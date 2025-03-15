@@ -60,6 +60,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -125,6 +129,20 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         private Parameters parameters; 
         private String requestId; 
         private RunningParameters runningParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterParametersResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.engine = model.engine;
+            this.parameterNumbers = model.parameterNumbers;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+            this.runningParameters = model.runningParameters;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -409,6 +427,25 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String rdsParameterOptional; 
             private String rdsParameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParametersParameters model) {
+                this.isEqual = model.isEqual;
+                this.isInstancePolarDBKey = model.isInstancePolarDBKey;
+                this.isInstanceRdsKey = model.isInstanceRdsKey;
+                this.isPolarDBKey = model.isPolarDBKey;
+                this.isRdsKey = model.isRdsKey;
+                this.distParameterDescription = model.distParameterDescription;
+                this.distParameterName = model.distParameterName;
+                this.distParameterOptional = model.distParameterOptional;
+                this.distParameterValue = model.distParameterValue;
+                this.rdsParameterDescription = model.rdsParameterDescription;
+                this.rdsParameterName = model.rdsParameterName;
+                this.rdsParameterOptional = model.rdsParameterOptional;
+                this.rdsParameterValue = model.rdsParameterValue;
+            } 
+
             /**
              * <p>Indicates whether the source and current parameters have the same value.</p>
              * 
@@ -613,6 +650,13 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ParametersParameters> parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameters = model.parameters;
+            } 
+
             /**
              * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
              */
@@ -791,6 +835,24 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterStatus; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.checkingCode = model.checkingCode;
+                this.dataType = model.dataType;
+                this.defaultParameterValue = model.defaultParameterValue;
+                this.factor = model.factor;
+                this.forceRestart = model.forceRestart;
+                this.isModifiable = model.isModifiable;
+                this.isNodeAvailable = model.isNodeAvailable;
+                this.paramRelyRule = model.paramRelyRule;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterStatus = model.parameterStatus;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>The valid values of the parameter.</p>
@@ -983,6 +1045,13 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Parameter> parameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningParameters model) {
+                this.parameter = model.parameter;
+            } 
 
             /**
              * Parameter.

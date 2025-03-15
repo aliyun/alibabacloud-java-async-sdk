@@ -27,11 +27,17 @@ public class ModifyMaskingRulesRequest extends Request {
     private String enable;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InterfaceVersion")
+    private String interfaceVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleConfig")
+    @com.aliyun.core.annotation.Validation(maxLength = 8192)
     private String ruleConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(maxLength = 8192)
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
@@ -46,6 +52,7 @@ public class ModifyMaskingRulesRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.enable = builder.enable;
+        this.interfaceVersion = builder.interfaceVersion;
         this.ruleConfig = builder.ruleConfig;
         this.ruleName = builder.ruleName;
         this.ruleNameList = builder.ruleNameList;
@@ -60,7 +67,7 @@ public class ModifyMaskingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -77,6 +84,13 @@ public class ModifyMaskingRulesRequest extends Request {
      */
     public String getEnable() {
         return this.enable;
+    }
+
+    /**
+     * @return interfaceVersion
+     */
+    public String getInterfaceVersion() {
+        return this.interfaceVersion;
     }
 
     /**
@@ -110,6 +124,7 @@ public class ModifyMaskingRulesRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyMaskingRulesRequest, Builder> {
         private String DBClusterId; 
         private String enable; 
+        private String interfaceVersion; 
         private String ruleConfig; 
         private String ruleName; 
         private String ruleNameList; 
@@ -123,6 +138,7 @@ public class ModifyMaskingRulesRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.enable = request.enable;
+            this.interfaceVersion = request.interfaceVersion;
             this.ruleConfig = request.ruleConfig;
             this.ruleName = request.ruleName;
             this.ruleNameList = request.ruleNameList;
@@ -161,6 +177,15 @@ public class ModifyMaskingRulesRequest extends Request {
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * InterfaceVersion.
+         */
+        public Builder interfaceVersion(String interfaceVersion) {
+            this.putQueryParameter("InterfaceVersion", interfaceVersion);
+            this.interfaceVersion = interfaceVersion;
             return this;
         }
 

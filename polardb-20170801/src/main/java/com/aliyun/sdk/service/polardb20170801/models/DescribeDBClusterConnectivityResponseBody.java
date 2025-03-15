@@ -48,6 +48,10 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connCheckErrorCode
      */
@@ -89,6 +93,17 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         private String connCheckResult; 
         private String DBClusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterConnectivityResponseBody model) {
+            this.connCheckErrorCode = model.connCheckErrorCode;
+            this.connCheckErrorMessage = model.connCheckErrorMessage;
+            this.connCheckResult = model.connCheckResult;
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The error code for connection diagnosis. Valid values:</p>

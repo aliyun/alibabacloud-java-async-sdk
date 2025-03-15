@@ -36,6 +36,10 @@ public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return GDNId
      */
@@ -53,6 +57,14 @@ public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
     public static final class Builder {
         private String GDNId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGlobalDatabaseNetworkResponseBody model) {
+            this.GDNId = model.GDNId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the GDN.</p>

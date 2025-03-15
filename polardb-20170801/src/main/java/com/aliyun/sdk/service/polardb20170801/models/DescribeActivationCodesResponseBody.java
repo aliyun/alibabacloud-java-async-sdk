@@ -48,6 +48,10 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActivationCodesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The queried activation codes.</p>
@@ -275,6 +290,21 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
             private String macAddress; 
             private String name; 
             private String systemIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.activateAt = model.activateAt;
+                this.description = model.description;
+                this.expireAt = model.expireAt;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.macAddress = model.macAddress;
+                this.name = model.name;
+                this.systemIdentifier = model.systemIdentifier;
+            } 
 
             /**
              * <p>The time when the activation code takes effect.</p>

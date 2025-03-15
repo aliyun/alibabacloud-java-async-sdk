@@ -48,6 +48,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClustersWithBackupsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details about the cluster.</p>
@@ -396,6 +411,31 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.createTime = model.createTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.deletedTime = model.deletedTime;
+                this.deletionLock = model.deletionLock;
+                this.engine = model.engine;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.isDeleted = model.isDeleted;
+                this.lockMode = model.lockMode;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the cluster was created.</p>
              * 
@@ -679,6 +719,13 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBCluster> DBCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBCluster = model.DBCluster;
+            } 
 
             /**
              * DBCluster.

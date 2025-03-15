@@ -96,7 +96,7 @@ public class CreateDBNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -458,6 +458,14 @@ public class CreateDBNodesRequest extends Request {
         public static final class Builder {
             private String targetClass; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNode model) {
+                this.targetClass = model.targetClass;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The specifications of the read-only node that you want to add, which must be the same as the specifications of the existing nodes. For more information, see the following topics:</p>

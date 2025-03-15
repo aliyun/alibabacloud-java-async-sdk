@@ -36,6 +36,10 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectorStatus
      */
@@ -53,6 +57,14 @@ public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
     public static final class Builder {
         private String collectorStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterAuditLogCollectorResponseBody model) {
+            this.collectorStatus = model.collectorStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of SQL collector. Valid values:</p>

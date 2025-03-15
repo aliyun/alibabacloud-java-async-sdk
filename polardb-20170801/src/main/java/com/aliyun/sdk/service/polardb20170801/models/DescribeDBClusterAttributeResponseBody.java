@@ -288,6 +288,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aiCreatingTime
      */
@@ -810,6 +814,77 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String vSwitchId; 
         private String zoneIds; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterAttributeResponseBody model) {
+            this.aiCreatingTime = model.aiCreatingTime;
+            this.aiType = model.aiType;
+            this.architecture = model.architecture;
+            this.blktagTotal = model.blktagTotal;
+            this.blktagUsed = model.blktagUsed;
+            this.burstingEnabled = model.burstingEnabled;
+            this.category = model.category;
+            this.compressStorageMode = model.compressStorageMode;
+            this.compressStorageUsed = model.compressStorageUsed;
+            this.creationTime = model.creationTime;
+            this.DBClusterDescription = model.DBClusterDescription;
+            this.DBClusterId = model.DBClusterId;
+            this.DBClusterNetworkType = model.DBClusterNetworkType;
+            this.DBClusterStatus = model.DBClusterStatus;
+            this.DBNodes = model.DBNodes;
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.DBVersionStatus = model.DBVersionStatus;
+            this.dataLevel1BackupChainSize = model.dataLevel1BackupChainSize;
+            this.dataSyncMode = model.dataSyncMode;
+            this.deletionLock = model.deletionLock;
+            this.engine = model.engine;
+            this.expireTime = model.expireTime;
+            this.expired = model.expired;
+            this.hasCompleteStandbyRes = model.hasCompleteStandbyRes;
+            this.hotStandbyCluster = model.hotStandbyCluster;
+            this.imciAutoIndex = model.imciAutoIndex;
+            this.imperceptibleSwitch = model.imperceptibleSwitch;
+            this.inodeTotal = model.inodeTotal;
+            this.inodeUsed = model.inodeUsed;
+            this.isLatestVersion = model.isLatestVersion;
+            this.isProxyLatestVersion = model.isProxyLatestVersion;
+            this.lockMode = model.lockMode;
+            this.maintainTime = model.maintainTime;
+            this.orca = model.orca;
+            this.payType = model.payType;
+            this.provisionedIops = model.provisionedIops;
+            this.proxyCpuCores = model.proxyCpuCores;
+            this.proxyServerlessType = model.proxyServerlessType;
+            this.proxyStandardCpuCores = model.proxyStandardCpuCores;
+            this.proxyStatus = model.proxyStatus;
+            this.proxyType = model.proxyType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.restoreDataPoint = model.restoreDataPoint;
+            this.restoreType = model.restoreType;
+            this.rowCompression = model.rowCompression;
+            this.SQLSize = model.SQLSize;
+            this.serverlessType = model.serverlessType;
+            this.sourceDBCluster = model.sourceDBCluster;
+            this.sourceRegionId = model.sourceRegionId;
+            this.standbyHAMode = model.standbyHAMode;
+            this.storageMax = model.storageMax;
+            this.storagePayType = model.storagePayType;
+            this.storageSpace = model.storageSpace;
+            this.storageType = model.storageType;
+            this.storageUsed = model.storageUsed;
+            this.strictConsistency = model.strictConsistency;
+            this.subCategory = model.subCategory;
+            this.supportInstantSwitchWithImci = model.supportInstantSwitchWithImci;
+            this.tags = model.tags;
+            this.VPCId = model.VPCId;
+            this.vSwitchId = model.vSwitchId;
+            this.zoneIds = model.zoneIds;
+        } 
+
         /**
          * <p>Start time for free AI activation</p>
          * 
@@ -1166,7 +1241,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ImperceptibleSwitch.
+         * <p>Indicates whether failover with hot replica is enabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code> (default)</li>
+         * </ul>
          */
         public Builder imperceptibleSwitch(String imperceptibleSwitch) {
             this.imperceptibleSwitch = imperceptibleSwitch;
@@ -1974,6 +2053,37 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String subCluster; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNodes model) {
+                this.addedCpuCores = model.addedCpuCores;
+                this.cpuCores = model.cpuCores;
+                this.creationTime = model.creationTime;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeDescription = model.DBNodeDescription;
+                this.DBNodeId = model.DBNodeId;
+                this.DBNodeRole = model.DBNodeRole;
+                this.DBNodeStatus = model.DBNodeStatus;
+                this.failoverPriority = model.failoverPriority;
+                this.hotReplicaMode = model.hotReplicaMode;
+                this.imciSwitch = model.imciSwitch;
+                this.masterId = model.masterId;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.memorySize = model.memorySize;
+                this.mirrorInsName = model.mirrorInsName;
+                this.multiMasterLocalStandby = model.multiMasterLocalStandby;
+                this.multiMasterPrimaryNode = model.multiMasterPrimaryNode;
+                this.orca = model.orca;
+                this.remoteMemorySize = model.remoteMemorySize;
+                this.sccMode = model.sccMode;
+                this.serverWeight = model.serverWeight;
+                this.serverlessType = model.serverlessType;
+                this.subCluster = model.subCluster;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>Number of CPU cores for second-level elastic scaling.</p>
              * 
@@ -2342,6 +2452,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Tag key.</p>

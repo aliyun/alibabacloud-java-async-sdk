@@ -36,6 +36,10 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TypeList> typeList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePendingMaintenanceActionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.typeList = model.typeList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TypeList model) {
+                this.count = model.count;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The number of pending events.</p>

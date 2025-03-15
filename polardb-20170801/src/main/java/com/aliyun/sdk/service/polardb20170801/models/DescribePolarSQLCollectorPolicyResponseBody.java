@@ -40,6 +40,10 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -65,6 +69,15 @@ public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
         private String DBClusterId; 
         private String requestId; 
         private String SQLCollectorStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolarSQLCollectorPolicyResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.SQLCollectorStatus = model.SQLCollectorStatus;
+        } 
 
         /**
          * <p>The IDs of the clusters.</p>

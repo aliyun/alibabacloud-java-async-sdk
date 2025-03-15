@@ -48,6 +48,10 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLicenseOrdersResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The queried orders.</p>
@@ -323,6 +338,25 @@ public class DescribeLicenseOrdersResponseBody extends TeaModel {
             private String packageValidity; 
             private String purchaseChannel; 
             private String virtualAliyunOrderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.activatedCodeCount = model.activatedCodeCount;
+                this.activationCodeQuota = model.activationCodeQuota;
+                this.aliyunOrderId = model.aliyunOrderId;
+                this.allowEmptySystemIdentifier = model.allowEmptySystemIdentifier;
+                this.engine = model.engine;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.isVirtualOrder = model.isVirtualOrder;
+                this.isVirtualOrderFrozen = model.isVirtualOrderFrozen;
+                this.packageType = model.packageType;
+                this.packageValidity = model.packageValidity;
+                this.purchaseChannel = model.purchaseChannel;
+                this.virtualAliyunOrderId = model.virtualAliyunOrderId;
+            } 
 
             /**
              * <p>The number of generated activation codes.</p>

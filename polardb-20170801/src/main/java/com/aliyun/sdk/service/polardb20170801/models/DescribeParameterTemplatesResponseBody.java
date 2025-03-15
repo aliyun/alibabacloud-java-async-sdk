@@ -52,6 +52,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBType
      */
@@ -101,6 +105,18 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private String parameterCount; 
         private Parameters parameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterTemplatesResponseBody model) {
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.engine = model.engine;
+            this.parameterCount = model.parameterCount;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The type of the database engine.</p>
@@ -287,6 +303,20 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplateRecord model) {
+                this.checkingCode = model.checkingCode;
+                this.forceModify = model.forceModify;
+                this.forceRestart = model.forceRestart;
+                this.isNodeAvailable = model.isNodeAvailable;
+                this.paramRelyRule = model.paramRelyRule;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The valid values of the parameter.</p>
              * 
@@ -425,6 +455,13 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TemplateRecord> templateRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.templateRecord = model.templateRecord;
+            } 
 
             /**
              * TemplateRecord.

@@ -325,7 +325,7 @@ public class CreateDBClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1918,6 +1918,14 @@ public class CreateDBClusterRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Tag key. If you need to add multiple tags to the target cluster at once, click <strong>Add</strong> to add a tag key.</p>

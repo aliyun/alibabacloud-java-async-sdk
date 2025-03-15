@@ -36,6 +36,10 @@ public class ModifyDBClusterServerlessConfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -53,6 +57,14 @@ public class ModifyDBClusterServerlessConfResponseBody extends TeaModel {
     public static final class Builder {
         private String DBClusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterServerlessConfResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the serverless cluster.</p>

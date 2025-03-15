@@ -56,6 +56,10 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBNodeId
      */
@@ -113,6 +117,19 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         private PerformanceKeys performanceKeys; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBNodePerformanceResponseBody model) {
+            this.DBNodeId = model.DBNodeId;
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.endTime = model.endTime;
+            this.performanceKeys = model.performanceKeys;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The ID of the cluster node.</p>
@@ -238,6 +255,14 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             private Long timestamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceItemValue model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceItemValue> performanceItemValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Points model) {
+                this.performanceItemValue = model.performanceItemValue;
+            } 
 
             /**
              * PerformanceItemValue.
@@ -370,6 +402,15 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             private String metricName; 
             private Points points; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceItem model) {
+                this.measurement = model.measurement;
+                this.metricName = model.metricName;
+                this.points = model.points;
+            } 
+
             /**
              * <p>The performance metrics that you want to query.</p>
              * 
@@ -438,6 +479,13 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceItem> performanceItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKeys model) {
+                this.performanceItem = model.performanceItem;
+            } 
 
             /**
              * PerformanceItem.

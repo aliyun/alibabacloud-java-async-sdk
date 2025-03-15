@@ -72,6 +72,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activateAt
      */
@@ -161,6 +165,23 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String systemIdentifier; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActivationCodeDetailsResponseBody model) {
+            this.activateAt = model.activateAt;
+            this.certContentB64 = model.certContentB64;
+            this.description = model.description;
+            this.expireAt = model.expireAt;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.macAddress = model.macAddress;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.systemIdentifier = model.systemIdentifier;
+        } 
 
         /**
          * <p>The time when the activation code takes effect.</p>

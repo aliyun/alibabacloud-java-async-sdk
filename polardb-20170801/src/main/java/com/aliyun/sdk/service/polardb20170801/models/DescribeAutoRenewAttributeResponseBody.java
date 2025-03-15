@@ -48,6 +48,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoRenewAttributeResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The renewal information about the clusters.</p>
@@ -240,6 +255,18 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             private String regionId; 
             private String renewalStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoRenewAttribute model) {
+                this.autoRenewEnabled = model.autoRenewEnabled;
+                this.DBClusterId = model.DBClusterId;
+                this.duration = model.duration;
+                this.periodUnit = model.periodUnit;
+                this.regionId = model.regionId;
+                this.renewalStatus = model.renewalStatus;
+            } 
+
             /**
              * <p>Indicates whether the auto-renewal feature is enabled. Valid values:</p>
              * <ul>
@@ -357,6 +384,13 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoRenewAttribute> autoRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.autoRenewAttribute = model.autoRenewAttribute;
+            } 
 
             /**
              * AutoRenewAttribute.

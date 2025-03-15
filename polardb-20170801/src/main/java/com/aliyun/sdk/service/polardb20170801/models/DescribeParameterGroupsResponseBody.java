@@ -36,6 +36,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroups
      */
@@ -53,6 +57,14 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ParameterGroups> parameterGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupsResponseBody model) {
+            this.parameterGroups = model.parameterGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of parameter templates.</p>
@@ -206,6 +218,21 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             private String parameterGroupId; 
             private String parameterGroupName; 
             private String parameterGroupType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroups model) {
+                this.createTime = model.createTime;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.forceRestart = model.forceRestart;
+                this.parameterCounts = model.parameterCounts;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupId = model.parameterGroupId;
+                this.parameterGroupName = model.parameterGroupName;
+                this.parameterGroupType = model.parameterGroupType;
+            } 
 
             /**
              * <p>The time when the parameter template was created. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>

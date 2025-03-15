@@ -84,6 +84,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activatedCodeCount
      */
@@ -197,6 +201,26 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         private String purchaseChannel; 
         private String requestId; 
         private String virtualOrderId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLicenseOrderDetailsResponseBody model) {
+            this.activatedCodeCount = model.activatedCodeCount;
+            this.activationCodeQuota = model.activationCodeQuota;
+            this.aliyunOrderId = model.aliyunOrderId;
+            this.allowEmptySystemIdentifier = model.allowEmptySystemIdentifier;
+            this.engine = model.engine;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtModified = model.gmtModified;
+            this.isVirtualOrder = model.isVirtualOrder;
+            this.isVirtualOrderFrozen = model.isVirtualOrderFrozen;
+            this.packageType = model.packageType;
+            this.packageValidity = model.packageValidity;
+            this.purchaseChannel = model.purchaseChannel;
+            this.requestId = model.requestId;
+            this.virtualOrderId = model.virtualOrderId;
+        } 
 
         /**
          * <p>The number of generated activation codes.</p>

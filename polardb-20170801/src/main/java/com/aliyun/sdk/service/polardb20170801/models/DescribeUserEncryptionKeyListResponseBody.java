@@ -40,6 +40,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -65,6 +69,15 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         private String DBClusterId; 
         private java.util.List<String> keyList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserEncryptionKeyListResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.keyList = model.keyList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>

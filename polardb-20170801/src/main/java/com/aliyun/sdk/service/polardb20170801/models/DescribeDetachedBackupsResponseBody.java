@@ -48,6 +48,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         private String pageRecordCount; 
         private String requestId; 
         private String totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDetachedBackupsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Details about the backup sets.</p>
@@ -324,6 +339,25 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             private String isAvail; 
             private String storeStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupSetSize = model.backupSetSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.backupsLevel = model.backupsLevel;
+                this.consistentTime = model.consistentTime;
+                this.DBClusterId = model.DBClusterId;
+                this.isAvail = model.isAvail;
+                this.storeStatus = model.storeStatus;
+            } 
+
             /**
              * <p>The end time of the backup task. The time is displayed in UTC.</p>
              * 
@@ -528,6 +562,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.

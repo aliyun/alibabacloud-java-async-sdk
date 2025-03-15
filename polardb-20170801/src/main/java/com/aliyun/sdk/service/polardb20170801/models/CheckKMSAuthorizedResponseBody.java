@@ -44,6 +44,10 @@ public class CheckKMSAuthorizedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizationState
      */
@@ -77,6 +81,16 @@ public class CheckKMSAuthorizedResponseBody extends TeaModel {
         private String DBClusterId; 
         private String requestId; 
         private String roleArn; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckKMSAuthorizedResponseBody model) {
+            this.authorizationState = model.authorizationState;
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.roleArn = model.roleArn;
+        } 
 
         /**
          * <p>Indicates whether the cluster is authorized to use KMS. Valid values:</p>

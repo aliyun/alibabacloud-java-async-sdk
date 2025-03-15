@@ -56,6 +56,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -113,6 +117,19 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.engine = model.engine;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Cluster ID.</p>
@@ -346,6 +363,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String SQLHash; 
             private String SQLText; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLSlowRecord model) {
+                this.DBName = model.DBName;
+                this.DBNodeId = model.DBNodeId;
+                this.executionStartTime = model.executionStartTime;
+                this.hostAddress = model.hostAddress;
+                this.lockTimes = model.lockTimes;
+                this.parseRowCounts = model.parseRowCounts;
+                this.queryTimeMS = model.queryTimeMS;
+                this.queryTimes = model.queryTimes;
+                this.returnRowCounts = model.returnRowCounts;
+                this.SQLHash = model.SQLHash;
+                this.SQLText = model.SQLText;
+            } 
+
             /**
              * <p>Database name.</p>
              * 
@@ -502,6 +536,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SQLSlowRecord> SQLSlowRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQLSlowRecord = model.SQLSlowRecord;
+            } 
 
             /**
              * SQLSlowRecord.

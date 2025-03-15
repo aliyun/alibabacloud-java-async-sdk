@@ -48,6 +48,10 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chargeType
      */
@@ -89,6 +93,17 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         private String expiredTime; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransformDBClusterPayTypeResponseBody model) {
+            this.chargeType = model.chargeType;
+            this.DBClusterId = model.DBClusterId;
+            this.expiredTime = model.expiredTime;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The billing method of the cluster. Valid values:</p>

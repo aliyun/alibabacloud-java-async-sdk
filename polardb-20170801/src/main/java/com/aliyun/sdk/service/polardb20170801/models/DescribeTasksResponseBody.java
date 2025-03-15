@@ -60,6 +60,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -125,6 +129,20 @@ public class DescribeTasksResponseBody extends TeaModel {
         private String startTime; 
         private Tasks tasks; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.endTime = model.endTime;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.tasks = model.tasks;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The ID of the cluster for which the task was created.</p>
@@ -405,6 +423,26 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskErrorMessage; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.beginTime = model.beginTime;
+                this.currentStepName = model.currentStepName;
+                this.DBName = model.DBName;
+                this.expectedFinishTime = model.expectedFinishTime;
+                this.finishTime = model.finishTime;
+                this.progress = model.progress;
+                this.progressInfo = model.progressInfo;
+                this.remain = model.remain;
+                this.stepProgressInfo = model.stepProgressInfo;
+                this.stepsInfo = model.stepsInfo;
+                this.taskAction = model.taskAction;
+                this.taskErrorCode = model.taskErrorCode;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The time when the task was started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
@@ -606,6 +644,13 @@ public class DescribeTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.

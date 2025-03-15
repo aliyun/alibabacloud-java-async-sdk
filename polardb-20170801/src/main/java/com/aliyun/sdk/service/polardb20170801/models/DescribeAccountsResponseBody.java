@@ -44,6 +44,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -77,6 +81,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.accounts = model.accounts;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the account.</p>
@@ -168,6 +182,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public static final class Builder {
             private String accountPrivilege; 
             private String DBName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasePrivileges model) {
+                this.accountPrivilege = model.accountPrivilege;
+                this.DBName = model.DBName;
+            } 
 
             /**
              * <p>The permissions that the account is granted on the database. Valid values:</p>
@@ -301,6 +323,19 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountStatus; 
             private String accountType; 
             private java.util.List<DatabasePrivileges> databasePrivileges; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountDescription = model.accountDescription;
+                this.accountLockState = model.accountLockState;
+                this.accountName = model.accountName;
+                this.accountPasswordValidTime = model.accountPasswordValidTime;
+                this.accountStatus = model.accountStatus;
+                this.accountType = model.accountType;
+                this.databasePrivileges = model.databasePrivileges;
+            } 
 
             /**
              * <p>The description of the account.</p>

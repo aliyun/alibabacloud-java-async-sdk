@@ -40,6 +40,10 @@ public class DescribeClassListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class DescribeClassListResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClassListResponseBody model) {
+            this.items = model.items;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster specifications.</p>
@@ -325,6 +338,29 @@ public class DescribeClassListResponseBody extends TeaModel {
             private String psl5MaxIOPS; 
             private String referenceExtPrice; 
             private String referencePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.classCode = model.classCode;
+                this.classGroup = model.classGroup;
+                this.classTypeLevel = model.classTypeLevel;
+                this.cpu = model.cpu;
+                this.essdMaxStorageCapacity = model.essdMaxStorageCapacity;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.maxStorageCapacity = model.maxStorageCapacity;
+                this.memoryClass = model.memoryClass;
+                this.pl1MaxIOPS = model.pl1MaxIOPS;
+                this.pl2MaxIOPS = model.pl2MaxIOPS;
+                this.pl3MaxIOPS = model.pl3MaxIOPS;
+                this.polarStoreMaxStorageCapacity = model.polarStoreMaxStorageCapacity;
+                this.psl4MaxIOPS = model.psl4MaxIOPS;
+                this.psl5MaxIOPS = model.psl5MaxIOPS;
+                this.referenceExtPrice = model.referenceExtPrice;
+                this.referencePrice = model.referencePrice;
+            } 
 
             /**
              * <p>The specifications of the cluster.</p>

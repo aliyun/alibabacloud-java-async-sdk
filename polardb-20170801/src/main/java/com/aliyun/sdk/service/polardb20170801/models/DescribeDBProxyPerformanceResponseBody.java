@@ -56,6 +56,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -113,6 +117,19 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         private PerformanceKeys performanceKeys; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBProxyPerformanceResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.endTime = model.endTime;
+            this.performanceKeys = model.performanceKeys;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -238,6 +255,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private Long timestamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceItemValue model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The time when the metric value was collected. This value is a timestamp in milliseconds.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceItemValue> performanceItemValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Points model) {
+                this.performanceItemValue = model.performanceItemValue;
+            } 
 
             /**
              * PerformanceItemValue.
@@ -382,6 +414,16 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private String metricName; 
             private Points points; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceItem model) {
+                this.DBNodeId = model.DBNodeId;
+                this.measurement = model.measurement;
+                this.metricName = model.metricName;
+                this.points = model.points;
+            } 
+
             /**
              * <p>The ID of the node.</p>
              * 
@@ -461,6 +503,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceItem> performanceItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKeys model) {
+                this.performanceItem = model.performanceItem;
+            } 
 
             /**
              * PerformanceItem.

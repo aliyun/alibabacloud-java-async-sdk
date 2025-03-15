@@ -48,6 +48,10 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableBackupLog
      */
@@ -89,6 +93,17 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         private String logBackupAnotherRegionRetentionPeriod; 
         private Integer logBackupRetentionPeriod; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogBackupPolicyResponseBody model) {
+            this.enableBackupLog = model.enableBackupLog;
+            this.logBackupAnotherRegionRegion = model.logBackupAnotherRegionRegion;
+            this.logBackupAnotherRegionRetentionPeriod = model.logBackupAnotherRegionRetentionPeriod;
+            this.logBackupRetentionPeriod = model.logBackupRetentionPeriod;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the log backup feature is enabled. Valid values:</p>

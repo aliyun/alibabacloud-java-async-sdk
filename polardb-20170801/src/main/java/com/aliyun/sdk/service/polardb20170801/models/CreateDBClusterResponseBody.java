@@ -44,6 +44,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -77,6 +81,16 @@ public class CreateDBClusterResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDBClusterResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>Cluster ID.</p>

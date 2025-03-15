@@ -48,6 +48,10 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePendingMaintenanceActionResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Details about tasks.</p>
@@ -335,6 +350,26 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
             private Integer status; 
             private String switchTime; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createdTime = model.createdTime;
+                this.DBClusterId = model.DBClusterId;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.deadline = model.deadline;
+                this.id = model.id;
+                this.modifiedTime = model.modifiedTime;
+                this.prepareInterval = model.prepareInterval;
+                this.region = model.region;
+                this.resultInfo = model.resultInfo;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.switchTime = model.switchTime;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the task was created. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>

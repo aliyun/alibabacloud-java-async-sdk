@@ -84,6 +84,10 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -197,6 +201,26 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         private java.util.List<ProxyRevisionVersionList> proxyRevisionVersionList; 
         private String proxyVersionStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterVersionResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.DBLatestVersion = model.DBLatestVersion;
+            this.DBMinorVersion = model.DBMinorVersion;
+            this.DBRevisionVersion = model.DBRevisionVersion;
+            this.DBRevisionVersionList = model.DBRevisionVersionList;
+            this.DBVersion = model.DBVersion;
+            this.DBVersionStatus = model.DBVersionStatus;
+            this.isLatestVersion = model.isLatestVersion;
+            this.isProxyLatestVersion = model.isProxyLatestVersion;
+            this.proxyLatestVersion = model.proxyLatestVersion;
+            this.proxyRevisionVersion = model.proxyRevisionVersion;
+            this.proxyRevisionVersionList = model.proxyRevisionVersionList;
+            this.proxyVersionStatus = model.proxyVersionStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of cluster.</p>
@@ -465,6 +489,16 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             private String revisionVersionCode; 
             private String revisionVersionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBRevisionVersionList model) {
+                this.releaseNote = model.releaseNote;
+                this.releaseType = model.releaseType;
+                this.revisionVersionCode = model.revisionVersionCode;
+                this.revisionVersionName = model.revisionVersionName;
+            } 
+
             /**
              * <p>The release notes for the database engine revision version.</p>
              * 
@@ -589,6 +623,16 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             private String releaseType; 
             private String revisionVersionCode; 
             private String revisionVersionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyRevisionVersionList model) {
+                this.releaseNote = model.releaseNote;
+                this.releaseType = model.releaseType;
+                this.revisionVersionCode = model.revisionVersionCode;
+                this.revisionVersionName = model.revisionVersionName;
+            } 
 
             /**
              * <p>The release notes for the PolarProxy revision version.</p>

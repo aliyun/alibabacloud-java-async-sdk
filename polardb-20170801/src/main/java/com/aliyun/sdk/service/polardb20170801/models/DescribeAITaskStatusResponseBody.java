@@ -48,6 +48,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountName
      */
@@ -89,6 +93,17 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String statusName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAITaskStatusResponseBody model) {
+            this.accountName = model.accountName;
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.statusName = model.statusName;
+        } 
 
         /**
          * <p>The name of the database account that is used to connect to the AI nodes in the cluster.</p>

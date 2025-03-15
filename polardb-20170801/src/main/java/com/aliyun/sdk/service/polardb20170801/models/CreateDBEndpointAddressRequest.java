@@ -87,7 +87,7 @@ public class CreateDBEndpointAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -379,6 +379,14 @@ public class CreateDBEndpointAddressRequest extends Request {
         public static final class Builder {
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfo model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the vSwitch.</p>

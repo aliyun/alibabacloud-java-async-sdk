@@ -48,6 +48,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -89,6 +93,17 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMaskingRulesResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -198,6 +213,14 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ruleList; 
             private String ruleVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ruleList = model.ruleList;
+                this.ruleVersion = model.ruleVersion;
+            } 
 
             /**
              * <p>Details about the masking rules.</p>

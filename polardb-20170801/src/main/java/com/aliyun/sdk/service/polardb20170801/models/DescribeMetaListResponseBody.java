@@ -56,6 +56,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -113,6 +117,19 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private String requestId; 
         private String totalPageCount; 
         private String totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetaListResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalPageCount = model.totalPageCount;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -237,6 +254,14 @@ public class DescribeMetaListResponseBody extends TeaModel {
         public static final class Builder {
             private String database; 
             private java.util.List<String> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.database = model.database;
+                this.tables = model.tables;
+            } 
 
             /**
              * <p>The name of the database that can be restored.</p>

@@ -48,6 +48,10 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalDatabaseNetworksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Details about the GDNs.</p>
@@ -203,6 +218,15 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             private String DBClusterId; 
             private String regionId; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBClusters model) {
+                this.DBClusterId = model.DBClusterId;
+                this.regionId = model.regionId;
+                this.role = model.role;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>
@@ -354,6 +378,19 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             private String GDNDescription; 
             private String GDNId; 
             private String GDNStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createTime = model.createTime;
+                this.DBClusters = model.DBClusters;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.GDNDescription = model.GDNDescription;
+                this.GDNId = model.GDNId;
+                this.GDNStatus = model.GDNStatus;
+            } 
 
             /**
              * <p>The time when the GDN was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>

@@ -40,6 +40,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String requestId; 
         private String SSLAutoRotate; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterSSLResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+            this.SSLAutoRotate = model.SSLAutoRotate;
+        } 
 
         /**
          * <p>The list of SSL connections.</p>
@@ -188,6 +201,17 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             private String SSLConnectionString; 
             private String SSLEnabled; 
             private String SSLExpireTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBEndpointId = model.DBEndpointId;
+                this.SSLAutoRotate = model.SSLAutoRotate;
+                this.SSLConnectionString = model.SSLConnectionString;
+                this.SSLEnabled = model.SSLEnabled;
+                this.SSLExpireTime = model.SSLExpireTime;
+            } 
 
             /**
              * <p>The ID of the endpoint.</p>

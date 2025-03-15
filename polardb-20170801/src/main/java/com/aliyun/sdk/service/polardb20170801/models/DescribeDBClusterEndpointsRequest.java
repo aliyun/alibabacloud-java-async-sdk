@@ -65,7 +65,7 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

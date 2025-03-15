@@ -40,6 +40,10 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         private String requestId; 
         private String storageAutoScale; 
         private Long storageUpperBound; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDasConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.storageAutoScale = model.storageAutoScale;
+            this.storageUpperBound = model.storageUpperBound;
+        } 
 
         /**
          * <p>The request ID.</p>

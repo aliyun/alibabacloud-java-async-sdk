@@ -40,6 +40,10 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -65,6 +69,15 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         private String DBInstanceName; 
         private java.util.List<DBLinkInfos> DBLinkInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBLinksResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.DBLinkInfos = model.DBLinkInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -193,6 +206,18 @@ public class DescribeDBLinksResponseBody extends TeaModel {
             private String targetAccount; 
             private String targetDBInstanceName; 
             private String targetDBName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBLinkInfos model) {
+                this.DBInstanceName = model.DBInstanceName;
+                this.DBLinkName = model.DBLinkName;
+                this.sourceDBName = model.sourceDBName;
+                this.targetAccount = model.targetAccount;
+                this.targetDBInstanceName = model.targetDBInstanceName;
+                this.targetDBName = model.targetDBName;
+            } 
 
             /**
              * <p>The ID of the source cluster that the database link connects.</p>

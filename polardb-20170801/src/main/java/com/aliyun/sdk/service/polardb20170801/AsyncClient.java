@@ -882,6 +882,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterAndNodesParametersResponse> modifyDBClusterAndNodesParameters(ModifyDBClusterAndNodesParametersRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBClusterArch  ModifyDBClusterArchRequest
+     * @return ModifyDBClusterArchResponse
+     */
+    CompletableFuture<ModifyDBClusterArchResponse> modifyDBClusterArch(ModifyDBClusterArchRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBClusterAuditLogCollector  ModifyDBClusterAuditLogCollectorRequest
      * @return ModifyDBClusterAuditLogCollectorResponse
      */

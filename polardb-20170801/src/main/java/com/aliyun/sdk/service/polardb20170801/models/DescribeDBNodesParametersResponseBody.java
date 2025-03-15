@@ -48,6 +48,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBNodeIds
      */
@@ -89,6 +93,17 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         private String DBVersion; 
         private String engine; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBNodesParametersResponseBody model) {
+            this.DBNodeIds = model.DBNodeIds;
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.engine = model.engine;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the nodes.</p>
@@ -317,6 +332,24 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             private String parameterStatus; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningParameters model) {
+                this.checkingCode = model.checkingCode;
+                this.dataType = model.dataType;
+                this.defaultParameterValue = model.defaultParameterValue;
+                this.factor = model.factor;
+                this.forceRestart = model.forceRestart;
+                this.isModifiable = model.isModifiable;
+                this.isNodeAvailable = model.isNodeAvailable;
+                this.paramRelyRule = model.paramRelyRule;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterStatus = model.parameterStatus;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The valid values of the parameter.</p>
              * 
@@ -520,6 +553,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         public static final class Builder {
             private String DBNodeId; 
             private java.util.List<RunningParameters> runningParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNodeIds model) {
+                this.DBNodeId = model.DBNodeId;
+                this.runningParameters = model.runningParameters;
+            } 
 
             /**
              * <p>The ID of the node.</p>

@@ -84,7 +84,7 @@ public class TempModifyDBNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -355,6 +355,14 @@ public class TempModifyDBNodeRequest extends Request {
         public static final class Builder {
             private String targetClass; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNode model) {
+                this.targetClass = model.targetClass;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.</p>

@@ -23,12 +23,17 @@ public class DescribeMaskingRulesRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InterfaceVersion")
+    private String interfaceVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleNameList")
     private String ruleNameList;
 
     private DescribeMaskingRulesRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.interfaceVersion = builder.interfaceVersion;
         this.ruleNameList = builder.ruleNameList;
     }
 
@@ -40,7 +45,7 @@ public class DescribeMaskingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,6 +58,13 @@ public class DescribeMaskingRulesRequest extends Request {
     }
 
     /**
+     * @return interfaceVersion
+     */
+    public String getInterfaceVersion() {
+        return this.interfaceVersion;
+    }
+
+    /**
      * @return ruleNameList
      */
     public String getRuleNameList() {
@@ -61,6 +73,7 @@ public class DescribeMaskingRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeMaskingRulesRequest, Builder> {
         private String DBClusterId; 
+        private String interfaceVersion; 
         private String ruleNameList; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class DescribeMaskingRulesRequest extends Request {
         private Builder(DescribeMaskingRulesRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.interfaceVersion = request.interfaceVersion;
             this.ruleNameList = request.ruleNameList;
         } 
 
@@ -86,6 +100,15 @@ public class DescribeMaskingRulesRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * InterfaceVersion.
+         */
+        public Builder interfaceVersion(String interfaceVersion) {
+            this.putQueryParameter("InterfaceVersion", interfaceVersion);
+            this.interfaceVersion = interfaceVersion;
             return this;
         }
 

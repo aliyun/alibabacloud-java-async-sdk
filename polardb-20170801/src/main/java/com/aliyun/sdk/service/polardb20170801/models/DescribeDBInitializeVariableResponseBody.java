@@ -44,6 +44,10 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBType
      */
@@ -77,6 +81,16 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         private String DBVersion; 
         private String requestId; 
         private Variables variables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInitializeVariableResponseBody model) {
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.requestId = model.requestId;
+            this.variables = model.variables;
+        } 
 
         /**
          * <p>The database type. Valid values:</p>
@@ -186,6 +200,15 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
             private String collate; 
             private String ctype; 
 
+            private Builder() {
+            } 
+
+            private Builder(Variable model) {
+                this.charset = model.charset;
+                this.collate = model.collate;
+                this.ctype = model.ctype;
+            } 
+
             /**
              * <p>The character set that is supported.</p>
              * 
@@ -276,6 +299,13 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Variable> variable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.variable = model.variable;
+            } 
 
             /**
              * Variable.

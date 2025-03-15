@@ -36,6 +36,10 @@ public class CheckDBNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBName
      */
@@ -53,6 +57,14 @@ public class CheckDBNameResponseBody extends TeaModel {
     public static final class Builder {
         private String DBName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDBNameResponseBody model) {
+            this.DBName = model.DBName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the database.</p>

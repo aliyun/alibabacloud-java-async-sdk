@@ -40,6 +40,10 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return characterSetNameItems
      */
@@ -65,6 +69,15 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         private CharacterSetNameItems characterSetNameItems; 
         private String engine; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCharacterSetNameResponseBody model) {
+            this.characterSetNameItems = model.characterSetNameItems;
+            this.engine = model.engine;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The character sets that are supported.</p>
@@ -133,6 +146,13 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> characterSetName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CharacterSetNameItems model) {
+                this.characterSetName = model.characterSetName;
+            } 
 
             /**
              * CharacterSetName.

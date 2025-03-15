@@ -44,6 +44,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScheduleTasksResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The result data.</p>
@@ -316,6 +330,26 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             private Boolean taskCancel; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimerInfos model) {
+                this.action = model.action;
+                this.crontabJobId = model.crontabJobId;
+                this.DBClusterId = model.DBClusterId;
+                this.dbClusterDescription = model.dbClusterDescription;
+                this.dbClusterStatus = model.dbClusterStatus;
+                this.orderId = model.orderId;
+                this.plannedEndTime = model.plannedEndTime;
+                this.plannedFlashingOffTime = model.plannedFlashingOffTime;
+                this.plannedStartTime = model.plannedStartTime;
+                this.plannedTime = model.plannedTime;
+                this.region = model.region;
+                this.status = model.status;
+                this.taskCancel = model.taskCancel;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The type of the scheduled tasks.</p>
              * 
@@ -548,6 +582,16 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<TimerInfos> timerInfos; 
             private Integer totalRecordCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.timerInfos = model.timerInfos;
+                this.totalRecordCount = model.totalRecordCount;
+            } 
 
             /**
              * <p>The page number of the page returned.</p>

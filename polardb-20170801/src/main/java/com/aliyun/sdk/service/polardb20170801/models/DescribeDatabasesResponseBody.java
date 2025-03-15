@@ -44,6 +44,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -77,6 +81,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatabasesResponseBody model) {
+            this.databases = model.databases;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about databases.</p>
@@ -193,6 +207,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String accountStatus; 
             private String privilegeStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.accountName = model.accountName;
+                this.accountPrivilege = model.accountPrivilege;
+                this.accountStatus = model.accountStatus;
+                this.privilegeStatus = model.privilegeStatus;
+            } 
+
             /**
              * <p>The username of the account.</p>
              * <blockquote>
@@ -295,6 +319,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Account> account; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+            } 
 
             /**
              * Account.
@@ -414,6 +445,19 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String DBStatus; 
             private String engine; 
             private String masterID; 
+
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.accounts = model.accounts;
+                this.characterSetName = model.characterSetName;
+                this.DBDescription = model.DBDescription;
+                this.DBName = model.DBName;
+                this.DBStatus = model.DBStatus;
+                this.engine = model.engine;
+                this.masterID = model.masterID;
+            } 
 
             /**
              * <p>Details about the accounts.</p>
@@ -540,6 +584,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Database> database; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.database = model.database;
+            } 
 
             /**
              * Database.

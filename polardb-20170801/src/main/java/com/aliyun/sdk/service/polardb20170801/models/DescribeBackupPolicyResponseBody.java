@@ -84,6 +84,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupFrequency
      */
@@ -197,6 +201,26 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupTime; 
         private String preferredNextBackupTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupFrequency = model.backupFrequency;
+            this.backupRetentionPolicyOnClusterDeletion = model.backupRetentionPolicyOnClusterDeletion;
+            this.dataLevel1BackupFrequency = model.dataLevel1BackupFrequency;
+            this.dataLevel1BackupPeriod = model.dataLevel1BackupPeriod;
+            this.dataLevel1BackupRetentionPeriod = model.dataLevel1BackupRetentionPeriod;
+            this.dataLevel1BackupTime = model.dataLevel1BackupTime;
+            this.dataLevel2BackupAnotherRegionRegion = model.dataLevel2BackupAnotherRegionRegion;
+            this.dataLevel2BackupAnotherRegionRetentionPeriod = model.dataLevel2BackupAnotherRegionRetentionPeriod;
+            this.dataLevel2BackupPeriod = model.dataLevel2BackupPeriod;
+            this.dataLevel2BackupRetentionPeriod = model.dataLevel2BackupRetentionPeriod;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.preferredNextBackupTime = model.preferredNextBackupTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The backup frequency. Default value: Normal. Valid values:</p>

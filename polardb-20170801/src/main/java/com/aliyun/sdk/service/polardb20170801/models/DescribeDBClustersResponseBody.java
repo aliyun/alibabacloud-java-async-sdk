@@ -48,6 +48,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClustersResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The information about the clusters.</p>
@@ -264,6 +279,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String serverless; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNode model) {
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeId = model.DBNodeId;
+                this.DBNodeRole = model.DBNodeRole;
+                this.hotReplicaMode = model.hotReplicaMode;
+                this.imciSwitch = model.imciSwitch;
+                this.regionId = model.regionId;
+                this.serverless = model.serverless;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The specifications of the node.</p>
              * 
@@ -409,6 +438,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBNode> DBNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNodes model) {
+                this.DBNode = model.DBNode;
+            } 
+
             /**
              * DBNode.
              */
@@ -467,6 +503,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -528,6 +572,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -983,6 +1034,47 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.aiType = model.aiType;
+                this.category = model.category;
+                this.cpuCores = model.cpuCores;
+                this.createTime = model.createTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeNumber = model.DBNodeNumber;
+                this.DBNodes = model.DBNodes;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.deletionLock = model.deletionLock;
+                this.engine = model.engine;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.hotStandbyCluster = model.hotStandbyCluster;
+                this.lockMode = model.lockMode;
+                this.memorySize = model.memorySize;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.remoteMemorySize = model.remoteMemorySize;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serverlessType = model.serverlessType;
+                this.storagePayType = model.storagePayType;
+                this.storageSpace = model.storageSpace;
+                this.storageType = model.storageType;
+                this.storageUsed = model.storageUsed;
+                this.strictConsistency = model.strictConsistency;
+                this.subCategory = model.subCategory;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The type of the AI node. Valid values:</p>
@@ -1459,6 +1551,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBCluster> DBCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBCluster = model.DBCluster;
+            } 
 
             /**
              * DBCluster.

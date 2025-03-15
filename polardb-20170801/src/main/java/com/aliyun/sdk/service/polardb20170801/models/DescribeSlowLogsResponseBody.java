@@ -64,6 +64,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -137,6 +141,21 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogsResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.endTime = model.endTime;
+            this.engine = model.engine;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The ID of cluster.</p>
@@ -428,6 +447,26 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             private Long totalExecutionTimes; 
             private Long totalLockTimes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLSlowLog model) {
+                this.createTime = model.createTime;
+                this.DBName = model.DBName;
+                this.DBNodeId = model.DBNodeId;
+                this.maxExecutionTime = model.maxExecutionTime;
+                this.maxLockTime = model.maxLockTime;
+                this.parseMaxRowCount = model.parseMaxRowCount;
+                this.parseTotalRowCounts = model.parseTotalRowCounts;
+                this.returnMaxRowCount = model.returnMaxRowCount;
+                this.returnTotalRowCounts = model.returnTotalRowCounts;
+                this.SQLHASH = model.SQLHASH;
+                this.SQLText = model.SQLText;
+                this.totalExecutionCounts = model.totalExecutionCounts;
+                this.totalExecutionTimes = model.totalExecutionTimes;
+                this.totalLockTimes = model.totalLockTimes;
+            } 
+
             /**
              * <p>The date when the data was generated.</p>
              * 
@@ -620,6 +659,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SQLSlowLog> SQLSlowLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQLSlowLog = model.SQLSlowLog;
+            } 
 
             /**
              * SQLSlowLog.

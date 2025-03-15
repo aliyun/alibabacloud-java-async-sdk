@@ -36,6 +36,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Items> items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterEndpointsResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the endpoints.</p>
@@ -206,6 +218,21 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String vpcInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressItems model) {
+                this.connectionString = model.connectionString;
+                this.dashboardUsed = model.dashboardUsed;
+                this.IPAddress = model.IPAddress;
+                this.netType = model.netType;
+                this.port = model.port;
+                this.privateZoneConnectionString = model.privateZoneConnectionString;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
 
             /**
              * <p>The endpoint.</p>
@@ -493,6 +520,25 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String readWriteMode; 
             private String sccMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.addressItems = model.addressItems;
+                this.autoAddNewNodes = model.autoAddNewNodes;
+                this.DBClusterId = model.DBClusterId;
+                this.DBEndpointDescription = model.DBEndpointDescription;
+                this.DBEndpointId = model.DBEndpointId;
+                this.endpointConfig = model.endpointConfig;
+                this.endpointType = model.endpointType;
+                this.nodeWithRoles = model.nodeWithRoles;
+                this.nodes = model.nodes;
+                this.polarSccTimeoutAction = model.polarSccTimeoutAction;
+                this.polarSccWaitTimeout = model.polarSccWaitTimeout;
+                this.readWriteMode = model.readWriteMode;
+                this.sccMode = model.sccMode;
+            } 
+
             /**
              * <p>The details of the endpoint.</p>
              */
@@ -625,7 +671,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PolarSccTimeoutAction.
+             * <p>The global consistency timeout policy. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: sends the request to the primary node.</li>
+             * <li><strong>2</strong>: downgrades the consistency level of a query to inconsistent read when a global consistent read in the query times out. No error message is returned to the client.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder polarSccTimeoutAction(String polarSccTimeoutAction) {
                 this.polarSccTimeoutAction = polarSccTimeoutAction;
@@ -633,7 +686,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PolarSccWaitTimeout.
+             * <p>Global consistency timeout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder polarSccWaitTimeout(String polarSccWaitTimeout) {
                 this.polarSccWaitTimeout = polarSccWaitTimeout;
@@ -656,7 +712,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * SccMode.
+             * <p>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder sccMode(String sccMode) {
                 this.sccMode = sccMode;

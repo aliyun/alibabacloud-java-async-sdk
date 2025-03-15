@@ -84,6 +84,10 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -197,6 +201,26 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         private String sourceRDSDBInstanceId; 
         private String srcDbType; 
         private String topologies; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterMigrationResponseBody model) {
+            this.comment = model.comment;
+            this.DBClusterEndpointList = model.DBClusterEndpointList;
+            this.DBClusterId = model.DBClusterId;
+            this.DBClusterReadWriteMode = model.DBClusterReadWriteMode;
+            this.delayedSeconds = model.delayedSeconds;
+            this.dtsInstanceId = model.dtsInstanceId;
+            this.expiredTime = model.expiredTime;
+            this.migrationStatus = model.migrationStatus;
+            this.rdsEndpointList = model.rdsEndpointList;
+            this.rdsReadWriteMode = model.rdsReadWriteMode;
+            this.requestId = model.requestId;
+            this.sourceRDSDBInstanceId = model.sourceRDSDBInstanceId;
+            this.srcDbType = model.srcDbType;
+            this.topologies = model.topologies;
+        } 
 
         /**
          * <p>The mode of the source ApsaraDB RDS instance. Valid values:</p>
@@ -482,6 +506,19 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddressItems model) {
+                this.connectionString = model.connectionString;
+                this.IPAddress = model.IPAddress;
+                this.netType = model.netType;
+                this.port = model.port;
+                this.SSLEnabled = model.SSLEnabled;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
              * <ul>
@@ -647,6 +684,16 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String endpointType; 
             private String readWriteMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBClusterEndpointList model) {
+                this.addressItems = model.addressItems;
+                this.DBEndpointId = model.DBEndpointId;
+                this.endpointType = model.endpointType;
+                this.readWriteMode = model.readWriteMode;
+            } 
+
             /**
              * <p>The VPC ID.</p>
              */
@@ -802,6 +849,19 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String SSLEnabled; 
             private String VPCId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RdsEndpointListAddressItems model) {
+                this.connectionString = model.connectionString;
+                this.IPAddress = model.IPAddress;
+                this.netType = model.netType;
+                this.port = model.port;
+                this.SSLEnabled = model.SSLEnabled;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
@@ -970,6 +1030,16 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String custinsType; 
             private String DBEndpointId; 
             private String endpointType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RdsEndpointList model) {
+                this.addressItems = model.addressItems;
+                this.custinsType = model.custinsType;
+                this.DBEndpointId = model.DBEndpointId;
+                this.endpointType = model.endpointType;
+            } 
 
             /**
              * <p>The VPC ID.</p>

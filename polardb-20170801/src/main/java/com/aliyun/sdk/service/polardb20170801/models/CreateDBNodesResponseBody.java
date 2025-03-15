@@ -44,6 +44,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -77,6 +81,16 @@ public class CreateDBNodesResponseBody extends TeaModel {
         private DBNodeIds DBNodeIds; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDBNodesResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.DBNodeIds = model.DBNodeIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -156,6 +170,13 @@ public class CreateDBNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> DBNodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNodeIds model) {
+                this.DBNodeId = model.DBNodeId;
+            } 
 
             /**
              * DBNodeId.

@@ -36,6 +36,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String taskIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyActiveOperationTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskIds = model.taskIds;
+        } 
 
         /**
          * <p>The request ID.</p>

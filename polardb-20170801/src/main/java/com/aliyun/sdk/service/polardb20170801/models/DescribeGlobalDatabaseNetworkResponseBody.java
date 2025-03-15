@@ -76,6 +76,10 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connections
      */
@@ -173,6 +177,24 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String globalDomainName; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalDatabaseNetworkResponseBody model) {
+            this.connections = model.connections;
+            this.createTime = model.createTime;
+            this.DBClusterId = model.DBClusterId;
+            this.DBClusters = model.DBClusters;
+            this.DBType = model.DBType;
+            this.DBVersion = model.DBVersion;
+            this.GDNDescription = model.GDNDescription;
+            this.GDNId = model.GDNId;
+            this.GDNStatus = model.GDNStatus;
+            this.globalDomainName = model.globalDomainName;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The information about the connection to the cluster.</p>
@@ -375,6 +397,15 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String netType; 
             private String port; 
 
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.connectionString = model.connectionString;
+                this.netType = model.netType;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The endpoint URL of the database service.</p>
              * 
@@ -542,6 +573,21 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNodes model) {
+                this.creationTime = model.creationTime;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeId = model.DBNodeId;
+                this.DBNodeRole = model.DBNodeRole;
+                this.DBNodeStatus = model.DBNodeStatus;
+                this.failoverPriority = model.failoverPriority;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The time when the node was created.</p>
@@ -877,6 +923,28 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String role; 
             private String serverlessType; 
             private String storageUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBClusters model) {
+                this.category = model.category;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodes = model.DBNodes;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.replicaLag = model.replicaLag;
+                this.role = model.role;
+                this.serverlessType = model.serverlessType;
+                this.storageUsed = model.storageUsed;
+            } 
 
             /**
              * <p>The edition of the cluster. Valid values:</p>

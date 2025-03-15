@@ -40,6 +40,10 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterSecurityGroups
      */
@@ -65,6 +69,15 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
         private DBClusterSecurityGroups DBClusterSecurityGroups; 
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterAccessWhitelistResponseBody model) {
+            this.DBClusterSecurityGroups = model.DBClusterSecurityGroups;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Elastic Compute Service (ECS) security groups that are associated with the cluster.</p>
@@ -143,6 +156,14 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             private String securityGroupId; 
             private String securityGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBClusterSecurityGroup model) {
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupName = model.securityGroupName;
+            } 
+
             /**
              * <p>The ID of the ECS security group.</p>
              * 
@@ -203,6 +224,13 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBClusterSecurityGroup> DBClusterSecurityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBClusterSecurityGroups model) {
+                this.DBClusterSecurityGroup = model.DBClusterSecurityGroup;
+            } 
 
             /**
              * DBClusterSecurityGroup.
@@ -274,6 +302,15 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
             private String DBClusterIPArrayAttribute; 
             private String DBClusterIPArrayName; 
             private String securityIps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBClusterIPArray model) {
+                this.DBClusterIPArrayAttribute = model.DBClusterIPArrayAttribute;
+                this.DBClusterIPArrayName = model.DBClusterIPArrayName;
+                this.securityIps = model.securityIps;
+            } 
 
             /**
              * <p>The attributes of the IP whitelist group. Set this parameter to <strong>hidden</strong> to hide the IP whitelist group in the console.</p>
@@ -370,6 +407,13 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBClusterIPArray> DBClusterIPArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBClusterIPArray = model.DBClusterIPArray;
+            } 
 
             /**
              * DBClusterIPArray.

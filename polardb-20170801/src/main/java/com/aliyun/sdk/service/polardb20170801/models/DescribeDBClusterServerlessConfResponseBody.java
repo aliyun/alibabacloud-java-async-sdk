@@ -92,6 +92,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agileScaleMax
      */
@@ -221,6 +225,28 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         private String serverlessRuleMode; 
         private String switchs; 
         private String traditionalScaleMaxThreshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterServerlessConfResponseBody model) {
+            this.agileScaleMax = model.agileScaleMax;
+            this.allowShutDown = model.allowShutDown;
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.scaleApRoNumMax = model.scaleApRoNumMax;
+            this.scaleApRoNumMin = model.scaleApRoNumMin;
+            this.scaleMax = model.scaleMax;
+            this.scaleMin = model.scaleMin;
+            this.scaleRoNumMax = model.scaleRoNumMax;
+            this.scaleRoNumMin = model.scaleRoNumMin;
+            this.secondsUntilAutoPause = model.secondsUntilAutoPause;
+            this.serverlessRuleCpuEnlargeThreshold = model.serverlessRuleCpuEnlargeThreshold;
+            this.serverlessRuleCpuShrinkThreshold = model.serverlessRuleCpuShrinkThreshold;
+            this.serverlessRuleMode = model.serverlessRuleMode;
+            this.switchs = model.switchs;
+            this.traditionalScaleMaxThreshold = model.traditionalScaleMaxThreshold;
+        } 
 
         /**
          * AgileScaleMax.

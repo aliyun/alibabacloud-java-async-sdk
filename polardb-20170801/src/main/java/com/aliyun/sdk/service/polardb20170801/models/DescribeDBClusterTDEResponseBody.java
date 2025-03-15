@@ -64,6 +64,10 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return automaticRotation
      */
@@ -137,6 +141,21 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         private String rotationInterval; 
         private String TDERegion; 
         private String TDEStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterTDEResponseBody model) {
+            this.automaticRotation = model.automaticRotation;
+            this.DBClusterId = model.DBClusterId;
+            this.encryptNewTables = model.encryptNewTables;
+            this.encryptionKey = model.encryptionKey;
+            this.encryptionKeyStatus = model.encryptionKeyStatus;
+            this.requestId = model.requestId;
+            this.rotationInterval = model.rotationInterval;
+            this.TDERegion = model.TDERegion;
+            this.TDEStatus = model.TDEStatus;
+        } 
 
         /**
          * <p>Indicates whether automatic key rotation is allowed. Valid values:</p>

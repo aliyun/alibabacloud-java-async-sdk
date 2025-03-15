@@ -36,6 +36,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -53,6 +57,14 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AvailableZones> availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterAvailableResourcesResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The available zones of the cluster.</p>
@@ -122,6 +134,14 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String DBNodeClass; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.category = model.category;
+                this.DBNodeClass = model.DBNodeClass;
+            } 
 
             /**
              * <p>The edition of the cluster. Valid values:</p>
@@ -209,6 +229,14 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private java.util.List<AvailableResources> availableResources; 
             private String engine; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngines model) {
+                this.availableResources = model.availableResources;
+                this.engine = model.engine;
+            } 
+
             /**
              * <p>The available resources.</p>
              */
@@ -290,6 +318,15 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             private String regionId; 
             private java.util.List<SupportedEngines> supportedEngines; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.regionId = model.regionId;
+                this.supportedEngines = model.supportedEngines;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The region ID of the cluster.</p>

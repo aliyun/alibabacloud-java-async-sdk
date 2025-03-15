@@ -36,6 +36,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroup
      */
@@ -53,6 +57,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ParameterGroup> parameterGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupResponseBody model) {
+            this.parameterGroup = model.parameterGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the parameter templates.</p>
@@ -122,6 +134,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String paramName; 
             private String paramValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterDetail model) {
+                this.paramName = model.paramName;
+                this.paramValue = model.paramValue;
+            } 
 
             /**
              * <p>The name of the parameter.</p>
@@ -291,6 +311,22 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String parameterGroupId; 
             private String parameterGroupName; 
             private String parameterGroupType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroup model) {
+                this.createTime = model.createTime;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.forceRestart = model.forceRestart;
+                this.parameterCounts = model.parameterCounts;
+                this.parameterDetail = model.parameterDetail;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupId = model.parameterGroupId;
+                this.parameterGroupName = model.parameterGroupName;
+                this.parameterGroupType = model.parameterGroupType;
+            } 
 
             /**
              * <p>The time when the parameter template was created. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>

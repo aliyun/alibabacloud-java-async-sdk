@@ -36,6 +36,10 @@ public class CreateColdStorageInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coldStorageInstanceId
      */
@@ -53,6 +57,14 @@ public class CreateColdStorageInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String coldStorageInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateColdStorageInstanceResponseBody model) {
+            this.coldStorageInstanceId = model.coldStorageInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster ID.</p>

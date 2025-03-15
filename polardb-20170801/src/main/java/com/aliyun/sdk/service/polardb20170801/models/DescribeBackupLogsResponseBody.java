@@ -48,6 +48,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         private String pageRecordCount; 
         private String requestId; 
         private String totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupLogsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of the backup logs.</p>
@@ -264,6 +279,20 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             private String intranetDownloadLink; 
             private String linkExpiredTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupLog model) {
+                this.backupLogEndTime = model.backupLogEndTime;
+                this.backupLogId = model.backupLogId;
+                this.backupLogName = model.backupLogName;
+                this.backupLogSize = model.backupLogSize;
+                this.backupLogStartTime = model.backupLogStartTime;
+                this.downloadLink = model.downloadLink;
+                this.intranetDownloadLink = model.intranetDownloadLink;
+                this.linkExpiredTime = model.linkExpiredTime;
+            } 
+
             /**
              * <p>The time when the backup task ended. The time follows the ISO 8601 standard in the <code>YYYY-MM-DD\&quot;T\&quot;HH:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackupLog> backupLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backupLog = model.backupLog;
+            } 
 
             /**
              * BackupLog.
