@@ -36,6 +36,10 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TranscodeParentJob transcodeParentJob; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTranscodeJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.transcodeParentJob = model.transcodeParentJob;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputGroup model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -215,6 +235,15 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String media; 
             private String outputUrl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.outputUrl = model.outputUrl;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -333,6 +362,16 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private Double duration; 
             private Double start; 
             private String videoIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(CombineConfigs model) {
+                this.audioIndex = model.audioIndex;
+                this.duration = model.duration;
+                this.start = model.start;
+                this.videoIndex = model.videoIndex;
+            } 
 
             /**
              * <p>The audio stream index.</p>
@@ -455,6 +494,16 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String encryptType; 
             private String keyServiceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.cipherText = model.cipherText;
+                this.decryptKeyUri = model.decryptKeyUri;
+                this.encryptType = model.encryptType;
+                this.keyServiceType = model.keyServiceType;
+            } 
+
             /**
              * <p>The ciphertext of HLS encryption.</p>
              * 
@@ -550,6 +599,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(File model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The media object.</p>
              * <ul>
@@ -630,6 +687,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeline model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The duration of the stream. Valid values: the number of seconds or &quot;ToEND&quot;.</p>
@@ -764,6 +829,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private Timeline timeline; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParams model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.file = model.file;
+                this.height = model.height;
+                this.referPos = model.referPos;
+                this.timeline = model.timeline;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The position of the watermark on the x-axis.</p>
              * 
@@ -886,6 +964,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private OverwriteParams overwriteParams; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageWatermarks model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
@@ -955,6 +1041,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsFile model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -1049,6 +1143,15 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private OverwriteParamsFile file; 
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubtitlesOverwriteParams model) {
+                this.charEnc = model.charEnc;
+                this.file = model.file;
+                this.format = model.format;
+            } 
+
             /**
              * <p>The file encoding format.</p>
              * 
@@ -1129,6 +1232,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private SubtitlesOverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subtitles model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
@@ -1296,6 +1407,22 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String left; 
             private String top; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextWatermarksOverwriteParams model) {
+                this.adaptive = model.adaptive;
+                this.borderColor = model.borderColor;
+                this.borderWidth = model.borderWidth;
+                this.content = model.content;
+                this.fontAlpha = model.fontAlpha;
+                this.fontColor = model.fontColor;
+                this.fontName = model.fontName;
+                this.fontSize = model.fontSize;
+                this.left = model.left;
+                this.top = model.top;
+            } 
+
             /**
              * <p>Indicates whether the text size was adjusted based on the output video dimensions. Valid values: true and false. Default value: false.</p>
              * 
@@ -1457,6 +1584,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private TextWatermarksOverwriteParams overwriteParams; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextWatermarks model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
@@ -1550,6 +1685,16 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String loudnessRangeTarget; 
             private String method; 
             private String truePeak; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volume model) {
+                this.integratedLoudnessTarget = model.integratedLoudnessTarget;
+                this.loudnessRangeTarget = model.loudnessRangeTarget;
+                this.method = model.method;
+                this.truePeak = model.truePeak;
+            } 
 
             /**
              * <p>The output volume.</p>
@@ -1706,6 +1851,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String samplerate; 
             private Volume volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.remove = model.remove;
+                this.samplerate = model.samplerate;
+                this.volume = model.volume;
+            } 
+
             /**
              * <p>The audio bitrate of the output file.</p>
              * <ul>
@@ -1829,6 +1987,13 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.format = model.format;
+            } 
+
             /**
              * <p>The container format.</p>
              * 
@@ -1891,6 +2056,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String duration; 
             private String forceSegTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Segment model) {
+                this.duration = model.duration;
+                this.forceSegTime = model.forceSegTime;
+            } 
+
             /**
              * <p>The segment length.</p>
              * 
@@ -1951,6 +2124,13 @@ public class GetTranscodeJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private Segment segment; 
+
+            private Builder() {
+            } 
+
+            private Builder(MuxConfig model) {
+                this.segment = model.segment;
+            } 
 
             /**
              * <p>The segment settings.</p>
@@ -2082,6 +2262,20 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String isCheckVideoBitrate; 
             private String isCheckVideoBitrateFail; 
             private String transMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransConfig model) {
+                this.adjDarMethod = model.adjDarMethod;
+                this.isCheckAudioBitrate = model.isCheckAudioBitrate;
+                this.isCheckAudioBitrateFail = model.isCheckAudioBitrateFail;
+                this.isCheckReso = model.isCheckReso;
+                this.isCheckResoFail = model.isCheckResoFail;
+                this.isCheckVideoBitrate = model.isCheckVideoBitrate;
+                this.isCheckVideoBitrateFail = model.isCheckVideoBitrateFail;
+                this.transMode = model.transMode;
+            } 
 
             /**
              * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
@@ -2456,6 +2650,30 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String scanMode; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.abrMax = model.abrMax;
+                this.bitrate = model.bitrate;
+                this.bufsize = model.bufsize;
+                this.codec = model.codec;
+                this.crf = model.crf;
+                this.crop = model.crop;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.longShortMode = model.longShortMode;
+                this.maxrate = model.maxrate;
+                this.pad = model.pad;
+                this.pixFmt = model.pixFmt;
+                this.preset = model.preset;
+                this.profile = model.profile;
+                this.remove = model.remove;
+                this.scanMode = model.scanMode;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The maximum ABR. This parameter takes effect only for Narrowband HD 1.0.</p>
              * <ul>
@@ -2792,6 +3010,17 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private TransConfig transConfig; 
             private Video video; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeOverwriteParams model) {
+                this.audio = model.audio;
+                this.container = model.container;
+                this.muxConfig = model.muxConfig;
+                this.transConfig = model.transConfig;
+                this.video = model.video;
+            } 
+
             /**
              * <p>The audio settings.</p>
              */
@@ -2882,6 +3111,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private TranscodeOverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Transcode model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
@@ -3001,6 +3238,18 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private java.util.List<TextWatermarks> textWatermarks; 
             private Transcode transcode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfig model) {
+                this.combineConfigs = model.combineConfigs;
+                this.encryption = model.encryption;
+                this.imageWatermarks = model.imageWatermarks;
+                this.subtitles = model.subtitles;
+                this.textWatermarks = model.textWatermarks;
+                this.transcode = model.transcode;
+            } 
+
             /**
              * <p>The multi-input stream merge configuration.</p>
              */
@@ -3100,6 +3349,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private Output output; 
             private ProcessConfig processConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputGroup model) {
+                this.output = model.output;
+                this.processConfig = model.processConfig;
+            } 
+
             /**
              * <p>The output file configuration.</p>
              */
@@ -3166,6 +3423,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the snapshot job was submitted.</p>
@@ -3251,6 +3516,15 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String inputUrl; 
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobListInputGroup model) {
+                this.inputUrl = model.inputUrl;
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The URL of the media asset. This parameter is specified only when the media asset is transcoded.</p>
@@ -3499,6 +3773,27 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String sampleRate; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamInfoList model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.sampleFmt = model.sampleFmt;
+                this.sampleRate = model.sampleRate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * <p>The bitrate.</p>
@@ -3835,6 +4130,24 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String mediaId; 
             private String region; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileBasicInfo model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileStatus = model.fileStatus;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+                this.formatName = model.formatName;
+                this.height = model.height;
+                this.mediaId = model.mediaId;
+                this.region = model.region;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The video bitrate.</p>
@@ -4271,6 +4584,35 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String timeBase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamInfoList model) {
+                this.avgFps = model.avgFps;
+                this.bitRate = model.bitRate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timeBase = model.timeBase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average frame rate.</p>
              * 
@@ -4592,6 +4934,15 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private FileBasicInfo fileBasicInfo; 
             private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutFileMeta model) {
+                this.audioStreamInfoList = model.audioStreamInfoList;
+                this.fileBasicInfo = model.fileBasicInfo;
+                this.videoStreamInfoList = model.videoStreamInfoList;
+            } 
+
             /**
              * <p>The information about the audio stream.</p>
              */
@@ -4678,6 +5029,15 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String media; 
             private String outputUrl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobListOutput model) {
+                this.media = model.media;
+                this.outputUrl = model.outputUrl;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -4796,6 +5156,16 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private Double duration; 
             private Double start; 
             private String videoIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigCombineConfigs model) {
+                this.audioIndex = model.audioIndex;
+                this.duration = model.duration;
+                this.start = model.start;
+                this.videoIndex = model.videoIndex;
+            } 
 
             /**
              * <p>The audio stream index.</p>
@@ -4918,6 +5288,16 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String encryptType; 
             private String keyServiceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigEncryption model) {
+                this.cipherText = model.cipherText;
+                this.decryptKeyUri = model.decryptKeyUri;
+                this.encryptType = model.encryptType;
+                this.keyServiceType = model.keyServiceType;
+            } 
+
             /**
              * <p>The ciphertext of HTTP Live Streaming (HLS) encryption.</p>
              * 
@@ -5013,6 +5393,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageWatermarksOverwriteParamsFile model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The media object.</p>
              * <ul>
@@ -5093,6 +5481,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsTimeline model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The duration of the stream. Valid values: the number of seconds or &quot;ToEND&quot;.</p>
@@ -5227,6 +5623,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private OverwriteParamsTimeline timeline; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageWatermarksOverwriteParams model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.file = model.file;
+                this.height = model.height;
+                this.referPos = model.referPos;
+                this.timeline = model.timeline;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The position of the watermark on the x-axis.</p>
              * 
@@ -5349,6 +5758,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private ImageWatermarksOverwriteParams overwriteParams; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigImageWatermarks model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
@@ -5418,6 +5835,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitlesOverwriteParamsFile model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -5512,6 +5937,15 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private SubtitlesOverwriteParamsFile file; 
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigSubtitlesOverwriteParams model) {
+                this.charEnc = model.charEnc;
+                this.file = model.file;
+                this.format = model.format;
+            } 
+
             /**
              * <p>The file encoding format.</p>
              * 
@@ -5592,6 +6026,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private ProcessConfigSubtitlesOverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigSubtitles model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
@@ -5759,6 +6201,22 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String left; 
             private String top; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigTextWatermarksOverwriteParams model) {
+                this.adaptive = model.adaptive;
+                this.borderColor = model.borderColor;
+                this.borderWidth = model.borderWidth;
+                this.content = model.content;
+                this.fontAlpha = model.fontAlpha;
+                this.fontColor = model.fontColor;
+                this.fontName = model.fontName;
+                this.fontSize = model.fontSize;
+                this.left = model.left;
+                this.top = model.top;
+            } 
+
             /**
              * <p>Indicates whether the text size was adjusted based on the output video dimensions. Valid values: true and false. Default value: false.</p>
              * 
@@ -5920,6 +6378,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private ProcessConfigTextWatermarksOverwriteParams overwriteParams; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigTextWatermarks model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
@@ -6013,6 +6479,16 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String loudnessRangeTarget; 
             private String method; 
             private String truePeak; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioVolume model) {
+                this.integratedLoudnessTarget = model.integratedLoudnessTarget;
+                this.loudnessRangeTarget = model.loudnessRangeTarget;
+                this.method = model.method;
+                this.truePeak = model.truePeak;
+            } 
 
             /**
              * <p>The output volume.</p>
@@ -6169,6 +6645,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String samplerate; 
             private AudioVolume volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsAudio model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.remove = model.remove;
+                this.samplerate = model.samplerate;
+                this.volume = model.volume;
+            } 
+
             /**
              * <p>The audio bitrate of the output file.</p>
              * <ul>
@@ -6291,6 +6780,13 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsContainer model) {
+                this.format = model.format;
+            } 
+
             /**
              * <p>The container format.</p>
              * 
@@ -6353,6 +6849,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String duration; 
             private String forceSegTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(MuxConfigSegment model) {
+                this.duration = model.duration;
+                this.forceSegTime = model.forceSegTime;
+            } 
+
             /**
              * <p>The segment length.</p>
              * 
@@ -6413,6 +6917,13 @@ public class GetTranscodeJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private MuxConfigSegment segment; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsMuxConfig model) {
+                this.segment = model.segment;
+            } 
 
             /**
              * <p>The segment settings.</p>
@@ -6544,6 +7055,20 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String isCheckVideoBitrate; 
             private String isCheckVideoBitrateFail; 
             private String transMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsTransConfig model) {
+                this.adjDarMethod = model.adjDarMethod;
+                this.isCheckAudioBitrate = model.isCheckAudioBitrate;
+                this.isCheckAudioBitrateFail = model.isCheckAudioBitrateFail;
+                this.isCheckReso = model.isCheckReso;
+                this.isCheckResoFail = model.isCheckResoFail;
+                this.isCheckVideoBitrate = model.isCheckVideoBitrate;
+                this.isCheckVideoBitrateFail = model.isCheckVideoBitrateFail;
+                this.transMode = model.transMode;
+            } 
 
             /**
              * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
@@ -6919,6 +7444,30 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String scanMode; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsVideo model) {
+                this.abrMax = model.abrMax;
+                this.bitrate = model.bitrate;
+                this.bufsize = model.bufsize;
+                this.codec = model.codec;
+                this.crf = model.crf;
+                this.crop = model.crop;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.longShortMode = model.longShortMode;
+                this.maxrate = model.maxrate;
+                this.pad = model.pad;
+                this.pixFmt = model.pixFmt;
+                this.preset = model.preset;
+                this.profile = model.profile;
+                this.remove = model.remove;
+                this.scanMode = model.scanMode;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The maximum adaptive bitrate (ABR). This parameter takes effect only for Narrowband HD 1.0.</p>
              * <ul>
@@ -7266,6 +7815,18 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private OverwriteParamsTransConfig transConfig; 
             private OverwriteParamsVideo video; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigTranscodeOverwriteParams model) {
+                this.audio = model.audio;
+                this.container = model.container;
+                this.muxConfig = model.muxConfig;
+                this.tags = model.tags;
+                this.transConfig = model.transConfig;
+                this.video = model.video;
+            } 
+
             /**
              * <p>The audio settings.</p>
              */
@@ -7364,6 +7925,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private ProcessConfigTranscodeOverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfigTranscode model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
@@ -7495,6 +8064,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private java.util.List<ProcessConfigTextWatermarks> textWatermarks; 
             private ProcessConfigTranscode transcode; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobListProcessConfig model) {
+                this.combineConfigs = model.combineConfigs;
+                this.encryption = model.encryption;
+                this.imageWatermarks = model.imageWatermarks;
+                this.isInheritTags = model.isInheritTags;
+                this.subtitles = model.subtitles;
+                this.textWatermarks = model.textWatermarks;
+                this.transcode = model.transcode;
+            } 
+
             /**
              * <p>The multi-input stream merge configuration.</p>
              */
@@ -7604,6 +8186,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobListScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the snapshot job was submitted.</p>
@@ -7845,6 +8435,28 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private java.util.Map<String, ?> submitResultJson; 
             private String submitTime; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobList model) {
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.inputGroup = model.inputGroup;
+                this.jobId = model.jobId;
+                this.jobIndex = model.jobIndex;
+                this.name = model.name;
+                this.outFileMeta = model.outFileMeta;
+                this.output = model.output;
+                this.parentJobId = model.parentJobId;
+                this.processConfig = model.processConfig;
+                this.requestId = model.requestId;
+                this.scheduleConfig = model.scheduleConfig;
+                this.status = model.status;
+                this.submitResultJson = model.submitResultJson;
+                this.submitTime = model.submitTime;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The time when the job was created.</p>
@@ -8213,6 +8825,27 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private java.util.List<TranscodeJobList> transcodeJobList; 
             private String triggerSource; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeParentJob model) {
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.inputGroup = model.inputGroup;
+                this.jobCount = model.jobCount;
+                this.name = model.name;
+                this.outputGroup = model.outputGroup;
+                this.parentJobId = model.parentJobId;
+                this.percent = model.percent;
+                this.requestId = model.requestId;
+                this.scheduleConfig = model.scheduleConfig;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.transcodeJobList = model.transcodeJobList;
+                this.triggerSource = model.triggerSource;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

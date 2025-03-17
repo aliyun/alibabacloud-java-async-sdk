@@ -40,6 +40,10 @@ public class MediaConvertOutputGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupConfig
      */
@@ -65,6 +69,15 @@ public class MediaConvertOutputGroup extends TeaModel {
         private MediaConvertOutputGroupConfig groupConfig; 
         private String name; 
         private java.util.List<MediaConvertOutputGroupOutput> outputs; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertOutputGroup model) {
+            this.groupConfig = model.groupConfig;
+            this.name = model.name;
+            this.outputs = model.outputs;
+        } 
 
         /**
          * GroupConfig.

@@ -44,6 +44,10 @@ public class RefreshUploadMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaId
      */
@@ -77,6 +81,16 @@ public class RefreshUploadMediaResponseBody extends TeaModel {
         private String requestId; 
         private String uploadAddress; 
         private String uploadAuth; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshUploadMediaResponseBody model) {
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+            this.uploadAddress = model.uploadAddress;
+            this.uploadAuth = model.uploadAuth;
+        } 
 
         /**
          * <p>The ID of the media asset.</p>

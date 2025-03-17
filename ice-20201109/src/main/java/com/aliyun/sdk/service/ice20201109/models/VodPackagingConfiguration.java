@@ -52,6 +52,10 @@ public class VodPackagingConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configurationName
      */
@@ -101,6 +105,18 @@ public class VodPackagingConfiguration extends TeaModel {
         private String groupName; 
         private VodPackagingConfig packageConfig; 
         private String protocol; 
+
+        private Builder() {
+        } 
+
+        private Builder(VodPackagingConfiguration model) {
+            this.configurationName = model.configurationName;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.groupName = model.groupName;
+            this.packageConfig = model.packageConfig;
+            this.protocol = model.protocol;
+        } 
 
         /**
          * ConfigurationName.

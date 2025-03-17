@@ -52,6 +52,10 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
         private java.util.List<MediaConvertOutputDetail> outputs; 
         private String status; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertOutputGroupDetail model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.name = model.name;
+            this.outputs = model.outputs;
+            this.status = model.status;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * Code.

@@ -53,6 +53,10 @@ public class MediaConvertOutput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return features
      */
@@ -102,6 +106,18 @@ public class MediaConvertOutput extends TeaModel {
         private String overrideParams; 
         private Integer priority; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertOutput model) {
+            this.features = model.features;
+            this.name = model.name;
+            this.outputFile = model.outputFile;
+            this.overrideParams = model.overrideParams;
+            this.priority = model.priority;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * Features.

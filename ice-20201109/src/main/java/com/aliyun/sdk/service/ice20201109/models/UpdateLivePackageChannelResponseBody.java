@@ -36,6 +36,10 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return livePackageChannel
      */
@@ -53,6 +57,14 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
     public static final class Builder {
         private LivePackageChannel livePackageChannel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateLivePackageChannelResponseBody model) {
+            this.livePackageChannel = model.livePackageChannel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the live package channel.</p>
@@ -146,6 +158,16 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             private String password; 
             private String url; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngestEndpoints model) {
+                this.id = model.id;
+                this.password = model.password;
+                this.url = model.url;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The ingest endpoint ID.</p>
@@ -325,6 +347,21 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
             private String protocol; 
             private Integer segmentCount; 
             private Integer segmentDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(LivePackageChannel model) {
+                this.channelName = model.channelName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupName = model.groupName;
+                this.ingestEndpoints = model.ingestEndpoints;
+                this.lastModified = model.lastModified;
+                this.protocol = model.protocol;
+                this.segmentCount = model.segmentCount;
+                this.segmentDuration = model.segmentDuration;
+            } 
 
             /**
              * <p>The channel name.</p>

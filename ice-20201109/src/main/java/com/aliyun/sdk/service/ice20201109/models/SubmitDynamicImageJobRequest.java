@@ -62,7 +62,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -251,6 +251,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The input file. If Type is set to OSS, set this parameter to the URL of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. The URL of an OSS object can be in one of the following formats:</p>
              * <ol>
@@ -340,6 +348,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The output file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</p>
              * <ul>
@@ -427,6 +443,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String pipelineId; 
             private Integer priority; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
+
             /**
              * <p>The ID of the MPS queue to which the job was submitted.</p>
              * 
@@ -511,6 +535,15 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String duration; 
             private String end; 
             private String seek; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeSpan model) {
+                this.duration = model.duration;
+                this.end = model.end;
+                this.seek = model.seek;
+            } 
 
             /**
              * <p>The length of the clip.</p>
@@ -668,6 +701,19 @@ public class SubmitDynamicImageJobRequest extends Request {
             private TimeSpan timeSpan; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParams model) {
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.longShortMode = model.longShortMode;
+                this.scanMode = model.scanMode;
+                this.timeSpan = model.timeSpan;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The format of the animated image. Valid values:</p>
              * <ul>
@@ -809,6 +855,14 @@ public class SubmitDynamicImageJobRequest extends Request {
         public static final class Builder {
             private OverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateConfig model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters.</p>

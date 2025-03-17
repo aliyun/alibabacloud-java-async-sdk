@@ -44,6 +44,10 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -77,6 +81,16 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         private String mediaId; 
         private String requestId; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAudioProduceJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
 
         /**
          * <p>The job ID.</p>

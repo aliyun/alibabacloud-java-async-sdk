@@ -60,6 +60,10 @@ public class ChannelAssemblyScheduleData extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adBreaks
      */
@@ -125,6 +129,20 @@ public class ChannelAssemblyScheduleData extends TeaModel {
         private String sourceLocationName; 
         private String sourceName; 
         private String sourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChannelAssemblyScheduleData model) {
+            this.adBreaks = model.adBreaks;
+            this.approximateDurationSeconds = model.approximateDurationSeconds;
+            this.approximateStartTime = model.approximateStartTime;
+            this.entryType = model.entryType;
+            this.programName = model.programName;
+            this.sourceLocationName = model.sourceLocationName;
+            this.sourceName = model.sourceName;
+            this.sourceType = model.sourceType;
+        } 
 
         /**
          * AdBreaks.
@@ -287,6 +305,18 @@ public class ChannelAssemblyScheduleData extends TeaModel {
             private String sourceName; 
             private String spliceInsertSettings; 
             private String timeSignalSettings; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdBreaks model) {
+                this.messageType = model.messageType;
+                this.offsetMillis = model.offsetMillis;
+                this.sourceLocationName = model.sourceLocationName;
+                this.sourceName = model.sourceName;
+                this.spliceInsertSettings = model.spliceInsertSettings;
+                this.timeSignalSettings = model.timeSignalSettings;
+            } 
 
             /**
              * MessageType.

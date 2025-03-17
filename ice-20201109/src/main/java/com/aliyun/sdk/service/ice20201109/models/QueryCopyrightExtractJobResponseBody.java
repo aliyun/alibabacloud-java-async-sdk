@@ -44,6 +44,10 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCopyrightExtractJobResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Data.
@@ -150,6 +164,13 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+            } 
 
             /**
              * Message.

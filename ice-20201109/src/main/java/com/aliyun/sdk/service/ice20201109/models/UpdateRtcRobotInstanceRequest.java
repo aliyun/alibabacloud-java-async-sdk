@@ -40,7 +40,7 @@ public class UpdateRtcRobotInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,6 +157,15 @@ public class UpdateRtcRobotInstanceRequest extends Request {
             private Boolean enableVoiceInterrupt; 
             private String greeting; 
             private String voiceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.enableVoiceInterrupt = model.enableVoiceInterrupt;
+                this.greeting = model.greeting;
+                this.voiceId = model.voiceId;
+            } 
 
             /**
              * EnableVoiceInterrupt.

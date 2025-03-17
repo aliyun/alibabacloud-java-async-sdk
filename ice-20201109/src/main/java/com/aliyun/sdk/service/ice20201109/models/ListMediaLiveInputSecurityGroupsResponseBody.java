@@ -48,6 +48,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SecurityGroups> securityGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediaLiveInputSecurityGroupsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.securityGroups = model.securityGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -227,6 +242,17 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
             private String name; 
             private String securityGroupId; 
             private java.util.List<String> whitelistRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroups model) {
+                this.createTime = model.createTime;
+                this.inputIds = model.inputIds;
+                this.name = model.name;
+                this.securityGroupId = model.securityGroupId;
+                this.whitelistRules = model.whitelistRules;
+            } 
 
             /**
              * <p>The time when the security group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

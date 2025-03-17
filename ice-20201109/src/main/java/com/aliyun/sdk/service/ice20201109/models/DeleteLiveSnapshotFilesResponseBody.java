@@ -36,6 +36,10 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deleteFileResultList
      */
@@ -53,6 +57,14 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DeleteFileResultList> deleteFileResultList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteLiveSnapshotFilesResponseBody model) {
+            this.deleteFileResultList = model.deleteFileResultList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of deleted files.</p>
@@ -122,6 +134,14 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTimestamp; 
             private String result; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteFileResultList model) {
+                this.createTimestamp = model.createTimestamp;
+                this.result = model.result;
+            } 
 
             /**
              * <p>The time when the file was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

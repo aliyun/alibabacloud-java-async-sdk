@@ -48,6 +48,10 @@ public class ListSchedulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class ListSchedulesResponseBody extends TeaModel {
         private java.util.List<ChannelAssemblyScheduleData> programs; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSchedulesResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.programs = model.programs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>

@@ -56,7 +56,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,6 +224,14 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String inputUrl; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamInput model) {
+                this.inputUrl = model.inputUrl;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The URL of the input stream.</p>
              * <p>This parameter is required.</p>
@@ -299,6 +307,14 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimedConfig model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The stop time of the transcoding job. Note: The time span between the stop time and the current time cannot exceed seven days.</p>
              * 
@@ -373,6 +389,14 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         public static final class Builder {
             private String domainName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeOutput model) {
+                this.domainName = model.domainName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The streaming domain name of ApsaraVideo Live.</p>

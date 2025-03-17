@@ -48,6 +48,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return inputs
      */
@@ -89,6 +93,17 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediaLiveInputsResponseBody model) {
+            this.inputs = model.inputs;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The inputs.</p>
@@ -239,6 +254,18 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             private String monitorUrl; 
             private String sourceUrl; 
             private String streamName; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputInfos model) {
+                this.destHost = model.destHost;
+                this.flowId = model.flowId;
+                this.flowOutputName = model.flowOutputName;
+                this.monitorUrl = model.monitorUrl;
+                this.sourceUrl = model.sourceUrl;
+                this.streamName = model.streamName;
+            } 
 
             /**
              * <p>The endpoint that the stream is pushed to. This parameter is returned for PUSH inputs.</p>
@@ -410,6 +437,19 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> securityGroupIds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.channelIds = model.channelIds;
+                this.createTime = model.createTime;
+                this.inputId = model.inputId;
+                this.inputInfos = model.inputInfos;
+                this.name = model.name;
+                this.securityGroupIds = model.securityGroupIds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IDs of the channels associated with the input.</p>

@@ -56,6 +56,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         private String requestId; 
         private String searchLibName; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySearchIndexResponseBody model) {
+            this.code = model.code;
+            this.indexStatus = model.indexStatus;
+            this.indexType = model.indexType;
+            this.mediaTotal = model.mediaTotal;
+            this.requestId = model.requestId;
+            this.searchLibName = model.searchLibName;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>

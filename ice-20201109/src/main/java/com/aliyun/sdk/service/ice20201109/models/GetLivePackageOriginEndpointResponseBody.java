@@ -36,6 +36,10 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return livePackageOriginEndpoint
      */
@@ -53,6 +57,14 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
     public static final class Builder {
         private LivePackageOriginEndpoint livePackageOriginEndpoint; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLivePackageOriginEndpointResponseBody model) {
+            this.livePackageOriginEndpoint = model.livePackageOriginEndpoint;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the origin endpoints.</p>
@@ -254,6 +266,25 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
             private String manifestName; 
             private String protocol; 
             private Integer timeshiftVision; 
+
+            private Builder() {
+            } 
+
+            private Builder(LivePackageOriginEndpoint model) {
+                this.authorizationCode = model.authorizationCode;
+                this.channelName = model.channelName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.endpointName = model.endpointName;
+                this.endpointUrl = model.endpointUrl;
+                this.groupName = model.groupName;
+                this.ipBlacklist = model.ipBlacklist;
+                this.ipWhitelist = model.ipWhitelist;
+                this.lastModified = model.lastModified;
+                this.manifestName = model.manifestName;
+                this.protocol = model.protocol;
+                this.timeshiftVision = model.timeshiftVision;
+            } 
 
             /**
              * <p>The authorization code.</p>

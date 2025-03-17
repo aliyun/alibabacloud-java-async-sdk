@@ -40,6 +40,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExists
      */
@@ -65,6 +69,15 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
         private java.util.List<String> nonExists; 
         private String requestId; 
         private java.util.List<URLUploadInfoList> URLUploadInfoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUrlUploadInfosResponseBody model) {
+            this.nonExists = model.nonExists;
+            this.requestId = model.requestId;
+            this.URLUploadInfoList = model.URLUploadInfoList;
+        } 
 
         /**
          * <p>The job IDs or upload URLs that do not exist.</p>
@@ -238,6 +251,22 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             private String status; 
             private String uploadURL; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(URLUploadInfoList model) {
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.fileSize = model.fileSize;
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.status = model.status;
+                this.uploadURL = model.uploadURL;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

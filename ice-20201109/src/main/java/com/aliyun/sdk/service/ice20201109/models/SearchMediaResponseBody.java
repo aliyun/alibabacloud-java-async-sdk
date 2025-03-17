@@ -52,6 +52,10 @@ public class SearchMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SearchMediaResponseBody extends TeaModel {
         private String scrollToken; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaResponseBody model) {
+            this.code = model.code;
+            this.mediaInfoList = model.mediaInfoList;
+            this.requestId = model.requestId;
+            this.scrollToken = model.scrollToken;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -226,6 +242,15 @@ public class SearchMediaResponseBody extends TeaModel {
             private String position; 
             private Double size; 
             private Double timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tracks model) {
+                this.position = model.position;
+                this.size = model.size;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The coordinates of the bounding box.</p>
@@ -406,6 +431,22 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double to; 
             private java.util.List<Tracks> tracks; 
             private String clipId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Occurrences model) {
+                this.content = model.content;
+                this.finegrainId = model.finegrainId;
+                this.finegrainName = model.finegrainName;
+                this.from = model.from;
+                this.image = model.image;
+                this.score = model.score;
+                this.tableBatchSeqId = model.tableBatchSeqId;
+                this.to = model.to;
+                this.tracks = model.tracks;
+                this.clipId = model.clipId;
+            } 
 
             /**
              * <p>The text content.</p>
@@ -619,6 +660,19 @@ public class SearchMediaResponseBody extends TeaModel {
             private java.util.List<Occurrences> occurrences; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(AiLabelInfo model) {
+                this.category = model.category;
+                this.faceId = model.faceId;
+                this.labelId = model.labelId;
+                this.labelName = model.labelName;
+                this.labelType = model.labelType;
+                this.occurrences = model.occurrences;
+                this.source = model.source;
+            } 
+
             /**
              * <p>The category.</p>
              */
@@ -771,6 +825,17 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double timestamp; 
             private Double to; 
 
+            private Builder() {
+            } 
+
+            private Builder(AsrInfo model) {
+                this.clipId = model.clipId;
+                this.content = model.content;
+                this.from = model.from;
+                this.timestamp = model.timestamp;
+                this.to = model.to;
+            } 
+
             /**
              * <p>The ID of the clip.</p>
              * 
@@ -910,6 +975,17 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double timestamp; 
             private Double to; 
 
+            private Builder() {
+            } 
+
+            private Builder(OcrInfo model) {
+                this.clipId = model.clipId;
+                this.content = model.content;
+                this.from = model.from;
+                this.timestamp = model.timestamp;
+                this.to = model.to;
+            } 
+
             /**
              * <p>The ID of the clip.</p>
              * 
@@ -1025,6 +1101,15 @@ public class SearchMediaResponseBody extends TeaModel {
             private java.util.List<AsrInfo> asrInfo; 
             private java.util.List<OcrInfo> ocrInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(AiData model) {
+                this.aiLabelInfo = model.aiLabelInfo;
+                this.asrInfo = model.asrInfo;
+                this.ocrInfo = model.ocrInfo;
+            } 
+
             /**
              * <p>The tags of the intelligent AI job.</p>
              */
@@ -1135,6 +1220,17 @@ public class SearchMediaResponseBody extends TeaModel {
             private String result; 
             private String saveType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiRoughData model) {
+                this.aiCategory = model.aiCategory;
+                this.aiJobId = model.aiJobId;
+                this.result = model.result;
+                this.saveType = model.saveType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>TV Series</p>
@@ -1374,6 +1470,25 @@ public class SearchMediaResponseBody extends TeaModel {
             private String region; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileBasicInfo model) {
+                this.bitrate = model.bitrate;
+                this.createTime = model.createTime;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileStatus = model.fileStatus;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+                this.formatName = model.formatName;
+                this.height = model.height;
+                this.modifiedTime = model.modifiedTime;
+                this.region = model.region;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate of the file.</p>
              * 
@@ -1556,6 +1671,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public static final class Builder {
             private FileBasicInfo fileBasicInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileInfoList model) {
+                this.fileBasicInfo = model.fileBasicInfo;
+            } 
+
             /**
              * <p>The basic information about the file, such as the duration and size.</p>
              */
@@ -1614,6 +1736,14 @@ public class SearchMediaResponseBody extends TeaModel {
         public static final class Builder {
             private String indexStatus; 
             private String indexType; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexStatusList model) {
+                this.indexStatus = model.indexStatus;
+                this.indexType = model.indexType;
+            } 
 
             /**
              * IndexStatus.
@@ -1933,6 +2063,35 @@ public class SearchMediaResponseBody extends TeaModel {
             private String transcodeStatus; 
             private String uploadSource; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaBasicInfo model) {
+                this.biz = model.biz;
+                this.businessType = model.businessType;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.category = model.category;
+                this.coverURL = model.coverURL;
+                this.createTime = model.createTime;
+                this.deletedTime = model.deletedTime;
+                this.description = model.description;
+                this.inputURL = model.inputURL;
+                this.mediaId = model.mediaId;
+                this.mediaTags = model.mediaTags;
+                this.mediaType = model.mediaType;
+                this.modifiedTime = model.modifiedTime;
+                this.referenceId = model.referenceId;
+                this.snapshots = model.snapshots;
+                this.source = model.source;
+                this.spriteImages = model.spriteImages;
+                this.status = model.status;
+                this.title = model.title;
+                this.transcodeStatus = model.transcodeStatus;
+                this.uploadSource = model.uploadSource;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The business to which the media asset belongs.</p>
@@ -2276,6 +2435,18 @@ public class SearchMediaResponseBody extends TeaModel {
             private java.util.List<IndexStatusList> indexStatusList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfoList model) {
+                this.aiData = model.aiData;
+                this.aiRoughData = model.aiRoughData;
+                this.fileInfoList = model.fileInfoList;
+                this.indexStatusList = model.indexStatusList;
+                this.mediaBasicInfo = model.mediaBasicInfo;
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * <p>The details of the intelligent AI job.</p>

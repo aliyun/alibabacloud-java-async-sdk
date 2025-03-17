@@ -50,7 +50,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,6 +199,14 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The media object.</p>
              * <ul>
@@ -286,6 +294,14 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the MPS queue to which the job was submitted.</p>

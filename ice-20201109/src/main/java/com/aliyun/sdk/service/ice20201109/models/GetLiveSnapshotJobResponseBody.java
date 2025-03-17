@@ -84,6 +84,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callbackUrl
      */
@@ -197,6 +201,26 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         private String templateId; 
         private String templateName; 
         private Integer timeInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveSnapshotJobResponseBody model) {
+            this.callbackUrl = model.callbackUrl;
+            this.createTime = model.createTime;
+            this.jobId = model.jobId;
+            this.jobName = model.jobName;
+            this.lastModified = model.lastModified;
+            this.overwriteFormat = model.overwriteFormat;
+            this.requestId = model.requestId;
+            this.sequenceFormat = model.sequenceFormat;
+            this.snapshotOutput = model.snapshotOutput;
+            this.status = model.status;
+            this.streamInput = model.streamInput;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+            this.timeInterval = model.timeInterval;
+        } 
 
         /**
          * <p>The snapshot callback URL.</p>
@@ -408,6 +432,15 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             private String endpoint; 
             private String storageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotOutput model) {
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.storageType = model.storageType;
+            } 
+
             /**
              * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
              * 
@@ -491,6 +524,14 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInput model) {
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The type of the input stream. The value can only be rtmp.</p>

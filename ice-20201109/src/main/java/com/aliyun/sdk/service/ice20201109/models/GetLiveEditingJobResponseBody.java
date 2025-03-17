@@ -36,6 +36,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return liveEditingJob
      */
@@ -53,6 +57,14 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     public static final class Builder {
         private LiveEditingJob liveEditingJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveEditingJobResponseBody model) {
+            this.liveEditingJob = model.liveEditingJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the live editing job.</p>
@@ -135,6 +147,15 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private String domainName; 
             private String streamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamConfig model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.streamName = model.streamName;
+            } 
+
             /**
              * <p>The name of the application to which the live stream belongs.</p>
              * 
@@ -206,6 +227,13 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaProduceConfig model) {
+                this.mode = model.mode;
+            } 
 
             /**
              * <p>The editing mode. Default value: Accurate.</p>
@@ -328,6 +356,19 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private String storageLocation; 
             private String vodTemplateGroupId; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputMediaConfig model) {
+                this.bitrate = model.bitrate;
+                this.fileName = model.fileName;
+                this.height = model.height;
+                this.mediaURL = model.mediaURL;
+                this.storageLocation = model.storageLocation;
+                this.vodTemplateGroupId = model.vodTemplateGroupId;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The bitrate of the output file. Unit: Kbit/s. You can leave this parameter empty. The default value is the maximum bitrate of the input materials.</p>
@@ -612,6 +653,27 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private String projectId; 
             private String status; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveEditingJob model) {
+                this.clips = model.clips;
+                this.code = model.code;
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.jobId = model.jobId;
+                this.liveStreamConfig = model.liveStreamConfig;
+                this.mediaId = model.mediaId;
+                this.mediaProduceConfig = model.mediaProduceConfig;
+                this.mediaURL = model.mediaURL;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.outputMediaConfig = model.outputMediaConfig;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The clips.</p>

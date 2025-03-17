@@ -36,6 +36,10 @@ public class CreatePipelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pipeline
      */
@@ -53,6 +57,14 @@ public class CreatePipelineResponseBody extends TeaModel {
     public static final class Builder {
         private Pipeline pipeline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePipelineResponseBody model) {
+            this.pipeline = model.pipeline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the MPS queue.</p>
@@ -182,6 +194,19 @@ public class CreatePipelineResponseBody extends TeaModel {
             private Integer priority; 
             private String speed; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pipeline model) {
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+                this.speed = model.speed;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

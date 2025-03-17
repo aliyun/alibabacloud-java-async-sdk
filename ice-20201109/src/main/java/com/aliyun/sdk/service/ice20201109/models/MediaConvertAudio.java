@@ -52,6 +52,10 @@ public class MediaConvertAudio extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bitrate
      */
@@ -101,6 +105,18 @@ public class MediaConvertAudio extends TeaModel {
         private String profile; 
         private Boolean remove; 
         private String samplerate; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertAudio model) {
+            this.bitrate = model.bitrate;
+            this.channels = model.channels;
+            this.codec = model.codec;
+            this.profile = model.profile;
+            this.remove = model.remove;
+            this.samplerate = model.samplerate;
+        } 
 
         /**
          * Bitrate.

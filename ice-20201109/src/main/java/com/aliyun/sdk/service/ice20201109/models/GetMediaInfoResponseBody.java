@@ -36,6 +36,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaInfo
      */
@@ -53,6 +57,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
     public static final class Builder {
         private MediaInfo mediaInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaInfoResponseBody model) {
+            this.mediaInfo = model.mediaInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the media asset.</p>
@@ -122,6 +134,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String data; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.data = model.data;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The result data. The value is a JSON string. For information about the data structures of different data types&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-querysmarttagjob?spm=a2c4g.11186623.0.0.521d48b7KfapOL#api-detail-40">Description of the Results parameter</a>.</p>
@@ -222,6 +242,16 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String resultUrl; 
             private java.util.List<Results> results; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StandardSmartTagJob model) {
+                this.aiJobId = model.aiJobId;
+                this.resultUrl = model.resultUrl;
+                this.results = model.results;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the AI task.</p>
@@ -367,6 +397,18 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String saveType; 
             private StandardSmartTagJob standardSmartTagJob; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiRoughData model) {
+                this.aiCategory = model.aiCategory;
+                this.aiJobId = model.aiJobId;
+                this.result = model.result;
+                this.saveType = model.saveType;
+                this.standardSmartTagJob = model.standardSmartTagJob;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The AI category. Valid values:</p>
@@ -693,6 +735,30 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String sampleRate; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamInfoList model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.profile = model.profile;
+                this.sampleFmt = model.sampleFmt;
+                this.sampleRate = model.sampleRate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * <p>The bitrate.</p>
@@ -1075,6 +1141,25 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String region; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileBasicInfo model) {
+                this.bitrate = model.bitrate;
+                this.createTime = model.createTime;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileStatus = model.fileStatus;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+                this.formatName = model.formatName;
+                this.height = model.height;
+                this.modifiedTime = model.modifiedTime;
+                this.region = model.region;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate.</p>
              * 
@@ -1364,6 +1449,22 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String lang; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStreamInfoList model) {
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * <p>The full name of the codec.</p>
@@ -1790,6 +1891,36 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String timebase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamInfoList model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.nbFrames = model.nbFrames;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average video frame rate.</p>
              * 
@@ -2129,6 +2260,16 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList; 
             private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileInfoList model) {
+                this.audioStreamInfoList = model.audioStreamInfoList;
+                this.fileBasicInfo = model.fileBasicInfo;
+                this.subtitleStreamInfoList = model.subtitleStreamInfoList;
+                this.videoStreamInfoList = model.videoStreamInfoList;
+            } 
+
             /**
              * <p>The information about the audio tracks. A media asset may have multiple audio tracks.</p>
              */
@@ -2452,6 +2593,34 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String uploadSource; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaBasicInfo model) {
+                this.biz = model.biz;
+                this.businessType = model.businessType;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.category = model.category;
+                this.coverURL = model.coverURL;
+                this.createTime = model.createTime;
+                this.deletedTime = model.deletedTime;
+                this.description = model.description;
+                this.inputURL = model.inputURL;
+                this.mediaId = model.mediaId;
+                this.mediaTags = model.mediaTags;
+                this.mediaType = model.mediaType;
+                this.modifiedTime = model.modifiedTime;
+                this.referenceId = model.referenceId;
+                this.snapshots = model.snapshots;
+                this.source = model.source;
+                this.spriteImages = model.spriteImages;
+                this.status = model.status;
+                this.title = model.title;
+                this.uploadSource = model.uploadSource;
+                this.userData = model.userData;
+            } 
+
             /**
              * <p>The service to which the media asset belongs.</p>
              * 
@@ -2760,6 +2929,16 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfo model) {
+                this.aiRoughData = model.aiRoughData;
+                this.fileInfoList = model.fileInfoList;
+                this.mediaBasicInfo = model.mediaBasicInfo;
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * <p>The original AI analysis data.</p>

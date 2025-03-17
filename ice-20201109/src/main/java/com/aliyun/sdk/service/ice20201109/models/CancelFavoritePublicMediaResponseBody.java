@@ -36,6 +36,10 @@ public class CancelFavoritePublicMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ignoredList
      */
@@ -53,6 +57,14 @@ public class CancelFavoritePublicMediaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> ignoredList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CancelFavoritePublicMediaResponseBody model) {
+            this.ignoredList = model.ignoredList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * IgnoredList.

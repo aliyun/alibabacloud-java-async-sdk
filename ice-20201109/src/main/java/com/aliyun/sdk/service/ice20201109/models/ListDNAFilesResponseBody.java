@@ -40,6 +40,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileList
      */
@@ -65,6 +69,15 @@ public class ListDNAFilesResponseBody extends TeaModel {
         private java.util.List<FileList> fileList; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDNAFilesResponseBody model) {
+            this.fileList = model.fileList;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried files.</p>
@@ -158,6 +171,15 @@ public class ListDNAFilesResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
              * 
@@ -241,6 +263,14 @@ public class ListDNAFilesResponseBody extends TeaModel {
         public static final class Builder {
             private InputFile inputFile; 
             private String primaryKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.inputFile = model.inputFile;
+                this.primaryKey = model.primaryKey;
+            } 
 
             /**
              * <p>The Object Storage Service (OSS) information about the input file.</p>

@@ -79,7 +79,7 @@ public class SubmitSmarttagJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -357,6 +357,14 @@ public class SubmitSmarttagJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>If Type is set to OSS, specify an OSS path. Example: OSS://test-bucket/video/202208/test.mp4.</p>
              * <p>If Type is set to Media, specify a media asset ID. Example: c5c62d8f0361337cab312dce8e77dc6d.</p>
@@ -436,6 +444,14 @@ public class SubmitSmarttagJobRequest extends Request {
         public static final class Builder {
             private String pipelineId; 
             private String priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which you want to submit the smart tagging job. The MPS queue is bound to an SMQ queue. This parameter specifies the default MPS queue. By default, an MPS queue can process a maximum of two concurrent smart tagging jobs. To increase the limit, submit a ticket.</p>

@@ -48,6 +48,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaByMultimodalResponseBody model) {
+            this.code = model.code;
+            this.mediaList = model.mediaList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -204,6 +219,15 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
             private Double score; 
             private Double to; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClipInfo model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.to = model.to;
+            } 
+
             /**
              * <p>The start time of the clip.</p>
              * 
@@ -287,6 +311,14 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ClipInfo> clipInfo; 
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaList model) {
+                this.clipInfo = model.clipInfo;
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * <p>The information about the clip.</p>

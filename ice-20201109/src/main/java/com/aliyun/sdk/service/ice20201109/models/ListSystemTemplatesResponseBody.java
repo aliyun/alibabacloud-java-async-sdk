@@ -40,6 +40,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SystemTemplateList> systemTemplateList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSystemTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.systemTemplateList = model.systemTemplateList;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -217,6 +230,20 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             private String templateName; 
             private Integer type; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemTemplateList model) {
+                this.status = model.status;
+                this.subtype = model.subtype;
+                this.subtypeName = model.subtypeName;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.type = model.type;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The template state.</p>

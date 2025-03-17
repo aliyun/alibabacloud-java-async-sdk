@@ -48,6 +48,10 @@ public class GetVideoListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetVideoListResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVideoListResponseBody model) {
+            this.code = model.code;
+            this.mediaList = model.mediaList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -351,6 +366,27 @@ public class GetVideoListResponseBody extends TeaModel {
             private String storageLocation; 
             private String tags; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaList model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverUrl = model.coverUrl;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.mediaId = model.mediaId;
+                this.modificationTime = model.modificationTime;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The ID of the application. Default value: app-1000000.</p>

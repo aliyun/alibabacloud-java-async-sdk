@@ -36,6 +36,10 @@ public class GetSourceLocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSourceLocationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ChannelAssemblySourceLocation sourceLocation; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSourceLocationResponseBody model) {
+            this.requestId = model.requestId;
+            this.sourceLocation = model.sourceLocation;
+        } 
 
         /**
          * <p><strong>Request ID</strong></p>

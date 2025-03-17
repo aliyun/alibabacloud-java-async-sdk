@@ -48,6 +48,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         private java.util.List<ProjectList> projectList; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchEditingProjectResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.projectList = model.projectList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned on a single page. The value is set to the maximum number of entries returned on each page except for the last page.</p>
@@ -373,6 +388,29 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             private String templateType; 
             private String timeline; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectList model) {
+                this.businessConfig = model.businessConfig;
+                this.businessStatus = model.businessStatus;
+                this.coverURL = model.coverURL;
+                this.createSource = model.createSource;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.modifiedSource = model.modifiedSource;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.projectType = model.projectType;
+                this.status = model.status;
+                this.templateType = model.templateType;
+                this.timeline = model.timeline;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The business configuration of the project. This parameter can be ignored for general editing projects.</p>

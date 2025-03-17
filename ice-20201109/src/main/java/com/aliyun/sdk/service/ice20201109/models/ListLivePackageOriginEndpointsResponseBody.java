@@ -52,6 +52,10 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return livePackageOriginEndpoints
      */
@@ -101,6 +105,18 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLivePackageOriginEndpointsResponseBody model) {
+            this.livePackageOriginEndpoints = model.livePackageOriginEndpoints;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The origin endpoints returned.</p>
@@ -346,6 +362,25 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
             private String manifestName; 
             private String protocol; 
             private Integer timeshiftVision; 
+
+            private Builder() {
+            } 
+
+            private Builder(LivePackageOriginEndpoints model) {
+                this.authorizationCode = model.authorizationCode;
+                this.channelName = model.channelName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.endpointName = model.endpointName;
+                this.endpointUrl = model.endpointUrl;
+                this.groupName = model.groupName;
+                this.ipBlacklist = model.ipBlacklist;
+                this.ipWhitelist = model.ipWhitelist;
+                this.lastModified = model.lastModified;
+                this.manifestName = model.manifestName;
+                this.protocol = model.protocol;
+                this.timeshiftVision = model.timeshiftVision;
+            } 
 
             /**
              * <p>The authorization code.</p>

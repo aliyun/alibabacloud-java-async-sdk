@@ -40,6 +40,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomizedVoicesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -210,6 +223,19 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             private String voiceId; 
             private String voiceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomizedVoiceList model) {
+                this.demoAudioMediaId = model.demoAudioMediaId;
+                this.gender = model.gender;
+                this.scenario = model.scenario;
+                this.type = model.type;
+                this.voiceDesc = model.voiceDesc;
+                this.voiceId = model.voiceId;
+                this.voiceName = model.voiceName;
+            } 
+
             /**
              * <p>The media asset ID of the sample audio file.</p>
              * 
@@ -347,6 +373,14 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CustomizedVoiceList> customizedVoiceList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customizedVoiceList = model.customizedVoiceList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The queried personalized human voices.</p>

@@ -44,6 +44,10 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -77,6 +81,16 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         private String description; 
         private String requestId; 
         private Integer retCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaConnectFlowOutputResponseBody model) {
+            this.content = model.content;
+            this.description = model.description;
+            this.requestId = model.requestId;
+            this.retCode = model.retCode;
+        } 
 
         /**
          * <p>The response body.</p>
@@ -276,6 +290,23 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
             private Integer srtLatency; 
             private String srtPassphrase; 
             private Integer srtPbkeyLen; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cidrs = model.cidrs;
+                this.createTime = model.createTime;
+                this.outputName = model.outputName;
+                this.outputProtocol = model.outputProtocol;
+                this.outputUrl = model.outputUrl;
+                this.pairFlowId = model.pairFlowId;
+                this.pairInputName = model.pairInputName;
+                this.playerLimit = model.playerLimit;
+                this.srtLatency = model.srtLatency;
+                this.srtPassphrase = model.srtPassphrase;
+                this.srtPbkeyLen = model.srtPbkeyLen;
+            } 
 
             /**
              * <p>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</p>

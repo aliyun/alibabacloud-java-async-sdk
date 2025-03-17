@@ -44,6 +44,10 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return editingBatchJobList
      */
@@ -77,6 +81,16 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBatchMediaProducingJobsResponseBody model) {
+            this.editingBatchJobList = model.editingBatchJobList;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried quick video production jobs.</p>
@@ -277,6 +291,23 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
             private String outputConfig; 
             private String status; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(EditingBatchJobList model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.editingConfig = model.editingConfig;
+                this.extend = model.extend;
+                this.inputConfig = model.inputConfig;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.modifiedTime = model.modifiedTime;
+                this.outputConfig = model.outputConfig;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

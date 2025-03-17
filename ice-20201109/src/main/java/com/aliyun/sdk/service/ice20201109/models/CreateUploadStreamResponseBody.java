@@ -48,6 +48,10 @@ public class CreateUploadStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileURL
      */
@@ -89,6 +93,17 @@ public class CreateUploadStreamResponseBody extends TeaModel {
         private String requestId; 
         private String uploadAddress; 
         private String uploadAuth; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUploadStreamResponseBody model) {
+            this.fileURL = model.fileURL;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+            this.uploadAddress = model.uploadAddress;
+            this.uploadAuth = model.uploadAuth;
+        } 
 
         /**
          * <p>The Object Storage Service (OSS) URL of the file. The URL does not contain the information used for authentication.</p>

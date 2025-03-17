@@ -54,7 +54,7 @@ public class CreateVodPackagingAssetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -222,6 +222,14 @@ public class CreateVodPackagingAssetRequest extends Request {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>

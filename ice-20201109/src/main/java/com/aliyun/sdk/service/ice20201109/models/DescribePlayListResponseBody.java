@@ -48,6 +48,10 @@ public class DescribePlayListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNum
      */
@@ -89,6 +93,17 @@ public class DescribePlayListResponseBody extends TeaModel {
         private java.util.List<PlayList> playList; 
         private String requestId; 
         private Long totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlayListResponseBody model) {
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.playList = model.playList;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * PageNum.
@@ -278,6 +293,22 @@ public class DescribePlayListResponseBody extends TeaModel {
             private String traceId; 
             private String videoDuration; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlayList model) {
+                this.firstFrameDuration = model.firstFrameDuration;
+                this.playDuration = model.playDuration;
+                this.playTs = model.playTs;
+                this.playType = model.playType;
+                this.sessionId = model.sessionId;
+                this.status = model.status;
+                this.stuckDuration = model.stuckDuration;
+                this.traceId = model.traceId;
+                this.videoDuration = model.videoDuration;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * FirstFrameDuration.

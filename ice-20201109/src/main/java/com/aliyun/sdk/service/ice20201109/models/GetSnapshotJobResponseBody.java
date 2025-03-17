@@ -36,6 +36,10 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SnapshotJob snapshotJob; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSnapshotJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotJob = model.snapshotJob;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The OSS bucket.</p>
@@ -230,6 +251,15 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String media; 
             private OssFile ossFile; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.ossFile = model.ossFile;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
@@ -332,6 +362,15 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputOssFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The OSS bucket.</p>
              * 
@@ -427,6 +466,15 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String media; 
             private OutputOssFile ossFile; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.ossFile = model.ossFile;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
@@ -721,6 +769,31 @@ public class GetSnapshotJobResponseBody extends TeaModel {
             private String triggerSource; 
             private String type; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotJob model) {
+                this.async = model.async;
+                this.code = model.code;
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.output = model.output;
+                this.pipelineId = model.pipelineId;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.triggerSource = model.triggerSource;
+                this.type = model.type;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>Indicates whether the snapshots were captured in asynchronous mode. Default value: true.</p>

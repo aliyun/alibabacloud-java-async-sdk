@@ -36,6 +36,10 @@ public class GetSystemTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSystemTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SystemTemplate systemTemplate; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSystemTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.systemTemplate = model.systemTemplate;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -194,6 +206,20 @@ public class GetSystemTemplateResponseBody extends TeaModel {
             private String templateName; 
             private Integer type; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemTemplate model) {
+                this.status = model.status;
+                this.subtype = model.subtype;
+                this.subtypeName = model.subtypeName;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.type = model.type;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The template state.</p>

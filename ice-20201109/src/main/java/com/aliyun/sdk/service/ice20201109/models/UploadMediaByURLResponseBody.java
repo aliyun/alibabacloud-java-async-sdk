@@ -36,6 +36,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UploadJobs> uploadJobs; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadMediaByURLResponseBody model) {
+            this.requestId = model.requestId;
+            this.uploadJobs = model.uploadJobs;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             private String jobId; 
             private String mediaId; 
             private String sourceURL; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadJobs model) {
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.sourceURL = model.sourceURL;
+            } 
 
             /**
              * <p>The ID of the upload job.</p>

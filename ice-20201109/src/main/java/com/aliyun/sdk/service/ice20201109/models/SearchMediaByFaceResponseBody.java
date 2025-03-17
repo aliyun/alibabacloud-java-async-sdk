@@ -48,6 +48,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaByFaceResponseBody model) {
+            this.code = model.code;
+            this.mediaInfoList = model.mediaInfoList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -179,6 +194,13 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfoList model) {
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * <p>The ID of the media asset.</p>

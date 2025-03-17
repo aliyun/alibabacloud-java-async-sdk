@@ -36,6 +36,10 @@ public class CreateMediaLiveInputSecurityGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateMediaLiveInputSecurityGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String securityGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMediaLiveInputSecurityGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityGroupId = model.securityGroupId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

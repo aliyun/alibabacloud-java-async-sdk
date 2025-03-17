@@ -72,6 +72,10 @@ public class LicenseInstanceAppDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -161,6 +165,23 @@ public class LicenseInstanceAppDTO extends TeaModel {
         private String modificationTime; 
         private String status; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(LicenseInstanceAppDTO model) {
+            this.appId = model.appId;
+            this.beginOn = model.beginOn;
+            this.contractNo = model.contractNo;
+            this.creationTime = model.creationTime;
+            this.expiredOn = model.expiredOn;
+            this.instanceId = model.instanceId;
+            this.itemId = model.itemId;
+            this.licenseConfigs = model.licenseConfigs;
+            this.modificationTime = model.modificationTime;
+            this.status = model.status;
+            this.userId = model.userId;
+        } 
 
         /**
          * AppId.
@@ -371,6 +392,20 @@ public class LicenseInstanceAppDTO extends TeaModel {
             private String subscription; 
             private String subscriptionImp; 
             private String subscriptionPkg; 
+
+            private Builder() {
+            } 
+
+            private Builder(LicenseConfigs model) {
+                this.businessType = model.businessType;
+                this.featureIds = model.featureIds;
+                this.isTrial = model.isTrial;
+                this.sdkId = model.sdkId;
+                this.sdkName = model.sdkName;
+                this.subscription = model.subscription;
+                this.subscriptionImp = model.subscriptionImp;
+                this.subscriptionPkg = model.subscriptionPkg;
+            } 
 
             /**
              * BusinessType.

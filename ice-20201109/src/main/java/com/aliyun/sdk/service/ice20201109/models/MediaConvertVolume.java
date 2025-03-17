@@ -48,6 +48,10 @@ public class MediaConvertVolume extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return integratedLoudnessTarget
      */
@@ -89,6 +93,17 @@ public class MediaConvertVolume extends TeaModel {
         private Integer loudnessRangeTarget; 
         private String method; 
         private Integer truePeak; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertVolume model) {
+            this.integratedLoudnessTarget = model.integratedLoudnessTarget;
+            this.level = model.level;
+            this.loudnessRangeTarget = model.loudnessRangeTarget;
+            this.method = model.method;
+            this.truePeak = model.truePeak;
+        } 
 
         /**
          * IntegratedLoudnessTarget.

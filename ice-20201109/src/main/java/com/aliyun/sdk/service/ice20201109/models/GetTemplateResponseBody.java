@@ -36,6 +36,10 @@ public class GetTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Template template; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -266,6 +278,26 @@ public class GetTemplateResponseBody extends TeaModel {
             private String status; 
             private String templateId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.clipsParam = model.clipsParam;
+                this.config = model.config;
+                this.coverURL = model.coverURL;
+                this.createSource = model.createSource;
+                this.creationTime = model.creationTime;
+                this.modifiedSource = model.modifiedSource;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.previewMedia = model.previewMedia;
+                this.previewMediaStatus = model.previewMediaStatus;
+                this.relatedMediaids = model.relatedMediaids;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The clip parameters for submitting a video production job. You can replace mediaId and text with real values to submit a job. References:</p>

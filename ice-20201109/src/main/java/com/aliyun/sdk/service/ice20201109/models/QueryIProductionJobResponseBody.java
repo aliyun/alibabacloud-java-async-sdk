@@ -92,6 +92,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -221,6 +225,28 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         private String status; 
         private String templateId; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryIProductionJobResponseBody model) {
+            this.createTime = model.createTime;
+            this.finishTime = model.finishTime;
+            this.functionName = model.functionName;
+            this.input = model.input;
+            this.jobId = model.jobId;
+            this.jobParams = model.jobParams;
+            this.name = model.name;
+            this.output = model.output;
+            this.outputFiles = model.outputFiles;
+            this.outputUrls = model.outputUrls;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.scheduleConfig = model.scheduleConfig;
+            this.status = model.status;
+            this.templateId = model.templateId;
+            this.userData = model.userData;
+        } 
 
         /**
          * <p>The time when the job was created.</p>
@@ -439,6 +465,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The input file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
              * <ol>
@@ -520,6 +554,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
              * <ol>
@@ -600,6 +642,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>

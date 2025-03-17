@@ -36,6 +36,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaInfos
      */
@@ -53,6 +57,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MediaInfos> mediaInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetMediaInfosResponseBody model) {
+            this.mediaInfos = model.mediaInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried media assets.</p>
@@ -231,6 +243,23 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String region; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileBasicInfo model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileStatus = model.fileStatus;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+                this.formatName = model.formatName;
+                this.height = model.height;
+                this.region = model.region;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate.</p>
              * 
@@ -390,6 +419,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
         public static final class Builder {
             private FileBasicInfo fileBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileInfoList model) {
+                this.fileBasicInfo = model.fileBasicInfo;
+            } 
 
             /**
              * <p>The basic information of the file, including the duration and size.</p>
@@ -641,6 +677,30 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String title; 
             private String transcodeStatus; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaBasicInfo model) {
+                this.businessType = model.businessType;
+                this.category = model.category;
+                this.coverURL = model.coverURL;
+                this.createTime = model.createTime;
+                this.deletedTime = model.deletedTime;
+                this.description = model.description;
+                this.inputURL = model.inputURL;
+                this.mediaId = model.mediaId;
+                this.mediaTags = model.mediaTags;
+                this.mediaType = model.mediaType;
+                this.modifiedTime = model.modifiedTime;
+                this.snapshots = model.snapshots;
+                this.source = model.source;
+                this.spriteImages = model.spriteImages;
+                this.status = model.status;
+                this.title = model.title;
+                this.transcodeStatus = model.transcodeStatus;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The business type of the media asset.</p>
@@ -896,6 +956,15 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfos model) {
+                this.fileInfoList = model.fileInfoList;
+                this.mediaBasicInfo = model.mediaBasicInfo;
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * <p>FileInfos</p>

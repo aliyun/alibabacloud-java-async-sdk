@@ -36,6 +36,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMeterImsEditUsageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The usage statistics of IMS on VOD editing.</p>
@@ -134,6 +146,15 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             private Long duration; 
             private String profile; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.duration = model.duration;
+                this.profile = model.profile;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The usage duration, in minutes.</p>

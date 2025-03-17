@@ -52,6 +52,10 @@ public class VodPackagingGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approximateAssetCount
      */
@@ -101,6 +105,18 @@ public class VodPackagingGroup extends TeaModel {
         private String description; 
         private String domainName; 
         private String groupName; 
+
+        private Builder() {
+        } 
+
+        private Builder(VodPackagingGroup model) {
+            this.approximateAssetCount = model.approximateAssetCount;
+            this.configurationCount = model.configurationCount;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.domainName = model.domainName;
+            this.groupName = model.groupName;
+        } 
 
         /**
          * ApproximateAssetCount.

@@ -36,6 +36,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaProducingJob
      */
@@ -53,6 +57,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
     public static final class Builder {
         private MediaProducingJob mediaProducingJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaProducingJobResponseBody model) {
+            this.mediaProducingJob = model.mediaProducingJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the online editing project.</p>
@@ -314,6 +326,30 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             private String timeline; 
             private String userData; 
             private String vodMediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaProducingJob model) {
+                this.clipsParam = model.clipsParam;
+                this.code = model.code;
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.duration = model.duration;
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.mediaURL = model.mediaURL;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.progress = model.progress;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.subJobMaterials = model.subJobMaterials;
+                this.templateId = model.templateId;
+                this.timeline = model.timeline;
+                this.userData = model.userData;
+                this.vodMediaId = model.vodMediaId;
+            } 
 
             /**
              * <p>The template parameters of the media editing and production job.</p>

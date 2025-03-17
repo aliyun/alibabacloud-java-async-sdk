@@ -36,6 +36,10 @@ public class MediaConvertInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return inputFile
      */
@@ -53,6 +57,14 @@ public class MediaConvertInput extends TeaModel {
     public static final class Builder {
         private MediaObject inputFile; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertInput model) {
+            this.inputFile = model.inputFile;
+            this.name = model.name;
+        } 
 
         /**
          * InputFile.

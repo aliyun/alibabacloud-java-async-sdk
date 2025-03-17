@@ -87,7 +87,7 @@ public class SubmitDNAJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -374,6 +374,14 @@ public class SubmitDNAJobRequest extends Request {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>

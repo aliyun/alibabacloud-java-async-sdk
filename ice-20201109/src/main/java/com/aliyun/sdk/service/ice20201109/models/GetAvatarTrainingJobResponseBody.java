@@ -40,6 +40,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAvatarTrainingJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned if the request was successful.</p>
@@ -278,6 +291,25 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
             private Boolean transparent; 
             private String video; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvatarTrainingJob model) {
+                this.avatarDescription = model.avatarDescription;
+                this.avatarId = model.avatarId;
+                this.avatarName = model.avatarName;
+                this.avatarType = model.avatarType;
+                this.firstTrainingTime = model.firstTrainingTime;
+                this.jobId = model.jobId;
+                this.lastTrainingTime = model.lastTrainingTime;
+                this.message = model.message;
+                this.portrait = model.portrait;
+                this.status = model.status;
+                this.thumbnail = model.thumbnail;
+                this.transparent = model.transparent;
+                this.video = model.video;
+            } 
+
             /**
              * <p>The description of the digital human.</p>
              */
@@ -459,6 +491,13 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private AvatarTrainingJob avatarTrainingJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avatarTrainingJob = model.avatarTrainingJob;
+            } 
 
             /**
              * <p>The information about the digital human training job.</p>

@@ -48,6 +48,10 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaByHybridResponseBody model) {
+            this.code = model.code;
+            this.mediaList = model.mediaList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
             private Double score; 
             private Double to; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClipInfo model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.to = model.to;
+            } 
+
             /**
              * From.
              */
@@ -266,6 +290,14 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ClipInfo> clipInfo; 
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaList model) {
+                this.clipInfo = model.clipInfo;
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * ClipInfo.

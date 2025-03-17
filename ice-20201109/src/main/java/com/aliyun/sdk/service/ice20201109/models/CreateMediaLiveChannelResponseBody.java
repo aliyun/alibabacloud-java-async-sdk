@@ -36,6 +36,10 @@ public class CreateMediaLiveChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelId
      */
@@ -53,6 +57,14 @@ public class CreateMediaLiveChannelResponseBody extends TeaModel {
     public static final class Builder {
         private String channelId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMediaLiveChannelResponseBody model) {
+            this.channelId = model.channelId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the channel.</p>

@@ -64,6 +64,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -137,6 +141,21 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         private String templateName; 
         private Integer timeInterval; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveSnapshotTemplateResponseBody model) {
+            this.createTime = model.createTime;
+            this.lastModified = model.lastModified;
+            this.overwriteFormat = model.overwriteFormat;
+            this.requestId = model.requestId;
+            this.sequenceFormat = model.sequenceFormat;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+            this.timeInterval = model.timeInterval;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The time when the configuration was modified.</p>

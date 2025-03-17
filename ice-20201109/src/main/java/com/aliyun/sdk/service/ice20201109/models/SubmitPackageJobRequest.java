@@ -56,7 +56,7 @@ public class SubmitPackageJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -225,6 +225,14 @@ public class SubmitPackageJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The media object.</p>
              * <ul>
@@ -297,6 +305,13 @@ public class SubmitPackageJobRequest extends Request {
         public static final class Builder {
             private Input input; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.input = model.input;
+            } 
+
             /**
              * <p>The information about the input stream file.</p>
              * <p>This parameter is required.</p>
@@ -358,6 +373,14 @@ public class SubmitPackageJobRequest extends Request {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object. If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported. If Type is set to Media, set this parameter to the ID of a media asset.</p>
@@ -437,6 +460,14 @@ public class SubmitPackageJobRequest extends Request {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the MPS queue to which the job was submitted.</p>

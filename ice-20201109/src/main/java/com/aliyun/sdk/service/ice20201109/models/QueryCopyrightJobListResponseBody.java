@@ -44,6 +44,10 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCopyrightJobListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Data.
@@ -163,6 +177,14 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * Media.
              */
@@ -229,6 +251,14 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * Media.
@@ -404,6 +434,23 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
             private String status; 
             private String userData; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.level = model.level;
+                this.message = model.message;
+                this.output = model.output;
+                this.result = model.result;
+                this.status = model.status;
+                this.userData = model.userData;
+                this.userId = model.userId;
+            } 
 
             /**
              * GmtCreate.

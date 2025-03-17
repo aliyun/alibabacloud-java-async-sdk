@@ -36,6 +36,10 @@ public class GetLiveEditingIndexFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return indexFile
      */
@@ -53,6 +57,14 @@ public class GetLiveEditingIndexFileResponseBody extends TeaModel {
     public static final class Builder {
         private String indexFile; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveEditingIndexFileResponseBody model) {
+            this.indexFile = model.indexFile;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The URL of the index file.</p>

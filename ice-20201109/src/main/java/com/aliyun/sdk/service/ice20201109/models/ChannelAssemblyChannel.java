@@ -76,6 +76,10 @@ public class ChannelAssemblyChannel extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessPolicy
      */
@@ -173,6 +177,24 @@ public class ChannelAssemblyChannel extends TeaModel {
         private java.util.List<OutPutConfigList> outPutConfigList; 
         private String playbackMode; 
         private Integer state; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChannelAssemblyChannel model) {
+            this.accessPolicy = model.accessPolicy;
+            this.accessToken = model.accessToken;
+            this.arn = model.arn;
+            this.channelName = model.channelName;
+            this.channelTier = model.channelTier;
+            this.fillerSourceLocationName = model.fillerSourceLocationName;
+            this.fillerSourceName = model.fillerSourceName;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.outPutConfigList = model.outPutConfigList;
+            this.playbackMode = model.playbackMode;
+            this.state = model.state;
+        } 
 
         /**
          * AccessPolicy.
@@ -367,6 +389,18 @@ public class ChannelAssemblyChannel extends TeaModel {
             private String manifestSettings; 
             private String playbackUrl; 
             private String sourceGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutPutConfigList model) {
+                this.channelName = model.channelName;
+                this.format = model.format;
+                this.manifestName = model.manifestName;
+                this.manifestSettings = model.manifestSettings;
+                this.playbackUrl = model.playbackUrl;
+                this.sourceGroupName = model.sourceGroupName;
+            } 
 
             /**
              * ChannelName.

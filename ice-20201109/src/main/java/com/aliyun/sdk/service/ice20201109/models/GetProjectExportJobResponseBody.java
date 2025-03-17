@@ -36,6 +36,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectExportJob
      */
@@ -53,6 +57,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
     public static final class Builder {
         private ProjectExportJob projectExportJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectExportJobResponseBody model) {
+            this.projectExportJob = model.projectExportJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ProjectExportJob.
@@ -107,6 +119,13 @@ public class GetProjectExportJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String timeline; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExportResult model) {
+                this.timeline = model.timeline;
+            } 
 
             /**
              * Timeline.
@@ -238,6 +257,20 @@ public class GetProjectExportJobResponseBody extends TeaModel {
             private String projectId; 
             private String status; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectExportJob model) {
+                this.code = model.code;
+                this.exportResult = model.exportResult;
+                this.exportType = model.exportType;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
 
             /**
              * Code.

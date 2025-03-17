@@ -96,6 +96,10 @@ public class MediaConvertVideo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bitrate
      */
@@ -233,6 +237,29 @@ public class MediaConvertVideo extends TeaModel {
         private Boolean remove; 
         private String scanMode; 
         private Integer width; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertVideo model) {
+            this.bitrate = model.bitrate;
+            this.bufsize = model.bufsize;
+            this.codec = model.codec;
+            this.crf = model.crf;
+            this.crop = model.crop;
+            this.fps = model.fps;
+            this.gop = model.gop;
+            this.height = model.height;
+            this.longShortMode = model.longShortMode;
+            this.maxFps = model.maxFps;
+            this.maxrate = model.maxrate;
+            this.pad = model.pad;
+            this.profile = model.profile;
+            this.qscale = model.qscale;
+            this.remove = model.remove;
+            this.scanMode = model.scanMode;
+            this.width = model.width;
+        } 
 
         /**
          * Bitrate.

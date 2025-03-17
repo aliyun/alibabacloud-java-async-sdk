@@ -36,6 +36,10 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dialogues
      */
@@ -53,6 +57,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Dialogues> dialogues; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAIAgentDialoguesResponseBody model) {
+            this.dialogues = model.dialogues;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Dialogues.
@@ -191,6 +203,20 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             private String text; 
             private Long time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dialogues model) {
+                this.dialogueId = model.dialogueId;
+                this.producer = model.producer;
+                this.reasoningText = model.reasoningText;
+                this.roundId = model.roundId;
+                this.source = model.source;
+                this.text = model.text;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * DialogueId.

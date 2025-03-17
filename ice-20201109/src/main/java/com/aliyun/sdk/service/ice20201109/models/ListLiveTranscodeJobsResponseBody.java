@@ -40,6 +40,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobList
      */
@@ -65,6 +69,15 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         private java.util.List<JobList> jobList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveTranscodeJobsResponseBody model) {
+            this.jobList = model.jobList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of transcoding jobs.</p>
@@ -146,6 +159,14 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String outputUrl; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamInfos model) {
+                this.outputUrl = model.outputUrl;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The URL of the output stream.</p>
              * 
@@ -207,6 +228,13 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<StreamInfos> streamInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputStream model) {
+                this.streamInfos = model.streamInfos;
+            } 
+
             /**
              * <p>The list of stream URLs.</p>
              */
@@ -265,6 +293,14 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String inputUrl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInput model) {
+                this.inputUrl = model.inputUrl;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The URL of the input stream.</p>
@@ -434,6 +470,22 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.name = model.name;
+                this.outputStream = model.outputStream;
+                this.startMode = model.startMode;
+                this.status = model.status;
+                this.streamInput = model.streamInput;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

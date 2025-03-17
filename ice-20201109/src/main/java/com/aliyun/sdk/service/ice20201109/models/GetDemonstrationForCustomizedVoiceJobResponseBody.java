@@ -40,6 +40,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDemonstrationForCustomizedVoiceJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -162,6 +175,15 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             private String demoAudio; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(DemonstrationList model) {
+                this.audioId = model.audioId;
+                this.demoAudio = model.demoAudio;
+                this.text = model.text;
+            } 
+
             /**
              * <p>The sequence number of the text, which corresponds to the AduioRecordId parameter to be passed during audio check.</p>
              * 
@@ -236,6 +258,13 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<DemonstrationList> demonstrationList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.demonstrationList = model.demonstrationList;
+            } 
 
             /**
              * <p>A list of 20 text entries to be read and the corresponding sample audio.</p>

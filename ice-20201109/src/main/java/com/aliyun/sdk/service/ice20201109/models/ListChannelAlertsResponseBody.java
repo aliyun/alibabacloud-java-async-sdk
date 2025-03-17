@@ -48,6 +48,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         private java.util.List<ProgramAlerts> programAlerts; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListChannelAlertsResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.programAlerts = model.programAlerts;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -227,6 +242,17 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             private Integer count; 
             private String gmtModified; 
             private String programName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProgramAlerts model) {
+                this.arn = model.arn;
+                this.category = model.category;
+                this.count = model.count;
+                this.gmtModified = model.gmtModified;
+                this.programName = model.programName;
+            } 
 
             /**
              * <p>The ARN of the program.</p>

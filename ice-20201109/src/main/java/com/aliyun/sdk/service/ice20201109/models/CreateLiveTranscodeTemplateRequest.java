@@ -46,7 +46,7 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -216,6 +216,17 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             private String codec; 
             private String profile; 
             private String samplerate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioParams model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.samplerate = model.samplerate;
+            } 
 
             /**
              * <p>The bitrate of the output audio. Unit: Kbit/s. Valid values: 1 to 1000.</p>
@@ -394,6 +405,19 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             private String profile; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoParams model) {
+                this.bitrate = model.bitrate;
+                this.codec = model.codec;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.profile = model.profile;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate of the output video. Unit: Kbit/s. Valid values: 1 to 6000.</p>
              * 
@@ -527,6 +551,14 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         public static final class Builder {
             private AudioParams audioParams; 
             private VideoParams videoParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateConfig model) {
+                this.audioParams = model.audioParams;
+                this.videoParams = model.videoParams;
+            } 
 
             /**
              * <p>The audio parameters.</p>

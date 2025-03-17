@@ -36,6 +36,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMeterImsMpsAiUsageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The usage statistics of IMS on AI processing of MPS.</p>
@@ -134,6 +146,15 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             private Long duration; 
             private Long time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.duration = model.duration;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The usage duration, in minutes.</p>

@@ -36,6 +36,10 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaInfo
      */
@@ -53,6 +57,14 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     public static final class Builder {
         private MediaInfo mediaInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPublicMediaInfoResponseBody model) {
+            this.mediaInfo = model.mediaInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MediaInfo.
@@ -122,6 +134,14 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String data; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicMetaData model) {
+                this.data = model.data;
+                this.type = model.type;
+            } 
 
             /**
              * Data.
@@ -381,6 +401,30 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private String sampleRate; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamInfoList model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.profile = model.profile;
+                this.sampleFmt = model.sampleFmt;
+                this.sampleRate = model.sampleRate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * Bitrate.
@@ -685,6 +729,23 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private String region; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileBasicInfo model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileStatus = model.fileStatus;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+                this.formatName = model.formatName;
+                this.height = model.height;
+                this.region = model.region;
+                this.width = model.width;
+            } 
+
             /**
              * Bitrate.
              */
@@ -919,6 +980,22 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private String lang; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStreamInfoList model) {
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * CodecLongName.
@@ -1315,6 +1392,36 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private String timebase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamInfoList model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.nbFrames = model.nbFrames;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
+
             /**
              * AvgFPS.
              */
@@ -1582,6 +1689,16 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList; 
             private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileInfoList model) {
+                this.audioStreamInfoList = model.audioStreamInfoList;
+                this.fileBasicInfo = model.fileBasicInfo;
+                this.subtitleStreamInfoList = model.subtitleStreamInfoList;
+                this.videoStreamInfoList = model.videoStreamInfoList;
+            } 
+
             /**
              * AudioStreamInfoList.
              */
@@ -1821,6 +1938,27 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private String title; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaBasicInfo model) {
+                this.businessType = model.businessType;
+                this.category = model.category;
+                this.coverURL = model.coverURL;
+                this.createTime = model.createTime;
+                this.deletedTime = model.deletedTime;
+                this.description = model.description;
+                this.mediaId = model.mediaId;
+                this.mediaTags = model.mediaTags;
+                this.mediaType = model.mediaType;
+                this.modifiedTime = model.modifiedTime;
+                this.source = model.source;
+                this.spriteImages = model.spriteImages;
+                this.status = model.status;
+                this.title = model.title;
+                this.userData = model.userData;
+            } 
+
             /**
              * BusinessType.
              */
@@ -2018,6 +2156,16 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfo model) {
+                this.dynamicMetaData = model.dynamicMetaData;
+                this.fileInfoList = model.fileInfoList;
+                this.mediaBasicInfo = model.mediaBasicInfo;
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * DynamicMetaData.

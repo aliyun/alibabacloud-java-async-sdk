@@ -57,7 +57,7 @@ public class CreateMediaLiveChannelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,6 +235,15 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String profile; 
             private Integer sampleRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioCodecSetting model) {
+                this.bitrate = model.bitrate;
+                this.profile = model.profile;
+                this.sampleRate = model.sampleRate;
+            } 
+
             /**
              * <p>The audio bitrate. Unit: bit/s. Valid values: 8000 to 1000000. The value must be divisible by 1000.</p>
              * 
@@ -368,6 +377,18 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String languageName; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioSettings model) {
+                this.audioCodec = model.audioCodec;
+                this.audioCodecSetting = model.audioCodecSetting;
+                this.audioSelectorName = model.audioSelectorName;
+                this.languageCode = model.languageCode;
+                this.languageName = model.languageName;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The audio codec. If it is not specified, the source specification is used. Valid values: aac and libfdk_aac.</p>
              * 
@@ -479,6 +500,13 @@ public class CreateMediaLiveChannelRequest extends Request {
         public static final class Builder {
             private String languageCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioLanguageSelection model) {
+                this.languageCode = model.languageCode;
+            } 
+
             /**
              * <p>Enter a three-letter ISO 639-2 language code from within an audio source.</p>
              * <p>This parameter is required.</p>
@@ -531,6 +559,13 @@ public class CreateMediaLiveChannelRequest extends Request {
         public static final class Builder {
             private Long pid; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioPidSelection model) {
+                this.pid = model.pid;
+            } 
+
             /**
              * <p>Enter a specific PID from within a source.</p>
              * <p>This parameter is required.</p>
@@ -582,6 +617,13 @@ public class CreateMediaLiveChannelRequest extends Request {
 
         public static final class Builder {
             private Long trackId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioTrackSelection model) {
+                this.trackId = model.trackId;
+            } 
 
             /**
              * <p>Specify one or more audio tracks from within a source using Track ID.</p>
@@ -670,6 +712,16 @@ public class CreateMediaLiveChannelRequest extends Request {
             private AudioPidSelection audioPidSelection; 
             private java.util.List<AudioTrackSelection> audioTrackSelection; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioSelectors model) {
+                this.audioLanguageSelection = model.audioLanguageSelection;
+                this.audioPidSelection = model.audioPidSelection;
+                this.audioTrackSelection = model.audioTrackSelection;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The audio language selection.</p>
@@ -771,6 +823,15 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String inputId; 
             private String languageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputAttachments model) {
+                this.audioSelectors = model.audioSelectors;
+                this.inputId = model.inputId;
+                this.languageName = model.languageName;
+            } 
+
             /**
              * <p>The audio selectors.</p>
              */
@@ -862,6 +923,14 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String channelName; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaPackageGroupSetting model) {
+                this.channelName = model.channelName;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * <p>ChannelName in MediaPackage.</p>
              * <p>This parameter is required.</p>
@@ -936,6 +1005,14 @@ public class CreateMediaLiveChannelRequest extends Request {
         public static final class Builder {
             private String audioGroupId; 
             private String nameModifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaPackageOutputSetting model) {
+                this.audioGroupId = model.audioGroupId;
+                this.nameModifier = model.nameModifier;
+            } 
 
             /**
              * <p>The manifest audio group ID. To associate several audio tracks into one group, assign the same audio group ID. Viewers can select a track as needed. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 40 characters in length.</p>
@@ -1046,6 +1123,17 @@ public class CreateMediaLiveChannelRequest extends Request {
             private Integer mediaType; 
             private String name; 
             private String videoSettingName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.audioSettingNames = model.audioSettingNames;
+                this.mediaPackageOutputSetting = model.mediaPackageOutputSetting;
+                this.mediaType = model.mediaType;
+                this.name = model.name;
+                this.videoSettingName = model.videoSettingName;
+            } 
 
             /**
              * <p>The referenced AudioSettings.</p>
@@ -1180,6 +1268,16 @@ public class CreateMediaLiveChannelRequest extends Request {
             private java.util.List<Outputs> outputs; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputGroups model) {
+                this.mediaPackageGroupSetting = model.mediaPackageGroupSetting;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The MediaPackage destination.</p>
              */
@@ -1272,6 +1370,14 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String level; 
             private String profile; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodecDetail model) {
+                this.level = model.level;
+                this.profile = model.profile;
+            } 
+
             /**
              * <p>The video encoding level. It is not supported yet.</p>
              * 
@@ -1356,6 +1462,15 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String framerateControl; 
             private Integer framerateDenominator; 
             private Integer framerateNumerator; 
+
+            private Builder() {
+            } 
+
+            private Builder(Framerate model) {
+                this.framerateControl = model.framerateControl;
+                this.framerateDenominator = model.framerateDenominator;
+                this.framerateNumerator = model.framerateNumerator;
+            } 
 
             /**
              * <p>The frame rate mode. Valid values: SPECIFIED (fixed frame rate) and FROM_SOURCE (use source specification).</p>
@@ -1452,6 +1567,15 @@ public class CreateMediaLiveChannelRequest extends Request {
             private Integer bframesNum; 
             private Integer gopSize; 
             private String gopSizeUnits; 
+
+            private Builder() {
+            } 
+
+            private Builder(Gop model) {
+                this.bframesNum = model.bframesNum;
+                this.gopSize = model.gopSize;
+                this.gopSizeUnits = model.gopSizeUnits;
+            } 
 
             /**
              * <p>The number of B frames. Valid values: 1 to 3.</p>
@@ -1560,6 +1684,16 @@ public class CreateMediaLiveChannelRequest extends Request {
             private Integer bufferSize; 
             private Integer maxBitrate; 
             private String rateControlMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rate model) {
+                this.bitrate = model.bitrate;
+                this.bufferSize = model.bufferSize;
+                this.maxBitrate = model.maxBitrate;
+                this.rateControlMode = model.rateControlMode;
+            } 
 
             /**
              * <p>The video bitrate. Unit: bit/s. If you set it to 0 or leave it empty, the source specification is used. Valid values: 50000 to 6000000. The value must be divisible by 1000.</p>
@@ -1680,6 +1814,16 @@ public class CreateMediaLiveChannelRequest extends Request {
             private Gop gop; 
             private Rate rate; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoCodecSetting model) {
+                this.codecDetail = model.codecDetail;
+                this.framerate = model.framerate;
+                this.gop = model.gop;
+                this.rate = model.rate;
+            } 
+
             /**
              * <p>The video encoding settings.</p>
              */
@@ -1799,6 +1943,17 @@ public class CreateMediaLiveChannelRequest extends Request {
             private String videoCodec; 
             private VideoCodecSetting videoCodecSetting; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoSettings model) {
+                this.height = model.height;
+                this.name = model.name;
+                this.videoCodec = model.videoCodec;
+                this.videoCodecSetting = model.videoCodecSetting;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The height of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</p>

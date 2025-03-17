@@ -40,6 +40,10 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvatarTrainingJobsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -258,6 +271,23 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
             private String portrait; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvatarTrainingJobList model) {
+                this.avatarDescription = model.avatarDescription;
+                this.avatarId = model.avatarId;
+                this.avatarName = model.avatarName;
+                this.avatarType = model.avatarType;
+                this.createTime = model.createTime;
+                this.firstTrainingTime = model.firstTrainingTime;
+                this.jobId = model.jobId;
+                this.lastTrainingTime = model.lastTrainingTime;
+                this.message = model.message;
+                this.portrait = model.portrait;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The description of the digital human.</p>
              */
@@ -429,6 +459,14 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AvatarTrainingJobList> avatarTrainingJobList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avatarTrainingJobList = model.avatarTrainingJobList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The list of digital human training jobs.</p>

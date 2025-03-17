@@ -56,6 +56,10 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authToken
      */
@@ -113,6 +117,19 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         private String status; 
         private String userData; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRtcRobotInstanceResponseBody model) {
+            this.authToken = model.authToken;
+            this.channelId = model.channelId;
+            this.config = model.config;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.userData = model.userData;
+            this.userId = model.userId;
+        } 
 
         /**
          * AuthToken.
@@ -234,6 +251,15 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private String greeting; 
             private String voiceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.enableVoiceInterrupt = model.enableVoiceInterrupt;
+                this.greeting = model.greeting;
+                this.voiceId = model.voiceId;
+            } 
 
             /**
              * EnableVoiceInterrupt.

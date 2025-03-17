@@ -36,6 +36,10 @@ public class GetProgramResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return program
      */
@@ -53,6 +57,14 @@ public class GetProgramResponseBody extends TeaModel {
     public static final class Builder {
         private ChannelAssemblyProgram program; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProgramResponseBody model) {
+            this.program = model.program;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the program.</p>

@@ -36,6 +36,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VoiceGroups> voiceGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSmartVoiceGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.voiceGroups = model.voiceGroups;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -195,6 +207,20 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             private String voiceType; 
             private String voiceUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(VoiceList model) {
+                this.desc = model.desc;
+                this.name = model.name;
+                this.remark = model.remark;
+                this.supportSampleRate = model.supportSampleRate;
+                this.tag = model.tag;
+                this.voice = model.voice;
+                this.voiceType = model.voiceType;
+                this.voiceUrl = model.voiceUrl;
+            } 
+
             /**
              * <p>The speaker description.</p>
              */
@@ -325,6 +351,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private java.util.List<VoiceList> voiceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceGroups model) {
+                this.type = model.type;
+                this.voiceList = model.voiceList;
+            } 
 
             /**
              * <p>The name of the speaker group.</p>

@@ -36,6 +36,10 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataKey
      */
@@ -53,6 +57,14 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
     public static final class Builder {
         private DataKey dataKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateKMSDataKeyResponseBody model) {
+            this.dataKey = model.dataKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the data key.</p>
@@ -134,6 +146,15 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
             private String ciphertextBlob; 
             private String keyId; 
             private String plaintext; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataKey model) {
+                this.ciphertextBlob = model.ciphertextBlob;
+                this.keyId = model.keyId;
+                this.plaintext = model.plaintext;
+            } 
 
             /**
              * <p>The ciphertext of the encrypted data key. This parameter is used as CipherText when you create a transcoding job.</p>

@@ -40,6 +40,10 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupName
      */
@@ -65,6 +69,15 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
         private String groupName; 
         private String requestId; 
         private java.util.List<ResultList> resultList; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchCreateVodPackagingAssetResponseBody model) {
+            this.groupName = model.groupName;
+            this.requestId = model.requestId;
+            this.resultList = model.resultList;
+        } 
 
         /**
          * <p>The name of the packaging group.</p>
@@ -157,6 +170,15 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
             private VodPackagingAsset asset; 
             private String code; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.asset = model.asset;
+                this.code = model.code;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The information about the ingested asset.</p>

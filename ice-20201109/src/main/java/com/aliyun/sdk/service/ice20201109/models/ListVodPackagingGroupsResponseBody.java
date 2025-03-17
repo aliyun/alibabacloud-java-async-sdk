@@ -52,6 +52,10 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return packagingGroups
      */
@@ -101,6 +105,18 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVodPackagingGroupsResponseBody model) {
+            this.packagingGroups = model.packagingGroups;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The packaging groups.</p>

@@ -52,6 +52,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return liveRecordJobs
      */
@@ -101,6 +105,18 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveRecordJobsResponseBody model) {
+            this.liveRecordJobs = model.liveRecordJobs;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of live stream recording jobs.</p>
@@ -227,6 +243,15 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             private String endpoint; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordOutput model) {
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The bucket name.</p>
              * 
@@ -315,6 +340,14 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInput model) {
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The type of the live stream URL.</p>
@@ -472,6 +505,21 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             private StreamInput streamInput; 
             private String templateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveRecordJobs model) {
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.name = model.name;
+                this.notifyUrl = model.notifyUrl;
+                this.recordOutput = model.recordOutput;
+                this.status = model.status;
+                this.streamInput = model.streamInput;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

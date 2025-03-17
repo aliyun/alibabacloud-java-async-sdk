@@ -36,6 +36,10 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return editingBatchJob
      */
@@ -53,6 +57,14 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     public static final class Builder {
         private EditingBatchJob editingBatchJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchMediaProducingJobResponseBody model) {
+            this.editingBatchJob = model.editingBatchJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the quick video production job.</p>
@@ -182,6 +194,19 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             private String mediaURL; 
             private String projectId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubJobList model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.mediaURL = model.mediaURL;
+                this.projectId = model.projectId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error code that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>
@@ -434,6 +459,24 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             private String status; 
             private java.util.List<SubJobList> subJobList; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(EditingBatchJob model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.editingConfig = model.editingConfig;
+                this.extend = model.extend;
+                this.inputConfig = model.inputConfig;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.modifiedTime = model.modifiedTime;
+                this.outputConfig = model.outputConfig;
+                this.status = model.status;
+                this.subJobList = model.subJobList;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The time when the job was complete.</p>

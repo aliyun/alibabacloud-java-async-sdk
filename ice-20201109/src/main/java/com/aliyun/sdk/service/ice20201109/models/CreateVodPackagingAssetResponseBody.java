@@ -36,6 +36,10 @@ public class CreateVodPackagingAssetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asset
      */
@@ -53,6 +57,14 @@ public class CreateVodPackagingAssetResponseBody extends TeaModel {
     public static final class Builder {
         private VodPackagingAsset asset; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVodPackagingAssetResponseBody model) {
+            this.asset = model.asset;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the asset.</p>

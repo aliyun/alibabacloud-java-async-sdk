@@ -44,6 +44,10 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchIndexJobRerunResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -160,6 +174,13 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> mediaIdsNoExist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.mediaIdsNoExist = model.mediaIdsNoExist;
+            } 
 
             /**
              * <p>The media asset IDs that do not exist.</p>

@@ -36,6 +36,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pipelineList
      */
@@ -53,6 +57,14 @@ public class ListPipelinesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PipelineList> pipelineList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPipelinesResponseBody model) {
+            this.pipelineList = model.pipelineList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried MPS queues.</p>
@@ -182,6 +194,19 @@ public class ListPipelinesResponseBody extends TeaModel {
             private Integer priority; 
             private String speed; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PipelineList model) {
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+                this.speed = model.speed;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

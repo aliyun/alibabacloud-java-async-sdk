@@ -40,6 +40,10 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitVideoTranslationJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -138,6 +151,13 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobId = model.jobId;
+            } 
 
             /**
              * <p>The ID of the video translation job.</p>

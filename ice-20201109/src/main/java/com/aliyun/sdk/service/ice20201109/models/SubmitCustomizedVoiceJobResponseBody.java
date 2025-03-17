@@ -40,6 +40,10 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitCustomizedVoiceJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -149,6 +162,14 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
         public static final class Builder {
             private String jobId; 
             private String voiceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobId = model.jobId;
+                this.voiceId = model.voiceId;
+            } 
 
             /**
              * <p>The ID of the human voice cloning job.</p>

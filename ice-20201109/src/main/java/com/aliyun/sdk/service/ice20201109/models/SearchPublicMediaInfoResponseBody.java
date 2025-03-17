@@ -40,6 +40,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return publicMediaInfos
      */
@@ -65,6 +69,15 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         private java.util.List<PublicMediaInfos> publicMediaInfos; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchPublicMediaInfoResponseBody model) {
+            this.publicMediaInfos = model.publicMediaInfos;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PublicMediaInfos.
@@ -139,6 +152,14 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String data; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicMetaData model) {
+                this.data = model.data;
+                this.type = model.type;
+            } 
 
             /**
              * Data.
@@ -363,6 +384,27 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             private String title; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaBasicInfo model) {
+                this.businessType = model.businessType;
+                this.category = model.category;
+                this.coverURL = model.coverURL;
+                this.createTime = model.createTime;
+                this.deletedTime = model.deletedTime;
+                this.description = model.description;
+                this.mediaId = model.mediaId;
+                this.mediaTags = model.mediaTags;
+                this.mediaType = model.mediaType;
+                this.modifiedTime = model.modifiedTime;
+                this.source = model.source;
+                this.spriteImages = model.spriteImages;
+                this.status = model.status;
+                this.title = model.title;
+                this.userData = model.userData;
+            } 
+
             /**
              * BusinessType.
              */
@@ -549,6 +591,15 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaInfo model) {
+                this.dynamicMetaData = model.dynamicMetaData;
+                this.mediaBasicInfo = model.mediaBasicInfo;
+                this.mediaId = model.mediaId;
+            } 
+
             /**
              * DynamicMetaData.
              */
@@ -650,6 +701,16 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             private Boolean favorite; 
             private MediaInfo mediaInfo; 
             private String remainingAuthTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicMediaInfos model) {
+                this.authorized = model.authorized;
+                this.favorite = model.favorite;
+                this.mediaInfo = model.mediaInfo;
+                this.remainingAuthTime = model.remainingAuthTime;
+            } 
 
             /**
              * Authorized.

@@ -36,6 +36,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return packageJobList
      */
@@ -53,6 +57,14 @@ public class ListPackageJobsResponseBody extends TeaModel {
     public static final class Builder {
         private PackageJobList packageJobList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPackageJobsResponseBody model) {
+            this.packageJobList = model.packageJobList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of packaging jobs.</p>
@@ -123,6 +135,14 @@ public class ListPackageJobsResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The media object.</p>
              * <ul>
@@ -192,6 +212,13 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public static final class Builder {
             private Input input; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.input = model.input;
+            } 
+
             /**
              * <p>The information about the input stream file.</p>
              */
@@ -250,6 +277,14 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -488,6 +523,27 @@ public class ListPackageJobsResponseBody extends TeaModel {
             private String triggerSource; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageJobs model) {
+                this.code = model.code;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.inputs = model.inputs;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.output = model.output;
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.triggerSource = model.triggerSource;
+                this.userData = model.userData;
+            } 
+
             /**
              * <p>The error code returned if the job fails.</p>
              * 
@@ -702,6 +758,14 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String nextPageToken; 
             private java.util.List<PackageJobs> packageJobs; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageJobList model) {
+                this.nextPageToken = model.nextPageToken;
+                this.packageJobs = model.packageJobs;
+            } 
 
             /**
              * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</p>

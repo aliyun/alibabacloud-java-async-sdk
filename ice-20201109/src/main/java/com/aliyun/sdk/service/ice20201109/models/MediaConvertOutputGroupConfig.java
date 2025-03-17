@@ -40,6 +40,10 @@ public class MediaConvertOutputGroupConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return manifestName
      */
@@ -65,6 +69,15 @@ public class MediaConvertOutputGroupConfig extends TeaModel {
         private String manifestName; 
         private MediaObject outputFileBase; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertOutputGroupConfig model) {
+            this.manifestName = model.manifestName;
+            this.outputFileBase = model.outputFileBase;
+            this.type = model.type;
+        } 
 
         /**
          * ManifestName.

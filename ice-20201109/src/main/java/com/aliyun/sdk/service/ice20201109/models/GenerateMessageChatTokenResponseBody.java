@@ -60,6 +60,10 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -125,6 +129,20 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
         private Long timeStamp; 
         private String token; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateMessageChatTokenResponseBody model) {
+            this.appId = model.appId;
+            this.appSign = model.appSign;
+            this.nonce = model.nonce;
+            this.requestId = model.requestId;
+            this.role = model.role;
+            this.timeStamp = model.timeStamp;
+            this.token = model.token;
+            this.userId = model.userId;
+        } 
 
         /**
          * AppId.

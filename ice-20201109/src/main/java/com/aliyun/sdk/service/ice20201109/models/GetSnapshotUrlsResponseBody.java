@@ -44,6 +44,10 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         private java.util.List<String> snapshotUrls; 
         private Integer total; 
         private String webVTTUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSnapshotUrlsResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotUrls = model.snapshotUrls;
+            this.total = model.total;
+            this.webVTTUrl = model.webVTTUrl;
+        } 
 
         /**
          * <p>The request ID.</p>

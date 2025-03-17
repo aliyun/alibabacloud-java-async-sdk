@@ -52,7 +52,7 @@ public class CreateMediaLiveInputRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -227,6 +227,16 @@ public class CreateMediaLiveInputRequest extends Request {
             private String flowOutputName; 
             private String sourceUrl; 
             private String streamName; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputSettings model) {
+                this.flowId = model.flowId;
+                this.flowOutputName = model.flowOutputName;
+                this.sourceUrl = model.sourceUrl;
+                this.streamName = model.streamName;
+            } 
 
             /**
              * FlowId.

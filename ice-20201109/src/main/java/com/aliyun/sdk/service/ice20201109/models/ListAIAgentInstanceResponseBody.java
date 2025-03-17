@@ -36,6 +36,10 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -53,6 +57,14 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Instances> instances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAIAgentInstanceResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of the AI agents.</p>
@@ -158,6 +170,17 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             private String status; 
             private AIAgentTemplateConfig templateConfig; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.callLogUrl = model.callLogUrl;
+                this.runtimeConfig = model.runtimeConfig;
+                this.status = model.status;
+                this.templateConfig = model.templateConfig;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The URL of the call log file for the AI agent. The structure of the file is CallLog in the JSON format.</p>

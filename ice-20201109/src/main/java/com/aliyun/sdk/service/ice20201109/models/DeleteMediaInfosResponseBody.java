@@ -40,6 +40,10 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbiddenList
      */
@@ -65,6 +69,15 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         private java.util.List<String> forbiddenList; 
         private java.util.List<String> ignoredList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMediaInfosResponseBody model) {
+            this.forbiddenList = model.forbiddenList;
+            this.ignoredList = model.ignoredList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs or URLs of media assets that cannot be deleted. Generally, media assets cannot be deleted if you do not have the required permissions.</p>

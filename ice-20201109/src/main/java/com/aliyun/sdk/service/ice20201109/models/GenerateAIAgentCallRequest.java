@@ -65,7 +65,7 @@ public class GenerateAIAgentCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -268,6 +268,14 @@ public class GenerateAIAgentCallRequest extends Request {
         public static final class Builder {
             private String IMAIAgentId; 
             private String receiverId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChatSyncConfig model) {
+                this.IMAIAgentId = model.IMAIAgentId;
+                this.receiverId = model.receiverId;
+            } 
 
             /**
              * IMAIAgentId.

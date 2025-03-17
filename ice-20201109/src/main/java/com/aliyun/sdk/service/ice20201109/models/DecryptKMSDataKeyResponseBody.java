@@ -36,6 +36,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataKey
      */
@@ -53,6 +57,14 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
     public static final class Builder {
         private DataKey dataKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DecryptKMSDataKeyResponseBody model) {
+            this.dataKey = model.dataKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the decryption result.</p>
@@ -122,6 +134,14 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         public static final class Builder {
             private String keyId; 
             private String plaintext; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataKey model) {
+                this.keyId = model.keyId;
+                this.plaintext = model.plaintext;
+            } 
 
             /**
              * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>

@@ -61,7 +61,7 @@ public class SubmitTranscodeJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -272,6 +272,15 @@ public class SubmitTranscodeJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputGroup model) {
+                this.inputUrl = model.inputUrl;
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The URL of the input stream.</p>
              * <ul>
@@ -388,6 +397,15 @@ public class SubmitTranscodeJobRequest extends Request {
             private String media; 
             private String outputUrl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.outputUrl = model.outputUrl;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -525,6 +543,16 @@ public class SubmitTranscodeJobRequest extends Request {
             private Double start; 
             private String videoIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(CombineConfigs model) {
+                this.audioIndex = model.audioIndex;
+                this.duration = model.duration;
+                this.start = model.start;
+                this.videoIndex = model.videoIndex;
+            } 
+
             /**
              * <p>The audio stream index.</p>
              * <p>This parameter is required.</p>
@@ -646,6 +674,16 @@ public class SubmitTranscodeJobRequest extends Request {
             private String encryptType; 
             private String keyServiceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.cipherText = model.cipherText;
+                this.decryptKeyUri = model.decryptKeyUri;
+                this.encryptType = model.encryptType;
+                this.keyServiceType = model.keyServiceType;
+            } 
+
             /**
              * <p>The ciphertext of HTTP Live Streaming (HLS) encryption.</p>
              * 
@@ -749,6 +787,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(File model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The media object.</p>
              * <ul>
@@ -829,6 +875,14 @@ public class SubmitTranscodeJobRequest extends Request {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeline model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The time range in which the watermark is displayed.</p>
@@ -971,6 +1025,19 @@ public class SubmitTranscodeJobRequest extends Request {
             private String referPos; 
             private Timeline timeline; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParams model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.file = model.file;
+                this.height = model.height;
+                this.referPos = model.referPos;
+                this.timeline = model.timeline;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The horizontal offset of the watermark relative to the output video. Default value: 0.</p>
@@ -1157,6 +1224,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private OverwriteParams overwriteParams; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageWatermarks model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
@@ -1227,6 +1302,14 @@ public class SubmitTranscodeJobRequest extends Request {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParamsFile model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -1321,6 +1404,15 @@ public class SubmitTranscodeJobRequest extends Request {
             private OverwriteParamsFile file; 
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubtitlesOverwriteParams model) {
+                this.charEnc = model.charEnc;
+                this.file = model.file;
+                this.format = model.format;
+            } 
+
             /**
              * <p>The file encoding format.</p>
              * 
@@ -1402,6 +1494,14 @@ public class SubmitTranscodeJobRequest extends Request {
         public static final class Builder {
             private SubtitlesOverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subtitles model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
@@ -1569,6 +1669,22 @@ public class SubmitTranscodeJobRequest extends Request {
             private Integer fontSize; 
             private String left; 
             private String top; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextWatermarksOverwriteParams model) {
+                this.adaptive = model.adaptive;
+                this.borderColor = model.borderColor;
+                this.borderWidth = model.borderWidth;
+                this.content = model.content;
+                this.fontAlpha = model.fontAlpha;
+                this.fontColor = model.fontColor;
+                this.fontName = model.fontName;
+                this.fontSize = model.fontSize;
+                this.left = model.left;
+                this.top = model.top;
+            } 
 
             /**
              * <p>Specifies whether to the font size based on the output video dimensions. true / false, default: false</p>
@@ -1752,6 +1868,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private TextWatermarksOverwriteParams overwriteParams; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextWatermarks model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
              */
@@ -1846,6 +1970,16 @@ public class SubmitTranscodeJobRequest extends Request {
             private String loudnessRangeTarget; 
             private String method; 
             private String truePeak; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volume model) {
+                this.integratedLoudnessTarget = model.integratedLoudnessTarget;
+                this.loudnessRangeTarget = model.loudnessRangeTarget;
+                this.method = model.method;
+                this.truePeak = model.truePeak;
+            } 
 
             /**
              * <p>The output volume.</p>
@@ -2002,6 +2136,19 @@ public class SubmitTranscodeJobRequest extends Request {
             private String samplerate; 
             private Volume volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.remove = model.remove;
+                this.samplerate = model.samplerate;
+                this.volume = model.volume;
+            } 
+
             /**
              * <p>The audio bitrate of the output file. Valid values: [8,1000]. Unit: Kbit/s. Default value: 128.</p>
              * 
@@ -2115,6 +2262,13 @@ public class SubmitTranscodeJobRequest extends Request {
         public static final class Builder {
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.format = model.format;
+            } 
+
             /**
              * <p>The container format.</p>
              * 
@@ -2177,6 +2331,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private String duration; 
             private String forceSegTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Segment model) {
+                this.duration = model.duration;
+                this.forceSegTime = model.forceSegTime;
+            } 
+
             /**
              * <p>The segment length.</p>
              * 
@@ -2237,6 +2399,13 @@ public class SubmitTranscodeJobRequest extends Request {
 
         public static final class Builder {
             private Segment segment; 
+
+            private Builder() {
+            } 
+
+            private Builder(MuxConfig model) {
+                this.segment = model.segment;
+            } 
 
             /**
              * <p>The segment settings.</p>
@@ -2368,6 +2537,20 @@ public class SubmitTranscodeJobRequest extends Request {
             private String isCheckVideoBitrate; 
             private String isCheckVideoBitrateFail; 
             private String transMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransConfig model) {
+                this.adjDarMethod = model.adjDarMethod;
+                this.isCheckAudioBitrate = model.isCheckAudioBitrate;
+                this.isCheckAudioBitrateFail = model.isCheckAudioBitrateFail;
+                this.isCheckReso = model.isCheckReso;
+                this.isCheckResoFail = model.isCheckResoFail;
+                this.isCheckVideoBitrate = model.isCheckVideoBitrate;
+                this.isCheckVideoBitrateFail = model.isCheckVideoBitrateFail;
+                this.transMode = model.transMode;
+            } 
 
             /**
              * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
@@ -2742,6 +2925,30 @@ public class SubmitTranscodeJobRequest extends Request {
             private String scanMode; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.abrMax = model.abrMax;
+                this.bitrate = model.bitrate;
+                this.bufsize = model.bufsize;
+                this.codec = model.codec;
+                this.crf = model.crf;
+                this.crop = model.crop;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.longShortMode = model.longShortMode;
+                this.maxrate = model.maxrate;
+                this.pad = model.pad;
+                this.pixFmt = model.pixFmt;
+                this.preset = model.preset;
+                this.profile = model.profile;
+                this.remove = model.remove;
+                this.scanMode = model.scanMode;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The maximum adaptive bitrate (ABR). This parameter takes effect only for Narrowband HD 1.0. Valid values: [10,50000]. Unit: Kbit/s.</p>
              * 
@@ -3043,6 +3250,17 @@ public class SubmitTranscodeJobRequest extends Request {
             private TransConfig transConfig; 
             private Video video; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeOverwriteParams model) {
+                this.audio = model.audio;
+                this.container = model.container;
+                this.muxConfig = model.muxConfig;
+                this.transConfig = model.transConfig;
+                this.video = model.video;
+            } 
+
             /**
              * <p>The audio settings.</p>
              */
@@ -3134,6 +3352,14 @@ public class SubmitTranscodeJobRequest extends Request {
         public static final class Builder {
             private TranscodeOverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Transcode model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
@@ -3255,6 +3481,18 @@ public class SubmitTranscodeJobRequest extends Request {
             private java.util.List<TextWatermarks> textWatermarks; 
             private Transcode transcode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProcessConfig model) {
+                this.combineConfigs = model.combineConfigs;
+                this.encryption = model.encryption;
+                this.imageWatermarks = model.imageWatermarks;
+                this.subtitles = model.subtitles;
+                this.textWatermarks = model.textWatermarks;
+                this.transcode = model.transcode;
+            } 
+
             /**
              * <p>The multi-input stream merge configuration.</p>
              */
@@ -3357,6 +3595,14 @@ public class SubmitTranscodeJobRequest extends Request {
             private Output output; 
             private ProcessConfig processConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputGroup model) {
+                this.output = model.output;
+                this.processConfig = model.processConfig;
+            } 
+
             /**
              * <p>The output file configuration.</p>
              * <p>This parameter is required.</p>
@@ -3425,6 +3671,14 @@ public class SubmitTranscodeJobRequest extends Request {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the MPS queue to which the job was submitted.</p>

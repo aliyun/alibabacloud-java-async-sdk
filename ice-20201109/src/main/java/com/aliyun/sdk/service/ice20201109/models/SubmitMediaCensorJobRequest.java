@@ -79,7 +79,7 @@ public class SubmitMediaCensorJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -367,6 +367,14 @@ public class SubmitMediaCensorJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
              * <p>1. oss://bucket/object</p>
@@ -444,6 +452,14 @@ public class SubmitMediaCensorJobRequest extends Request {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted.</p>

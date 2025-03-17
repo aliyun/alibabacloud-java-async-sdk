@@ -48,6 +48,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -89,6 +93,17 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
         private String projectId; 
         private String requestId; 
         private String vodMediaId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitMediaProducingJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.mediaId = model.mediaId;
+            this.projectId = model.projectId;
+            this.requestId = model.requestId;
+            this.vodMediaId = model.vodMediaId;
+        } 
 
         /**
          * <p>The job ID.</p>

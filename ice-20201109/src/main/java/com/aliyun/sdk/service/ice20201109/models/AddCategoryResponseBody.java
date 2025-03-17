@@ -36,6 +36,10 @@ public class AddCategoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -53,6 +57,14 @@ public class AddCategoryResponseBody extends TeaModel {
     public static final class Builder {
         private Category category; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddCategoryResponseBody model) {
+            this.category = model.category;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the category.</p>
@@ -158,6 +170,17 @@ public class AddCategoryResponseBody extends TeaModel {
             private Long level; 
             private Long parentId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Category model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.level = model.level;
+                this.parentId = model.parentId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the created category.</p>

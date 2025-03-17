@@ -32,6 +32,10 @@ public class MediaConvertMuxConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return segment
      */
@@ -41,6 +45,13 @@ public class MediaConvertMuxConfig extends TeaModel {
 
     public static final class Builder {
         private MediaConvertSegment segment; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertMuxConfig model) {
+            this.segment = model.segment;
+        } 
 
         /**
          * Segment.

@@ -36,6 +36,10 @@ public class GetTemplateMaterialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return materialUrls
      */
@@ -53,6 +57,14 @@ public class GetTemplateMaterialsResponseBody extends TeaModel {
     public static final class Builder {
         private String materialUrls; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateMaterialsResponseBody model) {
+            this.materialUrls = model.materialUrls;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The URLs of the associated materials.</p>

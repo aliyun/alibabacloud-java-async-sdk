@@ -40,6 +40,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSmartSysAvatarModelsResponseBody model) {
+            this.requestId = model.requestId;
+            this.smartSysAvatarModelList = model.smartSysAvatarModelList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -217,6 +230,20 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             private Boolean outputMask; 
             private String videoUrl; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmartSysAvatarModelList model) {
+                this.avatarId = model.avatarId;
+                this.avatarName = model.avatarName;
+                this.bitrate = model.bitrate;
+                this.coverUrl = model.coverUrl;
+                this.height = model.height;
+                this.outputMask = model.outputMask;
+                this.videoUrl = model.videoUrl;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The ID of the digital human. The ID is required to submit a separate digital human rendering job or use the digital human image in an intelligent timeline.</p>

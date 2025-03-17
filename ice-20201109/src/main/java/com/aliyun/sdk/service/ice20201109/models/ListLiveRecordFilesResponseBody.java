@@ -52,6 +52,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return files
      */
@@ -101,6 +105,18 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveRecordFilesResponseBody model) {
+            this.files = model.files;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of index files.</p>
@@ -346,6 +362,25 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             private String startTime; 
             private String streamUrl; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.createTime = model.createTime;
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.format = model.format;
+                this.height = model.height;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.recordId = model.recordId;
+                this.recordOutput = model.recordOutput;
+                this.recordUrl = model.recordUrl;
+                this.startTime = model.startTime;
+                this.streamUrl = model.streamUrl;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The time when the file was created in UTC.</p>

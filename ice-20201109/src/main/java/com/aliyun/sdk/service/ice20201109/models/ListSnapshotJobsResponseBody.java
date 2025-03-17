@@ -40,6 +40,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -65,6 +69,15 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         private java.util.List<Jobs> jobs; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSnapshotJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of jobs.</p>
@@ -146,6 +159,14 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats: 1. OSS://bucket/object 2. http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
              * 
@@ -222,6 +243,14 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
@@ -460,6 +489,27 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             private String templateId; 
             private String triggerSource; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.async = model.async;
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.output = model.output;
+                this.pipelineId = model.pipelineId;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.templateId = model.templateId;
+                this.triggerSource = model.triggerSource;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether the snapshots were captured in asynchronous mode.</p>

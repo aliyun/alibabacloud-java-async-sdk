@@ -66,7 +66,7 @@ public class SubmitTraceAbJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -262,6 +262,14 @@ public class SubmitTraceAbJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -336,6 +344,14 @@ public class SubmitTraceAbJobRequest extends Request {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -56,6 +56,10 @@ public class GetEventCallbackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authKey
      */
@@ -113,6 +117,19 @@ public class GetEventCallbackResponseBody extends TeaModel {
         private String callbackURL; 
         private String eventTypeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEventCallbackResponseBody model) {
+            this.authKey = model.authKey;
+            this.authSwitch = model.authSwitch;
+            this.callbackQueueName = model.callbackQueueName;
+            this.callbackType = model.callbackType;
+            this.callbackURL = model.callbackURL;
+            this.eventTypeList = model.eventTypeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The authentication key. This parameter is returned only for HTTP callbacks.</p>

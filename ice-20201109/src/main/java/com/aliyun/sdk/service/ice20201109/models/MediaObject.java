@@ -40,6 +40,10 @@ public class MediaObject extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return media
      */
@@ -65,6 +69,15 @@ public class MediaObject extends TeaModel {
         private String media; 
         private String type; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaObject model) {
+            this.media = model.media;
+            this.type = model.type;
+            this.url = model.url;
+        } 
 
         /**
          * Media.

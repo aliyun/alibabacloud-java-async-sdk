@@ -52,6 +52,10 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -101,6 +105,18 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveRecordTemplatesResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.recordTemplateList = model.recordTemplateList;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -256,6 +272,17 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             private Integer sliceDuration; 
             private String sliceOssObjectPrefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordFormatList model) {
+                this.cycleDuration = model.cycleDuration;
+                this.format = model.format;
+                this.ossObjectPrefix = model.ossObjectPrefix;
+                this.sliceDuration = model.sliceDuration;
+                this.sliceOssObjectPrefix = model.sliceOssObjectPrefix;
+            } 
+
             /**
              * <p>The duration of the recording cycle. Unit: seconds.</p>
              * 
@@ -409,6 +436,18 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             private java.util.List<RecordFormatList> recordFormatList; 
             private String templateId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordTemplateList model) {
+                this.createTime = model.createTime;
+                this.lastModified = model.lastModified;
+                this.name = model.name;
+                this.recordFormatList = model.recordFormatList;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

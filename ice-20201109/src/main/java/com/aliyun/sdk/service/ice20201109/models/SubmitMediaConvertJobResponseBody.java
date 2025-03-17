@@ -36,6 +36,10 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return job
      */
@@ -53,6 +57,14 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
     public static final class Builder {
         private Job job; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitMediaConvertJobResponseBody model) {
+            this.job = model.job;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The transcoding task.</p>
@@ -134,6 +146,15 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             private java.util.List<MediaConvertInput> inputs; 
             private java.util.List<MediaConvertOutputGroup> outputGroups; 
             private java.util.List<MediaConvertOutput> outputs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.inputs = model.inputs;
+                this.outputGroups = model.outputGroups;
+                this.outputs = model.outputs;
+            } 
 
             /**
              * <p>The inputs of the transcoding task.</p>
@@ -317,6 +338,23 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
             private String requestId; 
             private String state; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.clientToken = model.clientToken;
+                this.code = model.code;
+                this.config = model.config;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.outputDetails = model.outputDetails;
+                this.outputGroupDetails = model.outputGroupDetails;
+                this.pipelineId = model.pipelineId;
+                this.requestId = model.requestId;
+                this.state = model.state;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The idempotency key of the request for creating the transcoding task.</p>

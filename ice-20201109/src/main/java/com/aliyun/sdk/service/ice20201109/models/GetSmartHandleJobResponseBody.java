@@ -56,6 +56,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -113,6 +117,19 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         private SmartJobInfo smartJobInfo; 
         private String state; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSmartHandleJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.jobResult = model.jobResult;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.smartJobInfo = model.smartJobInfo;
+            this.state = model.state;
+            this.userData = model.userData;
+        } 
 
         /**
          * <p>The job ID.</p>
@@ -266,6 +283,16 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private String mediaUrl; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobResult model) {
+                this.aiResult = model.aiResult;
+                this.mediaId = model.mediaId;
+                this.mediaUrl = model.mediaUrl;
+                this.usage = model.usage;
+            } 
+
             /**
              * <p>The AI analysis result.</p>
              * 
@@ -346,6 +373,13 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         public static final class Builder {
             private String inputFile; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputConfig model) {
+                this.inputFile = model.inputFile;
+            } 
+
             /**
              * <p>The OSS URL or the ID of the material in the media asset library.</p>
              * 
@@ -407,6 +441,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         public static final class Builder {
             private String bucket; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputConfig model) {
+                this.bucket = model.bucket;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The OSS bucket.</p>
@@ -552,6 +594,20 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private OutputConfig outputConfig; 
             private String title; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmartJobInfo model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.inputConfig = model.inputConfig;
+                this.jobType = model.jobType;
+                this.modifiedTime = model.modifiedTime;
+                this.outputConfig = model.outputConfig;
+                this.title = model.title;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

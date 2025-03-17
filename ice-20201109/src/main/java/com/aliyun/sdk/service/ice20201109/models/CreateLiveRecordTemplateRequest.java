@@ -41,7 +41,7 @@ public class CreateLiveRecordTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,6 +182,17 @@ public class CreateLiveRecordTemplateRequest extends Request {
             private String ossObjectPrefix; 
             private Integer sliceDuration; 
             private String sliceOssObjectPrefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordFormat model) {
+                this.cycleDuration = model.cycleDuration;
+                this.format = model.format;
+                this.ossObjectPrefix = model.ossObjectPrefix;
+                this.sliceDuration = model.sliceDuration;
+                this.sliceOssObjectPrefix = model.sliceOssObjectPrefix;
+            } 
 
             /**
              * <p>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>

@@ -40,6 +40,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatarChat3D
      */
@@ -65,6 +69,15 @@ public class AIAgentRuntimeConfig extends TeaModel {
         private AvatarChat3D avatarChat3D; 
         private VisionChat visionChat; 
         private VoiceChat voiceChat; 
+
+        private Builder() {
+        } 
+
+        private Builder(AIAgentRuntimeConfig model) {
+            this.avatarChat3D = model.avatarChat3D;
+            this.visionChat = model.visionChat;
+            this.voiceChat = model.voiceChat;
+        } 
 
         /**
          * AvatarChat3D.
@@ -151,6 +164,15 @@ public class AIAgentRuntimeConfig extends TeaModel {
             private String agentUserId; 
             private String authToken; 
             private String channelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvatarChat3D model) {
+                this.agentUserId = model.agentUserId;
+                this.authToken = model.authToken;
+                this.channelId = model.channelId;
+            } 
 
             /**
              * AgentUserId.
@@ -239,6 +261,15 @@ public class AIAgentRuntimeConfig extends TeaModel {
             private String authToken; 
             private String channelId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VisionChat model) {
+                this.agentUserId = model.agentUserId;
+                this.authToken = model.authToken;
+                this.channelId = model.channelId;
+            } 
+
             /**
              * AgentUserId.
              */
@@ -325,6 +356,15 @@ public class AIAgentRuntimeConfig extends TeaModel {
             private String agentUserId; 
             private String authToken; 
             private String channelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceChat model) {
+                this.agentUserId = model.agentUserId;
+                this.authToken = model.authToken;
+                this.channelId = model.channelId;
+            } 
 
             /**
              * AgentUserId.

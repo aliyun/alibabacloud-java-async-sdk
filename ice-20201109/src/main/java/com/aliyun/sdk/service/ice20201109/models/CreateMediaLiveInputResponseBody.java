@@ -36,6 +36,10 @@ public class CreateMediaLiveInputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return inputId
      */
@@ -53,6 +57,14 @@ public class CreateMediaLiveInputResponseBody extends TeaModel {
     public static final class Builder {
         private String inputId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMediaLiveInputResponseBody model) {
+            this.inputId = model.inputId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the input.</p>

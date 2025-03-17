@@ -60,6 +60,10 @@ public class MediaConvertTransConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adjDarMethod
      */
@@ -125,6 +129,20 @@ public class MediaConvertTransConfig extends TeaModel {
         private Boolean isCheckVideoBitrate; 
         private Boolean isCheckVideoBitrateFail; 
         private String transMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertTransConfig model) {
+            this.adjDarMethod = model.adjDarMethod;
+            this.isCheckAudioBitrate = model.isCheckAudioBitrate;
+            this.isCheckAudioBitrateFail = model.isCheckAudioBitrateFail;
+            this.isCheckReso = model.isCheckReso;
+            this.isCheckResoFail = model.isCheckResoFail;
+            this.isCheckVideoBitrate = model.isCheckVideoBitrate;
+            this.isCheckVideoBitrateFail = model.isCheckVideoBitrateFail;
+            this.transMode = model.transMode;
+        } 
 
         /**
          * AdjDarMethod.

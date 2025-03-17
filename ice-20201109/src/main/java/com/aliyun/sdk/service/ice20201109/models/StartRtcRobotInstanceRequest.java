@@ -63,7 +63,7 @@ public class StartRtcRobotInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -333,6 +333,21 @@ public class StartRtcRobotInstanceRequest extends Request {
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.asrMaxSilence = model.asrMaxSilence;
+                this.enableVoiceInterrupt = model.enableVoiceInterrupt;
+                this.greeting = model.greeting;
+                this.useVoiceprint = model.useVoiceprint;
+                this.userOfflineTimeout = model.userOfflineTimeout;
+                this.userOnlineTimeout = model.userOnlineTimeout;
+                this.voiceId = model.voiceId;
+                this.voiceprintId = model.voiceprintId;
+                this.volume = model.volume;
+            } 
 
             /**
              * AsrMaxSilence.

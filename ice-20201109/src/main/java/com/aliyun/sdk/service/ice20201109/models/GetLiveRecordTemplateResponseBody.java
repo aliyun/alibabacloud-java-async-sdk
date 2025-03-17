@@ -36,6 +36,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recordTemplate
      */
@@ -53,6 +57,14 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private RecordTemplate recordTemplate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveRecordTemplateResponseBody model) {
+            this.recordTemplate = model.recordTemplate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The recording template.</p>
@@ -158,6 +170,17 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             private String ossObjectPrefix; 
             private Integer sliceDuration; 
             private String sliceOssObjectPrefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordFormatList model) {
+                this.cycleDuration = model.cycleDuration;
+                this.format = model.format;
+                this.ossObjectPrefix = model.ossObjectPrefix;
+                this.sliceDuration = model.sliceDuration;
+                this.sliceOssObjectPrefix = model.sliceOssObjectPrefix;
+            } 
 
             /**
              * <p>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>
@@ -312,6 +335,18 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             private java.util.List<RecordFormatList> recordFormatList; 
             private String templateId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordTemplate model) {
+                this.createTime = model.createTime;
+                this.lastModified = model.lastModified;
+                this.name = model.name;
+                this.recordFormatList = model.recordFormatList;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

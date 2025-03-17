@@ -36,6 +36,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WorkflowTask workflowTask; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkflowTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.workflowTask = model.workflowTask;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -170,6 +182,18 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private String workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workflow model) {
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
 
             /**
              * <p>The time when the workflow was created.</p>
@@ -367,6 +391,20 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             private String taskInput; 
             private String userData; 
             private Workflow workflow; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowTask model) {
+                this.activityResults = model.activityResults;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskInput = model.taskInput;
+                this.userData = model.userData;
+                this.workflow = model.workflow;
+            } 
 
             /**
              * <p>The results for all nodes of the workflow task.</p>

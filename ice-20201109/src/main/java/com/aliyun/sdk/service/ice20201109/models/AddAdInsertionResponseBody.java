@@ -36,6 +36,10 @@ public class AddAdInsertionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -53,6 +57,14 @@ public class AddAdInsertionResponseBody extends TeaModel {
     public static final class Builder {
         private Config config; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddAdInsertionResponseBody model) {
+            this.config = model.config;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ad insertion configuration.</p>
@@ -123,6 +135,14 @@ public class AddAdInsertionResponseBody extends TeaModel {
             private String adSegmentUrlPrefix; 
             private String contentSegmentUrlPrefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(CdnConfig model) {
+                this.adSegmentUrlPrefix = model.adSegmentUrlPrefix;
+                this.contentSegmentUrlPrefix = model.contentSegmentUrlPrefix;
+            } 
+
             /**
              * <p>The CDN prefix for ad segments.</p>
              * 
@@ -183,6 +203,13 @@ public class AddAdInsertionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String hlsPrefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManifestEndpointConfig model) {
+                this.hlsPrefix = model.hlsPrefix;
+            } 
 
             /**
              * <p>The prefix of the playback endpoint for HLS manifests.</p>
@@ -350,6 +377,23 @@ public class AddAdInsertionResponseBody extends TeaModel {
             private String name; 
             private Integer personalizationThreshold; 
             private String slateAdUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.adMarkerPassthrough = model.adMarkerPassthrough;
+                this.adsUrl = model.adsUrl;
+                this.cdnConfig = model.cdnConfig;
+                this.configAliases = model.configAliases;
+                this.contentUrlPrefix = model.contentUrlPrefix;
+                this.createTime = model.createTime;
+                this.lastModified = model.lastModified;
+                this.manifestEndpointConfig = model.manifestEndpointConfig;
+                this.name = model.name;
+                this.personalizationThreshold = model.personalizationThreshold;
+                this.slateAdUrl = model.slateAdUrl;
+            } 
 
             /**
              * <p>Indicates whether ad marker passthrough is enabled.</p>

@@ -40,6 +40,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileList
      */
@@ -65,6 +69,15 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         private java.util.List<FileList> fileList; 
         private String nextStartTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveSnapshotFilesResponseBody model) {
+            this.fileList = model.fileList;
+            this.nextStartTime = model.nextStartTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of files.</p>
@@ -193,6 +206,18 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             private String ossBucket; 
             private String ossEndpoint; 
             private String ossObject; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.isOverlay = model.isOverlay;
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.ossObject = model.ossObject;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

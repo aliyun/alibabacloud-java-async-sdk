@@ -52,6 +52,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assets
      */
@@ -101,6 +105,18 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVodPackagingAssetsResponseBody model) {
+            this.assets = model.assets;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The VOD packaging assets.</p>
@@ -219,6 +235,14 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>
              */
@@ -324,6 +348,17 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             private String description; 
             private String groupName; 
             private Input input; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assets model) {
+                this.assetName = model.assetName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupName = model.groupName;
+                this.input = model.input;
+            } 
 
             /**
              * <p>The name of the VOD packaging asset.</p>

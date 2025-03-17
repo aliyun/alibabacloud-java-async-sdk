@@ -48,6 +48,10 @@ public class ListSearchLibResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListSearchLibResponseBody extends TeaModel {
         private java.util.List<SearchLibInfoList> searchLibInfoList; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchLibResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+            this.searchLibInfoList = model.searchLibInfoList;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -204,6 +219,15 @@ public class ListSearchLibResponseBody extends TeaModel {
             private String indexStatus; 
             private String indexType; 
 
+            private Builder() {
+            } 
+
+            private Builder(IndexInfo model) {
+                this.indexReadiness = model.indexReadiness;
+                this.indexStatus = model.indexStatus;
+                this.indexType = model.indexType;
+            } 
+
             /**
              * IndexReadiness.
              */
@@ -290,6 +314,15 @@ public class ListSearchLibResponseBody extends TeaModel {
             private java.util.List<IndexInfo> indexInfo; 
             private String searchLibName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchLibInfoList model) {
+                this.indexInfo = model.indexInfo;
+                this.searchLibName = model.searchLibName;
+                this.status = model.status;
+            } 
 
             /**
              * IndexInfo.

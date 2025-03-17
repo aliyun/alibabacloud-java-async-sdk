@@ -44,6 +44,10 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         private java.util.List<MediaProducingJobList> mediaProducingJobList; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediaProducingJobsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.mediaProducingJobList = model.mediaProducingJobList;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -313,6 +327,26 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
             private String status; 
             private String templateId; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaProducingJobList model) {
+                this.clipsParam = model.clipsParam;
+                this.code = model.code;
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.duration = model.duration;
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.mediaURL = model.mediaURL;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The template material parameters.</p>

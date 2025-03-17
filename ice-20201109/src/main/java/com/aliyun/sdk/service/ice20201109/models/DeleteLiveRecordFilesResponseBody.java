@@ -40,6 +40,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deleteFileInfoList
      */
@@ -65,6 +69,15 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         private java.util.List<DeleteFileInfoList> deleteFileInfoList; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteLiveRecordFilesResponseBody model) {
+            this.deleteFileInfoList = model.deleteFileInfoList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of files deleted.</p>
@@ -157,6 +170,15 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             private String code; 
             private String message; 
             private String recordId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteFileInfoList model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.recordId = model.recordId;
+            } 
 
             /**
              * <p>The code that identifies the result of the deletion.</p>

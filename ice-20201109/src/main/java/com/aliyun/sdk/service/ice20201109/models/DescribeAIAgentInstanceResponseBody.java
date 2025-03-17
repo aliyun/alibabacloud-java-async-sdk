@@ -36,6 +36,10 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -53,6 +57,14 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Instance instance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAIAgentInstanceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AI agent.</p>
@@ -170,6 +182,18 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             private String status; 
             private AIAgentTemplateConfig templateConfig; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.callLogUrl = model.callLogUrl;
+                this.runtimeConfig = model.runtimeConfig;
+                this.sessionId = model.sessionId;
+                this.status = model.status;
+                this.templateConfig = model.templateConfig;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The URL of the call log file.</p>

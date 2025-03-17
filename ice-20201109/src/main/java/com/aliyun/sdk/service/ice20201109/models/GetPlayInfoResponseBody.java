@@ -40,6 +40,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaBase
      */
@@ -65,6 +69,15 @@ public class GetPlayInfoResponseBody extends TeaModel {
         private MediaBase mediaBase; 
         private java.util.List<PlayInfoList> playInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPlayInfoResponseBody model) {
+            this.mediaBase = model.mediaBase;
+            this.playInfoList = model.playInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the media asset.</p>
@@ -226,6 +239,21 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String mediaType; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaBase model) {
+                this.cateId = model.cateId;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.mediaId = model.mediaId;
+                this.mediaTags = model.mediaTags;
+                this.mediaType = model.mediaType;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
@@ -644,6 +672,35 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String transTemplateType; 
             private String watermarkId; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlayInfoList model) {
+                this.bitDepth = model.bitDepth;
+                this.bitrate = model.bitrate;
+                this.creationTime = model.creationTime;
+                this.definition = model.definition;
+                this.duration = model.duration;
+                this.encrypt = model.encrypt;
+                this.encryptType = model.encryptType;
+                this.fileURL = model.fileURL;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.HDRType = model.HDRType;
+                this.height = model.height;
+                this.jobId = model.jobId;
+                this.modificationTime = model.modificationTime;
+                this.narrowBandType = model.narrowBandType;
+                this.playURL = model.playURL;
+                this.size = model.size;
+                this.status = model.status;
+                this.streamTags = model.streamTags;
+                this.streamType = model.streamType;
+                this.transTemplateType = model.transTemplateType;
+                this.watermarkId = model.watermarkId;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The color depth.</p>

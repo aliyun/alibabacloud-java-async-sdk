@@ -36,6 +36,10 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentAnalyzeConfig
      */
@@ -53,6 +57,14 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
     public static final class Builder {
         private ContentAnalyzeConfig contentAnalyzeConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetContentAnalyzeConfigResponseBody model) {
+            this.contentAnalyzeConfig = model.contentAnalyzeConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ContentAnalyzeConfig.
@@ -131,6 +143,15 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
             private Boolean auto; 
             private String saveType; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentAnalyzeConfig model) {
+                this.auto = model.auto;
+                this.saveType = model.saveType;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * Auto.

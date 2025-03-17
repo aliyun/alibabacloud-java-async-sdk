@@ -36,6 +36,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaCensorJobDetail
      */
@@ -53,6 +57,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     public static final class Builder {
         private MediaCensorJobDetail mediaCensorJobDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMediaCensorJobDetailResponseBody model) {
+            this.mediaCensorJobDetail = model.mediaCensorJobDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results of the content moderation job.</p>
@@ -146,6 +158,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(BarrageCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The label of the moderation result. Valid values:</p>
@@ -279,6 +301,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The label of the moderation result.</p>
@@ -433,6 +465,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Result> result; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.result = model.result;
+            } 
+
             /**
              * Result.
              */
@@ -516,6 +555,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String object; 
             private Results results; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoverImageCensorResult model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.results = model.results;
+            } 
+
             /**
              * <p>The OSS bucket in which the thumbnail is stored.</p>
              * 
@@ -595,6 +644,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CoverImageCensorResult> coverImageCensorResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(CoverImageCensorResults model) {
+                this.coverImageCensorResult = model.coverImageCensorResult;
+            } 
 
             /**
              * CoverImageCensorResult.
@@ -678,6 +734,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The label of the moderation result. Valid values:</p>
@@ -800,6 +866,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
              * 
@@ -907,6 +982,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(TitleCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The label of the moderation result. Valid values:</p>
@@ -1040,6 +1125,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(CensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The label of the moderation result.</p>
@@ -1194,6 +1289,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CensorResult> censorResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(CensorResults model) {
+                this.censorResult = model.censorResult;
+            } 
+
             /**
              * CensorResult.
              */
@@ -1276,6 +1378,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(CensorResultsCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The label of the moderation result.</p>
@@ -1430,6 +1542,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CensorResultsCensorResult> censorResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoTimelineCensorResults model) {
+                this.censorResult = model.censorResult;
+            } 
+
             /**
              * CensorResult.
              */
@@ -1500,6 +1619,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private VideoTimelineCensorResults censorResults; 
             private String object; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoTimeline model) {
+                this.censorResults = model.censorResults;
+                this.object = model.object;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The moderation results that include information such as labels and scores.</p>
@@ -1573,6 +1701,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<VideoTimeline> videoTimeline; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoTimelines model) {
+                this.videoTimeline = model.videoTimeline;
+            } 
+
             /**
              * VideoTimeline.
              */
@@ -1643,6 +1778,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private CensorResults censorResults; 
             private String nextPageToken; 
             private VideoTimelines videoTimelines; 
+
+            private Builder() {
+            } 
+
+            private Builder(VensorCensorResult model) {
+                this.censorResults = model.censorResults;
+                this.nextPageToken = model.nextPageToken;
+                this.videoTimelines = model.videoTimelines;
+            } 
 
             /**
              * <p>A collection of moderation results. The information includes the summary about various scenarios such as pornographic content moderation and terrorist content moderation.</p>
@@ -1733,6 +1877,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The OSS bucket in which the output snapshot is stored.</p>
@@ -1832,6 +1985,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String bizType; 
             private OutputFile outputFile; 
             private String videoCensor; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoCensorConfig model) {
+                this.bizType = model.bizType;
+                this.outputFile = model.outputFile;
+                this.videoCensor = model.videoCensor;
+            } 
 
             /**
              * <p>The custom business type. Default value: common.</p>
@@ -2085,6 +2247,28 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String userData; 
             private VensorCensorResult vensorCensorResult; 
             private VideoCensorConfig videoCensorConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaCensorJobDetail model) {
+                this.barrageCensorResult = model.barrageCensorResult;
+                this.code = model.code;
+                this.coverImageCensorResults = model.coverImageCensorResults;
+                this.creationTime = model.creationTime;
+                this.descCensorResult = model.descCensorResult;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.state = model.state;
+                this.suggestion = model.suggestion;
+                this.titleCensorResult = model.titleCensorResult;
+                this.userData = model.userData;
+                this.vensorCensorResult = model.vensorCensorResult;
+                this.videoCensorConfig = model.videoCensorConfig;
+            } 
 
             /**
              * <p>The moderation results of live comments.</p>

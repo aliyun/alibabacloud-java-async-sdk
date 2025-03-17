@@ -44,6 +44,10 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelId
      */
@@ -77,6 +81,16 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
         private String humanAgentUserId; 
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(TakeoverAIAgentCallResponseBody model) {
+            this.channelId = model.channelId;
+            this.humanAgentUserId = model.humanAgentUserId;
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * <p>The ID of the ARTC channel.</p>

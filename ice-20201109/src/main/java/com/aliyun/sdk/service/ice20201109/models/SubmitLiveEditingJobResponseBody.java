@@ -52,6 +52,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -101,6 +105,18 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         private String projectId; 
         private String requestId; 
         private String vodMediaId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitLiveEditingJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.mediaId = model.mediaId;
+            this.mediaURL = model.mediaURL;
+            this.projectId = model.projectId;
+            this.requestId = model.requestId;
+            this.vodMediaId = model.vodMediaId;
+        } 
 
         /**
          * <p>The ID of the live editing job.</p>

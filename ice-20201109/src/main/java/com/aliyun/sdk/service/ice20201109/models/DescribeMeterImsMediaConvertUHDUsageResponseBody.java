@@ -36,6 +36,10 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMeterImsMediaConvertUHDUsageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The usage statistics of IMS on UHD transcoding of MPS.</p>
@@ -134,6 +146,15 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
             private Long duration; 
             private String specification; 
             private Long time; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.duration = model.duration;
+                this.specification = model.specification;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The usage duration, in minutes.</p>

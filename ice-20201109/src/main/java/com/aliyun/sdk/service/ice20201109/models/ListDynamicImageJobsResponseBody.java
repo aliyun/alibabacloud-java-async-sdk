@@ -40,6 +40,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -65,6 +69,15 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         private java.util.List<Jobs> jobs; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDynamicImageJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of jobs.</p>
@@ -145,6 +158,14 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</p>
@@ -230,6 +251,14 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
@@ -435,6 +464,24 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
             private String submitTime; 
             private String templateId; 
             private String triggerSource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.output = model.output;
+                this.pipelineId = model.pipelineId;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.templateId = model.templateId;
+                this.triggerSource = model.triggerSource;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

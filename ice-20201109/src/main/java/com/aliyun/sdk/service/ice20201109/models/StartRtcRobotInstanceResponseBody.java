@@ -36,6 +36,10 @@ public class StartRtcRobotInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -53,6 +57,14 @@ public class StartRtcRobotInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartRtcRobotInstanceResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceId.

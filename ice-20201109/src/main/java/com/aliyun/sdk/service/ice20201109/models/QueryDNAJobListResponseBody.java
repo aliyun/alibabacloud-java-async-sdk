@@ -36,6 +36,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobList
      */
@@ -53,6 +57,14 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<JobList> jobList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDNAJobListResponseBody model) {
+            this.jobList = model.jobList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried media fingerprint analysis jobs.</p>
@@ -122,6 +134,14 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. The file can be an OSS object or a media asset. The path of an OSS object can be in one of the following formats:</p>
@@ -322,6 +342,24 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             private String primaryKey; 
             private String status; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.code = model.code;
+                this.config = model.config;
+                this.creationTime = model.creationTime;
+                this.DBId = model.DBId;
+                this.DNAResult = model.DNAResult;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.input = model.input;
+                this.message = model.message;
+                this.primaryKey = model.primaryKey;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The response code.</p>

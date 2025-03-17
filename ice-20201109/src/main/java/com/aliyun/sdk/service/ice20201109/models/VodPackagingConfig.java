@@ -44,6 +44,10 @@ public class VodPackagingConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return drmProvider
      */
@@ -77,6 +81,16 @@ public class VodPackagingConfig extends TeaModel {
         private String manifestName; 
         private Long segmentDuration; 
         private StreamSelection streamSelection; 
+
+        private Builder() {
+        } 
+
+        private Builder(VodPackagingConfig model) {
+            this.drmProvider = model.drmProvider;
+            this.manifestName = model.manifestName;
+            this.segmentDuration = model.segmentDuration;
+            this.streamSelection = model.streamSelection;
+        } 
 
         /**
          * DrmProvider.
@@ -184,6 +198,16 @@ public class VodPackagingConfig extends TeaModel {
             private java.util.List<String> systemIds; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(DrmProvider model) {
+                this.encryptionMethod = model.encryptionMethod;
+                this.iv = model.iv;
+                this.systemIds = model.systemIds;
+                this.url = model.url;
+            } 
+
             /**
              * EncryptionMethod.
              */
@@ -278,6 +302,15 @@ public class VodPackagingConfig extends TeaModel {
             private Long maxVideoBitsPerSecond; 
             private Long minVideoBitsPerSecond; 
             private String streamOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamSelection model) {
+                this.maxVideoBitsPerSecond = model.maxVideoBitsPerSecond;
+                this.minVideoBitsPerSecond = model.minVideoBitsPerSecond;
+                this.streamOrder = model.streamOrder;
+            } 
 
             /**
              * MaxVideoBitsPerSecond.

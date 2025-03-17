@@ -54,7 +54,7 @@ public class QueryTraceM3u8JobListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

@@ -36,6 +36,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return project
      */
@@ -53,6 +57,14 @@ public class GetEditingProjectResponseBody extends TeaModel {
     public static final class Builder {
         private Project project; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEditingProjectResponseBody model) {
+            this.project = model.project;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the online editing project.</p>
@@ -326,6 +338,31 @@ public class GetEditingProjectResponseBody extends TeaModel {
             private String timelineConvertErrorMessage; 
             private String timelineConvertStatus; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.businessConfig = model.businessConfig;
+                this.businessStatus = model.businessStatus;
+                this.clipsParam = model.clipsParam;
+                this.coverURL = model.coverURL;
+                this.createSource = model.createSource;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.modifiedSource = model.modifiedSource;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.projectType = model.projectType;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.templateType = model.templateType;
+                this.timeline = model.timeline;
+                this.timelineConvertErrorMessage = model.timelineConvertErrorMessage;
+                this.timelineConvertStatus = model.timelineConvertStatus;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The business configuration of the project. This parameter can be ignored for general editing projects.</p>

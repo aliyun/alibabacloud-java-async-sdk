@@ -40,6 +40,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectAudioForCustomizedVoiceJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -145,6 +158,14 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean pass; 
             private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pass = model.pass;
+                this.reason = model.reason;
+            } 
 
             /**
              * <p>Indicates whether the audio file passes the check. Valid values:</p>

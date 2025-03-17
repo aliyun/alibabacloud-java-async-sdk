@@ -44,6 +44,10 @@ public class DeleteMediaFromSearchLibResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DeleteMediaFromSearchLibResponseBody extends TeaModel {
         private String mediaId; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMediaFromSearchLibResponseBody model) {
+            this.code = model.code;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>

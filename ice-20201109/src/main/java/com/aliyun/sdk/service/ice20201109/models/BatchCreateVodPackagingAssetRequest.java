@@ -39,7 +39,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +145,14 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The URL of the media file. You can only specify a M3U8 file stored in Object Storage Service (OSS).</p>
              */
@@ -226,6 +234,15 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             private String assetName; 
             private String contentId; 
             private Input input; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assets model) {
+                this.assetName = model.assetName;
+                this.contentId = model.contentId;
+                this.input = model.input;
+            } 
 
             /**
              * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>

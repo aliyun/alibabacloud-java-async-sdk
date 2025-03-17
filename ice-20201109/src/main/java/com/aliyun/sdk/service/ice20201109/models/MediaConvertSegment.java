@@ -36,6 +36,10 @@ public class MediaConvertSegment extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return duration
      */
@@ -53,6 +57,14 @@ public class MediaConvertSegment extends TeaModel {
     public static final class Builder {
         private Integer duration; 
         private String forceSegTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertSegment model) {
+            this.duration = model.duration;
+            this.forceSegTime = model.forceSegTime;
+        } 
 
         /**
          * Duration.

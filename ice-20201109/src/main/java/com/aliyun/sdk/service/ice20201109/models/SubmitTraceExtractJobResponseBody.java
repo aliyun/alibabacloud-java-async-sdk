@@ -44,6 +44,10 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitTraceExtractJobResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Data.
@@ -150,6 +164,13 @@ public class SubmitTraceExtractJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobId = model.jobId;
+            } 
 
             /**
              * JobId.

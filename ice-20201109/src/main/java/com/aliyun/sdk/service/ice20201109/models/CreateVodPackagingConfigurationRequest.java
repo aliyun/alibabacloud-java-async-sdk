@@ -54,7 +54,7 @@ public class CreateVodPackagingConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -252,6 +252,16 @@ public class CreateVodPackagingConfigurationRequest extends Request {
             private java.util.List<String> systemIds; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(DrmProvider model) {
+                this.encryptionMethod = model.encryptionMethod;
+                this.iv = model.iv;
+                this.systemIds = model.systemIds;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The encryption method. Valid values:</p>
              * <ul>
@@ -368,6 +378,15 @@ public class CreateVodPackagingConfigurationRequest extends Request {
             private Long minVideoBitsPerSecond; 
             private String streamOrder; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamSelection model) {
+                this.maxVideoBitsPerSecond = model.maxVideoBitsPerSecond;
+                this.minVideoBitsPerSecond = model.minVideoBitsPerSecond;
+                this.streamOrder = model.streamOrder;
+            } 
+
             /**
              * <p>The maximum bitrate of the video stream. Unit: bit/s.</p>
              * 
@@ -480,6 +499,16 @@ public class CreateVodPackagingConfigurationRequest extends Request {
             private String manifestName; 
             private Long segmentDuration; 
             private StreamSelection streamSelection; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageConfig model) {
+                this.drmProvider = model.drmProvider;
+                this.manifestName = model.manifestName;
+                this.segmentDuration = model.segmentDuration;
+                this.streamSelection = model.streamSelection;
+            } 
 
             /**
              * <p>The settings of digital rights management (DRM) encryption.</p>

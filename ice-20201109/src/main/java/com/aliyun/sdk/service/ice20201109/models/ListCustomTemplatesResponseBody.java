@@ -40,6 +40,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customTemplateList
      */
@@ -65,6 +69,15 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         private java.util.List<CustomTemplateList> customTemplateList; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomTemplatesResponseBody model) {
+            this.customTemplateList = model.customTemplateList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The queried templates.</p>
@@ -134,6 +147,13 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String bitrateControlType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTemplateHint model) {
+                this.bitrateControlType = model.bitrateControlType;
+            } 
+
             /**
              * BitrateControlType.
              */
@@ -180,6 +200,13 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private TranscodeTemplateHint transcodeTemplateHint; 
+
+            private Builder() {
+            } 
+
+            private Builder(FrontendHint model) {
+                this.transcodeTemplateHint = model.transcodeTemplateHint;
+            } 
 
             /**
              * TranscodeTemplateHint.
@@ -359,6 +386,24 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             private String templateName; 
             private Integer type; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomTemplateList model) {
+                this.createTime = model.createTime;
+                this.frontendHint = model.frontendHint;
+                this.isDefault = model.isDefault;
+                this.modifiedTime = model.modifiedTime;
+                this.status = model.status;
+                this.subtype = model.subtype;
+                this.subtypeName = model.subtypeName;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.type = model.type;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

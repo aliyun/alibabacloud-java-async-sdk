@@ -48,6 +48,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class MediaConvertOutputDetail extends TeaModel {
         private String name; 
         private String status; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MediaConvertOutputDetail model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.name = model.name;
+            this.status = model.status;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * Code.

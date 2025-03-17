@@ -36,6 +36,10 @@ public class GetStorageListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetStorageListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StorageInfoList> storageInfoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStorageListResponseBody model) {
+            this.requestId = model.requestId;
+            this.storageInfoList = model.storageInfoList;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -206,6 +218,21 @@ public class GetStorageListResponseBody extends TeaModel {
             private String status; 
             private String storageLocation; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageInfoList model) {
+                this.appId = model.appId;
+                this.creationTime = model.creationTime;
+                this.defaultStorage = model.defaultStorage;
+                this.editingTempFileStorage = model.editingTempFileStorage;
+                this.modifiedTime = model.modifiedTime;
+                this.path = model.path;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * AppId.

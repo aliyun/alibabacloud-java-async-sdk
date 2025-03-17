@@ -52,6 +52,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobList
      */
@@ -101,6 +105,18 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveSnapshotJobsResponseBody model) {
+            this.jobList = model.jobList;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of jobs.</p>
@@ -226,6 +242,15 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             private String bucket; 
             private String endpoint; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotOutput model) {
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
@@ -382,6 +407,20 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
             private Integer timeInterval; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.snapshotOutput = model.snapshotOutput;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.timeInterval = model.timeInterval;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

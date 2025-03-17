@@ -40,6 +40,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -65,6 +69,15 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         private java.util.List<Jobs> jobs; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediaInfoJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of media information analysis jobs.</p>
@@ -145,6 +158,14 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The media object.</p>
@@ -382,6 +403,27 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             private String sampleRate; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamInfoList model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.sampleFmt = model.sampleFmt;
+                this.sampleRate = model.sampleRate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * <p>The bitrate.</p>
@@ -718,6 +760,24 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             private String mediaId; 
             private String region; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileBasicInfo model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileStatus = model.fileStatus;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+                this.formatName = model.formatName;
+                this.height = model.height;
+                this.mediaId = model.mediaId;
+                this.region = model.region;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The video bitrate.</p>
@@ -1154,6 +1214,35 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             private String timeBase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamInfoList model) {
+                this.avgFps = model.avgFps;
+                this.bitRate = model.bitRate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timeBase = model.timeBase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average frame rate.</p>
              * 
@@ -1479,6 +1568,15 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             private FileBasicInfo fileBasicInfo; 
             private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaInfoProperty model) {
+                this.audioStreamInfoList = model.audioStreamInfoList;
+                this.fileBasicInfo = model.fileBasicInfo;
+                this.videoStreamInfoList = model.videoStreamInfoList;
+            } 
+
             /**
              * <p>The information about the audio stream.</p>
              */
@@ -1553,6 +1651,14 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String pipelineId; 
             private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+            } 
 
             /**
              * <p>The ID of the MPS queue to which the job was submitted.</p>
@@ -1758,6 +1864,25 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
             private String submitTime; 
             private String triggerSource; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.async = model.async;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.mediaInfoProperty = model.mediaInfoProperty;
+                this.name = model.name;
+                this.requestId = model.requestId;
+                this.scheduleConfig = model.scheduleConfig;
+                this.status = model.status;
+                this.submitResultJson = model.submitResultJson;
+                this.submitTime = model.submitTime;
+                this.triggerSource = model.triggerSource;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>Indicates whether asynchronous processing was performed.</p>

@@ -44,6 +44,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTraceM3u8JobListResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Data.
@@ -162,6 +176,14 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * Media.
@@ -313,6 +335,21 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
             private String traceMediaId; 
             private String userData; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.jobId = model.jobId;
+                this.output = model.output;
+                this.status = model.status;
+                this.trace = model.trace;
+                this.traceMediaId = model.traceMediaId;
+                this.userData = model.userData;
+                this.userId = model.userId;
+            } 
 
             /**
              * GmtCreate.

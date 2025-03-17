@@ -40,6 +40,10 @@ public class GetAvatarResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetAvatarResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAvatarResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -234,6 +247,21 @@ public class GetAvatarResponseBody extends TeaModel {
             private Boolean transparent; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Avatar model) {
+                this.avatarDescription = model.avatarDescription;
+                this.avatarId = model.avatarId;
+                this.avatarName = model.avatarName;
+                this.avatarType = model.avatarType;
+                this.height = model.height;
+                this.portrait = model.portrait;
+                this.thumbnail = model.thumbnail;
+                this.transparent = model.transparent;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The description of the digital human.</p>
              */
@@ -365,6 +393,13 @@ public class GetAvatarResponseBody extends TeaModel {
 
         public static final class Builder {
             private Avatar avatar; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avatar = model.avatar;
+            } 
 
             /**
              * <p>The information about the digital human.</p>

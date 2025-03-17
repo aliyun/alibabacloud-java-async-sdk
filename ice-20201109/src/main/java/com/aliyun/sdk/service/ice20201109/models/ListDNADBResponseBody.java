@@ -36,6 +36,10 @@ public class ListDNADBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBList
      */
@@ -53,6 +57,14 @@ public class ListDNADBResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DBList> DBList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDNADBResponseBody model) {
+            this.DBList = model.DBList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried media fingerprint libraries.</p>
@@ -158,6 +170,17 @@ public class ListDNADBResponseBody extends TeaModel {
             private String model; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBList model) {
+                this.DBId = model.DBId;
+                this.description = model.description;
+                this.model = model.model;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the media fingerprint library.</p>

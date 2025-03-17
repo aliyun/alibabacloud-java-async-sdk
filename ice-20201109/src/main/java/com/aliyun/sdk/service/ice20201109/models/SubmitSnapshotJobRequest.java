@@ -62,7 +62,7 @@ public class SubmitSnapshotJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -251,6 +251,14 @@ public class SubmitSnapshotJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
              * <ol>
@@ -339,6 +347,14 @@ public class SubmitSnapshotJobRequest extends Request {
             private String media; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
              * <ol>
@@ -413,6 +429,13 @@ public class SubmitSnapshotJobRequest extends Request {
 
         public static final class Builder {
             private String pipelineId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleConfig model) {
+                this.pipelineId = model.pipelineId;
+            } 
 
             /**
              * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
@@ -535,6 +558,19 @@ public class SubmitSnapshotJobRequest extends Request {
             private Integer lines; 
             private Integer margin; 
             private Integer padding; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpriteSnapshotConfig model) {
+                this.cellHeight = model.cellHeight;
+                this.cellWidth = model.cellWidth;
+                this.color = model.color;
+                this.columns = model.columns;
+                this.lines = model.lines;
+                this.margin = model.margin;
+                this.padding = model.padding;
+            } 
 
             /**
              * <p>The height of a single snapshot before tiling. The default value is the height of the output snapshot.</p>
@@ -772,6 +808,23 @@ public class SubmitSnapshotJobRequest extends Request {
             private String type; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverwriteParams model) {
+                this.blackLevel = model.blackLevel;
+                this.count = model.count;
+                this.frameType = model.frameType;
+                this.height = model.height;
+                this.interval = model.interval;
+                this.isSptFrag = model.isSptFrag;
+                this.pixelBlackThreshold = model.pixelBlackThreshold;
+                this.spriteSnapshotConfig = model.spriteSnapshotConfig;
+                this.time = model.time;
+                this.type = model.type;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The threshold that is used to filter out black frames for the first snapshot to be captured. This feature is available if you request the system to capture multiple snapshots.</p>
              * 
@@ -941,6 +994,14 @@ public class SubmitSnapshotJobRequest extends Request {
         public static final class Builder {
             private OverwriteParams overwriteParams; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateConfig model) {
+                this.overwriteParams = model.overwriteParams;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The parameters that are used to overwrite the corresponding parameters.</p>

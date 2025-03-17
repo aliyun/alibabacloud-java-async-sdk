@@ -48,6 +48,10 @@ public class ListSourceLocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class ListSourceLocationsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ChannelAssemblySourceLocation> sourceLocationList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSourceLocationsResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sourceLocationList = model.sourceLocationList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>

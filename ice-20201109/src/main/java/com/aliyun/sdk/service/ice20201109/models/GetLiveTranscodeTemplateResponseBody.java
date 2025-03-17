@@ -36,6 +36,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TemplateContent templateContent; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLiveTranscodeTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateContent = model.templateContent;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private String codec; 
             private String profile; 
             private String samplerate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioParams model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.samplerate = model.samplerate;
+            } 
 
             /**
              * <p>The bitrate of the output audio.</p>
@@ -325,6 +348,19 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private String profile; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoParams model) {
+                this.bitrate = model.bitrate;
+                this.codec = model.codec;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.profile = model.profile;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate of the output video.</p>
              * 
@@ -453,6 +489,14 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private AudioParams audioParams; 
             private VideoParams videoParams; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplateConfig model) {
+                this.audioParams = model.audioParams;
+                this.videoParams = model.videoParams;
+            } 
+
             /**
              * <p>The audio parameters.</p>
              */
@@ -567,6 +611,18 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private TemplateConfig templateConfig; 
             private String templateId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateContent model) {
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.name = model.name;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The category of the template. Valid values:</p>

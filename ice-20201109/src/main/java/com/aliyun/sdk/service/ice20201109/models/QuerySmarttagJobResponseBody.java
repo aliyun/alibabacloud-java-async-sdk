@@ -44,6 +44,10 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobStatus
      */
@@ -77,6 +81,16 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         private String requestId; 
         private Results results; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmarttagJobResponseBody model) {
+            this.jobStatus = model.jobStatus;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.userData = model.userData;
+        } 
 
         /**
          * <p>The status of the job. Valid values:</p>
@@ -175,6 +189,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
             private String data; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The details of the analysis result. The value is a JSON string. For more information about the parameters of different result types, see the &quot;Parameters of different result types&quot; section of this topic.</p>
              * 
@@ -259,6 +281,13 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.result = model.result;
+            } 
 
             /**
              * Result.

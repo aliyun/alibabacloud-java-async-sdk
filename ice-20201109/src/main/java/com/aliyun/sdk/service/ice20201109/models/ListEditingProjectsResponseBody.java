@@ -45,6 +45,10 @@ public class ListEditingProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -78,6 +82,16 @@ public class ListEditingProjectsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<ProjectList> projectList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEditingProjectsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.projectList = model.projectList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -326,6 +340,27 @@ public class ListEditingProjectsResponseBody extends TeaModel {
             private String status; 
             private String templateType; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectList model) {
+                this.businessConfig = model.businessConfig;
+                this.businessStatus = model.businessStatus;
+                this.coverURL = model.coverURL;
+                this.createSource = model.createSource;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.modifiedSource = model.modifiedSource;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.projectType = model.projectType;
+                this.status = model.status;
+                this.templateType = model.templateType;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The business configuration of the project. This parameter can be ignored for general editing projects.</p>

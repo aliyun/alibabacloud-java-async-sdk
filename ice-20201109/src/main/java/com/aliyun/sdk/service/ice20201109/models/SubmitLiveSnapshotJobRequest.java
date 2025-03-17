@@ -58,7 +58,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -248,6 +248,15 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             private String endpoint; 
             private String storageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotOutput model) {
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.storageType = model.storageType;
+            } 
+
             /**
              * <p>The bucket of the snapshot output endpoint.</p>
              * <p>This parameter is required.</p>
@@ -336,6 +345,14 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         public static final class Builder {
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInput model) {
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The type of the input stream. The value can only be rtmp.</p>

@@ -58,7 +58,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -242,6 +242,15 @@ public class SubmitLiveRecordJobRequest extends Request {
             private String endpoint; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordOutput model) {
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The bucket name.</p>
              * 
@@ -327,6 +336,14 @@ public class SubmitLiveRecordJobRequest extends Request {
         public static final class Builder {
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInput model) {
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The type of the live stream URL. The value can only be rtmp.</p>

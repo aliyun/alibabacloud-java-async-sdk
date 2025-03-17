@@ -44,6 +44,10 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         private java.util.List<IndexJobInfoList> indexJobInfoList; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMediaIndexJobResponseBody model) {
+            this.code = model.code;
+            this.indexJobInfoList = model.indexJobInfoList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -196,6 +210,16 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
             private String gmtSubmit; 
             private String indexType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexJobInfoList model) {
+                this.gmtFinish = model.gmtFinish;
+                this.gmtSubmit = model.gmtSubmit;
+                this.indexType = model.indexType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The end time of the indexing job.</p>

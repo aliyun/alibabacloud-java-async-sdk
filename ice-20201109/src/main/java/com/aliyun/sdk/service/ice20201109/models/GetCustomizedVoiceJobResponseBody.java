@@ -40,6 +40,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomizedVoiceJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned if the request was successful.</p>
@@ -246,6 +259,22 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             private String voiceId; 
             private String voiceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomizedVoiceJob model) {
+                this.createTime = model.createTime;
+                this.gender = model.gender;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.scenario = model.scenario;
+                this.status = model.status;
+                this.type = model.type;
+                this.voiceDesc = model.voiceDesc;
+                this.voiceId = model.voiceId;
+                this.voiceName = model.voiceName;
+            } 
+
             /**
              * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -412,6 +441,13 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private CustomizedVoiceJob customizedVoiceJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customizedVoiceJob = model.customizedVoiceJob;
+            } 
 
             /**
              * <p>The information about the human voice cloning job.</p>

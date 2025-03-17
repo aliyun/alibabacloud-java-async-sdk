@@ -40,6 +40,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Templates> templates; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -277,6 +290,25 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String status; 
             private String templateId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.clipsParam = model.clipsParam;
+                this.config = model.config;
+                this.coverURL = model.coverURL;
+                this.createSource = model.createSource;
+                this.creationTime = model.creationTime;
+                this.modifiedSource = model.modifiedSource;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.previewMedia = model.previewMedia;
+                this.previewMediaStatus = model.previewMediaStatus;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The clip parameters.</p>

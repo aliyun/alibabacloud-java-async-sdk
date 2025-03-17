@@ -36,6 +36,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaTagList
      */
@@ -53,6 +57,14 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MediaTagList> mediaTagList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAllPublicMediaTagsResponseBody model) {
+            this.mediaTagList = model.mediaTagList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The tags of media assets in the public media library.</p>
@@ -134,6 +146,15 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             private String optionChineseName; 
             private String optionEnglishName; 
             private String optionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.optionChineseName = model.optionChineseName;
+                this.optionEnglishName = model.optionEnglishName;
+                this.optionId = model.optionId;
+            } 
 
             /**
              * <p>The option name in Chinese.</p>
@@ -239,6 +260,16 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             private String mediaTagNameChinese; 
             private String mediaTagNameEnglish; 
             private java.util.List<Options> options; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaTagList model) {
+                this.mediaTagId = model.mediaTagId;
+                this.mediaTagNameChinese = model.mediaTagNameChinese;
+                this.mediaTagNameEnglish = model.mediaTagNameEnglish;
+                this.options = model.options;
+            } 
 
             /**
              * <p>The ID of the media tag.</p>

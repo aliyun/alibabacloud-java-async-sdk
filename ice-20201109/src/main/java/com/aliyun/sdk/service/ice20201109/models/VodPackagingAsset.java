@@ -48,6 +48,10 @@ public class VodPackagingAsset extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetName
      */
@@ -89,6 +93,17 @@ public class VodPackagingAsset extends TeaModel {
         private String createTime; 
         private String groupName; 
         private Input input; 
+
+        private Builder() {
+        } 
+
+        private Builder(VodPackagingAsset model) {
+            this.assetName = model.assetName;
+            this.contentId = model.contentId;
+            this.createTime = model.createTime;
+            this.groupName = model.groupName;
+            this.input = model.input;
+        } 
 
         /**
          * AssetName.
@@ -179,6 +194,14 @@ public class VodPackagingAsset extends TeaModel {
         public static final class Builder {
             private String media; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.type = model.type;
+            } 
 
             /**
              * Media.

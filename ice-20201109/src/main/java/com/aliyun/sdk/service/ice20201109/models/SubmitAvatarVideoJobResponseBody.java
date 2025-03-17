@@ -40,6 +40,10 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
         private String jobId; 
         private String mediaId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAvatarVideoJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * JobId.

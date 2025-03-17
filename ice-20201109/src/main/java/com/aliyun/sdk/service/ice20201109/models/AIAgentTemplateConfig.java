@@ -40,6 +40,10 @@ public class AIAgentTemplateConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatarChat3D
      */
@@ -65,6 +69,15 @@ public class AIAgentTemplateConfig extends TeaModel {
         private AvatarChat3D avatarChat3D; 
         private VisionChat visionChat; 
         private VoiceChat voiceChat; 
+
+        private Builder() {
+        } 
+
+        private Builder(AIAgentTemplateConfig model) {
+            this.avatarChat3D = model.avatarChat3D;
+            this.visionChat = model.visionChat;
+            this.voiceChat = model.voiceChat;
+        } 
 
         /**
          * AvatarChat3D.
@@ -139,6 +152,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         public static final class Builder {
             private String content; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(LlmHistory model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
 
             /**
              * Content.
@@ -471,6 +492,36 @@ public class AIAgentTemplateConfig extends TeaModel {
             private String wakeUpQuery; 
             private String workflowOverrideParams; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvatarChat3D model) {
+                this.asrLanguageId = model.asrLanguageId;
+                this.asrMaxSilence = model.asrMaxSilence;
+                this.avatarId = model.avatarId;
+                this.bailianAppParams = model.bailianAppParams;
+                this.enableIntelligentSegment = model.enableIntelligentSegment;
+                this.enablePushToTalk = model.enablePushToTalk;
+                this.enableVoiceInterrupt = model.enableVoiceInterrupt;
+                this.gracefulShutdown = model.gracefulShutdown;
+                this.greeting = model.greeting;
+                this.interruptWords = model.interruptWords;
+                this.llmHistory = model.llmHistory;
+                this.llmHistoryLimit = model.llmHistoryLimit;
+                this.llmSystemPrompt = model.llmSystemPrompt;
+                this.maxIdleTime = model.maxIdleTime;
+                this.useVoiceprint = model.useVoiceprint;
+                this.userOfflineTimeout = model.userOfflineTimeout;
+                this.userOnlineTimeout = model.userOnlineTimeout;
+                this.vadLevel = model.vadLevel;
+                this.voiceId = model.voiceId;
+                this.voiceIdList = model.voiceIdList;
+                this.voiceprintId = model.voiceprintId;
+                this.volume = model.volume;
+                this.wakeUpQuery = model.wakeUpQuery;
+                this.workflowOverrideParams = model.workflowOverrideParams;
+            } 
+
             /**
              * AsrLanguageId.
              */
@@ -713,6 +764,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         public static final class Builder {
             private String content; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(VisionChatLlmHistory model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
 
             /**
              * Content.
@@ -1033,6 +1092,35 @@ public class AIAgentTemplateConfig extends TeaModel {
             private String wakeUpQuery; 
             private String workflowOverrideParams; 
 
+            private Builder() {
+            } 
+
+            private Builder(VisionChat model) {
+                this.asrLanguageId = model.asrLanguageId;
+                this.asrMaxSilence = model.asrMaxSilence;
+                this.bailianAppParams = model.bailianAppParams;
+                this.enableIntelligentSegment = model.enableIntelligentSegment;
+                this.enablePushToTalk = model.enablePushToTalk;
+                this.enableVoiceInterrupt = model.enableVoiceInterrupt;
+                this.gracefulShutdown = model.gracefulShutdown;
+                this.greeting = model.greeting;
+                this.interruptWords = model.interruptWords;
+                this.llmHistory = model.llmHistory;
+                this.llmHistoryLimit = model.llmHistoryLimit;
+                this.llmSystemPrompt = model.llmSystemPrompt;
+                this.maxIdleTime = model.maxIdleTime;
+                this.useVoiceprint = model.useVoiceprint;
+                this.userOfflineTimeout = model.userOfflineTimeout;
+                this.userOnlineTimeout = model.userOnlineTimeout;
+                this.vadLevel = model.vadLevel;
+                this.voiceId = model.voiceId;
+                this.voiceIdList = model.voiceIdList;
+                this.voiceprintId = model.voiceprintId;
+                this.volume = model.volume;
+                this.wakeUpQuery = model.wakeUpQuery;
+                this.workflowOverrideParams = model.workflowOverrideParams;
+            } 
+
             /**
              * AsrLanguageId.
              */
@@ -1267,6 +1355,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         public static final class Builder {
             private String content; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceChatLlmHistory model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
 
             /**
              * Content.
@@ -1610,6 +1706,37 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Long volume; 
             private String wakeUpQuery; 
             private String workflowOverrideParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceChat model) {
+                this.asrLanguageId = model.asrLanguageId;
+                this.asrMaxSilence = model.asrMaxSilence;
+                this.avatarUrl = model.avatarUrl;
+                this.avatarUrlType = model.avatarUrlType;
+                this.bailianAppParams = model.bailianAppParams;
+                this.enableIntelligentSegment = model.enableIntelligentSegment;
+                this.enablePushToTalk = model.enablePushToTalk;
+                this.enableVoiceInterrupt = model.enableVoiceInterrupt;
+                this.gracefulShutdown = model.gracefulShutdown;
+                this.greeting = model.greeting;
+                this.interruptWords = model.interruptWords;
+                this.llmHistory = model.llmHistory;
+                this.llmHistoryLimit = model.llmHistoryLimit;
+                this.llmSystemPrompt = model.llmSystemPrompt;
+                this.maxIdleTime = model.maxIdleTime;
+                this.useVoiceprint = model.useVoiceprint;
+                this.userOfflineTimeout = model.userOfflineTimeout;
+                this.userOnlineTimeout = model.userOnlineTimeout;
+                this.vadLevel = model.vadLevel;
+                this.voiceId = model.voiceId;
+                this.voiceIdList = model.voiceIdList;
+                this.voiceprintId = model.voiceprintId;
+                this.volume = model.volume;
+                this.wakeUpQuery = model.wakeUpQuery;
+                this.workflowOverrideParams = model.workflowOverrideParams;
+            } 
 
             /**
              * AsrLanguageId.

@@ -52,6 +52,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIAgentUserId
      */
@@ -101,6 +105,18 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         private String requestId; 
         private String token; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateAIAgentCallResponseBody model) {
+            this.AIAgentUserId = model.AIAgentUserId;
+            this.channelId = model.channelId;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.token = model.token;
+            this.userId = model.userId;
+        } 
 
         /**
          * <p>The username of the AI agent in the Alibaba Real-Time Communication (ARTC) channel.</p>

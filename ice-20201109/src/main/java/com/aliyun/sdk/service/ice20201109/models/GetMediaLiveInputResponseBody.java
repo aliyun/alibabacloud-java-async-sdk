@@ -36,6 +36,10 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return input
      */
@@ -53,6 +57,14 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
     public static final class Builder {
         private Input input; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaLiveInputResponseBody model) {
+            this.input = model.input;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The input information.</p>
@@ -170,6 +182,18 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
             private String monitorUrl; 
             private String sourceUrl; 
             private String streamName; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputInfos model) {
+                this.destHost = model.destHost;
+                this.flowId = model.flowId;
+                this.flowOutputName = model.flowOutputName;
+                this.monitorUrl = model.monitorUrl;
+                this.sourceUrl = model.sourceUrl;
+                this.streamName = model.streamName;
+            } 
 
             /**
              * <p>The endpoint that the stream is pushed to. This parameter is returned for PUSH inputs.</p>
@@ -341,6 +365,19 @@ public class GetMediaLiveInputResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> securityGroupIds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.channelIds = model.channelIds;
+                this.createTime = model.createTime;
+                this.inputId = model.inputId;
+                this.inputInfos = model.inputInfos;
+                this.name = model.name;
+                this.securityGroupIds = model.securityGroupIds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IDs of the channels associated with the input.</p>

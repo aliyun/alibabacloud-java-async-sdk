@@ -40,6 +40,10 @@ public class GetMediaMarksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaId
      */
@@ -65,6 +69,15 @@ public class GetMediaMarksResponseBody extends TeaModel {
         private String mediaId; 
         private String mediaMarks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaMarksResponseBody model) {
+            this.mediaId = model.mediaId;
+            this.mediaMarks = model.mediaMarks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the media asset.</p>

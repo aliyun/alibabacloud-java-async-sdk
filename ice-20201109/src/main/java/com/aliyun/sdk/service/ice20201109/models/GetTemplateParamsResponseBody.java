@@ -40,6 +40,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return paramList
      */
@@ -65,6 +69,15 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         private java.util.List<ParamList> paramList; 
         private String requestId; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateParamsResponseBody model) {
+            this.paramList = model.paramList;
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * <p>The queried parameters.</p>
@@ -181,6 +194,17 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             private String key; 
             private String mediaUrl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.content = model.content;
+                this.coverUrl = model.coverUrl;
+                this.key = model.key;
+                this.mediaUrl = model.mediaUrl;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The original subtitle content.</p>

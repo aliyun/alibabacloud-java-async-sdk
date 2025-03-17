@@ -48,6 +48,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaClipByFaceResponseBody model) {
+            this.code = model.code;
+            this.mediaClipList = model.mediaClipList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -216,6 +231,16 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
+            private Builder() {
+            } 
+
+            private Builder(BoxPosition model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The height of the rectangle frame. Unit: pixels.</p>
              * 
@@ -311,6 +336,14 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private BoxPosition boxPosition; 
             private Float timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrackData model) {
+                this.boxPosition = model.boxPosition;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The coordinates of the face.</p>
              */
@@ -404,6 +437,16 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private String expression; 
             private Float startTime; 
             private java.util.List<TrackData> trackData; 
+
+            private Builder() {
+            } 
+
+            private Builder(OccurrencesInfos model) {
+                this.endTime = model.endTime;
+                this.expression = model.expression;
+                this.startTime = model.startTime;
+                this.trackData = model.trackData;
+            } 
 
             /**
              * <p>The end time of the clip. Unit: seconds. The value is of the Float type.</p>
@@ -529,6 +572,17 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private String labelName; 
             private java.util.List<OccurrencesInfos> occurrencesInfos; 
             private Float score; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaClipList model) {
+                this.category = model.category;
+                this.entityId = model.entityId;
+                this.labelName = model.labelName;
+                this.occurrencesInfos = model.occurrencesInfos;
+                this.score = model.score;
+            } 
 
             /**
              * <p>The type of the character. Valid values: celebrity sensitive politician custom unknown</p>

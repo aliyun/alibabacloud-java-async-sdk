@@ -36,6 +36,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicImageJob
      */
@@ -53,6 +57,14 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     public static final class Builder {
         private DynamicImageJob dynamicImageJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDynamicImageJobResponseBody model) {
+            this.dynamicImageJob = model.dynamicImageJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the snapshot job.</p>
@@ -134,6 +146,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The OSS bucket.</p>
@@ -230,6 +251,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String media; 
             private OssFile ossFile; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.media = model.media;
+                this.ossFile = model.ossFile;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
@@ -333,6 +363,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputOssFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The OSS bucket.</p>
              * 
@@ -428,6 +467,15 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String media; 
             private OutputOssFile ossFile; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.media = model.media;
+                this.ossFile = model.ossFile;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
@@ -693,6 +741,29 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
             private String templateId; 
             private String triggerSource; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicImageJob model) {
+                this.code = model.code;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.output = model.output;
+                this.outputUrl = model.outputUrl;
+                this.pipelineId = model.pipelineId;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.triggerSource = model.triggerSource;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>Error codes</p>

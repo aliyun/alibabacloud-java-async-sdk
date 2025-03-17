@@ -48,6 +48,10 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucket
      */
@@ -89,6 +93,17 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String storageType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDefaultStorageLocationResponseBody model) {
+            this.bucket = model.bucket;
+            this.path = model.path;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.storageType = model.storageType;
+        } 
 
         /**
          * Bucket.

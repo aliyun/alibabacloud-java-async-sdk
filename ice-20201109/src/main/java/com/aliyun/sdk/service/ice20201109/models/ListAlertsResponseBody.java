@@ -48,6 +48,10 @@ public class ListAlertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alerts
      */
@@ -89,6 +93,17 @@ public class ListAlertsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlertsResponseBody model) {
+            this.alerts = model.alerts;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The alerts.</p>
@@ -251,6 +266,19 @@ public class ListAlertsResponseBody extends TeaModel {
             private String message; 
             private String relatedResourceArns; 
             private String resourceArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alerts model) {
+                this.category = model.category;
+                this.code = model.code;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.relatedResourceArns = model.relatedResourceArns;
+                this.resourceArn = model.resourceArn;
+            } 
 
             /**
              * <p>The alert type.</p>

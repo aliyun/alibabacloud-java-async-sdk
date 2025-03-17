@@ -36,6 +36,10 @@ public class GetVodPackagingConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return packagingConfiguration
      */
@@ -53,6 +57,14 @@ public class GetVodPackagingConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private VodPackagingConfiguration packagingConfiguration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVodPackagingConfigurationResponseBody model) {
+            this.packagingConfiguration = model.packagingConfiguration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the packaging configuration.</p>

@@ -72,6 +72,10 @@ public class ChannelAssemblyProgram extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adBreaks
      */
@@ -161,6 +165,23 @@ public class ChannelAssemblyProgram extends TeaModel {
         private String sourceName; 
         private String sourceType; 
         private String transition; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChannelAssemblyProgram model) {
+            this.adBreaks = model.adBreaks;
+            this.arn = model.arn;
+            this.channelName = model.channelName;
+            this.clipRange = model.clipRange;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.programName = model.programName;
+            this.sourceLocationName = model.sourceLocationName;
+            this.sourceName = model.sourceName;
+            this.sourceType = model.sourceType;
+            this.transition = model.transition;
+        } 
 
         /**
          * AdBreaks.
@@ -371,6 +392,20 @@ public class ChannelAssemblyProgram extends TeaModel {
             private String sourceName; 
             private String spliceInsertSettings; 
             private String timeSignalSettings; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdBreaks model) {
+                this.channelName = model.channelName;
+                this.messageType = model.messageType;
+                this.offsetMillis = model.offsetMillis;
+                this.programName = model.programName;
+                this.sourceLocationName = model.sourceLocationName;
+                this.sourceName = model.sourceName;
+                this.spliceInsertSettings = model.spliceInsertSettings;
+                this.timeSignalSettings = model.timeSignalSettings;
+            } 
 
             /**
              * ChannelName.

@@ -52,6 +52,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -101,6 +105,18 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         private String sortBy; 
         private java.util.List<TemplateList> templateList; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveSnapshotTemplatesResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.templateList = model.templateList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of the returned page.</p>
@@ -250,6 +266,17 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
             private String templateName; 
             private Integer timeInterval; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateList model) {
+                this.createTime = model.createTime;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.timeInterval = model.timeInterval;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

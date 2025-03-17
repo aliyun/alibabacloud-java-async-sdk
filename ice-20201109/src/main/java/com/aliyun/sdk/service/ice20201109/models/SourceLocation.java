@@ -56,6 +56,10 @@ public class SourceLocation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arn
      */
@@ -113,6 +117,19 @@ public class SourceLocation extends TeaModel {
         private String segmentDeliveryConfigurations; 
         private String sourceLocationName; 
         private Integer state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SourceLocation model) {
+            this.arn = model.arn;
+            this.baseUrl = model.baseUrl;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.segmentDeliveryConfigurations = model.segmentDeliveryConfigurations;
+            this.sourceLocationName = model.sourceLocationName;
+            this.state = model.state;
+        } 
 
         /**
          * Arn.

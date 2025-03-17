@@ -44,6 +44,10 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -77,6 +81,16 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         private String description; 
         private String requestId; 
         private Integer retCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddMediaConnectFlowInputResponseBody model) {
+            this.content = model.content;
+            this.description = model.description;
+            this.requestId = model.requestId;
+            this.retCode = model.retCode;
+        } 
 
         /**
          * <p>The response body.</p>
@@ -156,6 +170,13 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
 
         public static final class Builder {
             private String inputUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.inputUrl = model.inputUrl;
+            } 
 
             /**
              * <p>The source URL.</p>

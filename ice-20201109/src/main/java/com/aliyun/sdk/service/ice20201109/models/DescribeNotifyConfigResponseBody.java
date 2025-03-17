@@ -48,6 +48,10 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callbackUrl
      */
@@ -89,6 +93,17 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
         private String eventTypes; 
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNotifyConfigResponseBody model) {
+            this.callbackUrl = model.callbackUrl;
+            this.enableNotify = model.enableNotify;
+            this.eventTypes = model.eventTypes;
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * CallbackUrl.

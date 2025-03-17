@@ -36,6 +36,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMeterImsSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The usage statistics of IMS.</p>
@@ -194,6 +206,20 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             private Long mpsAiDuration; 
             private Long mpsTranscodeDuration; 
             private Long mpsTranscodeUHDDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.editingDuration = model.editingDuration;
+                this.liveEditDuration = model.liveEditDuration;
+                this.liveRecordDuration = model.liveRecordDuration;
+                this.liveSnapshotCount = model.liveSnapshotCount;
+                this.liveTranscodeDuration = model.liveTranscodeDuration;
+                this.mpsAiDuration = model.mpsAiDuration;
+                this.mpsTranscodeDuration = model.mpsTranscodeDuration;
+                this.mpsTranscodeUHDDuration = model.mpsTranscodeUHDDuration;
+            } 
 
             /**
              * <p>The duration of video editing.</p>

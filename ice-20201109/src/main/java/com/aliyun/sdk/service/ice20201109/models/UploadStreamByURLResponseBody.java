@@ -48,6 +48,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileURL
      */
@@ -89,6 +93,17 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         private String mediaId; 
         private String requestId; 
         private String sourceURL; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadStreamByURLResponseBody model) {
+            this.fileURL = model.fileURL;
+            this.jobId = model.jobId;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+            this.sourceURL = model.sourceURL;
+        } 
 
         /**
          * <p>The OSS URL of the file.</p>

@@ -36,6 +36,10 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ingestEndpoints
      */
@@ -53,6 +57,14 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<IngestEndpoints> ingestEndpoints; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateLivePackageChannelCredentialsResponseBody model) {
+            this.ingestEndpoints = model.ingestEndpoints;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the ingest endpoint.</p>
@@ -146,6 +158,16 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
             private String password; 
             private String url; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngestEndpoints model) {
+                this.id = model.id;
+                this.password = model.password;
+                this.url = model.url;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The ingest endpoint ID. <code>input1</code> indicates primary and <code>input2</code> indicates secondary.</p>

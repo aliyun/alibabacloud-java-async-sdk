@@ -40,6 +40,10 @@ public class SubmitASRJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class SubmitASRJobResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitASRJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
 
         /**
          * <p>The job ID.</p>

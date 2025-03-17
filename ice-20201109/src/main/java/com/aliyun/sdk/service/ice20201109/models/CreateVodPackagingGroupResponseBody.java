@@ -36,6 +36,10 @@ public class CreateVodPackagingGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return packagingGroup
      */
@@ -53,6 +57,14 @@ public class CreateVodPackagingGroupResponseBody extends TeaModel {
     public static final class Builder {
         private VodPackagingGroup packagingGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVodPackagingGroupResponseBody model) {
+            this.packagingGroup = model.packagingGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The packaging group information.</p>

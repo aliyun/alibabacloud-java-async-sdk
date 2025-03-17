@@ -48,6 +48,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListSmartJobsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SmartJobList> smartJobList; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSmartJobsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.smartJobList = model.smartJobList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned on a single page. The value is set to the maximum number of entries returned on each page except for the last page. Valid example: 10,10,5. Invalid example: 10,5,10.</p>
@@ -192,6 +207,14 @@ public class ListSmartJobsResponseBody extends TeaModel {
             private String inputFile; 
             private String keyword; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputConfig model) {
+                this.inputFile = model.inputFile;
+                this.keyword = model.keyword;
+            } 
+
             /**
              * <p>The information about the input file.</p>
              * 
@@ -264,6 +287,14 @@ public class ListSmartJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String bucket; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputConfig model) {
+                this.bucket = model.bucket;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The Object Storage Service (OSS) bucket.</p>
@@ -457,6 +488,24 @@ public class ListSmartJobsResponseBody extends TeaModel {
             private String title; 
             private String userData; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmartJobList model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.editingConfig = model.editingConfig;
+                this.inputConfig = model.inputConfig;
+                this.jobId = model.jobId;
+                this.jobState = model.jobState;
+                this.jobType = model.jobType;
+                this.modifiedTime = model.modifiedTime;
+                this.outputConfig = model.outputConfig;
+                this.title = model.title;
+                this.userData = model.userData;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

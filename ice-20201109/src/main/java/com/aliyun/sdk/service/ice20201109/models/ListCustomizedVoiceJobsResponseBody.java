@@ -40,6 +40,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomizedVoiceJobsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -253,6 +266,23 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             private String voiceDesc; 
             private String voiceId; 
             private String voiceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomizedVoiceJobList model) {
+                this.createTime = model.createTime;
+                this.gender = model.gender;
+                this.gmtCreate = model.gmtCreate;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.scenario = model.scenario;
+                this.status = model.status;
+                this.type = model.type;
+                this.voiceDesc = model.voiceDesc;
+                this.voiceId = model.voiceId;
+                this.voiceName = model.voiceName;
+            } 
 
             /**
              * <ul>
@@ -449,6 +479,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CustomizedVoiceJobList> customizedVoiceJobList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customizedVoiceJobList = model.customizedVoiceJobList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The queried human voice cloning jobs.</p>

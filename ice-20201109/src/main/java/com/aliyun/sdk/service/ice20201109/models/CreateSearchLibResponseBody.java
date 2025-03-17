@@ -44,6 +44,10 @@ public class CreateSearchLibResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateSearchLibResponseBody extends TeaModel {
         private String requestId; 
         private String searchLibName; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSearchLibResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+            this.searchLibName = model.searchLibName;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>

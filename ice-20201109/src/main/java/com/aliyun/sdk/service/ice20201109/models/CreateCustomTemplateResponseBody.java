@@ -36,6 +36,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customTemplate
      */
@@ -53,6 +57,14 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private CustomTemplate customTemplate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCustomTemplateResponseBody model) {
+            this.customTemplate = model.customTemplate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The template information.</p>
@@ -218,6 +230,22 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
             private String templateName; 
             private Integer type; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomTemplate model) {
+                this.createTime = model.createTime;
+                this.isDefault = model.isDefault;
+                this.modifiedTime = model.modifiedTime;
+                this.status = model.status;
+                this.subtype = model.subtype;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.type = model.type;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

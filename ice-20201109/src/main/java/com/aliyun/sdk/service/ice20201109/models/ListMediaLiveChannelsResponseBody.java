@@ -48,6 +48,10 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channels
      */
@@ -89,6 +93,17 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediaLiveChannelsResponseBody model) {
+            this.channels = model.channels;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The channels.</p>
@@ -203,6 +218,15 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private Integer bitrate; 
             private String profile; 
             private Integer sampleRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioCodecSetting model) {
+                this.bitrate = model.bitrate;
+                this.profile = model.profile;
+                this.sampleRate = model.sampleRate;
+            } 
 
             /**
              * <p>The audio bitrate. Unit: bit/s.</p>
@@ -336,6 +360,18 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String languageName; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioSettings model) {
+                this.audioCodec = model.audioCodec;
+                this.audioCodecSetting = model.audioCodecSetting;
+                this.audioSelectorName = model.audioSelectorName;
+                this.languageCode = model.languageCode;
+                this.languageName = model.languageName;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The audio codec.</p>
              * 
@@ -439,6 +475,13 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         public static final class Builder {
             private String languageCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioLanguageSelection model) {
+                this.languageCode = model.languageCode;
+            } 
+
             /**
              * <p>A three-letter ISO 639-2 language code from within an audio source.</p>
              * <p>This parameter is required.</p>
@@ -491,6 +534,13 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         public static final class Builder {
             private Long pid; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioPidSelection model) {
+                this.pid = model.pid;
+            } 
+
             /**
              * <p>A PID from within a source.</p>
              * <p>This parameter is required.</p>
@@ -542,6 +592,13 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long trackId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioTrackSelection model) {
+                this.trackId = model.trackId;
+            } 
 
             /**
              * <p>The track ID from within a source.</p>
@@ -630,6 +687,16 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private AudioPidSelection audioPidSelection; 
             private java.util.List<AudioTrackSelection> audioTrackSelection; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioSelectors model) {
+                this.audioLanguageSelection = model.audioLanguageSelection;
+                this.audioPidSelection = model.audioPidSelection;
+                this.audioTrackSelection = model.audioTrackSelection;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The audio language selection.</p>
@@ -743,6 +810,16 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String inputName; 
             private String languageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputAttachments model) {
+                this.audioSelectors = model.audioSelectors;
+                this.inputId = model.inputId;
+                this.inputName = model.inputName;
+                this.languageName = model.languageName;
+            } 
+
             /**
              * <p>The audio selectors.</p>
              */
@@ -836,6 +913,14 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String channelName; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaPackageGroupSetting model) {
+                this.channelName = model.channelName;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * <p>ChannelName in MediaPackage.</p>
              * 
@@ -908,6 +993,14 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         public static final class Builder {
             private String audioGroupId; 
             private String nameModifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaPackageOutputSetting model) {
+                this.audioGroupId = model.audioGroupId;
+                this.nameModifier = model.nameModifier;
+            } 
 
             /**
              * <p>The manifest audio group ID.</p>
@@ -1017,6 +1110,17 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private Integer mediaType; 
             private String name; 
             private String videoSettingName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.audioSettingNames = model.audioSettingNames;
+                this.mediaPackageOutputSetting = model.mediaPackageOutputSetting;
+                this.mediaType = model.mediaType;
+                this.name = model.name;
+                this.videoSettingName = model.videoSettingName;
+            } 
 
             /**
              * <p>The referenced AudioSettings.</p>
@@ -1154,6 +1258,17 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private java.util.List<Outputs> outputs; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputGroups model) {
+                this.mediaPackageGroupSetting = model.mediaPackageGroupSetting;
+                this.monitorUrl = model.monitorUrl;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The MediaPackage destination.</p>
              */
@@ -1254,6 +1369,14 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String level; 
             private String profile; 
 
+            private Builder() {
+            } 
+
+            private Builder(CodecDetail model) {
+                this.level = model.level;
+                this.profile = model.profile;
+            } 
+
             /**
              * <p>The video encoding level. It is not supported yet.</p>
              * 
@@ -1338,6 +1461,15 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String framerateControl; 
             private Integer framerateDenominator; 
             private Integer framerateNumerator; 
+
+            private Builder() {
+            } 
+
+            private Builder(Framerate model) {
+                this.framerateControl = model.framerateControl;
+                this.framerateDenominator = model.framerateDenominator;
+                this.framerateNumerator = model.framerateNumerator;
+            } 
 
             /**
              * <p>The frame rate mode.</p>
@@ -1434,6 +1566,15 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private Integer bframesNum; 
             private Integer gopSize; 
             private String gopSizeUnits; 
+
+            private Builder() {
+            } 
+
+            private Builder(Gop model) {
+                this.bframesNum = model.bframesNum;
+                this.gopSize = model.gopSize;
+                this.gopSizeUnits = model.gopSizeUnits;
+            } 
 
             /**
              * <p>The number of B frames.</p>
@@ -1542,6 +1683,16 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private Integer bufferSize; 
             private Integer maxBitrate; 
             private String rateControlMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rate model) {
+                this.bitrate = model.bitrate;
+                this.bufferSize = model.bufferSize;
+                this.maxBitrate = model.maxBitrate;
+                this.rateControlMode = model.rateControlMode;
+            } 
 
             /**
              * <p>The video bitrate. Unit: bit/s.</p>
@@ -1662,6 +1813,16 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private Gop gop; 
             private Rate rate; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoCodecSetting model) {
+                this.codecDetail = model.codecDetail;
+                this.framerate = model.framerate;
+                this.gop = model.gop;
+                this.rate = model.rate;
+            } 
+
             /**
              * <p>The video encoding settings.</p>
              */
@@ -1780,6 +1941,17 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String videoCodec; 
             private VideoCodecSetting videoCodecSetting; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoSettings model) {
+                this.height = model.height;
+                this.name = model.name;
+                this.videoCodec = model.videoCodec;
+                this.videoCodecSetting = model.videoCodecSetting;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The height of the video in pixels.</p>
@@ -1979,6 +2151,22 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private java.util.List<OutputGroups> outputGroups; 
             private String state; 
             private java.util.List<VideoSettings> videoSettings; 
+
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.audioSettings = model.audioSettings;
+                this.channelId = model.channelId;
+                this.createTime = model.createTime;
+                this.inputAttachments = model.inputAttachments;
+                this.lastStartTime = model.lastStartTime;
+                this.lastStopTime = model.lastStopTime;
+                this.name = model.name;
+                this.outputGroups = model.outputGroups;
+                this.state = model.state;
+                this.videoSettings = model.videoSettings;
+            } 
 
             /**
              * <p>The audio settings.</p>

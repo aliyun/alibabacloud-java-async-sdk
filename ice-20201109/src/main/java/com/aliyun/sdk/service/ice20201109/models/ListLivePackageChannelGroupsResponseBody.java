@@ -52,6 +52,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return livePackageChannelGroups
      */
@@ -101,6 +105,18 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLivePackageChannelGroupsResponseBody model) {
+            this.livePackageChannelGroups = model.livePackageChannelGroups;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sortBy = model.sortBy;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The channel groups returned.</p>
@@ -250,6 +266,17 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             private String groupName; 
             private String lastModified; 
             private String originDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(LivePackageChannelGroups model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupName = model.groupName;
+                this.lastModified = model.lastModified;
+                this.originDomain = model.originDomain;
+            } 
 
             /**
              * <p>The time when the channel group was created. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>

@@ -36,6 +36,10 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityGroup securityGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaLiveInputSecurityGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityGroup = model.securityGroup;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +170,17 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
             private String name; 
             private String securityGroupId; 
             private java.util.List<String> whitelistRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroup model) {
+                this.createTime = model.createTime;
+                this.inputIds = model.inputIds;
+                this.name = model.name;
+                this.securityGroupId = model.securityGroupId;
+                this.whitelistRules = model.whitelistRules;
+            } 
 
             /**
              * <p>The time when the security group was created. It follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

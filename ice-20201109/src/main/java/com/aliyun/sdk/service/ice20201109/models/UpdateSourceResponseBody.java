@@ -36,6 +36,10 @@ public class UpdateSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateSourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ChannelAssemblySource source; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateSourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.source = model.source;
+        } 
 
         /**
          * <p><strong>Request ID</strong></p>

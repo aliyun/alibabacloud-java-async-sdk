@@ -60,6 +60,10 @@ public class Source extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arn
      */
@@ -125,6 +129,20 @@ public class Source extends TeaModel {
         private String sourceName; 
         private String sourceType; 
         private Integer state; 
+
+        private Builder() {
+        } 
+
+        private Builder(Source model) {
+            this.arn = model.arn;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.httpPackageConfigurations = model.httpPackageConfigurations;
+            this.sourceLocationName = model.sourceLocationName;
+            this.sourceName = model.sourceName;
+            this.sourceType = model.sourceType;
+            this.state = model.state;
+        } 
 
         /**
          * Arn.

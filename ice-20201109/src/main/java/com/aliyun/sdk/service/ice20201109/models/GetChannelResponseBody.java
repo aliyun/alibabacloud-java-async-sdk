@@ -36,6 +36,10 @@ public class GetChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channel
      */
@@ -53,6 +57,14 @@ public class GetChannelResponseBody extends TeaModel {
     public static final class Builder {
         private ChannelAssemblyChannel channel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChannelResponseBody model) {
+            this.channel = model.channel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The channel information.</p>

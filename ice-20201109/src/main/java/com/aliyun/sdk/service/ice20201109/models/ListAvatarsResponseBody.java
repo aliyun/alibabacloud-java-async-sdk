@@ -40,6 +40,10 @@ public class ListAvatarsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListAvatarsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvatarsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -210,6 +223,19 @@ public class ListAvatarsResponseBody extends TeaModel {
             private String thumbnail; 
             private Boolean transparent; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvatarList model) {
+                this.avatarDescription = model.avatarDescription;
+                this.avatarId = model.avatarId;
+                this.avatarName = model.avatarName;
+                this.avatarType = model.avatarType;
+                this.portrait = model.portrait;
+                this.thumbnail = model.thumbnail;
+                this.transparent = model.transparent;
+            } 
+
             /**
              * <p>The description of the digital human.</p>
              */
@@ -331,6 +357,14 @@ public class ListAvatarsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AvatarList> avatarList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.avatarList = model.avatarList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The queried digital humans.</p>

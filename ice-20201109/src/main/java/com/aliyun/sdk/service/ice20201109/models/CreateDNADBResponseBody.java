@@ -36,6 +36,10 @@ public class CreateDNADBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInfo
      */
@@ -53,6 +57,14 @@ public class CreateDNADBResponseBody extends TeaModel {
     public static final class Builder {
         private DBInfo DBInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDNADBResponseBody model) {
+            this.DBInfo = model.DBInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the media fingerprint library.</p>
@@ -158,6 +170,17 @@ public class CreateDNADBResponseBody extends TeaModel {
             private String model; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInfo model) {
+                this.DBId = model.DBId;
+                this.description = model.description;
+                this.model = model.model;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the media fingerprint library. We recommend that you save this ID for subsequent calls of other operations.</p>
