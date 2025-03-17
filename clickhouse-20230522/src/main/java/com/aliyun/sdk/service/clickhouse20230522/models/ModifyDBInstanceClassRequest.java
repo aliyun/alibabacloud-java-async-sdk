@@ -50,7 +50,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,6 +102,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +127,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum capacity for elastic scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder scaleMax(Long scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -132,7 +139,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * <p>The minimum capacity for auto scaling.</p>
+         * <p>The minimum capacity for elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

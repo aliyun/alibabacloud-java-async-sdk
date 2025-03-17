@@ -53,7 +53,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +118,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +230,16 @@ public class ModifyAccountAuthorityRequest extends Request {
             private java.util.List<String> allowDictionaries; 
             private Boolean ddlAuthority; 
             private Integer dmlAuthority; 
+
+            private Builder() {
+            } 
+
+            private Builder(DmlAuthSetting model) {
+                this.allowDatabases = model.allowDatabases;
+                this.allowDictionaries = model.allowDictionaries;
+                this.ddlAuthority = model.ddlAuthority;
+                this.dmlAuthority = model.dmlAuthority;
+            } 
 
             /**
              * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>

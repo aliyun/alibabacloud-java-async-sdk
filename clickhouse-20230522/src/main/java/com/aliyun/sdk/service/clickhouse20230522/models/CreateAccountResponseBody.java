@@ -36,6 +36,10 @@ public class CreateAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class CreateAccountResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateAccountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -123,8 +135,19 @@ public class CreateAccountResponseBody extends TeaModel {
             private String account; 
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
-             * Account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -132,7 +155,10 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

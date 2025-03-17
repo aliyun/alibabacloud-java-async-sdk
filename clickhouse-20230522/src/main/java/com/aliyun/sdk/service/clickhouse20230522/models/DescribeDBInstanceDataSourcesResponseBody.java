@@ -36,6 +36,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceDataSourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F543E6CC-6868-523D-8D28-0E92CF977ED2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,8 +183,23 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             private String tableName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.comment = model.comment;
+                this.DBName = model.DBName;
+                this.primaryKey = model.primaryKey;
+                this.tableName = model.tableName;
+                this.type = model.type;
+            } 
+
             /**
-             * ColumnName.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c31</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -177,7 +207,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The description of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Used for test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -185,7 +218,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbtest</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -193,7 +229,14 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -201,7 +244,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableTest</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -209,7 +255,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the stored data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UInt64</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -291,8 +340,18 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             private String schemas; 
             private java.util.List<String> tables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columns = model.columns;
+                this.DBInstanceId = model.DBInstanceId;
+                this.schemas = model.schemas;
+                this.tables = model.tables;
+            } 
+
             /**
-             * Columns.
+             * <p>The columns.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -300,7 +359,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -308,7 +370,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Schemas.
+             * <p>The account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemas(String schemas) {
                 this.schemas = schemas;
@@ -316,7 +381,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * <p>The tables.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

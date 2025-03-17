@@ -36,6 +36,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeProcessListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProcessListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -170,6 +182,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String query; 
             private Long queryDurationMs; 
             private String queryStartTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultSet model) {
+                this.initialAddress = model.initialAddress;
+                this.initialQueryId = model.initialQueryId;
+                this.initialUser = model.initialUser;
+                this.query = model.query;
+                this.queryDurationMs = model.queryDurationMs;
+                this.queryStartTime = model.queryStartTime;
+            } 
 
             /**
              * <p>The address to which the query statement is sent.</p>
@@ -312,6 +336,16 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private java.util.List<ResultSet> resultSet; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.resultSet = model.resultSet;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -325,6 +359,9 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
             /**
              * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

@@ -36,6 +36,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,8 +135,19 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -129,7 +155,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -439,8 +468,40 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.aliUid = model.aliUid;
+                this.bid = model.bid;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.DBInstanceId = model.DBInstanceId;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scaleMax = model.scaleMax;
+                this.scaleMin = model.scaleMin;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * AliUid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1294****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -448,7 +509,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>186681****</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -456,7 +520,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: subscription</li>
+             * <li>PostPaid: pay-as-you-go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -464,7 +535,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-04 21:16:15</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -472,7 +546,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -480,7 +557,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Indicates whether the release protection feature is enabled for the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder deletionProtection(String deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -488,7 +568,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -496,7 +579,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clickhouse</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -504,7 +590,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22.8</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -512,7 +601,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the cluster expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-16 11:51:06</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -520,7 +612,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * <p>The lock mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -528,7 +623,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * <p>The reason why the cluster was locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -536,7 +634,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04:00:00Z</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -544,7 +645,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00Z</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -552,7 +656,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -560,7 +667,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzy****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -568,7 +678,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum capacity for elastic scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder scaleMax(Integer scaleMax) {
                 this.scaleMax = scaleMax;
@@ -576,7 +689,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum capacity for elastic scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleMin(Integer scaleMin) {
                 this.scaleMin = scaleMin;
@@ -584,7 +700,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The cluster status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -592,7 +711,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -600,7 +719,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-8vb5mw****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -608,7 +730,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf6kg****</p>
@@ -619,7 +741,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -701,8 +826,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer pageSize; 
             private String totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstances = model.DBInstances;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * DBInstances.
+             * <p>The clusters.</p>
              */
             public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
                 this.DBInstances = DBInstances;
@@ -710,7 +845,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -718,7 +856,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -726,7 +867,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

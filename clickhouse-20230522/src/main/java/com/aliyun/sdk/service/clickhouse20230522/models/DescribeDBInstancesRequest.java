@@ -64,7 +64,7 @@ public class DescribeDBInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,10 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * DBInstanceIds.
+         * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-xxxxx,cx-xxxx</p>
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -152,7 +155,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceStatus.
+         * <p>The cluster status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.putQueryParameter("DBInstanceStatus", DBInstanceStatus);
@@ -161,7 +167,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -194,7 +203,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +215,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

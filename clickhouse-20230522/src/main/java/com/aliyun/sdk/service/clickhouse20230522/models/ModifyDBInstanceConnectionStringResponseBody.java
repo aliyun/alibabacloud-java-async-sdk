@@ -36,6 +36,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceConnectionStringResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,6 +159,16 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             private String DBInstanceName; 
             private String disabledPorts; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionString = model.connectionString;
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.disabledPorts = model.disabledPorts;
+            } 
+
             /**
              * <p>The endpoint of the cluster.</p>
              * 
@@ -181,7 +203,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * DisabledPorts.
+             * <p>The disabled database ports.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9001,8123</p>
              */
             public Builder disabledPorts(String disabledPorts) {
                 this.disabledPorts = disabledPorts;

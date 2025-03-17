@@ -36,6 +36,10 @@ public class KillProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class KillProcessResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KillProcessResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,6 +146,15 @@ public class KillProcessResponseBody extends TeaModel {
             private Long count; 
             private Integer DBInstanceID; 
             private String DBInstanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+            } 
 
             /**
              * <p>The number of queries that are terminated.</p>

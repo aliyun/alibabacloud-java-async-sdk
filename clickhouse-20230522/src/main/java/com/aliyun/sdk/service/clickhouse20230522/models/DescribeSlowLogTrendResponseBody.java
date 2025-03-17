@@ -36,6 +36,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogTrendResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D3ECB0E-98CA-5E08-A9CA-F70C5A1E9BDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,8 +171,22 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             private Long minQueryDurationMs; 
             private String queryStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultSet model) {
+                this.avgQueryDurationMs = model.avgQueryDurationMs;
+                this.cnt = model.cnt;
+                this.maxQueryDurationMs = model.maxQueryDurationMs;
+                this.minQueryDurationMs = model.minQueryDurationMs;
+                this.queryStartTime = model.queryStartTime;
+            } 
+
             /**
-             * AvgQueryDurationMs.
+             * <p>The average execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder avgQueryDurationMs(Long avgQueryDurationMs) {
                 this.avgQueryDurationMs = avgQueryDurationMs;
@@ -165,7 +194,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Cnt.
+             * <p>The total number of SQL queries within the specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cnt(Long cnt) {
                 this.cnt = cnt;
@@ -173,7 +205,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueryDurationMs.
+             * <p>The maximum execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder maxQueryDurationMs(Long maxQueryDurationMs) {
                 this.maxQueryDurationMs = maxQueryDurationMs;
@@ -181,7 +216,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * MinQueryDurationMs.
+             * <p>The minimum execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder minQueryDurationMs(Long minQueryDurationMs) {
                 this.minQueryDurationMs = minQueryDurationMs;
@@ -189,7 +227,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-13 17:48:00</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -259,8 +300,20 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             private String DBInstanceName; 
             private java.util.List<ResultSet> resultSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.resultSet = model.resultSet;
+            } 
+
             /**
-             * DBInstanceID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -268,7 +321,10 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterTest</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -276,7 +332,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * ResultSet.
+             * <p>The result sets.</p>
              */
             public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;

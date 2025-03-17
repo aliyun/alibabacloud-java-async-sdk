@@ -36,6 +36,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEndpointsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,8 +135,24 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             private Integer port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
-             * Port.
+             * <p>The port used to connect to the cluster. Valid values:</p>
+             * <ul>
+             * <li>8123: This value is returned when the value of Protocol is HttpPort.</li>
+             * <li>8443: This value is returned when the value of Protocol is HttpsPort.</li>
+             * <li>9000: This value is returned when the value of Protocol is TcpPort.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>8123</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -129,7 +160,15 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>HttpPort</li>
+             * <li>HttpsPort</li>
+             * <li>TcpPort</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HttpPort</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -259,8 +298,25 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.connectionString = model.connectionString;
+                this.IPAddress = model.IPAddress;
+                this.netType = model.netType;
+                this.ports = model.ports;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
+
             /**
-             * ConnectionString.
+             * <p>The endpoint of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-****-clickhouse.clickhouseserver.pre.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -268,7 +324,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.30.XX.XX</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -276,7 +335,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li>VPC</li>
+             * <li>PUBLIC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -284,7 +350,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * <p>The details of the ports.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -292,7 +358,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -300,7 +369,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-0xi8829****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -308,7 +380,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf61z****</p>
@@ -319,7 +391,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf61z****</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -377,8 +452,16 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             private java.util.List<Endpoints> endpoints; 
             private String instanceNetworkType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endpoints = model.endpoints;
+                this.instanceNetworkType = model.instanceNetworkType;
+            } 
+
             /**
-             * Endpoints.
+             * <p>The details of the endpoints.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -386,7 +469,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetworkType.
+             * <p>The network type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>PUBLIC</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;

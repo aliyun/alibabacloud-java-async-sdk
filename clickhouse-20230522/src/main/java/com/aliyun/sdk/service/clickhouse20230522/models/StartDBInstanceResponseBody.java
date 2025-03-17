@@ -36,6 +36,10 @@ public class StartDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class StartDBInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartDBInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -135,6 +147,15 @@ public class StartDBInstanceResponseBody extends TeaModel {
             private String DBInstanceName; 
             private Long taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -148,6 +169,9 @@ public class StartDBInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

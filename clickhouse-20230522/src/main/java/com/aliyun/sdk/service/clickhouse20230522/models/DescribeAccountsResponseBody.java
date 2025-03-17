@@ -36,6 +36,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The result returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,8 +159,21 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String description; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+                this.accountType = model.accountType;
+                this.description = model.description;
+                this.status = model.status;
+            } 
+
             /**
-             * Account.
+             * <p>The username of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -153,7 +181,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The type of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: standard account</li>
+             * <li><strong>6</strong>: privileged account</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NormalAccount</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -161,7 +196,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Used for test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -169,7 +207,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The database account is being created.</li>
+             * <li><strong>1</strong>: The database account is in use.</li>
+             * <li><strong>3</strong>: The database account is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -251,8 +297,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accounts = model.accounts;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * Accounts.
+             * <p>The database accounts.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -260,7 +316,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -268,7 +327,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Valid values:</p>
+             * <ul>
+             * <li><strong>30</strong> (default)</li>
+             * <li><strong>50</strong></li>
+             * <li><strong>100</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -276,7 +343,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -36,6 +36,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceClassResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,8 +171,22 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             private Long scaleMin; 
             private Long taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.scaleMax = model.scaleMax;
+                this.scaleMin = model.scaleMin;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * DBInstanceID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxxxxx</p>
              */
             public Builder DBInstanceID(Long DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -165,7 +194,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxxxxx</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -173,7 +205,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum capacity for elastic scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder scaleMax(Long scaleMax) {
                 this.scaleMax = scaleMax;
@@ -181,7 +216,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum capacity for elastic scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scaleMin(Long scaleMin) {
                 this.scaleMin = scaleMin;
@@ -189,7 +227,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000****</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

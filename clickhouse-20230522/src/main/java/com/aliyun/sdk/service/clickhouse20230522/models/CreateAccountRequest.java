@@ -74,7 +74,7 @@ public class CreateAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +162,7 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
+         * <p>The name of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +192,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +205,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used for account</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,6 +227,12 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The password of the database account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>The following special characters are supported: ! @ # $ % ^ &amp; * ( ) _ + - =</li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,6 +257,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,6 +343,16 @@ public class CreateAccountRequest extends Request {
             private java.util.List<String> allowDictionaries; 
             private Boolean ddlAuthority; 
             private Integer dmlAuthority; 
+
+            private Builder() {
+            } 
+
+            private Builder(DmlAuthSetting model) {
+                this.allowDatabases = model.allowDatabases;
+                this.allowDictionaries = model.allowDictionaries;
+                this.ddlAuthority = model.ddlAuthority;
+                this.dmlAuthority = model.dmlAuthority;
+            } 
 
             /**
              * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>

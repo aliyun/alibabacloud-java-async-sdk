@@ -55,7 +55,7 @@ public class ModifySecurityIPListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,6 +116,7 @@ public class ModifySecurityIPListRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the whitelist whose settings you want to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -137,7 +141,18 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * <p>The modification mode.</p>
+         * <ul>
+         * <li>0: overwrites the original IP addresses and CIDR blocks in the whitelist.</li>
+         * <li>1: adds the IP addresses and CIDR blocks to the whitelist.</li>
+         * <li>2: removes the IP addresses and CIDR blocks from the whitelist.</li>
+         * </ul>
+         * <blockquote>
+         * <p> We recommend that you set the value to 0.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -146,7 +161,10 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +173,10 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24,172.16.0.0/24</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

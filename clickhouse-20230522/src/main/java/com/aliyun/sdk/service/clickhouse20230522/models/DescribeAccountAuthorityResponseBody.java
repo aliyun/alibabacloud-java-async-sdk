@@ -36,6 +36,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountAuthorityResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,8 +207,25 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             private java.util.List<String> totalDatabases; 
             private java.util.List<String> totalDictionaries; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.allowDatabases = model.allowDatabases;
+                this.allowDictionaries = model.allowDictionaries;
+                this.DBInstanceId = model.DBInstanceId;
+                this.ddlAuthority = model.ddlAuthority;
+                this.dmlAuthority = model.dmlAuthority;
+                this.totalDatabases = model.totalDatabases;
+                this.totalDictionaries = model.totalDictionaries;
+            } 
+
             /**
-             * Account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -201,7 +233,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * AllowDatabases.
+             * <p>The databases on which permissions are granted.</p>
              */
             public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
@@ -209,7 +241,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * AllowDictionaries.
+             * <p>The dictionaries on which permissions are granted.</p>
              */
             public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
@@ -217,7 +249,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -225,7 +260,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * DdlAuthority.
+             * <p>Indicates whether the DDL permissions are granted to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
+             * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ddlAuthority(Boolean ddlAuthority) {
                 this.ddlAuthority = ddlAuthority;
@@ -233,7 +275,15 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * DmlAuthority.
+             * <p>Indicates whether the DML permissions are granted to the database account. Valid values:</p>
+             * <ul>
+             * <li>0: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
+             * <li>1: The account only has the permissions to read data from the database.</li>
+             * <li>2: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dmlAuthority(Integer dmlAuthority) {
                 this.dmlAuthority = dmlAuthority;
@@ -241,7 +291,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDatabases.
+             * <p>All databases.</p>
              */
             public Builder totalDatabases(java.util.List<String> totalDatabases) {
                 this.totalDatabases = totalDatabases;
@@ -249,7 +299,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDictionaries.
+             * <p>The database.</p>
              */
             public Builder totalDictionaries(java.util.List<String> totalDictionaries) {
                 this.totalDictionaries = totalDictionaries;

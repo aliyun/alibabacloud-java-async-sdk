@@ -36,6 +36,10 @@ public class DeleteDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DeleteDBResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteDBResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DeleteDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,8 +135,19 @@ public class DeleteDBResponseBody extends TeaModel {
             private String DBInstanceId; 
             private String DBName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBName = model.DBName;
+            } 
+
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -129,7 +155,10 @@ public class DeleteDBResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb001</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;

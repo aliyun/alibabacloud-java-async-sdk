@@ -36,6 +36,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifySecurityIPListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,8 +207,25 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             private Integer taskId; 
             private String whitelistNetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.groupName = model.groupName;
+                this.groupTag = model.groupTag;
+                this.securityIPList = model.securityIPList;
+                this.securityIPType = model.securityIPType;
+                this.taskId = model.taskId;
+                this.whitelistNetType = model.whitelistNetType;
+            } 
+
             /**
-             * DBInstanceID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxx</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -201,7 +233,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxx</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -209,7 +244,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -217,7 +255,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The tag of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -225,7 +266,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24,172.16.0.0/24</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -233,7 +277,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPType.
+             * <p>The IP address type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -241,7 +288,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -249,7 +299,10 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistNetType.
+             * <p>The network type of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder whitelistNetType(String whitelistNetType) {
                 this.whitelistNetType = whitelistNetType;

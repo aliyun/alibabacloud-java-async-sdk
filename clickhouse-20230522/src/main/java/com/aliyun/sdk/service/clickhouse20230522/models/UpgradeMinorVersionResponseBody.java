@@ -36,6 +36,10 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpgradeMinorVersionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE242962-6DA3-5FC8-9691-37B62A3210F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -108,8 +123,18 @@ public class UpgradeMinorVersionResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceName = model.DBInstanceName;
+            } 
+
             /**
-             * DBInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-uf6x229yeq166****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

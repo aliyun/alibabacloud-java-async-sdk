@@ -36,6 +36,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateDBInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,8 +147,20 @@ public class CreateDBInstanceResponseBody extends TeaModel {
             private String DBInstanceId; 
             private Long orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connectionString = model.connectionString;
+                this.DBInstanceId = model.DBInstanceId;
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * ConnectionString.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -141,7 +168,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -149,7 +179,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21154955706****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

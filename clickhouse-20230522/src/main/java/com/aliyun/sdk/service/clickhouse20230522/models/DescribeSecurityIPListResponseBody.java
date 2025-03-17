@@ -36,6 +36,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityIPListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -158,6 +170,17 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             private String securityIPList; 
             private String securityIPType; 
             private String whitelistNetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupItems model) {
+                this.groupName = model.groupName;
+                this.groupTag = model.groupTag;
+                this.securityIPList = model.securityIPList;
+                this.securityIPType = model.securityIPType;
+                this.whitelistNetType = model.whitelistNetType;
+            } 
 
             /**
              * <p>The name of the whitelist.</p>
@@ -277,6 +300,15 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             private String DBInstanceName; 
             private java.util.List<GroupItems> groupItems; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.groupItems = model.groupItems;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -290,6 +322,9 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
             /**
              * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestCluster</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

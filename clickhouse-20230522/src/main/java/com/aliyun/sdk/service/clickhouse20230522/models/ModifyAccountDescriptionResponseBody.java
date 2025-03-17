@@ -36,6 +36,10 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyAccountDescriptionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -123,8 +135,19 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
             private String account; 
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
-             * Account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder account(String account) {
                 this.account = account;

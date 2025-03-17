@@ -31,6 +31,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
+    private String DBInstanceNetType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisablePorts")
     private String disablePorts;
 
@@ -43,6 +47,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         this.connectionString = builder.connectionString;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBInstanceNetType = builder.DBInstanceNetType;
         this.disablePorts = builder.disablePorts;
         this.regionId = builder.regionId;
     }
@@ -55,7 +60,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,6 +87,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
+     * @return DBInstanceNetType
+     */
+    public String getDBInstanceNetType() {
+        return this.DBInstanceNetType;
+    }
+
+    /**
      * @return disablePorts
      */
     public String getDisablePorts() {
@@ -99,6 +111,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         private String connectionString; 
         private String connectionStringPrefix; 
         private String DBInstanceId; 
+        private String DBInstanceNetType; 
         private String disablePorts; 
         private String regionId; 
 
@@ -111,6 +124,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.connectionString = request.connectionString;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceNetType = request.DBInstanceNetType;
             this.disablePorts = request.disablePorts;
             this.regionId = request.regionId;
         } 
@@ -153,7 +167,26 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DisablePorts.
+         * DBInstanceNetType.
+         */
+        public Builder DBInstanceNetType(String DBInstanceNetType) {
+            this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);
+            this.DBInstanceNetType = DBInstanceNetType;
+            return this;
+        }
+
+        /**
+         * <ul>
+         * <li><p>The database ports that you want to disable. Separate multiple ports with commas (,).</p>
+         * </li>
+         * <li><p>This parameter is supported only for clusters whose minor engine version is 24.10.1.11098_1 or later.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> If you create a cluster whose minor engine version is earlier than 24.10.1.11098_1 and you update the minor engine version to 24.10.1.11098_1 or later, the cluster still does not support this parameter.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>9001,8123</p>
          */
         public Builder disablePorts(String disablePorts) {
             this.putQueryParameter("DisablePorts", disablePorts);

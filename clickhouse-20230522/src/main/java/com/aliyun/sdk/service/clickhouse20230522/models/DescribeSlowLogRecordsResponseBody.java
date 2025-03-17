@@ -36,6 +36,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -230,6 +242,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Long readRows; 
             private Long resultBytes; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultSet model) {
+                this.initialAddress = model.initialAddress;
+                this.initialQueryId = model.initialQueryId;
+                this.initialUser = model.initialUser;
+                this.memoryUsage = model.memoryUsage;
+                this.query = model.query;
+                this.queryDurationMs = model.queryDurationMs;
+                this.queryStartTime = model.queryStartTime;
+                this.readBytes = model.readBytes;
+                this.readRows = model.readRows;
+                this.resultBytes = model.resultBytes;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The address to which the query statement is sent.</p>
@@ -427,6 +456,16 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private java.util.List<ResultSet> resultSet; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.DBInstanceName = model.DBInstanceName;
+                this.resultSet = model.resultSet;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -440,6 +479,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
             /**
              * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestCluster</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

@@ -36,6 +36,10 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteDBInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -108,8 +123,18 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

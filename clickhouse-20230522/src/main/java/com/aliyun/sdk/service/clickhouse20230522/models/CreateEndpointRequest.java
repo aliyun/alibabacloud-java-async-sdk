@@ -51,7 +51,7 @@ public class CreateEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,10 @@ public class CreateEndpointRequest extends Request {
         } 
 
         /**
-         * ConnectionPrefix.
+         * <p>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
          */
         public Builder connectionPrefix(String connectionPrefix) {
             this.putQueryParameter("ConnectionPrefix", connectionPrefix);
@@ -112,6 +115,7 @@ public class CreateEndpointRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,10 @@ public class CreateEndpointRequest extends Request {
 
         /**
          * <p>The network type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Public</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Public</p>
@@ -136,6 +144,7 @@ public class CreateEndpointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

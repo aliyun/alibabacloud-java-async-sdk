@@ -27,6 +27,10 @@ public class DeleteEndpointRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
+    private String DBInstanceNetType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -34,6 +38,7 @@ public class DeleteEndpointRequest extends Request {
         super(builder);
         this.connectionString = builder.connectionString;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBInstanceNetType = builder.DBInstanceNetType;
         this.regionId = builder.regionId;
     }
 
@@ -45,7 +50,7 @@ public class DeleteEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,6 +70,13 @@ public class DeleteEndpointRequest extends Request {
     }
 
     /**
+     * @return DBInstanceNetType
+     */
+    public String getDBInstanceNetType() {
+        return this.DBInstanceNetType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -74,6 +86,7 @@ public class DeleteEndpointRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteEndpointRequest, Builder> {
         private String connectionString; 
         private String DBInstanceId; 
+        private String DBInstanceNetType; 
         private String regionId; 
 
         private Builder() {
@@ -84,11 +97,15 @@ public class DeleteEndpointRequest extends Request {
             super(request);
             this.connectionString = request.connectionString;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceNetType = request.DBInstanceNetType;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ConnectionString.
+         * <p>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -97,6 +114,7 @@ public class DeleteEndpointRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +127,19 @@ public class DeleteEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * DBInstanceNetType.
+         */
+        public Builder DBInstanceNetType(String DBInstanceNetType) {
+            this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);
+            this.DBInstanceNetType = DBInstanceNetType;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

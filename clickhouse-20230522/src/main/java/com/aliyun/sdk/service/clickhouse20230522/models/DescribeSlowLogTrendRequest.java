@@ -60,7 +60,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,6 +130,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-07 10:03:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +167,10 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * QueryDurationMs.
+         * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder queryDurationMs(String queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -172,7 +179,10 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +191,10 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-13 17:48:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

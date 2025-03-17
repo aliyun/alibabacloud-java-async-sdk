@@ -100,7 +100,7 @@ public class CreateDBInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -242,7 +242,10 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * BackupSetId.
+         * <p>The backup set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -251,7 +254,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -260,7 +266,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceDescription.
+         * <p>The cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used for test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -269,7 +278,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DeploySchema.
+         * <p>The deployment status of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>multi_az</p>
          */
         public Builder deploySchema(String deploySchema) {
             this.putQueryParameter("DeploySchema", deploySchema);
@@ -279,6 +291,10 @@ public class CreateDBInstanceRequest extends Request {
 
         /**
          * <p>The engine type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>clickhouse</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>clickhouse</p>
@@ -290,7 +306,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23.8</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -299,7 +318,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * MultiZone.
+         * <p>The configurations of multi-zone deployment.</p>
          */
         public Builder multiZone(java.util.List<MultiZone> multiZone) {
             String multiZoneShrink = shrink(multiZone, "MultiZone", "json");
@@ -309,6 +328,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +341,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum capacity for auto scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -330,7 +353,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum capacity for auto scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -339,7 +365,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * SourceDBInstanceId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2ze1*********</p>
          */
         public Builder sourceDBInstanceId(String sourceDBInstanceId) {
             this.putQueryParameter("SourceDBInstanceId", sourceDBInstanceId);
@@ -348,7 +377,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6xmupdn7v6ui9f****</p>
@@ -360,7 +389,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf632qye9oqt4x4sr****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);
@@ -369,7 +401,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -428,8 +463,16 @@ public class CreateDBInstanceRequest extends Request {
             private java.util.List<String> vSwitchIds; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiZone model) {
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * VSwitchIds.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -437,7 +480,10 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

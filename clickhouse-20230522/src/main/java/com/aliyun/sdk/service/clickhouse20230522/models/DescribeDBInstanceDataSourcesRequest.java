@@ -50,7 +50,7 @@ public class DescribeDBInstanceDataSourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,6 +102,7 @@ public class DescribeDBInstanceDataSourcesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DescribeDBInstanceDataSourcesRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbtest</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -123,7 +127,10 @@ public class DescribeDBInstanceDataSourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +139,10 @@ public class DescribeDBInstanceDataSourcesRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableTest</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
