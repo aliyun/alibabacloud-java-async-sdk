@@ -36,6 +36,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktops
      */
@@ -53,6 +57,14 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Desktops> desktops; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDesktopInfoResponseBody model) {
+            this.desktops = model.desktops;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The basic information about cloud computers.</p>
@@ -218,6 +230,22 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             private String newAppVersion; 
             private String releaseNote; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Desktops model) {
+                this.connectionStatus = model.connectionStatus;
+                this.currentAppVersion = model.currentAppVersion;
+                this.desktopGroupId = model.desktopGroupId;
+                this.desktopId = model.desktopId;
+                this.desktopStatus = model.desktopStatus;
+                this.managementFlag = model.managementFlag;
+                this.newAppSize = model.newAppSize;
+                this.newAppVersion = model.newAppVersion;
+                this.releaseNote = model.releaseNote;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The connection status of the user.</p>

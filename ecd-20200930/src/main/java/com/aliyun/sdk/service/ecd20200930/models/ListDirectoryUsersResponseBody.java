@@ -40,6 +40,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDirectoryUsersResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
@@ -181,6 +194,17 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             private String email; 
             private String endUser; 
             private String phone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.assignedDesktopNumber = model.assignedDesktopNumber;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.endUser = model.endUser;
+                this.phone = model.phone;
+            } 
 
             /**
              * <p>The number of assigned cloud computers.</p>

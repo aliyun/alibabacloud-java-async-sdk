@@ -37,7 +37,7 @@ public class DescribePriceForModifyDesktopOversoldGroupSaleResponse extends Resp
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }

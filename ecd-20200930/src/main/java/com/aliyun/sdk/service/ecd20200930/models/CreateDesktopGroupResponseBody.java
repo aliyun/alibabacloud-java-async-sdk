@@ -44,6 +44,10 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktopGroupId
      */
@@ -77,6 +81,16 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> orderIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDesktopGroupResponseBody model) {
+            this.desktopGroupId = model.desktopGroupId;
+            this.desktopGroupIds = model.desktopGroupIds;
+            this.orderIds = model.orderIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the shared group.</p>

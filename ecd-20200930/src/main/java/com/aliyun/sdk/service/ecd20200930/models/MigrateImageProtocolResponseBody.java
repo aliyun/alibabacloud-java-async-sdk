@@ -36,6 +36,10 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedIds
      */
@@ -53,6 +57,14 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> failedIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MigrateImageProtocolResponseBody model) {
+            this.failedIds = model.failedIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the images whose protocols failed to be updated.</p>

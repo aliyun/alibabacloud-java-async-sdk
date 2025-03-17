@@ -36,6 +36,10 @@ public class SetIdpMetadataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return idpEntityId
      */
@@ -53,6 +57,14 @@ public class SetIdpMetadataResponseBody extends TeaModel {
     public static final class Builder {
         private String idpEntityId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetIdpMetadataResponseBody model) {
+            this.idpEntityId = model.idpEntityId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The entity ID obtained after the IdP metadata file is parsed.</p>

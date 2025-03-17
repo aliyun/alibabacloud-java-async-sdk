@@ -36,6 +36,10 @@ public class RenewDesktopGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class RenewDesktopGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewDesktopGroupResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The order IDs.</p>

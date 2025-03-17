@@ -52,6 +52,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktops
      */
@@ -101,6 +105,18 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDesktopsResponseBody model) {
+            this.desktops = model.desktops;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the cloud computers.</p>
@@ -335,6 +351,24 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long totalDuration; 
             private Long usedDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(DesktopDurationList model) {
+                this.orderInstanceId = model.orderInstanceId;
+                this.packageCreationTime = model.packageCreationTime;
+                this.packageExpiredTime = model.packageExpiredTime;
+                this.packageId = model.packageId;
+                this.packageStatus = model.packageStatus;
+                this.packageType = model.packageType;
+                this.packageUsedUpStrategy = model.packageUsedUpStrategy;
+                this.periodEndTime = model.periodEndTime;
+                this.periodStartTime = model.periodStartTime;
+                this.postPaidLimitFee = model.postPaidLimitFee;
+                this.totalDuration = model.totalDuration;
+                this.usedDuration = model.usedDuration;
+            } 
+
             /**
              * OrderInstanceId.
              */
@@ -517,6 +551,17 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Integer diskSize; 
             private String diskType; 
             private String performanceLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.diskCategory = model.diskCategory;
+                this.diskId = model.diskId;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+                this.performanceLevel = model.performanceLevel;
+            } 
 
             /**
              * <p>The type of the disk. Valid values:</p>
@@ -701,6 +746,18 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String releaseNoteJp; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(FotaUpdate model) {
+                this.currentAppVersion = model.currentAppVersion;
+                this.newAppVersion = model.newAppVersion;
+                this.releaseNote = model.releaseNote;
+                this.releaseNoteEn = model.releaseNoteEn;
+                this.releaseNoteJp = model.releaseNoteJp;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The current image version of the cloud computer.</p>
              * 
@@ -818,6 +875,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroups model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The ID of the enterprise resource group.</p>
              * 
@@ -903,6 +968,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String establishmentTime; 
             private String externalUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.endUserId = model.endUserId;
+                this.establishmentTime = model.establishmentTime;
+                this.externalUserName = model.externalUserName;
+            } 
+
             /**
              * <p>The ID of the end user that connects to the cloud computer.</p>
              * 
@@ -986,6 +1060,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1779,6 +1861,74 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
             private String zoneType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Desktops model) {
+                this.bindAmount = model.bindAmount;
+                this.bundleId = model.bundleId;
+                this.bundleName = model.bundleName;
+                this.chargeType = model.chargeType;
+                this.connectionStatus = model.connectionStatus;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskSize = model.dataDiskSize;
+                this.desktopDurationList = model.desktopDurationList;
+                this.desktopGroupId = model.desktopGroupId;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.desktopStatus = model.desktopStatus;
+                this.desktopType = model.desktopType;
+                this.directoryId = model.directoryId;
+                this.directoryType = model.directoryType;
+                this.disks = model.disks;
+                this.downgradeQuota = model.downgradeQuota;
+                this.downgradedTimes = model.downgradedTimes;
+                this.endUserIds = model.endUserIds;
+                this.expiredTime = model.expiredTime;
+                this.fotaUpdate = model.fotaUpdate;
+                this.gpuCategory = model.gpuCategory;
+                this.gpuCount = model.gpuCount;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuSpec = model.gpuSpec;
+                this.hibernationBeta = model.hibernationBeta;
+                this.hibernationOptionsConfigured = model.hibernationOptionsConfigured;
+                this.hostName = model.hostName;
+                this.imageId = model.imageId;
+                this.managementFlag = model.managementFlag;
+                this.managementFlags = model.managementFlags;
+                this.memory = model.memory;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfaceIp = model.networkInterfaceIp;
+                this.officeSiteId = model.officeSiteId;
+                this.officeSiteName = model.officeSiteName;
+                this.officeSiteType = model.officeSiteType;
+                this.officeSiteVpcType = model.officeSiteVpcType;
+                this.osType = model.osType;
+                this.platform = model.platform;
+                this.policyGroupId = model.policyGroupId;
+                this.policyGroupIdList = model.policyGroupIdList;
+                this.policyGroupName = model.policyGroupName;
+                this.policyGroupNameList = model.policyGroupNameList;
+                this.progress = model.progress;
+                this.protocolType = model.protocolType;
+                this.resourceGroups = model.resourceGroups;
+                this.sessionType = model.sessionType;
+                this.sessions = model.sessions;
+                this.snapshotPolicyId = model.snapshotPolicyId;
+                this.snapshotPolicyName = model.snapshotPolicyName;
+                this.standardStartTime = model.standardStartTime;
+                this.startTime = model.startTime;
+                this.supportHibernation = model.supportHibernation;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
+                this.volumeEncryptionKey = model.volumeEncryptionKey;
+                this.zoneType = model.zoneType;
+            } 
 
             /**
              * <p>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</p>

@@ -40,6 +40,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoSnapshotPolicies
      */
@@ -65,6 +69,15 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         private java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoSnapshotPolicyResponseBody model) {
+            this.autoSnapshotPolicies = model.autoSnapshotPolicies;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the queried automatic snapshot policies.</p>
@@ -229,6 +242,21 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             private String retentionDays; 
             private String status; 
             private String timePoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotPolicies model) {
+                this.creationTime = model.creationTime;
+                this.cronExpression = model.cronExpression;
+                this.desktopNum = model.desktopNum;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.regionId = model.regionId;
+                this.retentionDays = model.retentionDays;
+                this.status = model.status;
+                this.timePoints = model.timePoints;
+            } 
 
             /**
              * <p>The time when the automatic snapshot policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>

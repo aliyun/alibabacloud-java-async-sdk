@@ -46,7 +46,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -173,6 +173,14 @@ public class DisconnectDesktopSessionsRequest extends Request {
         public static final class Builder {
             private String desktopId; 
             private String endUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.desktopId = model.desktopId;
+                this.endUserId = model.endUserId;
+            } 
 
             /**
              * <p>The cloud desktop ID.</p>

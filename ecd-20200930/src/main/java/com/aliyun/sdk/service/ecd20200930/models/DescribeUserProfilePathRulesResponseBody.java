@@ -36,6 +36,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserProfilePathRule userProfilePathRule; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserProfilePathRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.userProfilePathRule = model.userProfilePathRule;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String path; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlackPath model) {
+                this.path = model.path;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The path.</p>
@@ -212,6 +232,14 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(WhitePaths model) {
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The path.</p>
              * 
@@ -301,6 +329,14 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private BlackPath blackPath; 
             private java.util.List<WhitePaths> whitePaths; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.blackPath = model.blackPath;
+                this.whitePaths = model.whitePaths;
+            } 
+
             /**
              * <p>The blacklist that is configured.</p>
              */
@@ -379,6 +415,15 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             private String desktopGroupId; 
             private java.util.List<Rules> rules; 
             private String userProfileRuleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProfilePathRule model) {
+                this.desktopGroupId = model.desktopGroupId;
+                this.rules = model.rules;
+                this.userProfileRuleType = model.userProfileRuleType;
+            } 
 
             /**
              * <p>The desktop group ID.</p>

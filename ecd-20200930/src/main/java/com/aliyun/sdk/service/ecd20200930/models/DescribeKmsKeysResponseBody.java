@@ -44,6 +44,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizeStatus
      */
@@ -77,6 +81,16 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         private java.util.List<Keys> keys; 
         private String kmsServiceStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKmsKeysResponseBody model) {
+            this.authorizeStatus = model.authorizeStatus;
+            this.keys = model.keys;
+            this.kmsServiceStatus = model.kmsServiceStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The authorization status.</p>
@@ -192,6 +206,16 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             private String arn; 
             private String keyId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.alias = model.alias;
+                this.arn = model.arn;
+                this.keyId = model.keyId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The alias of the key.</p>

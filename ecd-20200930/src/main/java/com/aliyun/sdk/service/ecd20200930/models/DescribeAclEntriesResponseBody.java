@@ -40,6 +40,10 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntries
      */
@@ -65,6 +69,15 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         private java.util.List<AclEntries> aclEntries; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAclEntriesResponseBody model) {
+            this.aclEntries = model.aclEntries;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ACL entries.</p>
@@ -157,6 +170,15 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             private String policy; 
             private String sourceId; 
             private String sourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.policy = model.policy;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+            } 
 
             /**
              * <p>The ACL type.</p>

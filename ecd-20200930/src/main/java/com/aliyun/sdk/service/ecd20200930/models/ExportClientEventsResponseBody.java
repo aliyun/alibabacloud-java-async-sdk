@@ -36,6 +36,10 @@ public class ExportClientEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ExportClientEventsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportClientEventsResponseBody model) {
+            this.requestId = model.requestId;
+            this.url = model.url;
+        } 
 
         /**
          * <p>The ID of the request.</p>

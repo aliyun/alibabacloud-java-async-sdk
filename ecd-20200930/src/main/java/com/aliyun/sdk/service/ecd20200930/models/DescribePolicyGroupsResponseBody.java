@@ -52,6 +52,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyGroupsResponseBody model) {
+            this.count = model.count;
+            this.describePolicyGroups = model.describePolicyGroups;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Count.
@@ -205,6 +221,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String cidrIp; 
             private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizeAccessPolicyRules model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+            } 
 
             /**
              * <p>The CIDR block that is allowed to access the client. The value is an IPv4 CIDR block.</p>
@@ -338,6 +362,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String portRange; 
             private String priority; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizeSecurityPolicyRules model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+                this.ipProtocol = model.ipProtocol;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
@@ -485,6 +522,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String clientType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientTypes model) {
+                this.clientType = model.clientType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The client type.</p>
              * <p>Valid values:</p>
@@ -570,6 +615,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String deviceType; 
             private String redirectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceRedirects model) {
+                this.deviceType = model.deviceType;
+                this.redirectType = model.redirectType;
+            } 
 
             /**
              * <p>The peripheral type.</p>
@@ -703,6 +756,18 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String deviceVid; 
             private String optCommand; 
             private String redirectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceRules model) {
+                this.deviceName = model.deviceName;
+                this.devicePid = model.devicePid;
+                this.deviceType = model.deviceType;
+                this.deviceVid = model.deviceVid;
+                this.optCommand = model.optCommand;
+                this.redirectType = model.redirectType;
+            } 
 
             /**
              * <p>The device name.</p>
@@ -852,6 +917,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String domain; 
             private String policy; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainResolveRule model) {
+                this.description = model.description;
+                this.domain = model.domain;
+                this.policy = model.policy;
+            } 
+
             /**
              * <p>The rule description.</p>
              * 
@@ -952,6 +1026,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String domain; 
             private String policy; 
             private String ruleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetRedirectRule model) {
+                this.domain = model.domain;
+                this.policy = model.policy;
+                this.ruleType = model.ruleType;
+            } 
 
             /**
              * <p>The rule content.</p>
@@ -1106,6 +1189,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Long usbRedirectType; 
             private Long usbRuleType; 
             private String vendorId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsbSupplyRedirectRule model) {
+                this.description = model.description;
+                this.deviceClass = model.deviceClass;
+                this.deviceSubclass = model.deviceSubclass;
+                this.productId = model.productId;
+                this.usbRedirectType = model.usbRedirectType;
+                this.usbRuleType = model.usbRuleType;
+                this.vendorId = model.vendorId;
+            } 
 
             /**
              * <p>The rule description.</p>
@@ -2432,6 +2528,113 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer watermarkTransparencyValue; 
             private String watermarkType; 
             private String wyAssistant; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribePolicyGroups model) {
+                this.adminAccess = model.adminAccess;
+                this.appContentProtection = model.appContentProtection;
+                this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
+                this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
+                this.cameraRedirect = model.cameraRedirect;
+                this.clientTypes = model.clientTypes;
+                this.clipboard = model.clipboard;
+                this.colorEnhancement = model.colorEnhancement;
+                this.cpuDownGradeDuration = model.cpuDownGradeDuration;
+                this.cpuProcessors = model.cpuProcessors;
+                this.cpuProtectedMode = model.cpuProtectedMode;
+                this.cpuRateLimit = model.cpuRateLimit;
+                this.cpuSampleDuration = model.cpuSampleDuration;
+                this.cpuSingleRateLimit = model.cpuSingleRateLimit;
+                this.desktopCount = model.desktopCount;
+                this.desktopGroupCount = model.desktopGroupCount;
+                this.deviceConnectHint = model.deviceConnectHint;
+                this.deviceRedirects = model.deviceRedirects;
+                this.deviceRules = model.deviceRules;
+                this.displayMode = model.displayMode;
+                this.domainList = model.domainList;
+                this.domainResolveRule = model.domainResolveRule;
+                this.domainResolveRuleType = model.domainResolveRuleType;
+                this.edsCount = model.edsCount;
+                this.endUserApplyAdminCoordinate = model.endUserApplyAdminCoordinate;
+                this.endUserGroupCoordinate = model.endUserGroupCoordinate;
+                this.fileTransfer = model.fileTransfer;
+                this.gpuAcceleration = model.gpuAcceleration;
+                this.html5Access = model.html5Access;
+                this.html5FileTransfer = model.html5FileTransfer;
+                this.internetCommunicationProtocol = model.internetCommunicationProtocol;
+                this.localDrive = model.localDrive;
+                this.maxReconnectTime = model.maxReconnectTime;
+                this.memoryDownGradeDuration = model.memoryDownGradeDuration;
+                this.memoryProcessors = model.memoryProcessors;
+                this.memoryProtectedMode = model.memoryProtectedMode;
+                this.memoryRateLimit = model.memoryRateLimit;
+                this.memorySampleDuration = model.memorySampleDuration;
+                this.memorySingleRateLimit = model.memorySingleRateLimit;
+                this.mobileRestart = model.mobileRestart;
+                this.mobileShutdown = model.mobileShutdown;
+                this.name = model.name;
+                this.netRedirect = model.netRedirect;
+                this.netRedirectRule = model.netRedirectRule;
+                this.policyGroupId = model.policyGroupId;
+                this.policyGroupType = model.policyGroupType;
+                this.policyStatus = model.policyStatus;
+                this.preemptLogin = model.preemptLogin;
+                this.preemptLoginUsers = model.preemptLoginUsers;
+                this.printerRedirection = model.printerRedirection;
+                this.qualityEnhancement = model.qualityEnhancement;
+                this.recordContent = model.recordContent;
+                this.recordContentExpires = model.recordContentExpires;
+                this.recordEventDuration = model.recordEventDuration;
+                this.recordEventFilePaths = model.recordEventFilePaths;
+                this.recordEventRegisters = model.recordEventRegisters;
+                this.recording = model.recording;
+                this.recordingAudio = model.recordingAudio;
+                this.recordingDuration = model.recordingDuration;
+                this.recordingEndTime = model.recordingEndTime;
+                this.recordingExpires = model.recordingExpires;
+                this.recordingFps = model.recordingFps;
+                this.recordingStartTime = model.recordingStartTime;
+                this.recordingUserNotify = model.recordingUserNotify;
+                this.recordingUserNotifyMessage = model.recordingUserNotifyMessage;
+                this.remoteCoordinate = model.remoteCoordinate;
+                this.resetDesktop = model.resetDesktop;
+                this.resolutionHeight = model.resolutionHeight;
+                this.resolutionModel = model.resolutionModel;
+                this.resolutionWidth = model.resolutionWidth;
+                this.resourceGroupCount = model.resourceGroupCount;
+                this.resourceRegionId = model.resourceRegionId;
+                this.scope = model.scope;
+                this.scopeValue = model.scopeValue;
+                this.smoothEnhancement = model.smoothEnhancement;
+                this.statusMonitor = model.statusMonitor;
+                this.streamingMode = model.streamingMode;
+                this.targetFps = model.targetFps;
+                this.usbRedirect = model.usbRedirect;
+                this.usbSupplyRedirectRule = model.usbSupplyRedirectRule;
+                this.videoEncAvgKbps = model.videoEncAvgKbps;
+                this.videoEncMaxQP = model.videoEncMaxQP;
+                this.videoEncMinQP = model.videoEncMinQP;
+                this.videoEncPeakKbps = model.videoEncPeakKbps;
+                this.videoEncPolicy = model.videoEncPolicy;
+                this.videoRedirect = model.videoRedirect;
+                this.visualQuality = model.visualQuality;
+                this.watermark = model.watermark;
+                this.watermarkAntiCam = model.watermarkAntiCam;
+                this.watermarkColor = model.watermarkColor;
+                this.watermarkCustomText = model.watermarkCustomText;
+                this.watermarkDegree = model.watermarkDegree;
+                this.watermarkFontSize = model.watermarkFontSize;
+                this.watermarkFontStyle = model.watermarkFontStyle;
+                this.watermarkPower = model.watermarkPower;
+                this.watermarkRowAmount = model.watermarkRowAmount;
+                this.watermarkSecurity = model.watermarkSecurity;
+                this.watermarkTransparency = model.watermarkTransparency;
+                this.watermarkTransparencyValue = model.watermarkTransparencyValue;
+                this.watermarkType = model.watermarkType;
+                this.wyAssistant = model.wyAssistant;
+            } 
 
             /**
              * <p>Indicates whether end users are granted the administrator permissions.</p>

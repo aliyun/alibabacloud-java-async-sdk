@@ -36,6 +36,10 @@ public class ClonePolicyGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyGroupId
      */
@@ -53,6 +57,14 @@ public class ClonePolicyGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String policyGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClonePolicyGroupResponseBody model) {
+            this.policyGroupId = model.policyGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the new cloud computer policy.</p>

@@ -46,6 +46,10 @@ public class FilePermissionMember extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cdsIdentity
      */
@@ -79,6 +83,16 @@ public class FilePermissionMember extends TeaModel {
         private Boolean disinheritSubGroup; 
         private Long expireTime; 
         private String roleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FilePermissionMember model) {
+            this.cdsIdentity = model.cdsIdentity;
+            this.disinheritSubGroup = model.disinheritSubGroup;
+            this.expireTime = model.expireTime;
+            this.roleId = model.roleId;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -163,6 +177,14 @@ public class FilePermissionMember extends TeaModel {
         public static final class Builder {
             private String id; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CdsIdentity model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

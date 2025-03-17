@@ -36,6 +36,10 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return modifyResults
      */
@@ -53,6 +57,14 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ModifyResults> modifyResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDesktopsPolicyGroupResponseBody model) {
+            this.modifyResults = model.modifyResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request results.</p>
@@ -134,6 +146,15 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             private String code; 
             private String desktopId; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyResults model) {
+                this.code = model.code;
+                this.desktopId = model.desktopId;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The returned message. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>

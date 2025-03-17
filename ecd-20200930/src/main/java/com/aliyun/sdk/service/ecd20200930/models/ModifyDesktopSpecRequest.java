@@ -83,7 +83,7 @@ public class ModifyDesktopSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -424,6 +424,15 @@ public class ModifyDesktopSpecRequest extends Request {
             private String desktopId; 
             private Integer rootDiskSizeGib; 
             private Integer userDiskSizeGib; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpecs model) {
+                this.desktopId = model.desktopId;
+                this.rootDiskSizeGib = model.rootDiskSizeGib;
+                this.userDiskSizeGib = model.userDiskSizeGib;
+            } 
 
             /**
              * <p>The ID of the cloud computer.</p>

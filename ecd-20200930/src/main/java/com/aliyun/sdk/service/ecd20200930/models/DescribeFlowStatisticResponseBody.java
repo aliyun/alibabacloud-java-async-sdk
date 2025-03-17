@@ -40,6 +40,10 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktopCount
      */
@@ -65,6 +69,15 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         private Integer desktopCount; 
         private java.util.List<DesktopFlowStatistic> desktopFlowStatistic; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowStatisticResponseBody model) {
+            this.desktopCount = model.desktopCount;
+            this.desktopFlowStatistic = model.desktopFlowStatistic;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of available cloud computers in the office network.</p>
@@ -169,6 +182,16 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             private String desktopName; 
             private String flowIn; 
             private Integer flowRank; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopFlowStatistic model) {
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.flowIn = model.flowIn;
+                this.flowRank = model.flowRank;
+            } 
 
             /**
              * <p>The ID of the cloud computer.</p>

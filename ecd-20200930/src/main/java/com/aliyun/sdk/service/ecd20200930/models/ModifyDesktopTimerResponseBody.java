@@ -36,6 +36,10 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktopIds
      */
@@ -53,6 +57,14 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> desktopIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDesktopTimerResponseBody model) {
+            this.desktopIds = model.desktopIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the cloud computers for which you successfully configure the scheduled task.</p>

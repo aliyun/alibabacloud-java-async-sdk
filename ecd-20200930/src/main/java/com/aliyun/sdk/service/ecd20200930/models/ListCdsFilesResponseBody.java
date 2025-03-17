@@ -56,6 +56,10 @@ public class ListCdsFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListCdsFilesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCdsFilesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.fileModels = model.fileModels;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
@@ -481,6 +498,33 @@ public class ListCdsFilesResponseBody extends TeaModel {
             private String sha1; 
             private Long size; 
             private String thumbnail; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileModels model) {
+                this.category = model.category;
+                this.contentType = model.contentType;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.downloadUrl = model.downloadUrl;
+                this.fileExtension = model.fileExtension;
+                this.fileId = model.fileId;
+                this.filePath = model.filePath;
+                this.fileType = model.fileType;
+                this.md5 = model.md5;
+                this.modifiedTime = model.modifiedTime;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.openTime = model.openTime;
+                this.openTimeStamp = model.openTimeStamp;
+                this.parentId = model.parentId;
+                this.regionId = model.regionId;
+                this.sha1 = model.sha1;
+                this.size = model.size;
+                this.thumbnail = model.thumbnail;
+            } 
 
             /**
              * <p>The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.</p>

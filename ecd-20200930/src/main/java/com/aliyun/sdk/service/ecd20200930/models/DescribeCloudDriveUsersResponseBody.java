@@ -40,6 +40,10 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cloudDriveUsers
      */
@@ -65,6 +69,15 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         private java.util.List<CloudDriveUsers> cloudDriveUsers; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudDriveUsersResponseBody model) {
+            this.cloudDriveUsers = model.cloudDriveUsers;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CloudDriveUsers.
@@ -199,6 +212,19 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
             private Long usedSize; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudDriveUsers model) {
+                this.driveId = model.driveId;
+                this.endUserId = model.endUserId;
+                this.status = model.status;
+                this.totalSize = model.totalSize;
+                this.usedSize = model.usedSize;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * DriveId.

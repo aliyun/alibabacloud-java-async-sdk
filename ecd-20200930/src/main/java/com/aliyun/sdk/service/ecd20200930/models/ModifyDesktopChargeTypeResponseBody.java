@@ -40,6 +40,10 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktopId
      */
@@ -65,6 +69,15 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         private java.util.List<String> desktopId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDesktopChargeTypeResponseBody model) {
+            this.desktopId = model.desktopId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the cloud computers.</p>

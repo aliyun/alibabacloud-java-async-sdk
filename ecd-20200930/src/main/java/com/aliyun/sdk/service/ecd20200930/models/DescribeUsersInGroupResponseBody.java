@@ -48,6 +48,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endUsers
      */
@@ -89,6 +93,17 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private Integer onlineUsersCount; 
         private String requestId; 
         private Integer usersCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUsersInGroupResponseBody model) {
+            this.endUsers = model.endUsers;
+            this.nextToken = model.nextToken;
+            this.onlineUsersCount = model.onlineUsersCount;
+            this.requestId = model.requestId;
+            this.usersCount = model.usersCount;
+        } 
 
         /**
          * <p>The list of authorized users.</p>
@@ -192,6 +207,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String externalName; 
             private String jobNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalInfo model) {
+                this.externalName = model.externalName;
+                this.jobNumber = model.jobNumber;
+            } 
+
             /**
              * <p>The external name.</p>
              * 
@@ -264,6 +287,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String propertyValue; 
             private Long propertyValueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValues model) {
+                this.propertyValue = model.propertyValue;
+                this.propertyValueId = model.propertyValueId;
+            } 
 
             /**
              * <p>The property value.</p>
@@ -385,6 +416,18 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private java.util.List<PropertyValues> propertyValues; 
             private Long userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSetPropertiesModels model) {
+                this.propertyId = model.propertyId;
+                this.propertyKey = model.propertyKey;
+                this.propertyType = model.propertyType;
+                this.propertyValues = model.propertyValues;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The property ID.</p>
@@ -636,6 +679,25 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private ExternalInfo externalInfo; 
             private String userDesktopId; 
             private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndUsers model) {
+                this.connectionStatus = model.connectionStatus;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.displayName = model.displayName;
+                this.endUserEmail = model.endUserEmail;
+                this.endUserId = model.endUserId;
+                this.endUserName = model.endUserName;
+                this.endUserPhone = model.endUserPhone;
+                this.endUserRemark = model.endUserRemark;
+                this.endUserType = model.endUserType;
+                this.externalInfo = model.externalInfo;
+                this.userDesktopId = model.userDesktopId;
+                this.userSetPropertiesModels = model.userSetPropertiesModels;
+            } 
 
             /**
              * <p>The connection status.</p>

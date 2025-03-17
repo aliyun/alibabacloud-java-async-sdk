@@ -44,6 +44,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adHostname
      */
@@ -77,6 +81,16 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private java.util.List<Directories> directories; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDirectoriesResponseBody model) {
+            this.adHostname = model.adHostname;
+            this.directories = model.directories;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.</p>
@@ -216,6 +230,18 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String specification; 
             private String trustKey; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ADConnectors model) {
+                this.ADConnectorAddress = model.ADConnectorAddress;
+                this.connectorStatus = model.connectorStatus;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.specification = model.specification;
+                this.trustKey = model.trustKey;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The connection address.</p>
@@ -380,6 +406,16 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String message; 
             private String step; 
             private String timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.level = model.level;
+                this.message = model.message;
+                this.step = model.step;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * <p>The level of the log entry.</p>
@@ -846,6 +882,43 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String trustPassword; 
             private java.util.List<String> vSwitchIds; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directories model) {
+                this.ADConnectors = model.ADConnectors;
+                this.adHostname = model.adHostname;
+                this.backupDCHostname = model.backupDCHostname;
+                this.backupDns = model.backupDns;
+                this.creationTime = model.creationTime;
+                this.customSecurityGroupId = model.customSecurityGroupId;
+                this.desktopAccessType = model.desktopAccessType;
+                this.desktopVpcEndpoint = model.desktopVpcEndpoint;
+                this.directoryId = model.directoryId;
+                this.directoryType = model.directoryType;
+                this.dnsAddress = model.dnsAddress;
+                this.dnsUserName = model.dnsUserName;
+                this.domainName = model.domainName;
+                this.domainPassword = model.domainPassword;
+                this.domainUserName = model.domainUserName;
+                this.enableAdminAccess = model.enableAdminAccess;
+                this.enableCrossDesktopAccess = model.enableCrossDesktopAccess;
+                this.enableInternetAccess = model.enableInternetAccess;
+                this.fileSystemIds = model.fileSystemIds;
+                this.logs = model.logs;
+                this.mfaEnabled = model.mfaEnabled;
+                this.name = model.name;
+                this.needVerifyLoginRisk = model.needVerifyLoginRisk;
+                this.ouName = model.ouName;
+                this.ssoEnabled = model.ssoEnabled;
+                this.status = model.status;
+                this.subDnsAddress = model.subDnsAddress;
+                this.subDomainName = model.subDomainName;
+                this.trustPassword = model.trustPassword;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>Details of the AD connector.</p>

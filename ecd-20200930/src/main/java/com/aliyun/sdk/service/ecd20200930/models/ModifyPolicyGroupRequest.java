@@ -331,7 +331,7 @@ public class ModifyPolicyGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1839,6 +1839,14 @@ public class ModifyPolicyGroupRequest extends Request {
             private String cidrIp; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorizeAccessPolicyRule model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+            } 
+
             /**
              * <p>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</p>
              * <p>This parameter is required.</p>
@@ -1972,6 +1980,19 @@ public class ModifyPolicyGroupRequest extends Request {
             private String portRange; 
             private String priority; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizeSecurityPolicyRule model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+                this.ipProtocol = model.ipProtocol;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
@@ -2126,6 +2147,14 @@ public class ModifyPolicyGroupRequest extends Request {
             private String clientType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientType model) {
+                this.clientType = model.clientType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The type of the Alibaba Cloud Workspace client.</p>
              * <blockquote>
@@ -2217,6 +2246,14 @@ public class ModifyPolicyGroupRequest extends Request {
         public static final class Builder {
             private String deviceType; 
             private String redirectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceRedirects model) {
+                this.deviceType = model.deviceType;
+                this.redirectType = model.redirectType;
+            } 
 
             /**
              * <p>The peripheral type.</p>
@@ -2351,6 +2388,18 @@ public class ModifyPolicyGroupRequest extends Request {
             private String deviceVid; 
             private String optCommand; 
             private String redirectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceRules model) {
+                this.deviceName = model.deviceName;
+                this.devicePid = model.devicePid;
+                this.deviceType = model.deviceType;
+                this.deviceVid = model.deviceVid;
+                this.optCommand = model.optCommand;
+                this.redirectType = model.redirectType;
+            } 
 
             /**
              * <p>The device name.</p>
@@ -2500,6 +2549,15 @@ public class ModifyPolicyGroupRequest extends Request {
             private String domain; 
             private String policy; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainResolveRule model) {
+                this.description = model.description;
+                this.domain = model.domain;
+                this.policy = model.policy;
+            } 
+
             /**
              * <p>The description of domain name resolution rule.</p>
              * 
@@ -2588,6 +2646,14 @@ public class ModifyPolicyGroupRequest extends Request {
         public static final class Builder {
             private String cidrIp; 
             private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(RevokeAccessPolicyRule model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+            } 
 
             /**
              * <p>The client CIDR block that you want to delete. After it is deleted, end users cannot connect to cloud computers from the CIDR block. The value is an IPv4 CIDR block.</p>
@@ -2721,6 +2787,19 @@ public class ModifyPolicyGroupRequest extends Request {
             private String portRange; 
             private String priority; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RevokeSecurityPolicyRule model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+                this.ipProtocol = model.ipProtocol;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The object of the security group rule that you want to delete. The value is an IPv4 CIDR block.</p>
@@ -2934,6 +3013,19 @@ public class ModifyPolicyGroupRequest extends Request {
             private Long usbRedirectType; 
             private Long usbRuleType; 
             private String vendorId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsbSupplyRedirectRule model) {
+                this.description = model.description;
+                this.deviceClass = model.deviceClass;
+                this.deviceSubclass = model.deviceSubclass;
+                this.productId = model.productId;
+                this.usbRedirectType = model.usbRedirectType;
+                this.usbRuleType = model.usbRuleType;
+                this.vendorId = model.vendorId;
+            } 
 
             /**
              * <p>The rule description.</p>

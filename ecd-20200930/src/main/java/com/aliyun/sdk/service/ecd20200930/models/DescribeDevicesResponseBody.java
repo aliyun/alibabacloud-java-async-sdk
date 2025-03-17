@@ -36,6 +36,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return devices
      */
@@ -53,6 +57,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Devices> devices; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDevicesResponseBody model) {
+            this.devices = model.devices;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about devices that you queried.</p>
@@ -146,6 +158,16 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private String directoryId; 
             private String endUserId; 
             private String userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndUserList model) {
+                this.adDomain = model.adDomain;
+                this.directoryId = model.directoryId;
+                this.endUserId = model.endUserId;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>The address of the AD office network.</p>
@@ -246,6 +268,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public static final class Builder {
             private String deviceId; 
             private java.util.List<EndUserList> endUserList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.deviceId = model.deviceId;
+                this.endUserList = model.endUserList;
+            } 
 
             /**
              * <p>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</p>

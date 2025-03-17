@@ -52,6 +52,10 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeCdsFileShareLinksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdsFileShareLinksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>

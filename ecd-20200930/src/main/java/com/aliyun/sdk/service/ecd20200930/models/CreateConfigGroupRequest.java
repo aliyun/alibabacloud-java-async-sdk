@@ -63,7 +63,7 @@ public class CreateConfigGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -347,6 +347,21 @@ public class CreateConfigGroupRequest extends Request {
             private String resetType; 
             private String timerType; 
             private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigTimers model) {
+                this.allowClientSetting = model.allowClientSetting;
+                this.cronExpression = model.cronExpression;
+                this.enforce = model.enforce;
+                this.interval = model.interval;
+                this.operationType = model.operationType;
+                this.processWhitelist = model.processWhitelist;
+                this.resetType = model.resetType;
+                this.timerType = model.timerType;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
