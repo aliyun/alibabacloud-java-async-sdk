@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaList
      */
@@ -60,6 +69,15 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         private MediaList mediaList; 
         private NonExistFileURLs nonExistFileURLs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMediaListByURLResponseBody model) {
+            this.mediaList = model.mediaList;
+            this.nonExistFileURLs = model.nonExistFileURLs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of media files.</p>
@@ -137,6 +155,14 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         public static final class Builder {
             private String state; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(File model) {
+                this.state = model.state;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The status of the media file. Valid values:</p>
@@ -286,6 +312,20 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String numStreams; 
             private String size; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Format model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.formatLongName = model.formatLongName;
+                this.formatName = model.formatName;
+                this.numPrograms = model.numPrograms;
+                this.numStreams = model.numStreams;
+                this.size = model.size;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The bitrate.</p>
@@ -594,6 +634,28 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String startTime; 
             private String timebase; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioStream model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.sampleFmt = model.sampleFmt;
+                this.samplerate = model.samplerate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
+
             /**
              * <p>The bitrate.</p>
              * 
@@ -785,7 +847,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class AudioStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStream")
-        private java.util.List < AudioStream> audioStream;
+        private java.util.List<AudioStream> audioStream;
 
         private AudioStreamList(Builder builder) {
             this.audioStream = builder.audioStream;
@@ -802,17 +864,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return audioStream
          */
-        public java.util.List < AudioStream> getAudioStream() {
+        public java.util.List<AudioStream> getAudioStream() {
             return this.audioStream;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStream> audioStream; 
+            private java.util.List<AudioStream> audioStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamList model) {
+                this.audioStream = model.audioStream;
+            } 
 
             /**
              * AudioStream.
              */
-            public Builder audioStream(java.util.List < AudioStream> audioStream) {
+            public Builder audioStream(java.util.List<AudioStream> audioStream) {
                 this.audioStream = audioStream;
                 return this;
             }
@@ -868,6 +937,14 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String index; 
             private String lang; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStream model) {
+                this.index = model.index;
+                this.lang = model.lang;
+            } 
+
             /**
              * <p>The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.</p>
              * 
@@ -905,7 +982,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class SubtitleStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubtitleStream")
-        private java.util.List < SubtitleStream> subtitleStream;
+        private java.util.List<SubtitleStream> subtitleStream;
 
         private SubtitleStreamList(Builder builder) {
             this.subtitleStream = builder.subtitleStream;
@@ -922,17 +999,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return subtitleStream
          */
-        public java.util.List < SubtitleStream> getSubtitleStream() {
+        public java.util.List<SubtitleStream> getSubtitleStream() {
             return this.subtitleStream;
         }
 
         public static final class Builder {
-            private java.util.List < SubtitleStream> subtitleStream; 
+            private java.util.List<SubtitleStream> subtitleStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStreamList model) {
+                this.subtitleStream = model.subtitleStream;
+            } 
 
             /**
              * SubtitleStream.
              */
-            public Builder subtitleStream(java.util.List < SubtitleStream> subtitleStream) {
+            public Builder subtitleStream(java.util.List<SubtitleStream> subtitleStream) {
                 this.subtitleStream = subtitleStream;
                 return this;
             }
@@ -999,6 +1083,15 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String avgBitrate; 
             private String costBandwidth; 
             private String preloadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkCost model) {
+                this.avgBitrate = model.avgBitrate;
+                this.costBandwidth = model.costBandwidth;
+                this.preloadTime = model.preloadTime;
+            } 
 
             /**
              * <p>The average bitrate of the video stream.</p>
@@ -1348,6 +1441,36 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String timebase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStream model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.networkCost = model.networkCost;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average frame rate.</p>
              * 
@@ -1624,7 +1747,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class VideoStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoStream")
-        private java.util.List < VideoStream> videoStream;
+        private java.util.List<VideoStream> videoStream;
 
         private VideoStreamList(Builder builder) {
             this.videoStream = builder.videoStream;
@@ -1641,17 +1764,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return videoStream
          */
-        public java.util.List < VideoStream> getVideoStream() {
+        public java.util.List<VideoStream> getVideoStream() {
             return this.videoStream;
         }
 
         public static final class Builder {
-            private java.util.List < VideoStream> videoStream; 
+            private java.util.List<VideoStream> videoStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamList model) {
+                this.videoStream = model.videoStream;
+            } 
 
             /**
              * VideoStream.
              */
-            public Builder videoStream(java.util.List < VideoStream> videoStream) {
+            public Builder videoStream(java.util.List<VideoStream> videoStream) {
                 this.videoStream = videoStream;
                 return this;
             }
@@ -1718,6 +1848,15 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private AudioStreamList audioStreamList; 
             private SubtitleStreamList subtitleStreamList; 
             private VideoStreamList videoStreamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Streams model) {
+                this.audioStreamList = model.audioStreamList;
+                this.subtitleStreamList = model.subtitleStreamList;
+                this.videoStreamList = model.videoStreamList;
+            } 
 
             /**
              * <p>The list of audio streams.</p>
@@ -1794,6 +1933,14 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private Format format; 
             private Streams streams; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaInfo model) {
+                this.format = model.format;
+                this.streams = model.streams;
+            } 
+
             /**
              * <p>The format information.</p>
              */
@@ -1860,6 +2007,14 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         public static final class Builder {
             private String state; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlayFile model) {
+                this.state = model.state;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The status of the media file. Valid values:</p>
@@ -2058,6 +2213,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String size; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Play model) {
+                this.activityName = model.activityName;
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.encryption = model.encryption;
+                this.file = model.file;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.mediaWorkflowId = model.mediaWorkflowId;
+                this.mediaWorkflowName = model.mediaWorkflowName;
+                this.size = model.size;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The name of the workflow activity.</p>
              * 
@@ -2206,7 +2379,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class PlayList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Play")
-        private java.util.List < Play> play;
+        private java.util.List<Play> play;
 
         private PlayList(Builder builder) {
             this.play = builder.play;
@@ -2223,17 +2396,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return play
          */
-        public java.util.List < Play> getPlay() {
+        public java.util.List<Play> getPlay() {
             return this.play;
         }
 
         public static final class Builder {
-            private java.util.List < Play> play; 
+            private java.util.List<Play> play; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlayList model) {
+                this.play = model.play;
+            } 
 
             /**
              * Play.
              */
-            public Builder play(java.util.List < Play> play) {
+            public Builder play(java.util.List<Play> play) {
                 this.play = play;
                 return this;
             }
@@ -2253,7 +2433,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class RunIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RunId")
-        private java.util.List < String > runId;
+        private java.util.List<String> runId;
 
         private RunIdList(Builder builder) {
             this.runId = builder.runId;
@@ -2270,17 +2450,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return runId
          */
-        public java.util.List < String > getRunId() {
+        public java.util.List<String> getRunId() {
             return this.runId;
         }
 
         public static final class Builder {
-            private java.util.List < String > runId; 
+            private java.util.List<String> runId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunIdList model) {
+                this.runId = model.runId;
+            } 
 
             /**
              * RunId.
              */
-            public Builder runId(java.util.List < String > runId) {
+            public Builder runId(java.util.List<String> runId) {
                 this.runId = runId;
                 return this;
             }
@@ -2335,6 +2522,14 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         public static final class Builder {
             private String state; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotFile model) {
+                this.state = model.state;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The status of the file. Valid values:</p>
@@ -2461,6 +2656,18 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String mediaWorkflowName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Snapshot model) {
+                this.activityName = model.activityName;
+                this.count = model.count;
+                this.file = model.file;
+                this.mediaWorkflowId = model.mediaWorkflowId;
+                this.mediaWorkflowName = model.mediaWorkflowName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the workflow activity that generates the snapshot.</p>
              * 
@@ -2543,7 +2750,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class SnapshotList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
-        private java.util.List < Snapshot> snapshot;
+        private java.util.List<Snapshot> snapshot;
 
         private SnapshotList(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -2560,17 +2767,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < Snapshot> getSnapshot() {
+        public java.util.List<Snapshot> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < Snapshot> snapshot; 
+            private java.util.List<Snapshot> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotList model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < Snapshot> snapshot) {
+            public Builder snapshot(java.util.List<Snapshot> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }
@@ -2625,6 +2839,14 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         public static final class Builder {
             private String state; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(SummaryFile model) {
+                this.state = model.state;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The status of the media file. Valid values:</p>
@@ -2739,6 +2961,17 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String mediaWorkflowName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.activityName = model.activityName;
+                this.file = model.file;
+                this.mediaWorkflowId = model.mediaWorkflowId;
+                this.mediaWorkflowName = model.mediaWorkflowName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the workflow activity.</p>
              * 
@@ -2810,7 +3043,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class SummaryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
-        private java.util.List < Summary> summary;
+        private java.util.List<Summary> summary;
 
         private SummaryList(Builder builder) {
             this.summary = builder.summary;
@@ -2827,17 +3060,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return summary
          */
-        public java.util.List < Summary> getSummary() {
+        public java.util.List<Summary> getSummary() {
             return this.summary;
         }
 
         public static final class Builder {
-            private java.util.List < Summary> summary; 
+            private java.util.List<Summary> summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(SummaryList model) {
+                this.summary = model.summary;
+            } 
 
             /**
              * Summary.
              */
-            public Builder summary(java.util.List < Summary> summary) {
+            public Builder summary(java.util.List<Summary> summary) {
                 this.summary = summary;
                 return this;
             }
@@ -2857,7 +3097,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < String > tag;
+        private java.util.List<String> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -2874,17 +3114,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < String > getTag() {
+        public java.util.List<String> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < String > tag; 
+            private java.util.List<String> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < String > tag) {
+            public Builder tag(java.util.List<String> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -3180,6 +3427,34 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
             private String title; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Media model) {
+                this.bitrate = model.bitrate;
+                this.cateId = model.cateId;
+                this.censorState = model.censorState;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.file = model.file;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.mediaId = model.mediaId;
+                this.mediaInfo = model.mediaInfo;
+                this.playList = model.playList;
+                this.publishState = model.publishState;
+                this.runIdList = model.runIdList;
+                this.size = model.size;
+                this.snapshotList = model.snapshotList;
+                this.summaryList = model.summaryList;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate.</p>
              * 
@@ -3426,7 +3701,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class MediaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Media")
-        private java.util.List < Media> media;
+        private java.util.List<Media> media;
 
         private MediaList(Builder builder) {
             this.media = builder.media;
@@ -3443,17 +3718,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return media
          */
-        public java.util.List < Media> getMedia() {
+        public java.util.List<Media> getMedia() {
             return this.media;
         }
 
         public static final class Builder {
-            private java.util.List < Media> media; 
+            private java.util.List<Media> media; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaList model) {
+                this.media = model.media;
+            } 
 
             /**
              * Media.
              */
-            public Builder media(java.util.List < Media> media) {
+            public Builder media(java.util.List<Media> media) {
                 this.media = media;
                 return this;
             }
@@ -3473,7 +3755,7 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
      */
     public static class NonExistFileURLs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileURL")
-        private java.util.List < String > fileURL;
+        private java.util.List<String> fileURL;
 
         private NonExistFileURLs(Builder builder) {
             this.fileURL = builder.fileURL;
@@ -3490,17 +3772,24 @@ public class QueryMediaListByURLResponseBody extends TeaModel {
         /**
          * @return fileURL
          */
-        public java.util.List < String > getFileURL() {
+        public java.util.List<String> getFileURL() {
             return this.fileURL;
         }
 
         public static final class Builder {
-            private java.util.List < String > fileURL; 
+            private java.util.List<String> fileURL; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistFileURLs model) {
+                this.fileURL = model.fileURL;
+            } 
 
             /**
              * FileURL.
              */
-            public Builder fileURL(java.util.List < String > fileURL) {
+            public Builder fileURL(java.util.List<String> fileURL) {
                 this.fileURL = fileURL;
                 return this;
             }

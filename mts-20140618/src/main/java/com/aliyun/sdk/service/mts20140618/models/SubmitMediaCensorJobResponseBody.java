@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SubmitMediaCensorJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -48,6 +57,14 @@ public class SubmitMediaCensorJobResponseBody extends TeaModel {
     public static final class Builder {
         private String jobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitMediaCensorJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the content moderation job. We recommend that you keep this ID for subsequent operation calls.</p>

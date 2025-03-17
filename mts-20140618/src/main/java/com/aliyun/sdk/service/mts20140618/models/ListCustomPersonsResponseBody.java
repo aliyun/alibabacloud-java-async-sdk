@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categories
      */
@@ -48,6 +57,14 @@ public class ListCustomPersonsResponseBody extends TeaModel {
     public static final class Builder {
         private Categories categories; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomPersonsResponseBody model) {
+            this.categories = model.categories;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The array of the figure libraries.</p>
@@ -118,6 +135,14 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             private String faceId; 
             private String imageUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Face model) {
+                this.faceId = model.faceId;
+                this.imageUrl = model.imageUrl;
+            } 
+
             /**
              * <p>The ID of the face.</p>
              * 
@@ -155,7 +180,7 @@ public class ListCustomPersonsResponseBody extends TeaModel {
      */
     public static class Faces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Face")
-        private java.util.List < Face> face;
+        private java.util.List<Face> face;
 
         private Faces(Builder builder) {
             this.face = builder.face;
@@ -172,17 +197,24 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         /**
          * @return face
          */
-        public java.util.List < Face> getFace() {
+        public java.util.List<Face> getFace() {
             return this.face;
         }
 
         public static final class Builder {
-            private java.util.List < Face> face; 
+            private java.util.List<Face> face; 
+
+            private Builder() {
+            } 
+
+            private Builder(Faces model) {
+                this.face = model.face;
+            } 
 
             /**
              * Face.
              */
-            public Builder face(java.util.List < Face> face) {
+            public Builder face(java.util.List<Face> face) {
                 this.face = face;
                 return this;
             }
@@ -262,6 +294,16 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             private String personId; 
             private String personName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Person model) {
+                this.faces = model.faces;
+                this.personDescription = model.personDescription;
+                this.personId = model.personId;
+                this.personName = model.personName;
+            } 
+
             /**
              * <p>The array of the faces.</p>
              */
@@ -318,7 +360,7 @@ public class ListCustomPersonsResponseBody extends TeaModel {
      */
     public static class Persons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Person")
-        private java.util.List < Person> person;
+        private java.util.List<Person> person;
 
         private Persons(Builder builder) {
             this.person = builder.person;
@@ -335,17 +377,24 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         /**
          * @return person
          */
-        public java.util.List < Person> getPerson() {
+        public java.util.List<Person> getPerson() {
             return this.person;
         }
 
         public static final class Builder {
-            private java.util.List < Person> person; 
+            private java.util.List<Person> person; 
+
+            private Builder() {
+            } 
+
+            private Builder(Persons model) {
+                this.person = model.person;
+            } 
 
             /**
              * Person.
              */
-            public Builder person(java.util.List < Person> person) {
+            public Builder person(java.util.List<Person> person) {
                 this.person = person;
                 return this;
             }
@@ -425,6 +474,16 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             private String categoryName; 
             private Persons persons; 
 
+            private Builder() {
+            } 
+
+            private Builder(Category model) {
+                this.categoryDescription = model.categoryDescription;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.persons = model.persons;
+            } 
+
             /**
              * <p>The description of the figure library.</p>
              * 
@@ -481,7 +540,7 @@ public class ListCustomPersonsResponseBody extends TeaModel {
      */
     public static class Categories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
-        private java.util.List < Category> category;
+        private java.util.List<Category> category;
 
         private Categories(Builder builder) {
             this.category = builder.category;
@@ -498,17 +557,24 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         /**
          * @return category
          */
-        public java.util.List < Category> getCategory() {
+        public java.util.List<Category> getCategory() {
             return this.category;
         }
 
         public static final class Builder {
-            private java.util.List < Category> category; 
+            private java.util.List<Category> category; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.category = model.category;
+            } 
 
             /**
              * Category.
              */
-            public Builder category(java.util.List < Category> category) {
+            public Builder category(java.util.List<Category> category) {
                 this.category = category;
                 return this;
             }

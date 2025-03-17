@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ListCustomGroupsResponseBody extends TeaModel {
 
     public static ListCustomGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListCustomGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomGroupsResponseBody model) {
+            this.customGroups = model.customGroups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CustomGroups.
@@ -187,6 +207,15 @@ public class ListCustomGroupsResponseBody extends TeaModel {
             private String customGroupId; 
             private String customGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomGroup model) {
+                this.customGroupDescription = model.customGroupDescription;
+                this.customGroupId = model.customGroupId;
+                this.customGroupName = model.customGroupName;
+            } 
+
             /**
              * CustomGroupDescription.
              */
@@ -226,7 +255,7 @@ public class ListCustomGroupsResponseBody extends TeaModel {
      */
     public static class CustomGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomGroup")
-        private java.util.List < CustomGroup> customGroup;
+        private java.util.List<CustomGroup> customGroup;
 
         private CustomGroups(Builder builder) {
             this.customGroup = builder.customGroup;
@@ -243,17 +272,24 @@ public class ListCustomGroupsResponseBody extends TeaModel {
         /**
          * @return customGroup
          */
-        public java.util.List < CustomGroup> getCustomGroup() {
+        public java.util.List<CustomGroup> getCustomGroup() {
             return this.customGroup;
         }
 
         public static final class Builder {
-            private java.util.List < CustomGroup> customGroup; 
+            private java.util.List<CustomGroup> customGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomGroups model) {
+                this.customGroup = model.customGroup;
+            } 
 
             /**
              * CustomGroup.
              */
-            public Builder customGroup(java.util.List < CustomGroup> customGroup) {
+            public Builder customGroup(java.util.List<CustomGroup> customGroup) {
                 this.customGroup = customGroup;
                 return this;
             }

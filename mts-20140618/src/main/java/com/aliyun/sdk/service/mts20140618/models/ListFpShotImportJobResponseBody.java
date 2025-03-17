@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFpShotImportJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FpShotImportJobList")
-    private java.util.List < FpShotImportJobList> fpShotImportJobList;
+    private java.util.List<FpShotImportJobList> fpShotImportJobList;
 
     @com.aliyun.core.annotation.NameInMap("NonExistIds")
-    private java.util.List < String > nonExistIds;
+    private java.util.List<String> nonExistIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,17 +40,21 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fpShotImportJobList
      */
-    public java.util.List < FpShotImportJobList> getFpShotImportJobList() {
+    public java.util.List<FpShotImportJobList> getFpShotImportJobList() {
         return this.fpShotImportJobList;
     }
 
     /**
      * @return nonExistIds
      */
-    public java.util.List < String > getNonExistIds() {
+    public java.util.List<String> getNonExistIds() {
         return this.nonExistIds;
     }
 
@@ -57,14 +66,23 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FpShotImportJobList> fpShotImportJobList; 
-        private java.util.List < String > nonExistIds; 
+        private java.util.List<FpShotImportJobList> fpShotImportJobList; 
+        private java.util.List<String> nonExistIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFpShotImportJobResponseBody model) {
+            this.fpShotImportJobList = model.fpShotImportJobList;
+            this.nonExistIds = model.nonExistIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The jobs of importing text files to a text fingerprint library.</p>
          */
-        public Builder fpShotImportJobList(java.util.List < FpShotImportJobList> fpShotImportJobList) {
+        public Builder fpShotImportJobList(java.util.List<FpShotImportJobList> fpShotImportJobList) {
             this.fpShotImportJobList = fpShotImportJobList;
             return this;
         }
@@ -72,7 +90,7 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         /**
          * <p>The job IDs that do not exist. This parameter is not returned if all specified job IDs exist.</p>
          */
-        public Builder nonExistIds(java.util.List < String > nonExistIds) {
+        public Builder nonExistIds(java.util.List<String> nonExistIds) {
             this.nonExistIds = nonExistIds;
             return this;
         }
@@ -257,6 +275,24 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             private String processMessage; 
             private String status; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(FpShotImportJobList model) {
+                this.code = model.code;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.fpDBId = model.fpDBId;
+                this.fpImportConfig = model.fpImportConfig;
+                this.id = model.id;
+                this.input = model.input;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.processMessage = model.processMessage;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The error code returned when the job fails.</p>

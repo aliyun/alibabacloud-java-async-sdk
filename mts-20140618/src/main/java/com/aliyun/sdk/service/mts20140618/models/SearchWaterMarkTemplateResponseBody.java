@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
 
     public static SearchWaterMarkTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private WaterMarkTemplateList waterMarkTemplateList; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchWaterMarkTemplateResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.waterMarkTemplateList = model.waterMarkTemplateList;
+        } 
 
         /**
          * <p>The width of the watermark image in the output video. The value can be an integer or a decimal.</p>
@@ -232,6 +252,16 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             private String height; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(RatioRefer model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The horizontal offset. Unit: pixel.</p>
              * 
@@ -326,6 +356,14 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeline model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The horizontal offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset.</p>
@@ -513,6 +551,23 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             private String type; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(WaterMarkTemplate model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.id = model.id;
+                this.name = model.name;
+                this.ratioRefer = model.ratioRefer;
+                this.referPos = model.referPos;
+                this.state = model.state;
+                this.timeline = model.timeline;
+                this.type = model.type;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The name of the watermark template.</p>
              * 
@@ -667,7 +722,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
      */
     public static class WaterMarkTemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WaterMarkTemplate")
-        private java.util.List < WaterMarkTemplate> waterMarkTemplate;
+        private java.util.List<WaterMarkTemplate> waterMarkTemplate;
 
         private WaterMarkTemplateList(Builder builder) {
             this.waterMarkTemplate = builder.waterMarkTemplate;
@@ -684,17 +739,24 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         /**
          * @return waterMarkTemplate
          */
-        public java.util.List < WaterMarkTemplate> getWaterMarkTemplate() {
+        public java.util.List<WaterMarkTemplate> getWaterMarkTemplate() {
             return this.waterMarkTemplate;
         }
 
         public static final class Builder {
-            private java.util.List < WaterMarkTemplate> waterMarkTemplate; 
+            private java.util.List<WaterMarkTemplate> waterMarkTemplate; 
+
+            private Builder() {
+            } 
+
+            private Builder(WaterMarkTemplateList model) {
+                this.waterMarkTemplate = model.waterMarkTemplate;
+            } 
 
             /**
              * WaterMarkTemplate.
              */
-            public Builder waterMarkTemplate(java.util.List < WaterMarkTemplate> waterMarkTemplate) {
+            public Builder waterMarkTemplate(java.util.List<WaterMarkTemplate> waterMarkTemplate) {
                 this.waterMarkTemplate = waterMarkTemplate;
                 return this;
             }

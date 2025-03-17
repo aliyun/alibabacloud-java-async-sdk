@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Templates templates; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmarttagTemplateListResponseBody model) {
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -261,6 +278,26 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
             private String scene; 
             private String templateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.analyseTypes = model.analyseTypes;
+                this.faceCategoryIds = model.faceCategoryIds;
+                this.faceCustomParamsConfig = model.faceCustomParamsConfig;
+                this.industry = model.industry;
+                this.isDefault = model.isDefault;
+                this.keywordConfig = model.keywordConfig;
+                this.knowledgeConfig = model.knowledgeConfig;
+                this.labelType = model.labelType;
+                this.labelVersion = model.labelVersion;
+                this.landmarkGroupIds = model.landmarkGroupIds;
+                this.objectGroupIds = model.objectGroupIds;
+                this.scene = model.scene;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>The analysis types that are used in the template. One or more values are returned. Valid values:</p>
@@ -533,7 +570,7 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
      */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
-        private java.util.List < Template> template;
+        private java.util.List<Template> template;
 
         private Templates(Builder builder) {
             this.template = builder.template;
@@ -550,17 +587,24 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         /**
          * @return template
          */
-        public java.util.List < Template> getTemplate() {
+        public java.util.List<Template> getTemplate() {
             return this.template;
         }
 
         public static final class Builder {
-            private java.util.List < Template> template; 
+            private java.util.List<Template> template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.template = model.template;
+            } 
 
             /**
              * Template.
              */
-            public Builder template(java.util.List < Template> template) {
+            public Builder template(java.util.List<Template> template) {
                 this.template = template;
                 return this;
             }

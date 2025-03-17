@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return media
      */
@@ -48,6 +57,14 @@ public class UpdateMediaResponseBody extends TeaModel {
     public static final class Builder {
         private Media media; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateMediaResponseBody model) {
+            this.media = model.media;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the media file.</p>
@@ -118,6 +135,14 @@ public class UpdateMediaResponseBody extends TeaModel {
             private String state; 
             private String URL; 
 
+            private Builder() {
+            } 
+
+            private Builder(File model) {
+                this.state = model.state;
+                this.URL = model.URL;
+            } 
+
             /**
              * <p>The state of the input file. Valid values:</p>
              * <ul>
@@ -159,7 +184,7 @@ public class UpdateMediaResponseBody extends TeaModel {
      */
     public static class RunIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RunId")
-        private java.util.List < String > runId;
+        private java.util.List<String> runId;
 
         private RunIdList(Builder builder) {
             this.runId = builder.runId;
@@ -176,17 +201,24 @@ public class UpdateMediaResponseBody extends TeaModel {
         /**
          * @return runId
          */
-        public java.util.List < String > getRunId() {
+        public java.util.List<String> getRunId() {
             return this.runId;
         }
 
         public static final class Builder {
-            private java.util.List < String > runId; 
+            private java.util.List<String> runId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunIdList model) {
+                this.runId = model.runId;
+            } 
 
             /**
              * RunId.
              */
-            public Builder runId(java.util.List < String > runId) {
+            public Builder runId(java.util.List<String> runId) {
                 this.runId = runId;
                 return this;
             }
@@ -206,7 +238,7 @@ public class UpdateMediaResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < String > tag;
+        private java.util.List<String> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -223,17 +255,24 @@ public class UpdateMediaResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < String > getTag() {
+        public java.util.List<String> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < String > tag; 
+            private java.util.List<String> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < String > tag) {
+            public Builder tag(java.util.List<String> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -480,6 +519,30 @@ public class UpdateMediaResponseBody extends TeaModel {
             private Tags tags; 
             private String title; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Media model) {
+                this.bitrate = model.bitrate;
+                this.cateId = model.cateId;
+                this.censorState = model.censorState;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.file = model.file;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.mediaId = model.mediaId;
+                this.publishState = model.publishState;
+                this.runIdList = model.runIdList;
+                this.size = model.size;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The bitrate of the media file.</p>

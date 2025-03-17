@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ListCustomViewsResponseBody extends TeaModel {
 
     public static ListCustomViewsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListCustomViewsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomViewsResponseBody model) {
+            this.customViews = model.customViews;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CustomViews.
@@ -175,6 +195,14 @@ public class ListCustomViewsResponseBody extends TeaModel {
             private String customViewId; 
             private String imageUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomView model) {
+                this.customViewId = model.customViewId;
+                this.imageUrl = model.imageUrl;
+            } 
+
             /**
              * CustomViewId.
              */
@@ -206,7 +234,7 @@ public class ListCustomViewsResponseBody extends TeaModel {
      */
     public static class CustomViews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomView")
-        private java.util.List < CustomView> customView;
+        private java.util.List<CustomView> customView;
 
         private CustomViews(Builder builder) {
             this.customView = builder.customView;
@@ -223,17 +251,24 @@ public class ListCustomViewsResponseBody extends TeaModel {
         /**
          * @return customView
          */
-        public java.util.List < CustomView> getCustomView() {
+        public java.util.List<CustomView> getCustomView() {
             return this.customView;
         }
 
         public static final class Builder {
-            private java.util.List < CustomView> customView; 
+            private java.util.List<CustomView> customView; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomViews model) {
+                this.customView = model.customView;
+            } 
 
             /**
              * CustomView.
              */
-            public Builder customView(java.util.List < CustomView> customView) {
+            public Builder customView(java.util.List<CustomView> customView) {
                 this.customView = customView;
                 return this;
             }

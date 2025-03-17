@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaCensorJobDetail
      */
@@ -48,6 +57,14 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     public static final class Builder {
         private MediaCensorJobDetail mediaCensorJobDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryMediaCensorJobDetailResponseBody model) {
+            this.mediaCensorJobDetail = model.mediaCensorJobDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results of the content moderation job.</p>
@@ -142,6 +159,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private Integer startTime; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioDetailResult model) {
+                this.endTime = model.endTime;
+                this.label = model.label;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
+
             /**
              * EndTime.
              */
@@ -189,7 +216,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
      */
     public static class AudioDetailResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioDetailResult")
-        private java.util.List < AudioDetailResult> audioDetailResult;
+        private java.util.List<AudioDetailResult> audioDetailResult;
 
         private AudioDetailResultList(Builder builder) {
             this.audioDetailResult = builder.audioDetailResult;
@@ -206,17 +233,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * @return audioDetailResult
          */
-        public java.util.List < AudioDetailResult> getAudioDetailResult() {
+        public java.util.List<AudioDetailResult> getAudioDetailResult() {
             return this.audioDetailResult;
         }
 
         public static final class Builder {
-            private java.util.List < AudioDetailResult> audioDetailResult; 
+            private java.util.List<AudioDetailResult> audioDetailResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioDetailResultList model) {
+                this.audioDetailResult = model.audioDetailResult;
+            } 
 
             /**
              * AudioDetailResult.
              */
-            public Builder audioDetailResult(java.util.List < AudioDetailResult> audioDetailResult) {
+            public Builder audioDetailResult(java.util.List<AudioDetailResult> audioDetailResult) {
                 this.audioDetailResult = audioDetailResult;
                 return this;
             }
@@ -283,6 +317,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private AudioDetailResultList audioDetailResultList; 
             private String label; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioCensorResult model) {
+                this.audioDetailResultList = model.audioDetailResultList;
+                this.label = model.label;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * AudioDetailResultList.
@@ -382,6 +425,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(BarrageCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The labels of the moderation result. Multiple labels are separated with commas (,). Valid values:</p>
@@ -516,6 +569,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String scene; 
             private String suggestion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
+
             /**
              * <p>The labels of the moderation result. Multiple labels are separated with commas (,).</p>
              * <ul>
@@ -645,7 +708,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -662,17 +725,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.result = model.result;
+            } 
 
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -752,6 +822,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String object; 
             private Results results; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoverImageCensorResult model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.results = model.results;
+            } 
+
             /**
              * <p>The OSS bucket that stores the video thumbnail.</p>
              * 
@@ -808,7 +888,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
      */
     public static class CoverImageCensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoverImageCensorResult")
-        private java.util.List < CoverImageCensorResult> coverImageCensorResult;
+        private java.util.List<CoverImageCensorResult> coverImageCensorResult;
 
         private CoverImageCensorResults(Builder builder) {
             this.coverImageCensorResult = builder.coverImageCensorResult;
@@ -825,17 +905,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * @return coverImageCensorResult
          */
-        public java.util.List < CoverImageCensorResult> getCoverImageCensorResult() {
+        public java.util.List<CoverImageCensorResult> getCoverImageCensorResult() {
             return this.coverImageCensorResult;
         }
 
         public static final class Builder {
-            private java.util.List < CoverImageCensorResult> coverImageCensorResult; 
+            private java.util.List<CoverImageCensorResult> coverImageCensorResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(CoverImageCensorResults model) {
+                this.coverImageCensorResult = model.coverImageCensorResult;
+            } 
 
             /**
              * CoverImageCensorResult.
              */
-            public Builder coverImageCensorResult(java.util.List < CoverImageCensorResult> coverImageCensorResult) {
+            public Builder coverImageCensorResult(java.util.List<CoverImageCensorResult> coverImageCensorResult) {
                 this.coverImageCensorResult = coverImageCensorResult;
                 return this;
             }
@@ -914,6 +1001,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The labels of the moderation result. Valid values:</p>
@@ -1036,6 +1133,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The name of the OSS bucket in which the input media file is stored.</p>
              * 
@@ -1143,6 +1249,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(TitleCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The labels of the moderation result. Valid values:</p>
@@ -1277,6 +1393,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String scene; 
             private String suggestion; 
 
+            private Builder() {
+            } 
+
+            private Builder(CensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
+
             /**
              * <p>The labels of the moderation result. Multiple labels are separated with commas (,). Valid values:</p>
              * <ul>
@@ -1406,7 +1532,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
      */
     public static class CensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResult")
-        private java.util.List < CensorResult> censorResult;
+        private java.util.List<CensorResult> censorResult;
 
         private CensorResults(Builder builder) {
             this.censorResult = builder.censorResult;
@@ -1423,17 +1549,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * @return censorResult
          */
-        public java.util.List < CensorResult> getCensorResult() {
+        public java.util.List<CensorResult> getCensorResult() {
             return this.censorResult;
         }
 
         public static final class Builder {
-            private java.util.List < CensorResult> censorResult; 
+            private java.util.List<CensorResult> censorResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(CensorResults model) {
+                this.censorResult = model.censorResult;
+            } 
 
             /**
              * CensorResult.
              */
-            public Builder censorResult(java.util.List < CensorResult> censorResult) {
+            public Builder censorResult(java.util.List<CensorResult> censorResult) {
                 this.censorResult = censorResult;
                 return this;
             }
@@ -1512,6 +1645,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String rate; 
             private String scene; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(CensorResultsCensorResult model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The labels of the moderation result. Multiple labels are separated with commas (,). Valid values:</p>
@@ -1642,7 +1785,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
      */
     public static class VideoTimelineCensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResult")
-        private java.util.List < CensorResultsCensorResult> censorResult;
+        private java.util.List<CensorResultsCensorResult> censorResult;
 
         private VideoTimelineCensorResults(Builder builder) {
             this.censorResult = builder.censorResult;
@@ -1659,17 +1802,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * @return censorResult
          */
-        public java.util.List < CensorResultsCensorResult> getCensorResult() {
+        public java.util.List<CensorResultsCensorResult> getCensorResult() {
             return this.censorResult;
         }
 
         public static final class Builder {
-            private java.util.List < CensorResultsCensorResult> censorResult; 
+            private java.util.List<CensorResultsCensorResult> censorResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoTimelineCensorResults model) {
+                this.censorResult = model.censorResult;
+            } 
 
             /**
              * CensorResult.
              */
-            public Builder censorResult(java.util.List < CensorResultsCensorResult> censorResult) {
+            public Builder censorResult(java.util.List<CensorResultsCensorResult> censorResult) {
                 this.censorResult = censorResult;
                 return this;
             }
@@ -1737,6 +1887,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String object; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoTimeline model) {
+                this.censorResults = model.censorResults;
+                this.object = model.object;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The moderation results that include information such as labels and scores.</p>
              */
@@ -1785,7 +1944,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
      */
     public static class VideoTimelines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoTimeline")
-        private java.util.List < VideoTimeline> videoTimeline;
+        private java.util.List<VideoTimeline> videoTimeline;
 
         private VideoTimelines(Builder builder) {
             this.videoTimeline = builder.videoTimeline;
@@ -1802,17 +1961,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * @return videoTimeline
          */
-        public java.util.List < VideoTimeline> getVideoTimeline() {
+        public java.util.List<VideoTimeline> getVideoTimeline() {
             return this.videoTimeline;
         }
 
         public static final class Builder {
-            private java.util.List < VideoTimeline> videoTimeline; 
+            private java.util.List<VideoTimeline> videoTimeline; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoTimelines model) {
+                this.videoTimeline = model.videoTimeline;
+            } 
 
             /**
              * VideoTimeline.
              */
-            public Builder videoTimeline(java.util.List < VideoTimeline> videoTimeline) {
+            public Builder videoTimeline(java.util.List<VideoTimeline> videoTimeline) {
                 this.videoTimeline = videoTimeline;
                 return this;
             }
@@ -1879,6 +2045,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private CensorResults censorResults; 
             private String nextPageToken; 
             private VideoTimelines videoTimelines; 
+
+            private Builder() {
+            } 
+
+            private Builder(VensorCensorResult model) {
+                this.censorResults = model.censorResults;
+                this.nextPageToken = model.nextPageToken;
+                this.videoTimelines = model.videoTimelines;
+            } 
 
             /**
              * <p>A collection of the moderation results. The information includes the summary of various scenarios such as pornographic content and terrorist content.</p>
@@ -1969,6 +2144,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The OSS bucket that stores the output snapshots.</p>
@@ -2068,6 +2252,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String bizType; 
             private OutputFile outputFile; 
             private String videoCensor; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoCensorConfig model) {
+                this.bizType = model.bizType;
+                this.outputFile = model.outputFile;
+                this.videoCensor = model.videoCensor;
+            } 
 
             /**
              * <p>The custom business type. Default value: common.</p>
@@ -2333,6 +2526,29 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
             private String userData; 
             private VensorCensorResult vensorCensorResult; 
             private VideoCensorConfig videoCensorConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaCensorJobDetail model) {
+                this.audioCensorResult = model.audioCensorResult;
+                this.barrageCensorResult = model.barrageCensorResult;
+                this.code = model.code;
+                this.coverImageCensorResults = model.coverImageCensorResults;
+                this.creationTime = model.creationTime;
+                this.descCensorResult = model.descCensorResult;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.state = model.state;
+                this.suggestion = model.suggestion;
+                this.titleCensorResult = model.titleCensorResult;
+                this.userData = model.userData;
+                this.vensorCensorResult = model.vensorCensorResult;
+                this.videoCensorConfig = model.videoCensorConfig;
+            } 
 
             /**
              * AudioCensorResult.

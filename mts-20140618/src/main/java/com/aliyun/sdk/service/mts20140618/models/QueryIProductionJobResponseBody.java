@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -61,6 +66,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
 
     public static QueryIProductionJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,6 +153,22 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         private String result; 
         private String state; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryIProductionJobResponseBody model) {
+            this.functionName = model.functionName;
+            this.input = model.input;
+            this.jobId = model.jobId;
+            this.jobParams = model.jobParams;
+            this.output = model.output;
+            this.pipelineId = model.pipelineId;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.state = model.state;
+            this.userData = model.userData;
+        } 
 
         /**
          * FunctionName.

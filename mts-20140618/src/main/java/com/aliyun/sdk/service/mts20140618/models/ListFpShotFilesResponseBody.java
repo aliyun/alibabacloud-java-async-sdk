@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fpShotFileList
      */
@@ -60,6 +69,15 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         private FpShotFileList fpShotFileList; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFpShotFilesResponseBody model) {
+            this.fpShotFileList = model.fpShotFileList;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The media fingerprint files. For more information, see the &quot;FpShotFile&quot; section of the <a href="https://help.aliyun.com/document_detail/29251.html">Data types</a> topic.</p>
@@ -152,6 +170,15 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
@@ -261,6 +288,16 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             private String primaryKey; 
             private String storeTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FpShotFile model) {
+                this.fileId = model.fileId;
+                this.inputFile = model.inputFile;
+                this.primaryKey = model.primaryKey;
+                this.storeTime = model.storeTime;
+            } 
+
             /**
              * <p>The ID of the video file.</p>
              * 
@@ -320,7 +357,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
      */
     public static class FpShotFileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FpShotFile")
-        private java.util.List < FpShotFile> fpShotFile;
+        private java.util.List<FpShotFile> fpShotFile;
 
         private FpShotFileList(Builder builder) {
             this.fpShotFile = builder.fpShotFile;
@@ -337,17 +374,24 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         /**
          * @return fpShotFile
          */
-        public java.util.List < FpShotFile> getFpShotFile() {
+        public java.util.List<FpShotFile> getFpShotFile() {
             return this.fpShotFile;
         }
 
         public static final class Builder {
-            private java.util.List < FpShotFile> fpShotFile; 
+            private java.util.List<FpShotFile> fpShotFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(FpShotFileList model) {
+                this.fpShotFile = model.fpShotFile;
+            } 
 
             /**
              * FpShotFile.
              */
-            public Builder fpShotFile(java.util.List < FpShotFile> fpShotFile) {
+            public Builder fpShotFile(java.util.List<FpShotFile> fpShotFile) {
                 this.fpShotFile = fpShotFile;
                 return this;
             }

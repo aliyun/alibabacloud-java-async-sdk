@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
 
     public static SearchMediaWorkflowResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaWorkflowResponseBody model) {
+            this.mediaWorkflowList = model.mediaWorkflowList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the media workflows.</p>
@@ -235,6 +255,18 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
             private String topology; 
             private String triggerMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaWorkflow model) {
+                this.creationTime = model.creationTime;
+                this.mediaWorkflowId = model.mediaWorkflowId;
+                this.name = model.name;
+                this.state = model.state;
+                this.topology = model.topology;
+                this.triggerMode = model.triggerMode;
+            } 
+
             /**
              * <p>The time when the media workflow was created.</p>
              * 
@@ -325,7 +357,7 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
      */
     public static class MediaWorkflowList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaWorkflow")
-        private java.util.List < MediaWorkflow> mediaWorkflow;
+        private java.util.List<MediaWorkflow> mediaWorkflow;
 
         private MediaWorkflowList(Builder builder) {
             this.mediaWorkflow = builder.mediaWorkflow;
@@ -342,17 +374,24 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
         /**
          * @return mediaWorkflow
          */
-        public java.util.List < MediaWorkflow> getMediaWorkflow() {
+        public java.util.List<MediaWorkflow> getMediaWorkflow() {
             return this.mediaWorkflow;
         }
 
         public static final class Builder {
-            private java.util.List < MediaWorkflow> mediaWorkflow; 
+            private java.util.List<MediaWorkflow> mediaWorkflow; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaWorkflowList model) {
+                this.mediaWorkflow = model.mediaWorkflow;
+            } 
 
             /**
              * MediaWorkflow.
              */
-            public Builder mediaWorkflow(java.util.List < MediaWorkflow> mediaWorkflow) {
+            public Builder mediaWorkflow(java.util.List<MediaWorkflow> mediaWorkflow) {
                 this.mediaWorkflow = mediaWorkflow;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListFpShotDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fpShotDBList
      */
@@ -60,6 +69,15 @@ public class ListFpShotDBResponseBody extends TeaModel {
         private FpShotDBList fpShotDBList; 
         private NonExistIds nonExistIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFpShotDBResponseBody model) {
+            this.fpShotDBList = model.fpShotDBList;
+            this.nonExistIds = model.nonExistIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The media fingerprint libraries.</p>
@@ -174,6 +192,17 @@ public class ListFpShotDBResponseBody extends TeaModel {
             private String name; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(FpShotDB model) {
+                this.description = model.description;
+                this.fpDBId = model.fpDBId;
+                this.modelId = model.modelId;
+                this.name = model.name;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The description of the media fingerprint library.</p>
              * 
@@ -250,7 +279,7 @@ public class ListFpShotDBResponseBody extends TeaModel {
      */
     public static class FpShotDBList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FpShotDB")
-        private java.util.List < FpShotDB> fpShotDB;
+        private java.util.List<FpShotDB> fpShotDB;
 
         private FpShotDBList(Builder builder) {
             this.fpShotDB = builder.fpShotDB;
@@ -267,17 +296,24 @@ public class ListFpShotDBResponseBody extends TeaModel {
         /**
          * @return fpShotDB
          */
-        public java.util.List < FpShotDB> getFpShotDB() {
+        public java.util.List<FpShotDB> getFpShotDB() {
             return this.fpShotDB;
         }
 
         public static final class Builder {
-            private java.util.List < FpShotDB> fpShotDB; 
+            private java.util.List<FpShotDB> fpShotDB; 
+
+            private Builder() {
+            } 
+
+            private Builder(FpShotDBList model) {
+                this.fpShotDB = model.fpShotDB;
+            } 
 
             /**
              * FpShotDB.
              */
-            public Builder fpShotDB(java.util.List < FpShotDB> fpShotDB) {
+            public Builder fpShotDB(java.util.List<FpShotDB> fpShotDB) {
                 this.fpShotDB = fpShotDB;
                 return this;
             }
@@ -297,7 +333,7 @@ public class ListFpShotDBResponseBody extends TeaModel {
      */
     public static class NonExistIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistIds(Builder builder) {
             this.string = builder.string;
@@ -314,17 +350,24 @@ public class ListFpShotDBResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistIds model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }

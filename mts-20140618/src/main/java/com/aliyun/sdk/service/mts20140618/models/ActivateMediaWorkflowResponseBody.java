@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaWorkflow
      */
@@ -48,6 +57,14 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
     public static final class Builder {
         private MediaWorkflow mediaWorkflow; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ActivateMediaWorkflowResponseBody model) {
+            this.mediaWorkflow = model.mediaWorkflow;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the media workflow.</p>
@@ -153,6 +170,17 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String topology; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaWorkflow model) {
+                this.creationTime = model.creationTime;
+                this.mediaWorkflowId = model.mediaWorkflowId;
+                this.name = model.name;
+                this.state = model.state;
+                this.topology = model.topology;
+            } 
 
             /**
              * <p>The time when the media workflow was created.</p>

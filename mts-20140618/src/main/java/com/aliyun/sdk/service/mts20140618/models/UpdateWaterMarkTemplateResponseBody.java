@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateWaterMarkTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdateWaterMarkTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WaterMarkTemplate waterMarkTemplate; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateWaterMarkTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.waterMarkTemplate = model.waterMarkTemplate;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -141,6 +158,16 @@ public class UpdateWaterMarkTemplateResponseBody extends TeaModel {
             private String dy; 
             private String height; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(RatioRefer model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The horizontal offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset. The value can be an integer or a decimal.</p>
@@ -252,6 +279,14 @@ public class UpdateWaterMarkTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeline model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The display duration of the watermark. Default value: <strong>ToEND</strong>. The default value indicates that the watermark is displayed until the video ends.</p>
@@ -437,6 +472,23 @@ public class UpdateWaterMarkTemplateResponseBody extends TeaModel {
             private Timeline timeline; 
             private String type; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(WaterMarkTemplate model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.id = model.id;
+                this.name = model.name;
+                this.ratioRefer = model.ratioRefer;
+                this.referPos = model.referPos;
+                this.state = model.state;
+                this.timeline = model.timeline;
+                this.type = model.type;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The horizontal offset. Unit: pixel.</p>

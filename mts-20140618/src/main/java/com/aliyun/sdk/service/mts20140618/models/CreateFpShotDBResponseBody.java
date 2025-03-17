@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateFpShotDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fpShotDB
      */
@@ -48,6 +57,14 @@ public class CreateFpShotDBResponseBody extends TeaModel {
     public static final class Builder {
         private FpShotDB fpShotDB; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFpShotDBResponseBody model) {
+            this.fpShotDB = model.fpShotDB;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the media fingerprint library.</p>
@@ -165,6 +182,18 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             private Integer modelId; 
             private String name; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(FpShotDB model) {
+                this.config = model.config;
+                this.description = model.description;
+                this.fpDBId = model.fpDBId;
+                this.modelId = model.modelId;
+                this.name = model.name;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The configurations of the media fingerprint library.</p>

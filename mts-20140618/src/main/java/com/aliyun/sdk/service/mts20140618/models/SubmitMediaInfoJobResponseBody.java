@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaInfoJob
      */
@@ -48,6 +57,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
     public static final class Builder {
         private MediaInfoJob mediaInfoJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitMediaInfoJobResponseBody model) {
+            this.mediaInfoJob = model.mediaInfoJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the media information analysis job.</p>
@@ -129,6 +146,15 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The name of the OSS bucket in which the input media file is stored.</p>
@@ -225,6 +251,15 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String messageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MNSMessageResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.messageId = model.messageId;
+            } 
 
             /**
              * <p>The error code that is returned if the job fails. This parameter is not returned if the job is successful.</p>
@@ -381,6 +416,20 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String numStreams; 
             private String size; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Format model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.formatLongName = model.formatLongName;
+                this.formatName = model.formatName;
+                this.numPrograms = model.numPrograms;
+                this.numStreams = model.numStreams;
+                this.size = model.size;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The total bitrate. Unit: Kbit/s.</p>
@@ -689,6 +738,28 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String startTime; 
             private String timebase; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioStream model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.sampleFmt = model.sampleFmt;
+                this.samplerate = model.samplerate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
+
             /**
              * <p>The bitrate. Unit: Kbit/s.</p>
              * 
@@ -887,7 +958,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
      */
     public static class AudioStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStream")
-        private java.util.List < AudioStream> audioStream;
+        private java.util.List<AudioStream> audioStream;
 
         private AudioStreamList(Builder builder) {
             this.audioStream = builder.audioStream;
@@ -904,17 +975,24 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         /**
          * @return audioStream
          */
-        public java.util.List < AudioStream> getAudioStream() {
+        public java.util.List<AudioStream> getAudioStream() {
             return this.audioStream;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStream> audioStream; 
+            private java.util.List<AudioStream> audioStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamList model) {
+                this.audioStream = model.audioStream;
+            } 
 
             /**
              * AudioStream.
              */
-            public Builder audioStream(java.util.List < AudioStream> audioStream) {
+            public Builder audioStream(java.util.List<AudioStream> audioStream) {
                 this.audioStream = audioStream;
                 return this;
             }
@@ -1066,6 +1144,22 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String startTime; 
             private String timebase; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStream model) {
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
+
             /**
              * <p>The full name of the encoding format.</p>
              * 
@@ -1195,7 +1289,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
      */
     public static class SubtitleStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubtitleStream")
-        private java.util.List < SubtitleStream> subtitleStream;
+        private java.util.List<SubtitleStream> subtitleStream;
 
         private SubtitleStreamList(Builder builder) {
             this.subtitleStream = builder.subtitleStream;
@@ -1212,17 +1306,24 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         /**
          * @return subtitleStream
          */
-        public java.util.List < SubtitleStream> getSubtitleStream() {
+        public java.util.List<SubtitleStream> getSubtitleStream() {
             return this.subtitleStream;
         }
 
         public static final class Builder {
-            private java.util.List < SubtitleStream> subtitleStream; 
+            private java.util.List<SubtitleStream> subtitleStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStreamList model) {
+                this.subtitleStream = model.subtitleStream;
+            } 
 
             /**
              * SubtitleStream.
              */
-            public Builder subtitleStream(java.util.List < SubtitleStream> subtitleStream) {
+            public Builder subtitleStream(java.util.List<SubtitleStream> subtitleStream) {
                 this.subtitleStream = subtitleStream;
                 return this;
             }
@@ -1289,6 +1390,15 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String avgBitrate; 
             private String costBandwidth; 
             private String preloadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkCost model) {
+                this.avgBitrate = model.avgBitrate;
+                this.costBandwidth = model.costBandwidth;
+                this.preloadTime = model.preloadTime;
+            } 
 
             /**
              * <p>The average bitrate. Unit: Kbit/s.</p>
@@ -1674,6 +1784,39 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String timebase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStream model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.colorPrimaries = model.colorPrimaries;
+                this.colorRange = model.colorRange;
+                this.colorTransfer = model.colorTransfer;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.networkCost = model.networkCost;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average frame rate.</p>
              * 
@@ -1989,7 +2132,7 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
      */
     public static class VideoStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoStream")
-        private java.util.List < VideoStream> videoStream;
+        private java.util.List<VideoStream> videoStream;
 
         private VideoStreamList(Builder builder) {
             this.videoStream = builder.videoStream;
@@ -2006,17 +2149,24 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         /**
          * @return videoStream
          */
-        public java.util.List < VideoStream> getVideoStream() {
+        public java.util.List<VideoStream> getVideoStream() {
             return this.videoStream;
         }
 
         public static final class Builder {
-            private java.util.List < VideoStream> videoStream; 
+            private java.util.List<VideoStream> videoStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamList model) {
+                this.videoStream = model.videoStream;
+            } 
 
             /**
              * VideoStream.
              */
-            public Builder videoStream(java.util.List < VideoStream> videoStream) {
+            public Builder videoStream(java.util.List<VideoStream> videoStream) {
                 this.videoStream = videoStream;
                 return this;
             }
@@ -2083,6 +2233,15 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private AudioStreamList audioStreamList; 
             private SubtitleStreamList subtitleStreamList; 
             private VideoStreamList videoStreamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Streams model) {
+                this.audioStreamList = model.audioStreamList;
+                this.subtitleStreamList = model.subtitleStreamList;
+                this.videoStreamList = model.videoStreamList;
+            } 
 
             /**
              * <p>The audio streams. A media file can contain up to four audio streams.</p>
@@ -2242,6 +2401,21 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private String height; 
             private Streams streams; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.fileFormat = model.fileFormat;
+                this.fileSize = model.fileSize;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.streams = model.streams;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The bitrate. Unit: Kbit/s.</p>
@@ -2494,6 +2668,23 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
             private Properties properties; 
             private String state; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfoJob model) {
+                this.async = model.async;
+                this.code = model.code;
+                this.creationTime = model.creationTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.MNSMessageResult = model.MNSMessageResult;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.properties = model.properties;
+                this.state = model.state;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>Indicates whether the job is run in asynchronous mode.</p>

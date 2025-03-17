@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SnapshotJob snapshotJob; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitSnapshotJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotJob = model.snapshotJob;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -141,6 +158,16 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The OSS bucket that stores the object.</p>
@@ -249,6 +276,15 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String errorMessage; 
             private String messageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MNSMessageResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.messageId = model.messageId;
+            } 
+
             /**
              * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
              * 
@@ -356,6 +392,16 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The OSS bucket that stores the output snapshot.</p>
@@ -535,6 +581,21 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String lines; 
             private String margin; 
             private String padding; 
+
+            private Builder() {
+            } 
+
+            private Builder(TileOut model) {
+                this.cellHeight = model.cellHeight;
+                this.cellSelStep = model.cellSelStep;
+                this.cellWidth = model.cellWidth;
+                this.color = model.color;
+                this.columns = model.columns;
+                this.isKeepCellPic = model.isKeepCellPic;
+                this.lines = model.lines;
+                this.margin = model.margin;
+                this.padding = model.padding;
+            } 
 
             /**
              * <p>The height of a single image. The default value is the height of the output snapshot.</p>
@@ -730,6 +791,16 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String object; 
             private String roleArn; 
 
+            private Builder() {
+            } 
+
+            private Builder(TileOutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
+
             /**
              * <p>The OSS bucket that stores the object.</p>
              * 
@@ -789,7 +860,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
      */
     public static class TimeArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimePointList")
-        private java.util.List < Long > timePointList;
+        private java.util.List<Long> timePointList;
 
         private TimeArray(Builder builder) {
             this.timePointList = builder.timePointList;
@@ -806,17 +877,24 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         /**
          * @return timePointList
          */
-        public java.util.List < Long > getTimePointList() {
+        public java.util.List<Long> getTimePointList() {
             return this.timePointList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > timePointList; 
+            private java.util.List<Long> timePointList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeArray model) {
+                this.timePointList = model.timePointList;
+            } 
 
             /**
              * TimePointList.
              */
-            public Builder timePointList(java.util.List < Long > timePointList) {
+            public Builder timePointList(java.util.List<Long> timePointList) {
                 this.timePointList = timePointList;
                 return this;
             }
@@ -967,6 +1045,22 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String time; 
             private TimeArray timeArray; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotConfig model) {
+                this.frameType = model.frameType;
+                this.height = model.height;
+                this.interval = model.interval;
+                this.num = model.num;
+                this.outputFile = model.outputFile;
+                this.tileOut = model.tileOut;
+                this.tileOutputFile = model.tileOutputFile;
+                this.time = model.time;
+                this.timeArray = model.timeArray;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The type of the snapshot. Default value: <strong>Normal</strong>. Valid values:</p>
@@ -1248,6 +1342,24 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String state; 
             private String tileCount; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotJob model) {
+                this.code = model.code;
+                this.count = model.count;
+                this.creationTime = model.creationTime;
+                this.id = model.id;
+                this.input = model.input;
+                this.MNSMessageResult = model.MNSMessageResult;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.snapshotConfig = model.snapshotConfig;
+                this.state = model.state;
+                this.tileCount = model.tileCount;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>

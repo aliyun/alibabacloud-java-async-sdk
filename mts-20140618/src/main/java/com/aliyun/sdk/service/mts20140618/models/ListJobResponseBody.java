@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobList
      */
@@ -60,6 +69,15 @@ public class ListJobResponseBody extends TeaModel {
         private JobList jobList; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobResponseBody model) {
+            this.jobList = model.jobList;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The transcoding jobs.</p>
@@ -152,6 +170,15 @@ public class ListJobResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The name of the OSS bucket in which the job input is stored.</p>
@@ -249,6 +276,15 @@ public class ListJobResponseBody extends TeaModel {
             private String errorMessage; 
             private String messageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MNSMessageResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.messageId = model.messageId;
+            } 
+
             /**
              * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
              * 
@@ -332,6 +368,14 @@ public class ListJobResponseBody extends TeaModel {
         public static final class Builder {
             private String level; 
             private String method; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volume model) {
+                this.level = model.level;
+                this.method = model.method;
+            } 
 
             /**
              * <p>The volume adjustment range.</p>
@@ -474,6 +518,19 @@ public class ListJobResponseBody extends TeaModel {
             private String qscale; 
             private String samplerate; 
             private Volume volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.qscale = model.qscale;
+                this.samplerate = model.samplerate;
+                this.volume = model.volume;
+            } 
 
             /**
              * <p>The audio bitrate of the output file.</p>
@@ -619,6 +676,14 @@ public class ListJobResponseBody extends TeaModel {
             private String duration; 
             private String seek; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimeSpan model) {
+                this.duration = model.duration;
+                this.seek = model.seek;
+            } 
+
             /**
              * <p>The duration of the clip.</p>
              * <ul>
@@ -690,6 +755,13 @@ public class ListJobResponseBody extends TeaModel {
         public static final class Builder {
             private TimeSpan timeSpan; 
 
+            private Builder() {
+            } 
+
+            private Builder(Clip model) {
+                this.timeSpan = model.timeSpan;
+            } 
+
             /**
              * <p>The time span of the clip.</p>
              */
@@ -736,6 +808,13 @@ public class ListJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String format; 
+
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.format = model.format;
+            } 
 
             /**
              * <p>The container format.</p>
@@ -855,6 +934,18 @@ public class ListJobResponseBody extends TeaModel {
             private String keyUri; 
             private String skipCnt; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Encryption model) {
+                this.id = model.id;
+                this.key = model.key;
+                this.keyType = model.keyType;
+                this.keyUri = model.keyUri;
+                this.skipCnt = model.skipCnt;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The encryption ID.</p>
@@ -976,6 +1067,14 @@ public class ListJobResponseBody extends TeaModel {
             private Boolean md5Support; 
             private Boolean sizeSupport; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ts model) {
+                this.md5Support = model.md5Support;
+                this.sizeSupport = model.sizeSupport;
+            } 
+
             /**
              * <p>Indicates whether the MD5 value of the TS file is included in the M3U8 file. Valid values:</p>
              * <ul>
@@ -1044,6 +1143,13 @@ public class ListJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private Ts ts; 
+
+            private Builder() {
+            } 
+
+            private Builder(M3U8NonStandardSupport model) {
+                this.ts = model.ts;
+            } 
 
             /**
              * <p>The non-standard support configurations for TS files. The value is a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</p>
@@ -1128,6 +1234,16 @@ public class ListJobResponseBody extends TeaModel {
             private String roleArn; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(Merge model) {
+                this.duration = model.duration;
+                this.mergeURL = model.mergeURL;
+                this.roleArn = model.roleArn;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The duration of the clip.</p>
              * <ul>
@@ -1196,7 +1312,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class MergeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Merge")
-        private java.util.List < Merge> merge;
+        private java.util.List<Merge> merge;
 
         private MergeList(Builder builder) {
             this.merge = builder.merge;
@@ -1213,17 +1329,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return merge
          */
-        public java.util.List < Merge> getMerge() {
+        public java.util.List<Merge> getMerge() {
             return this.merge;
         }
 
         public static final class Builder {
-            private java.util.List < Merge> merge; 
+            private java.util.List<Merge> merge; 
+
+            private Builder() {
+            } 
+
+            private Builder(MergeList model) {
+                this.merge = model.merge;
+            } 
 
             /**
              * Merge.
              */
-            public Builder merge(java.util.List < Merge> merge) {
+            public Builder merge(java.util.List<Merge> merge) {
                 this.merge = merge;
                 return this;
             }
@@ -1302,6 +1425,16 @@ public class ListJobResponseBody extends TeaModel {
             private String finalDelay; 
             private String isCustomPalette; 
             private String loop; 
+
+            private Builder() {
+            } 
+
+            private Builder(Gif model) {
+                this.ditherMode = model.ditherMode;
+                this.finalDelay = model.finalDelay;
+                this.isCustomPalette = model.isCustomPalette;
+                this.loop = model.loop;
+            } 
 
             /**
              * <p>The color dithering algorithm of the palette. Valid values: <strong>sierra</strong> and <strong>bayer</strong>.</p>
@@ -1390,6 +1523,13 @@ public class ListJobResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
 
+            private Builder() {
+            } 
+
+            private Builder(Segment model) {
+                this.duration = model.duration;
+            } 
+
             /**
              * <p>The length of the segment. The value must be an integer. Unit: seconds.</p>
              * <ul>
@@ -1443,6 +1583,13 @@ public class ListJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String loop; 
+
+            private Builder() {
+            } 
+
+            private Builder(Webp model) {
+                this.loop = model.loop;
+            } 
 
             /**
              * <p>The loop count.</p>
@@ -1517,6 +1664,15 @@ public class ListJobResponseBody extends TeaModel {
             private Gif gif; 
             private Segment segment; 
             private Webp webp; 
+
+            private Builder() {
+            } 
+
+            private Builder(MuxConfig model) {
+                this.gif = model.gif;
+                this.segment = model.segment;
+                this.webp = model.webp;
+            } 
 
             /**
              * <p>The transmuxing configurations for GIF.</p>
@@ -1617,6 +1773,16 @@ public class ListJobResponseBody extends TeaModel {
             private String width; 
             private String openUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Opening model) {
+                this.height = model.height;
+                this.start = model.start;
+                this.width = model.width;
+                this.openUrl = model.openUrl;
+            } 
+
             /**
              * <p>The height of the opening part. Valid values: values in the range of (0, 4096), -1, and full.</p>
              * <ul>
@@ -1690,7 +1856,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class OpeningList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Opening")
-        private java.util.List < Opening> opening;
+        private java.util.List<Opening> opening;
 
         private OpeningList(Builder builder) {
             this.opening = builder.opening;
@@ -1707,17 +1873,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return opening
          */
-        public java.util.List < Opening> getOpening() {
+        public java.util.List<Opening> getOpening() {
             return this.opening;
         }
 
         public static final class Builder {
-            private java.util.List < Opening> opening; 
+            private java.util.List<Opening> opening; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpeningList model) {
+                this.opening = model.opening;
+            } 
 
             /**
              * Opening.
              */
-            public Builder opening(java.util.List < Opening> opening) {
+            public Builder opening(java.util.List<Opening> opening) {
                 this.opening = opening;
                 return this;
             }
@@ -1796,6 +1969,16 @@ public class ListJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutSubtitleFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
@@ -1916,6 +2099,16 @@ public class ListJobResponseBody extends TeaModel {
             private OutSubtitleFile outSubtitleFile; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutSubtitle model) {
+                this.map = model.map;
+                this.message = model.message;
+                this.outSubtitleFile = model.outSubtitleFile;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The video track. Format: 0:{Stream}:{Stream sequence number}, that is, 0:v:{video_index}. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.</p>
              * 
@@ -1976,7 +2169,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class OutSubtitleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutSubtitle")
-        private java.util.List < OutSubtitle> outSubtitle;
+        private java.util.List<OutSubtitle> outSubtitle;
 
         private OutSubtitleList(Builder builder) {
             this.outSubtitle = builder.outSubtitle;
@@ -1993,17 +2186,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return outSubtitle
          */
-        public java.util.List < OutSubtitle> getOutSubtitle() {
+        public java.util.List<OutSubtitle> getOutSubtitle() {
             return this.outSubtitle;
         }
 
         public static final class Builder {
-            private java.util.List < OutSubtitle> outSubtitle; 
+            private java.util.List<OutSubtitle> outSubtitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutSubtitleList model) {
+                this.outSubtitle = model.outSubtitle;
+            } 
 
             /**
              * OutSubtitle.
              */
-            public Builder outSubtitle(java.util.List < OutSubtitle> outSubtitle) {
+            public Builder outSubtitle(java.util.List<OutSubtitle> outSubtitle) {
                 this.outSubtitle = outSubtitle;
                 return this;
             }
@@ -2082,6 +2282,16 @@ public class ListJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
@@ -2249,6 +2459,20 @@ public class ListJobResponseBody extends TeaModel {
             private String numStreams; 
             private String size; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Format model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.formatLongName = model.formatLongName;
+                this.formatName = model.formatName;
+                this.numPrograms = model.numPrograms;
+                this.numStreams = model.numStreams;
+                this.size = model.size;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The total bitrate.</p>
@@ -2557,6 +2781,28 @@ public class ListJobResponseBody extends TeaModel {
             private String startTime; 
             private String timebase; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioStream model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.sampleFmt = model.sampleFmt;
+                this.samplerate = model.samplerate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
+
             /**
              * <p>The bitrate of the audio stream.</p>
              * 
@@ -2748,7 +2994,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class AudioStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStream")
-        private java.util.List < AudioStream> audioStream;
+        private java.util.List<AudioStream> audioStream;
 
         private AudioStreamList(Builder builder) {
             this.audioStream = builder.audioStream;
@@ -2765,17 +3011,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return audioStream
          */
-        public java.util.List < AudioStream> getAudioStream() {
+        public java.util.List<AudioStream> getAudioStream() {
             return this.audioStream;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStream> audioStream; 
+            private java.util.List<AudioStream> audioStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamList model) {
+                this.audioStream = model.audioStream;
+            } 
 
             /**
              * AudioStream.
              */
-            public Builder audioStream(java.util.List < AudioStream> audioStream) {
+            public Builder audioStream(java.util.List<AudioStream> audioStream) {
                 this.audioStream = audioStream;
                 return this;
             }
@@ -2831,6 +3084,14 @@ public class ListJobResponseBody extends TeaModel {
             private String index; 
             private String lang; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStream model) {
+                this.index = model.index;
+                this.lang = model.lang;
+            } 
+
             /**
              * <p>The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.</p>
              * 
@@ -2868,7 +3129,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class SubtitleStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubtitleStream")
-        private java.util.List < SubtitleStream> subtitleStream;
+        private java.util.List<SubtitleStream> subtitleStream;
 
         private SubtitleStreamList(Builder builder) {
             this.subtitleStream = builder.subtitleStream;
@@ -2885,17 +3146,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return subtitleStream
          */
-        public java.util.List < SubtitleStream> getSubtitleStream() {
+        public java.util.List<SubtitleStream> getSubtitleStream() {
             return this.subtitleStream;
         }
 
         public static final class Builder {
-            private java.util.List < SubtitleStream> subtitleStream; 
+            private java.util.List<SubtitleStream> subtitleStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitleStreamList model) {
+                this.subtitleStream = model.subtitleStream;
+            } 
 
             /**
              * SubtitleStream.
              */
-            public Builder subtitleStream(java.util.List < SubtitleStream> subtitleStream) {
+            public Builder subtitleStream(java.util.List<SubtitleStream> subtitleStream) {
                 this.subtitleStream = subtitleStream;
                 return this;
             }
@@ -2962,6 +3230,15 @@ public class ListJobResponseBody extends TeaModel {
             private String avgBitrate; 
             private String costBandwidth; 
             private String preloadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkCost model) {
+                this.avgBitrate = model.avgBitrate;
+                this.costBandwidth = model.costBandwidth;
+                this.preloadTime = model.preloadTime;
+            } 
 
             /**
              * <p>The average bitrate of the video stream.</p>
@@ -3299,6 +3576,35 @@ public class ListJobResponseBody extends TeaModel {
             private String timebase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStream model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.networkCost = model.networkCost;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average frame rate of the video stream.</p>
              * 
@@ -3564,7 +3870,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class VideoStreamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoStream")
-        private java.util.List < VideoStream> videoStream;
+        private java.util.List<VideoStream> videoStream;
 
         private VideoStreamList(Builder builder) {
             this.videoStream = builder.videoStream;
@@ -3581,17 +3887,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return videoStream
          */
-        public java.util.List < VideoStream> getVideoStream() {
+        public java.util.List<VideoStream> getVideoStream() {
             return this.videoStream;
         }
 
         public static final class Builder {
-            private java.util.List < VideoStream> videoStream; 
+            private java.util.List<VideoStream> videoStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamList model) {
+                this.videoStream = model.videoStream;
+            } 
 
             /**
              * VideoStream.
              */
-            public Builder videoStream(java.util.List < VideoStream> videoStream) {
+            public Builder videoStream(java.util.List<VideoStream> videoStream) {
                 this.videoStream = videoStream;
                 return this;
             }
@@ -3658,6 +3971,15 @@ public class ListJobResponseBody extends TeaModel {
             private AudioStreamList audioStreamList; 
             private SubtitleStreamList subtitleStreamList; 
             private VideoStreamList videoStreamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Streams model) {
+                this.audioStreamList = model.audioStreamList;
+                this.subtitleStreamList = model.subtitleStreamList;
+                this.videoStreamList = model.videoStreamList;
+            } 
 
             /**
              * <p>The audio streams.</p>
@@ -3818,6 +4140,21 @@ public class ListJobResponseBody extends TeaModel {
             private Streams streams; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.fileFormat = model.fileFormat;
+                this.fileSize = model.fileSize;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.streams = model.streams;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The bitrate of the video.</p>
              * 
@@ -3974,6 +4311,15 @@ public class ListJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtSubtitleInput model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
              * 
@@ -4070,6 +4416,15 @@ public class ListJobResponseBody extends TeaModel {
             private String fontName; 
             private ExtSubtitleInput input; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtSubtitle model) {
+                this.charEnc = model.charEnc;
+                this.fontName = model.fontName;
+                this.input = model.input;
+            } 
+
             /**
              * <p>The character set used by the external subtitle.</p>
              * <ul>
@@ -4126,7 +4481,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class ExtSubtitleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtSubtitle")
-        private java.util.List < ExtSubtitle> extSubtitle;
+        private java.util.List<ExtSubtitle> extSubtitle;
 
         private ExtSubtitleList(Builder builder) {
             this.extSubtitle = builder.extSubtitle;
@@ -4143,17 +4498,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return extSubtitle
          */
-        public java.util.List < ExtSubtitle> getExtSubtitle() {
+        public java.util.List<ExtSubtitle> getExtSubtitle() {
             return this.extSubtitle;
         }
 
         public static final class Builder {
-            private java.util.List < ExtSubtitle> extSubtitle; 
+            private java.util.List<ExtSubtitle> extSubtitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtSubtitleList model) {
+                this.extSubtitle = model.extSubtitle;
+            } 
 
             /**
              * ExtSubtitle.
              */
-            public Builder extSubtitle(java.util.List < ExtSubtitle> extSubtitle) {
+            public Builder extSubtitle(java.util.List<ExtSubtitle> extSubtitle) {
                 this.extSubtitle = extSubtitle;
                 return this;
             }
@@ -4197,6 +4559,13 @@ public class ListJobResponseBody extends TeaModel {
         public static final class Builder {
             private String map; 
 
+            private Builder() {
+            } 
+
+            private Builder(Subtitle model) {
+                this.map = model.map;
+            } 
+
             /**
              * <p>The sequence number of the video stream. The sequence number is the index of the video stream in the list and starts from 0. If you do not set the corresponding parameter in the request, the default video stream is selected.</p>
              * 
@@ -4223,7 +4592,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class SubtitleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Subtitle")
-        private java.util.List < Subtitle> subtitle;
+        private java.util.List<Subtitle> subtitle;
 
         private SubtitleList(Builder builder) {
             this.subtitle = builder.subtitle;
@@ -4240,17 +4609,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return subtitle
          */
-        public java.util.List < Subtitle> getSubtitle() {
+        public java.util.List<Subtitle> getSubtitle() {
             return this.subtitle;
         }
 
         public static final class Builder {
-            private java.util.List < Subtitle> subtitle; 
+            private java.util.List<Subtitle> subtitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitleList model) {
+                this.subtitle = model.subtitle;
+            } 
 
             /**
              * Subtitle.
              */
-            public Builder subtitle(java.util.List < Subtitle> subtitle) {
+            public Builder subtitle(java.util.List<Subtitle> subtitle) {
                 this.subtitle = subtitle;
                 return this;
             }
@@ -4306,6 +4682,14 @@ public class ListJobResponseBody extends TeaModel {
             private ExtSubtitleList extSubtitleList; 
             private SubtitleList subtitleList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubtitleConfig model) {
+                this.extSubtitleList = model.extSubtitleList;
+                this.subtitleList = model.subtitleList;
+            } 
+
             /**
              * <p>The external subtitles. The value is a JSON array.</p>
              */
@@ -4360,6 +4744,13 @@ public class ListJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String isHalfSample; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuperReso model) {
+                this.isHalfSample = model.isHalfSample;
+            } 
 
             /**
              * <p>Indicates whether parameters related to the sampling rate are obtained. Valid values:</p>
@@ -4487,6 +4878,19 @@ public class ListJobResponseBody extends TeaModel {
             private String tailUrl; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(TailSlate model) {
+                this.bgColor = model.bgColor;
+                this.blendDuration = model.blendDuration;
+                this.height = model.height;
+                this.isMergeAudio = model.isMergeAudio;
+                this.start = model.start;
+                this.tailUrl = model.tailUrl;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: <strong>White</strong>. For more information, see <a href="https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.1df840f74IH4Eq&file=color.txt">Background colors</a>.</p>
              * 
@@ -4592,7 +4996,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class TailSlateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TailSlate")
-        private java.util.List < TailSlate> tailSlate;
+        private java.util.List<TailSlate> tailSlate;
 
         private TailSlateList(Builder builder) {
             this.tailSlate = builder.tailSlate;
@@ -4609,17 +5013,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return tailSlate
          */
-        public java.util.List < TailSlate> getTailSlate() {
+        public java.util.List<TailSlate> getTailSlate() {
             return this.tailSlate;
         }
 
         public static final class Builder {
-            private java.util.List < TailSlate> tailSlate; 
+            private java.util.List<TailSlate> tailSlate; 
+
+            private Builder() {
+            } 
+
+            private Builder(TailSlateList model) {
+                this.tailSlate = model.tailSlate;
+            } 
 
             /**
              * TailSlate.
              */
-            public Builder tailSlate(java.util.List < TailSlate> tailSlate) {
+            public Builder tailSlate(java.util.List<TailSlate> tailSlate) {
                 this.tailSlate = tailSlate;
                 return this;
             }
@@ -4746,6 +5157,20 @@ public class ListJobResponseBody extends TeaModel {
             private String isCheckVideoBitrate; 
             private String isCheckVideoBitrateFail; 
             private String transMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransConfig model) {
+                this.adjDarMethod = model.adjDarMethod;
+                this.isCheckAudioBitrate = model.isCheckAudioBitrate;
+                this.isCheckAudioBitrateFail = model.isCheckAudioBitrateFail;
+                this.isCheckReso = model.isCheckReso;
+                this.isCheckResoFail = model.isCheckResoFail;
+                this.isCheckVideoBitrate = model.isCheckVideoBitrate;
+                this.isCheckVideoBitrateFail = model.isCheckVideoBitrateFail;
+                this.transMode = model.transMode;
+            } 
 
             /**
              * <p>The method of resolution adjustment. Default value: <strong>none</strong>. Valid values: rescale, crop, pad, and none.</p>
@@ -4925,6 +5350,14 @@ public class ListJobResponseBody extends TeaModel {
         public static final class Builder {
             private String max; 
             private String min; 
+
+            private Builder() {
+            } 
+
+            private Builder(BitrateBnd model) {
+                this.max = model.max;
+                this.min = model.min;
+            } 
 
             /**
              * <p>The maximum bitrate. Unit: Kbit/s.</p>
@@ -5214,6 +5647,32 @@ public class ListJobResponseBody extends TeaModel {
             private String resoPriority; 
             private String scanMode; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.bitrate = model.bitrate;
+                this.bitrateBnd = model.bitrateBnd;
+                this.bufsize = model.bufsize;
+                this.codec = model.codec;
+                this.crf = model.crf;
+                this.crop = model.crop;
+                this.degrain = model.degrain;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.maxFps = model.maxFps;
+                this.maxrate = model.maxrate;
+                this.pad = model.pad;
+                this.pixFmt = model.pixFmt;
+                this.preset = model.preset;
+                this.profile = model.profile;
+                this.qscale = model.qscale;
+                this.resoPriority = model.resoPriority;
+                this.scanMode = model.scanMode;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The average bitrate of the video. Unit: Kbit/s.</p>
@@ -5540,6 +5999,15 @@ public class ListJobResponseBody extends TeaModel {
             private String location; 
             private String object; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
+
             /**
              * <p>The name of the OSS bucket in which the input file is stored.</p>
              * 
@@ -5695,6 +6163,20 @@ public class ListJobResponseBody extends TeaModel {
             private String type; 
             private String waterMarkTemplateId; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(WaterMark model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.inputFile = model.inputFile;
+                this.referPos = model.referPos;
+                this.type = model.type;
+                this.waterMarkTemplateId = model.waterMarkTemplateId;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.</p>
@@ -5862,7 +6344,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class WaterMarkList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WaterMark")
-        private java.util.List < WaterMark> waterMark;
+        private java.util.List<WaterMark> waterMark;
 
         private WaterMarkList(Builder builder) {
             this.waterMark = builder.waterMark;
@@ -5879,17 +6361,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return waterMark
          */
-        public java.util.List < WaterMark> getWaterMark() {
+        public java.util.List<WaterMark> getWaterMark() {
             return this.waterMark;
         }
 
         public static final class Builder {
-            private java.util.List < WaterMark> waterMark; 
+            private java.util.List<WaterMark> waterMark; 
+
+            private Builder() {
+            } 
+
+            private Builder(WaterMarkList model) {
+                this.waterMark = model.waterMark;
+            } 
 
             /**
              * WaterMark.
              */
-            public Builder waterMark(java.util.List < WaterMark> waterMark) {
+            public Builder waterMark(java.util.List<WaterMark> waterMark) {
                 this.waterMark = waterMark;
                 return this;
             }
@@ -6232,6 +6721,38 @@ public class ListJobResponseBody extends TeaModel {
             private String videoStreamMap; 
             private String waterMarkConfigUrl; 
             private WaterMarkList waterMarkList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.audio = model.audio;
+                this.audioStreamMap = model.audioStreamMap;
+                this.clip = model.clip;
+                this.container = model.container;
+                this.deWatermark = model.deWatermark;
+                this.encryption = model.encryption;
+                this.m3U8NonStandardSupport = model.m3U8NonStandardSupport;
+                this.mergeConfigUrl = model.mergeConfigUrl;
+                this.mergeList = model.mergeList;
+                this.muxConfig = model.muxConfig;
+                this.openingList = model.openingList;
+                this.outSubtitleList = model.outSubtitleList;
+                this.outputFile = model.outputFile;
+                this.priority = model.priority;
+                this.properties = model.properties;
+                this.rotate = model.rotate;
+                this.subtitleConfig = model.subtitleConfig;
+                this.superReso = model.superReso;
+                this.tailSlateList = model.tailSlateList;
+                this.templateId = model.templateId;
+                this.transConfig = model.transConfig;
+                this.userData = model.userData;
+                this.video = model.video;
+                this.videoStreamMap = model.videoStreamMap;
+                this.waterMarkConfigUrl = model.waterMarkConfigUrl;
+                this.waterMarkList = model.waterMarkList;
+            } 
 
             /**
              * <p>The audio configurations.</p>
@@ -6646,6 +7167,23 @@ public class ListJobResponseBody extends TeaModel {
             private String pipelineId; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.code = model.code;
+                this.creationTime = model.creationTime;
+                this.finishTime = model.finishTime;
+                this.input = model.input;
+                this.jobId = model.jobId;
+                this.MNSMessageResult = model.MNSMessageResult;
+                this.message = model.message;
+                this.output = model.output;
+                this.percent = model.percent;
+                this.pipelineId = model.pipelineId;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
              * 
@@ -6780,7 +7318,7 @@ public class ListJobResponseBody extends TeaModel {
      */
     public static class JobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Job")
-        private java.util.List < Job> job;
+        private java.util.List<Job> job;
 
         private JobList(Builder builder) {
             this.job = builder.job;
@@ -6797,17 +7335,24 @@ public class ListJobResponseBody extends TeaModel {
         /**
          * @return job
          */
-        public java.util.List < Job> getJob() {
+        public java.util.List<Job> getJob() {
             return this.job;
         }
 
         public static final class Builder {
-            private java.util.List < Job> job; 
+            private java.util.List<Job> job; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.job = model.job;
+            } 
 
             /**
              * Job.
              */
-            public Builder job(java.util.List < Job> job) {
+            public Builder job(java.util.List<Job> job) {
                 this.job = job;
                 return this;
             }

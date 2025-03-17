@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaBucketList
      */
@@ -60,6 +69,15 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         private MediaBucketList mediaBucketList; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAllMediaBucketResponseBody model) {
+            this.mediaBucketList = model.mediaBucketList;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The media buckets returned.</p>
@@ -153,6 +171,15 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             private String referer; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaBucket model) {
+                this.bucket = model.bucket;
+                this.referer = model.referer;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the media bucket.</p>
              * 
@@ -205,7 +232,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
      */
     public static class MediaBucketList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaBucket")
-        private java.util.List < MediaBucket> mediaBucket;
+        private java.util.List<MediaBucket> mediaBucket;
 
         private MediaBucketList(Builder builder) {
             this.mediaBucket = builder.mediaBucket;
@@ -222,17 +249,24 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         /**
          * @return mediaBucket
          */
-        public java.util.List < MediaBucket> getMediaBucket() {
+        public java.util.List<MediaBucket> getMediaBucket() {
             return this.mediaBucket;
         }
 
         public static final class Builder {
-            private java.util.List < MediaBucket> mediaBucket; 
+            private java.util.List<MediaBucket> mediaBucket; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaBucketList model) {
+                this.mediaBucket = model.mediaBucket;
+            } 
 
             /**
              * MediaBucket.
              */
-            public Builder mediaBucket(java.util.List < MediaBucket> mediaBucket) {
+            public Builder mediaBucket(java.util.List<MediaBucket> mediaBucket) {
                 this.mediaBucket = mediaBucket;
                 return this;
             }

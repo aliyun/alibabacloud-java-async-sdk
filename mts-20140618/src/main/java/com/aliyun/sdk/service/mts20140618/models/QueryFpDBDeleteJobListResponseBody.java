@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fpDBDeleteJobList
      */
@@ -60,6 +69,15 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         private FpDBDeleteJobList fpDBDeleteJobList; 
         private NonExistIds nonExistIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryFpDBDeleteJobListResponseBody model) {
+            this.fpDBDeleteJobList = model.fpDBDeleteJobList;
+            this.nonExistIds = model.nonExistIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The jobs of deleting a media fingerprint library. For more information, see the &quot;FpDBDeleteJob&quot; section of the <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/datatypes">Data types</a> topic.</p>
@@ -234,6 +252,22 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             private String status; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(FpDBDeleteJob model) {
+                this.code = model.code;
+                this.creationTime = model.creationTime;
+                this.delType = model.delType;
+                this.finishTime = model.finishTime;
+                this.fpDBId = model.fpDBId;
+                this.id = model.id;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
+
             /**
              * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
              * 
@@ -365,7 +399,7 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
      */
     public static class FpDBDeleteJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FpDBDeleteJob")
-        private java.util.List < FpDBDeleteJob> fpDBDeleteJob;
+        private java.util.List<FpDBDeleteJob> fpDBDeleteJob;
 
         private FpDBDeleteJobList(Builder builder) {
             this.fpDBDeleteJob = builder.fpDBDeleteJob;
@@ -382,17 +416,24 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         /**
          * @return fpDBDeleteJob
          */
-        public java.util.List < FpDBDeleteJob> getFpDBDeleteJob() {
+        public java.util.List<FpDBDeleteJob> getFpDBDeleteJob() {
             return this.fpDBDeleteJob;
         }
 
         public static final class Builder {
-            private java.util.List < FpDBDeleteJob> fpDBDeleteJob; 
+            private java.util.List<FpDBDeleteJob> fpDBDeleteJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(FpDBDeleteJobList model) {
+                this.fpDBDeleteJob = model.fpDBDeleteJob;
+            } 
 
             /**
              * FpDBDeleteJob.
              */
-            public Builder fpDBDeleteJob(java.util.List < FpDBDeleteJob> fpDBDeleteJob) {
+            public Builder fpDBDeleteJob(java.util.List<FpDBDeleteJob> fpDBDeleteJob) {
                 this.fpDBDeleteJob = fpDBDeleteJob;
                 return this;
             }
@@ -412,7 +453,7 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
      */
     public static class NonExistIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistIds(Builder builder) {
             this.string = builder.string;
@@ -429,17 +470,24 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistIds model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }

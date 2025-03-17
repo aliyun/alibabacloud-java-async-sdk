@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     public static QuerySmarttagJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         private String requestId; 
         private Results results; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmarttagJobResponseBody model) {
+            this.jobStatus = model.jobStatus;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.userData = model.userData;
+        } 
 
         /**
          * JobStatus.
@@ -175,6 +195,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
             private String data; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.type = model.type;
+            } 
+
             /**
              * Data.
              */
@@ -206,7 +234,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -223,17 +251,24 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.result = model.result;
+            } 
 
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextPageToken
      */
@@ -72,6 +81,16 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         private NonExistSnapshotJobIds nonExistSnapshotJobIds; 
         private String requestId; 
         private SnapshotJobList snapshotJobList; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySnapshotJobListResponseBody model) {
+            this.nextPageToken = model.nextPageToken;
+            this.nonExistSnapshotJobIds = model.nonExistSnapshotJobIds;
+            this.requestId = model.requestId;
+            this.snapshotJobList = model.snapshotJobList;
+        } 
 
         /**
          * <p>The OSS object that is used as the input file.</p>
@@ -129,7 +148,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
      */
     public static class NonExistSnapshotJobIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistSnapshotJobIds(Builder builder) {
             this.string = builder.string;
@@ -146,17 +165,24 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistSnapshotJobIds model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -235,6 +261,16 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String location; 
             private String object; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The ID of the snapshot job.</p>
@@ -343,6 +379,15 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String errorMessage; 
             private String messageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MNSMessageResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.messageId = model.messageId;
+            } 
+
             /**
              * <p>The number of snapshots that were taken.</p>
              * 
@@ -450,6 +495,16 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String location; 
             private String object; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The OSS bucket that stores the output file.</p>
@@ -629,6 +684,21 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String lines; 
             private String margin; 
             private String padding; 
+
+            private Builder() {
+            } 
+
+            private Builder(TileOut model) {
+                this.cellHeight = model.cellHeight;
+                this.cellSelStep = model.cellSelStep;
+                this.cellWidth = model.cellWidth;
+                this.color = model.color;
+                this.columns = model.columns;
+                this.isKeepCellPic = model.isKeepCellPic;
+                this.lines = model.lines;
+                this.margin = model.margin;
+                this.padding = model.padding;
+            } 
 
             /**
              * <p>The interval for taking snapshots.</p>
@@ -814,6 +884,16 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String object; 
             private String roleArn; 
 
+            private Builder() {
+            } 
+
+            private Builder(TileOutputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+                this.roleArn = model.roleArn;
+            } 
+
             /**
              * <p>The error code returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
              * 
@@ -873,7 +953,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
      */
     public static class TimeArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimePointList")
-        private java.util.List < Long > timePointList;
+        private java.util.List<Long> timePointList;
 
         private TimeArray(Builder builder) {
             this.timePointList = builder.timePointList;
@@ -890,17 +970,24 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         /**
          * @return timePointList
          */
-        public java.util.List < Long > getTimePointList() {
+        public java.util.List<Long> getTimePointList() {
             return this.timePointList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > timePointList; 
+            private java.util.List<Long> timePointList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeArray model) {
+                this.timePointList = model.timePointList;
+            } 
 
             /**
              * TimePointList.
              */
-            public Builder timePointList(java.util.List < Long > timePointList) {
+            public Builder timePointList(java.util.List<Long> timePointList) {
                 this.timePointList = timePointList;
                 return this;
             }
@@ -1051,6 +1138,22 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String time; 
             private TimeArray timeArray; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotConfig model) {
+                this.frameType = model.frameType;
+                this.height = model.height;
+                this.interval = model.interval;
+                this.num = model.num;
+                this.outputFile = model.outputFile;
+                this.tileOut = model.tileOut;
+                this.tileOutputFile = model.tileOutputFile;
+                this.time = model.time;
+                this.timeArray = model.timeArray;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The ID of the region in which the output OSS bucket is located.</p>
@@ -1331,6 +1434,24 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String tileCount; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotJob model) {
+                this.code = model.code;
+                this.count = model.count;
+                this.creationTime = model.creationTime;
+                this.id = model.id;
+                this.input = model.input;
+                this.MNSMessageResult = model.MNSMessageResult;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.snapshotConfig = model.snapshotConfig;
+                this.state = model.state;
+                this.tileCount = model.tileCount;
+                this.userData = model.userData;
+            } 
+
             /**
              * <p>You can call this operation to query up to 10 snapshot jobs at a time.</p>
              * <h2>Limits on QPS</h2>
@@ -1471,7 +1592,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
      */
     public static class SnapshotJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnapshotJob")
-        private java.util.List < SnapshotJob> snapshotJob;
+        private java.util.List<SnapshotJob> snapshotJob;
 
         private SnapshotJobList(Builder builder) {
             this.snapshotJob = builder.snapshotJob;
@@ -1488,17 +1609,24 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         /**
          * @return snapshotJob
          */
-        public java.util.List < SnapshotJob> getSnapshotJob() {
+        public java.util.List<SnapshotJob> getSnapshotJob() {
             return this.snapshotJob;
         }
 
         public static final class Builder {
-            private java.util.List < SnapshotJob> snapshotJob; 
+            private java.util.List<SnapshotJob> snapshotJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotJobList model) {
+                this.snapshotJob = model.snapshotJob;
+            } 
 
             /**
              * SnapshotJob.
              */
-            public Builder snapshotJob(java.util.List < SnapshotJob> snapshotJob) {
+            public Builder snapshotJob(java.util.List<SnapshotJob> snapshotJob) {
                 this.snapshotJob = snapshotJob;
                 return this;
             }

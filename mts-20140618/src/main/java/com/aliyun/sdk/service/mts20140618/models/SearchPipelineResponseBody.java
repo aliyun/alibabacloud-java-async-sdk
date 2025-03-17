@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class SearchPipelineResponseBody extends TeaModel {
 
     public static SearchPipelineResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class SearchPipelineResponseBody extends TeaModel {
         private PipelineList pipelineList; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchPipelineResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.pipelineList = model.pipelineList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -210,6 +230,16 @@ public class SearchPipelineResponseBody extends TeaModel {
             private String mqTopic; 
             private String queueName; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfig model) {
+                this.mqTag = model.mqTag;
+                this.mqTopic = model.mqTopic;
+                this.queueName = model.queueName;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The tags.</p>
@@ -390,6 +420,21 @@ public class SearchPipelineResponseBody extends TeaModel {
             private Long speedLevel; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pipeline model) {
+                this.creationTime = model.creationTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.notifyConfig = model.notifyConfig;
+                this.quotaAllocate = model.quotaAllocate;
+                this.role = model.role;
+                this.speed = model.speed;
+                this.speedLevel = model.speedLevel;
+                this.state = model.state;
+            } 
+
             /**
              * CreationTime.
              */
@@ -515,7 +560,7 @@ public class SearchPipelineResponseBody extends TeaModel {
      */
     public static class PipelineList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pipeline")
-        private java.util.List < Pipeline> pipeline;
+        private java.util.List<Pipeline> pipeline;
 
         private PipelineList(Builder builder) {
             this.pipeline = builder.pipeline;
@@ -532,17 +577,24 @@ public class SearchPipelineResponseBody extends TeaModel {
         /**
          * @return pipeline
          */
-        public java.util.List < Pipeline> getPipeline() {
+        public java.util.List<Pipeline> getPipeline() {
             return this.pipeline;
         }
 
         public static final class Builder {
-            private java.util.List < Pipeline> pipeline; 
+            private java.util.List<Pipeline> pipeline; 
+
+            private Builder() {
+            } 
+
+            private Builder(PipelineList model) {
+                this.pipeline = model.pipeline;
+            } 
 
             /**
              * Pipeline.
              */
-            public Builder pipeline(java.util.List < Pipeline> pipeline) {
+            public Builder pipeline(java.util.List<Pipeline> pipeline) {
                 this.pipeline = pipeline;
                 return this;
             }

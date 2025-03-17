@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
 
     public static ListCustomEntitiesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomEntitiesResponseBody model) {
+            this.customEntities = model.customEntities;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CustomEntities.
@@ -187,6 +207,15 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
             private String customEntityInfo; 
             private String customEntityName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomEntity model) {
+                this.customEntityId = model.customEntityId;
+                this.customEntityInfo = model.customEntityInfo;
+                this.customEntityName = model.customEntityName;
+            } 
+
             /**
              * CustomEntityId.
              */
@@ -226,7 +255,7 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
      */
     public static class CustomEntities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomEntity")
-        private java.util.List < CustomEntity> customEntity;
+        private java.util.List<CustomEntity> customEntity;
 
         private CustomEntities(Builder builder) {
             this.customEntity = builder.customEntity;
@@ -243,17 +272,24 @@ public class ListCustomEntitiesResponseBody extends TeaModel {
         /**
          * @return customEntity
          */
-        public java.util.List < CustomEntity> getCustomEntity() {
+        public java.util.List<CustomEntity> getCustomEntity() {
             return this.customEntity;
         }
 
         public static final class Builder {
-            private java.util.List < CustomEntity> customEntity; 
+            private java.util.List<CustomEntity> customEntity; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomEntities model) {
+                this.customEntity = model.customEntity;
+            } 
 
             /**
              * CustomEntity.
              */
-            public Builder customEntity(java.util.List < CustomEntity> customEntity) {
+            public Builder customEntity(java.util.List<CustomEntity> customEntity) {
                 this.customEntity = customEntity;
                 return this;
             }

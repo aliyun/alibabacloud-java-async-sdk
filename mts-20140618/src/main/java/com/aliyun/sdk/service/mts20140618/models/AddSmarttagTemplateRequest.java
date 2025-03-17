@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,14 @@ public class AddSmarttagTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KnowledgeConfig")
     private String knowledgeConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelCustomCategoryIds")
+    private String labelCustomCategoryIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelCustomParamsConfig")
+    private String labelCustomParamsConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LabelType")
@@ -93,6 +106,8 @@ public class AddSmarttagTemplateRequest extends Request {
         this.isDefault = builder.isDefault;
         this.keywordConfig = builder.keywordConfig;
         this.knowledgeConfig = builder.knowledgeConfig;
+        this.labelCustomCategoryIds = builder.labelCustomCategoryIds;
+        this.labelCustomParamsConfig = builder.labelCustomParamsConfig;
         this.labelType = builder.labelType;
         this.labelVersion = builder.labelVersion;
         this.landmarkGroupIds = builder.landmarkGroupIds;
@@ -113,7 +128,7 @@ public class AddSmarttagTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,6 +180,20 @@ public class AddSmarttagTemplateRequest extends Request {
      */
     public String getKnowledgeConfig() {
         return this.knowledgeConfig;
+    }
+
+    /**
+     * @return labelCustomCategoryIds
+     */
+    public String getLabelCustomCategoryIds() {
+        return this.labelCustomCategoryIds;
+    }
+
+    /**
+     * @return labelCustomParamsConfig
+     */
+    public String getLabelCustomParamsConfig() {
+        return this.labelCustomParamsConfig;
     }
 
     /**
@@ -245,6 +274,8 @@ public class AddSmarttagTemplateRequest extends Request {
         private Boolean isDefault; 
         private String keywordConfig; 
         private String knowledgeConfig; 
+        private String labelCustomCategoryIds; 
+        private String labelCustomParamsConfig; 
         private String labelType; 
         private String labelVersion; 
         private String landmarkGroupIds; 
@@ -269,6 +300,8 @@ public class AddSmarttagTemplateRequest extends Request {
             this.isDefault = request.isDefault;
             this.keywordConfig = request.keywordConfig;
             this.knowledgeConfig = request.knowledgeConfig;
+            this.labelCustomCategoryIds = request.labelCustomCategoryIds;
+            this.labelCustomParamsConfig = request.labelCustomParamsConfig;
             this.labelType = request.labelType;
             this.labelVersion = request.labelVersion;
             this.landmarkGroupIds = request.landmarkGroupIds;
@@ -347,6 +380,24 @@ public class AddSmarttagTemplateRequest extends Request {
         public Builder knowledgeConfig(String knowledgeConfig) {
             this.putQueryParameter("KnowledgeConfig", knowledgeConfig);
             this.knowledgeConfig = knowledgeConfig;
+            return this;
+        }
+
+        /**
+         * LabelCustomCategoryIds.
+         */
+        public Builder labelCustomCategoryIds(String labelCustomCategoryIds) {
+            this.putQueryParameter("LabelCustomCategoryIds", labelCustomCategoryIds);
+            this.labelCustomCategoryIds = labelCustomCategoryIds;
+            return this;
+        }
+
+        /**
+         * LabelCustomParamsConfig.
+         */
+        public Builder labelCustomParamsConfig(String labelCustomParamsConfig) {
+            this.putQueryParameter("LabelCustomParamsConfig", labelCustomParamsConfig);
+            this.labelCustomParamsConfig = labelCustomParamsConfig;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaWorkflowExecutionList
      */
@@ -60,6 +69,15 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         private MediaWorkflowExecutionList mediaWorkflowExecutionList; 
         private String nextPageToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediaWorkflowExecutionsResponseBody model) {
+            this.mediaWorkflowExecutionList = model.mediaWorkflowExecutionList;
+            this.nextPageToken = model.nextPageToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the media workflows.</p>
@@ -152,6 +170,15 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String messageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MNSMessageResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.messageId = model.messageId;
+            } 
 
             /**
              * <p>The error code returned if the job failed. If the job was successful, this parameter is not returned.</p>
@@ -321,6 +348,21 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String state; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Activity model) {
+                this.code = model.code;
+                this.endTime = model.endTime;
+                this.jobId = model.jobId;
+                this.MNSMessageResult = model.MNSMessageResult;
+                this.message = model.message;
+                this.name = model.name;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The error code returned if the request failed.</p>
              * <ul>
@@ -452,7 +494,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
      */
     public static class ActivityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Activity")
-        private java.util.List < Activity> activity;
+        private java.util.List<Activity> activity;
 
         private ActivityList(Builder builder) {
             this.activity = builder.activity;
@@ -469,17 +511,24 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         /**
          * @return activity
          */
-        public java.util.List < Activity> getActivity() {
+        public java.util.List<Activity> getActivity() {
             return this.activity;
         }
 
         public static final class Builder {
-            private java.util.List < Activity> activity; 
+            private java.util.List<Activity> activity; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivityList model) {
+                this.activity = model.activity;
+            } 
 
             /**
              * Activity.
              */
-            public Builder activity(java.util.List < Activity> activity) {
+            public Builder activity(java.util.List<Activity> activity) {
                 this.activity = activity;
                 return this;
             }
@@ -546,6 +595,15 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The name of the OSS bucket in which the input media file is stored.</p>
@@ -627,6 +685,14 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         public static final class Builder {
             private InputFile inputFile; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.inputFile = model.inputFile;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The information about the storage location of the input file of the media workflow in OSS.</p>
@@ -770,6 +836,20 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             private String runId; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaWorkflowExecution model) {
+                this.activityList = model.activityList;
+                this.creationTime = model.creationTime;
+                this.input = model.input;
+                this.mediaId = model.mediaId;
+                this.mediaWorkflowId = model.mediaWorkflowId;
+                this.name = model.name;
+                this.runId = model.runId;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The activities that are executed in the media workflow.</p>
              */
@@ -878,7 +958,7 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
      */
     public static class MediaWorkflowExecutionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaWorkflowExecution")
-        private java.util.List < MediaWorkflowExecution> mediaWorkflowExecution;
+        private java.util.List<MediaWorkflowExecution> mediaWorkflowExecution;
 
         private MediaWorkflowExecutionList(Builder builder) {
             this.mediaWorkflowExecution = builder.mediaWorkflowExecution;
@@ -895,17 +975,24 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         /**
          * @return mediaWorkflowExecution
          */
-        public java.util.List < MediaWorkflowExecution> getMediaWorkflowExecution() {
+        public java.util.List<MediaWorkflowExecution> getMediaWorkflowExecution() {
             return this.mediaWorkflowExecution;
         }
 
         public static final class Builder {
-            private java.util.List < MediaWorkflowExecution> mediaWorkflowExecution; 
+            private java.util.List<MediaWorkflowExecution> mediaWorkflowExecution; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaWorkflowExecutionList model) {
+                this.mediaWorkflowExecution = model.mediaWorkflowExecution;
+            } 
 
             /**
              * MediaWorkflowExecution.
              */
-            public Builder mediaWorkflowExecution(java.util.List < MediaWorkflowExecution> mediaWorkflowExecution) {
+            public Builder mediaWorkflowExecution(java.util.List<MediaWorkflowExecution> mediaWorkflowExecution) {
                 this.mediaWorkflowExecution = mediaWorkflowExecution;
                 return this;
             }

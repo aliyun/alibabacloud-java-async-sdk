@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class ImAuditResponseBody extends TeaModel {
 
     public static ImAuditResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ImAuditResponseBody extends TeaModel {
         private String requestId; 
         private Boolean textQuotaExceed; 
         private TextResults textResults; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImAuditResponseBody model) {
+            this.imageQuotaExceed = model.imageQuotaExceed;
+            this.imageResults = model.imageResults;
+            this.requestId = model.requestId;
+            this.textQuotaExceed = model.textQuotaExceed;
+            this.textResults = model.textResults;
+        } 
 
         /**
          * <p>Indicates whether the image moderation QPS exceeds the limit. Valid values: true and false. A value of true indicates that the QPS does not exceed the limit. A value of false indicates that the QPS exceeds the limit.</p>
@@ -184,6 +204,14 @@ public class ImAuditResponseBody extends TeaModel {
             private Float rate; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.rate = model.rate;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. A higher confidence level indicates higher reliability of the moderation result. We recommend that you do not use this score in your business.</p>
              * 
@@ -244,6 +272,13 @@ public class ImAuditResponseBody extends TeaModel {
 
         public static final class Builder {
             private String context; 
+
+            private Builder() {
+            } 
+
+            private Builder(HintWordsInfo model) {
+                this.context = model.context;
+            } 
 
             /**
              * <p>The term hit by the detected text.</p>
@@ -354,6 +389,18 @@ public class ImAuditResponseBody extends TeaModel {
             private Float w; 
             private Float x; 
             private Float y; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogoData model) {
+                this.h = model.h;
+                this.name = model.name;
+                this.type = model.type;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * <p>The height of the logo area. Unit: pixel.</p>
@@ -496,6 +543,16 @@ public class ImAuditResponseBody extends TeaModel {
             private Float x; 
             private Float y; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProgramCodeData model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The height of the mini program code area. Unit: pixel.</p>
              * 
@@ -627,6 +684,17 @@ public class ImAuditResponseBody extends TeaModel {
             private Float x; 
             private Float y; 
 
+            private Builder() {
+            } 
+
+            private Builder(QrcodeLocations model) {
+                this.h = model.h;
+                this.qrcode = model.qrcode;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The height of the QR code area. Unit: pixel.</p>
              * 
@@ -745,6 +813,15 @@ public class ImAuditResponseBody extends TeaModel {
             private String name; 
             private Float re; 
 
+            private Builder() {
+            } 
+
+            private Builder(Faces model) {
+                this.idid = model.idid;
+                this.name = model.name;
+                this.re = model.re;
+            } 
+
             /**
              * <p>The ID of the detected face. The value is a string.</p>
              * 
@@ -793,7 +870,7 @@ public class ImAuditResponseBody extends TeaModel {
      */
     public static class SfaceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("faces")
-        private java.util.List < Faces> faces;
+        private java.util.List<Faces> faces;
 
         @com.aliyun.core.annotation.NameInMap("h")
         private Float h;
@@ -826,7 +903,7 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return faces
          */
-        public java.util.List < Faces> getFaces() {
+        public java.util.List<Faces> getFaces() {
             return this.faces;
         }
 
@@ -859,16 +936,27 @@ public class ImAuditResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Faces> faces; 
+            private java.util.List<Faces> faces; 
             private Float h; 
             private Float w; 
             private Float x; 
             private Float y; 
 
+            private Builder() {
+            } 
+
+            private Builder(SfaceData model) {
+                this.faces = model.faces;
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The information about the face detected in the moderated image.</p>
              */
-            public Builder faces(java.util.List < Faces> faces) {
+            public Builder faces(java.util.List<Faces> faces) {
                 this.faces = faces;
                 return this;
             }
@@ -944,28 +1032,28 @@ public class ImAuditResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("frames")
-        private java.util.List < Frames> frames;
+        private java.util.List<Frames> frames;
 
         @com.aliyun.core.annotation.NameInMap("hintWordsInfo")
-        private java.util.List < HintWordsInfo> hintWordsInfo;
+        private java.util.List<HintWordsInfo> hintWordsInfo;
 
         @com.aliyun.core.annotation.NameInMap("logoData")
-        private java.util.List < LogoData> logoData;
+        private java.util.List<LogoData> logoData;
 
         @com.aliyun.core.annotation.NameInMap("ocrData")
-        private java.util.List < String > ocrData;
+        private java.util.List<String> ocrData;
 
         @com.aliyun.core.annotation.NameInMap("programCodeData")
-        private java.util.List < ProgramCodeData> programCodeData;
+        private java.util.List<ProgramCodeData> programCodeData;
 
         @com.aliyun.core.annotation.NameInMap("qrcodeData")
-        private java.util.List < String > qrcodeData;
+        private java.util.List<String> qrcodeData;
 
         @com.aliyun.core.annotation.NameInMap("qrcodeLocations")
-        private java.util.List < QrcodeLocations> qrcodeLocations;
+        private java.util.List<QrcodeLocations> qrcodeLocations;
 
         @com.aliyun.core.annotation.NameInMap("sfaceData")
-        private java.util.List < SfaceData> sfaceData;
+        private java.util.List<SfaceData> sfaceData;
 
         private Results(Builder builder) {
             this.label = builder.label;
@@ -1021,56 +1109,56 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return frames
          */
-        public java.util.List < Frames> getFrames() {
+        public java.util.List<Frames> getFrames() {
             return this.frames;
         }
 
         /**
          * @return hintWordsInfo
          */
-        public java.util.List < HintWordsInfo> getHintWordsInfo() {
+        public java.util.List<HintWordsInfo> getHintWordsInfo() {
             return this.hintWordsInfo;
         }
 
         /**
          * @return logoData
          */
-        public java.util.List < LogoData> getLogoData() {
+        public java.util.List<LogoData> getLogoData() {
             return this.logoData;
         }
 
         /**
          * @return ocrData
          */
-        public java.util.List < String > getOcrData() {
+        public java.util.List<String> getOcrData() {
             return this.ocrData;
         }
 
         /**
          * @return programCodeData
          */
-        public java.util.List < ProgramCodeData> getProgramCodeData() {
+        public java.util.List<ProgramCodeData> getProgramCodeData() {
             return this.programCodeData;
         }
 
         /**
          * @return qrcodeData
          */
-        public java.util.List < String > getQrcodeData() {
+        public java.util.List<String> getQrcodeData() {
             return this.qrcodeData;
         }
 
         /**
          * @return qrcodeLocations
          */
-        public java.util.List < QrcodeLocations> getQrcodeLocations() {
+        public java.util.List<QrcodeLocations> getQrcodeLocations() {
             return this.qrcodeLocations;
         }
 
         /**
          * @return sfaceData
          */
-        public java.util.List < SfaceData> getSfaceData() {
+        public java.util.List<SfaceData> getSfaceData() {
             return this.sfaceData;
         }
 
@@ -1079,14 +1167,32 @@ public class ImAuditResponseBody extends TeaModel {
             private Double rate; 
             private String scene; 
             private String suggestion; 
-            private java.util.List < Frames> frames; 
-            private java.util.List < HintWordsInfo> hintWordsInfo; 
-            private java.util.List < LogoData> logoData; 
-            private java.util.List < String > ocrData; 
-            private java.util.List < ProgramCodeData> programCodeData; 
-            private java.util.List < String > qrcodeData; 
-            private java.util.List < QrcodeLocations> qrcodeLocations; 
-            private java.util.List < SfaceData> sfaceData; 
+            private java.util.List<Frames> frames; 
+            private java.util.List<HintWordsInfo> hintWordsInfo; 
+            private java.util.List<LogoData> logoData; 
+            private java.util.List<String> ocrData; 
+            private java.util.List<ProgramCodeData> programCodeData; 
+            private java.util.List<String> qrcodeData; 
+            private java.util.List<QrcodeLocations> qrcodeLocations; 
+            private java.util.List<SfaceData> sfaceData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+                this.frames = model.frames;
+                this.hintWordsInfo = model.hintWordsInfo;
+                this.logoData = model.logoData;
+                this.ocrData = model.ocrData;
+                this.programCodeData = model.programCodeData;
+                this.qrcodeData = model.qrcodeData;
+                this.qrcodeLocations = model.qrcodeLocations;
+                this.sfaceData = model.sfaceData;
+            } 
 
             /**
              * <p>The category of the moderation results. Valid values vary based on the specified moderation scenario.</p>
@@ -1216,7 +1322,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>If the temporary access URL of the image is too long, a truncated temporary access URL is returned for each frame.</p>
              */
-            public Builder frames(java.util.List < Frames> frames) {
+            public Builder frames(java.util.List<Frames> frames) {
                 this.frames = frames;
                 return this;
             }
@@ -1224,7 +1330,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The information about the term hit by the ad or violation text detected in the moderated image.</p>
              */
-            public Builder hintWordsInfo(java.util.List < HintWordsInfo> hintWordsInfo) {
+            public Builder hintWordsInfo(java.util.List<HintWordsInfo> hintWordsInfo) {
                 this.hintWordsInfo = hintWordsInfo;
                 return this;
             }
@@ -1232,7 +1338,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The information about the logo detected in the moderated image.</p>
              */
-            public Builder logoData(java.util.List < LogoData> logoData) {
+            public Builder logoData(java.util.List<LogoData> logoData) {
                 this.logoData = logoData;
                 return this;
             }
@@ -1240,7 +1346,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>ocrData</p>
              */
-            public Builder ocrData(java.util.List < String > ocrData) {
+            public Builder ocrData(java.util.List<String> ocrData) {
                 this.ocrData = ocrData;
                 return this;
             }
@@ -1248,7 +1354,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The location information of the mini program code detected in the moderated image.</p>
              */
-            public Builder programCodeData(java.util.List < ProgramCodeData> programCodeData) {
+            public Builder programCodeData(java.util.List<ProgramCodeData> programCodeData) {
                 this.programCodeData = programCodeData;
                 return this;
             }
@@ -1256,7 +1362,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The information about the text that is included in the QR code detected in the moderated image.</p>
              */
-            public Builder qrcodeData(java.util.List < String > qrcodeData) {
+            public Builder qrcodeData(java.util.List<String> qrcodeData) {
                 this.qrcodeData = qrcodeData;
                 return this;
             }
@@ -1264,7 +1370,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The coordinates of the QR code detected in the image.</p>
              */
-            public Builder qrcodeLocations(java.util.List < QrcodeLocations> qrcodeLocations) {
+            public Builder qrcodeLocations(java.util.List<QrcodeLocations> qrcodeLocations) {
                 this.qrcodeLocations = qrcodeLocations;
                 return this;
             }
@@ -1272,7 +1378,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The information about the terrorist content detected in the moderated image.</p>
              */
-            public Builder sfaceData(java.util.List < SfaceData> sfaceData) {
+            public Builder sfaceData(java.util.List<SfaceData> sfaceData) {
                 this.sfaceData = sfaceData;
                 return this;
             }
@@ -1298,13 +1404,13 @@ public class ImAuditResponseBody extends TeaModel {
         private String dataId;
 
         @com.aliyun.core.annotation.NameInMap("extras")
-        private java.util.Map < String, ? > extras;
+        private java.util.Map<String, ?> extras;
 
         @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
 
         @com.aliyun.core.annotation.NameInMap("results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
@@ -1347,7 +1453,7 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return extras
          */
-        public java.util.Map < String, ? > getExtras() {
+        public java.util.Map<String, ?> getExtras() {
             return this.extras;
         }
 
@@ -1361,7 +1467,7 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
@@ -1382,11 +1488,24 @@ public class ImAuditResponseBody extends TeaModel {
         public static final class Builder {
             private Long code; 
             private String dataId; 
-            private java.util.Map < String, ? > extras; 
+            private java.util.Map<String, ?> extras; 
             private String msg; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
             private String taskId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.code = model.code;
+                this.dataId = model.dataId;
+                this.extras = model.extras;
+                this.msg = model.msg;
+                this.results = model.results;
+                this.taskId = model.taskId;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The error code. The error code is the same as the HTTP status code. This parameter is not returned if the request is successful.</p>
@@ -1416,7 +1535,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The additional information about the image. If ad is specified for the Scenes parameter, the following content may be returned for this parameter: hitLibInfo: the information about the custom text library that is hit by the text in the image. The value of this parameter is an array. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/268644.html">hitLibInfo</a>.</p>
              */
-            public Builder extras(java.util.Map < String, ? > extras) {
+            public Builder extras(java.util.Map<String, ?> extras) {
                 this.extras = extras;
                 return this;
             }
@@ -1435,7 +1554,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The returned data. If the call is successful, the array in the returned results contains one or more elements. Each element is a struct.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }
@@ -1477,7 +1596,7 @@ public class ImAuditResponseBody extends TeaModel {
      */
     public static class ImageResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private ImageResults(Builder builder) {
             this.result = builder.result;
@@ -1494,17 +1613,24 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageResults model) {
+                this.result = model.result;
+            } 
 
             /**
              * <p>The image moderation results.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -1533,7 +1659,7 @@ public class ImAuditResponseBody extends TeaModel {
         private String libName;
 
         @com.aliyun.core.annotation.NameInMap("positions")
-        private java.util.List < String > positions;
+        private java.util.List<String> positions;
 
         @com.aliyun.core.annotation.NameInMap("ruleType")
         private String ruleType;
@@ -1578,7 +1704,7 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return positions
          */
-        public java.util.List < String > getPositions() {
+        public java.util.List<String> getPositions() {
             return this.positions;
         }
 
@@ -1593,8 +1719,19 @@ public class ImAuditResponseBody extends TeaModel {
             private String context; 
             private String libCode; 
             private String libName; 
-            private java.util.List < String > positions; 
+            private java.util.List<String> positions; 
             private String ruleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contexts model) {
+                this.context = model.context;
+                this.libCode = model.libCode;
+                this.libName = model.libName;
+                this.positions = model.positions;
+                this.ruleType = model.ruleType;
+            } 
 
             /**
              * <p>The term that the moderated text hits. If the text hits a term, the term is returned. If the text hits the algorithmic model, this parameter is not returned.</p>
@@ -1632,7 +1769,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The position of the term that the moderated text hits in the original text.</p>
              */
-            public Builder positions(java.util.List < String > positions) {
+            public Builder positions(java.util.List<String> positions) {
                 this.positions = positions;
                 return this;
             }
@@ -1675,7 +1812,7 @@ public class ImAuditResponseBody extends TeaModel {
         private String label;
 
         @com.aliyun.core.annotation.NameInMap("contexts")
-        private java.util.List < Contexts> contexts;
+        private java.util.List<Contexts> contexts;
 
         private Details(Builder builder) {
             this.label = builder.label;
@@ -1700,13 +1837,21 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return contexts
          */
-        public java.util.List < Contexts> getContexts() {
+        public java.util.List<Contexts> getContexts() {
             return this.contexts;
         }
 
         public static final class Builder {
             private String label; 
-            private java.util.List < Contexts> contexts; 
+            private java.util.List<Contexts> contexts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.label = model.label;
+                this.contexts = model.contexts;
+            } 
 
             /**
              * <p>The category of the risky content that the moderated text hits. Valid values:</p>
@@ -1734,7 +1879,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The context information of the risky content that the moderated text hits.</p>
              */
-            public Builder contexts(java.util.List < Contexts> contexts) {
+            public Builder contexts(java.util.List<Contexts> contexts) {
                 this.contexts = contexts;
                 return this;
             }
@@ -1754,7 +1899,7 @@ public class ImAuditResponseBody extends TeaModel {
      */
     public static class ResultResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("label")
         private String label;
@@ -1787,7 +1932,7 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -1820,16 +1965,27 @@ public class ImAuditResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String label; 
             private Double rate; 
             private String scene; 
             private String suggestion; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultResults model) {
+                this.details = model.details;
+                this.label = model.label;
+                this.rate = model.rate;
+                this.scene = model.scene;
+                this.suggestion = model.suggestion;
+            } 
+
             /**
              * <p>The risky content that the moderated text hits. A text entry can hit multiple pieces of risky content.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
@@ -1926,7 +2082,7 @@ public class ImAuditResponseBody extends TeaModel {
         private String msg;
 
         @com.aliyun.core.annotation.NameInMap("results")
-        private java.util.List < ResultResults> results;
+        private java.util.List<ResultResults> results;
 
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
@@ -1979,7 +2135,7 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < ResultResults> getResults() {
+        public java.util.List<ResultResults> getResults() {
             return this.results;
         }
 
@@ -1995,8 +2151,20 @@ public class ImAuditResponseBody extends TeaModel {
             private String content; 
             private String dataId; 
             private String msg; 
-            private java.util.List < ResultResults> results; 
+            private java.util.List<ResultResults> results; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextResultsResult model) {
+                this.code = model.code;
+                this.content = model.content;
+                this.dataId = model.dataId;
+                this.msg = model.msg;
+                this.results = model.results;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The error code. The error code is the same as the HTTP status code. For more information, see <a href="https://help.aliyun.com/document_detail/29254.html">Error codes</a>.</p>
@@ -2045,7 +2213,7 @@ public class ImAuditResponseBody extends TeaModel {
             /**
              * <p>The returned data. If the HTTP status code 200 is returned, the array in the returned results contains one or more elements. Each element is a struct.</p>
              */
-            public Builder results(java.util.List < ResultResults> results) {
+            public Builder results(java.util.List<ResultResults> results) {
                 this.results = results;
                 return this;
             }
@@ -2076,7 +2244,7 @@ public class ImAuditResponseBody extends TeaModel {
      */
     public static class TextResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.List < TextResultsResult> result;
+        private java.util.List<TextResultsResult> result;
 
         private TextResults(Builder builder) {
             this.result = builder.result;
@@ -2093,17 +2261,24 @@ public class ImAuditResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < TextResultsResult> getResult() {
+        public java.util.List<TextResultsResult> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < TextResultsResult> result; 
+            private java.util.List<TextResultsResult> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextResults model) {
+                this.result = model.result;
+            } 
 
             /**
              * <p>The text moderation results.</p>
              */
-            public Builder result(java.util.List < TextResultsResult> result) {
+            public Builder result(java.util.List<TextResultsResult> result) {
                 this.result = result;
                 return this;
             }

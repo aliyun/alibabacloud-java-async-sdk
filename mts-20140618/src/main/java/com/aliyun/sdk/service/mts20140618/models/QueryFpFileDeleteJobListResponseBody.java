@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fpFileDeleteJobList
      */
@@ -60,6 +69,15 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
         private FpFileDeleteJobList fpFileDeleteJobList; 
         private NonExistIds nonExistIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryFpFileDeleteJobListResponseBody model) {
+            this.fpFileDeleteJobList = model.fpFileDeleteJobList;
+            this.nonExistIds = model.nonExistIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The jobs of deleting media files from a media fingerprint library. For more information, see the &quot;FpFileDeleteJob&quot; section of the <a href="https://help.aliyun.com/document_detail/93555.html">Data types</a> topic.</p>
@@ -234,6 +252,22 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
             private String status; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(FpFileDeleteJob model) {
+                this.code = model.code;
+                this.creationTime = model.creationTime;
+                this.fileIds = model.fileIds;
+                this.finishTime = model.finishTime;
+                this.fpDBId = model.fpDBId;
+                this.id = model.id;
+                this.message = model.message;
+                this.pipelineId = model.pipelineId;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
+
             /**
              * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
              * 
@@ -365,7 +399,7 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
      */
     public static class FpFileDeleteJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FpFileDeleteJob")
-        private java.util.List < FpFileDeleteJob> fpFileDeleteJob;
+        private java.util.List<FpFileDeleteJob> fpFileDeleteJob;
 
         private FpFileDeleteJobList(Builder builder) {
             this.fpFileDeleteJob = builder.fpFileDeleteJob;
@@ -382,17 +416,24 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
         /**
          * @return fpFileDeleteJob
          */
-        public java.util.List < FpFileDeleteJob> getFpFileDeleteJob() {
+        public java.util.List<FpFileDeleteJob> getFpFileDeleteJob() {
             return this.fpFileDeleteJob;
         }
 
         public static final class Builder {
-            private java.util.List < FpFileDeleteJob> fpFileDeleteJob; 
+            private java.util.List<FpFileDeleteJob> fpFileDeleteJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(FpFileDeleteJobList model) {
+                this.fpFileDeleteJob = model.fpFileDeleteJob;
+            } 
 
             /**
              * FpFileDeleteJob.
              */
-            public Builder fpFileDeleteJob(java.util.List < FpFileDeleteJob> fpFileDeleteJob) {
+            public Builder fpFileDeleteJob(java.util.List<FpFileDeleteJob> fpFileDeleteJob) {
                 this.fpFileDeleteJob = fpFileDeleteJob;
                 return this;
             }
@@ -412,7 +453,7 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
      */
     public static class NonExistIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistIds(Builder builder) {
             this.string = builder.string;
@@ -429,17 +470,24 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistIds model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }

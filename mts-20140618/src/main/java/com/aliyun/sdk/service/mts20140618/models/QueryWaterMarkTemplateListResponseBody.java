@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistWids
      */
@@ -60,6 +69,15 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
         private NonExistWids nonExistWids; 
         private String requestId; 
         private WaterMarkTemplateList waterMarkTemplateList; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryWaterMarkTemplateListResponseBody model) {
+            this.nonExistWids = model.nonExistWids;
+            this.requestId = model.requestId;
+            this.waterMarkTemplateList = model.waterMarkTemplateList;
+        } 
 
         /**
          * <p>The IDs of the templates that do not exist.</p>
@@ -102,7 +120,7 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
      */
     public static class NonExistWids extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistWids(Builder builder) {
             this.string = builder.string;
@@ -119,17 +137,24 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistWids model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -208,6 +233,16 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
             private String dy; 
             private String height; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(RatioRefer model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The horizontal offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset. The value can be an integer or a decimal.</p>
@@ -319,6 +354,14 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeline model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The display duration of the watermark. Default value: <strong>ToEND</strong>. The default value indicates that the watermark is displayed until the video ends.</p>
@@ -505,6 +548,23 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
             private String type; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(WaterMarkTemplate model) {
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.id = model.id;
+                this.name = model.name;
+                this.ratioRefer = model.ratioRefer;
+                this.referPos = model.referPos;
+                this.state = model.state;
+                this.timeline = model.timeline;
+                this.type = model.type;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The horizontal offset. Unit: pixel.</p>
              * 
@@ -658,7 +718,7 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
      */
     public static class WaterMarkTemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WaterMarkTemplate")
-        private java.util.List < WaterMarkTemplate> waterMarkTemplate;
+        private java.util.List<WaterMarkTemplate> waterMarkTemplate;
 
         private WaterMarkTemplateList(Builder builder) {
             this.waterMarkTemplate = builder.waterMarkTemplate;
@@ -675,17 +735,24 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
         /**
          * @return waterMarkTemplate
          */
-        public java.util.List < WaterMarkTemplate> getWaterMarkTemplate() {
+        public java.util.List<WaterMarkTemplate> getWaterMarkTemplate() {
             return this.waterMarkTemplate;
         }
 
         public static final class Builder {
-            private java.util.List < WaterMarkTemplate> waterMarkTemplate; 
+            private java.util.List<WaterMarkTemplate> waterMarkTemplate; 
+
+            private Builder() {
+            } 
+
+            private Builder(WaterMarkTemplateList model) {
+                this.waterMarkTemplate = model.waterMarkTemplate;
+            } 
 
             /**
              * WaterMarkTemplate.
              */
-            public Builder waterMarkTemplate(java.util.List < WaterMarkTemplate> waterMarkTemplate) {
+            public Builder waterMarkTemplate(java.util.List<WaterMarkTemplate> waterMarkTemplate) {
                 this.waterMarkTemplate = waterMarkTemplate;
                 return this;
             }

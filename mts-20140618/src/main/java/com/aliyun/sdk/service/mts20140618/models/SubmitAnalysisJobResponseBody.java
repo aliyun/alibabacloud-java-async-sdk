@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return analysisJob
      */
@@ -48,6 +57,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     public static final class Builder {
         private AnalysisJob analysisJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAnalysisJobResponseBody model) {
+            this.analysisJob = model.analysisJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the preset template analysis job that was submitted.</p>
@@ -153,6 +170,17 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String mode; 
             private String top; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Crop model) {
+                this.height = model.height;
+                this.left = model.left;
+                this.mode = model.mode;
+                this.top = model.top;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The height of the video after the margins were cropped out.</p>
@@ -277,6 +305,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private Crop crop; 
             private String deinterlace; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertiesControl model) {
+                this.crop = model.crop;
+                this.deinterlace = model.deinterlace;
+            } 
+
             /**
              * <p>The cropping configurations of video images.</p>
              */
@@ -351,6 +387,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private String methodStreaming; 
             private String rateQuality; 
+
+            private Builder() {
+            } 
+
+            private Builder(QualityControl model) {
+                this.methodStreaming = model.methodStreaming;
+                this.rateQuality = model.rateQuality;
+            } 
 
             /**
              * <p>The playback mode. Valid values:</p>
@@ -430,6 +474,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private PropertiesControl propertiesControl; 
             private QualityControl qualityControl; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnalysisConfig model) {
+                this.propertiesControl = model.propertiesControl;
+                this.qualityControl = model.qualityControl;
+            } 
+
             /**
              * <p>The control on the attributes of the job output.</p>
              */
@@ -508,6 +560,15 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String bucket; 
             private String location; 
             private String object; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputFile model) {
+                this.bucket = model.bucket;
+                this.location = model.location;
+                this.object = model.object;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>
@@ -604,6 +665,15 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String messageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MNSMessageResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.messageId = model.messageId;
+            } 
 
             /**
              * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
@@ -737,6 +807,18 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String qscale; 
             private String samplerate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.qscale = model.qscale;
+                this.samplerate = model.samplerate;
+            } 
+
             /**
              * <p>The audio bitrate of the output file.</p>
              * <ul>
@@ -850,6 +932,13 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.format = model.format;
+            } 
+
             /**
              * <p>The container format.</p>
              * 
@@ -912,6 +1001,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String finalDelay; 
             private String loop; 
 
+            private Builder() {
+            } 
+
+            private Builder(Gif model) {
+                this.finalDelay = model.finalDelay;
+                this.loop = model.loop;
+            } 
+
             /**
              * <p>The interval between two consecutive loops for the GIF format. Unit: 0.01s. For example, a value of 500 indicates 5 seconds.</p>
              * 
@@ -972,6 +1069,13 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String duration; 
+
+            private Builder() {
+            } 
+
+            private Builder(Segment model) {
+                this.duration = model.duration;
+            } 
 
             /**
              * <p>The length of the segment. Unit: seconds.</p>
@@ -1035,6 +1139,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private Gif gif; 
             private Segment segment; 
 
+            private Builder() {
+            } 
+
+            private Builder(MuxConfig model) {
+                this.gif = model.gif;
+                this.segment = model.segment;
+            } 
+
             /**
              * <p>The transmuxing configurations for the GIF format.</p>
              */
@@ -1089,6 +1201,13 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String transMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransConfig model) {
+                this.transMode = model.transMode;
+            } 
 
             /**
              * <p>The transcoding mode. Valid values: onepass, twopass, and CBR. Default value: <strong>onepass</strong>.</p>
@@ -1151,6 +1270,14 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private String max; 
             private String min; 
+
+            private Builder() {
+            } 
+
+            private Builder(BitrateBnd model) {
+                this.max = model.max;
+                this.min = model.min;
+            } 
 
             /**
              * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
@@ -1392,6 +1519,28 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String qscale; 
             private String scanMode; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.bitrate = model.bitrate;
+                this.bitrateBnd = model.bitrateBnd;
+                this.bufsize = model.bufsize;
+                this.codec = model.codec;
+                this.crf = model.crf;
+                this.degrain = model.degrain;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.maxrate = model.maxrate;
+                this.pixFmt = model.pixFmt;
+                this.preset = model.preset;
+                this.profile = model.profile;
+                this.qscale = model.qscale;
+                this.scanMode = model.scanMode;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The average bitrate of the video. Unit: Kbit/s.</p>
@@ -1719,6 +1868,20 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private TransConfig transConfig; 
             private Video video; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.audio = model.audio;
+                this.container = model.container;
+                this.id = model.id;
+                this.muxConfig = model.muxConfig;
+                this.name = model.name;
+                this.state = model.state;
+                this.transConfig = model.transConfig;
+                this.video = model.video;
+            } 
+
             /**
              * <p>The audio codec configurations.</p>
              */
@@ -1811,7 +1974,7 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
      */
     public static class TemplateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
-        private java.util.List < Template> template;
+        private java.util.List<Template> template;
 
         private TemplateList(Builder builder) {
             this.template = builder.template;
@@ -1828,17 +1991,24 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
         /**
          * @return template
          */
-        public java.util.List < Template> getTemplate() {
+        public java.util.List<Template> getTemplate() {
             return this.template;
         }
 
         public static final class Builder {
-            private java.util.List < Template> template; 
+            private java.util.List<Template> template; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateList model) {
+                this.template = model.template;
+            } 
 
             /**
              * Template.
              */
-            public Builder template(java.util.List < Template> template) {
+            public Builder template(java.util.List<Template> template) {
                 this.template = template;
                 return this;
             }
@@ -2025,6 +2195,25 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
             private String state; 
             private TemplateList templateList; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnalysisJob model) {
+                this.analysisConfig = model.analysisConfig;
+                this.code = model.code;
+                this.creationTime = model.creationTime;
+                this.id = model.id;
+                this.inputFile = model.inputFile;
+                this.MNSMessageResult = model.MNSMessageResult;
+                this.message = model.message;
+                this.percent = model.percent;
+                this.pipelineId = model.pipelineId;
+                this.priority = model.priority;
+                this.state = model.state;
+                this.templateList = model.templateList;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The job configurations.</p>

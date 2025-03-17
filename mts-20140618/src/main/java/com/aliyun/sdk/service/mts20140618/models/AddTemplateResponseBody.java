@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class AddTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class AddTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Template template; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -165,6 +182,18 @@ public class AddTemplateResponseBody extends TeaModel {
             private String method; 
             private String peakLevel; 
             private String truePeak; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volume model) {
+                this.integratedLoudnessTarget = model.integratedLoudnessTarget;
+                this.level = model.level;
+                this.loudnessRangeTarget = model.loudnessRangeTarget;
+                this.method = model.method;
+                this.peakLevel = model.peakLevel;
+                this.truePeak = model.truePeak;
+            } 
 
             /**
              * <p>The output volume.</p>
@@ -379,6 +408,20 @@ public class AddTemplateResponseBody extends TeaModel {
             private String samplerate; 
             private Volume volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.bitrate = model.bitrate;
+                this.channels = model.channels;
+                this.codec = model.codec;
+                this.profile = model.profile;
+                this.qscale = model.qscale;
+                this.remove = model.remove;
+                this.samplerate = model.samplerate;
+                this.volume = model.volume;
+            } 
+
             /**
              * <p>The audio bitrate of the output file.</p>
              * <ul>
@@ -529,6 +572,13 @@ public class AddTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String format; 
 
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.format = model.format;
+            } 
+
             /**
              * <p>The container format.</p>
              * 
@@ -615,6 +665,16 @@ public class AddTemplateResponseBody extends TeaModel {
             private String isCustomPalette; 
             private String loop; 
 
+            private Builder() {
+            } 
+
+            private Builder(Gif model) {
+                this.ditherMode = model.ditherMode;
+                this.finalDelay = model.finalDelay;
+                this.isCustomPalette = model.isCustomPalette;
+                this.loop = model.loop;
+            } 
+
             /**
              * <p>The color dithering algorithm of the palette. Valid values: sierra and bayer.</p>
              * 
@@ -698,6 +758,13 @@ public class AddTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
 
+            private Builder() {
+            } 
+
+            private Builder(Segment model) {
+                this.duration = model.duration;
+            } 
+
             /**
              * <p>The length of the segment. Unit: seconds.</p>
              * 
@@ -747,6 +814,13 @@ public class AddTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String loop; 
+
+            private Builder() {
+            } 
+
+            private Builder(Webp model) {
+                this.loop = model.loop;
+            } 
 
             /**
              * <p>The loop count.</p>
@@ -821,6 +895,15 @@ public class AddTemplateResponseBody extends TeaModel {
             private Gif gif; 
             private Segment segment; 
             private Webp webp; 
+
+            private Builder() {
+            } 
+
+            private Builder(MuxConfig model) {
+                this.gif = model.gif;
+                this.segment = model.segment;
+                this.webp = model.webp;
+            } 
 
             /**
              * <p>The transmuxing settings for GIF.</p>
@@ -968,6 +1051,20 @@ public class AddTemplateResponseBody extends TeaModel {
             private String isCheckVideoBitrate; 
             private String isCheckVideoBitrateFail; 
             private String transMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransConfig model) {
+                this.adjDarMethod = model.adjDarMethod;
+                this.isCheckAudioBitrate = model.isCheckAudioBitrate;
+                this.isCheckAudioBitrateFail = model.isCheckAudioBitrateFail;
+                this.isCheckReso = model.isCheckReso;
+                this.isCheckResoFail = model.isCheckResoFail;
+                this.isCheckVideoBitrate = model.isCheckVideoBitrate;
+                this.isCheckVideoBitrateFail = model.isCheckVideoBitrateFail;
+                this.transMode = model.transMode;
+            } 
 
             /**
              * <p>The method of resolution adjustment. Default value: <strong>none</strong>. Valid values:</p>
@@ -1159,6 +1256,14 @@ public class AddTemplateResponseBody extends TeaModel {
             private String max; 
             private String min; 
 
+            private Builder() {
+            } 
+
+            private Builder(BitrateBnd model) {
+                this.max = model.max;
+                this.min = model.min;
+            } 
+
             /**
              * <p>The maximum bitrate.</p>
              * 
@@ -1243,6 +1348,15 @@ public class AddTemplateResponseBody extends TeaModel {
             private Float abrmax; 
             private Float maxAbrRatio; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(NarrowBand model) {
+                this.abrmax = model.abrmax;
+                this.maxAbrRatio = model.maxAbrRatio;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The upper limit of the dynamic bitrate. If this parameter is set, the average bitrate is in the range of (0, 1000000].</p>
@@ -1591,6 +1705,36 @@ public class AddTemplateResponseBody extends TeaModel {
             private String resoPriority; 
             private String scanMode; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.bitrate = model.bitrate;
+                this.bitrateBnd = model.bitrateBnd;
+                this.bufsize = model.bufsize;
+                this.codec = model.codec;
+                this.crf = model.crf;
+                this.crop = model.crop;
+                this.degrain = model.degrain;
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.hdr2sdr = model.hdr2sdr;
+                this.height = model.height;
+                this.longShortMode = model.longShortMode;
+                this.maxFps = model.maxFps;
+                this.maxrate = model.maxrate;
+                this.narrowBand = model.narrowBand;
+                this.pad = model.pad;
+                this.pixFmt = model.pixFmt;
+                this.preset = model.preset;
+                this.profile = model.profile;
+                this.qscale = model.qscale;
+                this.remove = model.remove;
+                this.resoPriority = model.resoPriority;
+                this.scanMode = model.scanMode;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The bitrate of the output video. Unit: Kbit/s.</p>
@@ -2027,6 +2171,20 @@ public class AddTemplateResponseBody extends TeaModel {
             private String state; 
             private TransConfig transConfig; 
             private Video video; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.audio = model.audio;
+                this.container = model.container;
+                this.id = model.id;
+                this.muxConfig = model.muxConfig;
+                this.name = model.name;
+                this.state = model.state;
+                this.transConfig = model.transConfig;
+                this.video = model.video;
+            } 
 
             /**
              * <p>The audio codec configurations.</p>

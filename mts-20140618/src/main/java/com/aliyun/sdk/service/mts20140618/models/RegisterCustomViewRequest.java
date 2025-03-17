@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,8 +34,11 @@ public class RegisterCustomViewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelPrompt")
+    private String labelPrompt;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -54,6 +62,7 @@ public class RegisterCustomViewRequest extends Request {
         this.customEntityId = builder.customEntityId;
         this.customGroupId = builder.customGroupId;
         this.imageUrl = builder.imageUrl;
+        this.labelPrompt = builder.labelPrompt;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -68,7 +77,7 @@ public class RegisterCustomViewRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,6 +108,13 @@ public class RegisterCustomViewRequest extends Request {
      */
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    /**
+     * @return labelPrompt
+     */
+    public String getLabelPrompt() {
+        return this.labelPrompt;
     }
 
     /**
@@ -134,6 +150,7 @@ public class RegisterCustomViewRequest extends Request {
         private String customEntityId; 
         private String customGroupId; 
         private String imageUrl; 
+        private String labelPrompt; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -149,6 +166,7 @@ public class RegisterCustomViewRequest extends Request {
             this.customEntityId = request.customEntityId;
             this.customGroupId = request.customGroupId;
             this.imageUrl = request.imageUrl;
+            this.labelPrompt = request.labelPrompt;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -192,11 +210,20 @@ public class RegisterCustomViewRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * ImageUrl.
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
             this.imageUrl = imageUrl;
+            return this;
+        }
+
+        /**
+         * LabelPrompt.
+         */
+        public Builder labelPrompt(String labelPrompt) {
+            this.putQueryParameter("LabelPrompt", labelPrompt);
+            this.labelPrompt = labelPrompt;
             return this;
         }
 

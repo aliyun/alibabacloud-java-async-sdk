@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pipeline
      */
@@ -48,6 +57,14 @@ public class UpdatePipelineResponseBody extends TeaModel {
     public static final class Builder {
         private Pipeline pipeline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePipelineResponseBody model) {
+            this.pipeline = model.pipeline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the MPS queue.</p>
@@ -141,6 +158,16 @@ public class UpdatePipelineResponseBody extends TeaModel {
             private String mqTopic; 
             private String queueName; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfig model) {
+                this.mqTag = model.mqTag;
+                this.mqTopic = model.mqTopic;
+                this.queueName = model.queueName;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The tags of the messages.</p>
@@ -296,6 +323,19 @@ public class UpdatePipelineResponseBody extends TeaModel {
             private String role; 
             private String speed; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pipeline model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.notifyConfig = model.notifyConfig;
+                this.quotaAllocate = model.quotaAllocate;
+                this.role = model.role;
+                this.speed = model.speed;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The ID of the MPS queue.</p>
