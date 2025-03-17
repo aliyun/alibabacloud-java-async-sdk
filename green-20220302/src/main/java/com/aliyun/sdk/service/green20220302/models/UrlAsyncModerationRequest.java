@@ -39,7 +39,7 @@ public class UrlAsyncModerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

@@ -44,6 +44,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFileModerationResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -180,6 +194,15 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Float confidence; 
             private String description; 
             private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelResult model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
 
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -288,6 +311,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Integer w; 
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * <p>The H value of the coordinate point.</p>
@@ -419,6 +452,17 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Location location; 
             private String riskLevel; 
             private String service; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageResult model) {
+                this.description = model.description;
+                this.labelResult = model.labelResult;
+                this.location = model.location;
+                this.riskLevel = model.riskLevel;
+                this.service = model.service;
+            } 
 
             /**
              * <p>The description.</p>
@@ -604,6 +648,21 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String text; 
             private String textSegment; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextResult model) {
+                this.description = model.description;
+                this.descriptions = model.descriptions;
+                this.labels = model.labels;
+                this.riskLevel = model.riskLevel;
+                this.riskTips = model.riskTips;
+                this.riskWords = model.riskWords;
+                this.service = model.service;
+                this.text = model.text;
+                this.textSegment = model.textSegment;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -787,6 +846,17 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private java.util.List<TextResult> textResult; 
             private String textUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.imageResult = model.imageResult;
+                this.imageUrl = model.imageUrl;
+                this.pageNum = model.pageNum;
+                this.textResult = model.textResult;
+                this.textUrl = model.textUrl;
+            } 
+
             /**
              * <p>The image moderation results.</p>
              */
@@ -899,6 +969,15 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String label; 
             private Integer labelSum; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageLabels model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.labelSum = model.labelSum;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -983,6 +1062,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private java.util.List<ImageLabels> imageLabels; 
             private String riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageSummary model) {
+                this.imageLabels = model.imageLabels;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>Image Label</p>
              */
@@ -1064,6 +1151,15 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String description; 
             private String label; 
             private Integer labelSum; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextLabels model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.labelSum = model.labelSum;
+            } 
 
             /**
              * <p>The description.</p>
@@ -1149,6 +1245,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
             private java.util.List<TextLabels> textLabels; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextSummary model) {
+                this.riskLevel = model.riskLevel;
+                this.textLabels = model.textLabels;
+            } 
+
             /**
              * <p>Risk Level</p>
              * 
@@ -1230,6 +1334,15 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private ImageSummary imageSummary; 
             private Integer pageSum; 
             private TextSummary textSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageSummary model) {
+                this.imageSummary = model.imageSummary;
+                this.pageSum = model.pageSum;
+                this.textSummary = model.textSummary;
+            } 
 
             /**
              * <p>Image Results Summary</p>
@@ -1356,6 +1469,18 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private PageSummary pageSummary; 
             private String riskLevel; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataId = model.dataId;
+                this.docType = model.docType;
+                this.pageResult = model.pageResult;
+                this.pageSummary = model.pageSummary;
+                this.riskLevel = model.riskLevel;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The ID of the moderated object.</p>

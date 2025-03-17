@@ -44,6 +44,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextModerationPlusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -181,6 +195,15 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String hitLabel; 
             private String hitLibName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Advice model) {
+                this.answer = model.answer;
+                this.hitLabel = model.hitLabel;
+                this.hitLibName = model.hitLibName;
+            } 
+
             /**
              * <p>The answer.</p>
              * 
@@ -264,6 +287,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public static final class Builder {
             private String keyWords; 
             private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomizedHit model) {
+                this.keyWords = model.keyWords;
+                this.libName = model.libName;
+            } 
 
             /**
              * <p>The terms that are hit. Multiple terms are separated by commas (,).</p>
@@ -373,6 +404,17 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String description; 
             private String label; 
             private String riskWords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.customizedHit = model.customizedHit;
+                this.description = model.description;
+                this.label = model.label;
+                this.riskWords = model.riskWords;
+            } 
 
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -512,6 +554,17 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private String riskLevel; 
             private Float score; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.advice = model.advice;
+                this.dataId = model.dataId;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+                this.score = model.score;
+            } 
 
             /**
              * <p>The suggestion.</p>

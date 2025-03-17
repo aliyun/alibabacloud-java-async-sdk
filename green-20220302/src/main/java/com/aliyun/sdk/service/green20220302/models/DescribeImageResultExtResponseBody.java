@@ -44,6 +44,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageResultExtResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -181,6 +195,15 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private String libId; 
             private String libName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomImage model) {
+                this.imageId = model.imageId;
+                this.libId = model.libId;
+                this.libName = model.libName;
+            } 
+
             /**
              * <p>The image ID.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
         public static final class Builder {
             private String figureId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicFigure model) {
+                this.figureId = model.figureId;
+            } 
 
             /**
              * <p>Identified person coding information.</p>
@@ -326,6 +356,15 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private String keyWords; 
             private String libId; 
             private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomTexts model) {
+                this.keyWords = model.keyWords;
+                this.libId = model.libId;
+                this.libName = model.libName;
+            } 
 
             /**
              * <p>Custom words, multiple words separated by commas.</p>
@@ -423,6 +462,15 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private java.util.List<String> ocrDatas; 
             private java.util.List<String> riskWords; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextInImage model) {
+                this.customTexts = model.customTexts;
+                this.ocrDatas = model.ocrDatas;
+                this.riskWords = model.riskWords;
+            } 
+
             /**
              * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
              */
@@ -509,6 +557,15 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             private java.util.List<CustomImage> customImage; 
             private java.util.List<PublicFigure> publicFigure; 
             private TextInImage textInImage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customImage = model.customImage;
+                this.publicFigure = model.publicFigure;
+                this.textInImage = model.textInImage;
+            } 
 
             /**
              * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
