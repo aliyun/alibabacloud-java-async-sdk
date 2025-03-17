@@ -40,6 +40,10 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         private RunHotTopicChatResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunHotTopicChatResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * header.
@@ -199,6 +212,19 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunHotTopicChatResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * errorCode.
@@ -379,6 +405,20 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.content = model.content;
+                this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSourceName = model.searchSourceName;
+                this.select = model.select;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * content.
              */
@@ -482,6 +522,13 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         public static final class Builder {
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.url = model.url;
+            } 
+
             /**
              * url.
              */
@@ -540,6 +587,14 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         public static final class Builder {
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(News model) {
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * title.
@@ -680,6 +735,20 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private java.util.List<News> news; 
             private String textSummary; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotTopicSummaries model) {
+                this.customHotValue = model.customHotValue;
+                this.customTextSummary = model.customTextSummary;
+                this.hotTopic = model.hotTopic;
+                this.hotTopicVersion = model.hotTopicVersion;
+                this.hotValue = model.hotValue;
+                this.images = model.images;
+                this.news = model.news;
+                this.textSummary = model.textSummary;
+            } 
+
             /**
              * customHotValue.
              */
@@ -807,6 +876,15 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private String mediaType; 
             private Double sortScore; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMedias model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaType = model.mediaType;
+                this.sortScore = model.sortScore;
+            } 
+
             /**
              * fileUrl.
              */
@@ -930,6 +1008,18 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private String searchQuery; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.articles = model.articles;
+                this.hotTopicSummaries = model.hotTopicSummaries;
+                this.multimodalMedias = model.multimodalMedias;
+                this.recommendQueries = model.recommendQueries;
+                this.searchQuery = model.searchQuery;
+                this.text = model.text;
+            } 
+
             /**
              * articles.
              */
@@ -1041,6 +1131,15 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -1115,6 +1214,14 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.

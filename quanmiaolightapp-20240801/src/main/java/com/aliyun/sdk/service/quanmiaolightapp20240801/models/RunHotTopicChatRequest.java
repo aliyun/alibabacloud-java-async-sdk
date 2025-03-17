@@ -100,7 +100,7 @@ public class RunHotTopicChatRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -437,6 +437,15 @@ public class RunHotTopicChatRequest extends Request {
             private String createTime; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.role = model.role;
+            } 
+
             /**
              * content.
              */
@@ -511,6 +520,14 @@ public class RunHotTopicChatRequest extends Request {
         public static final class Builder {
             private String dimension; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomHotValueWeights model) {
+                this.dimension = model.dimension;
+                this.weight = model.weight;
+            } 
 
             /**
              * dimension.
@@ -590,6 +607,15 @@ public class RunHotTopicChatRequest extends Request {
             private java.util.List<String> categories; 
             private java.util.List<CustomHotValueWeights> customHotValueWeights; 
             private Integer topicCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepForBroadcastContentConfig model) {
+                this.categories = model.categories;
+                this.customHotValueWeights = model.customHotValueWeights;
+                this.topicCount = model.topicCount;
+            } 
 
             /**
              * categories.

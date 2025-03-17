@@ -58,7 +58,7 @@ public class RunHotTopicSummaryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,7 +192,6 @@ public class RunHotTopicSummaryRequest extends Request {
         private Integer summaryImageCount;
 
         @com.aliyun.core.annotation.NameInMap("summaryModel")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String summaryModel;
 
         @com.aliyun.core.annotation.NameInMap("summaryPrompt")
@@ -238,6 +237,15 @@ public class RunHotTopicSummaryRequest extends Request {
             private String summaryModel; 
             private String summaryPrompt; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepForCustomSummaryStyleConfig model) {
+                this.summaryImageCount = model.summaryImageCount;
+                this.summaryModel = model.summaryModel;
+                this.summaryPrompt = model.summaryPrompt;
+            } 
+
             /**
              * summaryImageCount.
              */
@@ -247,10 +255,7 @@ public class RunHotTopicSummaryRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qwen-max</p>
+             * summaryModel.
              */
             public Builder summaryModel(String summaryModel) {
                 this.summaryModel = summaryModel;

@@ -64,6 +64,10 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotTopicSummariesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * code.
@@ -248,6 +267,13 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Comments model) {
+                this.text = model.text;
+            } 
+
             /**
              * text.
              */
@@ -343,6 +369,17 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(News model) {
+                this.comments = model.comments;
+                this.content = model.content;
+                this.pubTime = model.pubTime;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * comments.
              */
@@ -437,6 +474,14 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             private String summary; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summaries model) {
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
+
             /**
              * summary.
              */
@@ -491,6 +536,13 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Summaries> summaries; 
+
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.summaries = model.summaries;
+            } 
 
             /**
              * summaries.
@@ -622,6 +674,20 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             private java.util.List<News> news; 
             private Summary summary; 
             private String textSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.category = model.category;
+                this.hotTopic = model.hotTopic;
+                this.hotTopicVersion = model.hotTopicVersion;
+                this.hotValue = model.hotValue;
+                this.id = model.id;
+                this.news = model.news;
+                this.summary = model.summary;
+                this.textSummary = model.textSummary;
+            } 
 
             /**
              * category.

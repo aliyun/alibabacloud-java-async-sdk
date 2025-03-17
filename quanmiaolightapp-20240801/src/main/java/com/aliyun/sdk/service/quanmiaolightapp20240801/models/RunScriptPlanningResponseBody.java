@@ -40,6 +40,10 @@ public class RunScriptPlanningResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -65,6 +69,15 @@ public class RunScriptPlanningResponseBody extends TeaModel {
         private Boolean end; 
         private RunScriptPlanningResponseBodyHeader header; 
         private Payload payload; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunScriptPlanningResponseBody model) {
+            this.end = model.end;
+            this.header = model.header;
+            this.payload = model.payload;
+        } 
 
         /**
          * end.
@@ -212,6 +225,20 @@ public class RunScriptPlanningResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunScriptPlanningResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.requestId = model.requestId;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * errorCode.
              */
@@ -315,6 +342,13 @@ public class RunScriptPlanningResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.text = model.text;
+            } 
+
             /**
              * text.
              */
@@ -385,6 +419,15 @@ public class RunScriptPlanningResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * inputTokens.
@@ -460,6 +503,14 @@ public class RunScriptPlanningResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.

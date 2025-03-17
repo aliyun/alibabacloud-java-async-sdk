@@ -52,6 +52,10 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateBroadcastNewsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -187,6 +203,13 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.url = model.url;
+            } 
 
             /**
              * url.
@@ -307,6 +330,19 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
             private java.util.List<Images> images; 
             private String textSummary; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotTopicSummaries model) {
+                this.category = model.category;
+                this.hotTopic = model.hotTopic;
+                this.hotTopicVersion = model.hotTopicVersion;
+                this.hotValue = model.hotValue;
+                this.id = model.id;
+                this.images = model.images;
+                this.textSummary = model.textSummary;
+            } 
+
             /**
              * category.
              */
@@ -426,6 +462,15 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -536,6 +581,17 @@ public class GenerateBroadcastNewsResponseBody extends TeaModel {
             private String taskId; 
             private String text; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hotTopicSummaries = model.hotTopicSummaries;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.text = model.text;
+                this.usage = model.usage;
+            } 
 
             /**
              * hotTopicSummaries.

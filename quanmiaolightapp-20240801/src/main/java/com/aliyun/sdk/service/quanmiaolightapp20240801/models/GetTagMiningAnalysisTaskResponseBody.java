@@ -52,6 +52,10 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTagMiningAnalysisTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -227,6 +243,16 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
             private String event; 
             private String requestId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultsHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.requestId = model.requestId;
+            } 
+
             /**
              * errorCode.
              */
@@ -301,6 +327,13 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.text = model.text;
+            } 
+
             /**
              * text.
              */
@@ -371,6 +404,15 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
             private Long inputToken; 
             private Long outputToken; 
             private Long totalToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputToken = model.inputToken;
+                this.outputToken = model.outputToken;
+                this.totalToken = model.totalToken;
+            } 
 
             /**
              * inputToken.
@@ -446,6 +488,14 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.
@@ -525,6 +575,15 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
             private String customId; 
             private ResultsHeader header; 
             private Payload payload; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.customId = model.customId;
+                this.header = model.header;
+                this.payload = model.payload;
+            } 
 
             /**
              * customId.
@@ -624,6 +683,16 @@ public class GetTagMiningAnalysisTaskResponseBody extends TeaModel {
             private String errorMessage; 
             private java.util.List<Results> results; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.results = model.results;
+                this.status = model.status;
+            } 
 
             /**
              * errorCode.

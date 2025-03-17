@@ -27,6 +27,10 @@ public class RunVideoAnalysisRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("faceIdentitySimilarityMinScore")
+    private Float faceIdentitySimilarityMinScore;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("frameSampleMethod")
     private FrameSampleMethod frameSampleMethod;
 
@@ -63,6 +67,10 @@ public class RunVideoAnalysisRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("textProcessTasks")
+    private java.util.List<TextProcessTasks> textProcessTasks;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoExtraInfo")
     private String videoExtraInfo;
 
@@ -79,6 +87,10 @@ public class RunVideoAnalysisRequest extends Request {
     private java.util.List<VideoRoles> videoRoles;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("videoShotFaceIdentityCount")
+    private Integer videoShotFaceIdentityCount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoUrl")
     private String videoUrl;
 
@@ -86,6 +98,7 @@ public class RunVideoAnalysisRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.faceIdentitySimilarityMinScore = builder.faceIdentitySimilarityMinScore;
         this.frameSampleMethod = builder.frameSampleMethod;
         this.generateOptions = builder.generateOptions;
         this.language = builder.language;
@@ -95,10 +108,12 @@ public class RunVideoAnalysisRequest extends Request {
         this.originalSessionId = builder.originalSessionId;
         this.snapshotInterval = builder.snapshotInterval;
         this.taskId = builder.taskId;
+        this.textProcessTasks = builder.textProcessTasks;
         this.videoExtraInfo = builder.videoExtraInfo;
         this.videoModelCustomPromptTemplate = builder.videoModelCustomPromptTemplate;
         this.videoModelId = builder.videoModelId;
         this.videoRoles = builder.videoRoles;
+        this.videoShotFaceIdentityCount = builder.videoShotFaceIdentityCount;
         this.videoUrl = builder.videoUrl;
     }
 
@@ -110,7 +125,7 @@ public class RunVideoAnalysisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,6 +142,13 @@ public class RunVideoAnalysisRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return faceIdentitySimilarityMinScore
+     */
+    public Float getFaceIdentitySimilarityMinScore() {
+        return this.faceIdentitySimilarityMinScore;
     }
 
     /**
@@ -193,6 +215,13 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
+     * @return textProcessTasks
+     */
+    public java.util.List<TextProcessTasks> getTextProcessTasks() {
+        return this.textProcessTasks;
+    }
+
+    /**
      * @return videoExtraInfo
      */
     public String getVideoExtraInfo() {
@@ -221,6 +250,13 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
+     * @return videoShotFaceIdentityCount
+     */
+    public Integer getVideoShotFaceIdentityCount() {
+        return this.videoShotFaceIdentityCount;
+    }
+
+    /**
      * @return videoUrl
      */
     public String getVideoUrl() {
@@ -230,6 +266,7 @@ public class RunVideoAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<RunVideoAnalysisRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private Float faceIdentitySimilarityMinScore; 
         private FrameSampleMethod frameSampleMethod; 
         private java.util.List<String> generateOptions; 
         private String language; 
@@ -239,10 +276,12 @@ public class RunVideoAnalysisRequest extends Request {
         private String originalSessionId; 
         private Double snapshotInterval; 
         private String taskId; 
+        private java.util.List<TextProcessTasks> textProcessTasks; 
         private String videoExtraInfo; 
         private String videoModelCustomPromptTemplate; 
         private String videoModelId; 
         private java.util.List<VideoRoles> videoRoles; 
+        private Integer videoShotFaceIdentityCount; 
         private String videoUrl; 
 
         private Builder() {
@@ -253,6 +292,7 @@ public class RunVideoAnalysisRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.faceIdentitySimilarityMinScore = request.faceIdentitySimilarityMinScore;
             this.frameSampleMethod = request.frameSampleMethod;
             this.generateOptions = request.generateOptions;
             this.language = request.language;
@@ -262,10 +302,12 @@ public class RunVideoAnalysisRequest extends Request {
             this.originalSessionId = request.originalSessionId;
             this.snapshotInterval = request.snapshotInterval;
             this.taskId = request.taskId;
+            this.textProcessTasks = request.textProcessTasks;
             this.videoExtraInfo = request.videoExtraInfo;
             this.videoModelCustomPromptTemplate = request.videoModelCustomPromptTemplate;
             this.videoModelId = request.videoModelId;
             this.videoRoles = request.videoRoles;
+            this.videoShotFaceIdentityCount = request.videoShotFaceIdentityCount;
             this.videoUrl = request.videoUrl;
         } 
 
@@ -287,6 +329,15 @@ public class RunVideoAnalysisRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * faceIdentitySimilarityMinScore.
+         */
+        public Builder faceIdentitySimilarityMinScore(Float faceIdentitySimilarityMinScore) {
+            this.putBodyParameter("faceIdentitySimilarityMinScore", faceIdentitySimilarityMinScore);
+            this.faceIdentitySimilarityMinScore = faceIdentitySimilarityMinScore;
             return this;
         }
 
@@ -374,6 +425,16 @@ public class RunVideoAnalysisRequest extends Request {
         }
 
         /**
+         * textProcessTasks.
+         */
+        public Builder textProcessTasks(java.util.List<TextProcessTasks> textProcessTasks) {
+            String textProcessTasksShrink = shrink(textProcessTasks, "textProcessTasks", "json");
+            this.putBodyParameter("textProcessTasks", textProcessTasksShrink);
+            this.textProcessTasks = textProcessTasks;
+            return this;
+        }
+
+        /**
          * videoExtraInfo.
          */
         public Builder videoExtraInfo(String videoExtraInfo) {
@@ -407,6 +468,15 @@ public class RunVideoAnalysisRequest extends Request {
             String videoRolesShrink = shrink(videoRoles, "videoRoles", "json");
             this.putBodyParameter("videoRoles", videoRolesShrink);
             this.videoRoles = videoRoles;
+            return this;
+        }
+
+        /**
+         * videoShotFaceIdentityCount.
+         */
+        public Builder videoShotFaceIdentityCount(Integer videoShotFaceIdentityCount) {
+            this.putBodyParameter("videoShotFaceIdentityCount", videoShotFaceIdentityCount);
+            this.videoShotFaceIdentityCount = videoShotFaceIdentityCount;
             return this;
         }
 
@@ -482,6 +552,15 @@ public class RunVideoAnalysisRequest extends Request {
             private String methodName; 
             private Integer pixel; 
 
+            private Builder() {
+            } 
+
+            private Builder(FrameSampleMethod model) {
+                this.interval = model.interval;
+                this.methodName = model.methodName;
+                this.pixel = model.pixel;
+            } 
+
             /**
              * interval.
              */
@@ -508,6 +587,102 @@ public class RunVideoAnalysisRequest extends Request {
 
             public FrameSampleMethod build() {
                 return new FrameSampleMethod(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisRequest</p>
+     */
+    public static class TextProcessTasks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("modelCustomPromptTemplate")
+        private String modelCustomPromptTemplate;
+
+        @com.aliyun.core.annotation.NameInMap("modelCustomPromptTemplateId")
+        private String modelCustomPromptTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("modelId")
+        private String modelId;
+
+        private TextProcessTasks(Builder builder) {
+            this.modelCustomPromptTemplate = builder.modelCustomPromptTemplate;
+            this.modelCustomPromptTemplateId = builder.modelCustomPromptTemplateId;
+            this.modelId = builder.modelId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextProcessTasks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modelCustomPromptTemplate
+         */
+        public String getModelCustomPromptTemplate() {
+            return this.modelCustomPromptTemplate;
+        }
+
+        /**
+         * @return modelCustomPromptTemplateId
+         */
+        public String getModelCustomPromptTemplateId() {
+            return this.modelCustomPromptTemplateId;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public static final class Builder {
+            private String modelCustomPromptTemplate; 
+            private String modelCustomPromptTemplateId; 
+            private String modelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextProcessTasks model) {
+                this.modelCustomPromptTemplate = model.modelCustomPromptTemplate;
+                this.modelCustomPromptTemplateId = model.modelCustomPromptTemplateId;
+                this.modelId = model.modelId;
+            } 
+
+            /**
+             * modelCustomPromptTemplate.
+             */
+            public Builder modelCustomPromptTemplate(String modelCustomPromptTemplate) {
+                this.modelCustomPromptTemplate = modelCustomPromptTemplate;
+                return this;
+            }
+
+            /**
+             * modelCustomPromptTemplateId.
+             */
+            public Builder modelCustomPromptTemplateId(String modelCustomPromptTemplateId) {
+                this.modelCustomPromptTemplateId = modelCustomPromptTemplateId;
+                return this;
+            }
+
+            /**
+             * modelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            public TextProcessTasks build() {
+                return new TextProcessTasks(this);
             } 
 
         } 
@@ -568,6 +743,15 @@ public class RunVideoAnalysisRequest extends Request {
             private String roleInfo; 
             private String roleName; 
             private java.util.List<String> urls; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoRoles model) {
+                this.roleInfo = model.roleInfo;
+                this.roleName = model.roleName;
+                this.urls = model.urls;
+            } 
 
             /**
              * roleInfo.

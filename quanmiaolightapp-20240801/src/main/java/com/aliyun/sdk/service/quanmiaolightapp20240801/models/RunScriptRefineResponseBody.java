@@ -40,6 +40,10 @@ public class RunScriptRefineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -65,6 +69,15 @@ public class RunScriptRefineResponseBody extends TeaModel {
         private Boolean end; 
         private RunScriptRefineResponseBodyHeader header; 
         private Payload payload; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunScriptRefineResponseBody model) {
+            this.end = model.end;
+            this.header = model.header;
+            this.payload = model.payload;
+        } 
 
         /**
          * end.
@@ -211,6 +224,20 @@ public class RunScriptRefineResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunScriptRefineResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.requestId = model.requestId;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * errorCode.
@@ -375,6 +402,18 @@ public class RunScriptRefineResponseBody extends TeaModel {
             private String summary; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.content = model.content;
+                this.outline = model.outline;
+                this.role = model.role;
+                this.scene = model.scene;
+                this.summary = model.summary;
+                this.text = model.text;
+            } 
+
             /**
              * content.
              */
@@ -486,6 +525,15 @@ public class RunScriptRefineResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -560,6 +608,14 @@ public class RunScriptRefineResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.

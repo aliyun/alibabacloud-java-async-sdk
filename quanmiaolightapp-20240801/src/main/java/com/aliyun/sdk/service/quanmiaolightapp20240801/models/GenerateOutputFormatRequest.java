@@ -66,7 +66,7 @@ public class GenerateOutputFormatRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -261,6 +261,14 @@ public class GenerateOutputFormatRequest extends Request {
         public static final class Builder {
             private String tagDefinePrompt; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagDefinePrompt = model.tagDefinePrompt;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * tagDefinePrompt.

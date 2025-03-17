@@ -40,6 +40,10 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         private RunVideoAnalysisResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunVideoAnalysisResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * header.
@@ -200,6 +213,19 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunVideoAnalysisResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * errorCode.
              */
@@ -319,6 +345,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -405,6 +440,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Long endTime; 
             private Long startTime; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoShotAnalysisResults model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
 
             /**
              * endTime.
@@ -516,6 +560,17 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private String text; 
             private Usage usage; 
             private java.util.List<VideoShotAnalysisResults> videoShotAnalysisResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoAnalysisResult model) {
+                this.generateFinished = model.generateFinished;
+                this.modelId = model.modelId;
+                this.text = model.text;
+                this.usage = model.usage;
+                this.videoShotAnalysisResults = model.videoShotAnalysisResults;
+            } 
 
             /**
              * generateFinished.
@@ -644,6 +699,17 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private String startTimeFormat; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoCaptions model) {
+                this.endTime = model.endTime;
+                this.endTimeFormat = model.endTimeFormat;
+                this.startTime = model.startTime;
+                this.startTimeFormat = model.startTimeFormat;
+                this.text = model.text;
+            } 
+
             /**
              * endTime.
              */
@@ -735,6 +801,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Boolean generateFinished; 
             private java.util.List<VideoCaptions> videoCaptions; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoCaptionResult model) {
+                this.generateFinished = model.generateFinished;
+                this.videoCaptions = model.videoCaptions;
+            } 
+
             /**
              * generateFinished.
              */
@@ -814,6 +888,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoGenerateResultUsage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -855,11 +938,17 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private Integer index;
+
         @com.aliyun.core.annotation.NameInMap("modelId")
         private String modelId;
 
         @com.aliyun.core.annotation.NameInMap("modelReduce")
         private Boolean modelReduce;
+
+        @com.aliyun.core.annotation.NameInMap("reasonText")
+        private String reasonText;
 
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -869,8 +958,10 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         private VideoGenerateResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
+            this.index = builder.index;
             this.modelId = builder.modelId;
             this.modelReduce = builder.modelReduce;
+            this.reasonText = builder.reasonText;
             this.text = builder.text;
             this.usage = builder.usage;
         }
@@ -891,6 +982,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        /**
          * @return modelId
          */
         public String getModelId() {
@@ -902,6 +1000,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
          */
         public Boolean getModelReduce() {
             return this.modelReduce;
+        }
+
+        /**
+         * @return reasonText
+         */
+        public String getReasonText() {
+            return this.reasonText;
         }
 
         /**
@@ -920,16 +1025,39 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean generateFinished; 
+            private Integer index; 
             private String modelId; 
             private Boolean modelReduce; 
+            private String reasonText; 
             private String text; 
             private VideoGenerateResultUsage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoGenerateResult model) {
+                this.generateFinished = model.generateFinished;
+                this.index = model.index;
+                this.modelId = model.modelId;
+                this.modelReduce = model.modelReduce;
+                this.reasonText = model.reasonText;
+                this.text = model.text;
+                this.usage = model.usage;
+            } 
 
             /**
              * generateFinished.
              */
             public Builder generateFinished(Boolean generateFinished) {
                 this.generateFinished = generateFinished;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
                 return this;
             }
 
@@ -946,6 +1074,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
              */
             public Builder modelReduce(Boolean modelReduce) {
                 this.modelReduce = modelReduce;
+                return this;
+            }
+
+            /**
+             * reasonText.
+             */
+            public Builder reasonText(String reasonText) {
+                this.reasonText = reasonText;
                 return this;
             }
 
@@ -967,6 +1103,261 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
             public VideoGenerateResult build() {
                 return new VideoGenerateResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
+    public static class VideoGenerateResultsUsage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("inputTokens")
+        private Long inputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("outputTokens")
+        private Long outputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("totalTokens")
+        private Long totalTokens;
+
+        private VideoGenerateResultsUsage(Builder builder) {
+            this.inputTokens = builder.inputTokens;
+            this.outputTokens = builder.outputTokens;
+            this.totalTokens = builder.totalTokens;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoGenerateResultsUsage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputTokens
+         */
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public Long getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        /**
+         * @return totalTokens
+         */
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        public static final class Builder {
+            private Long inputTokens; 
+            private Long outputTokens; 
+            private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoGenerateResultsUsage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
+            /**
+             * inputTokens.
+             */
+            public Builder inputTokens(Long inputTokens) {
+                this.inputTokens = inputTokens;
+                return this;
+            }
+
+            /**
+             * outputTokens.
+             */
+            public Builder outputTokens(Long outputTokens) {
+                this.outputTokens = outputTokens;
+                return this;
+            }
+
+            /**
+             * totalTokens.
+             */
+            public Builder totalTokens(Long totalTokens) {
+                this.totalTokens = totalTokens;
+                return this;
+            }
+
+            public VideoGenerateResultsUsage build() {
+                return new VideoGenerateResultsUsage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisResponseBody</p>
+     */
+    public static class VideoGenerateResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("generateFinished")
+        private Boolean generateFinished;
+
+        @com.aliyun.core.annotation.NameInMap("index")
+        private Integer index;
+
+        @com.aliyun.core.annotation.NameInMap("modelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("reasonText")
+        private String reasonText;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("usage")
+        private VideoGenerateResultsUsage usage;
+
+        private VideoGenerateResults(Builder builder) {
+            this.generateFinished = builder.generateFinished;
+            this.index = builder.index;
+            this.modelId = builder.modelId;
+            this.reasonText = builder.reasonText;
+            this.text = builder.text;
+            this.usage = builder.usage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoGenerateResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return generateFinished
+         */
+        public Boolean getGenerateFinished() {
+            return this.generateFinished;
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return reasonText
+         */
+        public String getReasonText() {
+            return this.reasonText;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return usage
+         */
+        public VideoGenerateResultsUsage getUsage() {
+            return this.usage;
+        }
+
+        public static final class Builder {
+            private Boolean generateFinished; 
+            private Integer index; 
+            private String modelId; 
+            private String reasonText; 
+            private String text; 
+            private VideoGenerateResultsUsage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoGenerateResults model) {
+                this.generateFinished = model.generateFinished;
+                this.index = model.index;
+                this.modelId = model.modelId;
+                this.reasonText = model.reasonText;
+                this.text = model.text;
+                this.usage = model.usage;
+            } 
+
+            /**
+             * generateFinished.
+             */
+            public Builder generateFinished(Boolean generateFinished) {
+                this.generateFinished = generateFinished;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * modelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * reasonText.
+             */
+            public Builder reasonText(String reasonText) {
+                this.reasonText = reasonText;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * usage.
+             */
+            public Builder usage(VideoGenerateResultsUsage usage) {
+                this.usage = usage;
+                return this;
+            }
+
+            public VideoGenerateResults build() {
+                return new VideoGenerateResults(this);
             } 
 
         } 
@@ -1027,6 +1418,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoMindMappingGenerateResultUsage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * inputTokens.
@@ -1091,6 +1491,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChildNodes model) {
+                this.name = model.name;
+            } 
+
             /**
              * name.
              */
@@ -1149,6 +1556,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ChildNodes> childNodes; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoMindMappingsChildNodes model) {
+                this.childNodes = model.childNodes;
+                this.name = model.name;
+            } 
 
             /**
              * childNodes.
@@ -1216,6 +1631,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<VideoMindMappingsChildNodes> childNodes; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoMindMappings model) {
+                this.childNodes = model.childNodes;
+                this.name = model.name;
+            } 
 
             /**
              * childNodes.
@@ -1332,6 +1755,18 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private VideoMindMappingGenerateResultUsage usage; 
             private java.util.List<VideoMindMappings> videoMindMappings; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoMindMappingGenerateResult model) {
+                this.generateFinished = model.generateFinished;
+                this.modelId = model.modelId;
+                this.modelReduce = model.modelReduce;
+                this.text = model.text;
+                this.usage = model.usage;
+                this.videoMindMappings = model.videoMindMappings;
+            } 
+
             /**
              * generateFinished.
              */
@@ -1418,6 +1853,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoSnapshots model) {
+                this.url = model.url;
+            } 
 
             /**
              * url.
@@ -1514,6 +1956,17 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private String startTimeFormat; 
             private java.util.List<VideoSnapshots> videoSnapshots; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoShots model) {
+                this.endTime = model.endTime;
+                this.endTimeFormat = model.endTimeFormat;
+                this.startTime = model.startTime;
+                this.startTimeFormat = model.startTimeFormat;
+                this.videoSnapshots = model.videoSnapshots;
+            } 
+
             /**
              * endTime.
              */
@@ -1593,6 +2046,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<VideoShots> videoShots; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoShotSnapshotResult model) {
+                this.videoShots = model.videoShots;
+            } 
+
             /**
              * videoShots.
              */
@@ -1663,6 +2123,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoTitleGenerateResultUsage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * inputTokens.
@@ -1775,6 +2244,17 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private String text; 
             private VideoTitleGenerateResultUsage usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoTitleGenerateResult model) {
+                this.generateFinished = model.generateFinished;
+                this.modelId = model.modelId;
+                this.modelReduce = model.modelReduce;
+                this.text = model.text;
+                this.usage = model.usage;
+            } 
+
             /**
              * generateFinished.
              */
@@ -1841,6 +2321,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("videoGenerateResult")
         private VideoGenerateResult videoGenerateResult;
 
+        @com.aliyun.core.annotation.NameInMap("videoGenerateResults")
+        private java.util.List<VideoGenerateResults> videoGenerateResults;
+
         @com.aliyun.core.annotation.NameInMap("videoMindMappingGenerateResult")
         private VideoMindMappingGenerateResult videoMindMappingGenerateResult;
 
@@ -1855,6 +2338,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             this.videoAnalysisResult = builder.videoAnalysisResult;
             this.videoCaptionResult = builder.videoCaptionResult;
             this.videoGenerateResult = builder.videoGenerateResult;
+            this.videoGenerateResults = builder.videoGenerateResults;
             this.videoMindMappingGenerateResult = builder.videoMindMappingGenerateResult;
             this.videoShotSnapshotResult = builder.videoShotSnapshotResult;
             this.videoTitleGenerateResult = builder.videoTitleGenerateResult;
@@ -1897,6 +2381,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         /**
+         * @return videoGenerateResults
+         */
+        public java.util.List<VideoGenerateResults> getVideoGenerateResults() {
+            return this.videoGenerateResults;
+        }
+
+        /**
          * @return videoMindMappingGenerateResult
          */
         public VideoMindMappingGenerateResult getVideoMindMappingGenerateResult() {
@@ -1922,9 +2413,24 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private VideoAnalysisResult videoAnalysisResult; 
             private VideoCaptionResult videoCaptionResult; 
             private VideoGenerateResult videoGenerateResult; 
+            private java.util.List<VideoGenerateResults> videoGenerateResults; 
             private VideoMindMappingGenerateResult videoMindMappingGenerateResult; 
             private VideoShotSnapshotResult videoShotSnapshotResult; 
             private VideoTitleGenerateResult videoTitleGenerateResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.resultJsonFileUrl = model.resultJsonFileUrl;
+                this.videoAnalysisResult = model.videoAnalysisResult;
+                this.videoCaptionResult = model.videoCaptionResult;
+                this.videoGenerateResult = model.videoGenerateResult;
+                this.videoGenerateResults = model.videoGenerateResults;
+                this.videoMindMappingGenerateResult = model.videoMindMappingGenerateResult;
+                this.videoShotSnapshotResult = model.videoShotSnapshotResult;
+                this.videoTitleGenerateResult = model.videoTitleGenerateResult;
+            } 
 
             /**
              * resultJsonFileUrl.
@@ -1955,6 +2461,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
              */
             public Builder videoGenerateResult(VideoGenerateResult videoGenerateResult) {
                 this.videoGenerateResult = videoGenerateResult;
+                return this;
+            }
+
+            /**
+             * videoGenerateResults.
+             */
+            public Builder videoGenerateResults(java.util.List<VideoGenerateResults> videoGenerateResults) {
+                this.videoGenerateResults = videoGenerateResults;
                 return this;
             }
 
@@ -2045,6 +2559,15 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(PayloadUsage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -2119,6 +2642,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private PayloadUsage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.

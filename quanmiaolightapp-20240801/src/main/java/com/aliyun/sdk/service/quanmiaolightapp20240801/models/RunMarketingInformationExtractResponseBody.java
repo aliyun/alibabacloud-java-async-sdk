@@ -40,6 +40,10 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -65,6 +69,15 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         private Boolean end; 
         private RunMarketingInformationExtractResponseBodyHeader header; 
         private Payload payload; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunMarketingInformationExtractResponseBody model) {
+            this.end = model.end;
+            this.header = model.header;
+            this.payload = model.payload;
+        } 
 
         /**
          * end.
@@ -188,6 +201,18 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunMarketingInformationExtractResponseBodyHeader model) {
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.requestId = model.requestId;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * event.
              */
@@ -275,6 +300,13 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.text = model.text;
+            } 
+
             /**
              * text.
              */
@@ -345,6 +377,15 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * inputTokens.
@@ -420,6 +461,14 @@ public class RunMarketingInformationExtractResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.

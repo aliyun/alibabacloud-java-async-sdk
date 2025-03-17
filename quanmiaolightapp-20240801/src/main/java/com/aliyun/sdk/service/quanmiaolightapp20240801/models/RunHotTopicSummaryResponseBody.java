@@ -40,6 +40,10 @@ public class RunHotTopicSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunHotTopicSummaryResponseBody extends TeaModel {
         private RunHotTopicSummaryResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunHotTopicSummaryResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * header.
@@ -191,6 +204,18 @@ public class RunHotTopicSummaryResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunHotTopicSummaryResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * errorCode.
              */
@@ -290,6 +315,14 @@ public class RunHotTopicSummaryResponseBody extends TeaModel {
             private String text; 
             private String topicId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.text = model.text;
+                this.topicId = model.topicId;
+            } 
+
             /**
              * text.
              */
@@ -369,6 +402,15 @@ public class RunHotTopicSummaryResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * inputTokens.
              */
@@ -443,6 +485,14 @@ public class RunHotTopicSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * output.
