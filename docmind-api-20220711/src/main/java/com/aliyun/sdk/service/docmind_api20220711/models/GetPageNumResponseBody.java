@@ -52,6 +52,10 @@ public class GetPageNumResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetPageNumResponseBody extends TeaModel {
         private String httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPageNumResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Data.
@@ -187,6 +203,13 @@ public class GetPageNumResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer pageNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNum = model.pageNum;
+            } 
 
             /**
              * PageNum.

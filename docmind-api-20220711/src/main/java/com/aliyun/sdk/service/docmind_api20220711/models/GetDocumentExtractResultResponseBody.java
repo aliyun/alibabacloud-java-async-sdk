@@ -52,6 +52,10 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentExtractResultResponseBody model) {
+            this.code = model.code;
+            this.completed = model.completed;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * Code.

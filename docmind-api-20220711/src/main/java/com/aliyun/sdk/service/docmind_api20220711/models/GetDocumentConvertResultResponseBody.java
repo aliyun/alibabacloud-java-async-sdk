@@ -54,6 +54,10 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -103,6 +107,18 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentConvertResultResponseBody model) {
+            this.code = model.code;
+            this.completed = model.completed;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * Code.
@@ -228,6 +244,16 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
             private Long size; 
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.md5 = model.md5;
+                this.size = model.size;
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * Md5.

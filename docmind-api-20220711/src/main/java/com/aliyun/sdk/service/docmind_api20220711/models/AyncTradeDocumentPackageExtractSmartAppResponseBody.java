@@ -52,6 +52,10 @@ public class AyncTradeDocumentPackageExtractSmartAppResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return completed
      */
@@ -101,6 +105,18 @@ public class AyncTradeDocumentPackageExtractSmartAppResponseBody extends TeaMode
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AyncTradeDocumentPackageExtractSmartAppResponseBody model) {
+            this.completed = model.completed;
+            this.createTime = model.createTime;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * Completed.

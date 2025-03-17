@@ -44,6 +44,10 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDocParserStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -219,6 +233,19 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             private String status; 
             private Integer tableCount; 
             private Long tokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.imageCount = model.imageCount;
+                this.numberOfSuccessfulParsing = model.numberOfSuccessfulParsing;
+                this.pageCountEstimate = model.pageCountEstimate;
+                this.paragraphCount = model.paragraphCount;
+                this.status = model.status;
+                this.tableCount = model.tableCount;
+                this.tokens = model.tokens;
+            } 
 
             /**
              * ImageCount.
