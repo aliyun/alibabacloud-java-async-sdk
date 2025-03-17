@@ -48,6 +48,10 @@ public class CreateDatasourceAuthorizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateDatasourceAuthorizationResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDatasourceAuthorizationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.

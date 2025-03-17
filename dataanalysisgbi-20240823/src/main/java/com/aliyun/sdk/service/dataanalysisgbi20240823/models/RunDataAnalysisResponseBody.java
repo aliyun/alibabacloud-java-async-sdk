@@ -44,6 +44,10 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         private Data data; 
         private Long httpStatusCode; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunDataAnalysisResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+        } 
 
         /**
          * code.
@@ -160,6 +174,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             private java.util.List<String> column; 
             private java.util.List<java.util.Map<String, ?>> data; 
 
+            private Builder() {
+            } 
+
+            private Builder(SqlData model) {
+                this.column = model.column;
+                this.data = model.data;
+            } 
+
             /**
              * column.
              */
@@ -239,6 +261,15 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             private java.util.List<String> xAxis; 
             private java.util.List<String> yAxis; 
 
+            private Builder() {
+            } 
+
+            private Builder(VisualizationData model) {
+                this.plotType = model.plotType;
+                this.xAxis = model.xAxis;
+                this.yAxis = model.yAxis;
+            } 
+
             /**
              * plotType.
              */
@@ -314,6 +345,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             private VisualizationData data; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Visualization model) {
+                this.data = model.data;
+                this.text = model.text;
+            } 
+
             /**
              * data.
              */
@@ -344,6 +383,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
      * <p>RunDataAnalysisResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attempts")
+        private java.util.List<?> attempts;
+
         @com.aliyun.core.annotation.NameInMap("errorMessage")
         private String errorMessage;
 
@@ -381,6 +423,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         private Visualization visualization;
 
         private Data(Builder builder) {
+            this.attempts = builder.attempts;
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
             this.evidence = builder.evidence;
@@ -401,6 +444,13 @@ public class RunDataAnalysisResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return attempts
+         */
+        public java.util.List<?> getAttempts() {
+            return this.attempts;
         }
 
         /**
@@ -488,6 +538,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<?> attempts; 
             private String errorMessage; 
             private String event; 
             private String evidence; 
@@ -500,6 +551,33 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             private SqlData sqlData; 
             private String sqlError; 
             private Visualization visualization; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attempts = model.attempts;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.evidence = model.evidence;
+                this.httpStatusCode = model.httpStatusCode;
+                this.requestId = model.requestId;
+                this.rewrite = model.rewrite;
+                this.selector = model.selector;
+                this.sessionId = model.sessionId;
+                this.sql = model.sql;
+                this.sqlData = model.sqlData;
+                this.sqlError = model.sqlError;
+                this.visualization = model.visualization;
+            } 
+
+            /**
+             * attempts.
+             */
+            public Builder attempts(java.util.List<?> attempts) {
+                this.attempts = attempts;
+                return this;
+            }
 
             /**
              * errorMessage.

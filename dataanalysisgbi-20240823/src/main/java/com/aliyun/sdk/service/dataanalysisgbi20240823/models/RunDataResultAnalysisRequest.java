@@ -56,7 +56,7 @@ public class RunDataResultAnalysisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,6 +217,14 @@ public class RunDataResultAnalysisRequest extends Request {
         public static final class Builder {
             private java.util.List<String> column; 
             private java.util.List<java.util.Map<String, String>> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(SqlData model) {
+                this.column = model.column;
+                this.data = model.data;
+            } 
 
             /**
              * column.

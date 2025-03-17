@@ -48,6 +48,10 @@ public class UpdateTableInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class UpdateTableInfoResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateTableInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.

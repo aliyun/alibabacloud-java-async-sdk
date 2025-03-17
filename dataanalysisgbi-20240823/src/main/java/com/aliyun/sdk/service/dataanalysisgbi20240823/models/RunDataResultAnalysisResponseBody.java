@@ -32,6 +32,10 @@ public class RunDataResultAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -41,6 +45,13 @@ public class RunDataResultAnalysisResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunDataResultAnalysisResponseBody model) {
+            this.data = model.data;
+        } 
 
         /**
          * data.
@@ -111,6 +122,15 @@ public class RunDataResultAnalysisResponseBody extends TeaModel {
             private String plotType; 
             private java.util.List<String> xAxis; 
             private java.util.List<String> yAxis; 
+
+            private Builder() {
+            } 
+
+            private Builder(VisualizationData model) {
+                this.plotType = model.plotType;
+                this.xAxis = model.xAxis;
+                this.yAxis = model.yAxis;
+            } 
 
             /**
              * plotType.
@@ -186,6 +206,14 @@ public class RunDataResultAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private VisualizationData data; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Visualization model) {
+                this.data = model.data;
+                this.text = model.text;
+            } 
 
             /**
              * data.
@@ -301,6 +329,18 @@ public class RunDataResultAnalysisResponseBody extends TeaModel {
             private String rewrite; 
             private String sql; 
             private Visualization visualization; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.requestId = model.requestId;
+                this.rewrite = model.rewrite;
+                this.sql = model.sql;
+                this.visualization = model.visualization;
+            } 
 
             /**
              * errorMessage.

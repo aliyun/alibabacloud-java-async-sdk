@@ -32,6 +32,10 @@ public class RunSqlGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -41,6 +45,13 @@ public class RunSqlGenerationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunSqlGenerationResponseBody model) {
+            this.data = model.data;
+        } 
 
         /**
          * data.
@@ -183,6 +194,21 @@ public class RunSqlGenerationResponseBody extends TeaModel {
             private String sessionId; 
             private String sql; 
             private String sqlError; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.evidence = model.evidence;
+                this.requestId = model.requestId;
+                this.rewrite = model.rewrite;
+                this.selector = model.selector;
+                this.sessionId = model.sessionId;
+                this.sql = model.sql;
+                this.sqlError = model.sqlError;
+            } 
 
             /**
              * errorMessage.
