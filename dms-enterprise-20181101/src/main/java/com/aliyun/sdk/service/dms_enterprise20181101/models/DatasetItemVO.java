@@ -88,6 +88,10 @@ public class DatasetItemVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskList
      */
@@ -209,6 +213,27 @@ public class DatasetItemVO extends TeaModel {
         private String schema; 
         private String tableName; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetItemVO model) {
+            this.asyncTaskList = model.asyncTaskList;
+            this.datasetStatus = model.datasetStatus;
+            this.datasetType = model.datasetType;
+            this.digest = model.digest;
+            this.fileSystem = model.fileSystem;
+            this.id = model.id;
+            this.keyName = model.keyName;
+            this.moreInfo = model.moreInfo;
+            this.path = model.path;
+            this.projectsLinked = model.projectsLinked;
+            this.recentTaskStatus = model.recentTaskStatus;
+            this.remark = model.remark;
+            this.schema = model.schema;
+            this.tableName = model.tableName;
+            this.url = model.url;
+        } 
 
         /**
          * AsyncTaskList.

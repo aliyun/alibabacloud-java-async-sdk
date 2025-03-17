@@ -71,7 +71,7 @@ public class SearchDataTrackResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -344,6 +344,18 @@ public class SearchDataTrackResultRequest extends Request {
             private java.util.List<String> inList; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnFilter model) {
+                this.betweenEnd = model.betweenEnd;
+                this.betweenStart = model.betweenStart;
+                this.columnName = model.columnName;
+                this.inList = model.inList;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The end value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.</p>

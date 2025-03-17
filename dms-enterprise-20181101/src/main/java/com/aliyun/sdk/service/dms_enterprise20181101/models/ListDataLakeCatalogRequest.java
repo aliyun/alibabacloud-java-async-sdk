@@ -31,6 +31,10 @@ public class ListDataLakeCatalogRequest extends Request {
     private String searchKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionToken")
+    private String sessionToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
@@ -40,6 +44,7 @@ public class ListDataLakeCatalogRequest extends Request {
         this.regionId = builder.regionId;
         this.dataRegion = builder.dataRegion;
         this.searchKey = builder.searchKey;
+        this.sessionToken = builder.sessionToken;
         this.tid = builder.tid;
     }
 
@@ -51,7 +56,7 @@ public class ListDataLakeCatalogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,6 +83,13 @@ public class ListDataLakeCatalogRequest extends Request {
     }
 
     /**
+     * @return sessionToken
+     */
+    public String getSessionToken() {
+        return this.sessionToken;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -88,6 +100,7 @@ public class ListDataLakeCatalogRequest extends Request {
         private String regionId; 
         private String dataRegion; 
         private String searchKey; 
+        private String sessionToken; 
         private Long tid; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ListDataLakeCatalogRequest extends Request {
             this.regionId = request.regionId;
             this.dataRegion = request.dataRegion;
             this.searchKey = request.searchKey;
+            this.sessionToken = request.sessionToken;
             this.tid = request.tid;
         } 
 
@@ -129,6 +143,15 @@ public class ListDataLakeCatalogRequest extends Request {
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
             this.searchKey = searchKey;
+            return this;
+        }
+
+        /**
+         * SessionToken.
+         */
+        public Builder sessionToken(String sessionToken) {
+            this.putQueryParameter("SessionToken", sessionToken);
+            this.sessionToken = sessionToken;
             return this;
         }
 

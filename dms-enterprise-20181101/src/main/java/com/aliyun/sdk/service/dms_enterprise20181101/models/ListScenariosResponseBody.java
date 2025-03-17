@@ -48,6 +48,10 @@ public class ListScenariosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListScenariosResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScenarioList> scenarioList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScenariosResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.scenarioList = model.scenarioList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -219,6 +234,16 @@ public class ListScenariosResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String scenarioName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScenarioList model) {
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.id = model.id;
+                this.scenarioName = model.scenarioName;
+            } 
 
             /**
              * <p>The ID of the user who created the business scenario.</p>

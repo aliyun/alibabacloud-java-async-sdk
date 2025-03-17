@@ -48,6 +48,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         private OptimizeDetail optimizeDetail; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSQLReviewOptimizeDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.optimizeDetail = model.optimizeDetail;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -203,6 +218,15 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private String content; 
             private String opType; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scripts model) {
+                this.content = model.content;
+                this.opType = model.opType;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The content of the SQL script.</p>
@@ -335,6 +359,18 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleType; 
             private java.util.List<Scripts> scripts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.comments = model.comments;
+                this.feedback = model.feedback;
+                this.messages = model.messages;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.scripts = model.scripts;
+            } 
 
             /**
              * <p>The comment that is specified when you create the SQL review rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</p>
@@ -471,6 +507,15 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private Boolean occurError; 
             private java.util.List<Results> results; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualityResult model) {
+                this.errorMessage = model.errorMessage;
+                this.occurError = model.occurError;
+                this.results = model.results;
+            } 
+
             /**
              * <p>The error message returned.</p>
              * 
@@ -591,6 +636,17 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private QualityResult qualityResult; 
             private String queryKey; 
             private String sqlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptimizeDetail model) {
+                this.dbId = model.dbId;
+                this.instanceId = model.instanceId;
+                this.qualityResult = model.qualityResult;
+                this.queryKey = model.queryKey;
+                this.sqlType = model.sqlType;
+            } 
 
             /**
              * <p>The ID of the database.</p>

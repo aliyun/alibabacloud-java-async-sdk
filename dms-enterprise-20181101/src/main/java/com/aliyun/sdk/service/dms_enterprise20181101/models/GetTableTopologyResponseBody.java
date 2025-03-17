@@ -48,6 +48,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTableTopologyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TableTopology tableTopology; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableTopologyResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tableTopology = model.tableTopology;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -299,6 +314,23 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private Long tableCount; 
             private String tableNameExpr; 
             private String tableNameList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableTopologyInfoList model) {
+                this.dbId = model.dbId;
+                this.dbName = model.dbName;
+                this.dbSearchName = model.dbSearchName;
+                this.dbType = model.dbType;
+                this.instanceId = model.instanceId;
+                this.instanceResourceId = model.instanceResourceId;
+                this.instanceSource = model.instanceSource;
+                this.regionId = model.regionId;
+                this.tableCount = model.tableCount;
+                this.tableNameExpr = model.tableNameExpr;
+                this.tableNameList = model.tableNameList;
+            } 
 
             /**
              * <p>The ID of the physical database.</p>
@@ -518,6 +550,16 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private String tableGuid; 
             private String tableName; 
             private java.util.List<TableTopologyInfoList> tableTopologyInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableTopology model) {
+                this.logic = model.logic;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+                this.tableTopologyInfoList = model.tableTopologyInfoList;
+            } 
 
             /**
              * <p>Indicates whether the table is a logical table. Valid values:</p>

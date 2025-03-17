@@ -52,6 +52,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProxySQLExecAuditLogResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.proxySQLExecAuditLogList = model.proxySQLExecAuditLogList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -339,6 +355,24 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProxySQLExecAuditLog model) {
+                this.affectRows = model.affectRows;
+                this.elapsedTime = model.elapsedTime;
+                this.execState = model.execState;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.opTime = model.opTime;
+                this.remark = model.remark;
+                this.SQL = model.SQL;
+                this.SQLType = model.SQLType;
+                this.schemaName = model.schemaName;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.</p>
              * 
@@ -523,6 +557,13 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxySQLExecAuditLogList model) {
+                this.proxySQLExecAuditLog = model.proxySQLExecAuditLog;
+            } 
 
             /**
              * ProxySQLExecAuditLog.

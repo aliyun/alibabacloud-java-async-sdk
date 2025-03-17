@@ -62,7 +62,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -292,6 +292,17 @@ public class CreateDataCronClearOrderRequest extends Request {
             private String tableName; 
             private String timeUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(CronClearItemList model) {
+                this.columnName = model.columnName;
+                this.filterSQL = model.filterSQL;
+                this.remainDays = model.remainDays;
+                this.tableName = model.tableName;
+                this.timeUnit = model.timeUnit;
+            } 
+
             /**
              * <p>The name of the field.</p>
              * <p>This parameter is required.</p>
@@ -406,6 +417,14 @@ public class CreateDataCronClearOrderRequest extends Request {
         public static final class Builder {
             private Long dbId; 
             private Boolean logic; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbItemList model) {
+                this.dbId = model.dbId;
+                this.logic = model.logic;
+            } 
 
             /**
              * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
@@ -537,6 +556,18 @@ public class CreateDataCronClearOrderRequest extends Request {
             private java.util.List<DbItemList> dbItemList; 
             private Long durationHour; 
             private Boolean specifyDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.classify = model.classify;
+                this.cronClearItemList = model.cronClearItemList;
+                this.cronFormat = model.cronFormat;
+                this.dbItemList = model.dbItemList;
+                this.durationHour = model.durationHour;
+                this.specifyDuration = model.specifyDuration;
+            } 
 
             /**
              * <p>The reason for the data change.</p>

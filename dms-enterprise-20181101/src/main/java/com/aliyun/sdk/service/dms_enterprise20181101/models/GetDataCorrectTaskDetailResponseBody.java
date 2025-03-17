@@ -48,6 +48,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCorrectTaskDetail
      */
@@ -89,6 +93,17 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataCorrectTaskDetailResponseBody model) {
+            this.dataCorrectTaskDetail = model.dataCorrectTaskDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data change task.</p>
@@ -215,6 +230,16 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
             private String createTime; 
             private Long DBTaskGroupId; 
             private String jobStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataCorrectTaskDetail model) {
+                this.actualAffectRows = model.actualAffectRows;
+                this.createTime = model.createTime;
+                this.DBTaskGroupId = model.DBTaskGroupId;
+                this.jobStatus = model.jobStatus;
+            } 
 
             /**
              * <p>The number of rows affected by the SQL statement.</p>

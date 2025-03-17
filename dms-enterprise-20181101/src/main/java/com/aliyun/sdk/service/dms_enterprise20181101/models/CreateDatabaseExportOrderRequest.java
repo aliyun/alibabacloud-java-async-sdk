@@ -66,7 +66,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -341,6 +341,19 @@ public class CreateDatabaseExportOrderRequest extends Request {
             private java.util.Map<String, String> tables; 
             private String targetOption; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.dataOption = model.dataOption;
+                this.exportContent = model.exportContent;
+                this.exportTypes = model.exportTypes;
+                this.SQLExtOption = model.SQLExtOption;
+                this.selectedTables = model.selectedTables;
+                this.tables = model.tables;
+                this.targetOption = model.targetOption;
+            } 
+
             /**
              * <p>The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.</p>
              * <p>This parameter is required.</p>
@@ -521,6 +534,18 @@ public class CreateDatabaseExportOrderRequest extends Request {
             private Long instanceId; 
             private Boolean logic; 
             private String searchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PluginParam model) {
+                this.classify = model.classify;
+                this.config = model.config;
+                this.dbId = model.dbId;
+                this.instanceId = model.instanceId;
+                this.logic = model.logic;
+                this.searchName = model.searchName;
+            } 
 
             /**
              * <p>The reason for the database export.</p>

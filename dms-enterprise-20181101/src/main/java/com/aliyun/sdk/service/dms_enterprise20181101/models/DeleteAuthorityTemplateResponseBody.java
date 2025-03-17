@@ -48,6 +48,10 @@ public class DeleteAuthorityTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class DeleteAuthorityTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long tid; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAuthorityTemplateResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tid = model.tid;
+        } 
 
         /**
          * ErrorCode.

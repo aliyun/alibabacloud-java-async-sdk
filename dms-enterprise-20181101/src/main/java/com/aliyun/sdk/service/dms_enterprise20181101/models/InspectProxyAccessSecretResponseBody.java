@@ -48,6 +48,10 @@ public class InspectProxyAccessSecretResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessSecret
      */
@@ -89,6 +93,17 @@ public class InspectProxyAccessSecretResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InspectProxyAccessSecretResponseBody model) {
+            this.accessSecret = model.accessSecret;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The authorization password of the security protection agent.</p>

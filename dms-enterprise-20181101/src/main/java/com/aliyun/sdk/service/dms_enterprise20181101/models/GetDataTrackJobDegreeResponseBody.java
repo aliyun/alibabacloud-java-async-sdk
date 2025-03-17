@@ -48,6 +48,10 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
         private JobDegree jobDegree; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataTrackJobDegreeResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.jobDegree = model.jobDegree;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -231,6 +246,17 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
             private String jobStatus; 
             private Double listCompletionDegree; 
             private String statusDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobDegree model) {
+                this.downloadCompletionDegree = model.downloadCompletionDegree;
+                this.filterCompletionDegree = model.filterCompletionDegree;
+                this.jobStatus = model.jobStatus;
+                this.listCompletionDegree = model.listCompletionDegree;
+                this.statusDesc = model.statusDesc;
+            } 
 
             /**
              * <p>The progress of binary log download. Valid values: 0 to 1. A value of 1 indicates that binary log download is complete.</p>

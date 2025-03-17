@@ -40,6 +40,10 @@ public class DLColumn extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -65,6 +69,15 @@ public class DLColumn extends TeaModel {
         private String comment; 
         private String name; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLColumn model) {
+            this.comment = model.comment;
+            this.name = model.name;
+            this.type = model.type;
+        } 
 
         /**
          * Comment.

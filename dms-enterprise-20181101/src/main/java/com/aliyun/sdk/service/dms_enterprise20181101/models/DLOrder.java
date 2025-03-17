@@ -36,6 +36,10 @@ public class DLOrder extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return col
      */
@@ -53,6 +57,14 @@ public class DLOrder extends TeaModel {
     public static final class Builder {
         private String col; 
         private Integer order; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLOrder model) {
+            this.col = model.col;
+            this.order = model.order;
+        } 
 
         /**
          * Col.

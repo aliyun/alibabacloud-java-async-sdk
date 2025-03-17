@@ -52,6 +52,10 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         private Boolean success; 
         private java.util.List<DLTablebaseInfo> tablebaseInfoList; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataLakeTablebaseInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tablebaseInfoList = model.tablebaseInfoList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ErrorCode.

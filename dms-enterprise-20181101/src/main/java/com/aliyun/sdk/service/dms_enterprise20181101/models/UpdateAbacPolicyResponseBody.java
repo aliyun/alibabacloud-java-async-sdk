@@ -48,6 +48,10 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long updatePolicyResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAbacPolicyResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.updatePolicyResult = model.updatePolicyResult;
+        } 
 
         /**
          * ErrorCode.

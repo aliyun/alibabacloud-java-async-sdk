@@ -51,7 +51,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -229,6 +229,17 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             private java.util.List<String> permissionTypes; 
             private String resourceType; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.dbId = model.dbId;
+                this.instanceId = model.instanceId;
+                this.permissionTypes = model.permissionTypes;
+                this.resourceType = model.resourceType;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * DbId.

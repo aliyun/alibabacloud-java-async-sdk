@@ -48,6 +48,10 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCronClearConfig
      */
@@ -89,6 +93,17 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataCronClearConfigResponseBody model) {
+            this.dataCronClearConfig = model.dataCronClearConfig;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Data configuration.</p>
@@ -267,6 +282,20 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
             private Long currentClearTaskCount; 
             private String duration; 
             private Long optimizeTableAfterEveryClearTimes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataCronClearConfig model) {
+                this.cronCallTimes = model.cronCallTimes;
+                this.cronFormat = model.cronFormat;
+                this.cronLastCallStartTime = model.cronLastCallStartTime;
+                this.cronNextCallTime = model.cronNextCallTime;
+                this.cronStatus = model.cronStatus;
+                this.currentClearTaskCount = model.currentClearTaskCount;
+                this.duration = model.duration;
+                this.optimizeTableAfterEveryClearTimes = model.optimizeTableAfterEveryClearTimes;
+            } 
 
             /**
              * <p>The number of times that the task is run.</p>

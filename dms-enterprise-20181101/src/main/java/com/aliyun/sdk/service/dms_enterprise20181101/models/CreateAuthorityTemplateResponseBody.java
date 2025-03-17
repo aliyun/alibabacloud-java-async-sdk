@@ -52,6 +52,10 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorityTemplateView
      */
@@ -101,6 +105,18 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long tid; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAuthorityTemplateResponseBody model) {
+            this.authorityTemplateView = model.authorityTemplateView;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tid = model.tid;
+        } 
 
         /**
          * <p>The details of the permission template.</p>
@@ -254,6 +270,17 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateView model) {
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>

@@ -48,6 +48,10 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadURLResult
      */
@@ -89,6 +93,17 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDbExportDownloadURLResponseBody model) {
+            this.downloadURLResult = model.downloadURLResult;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * DownloadURLResult.
@@ -191,6 +206,15 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
             private Boolean hasResult; 
             private String tipMessage; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(DownloadURLResult model) {
+                this.hasResult = model.hasResult;
+                this.tipMessage = model.tipMessage;
+                this.URL = model.URL;
+            } 
 
             /**
              * HasResult.

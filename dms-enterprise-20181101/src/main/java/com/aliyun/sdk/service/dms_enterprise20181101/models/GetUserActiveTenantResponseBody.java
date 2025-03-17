@@ -48,6 +48,10 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Tenant tenant; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserActiveTenantResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tenant = model.tenant;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -207,6 +222,15 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
             private String status; 
             private String tenantName; 
             private Long tid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tenant model) {
+                this.status = model.status;
+                this.tenantName = model.tenantName;
+                this.tid = model.tid;
+            } 
 
             /**
              * <p>The status of the tenant. Valid values:</p>

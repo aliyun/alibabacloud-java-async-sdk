@@ -48,6 +48,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TimeVariables timeVariables; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowTimeVariablesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timeVariables = model.timeVariables;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -196,6 +211,14 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
             private String name; 
             private String pattern; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimeVariable model) {
+                this.name = model.name;
+                this.pattern = model.pattern;
+            } 
+
             /**
              * <p>The name of the time variable.</p>
              * 
@@ -256,6 +279,13 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TimeVariable> timeVariable; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeVariables model) {
+                this.timeVariable = model.timeVariable;
+            } 
 
             /**
              * TimeVariable.

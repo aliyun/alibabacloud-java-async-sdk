@@ -52,6 +52,10 @@ public class DLDatabase extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalogName
      */
@@ -101,6 +105,18 @@ public class DLDatabase extends TeaModel {
         private String location; 
         private String name; 
         private java.util.Map<String, ?> parameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLDatabase model) {
+            this.catalogName = model.catalogName;
+            this.dbId = model.dbId;
+            this.description = model.description;
+            this.location = model.location;
+            this.name = model.name;
+            this.parameters = model.parameters;
+        } 
 
         /**
          * CatalogName.

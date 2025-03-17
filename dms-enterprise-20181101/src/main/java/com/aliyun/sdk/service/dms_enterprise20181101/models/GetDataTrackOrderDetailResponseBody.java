@@ -48,6 +48,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataTrackOrderDetail
      */
@@ -89,6 +93,17 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataTrackOrderDetailResponseBody model) {
+            this.dataTrackOrderDetail = model.dataTrackOrderDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the ticket.</p>
@@ -291,6 +306,22 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             private String statusDesc; 
             private java.util.List<String> tableNames; 
             private java.util.List<String> trackTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataTrackOrderDetail model) {
+                this.databaseSearchName = model.databaseSearchName;
+                this.dbId = model.dbId;
+                this.jobEndTime = model.jobEndTime;
+                this.jobStartTime = model.jobStartTime;
+                this.jobStatus = model.jobStatus;
+                this.logic = model.logic;
+                this.schemaName = model.schemaName;
+                this.statusDesc = model.statusDesc;
+                this.tableNames = model.tableNames;
+                this.trackTypes = model.trackTypes;
+            } 
 
             /**
              * <p>The name that is used to search for the database.</p>

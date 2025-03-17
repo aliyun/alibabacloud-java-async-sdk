@@ -48,6 +48,10 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createOrderResult
      */
@@ -89,6 +93,17 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFreeLockCorrectOrderResponseBody model) {
+            this.createOrderResult = model.createOrderResult;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the ticket.</p>

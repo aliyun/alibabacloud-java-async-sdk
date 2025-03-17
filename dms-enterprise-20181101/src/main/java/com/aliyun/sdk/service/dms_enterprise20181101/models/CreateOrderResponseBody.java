@@ -48,6 +48,10 @@ public class CreateOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createOrderResult
      */
@@ -89,6 +93,17 @@ public class CreateOrderResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrderResponseBody model) {
+            this.createOrderResult = model.createOrderResult;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the ticket.</p>
@@ -183,6 +198,13 @@ public class CreateOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> orderIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateOrderResult model) {
+                this.orderIds = model.orderIds;
+            } 
 
             /**
              * OrderIds.

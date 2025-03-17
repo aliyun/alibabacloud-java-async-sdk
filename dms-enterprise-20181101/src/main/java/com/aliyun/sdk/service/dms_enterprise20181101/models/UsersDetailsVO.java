@@ -80,6 +80,10 @@ public class UsersDetailsVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approvalSignatureBase64
      */
@@ -185,6 +189,25 @@ public class UsersDetailsVO extends TeaModel {
         private Integer userConfirmed; 
         private String userName; 
         private String userPublicKeyPem; 
+
+        private Builder() {
+        } 
+
+        private Builder(UsersDetailsVO model) {
+            this.approvalSignatureBase64 = model.approvalSignatureBase64;
+            this.approvalSqlTemplate = model.approvalSqlTemplate;
+            this.approvalStatus = model.approvalStatus;
+            this.creator = model.creator;
+            this.dataReady = model.dataReady;
+            this.id = model.id;
+            this.mekid = model.mekid;
+            this.pathPrefix = model.pathPrefix;
+            this.resultParty = model.resultParty;
+            this.uid = model.uid;
+            this.userConfirmed = model.userConfirmed;
+            this.userName = model.userName;
+            this.userPublicKeyPem = model.userPublicKeyPem;
+        } 
 
         /**
          * ApprovalSignatureBase64.

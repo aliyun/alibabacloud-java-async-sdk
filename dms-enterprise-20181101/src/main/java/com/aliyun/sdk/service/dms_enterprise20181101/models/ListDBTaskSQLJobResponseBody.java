@@ -52,6 +52,10 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBTaskSQLJobList
      */
@@ -101,6 +105,18 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDBTaskSQLJobResponseBody model) {
+            this.DBTaskSQLJobList = model.DBTaskSQLJobList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of the SQL tasks.</p>
@@ -322,6 +338,23 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             private Boolean logic; 
             private String status; 
             private Boolean transactional; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBTaskSQLJobList model) {
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.dbId = model.dbId;
+                this.dbSearchName = model.dbSearchName;
+                this.dbTaskGroupId = model.dbTaskGroupId;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.lastExecTime = model.lastExecTime;
+                this.logic = model.logic;
+                this.status = model.status;
+                this.transactional = model.transactional;
+            } 
 
             /**
              * <p>The description of the SQL task.</p>

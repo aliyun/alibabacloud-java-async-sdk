@@ -48,6 +48,10 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         private NodeList nodeList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskInstanceRelationResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.nodeList = model.nodeList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request fails.</p>
@@ -280,6 +295,21 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
             private Integer nodeType; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.businessTime = model.businessTime;
+                this.endTime = model.endTime;
+                this.executeTime = model.executeTime;
+                this.id = model.id;
+                this.message = model.message;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeType = model.nodeType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The business time of the node.</p>
              * 
@@ -425,6 +455,13 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Node> node; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeList model) {
+                this.node = model.node;
+            } 
 
             /**
              * Node.

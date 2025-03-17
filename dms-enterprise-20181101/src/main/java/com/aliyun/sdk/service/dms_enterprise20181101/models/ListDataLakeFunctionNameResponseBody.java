@@ -56,6 +56,10 @@ public class ListDataLakeFunctionNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListDataLakeFunctionNameResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataLakeFunctionNameResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.functionNameList = model.functionNameList;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

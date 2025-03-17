@@ -44,6 +44,10 @@ public class StsTokenVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyId
      */
@@ -77,6 +81,16 @@ public class StsTokenVO extends TeaModel {
         private String accessKeySecret; 
         private String expiration; 
         private String securityToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(StsTokenVO model) {
+            this.accessKeyId = model.accessKeyId;
+            this.accessKeySecret = model.accessKeySecret;
+            this.expiration = model.expiration;
+            this.securityToken = model.securityToken;
+        } 
 
         /**
          * AccessKeyId.

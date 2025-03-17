@@ -64,6 +64,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -137,6 +141,21 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         private Boolean success; 
         private Long total; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPagedInstanceResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * Data.
@@ -431,6 +450,28 @@ public class GetPagedInstanceResponseBody extends TeaModel {
             private Long triggerType; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.businessTime = model.businessTime;
+                this.checkStatus = model.checkStatus;
+                this.dagId = model.dagId;
+                this.delete = model.delete;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.historyDagId = model.historyDagId;
+                this.id = model.id;
+                this.lastRunningContext = model.lastRunningContext;
+                this.msg = model.msg;
+                this.status = model.status;
+                this.taskType = model.taskType;
+                this.tenantId = model.tenantId;
+                this.triggerType = model.triggerType;
+                this.version = model.version;
+            } 
+
             /**
              * BusinessTime.
              */
@@ -597,6 +638,13 @@ public class GetPagedInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

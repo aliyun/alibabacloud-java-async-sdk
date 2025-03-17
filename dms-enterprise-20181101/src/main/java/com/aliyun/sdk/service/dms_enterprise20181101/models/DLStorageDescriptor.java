@@ -76,6 +76,10 @@ public class DLStorageDescriptor extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketCols
      */
@@ -173,6 +177,24 @@ public class DLStorageDescriptor extends TeaModel {
         private DLSerdeInfo serdeInfo; 
         private DLSkewedInfo skewedInfo; 
         private java.util.List<DLOrder> sortCols; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLStorageDescriptor model) {
+            this.bucketCols = model.bucketCols;
+            this.columns = model.columns;
+            this.inputFormat = model.inputFormat;
+            this.isCompressed = model.isCompressed;
+            this.location = model.location;
+            this.numBuckets = model.numBuckets;
+            this.originalColumns = model.originalColumns;
+            this.outputFormat = model.outputFormat;
+            this.parameters = model.parameters;
+            this.serdeInfo = model.serdeInfo;
+            this.skewedInfo = model.skewedInfo;
+            this.sortCols = model.sortCols;
+        } 
 
         /**
          * BucketCols.

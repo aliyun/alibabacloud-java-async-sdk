@@ -48,6 +48,10 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         private ProjectInfo projectInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableDesignProjectInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.projectInfo = model.projectInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -255,6 +270,19 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             private Boolean logic; 
             private String schemaName; 
             private String searchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaseDatabase model) {
+                this.alias = model.alias;
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+            } 
 
             /**
              * <p>The alias of the database instance.</p>
@@ -481,6 +509,21 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             private Long projectId; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectInfo model) {
+                this.baseDatabase = model.baseDatabase;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.orderId = model.orderId;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The information about the change base database of the schema design ticket.</p>

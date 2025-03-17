@@ -62,7 +62,7 @@ public class CreateDataImportOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,6 +250,14 @@ public class CreateDataImportOrderRequest extends Request {
         public static final class Builder {
             private Long dbId; 
             private Boolean logic; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbItemList model) {
+                this.dbId = model.dbId;
+                this.logic = model.logic;
+            } 
 
             /**
              * <p>The ID of the database. The database can be a physical database or a logical database.</p>
@@ -483,6 +491,26 @@ public class CreateDataImportOrderRequest extends Request {
             private String rollbackSQL; 
             private String rollbackSqlType; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.attachmentName = model.attachmentName;
+                this.classify = model.classify;
+                this.csvFirstRowIsColumnDef = model.csvFirstRowIsColumnDef;
+                this.dbItemList = model.dbItemList;
+                this.execMode = model.execMode;
+                this.fileEncoding = model.fileEncoding;
+                this.fileType = model.fileType;
+                this.ignoreError = model.ignoreError;
+                this.importMode = model.importMode;
+                this.insertType = model.insertType;
+                this.rollbackAttachmentName = model.rollbackAttachmentName;
+                this.rollbackSQL = model.rollbackSQL;
+                this.rollbackSqlType = model.rollbackSqlType;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The key of the attachment that contains the SQL statements used to import data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</p>

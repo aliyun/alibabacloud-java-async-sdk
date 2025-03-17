@@ -48,6 +48,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         private LakehouseSpace lakehouseSpace; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLhSpaceByNameResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.lakehouseSpace = model.lakehouseSpace;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request fails.</p>
@@ -303,6 +318,23 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             private String spaceConfig; 
             private String spaceName; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LakehouseSpace model) {
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.devDbId = model.devDbId;
+                this.dwDbType = model.dwDbType;
+                this.id = model.id;
+                this.isDeleted = model.isDeleted;
+                this.mode = model.mode;
+                this.prodDbId = model.prodDbId;
+                this.spaceConfig = model.spaceConfig;
+                this.spaceName = model.spaceName;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The ID of the user who creates the workspace.</p>

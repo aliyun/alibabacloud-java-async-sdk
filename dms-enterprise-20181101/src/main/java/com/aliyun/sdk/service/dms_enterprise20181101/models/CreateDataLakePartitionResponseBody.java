@@ -48,6 +48,10 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateDataLakePartitionResponseBody extends TeaModel {
         private DLPartition partition; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataLakePartitionResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.partition = model.partition;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

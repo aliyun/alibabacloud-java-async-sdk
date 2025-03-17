@@ -48,6 +48,10 @@ public class GetDataLakeDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return database
      */
@@ -89,6 +93,17 @@ public class GetDataLakeDatabaseResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataLakeDatabaseResponseBody model) {
+            this.database = model.database;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Database.

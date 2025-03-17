@@ -52,6 +52,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorityTemplateView
      */
@@ -101,6 +105,18 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long tid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAuthorityTemplateResponseBody model) {
+            this.authorityTemplateView = model.authorityTemplateView;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tid = model.tid;
+        } 
 
         /**
          * <p>The details of the permission template.</p>
@@ -291,6 +307,20 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             private String tableName; 
             private Long templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateItem model) {
+                this.attribute = model.attribute;
+                this.dbId = model.dbId;
+                this.instanceId = model.instanceId;
+                this.itemId = model.itemId;
+                this.modifierId = model.modifierId;
+                this.resourceType = model.resourceType;
+                this.tableName = model.tableName;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>Other information. For example, you can add the logon permission on an instance to the permission template.</p>
              * 
@@ -427,6 +457,13 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AuthorityTemplateItem> authorityTemplateItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateItemList model) {
+                this.authorityTemplateItem = model.authorityTemplateItem;
+            } 
+
             /**
              * AuthorityTemplateItem.
              */
@@ -533,6 +570,18 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateView model) {
+                this.authorityTemplateItemList = model.authorityTemplateItemList;
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The resource information in the permission template.</p>

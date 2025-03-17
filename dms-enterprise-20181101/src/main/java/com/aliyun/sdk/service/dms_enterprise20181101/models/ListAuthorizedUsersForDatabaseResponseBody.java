@@ -36,6 +36,10 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAuthorizedUsersForDatabaseResponseBody model) {
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
             private String uid; 
             private String userId; 
             private String userNickName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.uid = model.uid;
+                this.userId = model.userId;
+                this.userNickName = model.userNickName;
+            } 
 
             /**
              * Uid.

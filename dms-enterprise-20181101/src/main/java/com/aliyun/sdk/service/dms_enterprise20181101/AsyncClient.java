@@ -1765,6 +1765,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request);
 
     /**
+     * @param request the request parameters of TryRunTaskFlow  TryRunTaskFlowRequest
+     * @return TryRunTaskFlowResponse
+     */
+    CompletableFuture<TryRunTaskFlowResponse> tryRunTaskFlow(TryRunTaskFlowRequest request);
+
+    /**
      * @param request the request parameters of UpdateAbacPolicy  UpdateAbacPolicyRequest
      * @return UpdateAbacPolicyResponse
      */

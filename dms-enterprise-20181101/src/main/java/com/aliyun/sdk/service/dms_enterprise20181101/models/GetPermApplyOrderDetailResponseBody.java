@@ -48,6 +48,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         private PermApplyOrderDetail permApplyOrderDetail; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPermApplyOrderDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.permApplyOrderDetail = model.permApplyOrderDetail;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -195,6 +210,14 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String columnName; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnInfo model) {
+                this.columnName = model.columnName;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The name of the column.</p>
@@ -328,6 +351,19 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private java.util.List<Long> ownerIds; 
             private java.util.List<String> ownerNickNames; 
             private String searchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseInfo model) {
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.ownerIds = model.ownerIds;
+                this.ownerNickNames = model.ownerNickNames;
+                this.searchName = model.searchName;
+            } 
 
             /**
              * <p>The database ID.</p>
@@ -551,6 +587,22 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private Long port; 
             private String searchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceInfo model) {
+                this.dbType = model.dbType;
+                this.dbaId = model.dbaId;
+                this.dbaNickName = model.dbaNickName;
+                this.envType = model.envType;
+                this.host = model.host;
+                this.instanceId = model.instanceId;
+                this.ownerIds = model.ownerIds;
+                this.ownerNickName = model.ownerNickName;
+                this.port = model.port;
+                this.searchName = model.searchName;
+            } 
+
             /**
              * <p>The type of the database engine.</p>
              * 
@@ -694,6 +746,13 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableInfo model) {
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The name of the table.</p>
              * 
@@ -779,6 +838,16 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private DatabaseInfo databaseInfo; 
             private InstanceInfo instanceInfo; 
             private TableInfo tableInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.columnInfo = model.columnInfo;
+                this.databaseInfo = model.databaseInfo;
+                this.instanceInfo = model.instanceInfo;
+                this.tableInfo = model.tableInfo;
+            } 
 
             /**
              * <p>The information about the column.</p>
@@ -886,6 +955,16 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private Long permType; 
             private java.util.List<Resources> resources; 
             private Long seconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermApplyOrderDetail model) {
+                this.applyType = model.applyType;
+                this.permType = model.permType;
+                this.resources = model.resources;
+                this.seconds = model.seconds;
+            } 
 
             /**
              * <p>The type of objects on which you apply for permissions. Valid values:</p>

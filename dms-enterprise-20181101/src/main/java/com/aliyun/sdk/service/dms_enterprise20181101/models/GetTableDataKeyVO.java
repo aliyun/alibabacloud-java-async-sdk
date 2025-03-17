@@ -52,6 +52,10 @@ public class GetTableDataKeyVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return colName
      */
@@ -101,6 +105,18 @@ public class GetTableDataKeyVO extends TeaModel {
         private String schemaName; 
         private String tblName; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableDataKeyVO model) {
+            this.colName = model.colName;
+            this.dbName = model.dbName;
+            this.mekId = model.mekId;
+            this.schemaName = model.schemaName;
+            this.tblName = model.tblName;
+            this.userName = model.userName;
+        } 
 
         /**
          * ColName.

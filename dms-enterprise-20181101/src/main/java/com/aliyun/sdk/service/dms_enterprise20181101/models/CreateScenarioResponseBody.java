@@ -48,6 +48,10 @@ public class CreateScenarioResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateScenarioResponseBody extends TeaModel {
         private String requestId; 
         private Long scenarioId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScenarioResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.scenarioId = model.scenarioId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

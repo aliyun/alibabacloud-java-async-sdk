@@ -44,6 +44,10 @@ public class UpdateTaskContentV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -77,6 +81,16 @@ public class UpdateTaskContentV2ResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateTaskContentV2ResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

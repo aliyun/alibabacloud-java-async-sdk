@@ -36,6 +36,10 @@ public class PartitionError extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorDetail
      */
@@ -53,6 +57,14 @@ public class PartitionError extends TeaModel {
     public static final class Builder {
         private String errorDetail; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(PartitionError model) {
+            this.errorDetail = model.errorDetail;
+            this.values = model.values;
+        } 
 
         /**
          * ErrorDetail.

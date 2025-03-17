@@ -51,7 +51,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,14 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DagConstants model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key name of a constant for the task flow.</p>

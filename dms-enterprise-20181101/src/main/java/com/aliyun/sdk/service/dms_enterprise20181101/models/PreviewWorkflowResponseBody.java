@@ -48,6 +48,10 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private WorkflowDetail workflowDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(PreviewWorkflowResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workflowDetail = model.workflowDetail;
+        } 
 
         /**
          * ErrorCode.
@@ -192,6 +207,15 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             private String realName; 
             private Long userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuditUser model) {
+                this.nickName = model.nickName;
+                this.realName = model.realName;
+                this.userId = model.userId;
+            } 
+
             /**
              * NickName.
              */
@@ -254,6 +278,13 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AuditUser> auditUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuditUserList model) {
+                this.auditUser = model.auditUser;
+            } 
 
             /**
              * AuditUser.
@@ -338,6 +369,16 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             private String nodeName; 
             private String nodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNode model) {
+                this.auditUserList = model.auditUserList;
+                this.comment = model.comment;
+                this.nodeName = model.nodeName;
+                this.nodeType = model.nodeType;
+            } 
+
             /**
              * AuditUserList.
              */
@@ -409,6 +450,13 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<WorkflowNode> workflowNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNodeList model) {
+                this.workflowNode = model.workflowNode;
+            } 
+
             /**
              * WorkflowNode.
              */
@@ -479,6 +527,15 @@ public class PreviewWorkflowResponseBody extends TeaModel {
             private String comment; 
             private String wfCateName; 
             private WorkflowNodeList workflowNodeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowDetail model) {
+                this.comment = model.comment;
+                this.wfCateName = model.wfCateName;
+                this.workflowNodeList = model.workflowNodeList;
+            } 
 
             /**
              * Comment.

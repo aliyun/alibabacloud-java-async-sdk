@@ -48,6 +48,10 @@ public class GetStandardGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetStandardGroupResponseBody extends TeaModel {
         private String requestId; 
         private StandardGroup standardGroup; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStandardGroupResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.standardGroup = model.standardGroup;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.
@@ -227,6 +242,18 @@ public class GetStandardGroupResponseBody extends TeaModel {
             private String groupMode; 
             private String groupName; 
             private Long lastMenderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StandardGroup model) {
+                this.dbType = model.dbType;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupMode = model.groupMode;
+                this.groupName = model.groupName;
+                this.lastMenderId = model.lastMenderId;
+            } 
 
             /**
              * DbType.

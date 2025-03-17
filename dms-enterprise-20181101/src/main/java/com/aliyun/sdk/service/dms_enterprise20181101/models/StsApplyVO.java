@@ -36,6 +36,10 @@ public class StsApplyVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliyunId
      */
@@ -53,6 +57,14 @@ public class StsApplyVO extends TeaModel {
     public static final class Builder {
         private String aliyunId; 
         private Long duration; 
+
+        private Builder() {
+        } 
+
+        private Builder(StsApplyVO model) {
+            this.aliyunId = model.aliyunId;
+            this.duration = model.duration;
+        } 
 
         /**
          * AliyunId.

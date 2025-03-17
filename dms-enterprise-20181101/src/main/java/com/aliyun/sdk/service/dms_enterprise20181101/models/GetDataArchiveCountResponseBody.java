@@ -40,6 +40,10 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataArchiveCountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -173,6 +186,16 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             private Long processingCount; 
             private Long successCount; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failCount = model.failCount;
+                this.processingCount = model.processingCount;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of tickets that data archiving failed.</p>

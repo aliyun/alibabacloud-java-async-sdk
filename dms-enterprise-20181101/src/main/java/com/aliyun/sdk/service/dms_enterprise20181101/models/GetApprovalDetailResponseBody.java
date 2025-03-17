@@ -48,6 +48,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approvalDetail
      */
@@ -89,6 +93,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApprovalDetailResponseBody model) {
+            this.approvalDetail = model.approvalDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The approval details of the ticket.</p>
@@ -196,6 +211,14 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private Long id; 
             private String nickName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentHandler model) {
+                this.id = model.id;
+                this.nickName = model.nickName;
+            } 
+
             /**
              * <p>The ID of the user.</p>
              * 
@@ -257,6 +280,13 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CurrentHandler> currentHandler; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentHandlers model) {
+                this.currentHandler = model.currentHandler;
+            } 
+
             /**
              * CurrentHandler.
              */
@@ -304,6 +334,13 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> reasons; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReasonList model) {
+                this.reasons = model.reasons;
+            } 
+
             /**
              * Reasons.
              */
@@ -350,6 +387,13 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> auditUserIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuditUserIdList model) {
+                this.auditUserIds = model.auditUserIds;
+            } 
 
             /**
              * AuditUserIds.
@@ -457,6 +501,18 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String operateTime; 
             private Long operatorId; 
             private String workflowInsCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNode model) {
+                this.auditUserIdList = model.auditUserIdList;
+                this.nodeName = model.nodeName;
+                this.operateComment = model.operateComment;
+                this.operateTime = model.operateTime;
+                this.operatorId = model.operatorId;
+                this.workflowInsCode = model.workflowInsCode;
+            } 
 
             /**
              * <p>The IDs of the approvers.</p>
@@ -567,6 +623,13 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<WorkflowNode> workflowNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNodes model) {
+                this.workflowNode = model.workflowNode;
+            } 
 
             /**
              * WorkflowNode.
@@ -758,6 +821,25 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String title; 
             private String workflowInsCode; 
             private WorkflowNodes workflowNodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApprovalDetail model) {
+                this.auditId = model.auditId;
+                this.createTime = model.createTime;
+                this.currentHandlers = model.currentHandlers;
+                this.description = model.description;
+                this.orderId = model.orderId;
+                this.orderType = model.orderType;
+                this.reasonList = model.reasonList;
+                this.templateId = model.templateId;
+                this.thirdpartyWorkflowComment = model.thirdpartyWorkflowComment;
+                this.thirdpartyWorkflowUrl = model.thirdpartyWorkflowUrl;
+                this.title = model.title;
+                this.workflowInsCode = model.workflowInsCode;
+                this.workflowNodes = model.workflowNodes;
+            } 
 
             /**
              * <p>The ID of the approval process.</p>

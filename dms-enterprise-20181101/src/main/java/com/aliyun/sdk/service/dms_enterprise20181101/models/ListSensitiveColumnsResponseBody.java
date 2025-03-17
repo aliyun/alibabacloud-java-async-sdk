@@ -52,6 +52,10 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
         private SensitiveColumnList sensitiveColumnList; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSensitiveColumnsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sensitiveColumnList = model.sensitiveColumnList;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -267,6 +283,18 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
             private String securityLevel; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitiveColumn model) {
+                this.columnCount = model.columnCount;
+                this.columnName = model.columnName;
+                this.functionType = model.functionType;
+                this.schemaName = model.schemaName;
+                this.securityLevel = model.securityLevel;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The number of sensitive fields.</p>
              * 
@@ -380,6 +408,13 @@ public class ListSensitiveColumnsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SensitiveColumn> sensitiveColumn; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveColumnList model) {
+                this.sensitiveColumn = model.sensitiveColumn;
+            } 
 
             /**
              * SensitiveColumn.

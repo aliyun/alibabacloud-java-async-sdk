@@ -48,6 +48,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private WorkflowNodes workflowNodes; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkFlowNodesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workflowNodes = model.workflowNodes;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -204,6 +219,15 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             private String realName; 
             private Long userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuditUser model) {
+                this.nickName = model.nickName;
+                this.realName = model.realName;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The nickname of the approver.</p>
              * 
@@ -275,6 +299,13 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AuditUser> auditUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuditUsers model) {
+                this.auditUser = model.auditUser;
+            } 
 
             /**
              * AuditUser.
@@ -395,6 +426,19 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             private String nodeName; 
             private String nodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNode model) {
+                this.auditUsers = model.auditUsers;
+                this.comment = model.comment;
+                this.createUserId = model.createUserId;
+                this.createUserNickName = model.createUserNickName;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeType = model.nodeType;
+            } 
+
             /**
              * <p>The details about approvers.</p>
              */
@@ -511,6 +555,13 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<WorkflowNode> workflowNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNodes model) {
+                this.workflowNode = model.workflowNode;
+            } 
 
             /**
              * WorkflowNode.

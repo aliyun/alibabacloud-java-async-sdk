@@ -51,7 +51,7 @@ public class UpdateSLARulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -226,6 +226,16 @@ public class UpdateSLARulesRequest extends Request {
             private Integer intervalMinutes; 
             private Long nodeId; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlaRuleList model) {
+                this.dagId = model.dagId;
+                this.intervalMinutes = model.intervalMinutes;
+                this.nodeId = model.nodeId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the task flow.</p>

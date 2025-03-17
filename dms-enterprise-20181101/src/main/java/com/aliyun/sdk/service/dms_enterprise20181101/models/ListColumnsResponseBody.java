@@ -48,6 +48,10 @@ public class ListColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnList
      */
@@ -89,6 +93,17 @@ public class ListColumnsResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListColumnsResponseBody model) {
+            this.columnList = model.columnList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about columns.</p>
@@ -328,6 +343,25 @@ public class ListColumnsResponseBody extends TeaModel {
             private String securityLevel; 
             private Boolean sensitive; 
 
+            private Builder() {
+            } 
+
+            private Builder(Column model) {
+                this.autoIncrement = model.autoIncrement;
+                this.columnId = model.columnId;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.functionType = model.functionType;
+                this.nullable = model.nullable;
+                this.securityLevel = model.securityLevel;
+                this.sensitive = model.sensitive;
+            } 
+
             /**
              * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
              * <ul>
@@ -535,6 +569,13 @@ public class ListColumnsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Column> column; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.column = model.column;
+            } 
 
             /**
              * Column.

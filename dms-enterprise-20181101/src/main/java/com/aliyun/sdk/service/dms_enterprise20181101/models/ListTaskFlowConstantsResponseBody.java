@@ -48,6 +48,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dagConstants
      */
@@ -89,6 +93,17 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowConstantsResponseBody model) {
+            this.dagConstants = model.dagConstants;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>A list of constant key-value pairs for the task flow.</p>
@@ -196,6 +211,14 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DagConstant model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The constant key.</p>
              * 
@@ -256,6 +279,13 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DagConstant> dagConstant; 
+
+            private Builder() {
+            } 
+
+            private Builder(DagConstants model) {
+                this.dagConstant = model.dagConstant;
+            } 
 
             /**
              * DagConstant.

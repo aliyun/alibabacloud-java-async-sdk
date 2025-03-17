@@ -48,6 +48,10 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TaskFlowGraph taskFlowGraph; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskFlowGraphResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskFlowGraph = model.taskFlowGraph;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -220,6 +235,16 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Long nodeEnd; 
             private Long nodeFrom; 
 
+            private Builder() {
+            } 
+
+            private Builder(Edge model) {
+                this.dagId = model.dagId;
+                this.id = model.id;
+                this.nodeEnd = model.nodeEnd;
+                this.nodeFrom = model.nodeFrom;
+            } 
+
             /**
              * <p>The ID of the task flow.</p>
              * 
@@ -302,6 +327,13 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Edge> edge; 
+
+            private Builder() {
+            } 
+
+            private Builder(Edges model) {
+                this.edge = model.edge;
+            } 
 
             /**
              * Edge.
@@ -434,6 +466,20 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Long nodeType; 
             private String timeVariables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.dagId = model.dagId;
+                this.graphParam = model.graphParam;
+                this.nodeConfig = model.nodeConfig;
+                this.nodeContent = model.nodeContent;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeType = model.nodeType;
+                this.timeVariables = model.timeVariables;
+            } 
+
             /**
              * <p>The ID of the task flow.</p>
              * 
@@ -558,6 +604,13 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Node> node; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.node = model.node;
+            } 
+
             /**
              * Node.
              */
@@ -652,6 +705,17 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
             private Edges edges; 
             private Nodes nodes; 
             private Long status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskFlowGraph model) {
+                this.canEdit = model.canEdit;
+                this.dagName = model.dagName;
+                this.edges = model.edges;
+                this.nodes = model.nodes;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether the task flow is editable. Valid values:</p>

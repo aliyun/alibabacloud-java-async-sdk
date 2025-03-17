@@ -76,6 +76,10 @@ public class TeeEvidenceVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cipherSuite
      */
@@ -173,6 +177,24 @@ public class TeeEvidenceVO extends TeaModel {
         private String signPublicKeyPem; 
         private String signPublicKeyType; 
         private java.util.List<String> trustedMrEnclave; 
+
+        private Builder() {
+        } 
+
+        private Builder(TeeEvidenceVO model) {
+            this.cipherSuite = model.cipherSuite;
+            this.enclaveData = model.enclaveData;
+            this.encryptPublicKeyPem = model.encryptPublicKeyPem;
+            this.encryptPublicKeyType = model.encryptPublicKeyType;
+            this.modifiedDate = model.modifiedDate;
+            this.publicKey = model.publicKey;
+            this.publicKeyRaBase64 = model.publicKeyRaBase64;
+            this.publicKeyRaType = model.publicKeyRaType;
+            this.quoteReport = model.quoteReport;
+            this.signPublicKeyPem = model.signPublicKeyPem;
+            this.signPublicKeyType = model.signPublicKeyType;
+            this.trustedMrEnclave = model.trustedMrEnclave;
+        } 
 
         /**
          * CipherSuite.

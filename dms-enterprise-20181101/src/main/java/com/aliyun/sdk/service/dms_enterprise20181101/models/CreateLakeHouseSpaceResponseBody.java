@@ -48,6 +48,10 @@ public class CreateLakeHouseSpaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateLakeHouseSpaceResponseBody extends TeaModel {
         private String requestId; 
         private Long spaceId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLakeHouseSpaceResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.spaceId = model.spaceId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request fails.</p>

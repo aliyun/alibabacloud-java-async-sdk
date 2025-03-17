@@ -52,6 +52,10 @@ public class SearchTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class SearchTableResponseBody extends TeaModel {
         private SearchTableList searchTableList; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTableResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.searchTableList = model.searchTableList;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -203,6 +219,13 @@ public class SearchTableResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ownerIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerIdList model) {
+                this.ownerIds = model.ownerIds;
+            } 
+
             /**
              * OwnerIds.
              */
@@ -249,6 +272,13 @@ public class SearchTableResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ownerNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerNameList model) {
+                this.ownerNames = model.ownerNames;
+            } 
 
             /**
              * OwnerNames.
@@ -465,6 +495,27 @@ public class SearchTableResponseBody extends TeaModel {
             private String tableName; 
             private String tableSchemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchTable model) {
+                this.DBSearchName = model.DBSearchName;
+                this.databaseId = model.databaseId;
+                this.dbName = model.dbName;
+                this.dbType = model.dbType;
+                this.description = model.description;
+                this.encoding = model.encoding;
+                this.engine = model.engine;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.ownerIdList = model.ownerIdList;
+                this.ownerNameList = model.ownerNameList;
+                this.tableGuid = model.tableGuid;
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+                this.tableSchemaName = model.tableSchemaName;
+            } 
+
             /**
              * <p>The name that is used to search for the database to which the table belongs.</p>
              * 
@@ -676,6 +727,13 @@ public class SearchTableResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SearchTable> searchTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchTableList model) {
+                this.searchTable = model.searchTable;
+            } 
 
             /**
              * SearchTable.

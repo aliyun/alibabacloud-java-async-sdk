@@ -48,6 +48,10 @@ public class GetAbacPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetAbacPolicyResponseBody extends TeaModel {
         private Policy policy; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAbacPolicyResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.
@@ -239,6 +254,19 @@ public class GetAbacPolicyResponseBody extends TeaModel {
             private Long policyId; 
             private String policyName; 
             private String policySource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.authorizedQuantity = model.authorizedQuantity;
+                this.creatorId = model.creatorId;
+                this.policyContent = model.policyContent;
+                this.policyDesc = model.policyDesc;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policySource = model.policySource;
+            } 
 
             /**
              * AuthorizedQuantity.

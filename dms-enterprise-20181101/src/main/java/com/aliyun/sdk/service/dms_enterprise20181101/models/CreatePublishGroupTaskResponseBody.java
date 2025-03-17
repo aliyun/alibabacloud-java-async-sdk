@@ -48,6 +48,10 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePublishGroupTaskResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

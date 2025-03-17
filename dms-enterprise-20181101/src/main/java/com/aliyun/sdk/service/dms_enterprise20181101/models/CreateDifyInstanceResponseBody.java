@@ -56,6 +56,10 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDifyInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -303,6 +320,21 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
             private String vpcId; 
             private String workspaceId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.replicas = model.replicas;
+                this.resourceQuota = model.resourceQuota;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.workspaceId = model.workspaceId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * InstanceId.

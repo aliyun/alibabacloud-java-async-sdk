@@ -48,6 +48,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListTaskFlowResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TaskFlowList taskFlowList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskFlowList = model.taskFlowList;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -268,6 +283,20 @@ public class ListTaskFlowResponseBody extends TeaModel {
             private String latestInstanceTime; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskFlow model) {
+                this.creatorId = model.creatorId;
+                this.creatorNickName = model.creatorNickName;
+                this.dagOwnerNickName = model.dagOwnerNickName;
+                this.deployId = model.deployId;
+                this.id = model.id;
+                this.latestInstanceStatus = model.latestInstanceStatus;
+                this.latestInstanceTime = model.latestInstanceTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the user who creates the task flow.</p>
              * 
@@ -404,6 +433,13 @@ public class ListTaskFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskFlow> taskFlow; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskFlowList model) {
+                this.taskFlow = model.taskFlow;
+            } 
 
             /**
              * TaskFlow.

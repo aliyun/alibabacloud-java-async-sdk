@@ -48,6 +48,10 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
         private OnlineDDLTaskDetail onlineDDLTaskDetail; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOnlineDDLProgressResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.onlineDDLTaskDetail = model.onlineDDLTaskDetail;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -327,6 +342,25 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
             private String jobStatus; 
             private String progressRatio; 
             private String statusDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineDDLTaskDetail model) {
+                this.cleanStrategy = model.cleanStrategy;
+                this.copyChunkMode = model.copyChunkMode;
+                this.copyChunkSize = model.copyChunkSize;
+                this.copyCount = model.copyCount;
+                this.copyTotal = model.copyTotal;
+                this.cutoverFailRetryTimes = model.cutoverFailRetryTimes;
+                this.cutoverLockTimeSeconds = model.cutoverLockTimeSeconds;
+                this.cutoverWindowEndTime = model.cutoverWindowEndTime;
+                this.cutoverWindowStartTime = model.cutoverWindowStartTime;
+                this.delaySeconds = model.delaySeconds;
+                this.jobStatus = model.jobStatus;
+                this.progressRatio = model.progressRatio;
+                this.statusDesc = model.statusDesc;
+            } 
 
             /**
              * <p>The cleanup policy of the original table after the cut-over. Valid values:</p>

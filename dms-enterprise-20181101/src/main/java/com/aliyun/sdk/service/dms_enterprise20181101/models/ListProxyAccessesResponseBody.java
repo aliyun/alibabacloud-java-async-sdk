@@ -48,6 +48,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListProxyAccessesResponseBody extends TeaModel {
         private java.util.List<ProxyAccessList> proxyAccessList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProxyAccessesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.proxyAccessList = model.proxyAccessList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -291,6 +306,22 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
             private String userUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyAccessList model) {
+                this.accessId = model.accessId;
+                this.gmtCreate = model.gmtCreate;
+                this.indepAccount = model.indepAccount;
+                this.instanceId = model.instanceId;
+                this.originInfo = model.originInfo;
+                this.proxyAccessId = model.proxyAccessId;
+                this.proxyId = model.proxyId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userUid = model.userUid;
+            } 
 
             /**
              * <p>The username of the database account that is authorized to access the database instance by using the secure access proxy feature.</p>

@@ -52,6 +52,10 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dagVersionList
      */
@@ -101,6 +105,18 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDAGVersionsResponseBody model) {
+            this.dagVersionList = model.dagVersionList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the published versions.</p>
@@ -267,6 +283,18 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             private String versionComments; 
             private Long versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DagVersion model) {
+                this.dagName = model.dagName;
+                this.dagOwnerId = model.dagOwnerId;
+                this.dagOwnerNickName = model.dagOwnerNickName;
+                this.lastVersionId = model.lastVersionId;
+                this.versionComments = model.versionComments;
+                this.versionId = model.versionId;
+            } 
+
             /**
              * <p>The name of the task flow.</p>
              * 
@@ -371,6 +399,13 @@ public class ListDAGVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DagVersion> dagVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DagVersionList model) {
+                this.dagVersion = model.dagVersion;
+            } 
 
             /**
              * DagVersion.

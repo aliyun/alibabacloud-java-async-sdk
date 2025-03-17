@@ -48,6 +48,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBTopology
      */
@@ -89,6 +93,17 @@ public class GetDBTopologyResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDBTopologyResponseBody model) {
+            this.DBTopology = model.DBTopology;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The topology of the data table.</p>
@@ -291,6 +306,22 @@ public class GetDBTopologyResponseBody extends TeaModel {
             private String regionId; 
             private String schemaName; 
             private String searchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBTopologyInfoList model) {
+                this.catalogName = model.catalogName;
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.instanceId = model.instanceId;
+                this.instanceResourceId = model.instanceResourceId;
+                this.instanceSource = model.instanceSource;
+                this.regionId = model.regionId;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+            } 
 
             /**
              * <p>The name of the catalog to which the database belongs.</p>
@@ -534,6 +565,19 @@ public class GetDBTopologyResponseBody extends TeaModel {
             private Long logicDbId; 
             private String logicDbName; 
             private String searchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBTopology model) {
+                this.alias = model.alias;
+                this.DBTopologyInfoList = model.DBTopologyInfoList;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logicDbId = model.logicDbId;
+                this.logicDbName = model.logicDbName;
+                this.searchName = model.searchName;
+            } 
 
             /**
              * <p>The alias of the access point.</p>

@@ -36,6 +36,10 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -53,6 +57,14 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Databases> databases; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAuthorizedDatabasesForUserResponseBody model) {
+            this.databases = model.databases;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Databases.
@@ -143,6 +155,16 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             private String expireDate; 
             private String message; 
             private String permType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermissionDetail model) {
+                this.dsType = model.dsType;
+                this.expireDate = model.expireDate;
+                this.message = model.message;
+                this.permType = model.permType;
+            } 
 
             /**
              * DsType.
@@ -310,6 +332,21 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
             private String schemaName; 
             private String searchName; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.instanceId = model.instanceId;
+                this.logic = model.logic;
+                this.permissionDetail = model.permissionDetail;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+                this.userId = model.userId;
+            } 
 
             /**
              * DbId.

@@ -48,6 +48,10 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadKeyId
      */
@@ -89,6 +93,17 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DownloadDataTrackResultResponseBody model) {
+            this.downloadKeyId = model.downloadKeyId;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the download key, which is used to download the parsing result of the data tracking task.</p>

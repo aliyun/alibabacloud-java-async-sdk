@@ -52,6 +52,10 @@ public class ListLogicTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListLogicTablesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLogicTablesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.logicTableList = model.logicTableList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -203,6 +219,13 @@ public class ListLogicTablesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ownerIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerIdList model) {
+                this.ownerIds = model.ownerIds;
+            } 
+
             /**
              * OwnerIds.
              */
@@ -249,6 +272,13 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ownerNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerNameList model) {
+                this.ownerNames = model.ownerNames;
+            } 
 
             /**
              * OwnerNames.
@@ -405,6 +435,22 @@ public class ListLogicTablesResponseBody extends TeaModel {
             private String tableId; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogicTable model) {
+                this.databaseId = model.databaseId;
+                this.logic = model.logic;
+                this.ownerIdList = model.ownerIdList;
+                this.ownerNameList = model.ownerNameList;
+                this.schemaName = model.schemaName;
+                this.tableCount = model.tableCount;
+                this.tableExpr = model.tableExpr;
+                this.tableGuid = model.tableGuid;
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The ID of the logical database.</p>
              * 
@@ -547,6 +593,13 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogicTable> logicTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogicTableList model) {
+                this.logicTable = model.logicTable;
+            } 
 
             /**
              * LogicTable.

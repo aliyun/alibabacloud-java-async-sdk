@@ -52,6 +52,10 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorityTemplateView
      */
@@ -101,6 +105,18 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long tid; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAuthorityTemplateResponseBody model) {
+            this.authorityTemplateView = model.authorityTemplateView;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tid = model.tid;
+        } 
 
         /**
          * <p>The details of the permission template.</p>
@@ -242,6 +258,16 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateView model) {
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The ID of the user who created the permission template.</p>

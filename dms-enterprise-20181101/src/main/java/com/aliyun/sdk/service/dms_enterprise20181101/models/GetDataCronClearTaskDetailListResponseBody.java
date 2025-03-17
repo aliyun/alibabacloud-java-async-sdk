@@ -52,6 +52,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCronClearTaskDetailList
      */
@@ -101,6 +105,18 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataCronClearTaskDetailListResponseBody model) {
+            this.dataCronClearTaskDetailList = model.dataCronClearTaskDetailList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The historical data cleansing tasks</p>
@@ -238,6 +254,16 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             private String createTime; 
             private Long DBTaskGroupId; 
             private String jobStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataCronClearTaskDetailList model) {
+                this.actualAffectRows = model.actualAffectRows;
+                this.createTime = model.createTime;
+                this.DBTaskGroupId = model.DBTaskGroupId;
+                this.jobStatus = model.jobStatus;
+            } 
 
             /**
              * <p>The number of rows affected by the SQL task.</p>

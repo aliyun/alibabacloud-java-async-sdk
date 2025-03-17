@@ -56,6 +56,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorityTemplateViewList
      */
@@ -113,6 +117,19 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         private Boolean success; 
         private Long tid; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAuthorityTemplateResponseBody model) {
+            this.authorityTemplateViewList = model.authorityTemplateViewList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tid = model.tid;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AuthorityTemplateViewList.
@@ -256,6 +273,17 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
             private String name; 
             private Long templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateView model) {
+                this.createTime = model.createTime;
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.name = model.name;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * CreateTime.
              */
@@ -334,6 +362,13 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AuthorityTemplateView> authorityTemplateView; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorityTemplateViewList model) {
+                this.authorityTemplateView = model.authorityTemplateView;
+            } 
 
             /**
              * AuthorityTemplateView.

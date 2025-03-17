@@ -36,6 +36,10 @@ public class ProjectDetailsLiteVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class ProjectDetailsLiteVO extends TeaModel {
     public static final class Builder {
         private Long id; 
         private String projectName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProjectDetailsLiteVO model) {
+            this.id = model.id;
+            this.projectName = model.projectName;
+        } 
 
         /**
          * Id.

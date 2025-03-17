@@ -48,6 +48,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCorrectOrderDetail
      */
@@ -89,6 +93,17 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataCorrectOrderDetailResponseBody model) {
+            this.dataCorrectOrderDetail = model.dataCorrectOrderDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the data change ticket.</p>
@@ -196,6 +211,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private Integer currentClearTaskCount; 
             private Integer optimizeTableAfterEveryClearTimes; 
 
+            private Builder() {
+            } 
+
+            private Builder(CronExtConfig model) {
+                this.currentClearTaskCount = model.currentClearTaskCount;
+                this.optimizeTableAfterEveryClearTimes = model.optimizeTableAfterEveryClearTimes;
+            } 
+
             /**
              * <p>The number of times defragmentation is performed. This parameter is valid only if the value of OptimizeTableAfterEveryClearTimes is greater than 0.</p>
              * 
@@ -296,6 +319,16 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private Boolean ignoreError; 
             private String importMode; 
             private String insertType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImportExtConfig model) {
+                this.csvFirstRowIsColumnDef = model.csvFirstRowIsColumnDef;
+                this.ignoreError = model.ignoreError;
+                this.importMode = model.importMode;
+                this.insertType = model.insertType;
+            } 
 
             /**
              * <p>Indicates whether the first row of the CSV file contains field names. Valid values:</p>
@@ -559,6 +592,26 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String fileType; 
             private ImportExtConfig importExtConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigDetail model) {
+                this.cron = model.cron;
+                this.cronCallTimes = model.cronCallTimes;
+                this.cronExtConfig = model.cronExtConfig;
+                this.cronFormat = model.cronFormat;
+                this.cronLastCallStartTime = model.cronLastCallStartTime;
+                this.cronNextCallTime = model.cronNextCallTime;
+                this.cronStatus = model.cronStatus;
+                this.csvTableName = model.csvTableName;
+                this.currentTaskId = model.currentTaskId;
+                this.detailType = model.detailType;
+                this.duration = model.duration;
+                this.fileEncoding = model.fileEncoding;
+                this.fileType = model.fileType;
+                this.importExtConfig = model.importExtConfig;
+            } 
+
             /**
              * <p>Indicates whether the task is a scheduled task for historical data cleanup. This parameter is a reserved parameter and is valid only if the value of DetailType is CRON_CLEAR_DATA.</p>
              * 
@@ -818,6 +871,17 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private Boolean logic; 
             private String searchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.searchName = model.searchName;
+            } 
+
             /**
              * <p>The database ID.</p>
              * 
@@ -925,6 +989,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Database> database; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseList model) {
+                this.database = model.database;
+            } 
 
             /**
              * Database.
@@ -1092,6 +1163,23 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String rbSQL; 
             private String rbSQLType; 
             private String sqlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderDetail model) {
+                this.actualAffectRows = model.actualAffectRows;
+                this.attachmentName = model.attachmentName;
+                this.classify = model.classify;
+                this.estimateAffectRows = model.estimateAffectRows;
+                this.exeSQL = model.exeSQL;
+                this.ignoreAffectRows = model.ignoreAffectRows;
+                this.ignoreAffectRowsReason = model.ignoreAffectRowsReason;
+                this.rbAttachmentName = model.rbAttachmentName;
+                this.rbSQL = model.rbSQL;
+                this.rbSQLType = model.rbSQLType;
+                this.sqlType = model.sqlType;
+            } 
 
             /**
              * <p>The number of affected rows that is obtained by the precheck.</p>
@@ -1289,6 +1377,15 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private String checkStep; 
             private String userTip; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskCheckDO model) {
+                this.checkStatus = model.checkStatus;
+                this.checkStep = model.checkStep;
+                this.userTip = model.userTip;
+            } 
+
             /**
              * <p>The state of the precheck. Valid values:</p>
              * <ul>
@@ -1372,6 +1469,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskCheckDO> taskCheckDO; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckDetail model) {
+                this.taskCheckDO = model.taskCheckDO;
+            } 
 
             /**
              * TaskCheckDO.
@@ -1479,6 +1583,18 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
             private OrderDetail orderDetail; 
             private PreCheckDetail preCheckDetail; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataCorrectOrderDetail model) {
+                this.configDetail = model.configDetail;
+                this.databaseList = model.databaseList;
+                this.execMode = model.execMode;
+                this.orderDetail = model.orderDetail;
+                this.preCheckDetail = model.preCheckDetail;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The configurations of the ticket. This parameter is used to store the configuration information specific to a data change ticket type.</p>

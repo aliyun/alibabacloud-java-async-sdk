@@ -48,6 +48,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetInstanceResponseBody extends TeaModel {
         private Instance instance; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code that is returned.</p>
@@ -184,6 +199,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ownerIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerIdList model) {
+                this.ownerIds = model.ownerIds;
+            } 
+
             /**
              * OwnerIds.
              */
@@ -230,6 +252,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ownerNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerNameList model) {
+                this.ownerNames = model.ownerNames;
+            } 
 
             /**
              * OwnerNames.
@@ -289,6 +318,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String groupMode; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StandardGroup model) {
+                this.groupMode = model.groupMode;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The type of the control mode. Valid values:</p>
@@ -655,6 +692,38 @@ public class GetInstanceResponseBody extends TeaModel {
             private String state; 
             private Integer useDsql; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.dataLinkName = model.dataLinkName;
+                this.databasePassword = model.databasePassword;
+                this.databaseUser = model.databaseUser;
+                this.dbaId = model.dbaId;
+                this.dbaNickName = model.dbaNickName;
+                this.ddlOnline = model.ddlOnline;
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.ecsRegion = model.ecsRegion;
+                this.envType = model.envType;
+                this.exportTimeout = model.exportTimeout;
+                this.host = model.host;
+                this.instanceAlias = model.instanceAlias;
+                this.instanceId = model.instanceId;
+                this.instanceSource = model.instanceSource;
+                this.instanceType = model.instanceType;
+                this.ownerIdList = model.ownerIdList;
+                this.ownerNameList = model.ownerNameList;
+                this.port = model.port;
+                this.queryTimeout = model.queryTimeout;
+                this.safeRuleId = model.safeRuleId;
+                this.sellSitd = model.sellSitd;
+                this.sid = model.sid;
+                this.standardGroup = model.standardGroup;
+                this.state = model.state;
+                this.useDsql = model.useDsql;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The name of the database link for the database instance.</p>

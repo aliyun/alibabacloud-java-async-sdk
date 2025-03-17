@@ -52,6 +52,10 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataImportSQLPreCheckDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.preCheckSQLDetailList = model.preCheckSQLDetailList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -242,6 +258,16 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             private Long sqlId; 
             private String sqlType; 
             private String statusCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckSQLDetailList model) {
+                this.skip = model.skip;
+                this.sqlId = model.sqlId;
+                this.sqlType = model.sqlType;
+                this.statusCode = model.statusCode;
+            } 
 
             /**
              * <p>Indicates whether the precheck of the SQL statement was skipped. Valid values:</p>

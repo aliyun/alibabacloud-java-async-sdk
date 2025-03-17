@@ -48,6 +48,10 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkResultStatus
      */
@@ -89,6 +93,17 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSQLReviewCheckResultStatusResponseBody model) {
+            this.checkResultStatus = model.checkResultStatus;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The result of the SQL review.</p>
@@ -239,6 +254,18 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             private Long forcePass; 
             private Long _new; 
             private Long unknown; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckStatusResult model) {
+                this.checkNotPass = model.checkNotPass;
+                this.checkPass = model.checkPass;
+                this.forceNotPass = model.forceNotPass;
+                this.forcePass = model.forcePass;
+                this._new = model._new;
+                this.unknown = model.unknown;
+            } 
 
             /**
              * <p>The number of SQL statements that failed to pass the review.</p>
@@ -405,6 +432,18 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             private Long useDmsDmlUnlock; 
             private Long useDmsToolkit; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLReviewResult model) {
+                this.mustImprove = model.mustImprove;
+                this.potentialIssue = model.potentialIssue;
+                this.suggestImprove = model.suggestImprove;
+                this.tableIndexSuggest = model.tableIndexSuggest;
+                this.useDmsDmlUnlock = model.useDmsDmlUnlock;
+                this.useDmsToolkit = model.useDmsToolkit;
+            } 
+
             /**
              * <p>The number of SQL statements that must be modified.</p>
              * 
@@ -545,6 +584,16 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
             private Long checkedCount; 
             private SQLReviewResult SQLReviewResult; 
             private Long totalSQLCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckResultStatus model) {
+                this.checkStatusResult = model.checkStatusResult;
+                this.checkedCount = model.checkedCount;
+                this.SQLReviewResult = model.SQLReviewResult;
+                this.totalSQLCount = model.totalSQLCount;
+            } 
 
             /**
              * <p>The result of the SQL status check.</p>

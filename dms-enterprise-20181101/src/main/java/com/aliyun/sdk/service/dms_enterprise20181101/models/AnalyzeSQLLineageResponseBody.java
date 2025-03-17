@@ -48,6 +48,10 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         private LineageResult lineageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AnalyzeSQLLineageResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.lineageResult = model.lineageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -195,6 +210,14 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         public static final class Builder {
             private String calWay; 
             private String code; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessDetail model) {
+                this.calWay = model.calWay;
+                this.code = model.code;
+            } 
 
             /**
              * <p>The calculating method. Valid values:</p>
@@ -309,6 +332,17 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private ProcessDetail processDetail; 
             private String src; 
 
+            private Builder() {
+            } 
+
+            private Builder(Lineages model) {
+                this.dst = model.dst;
+                this.lineageType = model.lineageType;
+                this.operType = model.operType;
+                this.processDetail = model.processDetail;
+                this.src = model.src;
+            } 
+
             /**
              * <p>The target.</p>
              * 
@@ -411,6 +445,13 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the field.</p>
              * 
@@ -496,6 +537,16 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private String name; 
             private String source; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ObjectMetadata model) {
+                this.fields = model.fields;
+                this.name = model.name;
+                this.source = model.source;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The fields in the metatable.</p>
@@ -597,6 +648,14 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Lineages> lineages; 
             private java.util.List<ObjectMetadata> objectMetadata; 
+
+            private Builder() {
+            } 
+
+            private Builder(LineageResult model) {
+                this.lineages = model.lineages;
+                this.objectMetadata = model.objectMetadata;
+            } 
 
             /**
              * <p>The details about the lineage.</p>

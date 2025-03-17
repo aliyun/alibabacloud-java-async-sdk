@@ -48,6 +48,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return edgeIds
      */
@@ -89,6 +93,17 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddTaskFlowEdgesResponseBody model) {
+            this.edgeIds = model.edgeIds;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The list of task flow edge IDs.</p>
@@ -183,6 +198,13 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> edgeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdgeIds model) {
+                this.edgeId = model.edgeId;
+            } 
 
             /**
              * EdgeId.

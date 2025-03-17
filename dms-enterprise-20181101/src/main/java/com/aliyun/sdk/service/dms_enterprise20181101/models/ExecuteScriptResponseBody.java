@@ -48,6 +48,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ExecuteScriptResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Results> results; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteScriptResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -227,6 +242,17 @@ public class ExecuteScriptResponseBody extends TeaModel {
             private Long rowCount; 
             private java.util.List<java.util.Map<String, ?>> rows; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.columnNames = model.columnNames;
+                this.message = model.message;
+                this.rowCount = model.rowCount;
+                this.rows = model.rows;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The fields that are queried after the SQL statement is executed.</p>

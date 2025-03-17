@@ -48,6 +48,10 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return classificationResourceTemplateMap
      */
@@ -89,6 +93,17 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClassificationTemplateResponseBody model) {
+            this.classificationResourceTemplateMap = model.classificationResourceTemplateMap;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ClassificationResourceTemplateMap.
@@ -203,6 +218,16 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
             private String resourceType; 
             private Long templateId; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClassificationResourceTemplateMap model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.templateId = model.templateId;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * ResourceId.

@@ -36,6 +36,10 @@ public class DLResourceUri extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resourceType
      */
@@ -53,6 +57,14 @@ public class DLResourceUri extends TeaModel {
     public static final class Builder {
         private String resourceType; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLResourceUri model) {
+            this.resourceType = model.resourceType;
+            this.uri = model.uri;
+        } 
 
         /**
          * ResourceType.

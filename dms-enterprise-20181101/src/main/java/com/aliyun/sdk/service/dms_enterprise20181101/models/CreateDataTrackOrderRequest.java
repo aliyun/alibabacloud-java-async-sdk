@@ -57,7 +57,7 @@ public class CreateDataTrackOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -263,6 +263,17 @@ public class CreateDataTrackOrderRequest extends Request {
             private String jobStartTime; 
             private java.util.List<String> tableNames; 
             private java.util.List<String> trackTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.dbId = model.dbId;
+                this.jobEndTime = model.jobEndTime;
+                this.jobStartTime = model.jobStartTime;
+                this.tableNames = model.tableNames;
+                this.trackTypes = model.trackTypes;
+            } 
 
             /**
              * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>

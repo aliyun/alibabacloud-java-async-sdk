@@ -52,6 +52,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListUsersResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private UserList userList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.userList = model.userList;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -207,6 +223,13 @@ public class ListUsersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Integer> roleIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleIdList model) {
+                this.roleIds = model.roleIds;
+            } 
+
             /**
              * RoleIds.
              */
@@ -253,6 +276,13 @@ public class ListUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> roleNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleNameList model) {
+                this.roleNames = model.roleNames;
+            } 
 
             /**
              * RoleNames.
@@ -504,6 +534,30 @@ public class ListUsersResponseBody extends TeaModel {
             private String uid; 
             private String userId; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.curExecuteCount = model.curExecuteCount;
+                this.curResultCount = model.curResultCount;
+                this.dingRobot = model.dingRobot;
+                this.email = model.email;
+                this.lastLoginTime = model.lastLoginTime;
+                this.maxExecuteCount = model.maxExecuteCount;
+                this.maxResultCount = model.maxResultCount;
+                this.mobile = model.mobile;
+                this.nickName = model.nickName;
+                this.notificationMode = model.notificationMode;
+                this.parentUid = model.parentUid;
+                this.roleIdList = model.roleIdList;
+                this.roleNameList = model.roleNameList;
+                this.signatureMethod = model.signatureMethod;
+                this.state = model.state;
+                this.uid = model.uid;
+                this.userId = model.userId;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * <p>The number of queries that were performed on the current day.</p>
@@ -783,6 +837,13 @@ public class ListUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

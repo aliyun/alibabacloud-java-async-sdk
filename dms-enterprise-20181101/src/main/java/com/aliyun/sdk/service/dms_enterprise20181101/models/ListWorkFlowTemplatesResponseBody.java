@@ -48,6 +48,10 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private WorkFlowTemplates workFlowTemplates; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkFlowTemplatesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workFlowTemplates = model.workFlowTemplates;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -252,6 +267,19 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             private Integer position; 
             private Long templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNode model) {
+                this.comment = model.comment;
+                this.createUserId = model.createUserId;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeType = model.nodeType;
+                this.position = model.position;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The description of the approval node.</p>
              * 
@@ -372,6 +400,13 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<WorkflowNode> workflowNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkflowNodes model) {
+                this.workflowNode = model.workflowNode;
+            } 
+
             /**
              * WorkflowNode.
              */
@@ -490,6 +525,19 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             private Long templateId; 
             private String templateName; 
             private WorkflowNodes workflowNodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkFlowTemplate model) {
+                this.comment = model.comment;
+                this.createUserId = model.createUserId;
+                this.enabled = model.enabled;
+                this.isSystem = model.isSystem;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.workflowNodes = model.workflowNodes;
+            } 
 
             /**
              * <p>The description of the approval template.</p>
@@ -611,6 +659,13 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<WorkFlowTemplate> workFlowTemplate; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkFlowTemplates model) {
+                this.workFlowTemplate = model.workFlowTemplate;
+            } 
 
             /**
              * WorkFlowTemplate.

@@ -48,6 +48,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         private String requestId; 
         private StructSyncJobAnalyzeResult structSyncJobAnalyzeResult; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStructSyncJobAnalyzeResultResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.structSyncJobAnalyzeResult = model.structSyncJobAnalyzeResult;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -204,6 +219,15 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private String sourceTableName; 
             private String targetTableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.script = model.script;
+                this.sourceTableName = model.sourceTableName;
+                this.targetTableName = model.targetTableName;
+            } 
+
             /**
              * <p>The SQL script.</p>
              */
@@ -285,6 +309,14 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private String compareType; 
             private Long count; 
 
+            private Builder() {
+            } 
+
+            private Builder(SummaryList model) {
+                this.compareType = model.compareType;
+                this.count = model.count;
+            } 
+
             /**
              * <p>The type of the comparison. Valid values:</p>
              * <ul>
@@ -364,6 +396,14 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ResultList> resultList; 
             private java.util.List<SummaryList> summaryList; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructSyncJobAnalyzeResult model) {
+                this.resultList = model.resultList;
+                this.summaryList = model.summaryList;
+            } 
 
             /**
              * <p>The details of the analysis results.</p>

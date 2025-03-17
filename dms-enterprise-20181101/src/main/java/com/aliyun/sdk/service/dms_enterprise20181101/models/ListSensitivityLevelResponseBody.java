@@ -48,6 +48,10 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SensitivityLevelList> sensitivityLevelList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSensitivityLevelResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sensitivityLevelList = model.sensitivityLevelList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -219,6 +234,16 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             private String name; 
             private String templateId; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitivityLevelList model) {
+                this.isPlain = model.isPlain;
+                this.name = model.name;
+                this.templateId = model.templateId;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>Indicates whether the fields of the sensitive level are displayed in plaintext.</p>

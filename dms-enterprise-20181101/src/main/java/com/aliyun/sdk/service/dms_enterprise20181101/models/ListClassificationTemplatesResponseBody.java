@@ -48,6 +48,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TemplateList> templateList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClassificationTemplatesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.templateList = model.templateList;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -219,6 +234,16 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             private String remark; 
             private Long templateId; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateList model) {
+                this.name = model.name;
+                this.remark = model.remark;
+                this.templateId = model.templateId;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The name of the classification template.</p>

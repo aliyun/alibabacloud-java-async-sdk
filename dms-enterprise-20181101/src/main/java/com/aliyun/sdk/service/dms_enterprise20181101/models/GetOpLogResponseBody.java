@@ -52,6 +52,10 @@ public class GetOpLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class GetOpLogResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOpLogResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.opLogDetails = model.opLogDetails;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -291,6 +307,20 @@ public class GetOpLogResponseBody extends TeaModel {
             private String userId; 
             private String userNick; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpLogDetail model) {
+                this.database = model.database;
+                this.module = model.module;
+                this.opContent = model.opContent;
+                this.opTime = model.opTime;
+                this.opUserId = model.opUserId;
+                this.orderId = model.orderId;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
+
             /**
              * <p>The endpoint of the database instance.</p>
              * <blockquote>
@@ -428,6 +458,13 @@ public class GetOpLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OpLogDetail> opLogDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpLogDetails model) {
+                this.opLogDetail = model.opLogDetail;
+            } 
 
             /**
              * OpLogDetail.

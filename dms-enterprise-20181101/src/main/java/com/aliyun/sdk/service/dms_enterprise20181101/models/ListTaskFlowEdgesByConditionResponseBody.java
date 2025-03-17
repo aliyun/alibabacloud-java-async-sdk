@@ -48,6 +48,10 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return edges
      */
@@ -89,6 +93,17 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowEdgesByConditionResponseBody model) {
+            this.edges = model.edges;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The list of task flow edges.</p>
@@ -208,6 +223,15 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
             private Long nodeEnd; 
             private Long nodeFrom; 
 
+            private Builder() {
+            } 
+
+            private Builder(Edge model) {
+                this.id = model.id;
+                this.nodeEnd = model.nodeEnd;
+                this.nodeFrom = model.nodeFrom;
+            } 
+
             /**
              * <p>The ID of the task flow edge.</p>
              * 
@@ -279,6 +303,13 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Edge> edge; 
+
+            private Builder() {
+            } 
+
+            private Builder(Edges model) {
+                this.edge = model.edge;
+            } 
 
             /**
              * Edge.

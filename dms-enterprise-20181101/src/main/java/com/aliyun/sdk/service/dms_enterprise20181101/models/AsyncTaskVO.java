@@ -56,6 +56,10 @@ public class AsyncTaskVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetId
      */
@@ -113,6 +117,19 @@ public class AsyncTaskVO extends TeaModel {
         private Integer taskStatus; 
         private Integer taskType; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AsyncTaskVO model) {
+            this.datasetId = model.datasetId;
+            this.id = model.id;
+            this.remark = model.remark;
+            this.taskName = model.taskName;
+            this.taskStatus = model.taskStatus;
+            this.taskType = model.taskType;
+            this.userId = model.userId;
+        } 
 
         /**
          * DatasetId.

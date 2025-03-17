@@ -48,6 +48,10 @@ public class CreateTaskFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dagId
      */
@@ -89,6 +93,17 @@ public class CreateTaskFlowResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTaskFlowResponseBody model) {
+            this.dagId = model.dagId;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the task flow.</p>

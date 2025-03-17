@@ -48,6 +48,10 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         private ProjectFlow projectFlow; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableDesignProjectFlowResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.projectFlow = model.projectFlow;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -256,6 +271,19 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             private Boolean publishAnchor; 
             private java.util.List<String> publishStrategies; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlowNodeArray model) {
+                this.backToDesign = model.backToDesign;
+                this.canSkip = model.canSkip;
+                this.nodeRole = model.nodeRole;
+                this.nodeTitle = model.nodeTitle;
+                this.position = model.position;
+                this.publishAnchor = model.publishAnchor;
+                this.publishStrategies = model.publishStrategies;
+            } 
+
             /**
              * <p>Indicates whether the ticket can be returned to the schema design node. Valid values:</p>
              * <ul>
@@ -415,6 +443,16 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             private java.util.List<FlowNodeArray> flowNodeArray; 
             private String ruleComment; 
             private String ruleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectFlow model) {
+                this.currentPosition = model.currentPosition;
+                this.flowNodeArray = model.flowNodeArray;
+                this.ruleComment = model.ruleComment;
+                this.ruleName = model.ruleName;
+            } 
 
             /**
              * <p>The position of the current node in the process.</p>

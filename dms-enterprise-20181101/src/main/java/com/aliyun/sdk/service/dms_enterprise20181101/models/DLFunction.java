@@ -72,6 +72,10 @@ public class DLFunction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalogName
      */
@@ -161,6 +165,23 @@ public class DLFunction extends TeaModel {
         private String ownerName; 
         private String ownerType; 
         private java.util.List<DLResourceUri> resourceUris; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLFunction model) {
+            this.catalogName = model.catalogName;
+            this.className = model.className;
+            this.createTime = model.createTime;
+            this.creatorId = model.creatorId;
+            this.dbName = model.dbName;
+            this.functionName = model.functionName;
+            this.functionType = model.functionType;
+            this.modifierId = model.modifierId;
+            this.ownerName = model.ownerName;
+            this.ownerType = model.ownerType;
+            this.resourceUris = model.resourceUris;
+        } 
 
         /**
          * CatalogName.

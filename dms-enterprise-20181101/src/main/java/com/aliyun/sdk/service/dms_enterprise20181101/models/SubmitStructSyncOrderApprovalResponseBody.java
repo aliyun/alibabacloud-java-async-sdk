@@ -48,6 +48,10 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long workflowInstanceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitStructSyncOrderApprovalResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workflowInstanceId = model.workflowInstanceId;
+        } 
 
         /**
          * <p>The error code.</p>

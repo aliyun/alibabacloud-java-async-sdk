@@ -48,6 +48,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private UploadFileJobDetail uploadFileJobDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserUploadFileJobResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.uploadFileJobDetail = model.uploadFileJobDetail;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -203,6 +218,15 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private String bucketName; 
             private String endpoint; 
             private String objectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadOSSParam model) {
+                this.bucketName = model.bucketName;
+                this.endpoint = model.endpoint;
+                this.objectName = model.objectName;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>
@@ -395,6 +419,23 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private String uploadType; 
             private String uploadURL; 
             private Long uploadedSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadFileJobDetail model) {
+                this.attachmentKey = model.attachmentKey;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.fileSource = model.fileSource;
+                this.jobKey = model.jobKey;
+                this.jobStatus = model.jobStatus;
+                this.jobStatusDesc = model.jobStatusDesc;
+                this.uploadOSSParam = model.uploadOSSParam;
+                this.uploadType = model.uploadType;
+                this.uploadURL = model.uploadURL;
+                this.uploadedSize = model.uploadedSize;
+            } 
 
             /**
              * <p>The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.</p>

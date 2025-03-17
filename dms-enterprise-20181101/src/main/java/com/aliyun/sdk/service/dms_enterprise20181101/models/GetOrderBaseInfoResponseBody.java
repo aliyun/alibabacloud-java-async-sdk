@@ -48,6 +48,10 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         private OrderBaseInfo orderBaseInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrderBaseInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.orderBaseInfo = model.orderBaseInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -180,6 +195,13 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> userIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedUserList model) {
+                this.userIds = model.userIds;
+            } 
+
             /**
              * UserIds.
              */
@@ -226,6 +248,13 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> userNicks; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedUserNickList model) {
+                this.userNicks = model.userNicks;
+            } 
 
             /**
              * UserNicks.
@@ -441,6 +470,27 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             private String statusDesc; 
             private Long workflowInstanceId; 
             private String workflowStatusDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderBaseInfo model) {
+                this.attachmentKey = model.attachmentKey;
+                this.comment = model.comment;
+                this.committer = model.committer;
+                this.committerId = model.committerId;
+                this.createTime = model.createTime;
+                this.lastModifyTime = model.lastModifyTime;
+                this.orderId = model.orderId;
+                this.originAttachmentName = model.originAttachmentName;
+                this.pluginType = model.pluginType;
+                this.relatedUserList = model.relatedUserList;
+                this.relatedUserNickList = model.relatedUserNickList;
+                this.statusCode = model.statusCode;
+                this.statusDesc = model.statusDesc;
+                this.workflowInstanceId = model.workflowInstanceId;
+                this.workflowStatusDesc = model.workflowStatusDesc;
+            } 
 
             /**
              * <p>The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>

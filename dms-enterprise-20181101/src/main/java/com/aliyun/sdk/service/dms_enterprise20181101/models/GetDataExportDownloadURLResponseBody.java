@@ -48,6 +48,10 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadURLResult
      */
@@ -89,6 +93,17 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataExportDownloadURLResponseBody model) {
+            this.downloadURLResult = model.downloadURLResult;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the download URL of the file that records the export results for the ticket.</p>
@@ -207,6 +222,15 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             private Boolean hasResult; 
             private String tipMessage; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(DownloadURLResult model) {
+                this.hasResult = model.hasResult;
+                this.tipMessage = model.tipMessage;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>Indicates whether export results are available for download. Valid values:</p>

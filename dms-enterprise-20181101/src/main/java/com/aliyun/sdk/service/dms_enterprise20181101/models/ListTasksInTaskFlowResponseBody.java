@@ -48,6 +48,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Tasks tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksInTaskFlowResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -268,6 +283,20 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             private String nodeType; 
             private String timeVariables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.graphParam = model.graphParam;
+                this.nodeConfig = model.nodeConfig;
+                this.nodeContent = model.nodeContent;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeOutput = model.nodeOutput;
+                this.nodeType = model.nodeType;
+                this.timeVariables = model.timeVariables;
+            } 
+
             /**
              * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
              * 
@@ -394,6 +423,13 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.

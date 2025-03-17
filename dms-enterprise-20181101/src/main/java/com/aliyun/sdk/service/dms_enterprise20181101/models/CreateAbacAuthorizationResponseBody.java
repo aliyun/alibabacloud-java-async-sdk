@@ -48,6 +48,10 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateAbacAuthorizationResponseBody extends TeaModel {
         private String requestId; 
         private String result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAbacAuthorizationResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

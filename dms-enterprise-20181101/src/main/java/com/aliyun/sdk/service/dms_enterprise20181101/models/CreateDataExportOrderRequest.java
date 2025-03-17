@@ -71,7 +71,7 @@ public class CreateDataExportOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,6 +339,17 @@ public class CreateDataExportOrderRequest extends Request {
             private java.util.List<String> keys; 
             private java.util.List<String> watermarkTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Watermark model) {
+                this.columnName = model.columnName;
+                this.dataWatermark = model.dataWatermark;
+                this.fileWatermark = model.fileWatermark;
+                this.keys = model.keys;
+                this.watermarkTypes = model.watermarkTypes;
+            } 
+
             /**
              * <p>The field into which the watermark is to be embedded.</p>
              * 
@@ -529,6 +540,21 @@ public class CreateDataExportOrderRequest extends Request {
             private Long instanceId; 
             private Boolean logic; 
             private Watermark watermark; 
+
+            private Builder() {
+            } 
+
+            private Builder(PluginParam model) {
+                this.affectRows = model.affectRows;
+                this.classify = model.classify;
+                this.dbId = model.dbId;
+                this.exeSQL = model.exeSQL;
+                this.ignoreAffectRows = model.ignoreAffectRows;
+                this.ignoreAffectRowsReason = model.ignoreAffectRowsReason;
+                this.instanceId = model.instanceId;
+                this.logic = model.logic;
+                this.watermark = model.watermark;
+            } 
 
             /**
              * <p>The estimated number of data rows to be affected.</p>

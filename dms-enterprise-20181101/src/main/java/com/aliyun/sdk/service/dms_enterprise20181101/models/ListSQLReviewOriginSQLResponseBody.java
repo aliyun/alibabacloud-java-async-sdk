@@ -52,6 +52,10 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSQLReviewOriginSQLResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.originSQLList = model.originSQLList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code that is returned.</p>
@@ -326,6 +342,23 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             private String SQLReviewQueryKey; 
             private String sqlHash; 
             private String statusDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginSQLList model) {
+                this.checkStatus = model.checkStatus;
+                this.checkedTime = model.checkedTime;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.reviewSummary = model.reviewSummary;
+                this.SQLContent = model.SQLContent;
+                this.SQLId = model.SQLId;
+                this.SQLName = model.SQLName;
+                this.SQLReviewQueryKey = model.SQLReviewQueryKey;
+                this.sqlHash = model.sqlHash;
+                this.statusDesc = model.statusDesc;
+            } 
 
             /**
              * <p>The review status of the SQL statement. Valid values:</p>

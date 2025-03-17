@@ -48,6 +48,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         private OwnerApplyOrderDetail ownerApplyOrderDetail; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOwnerApplyOrderDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.ownerApplyOrderDetail = model.ownerApplyOrderDetail;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -240,6 +255,18 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private String searchName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceDetail model) {
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.ownerIds = model.ownerIds;
+                this.ownerNickNames = model.ownerNickNames;
+                this.searchName = model.searchName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The type of the database engine.</p>
              * 
@@ -366,6 +393,15 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private ResourceDetail resourceDetail; 
             private String targetId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.logic = model.logic;
+                this.resourceDetail = model.resourceDetail;
+                this.targetId = model.targetId;
+            } 
+
             /**
              * <p>Indicates whether the database is a logical database. Valid values:</p>
              * <ul>
@@ -450,6 +486,14 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String applyType; 
             private java.util.List<Resources> resources; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerApplyOrderDetail model) {
+                this.applyType = model.applyType;
+                this.resources = model.resources;
+            } 
 
             /**
              * <p>The type of the submitted ticket. Valid values:</p>

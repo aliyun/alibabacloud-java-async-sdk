@@ -48,6 +48,10 @@ public class ListSLARulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListSLARulesResponseBody extends TeaModel {
         private String requestId; 
         private SLARuleList SLARuleList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSLARulesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.SLARuleList = model.SLARuleList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -232,6 +247,17 @@ public class ListSLARulesResponseBody extends TeaModel {
             private Long nodeId; 
             private Integer ruleType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SLARule model) {
+                this.dagId = model.dagId;
+                this.id = model.id;
+                this.intervalMinutes = model.intervalMinutes;
+                this.nodeId = model.nodeId;
+                this.ruleType = model.ruleType;
+            } 
+
             /**
              * <p>The ID of the task flow.</p>
              * 
@@ -329,6 +355,13 @@ public class ListSLARulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SLARule> SLARule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SLARuleList model) {
+                this.SLARule = model.SLARule;
+            } 
 
             /**
              * SLARule.

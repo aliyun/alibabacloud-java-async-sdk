@@ -52,6 +52,10 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private UserPermissions userPermissions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatabaseUserPermssionsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.userPermissions = model.userPermissions;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -263,6 +279,18 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             private String permType; 
             private String userAccessId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PermDetail model) {
+                this.createDate = model.createDate;
+                this.expireDate = model.expireDate;
+                this.extraData = model.extraData;
+                this.originFrom = model.originFrom;
+                this.permType = model.permType;
+                this.userAccessId = model.userAccessId;
+            } 
+
             /**
              * <p>The time when the permission was created.</p>
              * 
@@ -372,6 +400,13 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PermDetail> permDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermDetails model) {
+                this.permDetail = model.permDetail;
+            } 
 
             /**
              * PermDetail.
@@ -588,6 +623,27 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             private String userId; 
             private String userNickName; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserPermission model) {
+                this.alias = model.alias;
+                this.columnName = model.columnName;
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.dsType = model.dsType;
+                this.envType = model.envType;
+                this.instanceId = model.instanceId;
+                this.logic = model.logic;
+                this.permDetails = model.permDetails;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+                this.userId = model.userId;
+                this.userNickName = model.userNickName;
+            } 
+
             /**
              * <p>The alias of the database instance.</p>
              * 
@@ -788,6 +844,13 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserPermission> userPermission; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserPermissions model) {
+                this.userPermission = model.userPermission;
+            } 
 
             /**
              * UserPermission.

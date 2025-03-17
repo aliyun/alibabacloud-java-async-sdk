@@ -48,6 +48,10 @@ public class DeleteAbacPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deletePolicyResult
      */
@@ -89,6 +93,17 @@ public class DeleteAbacPolicyResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAbacPolicyResponseBody model) {
+            this.deletePolicyResult = model.deletePolicyResult;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * DeletePolicyResult.

@@ -56,6 +56,10 @@ public class DescribeDifyDefaultVpcResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeDifyDefaultVpcResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDifyDefaultVpcResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -219,6 +236,14 @@ public class DescribeDifyDefaultVpcResponseBody extends TeaModel {
         public static final class Builder {
             private String defaultVpcId; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.defaultVpcId = model.defaultVpcId;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * DefaultVpcId.

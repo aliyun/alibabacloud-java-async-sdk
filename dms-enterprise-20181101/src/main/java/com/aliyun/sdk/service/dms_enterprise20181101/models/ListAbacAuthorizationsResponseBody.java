@@ -52,6 +52,10 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizationList
      */
@@ -101,6 +105,18 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAbacAuthorizationsResponseBody model) {
+            this.authorizationList = model.authorizationList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AuthorizationList.
@@ -259,6 +275,19 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
             private Long policyId; 
             private String policyName; 
             private String policySource; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizationList model) {
+                this.authorizationId = model.authorizationId;
+                this.identityId = model.identityId;
+                this.identityName = model.identityName;
+                this.identityType = model.identityType;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policySource = model.policySource;
+            } 
 
             /**
              * AuthorizationId.

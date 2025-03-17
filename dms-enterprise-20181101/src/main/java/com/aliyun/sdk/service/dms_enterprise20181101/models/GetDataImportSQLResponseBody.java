@@ -48,6 +48,10 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         private String requestId; 
         private SQLDetail SQLDetail; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataImportSQLResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.SQLDetail = model.SQLDetail;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -183,6 +198,13 @@ public class GetDataImportSQLResponseBody extends TeaModel {
 
         public static final class Builder {
             private String execSql; 
+
+            private Builder() {
+            } 
+
+            private Builder(SQLDetail model) {
+                this.execSql = model.execSql;
+            } 
 
             /**
              * <p>The SQL script.</p>

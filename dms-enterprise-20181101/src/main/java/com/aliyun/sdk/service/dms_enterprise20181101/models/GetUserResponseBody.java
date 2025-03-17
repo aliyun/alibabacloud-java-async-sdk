@@ -48,6 +48,10 @@ public class GetUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetUserResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -184,6 +199,13 @@ public class GetUserResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Integer> roleIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleIdList model) {
+                this.roleIds = model.roleIds;
+            } 
+
             /**
              * RoleIds.
              */
@@ -230,6 +252,13 @@ public class GetUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> roleNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleNameList model) {
+                this.roleNames = model.roleNames;
+            } 
 
             /**
              * RoleNames.
@@ -481,6 +510,30 @@ public class GetUserResponseBody extends TeaModel {
             private String uid; 
             private String userId; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.curExecuteCount = model.curExecuteCount;
+                this.curResultCount = model.curResultCount;
+                this.dingRobot = model.dingRobot;
+                this.email = model.email;
+                this.lastLoginTime = model.lastLoginTime;
+                this.maxExecuteCount = model.maxExecuteCount;
+                this.maxResultCount = model.maxResultCount;
+                this.mobile = model.mobile;
+                this.nickName = model.nickName;
+                this.notificationMode = model.notificationMode;
+                this.parentUid = model.parentUid;
+                this.roleIdList = model.roleIdList;
+                this.roleNameList = model.roleNameList;
+                this.signatureMethod = model.signatureMethod;
+                this.state = model.state;
+                this.uid = model.uid;
+                this.userId = model.userId;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * <p>The number of queries that are performed on the current day.</p>

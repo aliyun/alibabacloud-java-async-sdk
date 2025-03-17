@@ -48,6 +48,10 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TableMetaList> tableMetaList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataTrackJobTableMetaResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tableMetaList = model.tableMetaList;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -232,6 +247,17 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             private String columnType; 
             private Boolean fictive; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.charset = model.charset;
+                this.columnName = model.columnName;
+                this.columnPosition = model.columnPosition;
+                this.columnType = model.columnType;
+                this.fictive = model.fictive;
+            } 
+
             /**
              * <p>The name of the character set.</p>
              * 
@@ -353,6 +379,15 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
             private java.util.List<Columns> columns; 
             private String schemaName; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableMetaList model) {
+                this.columns = model.columns;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The information about columns.</p>

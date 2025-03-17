@@ -48,6 +48,10 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         private String requestId; 
         private Integer ruleId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDesensitizationRuleResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code that is returned.</p>

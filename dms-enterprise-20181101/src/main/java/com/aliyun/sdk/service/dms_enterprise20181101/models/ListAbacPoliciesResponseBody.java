@@ -56,6 +56,10 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         private Boolean success; 
         private Long tid; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAbacPoliciesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.policyList = model.policyList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tid = model.tid;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ErrorCode.
@@ -267,6 +284,18 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
             private String abacPolicyName; 
             private String abacPolicySource; 
             private Long creatorId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyList model) {
+                this.abacPolicyContent = model.abacPolicyContent;
+                this.abacPolicyDesc = model.abacPolicyDesc;
+                this.abacPolicyId = model.abacPolicyId;
+                this.abacPolicyName = model.abacPolicyName;
+                this.abacPolicySource = model.abacPolicySource;
+                this.creatorId = model.creatorId;
+            } 
 
             /**
              * AbacPolicyContent.

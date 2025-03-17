@@ -62,7 +62,7 @@ public class CreateStructSyncOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -278,6 +278,16 @@ public class CreateStructSyncOrderRequest extends Request {
             private Boolean logic; 
             private String versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.dbId = model.dbId;
+                this.dbSearchName = model.dbSearchName;
+                this.logic = model.logic;
+                this.versionId = model.versionId;
+            } 
+
             /**
              * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
              * <p>This parameter is required.</p>
@@ -379,6 +389,14 @@ public class CreateStructSyncOrderRequest extends Request {
             private String sourceTableName; 
             private String targetTableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableInfoList model) {
+                this.sourceTableName = model.sourceTableName;
+                this.targetTableName = model.targetTableName;
+            } 
+
             /**
              * <p>The name of the source table.</p>
              * 
@@ -477,6 +495,16 @@ public class CreateStructSyncOrderRequest extends Request {
             private String dbSearchName; 
             private Boolean logic; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.dbId = model.dbId;
+                this.dbSearchName = model.dbSearchName;
+                this.logic = model.logic;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
@@ -607,6 +635,16 @@ public class CreateStructSyncOrderRequest extends Request {
             private Source source; 
             private java.util.List<TableInfoList> tableInfoList; 
             private Target target; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.ignoreError = model.ignoreError;
+                this.source = model.source;
+                this.tableInfoList = model.tableInfoList;
+                this.target = model.target;
+            } 
 
             /**
              * <p>Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:</p>

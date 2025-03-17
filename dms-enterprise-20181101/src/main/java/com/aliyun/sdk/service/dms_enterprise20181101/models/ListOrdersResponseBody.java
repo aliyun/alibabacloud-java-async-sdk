@@ -52,6 +52,10 @@ public class ListOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListOrdersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOrdersResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.orders = model.orders;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -303,6 +319,21 @@ public class ListOrdersResponseBody extends TeaModel {
             private String statusCode; 
             private String statusDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.comment = model.comment;
+                this.committer = model.committer;
+                this.committerId = model.committerId;
+                this.createTime = model.createTime;
+                this.lastModifyTime = model.lastModifyTime;
+                this.orderId = model.orderId;
+                this.pluginType = model.pluginType;
+                this.statusCode = model.statusCode;
+                this.statusDesc = model.statusDesc;
+            } 
+
             /**
              * <p>The remarks of the ticket.</p>
              * 
@@ -450,6 +481,13 @@ public class ListOrdersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Order> order; 
+
+            private Builder() {
+            } 
+
+            private Builder(Orders model) {
+                this.order = model.order;
+            } 
 
             /**
              * Order.

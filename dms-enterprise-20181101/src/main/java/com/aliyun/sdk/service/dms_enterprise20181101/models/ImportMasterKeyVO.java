@@ -40,6 +40,10 @@ public class ImportMasterKeyVO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return encryptMekDataBase64
      */
@@ -65,6 +69,15 @@ public class ImportMasterKeyVO extends TeaModel {
         private String encryptMekDataBase64; 
         private Long mekId; 
         private java.util.List<Long> projectId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportMasterKeyVO model) {
+            this.encryptMekDataBase64 = model.encryptMekDataBase64;
+            this.mekId = model.mekId;
+            this.projectId = model.projectId;
+        } 
 
         /**
          * EncryptMekDataBase64.

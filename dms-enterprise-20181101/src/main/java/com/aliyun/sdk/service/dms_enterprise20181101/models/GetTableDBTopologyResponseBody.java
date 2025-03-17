@@ -48,6 +48,10 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBTopology
      */
@@ -89,6 +93,17 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableDBTopologyResponseBody model) {
+            this.DBTopology = model.DBTopology;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The topology of the data table.</p>
@@ -203,6 +218,15 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String tableId; 
             private String tableName; 
             private String tableType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableList model) {
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+                this.tableType = model.tableType;
+            } 
 
             /**
              * <p>The ID of the table.</p>
@@ -323,6 +347,17 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String dbType; 
             private String envType; 
             private java.util.List<TableList> tableList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseList model) {
+                this.dbId = model.dbId;
+                this.dbName = model.dbName;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.tableList = model.tableList;
+            } 
 
             /**
              * <p>The ID of the database.</p>
@@ -476,6 +511,17 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private Integer port; 
             private String sid; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceList model) {
+                this.databaseList = model.databaseList;
+                this.dbType = model.dbType;
+                this.host = model.host;
+                this.port = model.port;
+                this.sid = model.sid;
+            } 
+
             /**
              * <p>The physical databases.</p>
              */
@@ -590,6 +636,15 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private java.util.List<DataSourceList> dataSourceList; 
             private String tableGuid; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBTopology model) {
+                this.dataSourceList = model.dataSourceList;
+                this.tableGuid = model.tableGuid;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The data sources.</p>

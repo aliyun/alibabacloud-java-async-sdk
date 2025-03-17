@@ -67,7 +67,7 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -274,6 +274,14 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             private Long dbId; 
             private Boolean logic; 
 
+            private Builder() {
+            } 
+
+            private Builder(DbItemList model) {
+                this.dbId = model.dbId;
+                this.logic = model.logic;
+            } 
+
             /**
              * <p>The ID of the database. The database can be a physical database or a logical database.</p>
              * <ul>
@@ -443,6 +451,21 @@ public class CreateFreeLockCorrectOrderRequest extends Request {
             private String rollbackSQL; 
             private String rollbackSqlType; 
             private String sqlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.attachmentName = model.attachmentName;
+                this.classify = model.classify;
+                this.dbItemList = model.dbItemList;
+                this.execMode = model.execMode;
+                this.execSQL = model.execSQL;
+                this.rollbackAttachmentName = model.rollbackAttachmentName;
+                this.rollbackSQL = model.rollbackSQL;
+                this.rollbackSqlType = model.rollbackSqlType;
+                this.sqlType = model.sqlType;
+            } 
 
             /**
              * <p>The key of the attachment that contains the SQL statements used to change data. This parameter is not supported.</p>

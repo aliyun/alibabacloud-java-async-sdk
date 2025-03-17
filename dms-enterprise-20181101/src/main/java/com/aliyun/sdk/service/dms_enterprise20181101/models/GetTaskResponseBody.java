@@ -48,6 +48,10 @@ public class GetTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTaskResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Task task; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.task = model.task;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -267,6 +282,20 @@ public class GetTaskResponseBody extends TeaModel {
             private String nodeOutput; 
             private String nodeType; 
             private String timeVariables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.dagId = model.dagId;
+                this.graphParam = model.graphParam;
+                this.nodeConfig = model.nodeConfig;
+                this.nodeContent = model.nodeContent;
+                this.nodeName = model.nodeName;
+                this.nodeOutput = model.nodeOutput;
+                this.nodeType = model.nodeType;
+                this.timeVariables = model.timeVariables;
+            } 
 
             /**
              * <p>The ID of the task flow to which the node belongs.</p>

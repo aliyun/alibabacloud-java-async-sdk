@@ -48,6 +48,10 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detailInfo
      */
@@ -89,6 +93,17 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableDetailInfoResponseBody model) {
+            this.detailInfo = model.detailInfo;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the table.</p>
@@ -287,6 +302,22 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             private String description; 
             private Boolean nullable; 
             private String position; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.autoIncrement = model.autoIncrement;
+                this.columnId = model.columnId;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.description = model.description;
+                this.nullable = model.nullable;
+                this.position = model.position;
+            } 
 
             /**
              * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
@@ -493,6 +524,17 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             private String indexType; 
             private Boolean unique; 
 
+            private Builder() {
+            } 
+
+            private Builder(IndexList model) {
+                this.indexColumns = model.indexColumns;
+                this.indexId = model.indexId;
+                this.indexName = model.indexName;
+                this.indexType = model.indexType;
+                this.unique = model.unique;
+            } 
+
             /**
              * <p>The index column.</p>
              */
@@ -599,6 +641,14 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ColumnList> columnList; 
             private java.util.List<IndexList> indexList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfo model) {
+                this.columnList = model.columnList;
+                this.indexList = model.indexList;
+            } 
 
             /**
              * <p>The columns in the table.</p>

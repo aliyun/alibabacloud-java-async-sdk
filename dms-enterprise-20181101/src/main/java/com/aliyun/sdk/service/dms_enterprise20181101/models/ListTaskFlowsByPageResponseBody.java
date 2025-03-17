@@ -52,6 +52,10 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
         private Boolean success; 
         private TaskFlowList taskFlowList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowsByPageResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskFlowList = model.taskFlowList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -435,6 +451,32 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
             private String timeZoneId; 
             private Integer triggerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskFlow model) {
+                this.creatorId = model.creatorId;
+                this.creatorNickName = model.creatorNickName;
+                this.cronBeginDate = model.cronBeginDate;
+                this.cronEndDate = model.cronEndDate;
+                this.cronStr = model.cronStr;
+                this.cronSwitch = model.cronSwitch;
+                this.cronType = model.cronType;
+                this.dagName = model.dagName;
+                this.dagOwnerId = model.dagOwnerId;
+                this.dagOwnerNickName = model.dagOwnerNickName;
+                this.deployId = model.deployId;
+                this.description = model.description;
+                this.id = model.id;
+                this.latestInstanceStatus = model.latestInstanceStatus;
+                this.latestInstanceTime = model.latestInstanceTime;
+                this.scenarioId = model.scenarioId;
+                this.scheduleParam = model.scheduleParam;
+                this.status = model.status;
+                this.timeZoneId = model.timeZoneId;
+                this.triggerType = model.triggerType;
+            } 
+
             /**
              * <p>The ID of the user who created the task flow.</p>
              * 
@@ -713,6 +755,13 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskFlow> taskFlow; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskFlowList model) {
+                this.taskFlow = model.taskFlow;
+            } 
 
             /**
              * TaskFlow.

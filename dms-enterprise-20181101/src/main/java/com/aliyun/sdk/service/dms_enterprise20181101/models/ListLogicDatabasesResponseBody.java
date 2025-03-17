@@ -52,6 +52,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLogicDatabasesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.logicDatabaseList = model.logicDatabaseList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code that is returned.</p>
@@ -207,6 +223,13 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> databaseIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabaseIds model) {
+                this.databaseIds = model.databaseIds;
+            } 
+
             /**
              * DatabaseIds.
              */
@@ -254,6 +277,13 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ownerIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerIdList model) {
+                this.ownerIds = model.ownerIds;
+            } 
+
             /**
              * OwnerIds.
              */
@@ -300,6 +330,13 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ownerNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerNameList model) {
+                this.ownerNames = model.ownerNames;
+            } 
 
             /**
              * OwnerNames.
@@ -456,6 +493,22 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             private String schemaName; 
             private String searchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogicDatabase model) {
+                this.alias = model.alias;
+                this.databaseId = model.databaseId;
+                this.databaseIds = model.databaseIds;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.ownerIdList = model.ownerIdList;
+                this.ownerNameList = model.ownerNameList;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+            } 
+
             /**
              * <p>The alias of the logical database.</p>
              * 
@@ -608,6 +661,13 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogicDatabase> logicDatabase; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogicDatabaseList model) {
+                this.logicDatabase = model.logicDatabase;
+            } 
 
             /**
              * LogicDatabase.

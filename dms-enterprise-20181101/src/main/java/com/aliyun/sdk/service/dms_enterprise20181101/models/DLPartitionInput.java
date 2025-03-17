@@ -48,6 +48,10 @@ public class DLPartitionInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class DLPartitionInput extends TeaModel {
         private java.util.Map<String, String> parameters; 
         private DLStorageDescriptor storageDescriptor; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLPartitionInput model) {
+            this.createTime = model.createTime;
+            this.lastAccessTime = model.lastAccessTime;
+            this.parameters = model.parameters;
+            this.storageDescriptor = model.storageDescriptor;
+            this.values = model.values;
+        } 
 
         /**
          * CreateTime.

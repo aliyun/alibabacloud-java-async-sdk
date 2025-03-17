@@ -67,7 +67,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -276,6 +276,14 @@ public class CreateDataArchiveOrderRequest extends Request {
             private String tableName; 
             private String tableWhere; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableIncludes model) {
+                this.tableName = model.tableName;
+                this.tableWhere = model.tableWhere;
+            } 
+
             /**
              * <p>The table name.</p>
              * <p>This parameter is required.</p>
@@ -349,6 +357,14 @@ public class CreateDataArchiveOrderRequest extends Request {
         public static final class Builder {
             private String name; 
             private String pattern; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.pattern = model.pattern;
+            } 
 
             /**
              * Name.
@@ -555,6 +571,25 @@ public class CreateDataArchiveOrderRequest extends Request {
             private java.util.List<String> tableMapping; 
             private String targetInstanceHost; 
             private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.archiveMethod = model.archiveMethod;
+                this.cronStr = model.cronStr;
+                this.databaseId = model.databaseId;
+                this.logic = model.logic;
+                this.orderAfter = model.orderAfter;
+                this.runMethod = model.runMethod;
+                this.sourceCatalogName = model.sourceCatalogName;
+                this.sourceInstanceName = model.sourceInstanceName;
+                this.sourceSchemaName = model.sourceSchemaName;
+                this.tableIncludes = model.tableIncludes;
+                this.tableMapping = model.tableMapping;
+                this.targetInstanceHost = model.targetInstanceHost;
+                this.variables = model.variables;
+            } 
 
             /**
              * <p>The archiving destination to which you want to archive data. Valid values:</p>

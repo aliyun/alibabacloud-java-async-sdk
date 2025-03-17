@@ -48,6 +48,10 @@ public class BatchCreateDataLakePartitionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class BatchCreateDataLakePartitionsResponseBody extends TeaModel {
         private java.util.List<DLPartition> partitions; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchCreateDataLakePartitionsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.partitions = model.partitions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

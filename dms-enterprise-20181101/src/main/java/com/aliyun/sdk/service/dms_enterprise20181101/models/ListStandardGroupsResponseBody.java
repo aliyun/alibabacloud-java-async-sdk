@@ -48,6 +48,10 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<StandardGroupList> standardGroupList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStandardGroupsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.standardGroupList = model.standardGroupList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request fails.</p>
@@ -243,6 +258,18 @@ public class ListStandardGroupsResponseBody extends TeaModel {
             private String groupMode; 
             private String groupName; 
             private Long lastMenderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StandardGroupList model) {
+                this.dbType = model.dbType;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupMode = model.groupMode;
+                this.groupName = model.groupName;
+                this.lastMenderId = model.lastMenderId;
+            } 
 
             /**
              * <p>The type of the database engine. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>

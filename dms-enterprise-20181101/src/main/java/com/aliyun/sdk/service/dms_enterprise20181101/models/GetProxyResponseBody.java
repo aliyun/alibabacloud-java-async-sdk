@@ -92,6 +92,10 @@ public class GetProxyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creatorId
      */
@@ -221,6 +225,28 @@ public class GetProxyResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProxyResponseBody model) {
+            this.creatorId = model.creatorId;
+            this.creatorName = model.creatorName;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.httpsPort = model.httpsPort;
+            this.instanceId = model.instanceId;
+            this.privateEnable = model.privateEnable;
+            this.privateHost = model.privateHost;
+            this.protocolPort = model.protocolPort;
+            this.protocolType = model.protocolType;
+            this.proxyId = model.proxyId;
+            this.publicEnable = model.publicEnable;
+            this.publicHost = model.publicHost;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the user who enabled the secure access proxy feature.</p>

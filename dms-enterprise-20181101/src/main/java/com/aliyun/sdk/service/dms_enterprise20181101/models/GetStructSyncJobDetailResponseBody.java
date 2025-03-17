@@ -48,6 +48,10 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         private String requestId; 
         private StructSyncJobDetail structSyncJobDetail; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStructSyncJobDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.structSyncJobDetail = model.structSyncJobDetail;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -263,6 +278,20 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
             private Long sqlCount; 
             private Long tableAnalyzed; 
             private Long tableCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructSyncJobDetail model) {
+                this.DBTaskGroupId = model.DBTaskGroupId;
+                this.executeCount = model.executeCount;
+                this.jobStatus = model.jobStatus;
+                this.message = model.message;
+                this.securityRule = model.securityRule;
+                this.sqlCount = model.sqlCount;
+                this.tableAnalyzed = model.tableAnalyzed;
+                this.tableCount = model.tableCount;
+            } 
 
             /**
              * <p>The ID of the SQL task group.</p>

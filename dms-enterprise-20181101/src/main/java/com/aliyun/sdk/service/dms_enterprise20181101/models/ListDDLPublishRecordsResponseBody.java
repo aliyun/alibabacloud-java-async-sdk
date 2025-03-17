@@ -48,6 +48,10 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DDLPublishRecordList
      */
@@ -89,6 +93,17 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDDLPublishRecordsResponseBody model) {
+            this.DDLPublishRecordList = model.DDLPublishRecordList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the publishing records.</p>
@@ -239,6 +254,18 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private String statusDesc; 
             private String tableName; 
             private String taskJobStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishJobList model) {
+                this.DBTaskGroupId = model.DBTaskGroupId;
+                this.executeCount = model.executeCount;
+                this.scripts = model.scripts;
+                this.statusDesc = model.statusDesc;
+                this.tableName = model.tableName;
+                this.taskJobStatus = model.taskJobStatus;
+            } 
 
             /**
              * <p>The ID of the SQL task group.</p>
@@ -421,6 +448,19 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private String publishStrategy; 
             private String statusDesc; 
             private String taskJobStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishTaskInfoList model) {
+                this.dbId = model.dbId;
+                this.logic = model.logic;
+                this.planTime = model.planTime;
+                this.publishJobList = model.publishJobList;
+                this.publishStrategy = model.publishStrategy;
+                this.statusDesc = model.statusDesc;
+                this.taskJobStatus = model.taskJobStatus;
+            } 
 
             /**
              * <p>The ID of the database.</p>
@@ -662,6 +702,23 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private String riskLevel; 
             private String statusDesc; 
             private Long workflowInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DDLPublishRecordList model) {
+                this.auditExpireTime = model.auditExpireTime;
+                this.auditStatus = model.auditStatus;
+                this.comment = model.comment;
+                this.creatorId = model.creatorId;
+                this.finality = model.finality;
+                this.finalityReason = model.finalityReason;
+                this.publishStatus = model.publishStatus;
+                this.publishTaskInfoList = model.publishTaskInfoList;
+                this.riskLevel = model.riskLevel;
+                this.statusDesc = model.statusDesc;
+                this.workflowInstanceId = model.workflowInstanceId;
+            } 
 
             /**
              * <p>The time when the approval expires.</p>

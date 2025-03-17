@@ -56,6 +56,10 @@ public class DLSerdeInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -113,6 +117,19 @@ public class DLSerdeInfo extends TeaModel {
         private Integer serdeType; 
         private String serializationLib; 
         private String serializerClass; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLSerdeInfo model) {
+            this.description = model.description;
+            this.deserializerClass = model.deserializerClass;
+            this.name = model.name;
+            this.parameters = model.parameters;
+            this.serdeType = model.serdeType;
+            this.serializationLib = model.serializationLib;
+            this.serializerClass = model.serializerClass;
+        } 
 
         /**
          * Description.

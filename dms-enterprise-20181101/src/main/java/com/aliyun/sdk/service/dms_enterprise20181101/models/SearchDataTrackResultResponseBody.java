@@ -48,6 +48,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TrackResult trackResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchDataTrackResultResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.trackResult = model.trackResult;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -256,6 +271,19 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private String eventType; 
             private String rollSQL; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventList model) {
+                this.dataAfter = model.dataAfter;
+                this.dataBefore = model.dataBefore;
+                this.eventId = model.eventId;
+                this.eventLength = model.eventLength;
+                this.eventTimestamp = model.eventTimestamp;
+                this.eventType = model.eventType;
+                this.rollSQL = model.rollSQL;
+            } 
+
             /**
              * <p>The data records after you perform data operations in the database.</p>
              */
@@ -410,6 +438,16 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private String columnType; 
             private Boolean fictive; 
 
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.columnName = model.columnName;
+                this.columnPosition = model.columnPosition;
+                this.columnType = model.columnType;
+                this.fictive = model.fictive;
+            } 
+
             /**
              * <p>The name of the column.</p>
              * 
@@ -533,6 +571,16 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableInfoList model) {
+                this.columns = model.columns;
+                this.description = model.description;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The information about columns.</p>
              */
@@ -636,6 +684,15 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private java.util.List<EventList> eventList; 
             private java.util.List<TableInfoList> tableInfoList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrackResult model) {
+                this.eventList = model.eventList;
+                this.tableInfoList = model.tableInfoList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the event logs.</p>

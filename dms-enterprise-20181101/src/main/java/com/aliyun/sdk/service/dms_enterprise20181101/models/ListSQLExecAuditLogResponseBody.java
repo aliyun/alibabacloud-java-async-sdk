@@ -52,6 +52,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         private SQLExecAuditLogList SQLExecAuditLogList; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSQLExecAuditLogResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.SQLExecAuditLogList = model.SQLExecAuditLogList;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -363,6 +379,26 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLExecAuditLog model) {
+                this.affectRows = model.affectRows;
+                this.dbId = model.dbId;
+                this.elapsedTime = model.elapsedTime;
+                this.execState = model.execState;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.logic = model.logic;
+                this.opTime = model.opTime;
+                this.remark = model.remark;
+                this.SQL = model.SQL;
+                this.SQLType = model.SQLType;
+                this.schemaName = model.schemaName;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.</p>
              * 
@@ -578,6 +614,13 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SQLExecAuditLog> SQLExecAuditLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(SQLExecAuditLogList model) {
+                this.SQLExecAuditLog = model.SQLExecAuditLog;
+            } 
 
             /**
              * SQLExecAuditLog.

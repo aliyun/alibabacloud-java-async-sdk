@@ -64,6 +64,10 @@ public class DLFunctionInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return className
      */
@@ -137,6 +141,21 @@ public class DLFunctionInput extends TeaModel {
         private String ownerName; 
         private String ownerType; 
         private java.util.List<DLResourceUri> resourceUris; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLFunctionInput model) {
+            this.className = model.className;
+            this.createTime = model.createTime;
+            this.creatorId = model.creatorId;
+            this.functionName = model.functionName;
+            this.functionType = model.functionType;
+            this.modifierId = model.modifierId;
+            this.ownerName = model.ownerName;
+            this.ownerType = model.ownerType;
+            this.resourceUris = model.resourceUris;
+        } 
 
         /**
          * ClassName.

@@ -52,6 +52,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataArchiveOrderDetail
      */
@@ -101,6 +105,18 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataArchiveOrderDetailResponseBody model) {
+            this.dataArchiveOrderDetail = model.dataArchiveOrderDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The details of data archiving tickets.</p>
@@ -410,6 +426,30 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Boolean system; 
             private String tenantId; 
             private Boolean triggerOnce; 
+
+            private Builder() {
+            } 
+
+            private Builder(DagInfo model) {
+                this.creatorId = model.creatorId;
+                this.cronBeginDate = model.cronBeginDate;
+                this.cronEndDate = model.cronEndDate;
+                this.cronTrigger = model.cronTrigger;
+                this.DWDevelop = model.DWDevelop;
+                this.dagName = model.dagName;
+                this.dagOwnerId = model.dagOwnerId;
+                this.deployId = model.deployId;
+                this.description = model.description;
+                this.editDagId = model.editDagId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isPublic = model.isPublic;
+                this.legacy = model.legacy;
+                this.system = model.system;
+                this.tenantId = model.tenantId;
+                this.triggerOnce = model.triggerOnce;
+            } 
 
             /**
              * <p>The ID of the user who created the task flow.</p>
@@ -766,6 +806,21 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String groupName; 
             private Long id; 
             private Long lastMenderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StandardGroup model) {
+                this.dbType = model.dbType;
+                this.description = model.description;
+                this.freeOrStable = model.freeOrStable;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupMode = model.groupMode;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.lastMenderId = model.lastMenderId;
+            } 
 
             /**
              * <p>The type of the instance engine. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
@@ -1273,6 +1328,43 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Long tableCount; 
             private String tnsName; 
             private String unitType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbBaseInfo model) {
+                this.alias = model.alias;
+                this.alterTimeout = model.alterTimeout;
+                this.assetControl = model.assetControl;
+                this.catalogName = model.catalogName;
+                this.clusterNode = model.clusterNode;
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.dbaId = model.dbaId;
+                this.dbaName = model.dbaName;
+                this.description = model.description;
+                this.encoding = model.encoding;
+                this.envType = model.envType;
+                this.follow = model.follow;
+                this.host = model.host;
+                this.idc = model.idc;
+                this.idcTitle = model.idcTitle;
+                this.instanceId = model.instanceId;
+                this.instanceSource = model.instanceSource;
+                this.lastSyncTime = model.lastSyncTime;
+                this.level = model.level;
+                this.logic = model.logic;
+                this.ownerIds = model.ownerIds;
+                this.ownerNames = model.ownerNames;
+                this.port = model.port;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+                this.standardGroup = model.standardGroup;
+                this.state = model.state;
+                this.tableCount = model.tableCount;
+                this.tnsName = model.tnsName;
+                this.unitType = model.unitType;
+            } 
 
             /**
              * <p>The alias of the database instance.</p>
@@ -1830,6 +1922,25 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Long triggerType; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.businessTime = model.businessTime;
+                this.dagId = model.dagId;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.historyDagId = model.historyDagId;
+                this.id = model.id;
+                this.lastRunningContext = model.lastRunningContext;
+                this.msg = model.msg;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.triggerType = model.triggerType;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
              * 
@@ -2029,6 +2140,13 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String cronFireType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NextFireTimeResult model) {
+                this.cronFireType = model.cronFireType;
+            } 
+
             /**
              * <p>The type of scheduled triggering.</p>
              * 
@@ -2163,6 +2281,20 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.Map<String, ?> tempTableNameMap; 
 
+            private Builder() {
+            } 
+
+            private Builder(PluginExtraData model) {
+                this.dagInfo = model.dagInfo;
+                this.dbBaseInfo = model.dbBaseInfo;
+                this.instanceTotal = model.instanceTotal;
+                this.instances = model.instances;
+                this.nextFireTimeResult = model.nextFireTimeResult;
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.tempTableNameMap = model.tempTableNameMap;
+            } 
+
             /**
              * <p>The information about the workflow.</p>
              */
@@ -2293,6 +2425,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String tableName; 
             private String tableWhere; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableIncludes model) {
+                this.tableName = model.tableName;
+                this.tableWhere = model.tableWhere;
+            } 
 
             /**
              * <p>The table name.</p>
@@ -2462,6 +2602,22 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private java.util.List<String> tableMapping; 
             private String targetInstanceId; 
             private java.util.List<String> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(PluginParam model) {
+                this.archiveMethod = model.archiveMethod;
+                this.dbSchema = model.dbSchema;
+                this.logic = model.logic;
+                this.orderAfter = model.orderAfter;
+                this.runMethod = model.runMethod;
+                this.sourceDatabaseId = model.sourceDatabaseId;
+                this.tableIncludes = model.tableIncludes;
+                this.tableMapping = model.tableMapping;
+                this.targetInstanceId = model.targetInstanceId;
+                this.variables = model.variables;
+            } 
 
             /**
              * <p>The type of the archiving destination.</p>
@@ -2771,6 +2927,27 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String statusDesc; 
             private Long workflowInstanceId; 
             private String workflowStatusDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataArchiveOrderDetail model) {
+                this.comment = model.comment;
+                this.committer = model.committer;
+                this.committerId = model.committerId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.pluginExtraData = model.pluginExtraData;
+                this.pluginParam = model.pluginParam;
+                this.pluginType = model.pluginType;
+                this.relatedUserList = model.relatedUserList;
+                this.relatedUserNickList = model.relatedUserNickList;
+                this.statusCode = model.statusCode;
+                this.statusDesc = model.statusDesc;
+                this.workflowInstanceId = model.workflowInstanceId;
+                this.workflowStatusDesc = model.workflowStatusDesc;
+            } 
 
             /**
              * <p>The description of the data archiving tickets.</p>

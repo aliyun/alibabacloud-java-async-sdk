@@ -40,6 +40,10 @@ public class DLSkewedInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return skewedColNames
      */
@@ -65,6 +69,15 @@ public class DLSkewedInfo extends TeaModel {
         private java.util.List<String> skewedColNames; 
         private java.util.Map<String, ?> skewedColValueLocationMaps; 
         private java.util.List<java.util.List<String>> skewedColValues; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLSkewedInfo model) {
+            this.skewedColNames = model.skewedColNames;
+            this.skewedColValueLocationMaps = model.skewedColValueLocationMaps;
+            this.skewedColValues = model.skewedColValues;
+        } 
 
         /**
          * SkewedColNames.

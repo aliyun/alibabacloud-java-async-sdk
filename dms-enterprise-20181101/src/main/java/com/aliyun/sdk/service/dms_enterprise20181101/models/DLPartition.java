@@ -60,6 +60,10 @@ public class DLPartition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalogName
      */
@@ -125,6 +129,20 @@ public class DLPartition extends TeaModel {
         private DLStorageDescriptor sd; 
         private String tableName; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLPartition model) {
+            this.catalogName = model.catalogName;
+            this.createTime = model.createTime;
+            this.dbName = model.dbName;
+            this.lastAccessTime = model.lastAccessTime;
+            this.parameters = model.parameters;
+            this.sd = model.sd;
+            this.tableName = model.tableName;
+            this.values = model.values;
+        } 
 
         /**
          * CatalogName.

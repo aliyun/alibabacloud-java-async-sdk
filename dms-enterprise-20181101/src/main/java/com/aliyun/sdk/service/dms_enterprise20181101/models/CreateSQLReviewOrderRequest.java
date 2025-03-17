@@ -57,7 +57,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -237,6 +237,15 @@ public class CreateSQLReviewOrderRequest extends Request {
             private java.util.List<String> attachmentKeyList; 
             private Long dbId; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.attachmentKeyList = model.attachmentKeyList;
+                this.dbId = model.dbId;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * <p>The files to be reviewed. Multiple files can be reviewed at a time.</p>

@@ -48,6 +48,10 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databaseExportOrderDetail
      */
@@ -89,6 +93,17 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatabaseExportOrderDetailResponseBody model) {
+            this.databaseExportOrderDetail = model.databaseExportOrderDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the database export ticket.</p>
@@ -184,6 +199,13 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> exportTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExportTypes model) {
+                this.exportTypes = model.exportTypes;
+            } 
+
             /**
              * ExportTypes.
              */
@@ -231,6 +253,13 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> SQLExtOption; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLExtOption model) {
+                this.SQLExtOption = model.SQLExtOption;
+            } 
+
             /**
              * SQLExtOption.
              */
@@ -277,6 +306,13 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> selectedTables; 
+
+            private Builder() {
+            } 
+
+            private Builder(SelectedTables model) {
+                this.selectedTables = model.selectedTables;
+            } 
 
             /**
              * SelectedTables.
@@ -384,6 +420,18 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             private SQLExtOption SQLExtOption; 
             private SelectedTables selectedTables; 
             private String targetOption; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.dbName = model.dbName;
+                this.exportContent = model.exportContent;
+                this.exportTypes = model.exportTypes;
+                this.SQLExtOption = model.SQLExtOption;
+                this.selectedTables = model.selectedTables;
+                this.targetOption = model.targetOption;
+            } 
 
             /**
              * <p>The database name.</p>
@@ -526,6 +574,16 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             private Config config; 
             private Long dbId; 
             private String downloadURL; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyInfo model) {
+                this.auditDate = model.auditDate;
+                this.config = model.config;
+                this.dbId = model.dbId;
+                this.downloadURL = model.downloadURL;
+            } 
 
             /**
              * <p>The time when the ticket was submitted.</p>
@@ -702,6 +760,21 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
             private String searchName; 
             private String statusDesc; 
             private String workflowStatusDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseExportOrderDetail model) {
+                this.comment = model.comment;
+                this.committer = model.committer;
+                this.committerId = model.committerId;
+                this.id = model.id;
+                this.keyInfo = model.keyInfo;
+                this.log = model.log;
+                this.searchName = model.searchName;
+                this.statusDesc = model.statusDesc;
+                this.workflowStatusDesc = model.workflowStatusDesc;
+            } 
 
             /**
              * <p>The business background information of the database export ticket.</p>

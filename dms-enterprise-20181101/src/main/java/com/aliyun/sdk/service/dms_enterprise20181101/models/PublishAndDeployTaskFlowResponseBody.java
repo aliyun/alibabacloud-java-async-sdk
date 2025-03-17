@@ -48,6 +48,10 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deployId
      */
@@ -89,6 +93,17 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PublishAndDeployTaskFlowResponseBody model) {
+            this.deployId = model.deployId;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the deployment record.</p>

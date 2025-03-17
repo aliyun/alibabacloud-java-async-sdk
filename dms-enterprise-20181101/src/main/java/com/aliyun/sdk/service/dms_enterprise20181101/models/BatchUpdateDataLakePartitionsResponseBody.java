@@ -48,6 +48,10 @@ public class BatchUpdateDataLakePartitionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class BatchUpdateDataLakePartitionsResponseBody extends TeaModel {
         private java.util.List<PartitionError> partitionErrors; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchUpdateDataLakePartitionsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.partitionErrors = model.partitionErrors;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

@@ -40,6 +40,10 @@ public class DLCatalog extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -65,6 +69,15 @@ public class DLCatalog extends TeaModel {
         private String description; 
         private String location; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLCatalog model) {
+            this.description = model.description;
+            this.location = model.location;
+            this.name = model.name;
+        } 
 
         /**
          * Description.

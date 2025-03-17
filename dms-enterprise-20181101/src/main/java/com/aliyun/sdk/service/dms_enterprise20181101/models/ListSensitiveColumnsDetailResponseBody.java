@@ -48,6 +48,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         private String requestId; 
         private SensitiveColumnsDetailList sensitiveColumnsDetailList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSensitiveColumnsDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sensitiveColumnsDetailList = model.sensitiveColumnsDetailList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -292,6 +307,22 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             private String searchName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitiveColumnsDetail model) {
+                this.columnDescription = model.columnDescription;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The description of the field.</p>
              * 
@@ -444,6 +475,13 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveColumnsDetailList model) {
+                this.sensitiveColumnsDetail = model.sensitiveColumnsDetail;
+            } 
 
             /**
              * SensitiveColumnsDetail.

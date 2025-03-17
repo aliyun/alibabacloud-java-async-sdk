@@ -48,6 +48,10 @@ public class ListProxiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListProxiesResponseBody extends TeaModel {
         private java.util.List<ProxyList> proxyList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProxiesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.proxyList = model.proxyList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -315,6 +330,24 @@ public class ListProxiesResponseBody extends TeaModel {
             private Boolean publicEnable; 
             private String publicHost; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyList model) {
+                this.creatorId = model.creatorId;
+                this.creatorName = model.creatorName;
+                this.httpsPort = model.httpsPort;
+                this.instanceId = model.instanceId;
+                this.privateEnable = model.privateEnable;
+                this.privateHost = model.privateHost;
+                this.protocolPort = model.protocolPort;
+                this.protocolType = model.protocolType;
+                this.proxyId = model.proxyId;
+                this.publicEnable = model.publicEnable;
+                this.publicHost = model.publicHost;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The ID of the user who enabled the secure access proxy feature.</p>

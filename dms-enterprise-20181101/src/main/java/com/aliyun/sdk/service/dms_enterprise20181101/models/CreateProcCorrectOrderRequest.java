@@ -62,7 +62,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -243,6 +243,14 @@ public class CreateProcCorrectOrderRequest extends Request {
             private Long dbId; 
             private Boolean logic; 
 
+            private Builder() {
+            } 
+
+            private Builder(DbItemList model) {
+                this.dbId = model.dbId;
+                this.logic = model.logic;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -377,6 +385,19 @@ public class CreateProcCorrectOrderRequest extends Request {
             private String rollbackAttachmentName; 
             private String rollbackSQL; 
             private String rollbackSqlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.classify = model.classify;
+                this.dbItemList = model.dbItemList;
+                this.execMode = model.execMode;
+                this.execSQL = model.execSQL;
+                this.rollbackAttachmentName = model.rollbackAttachmentName;
+                this.rollbackSQL = model.rollbackSQL;
+                this.rollbackSqlType = model.rollbackSqlType;
+            } 
 
             /**
              * Classify.

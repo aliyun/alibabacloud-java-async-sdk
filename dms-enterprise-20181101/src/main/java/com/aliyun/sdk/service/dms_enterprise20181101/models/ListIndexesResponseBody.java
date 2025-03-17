@@ -48,6 +48,10 @@ public class ListIndexesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListIndexesResponseBody extends TeaModel {
         private IndexList indexList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndexesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.indexList = model.indexList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -228,6 +243,17 @@ public class ListIndexesResponseBody extends TeaModel {
             private String indexType; 
             private String tableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Index model) {
+                this.indexComment = model.indexComment;
+                this.indexId = model.indexId;
+                this.indexName = model.indexName;
+                this.indexType = model.indexType;
+                this.tableId = model.tableId;
+            } 
+
             /**
              * <p>The description of the index.</p>
              * 
@@ -328,6 +354,13 @@ public class ListIndexesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Index> index; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexList model) {
+                this.index = model.index;
+            } 
 
             /**
              * Index.

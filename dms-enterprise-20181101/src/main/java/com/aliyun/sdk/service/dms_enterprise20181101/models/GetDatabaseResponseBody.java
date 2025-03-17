@@ -48,6 +48,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return database
      */
@@ -89,6 +93,17 @@ public class GetDatabaseResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatabaseResponseBody model) {
+            this.database = model.database;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the database.</p>
@@ -184,6 +199,13 @@ public class GetDatabaseResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ownerIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerIdList model) {
+                this.ownerIds = model.ownerIds;
+            } 
+
             /**
              * OwnerIds.
              */
@@ -230,6 +252,13 @@ public class GetDatabaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ownerNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerNameList model) {
+                this.ownerNames = model.ownerNames;
+            } 
 
             /**
              * OwnerNames.
@@ -469,6 +498,29 @@ public class GetDatabaseResponseBody extends TeaModel {
             private String searchName; 
             private String sid; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.catalogName = model.catalogName;
+                this.databaseId = model.databaseId;
+                this.dbType = model.dbType;
+                this.dbaId = model.dbaId;
+                this.dbaName = model.dbaName;
+                this.encoding = model.encoding;
+                this.envType = model.envType;
+                this.host = model.host;
+                this.instanceAlias = model.instanceAlias;
+                this.instanceId = model.instanceId;
+                this.ownerIdList = model.ownerIdList;
+                this.ownerNameList = model.ownerNameList;
+                this.port = model.port;
+                this.schemaName = model.schemaName;
+                this.searchName = model.searchName;
+                this.sid = model.sid;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The name of the catalog to which the database belongs.</p>

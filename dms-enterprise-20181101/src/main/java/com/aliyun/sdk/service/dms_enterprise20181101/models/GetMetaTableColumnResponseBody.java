@@ -48,6 +48,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnList
      */
@@ -89,6 +93,17 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetaTableColumnResponseBody model) {
+            this.columnList = model.columnList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about fields in the table.</p>
@@ -315,6 +330,24 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private Integer position; 
             private String primaryKey; 
             private String securityLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.autoIncrement = model.autoIncrement;
+                this.columnId = model.columnId;
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+                this.dataLength = model.dataLength;
+                this.dataPrecision = model.dataPrecision;
+                this.dataScale = model.dataScale;
+                this.description = model.description;
+                this.nullable = model.nullable;
+                this.position = model.position;
+                this.primaryKey = model.primaryKey;
+                this.securityLevel = model.securityLevel;
+            } 
 
             /**
              * <p>Indicates whether the column is an auto-increment column. Valid values:</p>

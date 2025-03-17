@@ -52,6 +52,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         private String requestId; 
         private ScenarioDAGList scenarioDAGList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLhTaskFlowAndScenarioResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.rawDAGList = model.rawDAGList;
+            this.requestId = model.requestId;
+            this.scenarioDAGList = model.scenarioDAGList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request fails.</p>
@@ -384,6 +400,28 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Long spaceId; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dag model) {
+                this.canEdit = model.canEdit;
+                this.creatorId = model.creatorId;
+                this.creatorNickName = model.creatorNickName;
+                this.dagName = model.dagName;
+                this.dagOwnerId = model.dagOwnerId;
+                this.dagOwnerNickName = model.dagOwnerNickName;
+                this.dataFlowId = model.dataFlowId;
+                this.demoId = model.demoId;
+                this.deployId = model.deployId;
+                this.id = model.id;
+                this.isDeleted = model.isDeleted;
+                this.latestInstanceStatus = model.latestInstanceStatus;
+                this.latestInstanceTime = model.latestInstanceTime;
+                this.scenarioId = model.scenarioId;
+                this.spaceId = model.spaceId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Indicates whether the task flow can be modified. Valid values:</p>
              * <ul>
@@ -621,6 +659,13 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Dag> dag; 
 
+            private Builder() {
+            } 
+
+            private Builder(RawDAGList model) {
+                this.dag = model.dag;
+            } 
+
             /**
              * Dag.
              */
@@ -847,6 +892,28 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private Long scenarioId; 
             private Long spaceId; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DagListDag model) {
+                this.canEdit = model.canEdit;
+                this.creatorId = model.creatorId;
+                this.creatorNickName = model.creatorNickName;
+                this.dagName = model.dagName;
+                this.dagOwnerId = model.dagOwnerId;
+                this.dagOwnerNickName = model.dagOwnerNickName;
+                this.dataFlowId = model.dataFlowId;
+                this.demoId = model.demoId;
+                this.deployId = model.deployId;
+                this.id = model.id;
+                this.isDeleted = model.isDeleted;
+                this.latestInstanceStatus = model.latestInstanceStatus;
+                this.latestInstanceTime = model.latestInstanceTime;
+                this.scenarioId = model.scenarioId;
+                this.spaceId = model.spaceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether the task flow can be modified. Valid values:</p>
@@ -1085,6 +1152,13 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DagListDag> dag; 
 
+            private Builder() {
+            } 
+
+            private Builder(DagList model) {
+                this.dag = model.dag;
+            } 
+
             /**
              * Dag.
              */
@@ -1155,6 +1229,15 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private String creatorId; 
             private String description; 
             private String scenarioName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scenario model) {
+                this.creatorId = model.creatorId;
+                this.description = model.description;
+                this.scenarioName = model.scenarioName;
+            } 
 
             /**
              * <p>The ID of the user who creates the business scenario.</p>
@@ -1240,6 +1323,14 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
             private DagList dagList; 
             private Scenario scenario; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScenarioDAG model) {
+                this.dagList = model.dagList;
+                this.scenario = model.scenario;
+            } 
+
             /**
              * <p>The list of task flows.</p>
              */
@@ -1294,6 +1385,13 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ScenarioDAG> scenarioDAG; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScenarioDAGList model) {
+                this.scenarioDAG = model.scenarioDAG;
+            } 
 
             /**
              * ScenarioDAG.

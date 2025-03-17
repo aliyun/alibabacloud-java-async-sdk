@@ -51,7 +51,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -211,6 +211,15 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             private Long id; 
             private Long nodeEnd; 
             private Long nodeFrom; 
+
+            private Builder() {
+            } 
+
+            private Builder(Edges model) {
+                this.id = model.id;
+                this.nodeEnd = model.nodeEnd;
+                this.nodeFrom = model.nodeFrom;
+            } 
 
             /**
              * <p>The ID of the task flow edge.</p>

@@ -53,6 +53,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desensitizationRuleList
      */
@@ -102,6 +106,18 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDesensitizationRuleResponseBody model) {
+            this.desensitizationRuleList = model.desensitizationRuleList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of masking rules.</p>
@@ -316,6 +332,22 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             private Integer ruleId; 
             private String ruleName; 
             private String ruleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesensitizationRuleList model) {
+                this.funcParams = model.funcParams;
+                this.funcSample = model.funcSample;
+                this.functionType = model.functionType;
+                this.lastModifierId = model.lastModifierId;
+                this.lastModifierName = model.lastModifierName;
+                this.referenceCount = model.referenceCount;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+            } 
 
             /**
              * <p>The parameter.</p>

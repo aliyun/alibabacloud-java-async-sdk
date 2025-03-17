@@ -48,6 +48,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         private String requestId; 
         private StructSyncOrderDetail structSyncOrderDetail; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStructSyncOrderDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.structSyncOrderDetail = model.structSyncOrderDetail;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -228,6 +243,17 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private Boolean logic; 
             private String searchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceDatabaseInfo model) {
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.searchName = model.searchName;
+            } 
+
             /**
              * <p>The ID of the source database.</p>
              * 
@@ -326,6 +352,13 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceVersionInfo model) {
+                this.versionId = model.versionId;
+            } 
+
             /**
              * <p>The version number.</p>
              * 
@@ -387,6 +420,14 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String sourceTableName; 
             private String targetTableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableInfoList model) {
+                this.sourceTableName = model.sourceTableName;
+                this.targetTableName = model.targetTableName;
+            } 
 
             /**
              * <p>The name of the table whose schema you want to synchronize.</p>
@@ -497,6 +538,17 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private Boolean logic; 
             private String searchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetDatabaseInfo model) {
+                this.dbId = model.dbId;
+                this.dbType = model.dbType;
+                this.envType = model.envType;
+                this.logic = model.logic;
+                this.searchName = model.searchName;
+            } 
+
             /**
              * <p>The ID of the destination database.</p>
              * 
@@ -594,6 +646,13 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetVersionInfo model) {
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The version number.</p>
@@ -728,6 +787,20 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private TargetDatabaseInfo targetDatabaseInfo; 
             private String targetType; 
             private TargetVersionInfo targetVersionInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructSyncOrderDetail model) {
+                this.ignoreError = model.ignoreError;
+                this.sourceDatabaseInfo = model.sourceDatabaseInfo;
+                this.sourceType = model.sourceType;
+                this.sourceVersionInfo = model.sourceVersionInfo;
+                this.tableInfoList = model.tableInfoList;
+                this.targetDatabaseInfo = model.targetDatabaseInfo;
+                this.targetType = model.targetType;
+                this.targetVersionInfo = model.targetVersionInfo;
+            } 
 
             /**
              * <p>Indicates whether to skip errors. Valid values:</p>

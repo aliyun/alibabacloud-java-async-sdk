@@ -57,6 +57,10 @@ public class ListDataLakeTableNameRequest extends Request {
     @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private Long workspaceId;
+
     private ListDataLakeTableNameRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -68,6 +72,7 @@ public class ListDataLakeTableNameRequest extends Request {
         this.tableNamePattern = builder.tableNamePattern;
         this.tableType = builder.tableType;
         this.tid = builder.tid;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -78,7 +83,7 @@ public class ListDataLakeTableNameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,6 +151,13 @@ public class ListDataLakeTableNameRequest extends Request {
         return this.tid;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public Long getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListDataLakeTableNameRequest, Builder> {
         private String regionId; 
         private String catalogName; 
@@ -156,6 +168,7 @@ public class ListDataLakeTableNameRequest extends Request {
         private String tableNamePattern; 
         private String tableType; 
         private Long tid; 
+        private Long workspaceId; 
 
         private Builder() {
             super();
@@ -172,6 +185,7 @@ public class ListDataLakeTableNameRequest extends Request {
             this.tableNamePattern = request.tableNamePattern;
             this.tableType = request.tableType;
             this.tid = request.tid;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -261,6 +275,15 @@ public class ListDataLakeTableNameRequest extends Request {
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
             this.tid = tid;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(Long workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

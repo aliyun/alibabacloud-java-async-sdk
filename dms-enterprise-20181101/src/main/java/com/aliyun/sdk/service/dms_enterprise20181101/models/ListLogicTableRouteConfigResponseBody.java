@@ -48,6 +48,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         private LogicTableRouteConfigList logicTableRouteConfigList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLogicTableRouteConfigResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.logicTableRouteConfigList = model.logicTableRouteConfigList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -208,6 +223,15 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             private String routeKey; 
             private Long tableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogicTableRouteConfig model) {
+                this.routeExpr = model.routeExpr;
+                this.routeKey = model.routeKey;
+                this.tableId = model.tableId;
+            } 
+
             /**
              * <p>The routing algorithm expression.</p>
              * 
@@ -279,6 +303,13 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogicTableRouteConfig> logicTableRouteConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogicTableRouteConfigList model) {
+                this.logicTableRouteConfig = model.logicTableRouteConfig;
+            } 
 
             /**
              * LogicTableRouteConfig.

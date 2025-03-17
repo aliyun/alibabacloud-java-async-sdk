@@ -48,6 +48,10 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         private java.util.List<PreCheckSQLList> preCheckSQLList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataCorrectPreCheckSQLResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.preCheckSQLList = model.preCheckSQLList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -255,6 +270,19 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             private String sqlReviewStatus; 
             private String sqlType; 
             private String tableNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckSQLList model) {
+                this.affectRows = model.affectRows;
+                this.checkSQL = model.checkSQL;
+                this.dbId = model.dbId;
+                this.SQLReviewQueryKey = model.SQLReviewQueryKey;
+                this.sqlReviewStatus = model.sqlReviewStatus;
+                this.sqlType = model.sqlType;
+                this.tableNames = model.tableNames;
+            } 
 
             /**
              * <p>The estimated number of affected rows.</p>

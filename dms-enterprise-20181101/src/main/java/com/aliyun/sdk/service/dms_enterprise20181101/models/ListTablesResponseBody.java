@@ -52,6 +52,10 @@ public class ListTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListTablesResponseBody extends TeaModel {
         private Boolean success; 
         private TableList tableList; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTablesResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tableList = model.tableList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -207,6 +223,13 @@ public class ListTablesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ownerIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerIdList model) {
+                this.ownerIds = model.ownerIds;
+            } 
+
             /**
              * OwnerIds.
              */
@@ -253,6 +276,13 @@ public class ListTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ownerNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerNameList model) {
+                this.ownerNames = model.ownerNames;
+            } 
 
             /**
              * OwnerNames.
@@ -445,6 +475,25 @@ public class ListTablesResponseBody extends TeaModel {
             private String tableSchemaName; 
             private String tableType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.databaseId = model.databaseId;
+                this.description = model.description;
+                this.encoding = model.encoding;
+                this.engine = model.engine;
+                this.numRows = model.numRows;
+                this.ownerIdList = model.ownerIdList;
+                this.ownerNameList = model.ownerNameList;
+                this.storeCapacity = model.storeCapacity;
+                this.tableGuid = model.tableGuid;
+                this.tableId = model.tableId;
+                this.tableName = model.tableName;
+                this.tableSchemaName = model.tableSchemaName;
+                this.tableType = model.tableType;
+            } 
+
             /**
              * <p>The ID of the physical database.</p>
              * 
@@ -620,6 +669,13 @@ public class ListTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableList model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.

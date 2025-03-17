@@ -52,6 +52,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceLoginAuditLogResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.instanceLoginAuditLogList = model.instanceLoginAuditLogList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -279,6 +295,19 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             private Long userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceLoginAuditLog model) {
+                this.dbUser = model.dbUser;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.opTime = model.opTime;
+                this.requestIp = model.requestIp;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The database account that is used to log on to the instance.</p>
              * 
@@ -394,6 +423,13 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceLoginAuditLogList model) {
+                this.instanceLoginAuditLog = model.instanceLoginAuditLog;
+            } 
 
             /**
              * InstanceLoginAuditLog.

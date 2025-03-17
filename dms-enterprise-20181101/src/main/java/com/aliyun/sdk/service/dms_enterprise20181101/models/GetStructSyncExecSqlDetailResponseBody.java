@@ -48,6 +48,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         private String requestId; 
         private StructSyncExecSqlDetail structSyncExecSqlDetail; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStructSyncExecSqlDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.structSyncExecSqlDetail = model.structSyncExecSqlDetail;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -191,6 +206,14 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String execSql; 
             private Long totalSqlCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructSyncExecSqlDetail model) {
+                this.execSql = model.execSql;
+                this.totalSqlCount = model.totalSqlCount;
+            } 
 
             /**
              * <p>The SQL statements that are executed.</p>

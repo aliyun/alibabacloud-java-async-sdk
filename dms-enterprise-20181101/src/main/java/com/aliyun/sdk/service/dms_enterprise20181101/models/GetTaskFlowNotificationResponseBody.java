@@ -48,6 +48,10 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
         private Notification notification; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskFlowNotificationResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.notification = model.notification;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -207,6 +222,15 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
             private Boolean dagNotificationFail; 
             private Boolean dagNotificationSla; 
             private Boolean dagNotificationSuccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(Notification model) {
+                this.dagNotificationFail = model.dagNotificationFail;
+                this.dagNotificationSla = model.dagNotificationSla;
+                this.dagNotificationSuccess = model.dagNotificationSuccess;
+            } 
 
             /**
              * <p>Indicates whether notifications for failed task flows are enabled. Valid values:</p>

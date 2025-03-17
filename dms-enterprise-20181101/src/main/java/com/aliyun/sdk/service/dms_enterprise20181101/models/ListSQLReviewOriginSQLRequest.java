@@ -51,7 +51,7 @@ public class ListSQLReviewOriginSQLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -198,6 +198,14 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             private Integer pageNumber; 
             private Integer pageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
+
             /**
              * <p>The page number.</p>
              * 
@@ -294,6 +302,16 @@ public class ListSQLReviewOriginSQLRequest extends Request {
             private Long fileId; 
             private Page page; 
             private String SQLReviewResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderActionDetail model) {
+                this.checkStatusResult = model.checkStatusResult;
+                this.fileId = model.fileId;
+                this.page = model.page;
+                this.SQLReviewResult = model.SQLReviewResult;
+            } 
 
             /**
              * <p>The review status of the SQL statement. Valid values:</p>

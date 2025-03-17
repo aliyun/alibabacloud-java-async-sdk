@@ -48,6 +48,10 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         private java.util.List<OrderSummary> orderSummary; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEffectiveOrdersResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.orderSummary = model.orderSummary;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -244,6 +259,18 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             private String orderId; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderList model) {
+                this.buyerId = model.buyerId;
+                this.endTime = model.endTime;
+                this.insNum = model.insNum;
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The UID of the user who placed the order.</p>
              * 
@@ -396,6 +423,17 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             private java.util.List<OrderList> orderList; 
             private Integer totalQuota; 
             private String versionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderSummary model) {
+                this.commodityCode = model.commodityCode;
+                this.commodityType = model.commodityType;
+                this.orderList = model.orderList;
+                this.totalQuota = model.totalQuota;
+                this.versionType = model.versionType;
+            } 
 
             /**
              * <p>The commodity code of DMS.</p>

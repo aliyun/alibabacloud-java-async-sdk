@@ -52,6 +52,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         private SensitiveColumnList sensitiveColumnList; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSensitiveColumnInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sensitiveColumnList = model.sensitiveColumnList;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ErrorCode.
@@ -200,6 +216,14 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefaultDesensitizationRule model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * RuleId.
              */
@@ -267,6 +291,14 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SemiDesensitizationRule model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * RuleId.
              */
@@ -321,6 +353,13 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SemiDesensitizationRule> semiDesensitizationRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SemiDesensitizationRuleList model) {
+                this.semiDesensitizationRule = model.semiDesensitizationRule;
+            } 
 
             /**
              * SemiDesensitizationRule.
@@ -489,6 +528,23 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
             private String tableName; 
             private String userSensitivityLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitiveColumn model) {
+                this.categoryName = model.categoryName;
+                this.columnName = model.columnName;
+                this.defaultDesensitizationRule = model.defaultDesensitizationRule;
+                this.instanceId = model.instanceId;
+                this.isPlain = model.isPlain;
+                this.sampleData = model.sampleData;
+                this.schemaName = model.schemaName;
+                this.securityLevel = model.securityLevel;
+                this.semiDesensitizationRuleList = model.semiDesensitizationRuleList;
+                this.tableName = model.tableName;
+                this.userSensitivityLevel = model.userSensitivityLevel;
+            } 
+
             /**
              * CategoryName.
              */
@@ -615,6 +671,13 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SensitiveColumn> sensitiveColumn; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveColumnList model) {
+                this.sensitiveColumn = model.sensitiveColumn;
+            } 
 
             /**
              * SensitiveColumn.

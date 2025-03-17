@@ -48,6 +48,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCorrectBackupFiles
      */
@@ -89,6 +93,17 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataCorrectBackupFilesResponseBody model) {
+            this.dataCorrectBackupFiles = model.dataCorrectBackupFiles;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The download URL of the backup file for the ticket.</p>
@@ -179,6 +194,13 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataCorrectBackupFiles model) {
+                this.fileUrl = model.fileUrl;
+            } 
 
             /**
              * FileUrl.

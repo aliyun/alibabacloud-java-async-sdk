@@ -52,6 +52,10 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DAGInstanceList
      */
@@ -101,6 +105,18 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowInstanceResponseBody model) {
+            this.DAGInstanceList = model.DAGInstanceList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the execution records returned.</p>
@@ -339,6 +355,24 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
             private Integer triggerType; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DAGInstance model) {
+                this.businessTime = model.businessTime;
+                this.dagId = model.dagId;
+                this.dagName = model.dagName;
+                this.dagVersion = model.dagVersion;
+                this.endTime = model.endTime;
+                this.historyDagId = model.historyDagId;
+                this.id = model.id;
+                this.message = model.message;
+                this.ownerName = model.ownerName;
+                this.status = model.status;
+                this.triggerType = model.triggerType;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
              * 
@@ -521,6 +555,13 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DAGInstance> DAGInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(DAGInstanceList model) {
+                this.DAGInstance = model.DAGInstance;
+            } 
 
             /**
              * DAGInstance.

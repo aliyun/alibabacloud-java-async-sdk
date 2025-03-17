@@ -48,6 +48,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataExportOrderDetail
      */
@@ -89,6 +93,17 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataExportOrderDetailResponseBody model) {
+            this.dataExportOrderDetail = model.dataExportOrderDetail;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the data export ticket.</p>
@@ -207,6 +222,15 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private Long jobId; 
             private String jobStatus; 
             private Long preCheckId; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyInfo model) {
+                this.jobId = model.jobId;
+                this.jobStatus = model.jobStatus;
+                this.preCheckId = model.preCheckId;
+            } 
 
             /**
              * <p>Export task ID.</p>
@@ -388,6 +412,21 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private String ignoreAffectRowsReason; 
             private Boolean logic; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderDetail model) {
+                this.actualAffectRows = model.actualAffectRows;
+                this.classify = model.classify;
+                this.database = model.database;
+                this.dbId = model.dbId;
+                this.envType = model.envType;
+                this.exeSQL = model.exeSQL;
+                this.ignoreAffectRows = model.ignoreAffectRows;
+                this.ignoreAffectRowsReason = model.ignoreAffectRowsReason;
+                this.logic = model.logic;
+            } 
+
             /**
              * <p>The number of rows that were affected by the SQL statement.</p>
              * 
@@ -537,6 +576,14 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private KeyInfo keyInfo; 
             private OrderDetail orderDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataExportOrderDetail model) {
+                this.keyInfo = model.keyInfo;
+                this.orderDetail = model.orderDetail;
+            } 
 
             /**
              * <p>The status information.</p>

@@ -67,7 +67,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -287,6 +287,15 @@ public class CreateDataCorrectOrderRequest extends Request {
             private Long instanceId; 
             private Boolean logic; 
 
+            private Builder() {
+            } 
+
+            private Builder(DbItemList model) {
+                this.dbId = model.dbId;
+                this.instanceId = model.instanceId;
+                this.logic = model.logic;
+            } 
+
             /**
              * <p>The database ID. The database can be a physical database or a logical database.</p>
              * <ul>
@@ -480,6 +489,22 @@ public class CreateDataCorrectOrderRequest extends Request {
             private String rollbackSQL; 
             private String rollbackSqlType; 
             private String sqlType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.attachmentName = model.attachmentName;
+                this.classify = model.classify;
+                this.dbItemList = model.dbItemList;
+                this.estimateAffectRows = model.estimateAffectRows;
+                this.execMode = model.execMode;
+                this.execSQL = model.execSQL;
+                this.rollbackAttachmentName = model.rollbackAttachmentName;
+                this.rollbackSQL = model.rollbackSQL;
+                this.rollbackSqlType = model.rollbackSqlType;
+                this.sqlType = model.sqlType;
+            } 
 
             /**
              * <p>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of AttachmentKey.</p>

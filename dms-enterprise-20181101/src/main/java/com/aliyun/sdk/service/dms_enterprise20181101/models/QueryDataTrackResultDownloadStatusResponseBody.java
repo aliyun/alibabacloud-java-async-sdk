@@ -48,6 +48,10 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
         private String requestId; 
         private StatusResult statusResult; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDataTrackResultDownloadStatusResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.statusResult = model.statusResult;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -219,6 +234,16 @@ public class QueryDataTrackResultDownloadStatusResponseBody extends TeaModel {
             private String downloadUrl; 
             private String statusDesc; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusResult model) {
+                this.downloadStatus = model.downloadStatus;
+                this.downloadUrl = model.downloadUrl;
+                this.statusDesc = model.statusDesc;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The status of the download task. Valid values:</p>

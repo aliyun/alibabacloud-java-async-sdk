@@ -58,7 +58,7 @@ public class CreateUploadOSSFileJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -253,6 +253,15 @@ public class CreateUploadOSSFileJobRequest extends Request {
             private String bucketName; 
             private String endpoint; 
             private String objectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadTarget model) {
+                this.bucketName = model.bucketName;
+                this.endpoint = model.endpoint;
+                this.objectName = model.objectName;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>

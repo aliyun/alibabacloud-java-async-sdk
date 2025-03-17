@@ -52,6 +52,10 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBTaskSQLJobDetailList
      */
@@ -101,6 +105,18 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDBTaskSQLJobDetailResponseBody model) {
+            this.DBTaskSQLJobDetailList = model.DBTaskSQLJobDetailList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of SQL tasks.</p>
@@ -362,6 +378,26 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private Long timeDelay; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBTaskSQLJobDetailList model) {
+                this.affectRows = model.affectRows;
+                this.currentSql = model.currentSql;
+                this.dbId = model.dbId;
+                this.endTime = model.endTime;
+                this.executeCount = model.executeCount;
+                this.jobDetailId = model.jobDetailId;
+                this.jobId = model.jobId;
+                this.log = model.log;
+                this.logic = model.logic;
+                this.skip = model.skip;
+                this.sqlType = model.sqlType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.timeDelay = model.timeDelay;
+            } 
 
             /**
              * <p>The number of rows affected by the SQL task.</p>

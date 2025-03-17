@@ -56,6 +56,10 @@ public class ListDataLakePartitionNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListDataLakePartitionNameResponseBody extends TeaModel {
         private java.util.List<String> partitionNameList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataLakePartitionNameResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.partitionNameList = model.partitionNameList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.

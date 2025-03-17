@@ -52,6 +52,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         private java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSensitiveDataAuditLogResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sensitiveDataAuditLogList = model.sensitiveDataAuditLogList;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -254,6 +270,17 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private String desensitizationRule; 
             private String securityLevel; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveDataLog model) {
+                this.columnName = model.columnName;
+                this.columnPermissionType = model.columnPermissionType;
+                this.desensitizationRule = model.desensitizationRule;
+                this.securityLevel = model.securityLevel;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The name of the column that contains sensitive data.</p>
@@ -445,6 +472,20 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private String targetName; 
             private Long userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveDataAuditLogList model) {
+                this.dbDisplayName = model.dbDisplayName;
+                this.instanceId = model.instanceId;
+                this.moduleName = model.moduleName;
+                this.opTime = model.opTime;
+                this.sensitiveDataLog = model.sensitiveDataLog;
+                this.targetName = model.targetName;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The name of the database that stores the sensitive data.</p>

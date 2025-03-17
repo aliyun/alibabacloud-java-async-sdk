@@ -48,6 +48,10 @@ public class ListDataImportSQLTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListDataImportSQLTypeResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> sqlTypeResult; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataImportSQLTypeResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.sqlTypeResult = model.sqlTypeResult;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

@@ -52,7 +52,7 @@ public class AddTaskFlowEdgesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,6 +203,14 @@ public class AddTaskFlowEdgesRequest extends Request {
         public static final class Builder {
             private Long nodeEnd; 
             private Long nodeFrom; 
+
+            private Builder() {
+            } 
+
+            private Builder(Edges model) {
+                this.nodeEnd = model.nodeEnd;
+                this.nodeFrom = model.nodeFrom;
+            } 
 
             /**
              * <p>The ID of the node where the end node of the edge is located.</p>

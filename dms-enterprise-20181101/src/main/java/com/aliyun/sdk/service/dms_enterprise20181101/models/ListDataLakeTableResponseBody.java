@@ -56,6 +56,10 @@ public class ListDataLakeTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -113,6 +117,19 @@ public class ListDataLakeTableResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<DLTable> tableList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataLakeTableResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tableList = model.tableList;
+        } 
 
         /**
          * ErrorCode.

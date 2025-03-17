@@ -48,6 +48,10 @@ public class GetDataLakeCatalogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalog
      */
@@ -89,6 +93,17 @@ public class GetDataLakeCatalogResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataLakeCatalogResponseBody model) {
+            this.catalog = model.catalog;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Catalog.

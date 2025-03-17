@@ -48,6 +48,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         private java.util.List<PreCheckDBList> preCheckDBList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataCorrectPreCheckDBResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.preCheckDBList = model.preCheckDBList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -203,6 +218,15 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             private Long dbId; 
             private String searchName; 
             private Long sqlNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckDBList model) {
+                this.dbId = model.dbId;
+                this.searchName = model.searchName;
+                this.sqlNum = model.sqlNum;
+            } 
 
             /**
              * <p>The ID of the database.</p>

@@ -100,6 +100,10 @@ public class DLTablebaseInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return catalogName
      */
@@ -245,6 +249,30 @@ public class DLTablebaseInfo extends TeaModel {
         private String tableType; 
         private String viewExpandedText; 
         private String viewOriginalText; 
+
+        private Builder() {
+        } 
+
+        private Builder(DLTablebaseInfo model) {
+            this.catalogName = model.catalogName;
+            this.createTime = model.createTime;
+            this.creatorId = model.creatorId;
+            this.dbId = model.dbId;
+            this.dbName = model.dbName;
+            this.description = model.description;
+            this.lastAccessTime = model.lastAccessTime;
+            this.location = model.location;
+            this.modifierId = model.modifierId;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.ownerType = model.ownerType;
+            this.parameters = model.parameters;
+            this.partitionKeys = model.partitionKeys;
+            this.retention = model.retention;
+            this.tableType = model.tableType;
+            this.viewExpandedText = model.viewExpandedText;
+            this.viewOriginalText = model.viewOriginalText;
+        } 
 
         /**
          * CatalogName.

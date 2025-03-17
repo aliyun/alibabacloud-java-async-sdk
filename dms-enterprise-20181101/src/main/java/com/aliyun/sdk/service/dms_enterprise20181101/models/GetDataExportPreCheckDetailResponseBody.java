@@ -48,6 +48,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         private PreCheckResult preCheckResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataExportPreCheckDetailResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.preCheckResult = model.preCheckResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -196,6 +211,14 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             private Long affectRows; 
             private String SQL; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreCheckDetailList model) {
+                this.affectRows = model.affectRows;
+                this.SQL = model.SQL;
+            } 
+
             /**
              * <p>The estimated number of data rows to be affected.</p>
              * 
@@ -257,6 +280,13 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PreCheckDetailList> preCheckDetailList; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreCheckResultPreCheckDetailList model) {
+                this.preCheckDetailList = model.preCheckDetailList;
+            } 
+
             /**
              * PreCheckDetailList.
              */
@@ -315,6 +345,14 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean ignoreAffectRows; 
             private PreCheckResultPreCheckDetailList preCheckDetailList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreCheckResult model) {
+                this.ignoreAffectRows = model.ignoreAffectRows;
+                this.preCheckDetailList = model.preCheckDetailList;
+            } 
 
             /**
              * <p>Specifies whether to skip verification. Valid values:</p>

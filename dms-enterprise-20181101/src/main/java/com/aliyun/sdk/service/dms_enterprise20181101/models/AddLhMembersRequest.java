@@ -58,7 +58,7 @@ public class AddLhMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -236,6 +236,14 @@ public class AddLhMembersRequest extends Request {
         public static final class Builder {
             private java.util.List<String> roles; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Members model) {
+                this.roles = model.roles;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The role. Valid values:</p>

@@ -48,6 +48,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cooperatorList
      */
@@ -89,6 +93,17 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskFlowCooperatorsResponseBody model) {
+            this.cooperatorList = model.cooperatorList;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The users that are involved in the task flow.</p>
@@ -220,6 +235,16 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             private String nickName; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cooperator model) {
+                this.email = model.email;
+                this.loginName = model.loginName;
+                this.nickName = model.nickName;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The email address of the user.</p>
              * 
@@ -302,6 +327,13 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cooperator> cooperator; 
+
+            private Builder() {
+            } 
+
+            private Builder(CooperatorList model) {
+                this.cooperator = model.cooperator;
+            } 
 
             /**
              * Cooperator.
