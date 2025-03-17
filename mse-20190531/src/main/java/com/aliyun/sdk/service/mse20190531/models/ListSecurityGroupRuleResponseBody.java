@@ -52,6 +52,10 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecurityGroupRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -314,6 +330,22 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             private String ipProtocol; 
             private String portRange; 
             private String securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authCidrs = model.authCidrs;
+                this.description = model.description;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ipProtocol = model.ipProtocol;
+                this.portRange = model.portRange;
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * AuthCidrs.

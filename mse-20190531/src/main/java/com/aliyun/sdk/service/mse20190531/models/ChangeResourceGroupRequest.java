@@ -57,7 +57,7 @@ public class ChangeResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,7 +118,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the response is displayed. Values: zh (default): Chinese, en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -127,6 +130,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>Target resource group</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>Resource ID, which is the ID of the registration and configuration center instance or the unique ID of the gateway</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>Region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +170,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type, such as a registration and configuration center cluster or gateway instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster,Gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

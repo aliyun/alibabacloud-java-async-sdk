@@ -67,7 +67,7 @@ public class CloneNacosConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,7 +146,7 @@ public class CloneNacosConfigRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>Language type of the returned message:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -162,7 +162,10 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration items that you want to clone. The value of this parameter is the combination of the values of the dataId and group parameters. Separate multiple configuration items with commas (,).</p>
+         * <p>Configuration items to be cloned, in the format of dataId+group, with multiple items separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test+test,test1+test1</p>
          */
         public Builder dataIds(String dataIds) {
             this.putQueryParameter("DataIds", dataIds);
@@ -171,7 +174,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of configuration IDs.</p>
+         * <p>List of configuration IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>253661,253662</p>
@@ -183,7 +186,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination namespace.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,12 +199,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The policy used when a write conflict occurs.</p>
-         * <ul>
-         * <li>ABORT</li>
-         * <li>SKIP</li>
-         * <li>OVERWRITE</li>
-         * </ul>
+         * <p>Source namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>be821963-6d48-4ea5-9910-6057d****</p>
@@ -213,10 +211,11 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The strategy used when a write conflict occurs.</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>ABORT</li>
+         * <li>SKIP</li>
+         * <li>OVERWRITE</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -230,7 +229,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The IDs of configurations.</p>
+         * <p>Target namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08be4b5d-2d1c-4e6e-aa85-83b9****</p>

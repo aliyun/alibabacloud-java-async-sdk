@@ -52,6 +52,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCircuitBreakerRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -395,6 +411,29 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             private Integer strategy; 
             private Float threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.enable = model.enable;
+                this.fallbackObject = model.fallbackObject;
+                this.halfOpenBaseAmountPerStep = model.halfOpenBaseAmountPerStep;
+                this.halfOpenRecoveryStepNum = model.halfOpenRecoveryStepNum;
+                this.maxAllowedRtMs = model.maxAllowedRtMs;
+                this.minRequestAmount = model.minRequestAmount;
+                this.namespace = model.namespace;
+                this.regionId = model.regionId;
+                this.resource = model.resource;
+                this.resourceType = model.resourceType;
+                this.retryTimeoutMs = model.retryTimeoutMs;
+                this.ruleId = model.ruleId;
+                this.statIntervalMs = model.statIntervalMs;
+                this.strategy = model.strategy;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -673,6 +712,16 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number.</p>

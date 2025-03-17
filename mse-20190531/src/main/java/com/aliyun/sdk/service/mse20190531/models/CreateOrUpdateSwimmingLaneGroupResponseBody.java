@@ -48,6 +48,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateSwimmingLaneGroupResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -327,6 +342,25 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             private Boolean recordCanaryDetail; 
             private String region; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appIds = model.appIds;
+                this.canaryModel = model.canaryModel;
+                this.dbGrayEnable = model.dbGrayEnable;
+                this.entryApp = model.entryApp;
+                this.id = model.id;
+                this.messageQueueFilterSide = model.messageQueueFilterSide;
+                this.messageQueueGrayEnable = model.messageQueueGrayEnable;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.paths = model.paths;
+                this.recordCanaryDetail = model.recordCanaryDetail;
+                this.region = model.region;
+                this.userId = model.userId;
+            } 
 
             /**
              * AppIds.

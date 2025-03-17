@@ -52,6 +52,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayDomainResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -206,6 +222,13 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Comment model) {
+                this.status = model.status;
+            } 
 
             /**
              * <p>The route status.</p>
@@ -424,6 +447,27 @@ public class ListGatewayDomainResponseBody extends TeaModel {
             private String tlsMax; 
             private String tlsMin; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.certBeforeDate = model.certBeforeDate;
+                this.certIdentifier = model.certIdentifier;
+                this.comment = model.comment;
+                this.gatewayId = model.gatewayId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.http2 = model.http2;
+                this.id = model.id;
+                this.mustHttps = model.mustHttps;
+                this.name = model.name;
+                this.protocol = model.protocol;
+                this.status = model.status;
+                this.tlsMax = model.tlsMax;
+                this.tlsMin = model.tlsMin;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the certificate expires.</p>

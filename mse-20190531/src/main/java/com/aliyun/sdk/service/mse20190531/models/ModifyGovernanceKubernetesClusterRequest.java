@@ -51,7 +51,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,6 +204,14 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         public static final class Builder {
             private String mseNamespace; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(NamespaceInfos model) {
+                this.mseNamespace = model.mseNamespace;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The microservice namespace. If you do not specify this parameter, Microservice Governance is not enabled for the namespace.</p>

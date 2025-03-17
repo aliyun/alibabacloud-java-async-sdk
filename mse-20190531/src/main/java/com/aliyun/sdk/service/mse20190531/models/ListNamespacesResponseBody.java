@@ -36,6 +36,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListNamespacesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNamespacesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -203,6 +215,21 @@ public class ListNamespacesResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appCount = model.appCount;
+                this.createTime = model.createTime;
+                this.describe = model.describe;
+                this.instanceCount = model.instanceCount;
+                this.namespace = model.namespace;
+                this.region = model.region;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.version = model.version;
+            } 
 
             /**
              * AppCount.
@@ -411,6 +438,21 @@ public class ListNamespacesResponseBody extends TeaModel {
             private String userId; 
             private Integer version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.appCount = model.appCount;
+                this.createTime = model.createTime;
+                this.describe = model.describe;
+                this.instanceCount = model.instanceCount;
+                this.namespace = model.namespace;
+                this.region = model.region;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.version = model.version;
+            } 
+
             /**
              * AppCount.
              */
@@ -569,6 +611,17 @@ public class ListNamespacesResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private java.util.List<Results> results; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.results = model.results;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * PageNumber.

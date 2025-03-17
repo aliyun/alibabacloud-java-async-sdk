@@ -52,6 +52,10 @@ public class QueryConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -206,6 +222,13 @@ public class QueryConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean emptyProtect; 
+
+            private Builder() {
+            } 
+
+            private Builder(NacosRunningEnv model) {
+                this.emptyProtect = model.emptyProtect;
+            } 
 
             /**
              * <p>Indicates whether empty list protection is enabled.</p>
@@ -640,6 +663,45 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean TLSEnabled; 
             private String tickTime; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authEnabled = model.authEnabled;
+                this.autopurgePurgeInterval = model.autopurgePurgeInterval;
+                this.autopurgeSnapRetainCount = model.autopurgeSnapRetainCount;
+                this.clusterName = model.clusterName;
+                this.configAuthEnabled = model.configAuthEnabled;
+                this.configAuthSupported = model.configAuthSupported;
+                this.configContentLimit = model.configContentLimit;
+                this.configSecretEnabled = model.configSecretEnabled;
+                this.configSecretSupported = model.configSecretSupported;
+                this.consoleUIEnabled = model.consoleUIEnabled;
+                this.enable4lw = model.enable4lw;
+                this.eurekaSupported = model.eurekaSupported;
+                this.extendedTypesEnable = model.extendedTypesEnable;
+                this.initLimit = model.initLimit;
+                this.juteMaxbuffer = model.juteMaxbuffer;
+                this.jvmFlagsCustom = model.jvmFlagsCustom;
+                this.MCPEnabled = model.MCPEnabled;
+                this.MCPSupported = model.MCPSupported;
+                this.maxClientCnxns = model.maxClientCnxns;
+                this.maxSessionTimeout = model.maxSessionTimeout;
+                this.minSessionTimeout = model.minSessionTimeout;
+                this.nacosRunningEnv = model.nacosRunningEnv;
+                this.namingAuthEnabled = model.namingAuthEnabled;
+                this.namingAuthSupported = model.namingAuthSupported;
+                this.namingCreateServiceSupported = model.namingCreateServiceSupported;
+                this.openSuperAcl = model.openSuperAcl;
+                this.passWord = model.passWord;
+                this.restartFlag = model.restartFlag;
+                this.snapshotCount = model.snapshotCount;
+                this.syncLimit = model.syncLimit;
+                this.TLSEnabled = model.TLSEnabled;
+                this.tickTime = model.tickTime;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.</p>

@@ -52,6 +52,10 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecurityGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -242,6 +258,16 @@ public class ListSecurityGroupResponseBody extends TeaModel {
             private String securityGroupName; 
             private String securityGroupType; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupName = model.securityGroupName;
+                this.securityGroupType = model.securityGroupType;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The ID of the security group.</p>

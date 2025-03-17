@@ -44,6 +44,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class GetServiceListPageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceListPageResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response to the request.</p>
@@ -241,6 +255,20 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String serviceType; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.gmtModifyTime = model.gmtModifyTime;
+                this.group = model.group;
+                this.instanceNum = model.instanceNum;
+                this.serviceName = model.serviceName;
+                this.serviceType = model.serviceType;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The application ID.</p>
              * 
@@ -400,6 +428,16 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String pageSize; 
             private java.util.List<Result> result; 
             private String totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number.</p>

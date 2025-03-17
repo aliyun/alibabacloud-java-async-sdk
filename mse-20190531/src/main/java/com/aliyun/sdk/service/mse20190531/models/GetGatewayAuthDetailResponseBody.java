@@ -52,6 +52,10 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGatewayAuthDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -223,6 +239,16 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
             private String sourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Service model) {
+                this.groupName = model.groupName;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.sourceType = model.sourceType;
+            } 
 
             /**
              * GroupName.
@@ -415,6 +441,23 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private Boolean withRematchRoute; 
             private Boolean withRequestBody; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalAuthZ model) {
+                this.allowRequestHeaders = model.allowRequestHeaders;
+                this.allowUpstreamHeaders = model.allowUpstreamHeaders;
+                this.bodyMaxBytes = model.bodyMaxBytes;
+                this.isRestrict = model.isRestrict;
+                this.prefixPath = model.prefixPath;
+                this.service = model.service;
+                this.serviceId = model.serviceId;
+                this.timeout = model.timeout;
+                this.tokenKey = model.tokenKey;
+                this.withRematchRoute = model.withRematchRoute;
+                this.withRequestBody = model.withRequestBody;
+            } 
+
             /**
              * AllowRequestHeaders.
              */
@@ -565,6 +608,15 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private String headerKey; 
             private String headerMethod; 
             private String headerValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthResourceHeaderList model) {
+                this.headerKey = model.headerKey;
+                this.headerMethod = model.headerMethod;
+                this.headerValue = model.headerValue;
+            } 
 
             /**
              * HeaderKey.
@@ -772,6 +824,25 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private Boolean isWhite; 
             private String matchType; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.authId = model.authId;
+                this.authResourceHeaderList = model.authResourceHeaderList;
+                this.domainId = model.domainId;
+                this.domainName = model.domainName;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ignoreCase = model.ignoreCase;
+                this.isWhite = model.isWhite;
+                this.matchType = model.matchType;
+                this.path = model.path;
+            } 
 
             /**
              * AuthId.
@@ -1215,6 +1286,38 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private Boolean tokenPass; 
             private String tokenPosition; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authResourceConfig = model.authResourceConfig;
+                this.authResourceMode = model.authResourceMode;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+                this.cookieDomain = model.cookieDomain;
+                this.externalAuthZ = model.externalAuthZ;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isWhite = model.isWhite;
+                this.issuer = model.issuer;
+                this.jwks = model.jwks;
+                this.loginUrl = model.loginUrl;
+                this.name = model.name;
+                this.redirectUrl = model.redirectUrl;
+                this.resourceList = model.resourceList;
+                this.scopesList = model.scopesList;
+                this.status = model.status;
+                this.sub = model.sub;
+                this.tokenName = model.tokenName;
+                this.tokenNamePrefix = model.tokenNamePrefix;
+                this.tokenPass = model.tokenPass;
+                this.tokenPosition = model.tokenPosition;
+                this.type = model.type;
+            } 
 
             /**
              * AuthResourceConfig.

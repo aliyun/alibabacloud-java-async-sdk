@@ -52,6 +52,10 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,23 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(BindSentinelBlockFallbackDefinitionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -111,7 +130,10 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -119,7 +141,10 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -127,7 +152,10 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +163,10 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +174,14 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

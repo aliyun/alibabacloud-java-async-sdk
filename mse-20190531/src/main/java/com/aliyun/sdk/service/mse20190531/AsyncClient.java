@@ -135,7 +135,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>mse-200-105</p>
+     * <blockquote>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CloneNacosConfig  CloneNacosConfigRequest
      * @return CloneNacosConfigResponse
@@ -162,7 +164,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.</p>
+     * <p>Please ensure that you fully understand the billing method and pricing of the MSE (Microservice Engine) product before using this interface.</p>
      * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
@@ -386,6 +388,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMigrationTaskResponse> deleteMigrationTask(DeleteMigrationTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteNacosConfig  DeleteNacosConfigRequest
      * @return DeleteNacosConfigResponse
      */
@@ -655,7 +662,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetNacosConfig  GetNacosConfigRequest
@@ -1361,6 +1368,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateGatewayCircuitBreakerRuleResponse
      */
     CompletableFuture<UpdateGatewayCircuitBreakerRuleResponse> updateGatewayCircuitBreakerRule(UpdateGatewayCircuitBreakerRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayConfig  UpdateGatewayConfigRequest
+     * @return UpdateGatewayConfigResponse
+     */
+    CompletableFuture<UpdateGatewayConfigResponse> updateGatewayConfig(UpdateGatewayConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateGatewayDomain  UpdateGatewayDomainRequest

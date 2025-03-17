@@ -44,6 +44,10 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryGovernanceKubernetesClusterResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -216,6 +230,18 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String namespaceInfos; 
             private String pilotStartTime; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.k8sVersion = model.k8sVersion;
+                this.namespaceInfos = model.namespaceInfos;
+                this.pilotStartTime = model.pilotStartTime;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>
@@ -357,6 +383,16 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

@@ -64,6 +64,10 @@ public class ListListenersByIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -137,6 +141,21 @@ public class ListListenersByIpResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListListenersByIpResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.listeners = model.listeners;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -311,6 +330,16 @@ public class ListListenersByIpResponseBody extends TeaModel {
             private String group; 
             private String md5; 
             private String namespaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.dataId = model.dataId;
+                this.group = model.group;
+                this.md5 = model.md5;
+                this.namespaceId = model.namespaceId;
+            } 
 
             /**
              * <p>The ID of the data.</p>

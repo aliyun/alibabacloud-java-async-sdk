@@ -52,6 +52,10 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -101,6 +105,18 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEngineNamespaceResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the instance.</p>
@@ -278,6 +294,19 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
             private Integer quota; 
             private Integer serviceCount; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configCount = model.configCount;
+                this.namespace = model.namespace;
+                this.namespaceDesc = model.namespaceDesc;
+                this.namespaceShowName = model.namespaceShowName;
+                this.quota = model.quota;
+                this.serviceCount = model.serviceCount;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of configurations.</p>

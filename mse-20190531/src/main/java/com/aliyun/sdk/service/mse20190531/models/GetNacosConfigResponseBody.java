@@ -48,6 +48,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configuration
      */
@@ -90,8 +94,19 @@ public class GetNacosConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetNacosConfigResponseBody model) {
+            this.configuration = model.configuration;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The configuration information.</p>
+         * <p>Configuration information.</p>
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
@@ -99,7 +114,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>Error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -110,7 +125,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>Message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -121,7 +136,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4EAB48C-BB4B-5B8D-B33B-35D69606C5AD</p>
@@ -132,7 +147,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The result of the request, with values as follows:</p>
          * <ul>
          * <li><code>true</code>: The request was successful.</li>
          * <li><code>false</code>: The request failed.</li>
@@ -220,8 +235,21 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String rule; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(GrayVersions model) {
+                this.name = model.name;
+                this.priority = model.priority;
+                this.rule = model.rule;
+                this.type = model.type;
+            } 
+
             /**
-             * Name.
+             * <p>Gray version name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -229,7 +257,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the current gray rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -237,7 +268,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>Rules of the current gray version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a=b</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -245,7 +279,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Gray type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beta</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -411,8 +448,25 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String tags; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.appName = model.appName;
+                this.betaIps = model.betaIps;
+                this.content = model.content;
+                this.dataId = model.dataId;
+                this.desc = model.desc;
+                this.encryptedDataKey = model.encryptedDataKey;
+                this.grayVersions = model.grayVersions;
+                this.group = model.group;
+                this.md5 = model.md5;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>The name of the application.</p>
+             * <p>Application name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -423,10 +477,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+             * <p>List of IPs for Beta release.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.1.XX.XX,2.2.XX.XX</p>
+             * <p>1.1.XX.XX，2.2.XX.XX</p>
              */
             public Builder betaIps(String betaIps) {
                 this.betaIps = betaIps;
@@ -434,7 +488,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the configuration.</p>
+             * <p>Configuration content.</p>
              * 
              * <strong>example:</strong>
              * <p>log.level=error</p>
@@ -445,7 +499,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the configuration.</p>
+             * <p>Configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>log.yaml</p>
@@ -456,7 +510,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the configuration.</p>
+             * <p>Configuration description.</p>
              * 
              * <strong>example:</strong>
              * <p>For testing</p>
@@ -467,7 +521,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption key.</p>
+             * <p>Encrypted key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -478,7 +532,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GrayVersions.
+             * <p>Current gray version information</p>
              */
             public Builder grayVersions(java.util.List<GrayVersions> grayVersions) {
                 this.grayVersions = grayVersions;
@@ -486,7 +540,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the configuration group.</p>
+             * <p>Configuration group name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -497,7 +551,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message digest of the configuration.</p>
+             * <p>Message digest of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>123rfsdf3</p>
@@ -508,7 +562,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the configuration.</p>
+             * <p>Tags of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>context</p>
@@ -519,7 +573,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the configuration.</p>
+             * <p>Format of the configuration content.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>

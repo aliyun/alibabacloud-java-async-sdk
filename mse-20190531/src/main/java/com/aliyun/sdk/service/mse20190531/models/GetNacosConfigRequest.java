@@ -62,7 +62,7 @@ public class GetNacosConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,7 +132,7 @@ public class GetNacosConfigRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>Language type of the returned information:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -148,10 +148,10 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a beta release. Valid values:</p>
+         * <p>Whether it is a Beta release.</p>
          * <ul>
-         * <li><code>true</code>: yes</li>
-         * <li><code>false</code>: no</li>
+         * <li><code>true</code>: Yes</li>
+         * <li><code>false</code>: No</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data.</p>
+         * <p>Data ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>Configuration group information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class GetNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>Namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ddaf8f12-****-b1c1-86e7c72e266b</p>

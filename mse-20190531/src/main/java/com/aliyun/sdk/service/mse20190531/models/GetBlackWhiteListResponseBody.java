@@ -52,6 +52,10 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBlackWhiteListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
@@ -326,6 +342,23 @@ public class GetBlackWhiteListResponseBody extends TeaModel {
             private String resourceType; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isWhite = model.isWhite;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The content of the blacklist.</p>

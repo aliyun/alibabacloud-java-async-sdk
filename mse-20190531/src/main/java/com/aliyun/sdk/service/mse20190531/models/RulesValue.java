@@ -60,6 +60,10 @@ public class RulesValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return status
      */
@@ -125,6 +129,20 @@ public class RulesValue extends TeaModel {
         private Long id; 
         private Integer instanceNum; 
         private Rules rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(RulesValue model) {
+            this.status = model.status;
+            this.rate = model.rate;
+            this.enable = model.enable;
+            this.tag = model.tag;
+            this.name = model.name;
+            this.id = model.id;
+            this.instanceNum = model.instanceNum;
+            this.rules = model.rules;
+        } 
 
         /**
          * Status.
@@ -335,6 +353,22 @@ public class RulesValue extends TeaModel {
             private String type; 
             private String name; 
             private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestItems model) {
+                this.datum = model.datum;
+                this.operator = model.operator;
+                this.nameList = model.nameList;
+                this.cond = model.cond;
+                this.divisor = model.divisor;
+                this.remainder = model.remainder;
+                this.rate = model.rate;
+                this.type = model.type;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * datum.
@@ -550,6 +584,21 @@ public class RulesValue extends TeaModel {
             private java.util.List<String> tags; 
             private java.util.List<String> paths; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Springcloud model) {
+                this.condition = model.condition;
+                this.restItems = model.restItems;
+                this.triggerPolicy = model.triggerPolicy;
+                this.enable = model.enable;
+                this.appId = model.appId;
+                this.priority = model.priority;
+                this.tags = model.tags;
+                this.paths = model.paths;
+                this.path = model.path;
+            } 
 
             /**
              * condition.
@@ -769,6 +818,22 @@ public class RulesValue extends TeaModel {
             private Integer index; 
             private String expr; 
             private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArgumentItems model) {
+                this.operator = model.operator;
+                this.nameList = model.nameList;
+                this.datum = model.datum;
+                this.cond = model.cond;
+                this.divisor = model.divisor;
+                this.remainder = model.remainder;
+                this.rate = model.rate;
+                this.index = model.index;
+                this.expr = model.expr;
+                this.value = model.value;
+            } 
 
             /**
              * operator.
@@ -997,6 +1062,22 @@ public class RulesValue extends TeaModel {
             private String condition; 
             private java.util.List<ArgumentItems> argumentItems; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dubbo model) {
+                this.appId = model.appId;
+                this.tags = model.tags;
+                this.triggerPolicy = model.triggerPolicy;
+                this.serviceName = model.serviceName;
+                this.group = model.group;
+                this.version = model.version;
+                this.methodName = model.methodName;
+                this.paramTypes = model.paramTypes;
+                this.condition = model.condition;
+                this.argumentItems = model.argumentItems;
+            } 
+
             /**
              * appId.
              */
@@ -1127,6 +1208,14 @@ public class RulesValue extends TeaModel {
         public static final class Builder {
             private java.util.List<Springcloud> springcloud; 
             private java.util.List<Dubbo> dubbo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.springcloud = model.springcloud;
+                this.dubbo = model.dubbo;
+            } 
 
             /**
              * springcloud.

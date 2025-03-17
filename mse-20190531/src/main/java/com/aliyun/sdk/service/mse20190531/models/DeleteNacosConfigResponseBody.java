@@ -52,6 +52,10 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,23 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteNacosConfigResponseBody model) {
+            this.code = model.code;
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>Return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +130,10 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -119,9 +141,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <blockquote>
-         * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
-         * </blockquote>
+         * <p>HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -132,7 +152,10 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +163,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Deletes a Nacos configuration.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4FEFC13F-EB50-51E1-97D8-C5CBA8CD1B84</p>
@@ -151,7 +174,10 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Request result, with the following values: - <code>true</code>: The request was successful. - <code>false</code>: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -48,6 +48,10 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryClusterDetailResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -267,6 +282,20 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String role; 
             private String singleTunnelVip; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceModels model) {
+                this.creationTimestamp = model.creationTimestamp;
+                this.healthStatus = model.healthStatus;
+                this.internetIp = model.internetIp;
+                this.ip = model.ip;
+                this.podName = model.podName;
+                this.role = model.role;
+                this.singleTunnelVip = model.singleTunnelVip;
+                this.zone = model.zone;
+            } 
 
             /**
              * <p>The timestamp when the instance was created.</p>
@@ -826,6 +855,49 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private java.util.Map<String, ?> tags; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aclEntryList = model.aclEntryList;
+                this.aclId = model.aclId;
+                this.appVersion = model.appVersion;
+                this.chargeType = model.chargeType;
+                this.clusterAliasName = model.clusterAliasName;
+                this.clusterName = model.clusterName;
+                this.clusterSpecification = model.clusterSpecification;
+                this.clusterType = model.clusterType;
+                this.clusterVersion = model.clusterVersion;
+                this.connectionType = model.connectionType;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.diskCapacity = model.diskCapacity;
+                this.diskType = model.diskType;
+                this.healthStatus = model.healthStatus;
+                this.initCostTime = model.initCostTime;
+                this.initStatus = model.initStatus;
+                this.instanceCount = model.instanceCount;
+                this.instanceId = model.instanceId;
+                this.instanceModels = model.instanceModels;
+                this.internetAddress = model.internetAddress;
+                this.internetDomain = model.internetDomain;
+                this.internetPort = model.internetPort;
+                this.intranetAddress = model.intranetAddress;
+                this.intranetDomain = model.intranetDomain;
+                this.intranetPort = model.intranetPort;
+                this.memoryCapacity = model.memoryCapacity;
+                this.mseVersion = model.mseVersion;
+                this.netType = model.netType;
+                this.orderClusterVersion = model.orderClusterVersion;
+                this.payInfo = model.payInfo;
+                this.pubNetworkFlow = model.pubNetworkFlow;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The whitelist.</p>

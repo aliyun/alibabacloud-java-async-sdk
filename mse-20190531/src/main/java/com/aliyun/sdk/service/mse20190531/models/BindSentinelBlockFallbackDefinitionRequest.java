@@ -64,7 +64,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -134,7 +134,14 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -143,6 +150,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +163,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
+         * <p>Behavior ID. 0:the default behavior.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +176,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
+         * <p>The microservice namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +189,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
+         * <p>Interface Name: The resource to which the rule applies. It must match the interface name in the console&quot;s interface details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +202,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
+         * <p>Target rule type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -52,6 +52,10 @@ public class ListGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListGatewayResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The return value.</p>
@@ -219,6 +235,14 @@ public class ListGatewayResponseBody extends TeaModel {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnableScaleTimePolicyList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EndTime.
              */
@@ -297,6 +321,15 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer desiredReplica; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimePolicyList model) {
+                this.desiredReplica = model.desiredReplica;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The expected number of replicas for auto scale-out.</p>
@@ -430,6 +463,18 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer maxReplica; 
             private java.util.List<TimePolicyList> timePolicyList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticPolicy model) {
+                this.elastic = model.elastic;
+                this.elasticType = model.elasticType;
+                this.enableScaleTimePolicyList = model.enableScaleTimePolicyList;
+                this.loadWarningThreshold = model.loadWarningThreshold;
+                this.maxReplica = model.maxReplica;
+                this.timePolicyList = model.timePolicyList;
+            } 
+
             /**
              * <p>Indicates whether auto scale-out is enabled.</p>
              * 
@@ -540,6 +585,14 @@ public class ListGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableWaf; 
             private Boolean supportWaf; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitConfig model) {
+                this.enableWaf = model.enableWaf;
+                this.supportWaf = model.supportWaf;
+            } 
 
             /**
              * <p>Indicates whether Web Application Firewall (WAF) is enabled.</p>
@@ -697,6 +750,21 @@ public class ListGatewayResponseBody extends TeaModel {
             private String slbSpec; 
             private String statusDesc; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InternetSlb model) {
+                this.gatewaySlbMode = model.gatewaySlbMode;
+                this.gatewaySlbStatus = model.gatewaySlbStatus;
+                this.internetNetworkFlow = model.internetNetworkFlow;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbPort = model.slbPort;
+                this.slbSpec = model.slbSpec;
+                this.statusDesc = model.statusDesc;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The mode of the SLB instance.</p>
@@ -860,6 +928,15 @@ public class ListGatewayResponseBody extends TeaModel {
             private String startTime; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(MaintenancePeriod model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * <p>The end time of auto scale-out.</p>
              * 
@@ -1012,6 +1089,20 @@ public class ListGatewayResponseBody extends TeaModel {
             private String slbSpec; 
             private String statusDesc; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Slb model) {
+                this.gatewaySlbMode = model.gatewaySlbMode;
+                this.gatewaySlbStatus = model.gatewaySlbStatus;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbPort = model.slbPort;
+                this.slbSpec = model.slbSpec;
+                this.statusDesc = model.statusDesc;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The mode of the SLB instance.</p>
@@ -1624,6 +1715,53 @@ public class ListGatewayResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitch2; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ahasOn = model.ahasOn;
+                this.appVersion = model.appVersion;
+                this.armsOn = model.armsOn;
+                this.chargeType = model.chargeType;
+                this.currentVersion = model.currentVersion;
+                this.elastic = model.elastic;
+                this.elasticInstanceId = model.elasticInstanceId;
+                this.elasticPolicy = model.elasticPolicy;
+                this.elasticReplica = model.elasticReplica;
+                this.elasticType = model.elasticType;
+                this.endDate = model.endDate;
+                this.gatewayType = model.gatewayType;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gatewayVersion = model.gatewayVersion;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.initConfig = model.initConfig;
+                this.instanceId = model.instanceId;
+                this.internetSlb = model.internetSlb;
+                this.latestVersion = model.latestVersion;
+                this.maintenancePeriod = model.maintenancePeriod;
+                this.mseTag = model.mseTag;
+                this.mseVersion = model.mseVersion;
+                this.mustUpgrade = model.mustUpgrade;
+                this.name = model.name;
+                this.primaryUser = model.primaryUser;
+                this.region = model.region;
+                this.replica = model.replica;
+                this.resourceGroupId = model.resourceGroupId;
+                this.rollBack = model.rollBack;
+                this.slb = model.slb;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.supportWasm = model.supportWasm;
+                this.tag = model.tag;
+                this.totalReplica = model.totalReplica;
+                this.upgrade = model.upgrade;
+                this.vpcId = model.vpcId;
+                this.vswitch2 = model.vswitch2;
+            } 
+
             /**
              * <p>Indicates whether Application High Availability Service (AHAS) is activated.</p>
              * 
@@ -2148,6 +2286,16 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

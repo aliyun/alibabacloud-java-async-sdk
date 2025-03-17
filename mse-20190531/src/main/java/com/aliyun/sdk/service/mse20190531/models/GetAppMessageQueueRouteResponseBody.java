@@ -52,6 +52,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppMessageQueueRouteResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned.</p>
@@ -254,6 +270,17 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             private String filterSide; 
             private String region; 
             private java.util.List<String> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.enable = model.enable;
+                this.filterSide = model.filterSide;
+                this.region = model.region;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the application.</p>

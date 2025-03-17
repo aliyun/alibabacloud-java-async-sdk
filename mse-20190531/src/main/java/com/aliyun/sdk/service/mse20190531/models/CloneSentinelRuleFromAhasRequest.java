@@ -61,7 +61,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,7 +180,10 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * MseAppName.
+         * <p>The name of the MSE application after migration. If this parameter is not specified, the name of the Application High Availability Service (AHAS) application is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder mseAppName(String mseAppName) {
             this.putQueryParameter("MseAppName", mseAppName);

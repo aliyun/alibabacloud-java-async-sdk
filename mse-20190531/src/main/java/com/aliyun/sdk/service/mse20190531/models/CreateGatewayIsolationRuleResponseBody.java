@@ -36,6 +36,10 @@ public class CreateGatewayIsolationRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateGatewayIsolationRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Long data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGatewayIsolationRuleResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.

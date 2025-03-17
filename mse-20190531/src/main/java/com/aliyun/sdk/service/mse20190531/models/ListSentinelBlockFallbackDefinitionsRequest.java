@@ -51,7 +51,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,14 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -112,6 +119,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +132,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         }
 
         /**
-         * ClassificationSet.
+         * <p>Behavior Classification Set.</p>
          */
         public Builder classificationSet(java.util.List<Integer> classificationSet) {
             String classificationSetShrink = shrink(classificationSet, "ClassificationSet", "json");
@@ -134,6 +142,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the Microservices namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

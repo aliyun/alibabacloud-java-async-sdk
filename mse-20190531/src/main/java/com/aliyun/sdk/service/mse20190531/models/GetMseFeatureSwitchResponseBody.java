@@ -48,6 +48,10 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
         private String requestId; 
         private java.util.Map<String, ?> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMseFeatureSwitchResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

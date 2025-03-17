@@ -52,6 +52,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateGatewayRouteWafStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
@@ -291,6 +307,20 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String timeUnit; 
             private Long unitNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cors model) {
+                this.allowCredentials = model.allowCredentials;
+                this.allowHeaders = model.allowHeaders;
+                this.allowMethods = model.allowMethods;
+                this.allowOrigins = model.allowOrigins;
+                this.exposeHeaders = model.exposeHeaders;
+                this.status = model.status;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
+
             /**
              * <p>The credentials allowed.</p>
              * 
@@ -436,6 +466,14 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String body; 
             private Integer code; 
 
+            private Builder() {
+            } 
+
+            private Builder(DirectResponse model) {
+                this.body = model.body;
+                this.code = model.code;
+            } 
+
             /**
              * <p>The mock return value.</p>
              * 
@@ -556,6 +594,18 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String pattern; 
             private String status; 
             private String substitution; 
+
+            private Builder() {
+            } 
+
+            private Builder(HTTPRewrite model) {
+                this.host = model.host;
+                this.path = model.path;
+                this.pathType = model.pathType;
+                this.pattern = model.pattern;
+                this.status = model.status;
+                this.substitution = model.substitution;
+            } 
 
             /**
              * <p>The domain name.</p>
@@ -698,6 +748,16 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String opType; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderOpItems model) {
+                this.directionType = model.directionType;
+                this.key = model.key;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The request or response.</p>
              * 
@@ -793,6 +853,14 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private java.util.List<HeaderOpItems> headerOpItems; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderOp model) {
+                this.headerOpItems = model.headerOpItems;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The policy.</p>
              */
@@ -874,6 +942,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Integer code; 
             private String host; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Redirect model) {
+                this.code = model.code;
+                this.host = model.host;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The response code returned.</p>
@@ -983,6 +1060,16 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private java.util.List<String> retryOn; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Retry model) {
+                this.attempts = model.attempts;
+                this.httpCodes = model.httpCodes;
+                this.retryOn = model.retryOn;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The number of retries allowed for a request.</p>
              * 
@@ -1084,6 +1171,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderPredicates model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the request header.</p>
              * 
@@ -1180,6 +1276,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PathPredicates model) {
+                this.ignoreCase = model.ignoreCase;
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Indicates whether case sensitivity is ignored.</p>
              * 
@@ -1275,6 +1380,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String key; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryPredicates model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the parameter.</p>
@@ -1383,6 +1497,16 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private java.util.List<String> methodPredicates; 
             private PathPredicates pathPredicates; 
             private java.util.List<QueryPredicates> queryPredicates; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoutePredicates model) {
+                this.headerPredicates = model.headerPredicates;
+                this.methodPredicates = model.methodPredicates;
+                this.pathPredicates = model.pathPredicates;
+                this.queryPredicates = model.queryPredicates;
+            } 
 
             /**
              * <p>The information about matching based on request headers.</p>
@@ -1539,6 +1663,20 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String sourceType; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteServices model) {
+                this.groupName = model.groupName;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.percent = model.percent;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.sourceType = model.sourceType;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the group to which the service belongs.</p>
              * 
@@ -1689,6 +1827,15 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String status; 
             private String timeUnit; 
             private Integer unitNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Timeout model) {
+                this.status = model.status;
+                this.timeUnit = model.timeUnit;
+                this.unitNum = model.unitNum;
+            } 
 
             /**
              * <p>The status.</p>
@@ -2073,6 +2220,39 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String services; 
             private Integer status; 
             private Timeout timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cors = model.cors;
+                this.defaultServiceId = model.defaultServiceId;
+                this.defaultServiceName = model.defaultServiceName;
+                this.destinationType = model.destinationType;
+                this.directResponse = model.directResponse;
+                this.domainId = model.domainId;
+                this.domainIdList = model.domainIdList;
+                this.domainName = model.domainName;
+                this.domainNameList = model.domainNameList;
+                this.enableWaf = model.enableWaf;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.HTTPRewrite = model.HTTPRewrite;
+                this.headerOp = model.headerOp;
+                this.id = model.id;
+                this.name = model.name;
+                this.predicates = model.predicates;
+                this.redirect = model.redirect;
+                this.retry = model.retry;
+                this.routeOrder = model.routeOrder;
+                this.routePredicates = model.routePredicates;
+                this.routeServices = model.routeServices;
+                this.services = model.services;
+                this.status = model.status;
+                this.timeout = model.timeout;
+            } 
 
             /**
              * <p>The configuration for cross-origin resource sharing (CORS).</p>

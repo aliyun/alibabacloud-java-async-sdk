@@ -64,6 +64,10 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterHealthCheckTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. A value of 200 is returned if the request was successful.</p>
@@ -498,6 +517,31 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private Long taskId; 
             private Integer type; 
             private String values; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskList model) {
+                this.description = model.description;
+                this.descriptionEn = model.descriptionEn;
+                this.id = model.id;
+                this.module = model.module;
+                this.mute = model.mute;
+                this.noticeFeature = model.noticeFeature;
+                this.primaryUser = model.primaryUser;
+                this.riskCode = model.riskCode;
+                this.riskLevel = model.riskLevel;
+                this.riskName = model.riskName;
+                this.riskNameEn = model.riskNameEn;
+                this.riskType = model.riskType;
+                this.situation = model.situation;
+                this.situationEn = model.situationEn;
+                this.suggestion = model.suggestion;
+                this.suggestionEn = model.suggestionEn;
+                this.taskId = model.taskId;
+                this.type = model.type;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The description.</p>
@@ -948,6 +992,30 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private String updateTime; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appVersion = model.appVersion;
+                this.chargeType = model.chargeType;
+                this.clusterType = model.clusterType;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.imageVersion = model.imageVersion;
+                this.instanceId = model.instanceId;
+                this.primaryUser = model.primaryUser;
+                this.replica = model.replica;
+                this.riskList = model.riskList;
+                this.score = model.score;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.totalItem = model.totalItem;
+                this.totalRisk = model.totalRisk;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * <p>The complete version number.</p>
              * 
@@ -1217,6 +1285,16 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

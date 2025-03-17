@@ -52,6 +52,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAuthPolicyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -264,6 +280,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private String serviceName; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Method model) {
+                this.group = model.group;
+                this.name = model.name;
+                this.parameterTypes = model.parameterTypes;
+                this.returnType = model.returnType;
+                this.serviceName = model.serviceName;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The group.</p>
              * 
@@ -425,6 +453,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private java.util.List<String> k8sNamespaces; 
             private Method method; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthRule model) {
+                this.appIds = model.appIds;
+                this.authType = model.authType;
+                this.black = model.black;
+                this.k8sNamespaces = model.k8sNamespaces;
+                this.method = model.method;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The IDs of applications.</p>
@@ -682,6 +722,26 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private String source; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accountId = model.accountId;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.authRule = model.authRule;
+                this.authType = model.authType;
+                this.enable = model.enable;
+                this.id = model.id;
+                this.k8sNamespace = model.k8sNamespace;
+                this.name = model.name;
+                this.namespaceId = model.namespaceId;
+                this.protocol = model.protocol;
+                this.regionId = model.regionId;
+                this.source = model.source;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
              * 
@@ -920,6 +980,16 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number.</p>

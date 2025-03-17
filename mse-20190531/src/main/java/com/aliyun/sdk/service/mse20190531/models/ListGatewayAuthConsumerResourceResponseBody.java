@@ -64,6 +64,10 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayAuthConsumerResourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. A value of 200 is returned if the request is successful.</p>
@@ -363,6 +382,20 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             private Long routeId; 
             private String routeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.consumerId = model.consumerId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.resourceStatus = model.resourceStatus;
+                this.routeId = model.routeId;
+                this.routeName = model.routeName;
+            } 
+
             /**
              * <p>The ID of the consumer.</p>
              * 
@@ -529,6 +562,16 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

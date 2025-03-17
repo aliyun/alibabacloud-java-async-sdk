@@ -52,6 +52,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryInstancesInfoResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the data.</p>
@@ -318,6 +334,22 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             private String singleTunnelVip; 
             private String zone; 
             private Boolean zoneDistributed; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clientPort = model.clientPort;
+                this.creationTimestamp = model.creationTimestamp;
+                this.healthStatus = model.healthStatus;
+                this.internetIp = model.internetIp;
+                this.ip = model.ip;
+                this.podName = model.podName;
+                this.role = model.role;
+                this.singleTunnelVip = model.singleTunnelVip;
+                this.zone = model.zone;
+                this.zoneDistributed = model.zoneDistributed;
+            } 
 
             /**
              * <p>The enabled port.</p>

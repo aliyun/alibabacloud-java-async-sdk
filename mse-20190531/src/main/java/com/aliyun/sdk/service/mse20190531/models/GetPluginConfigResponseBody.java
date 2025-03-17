@@ -64,6 +64,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class GetPluginConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPluginConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -283,6 +302,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -446,6 +473,22 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private Long id; 
             private Long pluginId; 
             private java.util.List<ResourceList> resourceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewayConfigList model) {
+                this.config = model.config;
+                this.configLevel = model.configLevel;
+                this.enable = model.enable;
+                this.gatewayId = model.gatewayId;
+                this.gatewayUniqueId = model.gatewayUniqueId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.pluginId = model.pluginId;
+                this.resourceList = model.resourceList;
+            } 
 
             /**
              * <p>The plug-in configuration.</p>
@@ -871,6 +914,36 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private String version; 
             private String versionJson; 
             private Integer wasmLang; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.category = model.category;
+                this.configCheck = model.configCheck;
+                this.configExample = model.configExample;
+                this.domainConfigStartIndex = model.domainConfigStartIndex;
+                this.gatewayConfigList = model.gatewayConfigList;
+                this.gatewayConfigStartIndex = model.gatewayConfigStartIndex;
+                this.id = model.id;
+                this.imageName = model.imageName;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.phase = model.phase;
+                this.primaryUser = model.primaryUser;
+                this.priority = model.priority;
+                this.publishState = model.publishState;
+                this.readme = model.readme;
+                this.readmeEn = model.readmeEn;
+                this.routeConfigStartIndex = model.routeConfigStartIndex;
+                this.status = model.status;
+                this.summary = model.summary;
+                this.summaryEn = model.summaryEn;
+                this.type = model.type;
+                this.version = model.version;
+                this.versionJson = model.versionJson;
+                this.wasmLang = model.wasmLang;
+            } 
 
             /**
              * <p>The category of the plug-in. Valid values:</p>

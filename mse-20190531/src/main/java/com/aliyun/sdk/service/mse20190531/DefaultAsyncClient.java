@@ -383,7 +383,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>mse-200-105</p>
+     * <blockquote>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CloneNacosConfig  CloneNacosConfigRequest
      * @return CloneNacosConfigResponse
@@ -458,7 +460,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.</p>
+     * <p>Please ensure that you fully understand the billing method and pricing of the MSE (Microservice Engine) product before using this interface.</p>
      * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
@@ -1090,6 +1092,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteNacosConfig  DeleteNacosConfigRequest
      * @return DeleteNacosConfigResponse
      */
@@ -1815,7 +1822,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetNacosConfig  GetNacosConfigRequest
@@ -3813,6 +3820,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateGatewayCircuitBreakerRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateGatewayConfig  UpdateGatewayConfigRequest
+     * @return UpdateGatewayConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGatewayConfigResponse> updateGatewayConfig(UpdateGatewayConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateGatewayConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGatewayConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGatewayConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

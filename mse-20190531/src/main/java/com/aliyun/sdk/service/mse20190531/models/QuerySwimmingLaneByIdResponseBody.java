@@ -48,6 +48,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -90,6 +94,17 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QuerySwimmingLaneByIdResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The details of the data.</p>
          * 
@@ -102,7 +117,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -113,7 +128,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>The request was successfully processed.</p>
@@ -295,6 +310,22 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestItems model) {
+                this.cond = model.cond;
+                this.datum = model.datum;
+                this.divisor = model.divisor;
+                this.name = model.name;
+                this.nameList = model.nameList;
+                this.operator = model.operator;
+                this.rate = model.rate;
+                this.remainder = model.remainder;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * cond.
              */
@@ -449,6 +480,16 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String path; 
             private java.util.List<String> paths; 
             private java.util.List<RestItems> restItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntryRules model) {
+                this.condition = model.condition;
+                this.path = model.path;
+                this.paths = model.paths;
+                this.restItems = model.restItems;
+            } 
 
             /**
              * condition.
@@ -676,6 +717,26 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pathIndependentPercentageEnable = model.pathIndependentPercentageEnable;
+                this.enable = model.enable;
+                this.enableRules = model.enableRules;
+                this.entryRule = model.entryRule;
+                this.entryRules = model.entryRules;
+                this.gatewaySwimmingLaneRouteJson = model.gatewaySwimmingLaneRouteJson;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.tag = model.tag;
+            } 
 
             /**
              * PathIndependentPercentageEnable.

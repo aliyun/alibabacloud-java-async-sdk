@@ -48,6 +48,10 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCircuitBreakerRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned.</p>
@@ -363,6 +378,27 @@ public class CreateCircuitBreakerRuleResponseBody extends TeaModel {
             private Integer statIntervalMs; 
             private Integer strategy; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.enable = model.enable;
+                this.halfOpenBaseAmountPerStep = model.halfOpenBaseAmountPerStep;
+                this.halfOpenRecoveryStepNum = model.halfOpenRecoveryStepNum;
+                this.id = model.id;
+                this.maxAllowedRtMs = model.maxAllowedRtMs;
+                this.minRequestAmount = model.minRequestAmount;
+                this.namespace = model.namespace;
+                this.regionId = model.regionId;
+                this.resource = model.resource;
+                this.retryTimeoutMs = model.retryTimeoutMs;
+                this.statIntervalMs = model.statIntervalMs;
+                this.strategy = model.strategy;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The ID of the application.</p>

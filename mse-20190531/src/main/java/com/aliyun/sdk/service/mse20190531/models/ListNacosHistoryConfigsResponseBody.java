@@ -64,6 +64,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -137,6 +141,21 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNacosHistoryConfigsResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.historyItems = model.historyItems;
+            this.httpCode = model.httpCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -347,6 +366,19 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             private Long lastModifiedTime; 
             private String opType; 
             private String srcUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(HistoryItems model) {
+                this.appName = model.appName;
+                this.dataId = model.dataId;
+                this.group = model.group;
+                this.id = model.id;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.opType = model.opType;
+                this.srcUser = model.srcUser;
+            } 
 
             /**
              * <p>The application tag.</p>

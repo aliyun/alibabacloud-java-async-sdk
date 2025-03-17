@@ -56,6 +56,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryClusterSpecificationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The return value.</p>
@@ -253,6 +270,15 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             private String clusterSpecificationName; 
             private String cpuCapacity; 
             private String memoryCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterSpecificationName = model.clusterSpecificationName;
+                this.cpuCapacity = model.cpuCapacity;
+                this.memoryCapacity = model.memoryCapacity;
+            } 
 
             /**
              * <p>The engine specifications that can be used.</p>

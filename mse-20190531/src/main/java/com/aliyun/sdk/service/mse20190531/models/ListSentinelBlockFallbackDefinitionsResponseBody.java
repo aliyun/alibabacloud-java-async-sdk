@@ -48,6 +48,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -90,8 +94,19 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSentinelBlockFallbackDefinitionsResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Data.
+         * <p>The details of the data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -99,7 +114,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -107,7 +125,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +136,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +147,14 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,8 +271,24 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             private String resourceClassification; 
             private java.util.Map<String, ?> targetMap; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appName = model.appName;
+                this.fallbackBehavior = model.fallbackBehavior;
+                this.id = model.id;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.resourceClassification = model.resourceClassification;
+                this.targetMap = model.targetMap;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -249,7 +296,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * FallbackBehavior.
+             * <p>Behavior  detail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;webRespStatusCode&quot;:429,&quot;webRespMessage&quot;:&quot;test&quot;,&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0}</p>
              */
             public Builder fallbackBehavior(java.util.Map<String, ?> fallbackBehavior) {
                 this.fallbackBehavior = fallbackBehavior;
@@ -257,7 +307,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Behavior Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -265,7 +318,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the behavior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultFallback</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -273,7 +329,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The name of the Microservices namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -281,7 +340,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceClassification.
+             * <p>Behavior classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceClassification(String resourceClassification) {
                 this.resourceClassification = resourceClassification;
@@ -289,7 +351,10 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetMap.
+             * <p>Resource information bound to the behavior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;/params/{hot}&quot;:[1]}</p>
              */
             public Builder targetMap(java.util.Map<String, ?> targetMap) {
                 this.targetMap = targetMap;

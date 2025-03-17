@@ -32,6 +32,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -41,6 +45,13 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationInstanceListResponseBody model) {
+            this.data = model.data;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -87,6 +98,13 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>标签值。</p>
@@ -161,6 +179,15 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private String ip; 
             private String port; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ip = model.ip;
+                this.port = model.port;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The node IP address.</p>
@@ -266,6 +293,16 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.result = model.result;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The page number. Pages start from page 1.</p>
