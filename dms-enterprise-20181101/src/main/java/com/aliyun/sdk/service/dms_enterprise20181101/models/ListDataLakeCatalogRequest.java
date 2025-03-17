@@ -31,21 +31,21 @@ public class ListDataLakeCatalogRequest extends Request {
     private String searchKey;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SessionToken")
-    private String sessionToken;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private Long workspaceId;
 
     private ListDataLakeCatalogRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.dataRegion = builder.dataRegion;
         this.searchKey = builder.searchKey;
-        this.sessionToken = builder.sessionToken;
         this.tid = builder.tid;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -83,25 +83,25 @@ public class ListDataLakeCatalogRequest extends Request {
     }
 
     /**
-     * @return sessionToken
-     */
-    public String getSessionToken() {
-        return this.sessionToken;
-    }
-
-    /**
      * @return tid
      */
     public Long getTid() {
         return this.tid;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public Long getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListDataLakeCatalogRequest, Builder> {
         private String regionId; 
         private String dataRegion; 
         private String searchKey; 
-        private String sessionToken; 
         private Long tid; 
+        private Long workspaceId; 
 
         private Builder() {
             super();
@@ -112,8 +112,8 @@ public class ListDataLakeCatalogRequest extends Request {
             this.regionId = request.regionId;
             this.dataRegion = request.dataRegion;
             this.searchKey = request.searchKey;
-            this.sessionToken = request.sessionToken;
             this.tid = request.tid;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -147,20 +147,20 @@ public class ListDataLakeCatalogRequest extends Request {
         }
 
         /**
-         * SessionToken.
-         */
-        public Builder sessionToken(String sessionToken) {
-            this.putQueryParameter("SessionToken", sessionToken);
-            this.sessionToken = sessionToken;
-            return this;
-        }
-
-        /**
          * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
             this.tid = tid;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(Long workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

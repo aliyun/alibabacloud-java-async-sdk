@@ -123,6 +123,10 @@ public class CreateDifyInstanceRequest extends Request {
     private String modelOption;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayOption")
+    private String natGatewayOption;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssPath")
     private String ossPath;
 
@@ -267,6 +271,7 @@ public class CreateDifyInstanceRequest extends Request {
         this.kvStoreType = builder.kvStoreType;
         this.modelId = builder.modelId;
         this.modelOption = builder.modelOption;
+        this.natGatewayOption = builder.natGatewayOption;
         this.ossPath = builder.ossPath;
         this.ossResourceId = builder.ossResourceId;
         this.payPeriod = builder.payPeriod;
@@ -493,6 +498,13 @@ public class CreateDifyInstanceRequest extends Request {
     }
 
     /**
+     * @return natGatewayOption
+     */
+    public String getNatGatewayOption() {
+        return this.natGatewayOption;
+    }
+
+    /**
      * @return ossPath
      */
     public String getOssPath() {
@@ -715,6 +727,7 @@ public class CreateDifyInstanceRequest extends Request {
         private String kvStoreType; 
         private String modelId; 
         private String modelOption; 
+        private String natGatewayOption; 
         private String ossPath; 
         private Integer ossResourceId; 
         private Integer payPeriod; 
@@ -776,6 +789,7 @@ public class CreateDifyInstanceRequest extends Request {
             this.kvStoreType = request.kvStoreType;
             this.modelId = request.modelId;
             this.modelOption = request.modelOption;
+            this.natGatewayOption = request.natGatewayOption;
             this.ossPath = request.ossPath;
             this.ossResourceId = request.ossResourceId;
             this.payPeriod = request.payPeriod;
@@ -1037,6 +1051,15 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder modelOption(String modelOption) {
             this.putQueryParameter("ModelOption", modelOption);
             this.modelOption = modelOption;
+            return this;
+        }
+
+        /**
+         * NatGatewayOption.
+         */
+        public Builder natGatewayOption(String natGatewayOption) {
+            this.putQueryParameter("NatGatewayOption", natGatewayOption);
+            this.natGatewayOption = natGatewayOption;
             return this;
         }
 
