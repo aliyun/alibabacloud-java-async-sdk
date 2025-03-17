@@ -47,7 +47,7 @@ public class UpdateUserTagValueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,6 +90,7 @@ public class UpdateUserTagValueRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the tag to be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +103,16 @@ public class UpdateUserTagValueRequest extends Request {
         }
 
         /**
+         * <p>The tag value to be modified.</p>
+         * <ul>
+         * <li>To clear this tag, set the tag value to ($NULL$).</li>
+         * <li>For multiple values, use English commas to separate them.</li>
+         * <li>Format validation, maximum length: 3000 characters</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Product Director</p>
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);
@@ -111,6 +121,7 @@ public class UpdateUserTagValueRequest extends Request {
         }
 
         /**
+         * <p>The user ID for which the tag value is to be modified. This user ID refers to the Quick BI UserID, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

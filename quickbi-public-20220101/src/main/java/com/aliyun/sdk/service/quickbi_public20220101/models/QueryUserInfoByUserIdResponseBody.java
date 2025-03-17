@@ -40,6 +40,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUserInfoByUserIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -245,6 +258,22 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.adminUser = model.adminUser;
+                this.authAdminUser = model.authAdminUser;
+                this.email = model.email;
+                this.nickName = model.nickName;
+                this.phone = model.phone;
+                this.roleIdList = model.roleIdList;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

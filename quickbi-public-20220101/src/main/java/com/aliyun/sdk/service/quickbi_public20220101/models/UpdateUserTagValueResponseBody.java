@@ -40,6 +40,10 @@ public class UpdateUserTagValueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class UpdateUserTagValueResponseBody extends TeaModel {
         private Boolean result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserTagValueResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a29270</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,14 @@ public class UpdateUserTagValueResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the result of modifying the user tag. Possible values:</p>
+         * <ul>
+         * <li>true: Operation succeeded</li>
+         * <li>false: Operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -83,7 +106,13 @@ public class UpdateUserTagValueResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Value range:</p>
+         * <ul>
+         * <li>true: The request was successful - false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

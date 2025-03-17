@@ -40,6 +40,10 @@ public class QueryWorksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryWorksResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryWorksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -163,6 +176,16 @@ public class QueryWorksResponseBody extends TeaModel {
             private String name; 
             private String pathId; 
             private String pathName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.pathId = model.pathId;
+                this.pathName = model.pathName;
+            } 
 
             /**
              * Id.
@@ -426,6 +449,29 @@ public class QueryWorksResponseBody extends TeaModel {
             private String worksId; 
             private String workspaceId; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.auth3rdFlag = model.auth3rdFlag;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.modifyName = model.modifyName;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.publicFlag = model.publicFlag;
+                this.publicInvalidTime = model.publicInvalidTime;
+                this.securityLevel = model.securityLevel;
+                this.status = model.status;
+                this.workName = model.workName;
+                this.workType = model.workType;
+                this.worksId = model.worksId;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * Auth3rdFlag.

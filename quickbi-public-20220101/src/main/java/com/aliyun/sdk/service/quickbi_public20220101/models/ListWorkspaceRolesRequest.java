@@ -35,7 +35,7 @@ public class ListWorkspaceRolesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class ListWorkspaceRolesRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -47,7 +47,7 @@ public class ModifyApiDatasourceParametersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,6 +90,7 @@ public class ModifyApiDatasourceParametersRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the API data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class ModifyApiDatasourceParametersRequest extends Request {
         }
 
         /**
+         * <p>The configuration of API data parameters in the JSONArray format. You can modify a maximum of 10 parameters.</p>
+         * <ul>
+         * <li>name: the name of a common parameter or a parameter in a query statement</li>
+         * <li>value: the value of a common parameter or a parameter in a query statement.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +120,7 @@ public class ModifyApiDatasourceParametersRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -40,6 +40,10 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPortalMenuAuthorizationResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -149,6 +162,14 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         public static final class Builder {
             private String receiverId; 
             private Integer receiverType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Receivers model) {
+                this.receiverId = model.receiverId;
+                this.receiverType = model.receiverType;
+            } 
 
             /**
              * <p>The ID of the authorization object.</p>
@@ -238,6 +259,15 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             private String menuId; 
             private java.util.List<Receivers> receivers; 
             private Boolean showOnlyWithAccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.menuId = model.menuId;
+                this.receivers = model.receivers;
+                this.showOnlyWithAccess = model.showOnlyWithAccess;
+            } 
 
             /**
              * <p>The menu ID of the BI portal leaf node.</p>

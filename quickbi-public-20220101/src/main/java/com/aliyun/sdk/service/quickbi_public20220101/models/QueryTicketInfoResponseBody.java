@@ -40,6 +40,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTicketInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -247,6 +260,23 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             private String userId; 
             private String watermarkParam; 
             private String worksId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessTicket = model.accessTicket;
+                this.cmptId = model.cmptId;
+                this.globalParam = model.globalParam;
+                this.invalidTime = model.invalidTime;
+                this.maxTicketNum = model.maxTicketNum;
+                this.organizationId = model.organizationId;
+                this.registerTime = model.registerTime;
+                this.usedTicketNum = model.usedTicketNum;
+                this.userId = model.userId;
+                this.watermarkParam = model.watermarkParam;
+                this.worksId = model.worksId;
+            } 
 
             /**
              * AccessTicket.

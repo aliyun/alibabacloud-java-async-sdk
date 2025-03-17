@@ -40,6 +40,10 @@ public class DataSetBloodResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class DataSetBloodResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DataSetBloodResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e537a5****,3dadsu****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class DataSetBloodResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of works.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class DataSetBloodResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -140,8 +163,19 @@ public class DataSetBloodResponseBody extends TeaModel {
             private String worksId; 
             private String worksType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.worksId = model.worksId;
+                this.worksType = model.worksType;
+            } 
+
             /**
-             * WorksId.
+             * <p>Work ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -149,7 +183,18 @@ public class DataSetBloodResponseBody extends TeaModel {
             }
 
             /**
-             * WorksType.
+             * <p>Work types: - REPORT: </p>
+             * <ul>
+             * <li>REPORT: Workbooks</li>
+             * <li>dashboardOfflineQuery: Downloads</li>
+             * <li>DASHBOARD: Dashboard</li>
+             * <li>ANALYSIS: Ad Hoc Analysis</li>
+             * <li>SCREEN: Visualization Screen</li>
+             * <li>PAGE: Old dashboard</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder worksType(String worksType) {
                 this.worksType = worksType;

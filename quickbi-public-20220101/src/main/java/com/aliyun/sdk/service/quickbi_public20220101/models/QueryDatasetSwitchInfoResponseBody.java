@@ -40,6 +40,10 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDatasetSwitchInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -151,6 +164,15 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
             private String cubeId; 
             private Integer isOpenColumnLevelPermission; 
             private Integer isOpenRowLevelPermission; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cubeId = model.cubeId;
+                this.isOpenColumnLevelPermission = model.isOpenColumnLevelPermission;
+                this.isOpenRowLevelPermission = model.isOpenRowLevelPermission;
+            } 
 
             /**
              * CubeId.

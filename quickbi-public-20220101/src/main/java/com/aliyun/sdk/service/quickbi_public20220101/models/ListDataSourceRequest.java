@@ -40,7 +40,7 @@ public class ListDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,10 @@ public class ListDataSourceRequest extends Request {
         } 
 
         /**
-         * DsType.
+         * <p>Data source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder dsType(String dsType) {
             this.putQueryParameter("DsType", dsType);
@@ -83,6 +86,7 @@ public class ListDataSourceRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

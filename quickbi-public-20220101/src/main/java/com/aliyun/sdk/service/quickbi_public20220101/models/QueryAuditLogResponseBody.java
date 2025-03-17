@@ -40,6 +40,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryAuditLogResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAuditLogResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -211,6 +224,20 @@ public class QueryAuditLogResponseBody extends TeaModel {
             private String targetName; 
             private String targetType; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.gmtCreate = model.gmtCreate;
+                this.operatorAccountName = model.operatorAccountName;
+                this.operatorName = model.operatorName;
+                this.operatorType = model.operatorType;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * GmtCreate.

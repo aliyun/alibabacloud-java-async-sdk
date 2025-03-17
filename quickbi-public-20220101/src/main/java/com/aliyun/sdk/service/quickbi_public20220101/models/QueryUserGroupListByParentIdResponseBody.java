@@ -40,6 +40,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUserGroupListByParentIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -233,6 +246,21 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             private String userGroupDescription; 
             private String userGroupId; 
             private String userGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.identifiedPath = model.identifiedPath;
+                this.modifiedTime = model.modifiedTime;
+                this.modifyUser = model.modifyUser;
+                this.parentUserGroupId = model.parentUserGroupId;
+                this.userGroupDescription = model.userGroupDescription;
+                this.userGroupId = model.userGroupId;
+                this.userGroupName = model.userGroupName;
+            } 
 
             /**
              * <p>The time when the sub-user group was created.</p>

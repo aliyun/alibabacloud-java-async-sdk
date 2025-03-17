@@ -40,6 +40,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataLevelPermissionWhiteListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -139,6 +152,14 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> userGroups; 
             private java.util.List<String> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsersModel model) {
+                this.userGroups = model.userGroups;
+                this.users = model.users;
+            } 
 
             /**
              * UserGroups.
@@ -218,6 +239,15 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             private String cubeId; 
             private String ruleType; 
             private UsersModel usersModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cubeId = model.cubeId;
+                this.ruleType = model.ruleType;
+                this.usersModel = model.usersModel;
+            } 
 
             /**
              * CubeId.

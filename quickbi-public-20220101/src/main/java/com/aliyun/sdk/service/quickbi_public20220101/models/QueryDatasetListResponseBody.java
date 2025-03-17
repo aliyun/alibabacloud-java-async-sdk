@@ -40,6 +40,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryDatasetListResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDatasetListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The keyword used to search for the dataset name.</p>
@@ -161,6 +174,15 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String dsId; 
             private String dsName; 
             private String dsType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.dsId = model.dsId;
+                this.dsName = model.dsName;
+                this.dsType = model.dsType;
+            } 
 
             /**
              * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
@@ -269,6 +291,16 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String name; 
             private String pathId; 
             private String pathName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.pathId = model.pathId;
+                this.pathName = model.pathName;
+            } 
 
             /**
              * <p>The ID of the directory path.</p>
@@ -497,6 +529,25 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.dataSource = model.dataSource;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.modifyTime = model.modifyTime;
+                this.openOfflineAcceleration = model.openOfflineAcceleration;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.rowLevel = model.rowLevel;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
              * <p>The details of the dataset list.</p>
              * 
@@ -721,6 +772,17 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * <p>Returns the pagination results of the dataset list. The detailed information of the dataset list is stored in the response parameter Data.</p>

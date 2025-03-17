@@ -40,6 +40,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListWorkspaceRolesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>List of workspace roles.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful. </li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -140,8 +163,16 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             private java.util.List<String> actionAuthKeys; 
             private String authKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthConfigList model) {
+                this.actionAuthKeys = model.actionAuthKeys;
+                this.authKey = model.authKey;
+            } 
+
             /**
-             * ActionAuthKeys.
+             * <p>Authorization scope.</p>
              */
             public Builder actionAuthKeys(java.util.List<String> actionAuthKeys) {
                 this.actionAuthKeys = actionAuthKeys;
@@ -149,7 +180,22 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthKey.
+             * <p>Authorization type:</p>
+             * <ul>
+             * <li>portal_create: Data Portal</li>
+             * <li>dashboard_create: Dashboard</li>
+             * <li>report_create: Spreadsheet</li>
+             * <li>screen_create: Data Screen</li>
+             * <li>analysis: Ad-hoc Analysis</li>
+             * <li>offline_download: Self-service Data Retrieval</li>
+             * <li>data_form: Data Entry</li>
+             * <li>quick_etl: Data Preparation</li>
+             * <li>cube: Dataset</li>
+             * <li>datasource: Data Source</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>portal_create</p>
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -231,8 +277,18 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             private Long roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.authConfigList = model.authConfigList;
+                this.isSystemRole = model.isSystemRole;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
-             * AuthConfigList.
+             * <p>List of role authorization configurations.</p>
              */
             public Builder authConfigList(java.util.List<AuthConfigList> authConfigList) {
                 this.authConfigList = authConfigList;
@@ -240,7 +296,14 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystemRole.
+             * <p>Whether it is a predefined role. Value range:</p>
+             * <ul>
+             * <li>true: Yes</li>
+             * <li>false: No</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSystemRole(Boolean isSystemRole) {
                 this.isSystemRole = isSystemRole;
@@ -248,7 +311,17 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Workspace role ID, including predefined and custom roles:</p>
+             * <ul>
+             * <li>25: Workspace Administrator (predefined role)</li>
+             * <li>26: Developer (predefined role)</li>
+             * <li>27: Analyst (predefined role)</li>
+             * <li>30: Viewer (predefined role)</li>
+             * <li>Custom role: The corresponding role ID for a custom role</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder roleId(Long roleId) {
                 this.roleId = roleId;
@@ -256,7 +329,10 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Space administrator</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

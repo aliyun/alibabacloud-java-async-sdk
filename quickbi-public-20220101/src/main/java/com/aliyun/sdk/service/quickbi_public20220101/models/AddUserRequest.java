@@ -23,7 +23,7 @@ public class AddUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String accountName;
 
     @com.aliyun.core.annotation.Query
@@ -67,7 +67,7 @@ public class AddUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,10 +155,7 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
+         * AccountName.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);

@@ -49,7 +49,7 @@ public class QueryDataServiceListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class QueryDataServiceListRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>Data service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试sql</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -110,7 +113,10 @@ public class QueryDataServiceListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -119,7 +125,14 @@ public class QueryDataServiceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page in a paginated query:</p>
+         * <ul>
+         * <li>Default value: 10</li>
+         * <li>Maximum value: 1000</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +141,10 @@ public class QueryDataServiceListRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dasdfdsa-csddf-dsadsa</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

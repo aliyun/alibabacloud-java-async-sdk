@@ -40,6 +40,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchAddFeishuUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -152,6 +165,15 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             private String codeDesc; 
             private String input; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailInfos model) {
+                this.code = model.code;
+                this.codeDesc = model.codeDesc;
+                this.input = model.input;
+            } 
+
             /**
              * Code.
              */
@@ -214,6 +236,13 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FailInfos> failInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailResults model) {
+                this.failInfos = model.failInfos;
+            } 
 
             /**
              * FailInfos.
@@ -285,6 +314,15 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             private Integer failCount; 
             private java.util.List<FailResults> failResults; 
             private Integer okCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.failCount = model.failCount;
+                this.failResults = model.failResults;
+                this.okCount = model.okCount;
+            } 
 
             /**
              * FailCount.

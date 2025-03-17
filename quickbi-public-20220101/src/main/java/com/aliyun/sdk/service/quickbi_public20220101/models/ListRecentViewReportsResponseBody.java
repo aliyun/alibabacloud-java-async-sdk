@@ -40,6 +40,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecentViewReportsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -296,6 +309,27 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.favorite = model.favorite;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hasEditAuth = model.hasEditAuth;
+                this.hasViewAuth = model.hasViewAuth;
+                this.latestViewTime = model.latestViewTime;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerNum = model.ownerNum;
+                this.publishStatus = model.publishStatus;
+                this.treeId = model.treeId;
+                this.type = model.type;
+                this.viewCount = model.viewCount;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
              * Favorite.
              */
@@ -514,6 +548,18 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.attention = model.attention;
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * Attention.

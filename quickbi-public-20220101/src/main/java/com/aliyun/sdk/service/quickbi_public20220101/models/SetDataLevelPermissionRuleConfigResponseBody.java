@@ -40,6 +40,10 @@ public class SetDataLevelPermissionRuleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class SetDataLevelPermissionRuleConfigResponseBody extends TeaModel {
         private String requestId; 
         private String result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetDataLevelPermissionRuleConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

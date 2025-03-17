@@ -40,6 +40,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         private Result result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListWorkspaceRoleUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the list of users under the specified workspace role.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>是否请求成功。取值范围：</p>
+         * <ul>
+         * <li>true：请求成功</li>
+         * <li>false：请求失败</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -164,8 +187,21 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nickName = model.nickName;
+                this.userId = model.userId;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
-             * NickName.
+             * <p>Nickname of the organization member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -173,7 +209,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>UserID of the organization member in Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b5d8fd9348cc4327****afb604</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -181,7 +220,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>Workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -189,7 +231,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>Workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test space</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -283,8 +328,19 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             private Integer totalNum; 
             private Integer totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * Data.
+             * <p>User list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -292,7 +348,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -300,7 +359,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of items per page as set in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -308,7 +370,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -316,7 +381,10 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

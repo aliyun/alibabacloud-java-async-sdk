@@ -46,7 +46,7 @@ public class UpdateUserTagMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +89,13 @@ public class UpdateUserTagMetaRequest extends Request {
         } 
 
         /**
-         * TagDescription.
+         * <p>The tag description.</p>
+         * <ul>
+         * <li>Format check: Maximum length is 255 characters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Job Positions within the Department</p>
          */
         public Builder tagDescription(String tagDescription) {
             this.putQueryParameter("TagDescription", tagDescription);
@@ -98,6 +104,10 @@ public class UpdateUserTagMetaRequest extends Request {
         }
 
         /**
+         * <p>The specified TagID.</p>
+         * <ul>
+         * <li>Format check: Maximum length is 64 characters.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +120,15 @@ public class UpdateUserTagMetaRequest extends Request {
         }
 
         /**
+         * <p>The tag name.</p>
+         * <ul>
+         * <li>Format check: Maximum length is 50 characters.</li>
+         * <li>Only Chinese, English, numbers, and /|<a href=""></a> symbols are allowed.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Department</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

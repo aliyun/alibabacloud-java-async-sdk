@@ -40,6 +40,10 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SmartqAuthorizeResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -163,6 +176,16 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             private String llmCube; 
             private String llmCubeTheme; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.detailMessage = model.detailMessage;
+                this.llmCube = model.llmCube;
+                this.llmCubeTheme = model.llmCubeTheme;
+                this.userId = model.userId;
+            } 
 
             /**
              * DetailMessage.

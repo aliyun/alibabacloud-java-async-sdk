@@ -40,6 +40,10 @@ public class CreateTicket4CopilotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateTicket4CopilotResponseBody extends TeaModel {
         private String requestId; 
         private String result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTicket4CopilotResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

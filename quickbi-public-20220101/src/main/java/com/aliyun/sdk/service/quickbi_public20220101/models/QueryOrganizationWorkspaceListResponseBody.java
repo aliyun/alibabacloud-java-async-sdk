@@ -40,6 +40,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOrganizationWorkspaceListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -284,6 +297,26 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allowPublishOperation = model.allowPublishOperation;
+                this.allowShareOperation = model.allowShareOperation;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.createUserAccountName = model.createUserAccountName;
+                this.modifiedTime = model.modifiedTime;
+                this.modifyUser = model.modifyUser;
+                this.modifyUserAccountName = model.modifyUserAccountName;
+                this.organizationId = model.organizationId;
+                this.owner = model.owner;
+                this.ownerAccountName = model.ownerAccountName;
+                this.workspaceDescription = model.workspaceDescription;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
              * AllowPublishOperation.
              */
@@ -482,6 +515,17 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * Data.

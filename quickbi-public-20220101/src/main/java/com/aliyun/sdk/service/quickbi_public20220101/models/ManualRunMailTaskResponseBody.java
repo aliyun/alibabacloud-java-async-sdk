@@ -40,6 +40,10 @@ public class ManualRunMailTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ManualRunMailTaskResponseBody extends TeaModel {
         private Boolean result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ManualRunMailTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a4d1a221d-41za1-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,10 @@ public class ManualRunMailTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the execution was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -83,7 +102,14 @@ public class ManualRunMailTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Value range:</p>
+         * <ul>
+         * <li>true: The request succeeded </li>
+         * <li>false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

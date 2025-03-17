@@ -40,6 +40,10 @@ public class DeleteUserGroupMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class DeleteUserGroupMembersResponseBody extends TeaModel {
         private Boolean result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteUserGroupMembersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABBAD906-****-5D18-B23D-****53AB0AA2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,14 @@ public class DeleteUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the result of the interface execution. Possible values:</p>
+         * <ul>
+         * <li>true: Execution succeeded</li>
+         * <li>false: Execution failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -83,7 +106,14 @@ public class DeleteUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

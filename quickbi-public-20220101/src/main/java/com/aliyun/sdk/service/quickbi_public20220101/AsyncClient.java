@@ -130,6 +130,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckReadableResponse> checkReadable(CheckReadableRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For detailed usage, please refer to the <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</p>
+     * 
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -250,6 +253,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorksEmbedListResponse> getWorksEmbedList(GetWorksEmbedListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source</a>.</p>
+     * 
      * @param request the request parameters of ListApiDatasource  ListApiDatasourceRequest
      * @return ListApiDatasourceResponse
      */
@@ -357,6 +363,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManualRunMailTaskResponse> manualRunMailTask(ManualRunMailTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When you modify a query statement, you can modify only the top-level JsonObject. You cannot modify parameters that are nested in multiple layers. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source</a>.</p>
+     * 
      * @param request the request parameters of ModifyApiDatasourceParameters  ModifyApiDatasourceParametersRequest
      * @return ModifyApiDatasourceParametersResponse
      */
@@ -405,6 +414,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryCubePerformanceResponse> queryCubePerformance(QueryCubePerformanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Prerequisites</h3>
+     * <p>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
+     * <h3>Usage Restrictions</h3>
+     * <ul>
+     * <li>The data service feature is only available to professional edition customers.</li>
+     * <li>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</li>
+     * <li>If row-level permissions are enabled on the dataset referenced by the data service API, the API call will also be intercepted by the row-level permission policy.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryData  QueryDataRequest
      * @return QueryDataResponse
      */
@@ -418,7 +437,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>f4cc43bc3***</p>
+     * <h4>Prerequisites</h4>
+     * <p>You create the data service API through Quick BI\&quot;s data service. For more details, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
+     * <h4>Usage Restrictions</h4>
+     * <ul>
+     * <li>The data service feature is only available to professional edition customers. </li>
+     * <li>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</li>
+     * <li>If row-level permissions are enabled on the dataset referenced by the data service API, the API call may be intercepted by the row-level permission policy.</li>
+     * </ul>
      * 
      * @param request the request parameters of QueryDataService  QueryDataServiceRequest
      * @return QueryDataServiceResponse

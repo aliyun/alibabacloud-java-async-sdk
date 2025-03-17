@@ -40,6 +40,10 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetMailTaskStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38C0FEC8-****-415C-A9F1-****422BDB65</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful. </li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -164,8 +187,21 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
             private String status; 
             private Long taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.execTime = model.execTime;
+                this.mailId = model.mailId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * execTime.
+             * <p>Execution time, in the format yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-09 17:34:11</p>
              */
             public Builder execTime(String execTime) {
                 this.execTime = execTime;
@@ -173,7 +209,10 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * mailId.
+             * <p>Mail ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c38f73f4c5*****c808c41b3f4d23b7852</p>
              */
             public Builder mailId(String mailId) {
                 this.mailId = mailId;
@@ -181,7 +220,15 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Mail status. Possible values:</p>
+             * <ul>
+             * <li>Success: SENT</li>
+             * <li>Failure: FAILED </li>
+             * <li>In Progress: PROCESSING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SENT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -189,7 +236,10 @@ public class GetMailTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1282xxx610816</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

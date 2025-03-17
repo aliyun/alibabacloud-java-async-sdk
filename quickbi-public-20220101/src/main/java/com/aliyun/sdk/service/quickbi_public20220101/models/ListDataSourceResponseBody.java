@@ -40,6 +40,10 @@ public class ListDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListDataSourceResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FC9A6A6-****-5CED-B*****E891E4075</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of data source information.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -83,7 +99,10 @@ public class ListDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,8 +231,25 @@ public class ListDataSourceResponseBody extends TeaModel {
             private String parentDsType; 
             private String showName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.creatorId = model.creatorId;
+                this.creatorName = model.creatorName;
+                this.datasourceId = model.datasourceId;
+                this.dsType = model.dsType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.parentDsType = model.parentDsType;
+                this.showName = model.showName;
+            } 
+
             /**
-             * CreatorId.
+             * <p>Quick BI user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>281*****-485******-8</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -221,7 +257,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>Owner&quot;s nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -229,7 +268,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>Data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7FC9A6A6-****-5CED-B*****E891E4075</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -237,7 +279,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * DsType.
+             * <p>Data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -245,7 +290,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time of the data source, in yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-16 13:17:39</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -253,7 +301,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-15 10:06:31</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -261,7 +312,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentDsType.
+             * <p>Primary data source type for multi-engine data sources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder parentDsType(String parentDsType) {
                 this.parentDsType = parentDsType;
@@ -269,7 +323,10 @@ public class ListDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * <p>Display name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0327</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;

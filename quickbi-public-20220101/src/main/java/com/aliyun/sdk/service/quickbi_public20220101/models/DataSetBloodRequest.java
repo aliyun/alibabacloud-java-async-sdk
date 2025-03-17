@@ -45,7 +45,7 @@ public class DataSetBloodRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,6 +88,7 @@ public class DataSetBloodRequest extends Request {
         } 
 
         /**
+         * <p>List of dataset IDs, separated by English commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class DataSetBloodRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>Specify the owner of the report, which is the userId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dasasgaj342351</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -109,7 +113,18 @@ public class DataSetBloodRequest extends Request {
         }
 
         /**
-         * WorksType.
+         * <p>Specify the type of report:</p>
+         * <ul>
+         * <li>REPORT: Workbooks</li>
+         * <li>dashboardOfflineQuery: Downloads</li>
+         * <li>DASHBOARD: Dashboard</li>
+         * <li>ANALYSIS: Ad Hoc Analysis</li>
+         * <li>SCREEN: Visualization Screen</li>
+         * <li>PAGE: Old dashboard</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         public Builder worksType(String worksType) {
             this.putQueryParameter("WorksType", worksType);

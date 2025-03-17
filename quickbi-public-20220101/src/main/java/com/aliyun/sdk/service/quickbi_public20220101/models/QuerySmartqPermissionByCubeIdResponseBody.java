@@ -40,6 +40,10 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmartqPermissionByCubeIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -151,6 +164,15 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             private String cubeId; 
             private String cubeName; 
             private Boolean hasPerssion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cubeId = model.cubeId;
+                this.cubeName = model.cubeName;
+                this.hasPerssion = model.hasPerssion;
+            } 
 
             /**
              * CubeId.

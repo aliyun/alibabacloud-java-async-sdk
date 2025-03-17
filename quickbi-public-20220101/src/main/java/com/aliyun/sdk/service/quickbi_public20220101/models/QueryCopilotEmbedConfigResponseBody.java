@@ -40,6 +40,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCopilotEmbedConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -163,6 +176,16 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             private Boolean allTheme; 
             private java.util.List<String> llmCubes; 
             private java.util.List<String> themes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataRange model) {
+                this.allCube = model.allCube;
+                this.allTheme = model.allTheme;
+                this.llmCubes = model.llmCubes;
+                this.themes = model.themes;
+            } 
 
             /**
              * AllCube.
@@ -318,6 +341,20 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             private String modifyUser; 
             private String moduleName; 
             private String showName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.agentName = model.agentName;
+                this.copilotId = model.copilotId;
+                this.createUser = model.createUser;
+                this.createUserName = model.createUserName;
+                this.dataRange = model.dataRange;
+                this.modifyUser = model.modifyUser;
+                this.moduleName = model.moduleName;
+                this.showName = model.showName;
+            } 
 
             /**
              * AgentName.

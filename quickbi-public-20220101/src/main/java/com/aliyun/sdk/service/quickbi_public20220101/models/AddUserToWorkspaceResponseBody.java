@@ -40,6 +40,10 @@ public class AddUserToWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class AddUserToWorkspaceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddUserToWorkspaceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

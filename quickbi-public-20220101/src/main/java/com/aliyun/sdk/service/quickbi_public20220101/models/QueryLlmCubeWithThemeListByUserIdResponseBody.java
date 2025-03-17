@@ -40,6 +40,10 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryLlmCubeWithThemeListByUserIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -139,6 +152,14 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, String> cubeIds; 
             private java.util.Map<String, String> themeIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cubeIds = model.cubeIds;
+                this.themeIds = model.themeIds;
+            } 
 
             /**
              * CubeIds.

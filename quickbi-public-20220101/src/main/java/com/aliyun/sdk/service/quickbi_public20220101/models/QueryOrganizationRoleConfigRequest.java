@@ -35,7 +35,7 @@ public class QueryOrganizationRoleConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,13 @@ public class QueryOrganizationRoleConfigRequest extends Request {
         } 
 
         /**
+         * <p>Organization role ID, including predefined roles and custom roles:</p>
+         * <ul>
+         * <li>Organization Administrator (predefined role): 111111111</li>
+         * <li>Permission Administrator (predefined role): 111111112</li>
+         * <li>Regular User (predefined role): 111111113</li>
+         * <li>Custom Role: The corresponding role ID of the custom role</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

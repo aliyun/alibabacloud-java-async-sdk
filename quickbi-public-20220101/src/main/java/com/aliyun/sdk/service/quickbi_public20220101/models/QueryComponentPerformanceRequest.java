@@ -66,7 +66,7 @@ public class QueryComponentPerformanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class QueryComponentPerformanceRequest extends Request {
         } 
 
         /**
-         * CostTimeAvgMin.
+         * <p>The average duration (minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder costTimeAvgMin(Integer costTimeAvgMin) {
             this.putQueryParameter("CostTimeAvgMin", costTimeAvgMin);
@@ -154,7 +157,14 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The current page number of the workspace member list:</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -163,7 +173,14 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page in a paged query.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 1,000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,6 +189,12 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li><strong>lastDay</strong>: Yesterday</li>
+         * <li><strong>sevenDays</strong>: Within seven days</li>
+         * <li><strong>thirtyDays</strong>: Within 30 days</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +207,10 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b407e50-e774-406b-9956-da2425c2****</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -193,7 +219,10 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>report</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -202,6 +231,7 @@ public class QueryComponentPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

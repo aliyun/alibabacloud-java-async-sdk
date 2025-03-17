@@ -35,7 +35,7 @@ public class QueryUserTagValueListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class QueryUserTagValueListRequest extends Request {
         } 
 
         /**
+         * <p>This UserID refers to the Quick BI UserID, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -40,6 +40,10 @@ public class AddUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class AddUserResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -199,6 +212,19 @@ public class AddUserResponseBody extends TeaModel {
             private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accountName = model.accountName;
+                this.adminUser = model.adminUser;
+                this.authAdminUser = model.authAdminUser;
+                this.nickName = model.nickName;
+                this.roleIdList = model.roleIdList;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
 
             /**
              * AccountName.

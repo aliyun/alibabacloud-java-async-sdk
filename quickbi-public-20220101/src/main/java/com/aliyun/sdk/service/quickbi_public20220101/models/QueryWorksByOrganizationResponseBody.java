@@ -40,6 +40,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryWorksByOrganizationResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of the list of works.</p>
@@ -175,6 +188,16 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private String name; 
             private String pathId; 
             private String pathName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.pathId = model.pathId;
+                this.pathName = model.pathName;
+            } 
 
             /**
              * Id.
@@ -438,6 +461,29 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private String worksId; 
             private String workspaceId; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.auth3rdFlag = model.auth3rdFlag;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.modifyName = model.modifyName;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.publicFlag = model.publicFlag;
+                this.publicInvalidTime = model.publicInvalidTime;
+                this.securityLevel = model.securityLevel;
+                this.status = model.status;
+                this.workName = model.workName;
+                this.workType = model.workType;
+                this.worksId = model.worksId;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * <p>The name of the workspace to which the work belongs.</p>
@@ -716,6 +762,17 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * <p>The Alibaba Cloud account name of the work owner.</p>

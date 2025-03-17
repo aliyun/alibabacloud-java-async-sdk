@@ -40,6 +40,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListByUserGroupIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -234,6 +247,21 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             private String usergroupId; 
             private String usergroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserGroupModels model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.identifiedPath = model.identifiedPath;
+                this.modifiedTime = model.modifiedTime;
+                this.modifyUser = model.modifyUser;
+                this.parentUsergroupId = model.parentUsergroupId;
+                this.usergroupDesc = model.usergroupDesc;
+                this.usergroupId = model.usergroupId;
+                this.usergroupName = model.usergroupName;
+            } 
+
             /**
              * <p>The time when the Secret was created.</p>
              * 
@@ -383,6 +411,14 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> failedUserGroupIds; 
             private java.util.List<UserGroupModels> userGroupModels; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.failedUserGroupIds = model.failedUserGroupIds;
+                this.userGroupModels = model.userGroupModels;
+            } 
 
             /**
              * FailedUserGroupIds.

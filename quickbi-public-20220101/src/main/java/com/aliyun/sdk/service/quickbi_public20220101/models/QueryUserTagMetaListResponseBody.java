@@ -40,6 +40,10 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryUserTagMetaListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns a list of user tags in an organization.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -83,7 +99,11 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Queries the metadata list of member tags in an organization.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -155,8 +175,20 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
             private String tagId; 
             private String tagName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.tagDescription = model.tagDescription;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
+
             /**
-             * TagDescription.
+             * <p>The description of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Used to distinguish some positions</p>
              */
             public Builder tagDescription(String tagDescription) {
                 this.tagDescription = tagDescription;
@@ -164,7 +196,10 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pop_001</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -172,7 +207,10 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Position</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

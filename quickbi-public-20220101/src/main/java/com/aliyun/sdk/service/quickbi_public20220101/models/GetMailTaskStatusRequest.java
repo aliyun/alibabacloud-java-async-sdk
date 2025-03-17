@@ -40,7 +40,7 @@ public class GetMailTaskStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,10 +74,11 @@ public class GetMailTaskStatusRequest extends Request {
         } 
 
         /**
+         * <p>Mail ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>d5a59a898b634d75be5584f8dc159c62</p>
+         * <p>d5a5<strong><strong>8b634d</strong></strong>5584f8dc159c62</p>
          */
         public Builder mailId(String mailId) {
             this.putQueryParameter("MailId", mailId);
@@ -86,7 +87,16 @@ public class GetMailTaskStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the task ID is not provided, the latest task status will be returned by default;</li>
+         * <li>If the task ID is provided, the status of the specified task will be returned.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>7218<strong><strong>0392</strong></strong>212</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

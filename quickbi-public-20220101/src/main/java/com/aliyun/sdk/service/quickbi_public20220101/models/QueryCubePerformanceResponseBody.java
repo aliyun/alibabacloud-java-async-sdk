@@ -40,6 +40,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCubePerformanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -367,6 +380,33 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             private String repeatSqlQueryPercent; 
             private String workspaceId; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cacheCostTimeAvg = model.cacheCostTimeAvg;
+                this.cacheQueryCount = model.cacheQueryCount;
+                this.costTimeAvg = model.costTimeAvg;
+                this.cubeId = model.cubeId;
+                this.cubeName = model.cubeName;
+                this.queryCount = model.queryCount;
+                this.queryCountAvg = model.queryCountAvg;
+                this.queryOverFivePercentNum = model.queryOverFivePercentNum;
+                this.queryOverFiveSecPercent = model.queryOverFiveSecPercent;
+                this.queryOverTenSecPercent = model.queryOverTenSecPercent;
+                this.queryOverTenSecPercentNum = model.queryOverTenSecPercentNum;
+                this.queryTimeoutCount = model.queryTimeoutCount;
+                this.queryTimeoutCountPercent = model.queryTimeoutCountPercent;
+                this.quickIndexCostTimeAvg = model.quickIndexCostTimeAvg;
+                this.quickIndexQueryCount = model.quickIndexQueryCount;
+                this.repeatQueryPercent = model.repeatQueryPercent;
+                this.repeatQueryPercentNum = model.repeatQueryPercentNum;
+                this.repeatSqlQueryCount = model.repeatSqlQueryCount;
+                this.repeatSqlQueryPercent = model.repeatSqlQueryPercent;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * CacheCostTimeAvg.

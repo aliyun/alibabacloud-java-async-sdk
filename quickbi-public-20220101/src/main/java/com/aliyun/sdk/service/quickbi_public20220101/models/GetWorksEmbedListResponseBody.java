@@ -40,6 +40,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         private Result result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetWorksEmbedListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38C0F*<strong><strong>0-415</strong></strong>9F1-*****422BDB65</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of report objects</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -83,7 +99,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,8 +195,22 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             private String worksType; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.embedTime = model.embedTime;
+                this.worksId = model.worksId;
+                this.worksName = model.worksName;
+                this.worksType = model.worksType;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
-             * EmbedTime.
+             * <p>Embed time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YYYY-mm-DD hh:MM:ss</p>
              */
             public Builder embedTime(String embedTime) {
                 this.embedTime = embedTime;
@@ -185,7 +218,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * <p>Report ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>897ce25e-<strong><strong>-</strong></strong>-af84-d13c5610****</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -193,7 +229,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * WorksName.
+             * <p>Report name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder worksName(String worksName) {
                 this.worksName = worksName;
@@ -201,7 +240,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * WorksType.
+             * <p>Report type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>page</p>
              */
             public Builder worksType(String worksType) {
                 this.worksType = worksType;
@@ -209,7 +251,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>Workspace ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87c6b145-<strong><strong>-43e1-9426-8f93be23</strong></strong></p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -303,8 +348,19 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             private Long totalNum; 
             private Long totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * Data.
+             * <p>Array of reports</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -312,7 +368,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -320,7 +379,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of items per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -328,7 +390,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of items</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;
@@ -336,7 +401,10 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>Total number of pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

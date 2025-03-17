@@ -40,6 +40,10 @@ public class QueryShareListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryShareListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryShareListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -211,6 +224,20 @@ public class QueryShareListResponseBody extends TeaModel {
             private String shareToName; 
             private Integer shareToType; 
             private String shareType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.authPoint = model.authPoint;
+                this.expireDate = model.expireDate;
+                this.reportId = model.reportId;
+                this.shareId = model.shareId;
+                this.shareToId = model.shareToId;
+                this.shareToName = model.shareToName;
+                this.shareToType = model.shareToType;
+                this.shareType = model.shareType;
+            } 
 
             /**
              * AuthPoint.

@@ -40,6 +40,10 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUserRoleInfoInWorkspaceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -151,6 +164,15 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
             private String roleCode; 
             private Long roleId; 
             private String roleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.roleCode = model.roleCode;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
 
             /**
              * RoleCode.

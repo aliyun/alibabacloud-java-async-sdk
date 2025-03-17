@@ -40,6 +40,10 @@ public class QueryUserListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryUserListResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUserListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -115,6 +128,9 @@ public class QueryUserListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
+        private Boolean isDeleted;
+
         @com.aliyun.core.annotation.NameInMap("JoinedDate")
         private Long joinedDate;
 
@@ -138,6 +154,7 @@ public class QueryUserListResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
+            this.isDeleted = builder.isDeleted;
             this.joinedDate = builder.joinedDate;
             this.lastLoginTime = builder.lastLoginTime;
             this.nickName = builder.nickName;
@@ -180,6 +197,13 @@ public class QueryUserListResponseBody extends TeaModel {
          */
         public Boolean getAuthAdminUser() {
             return this.authAdminUser;
+        }
+
+        /**
+         * @return isDeleted
+         */
+        public Boolean getIsDeleted() {
+            return this.isDeleted;
         }
 
         /**
@@ -229,12 +253,30 @@ public class QueryUserListResponseBody extends TeaModel {
             private String accountName; 
             private Boolean adminUser; 
             private Boolean authAdminUser; 
+            private Boolean isDeleted; 
             private Long joinedDate; 
             private Long lastLoginTime; 
             private String nickName; 
             private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.adminUser = model.adminUser;
+                this.authAdminUser = model.authAdminUser;
+                this.isDeleted = model.isDeleted;
+                this.joinedDate = model.joinedDate;
+                this.lastLoginTime = model.lastLoginTime;
+                this.nickName = model.nickName;
+                this.roleIdList = model.roleIdList;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
 
             /**
              * AccountId.
@@ -265,6 +307,14 @@ public class QueryUserListResponseBody extends TeaModel {
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
+                return this;
+            }
+
+            /**
+             * IsDeleted.
+             */
+            public Builder isDeleted(Boolean isDeleted) {
+                this.isDeleted = isDeleted;
                 return this;
             }
 
@@ -402,6 +452,17 @@ public class QueryUserListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * Data.

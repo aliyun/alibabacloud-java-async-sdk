@@ -36,7 +36,6 @@ public class ListWorkspaceRoleUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private ListWorkspaceRoleUsersRequest(Builder builder) {
@@ -56,7 +55,7 @@ public class ListWorkspaceRoleUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,7 +116,10 @@ public class ListWorkspaceRoleUsersRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Keyword for the user&quot;s nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试pop用户</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -126,7 +128,14 @@ public class ListWorkspaceRoleUsersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Current page number for pagination:</p>
+         * <ul>
+         * <li>Starting value: 1</li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -135,7 +144,14 @@ public class ListWorkspaceRoleUsersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page for pagination:</p>
+         * <ul>
+         * <li>Default value: 10</li>
+         * <li>Maximum value: 1000</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -144,6 +160,14 @@ public class ListWorkspaceRoleUsersRequest extends Request {
         }
 
         /**
+         * <p>Workspace role ID, including predefined roles and custom roles:</p>
+         * <ul>
+         * <li>25: Workspace Administrator (predefined role)</li>
+         * <li>26: Developer (predefined role)</li>
+         * <li>27: Analyst (predefined role)</li>
+         * <li>30: Viewer (predefined role)</li>
+         * <li>Custom roles: The corresponding role ID for custom roles</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +180,7 @@ public class ListWorkspaceRoleUsersRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>Workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>726bee5a-****-43e1-9a8e-b550f0120f35</p>

@@ -40,6 +40,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSharedReportsResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSharedReportsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -272,6 +285,25 @@ public class ListSharedReportsResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.favorite = model.favorite;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hasEditAuth = model.hasEditAuth;
+                this.hasViewAuth = model.hasViewAuth;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerNum = model.ownerNum;
+                this.publishStatus = model.publishStatus;
+                this.treeId = model.treeId;
+                this.type = model.type;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
              * Favorite.
              */
@@ -462,6 +494,17 @@ public class ListSharedReportsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * Data.

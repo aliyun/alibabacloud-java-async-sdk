@@ -35,7 +35,7 @@ public class ManualRunMailTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class ManualRunMailTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the email task in the subscription management interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -50,7 +50,7 @@ public class ListApiDatasourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,10 @@ public class ListApiDatasourceRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>The keyword of the API data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -111,7 +114,14 @@ public class ListApiDatasourceRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Current page number for API data source list:</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -120,7 +130,14 @@ public class ListApiDatasourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page in a paged query.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Valid values: 1 to 100.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,6 +146,7 @@ public class ListApiDatasourceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

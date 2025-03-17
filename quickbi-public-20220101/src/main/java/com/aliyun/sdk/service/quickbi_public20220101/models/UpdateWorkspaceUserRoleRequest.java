@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateWorkspaceUserRoleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RoleId")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(maximum = 30, minimum = 25)
     private Long roleId;
 
@@ -52,7 +53,7 @@ public class UpdateWorkspaceUserRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

@@ -54,7 +54,7 @@ public class GetWorksEmbedListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,10 @@ public class GetWorksEmbedListRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Report name (fuzzy match)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test dataset</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -124,7 +127,10 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Page number (defaults to 1 if empty)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -133,7 +139,10 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page (defaults to 10 if empty)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,7 +151,18 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * WorksType.
+         * <p>Report type</p>
+         * <ul>
+         * <li>page, Dashboard</li>
+         * <li>screen, Visualization Screen</li>
+         * <li>report, Workbooks</li>
+         * <li>ANALYSIS, Ad Hoc Analysis</li>
+         * <li>dashboardOfflineQuery, Downloads</li>
+         * <li>dataForm, Forms</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>page</p>
          */
         public Builder worksType(String worksType) {
             this.putQueryParameter("WorksType", worksType);
@@ -151,7 +171,10 @@ public class GetWorksEmbedListRequest extends Request {
         }
 
         /**
-         * WsId.
+         * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>919818-<em><strong>-</strong></em>**-wdasd</p>
          */
         public Builder wsId(String wsId) {
             this.putQueryParameter("WsId", wsId);

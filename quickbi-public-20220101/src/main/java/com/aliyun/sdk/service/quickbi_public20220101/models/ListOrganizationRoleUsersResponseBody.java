@@ -40,6 +40,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         private Result result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationRoleUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCE45E6D-****-4F94-86BB-****2B1615FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the list of users under the organization role.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -140,8 +163,19 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             private String nickName; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.nickName = model.nickName;
+                this.userId = model.userId;
+            } 
+
             /**
-             * NickName.
+             * <p>Nickname of the organization member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test User</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -149,7 +183,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>UserID of the organization member in Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b5d8fd9348cc4327****afb604</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -243,8 +280,19 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             private Integer totalNum; 
             private Integer totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * Data.
+             * <p>User list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -252,7 +300,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -260,7 +311,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of items per page as set in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -268,7 +322,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -276,7 +333,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

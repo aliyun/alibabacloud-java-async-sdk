@@ -40,6 +40,10 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationRolesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the list of organization roles.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>是否请求成功。取值范围：</p>
+         * <ul>
+         * <li>true：请求成功</li>
+         * <li>false：请求失败</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -128,8 +151,33 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         public static final class Builder {
             private String authKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthConfigList model) {
+                this.authKey = model.authKey;
+            } 
+
             /**
-             * AuthKey.
+             * <p>Permission type:</p>
+             * <ul>
+             * <li>quick_monitor: Metric monitoring</li>
+             * <li>subscription: Subscription management</li>
+             * <li>offline_download: Self-service data retrieval</li>
+             * <li>resource_package: Resource package management</li>
+             * <li>organization_ask: Organization identification code (AK/SK)</li>
+             * <li>developer_openapi: Open API</li>
+             * <li>data_service: Data service</li>
+             * <li>admin_authorize3rd: Embedded analysis</li>
+             * <li>component_manage: Custom component</li>
+             * <li>template_open: Custom template</li>
+             * <li>custom_driver: Custom driver (supported only in standalone deployment)</li>
+             * <li>open_platform_custom_plugin: Custom plugin (supported only in standalone deployment)</li>
+             * <li>enterprise_safety: Enterprise security</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise_safety</p>
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -211,8 +259,18 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
             private Long roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.authConfigList = model.authConfigList;
+                this.isSystemRole = model.isSystemRole;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
-             * AuthConfigList.
+             * <p>List of role permission configurations.</p>
              */
             public Builder authConfigList(java.util.List<AuthConfigList> authConfigList) {
                 this.authConfigList = authConfigList;
@@ -220,7 +278,14 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystemRole.
+             * <p>Whether it is a predefined role. Possible values:</p>
+             * <ul>
+             * <li>true: Yes</li>
+             * <li>false: No</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSystemRole(Boolean isSystemRole) {
                 this.isSystemRole = isSystemRole;
@@ -228,7 +293,10 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Role ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111</p>
              */
             public Builder roleId(Long roleId) {
                 this.roleId = roleId;
@@ -236,7 +304,10 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Organization Admin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

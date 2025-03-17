@@ -35,7 +35,7 @@ public class QueryWorkspaceRoleConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,14 @@ public class QueryWorkspaceRoleConfigRequest extends Request {
         } 
 
         /**
+         * <p>Workspace role ID, including predefined roles and custom roles:</p>
+         * <ul>
+         * <li>25: Workspace Administrator (predefined role)</li>
+         * <li>26: Developer (predefined role)</li>
+         * <li>27: Analyst (predefined role)</li>
+         * <li>30: Viewer (predefined role)</li>
+         * <li>Custom role: The corresponding role ID for the custom role</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

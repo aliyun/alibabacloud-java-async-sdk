@@ -40,6 +40,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         private Result result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryApprovalInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return the result of the interface execution.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful. Possible values are:</p>
+         * <ul>
+         * <li>true: success</li>
+         * <li>false: failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -308,8 +331,33 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             private String resourceType; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicantId = model.applicantId;
+                this.applicantName = model.applicantName;
+                this.applicationId = model.applicationId;
+                this.applyReason = model.applyReason;
+                this.approverId = model.approverId;
+                this.approverName = model.approverName;
+                this.deleteFlag = model.deleteFlag;
+                this.expireDate = model.expireDate;
+                this.flagStatus = model.flagStatus;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.handleReason = model.handleReason;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
-             * ApplicantId.
+             * <p>Applicant&quot;s user ID, qbi user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1359508</p>
              */
             public Builder applicantId(String applicantId) {
                 this.applicantId = applicantId;
@@ -317,7 +365,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicantName.
+             * <p>Applicant&quot;s nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li Fei</p>
              */
             public Builder applicantName(String applicantName) {
                 this.applicantName = applicantName;
@@ -325,7 +376,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64813ef6da58e80eef8ed2f9</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -333,7 +387,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyReason.
+             * <p>Application reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Development needs</p>
              */
             public Builder applyReason(String applyReason) {
                 this.applyReason = applyReason;
@@ -341,7 +398,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ApproverId.
+             * <p>Approver&quot;s user ID, qbi user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdasascasxasd</p>
              */
             public Builder approverId(String approverId) {
                 this.approverId = approverId;
@@ -349,7 +409,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ApproverName.
+             * <p>Approver&quot;s nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_fusion_002</p>
              */
             public Builder approverName(String approverName) {
                 this.approverName = approverName;
@@ -357,7 +420,14 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteFlag.
+             * <p>Whether the resource has been deleted:</p>
+             * <ul>
+             * <li>true: Deleted</li>
+             * <li>false: Not deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteFlag(Boolean deleteFlag) {
                 this.deleteFlag = deleteFlag;
@@ -365,7 +435,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>Permission expiration date, timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708568097135</p>
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -373,7 +446,15 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FlagStatus.
+             * <p>Permission approval status:</p>
+             * <ul>
+             * <li>0: Under review, corresponding to 0 in the request parameters</li>
+             * <li>1: Approved, corresponding to 1 in the request parameters</li>
+             * <li>2: Rejected, corresponding to 1 in the request parameters</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flagStatus(Integer flagStatus) {
                 this.flagStatus = flagStatus;
@@ -381,7 +462,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Application creation time, timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687315758</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -389,7 +473,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Application modification time, timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640595729000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -397,7 +484,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HandleReason.
+             * <p>Handling reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Development needs</p>
              */
             public Builder handleReason(String handleReason) {
                 this.handleReason = handleReason;
@@ -405,7 +495,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource for which permission is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-ct4t2e4u2x4ej1bzur</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -413,7 +506,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the resource for which permission is requested (e.g., report name, space name...).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Resources</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -421,7 +517,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DASHBOARD</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -429,7 +528,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -535,8 +637,20 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             private Integer total; 
             private Integer totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.start = model.start;
+                this.total = model.total;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * Data.
+             * <p>Array of approval flow information.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -544,7 +658,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -552,7 +669,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records requested per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -560,7 +680,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>The starting position of the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder start(Integer start) {
                 this.start = start;
@@ -568,7 +691,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -576,7 +702,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

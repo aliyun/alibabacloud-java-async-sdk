@@ -41,7 +41,7 @@ public class DeleteUserGroupMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +75,10 @@ public class DeleteUserGroupMembersRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the user group(s) to exit.</p>
+         * <ul>
+         * <li>Supports batch parameters, separate IDs with a comma (,).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +91,7 @@ public class DeleteUserGroupMembersRequest extends Request {
         }
 
         /**
+         * <p>The UserID of the user to be removed from the user group. Note that this UserID refers to the Quick BI UserID, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -41,6 +41,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,6 +70,15 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SmartqQueryAbilityResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -144,6 +157,14 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetaType model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -198,6 +219,13 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> row; 
+
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.row = model.row;
+            } 
 
             /**
              * Row.
@@ -269,6 +297,15 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             private String chartType; 
             private java.util.List<MetaType> metaType; 
             private java.util.List<Values> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.chartType = model.chartType;
+                this.metaType = model.metaType;
+                this.values = model.values;
+            } 
 
             /**
              * ChartType.

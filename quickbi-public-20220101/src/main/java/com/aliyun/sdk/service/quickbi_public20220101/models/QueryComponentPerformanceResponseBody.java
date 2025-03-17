@@ -40,6 +40,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryComponentPerformanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCE45E6D-9304-4F94-86BB-5A772B1615FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +99,14 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -404,8 +427,41 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cacheCostTimeAvg = model.cacheCostTimeAvg;
+                this.cacheQueryCount = model.cacheQueryCount;
+                this.componentId = model.componentId;
+                this.componentName = model.componentName;
+                this.costTimeAvg = model.costTimeAvg;
+                this.queryCount = model.queryCount;
+                this.queryCountAvg = model.queryCountAvg;
+                this.queryOverFivePercentNum = model.queryOverFivePercentNum;
+                this.queryOverFiveSecPercent = model.queryOverFiveSecPercent;
+                this.queryOverTenSecPercent = model.queryOverTenSecPercent;
+                this.queryOverTenSecPercentNum = model.queryOverTenSecPercentNum;
+                this.queryTimeoutCount = model.queryTimeoutCount;
+                this.queryTimeoutCountPercent = model.queryTimeoutCountPercent;
+                this.quickIndexCostTimeAvg = model.quickIndexCostTimeAvg;
+                this.quickIndexQueryCount = model.quickIndexQueryCount;
+                this.repeatQueryPercent = model.repeatQueryPercent;
+                this.repeatQueryPercentNum = model.repeatQueryPercentNum;
+                this.repeatSqlQueryCount = model.repeatSqlQueryCount;
+                this.repeatSqlQueryPercent = model.repeatSqlQueryPercent;
+                this.reportId = model.reportId;
+                this.reportName = model.reportName;
+                this.reportType = model.reportType;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
-             * CacheCostTimeAvg.
+             * <p>The average duration of cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder cacheCostTimeAvg(Double cacheCostTimeAvg) {
                 this.cacheCostTimeAvg = cacheCostTimeAvg;
@@ -413,7 +469,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * CacheQueryCount.
+             * <p>The number of cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder cacheQueryCount(Integer cacheQueryCount) {
                 this.cacheQueryCount = cacheQueryCount;
@@ -421,7 +480,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentId.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0696083a-ca72-4d89-8e7a-c017910e0***</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -429,7 +491,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentName.
+             * <p>The name of the add-on.</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -437,7 +499,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * CostTimeAvg.
+             * <p>The average query duration associated with the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder costTimeAvg(Double costTimeAvg) {
                 this.costTimeAvg = costTimeAvg;
@@ -445,7 +510,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCount.
+             * <p>The number of queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder queryCount(Integer queryCount) {
                 this.queryCount = queryCount;
@@ -453,7 +521,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCountAvg.
+             * <p>The average number of queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder queryCountAvg(Double queryCountAvg) {
                 this.queryCountAvg = queryCountAvg;
@@ -461,7 +532,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverFivePercentNum.
+             * <p>The query exceeds the 5S number of queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder queryOverFivePercentNum(Double queryOverFivePercentNum) {
                 this.queryOverFivePercentNum = queryOverFivePercentNum;
@@ -469,7 +543,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverFiveSecPercent.
+             * <p>Query the proportion of more than 5S.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder queryOverFiveSecPercent(String queryOverFiveSecPercent) {
                 this.queryOverFiveSecPercent = queryOverFiveSecPercent;
@@ -477,7 +554,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverTenSecPercent.
+             * <p>The percentage of queries that exceed 10s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder queryOverTenSecPercent(String queryOverTenSecPercent) {
                 this.queryOverTenSecPercent = queryOverTenSecPercent;
@@ -485,7 +565,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverTenSecPercentNum.
+             * <p>The percentage of queries that exceed 10s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder queryOverTenSecPercentNum(Double queryOverTenSecPercentNum) {
                 this.queryOverTenSecPercentNum = queryOverTenSecPercentNum;
@@ -493,7 +576,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeoutCount.
+             * <p>The number of times that the chart query times out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder queryTimeoutCount(Integer queryTimeoutCount) {
                 this.queryTimeoutCount = queryTimeoutCount;
@@ -501,7 +587,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeoutCountPercent.
+             * <p>The percentage of timeout times for chart queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder queryTimeoutCountPercent(Double queryTimeoutCountPercent) {
                 this.queryTimeoutCountPercent = queryTimeoutCountPercent;
@@ -509,7 +598,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QuickIndexCostTimeAvg.
+             * <p>The average time consumed by the Quick engine query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder quickIndexCostTimeAvg(Double quickIndexCostTimeAvg) {
                 this.quickIndexCostTimeAvg = quickIndexCostTimeAvg;
@@ -517,7 +609,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QuickIndexQueryCount.
+             * <p>The number of times that the Quick engine is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder quickIndexQueryCount(Integer quickIndexQueryCount) {
                 this.quickIndexQueryCount = quickIndexQueryCount;
@@ -525,7 +620,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatQueryPercent.
+             * <p>The proportion of duplicate queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder repeatQueryPercent(String repeatQueryPercent) {
                 this.repeatQueryPercent = repeatQueryPercent;
@@ -533,7 +631,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatQueryPercentNum.
+             * <p>The number of duplicate queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder repeatQueryPercentNum(Double repeatQueryPercentNum) {
                 this.repeatQueryPercentNum = repeatQueryPercentNum;
@@ -541,7 +642,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatSqlQueryCount.
+             * <p>The number of times the query is repeated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder repeatSqlQueryCount(Integer repeatSqlQueryCount) {
                 this.repeatSqlQueryCount = repeatSqlQueryCount;
@@ -549,7 +653,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatSqlQueryPercent.
+             * <p>The proportion of duplicate queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder repeatSqlQueryPercent(String repeatSqlQueryPercent) {
                 this.repeatSqlQueryPercent = repeatSqlQueryPercent;
@@ -557,7 +664,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6b407e50-e774-406b-9956-da2425c2****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -565,7 +675,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReportName.
+             * <p>The name of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterRiskReport</p>
              */
             public Builder reportName(String reportName) {
                 this.reportName = reportName;
@@ -573,7 +686,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReportType.
+             * <p>The format of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report</p>
              */
             public Builder reportType(String reportType) {
                 this.reportType = reportType;
@@ -581,7 +697,10 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The unique ID of the space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89713491-cb4f-4579-b889-e82c35f1****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -589,7 +708,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the group.</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

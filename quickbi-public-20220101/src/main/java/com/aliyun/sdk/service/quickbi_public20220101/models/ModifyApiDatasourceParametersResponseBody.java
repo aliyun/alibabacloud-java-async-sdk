@@ -40,6 +40,10 @@ public class ModifyApiDatasourceParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ModifyApiDatasourceParametersResponseBody extends TeaModel {
         private Boolean result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyApiDatasourceParametersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,14 @@ public class ModifyApiDatasourceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The execution result of the interface. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -83,7 +106,14 @@ public class ModifyApiDatasourceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -40,6 +40,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEmbeddedInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -159,6 +172,15 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             private Integer page; 
             private Integer report; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.dashboardOfflineQuery = model.dashboardOfflineQuery;
+                this.page = model.page;
+                this.report = model.report;
+            } 
+
             /**
              * DashboardOfflineQuery.
              */
@@ -245,6 +267,15 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             private Detail detail; 
             private Integer embeddedCount; 
             private Integer maxCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.detail = model.detail;
+                this.embeddedCount = model.embeddedCount;
+                this.maxCount = model.maxCount;
+            } 
 
             /**
              * Detail.

@@ -40,6 +40,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryDataRangeResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDataRangeResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -152,6 +165,15 @@ public class QueryDataRangeResponseBody extends TeaModel {
             private String createUser; 
             private String llmCubeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiCopilotLlmCubeModels model) {
+                this.alias = model.alias;
+                this.createUser = model.createUser;
+                this.llmCubeId = model.llmCubeId;
+            } 
+
             /**
              * Alias.
              */
@@ -238,6 +260,15 @@ public class QueryDataRangeResponseBody extends TeaModel {
             private String alias; 
             private String createUser; 
             private String llmCubeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiCopilotThemeModelsApiCopilotLlmCubeModels model) {
+                this.alias = model.alias;
+                this.createUser = model.createUser;
+                this.llmCubeId = model.llmCubeId;
+            } 
 
             /**
              * Alias.
@@ -338,6 +369,16 @@ public class QueryDataRangeResponseBody extends TeaModel {
             private String themeId; 
             private String themeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiCopilotThemeModels model) {
+                this.apiCopilotLlmCubeModels = model.apiCopilotLlmCubeModels;
+                this.createUser = model.createUser;
+                this.themeId = model.themeId;
+                this.themeName = model.themeName;
+            } 
+
             /**
              * ApiCopilotLlmCubeModels.
              */
@@ -420,6 +461,14 @@ public class QueryDataRangeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels; 
             private java.util.List<ApiCopilotThemeModels> apiCopilotThemeModels; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.apiCopilotLlmCubeModels = model.apiCopilotLlmCubeModels;
+                this.apiCopilotThemeModels = model.apiCopilotThemeModels;
+            } 
 
             /**
              * ApiCopilotLlmCubeModels.

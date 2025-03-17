@@ -51,7 +51,7 @@ public class QueryApprovalInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,10 @@ public class QueryApprovalInfoRequest extends Request {
         } 
 
         /**
-         * Page.
+         * <p>Page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -112,7 +115,10 @@ public class QueryApprovalInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of rows per page, default is 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -121,6 +127,11 @@ public class QueryApprovalInfoRequest extends Request {
         }
 
         /**
+         * <p>Approval status:</p>
+         * <ul>
+         * <li>0: Pending</li>
+         * <li>1: Processed</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +144,7 @@ public class QueryApprovalInfoRequest extends Request {
         }
 
         /**
+         * <p>Current approver user ID, qbi user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

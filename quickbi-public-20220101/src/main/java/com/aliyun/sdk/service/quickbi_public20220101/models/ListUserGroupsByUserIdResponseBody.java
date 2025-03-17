@@ -40,6 +40,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserGroupsByUserIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -226,6 +239,21 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             private String usergroupDesc; 
             private String usergroupId; 
             private String usergroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.identifiedPath = model.identifiedPath;
+                this.modifiedTime = model.modifiedTime;
+                this.modifyUser = model.modifyUser;
+                this.parentUsergroupId = model.parentUsergroupId;
+                this.usergroupDesc = model.usergroupDesc;
+                this.usergroupId = model.usergroupId;
+                this.usergroupName = model.usergroupName;
+            } 
 
             /**
              * CreateTime.

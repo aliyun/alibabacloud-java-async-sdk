@@ -40,6 +40,10 @@ public class CreateTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class CreateTicketResponseBody extends TeaModel {
         private String result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateTicketResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,10 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The generated ticket value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -83,7 +102,14 @@ public class CreateTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>是否请求成功。取值范围：</p>
+         * <ul>
+         * <li>true：请求成功</li>
+         * <li>false：请求失败</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

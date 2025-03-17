@@ -40,6 +40,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryWorksBloodRelationshipResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
@@ -221,6 +234,20 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private Boolean isMeasure; 
             private String pathId; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryParams model) {
+                this.areaId = model.areaId;
+                this.areaName = model.areaName;
+                this.caption = model.caption;
+                this.dataType = model.dataType;
+                this.expression = model.expression;
+                this.isMeasure = model.isMeasure;
+                this.pathId = model.pathId;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>Indices whether the metric. Valid values:</p>
@@ -430,6 +457,19 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private String componentTypeName; 
             private String datasetId; 
             private java.util.List<QueryParams> queryParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.componentId = model.componentId;
+                this.componentName = model.componentName;
+                this.componentType = model.componentType;
+                this.componentTypeCnName = model.componentTypeCnName;
+                this.componentTypeName = model.componentTypeName;
+                this.datasetId = model.datasetId;
+                this.queryParams = model.queryParams;
+            } 
 
             /**
              * <p>List of work blood information.</p>

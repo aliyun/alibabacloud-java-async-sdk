@@ -40,6 +40,10 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddWorkspaceUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -163,6 +176,16 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
             private java.util.Map<String, ?> failureDetail; 
             private Integer success; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.failure = model.failure;
+                this.failureDetail = model.failureDetail;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * Failure.

@@ -40,6 +40,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDatasetInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Whether the operation is successfully returned. Valid values:</p>
@@ -221,6 +234,20 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String sql; 
             private String tableName; 
             private String uniqueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CubeTableList model) {
+                this.caption = model.caption;
+                this.customsql = model.customsql;
+                this.datasourceId = model.datasourceId;
+                this.dsType = model.dsType;
+                this.factTable = model.factTable;
+                this.sql = model.sql;
+                this.tableName = model.tableName;
+                this.uniqueId = model.uniqueId;
+            } 
 
             /**
              * <p>Indicates whether the data source table is valid. Valid values:</p>
@@ -471,6 +498,22 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String tableUniqueId; 
             private String uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(DimensionList model) {
+                this.caption = model.caption;
+                this.dataType = model.dataType;
+                this.dimensionType = model.dimensionType;
+                this.expression = model.expression;
+                this.factColumn = model.factColumn;
+                this.fieldDescription = model.fieldDescription;
+                this.granularity = model.granularity;
+                this.refUid = model.refUid;
+                this.tableUniqueId = model.tableUniqueId;
+                this.uid = model.uid;
+            } 
+
             /**
              * <p>The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.</p>
              * 
@@ -663,6 +706,16 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String pathId; 
             private String pathName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.pathId = model.pathId;
+                this.pathName = model.pathName;
+            } 
+
             /**
              * <p>Test directory</p>
              * 
@@ -829,6 +882,20 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String measureType; 
             private String tableUniqueId; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeasureList model) {
+                this.caption = model.caption;
+                this.dataType = model.dataType;
+                this.expression = model.expression;
+                this.factColumn = model.factColumn;
+                this.fieldDescription = model.fieldDescription;
+                this.measureType = model.measureType;
+                this.tableUniqueId = model.tableUniqueId;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The actual physical field.</p>
@@ -1166,6 +1233,30 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private Boolean rowLevel; 
             private String workspaceId; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cubeTableList = model.cubeTableList;
+                this.custimzeSql = model.custimzeSql;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.dimensionList = model.dimensionList;
+                this.directory = model.directory;
+                this.dsId = model.dsId;
+                this.dsName = model.dsName;
+                this.dsType = model.dsType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.measureList = model.measureList;
+                this.openOfflineAcceleration = model.openOfflineAcceleration;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.rowLevel = model.rowLevel;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * <p>The unique ID of the dataset.</p>

@@ -40,6 +40,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListCollectionsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCollectionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -205,6 +218,19 @@ public class ListCollectionsResponseBody extends TeaModel {
             private String worksType; 
             private String workspaceId; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.favoriteId = model.favoriteId;
+                this.ownerId = model.ownerId;
+                this.worksId = model.worksId;
+                this.worksName = model.worksName;
+                this.worksType = model.worksType;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * FavoriteId.

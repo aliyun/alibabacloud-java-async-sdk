@@ -40,6 +40,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         private Result result; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListApiDatasourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,7 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The query results are returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -83,7 +99,14 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -236,8 +259,27 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             private String showName; 
             private Integer statusType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiId = model.apiId;
+                this.body = model.body;
+                this.dataSize = model.dataSize;
+                this.dateUpdateTime = model.dateUpdateTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.jobId = model.jobId;
+                this.parameters = model.parameters;
+                this.showName = model.showName;
+                this.statusType = model.statusType;
+            } 
+
             /**
-             * ApiId.
+             * <p>The ID of the API data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0f2c3c6409be4dc0810f2a5785e816a8</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -245,7 +287,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * Body.
+             * <p>The parameter configuration of the query statement in JSON format. You can customize the parameter configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -253,7 +298,13 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * <p>The data volume of the API data source.</p>
+             * <ul>
+             * <li>Unit: Kbit/s</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0.39746094</p>
              */
             public Builder dataSize(Float dataSize) {
                 this.dataSize = dataSize;
@@ -261,7 +312,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DateUpdateTime.
+             * <p>The last synchronization time of the API data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25 16:19:43</p>
              */
             public Builder dateUpdateTime(String dateUpdateTime) {
                 this.dateUpdateTime = dateUpdateTime;
@@ -269,7 +323,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the quota plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25 16:19:43</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -277,7 +334,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the optimization job was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25 16:19:43</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -285,7 +345,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REST_API_SYNC_0f2c3c6409be4dc0810f2a5785e816a8</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -293,7 +356,14 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameter configurations in the JSONArray format.</p>
+             * <ul>
+             * <li>name: parameter name</li>
+             * <li>value: the parameter value</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;token&quot;,&quot;value&quot;:&quot;xxxxxxxxxxxx&quot;},{&quot;name&quot;:&quot;pageSize&quot;,&quot;value&quot;:100}]</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -301,7 +371,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * <p>The name of the API data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test data source</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -309,7 +382,17 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * StatusType.
+             * <p>The status of the API data source synchronization task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: the to be run.</li>
+             * <li>1: The is running.</li>
+             * <li>2: The is successfully.</li>
+             * <li>3: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder statusType(Integer statusType) {
                 this.statusType = statusType;
@@ -391,8 +474,18 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+            } 
+
             /**
-             * Data.
+             * <p>The list of API data sources that were queried.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -400,7 +493,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -408,7 +504,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of rows per page set when the interface is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -416,7 +515,10 @@ public class ListApiDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

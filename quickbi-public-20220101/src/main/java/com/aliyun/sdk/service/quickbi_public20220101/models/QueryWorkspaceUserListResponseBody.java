@@ -40,6 +40,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryWorkspaceUserListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -151,6 +164,15 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             private String roleCode; 
             private Long roleId; 
             private String roleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.roleCode = model.roleCode;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
 
             /**
              * RoleCode.
@@ -262,6 +284,17 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             private String nickName; 
             private Role role; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.nickName = model.nickName;
+                this.role = model.role;
+                this.userId = model.userId;
+            } 
 
             /**
              * AccountId.
@@ -389,6 +422,17 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.totalNum = model.totalNum;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * Data.

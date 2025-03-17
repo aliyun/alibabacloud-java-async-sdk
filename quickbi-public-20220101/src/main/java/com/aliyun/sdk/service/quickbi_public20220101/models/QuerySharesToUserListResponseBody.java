@@ -40,6 +40,10 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySharesToUserListResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -173,6 +186,16 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
             private String name; 
             private String pathId; 
             private String pathName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.pathId = model.pathId;
+                this.pathName = model.pathName;
+            } 
 
             /**
              * <p>The ID of the directory where the resource is located.</p>
@@ -421,6 +444,27 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
             private String worksId; 
             private String workspaceId; 
             private String workspaceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.modifyName = model.modifyName;
+                this.modifyTime = model.modifyTime;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.securityLevel = model.securityLevel;
+                this.status = model.status;
+                this.thirdPartAuthFlag = model.thirdPartAuthFlag;
+                this.workName = model.workName;
+                this.workType = model.workType;
+                this.worksId = model.worksId;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
 
             /**
              * <p>The timestamp of the creation time in milliseconds.</p>
