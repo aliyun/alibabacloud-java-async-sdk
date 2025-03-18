@@ -36,6 +36,10 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAdvanceConfigFileResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -110,6 +122,13 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+            } 
 
             /**
              * <p>The file content.</p>

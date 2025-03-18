@@ -36,6 +36,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataSourceDeployResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>requestId</p>
@@ -111,6 +123,13 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public static final class Builder {
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hdfs model) {
+                this.path = model.path;
+            } 
+
             /**
              * path.
              */
@@ -158,6 +177,13 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, String> partitions; 
 
+            private Builder() {
+            } 
+
+            private Builder(Odps model) {
+                this.partitions = model.partitions;
+            } 
+
             /**
              * partitions.
              */
@@ -204,6 +230,13 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
         public static final class Builder {
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.path = model.path;
+            } 
 
             /**
              * path.
@@ -263,6 +296,14 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public static final class Builder {
             private String path; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Saro model) {
+                this.path = model.path;
+                this.version = model.version;
+            } 
 
             /**
              * path.
@@ -355,6 +396,16 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private Oss oss; 
             private Saro saro; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extend model) {
+                this.hdfs = model.hdfs;
+                this.odps = model.odps;
+                this.oss = model.oss;
+                this.saro = model.saro;
+            } 
+
             /**
              * hdfs.
              */
@@ -437,6 +488,14 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public static final class Builder {
             private String args; 
             private String resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processor model) {
+                this.args = model.args;
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The startup parameters of the process.</p>
@@ -643,6 +702,25 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * <p>The AccessKey ID of the MaxCompute data source.</p>
              * 
@@ -816,6 +894,14 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String topic; 
             private String zk; 
 
+            private Builder() {
+            } 
+
+            private Builder(Swift model) {
+                this.topic = model.topic;
+                this.zk = model.zk;
+            } 
+
             /**
              * <p>The topic.</p>
              * 
@@ -924,6 +1010,17 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private Processor processor; 
             private Storage storage; 
             private Swift swift; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.autoBuildIndex = model.autoBuildIndex;
+                this.extend = model.extend;
+                this.processor = model.processor;
+                this.storage = model.storage;
+                this.swift = model.swift;
+            } 
 
             /**
              * autoBuildIndex.

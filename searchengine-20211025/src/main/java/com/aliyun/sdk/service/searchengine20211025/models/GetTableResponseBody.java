@@ -36,6 +36,10 @@ public class GetTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTableResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>requestId</p>
@@ -134,6 +146,15 @@ public class GetTableResponseBody extends TeaModel {
             private String ossBucket; 
             private String ossEndpoint; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrcFieldConfig model) {
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>OSS Bucket</p>
@@ -230,6 +251,15 @@ public class GetTableResponseBody extends TeaModel {
             private SrcFieldConfig srcFieldConfig; 
             private String vectorModal; 
             private String vectorModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.srcFieldConfig = model.srcFieldConfig;
+                this.vectorModal = model.vectorModal;
+                this.vectorModel = model.vectorModel;
+            } 
 
             /**
              * <p>The source of the data to be vectorized.</p>
@@ -335,6 +365,16 @@ public class GetTableResponseBody extends TeaModel {
             private String operator; 
             private Params params; 
             private String srcField; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataProcessConfig model) {
+                this.dstField = model.dstField;
+                this.operator = model.operator;
+                this.params = model.params;
+                this.srcField = model.srcField;
+            } 
 
             /**
              * <p>The destination field.</p>
@@ -524,6 +564,22 @@ public class GetTableResponseBody extends TeaModel {
             private String project; 
             private String table; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+            } 
+
             /**
              * <p>AK</p>
              * 
@@ -685,6 +741,16 @@ public class GetTableResponseBody extends TeaModel {
             private Integer dataTimeSec; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.autoBuildIndex = model.autoBuildIndex;
+                this.config = model.config;
+                this.dataTimeSec = model.dataTimeSec;
+                this.type = model.type;
+            } 
+
             /**
              * autoBuildIndex.
              */
@@ -791,6 +857,16 @@ public class GetTableResponseBody extends TeaModel {
             private String linearBuildThreshold; 
             private String minScanDocCnt; 
             private String searchIndexParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvanceParams model) {
+                this.buildIndexParams = model.buildIndexParams;
+                this.linearBuildThreshold = model.linearBuildThreshold;
+                this.minScanDocCnt = model.minScanDocCnt;
+                this.searchIndexParams = model.searchIndexParams;
+            } 
 
             /**
              * <p>The index building parameters.</p>
@@ -970,6 +1046,21 @@ public class GetTableResponseBody extends TeaModel {
             private String sparseValueField; 
             private String vectorField; 
             private String vectorIndexType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorIndex model) {
+                this.advanceParams = model.advanceParams;
+                this.dimension = model.dimension;
+                this.distanceType = model.distanceType;
+                this.indexName = model.indexName;
+                this.namespace = model.namespace;
+                this.sparseIndexField = model.sparseIndexField;
+                this.sparseValueField = model.sparseValueField;
+                this.vectorField = model.vectorField;
+                this.vectorIndexType = model.vectorIndexType;
+            } 
 
             /**
              * <p>The configurations of the index schema.</p>
@@ -1213,6 +1304,22 @@ public class GetTableResponseBody extends TeaModel {
             private String rawSchema; 
             private String status; 
             private java.util.List<VectorIndex> vectorIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.dataProcessConfig = model.dataProcessConfig;
+                this.dataProcessorCount = model.dataProcessorCount;
+                this.dataSource = model.dataSource;
+                this.fieldSchema = model.fieldSchema;
+                this.name = model.name;
+                this.partitionCount = model.partitionCount;
+                this.primaryKey = model.primaryKey;
+                this.rawSchema = model.rawSchema;
+                this.status = model.status;
+                this.vectorIndex = model.vectorIndex;
+            } 
 
             /**
              * <p>The configurations about field processing.</p>

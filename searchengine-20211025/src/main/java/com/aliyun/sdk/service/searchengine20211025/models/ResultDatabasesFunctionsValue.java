@@ -36,6 +36,10 @@ public class ResultDatabasesFunctionsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -53,6 +57,14 @@ public class ResultDatabasesFunctionsValue extends TeaModel {
     public static final class Builder {
         private String name; 
         private String signatures; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResultDatabasesFunctionsValue model) {
+            this.name = model.name;
+            this.signatures = model.signatures;
+        } 
 
         /**
          * name.

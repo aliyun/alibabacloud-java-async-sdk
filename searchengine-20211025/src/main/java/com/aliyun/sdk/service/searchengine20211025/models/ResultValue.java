@@ -48,6 +48,10 @@ public class ResultValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pauseAll
      */
@@ -89,6 +93,17 @@ public class ResultValue extends TeaModel {
         private Boolean pauseIndexBatch; 
         private Boolean pauseBiz; 
         private Boolean pauseRuntime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResultValue model) {
+            this.pauseAll = model.pauseAll;
+            this.pauseIndex = model.pauseIndex;
+            this.pauseIndexBatch = model.pauseIndexBatch;
+            this.pauseBiz = model.pauseBiz;
+            this.pauseRuntime = model.pauseRuntime;
+        } 
 
         /**
          * <p>Indicates whether all pushes are suspended.</p>

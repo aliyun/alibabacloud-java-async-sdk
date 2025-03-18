@@ -22,10 +22,6 @@ public class ListRestQueryResultRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("address")
-    private String address;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("indexName")
     private String indexName;
@@ -37,7 +33,6 @@ public class ListRestQueryResultRequest extends Request {
     private ListRestQueryResultRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.address = builder.address;
         this.indexName = builder.indexName;
         this.query = builder.query;
     }
@@ -50,7 +45,7 @@ public class ListRestQueryResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,13 +55,6 @@ public class ListRestQueryResultRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return address
-     */
-    public String getAddress() {
-        return this.address;
     }
 
     /**
@@ -85,7 +73,6 @@ public class ListRestQueryResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRestQueryResultRequest, Builder> {
         private String instanceId; 
-        private String address; 
         private String indexName; 
         private java.util.Map<String, ?> query; 
 
@@ -96,7 +83,6 @@ public class ListRestQueryResultRequest extends Request {
         private Builder(ListRestQueryResultRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.address = request.address;
             this.indexName = request.indexName;
             this.query = request.query;
         } 
@@ -111,18 +97,6 @@ public class ListRestQueryResultRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * <p>The instance endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
-         */
-        public Builder address(String address) {
-            this.putQueryParameter("address", address);
-            this.address = address;
             return this;
         }
 

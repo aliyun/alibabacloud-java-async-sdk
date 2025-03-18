@@ -85,7 +85,7 @@ public class CreateTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -387,6 +387,15 @@ public class CreateTableRequest extends Request {
             private String ossEndpoint; 
             private String uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(SrcFieldConfig model) {
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.uid = model.uid;
+            } 
+
             /**
              * <p>The OSS bucket.</p>
              * 
@@ -482,6 +491,15 @@ public class CreateTableRequest extends Request {
             private SrcFieldConfig srcFieldConfig; 
             private String vectorModal; 
             private String vectorModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.srcFieldConfig = model.srcFieldConfig;
+                this.vectorModal = model.vectorModal;
+                this.vectorModel = model.vectorModel;
+            } 
 
             /**
              * <p>The source of the data to be vectorized.</p>
@@ -587,6 +605,16 @@ public class CreateTableRequest extends Request {
             private String operator; 
             private Params params; 
             private String srcField; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataProcessConfig model) {
+                this.dstField = model.dstField;
+                this.operator = model.operator;
+                this.params = model.params;
+                this.srcField = model.srcField;
+            } 
 
             /**
              * <p>The destination field.</p>
@@ -788,6 +816,23 @@ public class CreateTableRequest extends Request {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * <p>The AccessKey ID of the MaxCompute data source.</p>
              * 
@@ -975,6 +1020,16 @@ public class CreateTableRequest extends Request {
             private Integer dataTimeSec; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.autoBuildIndex = model.autoBuildIndex;
+                this.config = model.config;
+                this.dataTimeSec = model.dataTimeSec;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Specifies whether to automatically rebuild the index.</p>
              * 
@@ -1090,6 +1145,16 @@ public class CreateTableRequest extends Request {
             private String linearBuildThreshold; 
             private String minScanDocCnt; 
             private String searchIndexParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvanceParams model) {
+                this.buildIndexParams = model.buildIndexParams;
+                this.linearBuildThreshold = model.linearBuildThreshold;
+                this.minScanDocCnt = model.minScanDocCnt;
+                this.searchIndexParams = model.searchIndexParams;
+            } 
 
             /**
              * <p>The index building parameters.</p>
@@ -1269,6 +1334,21 @@ public class CreateTableRequest extends Request {
             private String sparseValueField; 
             private String vectorField; 
             private String vectorIndexType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VectorIndex model) {
+                this.advanceParams = model.advanceParams;
+                this.dimension = model.dimension;
+                this.distanceType = model.distanceType;
+                this.indexName = model.indexName;
+                this.namespace = model.namespace;
+                this.sparseIndexField = model.sparseIndexField;
+                this.sparseValueField = model.sparseValueField;
+                this.vectorField = model.vectorField;
+                this.vectorIndexType = model.vectorIndexType;
+            } 
 
             /**
              * <p>The configurations of the index schema.</p>

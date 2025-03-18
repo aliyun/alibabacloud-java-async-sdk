@@ -45,7 +45,7 @@ public class ModifyIndexVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,6 +186,15 @@ public class ModifyIndexVersionRequest extends Request {
             private String buildDeployId; 
             private String indexName; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyIndexVersionRequestBody model) {
+                this.buildDeployId = model.buildDeployId;
+                this.indexName = model.indexName;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The deployment ID of the data source.</p>

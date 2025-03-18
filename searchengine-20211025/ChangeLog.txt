@@ -1,3 +1,6 @@
+2025-03-18 Version: 5.0.0
+- Generated java-async 2021-10-25 for searchengine.
+
 2025-01-03 Version: 4.0.9
 - Generated java-async 2021-10-25 for searchengine.
 

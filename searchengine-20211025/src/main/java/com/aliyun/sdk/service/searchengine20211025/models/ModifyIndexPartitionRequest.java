@@ -55,7 +55,7 @@ public class ModifyIndexPartitionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,6 +235,15 @@ public class ModifyIndexPartitionRequest extends Request {
             private String indexName; 
             private Integer parallelNum; 
             private Integer partitionCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexInfos model) {
+                this.indexName = model.indexName;
+                this.parallelNum = model.parallelNum;
+                this.partitionCount = model.partitionCount;
+            } 
 
             /**
              * <p>The index name.</p>

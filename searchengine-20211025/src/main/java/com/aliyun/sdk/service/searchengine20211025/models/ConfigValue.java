@@ -36,6 +36,10 @@ public class ConfigValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desc
      */
@@ -53,6 +57,14 @@ public class ConfigValue extends TeaModel {
     public static final class Builder {
         private String desc; 
         private java.util.List<Files> files; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfigValue model) {
+            this.desc = model.desc;
+            this.files = model.files;
+        } 
 
         /**
          * <p>The description of the offline configuration.</p>
@@ -122,6 +134,14 @@ public class ConfigValue extends TeaModel {
         public static final class Builder {
             private String content; 
             private java.util.Map<String, ConfigValueFilesConfigVariablesValue> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.content = model.content;
+                this.variables = model.variables;
+            } 
 
             /**
              * <p>The file content.</p>
@@ -228,6 +248,17 @@ public class ConfigValue extends TeaModel {
             private String fileName; 
             private Config config; 
             private String dirName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.operateType = model.operateType;
+                this.parentFullPath = model.parentFullPath;
+                this.fileName = model.fileName;
+                this.config = model.config;
+                this.dirName = model.dirName;
+            } 
 
             /**
              * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>

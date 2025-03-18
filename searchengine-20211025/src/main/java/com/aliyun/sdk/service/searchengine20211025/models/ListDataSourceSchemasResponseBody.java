@@ -36,6 +36,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceSchemasResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             private Boolean hasPrimaryKeyAttribute; 
             private Boolean isPrimaryKey; 
             private Boolean isPrimaryKeySorted; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrimaryKey model) {
+                this.hasPrimaryKeyAttribute = model.hasPrimaryKeyAttribute;
+                this.isPrimaryKey = model.isPrimaryKey;
+                this.isPrimaryKeySorted = model.isPrimaryKeySorted;
+            } 
 
             /**
              * <p>Indicates whether the field has the primary key attribute. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
@@ -278,6 +299,19 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             private PrimaryKey primaryKey; 
             private Boolean summary; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.addIndex = model.addIndex;
+                this.attribute = model.attribute;
+                this.custom = model.custom;
+                this.name = model.name;
+                this.primaryKey = model.primaryKey;
+                this.summary = model.summary;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether the field has the index attribute. Valid values: <strong>true</strong> and <strong>false</strong>.</p>

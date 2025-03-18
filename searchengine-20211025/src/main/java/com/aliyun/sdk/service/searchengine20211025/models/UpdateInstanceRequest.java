@@ -49,7 +49,7 @@ public class UpdateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,6 +195,14 @@ public class UpdateInstanceRequest extends Request {
         public static final class Builder {
             private String code; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>

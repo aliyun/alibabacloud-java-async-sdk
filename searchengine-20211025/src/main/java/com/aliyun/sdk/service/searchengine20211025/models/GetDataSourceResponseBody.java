@@ -36,6 +36,10 @@ public class GetDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataSourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -170,6 +182,18 @@ public class GetDataSourceResponseBody extends TeaModel {
             private String name; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.domain = model.domain;
+                this.indexes = model.indexes;
+                this.lastFulTime = model.lastFulTime;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The data center where the data source is deployed in offline mode</p>

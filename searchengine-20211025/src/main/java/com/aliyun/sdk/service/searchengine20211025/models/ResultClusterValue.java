@@ -36,6 +36,10 @@ public class ResultClusterValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buildParallelNum
      */
@@ -53,6 +57,14 @@ public class ResultClusterValue extends TeaModel {
     public static final class Builder {
         private Integer buildParallelNum; 
         private Integer mergeParallelNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResultClusterValue model) {
+            this.buildParallelNum = model.buildParallelNum;
+            this.mergeParallelNum = model.mergeParallelNum;
+        } 
 
         /**
          * <p>The maximum number of full indexes that can be concurrently built.</p>

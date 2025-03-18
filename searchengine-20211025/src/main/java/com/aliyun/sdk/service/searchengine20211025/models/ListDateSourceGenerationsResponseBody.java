@@ -36,6 +36,10 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDateSourceGenerationsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -182,6 +194,19 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             private java.util.Map<String, Integer> partition; 
             private String status; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.buildDeployId = model.buildDeployId;
+                this.createTime = model.createTime;
+                this.dataDumpRoot = model.dataDumpRoot;
+                this.generation = model.generation;
+                this.partition = model.partition;
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The ID of the offline deployment.</p>

@@ -36,6 +36,10 @@ public class ListIndexesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListIndexesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndexesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -267,6 +279,26 @@ public class ListIndexesResponseBody extends TeaModel {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.format = model.format;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * <p>The AccessKey ID of the MaxCompute data source.</p>
              * 
@@ -460,6 +492,14 @@ public class ListIndexesResponseBody extends TeaModel {
             private String namespace; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SaroConfig model) {
+                this.namespace = model.namespace;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The namespace of the SARO data source.</p>
              * 
@@ -592,6 +632,19 @@ public class ListIndexesResponseBody extends TeaModel {
             private Integer processPartitionCount; 
             private SaroConfig saroConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceInfo model) {
+                this.autoBuildIndex = model.autoBuildIndex;
+                this.config = model.config;
+                this.domain = model.domain;
+                this.name = model.name;
+                this.processPartitionCount = model.processPartitionCount;
+                this.saroConfig = model.saroConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether the automatic full indexing feature is enabled.</p>
@@ -739,6 +792,16 @@ public class ListIndexesResponseBody extends TeaModel {
             private Boolean isTemplate; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.fullPathName = model.fullPathName;
+                this.isDir = model.isDir;
+                this.isTemplate = model.isTemplate;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The full path of the file.</p>
              * 
@@ -881,6 +944,18 @@ public class ListIndexesResponseBody extends TeaModel {
             private String status; 
             private Long updateTime; 
             private Integer versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.desc = model.desc;
+                this.files = model.files;
+                this.name = model.name;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The description of the index version.</p>
@@ -1160,6 +1235,27 @@ public class ListIndexesResponseBody extends TeaModel {
             private Integer partition; 
             private String updateTime; 
             private java.util.List<Versions> versions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.dataSource = model.dataSource;
+                this.dataSourceInfo = model.dataSourceInfo;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.fullUpdateTime = model.fullUpdateTime;
+                this.fullVersion = model.fullVersion;
+                this.incUpdateTime = model.incUpdateTime;
+                this.indexSize = model.indexSize;
+                this.indexStatus = model.indexStatus;
+                this.name = model.name;
+                this.partition = model.partition;
+                this.updateTime = model.updateTime;
+                this.versions = model.versions;
+            } 
 
             /**
              * <p>The index schema, which is a JSON string.</p>

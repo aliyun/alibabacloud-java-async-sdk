@@ -36,6 +36,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetIndexVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIndexVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -147,6 +159,16 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private String indexName; 
             private java.util.List<Long> versions; 
 
+            private Builder() {
+            } 
+
+            private Builder(IndexVersions model) {
+                this.buildDeployId = model.buildDeployId;
+                this.currentVersion = model.currentVersion;
+                this.indexName = model.indexName;
+                this.versions = model.versions;
+            } 
+
             /**
              * <p>The ID of the offline deployment.</p>
              * 
@@ -238,6 +260,14 @@ public class GetIndexVersionResponseBody extends TeaModel {
         public static final class Builder {
             private String cluster; 
             private java.util.List<IndexVersions> indexVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cluster = model.cluster;
+                this.indexVersions = model.indexVersions;
+            } 
 
             /**
              * <p>The cluster name.</p>

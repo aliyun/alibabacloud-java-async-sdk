@@ -36,6 +36,10 @@ public class ListLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListLogsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLogsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -122,6 +134,14 @@ public class ListLogsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<?> result; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.result = model.result;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The result.</p>

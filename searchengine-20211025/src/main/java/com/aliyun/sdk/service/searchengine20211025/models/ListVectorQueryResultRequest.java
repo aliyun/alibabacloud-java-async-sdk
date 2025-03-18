@@ -22,13 +22,13 @@ public class ListVectorQueryResultRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("address")
-    private String address;
-
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
     private java.util.Map<String, ?> body;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("path")
+    private String path;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("queryType")
@@ -41,8 +41,8 @@ public class ListVectorQueryResultRequest extends Request {
     private ListVectorQueryResultRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.address = builder.address;
         this.body = builder.body;
+        this.path = builder.path;
         this.queryType = builder.queryType;
         this.vectorQueryType = builder.vectorQueryType;
     }
@@ -55,7 +55,7 @@ public class ListVectorQueryResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,17 +68,17 @@ public class ListVectorQueryResultRequest extends Request {
     }
 
     /**
-     * @return address
-     */
-    public String getAddress() {
-        return this.address;
-    }
-
-    /**
      * @return body
      */
     public java.util.Map<String, ?> getBody() {
         return this.body;
+    }
+
+    /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
     }
 
     /**
@@ -97,8 +97,8 @@ public class ListVectorQueryResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListVectorQueryResultRequest, Builder> {
         private String instanceId; 
-        private String address; 
         private java.util.Map<String, ?> body; 
+        private String path; 
         private String queryType; 
         private String vectorQueryType; 
 
@@ -109,8 +109,8 @@ public class ListVectorQueryResultRequest extends Request {
         private Builder(ListVectorQueryResultRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.address = request.address;
             this.body = request.body;
+            this.path = request.path;
             this.queryType = request.queryType;
             this.vectorQueryType = request.vectorQueryType;
         } 
@@ -129,18 +129,6 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * <p>The instance endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
-         */
-        public Builder address(String address) {
-            this.putQueryParameter("address", address);
-            this.address = address;
-            return this;
-        }
-
-        /**
          * <p>The request body.</p>
          * 
          * <strong>example:</strong>
@@ -149,6 +137,15 @@ public class ListVectorQueryResultRequest extends Request {
         public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
+            return this;
+        }
+
+        /**
+         * path.
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("path", path);
+            this.path = path;
             return this;
         }
 

@@ -60,7 +60,7 @@ public class CreateClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -247,6 +247,14 @@ public class CreateClusterRequest extends Request {
             private Integer number; 
             private String partition; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataNode model) {
+                this.number = model.number;
+                this.partition = model.partition;
+            } 
+
             /**
              * <p>The number of Searcher workers.</p>
              * 
@@ -307,6 +315,13 @@ public class CreateClusterRequest extends Request {
 
         public static final class Builder {
             private Integer number; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryNode model) {
+                this.number = model.number;
+            } 
 
             /**
              * <p>The number of QRS workers.</p>

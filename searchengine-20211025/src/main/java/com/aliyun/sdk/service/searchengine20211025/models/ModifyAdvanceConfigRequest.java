@@ -76,7 +76,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -353,6 +353,16 @@ public class ModifyAdvanceConfigRequest extends Request {
             private Boolean isDir; 
             private Boolean isTemplate; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.fullPathName = model.fullPathName;
+                this.isDir = model.isDir;
+                this.isTemplate = model.isTemplate;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The full path of the file.</p>

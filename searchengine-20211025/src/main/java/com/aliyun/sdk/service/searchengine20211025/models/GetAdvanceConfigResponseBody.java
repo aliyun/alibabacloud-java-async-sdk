@@ -36,6 +36,10 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAdvanceConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             private Boolean isDir; 
             private Boolean isTemplate; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.fullPathName = model.fullPathName;
+                this.isDir = model.isDir;
+                this.isTemplate = model.isTemplate;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The file path.</p>
@@ -301,6 +323,19 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             private String name; 
             private String status; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.desc = model.desc;
+                this.files = model.files;
+                this.name = model.name;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The content of the advanced configuration that is returned.</p>

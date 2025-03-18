@@ -36,6 +36,10 @@ public class DeleteIndexVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteIndexVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.Map<String, ?> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteIndexVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>

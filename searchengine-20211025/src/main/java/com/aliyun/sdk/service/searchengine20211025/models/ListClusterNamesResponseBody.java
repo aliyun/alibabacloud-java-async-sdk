@@ -36,6 +36,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListClusterNamesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterNamesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -134,6 +146,15 @@ public class ListClusterNamesResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The description of the cluster.</p>

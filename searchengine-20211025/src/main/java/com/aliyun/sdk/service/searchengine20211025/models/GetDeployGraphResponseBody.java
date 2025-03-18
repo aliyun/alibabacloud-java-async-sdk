@@ -36,6 +36,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetDeployGraphResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeployGraphResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -173,6 +185,18 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String tableName; 
             private String tag; 
             private String zoneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexMetas model) {
+                this.domainName = model.domainName;
+                this.name = model.name;
+                this.tableDeployId = model.tableDeployId;
+                this.tableName = model.tableName;
+                this.tag = model.tag;
+                this.zoneName = model.zoneName;
+            } 
 
             /**
              * <p>The name of the data center.</p>
@@ -314,6 +338,16 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String hippoId; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineMaster model) {
+                this.domainName = model.domainName;
+                this.hippoId = model.hippoId;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data center.</p>
@@ -457,6 +491,18 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private Long tableDeployId; 
             private String tag; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableMetas model) {
+                this.buildDeployId = model.buildDeployId;
+                this.domainName = model.domainName;
+                this.name = model.name;
+                this.tableDeployId = model.tableDeployId;
+                this.tag = model.tag;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the offline deployment.</p>
@@ -610,6 +656,17 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String suezAdminName; 
             private String tag; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneMetas model) {
+                this.domainInfo = model.domainInfo;
+                this.name = model.name;
+                this.suezAdminName = model.suezAdminName;
+                this.tag = model.tag;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the data center.</p>
@@ -765,6 +822,18 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private java.util.Map<String, java.util.List<String>> zoneIndexRelation; 
             private java.util.List<ZoneMetas> zoneMetas; 
 
+            private Builder() {
+            } 
+
+            private Builder(Graph model) {
+                this.indexMetas = model.indexMetas;
+                this.onlineMaster = model.onlineMaster;
+                this.tableIndexRelation = model.tableIndexRelation;
+                this.tableMetas = model.tableMetas;
+                this.zoneIndexRelation = model.zoneIndexRelation;
+                this.zoneMetas = model.zoneMetas;
+            } 
+
             /**
              * <p>The index metadata.</p>
              */
@@ -851,6 +920,13 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
         public static final class Builder {
             private Graph graph; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.graph = model.graph;
+            } 
 
             /**
              * <p>The deployment information.</p>

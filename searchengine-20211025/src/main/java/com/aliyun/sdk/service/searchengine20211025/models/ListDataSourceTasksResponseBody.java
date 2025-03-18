@@ -36,6 +36,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -122,6 +134,14 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String msg; 
             private String tagLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.msg = model.msg;
+                this.tagLevel = model.tagLevel;
+            } 
 
             /**
              * <p>The tag content.</p>
@@ -219,6 +239,16 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private Long index; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskNodes model) {
+                this.finishDate = model.finishDate;
+                this.index = model.index;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the task was complete.</p>
@@ -422,6 +452,23 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private String time; 
             private String type; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extraAttribute = model.extraAttribute;
+                this.field3 = model.field3;
+                this.fsmId = model.fsmId;
+                this.groupType = model.groupType;
+                this.name = model.name;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.taskNodes = model.taskNodes;
+                this.time = model.time;
+                this.type = model.type;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The additional attributes of the card.</p>

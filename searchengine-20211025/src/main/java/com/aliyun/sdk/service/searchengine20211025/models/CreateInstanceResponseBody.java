@@ -36,6 +36,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request</p>
@@ -110,6 +122,13 @@ public class CreateInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The instance ID.</p>

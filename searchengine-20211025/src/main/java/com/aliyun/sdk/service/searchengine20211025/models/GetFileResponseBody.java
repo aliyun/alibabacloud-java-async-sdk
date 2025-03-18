@@ -36,6 +36,10 @@ public class GetFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetFileResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +194,19 @@ public class GetFileResponseBody extends TeaModel {
             private Boolean isDir; 
             private String name; 
             private Long partition; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.dataSource = model.dataSource;
+                this.extend = model.extend;
+                this.fullPathName = model.fullPathName;
+                this.isDir = model.isDir;
+                this.name = model.name;
+                this.partition = model.partition;
+            } 
 
             /**
              * <p>The file content.</p>

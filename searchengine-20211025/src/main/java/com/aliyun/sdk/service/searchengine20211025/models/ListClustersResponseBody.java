@@ -36,6 +36,10 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListClustersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -134,6 +146,15 @@ public class ListClustersResponseBody extends TeaModel {
             private String name; 
             private Integer number; 
             private Integer partition; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataNode model) {
+                this.name = model.name;
+                this.number = model.number;
+                this.partition = model.partition;
+            } 
 
             /**
              * <p>The name of the Searcher worker.</p>
@@ -230,6 +251,15 @@ public class ListClustersResponseBody extends TeaModel {
             private String name; 
             private Integer number; 
             private Integer partition; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryNode model) {
+                this.name = model.name;
+                this.number = model.number;
+                this.partition = model.partition;
+            } 
 
             /**
              * <p>The name of the QRS worker.</p>
@@ -482,6 +512,28 @@ public class ListClustersResponseBody extends TeaModel {
             private String name; 
             private QueryNode queryNode; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.config = model.config;
+                this.configUpdateTime = model.configUpdateTime;
+                this.createTime = model.createTime;
+                this.currentAdvanceConfigVersion = model.currentAdvanceConfigVersion;
+                this.currentOfflineDictConfigVersion = model.currentOfflineDictConfigVersion;
+                this.currentOnlineConfigVersion = model.currentOnlineConfigVersion;
+                this.currentOnlineQueryConfigVersion = model.currentOnlineQueryConfigVersion;
+                this.dataNode = model.dataNode;
+                this.description = model.description;
+                this.latestAdvanceConfigVersion = model.latestAdvanceConfigVersion;
+                this.latestOfflineDictConfigVersion = model.latestOfflineDictConfigVersion;
+                this.latestOnlineConfigVersion = model.latestOnlineConfigVersion;
+                this.latestOnlineQueryConfigVersion = model.latestOnlineQueryConfigVersion;
+                this.name = model.name;
+                this.queryNode = model.queryNode;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The configuration information.</p>

@@ -36,6 +36,10 @@ public class GetSqlInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSqlInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSqlInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -242,6 +254,24 @@ public class GetSqlInstanceResponseBody extends TeaModel {
             private String staticParams; 
             private String templateParams; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.combineParams = model.combineParams;
+                this.comment = model.comment;
+                this.content = model.content;
+                this.dynamicParams = model.dynamicParams;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.instanceId = model.instanceId;
+                this.kvpairs = model.kvpairs;
+                this.relatedTemplateId = model.relatedTemplateId;
+                this.staticParams = model.staticParams;
+                this.templateParams = model.templateParams;
+                this.version = model.version;
+            } 
 
             /**
              * combineParams.

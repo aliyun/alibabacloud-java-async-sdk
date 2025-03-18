@@ -36,6 +36,10 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatabaseSchemaResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -158,6 +170,17 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
             private java.util.Map<String, ?> fieldTypeDetail; 
             private String indexName; 
             private String indexType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.fieldName = model.fieldName;
+                this.fieldType = model.fieldType;
+                this.fieldTypeDetail = model.fieldTypeDetail;
+                this.indexName = model.indexName;
+                this.indexType = model.indexType;
+            } 
 
             /**
              * fieldName.

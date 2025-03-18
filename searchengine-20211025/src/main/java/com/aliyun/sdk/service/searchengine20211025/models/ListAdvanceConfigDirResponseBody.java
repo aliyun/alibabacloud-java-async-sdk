@@ -36,6 +36,10 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAdvanceConfigDirResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             private Boolean isDir; 
             private Boolean isTemplate; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.fullPathName = model.fullPathName;
+                this.isDir = model.isDir;
+                this.isTemplate = model.isTemplate;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The absolute path in which the file is stored.</p>

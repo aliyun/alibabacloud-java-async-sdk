@@ -36,6 +36,10 @@ public class DeleteFolderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteFolderResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteFolderResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -122,6 +134,14 @@ public class DeleteFolderResponseBody extends TeaModel {
         public static final class Builder {
             private String requestId; 
             private java.util.Map<String, String> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.requestId = model.requestId;
+                this.result = model.result;
+            } 
 
             /**
              * <p>The request ID.</p>

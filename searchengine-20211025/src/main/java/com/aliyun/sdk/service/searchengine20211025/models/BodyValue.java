@@ -48,6 +48,10 @@ public class BodyValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pauseAll
      */
@@ -89,6 +93,17 @@ public class BodyValue extends TeaModel {
         private Boolean pauseIndexBatch; 
         private Boolean pauseBiz; 
         private Boolean pauseRuntime; 
+
+        private Builder() {
+        } 
+
+        private Builder(BodyValue model) {
+            this.pauseAll = model.pauseAll;
+            this.pauseIndex = model.pauseIndex;
+            this.pauseIndexBatch = model.pauseIndexBatch;
+            this.pauseBiz = model.pauseBiz;
+            this.pauseRuntime = model.pauseRuntime;
+        } 
 
         /**
          * <p>Specifies whether to suspend all pushes.</p>

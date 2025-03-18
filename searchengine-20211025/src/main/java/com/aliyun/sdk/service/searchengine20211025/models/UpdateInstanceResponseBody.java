@@ -36,6 +36,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request</p>
@@ -230,6 +242,23 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.inDebt = model.inDebt;
+                this.instanceId = model.instanceId;
+                this.lockMode = model.lockMode;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The billing method.</p>

@@ -36,6 +36,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class GetInstanceResponseBody extends TeaModel {
             private String publicEndpoint; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.allow = model.allow;
+                this.endpoint = model.endpoint;
+                this.publicEndpoint = model.publicEndpoint;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The public domain name whitelist.</p>
@@ -301,6 +324,17 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer mem; 
             private Integer nodeCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(QrsResource model) {
+                this.category = model.category;
+                this.cpu = model.cpu;
+                this.disk = model.disk;
+                this.mem = model.mem;
+                this.nodeCount = model.nodeCount;
+            } 
+
             /**
              * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
              * 
@@ -443,6 +477,17 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer mem; 
             private Integer nodeCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResource model) {
+                this.category = model.category;
+                this.cpu = model.cpu;
+                this.disk = model.disk;
+                this.mem = model.mem;
+                this.nodeCount = model.nodeCount;
+            } 
+
             /**
              * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
              * 
@@ -549,6 +594,14 @@ public class GetInstanceResponseBody extends TeaModel {
             private QrsResource qrsResource; 
             private SearchResource searchResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.qrsResource = model.qrsResource;
+                this.searchResource = model.searchResource;
+            } 
+
             /**
              * <p>The QRS worker specifications.</p>
              */
@@ -615,6 +668,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -904,6 +965,32 @@ public class GetInstanceResponseBody extends TeaModel {
             private String updateTime; 
             private String userName; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.bsVersion = model.bsVersion;
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.edition = model.edition;
+                this.expiredTime = model.expiredTime;
+                this.inDebt = model.inDebt;
+                this.instanceId = model.instanceId;
+                this.lockMode = model.lockMode;
+                this.network = model.network;
+                this.newMode = model.newMode;
+                this.noQrs = model.noQrs;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+                this.userName = model.userName;
+                this.version = model.version;
+            } 
 
             /**
              * bsVersion.

@@ -36,6 +36,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -170,6 +182,18 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String name; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.domain = model.domain;
+                this.indexes = model.indexes;
+                this.lastFulTime = model.lastFulTime;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The data center in which the data source is deployed.</p>

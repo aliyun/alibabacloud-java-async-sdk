@@ -40,6 +40,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListInstancesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Result> result; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request</p>
@@ -266,6 +279,24 @@ public class ListInstancesResponseBody extends TeaModel {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.accessKey = model.accessKey;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * accessKey.
              */
@@ -425,6 +456,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private String indexName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceDetails model) {
+                this.config = model.config;
+                this.indexName = model.indexName;
+                this.type = model.type;
+            } 
+
             /**
              * config.
              */
@@ -535,6 +575,17 @@ public class ListInstancesResponseBody extends TeaModel {
             private String publicEndpoint; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.allow = model.allow;
+                this.endpoint = model.endpoint;
+                this.publicEndpoint = model.publicEndpoint;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * allow.
@@ -672,6 +723,17 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer mem; 
             private Integer nodeCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(QrsResource model) {
+                this.category = model.category;
+                this.cpu = model.cpu;
+                this.disk = model.disk;
+                this.mem = model.mem;
+                this.nodeCount = model.nodeCount;
+            } 
+
             /**
              * category.
              */
@@ -799,6 +861,17 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer mem; 
             private Integer nodeCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResource model) {
+                this.category = model.category;
+                this.cpu = model.cpu;
+                this.disk = model.disk;
+                this.mem = model.mem;
+                this.nodeCount = model.nodeCount;
+            } 
+
             /**
              * category.
              */
@@ -890,6 +963,14 @@ public class ListInstancesResponseBody extends TeaModel {
             private QrsResource qrsResource; 
             private SearchResource searchResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.qrsResource = model.qrsResource;
+                this.searchResource = model.searchResource;
+            } 
+
             /**
              * qrsResource.
              */
@@ -956,6 +1037,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1233,6 +1322,31 @@ public class ListInstancesResponseBody extends TeaModel {
             private String updateTime; 
             private String userName; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.dataSourceDetails = model.dataSourceDetails;
+                this.description = model.description;
+                this.edition = model.edition;
+                this.expiredTime = model.expiredTime;
+                this.inDebt = model.inDebt;
+                this.instanceId = model.instanceId;
+                this.lockMode = model.lockMode;
+                this.network = model.network;
+                this.noQrs = model.noQrs;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+                this.userName = model.userName;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The billing method.</p>

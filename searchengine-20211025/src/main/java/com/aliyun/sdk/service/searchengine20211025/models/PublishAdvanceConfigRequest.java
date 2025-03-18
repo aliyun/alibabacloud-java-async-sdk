@@ -51,7 +51,7 @@ public class PublishAdvanceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +200,14 @@ public class PublishAdvanceConfigRequest extends Request {
             private String content; 
             private java.util.Map<String, FilesConfigVariablesValue> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.content = model.content;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The file content.</p>
              * 
@@ -317,6 +325,18 @@ public class PublishAdvanceConfigRequest extends Request {
             private String operateType; 
             private String ossPath; 
             private String parentFullPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.config = model.config;
+                this.dirName = model.dirName;
+                this.fileName = model.fileName;
+                this.operateType = model.operateType;
+                this.ossPath = model.ossPath;
+                this.parentFullPath = model.parentFullPath;
+            } 
 
             /**
              * <p>The information about the advanced configuration.</p>

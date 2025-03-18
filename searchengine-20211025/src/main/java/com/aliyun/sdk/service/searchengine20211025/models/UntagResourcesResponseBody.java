@@ -32,6 +32,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tequestId
      */
@@ -41,6 +45,13 @@ public class UntagResourcesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String tequestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UntagResourcesResponseBody model) {
+            this.tequestId = model.tequestId;
+        } 
 
         /**
          * tequestId.

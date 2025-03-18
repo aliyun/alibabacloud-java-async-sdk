@@ -36,6 +36,10 @@ public class ListPausePolicysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListPausePolicysResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.Map<String, ResultValue> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPausePolicysResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>

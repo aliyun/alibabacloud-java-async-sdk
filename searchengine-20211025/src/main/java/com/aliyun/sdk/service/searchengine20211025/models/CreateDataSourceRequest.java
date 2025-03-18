@@ -70,7 +70,7 @@ public class CreateDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -431,6 +431,25 @@ public class CreateDataSourceRequest extends Request {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * <p>The AccessKey ID of the MaxCompute data source.</p>
              * 
@@ -615,6 +634,14 @@ public class CreateDataSourceRequest extends Request {
         public static final class Builder {
             private String namespace; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaroConfig model) {
+                this.namespace = model.namespace;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The namespace of the SARO data source.</p>

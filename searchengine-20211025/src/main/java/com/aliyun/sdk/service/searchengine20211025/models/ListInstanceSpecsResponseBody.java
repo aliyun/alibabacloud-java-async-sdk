@@ -36,6 +36,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceSpecsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             private Integer maxDisk; 
             private Integer mem; 
             private Integer minDisk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cpu = model.cpu;
+                this.maxDisk = model.maxDisk;
+                this.mem = model.mem;
+                this.minDisk = model.minDisk;
+            } 
 
             /**
              * <p>The number of vCPUs.</p>

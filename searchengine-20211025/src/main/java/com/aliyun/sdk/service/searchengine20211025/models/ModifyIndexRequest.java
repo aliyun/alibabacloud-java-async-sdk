@@ -111,7 +111,7 @@ public class ModifyIndexRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -652,6 +652,26 @@ public class ModifyIndexRequest extends Request {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.format = model.format;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * <p>The AccessKey ID of the MaxCompute data source.</p>
              * 
@@ -844,6 +864,14 @@ public class ModifyIndexRequest extends Request {
         public static final class Builder {
             private String namespace; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaroConfig model) {
+                this.namespace = model.namespace;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The namespace to which the SARO data source belongs.</p>
@@ -1049,6 +1077,25 @@ public class ModifyIndexRequest extends Request {
             private Integer processPartitionCount; 
             private SaroConfig saroConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceInfo model) {
+                this.autoBuildIndex = model.autoBuildIndex;
+                this.buildMode = model.buildMode;
+                this.config = model.config;
+                this.dataTimeSec = model.dataTimeSec;
+                this.domain = model.domain;
+                this.generation = model.generation;
+                this.name = model.name;
+                this.ossDataPath = model.ossDataPath;
+                this.partition = model.partition;
+                this.processParallelNum = model.processParallelNum;
+                this.processPartitionCount = model.processPartitionCount;
+                this.saroConfig = model.saroConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Specifies whether to enable the automatic full indexing feature.</p>

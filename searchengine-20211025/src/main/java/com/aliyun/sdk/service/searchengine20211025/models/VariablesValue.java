@@ -56,6 +56,10 @@ public class VariablesValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disableModify
      */
@@ -113,6 +117,19 @@ public class VariablesValue extends TeaModel {
         private String templateValue; 
         private String type; 
         private FuncValue funcValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(VariablesValue model) {
+            this.disableModify = model.disableModify;
+            this.isModify = model.isModify;
+            this.value = model.value;
+            this.description = model.description;
+            this.templateValue = model.templateValue;
+            this.type = model.type;
+            this.funcValue = model.funcValue;
+        } 
 
         /**
          * <p>Specifies whether the variable is not allowed to be modified.</p>
@@ -241,6 +258,14 @@ public class VariablesValue extends TeaModel {
         public static final class Builder {
             private String funcClassName; 
             private String template; 
+
+            private Builder() {
+            } 
+
+            private Builder(FuncValue model) {
+                this.funcClassName = model.funcClassName;
+                this.template = model.template;
+            } 
 
             /**
              * <p>The class name of the function variable.</p>

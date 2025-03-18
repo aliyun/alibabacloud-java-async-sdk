@@ -36,6 +36,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListDatabasesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatabasesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>id of request</p>
@@ -194,6 +206,20 @@ public class ListDatabasesResponseBody extends TeaModel {
             private Long parent; 
             private Long templateId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SqlInstances model) {
+                this.children = model.children;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.isDir = model.isDir;
+                this.name = model.name;
+                this.parent = model.parent;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
 
             /**
              * children.
@@ -385,6 +411,20 @@ public class ListDatabasesResponseBody extends TeaModel {
             private Long templateId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.children = model.children;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.isDir = model.isDir;
+                this.name = model.name;
+                this.parent = model.parent;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
+
             /**
              * children.
              */
@@ -575,6 +615,20 @@ public class ListDatabasesResponseBody extends TeaModel {
             private Long templateId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.children = model.children;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.isDir = model.isDir;
+                this.name = model.name;
+                this.parent = model.parent;
+                this.templateId = model.templateId;
+                this.type = model.type;
+            } 
+
             /**
              * children.
              */
@@ -729,6 +783,17 @@ public class ListDatabasesResponseBody extends TeaModel {
             private java.util.List<Tables> tables; 
             private java.util.List<Templates> templates; 
 
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.database = model.database;
+                this.functions = model.functions;
+                this.sqlInstances = model.sqlInstances;
+                this.tables = model.tables;
+                this.templates = model.templates;
+            } 
+
             /**
              * database.
              */
@@ -807,6 +872,13 @@ public class ListDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Databases> databases; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.databases = model.databases;
+            } 
 
             /**
              * databases.

@@ -36,6 +36,10 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIndexOnlineStrategyResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -110,6 +122,13 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer changeRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.changeRate = model.changeRate;
+            } 
 
             /**
              * <p>The index change rate.</p>

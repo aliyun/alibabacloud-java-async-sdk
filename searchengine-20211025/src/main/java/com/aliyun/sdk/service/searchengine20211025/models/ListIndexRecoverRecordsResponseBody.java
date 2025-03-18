@@ -40,6 +40,10 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desc
      */
@@ -65,6 +69,15 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         private String desc; 
         private String finishedTime; 
         private String generationId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndexRecoverRecordsResponseBody model) {
+            this.desc = model.desc;
+            this.finishedTime = model.finishedTime;
+            this.generationId = model.generationId;
+        } 
 
         /**
          * <p>The description.</p>

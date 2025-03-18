@@ -36,6 +36,10 @@ public class ListSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListSchemasResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Object result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSchemasResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>

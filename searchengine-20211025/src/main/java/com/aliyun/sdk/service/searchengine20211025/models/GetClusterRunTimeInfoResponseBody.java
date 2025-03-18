@@ -36,6 +36,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterRunTimeInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer doneSize; 
             private String name; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigStatusList model) {
+                this.configUpdateTime = model.configUpdateTime;
+                this.donePercent = model.donePercent;
+                this.doneSize = model.doneSize;
+                this.name = model.name;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The time when the configuration was last updated.</p>
@@ -265,6 +288,14 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private String configMetaName; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvanceConfigInfo model) {
+                this.configMetaName = model.configMetaName;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the index configuration.</p>
              * 
@@ -337,6 +368,14 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String configMetaName; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(IndexConfigInfo model) {
+                this.configMetaName = model.configMetaName;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the index configuration.</p>
@@ -579,6 +618,28 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private String name; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataStatusList model) {
+                this.advanceConfigInfo = model.advanceConfigInfo;
+                this.deployFailedWorker = model.deployFailedWorker;
+                this.docSize = model.docSize;
+                this.donePercent = model.donePercent;
+                this.doneSize = model.doneSize;
+                this.errorMsg = model.errorMsg;
+                this.fullUpdateTime = model.fullUpdateTime;
+                this.fullVersion = model.fullVersion;
+                this.incUpdateTime = model.incUpdateTime;
+                this.incVersion = model.incVersion;
+                this.indexConfigInfo = model.indexConfigInfo;
+                this.indexSize = model.indexSize;
+                this.lackDiskWorker = model.lackDiskWorker;
+                this.lackMemWorker = model.lackMemWorker;
+                this.name = model.name;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>The information about the advanced configuration.</p>
              */
@@ -815,6 +876,16 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private String name; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceStatus model) {
+                this.donePercent = model.donePercent;
+                this.doneSize = model.doneSize;
+                this.name = model.name;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
              * 
@@ -921,6 +992,15 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private java.util.List<ConfigStatusList> configStatusList; 
             private java.util.List<DataStatusList> dataStatusList; 
             private ServiceStatus serviceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataNodes model) {
+                this.configStatusList = model.configStatusList;
+                this.dataStatusList = model.dataStatusList;
+                this.serviceStatus = model.serviceStatus;
+            } 
 
             /**
              * <p>The configuration status.</p>
@@ -1032,6 +1112,17 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer doneSize; 
             private String name; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryNodeConfigStatusList model) {
+                this.configUpdateTime = model.configUpdateTime;
+                this.donePercent = model.donePercent;
+                this.doneSize = model.doneSize;
+                this.name = model.name;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The time when the configuration was last updated.</p>
@@ -1163,6 +1254,16 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private String name; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryNodeServiceStatus model) {
+                this.donePercent = model.donePercent;
+                this.doneSize = model.doneSize;
+                this.name = model.name;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
              * 
@@ -1258,6 +1359,14 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private java.util.List<QueryNodeConfigStatusList> configStatusList; 
             private QueryNodeServiceStatus serviceStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryNode model) {
+                this.configStatusList = model.configStatusList;
+                this.serviceStatus = model.serviceStatus;
+            } 
+
             /**
              * <p>The configuration status.</p>
              */
@@ -1336,6 +1445,15 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private String clusterName; 
             private java.util.List<DataNodes> dataNodes; 
             private QueryNode queryNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.clusterName = model.clusterName;
+                this.dataNodes = model.dataNodes;
+                this.queryNode = model.queryNode;
+            } 
 
             /**
              * <p>The cluster name.</p>

@@ -36,6 +36,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetNodeConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -170,6 +182,18 @@ public class GetNodeConfigResponseBody extends TeaModel {
             private Integer flowRatio; 
             private Integer minServicePercent; 
             private Boolean published; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.dataDuplicateNumber = model.dataDuplicateNumber;
+                this.dataFragmentNumber = model.dataFragmentNumber;
+                this.flowRatio = model.flowRatio;
+                this.minServicePercent = model.minServicePercent;
+                this.published = model.published;
+            } 
 
             /**
              * <p>Indicates whether the index is effective online.</p>

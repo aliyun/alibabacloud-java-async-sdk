@@ -82,7 +82,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -337,6 +337,13 @@ public class ModifyDataSourceDeployRequest extends Request {
         public static final class Builder {
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hdfs model) {
+                this.path = model.path;
+            } 
+
             /**
              * <p>The path of the Apsara File Storage for HDFS data source.</p>
              * 
@@ -387,6 +394,13 @@ public class ModifyDataSourceDeployRequest extends Request {
         public static final class Builder {
             private java.util.Map<String, String> partitions; 
 
+            private Builder() {
+            } 
+
+            private Builder(Odps model) {
+                this.partitions = model.partitions;
+            } 
+
             /**
              * <p>The partitions in the MaxCompute table.</p>
              */
@@ -433,6 +447,13 @@ public class ModifyDataSourceDeployRequest extends Request {
 
         public static final class Builder {
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.path = model.path;
+            } 
 
             /**
              * <p>The path of the OSS data source.</p>
@@ -495,6 +516,14 @@ public class ModifyDataSourceDeployRequest extends Request {
         public static final class Builder {
             private String path; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Saro model) {
+                this.path = model.path;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The path of the SARO data source.</p>
@@ -593,6 +622,16 @@ public class ModifyDataSourceDeployRequest extends Request {
             private Oss oss; 
             private Saro saro; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extend model) {
+                this.hdfs = model.hdfs;
+                this.odps = model.odps;
+                this.oss = model.oss;
+                this.saro = model.saro;
+            } 
+
             /**
              * <p>The information about the Apsara File Storage for HDFS data source.</p>
              */
@@ -675,6 +714,14 @@ public class ModifyDataSourceDeployRequest extends Request {
         public static final class Builder {
             private String args; 
             private String resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processor model) {
+                this.args = model.args;
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The startup parameters of the process.</p>
@@ -881,6 +928,25 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String table; 
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.bucket = model.bucket;
+                this.catalog = model.catalog;
+                this.database = model.database;
+                this.endpoint = model.endpoint;
+                this.namespace = model.namespace;
+                this.ossPath = model.ossPath;
+                this.partition = model.partition;
+                this.path = model.path;
+                this.project = model.project;
+                this.table = model.table;
+                this.tag = model.tag;
+            } 
+
             /**
              * <p>The AccessKey ID of the MaxCompute data source.</p>
              * 
@@ -1065,6 +1131,14 @@ public class ModifyDataSourceDeployRequest extends Request {
         public static final class Builder {
             private String topic; 
             private String zk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Swift model) {
+                this.topic = model.topic;
+                this.zk = model.zk;
+            } 
 
             /**
              * <p>The topic.</p>

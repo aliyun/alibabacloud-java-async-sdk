@@ -48,6 +48,10 @@ public class FilesConfigVariablesValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -89,6 +93,17 @@ public class FilesConfigVariablesValue extends TeaModel {
         private Boolean isModify; 
         private String type; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(FilesConfigVariablesValue model) {
+            this.description = model.description;
+            this.disableModify = model.disableModify;
+            this.isModify = model.isModify;
+            this.type = model.type;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The description of the variable.</p>

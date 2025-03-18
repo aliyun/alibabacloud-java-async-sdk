@@ -36,6 +36,10 @@ public class ListTableGenerationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListTableGenerationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTableGenerationsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>requestId</p>
@@ -110,6 +122,13 @@ public class ListTableGenerationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long generationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.generationId = model.generationId;
+            } 
 
             /**
              * <p>The ID of the full index version.</p>

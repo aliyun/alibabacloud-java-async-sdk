@@ -36,6 +36,10 @@ public class GetClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetClusterResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class GetClusterResponseBody extends TeaModel {
             private String name; 
             private Integer number; 
             private Integer partition; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataNode model) {
+                this.name = model.name;
+                this.number = model.number;
+                this.partition = model.partition;
+            } 
 
             /**
              * <p>The name of the Searcher worker.</p>
@@ -230,6 +251,15 @@ public class GetClusterResponseBody extends TeaModel {
             private String name; 
             private Integer number; 
             private Integer partition; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryNode model) {
+                this.name = model.name;
+                this.number = model.number;
+                this.partition = model.partition;
+            } 
 
             /**
              * <p>The name of the QRS worker.</p>
@@ -434,6 +464,24 @@ public class GetClusterResponseBody extends TeaModel {
             private String name; 
             private QueryNode queryNode; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.config = model.config;
+                this.configUpdateTime = model.configUpdateTime;
+                this.createTime = model.createTime;
+                this.currentAdvanceConfigVersion = model.currentAdvanceConfigVersion;
+                this.currentOnlineConfigVersion = model.currentOnlineConfigVersion;
+                this.dataNode = model.dataNode;
+                this.description = model.description;
+                this.latestAdvanceConfigVersion = model.latestAdvanceConfigVersion;
+                this.latestOnlineConfigVersion = model.latestOnlineConfigVersion;
+                this.name = model.name;
+                this.queryNode = model.queryNode;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The configuration information.</p>

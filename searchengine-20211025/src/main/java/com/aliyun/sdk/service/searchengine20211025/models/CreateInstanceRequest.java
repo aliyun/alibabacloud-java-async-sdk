@@ -54,7 +54,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -213,6 +213,14 @@ public class CreateInstanceRequest extends Request {
             private String code; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
              * 
@@ -298,6 +306,15 @@ public class CreateInstanceRequest extends Request {
             private Long duration; 
             private String pricingCycle; 
 
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.autoRenew = model.autoRenew;
+                this.duration = model.duration;
+                this.pricingCycle = model.pricingCycle;
+            } 
+
             /**
              * <p>Specifies whether to enable auto-renewal. Valid values: true and false.</p>
              * 
@@ -381,6 +398,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.
