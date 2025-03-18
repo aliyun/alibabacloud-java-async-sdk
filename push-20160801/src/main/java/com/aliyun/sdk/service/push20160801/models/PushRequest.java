@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -295,6 +300,11 @@ public class PushRequest extends Request {
     private String harmonyUri;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdempotentToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 36, minLength = 36)
+    private String idempotentToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobKey")
     private String jobKey;
 
@@ -489,6 +499,7 @@ public class PushRequest extends Request {
         this.harmonyRenderStyle = builder.harmonyRenderStyle;
         this.harmonyTestMessage = builder.harmonyTestMessage;
         this.harmonyUri = builder.harmonyUri;
+        this.idempotentToken = builder.idempotentToken;
         this.jobKey = builder.jobKey;
         this.pushTime = builder.pushTime;
         this.pushType = builder.pushType;
@@ -529,7 +540,7 @@ public class PushRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1011,6 +1022,13 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return idempotentToken
+     */
+    public String getIdempotentToken() {
+        return this.idempotentToken;
+    }
+
+    /**
      * @return jobKey
      */
     public String getJobKey() {
@@ -1289,6 +1307,7 @@ public class PushRequest extends Request {
         private String harmonyRenderStyle; 
         private Boolean harmonyTestMessage; 
         private String harmonyUri; 
+        private String idempotentToken; 
         private String jobKey; 
         private String pushTime; 
         private String pushType; 
@@ -1394,6 +1413,7 @@ public class PushRequest extends Request {
             this.harmonyRenderStyle = request.harmonyRenderStyle;
             this.harmonyTestMessage = request.harmonyTestMessage;
             this.harmonyUri = request.harmonyUri;
+            this.idempotentToken = request.idempotentToken;
             this.jobKey = request.jobKey;
             this.pushTime = request.pushTime;
             this.pushType = request.pushType;
@@ -2044,6 +2064,15 @@ public class PushRequest extends Request {
         public Builder harmonyUri(String harmonyUri) {
             this.putQueryParameter("HarmonyUri", harmonyUri);
             this.harmonyUri = harmonyUri;
+            return this;
+        }
+
+        /**
+         * IdempotentToken.
+         */
+        public Builder idempotentToken(String idempotentToken) {
+            this.putQueryParameter("IdempotentToken", idempotentToken);
+            this.idempotentToken = idempotentToken;
             return this;
         }
 

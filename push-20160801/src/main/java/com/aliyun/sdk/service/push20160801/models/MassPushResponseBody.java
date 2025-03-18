@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class MassPushResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return messageIds
      */
@@ -48,6 +57,14 @@ public class MassPushResponseBody extends TeaModel {
     public static final class Builder {
         private MessageIds messageIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MassPushResponseBody model) {
+            this.messageIds = model.messageIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MessageIds.
@@ -79,7 +96,7 @@ public class MassPushResponseBody extends TeaModel {
      */
     public static class MessageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MessageId")
-        private java.util.List < String > messageId;
+        private java.util.List<String> messageId;
 
         private MessageIds(Builder builder) {
             this.messageId = builder.messageId;
@@ -96,17 +113,24 @@ public class MassPushResponseBody extends TeaModel {
         /**
          * @return messageId
          */
-        public java.util.List < String > getMessageId() {
+        public java.util.List<String> getMessageId() {
             return this.messageId;
         }
 
         public static final class Builder {
-            private java.util.List < String > messageId; 
+            private java.util.List<String> messageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageIds model) {
+                this.messageId = model.messageId;
+            } 
 
             /**
              * MessageId.
              */
-            public Builder messageId(java.util.List < String > messageId) {
+            public Builder messageId(java.util.List<String> messageId) {
                 this.messageId = messageId;
                 return this;
             }

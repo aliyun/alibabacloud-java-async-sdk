@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,14 +22,20 @@ public class MassPushRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdempotentToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 36, minLength = 36)
+    private String idempotentToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PushTask")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PushTask> pushTask;
+    private java.util.List<PushTask> pushTask;
 
     private MassPushRequest(Builder builder) {
         super(builder);
         this.appKey = builder.appKey;
+        this.idempotentToken = builder.idempotentToken;
         this.pushTask = builder.pushTask;
     }
 
@@ -36,7 +47,7 @@ public class MassPushRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,15 +60,23 @@ public class MassPushRequest extends Request {
     }
 
     /**
+     * @return idempotentToken
+     */
+    public String getIdempotentToken() {
+        return this.idempotentToken;
+    }
+
+    /**
      * @return pushTask
      */
-    public java.util.List < PushTask> getPushTask() {
+    public java.util.List<PushTask> getPushTask() {
         return this.pushTask;
     }
 
     public static final class Builder extends Request.Builder<MassPushRequest, Builder> {
         private Long appKey; 
-        private java.util.List < PushTask> pushTask; 
+        private String idempotentToken; 
+        private java.util.List<PushTask> pushTask; 
 
         private Builder() {
             super();
@@ -66,6 +85,7 @@ public class MassPushRequest extends Request {
         private Builder(MassPushRequest request) {
             super(request);
             this.appKey = request.appKey;
+            this.idempotentToken = request.idempotentToken;
             this.pushTask = request.pushTask;
         } 
 
@@ -82,9 +102,18 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * IdempotentToken.
+         */
+        public Builder idempotentToken(String idempotentToken) {
+            this.putQueryParameter("IdempotentToken", idempotentToken);
+            this.idempotentToken = idempotentToken;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          */
-        public Builder pushTask(java.util.List < PushTask> pushTask) {
+        public Builder pushTask(java.util.List<PushTask> pushTask) {
             this.putBodyParameter("PushTask", pushTask);
             this.pushTask = pushTask;
             return this;
@@ -1229,6 +1258,104 @@ public class MassPushRequest extends Request {
             private String iOSRemindBody; 
             private Boolean iOSSilentNotification; 
             private String iOSSubtitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushTask model) {
+                this.androidActivity = model.androidActivity;
+                this.androidBadgeAddNum = model.androidBadgeAddNum;
+                this.androidBadgeClass = model.androidBadgeClass;
+                this.androidBadgeSetNum = model.androidBadgeSetNum;
+                this.androidBigBody = model.androidBigBody;
+                this.androidBigPictureUrl = model.androidBigPictureUrl;
+                this.androidBigTitle = model.androidBigTitle;
+                this.androidExtParameters = model.androidExtParameters;
+                this.androidHonorTargetUserType = model.androidHonorTargetUserType;
+                this.androidHuaweiReceiptId = model.androidHuaweiReceiptId;
+                this.androidHuaweiTargetUserType = model.androidHuaweiTargetUserType;
+                this.androidImageUrl = model.androidImageUrl;
+                this.androidInboxBody = model.androidInboxBody;
+                this.androidMessageHuaweiCategory = model.androidMessageHuaweiCategory;
+                this.androidMessageHuaweiUrgency = model.androidMessageHuaweiUrgency;
+                this.androidMessageOppoCategory = model.androidMessageOppoCategory;
+                this.androidMessageOppoNotifyLevel = model.androidMessageOppoNotifyLevel;
+                this.androidMessageVivoCategory = model.androidMessageVivoCategory;
+                this.androidMusic = model.androidMusic;
+                this.androidNotificationBarPriority = model.androidNotificationBarPriority;
+                this.androidNotificationBarType = model.androidNotificationBarType;
+                this.androidNotificationChannel = model.androidNotificationChannel;
+                this.androidNotificationGroup = model.androidNotificationGroup;
+                this.androidNotificationHonorChannel = model.androidNotificationHonorChannel;
+                this.androidNotificationHuaweiChannel = model.androidNotificationHuaweiChannel;
+                this.androidNotificationNotifyId = model.androidNotificationNotifyId;
+                this.androidNotificationThreadId = model.androidNotificationThreadId;
+                this.androidNotificationVivoChannel = model.androidNotificationVivoChannel;
+                this.androidNotificationXiaomiChannel = model.androidNotificationXiaomiChannel;
+                this.androidNotifyType = model.androidNotifyType;
+                this.androidOpenType = model.androidOpenType;
+                this.androidOpenUrl = model.androidOpenUrl;
+                this.androidPopupActivity = model.androidPopupActivity;
+                this.androidPopupBody = model.androidPopupBody;
+                this.androidPopupTitle = model.androidPopupTitle;
+                this.androidRemind = model.androidRemind;
+                this.androidRenderStyle = model.androidRenderStyle;
+                this.androidTargetUserType = model.androidTargetUserType;
+                this.androidVivoPushMode = model.androidVivoPushMode;
+                this.androidVivoReceiptId = model.androidVivoReceiptId;
+                this.androidXiaoMiActivity = model.androidXiaoMiActivity;
+                this.androidXiaoMiNotifyBody = model.androidXiaoMiNotifyBody;
+                this.androidXiaoMiNotifyTitle = model.androidXiaoMiNotifyTitle;
+                this.androidXiaomiBigPictureUrl = model.androidXiaomiBigPictureUrl;
+                this.androidXiaomiImageUrl = model.androidXiaomiImageUrl;
+                this.body = model.body;
+                this.deviceType = model.deviceType;
+                this.expireTime = model.expireTime;
+                this.harmonyAction = model.harmonyAction;
+                this.harmonyActionType = model.harmonyActionType;
+                this.harmonyBadgeAddNum = model.harmonyBadgeAddNum;
+                this.harmonyBadgeSetNum = model.harmonyBadgeSetNum;
+                this.harmonyCategory = model.harmonyCategory;
+                this.harmonyExtParameters = model.harmonyExtParameters;
+                this.harmonyExtensionExtraData = model.harmonyExtensionExtraData;
+                this.harmonyExtensionPush = model.harmonyExtensionPush;
+                this.harmonyImageUrl = model.harmonyImageUrl;
+                this.harmonyInboxContent = model.harmonyInboxContent;
+                this.harmonyNotificationSlotType = model.harmonyNotificationSlotType;
+                this.harmonyNotifyId = model.harmonyNotifyId;
+                this.harmonyReceiptId = model.harmonyReceiptId;
+                this.harmonyRemind = model.harmonyRemind;
+                this.harmonyRemindBody = model.harmonyRemindBody;
+                this.harmonyRemindTitle = model.harmonyRemindTitle;
+                this.harmonyRenderStyle = model.harmonyRenderStyle;
+                this.harmonyTestMessage = model.harmonyTestMessage;
+                this.harmonyUri = model.harmonyUri;
+                this.jobKey = model.jobKey;
+                this.pushTime = model.pushTime;
+                this.pushType = model.pushType;
+                this.sendChannels = model.sendChannels;
+                this.sendSpeed = model.sendSpeed;
+                this.storeOffline = model.storeOffline;
+                this.target = model.target;
+                this.targetValue = model.targetValue;
+                this.title = model.title;
+                this.trim = model.trim;
+                this.iOSApnsEnv = model.iOSApnsEnv;
+                this.iOSBadge = model.iOSBadge;
+                this.iOSBadgeAutoIncrement = model.iOSBadgeAutoIncrement;
+                this.iOSExtParameters = model.iOSExtParameters;
+                this.iOSInterruptionLevel = model.iOSInterruptionLevel;
+                this.iOSMusic = model.iOSMusic;
+                this.iOSMutableContent = model.iOSMutableContent;
+                this.iOSNotificationCategory = model.iOSNotificationCategory;
+                this.iOSNotificationCollapseId = model.iOSNotificationCollapseId;
+                this.iOSNotificationThreadId = model.iOSNotificationThreadId;
+                this.iOSRelevanceScore = model.iOSRelevanceScore;
+                this.iOSRemind = model.iOSRemind;
+                this.iOSRemindBody = model.iOSRemindBody;
+                this.iOSSilentNotification = model.iOSSilentNotification;
+                this.iOSSubtitle = model.iOSSubtitle;
+            } 
 
             /**
              * AndroidActivity.

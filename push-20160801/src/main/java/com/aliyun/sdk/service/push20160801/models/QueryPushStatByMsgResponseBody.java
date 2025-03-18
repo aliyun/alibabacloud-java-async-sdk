@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pushStats
      */
@@ -48,6 +57,14 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
     public static final class Builder {
         private PushStats pushStats; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPushStatByMsgResponseBody model) {
+            this.pushStats = model.pushStats;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PushStats.
@@ -223,6 +240,23 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
             private Long smsSentCount; 
             private Long smsSkipCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PushStat model) {
+                this.acceptCount = model.acceptCount;
+                this.deletedCount = model.deletedCount;
+                this.messageId = model.messageId;
+                this.openedCount = model.openedCount;
+                this.receivedCount = model.receivedCount;
+                this.sentCount = model.sentCount;
+                this.smsFailedCount = model.smsFailedCount;
+                this.smsReceiveFailedCount = model.smsReceiveFailedCount;
+                this.smsReceiveSuccessCount = model.smsReceiveSuccessCount;
+                this.smsSentCount = model.smsSentCount;
+                this.smsSkipCount = model.smsSkipCount;
+            } 
+
             /**
              * AcceptCount.
              */
@@ -326,7 +360,7 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
      */
     public static class PushStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushStat")
-        private java.util.List < PushStat> pushStat;
+        private java.util.List<PushStat> pushStat;
 
         private PushStats(Builder builder) {
             this.pushStat = builder.pushStat;
@@ -343,17 +377,24 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         /**
          * @return pushStat
          */
-        public java.util.List < PushStat> getPushStat() {
+        public java.util.List<PushStat> getPushStat() {
             return this.pushStat;
         }
 
         public static final class Builder {
-            private java.util.List < PushStat> pushStat; 
+            private java.util.List<PushStat> pushStat; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushStats model) {
+                this.pushStat = model.pushStat;
+            } 
 
             /**
              * PushStat.
              */
-            public Builder pushStat(java.util.List < PushStat> pushStat) {
+            public Builder pushStat(java.util.List<PushStat> pushStat) {
                 this.pushStat = pushStat;
                 return this;
             }

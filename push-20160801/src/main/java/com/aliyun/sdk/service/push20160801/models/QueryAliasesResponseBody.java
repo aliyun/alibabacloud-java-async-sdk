@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryAliasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliasInfos
      */
@@ -48,6 +57,14 @@ public class QueryAliasesResponseBody extends TeaModel {
     public static final class Builder {
         private AliasInfos aliasInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAliasesResponseBody model) {
+            this.aliasInfos = model.aliasInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AliasInfos.
@@ -103,6 +120,13 @@ public class QueryAliasesResponseBody extends TeaModel {
         public static final class Builder {
             private String aliasName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AliasInfo model) {
+                this.aliasName = model.aliasName;
+            } 
+
             /**
              * AliasName.
              */
@@ -126,7 +150,7 @@ public class QueryAliasesResponseBody extends TeaModel {
      */
     public static class AliasInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasInfo")
-        private java.util.List < AliasInfo> aliasInfo;
+        private java.util.List<AliasInfo> aliasInfo;
 
         private AliasInfos(Builder builder) {
             this.aliasInfo = builder.aliasInfo;
@@ -143,17 +167,24 @@ public class QueryAliasesResponseBody extends TeaModel {
         /**
          * @return aliasInfo
          */
-        public java.util.List < AliasInfo> getAliasInfo() {
+        public java.util.List<AliasInfo> getAliasInfo() {
             return this.aliasInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AliasInfo> aliasInfo; 
+            private java.util.List<AliasInfo> aliasInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliasInfos model) {
+                this.aliasInfo = model.aliasInfo;
+            } 
 
             /**
              * AliasInfo.
              */
-            public Builder aliasInfo(java.util.List < AliasInfo> aliasInfo) {
+            public Builder aliasInfo(java.util.List<AliasInfo> aliasInfo) {
                 this.aliasInfo = aliasInfo;
                 return this;
             }

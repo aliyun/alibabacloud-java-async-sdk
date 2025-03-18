@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appDeviceStats
      */
@@ -48,6 +57,14 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
     public static final class Builder {
         private AppDeviceStats appDeviceStats; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUniqueDeviceStatResponseBody model) {
+            this.appDeviceStats = model.appDeviceStats;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AppDeviceStats.
@@ -115,6 +132,14 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
             private Long count; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppDeviceStat model) {
+                this.count = model.count;
+                this.time = model.time;
+            } 
+
             /**
              * Count.
              */
@@ -146,7 +171,7 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
      */
     public static class AppDeviceStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDeviceStat")
-        private java.util.List < AppDeviceStat> appDeviceStat;
+        private java.util.List<AppDeviceStat> appDeviceStat;
 
         private AppDeviceStats(Builder builder) {
             this.appDeviceStat = builder.appDeviceStat;
@@ -163,17 +188,24 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
         /**
          * @return appDeviceStat
          */
-        public java.util.List < AppDeviceStat> getAppDeviceStat() {
+        public java.util.List<AppDeviceStat> getAppDeviceStat() {
             return this.appDeviceStat;
         }
 
         public static final class Builder {
-            private java.util.List < AppDeviceStat> appDeviceStat; 
+            private java.util.List<AppDeviceStat> appDeviceStat; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppDeviceStats model) {
+                this.appDeviceStat = model.appDeviceStat;
+            } 
 
             /**
              * AppDeviceStat.
              */
-            public Builder appDeviceStat(java.util.List < AppDeviceStat> appDeviceStat) {
+            public Builder appDeviceStat(java.util.List<AppDeviceStat> appDeviceStat) {
                 this.appDeviceStat = appDeviceStat;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class QueryPushRecordsResponseBody extends TeaModel {
 
     public static QueryPushRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         private PushInfos pushInfos; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPushRecordsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.pushInfos = model.pushInfos;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * NextToken.
@@ -291,6 +312,22 @@ public class QueryPushRecordsResponseBody extends TeaModel {
             private String target; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(PushInfo model) {
+                this.appKey = model.appKey;
+                this.body = model.body;
+                this.deviceType = model.deviceType;
+                this.messageId = model.messageId;
+                this.pushTime = model.pushTime;
+                this.pushType = model.pushType;
+                this.source = model.source;
+                this.status = model.status;
+                this.target = model.target;
+                this.title = model.title;
+            } 
+
             /**
              * AppKey.
              */
@@ -386,7 +423,7 @@ public class QueryPushRecordsResponseBody extends TeaModel {
      */
     public static class PushInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushInfo")
-        private java.util.List < PushInfo> pushInfo;
+        private java.util.List<PushInfo> pushInfo;
 
         private PushInfos(Builder builder) {
             this.pushInfo = builder.pushInfo;
@@ -403,17 +440,24 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         /**
          * @return pushInfo
          */
-        public java.util.List < PushInfo> getPushInfo() {
+        public java.util.List<PushInfo> getPushInfo() {
             return this.pushInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PushInfo> pushInfo; 
+            private java.util.List<PushInfo> pushInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushInfos model) {
+                this.pushInfo = model.pushInfo;
+            } 
 
             /**
              * PushInfo.
              */
-            public Builder pushInfo(java.util.List < PushInfo> pushInfo) {
+            public Builder pushInfo(java.util.List<PushInfo> pushInfo) {
                 this.pushInfo = pushInfo;
                 return this;
             }

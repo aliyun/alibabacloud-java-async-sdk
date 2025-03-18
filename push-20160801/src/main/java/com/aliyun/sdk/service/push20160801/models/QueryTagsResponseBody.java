@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class QueryTagsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TagInfos tagInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTagsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tagInfos = model.tagInfos;
+        } 
 
         /**
          * RequestId.
@@ -103,6 +120,13 @@ public class QueryTagsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.tagName = model.tagName;
+            } 
+
             /**
              * TagName.
              */
@@ -126,7 +150,7 @@ public class QueryTagsResponseBody extends TeaModel {
      */
     public static class TagInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        private java.util.List<TagInfo> tagInfo;
 
         private TagInfos(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -143,17 +167,24 @@ public class QueryTagsResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagInfos model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }

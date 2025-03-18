@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryDevicesByAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceIds
      */
@@ -48,6 +57,14 @@ public class QueryDevicesByAccountResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceIds deviceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDevicesByAccountResponseBody model) {
+            this.deviceIds = model.deviceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DeviceIds.
@@ -79,7 +96,7 @@ public class QueryDevicesByAccountResponseBody extends TeaModel {
      */
     public static class DeviceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceId")
-        private java.util.List < String > deviceId;
+        private java.util.List<String> deviceId;
 
         private DeviceIds(Builder builder) {
             this.deviceId = builder.deviceId;
@@ -96,17 +113,24 @@ public class QueryDevicesByAccountResponseBody extends TeaModel {
         /**
          * @return deviceId
          */
-        public java.util.List < String > getDeviceId() {
+        public java.util.List<String> getDeviceId() {
             return this.deviceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > deviceId; 
+            private java.util.List<String> deviceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceIds model) {
+                this.deviceId = model.deviceId;
+            } 
 
             /**
              * DeviceId.
              */
-            public Builder deviceId(java.util.List < String > deviceId) {
+            public Builder deviceId(java.util.List<String> deviceId) {
                 this.deviceId = deviceId;
                 return this;
             }

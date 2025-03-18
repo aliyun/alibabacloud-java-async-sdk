@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class CheckCertificateResponseBody extends TeaModel {
 
     public static CheckCertificateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CheckCertificateResponseBody extends TeaModel {
         private Boolean IOS; 
         private ProductionCertInfo productionCertInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckCertificateResponseBody model) {
+            this.android = model.android;
+            this.developmentCertInfo = model.developmentCertInfo;
+            this.IOS = model.IOS;
+            this.productionCertInfo = model.productionCertInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Android.
@@ -175,6 +195,14 @@ public class CheckCertificateResponseBody extends TeaModel {
             private Long exipreTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DevelopmentCertInfo model) {
+                this.exipreTime = model.exipreTime;
+                this.status = model.status;
+            } 
+
             /**
              * ExipreTime.
              */
@@ -241,6 +269,14 @@ public class CheckCertificateResponseBody extends TeaModel {
         public static final class Builder {
             private Long exipreTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductionCertInfo model) {
+                this.exipreTime = model.exipreTime;
+                this.status = model.status;
+            } 
 
             /**
              * ExipreTime.

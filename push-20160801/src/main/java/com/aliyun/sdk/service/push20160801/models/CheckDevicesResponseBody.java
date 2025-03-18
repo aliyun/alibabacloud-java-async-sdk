@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CheckDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceCheckInfos
      */
@@ -48,6 +57,14 @@ public class CheckDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceCheckInfos deviceCheckInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDevicesResponseBody model) {
+            this.deviceCheckInfos = model.deviceCheckInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DeviceCheckInfos.
@@ -115,6 +132,14 @@ public class CheckDevicesResponseBody extends TeaModel {
             private Boolean available; 
             private String deviceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceCheckInfo model) {
+                this.available = model.available;
+                this.deviceId = model.deviceId;
+            } 
+
             /**
              * Available.
              */
@@ -146,7 +171,7 @@ public class CheckDevicesResponseBody extends TeaModel {
      */
     public static class DeviceCheckInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceCheckInfo")
-        private java.util.List < DeviceCheckInfo> deviceCheckInfo;
+        private java.util.List<DeviceCheckInfo> deviceCheckInfo;
 
         private DeviceCheckInfos(Builder builder) {
             this.deviceCheckInfo = builder.deviceCheckInfo;
@@ -163,17 +188,24 @@ public class CheckDevicesResponseBody extends TeaModel {
         /**
          * @return deviceCheckInfo
          */
-        public java.util.List < DeviceCheckInfo> getDeviceCheckInfo() {
+        public java.util.List<DeviceCheckInfo> getDeviceCheckInfo() {
             return this.deviceCheckInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DeviceCheckInfo> deviceCheckInfo; 
+            private java.util.List<DeviceCheckInfo> deviceCheckInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceCheckInfos model) {
+                this.deviceCheckInfo = model.deviceCheckInfo;
+            } 
 
             /**
              * DeviceCheckInfo.
              */
-            public Builder deviceCheckInfo(java.util.List < DeviceCheckInfo> deviceCheckInfo) {
+            public Builder deviceCheckInfo(java.util.List<DeviceCheckInfo> deviceCheckInfo) {
                 this.deviceCheckInfo = deviceCheckInfo;
                 return this;
             }
