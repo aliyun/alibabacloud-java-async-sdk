@@ -212,8 +212,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
      * <p>RunDataAnalysisResponseBody</p>
      */
     public static class VisualizationData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("option")
+        private String option;
+
         @com.aliyun.core.annotation.NameInMap("plotType")
         private String plotType;
+
+        @com.aliyun.core.annotation.NameInMap("stack")
+        private Boolean stack;
 
         @com.aliyun.core.annotation.NameInMap("xAxis")
         private java.util.List<String> xAxis;
@@ -222,7 +228,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         private java.util.List<String> yAxis;
 
         private VisualizationData(Builder builder) {
+            this.option = builder.option;
             this.plotType = builder.plotType;
+            this.stack = builder.stack;
             this.xAxis = builder.xAxis;
             this.yAxis = builder.yAxis;
         }
@@ -236,10 +244,24 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         }
 
         /**
+         * @return option
+         */
+        public String getOption() {
+            return this.option;
+        }
+
+        /**
          * @return plotType
          */
         public String getPlotType() {
             return this.plotType;
+        }
+
+        /**
+         * @return stack
+         */
+        public Boolean getStack() {
+            return this.stack;
         }
 
         /**
@@ -257,7 +279,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String option; 
             private String plotType; 
+            private Boolean stack; 
             private java.util.List<String> xAxis; 
             private java.util.List<String> yAxis; 
 
@@ -265,16 +289,34 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             } 
 
             private Builder(VisualizationData model) {
+                this.option = model.option;
                 this.plotType = model.plotType;
+                this.stack = model.stack;
                 this.xAxis = model.xAxis;
                 this.yAxis = model.yAxis;
             } 
+
+            /**
+             * option.
+             */
+            public Builder option(String option) {
+                this.option = option;
+                return this;
+            }
 
             /**
              * plotType.
              */
             public Builder plotType(String plotType) {
                 this.plotType = plotType;
+                return this;
+            }
+
+            /**
+             * stack.
+             */
+            public Builder stack(Boolean stack) {
+                this.stack = stack;
                 return this;
             }
 
