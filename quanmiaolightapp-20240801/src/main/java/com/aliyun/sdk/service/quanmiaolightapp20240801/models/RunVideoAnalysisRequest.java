@@ -63,6 +63,10 @@ public class RunVideoAnalysisRequest extends Request {
     private Double snapshotInterval;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("splitInterval")
+    private Integer splitInterval;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskId")
     private String taskId;
 
@@ -107,6 +111,7 @@ public class RunVideoAnalysisRequest extends Request {
         this.modelId = builder.modelId;
         this.originalSessionId = builder.originalSessionId;
         this.snapshotInterval = builder.snapshotInterval;
+        this.splitInterval = builder.splitInterval;
         this.taskId = builder.taskId;
         this.textProcessTasks = builder.textProcessTasks;
         this.videoExtraInfo = builder.videoExtraInfo;
@@ -208,6 +213,13 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
+     * @return splitInterval
+     */
+    public Integer getSplitInterval() {
+        return this.splitInterval;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -275,6 +287,7 @@ public class RunVideoAnalysisRequest extends Request {
         private String modelId; 
         private String originalSessionId; 
         private Double snapshotInterval; 
+        private Integer splitInterval; 
         private String taskId; 
         private java.util.List<TextProcessTasks> textProcessTasks; 
         private String videoExtraInfo; 
@@ -301,6 +314,7 @@ public class RunVideoAnalysisRequest extends Request {
             this.modelId = request.modelId;
             this.originalSessionId = request.originalSessionId;
             this.snapshotInterval = request.snapshotInterval;
+            this.splitInterval = request.splitInterval;
             this.taskId = request.taskId;
             this.textProcessTasks = request.textProcessTasks;
             this.videoExtraInfo = request.videoExtraInfo;
@@ -412,6 +426,15 @@ public class RunVideoAnalysisRequest extends Request {
         public Builder snapshotInterval(Double snapshotInterval) {
             this.putBodyParameter("snapshotInterval", snapshotInterval);
             this.snapshotInterval = snapshotInterval;
+            return this;
+        }
+
+        /**
+         * splitInterval.
+         */
+        public Builder splitInterval(Integer splitInterval) {
+            this.putBodyParameter("splitInterval", splitInterval);
+            this.splitInterval = splitInterval;
             return this;
         }
 

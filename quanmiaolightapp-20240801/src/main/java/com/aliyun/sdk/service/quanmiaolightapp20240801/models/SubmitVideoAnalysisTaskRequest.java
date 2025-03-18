@@ -59,6 +59,10 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
     private Double snapshotInterval;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("splitInterval")
+    private Integer splitInterval;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("textProcessTasks")
     private java.util.List<TextProcessTasks> textProcessTasks;
 
@@ -99,6 +103,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         this.modelCustomPromptTemplateId = builder.modelCustomPromptTemplateId;
         this.modelId = builder.modelId;
         this.snapshotInterval = builder.snapshotInterval;
+        this.splitInterval = builder.splitInterval;
         this.textProcessTasks = builder.textProcessTasks;
         this.videoExtraInfo = builder.videoExtraInfo;
         this.videoModelCustomPromptTemplate = builder.videoModelCustomPromptTemplate;
@@ -192,6 +197,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
     }
 
     /**
+     * @return splitInterval
+     */
+    public Integer getSplitInterval() {
+        return this.splitInterval;
+    }
+
+    /**
      * @return textProcessTasks
      */
     public java.util.List<TextProcessTasks> getTextProcessTasks() {
@@ -251,6 +263,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         private String modelCustomPromptTemplateId; 
         private String modelId; 
         private Double snapshotInterval; 
+        private Integer splitInterval; 
         private java.util.List<TextProcessTasks> textProcessTasks; 
         private String videoExtraInfo; 
         private String videoModelCustomPromptTemplate; 
@@ -275,6 +288,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
             this.modelCustomPromptTemplateId = request.modelCustomPromptTemplateId;
             this.modelId = request.modelId;
             this.snapshotInterval = request.snapshotInterval;
+            this.splitInterval = request.splitInterval;
             this.textProcessTasks = request.textProcessTasks;
             this.videoExtraInfo = request.videoExtraInfo;
             this.videoModelCustomPromptTemplate = request.videoModelCustomPromptTemplate;
@@ -376,6 +390,15 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         public Builder snapshotInterval(Double snapshotInterval) {
             this.putBodyParameter("snapshotInterval", snapshotInterval);
             this.snapshotInterval = snapshotInterval;
+            return this;
+        }
+
+        /**
+         * splitInterval.
+         */
+        public Builder splitInterval(Integer splitInterval) {
+            this.putBodyParameter("splitInterval", splitInterval);
+            this.splitInterval = splitInterval;
             return this;
         }
 
