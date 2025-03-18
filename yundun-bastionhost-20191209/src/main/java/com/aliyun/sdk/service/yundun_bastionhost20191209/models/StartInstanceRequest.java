@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class StartInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientSecurityGroupIds")
-    private java.util.List < String > clientSecurityGroupIds;
+    private java.util.List<String> clientSecurityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnablePortalPrivateAccess")
@@ -32,7 +37,7 @@ public class StartInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlaveVswitchId")
@@ -61,7 +66,7 @@ public class StartInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class StartInstanceRequest extends Request {
     /**
      * @return clientSecurityGroupIds
      */
-    public java.util.List < String > getClientSecurityGroupIds() {
+    public java.util.List<String> getClientSecurityGroupIds() {
         return this.clientSecurityGroupIds;
     }
 
@@ -97,7 +102,7 @@ public class StartInstanceRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -116,11 +121,11 @@ public class StartInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartInstanceRequest, Builder> {
-        private java.util.List < String > clientSecurityGroupIds; 
+        private java.util.List<String> clientSecurityGroupIds; 
         private Boolean enablePortalPrivateAccess; 
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private String slaveVswitchId; 
         private String vswitchId; 
 
@@ -142,7 +147,7 @@ public class StartInstanceRequest extends Request {
         /**
          * ClientSecurityGroupIds.
          */
-        public Builder clientSecurityGroupIds(java.util.List < String > clientSecurityGroupIds) {
+        public Builder clientSecurityGroupIds(java.util.List<String> clientSecurityGroupIds) {
             this.putQueryParameter("ClientSecurityGroupIds", clientSecurityGroupIds);
             this.clientSecurityGroupIds = clientSecurityGroupIds;
             return this;
@@ -192,7 +197,7 @@ public class StartInstanceRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp1aiupc4yjqgmm****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;

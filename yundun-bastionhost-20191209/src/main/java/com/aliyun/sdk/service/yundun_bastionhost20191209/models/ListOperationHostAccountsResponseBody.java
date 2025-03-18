@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOperationHostAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HostAccounts")
-    private java.util.List < HostAccounts> hostAccounts;
+    private java.util.List<HostAccounts> hostAccounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostAccounts
      */
-    public java.util.List < HostAccounts> getHostAccounts() {
+    public java.util.List<HostAccounts> getHostAccounts() {
         return this.hostAccounts;
     }
 
@@ -57,14 +66,23 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HostAccounts> hostAccounts; 
+        private java.util.List<HostAccounts> hostAccounts; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationHostAccountsResponseBody model) {
+            this.hostAccounts = model.hostAccounts;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The host accounts returned.</p>
          */
-        public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
+        public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
             return this;
         }
@@ -140,6 +158,14 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableSFTPChannel; 
             private Boolean enableSSHChannel; 
+
+            private Builder() {
+            } 
+
+            private Builder(SSHConfig model) {
+                this.enableSFTPChannel = model.enableSFTPChannel;
+                this.enableSSHChannel = model.enableSSHChannel;
+            } 
 
             /**
              * <p>Indicates whether SFTP channels are enabled for the account.</p>
@@ -279,6 +305,20 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             private String privateKeyFingerprint; 
             private String protocolName; 
             private SSHConfig SSHConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAccounts model) {
+                this.hasPassword = model.hasPassword;
+                this.hostAccountId = model.hostAccountId;
+                this.hostAccountName = model.hostAccountName;
+                this.hostId = model.hostId;
+                this.hostShareKeyId = model.hostShareKeyId;
+                this.privateKeyFingerprint = model.privateKeyFingerprint;
+                this.protocolName = model.protocolName;
+                this.SSHConfig = model.SSHConfig;
+            } 
 
             /**
              * <p>Indicates whether a password is configured for the host account.</p>

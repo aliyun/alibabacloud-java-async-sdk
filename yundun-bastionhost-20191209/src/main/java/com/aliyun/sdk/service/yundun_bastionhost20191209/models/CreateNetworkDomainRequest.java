@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class CreateNetworkDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Proxies")
-    private java.util.List < Proxies> proxies;
+    private java.util.List<Proxies> proxies;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -57,7 +62,7 @@ public class CreateNetworkDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,7 @@ public class CreateNetworkDomainRequest extends Request {
     /**
      * @return proxies
      */
-    public java.util.List < Proxies> getProxies() {
+    public java.util.List<Proxies> getProxies() {
         return this.proxies;
     }
 
@@ -109,7 +114,7 @@ public class CreateNetworkDomainRequest extends Request {
         private String instanceId; 
         private String networkDomainName; 
         private String networkDomainType; 
-        private java.util.List < Proxies> proxies; 
+        private java.util.List<Proxies> proxies; 
         private String regionId; 
 
         private Builder() {
@@ -184,7 +189,7 @@ public class CreateNetworkDomainRequest extends Request {
         /**
          * <p>The information about the proxy servers.</p>
          */
-        public Builder proxies(java.util.List < Proxies> proxies) {
+        public Builder proxies(java.util.List<Proxies> proxies) {
             this.putQueryParameter("Proxies", proxies);
             this.proxies = proxies;
             return this;
@@ -303,6 +308,18 @@ public class CreateNetworkDomainRequest extends Request {
             private Integer port; 
             private String proxyType; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Proxies model) {
+                this.address = model.address;
+                this.nodeType = model.nodeType;
+                this.password = model.password;
+                this.port = model.port;
+                this.proxyType = model.proxyType;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The IP address of the proxy server.</p>

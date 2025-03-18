@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return LDAP
      */
@@ -48,6 +57,14 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
     public static final class Builder {
         private LDAP LDAP; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceLDAPAuthServerResponseBody model) {
+            this.LDAP = model.LDAP;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The settings of LDAP authentication.</p>
@@ -237,6 +254,24 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             private Long port; 
             private String server; 
             private String standbyServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(LDAP model) {
+                this.account = model.account;
+                this.baseDN = model.baseDN;
+                this.emailMapping = model.emailMapping;
+                this.filter = model.filter;
+                this.hasPassword = model.hasPassword;
+                this.isSSL = model.isSSL;
+                this.loginNameMapping = model.loginNameMapping;
+                this.mobileMapping = model.mobileMapping;
+                this.nameMapping = model.nameMapping;
+                this.port = model.port;
+                this.server = model.server;
+                this.standbyServer = model.standbyServer;
+            } 
 
             /**
              * <p>The account of the LDAP server.</p>

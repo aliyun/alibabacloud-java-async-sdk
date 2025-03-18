@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -48,6 +57,14 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
     public static final class Builder {
         private Config config; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceTwoFactorResponseBody model) {
+            this.config = model.config;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The settings of two-factor authentication.</p>
@@ -88,7 +105,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         private Long skipTwoFactorTime;
 
         @com.aliyun.core.annotation.NameInMap("TwoFactorMethods")
-        private java.util.List < String > twoFactorMethods;
+        private java.util.List<String> twoFactorMethods;
 
         private Config(Builder builder) {
             this.enableTwoFactor = builder.enableTwoFactor;
@@ -121,14 +138,23 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         /**
          * @return twoFactorMethods
          */
-        public java.util.List < String > getTwoFactorMethods() {
+        public java.util.List<String> getTwoFactorMethods() {
             return this.twoFactorMethods;
         }
 
         public static final class Builder {
             private Boolean enableTwoFactor; 
             private Long skipTwoFactorTime; 
-            private java.util.List < String > twoFactorMethods; 
+            private java.util.List<String> twoFactorMethods; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.enableTwoFactor = model.enableTwoFactor;
+                this.skipTwoFactorTime = model.skipTwoFactorTime;
+                this.twoFactorMethods = model.twoFactorMethods;
+            } 
 
             /**
              * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
@@ -162,7 +188,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             /**
              * <p>The two-factor authentication methods.</p>
              */
-            public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
+            public Builder twoFactorMethods(java.util.List<String> twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;
                 return this;
             }

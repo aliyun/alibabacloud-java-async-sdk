@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class SetPolicyApprovalConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,6 +200,13 @@ public class SetPolicyApprovalConfigRequest extends Request {
 
         public static final class Builder {
             private String switchStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApprovalConfig model) {
+                this.switchStatus = model.switchStatus;
+            } 
 
             /**
              * <p>Specifies whether to enable O&amp;M approval in the control policy. Valid values:</p>

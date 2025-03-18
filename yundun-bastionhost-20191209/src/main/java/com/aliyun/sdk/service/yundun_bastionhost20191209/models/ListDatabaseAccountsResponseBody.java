@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDatabaseAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
-    private java.util.List < DatabaseAccounts> databaseAccounts;
+    private java.util.List<DatabaseAccounts> databaseAccounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databaseAccounts
      */
-    public java.util.List < DatabaseAccounts> getDatabaseAccounts() {
+    public java.util.List<DatabaseAccounts> getDatabaseAccounts() {
         return this.databaseAccounts;
     }
 
@@ -57,14 +66,23 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DatabaseAccounts> databaseAccounts; 
+        private java.util.List<DatabaseAccounts> databaseAccounts; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatabaseAccountsResponseBody model) {
+            this.databaseAccounts = model.databaseAccounts;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned database accounts.</p>
          */
-        public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
+        public Builder databaseAccounts(java.util.List<DatabaseAccounts> databaseAccounts) {
             this.databaseAccounts = databaseAccounts;
             return this;
         }
@@ -176,6 +194,17 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
             private String databaseId; 
             private String databaseSchema; 
             private String hasPassword; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabaseAccounts model) {
+                this.databaseAccountId = model.databaseAccountId;
+                this.databaseAccountName = model.databaseAccountName;
+                this.databaseId = model.databaseId;
+                this.databaseSchema = model.databaseSchema;
+                this.hasPassword = model.hasPassword;
+            } 
 
             /**
              * <p>The database account ID.</p>

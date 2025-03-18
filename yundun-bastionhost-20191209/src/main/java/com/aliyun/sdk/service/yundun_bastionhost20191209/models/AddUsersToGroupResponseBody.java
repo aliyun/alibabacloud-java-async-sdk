@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     private AddUsersToGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class AddUsersToGroupResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddUsersToGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +80,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         /**
          * <p>The result of the call.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -141,6 +158,16 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             private String message; 
             private String userGroupId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.userGroupId = model.userGroupId;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The return code that indicates whether the call was successful. Valid values:</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HostGroups")
-    private java.util.List < HostGroups> hostGroups;
+    private java.util.List<HostGroups> hostGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostGroups
      */
-    public java.util.List < HostGroups> getHostGroups() {
+    public java.util.List<HostGroups> getHostGroups() {
         return this.hostGroups;
     }
 
@@ -57,14 +66,23 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HostGroups> hostGroups; 
+        private java.util.List<HostGroups> hostGroups; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostGroupsForUserGroupResponseBody model) {
+            this.hostGroups = model.hostGroups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The host groups returned.</p>
          */
-        public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
+        public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
             return this;
         }
@@ -152,6 +170,15 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
             private String comment; 
             private String hostGroupId; 
             private String hostGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroups model) {
+                this.comment = model.comment;
+                this.hostGroupId = model.hostGroupId;
+                this.hostGroupName = model.hostGroupName;
+            } 
 
             /**
              * <p>The description of the host group.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     private DetachHostGroupAccountsFromUserResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetachHostGroupAccountsFromUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +80,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         /**
          * <p>The result of the call.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -130,6 +147,15 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             private String hostAccountName; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostAccountNames model) {
+                this.code = model.code;
+                this.hostAccountName = model.hostAccountName;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The return code that indicates whether permissions on the specified host account were revoked from the user. Valid values:</p>
              * <ul>
@@ -188,7 +214,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("HostAccountNames")
-        private java.util.List < HostAccountNames> hostAccountNames;
+        private java.util.List<HostAccountNames> hostAccountNames;
 
         @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
@@ -225,7 +251,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         /**
          * @return hostAccountNames
          */
-        public java.util.List < HostAccountNames> getHostAccountNames() {
+        public java.util.List<HostAccountNames> getHostAccountNames() {
             return this.hostAccountNames;
         }
 
@@ -252,10 +278,21 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.List < HostAccountNames> hostAccountNames; 
+            private java.util.List<HostAccountNames> hostAccountNames; 
             private String hostGroupId; 
             private String message; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.code = model.code;
+                this.hostAccountNames = model.hostAccountNames;
+                this.hostGroupId = model.hostGroupId;
+                this.message = model.message;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The return code that indicates whether the call was successful. Valid values:</p>
@@ -278,7 +315,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             /**
              * <p>The result of revoking permissions on the specified host accounts from the user.</p>
              */
-            public Builder hostAccountNames(java.util.List < HostAccountNames> hostAccountNames) {
+            public Builder hostAccountNames(java.util.List<HostAccountNames> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
                 return this;
             }

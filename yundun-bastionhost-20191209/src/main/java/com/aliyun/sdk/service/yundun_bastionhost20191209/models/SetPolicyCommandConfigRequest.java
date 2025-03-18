@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class SetPolicyCommandConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,7 +179,7 @@ public class SetPolicyCommandConfigRequest extends Request {
      */
     public static class Approval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         private Approval(Builder builder) {
             this.commands = builder.commands;
@@ -191,17 +196,24 @@ public class SetPolicyCommandConfigRequest extends Request {
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
         public static final class Builder {
-            private java.util.List < String > commands; 
+            private java.util.List<String> commands; 
+
+            private Builder() {
+            } 
+
+            private Builder(Approval model) {
+                this.commands = model.commands;
+            } 
 
             /**
              * <p>The commands that can be run only after approval.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -225,7 +237,7 @@ public class SetPolicyCommandConfigRequest extends Request {
         private String aclType;
 
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         private Deny(Builder builder) {
             this.aclType = builder.aclType;
@@ -250,13 +262,21 @@ public class SetPolicyCommandConfigRequest extends Request {
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
         public static final class Builder {
             private String aclType; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> commands; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deny model) {
+                this.aclType = model.aclType;
+                this.commands = model.commands;
+            } 
 
             /**
              * <p>The type of command control. Valid values:</p>
@@ -280,7 +300,7 @@ public class SetPolicyCommandConfigRequest extends Request {
              * <p>This parameter is required if AclType is set to white.</p>
              * </blockquote>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -336,6 +356,14 @@ public class SetPolicyCommandConfigRequest extends Request {
         public static final class Builder {
             private Approval approval; 
             private Deny deny; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommandConfig model) {
+                this.approval = model.approval;
+                this.deny = model.deny;
+            } 
 
             /**
              * <p>The command approval settings.</p>

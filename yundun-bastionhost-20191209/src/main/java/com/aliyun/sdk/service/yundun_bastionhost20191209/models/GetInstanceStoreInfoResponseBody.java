@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class GetInstanceStoreInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return max
      */
@@ -60,6 +69,15 @@ public class GetInstanceStoreInfoResponseBody extends TeaModel {
         private Long max; 
         private String requestId; 
         private Long usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceStoreInfoResponseBody model) {
+            this.max = model.max;
+            this.requestId = model.requestId;
+            this.usage = model.usage;
+        } 
 
         /**
          * Max.

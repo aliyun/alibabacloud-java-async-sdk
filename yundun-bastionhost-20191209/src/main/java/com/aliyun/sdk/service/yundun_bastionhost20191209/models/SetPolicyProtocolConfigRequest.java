@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -230,6 +235,16 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private String clipboardUpload; 
             private String diskRedirection; 
             private String recordKeyboard; 
+
+            private Builder() {
+            } 
+
+            private Builder(RDP model) {
+                this.clipboardDownload = model.clipboardDownload;
+                this.clipboardUpload = model.clipboardUpload;
+                this.diskRedirection = model.diskRedirection;
+                this.recordKeyboard = model.recordKeyboard;
+            } 
 
             /**
              * <p>Specifies whether to enable downloading from the clipboard. Valid values:</p>
@@ -449,6 +464,22 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private String SFTPUploadFile; 
             private String SSHChannel; 
             private String x11Forwarding; 
+
+            private Builder() {
+            } 
+
+            private Builder(SSH model) {
+                this.execCommand = model.execCommand;
+                this.SFTPChannel = model.SFTPChannel;
+                this.SFTPDownloadFile = model.SFTPDownloadFile;
+                this.SFTPMkdir = model.SFTPMkdir;
+                this.SFTPRemoveFile = model.SFTPRemoveFile;
+                this.SFTPRenameFile = model.SFTPRenameFile;
+                this.SFTPRmdir = model.SFTPRmdir;
+                this.SFTPUploadFile = model.SFTPUploadFile;
+                this.SSHChannel = model.SSHChannel;
+                this.x11Forwarding = model.x11Forwarding;
+            } 
 
             /**
              * <p>Specifies whether to enable remote command execution. Valid values:</p>
@@ -694,6 +725,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
         public static final class Builder {
             private RDP RDP; 
             private SSH SSH; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolConfig model) {
+                this.RDP = model.RDP;
+                this.SSH = model.SSH;
+            } 
 
             /**
              * <p>The settings of the Remote Desktop Protocol (RDP) options.</p>

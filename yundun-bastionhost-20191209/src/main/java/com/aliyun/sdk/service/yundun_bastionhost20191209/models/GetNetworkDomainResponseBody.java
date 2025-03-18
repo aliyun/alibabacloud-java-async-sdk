@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkDomain
      */
@@ -48,6 +57,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
     public static final class Builder {
         private NetworkDomain networkDomain; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNetworkDomainResponseBody model) {
+            this.networkDomain = model.networkDomain;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed information about the network domain.</p>
@@ -190,6 +207,20 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             private String proxyType; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(Proxies model) {
+                this.address = model.address;
+                this.hasPassword = model.hasPassword;
+                this.nodeType = model.nodeType;
+                this.port = model.port;
+                this.proxyState = model.proxyState;
+                this.proxyStateErrorCode = model.proxyStateErrorCode;
+                this.proxyType = model.proxyType;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP address of the proxy server.</p>
              * 
@@ -331,7 +362,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         private String networkDomainType;
 
         @com.aliyun.core.annotation.NameInMap("Proxies")
-        private java.util.List < Proxies> proxies;
+        private java.util.List<Proxies> proxies;
 
         private NetworkDomain(Builder builder) {
             this.comment = builder.comment;
@@ -388,7 +419,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         /**
          * @return proxies
          */
-        public java.util.List < Proxies> getProxies() {
+        public java.util.List<Proxies> getProxies() {
             return this.proxies;
         }
 
@@ -398,7 +429,19 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             private String networkDomainId; 
             private String networkDomainName; 
             private String networkDomainType; 
-            private java.util.List < Proxies> proxies; 
+            private java.util.List<Proxies> proxies; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkDomain model) {
+                this.comment = model.comment;
+                this._default = model._default;
+                this.networkDomainId = model.networkDomainId;
+                this.networkDomainName = model.networkDomainName;
+                this.networkDomainType = model.networkDomainType;
+                this.proxies = model.proxies;
+            } 
 
             /**
              * <p>The remarks of the network domain.</p>
@@ -466,7 +509,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             /**
              * <p>The information about the proxy servers.</p>
              */
-            public Builder proxies(java.util.List < Proxies> proxies) {
+            public Builder proxies(java.util.List<Proxies> proxies) {
                 this.proxies = proxies;
                 return this;
             }

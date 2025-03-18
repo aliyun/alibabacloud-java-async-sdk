@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     private AttachDatabaseAccountsToUserResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachDatabaseAccountsToUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
         /**
          * <p>The result of the call.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -130,6 +147,15 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
             private String databaseAccountId; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabaseAccounts model) {
+                this.code = model.code;
+                this.databaseAccountId = model.databaseAccountId;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The error code that is returned. If OK is returned, the authorization was successful. If another error code is returned, the authorization failed.</p>
              * 
@@ -181,7 +207,7 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
-        private java.util.List < DatabaseAccounts> databaseAccounts;
+        private java.util.List<DatabaseAccounts> databaseAccounts;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -218,7 +244,7 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
         /**
          * @return databaseAccounts
          */
-        public java.util.List < DatabaseAccounts> getDatabaseAccounts() {
+        public java.util.List<DatabaseAccounts> getDatabaseAccounts() {
             return this.databaseAccounts;
         }
 
@@ -245,10 +271,21 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.List < DatabaseAccounts> databaseAccounts; 
+            private java.util.List<DatabaseAccounts> databaseAccounts; 
             private String databaseId; 
             private String message; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.code = model.code;
+                this.databaseAccounts = model.databaseAccounts;
+                this.databaseId = model.databaseId;
+                this.message = model.message;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The error code that is returned. If <strong>OK</strong> is returned, the authorization was successful. If another error code is returned, the authorization failed.</p>
@@ -264,7 +301,7 @@ public class AttachDatabaseAccountsToUserResponseBody extends TeaModel {
             /**
              * <p>A list that shows the authorization results of the database accounts.</p>
              */
-            public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
+            public Builder databaseAccounts(java.util.List<DatabaseAccounts> databaseAccounts) {
                 this.databaseAccounts = databaseAccounts;
                 return this;
             }

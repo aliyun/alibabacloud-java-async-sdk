@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagKeys")
-    private java.util.List < TagKeys> tagKeys;
+    private java.util.List<TagKeys> tagKeys;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     public static ListTagKeysResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     /**
      * @return tagKeys
      */
-    public java.util.List < TagKeys> getTagKeys() {
+    public java.util.List<TagKeys> getTagKeys() {
         return this.tagKeys;
     }
 
@@ -82,8 +91,19 @@ public class ListTagKeysResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TagKeys> tagKeys; 
+        private java.util.List<TagKeys> tagKeys; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagKeysResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tagKeys = model.tagKeys;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -121,7 +141,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         /**
          * <p>An array that consists of tags.</p>
          */
-        public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
+        public Builder tagKeys(java.util.List<TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
             return this;
         }
@@ -186,6 +206,14 @@ public class ListTagKeysResponseBody extends TeaModel {
         public static final class Builder {
             private Integer tagCount; 
             private String tagKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagKeys model) {
+                this.tagCount = model.tagCount;
+                this.tagKey = model.tagKey;
+            } 
 
             /**
              * <p>The total number of tag keys.</p>

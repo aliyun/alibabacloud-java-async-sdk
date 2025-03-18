@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizedSecurityGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > authorizedSecurityGroups;
+    private java.util.List<String> authorizedSecurityGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -46,7 +51,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
     /**
      * @return authorizedSecurityGroups
      */
-    public java.util.List < String > getAuthorizedSecurityGroups() {
+    public java.util.List<String> getAuthorizedSecurityGroups() {
         return this.authorizedSecurityGroups;
     }
 
@@ -80,7 +85,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ConfigInstanceSecurityGroupsRequest, Builder> {
-        private java.util.List < String > authorizedSecurityGroups; 
+        private java.util.List<String> authorizedSecurityGroups; 
         private String instanceId; 
         private String lang; 
         private String regionId; 
@@ -104,7 +109,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp14u00sh39jvw5****</p>
          */
-        public Builder authorizedSecurityGroups(java.util.List < String > authorizedSecurityGroups) {
+        public Builder authorizedSecurityGroups(java.util.List<String> authorizedSecurityGroups) {
             this.putQueryParameter("AuthorizedSecurityGroups", authorizedSecurityGroups);
             this.authorizedSecurityGroups = authorizedSecurityGroups;
             return this;

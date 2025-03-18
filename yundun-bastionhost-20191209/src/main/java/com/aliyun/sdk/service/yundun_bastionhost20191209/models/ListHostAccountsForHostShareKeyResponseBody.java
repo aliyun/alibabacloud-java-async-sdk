@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HostAccounts")
-    private java.util.List < HostAccounts> hostAccounts;
+    private java.util.List<HostAccounts> hostAccounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostAccounts
      */
-    public java.util.List < HostAccounts> getHostAccounts() {
+    public java.util.List<HostAccounts> getHostAccounts() {
         return this.hostAccounts;
     }
 
@@ -57,14 +66,23 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HostAccounts> hostAccounts; 
+        private java.util.List<HostAccounts> hostAccounts; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostAccountsForHostShareKeyResponseBody model) {
+            this.hostAccounts = model.hostAccounts;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the host accounts that are associated with the shared key.</p>
          */
-        public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
+        public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
             return this;
         }
@@ -164,6 +182,16 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             private String hostId; 
             private String hostsAccountId; 
             private String protocolName; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAccounts model) {
+                this.hostAccountName = model.hostAccountName;
+                this.hostId = model.hostId;
+                this.hostsAccountId = model.hostsAccountId;
+                this.protocolName = model.protocolName;
+            } 
 
             /**
              * <p>The name of the host account.</p>

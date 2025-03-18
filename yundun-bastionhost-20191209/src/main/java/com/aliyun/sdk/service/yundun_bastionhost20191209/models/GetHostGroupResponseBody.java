@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetHostGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostGroup
      */
@@ -48,6 +57,14 @@ public class GetHostGroupResponseBody extends TeaModel {
     public static final class Builder {
         private HostGroup hostGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHostGroupResponseBody model) {
+            this.hostGroup = model.hostGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned detailed information about the asset group.</p>
@@ -129,6 +146,15 @@ public class GetHostGroupResponseBody extends TeaModel {
             private String comment; 
             private String hostGroupId; 
             private String hostGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroup model) {
+                this.comment = model.comment;
+                this.hostGroupId = model.hostGroupId;
+                this.hostGroupName = model.hostGroupName;
+            } 
 
             /**
              * <p>The remarks of the asset group.</p>

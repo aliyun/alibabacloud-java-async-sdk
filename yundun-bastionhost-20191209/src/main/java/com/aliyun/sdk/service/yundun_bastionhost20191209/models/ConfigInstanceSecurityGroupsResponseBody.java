@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ConfigInstanceSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -48,6 +57,14 @@ public class ConfigInstanceSecurityGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfigInstanceSecurityGroupsResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the bastion host for which security groups were configured.</p>

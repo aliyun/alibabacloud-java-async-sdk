@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHostsForUserGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Hosts")
-    private java.util.List < Hosts> hosts;
+    private java.util.List<Hosts> hosts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hosts
      */
-    public java.util.List < Hosts> getHosts() {
+    public java.util.List<Hosts> getHosts() {
         return this.hosts;
     }
 
@@ -57,14 +66,23 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Hosts> hosts; 
+        private java.util.List<Hosts> hosts; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostsForUserGroupResponseBody model) {
+            this.hosts = model.hosts;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The hosts returned.</p>
          */
-        public Builder hosts(java.util.List < Hosts> hosts) {
+        public Builder hosts(java.util.List<Hosts> hosts) {
             this.hosts = hosts;
             return this;
         }
@@ -200,6 +218,19 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             private String hostPrivateAddress; 
             private String hostPublicAddress; 
             private String OSType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.activeAddressType = model.activeAddressType;
+                this.comment = model.comment;
+                this.hostId = model.hostId;
+                this.hostName = model.hostName;
+                this.hostPrivateAddress = model.hostPrivateAddress;
+                this.hostPublicAddress = model.hostPublicAddress;
+                this.OSType = model.OSType;
+            } 
 
             /**
              * <p>The address type of the host. Valid values:</p>

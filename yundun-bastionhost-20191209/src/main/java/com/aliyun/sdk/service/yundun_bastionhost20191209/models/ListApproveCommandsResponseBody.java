@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListApproveCommandsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApproveCommands")
-    private java.util.List < ApproveCommands> approveCommands;
+    private java.util.List<ApproveCommands> approveCommands;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approveCommands
      */
-    public java.util.List < ApproveCommands> getApproveCommands() {
+    public java.util.List<ApproveCommands> getApproveCommands() {
         return this.approveCommands;
     }
 
@@ -57,14 +66,23 @@ public class ListApproveCommandsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApproveCommands> approveCommands; 
+        private java.util.List<ApproveCommands> approveCommands; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApproveCommandsResponseBody model) {
+            this.approveCommands = model.approveCommands;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The commands to be reviewed.</p>
          */
-        public Builder approveCommands(java.util.List < ApproveCommands> approveCommands) {
+        public Builder approveCommands(java.util.List<ApproveCommands> approveCommands) {
             this.approveCommands = approveCommands;
             return this;
         }
@@ -248,6 +266,23 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             private String protocolName; 
             private String sessionId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApproveCommands model) {
+                this.approveCommandId = model.approveCommandId;
+                this.assetAccountName = model.assetAccountName;
+                this.assetIp = model.assetIp;
+                this.assetName = model.assetName;
+                this.clientIp = model.clientIp;
+                this.clientUser = model.clientUser;
+                this.command = model.command;
+                this.createTime = model.createTime;
+                this.protocolName = model.protocolName;
+                this.sessionId = model.sessionId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The ID of the command to be reviewed.</p>

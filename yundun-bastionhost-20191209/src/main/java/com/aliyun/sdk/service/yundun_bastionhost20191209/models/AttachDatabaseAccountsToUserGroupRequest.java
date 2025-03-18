@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AttachDatabaseAccountsToUserGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -46,7 +51,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
@@ -80,7 +85,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachDatabaseAccountsToUserGroupRequest, Builder> {
-        private java.util.List < Databases> databases; 
+        private java.util.List<Databases> databases; 
         private String instanceId; 
         private String regionId; 
         private String userGroupId; 
@@ -103,7 +108,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
          * <p> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user group is authorized to manage only the databases.</p>
          * </blockquote>
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             this.putQueryParameter("Databases", databases);
             this.databases = databases;
             return this;
@@ -167,7 +172,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
      */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
-        private java.util.List < String > databaseAccountIds;
+        private java.util.List<String> databaseAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -188,7 +193,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         /**
          * @return databaseAccountIds
          */
-        public java.util.List < String > getDatabaseAccountIds() {
+        public java.util.List<String> getDatabaseAccountIds() {
             return this.databaseAccountIds;
         }
 
@@ -200,13 +205,21 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > databaseAccountIds; 
+            private java.util.List<String> databaseAccountIds; 
             private String databaseId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.databaseAccountIds = model.databaseAccountIds;
+                this.databaseId = model.databaseId;
+            } 
 
             /**
              * <p>An array that consists of database account IDs.</p>
              */
-            public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
+            public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
                 return this;
             }

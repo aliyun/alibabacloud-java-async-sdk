@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -57,14 +66,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the bastion hosts returned.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -332,6 +350,30 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long startTime; 
             private String vpcId; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.bandWidth = model.bandWidth;
+                this.description = model.description;
+                this.expireTime = model.expireTime;
+                this.imageVersion = model.imageVersion;
+                this.instanceId = model.instanceId;
+                this.instanceStatus = model.instanceStatus;
+                this.internetEndpoint = model.internetEndpoint;
+                this.intranetEndpoint = model.intranetEndpoint;
+                this.legacy = model.legacy;
+                this.licenseCode = model.licenseCode;
+                this.planCode = model.planCode;
+                this.publicNetworkAccess = model.publicNetworkAccess;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.slaveVswitchId = model.slaveVswitchId;
+                this.startTime = model.startTime;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * BandWidth.

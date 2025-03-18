@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class SetPolicyIPAclConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,7 +181,7 @@ public class SetPolicyIPAclConfigRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("IPs")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > iPs;
+        private java.util.List<String> iPs;
 
         private IPAclConfig(Builder builder) {
             this.aclType = builder.aclType;
@@ -201,13 +206,21 @@ public class SetPolicyIPAclConfigRequest extends Request {
         /**
          * @return iPs
          */
-        public java.util.List < String > getIPs() {
+        public java.util.List<String> getIPs() {
             return this.iPs;
         }
 
         public static final class Builder {
             private String aclType; 
-            private java.util.List < String > iPs; 
+            private java.util.List<String> iPs; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPAclConfig model) {
+                this.aclType = model.aclType;
+                this.iPs = model.iPs;
+            } 
 
             /**
              * <p>The mode of access control on source IP addresses. Valid values:</p>
@@ -237,7 +250,7 @@ public class SetPolicyIPAclConfigRequest extends Request {
              * </ul>
              * <p>This parameter is required.</p>
              */
-            public Builder iPs(java.util.List < String > iPs) {
+            public Builder iPs(java.util.List<String> iPs) {
                 this.iPs = iPs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetHostAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostAccount
      */
@@ -48,6 +57,14 @@ public class GetHostAccountResponseBody extends TeaModel {
     public static final class Builder {
         private HostAccount hostAccount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHostAccountResponseBody model) {
+            this.hostAccount = model.hostAccount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the host account that was queried.</p>
@@ -189,6 +206,20 @@ public class GetHostAccountResponseBody extends TeaModel {
             private String hostShareKeyName; 
             private String privateKeyFingerprint; 
             private String protocolName; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAccount model) {
+                this.hasPassword = model.hasPassword;
+                this.hostAccountId = model.hostAccountId;
+                this.hostAccountName = model.hostAccountName;
+                this.hostId = model.hostId;
+                this.hostShareKeyId = model.hostShareKeyId;
+                this.hostShareKeyName = model.hostShareKeyName;
+                this.privateKeyFingerprint = model.privateKeyFingerprint;
+                this.protocolName = model.protocolName;
+            } 
 
             /**
              * <p>Indicates whether a password is configured for the host account. Valid values:</p>

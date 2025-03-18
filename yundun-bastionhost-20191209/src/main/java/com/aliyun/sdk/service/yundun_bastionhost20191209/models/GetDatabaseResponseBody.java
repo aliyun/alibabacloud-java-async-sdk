@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return database
      */
@@ -48,6 +57,14 @@ public class GetDatabaseResponseBody extends TeaModel {
     public static final class Builder {
         private Database database; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatabaseResponseBody model) {
+            this.database = model.database;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned detailed information about the database.</p>
@@ -249,6 +266,25 @@ public class GetDatabaseResponseBody extends TeaModel {
             private String sourceInstanceId; 
             private String sourceInstanceRegionId; 
             private String sourceInstanceState; 
+
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.activeAddressType = model.activeAddressType;
+                this.comment = model.comment;
+                this.databaseId = model.databaseId;
+                this.databaseName = model.databaseName;
+                this.databasePort = model.databasePort;
+                this.databasePrivateAddress = model.databasePrivateAddress;
+                this.databasePublicAddress = model.databasePublicAddress;
+                this.databaseType = model.databaseType;
+                this.networkDomainId = model.networkDomainId;
+                this.source = model.source;
+                this.sourceInstanceId = model.sourceInstanceId;
+                this.sourceInstanceRegionId = model.sourceInstanceRegionId;
+                this.sourceInstanceState = model.sourceInstanceState;
+            } 
 
             /**
              * <p>The address type of the database. Valid values:</p>

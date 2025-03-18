@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyId
      */
@@ -48,6 +57,14 @@ public class CreatePolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String policyId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePolicyResponseBody model) {
+            this.policyId = model.policyId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The control policy ID.</p>

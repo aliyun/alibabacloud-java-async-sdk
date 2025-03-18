@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetHostResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return host
      */
@@ -48,6 +57,14 @@ public class GetHostResponseBody extends TeaModel {
     public static final class Builder {
         private GetHostResponseBodyHost host; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHostResponseBody model) {
+            this.host = model.host;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about the host.</p>
@@ -130,6 +147,15 @@ public class GetHostResponseBody extends TeaModel {
             private Integer port; 
             private String protocolName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Protocols model) {
+                this.hostFingerPrint = model.hostFingerPrint;
+                this.port = model.port;
+                this.protocolName = model.protocolName;
+            } 
+
             /**
              * <p>The fingerprint of the host. This parameter uniquely identifies a host. A value is returned for this parameter only if you have performed O&amp;M operations on the host by using the bastion host. Otherwise, no value is returned.</p>
              * 
@@ -205,8 +231,11 @@ public class GetHostResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
+        @com.aliyun.core.annotation.NameInMap("PrefKex")
+        private String prefKex;
+
         @com.aliyun.core.annotation.NameInMap("Protocols")
-        private java.util.List < Protocols> protocols;
+        private java.util.List<Protocols> protocols;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -226,6 +255,7 @@ public class GetHostResponseBody extends TeaModel {
             this.hostPublicAddress = builder.hostPublicAddress;
             this.networkDomainId = builder.networkDomainId;
             this.OSType = builder.OSType;
+            this.prefKex = builder.prefKex;
             this.protocols = builder.protocols;
             this.source = builder.source;
             this.sourceInstanceId = builder.sourceInstanceId;
@@ -297,9 +327,16 @@ public class GetHostResponseBody extends TeaModel {
         }
 
         /**
+         * @return prefKex
+         */
+        public String getPrefKex() {
+            return this.prefKex;
+        }
+
+        /**
          * @return protocols
          */
-        public java.util.List < Protocols> getProtocols() {
+        public java.util.List<Protocols> getProtocols() {
             return this.protocols;
         }
 
@@ -333,10 +370,30 @@ public class GetHostResponseBody extends TeaModel {
             private String hostPublicAddress; 
             private String networkDomainId; 
             private String OSType; 
-            private java.util.List < Protocols> protocols; 
+            private String prefKex; 
+            private java.util.List<Protocols> protocols; 
             private String source; 
             private String sourceInstanceId; 
             private String sourceInstanceState; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetHostResponseBodyHost model) {
+                this.activeAddressType = model.activeAddressType;
+                this.comment = model.comment;
+                this.hostId = model.hostId;
+                this.hostName = model.hostName;
+                this.hostPrivateAddress = model.hostPrivateAddress;
+                this.hostPublicAddress = model.hostPublicAddress;
+                this.networkDomainId = model.networkDomainId;
+                this.OSType = model.OSType;
+                this.prefKex = model.prefKex;
+                this.protocols = model.protocols;
+                this.source = model.source;
+                this.sourceInstanceId = model.sourceInstanceId;
+                this.sourceInstanceState = model.sourceInstanceState;
+            } 
 
             /**
              * <p>The address type of the host. Valid values:</p>
@@ -435,9 +492,17 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
+             * PrefKex.
+             */
+            public Builder prefKex(String prefKex) {
+                this.prefKex = prefKex;
+                return this;
+            }
+
+            /**
              * <p>The protocol information about the host.</p>
              */
-            public Builder protocols(java.util.List < Protocols> protocols) {
+            public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
                 return this;
             }

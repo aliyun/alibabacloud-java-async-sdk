@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetScope
      */
@@ -48,6 +57,14 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
     public static final class Builder {
         private AssetScope assetScope; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyAssetScopeResponseBody model) {
+            this.assetScope = model.assetScope;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The assets to which the control policy applies.</p>
@@ -85,7 +102,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         private String accountScopeType;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
-        private java.util.List < String > databaseAccountIds;
+        private java.util.List<String> databaseAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -114,7 +131,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * @return databaseAccountIds
          */
-        public java.util.List < String > getDatabaseAccountIds() {
+        public java.util.List<String> getDatabaseAccountIds() {
             return this.databaseAccountIds;
         }
 
@@ -127,8 +144,17 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountScopeType; 
-            private java.util.List < String > databaseAccountIds; 
+            private java.util.List<String> databaseAccountIds; 
             private String databaseId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.accountScopeType = model.accountScopeType;
+                this.databaseAccountIds = model.databaseAccountIds;
+                this.databaseId = model.databaseId;
+            } 
 
             /**
              * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
@@ -148,7 +174,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             /**
              * <p>The IDs of database accounts to which the control policy applies.</p>
              */
-            public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
+            public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
                 return this;
             }
@@ -179,7 +205,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
      */
     public static class HostGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountNames")
-        private java.util.List < String > accountNames;
+        private java.util.List<String> accountNames;
 
         @com.aliyun.core.annotation.NameInMap("AccountScopeType")
         private String accountScopeType;
@@ -204,7 +230,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * @return accountNames
          */
-        public java.util.List < String > getAccountNames() {
+        public java.util.List<String> getAccountNames() {
             return this.accountNames;
         }
 
@@ -223,14 +249,23 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > accountNames; 
+            private java.util.List<String> accountNames; 
             private String accountScopeType; 
             private String hostGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroups model) {
+                this.accountNames = model.accountNames;
+                this.accountScopeType = model.accountScopeType;
+                this.hostGroupId = model.hostGroupId;
+            } 
 
             /**
              * <p>The asset accounts to which the control policy applies.</p>
              */
-            public Builder accountNames(java.util.List < String > accountNames) {
+            public Builder accountNames(java.util.List<String> accountNames) {
                 this.accountNames = accountNames;
                 return this;
             }
@@ -279,7 +314,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         private String accountScopeType;
 
         @com.aliyun.core.annotation.NameInMap("HostAccountIds")
-        private java.util.List < String > hostAccountIds;
+        private java.util.List<String> hostAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -308,7 +343,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * @return hostAccountIds
          */
-        public java.util.List < String > getHostAccountIds() {
+        public java.util.List<String> getHostAccountIds() {
             return this.hostAccountIds;
         }
 
@@ -321,8 +356,17 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountScopeType; 
-            private java.util.List < String > hostAccountIds; 
+            private java.util.List<String> hostAccountIds; 
             private String hostId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.accountScopeType = model.accountScopeType;
+                this.hostAccountIds = model.hostAccountIds;
+                this.hostId = model.hostId;
+            } 
 
             /**
              * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
@@ -342,7 +386,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             /**
              * <p>The host accounts to which the control policy applies.</p>
              */
-            public Builder hostAccountIds(java.util.List < String > hostAccountIds) {
+            public Builder hostAccountIds(java.util.List<String> hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
                 return this;
             }
@@ -373,13 +417,13 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
      */
     public static class AssetScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Databases")
-        private java.util.List < Databases> databases;
+        private java.util.List<Databases> databases;
 
         @com.aliyun.core.annotation.NameInMap("HostGroups")
-        private java.util.List < HostGroups> hostGroups;
+        private java.util.List<HostGroups> hostGroups;
 
         @com.aliyun.core.annotation.NameInMap("Hosts")
-        private java.util.List < Hosts> hosts;
+        private java.util.List<Hosts> hosts;
 
         @com.aliyun.core.annotation.NameInMap("ScopeType")
         private String scopeType;
@@ -402,21 +446,21 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * @return databases
          */
-        public java.util.List < Databases> getDatabases() {
+        public java.util.List<Databases> getDatabases() {
             return this.databases;
         }
 
         /**
          * @return hostGroups
          */
-        public java.util.List < HostGroups> getHostGroups() {
+        public java.util.List<HostGroups> getHostGroups() {
             return this.hostGroups;
         }
 
         /**
          * @return hosts
          */
-        public java.util.List < Hosts> getHosts() {
+        public java.util.List<Hosts> getHosts() {
             return this.hosts;
         }
 
@@ -428,15 +472,25 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Databases> databases; 
-            private java.util.List < HostGroups> hostGroups; 
-            private java.util.List < Hosts> hosts; 
+            private java.util.List<Databases> databases; 
+            private java.util.List<HostGroups> hostGroups; 
+            private java.util.List<Hosts> hosts; 
             private String scopeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetScope model) {
+                this.databases = model.databases;
+                this.hostGroups = model.hostGroups;
+                this.hosts = model.hosts;
+                this.scopeType = model.scopeType;
+            } 
 
             /**
              * <p>The databases and database accounts to which the control policy applies.</p>
              */
-            public Builder databases(java.util.List < Databases> databases) {
+            public Builder databases(java.util.List<Databases> databases) {
                 this.databases = databases;
                 return this;
             }
@@ -444,7 +498,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             /**
              * <p>The asset groups and asset accounts to which the control policy applies.</p>
              */
-            public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
+            public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
                 this.hostGroups = hostGroups;
                 return this;
             }
@@ -452,7 +506,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             /**
              * <p>The hosts and host accounts to which the control policy applies.</p>
              */
-            public Builder hosts(java.util.List < Hosts> hosts) {
+            public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
                 return this;
             }

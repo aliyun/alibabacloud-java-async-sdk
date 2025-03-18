@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     private AttachHostGroupAccountsToUserGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachHostGroupAccountsToUserGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
         /**
          * <p>The result of the call.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -130,6 +147,15 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
             private String hostAccountName; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostAccountNames model) {
+                this.code = model.code;
+                this.hostAccountName = model.hostAccountName;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The return code that indicates whether the user group was authorized to manage the specified host account. Valid values:</p>
              * <ul>
@@ -185,7 +211,7 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("HostAccountNames")
-        private java.util.List < HostAccountNames> hostAccountNames;
+        private java.util.List<HostAccountNames> hostAccountNames;
 
         @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
@@ -222,7 +248,7 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
         /**
          * @return hostAccountNames
          */
-        public java.util.List < HostAccountNames> getHostAccountNames() {
+        public java.util.List<HostAccountNames> getHostAccountNames() {
             return this.hostAccountNames;
         }
 
@@ -249,10 +275,21 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.List < HostAccountNames> hostAccountNames; 
+            private java.util.List<HostAccountNames> hostAccountNames; 
             private String hostGroupId; 
             private String message; 
             private String userGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.code = model.code;
+                this.hostAccountNames = model.hostAccountNames;
+                this.hostGroupId = model.hostGroupId;
+                this.message = model.message;
+                this.userGroupId = model.userGroupId;
+            } 
 
             /**
              * <p>The return code that indicates whether the call was successful. Valid values:</p>
@@ -275,7 +312,7 @@ public class AttachHostGroupAccountsToUserGroupResponseBody extends TeaModel {
             /**
              * <p>The result of authorizing the user group to manage the specified host accounts.</p>
              */
-            public Builder hostAccountNames(java.util.List < HostAccountNames> hostAccountNames) {
+            public Builder hostAccountNames(java.util.List<HostAccountNames> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
                 return this;
             }

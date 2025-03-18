@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,6 +61,10 @@ public class GenerateAssetOperationTokenRequest extends Request {
     private String operationMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationNote")
+    private String operationNote;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -75,6 +84,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
         this.instanceId = builder.instanceId;
         this.loginAttribute = builder.loginAttribute;
         this.operationMode = builder.operationMode;
+        this.operationNote = builder.operationNote;
         this.regionId = builder.regionId;
         this.ssoClient = builder.ssoClient;
     }
@@ -87,7 +97,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,6 +173,13 @@ public class GenerateAssetOperationTokenRequest extends Request {
     }
 
     /**
+     * @return operationNote
+     */
+    public String getOperationNote() {
+        return this.operationNote;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -187,6 +204,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
         private String instanceId; 
         private String loginAttribute; 
         private String operationMode; 
+        private String operationNote; 
         private String regionId; 
         private String ssoClient; 
 
@@ -206,6 +224,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
             this.instanceId = request.instanceId;
             this.loginAttribute = request.loginAttribute;
             this.operationMode = request.operationMode;
+            this.operationNote = request.operationNote;
             this.regionId = request.regionId;
             this.ssoClient = request.ssoClient;
         } 
@@ -303,7 +322,13 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * DatabaseSchema.
+         * <p>The name of the database. If you set OperationMode to Sso and AssetAccountProtocolName to PostgreSQL or Oracle and you select Custom Account for the Database Account parameter, you must specify this parameter.</p>
+         * <blockquote>
+         * <p>This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>orcl</p>
          */
         public Builder databaseSchema(String databaseSchema) {
             this.putQueryParameter("DatabaseSchema", databaseSchema);
@@ -328,7 +353,17 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * LoginAttribute.
+         * <p>The logon attribute. If you set OperationMode to Sso and AssetAccountProtocolName to Oracle, you must specify this parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>SERVICENAME</strong></li>
+         * <li><strong>SID</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SID</p>
          */
         public Builder loginAttribute(String loginAttribute) {
             this.putQueryParameter("LoginAttribute", loginAttribute);
@@ -337,11 +372,30 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * OperationMode.
+         * <p>The O&amp;M logon method. Valid values:</p>
+         * <ul>
+         * <li><strong>WebToken</strong>: O&amp;M token-based logon.</li>
+         * <li><strong>Sso</strong>: Local client-based logon.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for bastion hosts that run V3.2.44 or later. If you do not specify this parameter, the default value WebToken is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Sso</p>
          */
         public Builder operationMode(String operationMode) {
             this.putQueryParameter("OperationMode", operationMode);
             this.operationMode = operationMode;
+            return this;
+        }
+
+        /**
+         * OperationNote.
+         */
+        public Builder operationNote(String operationNote) {
+            this.putQueryParameter("OperationNote", operationNote);
+            this.operationNote = operationNote;
             return this;
         }
 
@@ -361,7 +415,17 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * SsoClient.
+         * <p>The type of the local client that you want to perform O&amp;M operations on Linux assets. If you set OperationMode to Sso and AssetAccountProtocolName to SSH, you must specify this parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>ssh</strong>: Perform O&amp;M operations on Linux assets by connecting to a bastion host from an SSH client.</li>
+         * <li><strong>sftp</strong>: Perform O&amp;M operations on Linux assets by connecting to a bastion host from a Secure File Transfer Protocol (SFTP) client.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh</p>
          */
         public Builder ssoClient(String ssoClient) {
             this.putQueryParameter("SsoClient", ssoClient);

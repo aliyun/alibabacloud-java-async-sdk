@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOperationTicketsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OperationTickets")
-    private java.util.List < OperationTickets> operationTickets;
+    private java.util.List<OperationTickets> operationTickets;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationTickets
      */
-    public java.util.List < OperationTickets> getOperationTickets() {
+    public java.util.List<OperationTickets> getOperationTickets() {
         return this.operationTickets;
     }
 
@@ -57,14 +66,23 @@ public class ListOperationTicketsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OperationTickets> operationTickets; 
+        private java.util.List<OperationTickets> operationTickets; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationTicketsResponseBody model) {
+            this.operationTickets = model.operationTickets;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The O&amp;M applications to be reviewed.</p>
          */
-        public Builder operationTickets(java.util.List < OperationTickets> operationTickets) {
+        public Builder operationTickets(java.util.List<OperationTickets> operationTickets) {
             this.operationTickets = operationTickets;
             return this;
         }
@@ -345,6 +363,31 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             private String protocolName; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationTickets model) {
+                this.applyUserId = model.applyUserId;
+                this.applyUsername = model.applyUsername;
+                this.approveComment = model.approveComment;
+                this.assetAccountId = model.assetAccountId;
+                this.assetAccountName = model.assetAccountName;
+                this.assetAddress = model.assetAddress;
+                this.assetId = model.assetId;
+                this.assetName = model.assetName;
+                this.assetNetworkDomainId = model.assetNetworkDomainId;
+                this.assetOs = model.assetOs;
+                this.assetSource = model.assetSource;
+                this.assetSourceInstanceId = model.assetSourceInstanceId;
+                this.createdTime = model.createdTime;
+                this.effectCount = model.effectCount;
+                this.effectEndTime = model.effectEndTime;
+                this.effectStartTime = model.effectStartTime;
+                this.operationTicketId = model.operationTicketId;
+                this.protocolName = model.protocolName;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The ID of the O&amp;M applicant.</p>
              * 
@@ -368,7 +411,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * ApproveComment.
+             * <p>The remarks entered when the O&amp;M personnel applies for O&amp;M permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apply for O&amp;M</p>
              */
             public Builder approveComment(String approveComment) {
                 this.approveComment = approveComment;
@@ -492,7 +538,14 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectCount.
+             * <p>The maximum number of logons applied by the O&amp;M engineer. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The number of logons is unlimited. The O&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</li>
+             * <li><strong>1</strong>: The O&amp;M engineer can log on to the specified asset only once during the validity period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder effectCount(Integer effectCount) {
                 this.effectCount = effectCount;
@@ -500,7 +553,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectEndTime.
+             * <p>The end time of the validity period. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679393152</p>
              */
             public Builder effectEndTime(Integer effectEndTime) {
                 this.effectEndTime = effectEndTime;
@@ -508,7 +564,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectStartTime.
+             * <p>The start time of the validity period. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1685600242</p>
              */
             public Builder effectStartTime(Integer effectStartTime) {
                 this.effectStartTime = effectStartTime;

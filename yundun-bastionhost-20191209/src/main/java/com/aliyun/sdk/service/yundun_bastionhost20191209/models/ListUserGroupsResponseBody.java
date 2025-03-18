@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("UserGroups")
-    private java.util.List < UserGroups> userGroups;
+    private java.util.List<UserGroups> userGroups;
 
     private ListUserGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -33,6 +38,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     public static ListUserGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListUserGroupsResponseBody extends TeaModel {
     /**
      * @return userGroups
      */
-    public java.util.List < UserGroups> getUserGroups() {
+    public java.util.List<UserGroups> getUserGroups() {
         return this.userGroups;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < UserGroups> userGroups; 
+        private java.util.List<UserGroups> userGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.userGroups = model.userGroups;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -86,7 +104,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * <p>The user groups returned.</p>
          */
-        public Builder userGroups(java.util.List < UserGroups> userGroups) {
+        public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
@@ -164,6 +182,16 @@ public class ListUserGroupsResponseBody extends TeaModel {
             private Integer memberCount; 
             private String userGroupId; 
             private String userGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroups model) {
+                this.comment = model.comment;
+                this.memberCount = model.memberCount;
+                this.userGroupId = model.userGroupId;
+                this.userGroupName = model.userGroupName;
+            } 
 
             /**
              * <p>The description of the user group.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceAttribute
      */
@@ -48,6 +57,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceAttribute instanceAttribute; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAttributeResponseBody model) {
+            this.instanceAttribute = model.instanceAttribute;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The attribute information about the bastion host.</p>
@@ -117,6 +134,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer customPort; 
             private Integer standardPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.customPort = model.customPort;
+                this.standardPort = model.standardPort;
+            } 
 
             /**
              * <p>The custom port.</p>
@@ -199,6 +224,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String description; 
             private String entry; 
 
+            private Builder() {
+            } 
+
+            private Builder(WhiteListPolicies model) {
+                this.description = model.description;
+                this.entry = model.entry;
+            } 
+
             /**
              * Description.
              */
@@ -233,7 +266,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String appOperationModule;
 
         @com.aliyun.core.annotation.NameInMap("AuthorizedSecurityGroups")
-        private java.util.List < String > authorizedSecurityGroups;
+        private java.util.List<String> authorizedSecurityGroups;
 
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
@@ -284,25 +317,25 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String networkProxyModule;
 
         @com.aliyun.core.annotation.NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         @com.aliyun.core.annotation.NameInMap("PrivateExportIps")
-        private java.util.List < String > privateExportIps;
+        private java.util.List<String> privateExportIps;
 
         @com.aliyun.core.annotation.NameInMap("PrivateWhiteList")
-        private java.util.List < String > privateWhiteList;
+        private java.util.List<String> privateWhiteList;
 
         @com.aliyun.core.annotation.NameInMap("PublicExportIps")
-        private java.util.List < String > publicExportIps;
+        private java.util.List<String> publicExportIps;
 
         @com.aliyun.core.annotation.NameInMap("PublicIps")
-        private java.util.List < String > publicIps;
+        private java.util.List<String> publicIps;
 
         @com.aliyun.core.annotation.NameInMap("PublicNetworkAccess")
         private Boolean publicNetworkAccess;
 
         @com.aliyun.core.annotation.NameInMap("PublicWhiteList")
-        private java.util.List < String > publicWhiteList;
+        private java.util.List<String> publicWhiteList;
 
         @com.aliyun.core.annotation.NameInMap("RDModule")
         private String RDModule;
@@ -314,13 +347,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("RouterRules")
-        private java.util.List < String > routerRules;
+        private java.util.List<String> routerRules;
 
         @com.aliyun.core.annotation.NameInMap("ScriptDeliverModule")
         private String scriptDeliverModule;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("SlaveVswitchId")
         private String slaveVswitchId;
@@ -341,7 +374,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String webTerminalModule;
 
         @com.aliyun.core.annotation.NameInMap("WhiteListPolicies")
-        private java.util.List < WhiteListPolicies> whiteListPolicies;
+        private java.util.List<WhiteListPolicies> whiteListPolicies;
 
         private InstanceAttribute(Builder builder) {
             this.appOperationModule = builder.appOperationModule;
@@ -402,7 +435,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return authorizedSecurityGroups
          */
-        public java.util.List < String > getAuthorizedSecurityGroups() {
+        public java.util.List<String> getAuthorizedSecurityGroups() {
             return this.authorizedSecurityGroups;
         }
 
@@ -521,35 +554,35 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
         /**
          * @return privateExportIps
          */
-        public java.util.List < String > getPrivateExportIps() {
+        public java.util.List<String> getPrivateExportIps() {
             return this.privateExportIps;
         }
 
         /**
          * @return privateWhiteList
          */
-        public java.util.List < String > getPrivateWhiteList() {
+        public java.util.List<String> getPrivateWhiteList() {
             return this.privateWhiteList;
         }
 
         /**
          * @return publicExportIps
          */
-        public java.util.List < String > getPublicExportIps() {
+        public java.util.List<String> getPublicExportIps() {
             return this.publicExportIps;
         }
 
         /**
          * @return publicIps
          */
-        public java.util.List < String > getPublicIps() {
+        public java.util.List<String> getPublicIps() {
             return this.publicIps;
         }
 
@@ -563,7 +596,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return publicWhiteList
          */
-        public java.util.List < String > getPublicWhiteList() {
+        public java.util.List<String> getPublicWhiteList() {
             return this.publicWhiteList;
         }
 
@@ -591,7 +624,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return routerRules
          */
-        public java.util.List < String > getRouterRules() {
+        public java.util.List<String> getRouterRules() {
             return this.routerRules;
         }
 
@@ -605,7 +638,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -654,13 +687,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return whiteListPolicies
          */
-        public java.util.List < WhiteListPolicies> getWhiteListPolicies() {
+        public java.util.List<WhiteListPolicies> getWhiteListPolicies() {
             return this.whiteListPolicies;
         }
 
         public static final class Builder {
             private String appOperationModule; 
-            private java.util.List < String > authorizedSecurityGroups; 
+            private java.util.List<String> authorizedSecurityGroups; 
             private String bandwidth; 
             private String bandwidthPackage; 
             private String dbOperationModule; 
@@ -677,26 +710,70 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String licenseCode; 
             private String modifyPasswordModule; 
             private String networkProxyModule; 
-            private java.util.List < Ports> ports; 
-            private java.util.List < String > privateExportIps; 
-            private java.util.List < String > privateWhiteList; 
-            private java.util.List < String > publicExportIps; 
-            private java.util.List < String > publicIps; 
+            private java.util.List<Ports> ports; 
+            private java.util.List<String> privateExportIps; 
+            private java.util.List<String> privateWhiteList; 
+            private java.util.List<String> publicExportIps; 
+            private java.util.List<String> publicIps; 
             private Boolean publicNetworkAccess; 
-            private java.util.List < String > publicWhiteList; 
+            private java.util.List<String> publicWhiteList; 
             private String RDModule; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < String > routerRules; 
+            private java.util.List<String> routerRules; 
             private String scriptDeliverModule; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private String slaveVswitchId; 
             private Long startTime; 
             private Long storage; 
             private String vpcId; 
             private String vswitchId; 
             private String webTerminalModule; 
-            private java.util.List < WhiteListPolicies> whiteListPolicies; 
+            private java.util.List<WhiteListPolicies> whiteListPolicies; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceAttribute model) {
+                this.appOperationModule = model.appOperationModule;
+                this.authorizedSecurityGroups = model.authorizedSecurityGroups;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthPackage = model.bandwidthPackage;
+                this.dbOperationModule = model.dbOperationModule;
+                this.description = model.description;
+                this.eniInstanceId = model.eniInstanceId;
+                this.expireTime = model.expireTime;
+                this.HSMModule = model.HSMModule;
+                this.iDaaSModule = model.iDaaSModule;
+                this.instanceId = model.instanceId;
+                this.instanceStatus = model.instanceStatus;
+                this.internetEndpoint = model.internetEndpoint;
+                this.intranetEndpoint = model.intranetEndpoint;
+                this.kmsSecretModule = model.kmsSecretModule;
+                this.licenseCode = model.licenseCode;
+                this.modifyPasswordModule = model.modifyPasswordModule;
+                this.networkProxyModule = model.networkProxyModule;
+                this.ports = model.ports;
+                this.privateExportIps = model.privateExportIps;
+                this.privateWhiteList = model.privateWhiteList;
+                this.publicExportIps = model.publicExportIps;
+                this.publicIps = model.publicIps;
+                this.publicNetworkAccess = model.publicNetworkAccess;
+                this.publicWhiteList = model.publicWhiteList;
+                this.RDModule = model.RDModule;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routerRules = model.routerRules;
+                this.scriptDeliverModule = model.scriptDeliverModule;
+                this.securityGroupIds = model.securityGroupIds;
+                this.slaveVswitchId = model.slaveVswitchId;
+                this.startTime = model.startTime;
+                this.storage = model.storage;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.webTerminalModule = model.webTerminalModule;
+                this.whiteListPolicies = model.whiteListPolicies;
+            } 
 
             /**
              * AppOperationModule.
@@ -709,7 +786,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The IDs of authorized security groups.</p>
              */
-            public Builder authorizedSecurityGroups(java.util.List < String > authorizedSecurityGroups) {
+            public Builder authorizedSecurityGroups(java.util.List<String> authorizedSecurityGroups) {
                 this.authorizedSecurityGroups = authorizedSecurityGroups;
                 return this;
             }
@@ -898,7 +975,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the O&amp;M ports of the bastion host.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -906,7 +983,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the egress private IP addresses of the bastion host.</p>
              */
-            public Builder privateExportIps(java.util.List < String > privateExportIps) {
+            public Builder privateExportIps(java.util.List<String> privateExportIps) {
                 this.privateExportIps = privateExportIps;
                 return this;
             }
@@ -914,7 +991,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The private IP addresses that are allowed to access the instance.</p>
              */
-            public Builder privateWhiteList(java.util.List < String > privateWhiteList) {
+            public Builder privateWhiteList(java.util.List<String> privateWhiteList) {
                 this.privateWhiteList = privateWhiteList;
                 return this;
             }
@@ -922,7 +999,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the egress public IP addresses of the bastion host.</p>
              */
-            public Builder publicExportIps(java.util.List < String > publicExportIps) {
+            public Builder publicExportIps(java.util.List<String> publicExportIps) {
                 this.publicExportIps = publicExportIps;
                 return this;
             }
@@ -930,7 +1007,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The public IP address.</p>
              */
-            public Builder publicIps(java.util.List < String > publicIps) {
+            public Builder publicIps(java.util.List<String> publicIps) {
                 this.publicIps = publicIps;
                 return this;
             }
@@ -949,7 +1026,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The public IP addresses that are allowed to access the instance.</p>
              */
-            public Builder publicWhiteList(java.util.List < String > publicWhiteList) {
+            public Builder publicWhiteList(java.util.List<String> publicWhiteList) {
                 this.publicWhiteList = publicWhiteList;
                 return this;
             }
@@ -987,7 +1064,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * RouterRules.
              */
-            public Builder routerRules(java.util.List < String > routerRules) {
+            public Builder routerRules(java.util.List<String> routerRules) {
                 this.routerRules = routerRules;
                 return this;
             }
@@ -1003,7 +1080,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The IDs of the security groups to which the instance belongs.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
@@ -1078,7 +1155,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             /**
              * WhiteListPolicies.
              */
-            public Builder whiteListPolicies(java.util.List < WhiteListPolicies> whiteListPolicies) {
+            public Builder whiteListPolicies(java.util.List<WhiteListPolicies> whiteListPolicies) {
                 this.whiteListPolicies = whiteListPolicies;
                 return this;
             }

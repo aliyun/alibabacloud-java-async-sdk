@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assetOperationToken
      */
@@ -48,6 +57,14 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
     public static final class Builder {
         private AssetOperationToken assetOperationToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateAssetOperationTokenResponseBody model) {
+            this.assetOperationToken = model.assetOperationToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -190,6 +207,20 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             private String token; 
             private String tokenId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssetOperationToken model) {
+                this.countLeft = model.countLeft;
+                this.expireTime = model.expireTime;
+                this.hasCountLimit = model.hasCountLimit;
+                this.maxRenewCount = model.maxRenewCount;
+                this.renewCount = model.renewCount;
+                this.ssoUrl = model.ssoUrl;
+                this.token = model.token;
+                this.tokenId = model.tokenId;
+            } 
+
             /**
              * <p>The remaining number of times that you can use the O&amp;M token.</p>
              * 
@@ -246,7 +277,10 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * SsoUrl.
+             * <p>The single sign-on (SSO) URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sso://eyJOT0RFX0NPTU1PTiI6eyJNb2R******</p>
              */
             public Builder ssoUrl(String ssoUrl) {
                 this.ssoUrl = ssoUrl;

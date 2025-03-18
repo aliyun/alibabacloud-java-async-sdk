@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class ConfigInstanceWhiteListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteList")
-    private java.util.List < String > whiteList;
+    private java.util.List<String> whiteList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteListPolicies")
-    private java.util.List < WhiteListPolicies> whiteListPolicies;
+    private java.util.List<WhiteListPolicies> whiteListPolicies;
 
     private ConfigInstanceWhiteListRequest(Builder builder) {
         super(builder);
@@ -45,7 +50,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,22 +72,22 @@ public class ConfigInstanceWhiteListRequest extends Request {
     /**
      * @return whiteList
      */
-    public java.util.List < String > getWhiteList() {
+    public java.util.List<String> getWhiteList() {
         return this.whiteList;
     }
 
     /**
      * @return whiteListPolicies
      */
-    public java.util.List < WhiteListPolicies> getWhiteListPolicies() {
+    public java.util.List<WhiteListPolicies> getWhiteListPolicies() {
         return this.whiteListPolicies;
     }
 
     public static final class Builder extends Request.Builder<ConfigInstanceWhiteListRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > whiteList; 
-        private java.util.List < WhiteListPolicies> whiteListPolicies; 
+        private java.util.List<String> whiteList; 
+        private java.util.List<WhiteListPolicies> whiteListPolicies; 
 
         private Builder() {
             super();
@@ -130,7 +135,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
          * <strong>example:</strong>
          * <p>10.162.XX.XX</p>
          */
-        public Builder whiteList(java.util.List < String > whiteList) {
+        public Builder whiteList(java.util.List<String> whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
             this.whiteList = whiteList;
             return this;
@@ -139,7 +144,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         /**
          * WhiteListPolicies.
          */
-        public Builder whiteListPolicies(java.util.List < WhiteListPolicies> whiteListPolicies) {
+        public Builder whiteListPolicies(java.util.List<WhiteListPolicies> whiteListPolicies) {
             this.putQueryParameter("WhiteListPolicies", whiteListPolicies);
             this.whiteListPolicies = whiteListPolicies;
             return this;
@@ -195,6 +200,14 @@ public class ConfigInstanceWhiteListRequest extends Request {
         public static final class Builder {
             private String description; 
             private String entry; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteListPolicies model) {
+                this.description = model.description;
+                this.entry = model.entry;
+            } 
 
             /**
              * Description.

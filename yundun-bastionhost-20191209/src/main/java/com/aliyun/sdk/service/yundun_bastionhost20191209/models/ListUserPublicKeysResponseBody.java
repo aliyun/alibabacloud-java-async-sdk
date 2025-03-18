@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserPublicKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PublicKeys")
-    private java.util.List < PublicKeys> publicKeys;
+    private java.util.List<PublicKeys> publicKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return publicKeys
      */
-    public java.util.List < PublicKeys> getPublicKeys() {
+    public java.util.List<PublicKeys> getPublicKeys() {
         return this.publicKeys;
     }
 
@@ -57,14 +66,23 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PublicKeys> publicKeys; 
+        private java.util.List<PublicKeys> publicKeys; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserPublicKeysResponseBody model) {
+            this.publicKeys = model.publicKeys;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the public keys of the user.</p>
          */
-        public Builder publicKeys(java.util.List < PublicKeys> publicKeys) {
+        public Builder publicKeys(java.util.List<PublicKeys> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
@@ -176,6 +194,17 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
             private String publicKeyId; 
             private String publicKeyName; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicKeys model) {
+                this.comment = model.comment;
+                this.fingerPrint = model.fingerPrint;
+                this.publicKeyId = model.publicKeyId;
+                this.publicKeyName = model.publicKeyName;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The description of the public key.</p>

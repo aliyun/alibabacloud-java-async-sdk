@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -118,7 +135,7 @@ public class GetUserResponseBody extends TeaModel {
         private String sourceUserId;
 
         @com.aliyun.core.annotation.NameInMap("TwoFactorMethods")
-        private java.util.List < String > twoFactorMethods;
+        private java.util.List<String> twoFactorMethods;
 
         @com.aliyun.core.annotation.NameInMap("TwoFactorStatus")
         private String twoFactorStatus;
@@ -130,7 +147,7 @@ public class GetUserResponseBody extends TeaModel {
         private String userName;
 
         @com.aliyun.core.annotation.NameInMap("UserState")
-        private java.util.List < String > userState;
+        private java.util.List<String> userState;
 
         private User(Builder builder) {
             this.comment = builder.comment;
@@ -247,7 +264,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return twoFactorMethods
          */
-        public java.util.List < String > getTwoFactorMethods() {
+        public java.util.List<String> getTwoFactorMethods() {
             return this.twoFactorMethods;
         }
 
@@ -275,7 +292,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return userState
          */
-        public java.util.List < String > getUserState() {
+        public java.util.List<String> getUserState() {
             return this.userState;
         }
 
@@ -292,11 +309,34 @@ public class GetUserResponseBody extends TeaModel {
             private Boolean needResetPassword; 
             private String source; 
             private String sourceUserId; 
-            private java.util.List < String > twoFactorMethods; 
+            private java.util.List<String> twoFactorMethods; 
             private String twoFactorStatus; 
             private String userId; 
             private String userName; 
-            private java.util.List < String > userState; 
+            private java.util.List<String> userState; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.comment = model.comment;
+                this.displayName = model.displayName;
+                this.effectiveEndTime = model.effectiveEndTime;
+                this.effectiveStartTime = model.effectiveStartTime;
+                this.email = model.email;
+                this.language = model.language;
+                this.languageStatus = model.languageStatus;
+                this.mobile = model.mobile;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.needResetPassword = model.needResetPassword;
+                this.source = model.source;
+                this.sourceUserId = model.sourceUserId;
+                this.twoFactorMethods = model.twoFactorMethods;
+                this.twoFactorStatus = model.twoFactorStatus;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userState = model.userState;
+            } 
 
             /**
              * <p>The description of the user.</p>
@@ -473,7 +513,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the details of the two-factor authentication method.</p>
              */
-            public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
+            public Builder twoFactorMethods(java.util.List<String> twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;
                 return this;
             }
@@ -519,7 +559,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the details of the user status.</p>
              */
-            public Builder userState(java.util.List < String > userState) {
+            public Builder userState(java.util.List<String> userState) {
                 this.userState = userState;
                 return this;
             }

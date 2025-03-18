@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -48,6 +57,14 @@ public class GetPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private Policy policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the control policy.</p>
@@ -82,10 +99,10 @@ public class GetPolicyResponseBody extends TeaModel {
      */
     public static class EffectiveTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
-        private java.util.List < String > days;
+        private java.util.List<String> days;
 
         @com.aliyun.core.annotation.NameInMap("Hours")
-        private java.util.List < String > hours;
+        private java.util.List<String> hours;
 
         private EffectiveTime(Builder builder) {
             this.days = builder.days;
@@ -103,25 +120,33 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * @return days
          */
-        public java.util.List < String > getDays() {
+        public java.util.List<String> getDays() {
             return this.days;
         }
 
         /**
          * @return hours
          */
-        public java.util.List < String > getHours() {
+        public java.util.List<String> getHours() {
             return this.hours;
         }
 
         public static final class Builder {
-            private java.util.List < String > days; 
-            private java.util.List < String > hours; 
+            private java.util.List<String> days; 
+            private java.util.List<String> hours; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectiveTime model) {
+                this.days = model.days;
+                this.hours = model.hours;
+            } 
 
             /**
              * <p>The days of a week on which logons are allowed.</p>
              */
-            public Builder days(java.util.List < String > days) {
+            public Builder days(java.util.List<String> days) {
                 this.days = days;
                 return this;
             }
@@ -129,7 +154,7 @@ public class GetPolicyResponseBody extends TeaModel {
             /**
              * <p>The time periods during which logons are allowed.</p>
              */
-            public Builder hours(java.util.List < String > hours) {
+            public Builder hours(java.util.List<String> hours) {
                 this.hours = hours;
                 return this;
             }
@@ -149,7 +174,7 @@ public class GetPolicyResponseBody extends TeaModel {
      */
     public static class AccessTimeRangeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectiveTime")
-        private java.util.List < EffectiveTime> effectiveTime;
+        private java.util.List<EffectiveTime> effectiveTime;
 
         private AccessTimeRangeConfig(Builder builder) {
             this.effectiveTime = builder.effectiveTime;
@@ -166,17 +191,24 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * @return effectiveTime
          */
-        public java.util.List < EffectiveTime> getEffectiveTime() {
+        public java.util.List<EffectiveTime> getEffectiveTime() {
             return this.effectiveTime;
         }
 
         public static final class Builder {
-            private java.util.List < EffectiveTime> effectiveTime; 
+            private java.util.List<EffectiveTime> effectiveTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessTimeRangeConfig model) {
+                this.effectiveTime = model.effectiveTime;
+            } 
 
             /**
              * <p>The details of the periods during which logons are allowed.</p>
              */
-            public Builder effectiveTime(java.util.List < EffectiveTime> effectiveTime) {
+            public Builder effectiveTime(java.util.List<EffectiveTime> effectiveTime) {
                 this.effectiveTime = effectiveTime;
                 return this;
             }
@@ -220,6 +252,13 @@ public class GetPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String switchStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApprovalConfig model) {
+                this.switchStatus = model.switchStatus;
+            } 
+
             /**
              * <p>Indicates whether O&amp;M approval is enabled in the control policy. Valid values:</p>
              * <ul>
@@ -250,7 +289,7 @@ public class GetPolicyResponseBody extends TeaModel {
      */
     public static class Approval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         private Approval(Builder builder) {
             this.commands = builder.commands;
@@ -267,17 +306,24 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
         public static final class Builder {
-            private java.util.List < String > commands; 
+            private java.util.List<String> commands; 
+
+            private Builder() {
+            } 
+
+            private Builder(Approval model) {
+                this.commands = model.commands;
+            } 
 
             /**
              * <p>An array of commands that can be run only after approval.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -300,7 +346,7 @@ public class GetPolicyResponseBody extends TeaModel {
         private String aclType;
 
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         private Deny(Builder builder) {
             this.aclType = builder.aclType;
@@ -325,13 +371,21 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
         public static final class Builder {
             private String aclType; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> commands; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deny model) {
+                this.aclType = model.aclType;
+                this.commands = model.commands;
+            } 
 
             /**
              * <p>The type of command control. Valid values:</p>
@@ -351,7 +405,7 @@ public class GetPolicyResponseBody extends TeaModel {
             /**
              * <p>An array of controlled commands.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -407,6 +461,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private Approval approval; 
             private Deny deny; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommandConfig model) {
+                this.approval = model.approval;
+                this.deny = model.deny;
+            } 
+
             /**
              * <p>The details of the command approval settings.</p>
              */
@@ -441,7 +503,7 @@ public class GetPolicyResponseBody extends TeaModel {
         private String aclType;
 
         @com.aliyun.core.annotation.NameInMap("IPs")
-        private java.util.List < String > iPs;
+        private java.util.List<String> iPs;
 
         private IPAclConfig(Builder builder) {
             this.aclType = builder.aclType;
@@ -466,13 +528,21 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * @return iPs
          */
-        public java.util.List < String > getIPs() {
+        public java.util.List<String> getIPs() {
             return this.iPs;
         }
 
         public static final class Builder {
             private String aclType; 
-            private java.util.List < String > iPs; 
+            private java.util.List<String> iPs; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPAclConfig model) {
+                this.aclType = model.aclType;
+                this.iPs = model.iPs;
+            } 
 
             /**
              * <p>The mode of access control on source IP addresses. Valid values:</p>
@@ -492,7 +562,7 @@ public class GetPolicyResponseBody extends TeaModel {
             /**
              * <p>The IP addresses from which logons are not allowed.</p>
              */
-            public Builder iPs(java.util.List < String > iPs) {
+            public Builder iPs(java.util.List<String> iPs) {
                 this.iPs = iPs;
                 return this;
             }
@@ -571,6 +641,16 @@ public class GetPolicyResponseBody extends TeaModel {
             private String clipboardUpload; 
             private String diskRedirection; 
             private String recordKeyboard; 
+
+            private Builder() {
+            } 
+
+            private Builder(RDP model) {
+                this.clipboardDownload = model.clipboardDownload;
+                this.clipboardUpload = model.clipboardUpload;
+                this.diskRedirection = model.diskRedirection;
+                this.recordKeyboard = model.recordKeyboard;
+            } 
 
             /**
              * <p>Indicates whether downloading from the clipboard is enabled. Valid values:</p>
@@ -779,6 +859,22 @@ public class GetPolicyResponseBody extends TeaModel {
             private String SSHChannel; 
             private String x11Forwarding; 
 
+            private Builder() {
+            } 
+
+            private Builder(SSH model) {
+                this.execCommand = model.execCommand;
+                this.SFTPChannel = model.SFTPChannel;
+                this.SFTPDownloadFile = model.SFTPDownloadFile;
+                this.SFTPMkdir = model.SFTPMkdir;
+                this.SFTPRemoveFile = model.SFTPRemoveFile;
+                this.SFTPRenameFile = model.SFTPRenameFile;
+                this.SFTPRmdir = model.SFTPRmdir;
+                this.SFTPUploadFile = model.SFTPUploadFile;
+                this.SSHChannel = model.SSHChannel;
+                this.x11Forwarding = model.x11Forwarding;
+            } 
+
             /**
              * <p>Indicates whether remote command execution is enabled. Valid values:</p>
              * <ul>
@@ -980,6 +1076,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private RDP RDP; 
             private SSH SSH; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProtocolConfig model) {
+                this.RDP = model.RDP;
+                this.SSH = model.SSH;
+            } 
+
             /**
              * <p>The configuration details of Remote Desktop Protocol (RDP) options.</p>
              */
@@ -1130,6 +1234,21 @@ public class GetPolicyResponseBody extends TeaModel {
             private String policyName; 
             private Long priority; 
             private ProtocolConfig protocolConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.accessTimeRangeConfig = model.accessTimeRangeConfig;
+                this.approvalConfig = model.approvalConfig;
+                this.commandConfig = model.commandConfig;
+                this.comment = model.comment;
+                this.IPAclConfig = model.IPAclConfig;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.priority = model.priority;
+                this.protocolConfig = model.protocolConfig;
+            } 
 
             /**
              * <p>The details of the logon period restrictions.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -35,6 +40,10 @@ public class ListRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class ListRulesResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -58,8 +67,17 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -75,7 +93,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * <p>The authorization rules that are returned.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -188,6 +206,18 @@ public class ListRulesResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
             private String ruleState; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.comment = model.comment;
+                this.effectiveEndTime = model.effectiveEndTime;
+                this.effectiveStartTime = model.effectiveStartTime;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleState = model.ruleState;
+            } 
 
             /**
              * <p>The remarks of the authorization rule.</p>

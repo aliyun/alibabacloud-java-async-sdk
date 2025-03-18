@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostShareKey
      */
@@ -48,6 +57,14 @@ public class GetHostShareKeyResponseBody extends TeaModel {
     public static final class Builder {
         private HostShareKey hostShareKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHostShareKeyResponseBody model) {
+            this.hostShareKey = model.hostShareKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about the shared key.</p>
@@ -141,6 +158,16 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             private String hostShareKeyName; 
             private Long lastModifyKeyAt; 
             private String privateKeyFingerPrint; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostShareKey model) {
+                this.hostShareKeyId = model.hostShareKeyId;
+                this.hostShareKeyName = model.hostShareKeyName;
+                this.lastModifyKeyAt = model.lastModifyKeyAt;
+                this.privateKeyFingerPrint = model.privateKeyFingerPrint;
+            } 
 
             /**
              * <p>The ID of the shared key.</p>

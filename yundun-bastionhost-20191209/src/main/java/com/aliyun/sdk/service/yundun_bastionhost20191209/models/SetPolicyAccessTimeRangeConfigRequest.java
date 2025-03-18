@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,10 +176,10 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
      */
     public static class EffectiveTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
-        private java.util.List < Integer > days;
+        private java.util.List<Integer> days;
 
         @com.aliyun.core.annotation.NameInMap("Hours")
-        private java.util.List < Integer > hours;
+        private java.util.List<Integer> hours;
 
         private EffectiveTime(Builder builder) {
             this.days = builder.days;
@@ -192,25 +197,33 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         /**
          * @return days
          */
-        public java.util.List < Integer > getDays() {
+        public java.util.List<Integer> getDays() {
             return this.days;
         }
 
         /**
          * @return hours
          */
-        public java.util.List < Integer > getHours() {
+        public java.util.List<Integer> getHours() {
             return this.hours;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > days; 
-            private java.util.List < Integer > hours; 
+            private java.util.List<Integer> days; 
+            private java.util.List<Integer> hours; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectiveTime model) {
+                this.days = model.days;
+                this.hours = model.hours;
+            } 
 
             /**
              * <p>The days of the week during which users can log on to the assets.</p>
              */
-            public Builder days(java.util.List < Integer > days) {
+            public Builder days(java.util.List<Integer> days) {
                 this.days = days;
                 return this;
             }
@@ -218,7 +231,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
             /**
              * <p>The time periods of the day during which users can log on to the assets.</p>
              */
-            public Builder hours(java.util.List < Integer > hours) {
+            public Builder hours(java.util.List<Integer> hours) {
                 this.hours = hours;
                 return this;
             }
@@ -238,7 +251,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
      */
     public static class AccessTimeRangeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectiveTime")
-        private java.util.List < EffectiveTime> effectiveTime;
+        private java.util.List<EffectiveTime> effectiveTime;
 
         private AccessTimeRangeConfig(Builder builder) {
             this.effectiveTime = builder.effectiveTime;
@@ -255,17 +268,24 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         /**
          * @return effectiveTime
          */
-        public java.util.List < EffectiveTime> getEffectiveTime() {
+        public java.util.List<EffectiveTime> getEffectiveTime() {
             return this.effectiveTime;
         }
 
         public static final class Builder {
-            private java.util.List < EffectiveTime> effectiveTime; 
+            private java.util.List<EffectiveTime> effectiveTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessTimeRangeConfig model) {
+                this.effectiveTime = model.effectiveTime;
+            } 
 
             /**
              * <p>The details about the periods during which users can log on to the assets.</p>
              */
-            public Builder effectiveTime(java.util.List < EffectiveTime> effectiveTime) {
+            public Builder effectiveTime(java.util.List<EffectiveTime> effectiveTime) {
                 this.effectiveTime = effectiveTime;
                 return this;
             }

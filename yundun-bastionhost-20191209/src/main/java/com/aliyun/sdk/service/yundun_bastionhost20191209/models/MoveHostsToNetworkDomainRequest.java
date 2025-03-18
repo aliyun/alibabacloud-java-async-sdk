@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > hostIds;
+    private java.util.List<String> hostIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -47,7 +52,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
     /**
      * @return hostIds
      */
-    public java.util.List < String > getHostIds() {
+    public java.util.List<String> getHostIds() {
         return this.hostIds;
     }
 
@@ -81,7 +86,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<MoveHostsToNetworkDomainRequest, Builder> {
-        private java.util.List < String > hostIds; 
+        private java.util.List<String> hostIds; 
         private String instanceId; 
         private String networkDomainId; 
         private String regionId; 
@@ -102,7 +107,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
          * <p>The IDs of the hosts that you want to add to the network domain.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder hostIds(java.util.List < String > hostIds) {
+        public Builder hostIds(java.util.List<String> hostIds) {
             this.putQueryParameter("HostIds", hostIds);
             this.hostIds = hostIds;
             return this;

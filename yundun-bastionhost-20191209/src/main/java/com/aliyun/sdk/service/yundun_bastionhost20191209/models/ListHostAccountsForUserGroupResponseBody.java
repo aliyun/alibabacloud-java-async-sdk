@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HostAccounts")
-    private java.util.List < HostAccounts> hostAccounts;
+    private java.util.List<HostAccounts> hostAccounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostAccounts
      */
-    public java.util.List < HostAccounts> getHostAccounts() {
+    public java.util.List<HostAccounts> getHostAccounts() {
         return this.hostAccounts;
     }
 
@@ -57,14 +66,23 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HostAccounts> hostAccounts; 
+        private java.util.List<HostAccounts> hostAccounts; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostAccountsForUserGroupResponseBody model) {
+            this.hostAccounts = model.hostAccounts;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the queried host accounts.</p>
          */
-        public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
+        public Builder hostAccounts(java.util.List<HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
             return this;
         }
@@ -176,6 +194,17 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             private String hostId; 
             private Boolean isAuthorized; 
             private String protocolName; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAccounts model) {
+                this.hostAccountId = model.hostAccountId;
+                this.hostAccountName = model.hostAccountName;
+                this.hostId = model.hostId;
+                this.isAuthorized = model.isAuthorized;
+                this.protocolName = model.protocolName;
+            } 
 
             /**
              * <p>The ID of the host account.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ModifyRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
@@ -30,11 +35,11 @@ public class ModifyRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostGroups")
-    private java.util.List < HostGroups> hostGroups;
+    private java.util.List<HostGroups> hostGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Hosts")
-    private java.util.List < Hosts> hosts;
+    private java.util.List<Hosts> hosts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -56,11 +61,11 @@ public class ModifyRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    private java.util.List<String> userGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     private ModifyRuleRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class ModifyRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +106,7 @@ public class ModifyRuleRequest extends Request {
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
@@ -122,14 +127,14 @@ public class ModifyRuleRequest extends Request {
     /**
      * @return hostGroups
      */
-    public java.util.List < HostGroups> getHostGroups() {
+    public java.util.List<HostGroups> getHostGroups() {
         return this.hostGroups;
     }
 
     /**
      * @return hosts
      */
-    public java.util.List < Hosts> getHosts() {
+    public java.util.List<Hosts> getHosts() {
         return this.hosts;
     }
 
@@ -164,30 +169,30 @@ public class ModifyRuleRequest extends Request {
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
     public static final class Builder extends Request.Builder<ModifyRuleRequest, Builder> {
         private String comment; 
-        private java.util.List < Databases> databases; 
+        private java.util.List<Databases> databases; 
         private Long effectiveEndTime; 
         private Long effectiveStartTime; 
-        private java.util.List < HostGroups> hostGroups; 
-        private java.util.List < Hosts> hosts; 
+        private java.util.List<HostGroups> hostGroups; 
+        private java.util.List<Hosts> hosts; 
         private String instanceId; 
         private String regionId; 
         private String ruleId; 
         private String ruleName; 
-        private java.util.List < String > userGroupIds; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userGroupIds; 
+        private java.util.List<String> userIds; 
 
         private Builder() {
             super();
@@ -221,7 +226,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * <p>The databases and database accounts that a user associated with the modified rule can manage.</p>
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             this.putQueryParameter("Databases", databases);
             this.databases = databases;
             return this;
@@ -254,7 +259,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * <p>The asset groups and asset accounts that a user associated with the modified rule can manage.</p>
          */
-        public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
+        public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
             this.hostGroups = hostGroups;
             return this;
@@ -263,7 +268,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * <p>An array that consists of the host IDs and host account IDs with which the modified authorization rule is associated.</p>
          */
-        public Builder hosts(java.util.List < Hosts> hosts) {
+        public Builder hosts(java.util.List<Hosts> hosts) {
             this.putQueryParameter("Hosts", hosts);
             this.hosts = hosts;
             return this;
@@ -328,7 +333,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * <p>The IDs of the user groups with which the modified authorization rule is associated.</p>
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
@@ -337,7 +342,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * <p>The IDs of the users with whom the modified authorization rule is associated.</p>
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
             this.userIds = userIds;
             return this;
@@ -358,7 +363,7 @@ public class ModifyRuleRequest extends Request {
      */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
-        private java.util.List < String > databaseAccountIds;
+        private java.util.List<String> databaseAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -379,7 +384,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * @return databaseAccountIds
          */
-        public java.util.List < String > getDatabaseAccountIds() {
+        public java.util.List<String> getDatabaseAccountIds() {
             return this.databaseAccountIds;
         }
 
@@ -391,13 +396,21 @@ public class ModifyRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > databaseAccountIds; 
+            private java.util.List<String> databaseAccountIds; 
             private String databaseId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.databaseAccountIds = model.databaseAccountIds;
+                this.databaseId = model.databaseId;
+            } 
 
             /**
              * <p>The database account IDs.</p>
              */
-            public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
+            public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
                 return this;
             }
@@ -432,7 +445,7 @@ public class ModifyRuleRequest extends Request {
      */
     public static class HostGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostAccountNames")
-        private java.util.List < String > hostAccountNames;
+        private java.util.List<String> hostAccountNames;
 
         @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
@@ -453,7 +466,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * @return hostAccountNames
          */
-        public java.util.List < String > getHostAccountNames() {
+        public java.util.List<String> getHostAccountNames() {
             return this.hostAccountNames;
         }
 
@@ -465,13 +478,21 @@ public class ModifyRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostAccountNames; 
+            private java.util.List<String> hostAccountNames; 
             private String hostGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroups model) {
+                this.hostAccountNames = model.hostAccountNames;
+                this.hostGroupId = model.hostGroupId;
+            } 
 
             /**
              * <p>The names of the asset accounts.</p>
              */
-            public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
+            public Builder hostAccountNames(java.util.List<String> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
                 return this;
             }
@@ -502,7 +523,7 @@ public class ModifyRuleRequest extends Request {
      */
     public static class Hosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostAccountIds")
-        private java.util.List < String > hostAccountIds;
+        private java.util.List<String> hostAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -523,7 +544,7 @@ public class ModifyRuleRequest extends Request {
         /**
          * @return hostAccountIds
          */
-        public java.util.List < String > getHostAccountIds() {
+        public java.util.List<String> getHostAccountIds() {
             return this.hostAccountIds;
         }
 
@@ -535,13 +556,21 @@ public class ModifyRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostAccountIds; 
+            private java.util.List<String> hostAccountIds; 
             private String hostId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.hostAccountIds = model.hostAccountIds;
+                this.hostId = model.hostId;
+            } 
 
             /**
              * <p>The host account IDs.</p>
              */
-            public Builder hostAccountIds(java.util.List < String > hostAccountIds) {
+            public Builder hostAccountIds(java.util.List<String> hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
                 return this;
             }

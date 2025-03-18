@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,15 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SetPolicyAssetScopeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostGroups")
-    private java.util.List < HostGroups> hostGroups;
+    private java.util.List<HostGroups> hostGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Hosts")
-    private java.util.List < Hosts> hosts;
+    private java.util.List<Hosts> hosts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -62,7 +67,7 @@ public class SetPolicyAssetScopeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,21 +75,21 @@ public class SetPolicyAssetScopeRequest extends Request {
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
     /**
      * @return hostGroups
      */
-    public java.util.List < HostGroups> getHostGroups() {
+    public java.util.List<HostGroups> getHostGroups() {
         return this.hostGroups;
     }
 
     /**
      * @return hosts
      */
-    public java.util.List < Hosts> getHosts() {
+    public java.util.List<Hosts> getHosts() {
         return this.hosts;
     }
 
@@ -117,9 +122,9 @@ public class SetPolicyAssetScopeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetPolicyAssetScopeRequest, Builder> {
-        private java.util.List < Databases> databases; 
-        private java.util.List < HostGroups> hostGroups; 
-        private java.util.List < Hosts> hosts; 
+        private java.util.List<Databases> databases; 
+        private java.util.List<HostGroups> hostGroups; 
+        private java.util.List<Hosts> hosts; 
         private String instanceId; 
         private String policyId; 
         private String regionId; 
@@ -146,7 +151,7 @@ public class SetPolicyAssetScopeRequest extends Request {
          * <p> This parameter is required if ScopeType is set to Database. You can specify up to 500 databases.</p>
          * </blockquote>
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             this.putQueryParameter("Databases", databases);
             this.databases = databases;
             return this;
@@ -158,7 +163,7 @@ public class SetPolicyAssetScopeRequest extends Request {
          * <p>This parameter is required if ScopeType is set to HostGroup. You can specify up to 100 asset groups.</p>
          * </blockquote>
          */
-        public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
+        public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
             this.hostGroups = hostGroups;
             return this;
@@ -170,7 +175,7 @@ public class SetPolicyAssetScopeRequest extends Request {
          * <p>This parameter is required if ScopeType is set to Host. You can specify up to 500 hosts.</p>
          * </blockquote>
          */
-        public Builder hosts(java.util.List < Hosts> hosts) {
+        public Builder hosts(java.util.List<Hosts> hosts) {
             this.putQueryParameter("Hosts", hosts);
             this.hosts = hosts;
             return this;
@@ -260,7 +265,7 @@ public class SetPolicyAssetScopeRequest extends Request {
         private String accountScopeType;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
-        private java.util.List < String > databaseAccountIds;
+        private java.util.List<String> databaseAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
@@ -289,7 +294,7 @@ public class SetPolicyAssetScopeRequest extends Request {
         /**
          * @return databaseAccountIds
          */
-        public java.util.List < String > getDatabaseAccountIds() {
+        public java.util.List<String> getDatabaseAccountIds() {
             return this.databaseAccountIds;
         }
 
@@ -302,8 +307,17 @@ public class SetPolicyAssetScopeRequest extends Request {
 
         public static final class Builder {
             private String accountScopeType; 
-            private java.util.List < String > databaseAccountIds; 
+            private java.util.List<String> databaseAccountIds; 
             private String databaseId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.accountScopeType = model.accountScopeType;
+                this.databaseAccountIds = model.databaseAccountIds;
+                this.databaseId = model.databaseId;
+            } 
 
             /**
              * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
@@ -326,7 +340,7 @@ public class SetPolicyAssetScopeRequest extends Request {
              * <p> This parameter is required if AccountScopeType is set to AccountId.</p>
              * </blockquote>
              */
-            public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
+            public Builder databaseAccountIds(java.util.List<String> databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
                 return this;
             }
@@ -357,7 +371,7 @@ public class SetPolicyAssetScopeRequest extends Request {
      */
     public static class HostGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountNames")
-        private java.util.List < String > accountNames;
+        private java.util.List<String> accountNames;
 
         @com.aliyun.core.annotation.NameInMap("AccountScopeType")
         private String accountScopeType;
@@ -382,7 +396,7 @@ public class SetPolicyAssetScopeRequest extends Request {
         /**
          * @return accountNames
          */
-        public java.util.List < String > getAccountNames() {
+        public java.util.List<String> getAccountNames() {
             return this.accountNames;
         }
 
@@ -401,9 +415,18 @@ public class SetPolicyAssetScopeRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > accountNames; 
+            private java.util.List<String> accountNames; 
             private String accountScopeType; 
             private String hostGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostGroups model) {
+                this.accountNames = model.accountNames;
+                this.accountScopeType = model.accountScopeType;
+                this.hostGroupId = model.hostGroupId;
+            } 
 
             /**
              * <p>The asset accounts to which the control policy applies.</p>
@@ -411,7 +434,7 @@ public class SetPolicyAssetScopeRequest extends Request {
              * <p>This parameter is required if AccountScopeType is set to AccountName.</p>
              * </blockquote>
              */
-            public Builder accountNames(java.util.List < String > accountNames) {
+            public Builder accountNames(java.util.List<String> accountNames) {
                 this.accountNames = accountNames;
                 return this;
             }
@@ -460,7 +483,7 @@ public class SetPolicyAssetScopeRequest extends Request {
         private String accountScopeType;
 
         @com.aliyun.core.annotation.NameInMap("HostAccountIds")
-        private java.util.List < String > hostAccountIds;
+        private java.util.List<String> hostAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -489,7 +512,7 @@ public class SetPolicyAssetScopeRequest extends Request {
         /**
          * @return hostAccountIds
          */
-        public java.util.List < String > getHostAccountIds() {
+        public java.util.List<String> getHostAccountIds() {
             return this.hostAccountIds;
         }
 
@@ -502,8 +525,17 @@ public class SetPolicyAssetScopeRequest extends Request {
 
         public static final class Builder {
             private String accountScopeType; 
-            private java.util.List < String > hostAccountIds; 
+            private java.util.List<String> hostAccountIds; 
             private String hostId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.accountScopeType = model.accountScopeType;
+                this.hostAccountIds = model.hostAccountIds;
+                this.hostId = model.hostId;
+            } 
 
             /**
              * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
@@ -526,7 +558,7 @@ public class SetPolicyAssetScopeRequest extends Request {
              * <p>This parameter is required if AccountScopeType is set to AccountId.</p>
              * </blockquote>
              */
-            public Builder hostAccountIds(java.util.List < String > hostAccountIds) {
+            public Builder hostAccountIds(java.util.List<String> hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
                 return this;
             }

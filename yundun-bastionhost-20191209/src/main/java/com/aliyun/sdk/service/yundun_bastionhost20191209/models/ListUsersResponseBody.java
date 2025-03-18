@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListUsersResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < Users> users;
+    private java.util.List<Users> users;
 
     private ListUsersResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -33,6 +38,10 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static ListUsersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListUsersResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -86,7 +104,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * <p>The users returned.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }
@@ -141,7 +159,7 @@ public class ListUsersResponseBody extends TeaModel {
         private String sourceUserId;
 
         @com.aliyun.core.annotation.NameInMap("TwoFactorMethods")
-        private java.util.List < String > twoFactorMethods;
+        private java.util.List<String> twoFactorMethods;
 
         @com.aliyun.core.annotation.NameInMap("TwoFactorStatus")
         private String twoFactorStatus;
@@ -153,7 +171,7 @@ public class ListUsersResponseBody extends TeaModel {
         private String userName;
 
         @com.aliyun.core.annotation.NameInMap("UserState")
-        private java.util.List < String > userState;
+        private java.util.List<String> userState;
 
         private Users(Builder builder) {
             this.comment = builder.comment;
@@ -270,7 +288,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return twoFactorMethods
          */
-        public java.util.List < String > getTwoFactorMethods() {
+        public java.util.List<String> getTwoFactorMethods() {
             return this.twoFactorMethods;
         }
 
@@ -298,7 +316,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return userState
          */
-        public java.util.List < String > getUserState() {
+        public java.util.List<String> getUserState() {
             return this.userState;
         }
 
@@ -315,11 +333,34 @@ public class ListUsersResponseBody extends TeaModel {
             private Boolean needResetPassword; 
             private String source; 
             private String sourceUserId; 
-            private java.util.List < String > twoFactorMethods; 
+            private java.util.List<String> twoFactorMethods; 
             private String twoFactorStatus; 
             private String userId; 
             private String userName; 
-            private java.util.List < String > userState; 
+            private java.util.List<String> userState; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.comment = model.comment;
+                this.displayName = model.displayName;
+                this.effectiveEndTime = model.effectiveEndTime;
+                this.effectiveStartTime = model.effectiveStartTime;
+                this.email = model.email;
+                this.language = model.language;
+                this.languageStatus = model.languageStatus;
+                this.mobile = model.mobile;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.needResetPassword = model.needResetPassword;
+                this.source = model.source;
+                this.sourceUserId = model.sourceUserId;
+                this.twoFactorMethods = model.twoFactorMethods;
+                this.twoFactorStatus = model.twoFactorStatus;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userState = model.userState;
+            } 
 
             /**
              * <p>The remarks of the user.</p>
@@ -498,7 +539,7 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * <p>An array of the enabled two-factor authentication methods.</p>
              */
-            public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
+            public Builder twoFactorMethods(java.util.List<String> twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;
                 return this;
             }
@@ -544,7 +585,7 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * <p>An array that lists the states of users.</p>
              */
-            public Builder userState(java.util.List < String > userState) {
+            public Builder userState(java.util.List<String> userState) {
                 this.userState = userState;
                 return this;
             }

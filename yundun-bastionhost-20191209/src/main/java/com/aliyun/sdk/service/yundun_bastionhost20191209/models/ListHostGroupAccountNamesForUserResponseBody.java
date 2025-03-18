@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHostGroupAccountNamesForUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HostAccountNames")
-    private java.util.List < String > hostAccountNames;
+    private java.util.List<String> hostAccountNames;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class ListHostGroupAccountNamesForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostAccountNames
      */
-    public java.util.List < String > getHostAccountNames() {
+    public java.util.List<String> getHostAccountNames() {
         return this.hostAccountNames;
     }
 
@@ -46,13 +55,21 @@ public class ListHostGroupAccountNamesForUserResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > hostAccountNames; 
+        private java.util.List<String> hostAccountNames; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostGroupAccountNamesForUserResponseBody model) {
+            this.hostAccountNames = model.hostAccountNames;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the names of host accounts.</p>
          */
-        public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
+        public Builder hostAccountNames(java.util.List<String> hostAccountNames) {
             this.hostAccountNames = hostAccountNames;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddDatabasesToGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabaseIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > databaseIds;
+    private java.util.List<String> databaseIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostGroupId")
@@ -47,7 +52,7 @@ public class AddDatabasesToGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class AddDatabasesToGroupRequest extends Request {
     /**
      * @return databaseIds
      */
-    public java.util.List < String > getDatabaseIds() {
+    public java.util.List<String> getDatabaseIds() {
         return this.databaseIds;
     }
 
@@ -81,7 +86,7 @@ public class AddDatabasesToGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddDatabasesToGroupRequest, Builder> {
-        private java.util.List < String > databaseIds; 
+        private java.util.List<String> databaseIds; 
         private String hostGroupId; 
         private String instanceId; 
         private String regionId; 
@@ -102,7 +107,7 @@ public class AddDatabasesToGroupRequest extends Request {
          * <p>An array that consists of the database IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder databaseIds(java.util.List < String > databaseIds) {
+        public Builder databaseIds(java.util.List<String> databaseIds) {
             this.putQueryParameter("DatabaseIds", databaseIds);
             this.databaseIds = databaseIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHostShareKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HostShareKeys")
-    private java.util.List < HostShareKeys> hostShareKeys;
+    private java.util.List<HostShareKeys> hostShareKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostShareKeys
      */
-    public java.util.List < HostShareKeys> getHostShareKeys() {
+    public java.util.List<HostShareKeys> getHostShareKeys() {
         return this.hostShareKeys;
     }
 
@@ -57,14 +66,23 @@ public class ListHostShareKeysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HostShareKeys> hostShareKeys; 
+        private java.util.List<HostShareKeys> hostShareKeys; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHostShareKeysResponseBody model) {
+            this.hostShareKeys = model.hostShareKeys;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the shared keys.</p>
          */
-        public Builder hostShareKeys(java.util.List < HostShareKeys> hostShareKeys) {
+        public Builder hostShareKeys(java.util.List<HostShareKeys> hostShareKeys) {
             this.hostShareKeys = hostShareKeys;
             return this;
         }
@@ -176,6 +194,17 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             private String hostShareKeyName; 
             private Long lastModifyKeyAt; 
             private String privateKeyFingerPrint; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostShareKeys model) {
+                this.hostAccountCount = model.hostAccountCount;
+                this.hostShareKeyId = model.hostShareKeyId;
+                this.hostShareKeyName = model.hostShareKeyName;
+                this.lastModifyKeyAt = model.lastModifyKeyAt;
+                this.privateKeyFingerPrint = model.privateKeyFingerPrint;
+            } 
 
             /**
              * <p>The number of the associated host accounts.</p>

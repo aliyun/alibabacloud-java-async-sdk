@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDatabasesForUserGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
@@ -57,14 +66,23 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Databases> databases; 
+        private java.util.List<Databases> databases; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatabasesForUserGroupResponseBody model) {
+            this.databases = model.databases;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The databases returned.</p>
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
             return this;
         }
@@ -260,6 +278,24 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
             private String networkDomainId; 
             private String source; 
             private String sourceInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.activeAddressType = model.activeAddressType;
+                this.comment = model.comment;
+                this.databaseAccountCount = model.databaseAccountCount;
+                this.databaseId = model.databaseId;
+                this.databaseName = model.databaseName;
+                this.databasePort = model.databasePort;
+                this.databasePrivateAddress = model.databasePrivateAddress;
+                this.databasePublicAddress = model.databasePublicAddress;
+                this.databaseType = model.databaseType;
+                this.networkDomainId = model.networkDomainId;
+                this.source = model.source;
+                this.sourceInstanceId = model.sourceInstanceId;
+            } 
 
             /**
              * <p>The address type of the database. Valid values:</p>

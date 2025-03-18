@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNetworkDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkDomains")
-    private java.util.List < NetworkDomains> networkDomains;
+    private java.util.List<NetworkDomains> networkDomains;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkDomains
      */
-    public java.util.List < NetworkDomains> getNetworkDomains() {
+    public java.util.List<NetworkDomains> getNetworkDomains() {
         return this.networkDomains;
     }
 
@@ -57,14 +66,23 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkDomains> networkDomains; 
+        private java.util.List<NetworkDomains> networkDomains; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNetworkDomainsResponseBody model) {
+            this.networkDomains = model.networkDomains;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The network domains that are returned.</p>
          */
-        public Builder networkDomains(java.util.List < NetworkDomains> networkDomains) {
+        public Builder networkDomains(java.util.List<NetworkDomains> networkDomains) {
             this.networkDomains = networkDomains;
             return this;
         }
@@ -141,6 +159,14 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             private String nodeType; 
             private String proxyState; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProxiesState model) {
+                this.nodeType = model.nodeType;
+                this.proxyState = model.proxyState;
+            } 
+
             /**
              * <p>The node type of the proxy server. Valid values:</p>
              * <ul>
@@ -201,7 +227,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         private String networkDomainType;
 
         @com.aliyun.core.annotation.NameInMap("ProxiesState")
-        private java.util.List < ProxiesState> proxiesState;
+        private java.util.List<ProxiesState> proxiesState;
 
         private NetworkDomains(Builder builder) {
             this.comment = builder.comment;
@@ -258,7 +284,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         /**
          * @return proxiesState
          */
-        public java.util.List < ProxiesState> getProxiesState() {
+        public java.util.List<ProxiesState> getProxiesState() {
             return this.proxiesState;
         }
 
@@ -268,7 +294,19 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             private String networkDomainId; 
             private String networkDomainName; 
             private String networkDomainType; 
-            private java.util.List < ProxiesState> proxiesState; 
+            private java.util.List<ProxiesState> proxiesState; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkDomains model) {
+                this.comment = model.comment;
+                this._default = model._default;
+                this.networkDomainId = model.networkDomainId;
+                this.networkDomainName = model.networkDomainName;
+                this.networkDomainType = model.networkDomainType;
+                this.proxiesState = model.proxiesState;
+            } 
 
             /**
              * <p>The remarks of the network domain.</p>
@@ -336,7 +374,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             /**
              * ProxiesState.
              */
-            public Builder proxiesState(java.util.List < ProxiesState> proxiesState) {
+            public Builder proxiesState(java.util.List<ProxiesState> proxiesState) {
                 this.proxiesState = proxiesState;
                 return this;
             }

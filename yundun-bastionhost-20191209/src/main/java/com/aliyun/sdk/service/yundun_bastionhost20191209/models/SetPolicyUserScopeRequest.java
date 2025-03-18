@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,11 +38,11 @@ public class SetPolicyUserScopeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    private java.util.List<String> userGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     private SetPolicyUserScopeRequest(Builder builder) {
         super(builder);
@@ -57,7 +62,7 @@ public class SetPolicyUserScopeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,14 +98,14 @@ public class SetPolicyUserScopeRequest extends Request {
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
@@ -109,8 +114,8 @@ public class SetPolicyUserScopeRequest extends Request {
         private String policyId; 
         private String regionId; 
         private String scopeType; 
-        private java.util.List < String > userGroupIds; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userGroupIds; 
+        private java.util.List<String> userIds; 
 
         private Builder() {
             super();
@@ -197,7 +202,7 @@ public class SetPolicyUserScopeRequest extends Request {
          * <p>This parameter is required if ScopeType is set to UserGroup. You can specify up to 100 user group IDs.</p>
          * </blockquote>
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
@@ -209,7 +214,7 @@ public class SetPolicyUserScopeRequest extends Request {
          * <p>This parameter is required if ScopeType is set to User. You can specify up to 500 user IDs.</p>
          * </blockquote>
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
             this.userIds = userIds;
             return this;

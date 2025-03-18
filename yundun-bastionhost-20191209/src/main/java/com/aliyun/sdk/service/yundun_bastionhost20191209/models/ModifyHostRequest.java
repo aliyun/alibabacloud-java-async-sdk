@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,6 +52,10 @@ public class ModifyHostRequest extends Request {
     private String OSType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefKex")
+    private String prefKex;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -60,6 +69,7 @@ public class ModifyHostRequest extends Request {
         this.instanceId = builder.instanceId;
         this.networkDomainId = builder.networkDomainId;
         this.OSType = builder.OSType;
+        this.prefKex = builder.prefKex;
         this.regionId = builder.regionId;
     }
 
@@ -71,7 +81,7 @@ public class ModifyHostRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,6 +143,13 @@ public class ModifyHostRequest extends Request {
     }
 
     /**
+     * @return prefKex
+     */
+    public String getPrefKex() {
+        return this.prefKex;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -148,6 +165,7 @@ public class ModifyHostRequest extends Request {
         private String instanceId; 
         private String networkDomainId; 
         private String OSType; 
+        private String prefKex; 
         private String regionId; 
 
         private Builder() {
@@ -164,6 +182,7 @@ public class ModifyHostRequest extends Request {
             this.instanceId = request.instanceId;
             this.networkDomainId = request.networkDomainId;
             this.OSType = request.OSType;
+            this.prefKex = request.prefKex;
             this.regionId = request.regionId;
         } 
 
@@ -275,6 +294,15 @@ public class ModifyHostRequest extends Request {
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
             this.OSType = OSType;
+            return this;
+        }
+
+        /**
+         * PrefKex.
+         */
+        public Builder prefKex(String prefKex) {
+            this.putQueryParameter("PrefKex", prefKex);
+            this.prefKex = prefKex;
             return this;
         }
 

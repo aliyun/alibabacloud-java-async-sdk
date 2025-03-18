@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserScope userScope; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyUserScopeResponseBody model) {
+            this.requestId = model.requestId;
+            this.userScope = model.userScope;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -85,10 +102,10 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
         private String scopeType;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-        private java.util.List < String > userGroupIds;
+        private java.util.List<String> userGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("UserIds")
-        private java.util.List < String > userIds;
+        private java.util.List<String> userIds;
 
         private UserScope(Builder builder) {
             this.scopeType = builder.scopeType;
@@ -114,21 +131,30 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
         /**
          * @return userGroupIds
          */
-        public java.util.List < String > getUserGroupIds() {
+        public java.util.List<String> getUserGroupIds() {
             return this.userGroupIds;
         }
 
         /**
          * @return userIds
          */
-        public java.util.List < String > getUserIds() {
+        public java.util.List<String> getUserIds() {
             return this.userIds;
         }
 
         public static final class Builder {
             private String scopeType; 
-            private java.util.List < String > userGroupIds; 
-            private java.util.List < String > userIds; 
+            private java.util.List<String> userGroupIds; 
+            private java.util.List<String> userIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserScope model) {
+                this.scopeType = model.scopeType;
+                this.userGroupIds = model.userGroupIds;
+                this.userIds = model.userIds;
+            } 
 
             /**
              * <p>The scope of users to whom the control policy applies.</p>
@@ -150,7 +176,7 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
             /**
              * <p>The user groups to which the control policy applies.</p>
              */
-            public Builder userGroupIds(java.util.List < String > userGroupIds) {
+            public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
                 return this;
             }
@@ -158,7 +184,7 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
             /**
              * <p>The users to whom the control policy applies.</p>
              */
-            public Builder userIds(java.util.List < String > userIds) {
+            public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
                 return this;
             }
