@@ -48,6 +48,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountTargets
      */
@@ -89,6 +93,17 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMountTargetsResponseBody model) {
+            this.mountTargets = model.mountTargets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about mount targets.</p>
@@ -239,6 +254,18 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String mountTargetName; 
             private String netWorkId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTargets model) {
+                this.ensRegionId = model.ensRegionId;
+                this.fileSystemId = model.fileSystemId;
+                this.mountTargetDomain = model.mountTargetDomain;
+                this.mountTargetName = model.mountTargetName;
+                this.netWorkId = model.netWorkId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the region.</p>

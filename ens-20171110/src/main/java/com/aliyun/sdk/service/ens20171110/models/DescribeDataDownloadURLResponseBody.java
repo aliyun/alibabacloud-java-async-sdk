@@ -44,6 +44,10 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataDownloadURLResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -169,6 +183,14 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             private String host; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerList model) {
+                this.host = model.host;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The host address of the file server.</p>
              * 
@@ -253,6 +275,15 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             private String expireTime; 
             private java.util.List<ServerList> serverList; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.expireTime = model.expireTime;
+                this.serverList = model.serverList;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The time when the data file expires. The time is displayed in UTC.</p>

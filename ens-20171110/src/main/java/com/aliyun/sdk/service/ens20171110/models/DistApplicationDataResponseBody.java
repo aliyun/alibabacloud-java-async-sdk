@@ -44,6 +44,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return distInstanceIds
      */
@@ -77,6 +81,16 @@ public class DistApplicationDataResponseBody extends TeaModel {
         private Integer distInstanceTotalCount; 
         private DistResults distResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DistApplicationDataResponseBody model) {
+            this.distInstanceIds = model.distInstanceIds;
+            this.distInstanceTotalCount = model.distInstanceTotalCount;
+            this.distResults = model.distResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of ENS instance IDs.</p>
@@ -153,6 +167,13 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> distInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DistInstanceIds model) {
+                this.distInstanceId = model.distInstanceId;
+            } 
 
             /**
              * DistInstanceId.
@@ -237,6 +258,16 @@ public class DistApplicationDataResponseBody extends TeaModel {
             private String resultDescrip; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DistResult model) {
+                this.name = model.name;
+                this.resultCode = model.resultCode;
+                this.resultDescrip = model.resultDescrip;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the data file.</p>
              * 
@@ -319,6 +350,13 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DistResult> distResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(DistResults model) {
+                this.distResult = model.distResult;
+            } 
 
             /**
              * DistResult.

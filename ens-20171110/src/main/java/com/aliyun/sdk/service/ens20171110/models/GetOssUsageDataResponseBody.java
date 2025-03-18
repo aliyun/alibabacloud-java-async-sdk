@@ -36,6 +36,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetOssUsageDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UsageList> usageList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssUsageDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.usageList = model.usageList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +194,19 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             private Long storageUsageByte; 
             private Long wanRxBw; 
             private Long wanTxBw; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageList model) {
+                this.lanRxBw = model.lanRxBw;
+                this.lanTxBw = model.lanTxBw;
+                this.point = model.point;
+                this.pointTs = model.pointTs;
+                this.storageUsageByte = model.storageUsageByte;
+                this.wanRxBw = model.wanRxBw;
+                this.wanTxBw = model.wanTxBw;
+            } 
 
             /**
              * <p>The inbound bandwidth over the internal network. Unit: bit/s.</p>

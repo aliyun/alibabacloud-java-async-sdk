@@ -219,7 +219,7 @@ public class RunInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -598,7 +598,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Examples:</p>
          * <ul>
          * <li><strong>true</strong>.</li>
          * <li><strong>false</strong> (default).</li>
@@ -725,7 +725,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method of the instance. Examples:</p>
          * <ul>
          * <li><strong>PrePaid</strong>: subscription.</li>
          * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
@@ -800,11 +800,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the IP address. Examples:</p>
+         * <p>The type of the IP address. Valid values:</p>
          * <ul>
          * <li><strong>ipv4</strong> (default).</li>
          * <li><strong>ipv6</strong>.</li>
-         * <li><strong>ipv4Andipv6</strong>.</li>
+         * <li><strong>ipv4Andipv6</strong> (single stack).</li>
+         * <li><strong>ipv4Withipv6</strong> (dual stack).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -974,7 +975,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <p>The scheduling price policy. Valid values:</p>
+         * <p>The scheduling price policy. Examples:</p>
          * <ul>
          * <li><strong>PriceHighPriority</strong>: The high price prevails.</li>
          * <li><strong>PriceLowPriority</strong>: The low price prevails.</li>
@@ -1021,7 +1022,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * SpotDuration.
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * </ul>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1032,7 +1041,7 @@ public class RunInstancesRequest extends Request {
         /**
          * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
          * <ul>
-         * <li>NoSpot: The instance is created as a regular pay-as-you-go instance.</li>
+         * <li>NoSpot: The elastic container instances are pay-as-you-go instances.</li>
          * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
          * </ul>
          * <p>Default value: NoSpot.</p>
@@ -1179,8 +1188,18 @@ public class RunInstancesRequest extends Request {
             private String KMSKeyId; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.size = model.size;
+            } 
+
             /**
-             * <p>The category of the disk. Valid values:</p>
+             * <p>The category of the disk. Examples:</p>
              * <ul>
              * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
              * <li><strong>cloud_ssd</strong>: all-flash disk.</li>
@@ -1197,7 +1216,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
+             * <p>Specifies whether to encrypt the disk. Valid values:</p>
              * <ul>
              * <li>true.</li>
              * <li>false (default).</li>
@@ -1291,6 +1310,14 @@ public class RunInstancesRequest extends Request {
             private String category; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The category of the system disk.</p>
              * 
@@ -1363,6 +1390,14 @@ public class RunInstancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>

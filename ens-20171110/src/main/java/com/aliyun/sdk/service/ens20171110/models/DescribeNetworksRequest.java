@@ -22,8 +22,16 @@ public class DescribeNetworksRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkIds")
+    private java.util.List<String> networkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkName")
@@ -40,7 +48,9 @@ public class DescribeNetworksRequest extends Request {
     private DescribeNetworksRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.networkId = builder.networkId;
+        this.networkIds = builder.networkIds;
         this.networkName = builder.networkName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -54,7 +64,7 @@ public class DescribeNetworksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,10 +77,24 @@ public class DescribeNetworksRequest extends Request {
     }
 
     /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    /**
+     * @return networkIds
+     */
+    public java.util.List<String> getNetworkIds() {
+        return this.networkIds;
     }
 
     /**
@@ -96,7 +120,9 @@ public class DescribeNetworksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeNetworksRequest, Builder> {
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private String networkId; 
+        private java.util.List<String> networkIds; 
         private String networkName; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -108,7 +134,9 @@ public class DescribeNetworksRequest extends Request {
         private Builder(DescribeNetworksRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.networkId = request.networkId;
+            this.networkIds = request.networkIds;
             this.networkName = request.networkName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -127,6 +155,15 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
+         * <p>The node information.</p>
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
+            return this;
+        }
+
+        /**
          * <p>The ID of the network.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +172,15 @@ public class DescribeNetworksRequest extends Request {
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
             this.networkId = networkId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of Network.</p>
+         */
+        public Builder networkIds(java.util.List<String> networkIds) {
+            this.putQueryParameter("NetworkIds", networkIds);
+            this.networkIds = networkIds;
             return this;
         }
 

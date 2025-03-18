@@ -36,6 +36,10 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -53,6 +57,14 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
     public static final class Builder {
         private MonitorData monitorData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEpnBandWidthDataResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The monitoring data of the instance.</p>
@@ -158,6 +170,17 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             private Long internetTX; 
             private String timeStamp; 
             private Long upBandWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandWidthMonitorData model) {
+                this.downBandWidth = model.downBandWidth;
+                this.internetRX = model.internetRX;
+                this.internetTX = model.internetTX;
+                this.timeStamp = model.timeStamp;
+                this.upBandWidth = model.upBandWidth;
+            } 
 
             /**
              * <p>The outbound bandwidth. Unit: bit/s.</p>
@@ -276,6 +299,15 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             private java.util.List<BandWidthMonitorData> bandWidthMonitorData; 
             private Long maxDownBandWidth; 
             private Long maxUpBandWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.bandWidthMonitorData = model.bandWidthMonitorData;
+                this.maxDownBandWidth = model.maxDownBandWidth;
+                this.maxUpBandWidth = model.maxUpBandWidth;
+            } 
 
             /**
              * <p>The bandwidth data.</p>

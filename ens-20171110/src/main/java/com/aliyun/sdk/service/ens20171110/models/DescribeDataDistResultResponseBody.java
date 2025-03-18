@@ -48,6 +48,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return distResults
      */
@@ -89,6 +93,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataDistResultResponseBody model) {
+            this.distResults = model.distResults;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The distribution status of data files on edge instances.</p>
@@ -216,6 +231,16 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String statusDescrip; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.instanceId = model.instanceId;
+                this.startTime = model.startTime;
+                this.statusDescrip = model.statusDescrip;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The ID of the instance</p>
              * 
@@ -299,6 +324,13 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Instance> instance; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
+
             /**
              * Instance.
              */
@@ -369,6 +401,15 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String instanceCount; 
             private Instances instances; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusStat model) {
+                this.instanceCount = model.instanceCount;
+                this.instances = model.instances;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The number of associated edge instances.</p>
@@ -446,6 +487,13 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<StatusStat> statusStat; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatusStats model) {
+                this.statusStat = model.statusStat;
+            } 
+
             /**
              * StatusStat.
              */
@@ -517,6 +565,15 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private StatusStats statusStats; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DistResult model) {
+                this.name = model.name;
+                this.statusStats = model.statusStats;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the data file.</p>
              * 
@@ -585,6 +642,13 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DistResult> distResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(DistResults model) {
+                this.distResult = model.distResult;
+            } 
 
             /**
              * DistResult.

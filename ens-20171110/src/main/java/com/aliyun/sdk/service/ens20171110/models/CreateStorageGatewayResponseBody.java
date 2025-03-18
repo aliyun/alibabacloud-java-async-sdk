@@ -44,6 +44,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocationId
      */
@@ -77,6 +81,16 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         private String bizStatusCode; 
         private String requestId; 
         private java.util.List<UnAllocationId> unAllocationId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateStorageGatewayResponseBody model) {
+            this.allocationId = model.allocationId;
+            this.bizStatusCode = model.bizStatusCode;
+            this.requestId = model.requestId;
+            this.unAllocationId = model.unAllocationId;
+        } 
 
         /**
          * <p>The list of created nodes.</p>
@@ -170,6 +184,14 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
             private String ensRegionId; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllocationId model) {
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The ID of the node.</p>
              * 
@@ -242,6 +264,14 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private String ensRegionId; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnAllocationId model) {
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The ID of the node.</p>

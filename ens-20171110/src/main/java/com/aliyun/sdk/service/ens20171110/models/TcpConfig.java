@@ -42,6 +42,10 @@ public class TcpConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return establishedTimeout
      */
@@ -67,6 +71,15 @@ public class TcpConfig extends TeaModel {
         private Integer establishedTimeout; 
         private Integer persistenceTimeout; 
         private String scheduler; 
+
+        private Builder() {
+        } 
+
+        private Builder(TcpConfig model) {
+            this.establishedTimeout = model.establishedTimeout;
+            this.persistenceTimeout = model.persistenceTimeout;
+            this.scheduler = model.scheduler;
+        } 
 
         /**
          * EstablishedTimeout.

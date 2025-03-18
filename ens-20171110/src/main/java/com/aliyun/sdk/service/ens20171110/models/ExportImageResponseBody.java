@@ -36,6 +36,10 @@ public class ExportImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exportedImageURL
      */
@@ -53,6 +57,14 @@ public class ExportImageResponseBody extends TeaModel {
     public static final class Builder {
         private String exportedImageURL; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportImageResponseBody model) {
+            this.exportedImageURL = model.exportedImageURL;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The URL that points to the exported image.</p>

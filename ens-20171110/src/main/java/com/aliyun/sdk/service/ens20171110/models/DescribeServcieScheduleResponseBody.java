@@ -60,6 +60,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return index
      */
@@ -125,6 +129,20 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         private String requestId; 
         private Boolean requestRepeated; 
         private String tcpPorts; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServcieScheduleResponseBody model) {
+            this.index = model.index;
+            this.instanceId = model.instanceId;
+            this.instanceIp = model.instanceIp;
+            this.instancePort = model.instancePort;
+            this.podAbstractInfo = model.podAbstractInfo;
+            this.requestId = model.requestId;
+            this.requestRepeated = model.requestRepeated;
+            this.tcpPorts = model.tcpPorts;
+        } 
 
         /**
          * <p>The index number of the scheduled virtual device (pod).</p>
@@ -261,6 +279,14 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             private String containerId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerStatus model) {
+                this.containerId = model.containerId;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The ID of the container.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ContainerStatus> containerStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainerStatuses model) {
+                this.containerStatus = model.containerStatus;
+            } 
 
             /**
              * ContainerStatus.
@@ -428,6 +461,18 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             private Boolean namespace; 
             private Boolean resourceScope; 
             private Boolean status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodAbstractInfo model) {
+                this.containerService = model.containerService;
+                this.containerStatuses = model.containerStatuses;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.resourceScope = model.resourceScope;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the container service.</p>

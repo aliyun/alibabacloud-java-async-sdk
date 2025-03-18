@@ -36,6 +36,10 @@ public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commodityCodeInfo
      */
@@ -53,6 +57,14 @@ public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CommodityCodeInfo> commodityCodeInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsCommodityCodeResponseBody model) {
+            this.commodityCodeInfo = model.commodityCodeInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CommodityCodeInfo.
@@ -119,6 +131,14 @@ public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String commodityCode; 
             private String commodityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommodityCodeInfo model) {
+                this.commodityCode = model.commodityCode;
+                this.commodityName = model.commodityName;
+            } 
 
             /**
              * CommodityCode.

@@ -36,6 +36,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ensResourceUsage
      */
@@ -53,6 +57,14 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EnsResourceUsage> ensResourceUsage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsResourceUsageResponseBody model) {
+            this.ensResourceUsage = model.ensResourceUsage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The resource usage data.</p>
@@ -230,6 +242,23 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             private Integer runningCount; 
             private String serviceType; 
             private Long storageSum; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnsResourceUsage model) {
+                this.computeResourceCount = model.computeResourceCount;
+                this.cpuSum = model.cpuSum;
+                this.diskCount = model.diskCount;
+                this.downCount = model.downCount;
+                this.expiredCount = model.expiredCount;
+                this.expiringCount = model.expiringCount;
+                this.gpuSum = model.gpuSum;
+                this.instanceCount = model.instanceCount;
+                this.runningCount = model.runningCount;
+                this.serviceType = model.serviceType;
+                this.storageSum = model.storageSum;
+            } 
 
             /**
              * <p>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</p>

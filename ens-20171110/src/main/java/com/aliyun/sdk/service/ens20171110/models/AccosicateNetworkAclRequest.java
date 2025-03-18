@@ -41,7 +41,7 @@ public class AccosicateNetworkAclRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -149,6 +149,14 @@ public class AccosicateNetworkAclRequest extends Request {
         public static final class Builder {
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The ID of the associated resource.</p>

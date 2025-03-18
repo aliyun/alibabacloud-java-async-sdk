@@ -36,6 +36,10 @@ public class ModifyImageAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,6 +57,14 @@ public class ModifyImageAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyImageAttributeResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>

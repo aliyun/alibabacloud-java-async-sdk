@@ -44,6 +44,10 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         private Images images; 
         private String requestId; 
         private SupportResources supportResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReservedResourceResponseBody model) {
+            this.code = model.code;
+            this.images = model.images;
+            this.requestId = model.requestId;
+            this.supportResources = model.supportResources;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>
@@ -166,6 +180,14 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             private String imageId; 
             private String imageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+            } 
+
             /**
              * <p>The ID of the image.</p>
              * 
@@ -227,6 +249,13 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Image> image; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.image = model.image;
+            } 
+
             /**
              * Image.
              */
@@ -274,6 +303,13 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> dataDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDiskSizes model) {
+                this.dataDiskSize = model.dataDiskSize;
+            } 
+
             /**
              * DataDiskSize.
              */
@@ -320,6 +356,13 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDiskSizes model) {
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * SystemDiskSize.
@@ -416,6 +459,17 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             private String supportResourcesCount; 
             private SystemDiskSizes systemDiskSizes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportResource model) {
+                this.dataDiskSizes = model.dataDiskSizes;
+                this.ensRegionId = model.ensRegionId;
+                this.instanceSpec = model.instanceSpec;
+                this.supportResourcesCount = model.supportResourcesCount;
+                this.systemDiskSizes = model.systemDiskSizes;
+            } 
+
             /**
              * <p>The sizes of data disks.</p>
              */
@@ -503,6 +557,13 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportResource> supportResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResources model) {
+                this.supportResource = model.supportResource;
+            } 
 
             /**
              * SupportResource.

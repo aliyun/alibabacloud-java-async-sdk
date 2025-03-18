@@ -67,6 +67,10 @@ public class HttpConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cookie
      */
@@ -140,6 +144,21 @@ public class HttpConfig extends TeaModel {
         private String stickySession; 
         private String stickySessionType; 
         private String xForwardedFor; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpConfig model) {
+            this.cookie = model.cookie;
+            this.cookieTimeout = model.cookieTimeout;
+            this.idleTimeout = model.idleTimeout;
+            this.requestTimeout = model.requestTimeout;
+            this.scheduler = model.scheduler;
+            this.serverCertificateId = model.serverCertificateId;
+            this.stickySession = model.stickySession;
+            this.stickySessionType = model.stickySessionType;
+            this.xForwardedFor = model.xForwardedFor;
+        } 
 
         /**
          * Cookie.

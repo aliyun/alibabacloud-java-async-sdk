@@ -20,8 +20,12 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private ReleaseInstanceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -32,6 +36,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -39,8 +47,24 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReleaseInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -50,6 +74,14 @@ public class ReleaseInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 

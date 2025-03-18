@@ -32,6 +32,10 @@ public class DeleteSnatIpForSnatEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class DeleteSnatIpForSnatEntryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSnatIpForSnatEntryResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -64,6 +64,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avaliableCount
      */
@@ -137,6 +141,21 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGap; 
         private Integer systemDiskSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePrePaidInstanceStockResponseBody model) {
+            this.avaliableCount = model.avaliableCount;
+            this.cores = model.cores;
+            this.dataDiskSize = model.dataDiskSize;
+            this.ensRegionId = model.ensRegionId;
+            this.instanceSpec = model.instanceSpec;
+            this.memory = model.memory;
+            this.requestId = model.requestId;
+            this.resourceGap = model.resourceGap;
+            this.systemDiskSize = model.systemDiskSize;
+        } 
 
         /**
          * <p>The number of resources that you can purchase.</p>

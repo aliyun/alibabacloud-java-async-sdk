@@ -52,6 +52,10 @@ public class DescribeDisksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeDisksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDisksResponseBody model) {
+            this.code = model.code;
+            this.disks = model.disks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>
@@ -407,6 +423,30 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DisksDisks model) {
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.diskChargeType = model.diskChargeType;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.encryptedKeyId = model.encryptedKeyId;
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.portable = model.portable;
+                this.serialId = model.serialId;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The category of the disk.</p>
              * <ul>
@@ -436,7 +476,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteWithInstance.
+             * <p>Specifies whether the disk to be attached is released with the instance. Valid values:</p>
+             * <ul>
+             * <li>true: The disk will be released when the ECS instance is released.</li>
+             * <li>false: The disk will be retained when the ECS instance is released.</li>
+             * <li>If you leave this parameter empty, the default value is used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -444,7 +492,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The namespace description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -673,6 +724,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DisksDisks> disks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.disks = model.disks;
+            } 
 
             /**
              * <p>The information about the disks.</p>

@@ -48,6 +48,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkInterfaceSets
      */
@@ -89,6 +93,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkInterfacesResponseBody model) {
+            this.networkInterfaceSets = model.networkInterfaceSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the ENIs.</p>
@@ -180,6 +195,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private String ipv6Address; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Set model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
+
             /**
              * <p>The IPv6 address of the ENI.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Set> ipv6Set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Sets model) {
+                this.ipv6Set = model.ipv6Set;
+            } 
 
             /**
              * Ipv6Set.
@@ -288,6 +317,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean primary; 
             private String privateIpAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSet model) {
+                this.primary = model.primary;
+                this.privateIpAddress = model.privateIpAddress;
+            } 
 
             /**
              * <p>Specifies whether the private IP address is the primary private IP address. Valid values:</p>
@@ -354,6 +391,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PrivateIpSet> privateIpSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSets model) {
+                this.privateIpSet = model.privateIpSet;
+            } 
+
             /**
              * PrivateIpSet.
              */
@@ -400,6 +444,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroup = model.securityGroup;
+            } 
 
             /**
              * SecurityGroup.
@@ -628,6 +679,28 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String type; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceSet model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+                this.ipv6Sets = model.ipv6Sets;
+                this.macAddress = model.macAddress;
+                this.networkId = model.networkId;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfaceName = model.networkInterfaceName;
+                this.primaryIp = model.primaryIp;
+                this.primaryIpType = model.primaryIpType;
+                this.privateIpSets = model.privateIpSets;
+                this.securityGroupIds = model.securityGroupIds;
+                this.status = model.status;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The time when the ENI was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
              * 
@@ -848,6 +921,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NetworkInterfaceSet> networkInterfaceSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceSets model) {
+                this.networkInterfaceSet = model.networkInterfaceSet;
+            } 
 
             /**
              * NetworkInterfaceSet.

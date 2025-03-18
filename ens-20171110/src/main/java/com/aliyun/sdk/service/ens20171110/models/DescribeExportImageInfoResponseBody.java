@@ -48,6 +48,10 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -89,6 +93,17 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExportImageInfoResponseBody model) {
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.</p>
@@ -264,6 +279,20 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             private String imageOwnerAlias; 
             private String platform; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.architecture = model.architecture;
+                this.creationTime = model.creationTime;
+                this.exportedImageURL = model.exportedImageURL;
+                this.imageExportStatus = model.imageExportStatus;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.platform = model.platform;
+            } 
+
             /**
              * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
              * 
@@ -400,6 +429,13 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Image> image; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.image = model.image;
+            } 
 
             /**
              * Image.

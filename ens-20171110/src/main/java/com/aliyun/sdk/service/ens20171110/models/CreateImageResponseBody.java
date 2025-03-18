@@ -40,6 +40,10 @@ public class CreateImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class CreateImageResponseBody extends TeaModel {
         private Integer code; 
         private String imageId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateImageResponseBody model) {
+            this.code = model.code;
+            this.imageId = model.imageId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>

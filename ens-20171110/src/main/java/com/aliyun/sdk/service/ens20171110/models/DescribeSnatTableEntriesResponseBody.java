@@ -48,6 +48,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SnatTableEntries> snatTableEntries; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnatTableEntriesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snatTableEntries = model.snatTableEntries;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -155,6 +170,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
      * <p>DescribeSnatTableEntriesResponseBody</p>
      */
     public static class SnatTableEntries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EipAffinity")
+        private Boolean eipAffinity;
+
         @com.aliyun.core.annotation.NameInMap("IdleTimeout")
         private Integer idleTimeout;
 
@@ -186,6 +204,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private String status;
 
         private SnatTableEntries(Builder builder) {
+            this.eipAffinity = builder.eipAffinity;
             this.idleTimeout = builder.idleTimeout;
             this.ispAffinity = builder.ispAffinity;
             this.natGatewayId = builder.natGatewayId;
@@ -204,6 +223,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         public static SnatTableEntries create() {
             return builder().build();
+        }
+
+        /**
+         * @return eipAffinity
+         */
+        public Boolean getEipAffinity() {
+            return this.eipAffinity;
         }
 
         /**
@@ -277,6 +303,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean eipAffinity; 
             private Integer idleTimeout; 
             private Boolean ispAffinity; 
             private String natGatewayId; 
@@ -287,6 +314,31 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String standbySnatIp; 
             private String standbyStatus; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnatTableEntries model) {
+                this.eipAffinity = model.eipAffinity;
+                this.idleTimeout = model.idleTimeout;
+                this.ispAffinity = model.ispAffinity;
+                this.natGatewayId = model.natGatewayId;
+                this.snatEntryId = model.snatEntryId;
+                this.snatEntryName = model.snatEntryName;
+                this.snatIp = model.snatIp;
+                this.sourceCIDR = model.sourceCIDR;
+                this.standbySnatIp = model.standbySnatIp;
+                this.standbyStatus = model.standbyStatus;
+                this.status = model.status;
+            } 
+
+            /**
+             * EipAffinity.
+             */
+            public Builder eipAffinity(Boolean eipAffinity) {
+                this.eipAffinity = eipAffinity;
+                return this;
+            }
 
             /**
              * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
@@ -300,7 +352,16 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * IspAffinity.
+             * <p>Whether to enable operator affinity. Value taking:</p>
+             * <ul>
+             * <li><p>false:Do not open.</p>
+             * </li>
+             * <li><p>true:Open.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ispAffinity(Boolean ispAffinity) {
                 this.ispAffinity = ispAffinity;

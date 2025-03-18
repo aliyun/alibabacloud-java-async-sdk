@@ -36,6 +36,10 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return measurementDatas
      */
@@ -53,6 +57,14 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     public static final class Builder {
         private MeasurementDatas measurementDatas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMeasurementDataResponseBody model) {
+            this.measurementDatas = model.measurementDatas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The metering data returned.</p>
@@ -135,6 +147,15 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private String costName; 
             private Integer costVal; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandWidthFeeData model) {
+                this.costCode = model.costCode;
+                this.costName = model.costName;
+                this.costVal = model.costVal;
+            } 
+
             /**
              * <p>The code of the bandwidth plan.</p>
              * 
@@ -207,6 +228,13 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BandWidthFeeData> bandWidthFeeData; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandWidthFeeDatas model) {
+                this.bandWidthFeeData = model.bandWidthFeeData;
+            } 
+
             /**
              * BandWidthFeeData.
              */
@@ -277,6 +305,15 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private Integer memory; 
             private Integer storage; 
             private Integer vcpu; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceFeeData model) {
+                this.memory = model.memory;
+                this.storage = model.storage;
+                this.vcpu = model.vcpu;
+            } 
 
             /**
              * <p>The memory size. Unit: GB.</p>
@@ -386,6 +423,16 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private Integer costVal; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceFeeDataDetail model) {
+                this.costCode = model.costCode;
+                this.costName = model.costName;
+                this.costVal = model.costVal;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The code of the resource.</p>
              * 
@@ -473,6 +520,13 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourceFeeDataDetail> resourceFeeDataDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceFeeDataDetails model) {
+                this.resourceFeeDataDetail = model.resourceFeeDataDetail;
+            } 
 
             /**
              * ResourceFeeDataDetail.
@@ -593,6 +647,19 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private ResourceFeeData resourceFeeData; 
             private ResourceFeeDataDetails resourceFeeDataDetails; 
 
+            private Builder() {
+            } 
+
+            private Builder(MeasurementData model) {
+                this.bandWidthFeeDatas = model.bandWidthFeeDatas;
+                this.chargeModel = model.chargeModel;
+                this.costCycle = model.costCycle;
+                this.costEndTime = model.costEndTime;
+                this.costStartTime = model.costStartTime;
+                this.resourceFeeData = model.resourceFeeData;
+                this.resourceFeeDataDetails = model.resourceFeeDataDetails;
+            } 
+
             /**
              * <p>The bandwidth data returned.</p>
              */
@@ -703,6 +770,13 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MeasurementData> measurementData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeasurementDatas model) {
+                this.measurementData = model.measurementData;
+            } 
 
             /**
              * MeasurementData.

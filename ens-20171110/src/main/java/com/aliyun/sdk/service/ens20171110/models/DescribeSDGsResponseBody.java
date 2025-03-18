@@ -36,6 +36,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSDGsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SDGs> SDGs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSDGsResponseBody model) {
+            this.requestId = model.requestId;
+            this.SDGs = model.SDGs;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private String regionId; 
             private String snapshotId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvaliableRegionIds model) {
+                this.creationTime = model.creationTime;
+                this.regionId = model.regionId;
+                this.snapshotId = model.snapshotId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the SDG was created on the node.</p>
@@ -272,6 +294,16 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private String deploymentType; 
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployedInstanceIds model) {
+                this.creationTime = model.creationTime;
+                this.deploymentType = model.deploymentType;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the SDG was deployed on the instance.</p>
@@ -484,6 +516,23 @@ public class DescribeSDGsResponseBody extends TeaModel {
             private Long size; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SDGs model) {
+                this.avaliableRegionIds = model.avaliableRegionIds;
+                this.creationInstanceId = model.creationInstanceId;
+                this.creationRegionId = model.creationRegionId;
+                this.creationTime = model.creationTime;
+                this.deployedInstanceIds = model.deployedInstanceIds;
+                this.description = model.description;
+                this.parentSDGId = model.parentSDGId;
+                this.SDGId = model.SDGId;
+                this.size = model.size;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The IDs of available edge nodes.</p>

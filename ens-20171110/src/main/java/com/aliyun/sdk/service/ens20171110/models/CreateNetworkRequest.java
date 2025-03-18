@@ -58,7 +58,7 @@ public class CreateNetworkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,7 +180,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -239,8 +239,24 @@ public class CreateNetworkRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag that are to add to the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <ul>
+             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The key must be up to 64 characters in length.</li>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -248,7 +264,10 @@ public class CreateNetworkRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

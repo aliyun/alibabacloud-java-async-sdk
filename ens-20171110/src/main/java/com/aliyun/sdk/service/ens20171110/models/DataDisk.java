@@ -32,6 +32,10 @@ public class DataDisk extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return size
      */
@@ -41,6 +45,13 @@ public class DataDisk extends TeaModel {
 
     public static final class Builder {
         private Long size; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataDisk model) {
+            this.size = model.size;
+        } 
 
         /**
          * Size.

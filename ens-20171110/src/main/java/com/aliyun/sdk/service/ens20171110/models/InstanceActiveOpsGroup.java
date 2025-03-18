@@ -32,6 +32,10 @@ public class InstanceActiveOpsGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -41,6 +45,13 @@ public class InstanceActiveOpsGroup extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> instanceIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceActiveOpsGroup model) {
+            this.instanceIds = model.instanceIds;
+        } 
 
         /**
          * InstanceIds.

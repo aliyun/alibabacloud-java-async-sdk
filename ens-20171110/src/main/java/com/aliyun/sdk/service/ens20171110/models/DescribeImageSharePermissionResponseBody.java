@@ -52,6 +52,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -101,6 +105,18 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageSharePermissionResponseBody model) {
+            this.accounts = model.accounts;
+            this.imageId = model.imageId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The account information.</p>
@@ -177,9 +193,63 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
      *
      * <p>DescribeImageSharePermissionResponseBody</p>
      */
+    public static class Account extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AliyunUid")
+        private String aliyunUid;
+
+        private Account(Builder builder) {
+            this.aliyunUid = builder.aliyunUid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Account create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aliyunUid
+         */
+        public String getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+        public static final class Builder {
+            private String aliyunUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.aliyunUid = model.aliyunUid;
+            } 
+
+            /**
+             * AliyunUid.
+             */
+            public Builder aliyunUid(String aliyunUid) {
+                this.aliyunUid = aliyunUid;
+                return this;
+            }
+
+            public Account build() {
+                return new Account(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSharePermissionResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
-        private java.util.List<String> account;
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -196,17 +266,24 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List<String> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List<String> account; 
+            private java.util.List<Account> account; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.account = model.account;
+            } 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List<String> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }

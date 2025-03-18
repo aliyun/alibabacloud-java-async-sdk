@@ -36,6 +36,10 @@ public class DescribePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -53,6 +57,14 @@ public class DescribePriceResponseBody extends TeaModel {
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The price information.</p>
@@ -147,6 +159,16 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The type of currency.</p>
              * <ul>
@@ -233,6 +255,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Price price; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.price = model.price;
+            } 
 
             /**
              * <p>The price.</p>

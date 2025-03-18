@@ -18,6 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLoadBalancerListenersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
+    private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
+    private Integer listenerPort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
@@ -33,6 +43,8 @@ public class DescribeLoadBalancerListenersRequest extends Request {
 
     private DescribeLoadBalancerListenersRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
+        this.listenerPort = builder.listenerPort;
         this.loadBalancerId = builder.loadBalancerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -46,9 +58,23 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return listenerPort
+     */
+    public Integer getListenerPort() {
+        return this.listenerPort;
     }
 
     /**
@@ -73,6 +99,8 @@ public class DescribeLoadBalancerListenersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLoadBalancerListenersRequest, Builder> {
+        private String description; 
+        private Integer listenerPort; 
         private String loadBalancerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -83,10 +111,30 @@ public class DescribeLoadBalancerListenersRequest extends Request {
 
         private Builder(DescribeLoadBalancerListenersRequest request) {
             super(request);
+            this.description = request.description;
+            this.listenerPort = request.listenerPort;
             this.loadBalancerId = request.loadBalancerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * ListenerPort.
+         */
+        public Builder listenerPort(Integer listenerPort) {
+            this.putQueryParameter("ListenerPort", listenerPort);
+            this.listenerPort = listenerPort;
+            return this;
+        }
 
         /**
          * <p>The ID of the ELB instance.</p>

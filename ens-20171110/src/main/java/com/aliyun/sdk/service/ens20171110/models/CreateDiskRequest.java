@@ -77,7 +77,7 @@ public class CreateDiskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -289,7 +289,8 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
+         * <p>You can specify at most 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -348,8 +349,24 @@ public class CreateDiskRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <ul>
+             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The key must be up to 64 characters in length.</li>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pro</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -357,7 +374,15 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Key</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 20.</li>
+             * <li>The value of this parameter can be an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -36,6 +36,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assignedPrivateIpAddressesSet
      */
@@ -53,6 +57,14 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     public static final class Builder {
         private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssignPrivateIpAddressesResponseBody model) {
+            this.assignedPrivateIpAddressesSet = model.assignedPrivateIpAddressesSet;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
@@ -122,6 +134,14 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         public static final class Builder {
             private String networkInterfaceId; 
             private java.util.List<String> privateIpSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssignedPrivateIpAddressesSet model) {
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.privateIpSet = model.privateIpSet;
+            } 
 
             /**
              * <p>The ID of the ENI.</p>

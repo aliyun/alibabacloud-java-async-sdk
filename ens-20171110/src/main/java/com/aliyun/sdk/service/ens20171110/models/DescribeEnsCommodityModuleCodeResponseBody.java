@@ -36,6 +36,10 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commodityCodesInfo
      */
@@ -53,6 +57,14 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CommodityCodesInfo> commodityCodesInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsCommodityModuleCodeResponseBody model) {
+            this.commodityCodesInfo = model.commodityCodesInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CommodityCodesInfo.
@@ -120,6 +132,14 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
             private String moduleCode; 
             private String moduleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleCodesInfo model) {
+                this.moduleCode = model.moduleCode;
+                this.moduleName = model.moduleName;
+            } 
+
             /**
              * ModuleCode.
              */
@@ -186,6 +206,14 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
         public static final class Builder {
             private String commodityCode; 
             private java.util.List<ModuleCodesInfo> moduleCodesInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommodityCodesInfo model) {
+                this.commodityCode = model.commodityCode;
+                this.moduleCodesInfo = model.moduleCodesInfo;
+            } 
 
             /**
              * CommodityCode.

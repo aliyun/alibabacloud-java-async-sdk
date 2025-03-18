@@ -40,6 +40,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private Integer code; 
         private InstanceTypes instanceTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTypesResponseBody model) {
+            this.code = model.code;
+            this.instanceTypes = model.instanceTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
@@ -170,6 +183,16 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private String instanceTypeName; 
             private Integer memorySize; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceType model) {
+                this.cpuCoreCount = model.cpuCoreCount;
+                this.instanceTypeId = model.instanceTypeId;
+                this.instanceTypeName = model.instanceTypeName;
+                this.memorySize = model.memorySize;
+            } 
+
             /**
              * <p>The number of vCPUs.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceType> instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * InstanceType.

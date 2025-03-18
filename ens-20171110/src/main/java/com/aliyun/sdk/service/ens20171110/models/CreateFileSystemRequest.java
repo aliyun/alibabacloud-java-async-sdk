@@ -35,7 +35,7 @@ public class CreateFileSystemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +200,20 @@ public class CreateFileSystemRequest extends Request {
             private String orderType; 
             private String protocolType; 
             private String storgeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderDetails model) {
+                this.chargeType = model.chargeType;
+                this.ensRegionId = model.ensRegionId;
+                this.fileSystemName = model.fileSystemName;
+                this.mountTargetDomain = model.mountTargetDomain;
+                this.networkId = model.networkId;
+                this.orderType = model.orderType;
+                this.protocolType = model.protocolType;
+                this.storgeType = model.storgeType;
+            } 
 
             /**
              * <p>The billing method of the NAS file system. Valid values:</p>

@@ -36,6 +36,10 @@ public class DeleteImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,6 +57,14 @@ public class DeleteImageResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteImageResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>

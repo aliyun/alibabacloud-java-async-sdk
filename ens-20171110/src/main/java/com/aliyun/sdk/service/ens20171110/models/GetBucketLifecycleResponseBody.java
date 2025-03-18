@@ -36,6 +36,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Rule> rule; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBucketLifecycleResponseBody model) {
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         public static final class Builder {
             private String createdBeforeDate; 
             private String days; 
+
+            private Builder() {
+            } 
+
+            private Builder(Expiration model) {
+                this.createdBeforeDate = model.createdBeforeDate;
+                this.days = model.days;
+            } 
 
             /**
              * <p>The expiration date.</p>
@@ -219,6 +239,16 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
             private String id; 
             private String prefix; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.expiration = model.expiration;
+                this.id = model.id;
+                this.prefix = model.prefix;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The expiration time.</p>

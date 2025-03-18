@@ -36,6 +36,10 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkInterfaceIds
      */
@@ -53,6 +57,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> networkInterfaceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNetworkInterfaceResponseBody model) {
+            this.networkInterfaceIds = model.networkInterfaceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * NetworkInterfaceIds.

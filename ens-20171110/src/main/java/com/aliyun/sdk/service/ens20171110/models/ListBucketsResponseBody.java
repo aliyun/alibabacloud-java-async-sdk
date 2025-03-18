@@ -40,6 +40,10 @@ public class ListBucketsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketInfos
      */
@@ -65,6 +69,15 @@ public class ListBucketsResponseBody extends TeaModel {
         private java.util.List<BucketInfos> bucketInfos; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBucketsResponseBody model) {
+            this.bucketInfos = model.bucketInfos;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of bucket information.</p>
@@ -205,6 +218,19 @@ public class ListBucketsResponseBody extends TeaModel {
             private String ensRegionId; 
             private String logicalBucketType; 
             private String modifyTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(BucketInfos model) {
+                this.bucketAcl = model.bucketAcl;
+                this.bucketName = model.bucketName;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.ensRegionId = model.ensRegionId;
+                this.logicalBucketType = model.logicalBucketType;
+                this.modifyTime = model.modifyTime;
+            } 
 
             /**
              * <p>The access control list (ACL) of the bucket.</p>

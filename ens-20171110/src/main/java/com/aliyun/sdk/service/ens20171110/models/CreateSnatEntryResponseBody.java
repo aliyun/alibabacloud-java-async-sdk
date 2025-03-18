@@ -36,6 +36,10 @@ public class CreateSnatEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateSnatEntryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String snatEntryId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSnatEntryResponseBody model) {
+            this.requestId = model.requestId;
+            this.snatEntryId = model.snatEntryId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

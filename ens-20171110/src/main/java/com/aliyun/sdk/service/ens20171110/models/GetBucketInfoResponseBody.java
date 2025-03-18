@@ -36,6 +36,10 @@ public class GetBucketInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketInfo
      */
@@ -53,6 +57,14 @@ public class GetBucketInfoResponseBody extends TeaModel {
     public static final class Builder {
         private BucketInfo bucketInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBucketInfoResponseBody model) {
+            this.bucketInfo = model.bucketInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of bucket information.</p>
@@ -170,6 +182,18 @@ public class GetBucketInfoResponseBody extends TeaModel {
             private String createTime; 
             private String logicalBucketType; 
             private String modifyTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(BucketInfo model) {
+                this.bucketAcl = model.bucketAcl;
+                this.bucketName = model.bucketName;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.logicalBucketType = model.logicalBucketType;
+                this.modifyTime = model.modifyTime;
+            } 
 
             /**
              * <p>The ACL of the bucket.</p>

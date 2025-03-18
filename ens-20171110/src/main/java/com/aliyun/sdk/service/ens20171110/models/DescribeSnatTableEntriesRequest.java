@@ -44,6 +44,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
     private String snatIp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIps")
+    private java.util.List<String> snatIps;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
 
@@ -55,6 +59,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         this.snatEntryId = builder.snatEntryId;
         this.snatEntryName = builder.snatEntryName;
         this.snatIp = builder.snatIp;
+        this.snatIps = builder.snatIps;
         this.sourceCIDR = builder.sourceCIDR;
     }
 
@@ -66,7 +71,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,6 +119,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
     }
 
     /**
+     * @return snatIps
+     */
+    public java.util.List<String> getSnatIps() {
+        return this.snatIps;
+    }
+
+    /**
      * @return sourceCIDR
      */
     public String getSourceCIDR() {
@@ -127,6 +139,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         private String snatEntryId; 
         private String snatEntryName; 
         private String snatIp; 
+        private java.util.List<String> snatIps; 
         private String sourceCIDR; 
 
         private Builder() {
@@ -141,6 +154,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
             this.snatEntryId = request.snatEntryId;
             this.snatEntryName = request.snatEntryName;
             this.snatIp = request.snatIp;
+            this.snatIps = request.snatIps;
             this.sourceCIDR = request.sourceCIDR;
         } 
 
@@ -216,6 +230,15 @@ public class DescribeSnatTableEntriesRequest extends Request {
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
             this.snatIp = snatIp;
+            return this;
+        }
+
+        /**
+         * SnatIps.
+         */
+        public Builder snatIps(java.util.List<String> snatIps) {
+            this.putQueryParameter("SnatIps", snatIps);
+            this.snatIps = snatIps;
             return this;
         }
 

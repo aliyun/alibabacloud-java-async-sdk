@@ -96,6 +96,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendServerPort
      */
@@ -233,6 +237,29 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private String scheduler; 
         private String status; 
         private Integer unhealthyThreshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerUDPListenerAttributeResponseBody model) {
+            this.backendServerPort = model.backendServerPort;
+            this.bandwidth = model.bandwidth;
+            this.description = model.description;
+            this.eipTransmit = model.eipTransmit;
+            this.establishedTimeout = model.establishedTimeout;
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+            this.healthCheckExp = model.healthCheckExp;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckReq = model.healthCheckReq;
+            this.healthyThreshold = model.healthyThreshold;
+            this.listenerPort = model.listenerPort;
+            this.requestId = model.requestId;
+            this.scheduler = model.scheduler;
+            this.status = model.status;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+        } 
 
         /**
          * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>

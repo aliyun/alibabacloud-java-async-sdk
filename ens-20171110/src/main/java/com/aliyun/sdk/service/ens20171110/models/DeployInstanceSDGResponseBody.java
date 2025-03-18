@@ -36,6 +36,10 @@ public class DeployInstanceSDGResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DeployInstanceSDGResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeployInstanceSDGResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data object.</p>
@@ -122,6 +134,14 @@ public class DeployInstanceSDGResponseBody extends TeaModel {
         public static final class Builder {
             private String errMessage; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedItems model) {
+                this.errMessage = model.errMessage;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The error message that is returned.</p>
@@ -207,6 +227,15 @@ public class DeployInstanceSDGResponseBody extends TeaModel {
             private Long failedCount; 
             private java.util.List<FailedItems> failedItems; 
             private Long successCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.failedCount = model.failedCount;
+                this.failedItems = model.failedItems;
+                this.successCount = model.successCount;
+            } 
 
             /**
              * <p>The number of failed tasks.</p>
@@ -300,6 +329,15 @@ public class DeployInstanceSDGResponseBody extends TeaModel {
             private String message; 
             private Result result; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.result = model.result;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The response message. Success is returned for a successful request.</p>

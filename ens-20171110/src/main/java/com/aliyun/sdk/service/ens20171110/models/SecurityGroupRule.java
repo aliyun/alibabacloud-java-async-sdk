@@ -65,6 +65,10 @@ public class SecurityGroupRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -138,6 +142,21 @@ public class SecurityGroupRule extends TeaModel {
         private String sourceCidrIp; 
         private String sourcePortRange; 
         private Integer priority; 
+
+        private Builder() {
+        } 
+
+        private Builder(SecurityGroupRule model) {
+            this.description = model.description;
+            this.destCidrIp = model.destCidrIp;
+            this.direction = model.direction;
+            this.ipProtocol = model.ipProtocol;
+            this.policy = model.policy;
+            this.portRange = model.portRange;
+            this.sourceCidrIp = model.sourceCidrIp;
+            this.sourcePortRange = model.sourcePortRange;
+            this.priority = model.priority;
+        } 
 
         /**
          * Description.

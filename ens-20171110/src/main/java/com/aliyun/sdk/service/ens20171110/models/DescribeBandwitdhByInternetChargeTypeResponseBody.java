@@ -44,6 +44,10 @@ public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthValue
      */
@@ -77,6 +81,16 @@ public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel 
         private String internetChargeType; 
         private String requestId; 
         private String timeStamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBandwitdhByInternetChargeTypeResponseBody model) {
+            this.bandwidthValue = model.bandwidthValue;
+            this.internetChargeType = model.internetChargeType;
+            this.requestId = model.requestId;
+            this.timeStamp = model.timeStamp;
+        } 
 
         /**
          * <p>The bandwidth. Unit: bit/s.</p>

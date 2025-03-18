@@ -48,6 +48,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancers
      */
@@ -89,6 +93,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancersResponseBody model) {
+            this.loadBalancers = model.loadBalancers;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array of ELB instances.</p>
@@ -288,6 +303,22 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String payType; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancer model) {
+                this.address = model.address;
+                this.addressIPVersion = model.addressIPVersion;
+                this.createTime = model.createTime;
+                this.ensRegionId = model.ensRegionId;
+                this.loadBalancerId = model.loadBalancerId;
+                this.loadBalancerName = model.loadBalancerName;
+                this.loadBalancerStatus = model.loadBalancerStatus;
+                this.networkId = model.networkId;
+                this.payType = model.payType;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The IP address that the ELB instance uses to provide services.</p>
              * 
@@ -444,6 +475,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LoadBalancer> loadBalancer; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.loadBalancer = model.loadBalancer;
+            } 
 
             /**
              * LoadBalancer.

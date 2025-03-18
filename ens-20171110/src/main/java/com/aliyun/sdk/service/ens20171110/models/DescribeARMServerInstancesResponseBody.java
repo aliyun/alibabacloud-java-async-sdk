@@ -48,6 +48,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Servers> servers; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeARMServerInstancesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.servers = model.servers;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -204,6 +219,15 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String networkId; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkAttributes model) {
+                this.ipAddress = model.ipAddress;
+                this.networkId = model.networkId;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The IP address of the AIC instance.</p>
              * 
@@ -287,6 +311,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String SDGId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SdgDeployInfo model) {
+                this.SDGId = model.SDGId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the SDG.</p>
@@ -473,6 +505,23 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String spec; 
             private String state; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AICInstances model) {
+                this.frequency = model.frequency;
+                this.imageId = model.imageId;
+                this.instanceId = model.instanceId;
+                this.latestAction = model.latestAction;
+                this.name = model.name;
+                this.networkAttributes = model.networkAttributes;
+                this.resolution = model.resolution;
+                this.sdgDeployInfo = model.sdgDeployInfo;
+                this.spec = model.spec;
+                this.state = model.state;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The refresh rate of the AIC instance. Unit: Hz.</p>
@@ -772,6 +821,24 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String specName; 
             private String state; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.AICInstances = model.AICInstances;
+                this.creationTime = model.creationTime;
+                this.ensRegionId = model.ensRegionId;
+                this.expiredTime = model.expiredTime;
+                this.latestAction = model.latestAction;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.payType = model.payType;
+                this.serverId = model.serverId;
+                this.specName = model.specName;
+                this.state = model.state;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about the AIC instances.</p>

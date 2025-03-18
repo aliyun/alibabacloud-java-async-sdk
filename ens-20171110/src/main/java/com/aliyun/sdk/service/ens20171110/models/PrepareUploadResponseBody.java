@@ -40,6 +40,10 @@ public class PrepareUploadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketName
      */
@@ -65,6 +69,15 @@ public class PrepareUploadResponseBody extends TeaModel {
         private String bucketName; 
         private String endpoint; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PrepareUploadResponseBody model) {
+            this.bucketName = model.bucketName;
+            this.endpoint = model.endpoint;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the bucket. This parameter is available only when the OSS SDK is used.</p>

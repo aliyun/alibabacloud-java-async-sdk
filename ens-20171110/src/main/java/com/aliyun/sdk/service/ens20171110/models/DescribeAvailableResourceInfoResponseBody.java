@@ -40,6 +40,10 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -65,6 +69,15 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         private Images images; 
         private String requestId; 
         private SupportResources supportResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceInfoResponseBody model) {
+            this.images = model.images;
+            this.requestId = model.requestId;
+            this.supportResources = model.supportResources;
+        } 
 
         /**
          * <p>The information about the image.</p>
@@ -155,6 +168,15 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private String imageName; 
             private Integer imageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageSize = model.imageSize;
+            } 
+
             /**
              * <p>The ID of the image.</p>
              * 
@@ -227,6 +249,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Image> image; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.image = model.image;
+            } 
+
             /**
              * Image.
              */
@@ -274,6 +303,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> bandwidthType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandwidthTypes model) {
+                this.bandwidthType = model.bandwidthType;
+            } 
+
             /**
              * BandwidthType.
              */
@@ -320,6 +356,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ensRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnsRegionIds model) {
+                this.ensRegionId = model.ensRegionId;
+            } 
 
             /**
              * EnsRegionId.
@@ -428,6 +471,18 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private String name; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnsRegionId model) {
+                this.area = model.area;
+                this.enName = model.enName;
+                this.ensRegionId = model.ensRegionId;
+                this.isp = model.isp;
+                this.name = model.name;
+                this.province = model.province;
+            } 
+
             /**
              * <p>The region.</p>
              * 
@@ -533,6 +588,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<EnsRegionId> ensRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnsRegionIdsExtends model) {
+                this.ensRegionId = model.ensRegionId;
+            } 
+
             /**
              * <p>The ID of the edge node.</p>
              * 
@@ -583,6 +645,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> instanceSpec; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpeces model) {
+                this.instanceSpec = model.instanceSpec;
+            } 
+
             /**
              * InstanceSpec.
              */
@@ -629,6 +698,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Isp model) {
+                this.isp = model.isp;
+            } 
 
             /**
              * <p>The information about the Internet service provider (ISP).</p>
@@ -776,6 +852,21 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private Integer systemDiskMaxSize; 
             private Integer systemDiskMinSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportResource model) {
+                this.bandwidthTypes = model.bandwidthTypes;
+                this.dataDiskMaxSize = model.dataDiskMaxSize;
+                this.dataDiskMinSize = model.dataDiskMinSize;
+                this.ensRegionIds = model.ensRegionIds;
+                this.ensRegionIdsExtends = model.ensRegionIdsExtends;
+                this.instanceSpeces = model.instanceSpeces;
+                this.isp = model.isp;
+                this.systemDiskMaxSize = model.systemDiskMaxSize;
+                this.systemDiskMinSize = model.systemDiskMinSize;
+            } 
+
             /**
              * <p>Bandwidth billing method.</p>
              */
@@ -898,6 +989,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportResource> supportResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResources model) {
+                this.supportResource = model.supportResource;
+            } 
 
             /**
              * SupportResource.

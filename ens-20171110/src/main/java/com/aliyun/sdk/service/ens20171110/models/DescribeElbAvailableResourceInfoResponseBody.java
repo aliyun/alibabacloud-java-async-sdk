@@ -36,6 +36,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elbAvailableResourceInfo
      */
@@ -53,6 +57,14 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElbAvailableResourceInfoResponseBody model) {
+            this.elbAvailableResourceInfo = model.elbAvailableResourceInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about resources.</p>
@@ -86,6 +98,9 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
      * <p>DescribeElbAvailableResourceInfoResponseBody</p>
      */
     public static class ElbAvailableResourceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ability")
+        private java.util.List<String> ability;
+
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
@@ -108,6 +123,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         private String province;
 
         private ElbAvailableResourceInfo(Builder builder) {
+            this.ability = builder.ability;
             this.area = builder.area;
             this.canBuyCount = builder.canBuyCount;
             this.enName = builder.enName;
@@ -123,6 +139,13 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
 
         public static ElbAvailableResourceInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return ability
+         */
+        public java.util.List<String> getAbility() {
+            return this.ability;
         }
 
         /**
@@ -175,6 +198,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> ability; 
             private String area; 
             private String canBuyCount; 
             private String enName; 
@@ -182,6 +206,28 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             private java.util.List<String> loadBalancerSpec; 
             private String name; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElbAvailableResourceInfo model) {
+                this.ability = model.ability;
+                this.area = model.area;
+                this.canBuyCount = model.canBuyCount;
+                this.enName = model.enName;
+                this.ensRegionId = model.ensRegionId;
+                this.loadBalancerSpec = model.loadBalancerSpec;
+                this.name = model.name;
+                this.province = model.province;
+            } 
+
+            /**
+             * Ability.
+             */
+            public Builder ability(java.util.List<String> ability) {
+                this.ability = ability;
+                return this;
+            }
 
             /**
              * <p>The ID of the region.</p>

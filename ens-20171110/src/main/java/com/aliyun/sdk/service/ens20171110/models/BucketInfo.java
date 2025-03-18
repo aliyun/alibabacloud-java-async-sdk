@@ -73,6 +73,10 @@ public class BucketInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketAcl
      */
@@ -162,6 +166,23 @@ public class BucketInfo extends TeaModel {
         private String modifyTime; 
         private String resourceType; 
         private String storageClass; 
+
+        private Builder() {
+        } 
+
+        private Builder(BucketInfo model) {
+            this.bucketAcl = model.bucketAcl;
+            this.bucketName = model.bucketName;
+            this.comment = model.comment;
+            this.createTime = model.createTime;
+            this.dataRedundancyType = model.dataRedundancyType;
+            this.dispatcherType = model.dispatcherType;
+            this.endpoint = model.endpoint;
+            this.ensRegionId = model.ensRegionId;
+            this.modifyTime = model.modifyTime;
+            this.resourceType = model.resourceType;
+            this.storageClass = model.storageClass;
+        } 
 
         /**
          * BucketAcl.

@@ -35,7 +35,7 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

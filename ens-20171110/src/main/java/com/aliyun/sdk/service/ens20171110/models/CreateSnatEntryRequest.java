@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSnatEntryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAffinity")
+    private Boolean eipAffinity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
     private Integer idleTimeout;
@@ -58,6 +62,7 @@ public class CreateSnatEntryRequest extends Request {
 
     private CreateSnatEntryRequest(Builder builder) {
         super(builder);
+        this.eipAffinity = builder.eipAffinity;
         this.idleTimeout = builder.idleTimeout;
         this.ispAffinity = builder.ispAffinity;
         this.natGatewayId = builder.natGatewayId;
@@ -77,9 +82,16 @@ public class CreateSnatEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return eipAffinity
+     */
+    public Boolean getEipAffinity() {
+        return this.eipAffinity;
     }
 
     /**
@@ -146,6 +158,7 @@ public class CreateSnatEntryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSnatEntryRequest, Builder> {
+        private Boolean eipAffinity; 
         private Integer idleTimeout; 
         private Boolean ispAffinity; 
         private String natGatewayId; 
@@ -162,6 +175,7 @@ public class CreateSnatEntryRequest extends Request {
 
         private Builder(CreateSnatEntryRequest request) {
             super(request);
+            this.eipAffinity = request.eipAffinity;
             this.idleTimeout = request.idleTimeout;
             this.ispAffinity = request.ispAffinity;
             this.natGatewayId = request.natGatewayId;
@@ -172,6 +186,15 @@ public class CreateSnatEntryRequest extends Request {
             this.sourceVSwitchId = request.sourceVSwitchId;
             this.standbySnatIp = request.standbySnatIp;
         } 
+
+        /**
+         * EipAffinity.
+         */
+        public Builder eipAffinity(Boolean eipAffinity) {
+            this.putQueryParameter("EipAffinity", eipAffinity);
+            this.eipAffinity = eipAffinity;
+            return this;
+        }
 
         /**
          * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
@@ -186,7 +209,14 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * IspAffinity.
+         * <p>Whether to enable operator affinity. Value taking:</p>
+         * <ul>
+         * <li>false:Do not open.</li>
+         * <li>true:Open.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ispAffinity(Boolean ispAffinity) {
             this.putQueryParameter("IspAffinity", ispAffinity);

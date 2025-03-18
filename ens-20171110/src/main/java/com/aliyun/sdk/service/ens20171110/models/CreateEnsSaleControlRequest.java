@@ -51,7 +51,7 @@ public class CreateEnsSaleControlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,6 +190,14 @@ public class CreateEnsSaleControlRequest extends Request {
             private String conditionControlModuleCode; 
             private String conditionControlModuleValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionControls model) {
+                this.conditionControlModuleCode = model.conditionControlModuleCode;
+                this.conditionControlModuleValue = model.conditionControlModuleValue;
+            } 
+
             /**
              * ConditionControlModuleCode.
              */
@@ -268,6 +276,15 @@ public class CreateEnsSaleControlRequest extends Request {
             private String moduleMaxValue; 
             private String moduleMinValue; 
             private java.util.List<String> moduleValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleValue model) {
+                this.moduleMaxValue = model.moduleMaxValue;
+                this.moduleMinValue = model.moduleMinValue;
+                this.moduleValue = model.moduleValue;
+            } 
 
             /**
              * ModuleMaxValue.
@@ -395,6 +412,18 @@ public class CreateEnsSaleControlRequest extends Request {
             private ModuleValue moduleValue; 
             private String operator; 
             private String orderType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleControls model) {
+                this.conditionControls = model.conditionControls;
+                this.description = model.description;
+                this.moduleCode = model.moduleCode;
+                this.moduleValue = model.moduleValue;
+                this.operator = model.operator;
+                this.orderType = model.orderType;
+            } 
 
             /**
              * ConditionControls.

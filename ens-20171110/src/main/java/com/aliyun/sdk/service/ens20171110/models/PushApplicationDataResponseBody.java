@@ -36,6 +36,10 @@ public class PushApplicationDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pushResults
      */
@@ -53,6 +57,14 @@ public class PushApplicationDataResponseBody extends TeaModel {
     public static final class Builder {
         private PushResults pushResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PushApplicationDataResponseBody model) {
+            this.pushResults = model.pushResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The push results of data files.</p>
@@ -147,6 +159,16 @@ public class PushApplicationDataResponseBody extends TeaModel {
             private String resultDescrip; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(PushResult model) {
+                this.name = model.name;
+                this.resultCode = model.resultCode;
+                this.resultDescrip = model.resultDescrip;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the data file.</p>
              * 
@@ -235,6 +257,13 @@ public class PushApplicationDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PushResult> pushResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushResults model) {
+                this.pushResult = model.pushResult;
+            } 
 
             /**
              * PushResult.

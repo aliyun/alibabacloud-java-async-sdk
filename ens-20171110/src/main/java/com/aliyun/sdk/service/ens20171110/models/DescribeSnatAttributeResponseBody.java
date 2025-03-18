@@ -23,6 +23,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DestCIDR")
     private String destCIDR;
 
+    @com.aliyun.core.annotation.NameInMap("EipAffinity")
+    private Boolean eipAffinity;
+
     @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
@@ -65,6 +68,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     private DescribeSnatAttributeResponseBody(Builder builder) {
         this.creationTime = builder.creationTime;
         this.destCIDR = builder.destCIDR;
+        this.eipAffinity = builder.eipAffinity;
         this.idleTimeout = builder.idleTimeout;
         this.ispAffinity = builder.ispAffinity;
         this.natGatewayId = builder.natGatewayId;
@@ -88,6 +92,10 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creationTime
      */
@@ -100,6 +108,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      */
     public String getDestCIDR() {
         return this.destCIDR;
+    }
+
+    /**
+     * @return eipAffinity
+     */
+    public Boolean getEipAffinity() {
+        return this.eipAffinity;
     }
 
     /**
@@ -196,6 +211,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String creationTime; 
         private String destCIDR; 
+        private Boolean eipAffinity; 
         private Integer idleTimeout; 
         private Boolean ispAffinity; 
         private String natGatewayId; 
@@ -209,6 +225,28 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         private String standbyStatus; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnatAttributeResponseBody model) {
+            this.creationTime = model.creationTime;
+            this.destCIDR = model.destCIDR;
+            this.eipAffinity = model.eipAffinity;
+            this.idleTimeout = model.idleTimeout;
+            this.ispAffinity = model.ispAffinity;
+            this.natGatewayId = model.natGatewayId;
+            this.requestId = model.requestId;
+            this.snatEntryId = model.snatEntryId;
+            this.snatEntryName = model.snatEntryName;
+            this.snatIp = model.snatIp;
+            this.snatIps = model.snatIps;
+            this.sourceCIDR = model.sourceCIDR;
+            this.standbySnatIp = model.standbySnatIp;
+            this.standbyStatus = model.standbyStatus;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The time when the entry was created. The time is displayed in UTC.</p>
@@ -233,6 +271,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * EipAffinity.
+         */
+        public Builder eipAffinity(Boolean eipAffinity) {
+            this.eipAffinity = eipAffinity;
+            return this;
+        }
+
+        /**
          * <p>The timeout period. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +290,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IspAffinity.
+         * <p>Whether to enable operator affinity. Value taking:</p>
+         * <ul>
+         * <li>false:Do not open.</li>
+         * <li>true:Open.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ispAffinity(Boolean ispAffinity) {
             this.ispAffinity = ispAffinity;
@@ -445,6 +498,15 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
             private String creationTime; 
             private String ip; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnatIps model) {
+                this.creationTime = model.creationTime;
+                this.ip = model.ip;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the IP address was created. The time is displayed in UTC.</p>

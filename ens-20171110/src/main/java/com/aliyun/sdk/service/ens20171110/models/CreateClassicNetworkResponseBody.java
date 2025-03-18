@@ -36,6 +36,10 @@ public class CreateClassicNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkId
      */
@@ -53,6 +57,14 @@ public class CreateClassicNetworkResponseBody extends TeaModel {
     public static final class Builder {
         private String networkId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateClassicNetworkResponseBody model) {
+            this.networkId = model.networkId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the network.</p>

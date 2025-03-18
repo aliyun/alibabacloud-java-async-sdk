@@ -36,6 +36,10 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageExportStatus
      */
@@ -53,6 +57,14 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String imageExportStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExportImageStatusResponseBody model) {
+            this.imageExportStatus = model.imageExportStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The export status of the image. Valid values:</p>

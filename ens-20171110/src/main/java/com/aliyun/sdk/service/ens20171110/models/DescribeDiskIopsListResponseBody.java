@@ -36,6 +36,10 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diskIopsList
      */
@@ -53,6 +57,14 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DiskIopsList> diskIopsList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskIopsListResponseBody model) {
+            this.diskIopsList = model.diskIopsList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IOPS monitoring data of the cloud disk.</p>
@@ -206,6 +218,21 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
             private Long writeBytes; 
             private Long writeLatency; 
             private Long writeOps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskIopsList model) {
+                this.bizTime = model.bizTime;
+                this.diskId = model.diskId;
+                this.readBytes = model.readBytes;
+                this.readLatency = model.readLatency;
+                this.readOps = model.readOps;
+                this.regionId = model.regionId;
+                this.writeBytes = model.writeBytes;
+                this.writeLatency = model.writeLatency;
+                this.writeOps = model.writeOps;
+            } 
 
             /**
              * <p>The business time . The time is displayed in the yyyy-MM-dd HH:mm:ss.</p>

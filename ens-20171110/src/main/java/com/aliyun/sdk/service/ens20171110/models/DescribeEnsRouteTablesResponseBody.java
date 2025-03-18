@@ -48,6 +48,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<RouteTables> routeTables; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsRouteTablesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeTables = model.routeTables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -155,11 +170,20 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
      * <p>DescribeEnsRouteTablesResponseBody</p>
      */
     public static class RouteTables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssociateType")
+        private String associateType;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("IsDefaultGatewayRouteTable")
+        private Boolean isDefaultGatewayRouteTable;
 
         @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
@@ -180,8 +204,11 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         private java.util.List<String> vSwitchIds;
 
         private RouteTables(Builder builder) {
+            this.associateType = builder.associateType;
             this.creationTime = builder.creationTime;
+            this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
+            this.isDefaultGatewayRouteTable = builder.isDefaultGatewayRouteTable;
             this.networkId = builder.networkId;
             this.routeTableId = builder.routeTableId;
             this.routeTableName = builder.routeTableName;
@@ -199,6 +226,13 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         }
 
         /**
+         * @return associateType
+         */
+        public String getAssociateType() {
+            return this.associateType;
+        }
+
+        /**
          * @return creationTime
          */
         public String getCreationTime() {
@@ -206,10 +240,24 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return ensRegionId
          */
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        /**
+         * @return isDefaultGatewayRouteTable
+         */
+        public Boolean getIsDefaultGatewayRouteTable() {
+            return this.isDefaultGatewayRouteTable;
         }
 
         /**
@@ -255,14 +303,42 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String associateType; 
             private String creationTime; 
+            private String description; 
             private String ensRegionId; 
+            private Boolean isDefaultGatewayRouteTable; 
             private String networkId; 
             private String routeTableId; 
             private String routeTableName; 
             private String status; 
             private String type; 
             private java.util.List<String> vSwitchIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTables model) {
+                this.associateType = model.associateType;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.isDefaultGatewayRouteTable = model.isDefaultGatewayRouteTable;
+                this.networkId = model.networkId;
+                this.routeTableId = model.routeTableId;
+                this.routeTableName = model.routeTableName;
+                this.status = model.status;
+                this.type = model.type;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
+
+            /**
+             * AssociateType.
+             */
+            public Builder associateType(String associateType) {
+                this.associateType = associateType;
+                return this;
+            }
 
             /**
              * <p>The time when the route table was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -276,6 +352,14 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             }
 
             /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
              * <p>The ID of the edge node.</p>
              * 
              * <strong>example:</strong>
@@ -283,6 +367,14 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
+                return this;
+            }
+
+            /**
+             * IsDefaultGatewayRouteTable.
+             */
+            public Builder isDefaultGatewayRouteTable(Boolean isDefaultGatewayRouteTable) {
+                this.isDefaultGatewayRouteTable = isDefaultGatewayRouteTable;
                 return this;
             }
 

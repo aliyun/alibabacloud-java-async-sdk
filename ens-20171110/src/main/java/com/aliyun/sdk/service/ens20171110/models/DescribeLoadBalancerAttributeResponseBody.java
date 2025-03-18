@@ -96,6 +96,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -233,6 +237,29 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String payType; 
         private String requestId; 
         private String vSwitchId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerAttributeResponseBody model) {
+            this.address = model.address;
+            this.addressIPVersion = model.addressIPVersion;
+            this.backendServers = model.backendServers;
+            this.bandwidth = model.bandwidth;
+            this.createTime = model.createTime;
+            this.endTime = model.endTime;
+            this.ensRegionId = model.ensRegionId;
+            this.listenerPorts = model.listenerPorts;
+            this.listenerPortsAndProtocols = model.listenerPortsAndProtocols;
+            this.loadBalancerId = model.loadBalancerId;
+            this.loadBalancerName = model.loadBalancerName;
+            this.loadBalancerSpec = model.loadBalancerSpec;
+            this.loadBalancerStatus = model.loadBalancerStatus;
+            this.networkId = model.networkId;
+            this.payType = model.payType;
+            this.requestId = model.requestId;
+            this.vSwitchId = model.vSwitchId;
+        } 
 
         /**
          * <p>The IP address that the Edge Load Balancer (ELB) instance uses to provide services.</p>
@@ -506,6 +533,17 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.ip = model.ip;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The IP address of the backend server.</p>
              * 
@@ -575,6 +613,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
      * <p>DescribeLoadBalancerAttributeResponseBody</p>
      */
     public static class ListenerPortsAndProtocols extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+        private Integer backendServerPort;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -591,6 +632,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String listenerProtocol;
 
         private ListenerPortsAndProtocols(Builder builder) {
+            this.backendServerPort = builder.backendServerPort;
             this.description = builder.description;
             this.forwardPort = builder.forwardPort;
             this.listenerForward = builder.listenerForward;
@@ -604,6 +646,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
         public static ListenerPortsAndProtocols create() {
             return builder().build();
+        }
+
+        /**
+         * @return backendServerPort
+         */
+        public Integer getBackendServerPort() {
+            return this.backendServerPort;
         }
 
         /**
@@ -642,11 +691,32 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer backendServerPort; 
             private String description; 
             private Integer forwardPort; 
             private String listenerForward; 
             private Integer listenerPort; 
             private String listenerProtocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenerPortsAndProtocols model) {
+                this.backendServerPort = model.backendServerPort;
+                this.description = model.description;
+                this.forwardPort = model.forwardPort;
+                this.listenerForward = model.listenerForward;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+            } 
+
+            /**
+             * BackendServerPort.
+             */
+            public Builder backendServerPort(Integer backendServerPort) {
+                this.backendServerPort = backendServerPort;
+                return this;
+            }
 
             /**
              * <p>The description of the listener.</p>

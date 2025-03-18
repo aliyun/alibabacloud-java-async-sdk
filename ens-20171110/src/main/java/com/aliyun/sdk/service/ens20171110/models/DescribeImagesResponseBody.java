@@ -52,6 +52,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeImagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImagesResponseBody model) {
+            this.code = model.code;
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>
@@ -239,8 +255,23 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String type; 
             private String imageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMapping model) {
+                this.format = model.format;
+                this.size = model.size;
+                this.type = model.type;
+                this.imageId = model.imageId;
+            } 
+
             /**
-             * Format.
+             * <p>The format of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The format of the image.
+             * raw
+             * qcow2</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -248,7 +279,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -256,7 +290,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk.</li>
+             * <li>data: data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Data</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -264,7 +305,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * imageId.
+             * <p>The ID of image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-test</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -309,6 +353,13 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMappings model) {
+                this.diskDeviceMapping = model.diskDeviceMapping;
+            } 
 
             /**
              * DiskDeviceMapping.
@@ -356,6 +407,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
@@ -368,6 +422,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.imageOwnerAlias = builder.imageOwnerAlias;
             this.imageSize = builder.imageSize;
             this.platform = builder.platform;
+            this.regionId = builder.regionId;
             this.snapshotId = builder.snapshotId;
         }
 
@@ -436,6 +491,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return snapshotId
          */
         public String getSnapshotId() {
@@ -451,7 +513,24 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String imageOwnerAlias; 
             private String imageSize; 
             private String platform; 
+            private String regionId; 
             private String snapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.architecture = model.architecture;
+                this.creationTime = model.creationTime;
+                this.diskDeviceMappings = model.diskDeviceMappings;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.imageSize = model.imageSize;
+                this.platform = model.platform;
+                this.regionId = model.regionId;
+                this.snapshotId = model.snapshotId;
+            } 
 
             /**
              * <p>The architecture of the image. Example: <strong>x86_64</strong>.</p>
@@ -476,7 +555,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskDeviceMappings.
+             * <p>The mappings between the disk and the snapshot in the image.</p>
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -548,6 +627,17 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the Edge Node Service (ENS) node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
              * <p>The ID of the snapshot.</p>
              * 
              * <strong>example:</strong>
@@ -596,6 +686,13 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Image> image; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.image = model.image;
+            } 
 
             /**
              * Image.

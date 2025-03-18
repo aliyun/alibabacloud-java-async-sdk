@@ -48,6 +48,10 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         private PushResults pushResults; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataPushResultResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.pushResults = model.pushResults;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -216,6 +231,16 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String statusDescrip; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionId model) {
+                this.regionId = model.regionId;
+                this.startTime = model.startTime;
+                this.statusDescrip = model.statusDescrip;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The ID of the ENS node.</p>
              * 
@@ -299,6 +324,13 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RegionId> regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionIds model) {
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The ID of the ENS node.</p>
              * 
@@ -373,6 +405,15 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private RegionIds regionIds; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatusStat model) {
+                this.regionIdCount = model.regionIdCount;
+                this.regionIds = model.regionIds;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The total number of ENS nodes.</p>
              * 
@@ -441,6 +482,13 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StatusStat> statusStat; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusStatS model) {
+                this.statusStat = model.statusStat;
+            } 
 
             /**
              * StatusStat.
@@ -513,6 +561,15 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private StatusStatS statusStatS; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(PushResult model) {
+                this.name = model.name;
+                this.statusStatS = model.statusStatS;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the data file.</p>
              * 
@@ -581,6 +638,13 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PushResult> pushResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushResults model) {
+                this.pushResult = model.pushResult;
+            } 
 
             /**
              * PushResult.

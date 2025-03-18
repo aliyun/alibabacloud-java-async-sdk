@@ -22,6 +22,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -36,6 +40,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private java.util.List<String> networkInterfaceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
@@ -74,10 +82,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
     private DescribeNetworkInterfacesRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.instanceId = builder.instanceId;
         this.ipv6Address = builder.ipv6Address;
         this.networkId = builder.networkId;
         this.networkInterfaceId = builder.networkInterfaceId;
+        this.networkInterfaceIds = builder.networkInterfaceIds;
         this.networkInterfaceName = builder.networkInterfaceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -96,7 +106,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -106,6 +116,13 @@ public class DescribeNetworkInterfacesRequest extends Request {
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     /**
@@ -134,6 +151,13 @@ public class DescribeNetworkInterfacesRequest extends Request {
      */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
+    }
+
+    /**
+     * @return networkInterfaceIds
+     */
+    public java.util.List<String> getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
     }
 
     /**
@@ -194,10 +218,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacesRequest, Builder> {
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private String instanceId; 
         private java.util.List<String> ipv6Address; 
         private String networkId; 
         private String networkInterfaceId; 
+        private java.util.List<String> networkInterfaceIds; 
         private String networkInterfaceName; 
         private String pageNumber; 
         private String pageSize; 
@@ -214,10 +240,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
         private Builder(DescribeNetworkInterfacesRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.instanceId = request.instanceId;
             this.ipv6Address = request.ipv6Address;
             this.networkId = request.networkId;
             this.networkInterfaceId = request.networkInterfaceId;
+            this.networkInterfaceIds = request.networkInterfaceIds;
             this.networkInterfaceName = request.networkInterfaceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -241,6 +269,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
+         * <p>The node information.</p>
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
+            return this;
+        }
+
+        /**
          * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
@@ -256,8 +293,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
          */
         public Builder ipv6Address(java.util.List<String> ipv6Address) {
-            String ipv6AddressShrink = shrink(ipv6Address, "Ipv6Address", "simple");
-            this.putQueryParameter("Ipv6Address", ipv6AddressShrink);
+            this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
         }
@@ -283,6 +319,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
             this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * <p>A list of multicast source IDs.</p>
+         */
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
+            this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
+            this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
@@ -369,8 +414,8 @@ public class DescribeNetworkInterfacesRequest extends Request {
         /**
          * <p>The type of the ENI. Valid values:</p>
          * <ul>
-         * <li>Primary: primary ENI.</li>
-         * <li>Secondary: secondary ENI.</li>
+         * <li>Primary: the primary ENI.</li>
+         * <li>Secondary: the secondary ENI.</li>
          * </ul>
          * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
          * 

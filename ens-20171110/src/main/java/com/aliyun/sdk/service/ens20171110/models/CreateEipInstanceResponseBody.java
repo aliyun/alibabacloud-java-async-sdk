@@ -36,6 +36,10 @@ public class CreateEipInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocationId
      */
@@ -53,6 +57,14 @@ public class CreateEipInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String allocationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEipInstanceResponseBody model) {
+            this.allocationId = model.allocationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the EIP.</p>

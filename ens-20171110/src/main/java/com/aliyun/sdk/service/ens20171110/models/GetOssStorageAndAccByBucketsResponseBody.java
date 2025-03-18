@@ -36,6 +36,10 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketList
      */
@@ -53,6 +57,14 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<BucketList> bucketList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssStorageAndAccByBucketsResponseBody model) {
+            this.bucketList = model.bucketList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the bucket.</p>
@@ -134,6 +146,15 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             private Long acc; 
             private String bucket; 
             private Long storageUsageByte; 
+
+            private Builder() {
+            } 
+
+            private Builder(BucketList model) {
+                this.acc = model.acc;
+                this.bucket = model.bucket;
+                this.storageUsageByte = model.storageUsageByte;
+            } 
 
             /**
              * <p>The number of times that the bucket is accessed.</p>

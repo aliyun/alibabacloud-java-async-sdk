@@ -36,6 +36,10 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
         private String requestId; 
         private String ruleId; 
 
+        private Builder() {
+        } 
+
+        private Builder(PutBucketLifecycleResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,10 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b8f93xxxxx4881xxxxxc71d991</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

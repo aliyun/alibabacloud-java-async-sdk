@@ -41,7 +41,7 @@ public class SetBackendServersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +162,15 @@ public class SetBackendServersRequest extends Request {
             private String serverId; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.serverId = model.serverId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The ID of the instance that you want to use as the backend server.</p>

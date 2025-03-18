@@ -40,6 +40,10 @@ public class CreateDiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -65,6 +69,15 @@ public class CreateDiskResponseBody extends TeaModel {
         private java.util.List<String> instanceIds; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDiskResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the instances.</p>

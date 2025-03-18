@@ -48,6 +48,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAcls
      */
@@ -89,6 +93,17 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkAclsResponseBody model) {
+            this.networkAcls = model.networkAcls;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the network ACLs.</p>
@@ -275,6 +290,21 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private Integer priority; 
             private String protocol; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EgressAclEntries model) {
+                this.cidrBlock = model.cidrBlock;
+                this.description = model.description;
+                this.networkAclEntryId = model.networkAclEntryId;
+                this.networkAclEntryName = model.networkAclEntryName;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The destination CIDR block.</p>
@@ -528,6 +558,21 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String protocol; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(IngressAclEntries model) {
+                this.cidrBlock = model.cidrBlock;
+                this.description = model.description;
+                this.networkAclEntryId = model.networkAclEntryId;
+                this.networkAclEntryName = model.networkAclEntryName;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The source CIDR block.</p>
              * 
@@ -720,6 +765,16 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String resourceType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.ensRegionId = model.ensRegionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the edge node.</p>
              * 
@@ -891,6 +946,20 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String networkAclName; 
             private java.util.List<Resources> resources; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAcls model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.egressAclEntries = model.egressAclEntries;
+                this.ingressAclEntries = model.ingressAclEntries;
+                this.networkAclId = model.networkAclId;
+                this.networkAclName = model.networkAclName;
+                this.resources = model.resources;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the network ACL was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>

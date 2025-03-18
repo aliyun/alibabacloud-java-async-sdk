@@ -48,6 +48,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,6 +94,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private SecurityGroups securityGroups; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.securityGroups = model.securityGroups;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The page number.</p>
          * 
@@ -102,7 +117,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -154,6 +169,114 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeSecurityGroupsResponseBody</p>
      */
+    public static class InstanceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private java.util.List<String> instanceId;
+
+        private InstanceIds(Builder builder) {
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public java.util.List<String> getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(java.util.List<String> instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public InstanceIds build() {
+                return new InstanceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
+    public static class NetworkInterfaceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+        private java.util.List<String> networkInterfaceId;
+
+        private NetworkInterfaceIds(Builder builder) {
+            this.networkInterfaceId = builder.networkInterfaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public java.util.List<String> getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> networkInterfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceIds model) {
+                this.networkInterfaceId = model.networkInterfaceId;
+            } 
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(java.util.List<String> networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            public NetworkInterfaceIds build() {
+                return new NetworkInterfaceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class SecurityGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -163,6 +286,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
+        private InstanceIds instanceIds;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+        private NetworkInterfaceIds networkInterfaceIds;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -174,6 +303,8 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.instanceCount = builder.instanceCount;
+            this.instanceIds = builder.instanceIds;
+            this.networkInterfaceIds = builder.networkInterfaceIds;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupName = builder.securityGroupName;
         }
@@ -208,6 +339,20 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceIds
+         */
+        public InstanceIds getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        /**
+         * @return networkInterfaceIds
+         */
+        public NetworkInterfaceIds getNetworkInterfaceIds() {
+            return this.networkInterfaceIds;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -225,11 +370,26 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private Integer instanceCount; 
+            private InstanceIds instanceIds; 
+            private NetworkInterfaceIds networkInterfaceIds; 
             private String securityGroupId; 
             private String securityGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroup model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.instanceCount = model.instanceCount;
+                this.instanceIds = model.instanceIds;
+                this.networkInterfaceIds = model.networkInterfaceIds;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupName = model.securityGroupName;
+            } 
+
             /**
-             * <p>The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-11-01T06:08:46Z</p>
@@ -258,6 +418,22 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
+                return this;
+            }
+
+            /**
+             * <p>The list of instance IDs.</p>
+             */
+            public Builder instanceIds(InstanceIds instanceIds) {
+                this.instanceIds = instanceIds;
+                return this;
+            }
+
+            /**
+             * <p>The IDs of ENIs.</p>
+             */
+            public Builder networkInterfaceIds(NetworkInterfaceIds networkInterfaceIds) {
+                this.networkInterfaceIds = networkInterfaceIds;
                 return this;
             }
 
@@ -321,6 +497,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecurityGroup> securityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroups model) {
+                this.securityGroup = model.securityGroup;
+            } 
 
             /**
              * SecurityGroup.

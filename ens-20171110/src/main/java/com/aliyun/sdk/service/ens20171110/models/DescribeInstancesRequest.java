@@ -129,7 +129,7 @@ public class DescribeInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -526,7 +526,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ServiceStatus.
+         * <p>The status of the service. Valid values.</p>
          */
         public Builder serviceStatus(java.util.List<String> serviceStatus) {
             String serviceStatusShrink = shrink(serviceStatus, "ServiceStatus", "json");
@@ -624,6 +624,14 @@ public class DescribeInstancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag that are to add to the instance. Valid values: 1 to 20.</p>

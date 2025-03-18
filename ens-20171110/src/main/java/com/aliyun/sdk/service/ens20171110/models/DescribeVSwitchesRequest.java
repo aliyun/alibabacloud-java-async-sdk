@@ -22,12 +22,12 @@ public class DescribeVSwitchesRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkId")
-    private String networkId;
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OrderByParams")
-    private String orderByParams;
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
+    private String networkId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -35,12 +35,16 @@ public class DescribeVSwitchesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 50)
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchName")
@@ -49,11 +53,12 @@ public class DescribeVSwitchesRequest extends Request {
     private DescribeVSwitchesRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.networkId = builder.networkId;
-        this.orderByParams = builder.orderByParams;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.vSwitchId = builder.vSwitchId;
+        this.vSwitchIds = builder.vSwitchIds;
         this.vSwitchName = builder.vSwitchName;
     }
 
@@ -65,7 +70,7 @@ public class DescribeVSwitchesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,17 +83,17 @@ public class DescribeVSwitchesRequest extends Request {
     }
 
     /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
         return this.networkId;
-    }
-
-    /**
-     * @return orderByParams
-     */
-    public String getOrderByParams() {
-        return this.orderByParams;
     }
 
     /**
@@ -113,6 +118,13 @@ public class DescribeVSwitchesRequest extends Request {
     }
 
     /**
+     * @return vSwitchIds
+     */
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    /**
      * @return vSwitchName
      */
     public String getVSwitchName() {
@@ -121,11 +133,12 @@ public class DescribeVSwitchesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVSwitchesRequest, Builder> {
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private String networkId; 
-        private String orderByParams; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String vSwitchId; 
+        private java.util.List<String> vSwitchIds; 
         private String vSwitchName; 
 
         private Builder() {
@@ -135,16 +148,17 @@ public class DescribeVSwitchesRequest extends Request {
         private Builder(DescribeVSwitchesRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.networkId = request.networkId;
-            this.orderByParams = request.orderByParams;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.vSwitchId = request.vSwitchId;
+            this.vSwitchIds = request.vSwitchIds;
             this.vSwitchName = request.vSwitchName;
         } 
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The ID of the ENS node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-xian-unicom</p>
@@ -156,7 +170,16 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the vSwitches belong.</p>
+         * <p>The node information.</p>
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the VPC to which the vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-25cdvfeq58pl****</p>
@@ -168,20 +191,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}.</p>
-         * <p>By default, the nodes are sorted by IDs in descending order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;EnsRegionId&quot;:&quot;desc&quot;}</p>
-         */
-        public Builder orderByParams(String orderByParams) {
-            this.putQueryParameter("OrderByParams", orderByParams);
-            this.orderByParams = orderByParams;
-            return this;
-        }
-
-        /**
-         * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,7 +203,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -213,6 +223,15 @@ public class DescribeVSwitchesRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * <p>The list of vSwitches in the network.</p>
+         */
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
             return this;
         }
 

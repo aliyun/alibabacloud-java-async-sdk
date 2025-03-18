@@ -1348,6 +1348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserBandWidthDataResponse> describeUserBandWidthData(DescribeUserBandWidthDataRequest request);
 
     /**
+     * @param request the request parameters of DescribeVSwitchAttributes  DescribeVSwitchAttributesRequest
+     * @return DescribeVSwitchAttributesResponse
+     */
+    CompletableFuture<DescribeVSwitchAttributesResponse> describeVSwitchAttributes(DescribeVSwitchAttributesRequest request);
+
+    /**
      * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
      */
@@ -1504,6 +1510,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request);
 
     /**
+     * @param request the request parameters of ListProductAbilities  ListProductAbilitiesRequest
+     * @return ListProductAbilitiesResponse
+     */
+    CompletableFuture<ListProductAbilitiesResponse> listProductAbilities(ListProductAbilitiesRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -1514,6 +1526,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyEnsEipAddressAttributeResponse
      */
     CompletableFuture<ModifyEnsEipAddressAttributeResponse> modifyEnsEipAddressAttribute(ModifyEnsEipAddressAttributeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyEnsRouteEntry  ModifyEnsRouteEntryRequest
+     * @return ModifyEnsRouteEntryResponse
+     */
+    CompletableFuture<ModifyEnsRouteEntryResponse> modifyEnsRouteEntry(ModifyEnsRouteEntryRequest request);
 
     /**
      * @param request the request parameters of ModifyEpnInstance  ModifyEpnInstanceRequest

@@ -48,6 +48,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancerSpecs
      */
@@ -89,6 +93,17 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerSpecResponseBody model) {
+            this.loadBalancerSpecs = model.loadBalancerSpecs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The specifications. Valid values:</p>
@@ -191,6 +206,14 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         public static final class Builder {
             private String displayName; 
             private String loadBalancerSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerSpecs model) {
+                this.displayName = model.displayName;
+                this.loadBalancerSpec = model.loadBalancerSpec;
+            } 
 
             /**
              * <p>The display name of the instance type.</p>

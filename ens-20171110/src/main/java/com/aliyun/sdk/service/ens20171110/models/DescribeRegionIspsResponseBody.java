@@ -36,6 +36,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isps
      */
@@ -53,6 +57,14 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Isps> isps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionIspsResponseBody model) {
+            this.isps = model.isps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of ISPs.</p>
@@ -122,6 +134,14 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Isps model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the ISP.</p>

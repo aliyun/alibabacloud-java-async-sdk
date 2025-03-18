@@ -32,6 +32,10 @@ public class TagsInParams extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tag
      */
@@ -41,6 +45,13 @@ public class TagsInParams extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Tag> tag; 
+
+        private Builder() {
+        } 
+
+        private Builder(TagsInParams model) {
+            this.tag = model.tag;
+        } 
 
         /**
          * Tag.
@@ -100,6 +111,14 @@ public class TagsInParams extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>This parameter is required.</p>

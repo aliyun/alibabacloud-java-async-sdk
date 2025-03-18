@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteNatGatewayRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDelete")
+    private Boolean forceDelete;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
     private DeleteNatGatewayRequest(Builder builder) {
         super(builder);
+        this.forceDelete = builder.forceDelete;
         this.natGatewayId = builder.natGatewayId;
     }
 
@@ -35,9 +40,16 @@ public class DeleteNatGatewayRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return forceDelete
+     */
+    public Boolean getForceDelete() {
+        return this.forceDelete;
     }
 
     /**
@@ -48,6 +60,7 @@ public class DeleteNatGatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteNatGatewayRequest, Builder> {
+        private Boolean forceDelete; 
         private String natGatewayId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class DeleteNatGatewayRequest extends Request {
 
         private Builder(DeleteNatGatewayRequest request) {
             super(request);
+            this.forceDelete = request.forceDelete;
             this.natGatewayId = request.natGatewayId;
         } 
+
+        /**
+         * ForceDelete.
+         */
+        public Builder forceDelete(Boolean forceDelete) {
+            this.putQueryParameter("ForceDelete", forceDelete);
+            this.forceDelete = forceDelete;
+            return this;
+        }
 
         /**
          * <p>The ID of the NAT gateway that you want to delete.</p>

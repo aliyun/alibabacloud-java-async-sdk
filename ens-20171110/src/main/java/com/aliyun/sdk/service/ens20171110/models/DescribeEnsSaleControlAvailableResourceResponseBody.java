@@ -36,6 +36,10 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
     public static final class Builder {
         private String requestId; 
         private java.util.List<SaleControlAvailableResource> saleControlAvailableResource; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsSaleControlAvailableResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.saleControlAvailableResource = model.saleControlAvailableResource;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         public static final class Builder {
             private String diskName; 
             private String diskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableDiskType model) {
+                this.diskName = model.diskName;
+                this.diskType = model.diskType;
+            } 
 
             /**
              * DiskName.
@@ -246,6 +266,19 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             private String ensRegionName; 
             private String isp; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableRegion model) {
+                this.area = model.area;
+                this.city = model.city;
+                this.country = model.country;
+                this.ensRegionId = model.ensRegionId;
+                this.ensRegionName = model.ensRegionName;
+                this.isp = model.isp;
+                this.province = model.province;
+            } 
 
             /**
              * Area.
@@ -378,6 +411,16 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             private String specName; 
             private String specValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpec model) {
+                this.cores = model.cores;
+                this.memory = model.memory;
+                this.specName = model.specName;
+                this.specValue = model.specValue;
+            } 
+
             /**
              * Cores.
              */
@@ -461,6 +504,14 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             private String storageName; 
             private String storageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableDefaultStorageType model) {
+                this.storageName = model.storageName;
+                this.storageType = model.storageType;
+            } 
+
             /**
              * StorageName.
              */
@@ -540,6 +591,15 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             private String storageName; 
             private String ensRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableSpecialStorageType model) {
+                this.storageType = model.storageType;
+                this.storageName = model.storageName;
+                this.ensRegionId = model.ensRegionId;
+            } 
+
             /**
              * StorageType.
              */
@@ -614,6 +674,14 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         public static final class Builder {
             private java.util.List<AvailableDefaultStorageType> availableDefaultStorageType; 
             private java.util.List<java.util.List<AvailableSpecialStorageType>> availableSpecialStorageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableStorageType model) {
+                this.availableDefaultStorageType = model.availableDefaultStorageType;
+                this.availableSpecialStorageType = model.availableSpecialStorageType;
+            } 
 
             /**
              * AvailableDefaultStorageType.
@@ -729,6 +797,18 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             private AvailableStorageType availableStorageType; 
             private String commodityCode; 
             private String orderType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleControlAvailableResource model) {
+                this.availableDiskType = model.availableDiskType;
+                this.availableRegion = model.availableRegion;
+                this.availableSpec = model.availableSpec;
+                this.availableStorageType = model.availableStorageType;
+                this.commodityCode = model.commodityCode;
+                this.orderType = model.orderType;
+            } 
 
             /**
              * AvailableDiskType.

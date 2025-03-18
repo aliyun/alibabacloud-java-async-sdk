@@ -35,7 +35,7 @@ public class CreateStorageGatewayRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,6 +159,17 @@ public class CreateStorageGatewayRequest extends Request {
             private String gatewayName; 
             private String gatewayType; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderDetails model) {
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.gatewayName = model.gatewayName;
+                this.gatewayType = model.gatewayType;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The description of the gateway. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>

@@ -36,6 +36,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -53,6 +57,14 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Clusters> clusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterResponseBody model) {
+            this.clusters = model.clusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about clusters.</p>
@@ -158,6 +170,17 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String name; 
             private String nextVersion; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterId = model.clusterId;
+                this.currentVersion = model.currentVersion;
+                this.name = model.name;
+                this.nextVersion = model.nextVersion;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The cluster ID.</p>

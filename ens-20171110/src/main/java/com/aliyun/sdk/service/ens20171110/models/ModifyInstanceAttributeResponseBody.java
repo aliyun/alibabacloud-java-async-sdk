@@ -36,6 +36,10 @@ public class ModifyInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,6 +57,14 @@ public class ModifyInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceAttributeResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>

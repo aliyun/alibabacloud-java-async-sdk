@@ -26,6 +26,10 @@ public class DescribeLoadBalancersRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
@@ -63,6 +67,7 @@ public class DescribeLoadBalancersRequest extends Request {
         super(builder);
         this.address = builder.address;
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.loadBalancerId = builder.loadBalancerId;
         this.loadBalancerName = builder.loadBalancerName;
         this.loadBalancerStatus = builder.loadBalancerStatus;
@@ -81,7 +86,7 @@ public class DescribeLoadBalancersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,6 +103,13 @@ public class DescribeLoadBalancersRequest extends Request {
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     /**
@@ -159,6 +171,7 @@ public class DescribeLoadBalancersRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeLoadBalancersRequest, Builder> {
         private String address; 
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private String loadBalancerId; 
         private String loadBalancerName; 
         private String loadBalancerStatus; 
@@ -176,6 +189,7 @@ public class DescribeLoadBalancersRequest extends Request {
             super(request);
             this.address = request.address;
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.loadBalancerId = request.loadBalancerId;
             this.loadBalancerName = request.loadBalancerName;
             this.loadBalancerStatus = request.loadBalancerStatus;
@@ -207,6 +221,15 @@ public class DescribeLoadBalancersRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * EnsRegionIds.
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
             return this;
         }
 

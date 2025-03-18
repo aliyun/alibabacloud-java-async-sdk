@@ -36,6 +36,10 @@ public class ExportMeasurementDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filePath
      */
@@ -53,6 +57,14 @@ public class ExportMeasurementDataResponseBody extends TeaModel {
     public static final class Builder {
         private String filePath; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportMeasurementDataResponseBody model) {
+            this.filePath = model.filePath;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The download path of the exported file.</p>

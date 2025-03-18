@@ -40,6 +40,10 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
         private Integer code; 
         private EnsNetDistricts ensNetDistricts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsNetSaleDistrictResponseBody model) {
+            this.code = model.code;
+            this.ensNetDistricts = model.ensNetDistricts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
@@ -206,6 +219,19 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             private String netDistrictLevel; 
             private String netDistrictName; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnsNetDistrict model) {
+                this.ensRegionIdCount = model.ensRegionIdCount;
+                this.instanceCount = model.instanceCount;
+                this.netDistrictCode = model.netDistrictCode;
+                this.netDistrictEnName = model.netDistrictEnName;
+                this.netDistrictFatherCode = model.netDistrictFatherCode;
+                this.netDistrictLevel = model.netDistrictLevel;
+                this.netDistrictName = model.netDistrictName;
+            } 
+
             /**
              * <p>The information about the ISP.</p>
              * 
@@ -326,6 +352,13 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EnsNetDistrict> ensNetDistrict; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnsNetDistricts model) {
+                this.ensNetDistrict = model.ensNetDistrict;
+            } 
 
             /**
              * EnsNetDistrict.

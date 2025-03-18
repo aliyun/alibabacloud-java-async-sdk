@@ -41,7 +41,7 @@ public class RemoveBackendServersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -187,6 +187,17 @@ public class RemoveBackendServersRequest extends Request {
             private String serverId; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.ip = model.ip;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The IP address of the backend server.</p>

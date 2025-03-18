@@ -36,6 +36,10 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServerLoadBalancerMonitorResponseBody model) {
+            this.requestId = model.requestId;
+            this.serverLoadBalancerMonitorData = model.serverLoadBalancerMonitorData;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -254,6 +266,25 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
             private Integer rtAvg; 
             private String vip; 
             private Integer vni; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerLoadBalancerMonitorData model) {
+                this.acc = model.acc;
+                this.bizTime = model.bizTime;
+                this.ensRegionId = model.ensRegionId;
+                this.loadBalancerId = model.loadBalancerId;
+                this.loadBalancerName = model.loadBalancerName;
+                this.loadBalancerSpec = model.loadBalancerSpec;
+                this.reqs2xx = model.reqs2xx;
+                this.reqs3xx = model.reqs3xx;
+                this.reqs4xx = model.reqs4xx;
+                this.reqs5xx = model.reqs5xx;
+                this.rtAvg = model.rtAvg;
+                this.vip = model.vip;
+                this.vni = model.vni;
+            } 
 
             /**
              * <p>The total number of requests.</p>

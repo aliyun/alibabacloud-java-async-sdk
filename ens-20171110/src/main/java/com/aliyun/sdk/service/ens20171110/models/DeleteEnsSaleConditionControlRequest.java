@@ -51,7 +51,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,6 +192,14 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             private String conditionControlModuleCode; 
             private String conditionControlModuleValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionControls model) {
+                this.conditionControlModuleCode = model.conditionControlModuleCode;
+                this.conditionControlModuleValue = model.conditionControlModuleValue;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -273,6 +281,15 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             private java.util.List<ConditionControls> conditionControls; 
             private String moduleCode; 
             private String orderType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleControls model) {
+                this.conditionControls = model.conditionControls;
+                this.moduleCode = model.moduleCode;
+                this.orderType = model.orderType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

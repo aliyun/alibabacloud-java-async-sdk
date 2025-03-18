@@ -48,6 +48,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -89,6 +93,17 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String securityGroupId; 
         private String securityGroupName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupAttributeResponseBody model) {
+            this.description = model.description;
+            this.permissions = model.permissions;
+            this.requestId = model.requestId;
+            this.securityGroupId = model.securityGroupId;
+            this.securityGroupName = model.securityGroupName;
+        } 
 
         /**
          * <p>The description of the security group.</p>
@@ -288,6 +303,22 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             private String sourceCidrIp; 
             private String sourcePortRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(Permission model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.destCidrIp = model.destCidrIp;
+                this.direction = model.direction;
+                this.ipProtocol = model.ipProtocol;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
+
             /**
              * <p>The time at which the security group rule was created. The time is displayed in UTC.</p>
              * 
@@ -436,6 +467,13 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Permission> permission; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.permission = model.permission;
+            } 
 
             /**
              * Permission.

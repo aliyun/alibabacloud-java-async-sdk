@@ -69,7 +69,7 @@ public class DescribeSnapshotsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,7 +181,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * <p>The node information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
          */
         public Builder ensRegionIds(String ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -202,7 +205,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -238,7 +241,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);

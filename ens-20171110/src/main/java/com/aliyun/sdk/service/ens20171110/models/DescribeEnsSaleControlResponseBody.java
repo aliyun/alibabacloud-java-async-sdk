@@ -36,6 +36,10 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SaleControl> saleControl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsSaleControlResponseBody model) {
+            this.requestId = model.requestId;
+            this.saleControl = model.saleControl;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
             private String moduleMaxValue; 
             private String moduleMinValue; 
             private java.util.List<String> moduleValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleValue model) {
+                this.moduleMaxValue = model.moduleMaxValue;
+                this.moduleMinValue = model.moduleMinValue;
+                this.moduleValue = model.moduleValue;
+            } 
 
             /**
              * ModuleMaxValue.
@@ -219,6 +240,15 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
             private ModuleValue moduleValue; 
             private String operator; 
 
+            private Builder() {
+            } 
+
+            private Builder(BasicSaleControl model) {
+                this.description = model.description;
+                this.moduleValue = model.moduleValue;
+                this.operator = model.operator;
+            } 
+
             /**
              * Description.
              */
@@ -293,6 +323,14 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
         public static final class Builder {
             private String conditionControlModuleCode; 
             private String conditionControlModuleValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionControl model) {
+                this.conditionControlModuleCode = model.conditionControlModuleCode;
+                this.conditionControlModuleValue = model.conditionControlModuleValue;
+            } 
 
             /**
              * ConditionControlModuleCode.
@@ -372,6 +410,15 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
             private String moduleMaxValue; 
             private String moduleMinValue; 
             private java.util.List<String> moduleValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionSaleControlModuleValue model) {
+                this.moduleMaxValue = model.moduleMaxValue;
+                this.moduleMinValue = model.moduleMinValue;
+                this.moduleValue = model.moduleValue;
+            } 
 
             /**
              * ModuleMaxValue.
@@ -472,6 +519,16 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
             private ConditionSaleControlModuleValue moduleValue; 
             private String operator; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionSaleControl model) {
+                this.conditionControl = model.conditionControl;
+                this.description = model.description;
+                this.moduleValue = model.moduleValue;
+                this.operator = model.operator;
+            } 
+
             /**
              * ConditionControl.
              */
@@ -555,6 +612,14 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
             private BasicSaleControl basicSaleControl; 
             private java.util.List<ConditionSaleControl> conditionSaleControl; 
 
+            private Builder() {
+            } 
+
+            private Builder(SaleControlItem model) {
+                this.basicSaleControl = model.basicSaleControl;
+                this.conditionSaleControl = model.conditionSaleControl;
+            } 
+
             /**
              * BasicSaleControl.
              */
@@ -621,6 +686,14 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
         public static final class Builder {
             private String moduleCode; 
             private SaleControlItem saleControlItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleControlItems model) {
+                this.moduleCode = model.moduleCode;
+                this.saleControlItem = model.saleControlItem;
+            } 
 
             /**
              * ModuleCode.
@@ -700,6 +773,15 @@ public class DescribeEnsSaleControlResponseBody extends TeaModel {
             private String commodityCode; 
             private String orderType; 
             private java.util.List<SaleControlItems> saleControlItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleControl model) {
+                this.commodityCode = model.commodityCode;
+                this.orderType = model.orderType;
+                this.saleControlItems = model.saleControlItems;
+            } 
 
             /**
              * CommodityCode.

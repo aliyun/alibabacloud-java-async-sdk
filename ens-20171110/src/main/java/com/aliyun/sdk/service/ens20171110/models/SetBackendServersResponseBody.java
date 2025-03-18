@@ -36,6 +36,10 @@ public class SetBackendServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendServers
      */
@@ -53,6 +57,14 @@ public class SetBackendServersResponseBody extends TeaModel {
     public static final class Builder {
         private BackendServers backendServers; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetBackendServersResponseBody model) {
+            this.backendServers = model.backendServers;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The backend servers.</p>
@@ -159,6 +171,17 @@ public class SetBackendServersResponseBody extends TeaModel {
             private String type; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServer model) {
+                this.ip = model.ip;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The IP address of the backend server.</p>
              * 
@@ -259,6 +282,13 @@ public class SetBackendServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackendServer> backendServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.backendServer = model.backendServer;
+            } 
 
             /**
              * BackendServer.

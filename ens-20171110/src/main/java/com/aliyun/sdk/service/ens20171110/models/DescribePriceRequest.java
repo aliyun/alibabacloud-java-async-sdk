@@ -79,7 +79,7 @@ public class DescribePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -334,6 +334,13 @@ public class DescribePriceRequest extends Request {
         public static final class Builder {
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.size = model.size;
+            } 
+
             /**
              * <p>The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.</p>
              * 
@@ -384,6 +391,13 @@ public class DescribePriceRequest extends Request {
 
         public static final class Builder {
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.size = model.size;
+            } 
 
             /**
              * <p>The size of the system disk. Unit: GB.</p>
@@ -447,6 +461,14 @@ public class DescribePriceRequest extends Request {
         public static final class Builder {
             private String category; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.category = model.category;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The category of the disk.</p>

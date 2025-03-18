@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLoadBalancerRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
@@ -48,6 +52,7 @@ public class CreateLoadBalancerRequest extends Request {
 
     private CreateLoadBalancerRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.ensRegionId = builder.ensRegionId;
         this.loadBalancerName = builder.loadBalancerName;
         this.loadBalancerSpec = builder.loadBalancerSpec;
@@ -64,9 +69,16 @@ public class CreateLoadBalancerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -112,6 +124,7 @@ public class CreateLoadBalancerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLoadBalancerRequest, Builder> {
+        private String clientToken; 
         private String ensRegionId; 
         private String loadBalancerName; 
         private String loadBalancerSpec; 
@@ -125,6 +138,7 @@ public class CreateLoadBalancerRequest extends Request {
 
         private Builder(CreateLoadBalancerRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.ensRegionId = request.ensRegionId;
             this.loadBalancerName = request.loadBalancerName;
             this.loadBalancerSpec = request.loadBalancerSpec;
@@ -132,6 +146,15 @@ public class CreateLoadBalancerRequest extends Request {
             this.payType = request.payType;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the Edge Node Service (ENS) node.</p>

@@ -41,7 +41,7 @@ public class UnmountInstanceSDGRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +75,7 @@ public class UnmountInstanceSDGRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -85,6 +86,7 @@ public class UnmountInstanceSDGRequest extends Request {
         }
 
         /**
+         * <p>The ID of the SDG.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -48,6 +48,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return haVips
      */
@@ -89,6 +93,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHaVipsResponseBody model) {
+            this.haVips = model.haVips;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the HAVIPs.</p>
@@ -191,6 +206,14 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public static final class Builder {
             private String eip; 
             private String eipId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedEipAddresses model) {
+                this.eip = model.eip;
+                this.eipId = model.eipId;
+            } 
 
             /**
              * <p>The EIP.</p>
@@ -300,6 +323,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String instanceType; 
             private String ipAddress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedInstances model) {
+                this.creationTime = model.creationTime;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.ipAddress = model.ipAddress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the instance was created.</p>
@@ -523,6 +557,23 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String networkId; 
             private String status; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HaVips model) {
+                this.associatedEipAddresses = model.associatedEipAddresses;
+                this.associatedInstances = model.associatedInstances;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.haVipId = model.haVipId;
+                this.ipAddress = model.ipAddress;
+                this.name = model.name;
+                this.networkId = model.networkId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The elastic IP addresses (EIPs) that are associated with the HAVIP.</p>

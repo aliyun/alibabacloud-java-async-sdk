@@ -44,6 +44,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocationId
      */
@@ -77,6 +81,16 @@ public class CreateFileSystemResponseBody extends TeaModel {
         private String bizStatusCode; 
         private String requestId; 
         private java.util.List<String> unAllocationId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFileSystemResponseBody model) {
+            this.allocationId = model.allocationId;
+            this.bizStatusCode = model.bizStatusCode;
+            this.requestId = model.requestId;
+            this.unAllocationId = model.unAllocationId;
+        } 
 
         /**
          * <p>The information about the file system that was created.</p>

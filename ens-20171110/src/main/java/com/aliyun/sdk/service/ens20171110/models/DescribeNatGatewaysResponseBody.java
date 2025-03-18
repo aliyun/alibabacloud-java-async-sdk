@@ -48,6 +48,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natGateways
      */
@@ -89,6 +93,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNatGatewaysResponseBody model) {
+            this.natGateways = model.natGateways;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the NAT gateways.</p>
@@ -154,12 +169,111 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      *
      * <p>DescribeNatGatewaysResponseBody</p>
      */
+    public static class IpLists extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
+        private String allocationId;
+
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
+        private String ipAddress;
+
+        @com.aliyun.core.annotation.NameInMap("UsingStatus")
+        private String usingStatus;
+
+        private IpLists(Builder builder) {
+            this.allocationId = builder.allocationId;
+            this.ipAddress = builder.ipAddress;
+            this.usingStatus = builder.usingStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpLists create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allocationId
+         */
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
+        /**
+         * @return ipAddress
+         */
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        /**
+         * @return usingStatus
+         */
+        public String getUsingStatus() {
+            return this.usingStatus;
+        }
+
+        public static final class Builder {
+            private String allocationId; 
+            private String ipAddress; 
+            private String usingStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpLists model) {
+                this.allocationId = model.allocationId;
+                this.ipAddress = model.ipAddress;
+                this.usingStatus = model.usingStatus;
+            } 
+
+            /**
+             * AllocationId.
+             */
+            public Builder allocationId(String allocationId) {
+                this.allocationId = allocationId;
+                return this;
+            }
+
+            /**
+             * IpAddress.
+             */
+            public Builder ipAddress(String ipAddress) {
+                this.ipAddress = ipAddress;
+                return this;
+            }
+
+            /**
+             * UsingStatus.
+             */
+            public Builder usingStatus(String usingStatus) {
+                this.usingStatus = usingStatus;
+                return this;
+            }
+
+            public IpLists build() {
+                return new IpLists(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class NatGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("IpLists")
+        private java.util.List<IpLists> ipLists;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -173,16 +287,21 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NatGateways(Builder builder) {
             this.creationTime = builder.creationTime;
             this.ensRegionId = builder.ensRegionId;
+            this.ipLists = builder.ipLists;
             this.name = builder.name;
             this.natGatewayId = builder.natGatewayId;
             this.networkId = builder.networkId;
             this.spec = builder.spec;
+            this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -206,6 +325,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          */
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        /**
+         * @return ipLists
+         */
+        public java.util.List<IpLists> getIpLists() {
+            return this.ipLists;
         }
 
         /**
@@ -237,6 +363,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -246,11 +379,28 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String ensRegionId; 
+            private java.util.List<IpLists> ipLists; 
             private String name; 
             private String natGatewayId; 
             private String networkId; 
             private String spec; 
+            private String status; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatGateways model) {
+                this.creationTime = model.creationTime;
+                this.ensRegionId = model.ensRegionId;
+                this.ipLists = model.ipLists;
+                this.name = model.name;
+                this.natGatewayId = model.natGatewayId;
+                this.networkId = model.networkId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The time when the NAT gateway was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -271,6 +421,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
+                return this;
+            }
+
+            /**
+             * IpLists.
+             */
+            public Builder ipLists(java.util.List<IpLists> ipLists) {
+                this.ipLists = ipLists;
                 return this;
             }
 
@@ -315,6 +473,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder spec(String spec) {
                 this.spec = spec;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

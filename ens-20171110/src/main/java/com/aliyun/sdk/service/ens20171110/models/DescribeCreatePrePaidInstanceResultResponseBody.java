@@ -36,6 +36,10 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceCreateResult
      */
@@ -53,6 +57,14 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceCreateResult instanceCreateResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCreatePrePaidInstanceResultResponseBody model) {
+            this.instanceCreateResult = model.instanceCreateResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returned results of creating an instance.</p>
@@ -122,6 +134,14 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceCreateStatus; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceCreateResult model) {
+                this.instanceCreateStatus = model.instanceCreateStatus;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The status of the instance creation.</p>

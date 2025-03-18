@@ -48,6 +48,10 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipAddresses
      */
@@ -89,6 +93,17 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsEipAddressesResponseBody model) {
+            this.eipAddresses = model.eipAddresses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the EIP.</p>
@@ -348,6 +363,27 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             private Boolean standby; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipAddress model) {
+                this.allocationId = model.allocationId;
+                this.allocationTime = model.allocationTime;
+                this.bandwidth = model.bandwidth;
+                this.chargeType = model.chargeType;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+                this.ipStatus = model.ipStatus;
+                this.isp = model.isp;
+                this.name = model.name;
+                this.standby = model.standby;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the EIP.</p>
              * 
@@ -580,6 +616,13 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EipAddress> eipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipAddresses model) {
+                this.eipAddress = model.eipAddress;
+            } 
 
             /**
              * EipAddress.

@@ -36,6 +36,10 @@ public class StartInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceResponses
      */
@@ -53,6 +57,14 @@ public class StartInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceOperateResponse> instanceResponses; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartInstancesResponseBody model) {
+            this.instanceResponses = model.instanceResponses;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceResponses.

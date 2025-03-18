@@ -40,6 +40,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         private Integer code; 
         private EnsRegions ensRegions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsRegionsResponseBody model) {
+            this.code = model.code;
+            this.ensRegions = model.ensRegions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
@@ -182,6 +195,17 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             private String name; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnsRegionsEnsRegions model) {
+                this.area = model.area;
+                this.enName = model.enName;
+                this.ensRegionId = model.ensRegionId;
+                this.name = model.name;
+                this.province = model.province;
+            } 
+
             /**
              * <p>The code of the region.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EnsRegionsEnsRegions> ensRegions; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnsRegions model) {
+                this.ensRegions = model.ensRegions;
+            } 
 
             /**
              * <p>The information about the regions.</p>

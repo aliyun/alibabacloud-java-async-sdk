@@ -56,7 +56,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,6 +117,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AIC instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +142,10 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +154,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         }
 
         /**
-         * SDGIds.
+         * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
          */
         public Builder SDGIds(java.util.List<String> SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");
@@ -157,7 +164,10 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The deployment status of the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

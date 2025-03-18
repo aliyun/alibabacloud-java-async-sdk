@@ -48,6 +48,10 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandWithTypeInfo
      */
@@ -89,6 +93,17 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         private String chargeCycleInfo; 
         private Integer code; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBandWithdChargeTypeResponseBody model) {
+            this.bandWithTypeInfo = model.bandWithTypeInfo;
+            this.chargeContractType = model.chargeContractType;
+            this.chargeCycleInfo = model.chargeCycleInfo;
+            this.code = model.code;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the metering method.</p>

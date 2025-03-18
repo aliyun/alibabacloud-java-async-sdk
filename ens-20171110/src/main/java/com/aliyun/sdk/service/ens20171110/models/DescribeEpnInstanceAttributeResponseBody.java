@@ -56,6 +56,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return confVersions
      */
@@ -113,6 +117,19 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         private String networkingModel; 
         private String requestId; 
         private java.util.List<VSwitches> vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEpnInstanceAttributeResponseBody model) {
+            this.confVersions = model.confVersions;
+            this.EPNInstanceId = model.EPNInstanceId;
+            this.EPNInstanceName = model.EPNInstanceName;
+            this.instances = model.instances;
+            this.networkingModel = model.networkingModel;
+            this.requestId = model.requestId;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
          * <p>The information about the EPN configurations.</p>
@@ -236,6 +253,14 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String confVersion; 
             private String ensRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfVersions model) {
+                this.confVersion = model.confVersion;
+                this.ensRegionId = model.ensRegionId;
+            } 
 
             /**
              * <p>The version number.</p>
@@ -369,6 +394,19 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String publicIpAddress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isp = model.isp;
+                this.privateIpAddress = model.privateIpAddress;
+                this.publicIpAddress = model.publicIpAddress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the node.</p>
@@ -531,6 +569,16 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
             private String ensRegionId; 
             private String vSwitchId; 
             private String vSwitchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.cidrBlock = model.cidrBlock;
+                this.ensRegionId = model.ensRegionId;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+            } 
 
             /**
              * <p>The CIDR block.</p>

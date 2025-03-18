@@ -48,6 +48,10 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,6 +94,17 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         private java.util.List<RouteEntrys> routeEntrys; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsRouteEntryListResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeEntrys = model.routeEntrys;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The page number of the returned page.</p>
          * 
@@ -124,7 +139,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the route.</p>
+         * <p>The information about the routes.</p>
          */
         public Builder routeEntrys(java.util.List<RouteEntrys> routeEntrys) {
             this.routeEntrys = routeEntrys;
@@ -158,11 +173,15 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
+        @com.aliyun.core.annotation.NameInMap("NextHopName")
+        private String nextHopName;
+
         @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
         private NextHops(Builder builder) {
             this.nextHopId = builder.nextHopId;
+            this.nextHopName = builder.nextHopName;
             this.nextHopType = builder.nextHopType;
         }
 
@@ -182,6 +201,13 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return nextHopName
+         */
+        public String getNextHopName() {
+            return this.nextHopName;
+        }
+
+        /**
          * @return nextHopType
          */
         public String getNextHopType() {
@@ -190,7 +216,17 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nextHopId; 
+            private String nextHopName; 
             private String nextHopType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHops model) {
+                this.nextHopId = model.nextHopId;
+                this.nextHopName = model.nextHopName;
+                this.nextHopType = model.nextHopType;
+            } 
 
             /**
              * <p>The ID of the next hop.</p>
@@ -200,6 +236,17 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testInstance</p>
+             */
+            public Builder nextHopName(String nextHopName) {
+                this.nextHopName = nextHopName;
                 return this;
             }
 
@@ -228,6 +275,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
      * <p>DescribeEnsRouteEntryListResponseBody</p>
      */
     public static class RouteEntrys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -246,6 +296,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
+        private String sourceCidrBlock;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -253,12 +306,14 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         private String type;
 
         private RouteEntrys(Builder builder) {
+            this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.destinationCidrBlock = builder.destinationCidrBlock;
             this.nextHops = builder.nextHops;
             this.routeEntryId = builder.routeEntryId;
             this.routeEntryName = builder.routeEntryName;
             this.routeTableId = builder.routeTableId;
+            this.sourceCidrBlock = builder.sourceCidrBlock;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -269,6 +324,13 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
         public static RouteEntrys create() {
             return builder().build();
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -314,6 +376,13 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceCidrBlock
+         */
+        public String getSourceCidrBlock() {
+            return this.sourceCidrBlock;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -328,14 +397,40 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String creationTime; 
             private String description; 
             private String destinationCidrBlock; 
             private java.util.List<NextHops> nextHops; 
             private String routeEntryId; 
             private String routeEntryName; 
             private String routeTableId; 
+            private String sourceCidrBlock; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntrys model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.nextHops = model.nextHops;
+                this.routeEntryId = model.routeEntryId;
+                this.routeEntryName = model.routeEntryName;
+                this.routeTableId = model.routeTableId;
+                this.sourceCidrBlock = model.sourceCidrBlock;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
 
             /**
              * <p>Enter a description for the route.</p>
@@ -397,6 +492,14 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
+                return this;
+            }
+
+            /**
+             * SourceCidrBlock.
+             */
+            public Builder sourceCidrBlock(String sourceCidrBlock) {
+                this.sourceCidrBlock = sourceCidrBlock;
                 return this;
             }
 

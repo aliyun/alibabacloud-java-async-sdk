@@ -52,7 +52,6 @@ public class DescribeEnsRouteEntryListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteTableId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
     private DescribeEnsRouteEntryListRequest(Builder builder) {
@@ -76,7 +75,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,7 +198,9 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         /**
          * <p>The type of next hop of the custom route entry. Valid values:</p>
          * <ul>
-         * <li>Instance: an ENS instance.</li>
+         * <li>Instance (default): an ENS instance.</li>
+         * <li>HaVip: a high-availability virtual IP address (HAVIP).</li>
+         * <li>NetworkPeer: VPC peering connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +278,6 @@ public class DescribeEnsRouteEntryListRequest extends Request {
 
         /**
          * <p>The ID of the route table that you want to query.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-hp3wdhynneo7fsclox8hs</p>

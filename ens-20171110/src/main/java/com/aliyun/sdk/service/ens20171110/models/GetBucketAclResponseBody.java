@@ -36,6 +36,10 @@ public class GetBucketAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketAcl
      */
@@ -53,6 +57,14 @@ public class GetBucketAclResponseBody extends TeaModel {
     public static final class Builder {
         private String bucketAcl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBucketAclResponseBody model) {
+            this.bucketAcl = model.bucketAcl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ACL of the bucket.</p>

@@ -44,6 +44,10 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceIds
      */
@@ -77,6 +81,16 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private java.util.List<ResourceDetailInfos> resourceDetailInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(RescaleDeviceServiceResponseBody model) {
+            this.deviceIds = model.deviceIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.resourceDetailInfos = model.resourceDetailInfos;
+        } 
 
         /**
          * <p>The IDs of the devices.</p>
@@ -237,6 +251,20 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             private String server; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDetailInfos model) {
+                this.id = model.id;
+                this.ip = model.ip;
+                this.ISP = model.ISP;
+                this.mac = model.mac;
+                this.regionID = model.regionID;
+                this.server = model.server;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the device.</p>

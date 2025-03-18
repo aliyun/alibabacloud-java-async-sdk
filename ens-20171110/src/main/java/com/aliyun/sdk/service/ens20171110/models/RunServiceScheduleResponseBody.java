@@ -60,6 +60,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commandResults
      */
@@ -125,6 +129,20 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         private String requestId; 
         private String requestRepeated; 
         private Boolean tcpPorts; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunServiceScheduleResponseBody model) {
+            this.commandResults = model.commandResults;
+            this.index = model.index;
+            this.instanceId = model.instanceId;
+            this.instanceIp = model.instanceIp;
+            this.instancePort = model.instancePort;
+            this.requestId = model.requestId;
+            this.requestRepeated = model.requestRepeated;
+            this.tcpPorts = model.tcpPorts;
+        } 
 
         /**
          * <p>The execution results of the commands.</p>
@@ -273,6 +291,15 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             private String containerName; 
             private String resultMsg; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommandResult model) {
+                this.command = model.command;
+                this.containerName = model.containerName;
+                this.resultMsg = model.resultMsg;
+            } 
+
             /**
              * <p>The command.</p>
              * 
@@ -344,6 +371,13 @@ public class RunServiceScheduleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CommandResult> commandResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommandResults model) {
+                this.commandResult = model.commandResult;
+            } 
 
             /**
              * CommandResult.

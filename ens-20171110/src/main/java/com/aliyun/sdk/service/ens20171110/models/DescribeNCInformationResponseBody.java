@@ -56,6 +56,10 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -113,6 +117,19 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         private Pager pager; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNCInformationResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.desc = model.desc;
+            this.msg = model.msg;
+            this.pager = model.pager;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -339,6 +356,24 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cpu model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -607,6 +642,24 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Gpu model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -874,6 +927,24 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hdd model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -1044,6 +1115,16 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> tag; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.ip = model.ip;
+                this.name = model.name;
+                this.tag = model.tag;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Ip.
@@ -1247,6 +1328,24 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -1515,6 +1614,24 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nvme model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -1782,6 +1899,24 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ssd model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -2025,6 +2160,22 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private Ssd ssd; 
             private String virtual; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.hdd = model.hdd;
+                this.info = model.info;
+                this.memory = model.memory;
+                this.nvme = model.nvme;
+                this.online = model.online;
+                this.region = model.region;
+                this.ssd = model.ssd;
+                this.virtual = model.virtual;
+            } 
+
             /**
              * Cpu.
              */
@@ -2167,6 +2318,15 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pager model) {
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * Page.

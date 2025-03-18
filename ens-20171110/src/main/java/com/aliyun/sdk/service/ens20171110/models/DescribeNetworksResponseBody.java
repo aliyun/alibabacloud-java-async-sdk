@@ -48,6 +48,10 @@ public class DescribeNetworksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networks
      */
@@ -89,6 +93,17 @@ public class DescribeNetworksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworksResponseBody model) {
+            this.networks = model.networks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of networks.</p>
@@ -154,6 +169,60 @@ public class DescribeNetworksResponseBody extends TeaModel {
      *
      * <p>DescribeNetworksResponseBody</p>
      */
+    public static class RouteTableIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        private java.util.List<String> routeTableId;
+
+        private RouteTableIds(Builder builder) {
+            this.routeTableId = builder.routeTableId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteTableIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return routeTableId
+         */
+        public java.util.List<String> getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTableIds model) {
+                this.routeTableId = model.routeTableId;
+            } 
+
+            /**
+             * RouteTableId.
+             */
+            public Builder routeTableId(java.util.List<String> routeTableId) {
+                this.routeTableId = routeTableId;
+                return this;
+            }
+
+            public RouteTableIds build() {
+                return new RouteTableIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworksResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List<String> vSwitchId;
@@ -179,6 +248,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * VSwitchId.
@@ -214,6 +290,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
+        @com.aliyun.core.annotation.NameInMap("GatewayRouteTableId")
+        private String gatewayRouteTableId;
+
         @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
 
@@ -222,6 +301,12 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NetworkName")
         private String networkName;
+
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        private String routeTableId;
+
+        @com.aliyun.core.annotation.NameInMap("RouteTableIds")
+        private RouteTableIds routeTableIds;
 
         @com.aliyun.core.annotation.NameInMap("RouterTableId")
         private String routerTableId;
@@ -237,9 +322,12 @@ public class DescribeNetworksResponseBody extends TeaModel {
             this.createdTime = builder.createdTime;
             this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
+            this.gatewayRouteTableId = builder.gatewayRouteTableId;
             this.networkAclId = builder.networkAclId;
             this.networkId = builder.networkId;
             this.networkName = builder.networkName;
+            this.routeTableId = builder.routeTableId;
+            this.routeTableIds = builder.routeTableIds;
             this.routerTableId = builder.routerTableId;
             this.status = builder.status;
             this.vSwitchIds = builder.vSwitchIds;
@@ -282,6 +370,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
+         * @return gatewayRouteTableId
+         */
+        public String getGatewayRouteTableId() {
+            return this.gatewayRouteTableId;
+        }
+
+        /**
          * @return networkAclId
          */
         public String getNetworkAclId() {
@@ -300,6 +395,20 @@ public class DescribeNetworksResponseBody extends TeaModel {
          */
         public String getNetworkName() {
             return this.networkName;
+        }
+
+        /**
+         * @return routeTableId
+         */
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        /**
+         * @return routeTableIds
+         */
+        public RouteTableIds getRouteTableIds() {
+            return this.routeTableIds;
         }
 
         /**
@@ -328,12 +437,34 @@ public class DescribeNetworksResponseBody extends TeaModel {
             private String createdTime; 
             private String description; 
             private String ensRegionId; 
+            private String gatewayRouteTableId; 
             private String networkAclId; 
             private String networkId; 
             private String networkName; 
+            private String routeTableId; 
+            private RouteTableIds routeTableIds; 
             private String routerTableId; 
             private String status; 
             private VSwitchIds vSwitchIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.cidrBlock = model.cidrBlock;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.gatewayRouteTableId = model.gatewayRouteTableId;
+                this.networkAclId = model.networkAclId;
+                this.networkId = model.networkId;
+                this.networkName = model.networkName;
+                this.routeTableId = model.routeTableId;
+                this.routeTableIds = model.routeTableIds;
+                this.routerTableId = model.routerTableId;
+                this.status = model.status;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
 
             /**
              * <p>The IPv4 CIDR block of the network.</p>
@@ -380,6 +511,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
+             * GatewayRouteTableId.
+             */
+            public Builder gatewayRouteTableId(String gatewayRouteTableId) {
+                this.gatewayRouteTableId = gatewayRouteTableId;
+                return this;
+            }
+
+            /**
              * <p>The ID of the network access control list (ACL).</p>
              * 
              * <strong>example:</strong>
@@ -409,6 +548,22 @@ public class DescribeNetworksResponseBody extends TeaModel {
              */
             public Builder networkName(String networkName) {
                 this.networkName = networkName;
+                return this;
+            }
+
+            /**
+             * RouteTableId.
+             */
+            public Builder routeTableId(String routeTableId) {
+                this.routeTableId = routeTableId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the route table. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>20</strong>, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</p>
+             */
+            public Builder routeTableIds(RouteTableIds routeTableIds) {
+                this.routeTableIds = routeTableIds;
                 return this;
             }
 
@@ -484,6 +639,13 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Network> network; 
+
+            private Builder() {
+            } 
+
+            private Builder(Networks model) {
+                this.network = model.network;
+            } 
 
             /**
              * Network.

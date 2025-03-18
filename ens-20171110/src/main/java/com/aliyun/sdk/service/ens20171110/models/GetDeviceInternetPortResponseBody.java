@@ -40,6 +40,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         private String instanceId; 
         private java.util.List<NetworkInfo> networkInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceInternetPortResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.networkInfo = model.networkInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the instance. The value is the ID of the server or container.</p>
@@ -193,6 +206,18 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             private String internalIp; 
             private String internalPort; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfo model) {
+                this.externalIp = model.externalIp;
+                this.externalPort = model.externalPort;
+                this.ISP = model.ISP;
+                this.internalIp = model.internalIp;
+                this.internalPort = model.internalPort;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The public IP address.</p>

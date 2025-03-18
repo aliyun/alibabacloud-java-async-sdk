@@ -48,6 +48,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -311,6 +326,24 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String sourceEnsRegionId; 
             private String sourceSnapshotId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.sourceDiskCategory = model.sourceDiskCategory;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceDiskType = model.sourceDiskType;
+                this.sourceEnsRegionId = model.sourceEnsRegionId;
+                this.sourceSnapshotId = model.sourceSnapshotId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

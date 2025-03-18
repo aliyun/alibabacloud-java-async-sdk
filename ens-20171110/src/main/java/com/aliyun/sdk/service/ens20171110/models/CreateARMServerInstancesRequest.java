@@ -119,7 +119,7 @@ public class CreateARMServerInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -337,7 +337,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * EnvironmentVar.
+         * <p>Set one or more environment variables during EAIS instance initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[object Object]</p>
          */
         public Builder environmentVar(String environmentVar) {
             this.putQueryParameter("EnvironmentVar", environmentVar);

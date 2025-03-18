@@ -36,6 +36,10 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SupportResources supportResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudDiskTypesResponseBody model) {
+            this.requestId = model.requestId;
+            this.supportResources = model.supportResources;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -123,6 +135,14 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
             private String category; 
             private String ensRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportResource model) {
+                this.category = model.category;
+                this.ensRegionId = model.ensRegionId;
+            } 
+
             /**
              * <p>The category of the disk.</p>
              * <ul>
@@ -189,6 +209,13 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportResource> supportResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResources model) {
+                this.supportResource = model.supportResource;
+            } 
 
             /**
              * SupportResource.

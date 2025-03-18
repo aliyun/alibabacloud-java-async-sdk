@@ -48,6 +48,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
@@ -89,6 +93,17 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerListenersResponseBody model) {
+            this.listeners = model.listeners;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The listeners of the ELB instance.</p>
@@ -155,6 +170,9 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
      * <p>DescribeLoadBalancerListenersResponseBody</p>
      */
     public static class Listener extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+        private Integer backendServerPort;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -180,6 +198,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         private String status;
 
         private Listener(Builder builder) {
+            this.backendServerPort = builder.backendServerPort;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.forwardPort = builder.forwardPort;
@@ -196,6 +215,13 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
         public static Listener create() {
             return builder().build();
+        }
+
+        /**
+         * @return backendServerPort
+         */
+        public Integer getBackendServerPort() {
+            return this.backendServerPort;
         }
 
         /**
@@ -255,6 +281,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer backendServerPort; 
             private String createTime; 
             private String description; 
             private String forwardPort; 
@@ -263,6 +290,29 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String loadBalancerId; 
             private String protocol; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listener model) {
+                this.backendServerPort = model.backendServerPort;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.forwardPort = model.forwardPort;
+                this.listenerForward = model.listenerForward;
+                this.listenerPort = model.listenerPort;
+                this.loadBalancerId = model.loadBalancerId;
+                this.protocol = model.protocol;
+                this.status = model.status;
+            } 
+
+            /**
+             * BackendServerPort.
+             */
+            public Builder backendServerPort(Integer backendServerPort) {
+                this.backendServerPort = backendServerPort;
+                return this;
+            }
 
             /**
              * <p>The timestamp when the listener was created.</p>
@@ -404,6 +454,13 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Listener> listener; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.listener = model.listener;
+            } 
 
             /**
              * Listener.

@@ -111,7 +111,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -296,7 +296,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * EstablishedTimeout.
+         * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder establishedTimeout(Integer establishedTimeout) {
             this.putQueryParameter("EstablishedTimeout", establishedTimeout);

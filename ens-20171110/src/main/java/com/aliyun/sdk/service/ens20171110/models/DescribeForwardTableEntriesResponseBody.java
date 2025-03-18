@@ -48,6 +48,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forwardTableEntries
      */
@@ -89,6 +93,17 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeForwardTableEntriesResponseBody model) {
+            this.forwardTableEntries = model.forwardTableEntries;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of DNAT entries.</p>
@@ -311,6 +326,24 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String standbyExternalIp; 
             private String standbyStatus; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableEntries model) {
+                this.externalIp = model.externalIp;
+                this.externalPort = model.externalPort;
+                this.forwardEntryId = model.forwardEntryId;
+                this.forwardEntryName = model.forwardEntryName;
+                this.healthCheckPort = model.healthCheckPort;
+                this.internalIp = model.internalIp;
+                this.internalPort = model.internalPort;
+                this.ipProtocol = model.ipProtocol;
+                this.natGatewayId = model.natGatewayId;
+                this.standbyExternalIp = model.standbyExternalIp;
+                this.standbyStatus = model.standbyStatus;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>

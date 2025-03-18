@@ -56,6 +56,10 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableEvents
      */
@@ -113,6 +117,19 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private java.util.List<ReserveEvents> reserveEvents; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceTimelineResponseBody model) {
+            this.availableEvents = model.availableEvents;
+            this.bizEvents = model.bizEvents;
+            this.desc = model.desc;
+            this.inventoryEvents = model.inventoryEvents;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.reserveEvents = model.reserveEvents;
+        } 
 
         /**
          * AvailableEvents.
@@ -244,6 +261,16 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableEvents model) {
+                this.name = model.name;
+                this.occurrenceTime = model.occurrenceTime;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
              * Name.
              */
@@ -350,6 +377,16 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
             private String occurrenceTime; 
             private String reason; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizEvents model) {
+                this.name = model.name;
+                this.occurrenceTime = model.occurrenceTime;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
 
             /**
              * Name.
@@ -458,6 +495,16 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(InventoryEvents model) {
+                this.name = model.name;
+                this.occurrenceTime = model.occurrenceTime;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
              * Name.
              */
@@ -564,6 +611,16 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
             private String occurrenceTime; 
             private String reason; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReserveEvents model) {
+                this.name = model.name;
+                this.occurrenceTime = model.occurrenceTime;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
 
             /**
              * Name.

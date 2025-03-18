@@ -36,6 +36,10 @@ public class DescribeApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -53,6 +57,14 @@ public class DescribeApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private String application; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationResponseBody model) {
+            this.application = model.application;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned application information.</p>

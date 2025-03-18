@@ -40,6 +40,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         private Integer code; 
         private MonitorData monitorData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceMonitorDataResponseBody model) {
+            this.code = model.code;
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
@@ -158,6 +171,15 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             private String instanceId; 
             private String memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceMonitorData model) {
+                this.CPU = model.CPU;
+                this.instanceId = model.instanceId;
+                this.memory = model.memory;
+            } 
+
             /**
              * <p>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceMonitorData> instanceMonitorData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.instanceMonitorData = model.instanceMonitorData;
+            } 
 
             /**
              * InstanceMonitorData.

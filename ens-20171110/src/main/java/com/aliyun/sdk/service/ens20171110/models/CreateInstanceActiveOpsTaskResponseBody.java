@@ -36,6 +36,10 @@ public class CreateInstanceActiveOpsTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceActiveOpsTask
      */
@@ -53,6 +57,14 @@ public class CreateInstanceActiveOpsTaskResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceActiveOpsTask instanceActiveOpsTask; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceActiveOpsTaskResponseBody model) {
+            this.instanceActiveOpsTask = model.instanceActiveOpsTask;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceActiveOpsTask.

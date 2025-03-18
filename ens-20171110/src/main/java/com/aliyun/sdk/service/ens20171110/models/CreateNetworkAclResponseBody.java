@@ -36,6 +36,10 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAclId
      */
@@ -53,6 +57,14 @@ public class CreateNetworkAclResponseBody extends TeaModel {
     public static final class Builder {
         private String networkAclId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNetworkAclResponseBody model) {
+            this.networkAclId = model.networkAclId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the network ACL.</p>

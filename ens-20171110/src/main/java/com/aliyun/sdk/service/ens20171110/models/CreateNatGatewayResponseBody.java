@@ -36,6 +36,10 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natGatewayId
      */
@@ -53,6 +57,14 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     public static final class Builder {
         private String natGatewayId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNatGatewayResponseBody model) {
+            this.natGatewayId = model.natGatewayId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the NAT gateway.</p>

@@ -48,6 +48,10 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SecondaryPublicIpAddresses> secondaryPublicIpAddresses; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecondaryPublicIpAddressesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.secondaryPublicIpAddresses = model.secondaryPublicIpAddresses;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number returned.</p>
@@ -263,6 +278,20 @@ public class DescribeSecondaryPublicIpAddressesResponseBody extends TeaModel {
             private String isp; 
             private String secondaryPublicIpAddress; 
             private String secondaryPublicIpId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecondaryPublicIpAddresses model) {
+                this.cidrMask = model.cidrMask;
+                this.creationTime = model.creationTime;
+                this.ensRegionId = model.ensRegionId;
+                this.gateway = model.gateway;
+                this.ipVersion = model.ipVersion;
+                this.isp = model.isp;
+                this.secondaryPublicIpAddress = model.secondaryPublicIpAddress;
+                this.secondaryPublicIpId = model.secondaryPublicIpId;
+            } 
 
             /**
              * <p>The subnet mask of the CIDR block.</p>

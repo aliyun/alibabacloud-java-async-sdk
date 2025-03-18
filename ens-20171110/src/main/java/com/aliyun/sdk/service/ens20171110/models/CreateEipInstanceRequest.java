@@ -23,6 +23,10 @@ public class CreateEipInstanceRequest extends Request {
     private Long bandwidth;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -56,6 +60,7 @@ public class CreateEipInstanceRequest extends Request {
     private CreateEipInstanceRequest(Builder builder) {
         super(builder);
         this.bandwidth = builder.bandwidth;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.ensRegionId = builder.ensRegionId;
         this.instanceChargeType = builder.instanceChargeType;
@@ -73,7 +78,7 @@ public class CreateEipInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,6 +88,13 @@ public class CreateEipInstanceRequest extends Request {
      */
     public Long getBandwidth() {
         return this.bandwidth;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -136,6 +148,7 @@ public class CreateEipInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateEipInstanceRequest, Builder> {
         private Long bandwidth; 
+        private String clientToken; 
         private String description; 
         private String ensRegionId; 
         private String instanceChargeType; 
@@ -151,6 +164,7 @@ public class CreateEipInstanceRequest extends Request {
         private Builder(CreateEipInstanceRequest request) {
             super(request);
             this.bandwidth = request.bandwidth;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.ensRegionId = request.ensRegionId;
             this.instanceChargeType = request.instanceChargeType;
@@ -169,6 +183,18 @@ public class CreateEipInstanceRequest extends Request {
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
             this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26C28756-2586-17AF-B802-0DC50D8FDEBB</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -253,7 +279,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -312,8 +338,24 @@ public class CreateEipInstanceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <ul>
+             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The key must be up to 64 characters in length.</li>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>team</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -321,7 +363,10 @@ public class CreateEipInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -36,6 +36,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SupportIpv6Info supportIpv6Info; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsRegionIdIpv6InfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.supportIpv6Info = model.supportIpv6Info;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         public static final class Builder {
             private String ensRegionId; 
             private Boolean supportIpv6; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportIpv6Info model) {
+                this.ensRegionId = model.ensRegionId;
+                this.supportIpv6 = model.supportIpv6;
+            } 
 
             /**
              * <p>The ID of the node.</p>

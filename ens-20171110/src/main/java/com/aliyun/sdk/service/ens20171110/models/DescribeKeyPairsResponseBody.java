@@ -48,6 +48,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyPairs
      */
@@ -89,6 +93,17 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKeyPairsResponseBody model) {
+            this.keyPairs = model.keyPairs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the key pairs.</p>
@@ -216,6 +231,16 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String keyPairId; 
             private String keyPairName; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyPair model) {
+                this.creationTime = model.creationTime;
+                this.keyPairFingerPrint = model.keyPairFingerPrint;
+                this.keyPairId = model.keyPairId;
+                this.keyPairName = model.keyPairName;
+            } 
+
             /**
              * <p>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<KeyPair> keyPair; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyPairs model) {
+                this.keyPair = model.keyPair;
+            } 
 
             /**
              * KeyPair.

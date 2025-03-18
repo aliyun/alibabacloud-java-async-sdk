@@ -120,6 +120,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendServerPort
      */
@@ -305,6 +309,35 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         private String status; 
         private Integer unhealthyThreshold; 
         private String xForwardedFor; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerHTTPListenerAttributeResponseBody model) {
+            this.backendServerPort = model.backendServerPort;
+            this.bandwidth = model.bandwidth;
+            this.description = model.description;
+            this.forwardPort = model.forwardPort;
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckDomain = model.healthCheckDomain;
+            this.healthCheckHttpCode = model.healthCheckHttpCode;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckMethod = model.healthCheckMethod;
+            this.healthCheckTimeout = model.healthCheckTimeout;
+            this.healthCheckURI = model.healthCheckURI;
+            this.healthyThreshold = model.healthyThreshold;
+            this.idleTimeout = model.idleTimeout;
+            this.listenerForward = model.listenerForward;
+            this.listenerPort = model.listenerPort;
+            this.requestId = model.requestId;
+            this.requestTimeout = model.requestTimeout;
+            this.scheduler = model.scheduler;
+            this.serverCertificateId = model.serverCertificateId;
+            this.status = model.status;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+            this.xForwardedFor = model.xForwardedFor;
+        } 
 
         /**
          * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>

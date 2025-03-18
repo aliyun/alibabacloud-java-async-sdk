@@ -148,7 +148,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -716,6 +716,13 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.size = model.size;
+            } 
+
             /**
              * <p>The capacity of the first data disk. Unit: GiB. The capacity is at least 20 GiB and is a multiple of 10 GiB.</p>
              * 
@@ -765,6 +772,13 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private String size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.size = model.size;
+            } 
 
             /**
              * <p>The size of the system disk. Unit: GiB. Valid values: <strong>20</strong> and <strong>40</strong>. The value cannot be smaller than the size of the image and must be a multiple of 10 GiB.</p>

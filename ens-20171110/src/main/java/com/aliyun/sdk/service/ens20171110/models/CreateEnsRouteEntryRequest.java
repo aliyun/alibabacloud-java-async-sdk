@@ -46,6 +46,10 @@ public class CreateEnsRouteEntryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
+    private String sourceCidrBlock;
+
     private CreateEnsRouteEntryRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -54,6 +58,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         this.nextHopType = builder.nextHopType;
         this.routeEntryName = builder.routeEntryName;
         this.routeTableId = builder.routeTableId;
+        this.sourceCidrBlock = builder.sourceCidrBlock;
     }
 
     public static Builder builder() {
@@ -64,7 +69,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,6 +116,13 @@ public class CreateEnsRouteEntryRequest extends Request {
         return this.routeTableId;
     }
 
+    /**
+     * @return sourceCidrBlock
+     */
+    public String getSourceCidrBlock() {
+        return this.sourceCidrBlock;
+    }
+
     public static final class Builder extends Request.Builder<CreateEnsRouteEntryRequest, Builder> {
         private String description; 
         private String destinationCidrBlock; 
@@ -118,6 +130,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         private String nextHopType; 
         private String routeEntryName; 
         private String routeTableId; 
+        private String sourceCidrBlock; 
 
         private Builder() {
             super();
@@ -131,6 +144,7 @@ public class CreateEnsRouteEntryRequest extends Request {
             this.nextHopType = request.nextHopType;
             this.routeEntryName = request.routeEntryName;
             this.routeTableId = request.routeTableId;
+            this.sourceCidrBlock = request.sourceCidrBlock;
         } 
 
         /**
@@ -213,6 +227,15 @@ public class CreateEnsRouteEntryRequest extends Request {
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
             this.routeTableId = routeTableId;
+            return this;
+        }
+
+        /**
+         * SourceCidrBlock.
+         */
+        public Builder sourceCidrBlock(String sourceCidrBlock) {
+            this.putQueryParameter("SourceCidrBlock", sourceCidrBlock);
+            this.sourceCidrBlock = sourceCidrBlock;
             return this;
         }
 

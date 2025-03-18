@@ -48,6 +48,10 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<StorageGateways> storageGateways; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStorageGatewayResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.storageGateways = model.storageGateways;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -288,6 +303,22 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
             private String storageGatewayName; 
             private Integer storageGatewayType; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageGateways model) {
+                this.cidrBlock = model.cidrBlock;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.serviceIp = model.serviceIp;
+                this.status = model.status;
+                this.storageGatewayId = model.storageGatewayId;
+                this.storageGatewayName = model.storageGatewayName;
+                this.storageGatewayType = model.storageGatewayType;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The internal CIDR block.</p>

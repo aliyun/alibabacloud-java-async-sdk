@@ -84,6 +84,10 @@ public class ListObjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketName
      */
@@ -197,6 +201,26 @@ public class ListObjectsResponseBody extends TeaModel {
         private String nextMarker; 
         private String prefix; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListObjectsResponseBody model) {
+            this.bucketName = model.bucketName;
+            this.commonPrefixes = model.commonPrefixes;
+            this.contents = model.contents;
+            this.continuationToken = model.continuationToken;
+            this.delimiter = model.delimiter;
+            this.encodingType = model.encodingType;
+            this.isTruncated = model.isTruncated;
+            this.keyCount = model.keyCount;
+            this.marker = model.marker;
+            this.maxKeys = model.maxKeys;
+            this.nextContinuationToken = model.nextContinuationToken;
+            this.nextMarker = model.nextMarker;
+            this.prefix = model.prefix;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the bucket.</p>
@@ -423,6 +447,16 @@ public class ListObjectsResponseBody extends TeaModel {
             private String key; 
             private String lastModified; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.eTag = model.eTag;
+                this.key = model.key;
+                this.lastModified = model.lastModified;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.</p>

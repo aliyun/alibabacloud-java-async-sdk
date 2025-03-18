@@ -36,6 +36,10 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return EPNInstanceId
      */
@@ -53,6 +57,14 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String EPNInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEpnInstanceResponseBody model) {
+            this.EPNInstanceId = model.EPNInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the EPN instance.</p>

@@ -48,6 +48,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystems
      */
@@ -89,6 +93,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFileSystemsResponseBody model) {
+            this.fileSystems = model.fileSystems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the file systems.</p>
@@ -215,6 +230,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String mountTargetName; 
             private String netWorkId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTargets model) {
+                this.mountTargetDomain = model.mountTargetDomain;
+                this.mountTargetName = model.mountTargetName;
+                this.netWorkId = model.netWorkId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The path of the mount target.</p>
@@ -424,6 +449,23 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String protocolType; 
             private String status; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystems model) {
+                this.capacity = model.capacity;
+                this.creationTime = model.creationTime;
+                this.ensRegionId = model.ensRegionId;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemName = model.fileSystemName;
+                this.meteredSize = model.meteredSize;
+                this.mountTargets = model.mountTargets;
+                this.payType = model.payType;
+                this.protocolType = model.protocolType;
+                this.status = model.status;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The capacity of the file system. Unit: MiB.</p>

@@ -40,6 +40,10 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -65,6 +69,15 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         private java.util.List<String> instanceIds; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyInstanceChargeTypeResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the instances.</p>

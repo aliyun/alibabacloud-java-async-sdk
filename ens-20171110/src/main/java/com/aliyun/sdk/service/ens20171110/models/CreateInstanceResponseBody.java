@@ -40,6 +40,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Integer code; 
         private InstanceIds instanceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceResponseBody model) {
+            this.code = model.code;
+            this.instanceIds = model.instanceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The return code. A value of 0 indicates that the request is successful.</p>
@@ -136,6 +149,13 @@ public class CreateInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.

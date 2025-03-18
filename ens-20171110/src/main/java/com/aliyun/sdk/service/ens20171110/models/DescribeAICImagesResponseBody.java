@@ -48,6 +48,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -89,6 +93,17 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAICImagesResponseBody model) {
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the images.</p>
@@ -240,6 +255,18 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             private String imageUrl; 
             private String status; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.imageUrl = model.imageUrl;
+                this.status = model.status;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The time when the image was created.</p>

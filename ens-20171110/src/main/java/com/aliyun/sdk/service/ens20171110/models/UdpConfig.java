@@ -36,6 +36,10 @@ public class UdpConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hashKey
      */
@@ -53,6 +57,14 @@ public class UdpConfig extends TeaModel {
     public static final class Builder {
         private String hashKey; 
         private String scheduler; 
+
+        private Builder() {
+        } 
+
+        private Builder(UdpConfig model) {
+            this.hashKey = model.hashKey;
+            this.scheduler = model.scheduler;
+        } 
 
         /**
          * HashKey.

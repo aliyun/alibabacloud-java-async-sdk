@@ -40,6 +40,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class CreateSnapshotResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private java.util.List<String> snapShotId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSnapshotResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.snapShotId = model.snapShotId;
+        } 
 
         /**
          * <p>The ID of the order.</p>

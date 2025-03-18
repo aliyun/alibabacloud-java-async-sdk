@@ -48,6 +48,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -89,6 +93,17 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about applications.</p>
@@ -191,6 +206,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String appInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(App model) {
+                this.appId = model.appId;
+                this.appInfo = model.appInfo;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -335,6 +358,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<App> app; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppList model) {
+                this.app = model.app;
+            } 
+
             /**
              * App.
              */
@@ -394,6 +424,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             private AppList appList; 
             private String clusterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.appList = model.appList;
+                this.clusterName = model.clusterName;
+            } 
+
             /**
              * <p>Details about the application.</p>
              */
@@ -451,6 +489,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Application> application; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.application = model.application;
+            } 
 
             /**
              * Application.

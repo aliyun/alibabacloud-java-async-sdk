@@ -48,6 +48,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<StorageVolumes> storageVolumes; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStorageVolumeResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.storageVolumes = model.storageVolumes;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>
@@ -311,6 +326,24 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
             private String storageVolumeId; 
             private String storageVolumeName; 
             private String targetName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageVolumes model) {
+                this.authProtocol = model.authProtocol;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ensRegionId = model.ensRegionId;
+                this.isAuth = model.isAuth;
+                this.isEnable = model.isEnable;
+                this.status = model.status;
+                this.storageGatewayId = model.storageGatewayId;
+                this.storageId = model.storageId;
+                this.storageVolumeId = model.storageVolumeId;
+                this.storageVolumeName = model.storageVolumeName;
+                this.targetName = model.targetName;
+            } 
 
             /**
              * <p>The authentication protocol. The value is set to <strong>CHAP</strong>.</p>

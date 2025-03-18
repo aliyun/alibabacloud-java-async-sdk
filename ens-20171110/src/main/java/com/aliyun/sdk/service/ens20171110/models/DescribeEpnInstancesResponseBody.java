@@ -48,6 +48,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return EPNInstances
      */
@@ -89,6 +93,17 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEpnInstancesResponseBody model) {
+            this.EPNInstances = model.EPNInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of EPN instances.</p>
@@ -288,6 +303,22 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(EPNInstance model) {
+                this.creationTime = model.creationTime;
+                this.EPNInstanceId = model.EPNInstanceId;
+                this.EPNInstanceName = model.EPNInstanceName;
+                this.EPNInstanceType = model.EPNInstanceType;
+                this.endTime = model.endTime;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.modifyTime = model.modifyTime;
+                this.networkingModel = model.networkingModel;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the instance was created. The time is displayed in UTC.</p>
              * 
@@ -446,6 +477,13 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EPNInstance> EPNInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(EPNInstances model) {
+                this.EPNInstance = model.EPNInstance;
+            } 
 
             /**
              * EPNInstance.

@@ -82,6 +82,10 @@ public class HealthCheck extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return healthCheck
      */
@@ -179,6 +183,24 @@ public class HealthCheck extends TeaModel {
         private String healthCheckURI; 
         private Integer healthyThreshold; 
         private Integer unhealthyThreshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(HealthCheck model) {
+            this.healthCheck = model.healthCheck;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+            this.healthCheckDomain = model.healthCheckDomain;
+            this.healthCheckHttpCode = model.healthCheckHttpCode;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckMethod = model.healthCheckMethod;
+            this.healthCheckTimeout = model.healthCheckTimeout;
+            this.healthCheckType = model.healthCheckType;
+            this.healthCheckURI = model.healthCheckURI;
+            this.healthyThreshold = model.healthyThreshold;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+        } 
 
         /**
          * HealthCheck.

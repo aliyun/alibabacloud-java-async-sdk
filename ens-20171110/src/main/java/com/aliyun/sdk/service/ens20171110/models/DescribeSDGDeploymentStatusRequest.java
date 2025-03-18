@@ -66,7 +66,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         } 
 
         /**
-         * DeploymentType.
+         * <p>The deployment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shared</p>
          */
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
@@ -154,7 +157,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>IDs of Android in Container (AIC) instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -176,7 +179,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -188,7 +191,7 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * <p>The IDs of the nodes.</p>
          */
         public Builder regionIds(java.util.List<String> regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
@@ -211,7 +214,10 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The deployment status of the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

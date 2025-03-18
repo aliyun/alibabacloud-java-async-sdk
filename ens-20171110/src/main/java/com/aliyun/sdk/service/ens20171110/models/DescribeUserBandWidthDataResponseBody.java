@@ -40,6 +40,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         private Integer code; 
         private MonitorData monitorData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserBandWidthDataResponseBody model) {
+            this.code = model.code;
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>
@@ -181,6 +194,17 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             private Long internetTX; 
             private String timeStamp; 
             private Long upBandWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandWidthMonitorData model) {
+                this.downBandWidth = model.downBandWidth;
+                this.internetRX = model.internetRX;
+                this.internetTX = model.internetTX;
+                this.timeStamp = model.timeStamp;
+                this.upBandWidth = model.upBandWidth;
+            } 
 
             /**
              * <p>The outbound bandwidth. Unit: bit/s.</p>
@@ -299,6 +323,15 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             private java.util.List<BandWidthMonitorData> bandWidthMonitorData; 
             private String maxDownBandWidth; 
             private String maxUpBandWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.bandWidthMonitorData = model.bandWidthMonitorData;
+                this.maxDownBandWidth = model.maxDownBandWidth;
+                this.maxUpBandWidth = model.maxUpBandWidth;
+            } 
 
             /**
              * <p>The bandwidth data.</p>

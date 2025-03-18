@@ -48,6 +48,10 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidths
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceBandwidthDetailResponseBody model) {
+            this.bandwidths = model.bandwidths;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Bandwidths.
@@ -290,6 +305,23 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
             private Long rxBw; 
             private String serviceType; 
             private Long txBw; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bandwidths model) {
+                this.aliUid = model.aliUid;
+                this.bizTime = model.bizTime;
+                this.ensRegionId = model.ensRegionId;
+                this.flowType = model.flowType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.isp = model.isp;
+                this.rxBw = model.rxBw;
+                this.serviceType = model.serviceType;
+                this.txBw = model.txBw;
+            } 
 
             /**
              * AliUid.

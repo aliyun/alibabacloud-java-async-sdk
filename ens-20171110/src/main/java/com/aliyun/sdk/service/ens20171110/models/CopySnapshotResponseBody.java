@@ -44,6 +44,10 @@ public class CopySnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocationId
      */
@@ -77,6 +81,16 @@ public class CopySnapshotResponseBody extends TeaModel {
         private String bizStatusCode; 
         private String requestId; 
         private java.util.List<UnAllocationId> unAllocationId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CopySnapshotResponseBody model) {
+            this.allocationId = model.allocationId;
+            this.bizStatusCode = model.bizStatusCode;
+            this.requestId = model.requestId;
+            this.unAllocationId = model.unAllocationId;
+        } 
 
         /**
          * <p>The list of created snapshots.</p>
@@ -170,6 +184,14 @@ public class CopySnapshotResponseBody extends TeaModel {
             private String ensRegionId; 
             private java.util.List<String> instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllocationId model) {
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The ID of the node.</p>
              * 
@@ -227,6 +249,13 @@ public class CopySnapshotResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ensRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnAllocationId model) {
+                this.ensRegionId = model.ensRegionId;
+            } 
 
             /**
              * <p>The ID of the node.</p>

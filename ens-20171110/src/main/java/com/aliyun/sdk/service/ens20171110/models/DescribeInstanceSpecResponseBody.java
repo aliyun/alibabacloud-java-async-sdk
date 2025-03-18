@@ -56,6 +56,10 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthLimit
      */
@@ -113,6 +117,19 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         private InstanceSpecs instanceSpecs; 
         private String requestId; 
         private Integer systemDiskMaxSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSpecResponseBody model) {
+            this.bandwidthLimit = model.bandwidthLimit;
+            this.code = model.code;
+            this.dataDiskMaxSize = model.dataDiskMaxSize;
+            this.dataDiskMinSize = model.dataDiskMinSize;
+            this.instanceSpecs = model.instanceSpecs;
+            this.requestId = model.requestId;
+            this.systemDiskMaxSize = model.systemDiskMaxSize;
+        } 
 
         /**
          * <p>The bandwidth limit for a single instance. Unit: Mbit/s.</p>
@@ -262,6 +279,16 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             private String instanceType; 
             private String memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpec model) {
+                this.core = model.core;
+                this.displayName = model.displayName;
+                this.instanceType = model.instanceType;
+                this.memory = model.memory;
+            } 
+
             /**
              * <p>The number of CPU cores.</p>
              * 
@@ -344,6 +371,13 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceSpec> instanceSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpecs model) {
+                this.instanceSpec = model.instanceSpec;
+            } 
 
             /**
              * InstanceSpec.

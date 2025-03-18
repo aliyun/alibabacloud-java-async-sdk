@@ -52,6 +52,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.code = model.code;
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned service code. 0 indicates that the request was successful.</p>
@@ -335,6 +351,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer storage; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.diskSize = model.diskSize;
+                this.encryptKeyId = model.encryptKeyId;
+                this.encrypted = model.encrypted;
+                this.size = model.size;
+                this.deviceType = model.deviceType;
+                this.diskType = model.diskType;
+                this.name = model.name;
+                this.storage = model.storage;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * <p>The category of the cloud disk or local disk. Valid values:</p>
              * <ul>
@@ -385,7 +419,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptKeyId.
+             * <p>The KMS key ID used by the cloud drive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fxxxxx</p>
              */
             public Builder encryptKeyId(String encryptKeyId) {
                 this.encryptKeyId = encryptKeyId;
@@ -393,7 +430,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypted.
+             * <p>Specifies whether to encrypt the new system disk. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -511,6 +555,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataDisk> dataDisk; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceDataDisk model) {
+                this.dataDisk = model.dataDisk;
+            } 
+
             /**
              * DataDisk.
              */
@@ -558,6 +609,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(InnerIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * IpAddress.
              */
@@ -604,6 +662,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * IpAddress.
@@ -676,6 +741,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private PrivateIpAddress privateIpAddress; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkAttributes model) {
+                this.networkId = model.networkId;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The ID of the network.</p>
              * 
@@ -745,8 +819,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String ipv6Address; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Set model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
+
             /**
-             * Ipv6Address.
+             * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:4005:396:3200:****:6609:821e:df7a</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -791,6 +875,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Set> ipv6Set; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Sets model) {
+                this.ipv6Set = model.ipv6Set;
+            } 
 
             /**
              * Ipv6Set.
@@ -851,8 +942,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean primary; 
             private String privateIpAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSet model) {
+                this.primary = model.primary;
+                this.privateIpAddress = model.privateIpAddress;
+            } 
+
             /**
-             * Primary.
+             * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -860,7 +966,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the private IP addresses.</p>
+             * <p>The private IP address.</p>
+             * <blockquote>
+             * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10.75.66.***</p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -905,6 +1017,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrivateIpSet> privateIpSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpSets model) {
+                this.privateIpSet = model.privateIpSet;
+            } 
 
             /**
              * PrivateIpSet.
@@ -1013,8 +1132,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private PrivateIpSets privateIpSets; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaces model) {
+                this.ipv6Sets = model.ipv6Sets;
+                this.macAddress = model.macAddress;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.primaryIpAddress = model.primaryIpAddress;
+                this.privateIpSets = model.privateIpSets;
+                this.type = model.type;
+            } 
+
             /**
-             * Ipv6Sets.
+             * <p>The IPv6 addresses of the ENI. This parameter has a value only when <code>AdditionalAttributes.N</code> is set to <code>NETWORK_PRIMARY_ENI_IP</code>.</p>
              */
             public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
                 this.ipv6Sets = ipv6Sets;
@@ -1022,7 +1153,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MacAddress.
+             * <p>The MAC address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:3e:4f:5f:ca</p>
              */
             public Builder macAddress(String macAddress) {
                 this.macAddress = macAddress;
@@ -1030,7 +1164,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-0wlonoy6jo8532gfzuama****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -1038,7 +1175,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryIpAddress.
+             * <p>The primary IP address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -1046,7 +1186,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSets.
+             * <p>The private IP addresses of the ENI.</p>
              */
             public Builder privateIpSets(PrivateIpSets privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -1054,7 +1194,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk.</li>
+             * <li>data: data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Secondary</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1099,6 +1246,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NetworkInterfaces> networkInterfaces; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceNetworkInterfaces model) {
+                this.networkInterfaces = model.networkInterfaces;
+            } 
 
             /**
              * NetworkInterfaces.
@@ -1170,6 +1324,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String gateWay; 
             private String ip; 
             private String isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddressesPrivateIpAddress model) {
+                this.gateWay = model.gateWay;
+                this.ip = model.ip;
+                this.isp = model.isp;
+            } 
 
             /**
              * <p>The gateway.</p>
@@ -1243,8 +1406,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PrivateIpAddressesPrivateIpAddress> privateIpAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddresses model) {
+                this.privateIpAddress = model.privateIpAddress;
+            } 
+
             /**
-             * <p>Details of the private IP addresses.</p>
+             * <p>The private IP address.</p>
+             * <blockquote>
+             * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10.75.66.***</p>
              */
             public Builder privateIpAddress(java.util.List<PrivateIpAddressesPrivateIpAddress> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -1289,6 +1465,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * IpAddress.
@@ -1360,6 +1543,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String gateWay; 
             private String ip; 
             private String isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddressesPublicIpAddress model) {
+                this.gateWay = model.gateWay;
+                this.ip = model.ip;
+                this.isp = model.isp;
+            } 
 
             /**
              * <p>The gateway.</p>
@@ -1433,6 +1625,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PublicIpAddressesPublicIpAddress> publicIpAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddresses model) {
+                this.publicIpAddress = model.publicIpAddress;
+            } 
+
             /**
              * PublicIpAddress.
              */
@@ -1479,6 +1678,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.
@@ -1622,6 +1828,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String name; 
             private Integer storage; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.size = model.size;
+                this.deviceType = model.deviceType;
+                this.diskType = model.diskType;
+                this.name = model.name;
+                this.storage = model.storage;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The category of the cloud disk or local disk. Valid values:</p>
@@ -1787,6 +2008,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -1847,6 +2076,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTags model) {
+                this.tags = model.tags;
+            } 
 
             /**
              * Tags.
@@ -2255,6 +2491,43 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private SystemDisk systemDisk; 
             private InstanceTags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.autoReleaseTime = model.autoReleaseTime;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.dataDisk = model.dataDisk;
+                this.disk = model.disk;
+                this.ensRegionId = model.ensRegionId;
+                this.expiredTime = model.expiredTime;
+                this.hostName = model.hostName;
+                this.imageId = model.imageId;
+                this.innerIpAddress = model.innerIpAddress;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceResourceType = model.instanceResourceType;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.keyPairName = model.keyPairName;
+                this.memory = model.memory;
+                this.networkAttributes = model.networkAttributes;
+                this.networkInterfaces = model.networkInterfaces;
+                this.OSName = model.OSName;
+                this.privateIpAddresses = model.privateIpAddresses;
+                this.publicIpAddress = model.publicIpAddress;
+                this.publicIpAddresses = model.publicIpAddresses;
+                this.securityGroupIds = model.securityGroupIds;
+                this.serviceStatus = model.serviceStatus;
+                this.specName = model.specName;
+                this.spotStrategy = model.spotStrategy;
+                this.status = model.status;
+                this.systemDisk = model.systemDisk;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The automatic release time of the instance.</p>
              * 
@@ -2446,7 +2719,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>The name of the SSH key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform-example</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2473,7 +2749,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaces.
+             * <p>The ENI attached to the instance.</p>
              */
             public Builder networkInterfaces(InstanceNetworkInterfaces networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -2524,7 +2800,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * <p>The ID of your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deleting</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -2626,6 +2905,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

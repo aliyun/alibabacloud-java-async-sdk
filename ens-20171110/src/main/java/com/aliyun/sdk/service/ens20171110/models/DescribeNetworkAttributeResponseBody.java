@@ -32,17 +32,41 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
+    @com.aliyun.core.annotation.NameInMap("GatewayRouteTableId")
+    private String gatewayRouteTableId;
+
+    @com.aliyun.core.annotation.NameInMap("HaVipIds")
+    private HaVipIds haVipIds;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private InstanceIds instanceIds;
+
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
+    private LoadBalancerIds loadBalancerIds;
+
+    @com.aliyun.core.annotation.NameInMap("NatGatewayIds")
+    private NatGatewayIds natGatewayIds;
+
     @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private NetworkInterfaceIds networkInterfaceIds;
+
     @com.aliyun.core.annotation.NameInMap("NetworkName")
     private String networkName;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    private String routeTableId;
+
+    @com.aliyun.core.annotation.NameInMap("RouteTableIds")
+    private RouteTableIds routeTableIds;
 
     @com.aliyun.core.annotation.NameInMap("RouterTableId")
     private String routerTableId;
@@ -59,10 +83,18 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
         this.ensRegionId = builder.ensRegionId;
+        this.gatewayRouteTableId = builder.gatewayRouteTableId;
+        this.haVipIds = builder.haVipIds;
+        this.instanceIds = builder.instanceIds;
+        this.loadBalancerIds = builder.loadBalancerIds;
+        this.natGatewayIds = builder.natGatewayIds;
         this.networkAclId = builder.networkAclId;
         this.networkId = builder.networkId;
+        this.networkInterfaceIds = builder.networkInterfaceIds;
         this.networkName = builder.networkName;
         this.requestId = builder.requestId;
+        this.routeTableId = builder.routeTableId;
+        this.routeTableIds = builder.routeTableIds;
         this.routerTableId = builder.routerTableId;
         this.status = builder.status;
         this.vSwitchIds = builder.vSwitchIds;
@@ -74,6 +106,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
     public static DescribeNetworkAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -112,6 +148,41 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return gatewayRouteTableId
+     */
+    public String getGatewayRouteTableId() {
+        return this.gatewayRouteTableId;
+    }
+
+    /**
+     * @return haVipIds
+     */
+    public HaVipIds getHaVipIds() {
+        return this.haVipIds;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public InstanceIds getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
+     * @return loadBalancerIds
+     */
+    public LoadBalancerIds getLoadBalancerIds() {
+        return this.loadBalancerIds;
+    }
+
+    /**
+     * @return natGatewayIds
+     */
+    public NatGatewayIds getNatGatewayIds() {
+        return this.natGatewayIds;
+    }
+
+    /**
      * @return networkAclId
      */
     public String getNetworkAclId() {
@@ -126,6 +197,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return networkInterfaceIds
+     */
+    public NetworkInterfaceIds getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
+    }
+
+    /**
      * @return networkName
      */
     public String getNetworkName() {
@@ -137,6 +215,20 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return routeTableId
+     */
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    /**
+     * @return routeTableIds
+     */
+    public RouteTableIds getRouteTableIds() {
+        return this.routeTableIds;
     }
 
     /**
@@ -166,13 +258,47 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         private String createdTime; 
         private String description; 
         private String ensRegionId; 
+        private String gatewayRouteTableId; 
+        private HaVipIds haVipIds; 
+        private InstanceIds instanceIds; 
+        private LoadBalancerIds loadBalancerIds; 
+        private NatGatewayIds natGatewayIds; 
         private String networkAclId; 
         private String networkId; 
+        private NetworkInterfaceIds networkInterfaceIds; 
         private String networkName; 
         private String requestId; 
+        private String routeTableId; 
+        private RouteTableIds routeTableIds; 
         private String routerTableId; 
         private String status; 
         private VSwitchIds vSwitchIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkAttributeResponseBody model) {
+            this.cidrBlock = model.cidrBlock;
+            this.cloudResources = model.cloudResources;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.ensRegionId = model.ensRegionId;
+            this.gatewayRouteTableId = model.gatewayRouteTableId;
+            this.haVipIds = model.haVipIds;
+            this.instanceIds = model.instanceIds;
+            this.loadBalancerIds = model.loadBalancerIds;
+            this.natGatewayIds = model.natGatewayIds;
+            this.networkAclId = model.networkAclId;
+            this.networkId = model.networkId;
+            this.networkInterfaceIds = model.networkInterfaceIds;
+            this.networkName = model.networkName;
+            this.requestId = model.requestId;
+            this.routeTableId = model.routeTableId;
+            this.routeTableIds = model.routeTableIds;
+            this.routerTableId = model.routerTableId;
+            this.status = model.status;
+            this.vSwitchIds = model.vSwitchIds;
+        } 
 
         /**
          * <p>The IPv4 CIDR block of the network.</p>
@@ -227,6 +353,46 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * GatewayRouteTableId.
+         */
+        public Builder gatewayRouteTableId(String gatewayRouteTableId) {
+            this.gatewayRouteTableId = gatewayRouteTableId;
+            return this;
+        }
+
+        /**
+         * <p>List of HaVipIds.</p>
+         */
+        public Builder haVipIds(HaVipIds haVipIds) {
+            this.haVipIds = haVipIds;
+            return this;
+        }
+
+        /**
+         * <p>The instance IDs.</p>
+         */
+        public Builder instanceIds(InstanceIds instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * <p>List of ELB instances.</p>
+         */
+        public Builder loadBalancerIds(LoadBalancerIds loadBalancerIds) {
+            this.loadBalancerIds = loadBalancerIds;
+            return this;
+        }
+
+        /**
+         * <p>List of NAT Gateways.</p>
+         */
+        public Builder natGatewayIds(NatGatewayIds natGatewayIds) {
+            this.natGatewayIds = natGatewayIds;
+            return this;
+        }
+
+        /**
          * <p>The ID of the network access control list (ACL).</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +415,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * <p>A list of multicast source IDs.</p>
+         */
+        public Builder networkInterfaceIds(NetworkInterfaceIds networkInterfaceIds) {
+            this.networkInterfaceIds = networkInterfaceIds;
+            return this;
+        }
+
+        /**
          * <p>The name of the network.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +441,22 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RouteTableId.
+         */
+        public Builder routeTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+
+        /**
+         * <p>List of routing table IDs.</p>
+         */
+        public Builder routeTableIds(RouteTableIds routeTableIds) {
+            this.routeTableIds = routeTableIds;
             return this;
         }
 
@@ -354,6 +544,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             private Integer resourceCount; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudResourceSetType model) {
+                this.resourceCount = model.resourceCount;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The number of resources in the network.</p>
              * 
@@ -415,6 +613,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CloudResourceSetType> cloudResourceSetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudResources model) {
+                this.cloudResourceSetType = model.cloudResourceSetType;
+            } 
+
             /**
              * CloudResourceSetType.
              */
@@ -425,6 +630,330 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
             public CloudResources build() {
                 return new CloudResources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class HaVipIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HaVipId")
+        private java.util.List<String> haVipId;
+
+        private HaVipIds(Builder builder) {
+            this.haVipId = builder.haVipId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HaVipIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return haVipId
+         */
+        public java.util.List<String> getHaVipId() {
+            return this.haVipId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> haVipId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HaVipIds model) {
+                this.haVipId = model.haVipId;
+            } 
+
+            /**
+             * HaVipId.
+             */
+            public Builder haVipId(java.util.List<String> haVipId) {
+                this.haVipId = haVipId;
+                return this;
+            }
+
+            public HaVipIds build() {
+                return new HaVipIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class InstanceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private java.util.List<String> instanceId;
+
+        private InstanceIds(Builder builder) {
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public java.util.List<String> getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(java.util.List<String> instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public InstanceIds build() {
+                return new InstanceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class LoadBalancerIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+        private java.util.List<String> loadBalancerId;
+
+        private LoadBalancerIds(Builder builder) {
+            this.loadBalancerId = builder.loadBalancerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LoadBalancerIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return loadBalancerId
+         */
+        public java.util.List<String> getLoadBalancerId() {
+            return this.loadBalancerId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> loadBalancerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerIds model) {
+                this.loadBalancerId = model.loadBalancerId;
+            } 
+
+            /**
+             * LoadBalancerId.
+             */
+            public Builder loadBalancerId(java.util.List<String> loadBalancerId) {
+                this.loadBalancerId = loadBalancerId;
+                return this;
+            }
+
+            public LoadBalancerIds build() {
+                return new LoadBalancerIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class NatGatewayIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+        private java.util.List<String> natGatewayId;
+
+        private NatGatewayIds(Builder builder) {
+            this.natGatewayId = builder.natGatewayId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NatGatewayIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return natGatewayId
+         */
+        public java.util.List<String> getNatGatewayId() {
+            return this.natGatewayId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> natGatewayId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatGatewayIds model) {
+                this.natGatewayId = model.natGatewayId;
+            } 
+
+            /**
+             * NatGatewayId.
+             */
+            public Builder natGatewayId(java.util.List<String> natGatewayId) {
+                this.natGatewayId = natGatewayId;
+                return this;
+            }
+
+            public NatGatewayIds build() {
+                return new NatGatewayIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class NetworkInterfaceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+        private java.util.List<String> networkInterfaceId;
+
+        private NetworkInterfaceIds(Builder builder) {
+            this.networkInterfaceId = builder.networkInterfaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public java.util.List<String> getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> networkInterfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceIds model) {
+                this.networkInterfaceId = model.networkInterfaceId;
+            } 
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(java.util.List<String> networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            public NetworkInterfaceIds build() {
+                return new NetworkInterfaceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAttributeResponseBody</p>
+     */
+    public static class RouteTableIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        private java.util.List<String> routeTableId;
+
+        private RouteTableIds(Builder builder) {
+            this.routeTableId = builder.routeTableId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteTableIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return routeTableId
+         */
+        public java.util.List<String> getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTableIds model) {
+                this.routeTableId = model.routeTableId;
+            } 
+
+            /**
+             * RouteTableId.
+             */
+            public Builder routeTableId(java.util.List<String> routeTableId) {
+                this.routeTableId = routeTableId;
+                return this;
+            }
+
+            public RouteTableIds build() {
+                return new RouteTableIds(this);
             } 
 
         } 
@@ -461,6 +990,13 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * VSwitchId.

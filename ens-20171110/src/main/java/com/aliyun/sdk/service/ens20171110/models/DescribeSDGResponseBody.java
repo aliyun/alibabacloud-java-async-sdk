@@ -48,6 +48,10 @@ public class DescribeSDGResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSDGResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SDGs> SDGs; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSDGResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.SDGs = model.SDGs;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -215,6 +230,16 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String regionId; 
             private String snapshotId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvaliableRegionIds model) {
+                this.creationTime = model.creationTime;
+                this.regionId = model.regionId;
+                this.snapshotId = model.snapshotId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the SDG was created on the node.</p>
@@ -353,6 +378,17 @@ public class DescribeSDGResponseBody extends TeaModel {
             private Integer redundantNum; 
             private String regionId; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreloadInfos model) {
+                this.creationTime = model.creationTime;
+                this.namespace = model.namespace;
+                this.redundantNum = model.redundantNum;
+                this.regionId = model.regionId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the SDG was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -567,6 +603,23 @@ public class DescribeSDGResponseBody extends TeaModel {
             private Long size; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SDGs model) {
+                this.avaliableRegionIds = model.avaliableRegionIds;
+                this.creationInstanceId = model.creationInstanceId;
+                this.creationRegionId = model.creationRegionId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.parentSDGId = model.parentSDGId;
+                this.preloadInfos = model.preloadInfos;
+                this.SDGId = model.SDGId;
+                this.size = model.size;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>SDGs that have snapshots.</p>

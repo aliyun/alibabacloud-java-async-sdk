@@ -36,6 +36,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
     public static final class Builder {
         private String requestId; 
         private SupportResources supportResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudDiskAvailableResourceInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.supportResources = model.supportResources;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -85,7 +97,64 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
      *
      * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
      */
+    public static class Ability extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ability")
+        private java.util.List<String> ability;
+
+        private Ability(Builder builder) {
+            this.ability = builder.ability;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ability create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ability
+         */
+        public java.util.List<String> getAbility() {
+            return this.ability;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> ability; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ability model) {
+                this.ability = model.ability;
+            } 
+
+            /**
+             * Ability.
+             */
+            public Builder ability(java.util.List<String> ability) {
+                this.ability = ability;
+                return this;
+            }
+
+            public Ability build() {
+                return new Ability(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ability")
+        private Ability ability;
+
         @com.aliyun.core.annotation.NameInMap("CanBuyCount")
         private Long canBuyCount;
 
@@ -108,6 +177,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         private String ensRegionName;
 
         private SupportResource(Builder builder) {
+            this.ability = builder.ability;
             this.canBuyCount = builder.canBuyCount;
             this.category = builder.category;
             this.defaultDiskSize = builder.defaultDiskSize;
@@ -123,6 +193,13 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
 
         public static SupportResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return ability
+         */
+        public Ability getAbility() {
+            return this.ability;
         }
 
         /**
@@ -175,6 +252,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         }
 
         public static final class Builder {
+            private Ability ability; 
             private Long canBuyCount; 
             private String category; 
             private Long defaultDiskSize; 
@@ -182,6 +260,28 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             private Long diskMinSize; 
             private String ensRegionId; 
             private String ensRegionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResource model) {
+                this.ability = model.ability;
+                this.canBuyCount = model.canBuyCount;
+                this.category = model.category;
+                this.defaultDiskSize = model.defaultDiskSize;
+                this.diskMaxSize = model.diskMaxSize;
+                this.diskMinSize = model.diskMinSize;
+                this.ensRegionId = model.ensRegionId;
+                this.ensRegionName = model.ensRegionName;
+            } 
+
+            /**
+             * <p>Node product capability.</p>
+             */
+            public Builder ability(Ability ability) {
+                this.ability = ability;
+                return this;
+            }
 
             /**
              * <p>The number of disks that you can purchase.</p>
@@ -304,6 +404,13 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<SupportResource> supportResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportResources model) {
+                this.supportResource = model.supportResource;
+            } 
 
             /**
              * SupportResource.

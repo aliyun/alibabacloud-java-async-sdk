@@ -32,6 +32,10 @@ public class DeleteEnsSaleConditionControlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class DeleteEnsSaleConditionControlResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteEnsSaleConditionControlResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

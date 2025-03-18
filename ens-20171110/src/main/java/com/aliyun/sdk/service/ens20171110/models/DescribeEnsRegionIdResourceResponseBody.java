@@ -48,6 +48,10 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ensRegionIdResources
      */
@@ -89,6 +93,17 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnsRegionIdResourceResponseBody model) {
+            this.ensRegionIdResources = model.ensRegionIdResources;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned data. For more information, see EnsRegionIdResources in sample JSON responses.</p>
@@ -276,6 +291,21 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             private String isp; 
             private Integer vCpu; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnsRegionIdResource model) {
+                this.area = model.area;
+                this.areaCode = model.areaCode;
+                this.bizDate = model.bizDate;
+                this.ensRegionId = model.ensRegionId;
+                this.ensRegionIdName = model.ensRegionIdName;
+                this.instanceCount = model.instanceCount;
+                this.internetBandwidth = model.internetBandwidth;
+                this.isp = model.isp;
+                this.vCpu = model.vCpu;
+            } 
+
             /**
              * <p>The region. Set the value to West.</p>
              * 
@@ -419,6 +449,13 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EnsRegionIdResource> ensRegionIdResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnsRegionIdResources model) {
+                this.ensRegionIdResource = model.ensRegionIdResource;
+            } 
 
             /**
              * EnsRegionIdResource.

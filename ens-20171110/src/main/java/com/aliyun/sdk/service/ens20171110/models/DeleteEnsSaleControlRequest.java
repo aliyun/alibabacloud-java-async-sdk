@@ -51,7 +51,7 @@ public class DeleteEnsSaleControlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -191,6 +191,14 @@ public class DeleteEnsSaleControlRequest extends Request {
         public static final class Builder {
             private String moduleCode; 
             private String orderType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleControls model) {
+                this.moduleCode = model.moduleCode;
+                this.orderType = model.orderType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

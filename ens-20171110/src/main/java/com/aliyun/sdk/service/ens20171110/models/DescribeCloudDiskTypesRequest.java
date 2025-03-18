@@ -39,7 +39,7 @@ public class DescribeCloudDiskTypesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +85,7 @@ public class DescribeCloudDiskTypesRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * <p>The edge nodes.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");

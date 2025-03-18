@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifySnatEntryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAffinity")
+    private Boolean eipAffinity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IspAffinity")
     private Boolean ispAffinity;
 
@@ -31,11 +35,17 @@ public class ModifySnatEntryRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String snatEntryName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
+    private String snatIp;
+
     private ModifySnatEntryRequest(Builder builder) {
         super(builder);
+        this.eipAffinity = builder.eipAffinity;
         this.ispAffinity = builder.ispAffinity;
         this.snatEntryId = builder.snatEntryId;
         this.snatEntryName = builder.snatEntryName;
+        this.snatIp = builder.snatIp;
     }
 
     public static Builder builder() {
@@ -46,9 +56,16 @@ public class ModifySnatEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return eipAffinity
+     */
+    public Boolean getEipAffinity() {
+        return this.eipAffinity;
     }
 
     /**
@@ -72,10 +89,19 @@ public class ModifySnatEntryRequest extends Request {
         return this.snatEntryName;
     }
 
+    /**
+     * @return snatIp
+     */
+    public String getSnatIp() {
+        return this.snatIp;
+    }
+
     public static final class Builder extends Request.Builder<ModifySnatEntryRequest, Builder> {
+        private Boolean eipAffinity; 
         private Boolean ispAffinity; 
         private String snatEntryId; 
         private String snatEntryName; 
+        private String snatIp; 
 
         private Builder() {
             super();
@@ -83,10 +109,21 @@ public class ModifySnatEntryRequest extends Request {
 
         private Builder(ModifySnatEntryRequest request) {
             super(request);
+            this.eipAffinity = request.eipAffinity;
             this.ispAffinity = request.ispAffinity;
             this.snatEntryId = request.snatEntryId;
             this.snatEntryName = request.snatEntryName;
+            this.snatIp = request.snatIp;
         } 
+
+        /**
+         * EipAffinity.
+         */
+        public Builder eipAffinity(Boolean eipAffinity) {
+            this.putQueryParameter("EipAffinity", eipAffinity);
+            this.eipAffinity = eipAffinity;
+            return this;
+        }
 
         /**
          * IspAffinity.
@@ -115,6 +152,15 @@ public class ModifySnatEntryRequest extends Request {
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
             this.snatEntryName = snatEntryName;
+            return this;
+        }
+
+        /**
+         * SnatIp.
+         */
+        public Builder snatIp(String snatIp) {
+            this.putQueryParameter("SnatIp", snatIp);
+            this.snatIp = snatIp;
             return this;
         }
 

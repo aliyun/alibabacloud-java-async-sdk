@@ -48,6 +48,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentStatus
      */
@@ -90,8 +94,19 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSDGStatusResponseBody model) {
+            this.deploymentStatus = model.deploymentStatus;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * DeploymentStatus.
+         * <p>The deployment information of the SDGs.</p>
          */
         public Builder deploymentStatus(java.util.List<DeploymentStatus> deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
@@ -99,7 +114,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,7 +125,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +136,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +147,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of queried deployment records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -240,8 +267,24 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeploymentStatus model) {
+                this.ensRegionId = model.ensRegionId;
+                this.instanceId = model.instanceId;
+                this.mountType = model.mountType;
+                this.phase = model.phase;
+                this.SDGId = model.SDGId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * EnsRegionId.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangzhou-26</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -249,7 +292,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -257,7 +303,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MountType.
+             * <p>The deployment type of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shared</p>
              */
             public Builder mountType(String mountType) {
                 this.mountType = mountType;
@@ -265,7 +314,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>Deployment Phase</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attach</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -273,7 +325,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SDGId.
+             * <p>The ID of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-xxxxxxx</p>
              */
             public Builder SDGId(String SDGId) {
                 this.SDGId = SDGId;
@@ -281,7 +336,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The deployment status of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -289,7 +347,10 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the status was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-17T02:44:31Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

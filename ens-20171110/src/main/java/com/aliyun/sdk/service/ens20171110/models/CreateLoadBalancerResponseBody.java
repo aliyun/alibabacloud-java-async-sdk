@@ -48,6 +48,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancerId
      */
@@ -89,6 +93,17 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String networkId; 
         private String requestId; 
         private String vSwitchId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLoadBalancerResponseBody model) {
+            this.loadBalancerId = model.loadBalancerId;
+            this.loadBalancerName = model.loadBalancerName;
+            this.networkId = model.networkId;
+            this.requestId = model.requestId;
+            this.vSwitchId = model.vSwitchId;
+        } 
 
         /**
          * <p>The ID of the ELB instance.</p>

@@ -48,6 +48,10 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         private String msg; 
         private Pager pager; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionResourceResponseBody model) {
+            this.data = model.data;
+            this.desc = model.desc;
+            this.msg = model.msg;
+            this.pager = model.pager;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -299,6 +314,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArmCard model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -567,6 +600,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Bandwidth model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -833,6 +884,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockStorage model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -1101,6 +1170,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cpu model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -1368,6 +1455,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Gpu model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -1634,6 +1739,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hdd model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -1925,6 +2048,26 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
             private String vlan; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv4s model) {
+                this.display = model.display;
+                this.isp = model.isp;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+                this.vlan = model.vlan;
+            } 
 
             /**
              * Display.
@@ -2233,6 +2376,26 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long usedRatio; 
             private String vlan; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6s model) {
+                this.display = model.display;
+                this.isp = model.isp;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+                this.vlan = model.vlan;
+            } 
+
             /**
              * Display.
              */
@@ -2516,6 +2679,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -2782,6 +2963,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nvme model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -3050,6 +3249,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssStorage model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -3316,6 +3533,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pangu model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -3584,6 +3819,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long used; 
             private Long usedRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(PcfarmNum model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
+
             /**
              * Display.
              */
@@ -3850,6 +4103,24 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String type; 
             private Long used; 
             private Long usedRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ssd model) {
+                this.display = model.display;
+                this.oversellRatio = model.oversellRatio;
+                this.remain = model.remain;
+                this.reserveDisable = model.reserveDisable;
+                this.reserveDisableTotal = model.reserveDisableTotal;
+                this.reserved = model.reserved;
+                this.statusDisable = model.statusDisable;
+                this.statusDisableTotal = model.statusDisableTotal;
+                this.total = model.total;
+                this.type = model.type;
+                this.used = model.used;
+                this.usedRatio = model.usedRatio;
+            } 
 
             /**
              * Display.
@@ -4334,6 +4605,42 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String uuid; 
             private String virtual; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.areaCode = model.areaCode;
+                this.areaName = model.areaName;
+                this.armCard = model.armCard;
+                this.attributes = model.attributes;
+                this.bandwidth = model.bandwidth;
+                this.blockStorage = model.blockStorage;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.hdd = model.hdd;
+                this.houseId = model.houseId;
+                this.ipv4s = model.ipv4s;
+                this.ipv6s = model.ipv6s;
+                this.ispTypes = model.ispTypes;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.nvme = model.nvme;
+                this.ossStorage = model.ossStorage;
+                this.pangu = model.pangu;
+                this.pcfarmNum = model.pcfarmNum;
+                this.poc = model.poc;
+                this.provinceCode = model.provinceCode;
+                this.provinceName = model.provinceName;
+                this.reserveDisable = model.reserveDisable;
+                this.ssd = model.ssd;
+                this.statusDisable = model.statusDisable;
+                this.type = model.type;
+                this.uuid = model.uuid;
+                this.virtual = model.virtual;
+            } 
+
             /**
              * AreaCode.
              */
@@ -4636,6 +4943,15 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pager model) {
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * Page.

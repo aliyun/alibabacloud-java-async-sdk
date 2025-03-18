@@ -53,6 +53,10 @@ public class UdpCheck extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return healthCheckConnectPort
      */
@@ -94,6 +98,17 @@ public class UdpCheck extends TeaModel {
         private Integer healthCheckInterval; 
         private Integer healthyThreshold; 
         private Integer unhealthyThreshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(UdpCheck model) {
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthyThreshold = model.healthyThreshold;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+        } 
 
         /**
          * HealthCheckConnectPort.

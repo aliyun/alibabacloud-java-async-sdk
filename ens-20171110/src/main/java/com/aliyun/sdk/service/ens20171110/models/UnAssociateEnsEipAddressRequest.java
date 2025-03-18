@@ -22,9 +22,14 @@ public class UnAssociateEnsEipAddressRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
     private UnAssociateEnsEipAddressRequest(Builder builder) {
         super(builder);
         this.allocationId = builder.allocationId;
+        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -35,7 +40,7 @@ public class UnAssociateEnsEipAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,8 +52,16 @@ public class UnAssociateEnsEipAddressRequest extends Request {
         return this.allocationId;
     }
 
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
     public static final class Builder extends Request.Builder<UnAssociateEnsEipAddressRequest, Builder> {
         private String allocationId; 
+        private Boolean force; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class UnAssociateEnsEipAddressRequest extends Request {
         private Builder(UnAssociateEnsEipAddressRequest request) {
             super(request);
             this.allocationId = request.allocationId;
+            this.force = request.force;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class UnAssociateEnsEipAddressRequest extends Request {
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
             this.allocationId = allocationId;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

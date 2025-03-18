@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyForwardEntryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
+    private String externalIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
+    private String externalPort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String forwardEntryId;
@@ -32,11 +40,28 @@ public class ModifyForwardEntryRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer healthCheckPort;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    private String internalIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
+    private String internalPort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
+    private String ipProtocol;
+
     private ModifyForwardEntryRequest(Builder builder) {
         super(builder);
+        this.externalIp = builder.externalIp;
+        this.externalPort = builder.externalPort;
         this.forwardEntryId = builder.forwardEntryId;
         this.forwardEntryName = builder.forwardEntryName;
         this.healthCheckPort = builder.healthCheckPort;
+        this.internalIp = builder.internalIp;
+        this.internalPort = builder.internalPort;
+        this.ipProtocol = builder.ipProtocol;
     }
 
     public static Builder builder() {
@@ -47,9 +72,23 @@ public class ModifyForwardEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return externalIp
+     */
+    public String getExternalIp() {
+        return this.externalIp;
+    }
+
+    /**
+     * @return externalPort
+     */
+    public String getExternalPort() {
+        return this.externalPort;
     }
 
     /**
@@ -73,10 +112,36 @@ public class ModifyForwardEntryRequest extends Request {
         return this.healthCheckPort;
     }
 
+    /**
+     * @return internalIp
+     */
+    public String getInternalIp() {
+        return this.internalIp;
+    }
+
+    /**
+     * @return internalPort
+     */
+    public String getInternalPort() {
+        return this.internalPort;
+    }
+
+    /**
+     * @return ipProtocol
+     */
+    public String getIpProtocol() {
+        return this.ipProtocol;
+    }
+
     public static final class Builder extends Request.Builder<ModifyForwardEntryRequest, Builder> {
+        private String externalIp; 
+        private String externalPort; 
         private String forwardEntryId; 
         private String forwardEntryName; 
         private Integer healthCheckPort; 
+        private String internalIp; 
+        private String internalPort; 
+        private String ipProtocol; 
 
         private Builder() {
             super();
@@ -84,10 +149,33 @@ public class ModifyForwardEntryRequest extends Request {
 
         private Builder(ModifyForwardEntryRequest request) {
             super(request);
+            this.externalIp = request.externalIp;
+            this.externalPort = request.externalPort;
             this.forwardEntryId = request.forwardEntryId;
             this.forwardEntryName = request.forwardEntryName;
             this.healthCheckPort = request.healthCheckPort;
+            this.internalIp = request.internalIp;
+            this.internalPort = request.internalPort;
+            this.ipProtocol = request.ipProtocol;
         } 
+
+        /**
+         * ExternalIp.
+         */
+        public Builder externalIp(String externalIp) {
+            this.putQueryParameter("ExternalIp", externalIp);
+            this.externalIp = externalIp;
+            return this;
+        }
+
+        /**
+         * ExternalPort.
+         */
+        public Builder externalPort(String externalPort) {
+            this.putQueryParameter("ExternalPort", externalPort);
+            this.externalPort = externalPort;
+            return this;
+        }
 
         /**
          * <p>The ID of the DNAT entry.</p>
@@ -123,6 +211,33 @@ public class ModifyForwardEntryRequest extends Request {
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);
             this.healthCheckPort = healthCheckPort;
+            return this;
+        }
+
+        /**
+         * InternalIp.
+         */
+        public Builder internalIp(String internalIp) {
+            this.putQueryParameter("InternalIp", internalIp);
+            this.internalIp = internalIp;
+            return this;
+        }
+
+        /**
+         * InternalPort.
+         */
+        public Builder internalPort(String internalPort) {
+            this.putQueryParameter("InternalPort", internalPort);
+            this.internalPort = internalPort;
+            return this;
+        }
+
+        /**
+         * IpProtocol.
+         */
+        public Builder ipProtocol(String ipProtocol) {
+            this.putQueryParameter("IpProtocol", ipProtocol);
+            this.ipProtocol = ipProtocol;
             return this;
         }
 

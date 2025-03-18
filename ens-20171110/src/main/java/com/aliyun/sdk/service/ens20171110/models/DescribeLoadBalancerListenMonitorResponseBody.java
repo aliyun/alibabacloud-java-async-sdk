@@ -36,6 +36,10 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancerMonitorListenData
      */
@@ -53,6 +57,14 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<LoadBalancerMonitorListenData> loadBalancerMonitorListenData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadBalancerListenMonitorResponseBody model) {
+            this.loadBalancerMonitorListenData = model.loadBalancerMonitorListenData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The TCP/UDP monitoring data of the ELB instance.</p>
@@ -350,6 +362,33 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             private String validRsNum; 
             private String vip; 
             private String vni; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerMonitorListenData model) {
+                this.actConns = model.actConns;
+                this.bizTime = model.bizTime;
+                this.conns = model.conns;
+                this.dropConns = model.dropConns;
+                this.ensRegionId = model.ensRegionId;
+                this.inActConns = model.inActConns;
+                this.inBytes = model.inBytes;
+                this.inDropBytes = model.inDropBytes;
+                this.inDropPkts = model.inDropPkts;
+                this.inPkts = model.inPkts;
+                this.inValidRsNum = model.inValidRsNum;
+                this.loadBalancerId = model.loadBalancerId;
+                this.outBytes = model.outBytes;
+                this.outDropBytes = model.outDropBytes;
+                this.outDropPkts = model.outDropPkts;
+                this.outPkts = model.outPkts;
+                this.proto = model.proto;
+                this.vPort = model.vPort;
+                this.validRsNum = model.validRsNum;
+                this.vip = model.vip;
+                this.vni = model.vni;
+            } 
 
             /**
              * <p>The number of active connections.</p>

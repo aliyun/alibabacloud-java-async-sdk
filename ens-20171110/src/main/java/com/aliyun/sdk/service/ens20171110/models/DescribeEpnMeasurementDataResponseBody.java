@@ -36,6 +36,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return measurementDatas
      */
@@ -53,6 +57,14 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
     public static final class Builder {
         private MeasurementDatas measurementDatas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEpnMeasurementDataResponseBody model) {
+            this.measurementDatas = model.measurementDatas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The metering data returned.</p>
@@ -159,6 +171,17 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             private Integer costVal; 
             private String ispLine; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandWidthFeeData model) {
+                this.costCode = model.costCode;
+                this.costName = model.costName;
+                this.costType = model.costType;
+                this.costVal = model.costVal;
+                this.ispLine = model.ispLine;
+            } 
+
             /**
              * <p>The code of the billable item.</p>
              * 
@@ -257,6 +280,13 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BandWidthFeeData> bandWidthFeeData; 
 
+            private Builder() {
+            } 
+
+            private Builder(BandWidthFeeDatas model) {
+                this.bandWidthFeeData = model.bandWidthFeeData;
+            } 
+
             /**
              * BandWidthFeeData.
              */
@@ -352,6 +382,17 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             private String costEndTime; 
             private String costStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(MeasurementData model) {
+                this.bandWidthFeeDatas = model.bandWidthFeeDatas;
+                this.chargeModel = model.chargeModel;
+                this.costCycle = model.costCycle;
+                this.costEndTime = model.costEndTime;
+                this.costStartTime = model.costStartTime;
+            } 
+
             /**
              * <p>The bandwidth data returned.</p>
              */
@@ -446,6 +487,13 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MeasurementData> measurementData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeasurementDatas model) {
+                this.measurementData = model.measurementData;
+            } 
 
             /**
              * MeasurementData.

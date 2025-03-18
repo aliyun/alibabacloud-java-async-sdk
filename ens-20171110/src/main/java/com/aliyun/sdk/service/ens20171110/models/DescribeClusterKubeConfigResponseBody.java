@@ -40,6 +40,10 @@ public class DescribeClusterKubeConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class DescribeClusterKubeConfigResponseBody extends TeaModel {
         private String clusterId; 
         private String kubeconfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterKubeConfigResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.kubeconfig = model.kubeconfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster ID.</p>

@@ -40,6 +40,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private Integer code; 
         private InstanceRenewAttributes instanceRenewAttributes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAutoRenewAttributeResponseBody model) {
+            this.code = model.code;
+            this.instanceRenewAttributes = model.instanceRenewAttributes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
@@ -158,6 +171,15 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             private String duration; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceRenewAttribute model) {
+                this.autoRenewal = model.autoRenewal;
+                this.duration = model.duration;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The renewal type of the instance.</p>
              * <ul>
@@ -233,6 +255,13 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceRenewAttribute> instanceRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRenewAttributes model) {
+                this.instanceRenewAttribute = model.instanceRenewAttribute;
+            } 
 
             /**
              * InstanceRenewAttribute.

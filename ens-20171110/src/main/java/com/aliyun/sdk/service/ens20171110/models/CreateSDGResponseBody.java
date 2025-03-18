@@ -36,6 +36,10 @@ public class CreateSDGResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateSDGResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String SDGId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSDGResponseBody model) {
+            this.requestId = model.requestId;
+            this.SDGId = model.SDGId;
+        } 
 
         /**
          * <p>The request ID.</p>

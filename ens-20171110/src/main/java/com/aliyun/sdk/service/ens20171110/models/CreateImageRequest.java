@@ -34,12 +34,17 @@ public class CreateImageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetOSSRegionId")
+    private String targetOSSRegionId;
+
     private CreateImageRequest(Builder builder) {
         super(builder);
         this.deleteAfterImageUpload = builder.deleteAfterImageUpload;
         this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
         this.snapshotId = builder.snapshotId;
+        this.targetOSSRegionId = builder.targetOSSRegionId;
     }
 
     public static Builder builder() {
@@ -50,7 +55,7 @@ public class CreateImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,11 +88,19 @@ public class CreateImageRequest extends Request {
         return this.snapshotId;
     }
 
+    /**
+     * @return targetOSSRegionId
+     */
+    public String getTargetOSSRegionId() {
+        return this.targetOSSRegionId;
+    }
+
     public static final class Builder extends Request.Builder<CreateImageRequest, Builder> {
         private String deleteAfterImageUpload; 
         private String imageName; 
         private String instanceId; 
         private String snapshotId; 
+        private String targetOSSRegionId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class CreateImageRequest extends Request {
             this.imageName = request.imageName;
             this.instanceId = request.instanceId;
             this.snapshotId = request.snapshotId;
+            this.targetOSSRegionId = request.targetOSSRegionId;
         } 
 
         /**
@@ -106,7 +120,7 @@ public class CreateImageRequest extends Request {
          * <ul>
          * <li>true: The image is released when the instance is released.</li>
          * <li>false: The image is retained when the instance is released.</li>
-         * <li>If you leave this parameter empty, the default value is used.</li>
+         * <li>If you leave this property empty, false is used by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,6 +166,18 @@ public class CreateImageRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * <p>The region of the target OSS where the image is to be stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        public Builder targetOSSRegionId(String targetOSSRegionId) {
+            this.putQueryParameter("TargetOSSRegionId", targetOSSRegionId);
+            this.targetOSSRegionId = targetOSSRegionId;
             return this;
         }
 

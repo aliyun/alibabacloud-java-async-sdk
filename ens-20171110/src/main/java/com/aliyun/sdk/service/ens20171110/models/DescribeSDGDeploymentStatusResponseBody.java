@@ -48,6 +48,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentStatus
      */
@@ -90,8 +94,19 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSDGDeploymentStatusResponseBody model) {
+            this.deploymentStatus = model.deploymentStatus;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The deployment information of the SDG.</p>
+         * <p>The list of SDG deployment information.</p>
          */
         public Builder deploymentStatus(java.util.List<DeploymentStatus> deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
@@ -121,7 +136,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68B85217-03B8-5141-9216-EA4D7C496B9A</p>
@@ -240,6 +255,18 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeploymentStatus model) {
+                this.instanceId = model.instanceId;
+                this.mountType = model.mountType;
+                this.phase = model.phase;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The ID of the AIC instance.</p>
              * 
@@ -268,7 +295,10 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The deployment phase of the SDG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attach</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -287,7 +317,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>the deployment status of the shared data group SDG.</p>
+             * <p>The deployment status of the SDG.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>sdg_deploying</li>

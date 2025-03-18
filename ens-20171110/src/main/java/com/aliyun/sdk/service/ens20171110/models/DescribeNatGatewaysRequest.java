@@ -22,12 +22,20 @@ public class DescribeNatGatewaysRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayIds")
+    private java.util.List<String> natGatewayIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
@@ -48,8 +56,10 @@ public class DescribeNatGatewaysRequest extends Request {
     private DescribeNatGatewaysRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
+        this.natGatewayIds = builder.natGatewayIds;
         this.networkId = builder.networkId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -64,7 +74,7 @@ public class DescribeNatGatewaysRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,6 +84,13 @@ public class DescribeNatGatewaysRequest extends Request {
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     /**
@@ -88,6 +105,13 @@ public class DescribeNatGatewaysRequest extends Request {
      */
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    /**
+     * @return natGatewayIds
+     */
+    public java.util.List<String> getNatGatewayIds() {
+        return this.natGatewayIds;
     }
 
     /**
@@ -120,8 +144,10 @@ public class DescribeNatGatewaysRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeNatGatewaysRequest, Builder> {
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private String name; 
         private String natGatewayId; 
+        private java.util.List<String> natGatewayIds; 
         private String networkId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -134,8 +160,10 @@ public class DescribeNatGatewaysRequest extends Request {
         private Builder(DescribeNatGatewaysRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.name = request.name;
             this.natGatewayId = request.natGatewayId;
+            this.natGatewayIds = request.natGatewayIds;
             this.networkId = request.networkId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -151,6 +179,15 @@ public class DescribeNatGatewaysRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * EnsRegionIds.
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
             return this;
         }
 
@@ -175,6 +212,15 @@ public class DescribeNatGatewaysRequest extends Request {
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * NatGatewayIds.
+         */
+        public Builder natGatewayIds(java.util.List<String> natGatewayIds) {
+            this.putQueryParameter("NatGatewayIds", natGatewayIds);
+            this.natGatewayIds = natGatewayIds;
             return this;
         }
 
