@@ -39,6 +39,7 @@ public class CreateQueueRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 604800, minimum = 60)
     private Long messageRetentionPeriod;
 
     @com.aliyun.core.annotation.Query
@@ -80,7 +81,7 @@ public class CreateQueueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,7 +208,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * DlqPolicy.
+         * <p>The dead-letter queue policy.</p>
          */
         public Builder dlqPolicy(DlqPolicy dlqPolicy) {
             String dlqPolicyShrink = shrink(dlqPolicy, "DlqPolicy", "json");
@@ -246,7 +247,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
+         * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is consumed. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
          * 
          * <strong>example:</strong>
          * <p>345600</p>
@@ -283,7 +284,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -366,8 +367,20 @@ public class CreateQueueRequest extends Request {
             private Boolean enabled; 
             private Integer maxReceiveCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(DlqPolicy model) {
+                this.deadLetterTargetQueue = model.deadLetterTargetQueue;
+                this.enabled = model.enabled;
+                this.maxReceiveCount = model.maxReceiveCount;
+            } 
+
             /**
-             * DeadLetterTargetQueue.
+             * <p>The queue to which dead-letter messages are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadLetterQueue</p>
              */
             public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
                 this.deadLetterTargetQueue = deadLetterTargetQueue;
@@ -375,7 +388,10 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -383,7 +399,10 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * MaxReceiveCount.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxReceiveCount(Integer maxReceiveCount) {
                 this.maxReceiveCount = maxReceiveCount;
@@ -441,8 +460,19 @@ public class CreateQueueRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -450,7 +480,10 @@ public class CreateQueueRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

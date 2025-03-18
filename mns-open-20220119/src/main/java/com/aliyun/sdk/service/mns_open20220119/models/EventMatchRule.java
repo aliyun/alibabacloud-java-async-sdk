@@ -44,6 +44,10 @@ public class EventMatchRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return matchState
      */
@@ -77,6 +81,16 @@ public class EventMatchRule extends TeaModel {
         private String name; 
         private String prefix; 
         private String suffix; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventMatchRule model) {
+            this.matchState = model.matchState;
+            this.name = model.name;
+            this.prefix = model.prefix;
+            this.suffix = model.suffix;
+        } 
 
         /**
          * MatchState.

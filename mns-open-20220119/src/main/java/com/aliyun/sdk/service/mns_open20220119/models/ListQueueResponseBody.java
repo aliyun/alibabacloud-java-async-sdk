@@ -52,6 +52,10 @@ public class ListQueueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListQueueResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQueueResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -227,8 +243,20 @@ public class ListQueueResponseBody extends TeaModel {
             private Boolean enabled; 
             private String maxReceiveCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(DlqPolicy model) {
+                this.deadLetterTargetQueue = model.deadLetterTargetQueue;
+                this.enabled = model.enabled;
+                this.maxReceiveCount = model.maxReceiveCount;
+            } 
+
             /**
-             * DeadLetterTargetQueue.
+             * <p>The queue to which dead-letter messages are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadLetterTargetQueue</p>
              */
             public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
                 this.deadLetterTargetQueue = deadLetterTargetQueue;
@@ -236,7 +264,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -244,7 +275,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReceiveCount.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxReceiveCount(String maxReceiveCount) {
                 this.maxReceiveCount = maxReceiveCount;
@@ -301,6 +335,14 @@ public class ListQueueResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -519,8 +561,28 @@ public class ListQueueResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Long visibilityTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.activeMessages = model.activeMessages;
+                this.createTime = model.createTime;
+                this.delayMessages = model.delayMessages;
+                this.delaySeconds = model.delaySeconds;
+                this.dlqPolicy = model.dlqPolicy;
+                this.inactiveMessages = model.inactiveMessages;
+                this.lastModifyTime = model.lastModifyTime;
+                this.loggingEnabled = model.loggingEnabled;
+                this.maximumMessageSize = model.maximumMessageSize;
+                this.messageRetentionPeriod = model.messageRetentionPeriod;
+                this.pollingWaitSeconds = model.pollingWaitSeconds;
+                this.queueName = model.queueName;
+                this.tags = model.tags;
+                this.visibilityTimeout = model.visibilityTimeout;
+            } 
+
             /**
-             * <p>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * <p>The total number of messages that are in the Active state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -542,7 +604,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of messages that are in the Delayed state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * <p>The total number of the messages that are in the Delayed state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -564,7 +626,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * DlqPolicy.
+             * <p>The dead-letter queue policy.</p>
              */
             public Builder dlqPolicy(DlqPolicy dlqPolicy) {
                 this.dlqPolicy = dlqPolicy;
@@ -572,7 +634,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * <p>The total number of the messages that are in the Inactive state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -769,6 +831,18 @@ public class ListQueueResponseBody extends TeaModel {
             private Long pages; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageData = model.pageData;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.pages = model.pages;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The data returned on the current page.</p>

@@ -52,6 +52,10 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,20 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetEndpointAttributeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>The response code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -114,7 +130,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +138,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -227,10 +243,19 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             private String cidr; 
             private Long createTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CidrList model) {
+                this.aclStrategy = model.aclStrategy;
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+            } 
+
             /**
-             * <p>The ACL policy. Valid value:</p>
+             * <p>The ACL policy. Valid values:</p>
              * <ul>
-             * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported)</li>
+             * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported.)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -253,7 +278,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the list was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1701951224000</p>
@@ -314,8 +339,16 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
             private java.util.List<CidrList> cidrList; 
             private Boolean endpointEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cidrList = model.cidrList;
+                this.endpointEnabled = model.endpointEnabled;
+            } 
+
             /**
-             * <p>The CIDR blocks.</p>
+             * <p>The list of CIDR block.</p>
              */
             public Builder cidrList(java.util.List<CidrList> cidrList) {
                 this.cidrList = cidrList;

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateTopicResponse} extends {@link TeaModel}
+ * {@link CreateEventRuleResponse} extends {@link TeaModel}
  *
- * <p>CreateTopicResponse</p>
+ * <p>CreateEventRuleResponse</p>
  */
-public class CreateTopicResponse extends Response {
+public class CreateEventRuleResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateTopicResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateTopicResponseBody body;
+    private CreateEventRuleResponseBody body;
 
-    private CreateTopicResponse(BuilderImpl builder) {
+    private CreateEventRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateTopicResponse create() {
+    public static CreateEventRuleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateTopicResponse extends Response {
     /**
      * @return body
      */
-    public CreateTopicResponseBody getBody() {
+    public CreateEventRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateTopicResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateEventRuleResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateTopicResponseBody body);
+        Builder body(CreateEventRuleResponseBody body);
 
         @Override
-        CreateTopicResponse build();
+        CreateEventRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateTopicResponse, Builder>
+            extends Response.BuilderImpl<CreateEventRuleResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateTopicResponseBody body; 
+        private CreateEventRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateTopicResponse response) {
+        private BuilderImpl(CreateEventRuleResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateTopicResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateTopicResponseBody body) {
+        public Builder body(CreateEventRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateTopicResponse build() {
-            return new CreateTopicResponse(this);
+        public CreateEventRuleResponse build() {
+            return new CreateEventRuleResponse(this);
         } 
 
     } 

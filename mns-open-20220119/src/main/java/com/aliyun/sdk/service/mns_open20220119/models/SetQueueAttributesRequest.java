@@ -75,7 +75,7 @@ public class SetQueueAttributesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,7 +193,7 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
-         * DlqPolicy.
+         * <p>The dead-letter queue policy.</p>
          */
         public Builder dlqPolicy(DlqPolicy dlqPolicy) {
             String dlqPolicyShrink = shrink(dlqPolicy, "DlqPolicy", "json");
@@ -342,8 +342,20 @@ public class SetQueueAttributesRequest extends Request {
             private Boolean enabled; 
             private Integer maxReceiveCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(DlqPolicy model) {
+                this.deadLetterTargetQueue = model.deadLetterTargetQueue;
+                this.enabled = model.enabled;
+                this.maxReceiveCount = model.maxReceiveCount;
+            } 
+
             /**
-             * DeadLetterTargetQueue.
+             * <p>The queue to which dead-letter messages are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadLetterTargetQueue</p>
              */
             public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
                 this.deadLetterTargetQueue = deadLetterTargetQueue;
@@ -351,7 +363,10 @@ public class SetQueueAttributesRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -359,7 +374,10 @@ public class SetQueueAttributesRequest extends Request {
             }
 
             /**
-             * MaxReceiveCount.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxReceiveCount(Integer maxReceiveCount) {
                 this.maxReceiveCount = maxReceiveCount;

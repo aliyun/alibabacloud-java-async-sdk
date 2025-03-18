@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeEndpointAclResponse> authorizeEndpointAcl(AuthorizeEndpointAclRequest request);
 
     /**
+     * @param request the request parameters of CreateEventRule  CreateEventRuleRequest
+     * @return CreateEventRuleResponse
+     */
+    CompletableFuture<CreateEventRuleResponse> createEventRule(CreateEventRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateQueue  CreateQueueRequest
      * @return CreateQueueResponse
      */
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateTopicResponse
      */
     CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEventRule  DeleteEventRuleRequest
+     * @return DeleteEventRuleResponse
+     */
+    CompletableFuture<DeleteEventRuleResponse> deleteEventRule(DeleteEventRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteQueue  DeleteQueueRequest

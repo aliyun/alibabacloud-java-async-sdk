@@ -52,6 +52,10 @@ public class ListTopicResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListTopicResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTopicResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -214,6 +230,14 @@ public class ListTopicResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -383,6 +407,22 @@ public class ListTopicResponseBody extends TeaModel {
             private String topicInnerUrl; 
             private String topicName; 
             private String topicUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.createTime = model.createTime;
+                this.lastModifyTime = model.lastModifyTime;
+                this.loggingEnabled = model.loggingEnabled;
+                this.maxMessageSize = model.maxMessageSize;
+                this.messageCount = model.messageCount;
+                this.messageRetentionPeriod = model.messageRetentionPeriod;
+                this.tags = model.tags;
+                this.topicInnerUrl = model.topicInnerUrl;
+                this.topicName = model.topicName;
+                this.topicUrl = model.topicUrl;
+            } 
 
             /**
              * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -569,6 +609,16 @@ public class ListTopicResponseBody extends TeaModel {
             private Long pageNum; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageData = model.pageData;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The data returned on the current page.</p>

@@ -78,7 +78,7 @@ public class SubscribeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,7 +184,7 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * DlqPolicy.
+         * <p>The dead-letter queue policy.</p>
          */
         public Builder dlqPolicy(DlqPolicy dlqPolicy) {
             String dlqPolicyShrink = shrink(dlqPolicy, "DlqPolicy", "json");
@@ -356,8 +356,19 @@ public class SubscribeRequest extends Request {
             private String deadLetterTargetQueue; 
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(DlqPolicy model) {
+                this.deadLetterTargetQueue = model.deadLetterTargetQueue;
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * DeadLetterTargetQueue.
+             * <p>The queue to which dead-letter messages are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadLetterTargetQueue</p>
              */
             public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
                 this.deadLetterTargetQueue = deadLetterTargetQueue;
@@ -365,7 +376,10 @@ public class SubscribeRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RevokeEndpointAclResponseBody} extends {@link TeaModel}
+ * {@link DeleteEventRuleResponseBody} extends {@link TeaModel}
  *
- * <p>RevokeEndpointAclResponseBody</p>
+ * <p>DeleteEventRuleResponseBody</p>
  */
-public class RevokeEndpointAclResponseBody extends TeaModel {
+public class DeleteEventRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
@@ -32,7 +32,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private RevokeEndpointAclResponseBody(Builder builder) {
+    private DeleteEventRuleResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -44,7 +44,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RevokeEndpointAclResponseBody create() {
+    public static DeleteEventRuleResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(RevokeEndpointAclResponseBody model) {
+        private Builder(DeleteEventRuleResponseBody model) {
             this.code = model.code;
             this.message = model.message;
             this.requestId = model.requestId;
@@ -106,10 +106,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -117,10 +114,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>operation success</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -128,10 +122,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>06273500-249F-5863-121D-74D51123****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,10 +130,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response status.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -150,18 +138,15 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public RevokeEndpointAclResponseBody build() {
-            return new RevokeEndpointAclResponseBody(this);
+        public DeleteEventRuleResponseBody build() {
+            return new DeleteEventRuleResponseBody(this);
         } 
 
     } 

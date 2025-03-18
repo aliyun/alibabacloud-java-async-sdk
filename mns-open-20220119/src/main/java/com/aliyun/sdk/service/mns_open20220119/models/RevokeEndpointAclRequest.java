@@ -52,7 +52,7 @@ public class RevokeEndpointAclRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,9 +113,9 @@ public class RevokeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The ACL policy. Valid value:</p>
+         * <p>The ACL policy. Value:</p>
          * <ul>
-         * <li><strong>allow</strong>: indicates that the operation is initiated from an endpoint in CIDR whitelist. (Only allow is supported)</li>
+         * <li><strong>allow</strong>: indicates that this operation is included in the Cidr whitelist. (Only the allow is supported.)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -129,7 +129,7 @@ public class RevokeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The CIDR blocks.</p>
+         * <p>The list of CIDR block.</p>
          * <p>This parameter is required.</p>
          */
         public Builder cidrList(java.util.List<String> cidrList) {
@@ -140,9 +140,9 @@ public class RevokeEndpointAclRequest extends Request {
         }
 
         /**
-         * <p>The type of the endpoint. Valid value:</p>
+         * <p>The type of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>public</strong>: indicates an public endpoint. (Only public endpoint is supported.)</li>
+         * <li><strong>public</strong>: indicates public endpoint. (Only the public is supported.)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

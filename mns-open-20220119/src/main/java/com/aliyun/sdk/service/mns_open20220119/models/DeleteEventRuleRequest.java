@@ -12,37 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UnsubscribeRequest} extends {@link RequestModel}
+ * {@link DeleteEventRuleRequest} extends {@link RequestModel}
  *
- * <p>UnsubscribeRequest</p>
+ * <p>DeleteEventRuleRequest</p>
  */
-public class UnsubscribeRequest extends Request {
+public class DeleteEventRuleRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SubscriptionName")
+    @com.aliyun.core.annotation.NameInMap("ProductName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String subscriptionName;
+    private String productName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TopicName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String topicName;
+    private String ruleName;
 
-    private UnsubscribeRequest(Builder builder) {
+    private DeleteEventRuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.subscriptionName = builder.subscriptionName;
-        this.topicName = builder.topicName;
+        this.productName = builder.productName;
+        this.ruleName = builder.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UnsubscribeRequest create() {
+    public static DeleteEventRuleRequest create() {
         return builder().build();
     }
 
@@ -59,33 +59,33 @@ public class UnsubscribeRequest extends Request {
     }
 
     /**
-     * @return subscriptionName
+     * @return productName
      */
-    public String getSubscriptionName() {
-        return this.subscriptionName;
+    public String getProductName() {
+        return this.productName;
     }
 
     /**
-     * @return topicName
+     * @return ruleName
      */
-    public String getTopicName() {
-        return this.topicName;
+    public String getRuleName() {
+        return this.ruleName;
     }
 
-    public static final class Builder extends Request.Builder<UnsubscribeRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteEventRuleRequest, Builder> {
         private String regionId; 
-        private String subscriptionName; 
-        private String topicName; 
+        private String productName; 
+        private String ruleName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UnsubscribeRequest request) {
+        private Builder(DeleteEventRuleRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.subscriptionName = request.subscriptionName;
-            this.topicName = request.topicName;
+            this.productName = request.productName;
+            this.ruleName = request.ruleName;
         } 
 
         /**
@@ -98,34 +98,32 @@ public class UnsubscribeRequest extends Request {
         }
 
         /**
-         * <p>The name of the subscription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySubscription</p>
+         * <p>oss</p>
          */
-        public Builder subscriptionName(String subscriptionName) {
-            this.putQueryParameter("SubscriptionName", subscriptionName);
-            this.subscriptionName = subscriptionName;
+        public Builder productName(String productName) {
+            this.putQueryParameter("ProductName", productName);
+            this.productName = productName;
             return this;
         }
 
         /**
-         * <p>The name of the topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>rule-xsXDW</p>
          */
-        public Builder topicName(String topicName) {
-            this.putQueryParameter("TopicName", topicName);
-            this.topicName = topicName;
+        public Builder ruleName(String ruleName) {
+            this.putQueryParameter("RuleName", ruleName);
+            this.ruleName = ruleName;
             return this;
         }
 
         @Override
-        public UnsubscribeRequest build() {
-            return new UnsubscribeRequest(this);
+        public DeleteEventRuleRequest build() {
+            return new DeleteEventRuleRequest(this);
         } 
 
     } 

@@ -52,6 +52,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSubscriptionByTopicResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The response code.</p>
          * 
@@ -114,7 +130,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -215,8 +231,19 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             private String deadLetterTargetQueue; 
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(DlqPolicy model) {
+                this.deadLetterTargetQueue = model.deadLetterTargetQueue;
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * DeadLetterTargetQueue.
+             * <p>The queue to which dead-letter messages are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dead-letter-queue</p>
              */
             public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
                 this.deadLetterTargetQueue = deadLetterTargetQueue;
@@ -224,7 +251,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the dead-letter message delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -378,6 +408,22 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             private String topicName; 
             private String topicOwner; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.createTime = model.createTime;
+                this.dlqPolicy = model.dlqPolicy;
+                this.endpoint = model.endpoint;
+                this.filterTag = model.filterTag;
+                this.lastModifyTime = model.lastModifyTime;
+                this.notifyContentFormat = model.notifyContentFormat;
+                this.notifyStrategy = model.notifyStrategy;
+                this.subscriptionName = model.subscriptionName;
+                this.topicName = model.topicName;
+                this.topicOwner = model.topicOwner;
+            } 
+
             /**
              * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
@@ -390,7 +436,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * DlqPolicy.
+             * <p>The dead-letter queue policy.</p>
              */
             public Builder dlqPolicy(DlqPolicy dlqPolicy) {
                 this.dlqPolicy = dlqPolicy;
@@ -592,6 +638,18 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             private Long pages; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageData = model.pageData;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.pages = model.pages;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The data returned on the current page.</p>
