@@ -52,6 +52,10 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDatasetDocumentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -235,6 +251,17 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.status = model.status;
+            } 
 
             /**
              * DocId.

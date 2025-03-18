@@ -78,7 +78,7 @@ public class RunDocQaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -317,6 +317,14 @@ public class RunDocQaRequest extends Request {
         public static final class Builder {
             private String content; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationContexts model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
 
             /**
              * Content.

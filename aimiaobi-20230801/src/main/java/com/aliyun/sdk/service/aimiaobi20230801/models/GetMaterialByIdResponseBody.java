@@ -52,6 +52,10 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMaterialByIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -403,6 +419,31 @@ public class GetMaterialByIdResponseBody extends TeaModel {
             private String updateTime; 
             private String updateUser; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.author = model.author;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.docKeywords = model.docKeywords;
+                this.docType = model.docType;
+                this.externalUrl = model.externalUrl;
+                this.htmlContent = model.htmlContent;
+                this.id = model.id;
+                this.pubTime = model.pubTime;
+                this.publicUrl = model.publicUrl;
+                this.shareAttr = model.shareAttr;
+                this.srcFrom = model.srcFrom;
+                this.summary = model.summary;
+                this.textContent = model.textContent;
+                this.thumbnailInBase64 = model.thumbnailInBase64;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+                this.url = model.url;
+            } 
 
             /**
              * Author.

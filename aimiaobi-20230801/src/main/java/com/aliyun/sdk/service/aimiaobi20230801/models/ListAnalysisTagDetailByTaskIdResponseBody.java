@@ -64,6 +64,10 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAnalysisTagDetailByTaskIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -272,6 +291,15 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
             private String tagName; 
             private java.util.List<String> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentTags model) {
+                this.summaryOverview = model.summaryOverview;
+                this.tagName = model.tagName;
+                this.tags = model.tags;
+            } 
+
             /**
              * SummaryOverview.
              */
@@ -382,6 +410,17 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
             private Long id; 
             private String tagTaskType; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.contentTags = model.contentTags;
+                this.id = model.id;
+                this.tagTaskType = model.tagTaskType;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * Content.

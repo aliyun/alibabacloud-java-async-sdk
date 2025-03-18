@@ -52,6 +52,10 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEnterpriseVocAnalysisTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
             private String tagTaskType; 
             private Integer valueCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagValueCountStatistic model) {
+                this.tagName = model.tagName;
+                this.tagTaskType = model.tagTaskType;
+                this.valueCount = model.valueCount;
+            } 
+
             /**
              * TagName.
              */
@@ -274,6 +299,13 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagValueCountStatistic> tagValueCountStatistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterDimensionStatistics model) {
+                this.tagValueCountStatistic = model.tagValueCountStatistic;
+            } 
 
             /**
              * TagValueCountStatistic.
@@ -346,6 +378,15 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
             private String tagTaskType; 
             private Integer valueCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagDimensionStatisticsTagValueCountStatistic model) {
+                this.tagName = model.tagName;
+                this.tagTaskType = model.tagTaskType;
+                this.valueCount = model.valueCount;
+            } 
+
             /**
              * TagName.
              */
@@ -408,6 +449,13 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagDimensionStatistics model) {
+                this.tagValueCountStatistic = model.tagValueCountStatistic;
+            } 
 
             /**
              * TagValueCountStatistic.
@@ -479,6 +527,15 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
             private Integer count; 
             private FilterDimensionStatistics filterDimensionStatistics; 
             private TagDimensionStatistics tagDimensionStatistics; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatisticsOverview model) {
+                this.count = model.count;
+                this.filterDimensionStatistics = model.filterDimensionStatistics;
+                this.tagDimensionStatistics = model.tagDimensionStatistics;
+            } 
 
             /**
              * Count.
@@ -554,6 +611,14 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Long inputTokens; 
             private Long outputTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+            } 
 
             /**
              * InputTokens.
@@ -645,6 +710,16 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
             private StatisticsOverview statisticsOverview; 
             private String status; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.statisticsOverview = model.statisticsOverview;
+                this.status = model.status;
+                this.usage = model.usage;
+            } 
 
             /**
              * ErrorMessage.

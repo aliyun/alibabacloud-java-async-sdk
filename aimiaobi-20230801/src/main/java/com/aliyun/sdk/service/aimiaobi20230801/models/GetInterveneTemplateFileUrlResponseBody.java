@@ -52,6 +52,10 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInterveneTemplateFileUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
 
         public static final class Builder {
             private String fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileUrl = model.fileUrl;
+            } 
 
             /**
              * FileUrl.

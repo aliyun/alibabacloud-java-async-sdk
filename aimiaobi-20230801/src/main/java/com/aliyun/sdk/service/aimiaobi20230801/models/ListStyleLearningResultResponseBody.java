@@ -64,6 +64,10 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
         private Integer size; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStyleLearningResultResponseBody model) {
+            this.code = model.code;
+            this.current = model.current;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -295,6 +314,17 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
             private String rewriteResult; 
             private String styleName; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aigcResult = model.aigcResult;
+                this.id = model.id;
+                this.rewriteResult = model.rewriteResult;
+                this.styleName = model.styleName;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * AigcResult.

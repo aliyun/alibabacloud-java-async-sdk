@@ -52,6 +52,10 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInterveneRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class ListInterveneRulesResponseBody extends TeaModel {
             private Integer answerType; 
             private String message; 
             private String namespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnswerConfig model) {
+                this.answerType = model.answerType;
+                this.message = model.message;
+                this.namespace = model.namespace;
+            } 
 
             /**
              * AnswerType.
@@ -347,6 +372,19 @@ public class ListInterveneRulesResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InterveneRuleList model) {
+                this.answerConfig = model.answerConfig;
+                this.createTime = model.createTime;
+                this.effectTime = model.effectTime;
+                this.interveneType = model.interveneType;
+                this.namespaceList = model.namespaceList;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * AnswerConfig.
              */
@@ -477,6 +515,16 @@ public class ListInterveneRulesResponseBody extends TeaModel {
             private java.util.List<InterveneRuleList> interveneRuleList; 
             private Integer pageIndex; 
             private Integer pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.interveneRuleList = model.interveneRuleList;
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * Count.

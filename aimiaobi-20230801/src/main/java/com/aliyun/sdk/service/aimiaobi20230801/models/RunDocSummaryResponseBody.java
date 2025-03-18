@@ -40,6 +40,10 @@ public class RunDocSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunDocSummaryResponseBody extends TeaModel {
         private RunDocSummaryResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunDocSummaryResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -200,6 +213,19 @@ public class RunDocSummaryResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunDocSummaryResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -295,6 +321,13 @@ public class RunDocSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.content = model.content;
+            } 
+
             /**
              * Content.
              */
@@ -365,6 +398,15 @@ public class RunDocSummaryResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * InputTokens.
@@ -440,6 +482,14 @@ public class RunDocSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

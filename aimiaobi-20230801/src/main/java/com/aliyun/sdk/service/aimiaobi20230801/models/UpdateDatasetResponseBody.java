@@ -52,6 +52,10 @@ public class UpdateDatasetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateDatasetResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDatasetResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -248,6 +264,18 @@ public class UpdateDatasetResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewsArticleResultsData model) {
+                this.content = model.content;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Content.
              */
@@ -394,6 +422,18 @@ public class UpdateDatasetResponseBody extends TeaModel {
             private String message; 
             private Integer size; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(NewsArticleResults model) {
+                this.code = model.code;
+                this.current = model.current;
+                this.data = model.data;
+                this.message = model.message;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * Code.
@@ -565,6 +605,20 @@ public class UpdateDatasetResponseBody extends TeaModel {
             private String datasetType; 
             private java.util.List<NewsArticleResults> newsArticleResults; 
             private Integer searchDatasetEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.datasetDescription = model.datasetDescription;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.datasetType = model.datasetType;
+                this.newsArticleResults = model.newsArticleResults;
+                this.searchDatasetEnable = model.searchDatasetEnable;
+            } 
 
             /**
              * CreateTime.

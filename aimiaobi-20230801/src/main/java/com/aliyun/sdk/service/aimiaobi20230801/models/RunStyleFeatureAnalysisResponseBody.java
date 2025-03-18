@@ -44,6 +44,10 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -77,6 +81,16 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         private RunStyleFeatureAnalysisResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunStyleFeatureAnalysisResponseBody model) {
+            this.end = model.end;
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * End.
@@ -220,6 +234,19 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunStyleFeatureAnalysisResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -315,6 +342,13 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.text = model.text;
+            } 
+
             /**
              * Text.
              */
@@ -385,6 +419,15 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * InputTokens.
@@ -460,6 +503,14 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

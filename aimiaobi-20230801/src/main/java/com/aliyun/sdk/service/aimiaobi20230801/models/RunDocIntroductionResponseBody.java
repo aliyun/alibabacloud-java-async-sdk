@@ -40,6 +40,10 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         private RunDocIntroductionResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunDocIntroductionResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -199,6 +212,19 @@ public class RunDocIntroductionResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunDocIntroductionResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * ErrorCode.
@@ -367,6 +393,19 @@ public class RunDocIntroductionResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Blocks model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+                this.height = model.height;
+                this.pageId = model.pageId;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * BeginTime.
              */
@@ -498,6 +537,16 @@ public class RunDocIntroductionResponseBody extends TeaModel {
             private String summary; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Introductions model) {
+                this.blocks = model.blocks;
+                this.startPageId = model.startPageId;
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
+
             /**
              * Blocks.
              */
@@ -593,6 +642,15 @@ public class RunDocIntroductionResponseBody extends TeaModel {
             private String keyPoint; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.introductions = model.introductions;
+                this.keyPoint = model.keyPoint;
+                this.summary = model.summary;
+            } 
+
             /**
              * Introductions.
              */
@@ -680,6 +738,15 @@ public class RunDocIntroductionResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -754,6 +821,14 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

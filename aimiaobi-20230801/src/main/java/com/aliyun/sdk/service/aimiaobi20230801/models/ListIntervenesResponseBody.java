@@ -52,6 +52,10 @@ public class ListIntervenesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListIntervenesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIntervenesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class ListIntervenesResponseBody extends TeaModel {
             private String id; 
             private String query; 
 
+            private Builder() {
+            } 
+
+            private Builder(InterveneList model) {
+                this.id = model.id;
+                this.query = model.query;
+            } 
+
             /**
              * <p>id</p>
              * 
@@ -293,6 +317,16 @@ public class ListIntervenesResponseBody extends TeaModel {
             private Integer pageIndex; 
             private Integer pageSize; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.interveneList = model.interveneList;
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * InterveneList.

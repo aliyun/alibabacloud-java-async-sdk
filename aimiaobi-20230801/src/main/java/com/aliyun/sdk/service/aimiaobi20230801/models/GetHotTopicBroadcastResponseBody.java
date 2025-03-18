@@ -52,6 +52,10 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotTopicBroadcastResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -188,6 +204,13 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public static final class Builder {
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.url = model.url;
+            } 
+
             /**
              * Url.
              */
@@ -246,6 +269,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Comments model) {
+                this.text = model.text;
+                this.username = model.username;
+            } 
 
             /**
              * Text.
@@ -506,6 +537,30 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private String uuid; 
             private String website; 
 
+            private Builder() {
+            } 
+
+            private Builder(News model) {
+                this.analysisCategory = model.analysisCategory;
+                this.analysisTopic = model.analysisTopic;
+                this.author = model.author;
+                this.category = model.category;
+                this.comments = model.comments;
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.domain = model.domain;
+                this.dt = model.dt;
+                this.hotTopic = model.hotTopic;
+                this.imgList = model.imgList;
+                this.logo = model.logo;
+                this.pubTime = model.pubTime;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+                this.uuid = model.uuid;
+                this.website = model.website;
+            } 
+
             /**
              * AnalysisCategory.
              */
@@ -704,6 +759,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private String summary; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summaries model) {
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
+
             /**
              * Summary.
              */
@@ -782,6 +845,15 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private Integer inputToken; 
             private Integer outputToken; 
             private java.util.List<Summaries> summaries; 
+
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.inputToken = model.inputToken;
+                this.outputToken = model.outputToken;
+                this.summaries = model.summaries;
+            } 
 
             /**
              * InputToken.
@@ -1002,6 +1074,26 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private Summary summary; 
             private String textSummary; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.customHotValue = model.customHotValue;
+                this.customTextSummary = model.customTextSummary;
+                this.hotTopic = model.hotTopic;
+                this.hotTopicVersion = model.hotTopicVersion;
+                this.hotValue = model.hotValue;
+                this.id = model.id;
+                this.images = model.images;
+                this.inputToken = model.inputToken;
+                this.news = model.news;
+                this.outputToken = model.outputToken;
+                this.summary = model.summary;
+                this.textSummary = model.textSummary;
+            } 
+
             /**
              * Category.
              */
@@ -1189,6 +1281,16 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private Integer outputTokens; 
             private Integer wordCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalTokenInfo model) {
+                this.hotTopicCount = model.hotTopicCount;
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.wordCount = model.wordCount;
+            } 
+
             /**
              * HotTopicCount.
              */
@@ -1283,6 +1385,15 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private java.util.List<DataData> data; 
             private Integer totalCount; 
             private TotalTokenInfo totalTokenInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+                this.totalCount = model.totalCount;
+                this.totalTokenInfo = model.totalTokenInfo;
+            } 
 
             /**
              * Data.

@@ -44,6 +44,10 @@ public class RunWritingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -77,6 +81,16 @@ public class RunWritingResponseBody extends TeaModel {
         private RunWritingResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunWritingResponseBody model) {
+            this.end = model.end;
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * End.
@@ -231,6 +245,20 @@ public class RunWritingResponseBody extends TeaModel {
             private Integer statusCode; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunWritingResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.originSessionId = model.originSessionId;
+                this.sessionId = model.sessionId;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * ErrorCode.
@@ -443,6 +471,22 @@ public class RunWritingResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tag = model.tag;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -598,6 +642,16 @@ public class RunWritingResponseBody extends TeaModel {
             private String searchQuery; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.articles = model.articles;
+                this.miniDoc = model.miniDoc;
+                this.searchQuery = model.searchQuery;
+                this.text = model.text;
+            } 
+
             /**
              * Articles.
              */
@@ -705,6 +759,16 @@ public class RunWritingResponseBody extends TeaModel {
             private java.util.Map<String, Long> tokenMap; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.tokenMap = model.tokenMap;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -787,6 +851,14 @@ public class RunWritingResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

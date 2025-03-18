@@ -64,6 +64,10 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         private Integer size; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMaterialDocumentsResponseBody model) {
+            this.code = model.code;
+            this.current = model.current;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -487,6 +506,33 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
             private String updateUser; 
             private String updateUserName; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.author = model.author;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.createUserName = model.createUserName;
+                this.docKeywords = model.docKeywords;
+                this.docType = model.docType;
+                this.externalUrl = model.externalUrl;
+                this.htmlContent = model.htmlContent;
+                this.id = model.id;
+                this.pubTime = model.pubTime;
+                this.publicUrl = model.publicUrl;
+                this.shareAttr = model.shareAttr;
+                this.srcFrom = model.srcFrom;
+                this.summary = model.summary;
+                this.textContent = model.textContent;
+                this.thumbnailInBase64 = model.thumbnailInBase64;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+                this.updateUserName = model.updateUserName;
+                this.url = model.url;
+            } 
 
             /**
              * Author.

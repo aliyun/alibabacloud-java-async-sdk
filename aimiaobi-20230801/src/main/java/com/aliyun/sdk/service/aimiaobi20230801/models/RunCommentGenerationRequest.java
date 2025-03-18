@@ -49,6 +49,10 @@ public class RunCommentGenerationRequest extends Request {
     private java.util.Map<String, ?> sentiment;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    private String sessionId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceMaterial")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceMaterial;
@@ -76,6 +80,7 @@ public class RunCommentGenerationRequest extends Request {
         this.lengthRange = builder.lengthRange;
         this.numComments = builder.numComments;
         this.sentiment = builder.sentiment;
+        this.sessionId = builder.sessionId;
         this.sourceMaterial = builder.sourceMaterial;
         this.style = builder.style;
         this.type = builder.type;
@@ -90,7 +95,7 @@ public class RunCommentGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +150,13 @@ public class RunCommentGenerationRequest extends Request {
     }
 
     /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
      * @return sourceMaterial
      */
     public String getSourceMaterial() {
@@ -180,6 +192,7 @@ public class RunCommentGenerationRequest extends Request {
         private java.util.Map<String, ?> lengthRange; 
         private String numComments; 
         private java.util.Map<String, ?> sentiment; 
+        private String sessionId; 
         private String sourceMaterial; 
         private String style; 
         private java.util.Map<String, ?> type; 
@@ -198,6 +211,7 @@ public class RunCommentGenerationRequest extends Request {
             this.lengthRange = request.lengthRange;
             this.numComments = request.numComments;
             this.sentiment = request.sentiment;
+            this.sessionId = request.sessionId;
             this.sourceMaterial = request.sourceMaterial;
             this.style = request.style;
             this.type = request.type;
@@ -275,6 +289,15 @@ public class RunCommentGenerationRequest extends Request {
             String sentimentShrink = shrink(sentiment, "Sentiment", "json");
             this.putBodyParameter("Sentiment", sentimentShrink);
             this.sentiment = sentiment;
+            return this;
+        }
+
+        /**
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.putBodyParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
             return this;
         }
 

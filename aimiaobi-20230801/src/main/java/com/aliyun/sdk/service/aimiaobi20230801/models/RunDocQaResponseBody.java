@@ -40,6 +40,10 @@ public class RunDocQaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunDocQaResponseBody extends TeaModel {
         private RunDocQaResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunDocQaResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -200,6 +213,19 @@ public class RunDocQaResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunDocQaResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -307,6 +333,14 @@ public class RunDocQaResponseBody extends TeaModel {
             private Double from; 
             private Double to; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClipInfos model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
+
             /**
              * From.
              */
@@ -386,6 +420,15 @@ public class RunDocQaResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaUrlList model) {
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaType = model.mediaType;
+            } 
+
             /**
              * ClipInfos.
              */
@@ -460,6 +503,14 @@ public class RunDocQaResponseBody extends TeaModel {
         public static final class Builder {
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recommends model) {
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * Title.
@@ -563,6 +614,17 @@ public class RunDocQaResponseBody extends TeaModel {
             private String sourceDocId; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(References model) {
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.sourceDocId = model.sourceDocId;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * PubTime.
@@ -703,6 +765,18 @@ public class RunDocQaResponseBody extends TeaModel {
             private java.util.List<Recommends> recommends; 
             private java.util.List<References> references; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.content = model.content;
+                this.interveneContent = model.interveneContent;
+                this.isReject = model.isReject;
+                this.mediaUrlList = model.mediaUrlList;
+                this.recommends = model.recommends;
+                this.references = model.references;
+            } 
+
             /**
              * Content.
              */
@@ -814,6 +888,15 @@ public class RunDocQaResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -888,6 +971,14 @@ public class RunDocQaResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

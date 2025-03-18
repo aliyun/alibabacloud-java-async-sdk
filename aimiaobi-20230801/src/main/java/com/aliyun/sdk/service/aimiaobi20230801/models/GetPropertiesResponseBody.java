@@ -52,6 +52,10 @@ public class GetPropertiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetPropertiesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPropertiesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class GetPropertiesResponseBody extends TeaModel {
             private String tipContent; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsoleConfig model) {
+                this.tipContent = model.tipContent;
+                this.title = model.title;
+            } 
+
             /**
              * TipContent.
              */
@@ -290,6 +314,16 @@ public class GetPropertiesResponseBody extends TeaModel {
             private Boolean stared; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.select = model.select;
+                this.stared = model.stared;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * Select.
@@ -386,6 +420,15 @@ public class GetPropertiesResponseBody extends TeaModel {
             private String prompt; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchSamples model) {
+                this.articles = model.articles;
+                this.prompt = model.prompt;
+                this.text = model.text;
+            } 
+
             /**
              * Articles.
              */
@@ -472,6 +515,15 @@ public class GetPropertiesResponseBody extends TeaModel {
             private String code; 
             private String datasetName; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSources model) {
+                this.code = model.code;
+                this.datasetName = model.datasetName;
+                this.name = model.name;
+            } 
 
             /**
              * Code.
@@ -560,6 +612,15 @@ public class GetPropertiesResponseBody extends TeaModel {
             private java.util.List<SearchSamples> searchSamples; 
             private java.util.List<SearchSources> searchSources; 
 
+            private Builder() {
+            } 
+
+            private Builder(IntelligentSearchConfig model) {
+                this.productDescription = model.productDescription;
+                this.searchSamples = model.searchSamples;
+                this.searchSources = model.searchSources;
+            } 
+
             /**
              * ProductDescription.
              */
@@ -634,6 +695,14 @@ public class GetPropertiesResponseBody extends TeaModel {
         public static final class Builder {
             private String label; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSearchSources model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
 
             /**
              * Label.
@@ -726,6 +795,16 @@ public class GetPropertiesResponseBody extends TeaModel {
             private String userId; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.agentId = model.agentId;
+                this.tenantId = model.tenantId;
+                this.userId = model.userId;
+                this.username = model.username;
+            } 
+
             /**
              * AgentId.
              */
@@ -809,6 +888,14 @@ public class GetPropertiesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(WanxiangImageSizeConfig model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * Name.
              */
@@ -887,6 +974,15 @@ public class GetPropertiesResponseBody extends TeaModel {
             private String name; 
             private String pic; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(WanxiangImageStyleConfig model) {
+                this.name = model.name;
+                this.pic = model.pic;
+                this.value = model.value;
+            } 
 
             /**
              * Name.
@@ -1046,6 +1142,21 @@ public class GetPropertiesResponseBody extends TeaModel {
             private UserInfo userInfo; 
             private java.util.List<WanxiangImageSizeConfig> wanxiangImageSizeConfig; 
             private java.util.List<WanxiangImageStyleConfig> wanxiangImageStyleConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chatConfig = model.chatConfig;
+                this.consoleConfig = model.consoleConfig;
+                this.generalConfigMap = model.generalConfigMap;
+                this.intelligentSearchConfig = model.intelligentSearchConfig;
+                this.searchSources = model.searchSources;
+                this.slrAuthorized = model.slrAuthorized;
+                this.userInfo = model.userInfo;
+                this.wanxiangImageSizeConfig = model.wanxiangImageSizeConfig;
+                this.wanxiangImageStyleConfig = model.wanxiangImageStyleConfig;
+            } 
 
             /**
              * ChatConfig.

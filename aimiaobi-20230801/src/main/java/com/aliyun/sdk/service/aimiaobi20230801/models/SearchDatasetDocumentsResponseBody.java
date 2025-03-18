@@ -52,6 +52,10 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchDatasetDocumentsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -272,6 +288,20 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.sourceFrom = model.sourceFrom;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Content.
              */
@@ -374,6 +404,13 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Documents> documents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.documents = model.documents;
+            } 
 
             /**
              * Documents.

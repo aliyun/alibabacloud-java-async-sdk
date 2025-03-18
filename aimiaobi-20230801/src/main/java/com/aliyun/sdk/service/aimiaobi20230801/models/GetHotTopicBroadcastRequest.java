@@ -80,7 +80,7 @@ public class GetHotTopicBroadcastRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -299,7 +299,6 @@ public class GetHotTopicBroadcastRequest extends Request {
         private Integer summaryImageCount;
 
         @com.aliyun.core.annotation.NameInMap("SummaryModel")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String summaryModel;
 
         @com.aliyun.core.annotation.NameInMap("SummaryPrompt")
@@ -345,6 +344,15 @@ public class GetHotTopicBroadcastRequest extends Request {
             private String summaryModel; 
             private String summaryPrompt; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepForCustomSummaryStyleConfig model) {
+                this.summaryImageCount = model.summaryImageCount;
+                this.summaryModel = model.summaryModel;
+                this.summaryPrompt = model.summaryPrompt;
+            } 
+
             /**
              * SummaryImageCount.
              */
@@ -354,10 +362,7 @@ public class GetHotTopicBroadcastRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>摘要模型</p>
+             * SummaryModel.
              */
             public Builder summaryModel(String summaryModel) {
                 this.summaryModel = summaryModel;
@@ -422,6 +427,14 @@ public class GetHotTopicBroadcastRequest extends Request {
         public static final class Builder {
             private String dimension; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomHotValueWeights model) {
+                this.dimension = model.dimension;
+                this.weight = model.weight;
+            } 
 
             /**
              * Dimension.
@@ -501,6 +514,15 @@ public class GetHotTopicBroadcastRequest extends Request {
             private java.util.List<String> categories; 
             private java.util.List<CustomHotValueWeights> customHotValueWeights; 
             private Integer topicCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepForNewsBroadcastContentConfig model) {
+                this.categories = model.categories;
+                this.customHotValueWeights = model.customHotValueWeights;
+                this.topicCount = model.topicCount;
+            } 
 
             /**
              * Categories.

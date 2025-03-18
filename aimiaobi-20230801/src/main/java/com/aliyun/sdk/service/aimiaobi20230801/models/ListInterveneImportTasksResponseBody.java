@@ -52,6 +52,10 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInterveneImportTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatusList model) {
+                this.msg = model.msg;
+                this.percentage = model.percentage;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * Msg.
              */
@@ -350,6 +377,16 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<StatusList> statusList; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.statusList = model.statusList;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * PageIndex.

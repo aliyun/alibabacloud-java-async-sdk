@@ -64,6 +64,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         private Integer size; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAsyncTasksResponseBody model) {
+            this.code = model.code;
+            this.current = model.current;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -487,6 +506,33 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             private String taskType; 
             private String updateTime; 
             private String updateUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.id = model.id;
+                this.taskCode = model.taskCode;
+                this.taskDefinition = model.taskDefinition;
+                this.taskEndTime = model.taskEndTime;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskExecuteTime = model.taskExecuteTime;
+                this.taskId = model.taskId;
+                this.taskInnerErrorMessage = model.taskInnerErrorMessage;
+                this.taskIntermediateResult = model.taskIntermediateResult;
+                this.taskName = model.taskName;
+                this.taskParam = model.taskParam;
+                this.taskProgressMessage = model.taskProgressMessage;
+                this.taskResult = model.taskResult;
+                this.taskRetryCount = model.taskRetryCount;
+                this.taskStartTime = model.taskStartTime;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+            } 
 
             /**
              * CreateTime.

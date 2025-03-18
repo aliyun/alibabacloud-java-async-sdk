@@ -87,7 +87,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -384,6 +384,16 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
             private String tagTaskType; 
             private String tagValueDefinePrompt; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContentTags model) {
+                this.tagDefinePrompt = model.tagDefinePrompt;
+                this.tagName = model.tagName;
+                this.tagTaskType = model.tagTaskType;
+                this.tagValueDefinePrompt = model.tagValueDefinePrompt;
+            } 
+
             /**
              * TagDefinePrompt.
              */
@@ -466,6 +476,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         public static final class Builder {
             private String extraInfo; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.extraInfo = model.extraInfo;
+                this.text = model.text;
+            } 
 
             /**
              * ExtraInfo.
@@ -557,6 +575,16 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
             private String tagName; 
             private String tagType; 
             private String tagValueDefinePrompt; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterTags model) {
+                this.tagDefinePrompt = model.tagDefinePrompt;
+                this.tagName = model.tagName;
+                this.tagType = model.tagType;
+                this.tagValueDefinePrompt = model.tagValueDefinePrompt;
+            } 
 
             /**
              * TagDefinePrompt.

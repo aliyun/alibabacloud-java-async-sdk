@@ -64,6 +64,10 @@ public class ListTopicViewPointRecommendEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListTopicViewPointRecommendEventListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTopicViewPointRecommendEventListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.

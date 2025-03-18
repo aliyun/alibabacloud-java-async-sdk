@@ -22,6 +22,10 @@ public class RunDocTranslationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CleanCache")
+    private Boolean cleanCache;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocId")
     private String docId;
 
@@ -46,6 +50,7 @@ public class RunDocTranslationRequest extends Request {
     private RunDocTranslationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
         this.recommendContent = builder.recommendContent;
         this.sessionId = builder.sessionId;
@@ -61,7 +66,7 @@ public class RunDocTranslationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,6 +76,13 @@ public class RunDocTranslationRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return cleanCache
+     */
+    public Boolean getCleanCache() {
+        return this.cleanCache;
     }
 
     /**
@@ -110,6 +122,7 @@ public class RunDocTranslationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunDocTranslationRequest, Builder> {
         private String regionId; 
+        private Boolean cleanCache; 
         private String docId; 
         private String recommendContent; 
         private String sessionId; 
@@ -123,6 +136,7 @@ public class RunDocTranslationRequest extends Request {
         private Builder(RunDocTranslationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cleanCache = request.cleanCache;
             this.docId = request.docId;
             this.recommendContent = request.recommendContent;
             this.sessionId = request.sessionId;
@@ -136,6 +150,15 @@ public class RunDocTranslationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CleanCache.
+         */
+        public Builder cleanCache(Boolean cleanCache) {
+            this.putBodyParameter("CleanCache", cleanCache);
+            this.cleanCache = cleanCache;
             return this;
         }
 

@@ -52,6 +52,10 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCategoriesByTaskIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -188,6 +204,13 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
 
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.category = model.category;
+            } 
+
             /**
              * Category.
              */
@@ -258,6 +281,15 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
             private String category; 
             private java.util.List<Children> children; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.category = model.category;
+                this.children = model.children;
+                this.count = model.count;
+            } 
 
             /**
              * Category.

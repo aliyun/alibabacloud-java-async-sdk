@@ -64,6 +64,10 @@ public class ListHotTopicsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListHotTopicsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotTopicsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -272,6 +291,15 @@ public class ListHotTopicsResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocList model) {
+                this.source = model.source;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Source.
              */
@@ -358,6 +386,15 @@ public class ListHotTopicsResponseBody extends TeaModel {
             private java.util.List<DocList> docList; 
             private String summary; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureSummary model) {
+                this.docList = model.docList;
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
 
             /**
              * DocList.
@@ -553,6 +590,24 @@ public class ListHotTopicsResponseBody extends TeaModel {
             private String topic; 
             private String topicSource; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asyncTaskId = model.asyncTaskId;
+                this.createUser = model.createUser;
+                this.hotValue = model.hotValue;
+                this.id = model.id;
+                this.status = model.status;
+                this.structureSummary = model.structureSummary;
+                this.summary = model.summary;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskStatus = model.taskStatus;
+                this.topic = model.topic;
+                this.topicSource = model.topicSource;
+                this.version = model.version;
+            } 
 
             /**
              * AsyncTaskId.

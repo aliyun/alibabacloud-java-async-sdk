@@ -40,6 +40,10 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         private RunBookIntroductionResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunBookIntroductionResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -203,6 +216,19 @@ public class RunBookIntroductionResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunBookIntroductionResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -310,6 +336,14 @@ public class RunBookIntroductionResponseBody extends TeaModel {
             private String keyPoint; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.keyPoint = model.keyPoint;
+                this.summary = model.summary;
+            } 
+
             /**
              * KeyPoint.
              */
@@ -389,6 +423,15 @@ public class RunBookIntroductionResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -463,6 +506,14 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

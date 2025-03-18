@@ -52,6 +52,10 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicSelectionPerspectiveAnalysisTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -278,6 +302,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -378,6 +411,16 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String ratio; 
             private java.util.List<ViewPoints> viewPoints; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attitudes model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.ratio = model.ratio;
+                this.viewPoints = model.viewPoints;
+            } 
+
             /**
              * Attitude.
              */
@@ -448,6 +491,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<Attitudes> attitudes; 
+
+            private Builder() {
+            } 
+
+            private Builder(FreshViewPointsResult model) {
+                this.attitudes = model.attitudes;
+            } 
 
             /**
              * Attitudes.
@@ -628,6 +678,24 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String topic; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(News model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.imageUrls = model.imageUrls;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.topic = model.topic;
+                this.url = model.url;
+            } 
+
             /**
              * Content.
              */
@@ -775,6 +843,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(ViewPointsOutlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -853,6 +929,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private java.util.List<ViewPointsOutlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttitudesViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -965,6 +1050,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String ratio; 
             private java.util.List<AttitudesViewPoints> viewPoints; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotViewPointsResultAttitudes model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.news = model.news;
+                this.ratio = model.ratio;
+                this.viewPoints = model.viewPoints;
+            } 
+
             /**
              * Attitude.
              */
@@ -1044,6 +1140,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public static final class Builder {
             private java.util.List<HotViewPointsResultAttitudes> attitudes; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotViewPointsResult model) {
+                this.attitudes = model.attitudes;
+            } 
+
             /**
              * Attitudes.
              */
@@ -1102,6 +1205,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public static final class Builder {
             private String outline; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttitudesViewPointsOutlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outline.
@@ -1181,6 +1292,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private java.util.List<AttitudesViewPointsOutlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimedViewPointsResultAttitudesViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -1329,6 +1449,20 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String url; 
             private java.util.List<TimedViewPointsResultAttitudesViewPoints> viewPoints; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimedViewPointsResultAttitudes model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.pubTime = model.pubTime;
+                this.ratio = model.ratio;
+                this.source = model.source;
+                this.title = model.title;
+                this.url = model.url;
+                this.viewPoints = model.viewPoints;
+            } 
+
             /**
              * Attitude.
              */
@@ -1432,6 +1566,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public static final class Builder {
             private java.util.List<TimedViewPointsResultAttitudes> attitudes; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimedViewPointsResult model) {
+                this.attitudes = model.attitudes;
+            } 
+
             /**
              * Attitudes.
              */
@@ -1502,6 +1643,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String source; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocList model) {
+                this.source = model.source;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * Source.
@@ -1590,6 +1740,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String summary; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summaries model) {
+                this.docList = model.docList;
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
+
             /**
              * DocList.
              */
@@ -1652,6 +1811,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<Summaries> summaries; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicSummaryResult model) {
+                this.summaries = model.summaries;
+            } 
 
             /**
              * Summaries.
@@ -1748,6 +1914,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String url; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Comments model) {
+                this.source = model.source;
+                this.text = model.text;
+                this.title = model.title;
+                this.url = model.url;
+                this.username = model.username;
+            } 
+
             /**
              * Source.
              */
@@ -1839,6 +2016,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebReviewPointsResultAttitudesViewPointsOutlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -1917,6 +2102,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private java.util.List<WebReviewPointsResultAttitudesViewPointsOutlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebReviewPointsResultAttitudesViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -2029,6 +2223,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String ratio; 
             private java.util.List<WebReviewPointsResultAttitudesViewPoints> viewPoints; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebReviewPointsResultAttitudes model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.comments = model.comments;
+                this.ratio = model.ratio;
+                this.viewPoints = model.viewPoints;
+            } 
+
             /**
              * Attitude.
              */
@@ -2107,6 +2312,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<WebReviewPointsResultAttitudes> attitudes; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebReviewPointsResult model) {
+                this.attitudes = model.attitudes;
+            } 
 
             /**
              * Attitudes.
@@ -2238,6 +2450,20 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String topic; 
             private TopicSummaryResult topicSummaryResult; 
             private WebReviewPointsResult webReviewPointsResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.freshViewPointsResult = model.freshViewPointsResult;
+                this.hotViewPointsResult = model.hotViewPointsResult;
+                this.status = model.status;
+                this.timedViewPointsResult = model.timedViewPointsResult;
+                this.topic = model.topic;
+                this.topicSummaryResult = model.topicSummaryResult;
+                this.webReviewPointsResult = model.webReviewPointsResult;
+            } 
 
             /**
              * ErrorMessage.

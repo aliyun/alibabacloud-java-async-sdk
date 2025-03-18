@@ -51,7 +51,7 @@ public class RunTitleGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,6 +181,13 @@ public class RunTitleGenerationRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> contents; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReferenceData model) {
+                this.contents = model.contents;
+            } 
 
             /**
              * <p>This parameter is required.</p>

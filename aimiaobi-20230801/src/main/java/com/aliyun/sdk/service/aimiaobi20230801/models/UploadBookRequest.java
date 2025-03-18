@@ -51,7 +51,7 @@ public class UploadBookRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,6 +192,14 @@ public class UploadBookRequest extends Request {
         public static final class Builder {
             private String docName; 
             private String fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Docs model) {
+                this.docName = model.docName;
+                this.fileUrl = model.fileUrl;
+            } 
 
             /**
              * DocName.

@@ -22,14 +22,30 @@ public class RunDocBrainmapRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CleanCache")
+    private Boolean cleanCache;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeNumber")
+    private Integer nodeNumber;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    private String prompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WordNumber")
+    private Integer wordNumber;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -39,8 +55,12 @@ public class RunDocBrainmapRequest extends Request {
     private RunDocBrainmapRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
+        this.nodeNumber = builder.nodeNumber;
+        this.prompt = builder.prompt;
         this.sessionId = builder.sessionId;
+        this.wordNumber = builder.wordNumber;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -52,7 +72,7 @@ public class RunDocBrainmapRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,6 +85,13 @@ public class RunDocBrainmapRequest extends Request {
     }
 
     /**
+     * @return cleanCache
+     */
+    public Boolean getCleanCache() {
+        return this.cleanCache;
+    }
+
+    /**
      * @return docId
      */
     public String getDocId() {
@@ -72,10 +99,31 @@ public class RunDocBrainmapRequest extends Request {
     }
 
     /**
+     * @return nodeNumber
+     */
+    public Integer getNodeNumber() {
+        return this.nodeNumber;
+    }
+
+    /**
+     * @return prompt
+     */
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    /**
+     * @return wordNumber
+     */
+    public Integer getWordNumber() {
+        return this.wordNumber;
     }
 
     /**
@@ -87,8 +135,12 @@ public class RunDocBrainmapRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunDocBrainmapRequest, Builder> {
         private String regionId; 
+        private Boolean cleanCache; 
         private String docId; 
+        private Integer nodeNumber; 
+        private String prompt; 
         private String sessionId; 
+        private Integer wordNumber; 
         private String workspaceId; 
 
         private Builder() {
@@ -98,8 +150,12 @@ public class RunDocBrainmapRequest extends Request {
         private Builder(RunDocBrainmapRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cleanCache = request.cleanCache;
             this.docId = request.docId;
+            this.nodeNumber = request.nodeNumber;
+            this.prompt = request.prompt;
             this.sessionId = request.sessionId;
+            this.wordNumber = request.wordNumber;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -109,6 +165,15 @@ public class RunDocBrainmapRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CleanCache.
+         */
+        public Builder cleanCache(Boolean cleanCache) {
+            this.putBodyParameter("CleanCache", cleanCache);
+            this.cleanCache = cleanCache;
             return this;
         }
 
@@ -125,6 +190,24 @@ public class RunDocBrainmapRequest extends Request {
         }
 
         /**
+         * NodeNumber.
+         */
+        public Builder nodeNumber(Integer nodeNumber) {
+            this.putBodyParameter("NodeNumber", nodeNumber);
+            this.nodeNumber = nodeNumber;
+            return this;
+        }
+
+        /**
+         * Prompt.
+         */
+        public Builder prompt(String prompt) {
+            this.putBodyParameter("Prompt", prompt);
+            this.prompt = prompt;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +216,15 @@ public class RunDocBrainmapRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * WordNumber.
+         */
+        public Builder wordNumber(Integer wordNumber) {
+            this.putBodyParameter("WordNumber", wordNumber);
+            this.wordNumber = wordNumber;
             return this;
         }
 

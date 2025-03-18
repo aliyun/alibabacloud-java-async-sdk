@@ -52,6 +52,10 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomHotTopicBroadcastJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
             private String errorMessage; 
             private String hotTopicVersion; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.hotTopicVersion = model.hotTopicVersion;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorMessage.

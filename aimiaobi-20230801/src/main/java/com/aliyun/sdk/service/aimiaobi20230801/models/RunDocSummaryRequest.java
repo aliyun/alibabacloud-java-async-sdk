@@ -22,6 +22,10 @@ public class RunDocSummaryRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CleanCache")
+    private Boolean cleanCache;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocId")
     private String docId;
 
@@ -46,6 +50,7 @@ public class RunDocSummaryRequest extends Request {
     private RunDocSummaryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
         this.query = builder.query;
         this.recommendContent = builder.recommendContent;
@@ -61,7 +66,7 @@ public class RunDocSummaryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,6 +76,13 @@ public class RunDocSummaryRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return cleanCache
+     */
+    public Boolean getCleanCache() {
+        return this.cleanCache;
     }
 
     /**
@@ -110,6 +122,7 @@ public class RunDocSummaryRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunDocSummaryRequest, Builder> {
         private String regionId; 
+        private Boolean cleanCache; 
         private String docId; 
         private String query; 
         private String recommendContent; 
@@ -123,6 +136,7 @@ public class RunDocSummaryRequest extends Request {
         private Builder(RunDocSummaryRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cleanCache = request.cleanCache;
             this.docId = request.docId;
             this.query = request.query;
             this.recommendContent = request.recommendContent;
@@ -136,6 +150,15 @@ public class RunDocSummaryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CleanCache.
+         */
+        public Builder cleanCache(Boolean cleanCache) {
+            this.putBodyParameter("CleanCache", cleanCache);
+            this.cleanCache = cleanCache;
             return this;
         }
 

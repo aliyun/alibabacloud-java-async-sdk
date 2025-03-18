@@ -61,7 +61,7 @@ public class RunSearchSimilarArticlesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -208,11 +208,15 @@ public class RunSearchSimilarArticlesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
+        private String datasetName;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SearchSources(Builder builder) {
             this.code = builder.code;
+            this.datasetName = builder.datasetName;
             this.name = builder.name;
         }
 
@@ -232,6 +236,13 @@ public class RunSearchSimilarArticlesRequest extends Request {
         }
 
         /**
+         * @return datasetName
+         */
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -240,13 +251,31 @@ public class RunSearchSimilarArticlesRequest extends Request {
 
         public static final class Builder {
             private String code; 
+            private String datasetName; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSources model) {
+                this.code = model.code;
+                this.datasetName = model.datasetName;
+                this.name = model.name;
+            } 
 
             /**
              * Code.
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * DatasetName.
+             */
+            public Builder datasetName(String datasetName) {
+                this.datasetName = datasetName;
                 return this;
             }
 
@@ -297,6 +326,13 @@ public class RunSearchSimilarArticlesRequest extends Request {
         public static final class Builder {
             private java.util.List<SearchSources> searchSources; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchParam model) {
+                this.searchSources = model.searchSources;
+            } 
+
             /**
              * SearchSources.
              */
@@ -343,6 +379,13 @@ public class RunSearchSimilarArticlesRequest extends Request {
 
         public static final class Builder {
             private SearchParam searchParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChatConfig model) {
+                this.searchParam = model.searchParam;
+            } 
 
             /**
              * SearchParam.

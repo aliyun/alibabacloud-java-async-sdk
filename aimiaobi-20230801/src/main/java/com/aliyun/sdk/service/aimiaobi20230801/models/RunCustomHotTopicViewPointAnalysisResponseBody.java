@@ -40,6 +40,10 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         private RunCustomHotTopicViewPointAnalysisResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunCustomHotTopicViewPointAnalysisResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -199,6 +212,19 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunCustomHotTopicViewPointAnalysisResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.originSessionId = model.originSessionId;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * ErrorCode.
@@ -355,6 +381,18 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
             private String text; 
             private String topicId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.askUser = model.askUser;
+                this.asyncTaskId = model.asyncTaskId;
+                this.attitude = model.attitude;
+                this.customViewPointId = model.customViewPointId;
+                this.text = model.text;
+                this.topicId = model.topicId;
+            } 
+
             /**
              * AskUser.
              */
@@ -466,6 +504,15 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -540,6 +587,14 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

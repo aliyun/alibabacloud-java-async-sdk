@@ -64,7 +64,7 @@ public class SubmitDocClusterTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -255,6 +255,15 @@ public class SubmitDocClusterTaskRequest extends Request {
             private String content; 
             private String docId; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.content = model.content;
+                this.docId = model.docId;
+                this.title = model.title;
+            } 
 
             /**
              * <p>This parameter is required.</p>

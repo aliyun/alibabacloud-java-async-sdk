@@ -64,6 +64,10 @@ public class ListSearchTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListSearchTasksResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -307,6 +326,18 @@ public class ListSearchTasksResponseBody extends TeaModel {
             private String taskName; 
             private String updateTime; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.dialogueType = model.dialogueType;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.updateTime = model.updateTime;
+                this.username = model.username;
+            } 
 
             /**
              * CreateTime.

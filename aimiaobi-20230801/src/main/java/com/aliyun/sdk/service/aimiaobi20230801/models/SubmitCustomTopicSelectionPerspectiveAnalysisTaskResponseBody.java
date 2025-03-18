@@ -52,6 +52,10 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody exten
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody exten
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponseBody exten
 
         public static final class Builder {
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskId = model.taskId;
+            } 
 
             /**
              * TaskId.

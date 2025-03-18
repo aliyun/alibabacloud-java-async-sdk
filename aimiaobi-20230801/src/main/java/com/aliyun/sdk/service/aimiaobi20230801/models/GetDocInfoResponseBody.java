@@ -52,6 +52,10 @@ public class GetDocInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDocInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetDocInfoResponseBody extends TeaModel {
             private Integer status; 
             private String statusMessage; 
             private java.util.List<String> videoContents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryId = model.categoryId;
+                this.docName = model.docName;
+                this.docType = model.docType;
+                this.fileUrl = model.fileUrl;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.videoContents = model.videoContents;
+            } 
 
             /**
              * CategoryId.

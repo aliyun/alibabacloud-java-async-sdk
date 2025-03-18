@@ -52,6 +52,10 @@ public class GenerateImageTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GenerateImageTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateImageTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -224,6 +240,16 @@ public class GenerateImageTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.content = model.content;
+                this.id = model.id;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
              * Content.
              */
@@ -294,6 +320,13 @@ public class GenerateImageTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskList> taskList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskList = model.taskList;
+            } 
 
             /**
              * TaskList.

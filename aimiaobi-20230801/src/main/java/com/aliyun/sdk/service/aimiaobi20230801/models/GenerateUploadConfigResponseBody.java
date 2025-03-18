@@ -52,6 +52,10 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateUploadConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
             private String fileKey; 
             private java.util.Map<String, ?> formDatas; 
             private String postUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileKey = model.fileKey;
+                this.formDatas = model.formDatas;
+                this.postUrl = model.postUrl;
+            } 
 
             /**
              * FileKey.

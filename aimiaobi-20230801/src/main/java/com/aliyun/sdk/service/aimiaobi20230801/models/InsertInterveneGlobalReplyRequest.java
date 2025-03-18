@@ -45,7 +45,7 @@ public class InsertInterveneGlobalReplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,6 +168,14 @@ public class InsertInterveneGlobalReplyRequest extends Request {
         public static final class Builder {
             private String message; 
             private String replyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplyMessagList model) {
+                this.message = model.message;
+                this.replyType = model.replyType;
+            } 
 
             /**
              * Message.

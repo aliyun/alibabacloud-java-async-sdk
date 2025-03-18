@@ -52,6 +52,10 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInterveneImportTaskInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.msg = model.msg;
+                this.percentage = model.percentage;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
+
             /**
              * Msg.
              */
@@ -314,6 +341,13 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private Status status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.status = model.status;
+            } 
 
             /**
              * Status.

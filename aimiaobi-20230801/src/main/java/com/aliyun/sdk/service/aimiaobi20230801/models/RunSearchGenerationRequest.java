@@ -65,7 +65,7 @@ public class RunSearchGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -394,6 +394,25 @@ public class RunSearchGenerationRequest extends Request {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResult model) {
+                this.chunks = model.chunks;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Chunks.
              */
@@ -537,6 +556,13 @@ public class RunSearchGenerationRequest extends Request {
         public static final class Builder {
             private java.util.List<SearchResult> searchResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextSearchResult model) {
+                this.searchResult = model.searchResult;
+            } 
+
             /**
              * SearchResult.
              */
@@ -644,6 +670,18 @@ public class RunSearchGenerationRequest extends Request {
             private String sessionId; 
             private TextSearchResult textSearchResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMediaSelection model) {
+                this.originalSessionId = model.originalSessionId;
+                this.searchModel = model.searchModel;
+                this.searchModelDataValue = model.searchModelDataValue;
+                this.selectionType = model.selectionType;
+                this.sessionId = model.sessionId;
+                this.textSearchResult = model.textSearchResult;
+            } 
+
             /**
              * OriginalSessionId.
              */
@@ -709,8 +747,12 @@ public class RunSearchGenerationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MultimodalMediaSelection")
         private MultimodalMediaSelection multimodalMediaSelection;
 
+        @com.aliyun.core.annotation.NameInMap("SkipCurrentSupplement")
+        private Boolean skipCurrentSupplement;
+
         private BizContext(Builder builder) {
             this.multimodalMediaSelection = builder.multimodalMediaSelection;
+            this.skipCurrentSupplement = builder.skipCurrentSupplement;
         }
 
         public static Builder builder() {
@@ -728,14 +770,38 @@ public class RunSearchGenerationRequest extends Request {
             return this.multimodalMediaSelection;
         }
 
+        /**
+         * @return skipCurrentSupplement
+         */
+        public Boolean getSkipCurrentSupplement() {
+            return this.skipCurrentSupplement;
+        }
+
         public static final class Builder {
             private MultimodalMediaSelection multimodalMediaSelection; 
+            private Boolean skipCurrentSupplement; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizContext model) {
+                this.multimodalMediaSelection = model.multimodalMediaSelection;
+                this.skipCurrentSupplement = model.skipCurrentSupplement;
+            } 
 
             /**
              * MultimodalMediaSelection.
              */
             public Builder multimodalMediaSelection(MultimodalMediaSelection multimodalMediaSelection) {
                 this.multimodalMediaSelection = multimodalMediaSelection;
+                return this;
+            }
+
+            /**
+             * SkipCurrentSupplement.
+             */
+            public Builder skipCurrentSupplement(Boolean skipCurrentSupplement) {
+                this.skipCurrentSupplement = skipCurrentSupplement;
                 return this;
             }
 
@@ -777,6 +843,13 @@ public class RunSearchGenerationRequest extends Request {
 
         public static final class Builder {
             private BizContext bizContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentContext model) {
+                this.bizContext = model.bizContext;
+            } 
 
             /**
              * BizContext.
@@ -836,6 +909,14 @@ public class RunSearchGenerationRequest extends Request {
         public static final class Builder {
             private String code; 
             private String datasetName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSources model) {
+                this.code = model.code;
+                this.datasetName = model.datasetName;
+            } 
 
             /**
              * Code.
@@ -927,6 +1008,16 @@ public class RunSearchGenerationRequest extends Request {
             private java.util.List<String> multimodalSearchTypes; 
             private java.util.List<SearchSources> searchSources; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchParam model) {
+                this.endTime = model.endTime;
+                this.multimodalSearchTypes = model.multimodalSearchTypes;
+                this.searchSources = model.searchSources;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EndTime.
@@ -1034,6 +1125,16 @@ public class RunSearchGenerationRequest extends Request {
             private String generateTechnology; 
             private java.util.List<String> searchModels; 
             private SearchParam searchParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChatConfig model) {
+                this.generateLevel = model.generateLevel;
+                this.generateTechnology = model.generateTechnology;
+                this.searchModels = model.searchModels;
+                this.searchParam = model.searchParam;
+            } 
 
             /**
              * GenerateLevel.

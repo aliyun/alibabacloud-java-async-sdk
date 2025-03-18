@@ -52,6 +52,10 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAsyncTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -343,6 +359,26 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
             private Integer taskStatus; 
             private String updateTime; 
             private String updateUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.taskCode = model.taskCode;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskId = model.taskId;
+                this.taskIntermediateResult = model.taskIntermediateResult;
+                this.taskName = model.taskName;
+                this.taskParam = model.taskParam;
+                this.taskProgressMessage = model.taskProgressMessage;
+                this.taskResult = model.taskResult;
+                this.taskRetryCount = model.taskRetryCount;
+                this.taskStatus = model.taskStatus;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+            } 
 
             /**
              * CreateTime.

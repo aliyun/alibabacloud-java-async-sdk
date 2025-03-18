@@ -55,7 +55,7 @@ public class UpdateDatasetDocumentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,6 +223,15 @@ public class UpdateDatasetDocumentRequest extends Request {
             private String docId; 
             private String docUuid; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Document model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.title = model.title;
+            } 
 
             /**
              * DocId.

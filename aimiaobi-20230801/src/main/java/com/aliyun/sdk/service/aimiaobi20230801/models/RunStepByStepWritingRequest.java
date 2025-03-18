@@ -71,7 +71,7 @@ public class RunStepByStepWritingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -397,6 +397,23 @@ public class RunStepByStepWritingRequest extends Request {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.mediaUrl = model.mediaUrl;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tag = model.tag;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -548,6 +565,15 @@ public class RunStepByStepWritingRequest extends Request {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutlinesArticles model) {
+                this.content = model.content;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Content.
              */
@@ -622,6 +648,14 @@ public class RunStepByStepWritingRequest extends Request {
         public static final class Builder {
             private java.util.List<OutlinesArticles> articles; 
             private String outline; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.articles = model.articles;
+                this.outline = model.outline;
+            } 
 
             /**
              * Articles.
@@ -713,6 +747,16 @@ public class RunStepByStepWritingRequest extends Request {
             private java.util.List<String> miniDoc; 
             private java.util.List<Outlines> outlines; 
             private java.util.List<String> summarization; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReferenceData model) {
+                this.articles = model.articles;
+                this.miniDoc = model.miniDoc;
+                this.outlines = model.outlines;
+                this.summarization = model.summarization;
+            } 
 
             /**
              * Articles.
@@ -821,6 +865,16 @@ public class RunStepByStepWritingRequest extends Request {
             private String reverseWords; 
             private String theme; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromptTag model) {
+                this.necessaryTips = model.necessaryTips;
+                this.position = model.position;
+                this.reverseWords = model.reverseWords;
+                this.theme = model.theme;
+            } 
+
             /**
              * NecessaryTips.
              */
@@ -903,6 +957,14 @@ public class RunStepByStepWritingRequest extends Request {
         public static final class Builder {
             private String keyword; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.keyword = model.keyword;
+                this.tag = model.tag;
+            } 
 
             /**
              * Keyword.
@@ -1042,6 +1104,20 @@ public class RunStepByStepWritingRequest extends Request {
             private String summaryReturnType; 
             private java.util.List<Tags> tags; 
             private Boolean useSearch; 
+
+            private Builder() {
+            } 
+
+            private Builder(WritingConfig model) {
+                this.domain = model.domain;
+                this.keywords = model.keywords;
+                this.promptTag = model.promptTag;
+                this.scene = model.scene;
+                this.step = model.step;
+                this.summaryReturnType = model.summaryReturnType;
+                this.tags = model.tags;
+                this.useSearch = model.useSearch;
+            } 
 
             /**
              * Domain.

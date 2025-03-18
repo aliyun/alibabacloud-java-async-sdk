@@ -52,6 +52,10 @@ public class ListVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListVersionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVersionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -319,6 +335,24 @@ public class ListVersionsResponseBody extends TeaModel {
             private String versionDetail; 
             private String versionName; 
             private Integer versionStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.concurrentCount = model.concurrentCount;
+                this.endTime = model.endTime;
+                this.instanceCount = model.instanceCount;
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+                this.productType = model.productType;
+                this.quota = model.quota;
+                this.startTime = model.startTime;
+                this.useQuota = model.useQuota;
+                this.versionDetail = model.versionDetail;
+                this.versionName = model.versionName;
+                this.versionStatus = model.versionStatus;
+            } 
 
             /**
              * ConcurrentCount.

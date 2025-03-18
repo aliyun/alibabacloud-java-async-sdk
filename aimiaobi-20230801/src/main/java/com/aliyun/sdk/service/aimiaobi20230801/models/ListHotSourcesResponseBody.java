@@ -64,6 +64,10 @@ public class ListHotSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListHotSourcesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotSourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -283,6 +302,16 @@ public class ListHotSourcesResponseBody extends TeaModel {
             private Boolean show; 
             private Integer sort; 
             private String source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.show = model.show;
+                this.sort = model.sort;
+                this.source = model.source;
+            } 
 
             /**
              * Description.

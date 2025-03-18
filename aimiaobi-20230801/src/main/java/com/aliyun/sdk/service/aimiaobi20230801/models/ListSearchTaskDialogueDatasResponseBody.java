@@ -80,6 +80,10 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return articles
      */
@@ -185,6 +189,25 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
         private java.util.List<Videos> videos; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchTaskDialogueDatasResponseBody model) {
+            this.articles = model.articles;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.images = model.images;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.realtimeSearch = model.realtimeSearch;
+            this.requestId = model.requestId;
+            this.searchType = model.searchType;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.videos = model.videos;
+        } 
 
         /**
          * Articles.
@@ -351,6 +374,15 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMedias model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * FileUrl.
@@ -583,6 +615,27 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.author = model.author;
+                this.categoryUuid = model.categoryUuid;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docType = model.docType;
+                this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.multimodalMedias = model.multimodalMedias;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -766,6 +819,15 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
             private String mediaId; 
             private String mediaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
+
             /**
              * FileUrl.
              */
@@ -852,6 +914,15 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Videos model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * FileUrl.

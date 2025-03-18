@@ -64,6 +64,10 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotViewPointsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -380,6 +399,24 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             private String topic; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(News model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.imageUrls = model.imageUrls;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.topic = model.topic;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -527,6 +564,14 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -605,6 +650,15 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -716,6 +770,17 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             private java.util.List<News> news; 
             private String ratio; 
             private java.util.List<ViewPoints> viewPoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.news = model.news;
+                this.ratio = model.ratio;
+                this.viewPoints = model.viewPoints;
+            } 
 
             /**
              * Attitude.

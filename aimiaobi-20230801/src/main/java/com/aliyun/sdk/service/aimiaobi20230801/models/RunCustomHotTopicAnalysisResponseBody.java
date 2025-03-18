@@ -40,6 +40,10 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         private RunCustomHotTopicAnalysisResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunCustomHotTopicAnalysisResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -199,6 +212,19 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunCustomHotTopicAnalysisResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.originSessionId = model.originSessionId;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * ErrorCode.
@@ -403,6 +429,22 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tag = model.tag;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -594,6 +636,19 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
             private String text; 
             private String topicId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.articles = model.articles;
+                this.askUser = model.askUser;
+                this.asyncTaskId = model.asyncTaskId;
+                this.attitude = model.attitude;
+                this.searchQuery = model.searchQuery;
+                this.text = model.text;
+                this.topicId = model.topicId;
+            } 
+
             /**
              * Articles.
              */
@@ -713,6 +768,15 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -787,6 +851,14 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

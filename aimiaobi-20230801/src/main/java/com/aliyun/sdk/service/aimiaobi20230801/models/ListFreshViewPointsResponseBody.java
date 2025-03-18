@@ -64,6 +64,10 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFreshViewPointsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -260,6 +279,14 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -338,6 +365,15 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
             private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.

@@ -27,9 +27,17 @@ public class RunBookIntroductionRequest extends Request {
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyPointPrompt")
+    private String keyPointPrompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SummaryPrompt")
+    private String summaryPrompt;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -40,7 +48,9 @@ public class RunBookIntroductionRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.docId = builder.docId;
+        this.keyPointPrompt = builder.keyPointPrompt;
         this.sessionId = builder.sessionId;
+        this.summaryPrompt = builder.summaryPrompt;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -52,7 +62,7 @@ public class RunBookIntroductionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -72,10 +82,24 @@ public class RunBookIntroductionRequest extends Request {
     }
 
     /**
+     * @return keyPointPrompt
+     */
+    public String getKeyPointPrompt() {
+        return this.keyPointPrompt;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    /**
+     * @return summaryPrompt
+     */
+    public String getSummaryPrompt() {
+        return this.summaryPrompt;
     }
 
     /**
@@ -88,7 +112,9 @@ public class RunBookIntroductionRequest extends Request {
     public static final class Builder extends Request.Builder<RunBookIntroductionRequest, Builder> {
         private String regionId; 
         private String docId; 
+        private String keyPointPrompt; 
         private String sessionId; 
+        private String summaryPrompt; 
         private String workspaceId; 
 
         private Builder() {
@@ -99,7 +125,9 @@ public class RunBookIntroductionRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.docId = request.docId;
+            this.keyPointPrompt = request.keyPointPrompt;
             this.sessionId = request.sessionId;
+            this.summaryPrompt = request.summaryPrompt;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -125,6 +153,15 @@ public class RunBookIntroductionRequest extends Request {
         }
 
         /**
+         * KeyPointPrompt.
+         */
+        public Builder keyPointPrompt(String keyPointPrompt) {
+            this.putBodyParameter("KeyPointPrompt", keyPointPrompt);
+            this.keyPointPrompt = keyPointPrompt;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +170,15 @@ public class RunBookIntroductionRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * SummaryPrompt.
+         */
+        public Builder summaryPrompt(String summaryPrompt) {
+            this.putBodyParameter("SummaryPrompt", summaryPrompt);
+            this.summaryPrompt = summaryPrompt;
             return this;
         }
 

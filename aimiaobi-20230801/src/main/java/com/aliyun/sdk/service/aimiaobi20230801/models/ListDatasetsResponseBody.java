@@ -64,6 +64,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListDatasetsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasetsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -319,6 +338,19 @@ public class ListDatasetsResponseBody extends TeaModel {
             private String datasetName; 
             private String datasetType; 
             private Integer searchDatasetEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.datasetDescription = model.datasetDescription;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.datasetType = model.datasetType;
+                this.searchDatasetEnable = model.searchDatasetEnable;
+            } 
 
             /**
              * CreateTime.

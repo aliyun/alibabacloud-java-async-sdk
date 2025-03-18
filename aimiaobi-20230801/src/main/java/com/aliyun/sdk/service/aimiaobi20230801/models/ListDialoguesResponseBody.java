@@ -64,6 +64,10 @@ public class ListDialoguesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListDialoguesResponseBody extends TeaModel {
         private Integer size; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDialoguesResponseBody model) {
+            this.code = model.code;
+            this.current = model.current;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -307,6 +326,18 @@ public class ListDialoguesResponseBody extends TeaModel {
             private Integer dialogueType; 
             private String taskId; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bot = model.bot;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dialogueType = model.dialogueType;
+                this.taskId = model.taskId;
+                this.user = model.user;
+            } 
 
             /**
              * Bot.

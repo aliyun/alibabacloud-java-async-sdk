@@ -1881,6 +1881,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunDocWashing  RunDocWashingRequest
+     * @return RunDocWashingResponse
+     */
+    @Override
+    public CompletableFuture<RunDocWashingResponse> runDocWashing(RunDocWashingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunDocWashing").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runDocWashing").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunDocWashingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunDocWashingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunDocWashingResponseBody> runDocWashingWithResponseIterable(RunDocWashingRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunDocWashing").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runDocWashing").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunDocWashingResponseBodyIterator iterator = RunDocWashingResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunExpandContent  RunExpandContentRequest
      * @return RunExpandContentResponse
      */

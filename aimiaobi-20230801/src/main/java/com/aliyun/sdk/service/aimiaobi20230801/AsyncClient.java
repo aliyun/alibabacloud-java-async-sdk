@@ -616,6 +616,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunDocTranslationResponseBody> runDocTranslationWithResponseIterable(RunDocTranslationRequest request);
 
     /**
+     * @param request the request parameters of RunDocWashing  RunDocWashingRequest
+     * @return RunDocWashingResponse
+     */
+    CompletableFuture<RunDocWashingResponse> runDocWashing(RunDocWashingRequest request);
+
+    ResponseIterable<RunDocWashingResponseBody> runDocWashingWithResponseIterable(RunDocWashingRequest request);
+
+    /**
      * @param request the request parameters of RunExpandContent  RunExpandContentRequest
      * @return RunExpandContentResponse
      */

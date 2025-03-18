@@ -52,6 +52,10 @@ public class CreateDatasetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateDatasetResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDatasetResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class CreateDatasetResponseBody extends TeaModel {
             private String datasetName; 
             private String datasetType; 
             private Integer searchDatasetEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.datasetDescription = model.datasetDescription;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.datasetType = model.datasetType;
+                this.searchDatasetEnable = model.searchDatasetEnable;
+            } 
 
             /**
              * CreateTime.

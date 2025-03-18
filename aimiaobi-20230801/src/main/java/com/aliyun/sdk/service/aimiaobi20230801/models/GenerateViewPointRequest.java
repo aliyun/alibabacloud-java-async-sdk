@@ -45,7 +45,7 @@ public class GenerateViewPointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,6 +156,13 @@ public class GenerateViewPointRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> miniDoc; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReferenceData model) {
+                this.miniDoc = model.miniDoc;
+            } 
 
             /**
              * MiniDoc.

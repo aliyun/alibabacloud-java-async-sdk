@@ -64,6 +64,10 @@ public class ListDocsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListDocsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDocsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -319,6 +338,19 @@ public class ListDocsResponseBody extends TeaModel {
             private String docType; 
             private Integer status; 
             private String statusMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryId = model.categoryId;
+                this.createTime = model.createTime;
+                this.docId = model.docId;
+                this.docName = model.docName;
+                this.docType = model.docType;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+            } 
 
             /**
              * CategoryId.

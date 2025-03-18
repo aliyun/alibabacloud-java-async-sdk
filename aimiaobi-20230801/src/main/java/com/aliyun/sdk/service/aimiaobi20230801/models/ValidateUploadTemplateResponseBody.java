@@ -52,6 +52,10 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValidateUploadTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
             private Integer commentCount; 
             private Integer dialogueCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.commentCount = model.commentCount;
+                this.dialogueCount = model.dialogueCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * CommentCount.

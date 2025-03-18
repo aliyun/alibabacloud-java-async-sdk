@@ -45,7 +45,7 @@ public class InsertInterveneRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,6 +181,15 @@ public class InsertInterveneRuleRequest extends Request {
             private String message; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnswerConfig model) {
+                this.answerType = model.answerType;
+                this.message = model.message;
+                this.namespace = model.namespace;
+            } 
+
             /**
              * AnswerType.
              */
@@ -268,6 +277,15 @@ public class InsertInterveneRuleRequest extends Request {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EffectConfig model) {
+                this.effectType = model.effectType;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EffectType.
              */
@@ -354,6 +372,15 @@ public class InsertInterveneRuleRequest extends Request {
             private String id; 
             private Integer operationType; 
             private String query; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterveneConfigList model) {
+                this.id = model.id;
+                this.operationType = model.operationType;
+                this.query = model.query;
+            } 
 
             /**
              * <p>id</p>
@@ -492,6 +519,19 @@ public class InsertInterveneRuleRequest extends Request {
             private java.util.List<String> namespaceList; 
             private Long ruleId; 
             private String ruleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterveneRuleConfig model) {
+                this.answerConfig = model.answerConfig;
+                this.effectConfig = model.effectConfig;
+                this.interveneConfigList = model.interveneConfigList;
+                this.interveneType = model.interveneType;
+                this.namespaceList = model.namespaceList;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
 
             /**
              * AnswerConfig.

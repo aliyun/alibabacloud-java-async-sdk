@@ -57,7 +57,7 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -286,6 +286,19 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * Author.

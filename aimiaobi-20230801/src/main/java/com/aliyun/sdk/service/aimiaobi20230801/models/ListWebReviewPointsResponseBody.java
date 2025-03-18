@@ -64,6 +64,10 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWebReviewPointsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -296,6 +315,17 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
             private String url; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Comments model) {
+                this.source = model.source;
+                this.text = model.text;
+                this.title = model.title;
+                this.url = model.url;
+                this.username = model.username;
+            } 
+
             /**
              * Source.
              */
@@ -387,6 +417,14 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -465,6 +503,15 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
             private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -576,6 +623,17 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
             private java.util.List<Comments> comments; 
             private String ratio; 
             private java.util.List<ViewPoints> viewPoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.comments = model.comments;
+                this.ratio = model.ratio;
+                this.viewPoints = model.viewPoints;
+            } 
 
             /**
              * Attitude.

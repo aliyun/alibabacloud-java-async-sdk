@@ -52,6 +52,10 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSmartClipTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -248,6 +264,18 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
             private String tmpUrl; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileAttr model) {
+                this.duration = model.duration;
+                this.fileLength = model.fileLength;
+                this.fileName = model.fileName;
+                this.height = model.height;
+                this.tmpUrl = model.tmpUrl;
+                this.width = model.width;
+            } 
+
             /**
              * Duration.
              */
@@ -383,6 +411,17 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
             private String status; 
             private String subJobId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubJobs model) {
+                this.errorMessage = model.errorMessage;
+                this.fileAttr = model.fileAttr;
+                this.fileKey = model.fileKey;
+                this.status = model.status;
+                this.subJobId = model.subJobId;
+            } 
+
             /**
              * ErrorMessage.
              */
@@ -485,6 +524,15 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
             private String errorMessage; 
             private String status; 
             private java.util.List<SubJobs> subJobs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.status = model.status;
+                this.subJobs = model.subJobs;
+            } 
 
             /**
              * ErrorMessage.

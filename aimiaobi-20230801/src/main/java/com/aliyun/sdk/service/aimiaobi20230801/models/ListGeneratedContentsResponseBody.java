@@ -64,6 +64,10 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         private Integer size; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGeneratedContentsResponseBody model) {
+            this.code = model.code;
+            this.current = model.current;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -415,6 +434,27 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
             private String updateTime; 
             private String updateUser; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.contentDomain = model.contentDomain;
+                this.contentText = model.contentText;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.deviceId = model.deviceId;
+                this.id = model.id;
+                this.keywordList = model.keywordList;
+                this.keywords = model.keywords;
+                this.prompt = model.prompt;
+                this.taskId = model.taskId;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Content.

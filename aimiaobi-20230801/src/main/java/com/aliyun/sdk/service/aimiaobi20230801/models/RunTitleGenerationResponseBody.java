@@ -56,6 +56,10 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         private Payload payload; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunTitleGenerationResponseBody model) {
+            this.code = model.code;
+            this.header = model.header;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -280,6 +297,19 @@ public class RunTitleGenerationResponseBody extends TeaModel {
             private String taskId; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunTitleGenerationResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.sessionId = model.sessionId;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -375,6 +405,13 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.text = model.text;
+            } 
+
             /**
              * Text.
              */
@@ -445,6 +482,15 @@ public class RunTitleGenerationResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * InputTokens.
@@ -520,6 +566,14 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

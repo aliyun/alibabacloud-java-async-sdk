@@ -52,6 +52,10 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBuildConfigsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String key; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keywords model) {
+                this.description = model.description;
+                this.key = model.key;
+            } 
 
             /**
              * Description.
@@ -362,6 +386,22 @@ public class ListBuildConfigsResponseBody extends TeaModel {
             private String type; 
             private String updateTime; 
             private String updateUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.buildIn = model.buildIn;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.id = model.id;
+                this.keywords = model.keywords;
+                this.tag = model.tag;
+                this.tagDescription = model.tagDescription;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+            } 
 
             /**
              * BuildIn.

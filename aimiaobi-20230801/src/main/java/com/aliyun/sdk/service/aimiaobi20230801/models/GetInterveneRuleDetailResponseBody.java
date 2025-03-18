@@ -52,6 +52,10 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInterveneRuleDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
             private String message; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnswerConfig model) {
+                this.answerType = model.answerType;
+                this.message = model.message;
+                this.namespace = model.namespace;
+            } 
+
             /**
              * AnswerType.
              */
@@ -298,6 +323,15 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
             private Integer effectType; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectConfig model) {
+                this.effectType = model.effectType;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EffectType.
@@ -422,6 +456,18 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InterveneRuleDetail model) {
+                this.answerConfig = model.answerConfig;
+                this.effectConfig = model.effectConfig;
+                this.interveneType = model.interveneType;
+                this.namespaceList = model.namespaceList;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * AnswerConfig.
              */
@@ -508,6 +554,13 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private InterveneRuleDetail interveneRuleDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.interveneRuleDetail = model.interveneRuleDetail;
+            } 
 
             /**
              * InterveneRuleDetail.

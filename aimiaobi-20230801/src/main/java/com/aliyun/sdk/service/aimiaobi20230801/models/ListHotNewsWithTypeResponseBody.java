@@ -52,6 +52,10 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotNewsWithTypeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -332,6 +348,25 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
             private String updateTime; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(News model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docUuid = model.docUuid;
+                this.imageUrls = model.imageUrls;
+                this.pubTime = model.pubTime;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tag = model.tag;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -510,6 +545,16 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
             private String newsType; 
             private String newsTypeName; 
             private Integer totalPages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.news = model.news;
+                this.newsType = model.newsType;
+                this.newsTypeName = model.newsTypeName;
+                this.totalPages = model.totalPages;
+            } 
 
             /**
              * News.

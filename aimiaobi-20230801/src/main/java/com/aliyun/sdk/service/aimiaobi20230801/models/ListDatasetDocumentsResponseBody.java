@@ -64,6 +64,10 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasetDocumentsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -271,6 +290,15 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMedias model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * FileUrl.
@@ -514,6 +542,28 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.categoryUuid = model.categoryUuid;
+                this.content = model.content;
+                this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
+                this.docId = model.docId;
+                this.docType = model.docType;
+                this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.multimodalMedias = model.multimodalMedias;
+                this.pubTime = model.pubTime;
+                this.sourceFrom = model.sourceFrom;
+                this.status = model.status;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * CategoryUuid.

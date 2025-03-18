@@ -56,7 +56,7 @@ public class AddDatasetDocumentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -227,6 +227,15 @@ public class AddDatasetDocumentRequest extends Request {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMedias model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * FileUrl.
@@ -458,6 +467,27 @@ public class AddDatasetDocumentRequest extends Request {
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Document model) {
+                this.content = model.content;
+                this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
+                this.docId = model.docId;
+                this.docType = model.docType;
+                this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.multimodalIndexName = model.multimodalIndexName;
+                this.multimodalMedias = model.multimodalMedias;
+                this.pubTime = model.pubTime;
+                this.sourceFrom = model.sourceFrom;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * Content.

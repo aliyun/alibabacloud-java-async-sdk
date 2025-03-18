@@ -64,7 +64,7 @@ public class GenerateImageTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -276,6 +276,16 @@ public class GenerateImageTaskRequest extends Request {
             private Long id; 
             private String taskId; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParagraphList model) {
+                this.content = model.content;
+                this.id = model.id;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * <p>This parameter is required.</p>

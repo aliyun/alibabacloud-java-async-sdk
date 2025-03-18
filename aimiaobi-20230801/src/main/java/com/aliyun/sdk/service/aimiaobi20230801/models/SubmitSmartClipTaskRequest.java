@@ -61,7 +61,7 @@ public class SubmitSmartClipTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -238,6 +238,14 @@ public class SubmitSmartClipTaskRequest extends Request {
             private String style; 
             private Double volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackgroundMusicConfig model) {
+                this.style = model.style;
+                this.volume = model.volume;
+            } 
+
             /**
              * Style.
              */
@@ -292,6 +300,13 @@ public class SubmitSmartClipTaskRequest extends Request {
 
         public static final class Builder {
             private Double volume; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaConfig model) {
+                this.volume = model.volume;
+            } 
 
             /**
              * Volume.
@@ -411,6 +426,19 @@ public class SubmitSmartClipTaskRequest extends Request {
             private String spacing; 
             private Float x; 
             private Float y; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsrConfig model) {
+                this.alignment = model.alignment;
+                this.font = model.font;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.spacing = model.spacing;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * Alignment.
@@ -555,6 +583,17 @@ public class SubmitSmartClipTaskRequest extends Request {
             private String voice; 
             private Double volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpeechConfig model) {
+                this.asrConfig = model.asrConfig;
+                this.speechRate = model.speechRate;
+                this.style = model.style;
+                this.voice = model.voice;
+                this.volume = model.volume;
+            } 
+
             /**
              * AsrConfig.
              */
@@ -682,6 +721,17 @@ public class SubmitSmartClipTaskRequest extends Request {
             private Float x; 
             private Float y; 
 
+            private Builder() {
+            } 
+
+            private Builder(TitleConfig model) {
+                this.alignment = model.alignment;
+                this.timelineIn = model.timelineIn;
+                this.timelineOut = model.timelineOut;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * Alignment.
              */
@@ -797,6 +847,16 @@ public class SubmitSmartClipTaskRequest extends Request {
             private SpeechConfig speechConfig; 
             private TitleConfig titleConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(EditingConfig model) {
+                this.backgroundMusicConfig = model.backgroundMusicConfig;
+                this.mediaConfig = model.mediaConfig;
+                this.speechConfig = model.speechConfig;
+                this.titleConfig = model.titleConfig;
+            } 
+
             /**
              * BackgroundMusicConfig.
              */
@@ -882,6 +942,14 @@ public class SubmitSmartClipTaskRequest extends Request {
             private String id; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackgroundMusics model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -956,6 +1024,14 @@ public class SubmitSmartClipTaskRequest extends Request {
         public static final class Builder {
             private String id; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(StickerId model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -1071,6 +1147,17 @@ public class SubmitSmartClipTaskRequest extends Request {
             private Double x; 
             private Double y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stickers model) {
+                this.height = model.height;
+                this.stickerId = model.stickerId;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -1175,6 +1262,14 @@ public class SubmitSmartClipTaskRequest extends Request {
         public static final class Builder {
             private String id; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoIds model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -1285,6 +1380,17 @@ public class SubmitSmartClipTaskRequest extends Request {
             private java.util.List<Stickers> stickers; 
             private java.util.List<String> titles; 
             private java.util.List<VideoIds> videoIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputConfig model) {
+                this.backgroundMusics = model.backgroundMusics;
+                this.speechTexts = model.speechTexts;
+                this.stickers = model.stickers;
+                this.titles = model.titles;
+                this.videoIds = model.videoIds;
+            } 
 
             /**
              * BackgroundMusics.
@@ -1424,6 +1530,18 @@ public class SubmitSmartClipTaskRequest extends Request {
             private Integer maxDuration; 
             private Boolean saveToGeneratedContent; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputConfig model) {
+                this.count = model.count;
+                this.fileName = model.fileName;
+                this.height = model.height;
+                this.maxDuration = model.maxDuration;
+                this.saveToGeneratedContent = model.saveToGeneratedContent;
+                this.width = model.width;
+            } 
 
             /**
              * Count.

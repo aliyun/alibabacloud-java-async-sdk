@@ -52,6 +52,10 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             private String outline; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outlines model) {
+                this.outline = model.outline;
+                this.summary = model.summary;
+            } 
+
             /**
              * Outline.
              */
@@ -278,6 +302,15 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewPoints model) {
+                this.outlines = model.outlines;
+                this.point = model.point;
+                this.summary = model.summary;
+            } 
 
             /**
              * Outlines.
@@ -378,6 +411,16 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             private String ratio; 
             private java.util.List<ViewPoints> viewPoints; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attitudes model) {
+                this.attitude = model.attitude;
+                this.attitudeType = model.attitudeType;
+                this.ratio = model.ratio;
+                this.viewPoints = model.viewPoints;
+            } 
+
             /**
              * Attitude.
              */
@@ -461,6 +504,14 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             private java.util.List<Attitudes> attitudes; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomViewPointsResult model) {
+                this.attitudes = model.attitudes;
+                this.topic = model.topic;
+            } 
+
             /**
              * Attitudes.
              */
@@ -539,6 +590,15 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             private CustomViewPointsResult customViewPointsResult; 
             private String errorMessage; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customViewPointsResult = model.customViewPointsResult;
+                this.errorMessage = model.errorMessage;
+                this.status = model.status;
+            } 
 
             /**
              * CustomViewPointsResult.

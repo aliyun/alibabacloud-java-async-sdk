@@ -64,6 +64,10 @@ public class SearchNewsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class SearchNewsResponseBody extends TeaModel {
         private Integer size; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchNewsResponseBody model) {
+            this.code = model.code;
+            this.current = model.current;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -391,6 +410,25 @@ public class SearchNewsResponseBody extends TeaModel {
             private String title; 
             private String updateTime; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docUuid = model.docUuid;
+                this.imageUrls = model.imageUrls;
+                this.pubTime = model.pubTime;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tag = model.tag;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.url = model.url;
+            } 
 
             /**
              * Author.

@@ -52,6 +52,10 @@ public class ListCustomTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListCustomTextResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomTextResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class ListCustomTextResponseBody extends TeaModel {
             private String title; 
             private String updateTime; 
             private String updateUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.id = model.id;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+            } 
 
             /**
              * Content.

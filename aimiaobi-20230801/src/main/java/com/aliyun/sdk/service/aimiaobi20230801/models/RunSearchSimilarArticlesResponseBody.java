@@ -40,6 +40,10 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         private RunSearchSimilarArticlesResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunSearchSimilarArticlesResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -176,6 +189,17 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunSearchSimilarArticlesResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * ErrorCode.
              */
@@ -230,6 +254,9 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
      * <p>RunSearchSimilarArticlesResponseBody</p>
      */
     public static class Articles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DocId")
+        private String docId;
+
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
@@ -252,6 +279,7 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         private String url;
 
         private Articles(Builder builder) {
+            this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.pubTime = builder.pubTime;
             this.searchSourceName = builder.searchSourceName;
@@ -267,6 +295,13 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
 
         public static Articles create() {
             return builder().build();
+        }
+
+        /**
+         * @return docId
+         */
+        public String getDocId() {
+            return this.docId;
         }
 
         /**
@@ -319,6 +354,7 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String docId; 
             private String docUuid; 
             private String pubTime; 
             private String searchSourceName; 
@@ -326,6 +362,28 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.searchSourceName = model.searchSourceName;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
+            /**
+             * DocId.
+             */
+            public Builder docId(String docId) {
+                this.docId = docId;
+                return this;
+            }
 
             /**
              * DocUuid.
@@ -434,6 +492,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             private java.util.List<Articles> articles; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.articles = model.articles;
+                this.text = model.text;
+            } 
+
             /**
              * Articles.
              */
@@ -513,6 +579,15 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             private Long outputTokens; 
             private Long totalTokens; 
 
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
+
             /**
              * InputTokens.
              */
@@ -587,6 +662,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

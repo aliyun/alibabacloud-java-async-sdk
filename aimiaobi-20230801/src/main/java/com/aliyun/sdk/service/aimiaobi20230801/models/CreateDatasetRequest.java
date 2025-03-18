@@ -71,7 +71,7 @@ public class CreateDatasetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -313,6 +313,16 @@ public class CreateDatasetRequest extends Request {
             private String valueFormat; 
             private String valueType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.name = model.name;
+                this.value = model.value;
+                this.valueFormat = model.valueFormat;
+                this.valueType = model.valueType;
+            } 
+
             /**
              * Name.
              */
@@ -419,6 +429,16 @@ public class CreateDatasetRequest extends Request {
             private String value; 
             private String valueFormat; 
             private String valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.name = model.name;
+                this.value = model.value;
+                this.valueFormat = model.valueFormat;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * Name.
@@ -575,6 +595,20 @@ public class CreateDatasetRequest extends Request {
             private Integer socketTimeout; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchSourceRequestConfig model) {
+                this.body = model.body;
+                this.connectTimeout = model.connectTimeout;
+                this.headers = model.headers;
+                this.method = model.method;
+                this.params = model.params;
+                this.pathParamsEnable = model.pathParamsEnable;
+                this.socketTimeout = model.socketTimeout;
+                this.url = model.url;
+            } 
+
             /**
              * Body.
              */
@@ -702,6 +736,15 @@ public class CreateDatasetRequest extends Request {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(JqNodes model) {
+                this.key = model.key;
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * Key.
              */
@@ -800,6 +843,16 @@ public class CreateDatasetRequest extends Request {
             private String key; 
             private String path; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(JqNodesJqNodes model) {
+                this.jqNodes = model.jqNodes;
+                this.key = model.key;
+                this.path = model.path;
+                this.type = model.type;
+            } 
 
             /**
              * JqNodes.
@@ -908,6 +961,16 @@ public class CreateDatasetRequest extends Request {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchSourceResponseConfigJqNodes model) {
+                this.jqNodes = model.jqNodes;
+                this.key = model.key;
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * JqNodes.
              */
@@ -978,6 +1041,13 @@ public class CreateDatasetRequest extends Request {
 
         public static final class Builder {
             private java.util.List<SearchSourceResponseConfigJqNodes> jqNodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSourceResponseConfig model) {
+                this.jqNodes = model.jqNodes;
+            } 
 
             /**
              * JqNodes.
@@ -1062,6 +1132,16 @@ public class CreateDatasetRequest extends Request {
             private SearchSourceResponseConfig searchSourceResponseConfig; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchSourceConfigs model) {
+                this.demoQuery = model.demoQuery;
+                this.searchSourceRequestConfig = model.searchSourceRequestConfig;
+                this.searchSourceResponseConfig = model.searchSourceResponseConfig;
+                this.size = model.size;
+            } 
+
             /**
              * DemoQuery.
              */
@@ -1133,6 +1213,13 @@ public class CreateDatasetRequest extends Request {
         public static final class Builder {
             private java.util.List<SearchSourceConfigs> searchSourceConfigs; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatasetConfig model) {
+                this.searchSourceConfigs = model.searchSourceConfigs;
+            } 
+
             /**
              * SearchSourceConfigs.
              */
@@ -1179,6 +1266,13 @@ public class CreateDatasetRequest extends Request {
 
         public static final class Builder {
             private Boolean disableHandleMultimodalMedia; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocumentHandleConfig model) {
+                this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
+            } 
 
             /**
              * DisableHandleMultimodalMedia.

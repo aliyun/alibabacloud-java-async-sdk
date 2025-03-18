@@ -71,7 +71,7 @@ public class RunWritingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -385,6 +385,22 @@ public class RunWritingRequest extends Request {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.tag = model.tag;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Author.
              */
@@ -504,6 +520,13 @@ public class RunWritingRequest extends Request {
         public static final class Builder {
             private java.util.List<Articles> articles; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferenceData model) {
+                this.articles = model.articles;
+            } 
+
             /**
              * Articles.
              */
@@ -587,6 +610,16 @@ public class RunWritingRequest extends Request {
             private String reverseWords; 
             private String theme; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromptTag model) {
+                this.necessaryTips = model.necessaryTips;
+                this.position = model.position;
+                this.reverseWords = model.reverseWords;
+                this.theme = model.theme;
+            } 
+
             /**
              * NecessaryTips.
              */
@@ -669,6 +702,14 @@ public class RunWritingRequest extends Request {
         public static final class Builder {
             private String keyword; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.keyword = model.keyword;
+                this.tag = model.tag;
+            } 
 
             /**
              * Keyword.
@@ -760,6 +801,16 @@ public class RunWritingRequest extends Request {
             private PromptTag promptTag; 
             private java.util.List<Tags> tags; 
             private Boolean useSearch; 
+
+            private Builder() {
+            } 
+
+            private Builder(WritingConfig model) {
+                this.domain = model.domain;
+                this.promptTag = model.promptTag;
+                this.tags = model.tags;
+                this.useSearch = model.useSearch;
+            } 
 
             /**
              * Domain.

@@ -52,6 +52,10 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGeneratedContentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -355,6 +371,27 @@ public class GetGeneratedContentResponseBody extends TeaModel {
             private String updateTime; 
             private String updateUser; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.contentDomain = model.contentDomain;
+                this.contentText = model.contentText;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.deviceId = model.deviceId;
+                this.id = model.id;
+                this.keywordList = model.keywordList;
+                this.keywords = model.keywords;
+                this.prompt = model.prompt;
+                this.taskId = model.taskId;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Content.

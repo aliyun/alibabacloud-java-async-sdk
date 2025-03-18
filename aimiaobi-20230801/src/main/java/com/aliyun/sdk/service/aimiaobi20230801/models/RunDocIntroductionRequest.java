@@ -21,15 +21,31 @@ public class RunDocIntroductionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CleanCache")
+    private Boolean cleanCache;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntroductionPrompt")
+    private String introductionPrompt;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyPointPrompt")
+    private String keyPointPrompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SummaryPrompt")
+    private String summaryPrompt;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -39,8 +55,12 @@ public class RunDocIntroductionRequest extends Request {
     private RunDocIntroductionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
+        this.introductionPrompt = builder.introductionPrompt;
+        this.keyPointPrompt = builder.keyPointPrompt;
         this.sessionId = builder.sessionId;
+        this.summaryPrompt = builder.summaryPrompt;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -52,7 +72,7 @@ public class RunDocIntroductionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,6 +85,13 @@ public class RunDocIntroductionRequest extends Request {
     }
 
     /**
+     * @return cleanCache
+     */
+    public Boolean getCleanCache() {
+        return this.cleanCache;
+    }
+
+    /**
      * @return docId
      */
     public String getDocId() {
@@ -72,10 +99,31 @@ public class RunDocIntroductionRequest extends Request {
     }
 
     /**
+     * @return introductionPrompt
+     */
+    public String getIntroductionPrompt() {
+        return this.introductionPrompt;
+    }
+
+    /**
+     * @return keyPointPrompt
+     */
+    public String getKeyPointPrompt() {
+        return this.keyPointPrompt;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    /**
+     * @return summaryPrompt
+     */
+    public String getSummaryPrompt() {
+        return this.summaryPrompt;
     }
 
     /**
@@ -87,8 +135,12 @@ public class RunDocIntroductionRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunDocIntroductionRequest, Builder> {
         private String regionId; 
+        private Boolean cleanCache; 
         private String docId; 
+        private String introductionPrompt; 
+        private String keyPointPrompt; 
         private String sessionId; 
+        private String summaryPrompt; 
         private String workspaceId; 
 
         private Builder() {
@@ -98,8 +150,12 @@ public class RunDocIntroductionRequest extends Request {
         private Builder(RunDocIntroductionRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cleanCache = request.cleanCache;
             this.docId = request.docId;
+            this.introductionPrompt = request.introductionPrompt;
+            this.keyPointPrompt = request.keyPointPrompt;
             this.sessionId = request.sessionId;
+            this.summaryPrompt = request.summaryPrompt;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -109,6 +165,15 @@ public class RunDocIntroductionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CleanCache.
+         */
+        public Builder cleanCache(Boolean cleanCache) {
+            this.putQueryParameter("CleanCache", cleanCache);
+            this.cleanCache = cleanCache;
             return this;
         }
 
@@ -125,6 +190,24 @@ public class RunDocIntroductionRequest extends Request {
         }
 
         /**
+         * IntroductionPrompt.
+         */
+        public Builder introductionPrompt(String introductionPrompt) {
+            this.putBodyParameter("IntroductionPrompt", introductionPrompt);
+            this.introductionPrompt = introductionPrompt;
+            return this;
+        }
+
+        /**
+         * KeyPointPrompt.
+         */
+        public Builder keyPointPrompt(String keyPointPrompt) {
+            this.putBodyParameter("KeyPointPrompt", keyPointPrompt);
+            this.keyPointPrompt = keyPointPrompt;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +216,15 @@ public class RunDocIntroductionRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * SummaryPrompt.
+         */
+        public Builder summaryPrompt(String summaryPrompt) {
+            this.putBodyParameter("SummaryPrompt", summaryPrompt);
+            this.summaryPrompt = summaryPrompt;
             return this;
         }
 

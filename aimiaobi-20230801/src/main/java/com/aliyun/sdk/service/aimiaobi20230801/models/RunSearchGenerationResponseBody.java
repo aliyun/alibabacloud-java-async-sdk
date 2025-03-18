@@ -40,6 +40,10 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return header
      */
@@ -65,6 +69,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private RunSearchGenerationResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunSearchGenerationResponseBody model) {
+            this.header = model.header;
+            this.payload = model.payload;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Header.
@@ -223,6 +236,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String sessionId; 
             private String taskId; 
             private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunSearchGenerationResponseBodyHeader model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.event = model.event;
+                this.eventInfo = model.eventInfo;
+                this.originSessionId = model.originSessionId;
+                this.responseTime = model.responseTime;
+                this.sessionId = model.sessionId;
+                this.taskId = model.taskId;
+                this.traceId = model.traceId;
+            } 
 
             /**
              * ErrorCode.
@@ -395,6 +423,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Article model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * DocId.
              */
@@ -506,6 +546,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResult model) {
+                this.article = model.article;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+            } 
+
             /**
              * Article.
              */
@@ -605,6 +654,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer size; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageSearchResult model) {
+                this.current = model.current;
+                this.searchResult = model.searchResult;
+                this.size = model.size;
+                this.total = model.total;
+            } 
+
             /**
              * Current.
              */
@@ -699,6 +758,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMedias model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * FileUrl.
@@ -871,6 +939,22 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextSearchResultSearchResult model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.multimodalMedias = model.multimodalMedias;
+                this.pubTime = model.pubTime;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * DocId.
              */
@@ -1026,6 +1110,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer size; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextSearchResult model) {
+                this.current = model.current;
+                this.searchResult = model.searchResult;
+                this.size = model.size;
+                this.total = model.total;
+            } 
+
             /**
              * Current.
              */
@@ -1156,6 +1250,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * DocId.
@@ -1292,6 +1398,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Double to; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClipInfos model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.text = model.text;
+                this.to = model.to;
+                this.type = model.type;
+            } 
+
             /**
              * From.
              */
@@ -1407,6 +1524,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoSearchResultSearchResult model) {
+                this.article = model.article;
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+            } 
+
             /**
              * Article.
              */
@@ -1513,6 +1640,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private java.util.List<VideoSearchResultSearchResult> searchResult; 
             private Integer size; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoSearchResult model) {
+                this.current = model.current;
+                this.searchResult = model.searchResult;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * Current.
@@ -1621,6 +1758,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String topic; 
             private VideoSearchResult videoSearchResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterTopics model) {
+                this.imageSearchResult = model.imageSearchResult;
+                this.textSearchResult = model.textSearchResult;
+                this.topic = model.topic;
+                this.videoSearchResult = model.videoSearchResult;
+            } 
+
             /**
              * ImageSearchResult.
              */
@@ -1716,6 +1863,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Boolean generateFinished; 
             private String textGenerate; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterTopicResult model) {
+                this.clusterTopics = model.clusterTopics;
+                this.generateFinished = model.generateFinished;
+                this.textGenerate = model.textGenerate;
+            } 
+
             /**
              * ClusterTopics.
              */
@@ -1802,6 +1958,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchResultMultimodalMedias model) {
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * FileUrl.
@@ -1913,6 +2078,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String searchSourceName; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMediaListArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * DocId.
@@ -2029,6 +2205,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String mediaId; 
             private String mediaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultimodalMediaList model) {
+                this.article = model.article;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
+
             /**
              * Article.
              */
@@ -2135,6 +2321,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer end; 
             private java.util.List<MultimodalMediaList> multimodalMediaList; 
             private Integer start; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextGenerateMultimodalMediaList model) {
+                this.docUuid = model.docUuid;
+                this.end = model.end;
+                this.multimodalMediaList = model.multimodalMediaList;
+                this.start = model.start;
+            } 
 
             /**
              * DocUuid.
@@ -2399,6 +2595,29 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer traceabilityId; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcerptResultSearchResult model) {
+                this.chunks = model.chunks;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.excerpt = model.excerpt;
+                this.multimodalMedias = model.multimodalMedias;
+                this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.select = model.select;
+                this.summary = model.summary;
+                this.textGenerateMultimodalMediaList = model.textGenerateMultimodalMediaList;
+                this.title = model.title;
+                this.traceabilityId = model.traceabilityId;
+                this.url = model.url;
+            } 
+
             /**
              * Chunks.
              */
@@ -2610,6 +2829,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private java.util.List<ExcerptResultSearchResult> searchResult; 
             private String textGenerate; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExcerptResult model) {
+                this.generateFinished = model.generateFinished;
+                this.generateLevel = model.generateLevel;
+                this.searchResult = model.searchResult;
+                this.textGenerate = model.textGenerate;
+            } 
+
             /**
              * GenerateFinished.
              */
@@ -2741,6 +2970,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageSearchResultSearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * DocId.
              */
@@ -2852,6 +3093,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageSearchResultSearchResult model) {
+                this.article = model.article;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+            } 
+
             /**
              * Article.
              */
@@ -2914,6 +3164,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ImageSearchResultSearchResult> searchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(GeneratedContentImageSearchResult model) {
+                this.searchResult = model.searchResult;
+            } 
 
             /**
              * SearchResult.
@@ -3094,6 +3351,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewsElementArticleListArticle model) {
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.select = model.select;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Content.
              */
@@ -3253,6 +3528,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private java.util.List<String> processList; 
             private java.util.List<String> resultList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Event model) {
+                this.causeList = model.causeList;
+                this.processList = model.processList;
+                this.resultList = model.resultList;
+            } 
+
             /**
              * CauseList.
              */
@@ -3352,6 +3636,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String people; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewsElementList model) {
+                this.event = model.event;
+                this.location = model.location;
+                this.people = model.people;
+                this.time = model.time;
+            } 
+
             /**
              * Event.
              */
@@ -3447,6 +3741,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private java.util.List<NewsElementList> newsElementList; 
             private String textGenerate; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewsElementArticleList model) {
+                this.article = model.article;
+                this.newsElementList = model.newsElementList;
+                this.textGenerate = model.textGenerate;
+            } 
+
             /**
              * Article.
              */
@@ -3533,6 +3836,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Boolean generateFinished; 
             private java.util.List<NewsElementArticleList> newsElementArticleList; 
             private String textGenerate; 
+
+            private Builder() {
+            } 
+
+            private Builder(NewsElementResult model) {
+                this.generateFinished = model.generateFinished;
+                this.newsElementArticleList = model.newsElementArticleList;
+                this.textGenerate = model.textGenerate;
+            } 
 
             /**
              * GenerateFinished.
@@ -3621,6 +3933,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer y; 
             private Integer z; 
 
+            private Builder() {
+            } 
+
+            private Builder(GenerateCoordinate model) {
+                this.x = model.x;
+                this.y = model.y;
+                this.z = model.z;
+            } 
+
             /**
              * X.
              */
@@ -3708,6 +4029,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer y; 
             private Integer z; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewsCoordinate model) {
+                this.x = model.x;
+                this.y = model.y;
+                this.z = model.z;
+            } 
+
             /**
              * X.
              */
@@ -3783,6 +4113,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private GenerateCoordinate generateCoordinate; 
             private NewsCoordinate newsCoordinate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coordinates model) {
+                this.generateCoordinate = model.generateCoordinate;
+                this.newsCoordinate = model.newsCoordinate;
+            } 
+
             /**
              * GenerateCoordinate.
              */
@@ -3849,6 +4187,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Coordinates> coordinates; 
             private Double duplicate; 
+
+            private Builder() {
+            } 
+
+            private Builder(GenerateTraceability model) {
+                this.coordinates = model.coordinates;
+                this.duplicate = model.duplicate;
+            } 
 
             /**
              * Coordinates.
@@ -3964,6 +4310,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalSearchResultListSearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * DocId.
@@ -4100,6 +4458,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Double to; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchResultClipInfos model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.text = model.text;
+                this.to = model.to;
+                this.type = model.type;
+            } 
+
             /**
              * From.
              */
@@ -4226,6 +4595,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
             private String mediaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalSearchResultListSearchResult model) {
+                this.article = model.article;
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
 
             /**
              * Article.
@@ -4377,6 +4757,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer size; 
             private String timelineDateStr; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultimodalSearchResultList model) {
+                this.current = model.current;
+                this.searchQuery = model.searchQuery;
+                this.searchResult = model.searchResult;
+                this.searchType = model.searchType;
+                this.size = model.size;
+                this.timelineDateStr = model.timelineDateStr;
+                this.total = model.total;
+            } 
 
             /**
              * Current.
@@ -4641,6 +5034,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer traceabilityId; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferenceList model) {
+                this.chunks = model.chunks;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.select = model.select;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.traceabilityId = model.traceabilityId;
+                this.url = model.url;
+            } 
+
             /**
              * Chunks.
              */
@@ -4860,6 +5274,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextGenerateMultimodalMediaListMultimodalMediaListArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * DocId.
              */
@@ -4983,6 +5409,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String mediaId; 
             private String mediaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextGenerateMultimodalMediaListMultimodalMediaList model) {
+                this.article = model.article;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
+
             /**
              * Article.
              */
@@ -5077,6 +5513,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer end; 
             private java.util.List<TextGenerateMultimodalMediaListMultimodalMediaList> multimodalMediaList; 
             private Integer start; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextGenerateResultTextGenerateMultimodalMediaList model) {
+                this.end = model.end;
+                this.multimodalMediaList = model.multimodalMediaList;
+                this.start = model.start;
+            } 
 
             /**
              * End.
@@ -5213,6 +5658,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String textGenerate; 
             private java.util.List<TextGenerateResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextGenerateResult model) {
+                this.generateFinished = model.generateFinished;
+                this.generateLevel = model.generateLevel;
+                this.generateTraceability = model.generateTraceability;
+                this.multimodalSearchResultList = model.multimodalSearchResultList;
+                this.referenceList = model.referenceList;
+                this.textGenerate = model.textGenerate;
+                this.textGenerateMultimodalMediaList = model.textGenerateMultimodalMediaList;
+            } 
+
             /**
              * GenerateFinished.
              */
@@ -5332,6 +5790,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer y; 
             private Integer z; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoordinatesGenerateCoordinate model) {
+                this.x = model.x;
+                this.y = model.y;
+                this.z = model.z;
+            } 
+
             /**
              * X.
              */
@@ -5419,6 +5886,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer y; 
             private Integer z; 
 
+            private Builder() {
+            } 
+
+            private Builder(CoordinatesNewsCoordinate model) {
+                this.x = model.x;
+                this.y = model.y;
+                this.z = model.z;
+            } 
+
             /**
              * X.
              */
@@ -5494,6 +5970,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private CoordinatesGenerateCoordinate generateCoordinate; 
             private CoordinatesNewsCoordinate newsCoordinate; 
 
+            private Builder() {
+            } 
+
+            private Builder(GenerateTraceabilityCoordinates model) {
+                this.generateCoordinate = model.generateCoordinate;
+                this.newsCoordinate = model.newsCoordinate;
+            } 
+
             /**
              * GenerateCoordinate.
              */
@@ -5560,6 +6044,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<GenerateTraceabilityCoordinates> coordinates; 
             private Double duplicate; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultGenerateTraceability model) {
+                this.coordinates = model.coordinates;
+                this.duplicate = model.duplicate;
+            } 
 
             /**
              * Coordinates.
@@ -5675,6 +6167,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultMultimodalSearchResultListSearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * DocId.
@@ -5811,6 +6315,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Double to; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultimodalSearchResultListSearchResultClipInfos model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.text = model.text;
+                this.to = model.to;
+                this.type = model.type;
+            } 
+
             /**
              * From.
              */
@@ -5938,6 +6453,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String mediaId; 
             private String mediaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultMultimodalSearchResultListSearchResult model) {
+                this.article = model.article;
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
+
             /**
              * Article.
              */
@@ -6028,6 +6554,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TimelineResultMultimodalSearchResultListSearchResult> searchResult; 
             private String timelineDateStr; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultMultimodalSearchResultList model) {
+                this.searchResult = model.searchResult;
+                this.timelineDateStr = model.timelineDateStr;
+            } 
 
             /**
              * SearchResult.
@@ -6252,6 +6786,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer traceabilityId; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultReferenceList model) {
+                this.chunks = model.chunks;
+                this.content = model.content;
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
+                this.select = model.select;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.traceabilityId = model.traceabilityId;
+                this.url = model.url;
+            } 
+
             /**
              * Chunks.
              */
@@ -6471,6 +7026,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultTextGenerateMultimodalMediaListMultimodalMediaListArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * DocId.
              */
@@ -6594,6 +7161,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String mediaId; 
             private String mediaType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultTextGenerateMultimodalMediaListMultimodalMediaList model) {
+                this.article = model.article;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+            } 
+
             /**
              * Article.
              */
@@ -6688,6 +7265,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Integer end; 
             private java.util.List<TimelineResultTextGenerateMultimodalMediaListMultimodalMediaList> multimodalMediaList; 
             private Integer start; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimelineResultTextGenerateMultimodalMediaList model) {
+                this.end = model.end;
+                this.multimodalMediaList = model.multimodalMediaList;
+                this.start = model.start;
+            } 
 
             /**
              * End.
@@ -6811,6 +7397,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private java.util.List<TimelineResultReferenceList> referenceList; 
             private String textGenerate; 
             private java.util.List<TimelineResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimelineResult model) {
+                this.generateFinished = model.generateFinished;
+                this.generateTraceability = model.generateTraceability;
+                this.multimodalSearchResultList = model.multimodalSearchResultList;
+                this.referenceList = model.referenceList;
+                this.textGenerate = model.textGenerate;
+                this.textGenerateMultimodalMediaList = model.textGenerateMultimodalMediaList;
+            } 
 
             /**
              * GenerateFinished.
@@ -6959,6 +7557,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoSearchResultSearchResultArticle model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.searchSourceName = model.searchSourceName;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * DocId.
              */
@@ -7094,6 +7704,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Double to; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoSearchResultSearchResultClipInfos model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.text = model.text;
+                this.to = model.to;
+                this.type = model.type;
+            } 
+
             /**
              * From.
              */
@@ -7209,6 +7830,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String fileUrl; 
             private String mediaId; 
 
+            private Builder() {
+            } 
+
+            private Builder(GeneratedContentVideoSearchResultSearchResult model) {
+                this.article = model.article;
+                this.clipInfos = model.clipInfos;
+                this.fileUrl = model.fileUrl;
+                this.mediaId = model.mediaId;
+            } 
+
             /**
              * Article.
              */
@@ -7279,6 +7910,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GeneratedContentVideoSearchResultSearchResult> searchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(GeneratedContentVideoSearchResult model) {
+                this.searchResult = model.searchResult;
+            } 
 
             /**
              * SearchResult.
@@ -7398,6 +8036,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private TextGenerateResult textGenerateResult; 
             private TimelineResult timelineResult; 
             private GeneratedContentVideoSearchResult videoSearchResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(GeneratedContent model) {
+                this.clusterTopicResult = model.clusterTopicResult;
+                this.excerptResult = model.excerptResult;
+                this.imageSearchResult = model.imageSearchResult;
+                this.newsElementResult = model.newsElementResult;
+                this.textGenerateResult = model.textGenerateResult;
+                this.timelineResult = model.timelineResult;
+                this.videoSearchResult = model.videoSearchResult;
+            } 
 
             /**
              * ClusterTopicResult.
@@ -7578,6 +8229,20 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String supplementDataType; 
             private Boolean supplementEnable; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizContext model) {
+                this.currentStep = model.currentStep;
+                this.generatedContent = model.generatedContent;
+                this.nextStep = model.nextStep;
+                this.recommendSearchQueryList = model.recommendSearchQueryList;
+                this.searchKeywords = model.searchKeywords;
+                this.searchQueryList = model.searchQueryList;
+                this.supplementDataType = model.supplementDataType;
+                this.supplementEnable = model.supplementEnable;
+            } 
+
             /**
              * CurrentStep.
              */
@@ -7681,6 +8346,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private BizContext bizContext; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentContext model) {
+                this.bizContext = model.bizContext;
+            } 
+
             /**
              * BizContext.
              */
@@ -7727,6 +8399,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private AgentContext agentContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.agentContext = model.agentContext;
+            } 
 
             /**
              * AgentContext.
@@ -7798,6 +8477,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * InputTokens.
@@ -7873,6 +8561,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private Output output; 
             private Usage usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.output = model.output;
+                this.usage = model.usage;
+            } 
 
             /**
              * Output.

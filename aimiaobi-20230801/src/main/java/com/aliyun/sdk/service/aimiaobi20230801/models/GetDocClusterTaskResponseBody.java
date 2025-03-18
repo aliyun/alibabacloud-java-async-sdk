@@ -52,6 +52,10 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocClusterTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
             private String summary; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.docIds = model.docIds;
+                this.summary = model.summary;
+                this.title = model.title;
+            } 
+
             /**
              * DocIds.
              */
@@ -298,6 +323,15 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
             private String errorMessage; 
             private String status; 
             private java.util.List<Topics> topics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorMessage = model.errorMessage;
+                this.status = model.status;
+                this.topics = model.topics;
+            } 
 
             /**
              * ErrorMessage.

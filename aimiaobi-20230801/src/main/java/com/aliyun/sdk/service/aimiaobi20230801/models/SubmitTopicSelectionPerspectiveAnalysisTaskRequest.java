@@ -56,7 +56,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,6 +217,14 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
             private String text; 
             private String username; 
 
+            private Builder() {
+            } 
+
+            private Builder(Comments model) {
+                this.text = model.text;
+                this.username = model.username;
+            } 
+
             /**
              * Text.
              */
@@ -362,6 +370,20 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
             private String summary; 
             private String title; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Documents model) {
+                this.author = model.author;
+                this.comments = model.comments;
+                this.content = model.content;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
 
             /**
              * Author.
