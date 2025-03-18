@@ -48,6 +48,10 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -89,6 +93,17 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         private String requestId; 
         private String state; 
         private String step; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEdgeMachineActiveProcessResponseBody model) {
+            this.logs = model.logs;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.state = model.state;
+            this.step = model.step;
+        } 
 
         /**
          * <p>The activation progress list.</p>

@@ -37,7 +37,7 @@ public class DescribeClustersResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -171,6 +171,14 @@ public class DescribeClustersResponse extends Response {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.
@@ -562,6 +570,41 @@ public class DescribeClustersResponse extends Response {
             private String vswitchId; 
             private String workerRamRoleName; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeClustersResponseBody model) {
+                this.clusterId = model.clusterId;
+                this.clusterType = model.clusterType;
+                this.created = model.created;
+                this.currentVersion = model.currentVersion;
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskSize = model.dataDiskSize;
+                this.deletionProtection = model.deletionProtection;
+                this.dockerVersion = model.dockerVersion;
+                this.externalLoadbalancerId = model.externalLoadbalancerId;
+                this.initVersion = model.initVersion;
+                this.masterUrl = model.masterUrl;
+                this.metaData = model.metaData;
+                this.name = model.name;
+                this.networkMode = model.networkMode;
+                this.privateZone = model.privateZone;
+                this.profile = model.profile;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.size = model.size;
+                this.state = model.state;
+                this.subnetCidr = model.subnetCidr;
+                this.tags = model.tags;
+                this.updated = model.updated;
+                this.vpcId = model.vpcId;
+                this.vswitchCidr = model.vswitchCidr;
+                this.vswitchId = model.vswitchId;
+                this.workerRamRoleName = model.workerRamRoleName;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * cluster_id.

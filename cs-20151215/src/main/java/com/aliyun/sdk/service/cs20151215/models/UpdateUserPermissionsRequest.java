@@ -44,7 +44,7 @@ public class UpdateUserPermissionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,8 +111,8 @@ public class UpdateUserPermissionsRequest extends Request {
          * <p>The authorization method. Valid values:</p>
          * <ul>
          * <li><code>apply</code>: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
-         * <li><code>delete</code>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.</li>
-         * <li><code>patch</code>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.</li>
+         * <li><code>delete</code>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, while other permissions of the RAM user or RAM role on the cluster are not affected.</li>
+         * <li><code>patch</code>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, while other permissions of the RAM user or RAM role on the cluster are not affected.</li>
          * </ul>
          * <p>Default value: <code>apply</code>.</p>
          * 
@@ -224,6 +224,18 @@ public class UpdateUserPermissionsRequest extends Request {
             private String roleName; 
             private String roleType; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateUserPermissionsRequestBody model) {
+                this.cluster = model.cluster;
+                this.isCustom = model.isCustom;
+                this.isRamRole = model.isRamRole;
+                this.namespace = model.namespace;
+                this.roleName = model.roleName;
+                this.roleType = model.roleType;
+            } 
+
             /**
              * <p>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</p>
              * <ul>
@@ -272,13 +284,19 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * <p>The predefined role. Valid values:</p>
+             * <p>The predefined role name. Valid values:</p>
              * <ul>
              * <li><code>admin</code>: administrator</li>
+             * <li><code>admin-view</code>: read-only administrator</li>
              * <li><code>ops</code>: O&amp;M engineer</li>
              * <li><code>dev</code>: developer</li>
              * <li><code>restricted</code>: restricted user</li>
              * <li>Custom role</li>
+             * </ul>
+             * <p>Note:</p>
+             * <ul>
+             * <li>You cannot grant <strong>namespace-level</strong> permissions to the <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles.</li>
+             * <li>You cannot grant <strong>all cluster-level</strong> permissions to the <code>admin-view</code> role.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -293,7 +311,7 @@ public class UpdateUserPermissionsRequest extends Request {
              * <p>The authorization type. Valid values:</p>
              * <ul>
              * <li><code>cluster</code>: authorizes the RAM user or RAM role to manage the specified clusters.</li>
-             * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namepsaces.</li>
+             * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namespaces.</li>
              * <li><code>all-clusters</code>: authorizes the RAM user or RAM role to manage all clusters.</li>
              * </ul>
              * 

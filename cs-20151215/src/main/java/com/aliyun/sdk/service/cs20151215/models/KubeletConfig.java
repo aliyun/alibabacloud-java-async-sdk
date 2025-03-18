@@ -152,6 +152,10 @@ public class KubeletConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowedUnsafeSysctls
      */
@@ -401,6 +405,43 @@ public class KubeletConfig extends TeaModel {
         private java.util.Map<String, ?> systemReserved; 
         private String topologyManagerPolicy; 
         private Tracing tracing; 
+
+        private Builder() {
+        } 
+
+        private Builder(KubeletConfig model) {
+            this.allowedUnsafeSysctls = model.allowedUnsafeSysctls;
+            this.clusterDNS = model.clusterDNS;
+            this.containerLogMaxFiles = model.containerLogMaxFiles;
+            this.containerLogMaxSize = model.containerLogMaxSize;
+            this.containerLogMaxWorkers = model.containerLogMaxWorkers;
+            this.containerLogMonitorInterval = model.containerLogMonitorInterval;
+            this.cpuCFSQuota = model.cpuCFSQuota;
+            this.cpuCFSQuotaPeriod = model.cpuCFSQuotaPeriod;
+            this.cpuManagerPolicy = model.cpuManagerPolicy;
+            this.eventBurst = model.eventBurst;
+            this.eventRecordQPS = model.eventRecordQPS;
+            this.evictionHard = model.evictionHard;
+            this.evictionSoft = model.evictionSoft;
+            this.evictionSoftGracePeriod = model.evictionSoftGracePeriod;
+            this.featureGates = model.featureGates;
+            this.imageGCHighThresholdPercent = model.imageGCHighThresholdPercent;
+            this.imageGCLowThresholdPercent = model.imageGCLowThresholdPercent;
+            this.kubeAPIBurst = model.kubeAPIBurst;
+            this.kubeAPIQPS = model.kubeAPIQPS;
+            this.kubeReserved = model.kubeReserved;
+            this.maxPods = model.maxPods;
+            this.memoryManagerPolicy = model.memoryManagerPolicy;
+            this.podPidsLimit = model.podPidsLimit;
+            this.readOnlyPort = model.readOnlyPort;
+            this.registryBurst = model.registryBurst;
+            this.registryPullQPS = model.registryPullQPS;
+            this.reservedMemory = model.reservedMemory;
+            this.serializeImagePulls = model.serializeImagePulls;
+            this.systemReserved = model.systemReserved;
+            this.topologyManagerPolicy = model.topologyManagerPolicy;
+            this.tracing = model.tracing;
+        } 
 
         /**
          * allowedUnsafeSysctls.
@@ -700,6 +741,14 @@ public class KubeletConfig extends TeaModel {
             private java.util.Map<String, ?> limits; 
             private Integer numaNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReservedMemory model) {
+                this.limits = model.limits;
+                this.numaNode = model.numaNode;
+            } 
+
             /**
              * limits.
              */
@@ -766,6 +815,14 @@ public class KubeletConfig extends TeaModel {
         public static final class Builder {
             private String endpoint; 
             private Integer samplingRatePerMillion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tracing model) {
+                this.endpoint = model.endpoint;
+                this.samplingRatePerMillion = model.samplingRatePerMillion;
+            } 
 
             /**
              * endpoint.

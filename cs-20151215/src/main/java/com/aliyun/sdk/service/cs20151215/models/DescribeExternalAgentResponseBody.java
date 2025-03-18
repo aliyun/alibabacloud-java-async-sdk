@@ -32,6 +32,10 @@ public class DescribeExternalAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -41,6 +45,13 @@ public class DescribeExternalAgentResponseBody extends TeaModel {
 
     public static final class Builder {
         private String config; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExternalAgentResponseBody model) {
+            this.config = model.config;
+        } 
 
         /**
          * <p>The agent configurations in the YAML format.</p>

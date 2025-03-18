@@ -32,6 +32,10 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return roles
      */
@@ -41,6 +45,13 @@ public class CheckServiceRoleResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Roles> roles; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceRoleResponseBody model) {
+            this.roles = model.roles;
+        } 
 
         /**
          * <p>The check results.</p>
@@ -112,8 +123,22 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             private String message; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.granted = model.granted;
+                this.message = model.message;
+                this.name = model.name;
+            } 
+
             /**
-             * <p>Specifies whether the service role is granted required permissions.</p>
+             * <p>Indicates whether the service role is assigned to ACK.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: The role is assigned to ACK.</li>
+             * <li>false: The role is not assigned to ACK.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -124,7 +149,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message returned if the service role is not granted required permissions.</p>
+             * <p>The message that is displayed for a role that is not assigned to ACK.</p>
              * 
              * <strong>example:</strong>
              * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>
@@ -135,7 +160,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service role name.</p>
+             * <p>The name of the service role.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunCSManagedAutoScalerRole</p>

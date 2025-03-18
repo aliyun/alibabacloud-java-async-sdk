@@ -44,6 +44,10 @@ public class QuotasValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quota
      */
@@ -77,6 +81,16 @@ public class QuotasValue extends TeaModel {
         private String operationCode; 
         private Boolean adjustable; 
         private String unit; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotasValue model) {
+            this.quota = model.quota;
+            this.operationCode = model.operationCode;
+            this.adjustable = model.adjustable;
+            this.unit = model.unit;
+        } 
 
         /**
          * <p>The value of the quota. If the quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>

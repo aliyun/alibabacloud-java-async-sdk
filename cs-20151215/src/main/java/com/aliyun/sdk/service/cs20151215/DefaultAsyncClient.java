@@ -290,15 +290,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes all request parameters for creating a Container Service for Kubernetes (ACK) cluster. For more information about how to call the API to create each type of ACK cluster, refer to the following topics:</p>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/90776.html">Call the API to create an ACK managed cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/197620.html">Call the API to create an ACK dedicated cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/144246.html">Call the API to create an ACK Serverless cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/128204.html">Call the API to create an ACK Edge cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/196321.html">Call the API to create an ACK Basic cluster that supports sandboxed containers</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/140623.html">Call the API to create an ACK Pro cluster that supports sandboxed containers</a></li>
-     * </ul>
+     * <h3><a href="#-openapi-"></a>Generate API request parameters in the ACK console</h3>
+     * <p>When you fail to create an ACK cluster by calling the CreateCluster operation due to invalid parameter settings, you can generate valid API request parameters in the ACK console. Procedure:</p>
+     * <ol>
+     * <li>Log on to the <a href="https://cs.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>On the <strong>Cluster</strong> page, click <strong>Cluster Templates</strong>.</li>
+     * <li>In the Select Cluster Template dialog box, select the type of cluster that you want to create and click Create. Then, configure the cluster setting parameters.</li>
+     * <li>After you configure the cluster parameters, click <strong>Generate API Request Parameters</strong> in the <strong>Confirm Order</strong> step.
+     * The API request parameters are displayed in the API Request Parameters dialog box.</li>
+     * </ol>
      * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
@@ -463,6 +463,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Warning:</p>
+     * <ul>
+     * <li>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</li>
+     * <li>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</li>
+     * <li>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</li>
+     * <li>Elastic container instances created on virtual nodes are automatically released.</li>
+     * <li>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
      * @return DeleteClusterResponse
      */
@@ -2411,7 +2421,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a>.</p>
      * 
      * @param request the request parameters of UpdateClusterAuditLogConfig  UpdateClusterAuditLogConfigRequest
      * @return UpdateClusterAuditLogConfigResponse

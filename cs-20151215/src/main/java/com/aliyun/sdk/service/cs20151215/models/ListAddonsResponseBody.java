@@ -32,6 +32,10 @@ public class ListAddonsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addons
      */
@@ -41,6 +45,13 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Addons> addons; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAddonsResponseBody model) {
+            this.addons = model.addons;
+        } 
 
         /**
          * <p>The list of available components.</p>
@@ -171,6 +182,20 @@ public class ListAddonsResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> supportedActions; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.architecture = model.architecture;
+                this.category = model.category;
+                this.configSchema = model.configSchema;
+                this.installByDefault = model.installByDefault;
+                this.managed = model.managed;
+                this.name = model.name;
+                this.supportedActions = model.supportedActions;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Architectures supported by the component. Valid values:</p>

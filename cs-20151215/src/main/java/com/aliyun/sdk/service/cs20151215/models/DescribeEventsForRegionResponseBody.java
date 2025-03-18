@@ -36,6 +36,10 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -53,6 +57,14 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Events> events; 
         private PageInfo pageInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventsForRegionResponseBody model) {
+            this.events = model.events;
+            this.pageInfo = model.pageInfo;
+        } 
 
         /**
          * <p>The events.</p>
@@ -131,6 +143,15 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             private String level; 
             private String message; 
             private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.level = model.level;
+                this.message = model.message;
+                this.reason = model.reason;
+            } 
 
             /**
              * <p>The severity level of the event.</p>
@@ -276,6 +297,19 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             private String time; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.clusterId = model.clusterId;
+                this.data = model.data;
+                this.eventId = model.eventId;
+                this.source = model.source;
+                this.subject = model.subject;
+                this.time = model.time;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -409,6 +443,15 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of pages.</p>

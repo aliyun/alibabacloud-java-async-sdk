@@ -108,6 +108,10 @@ public class InstancePatterns extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return architectures
      */
@@ -261,6 +265,31 @@ public class InstancePatterns extends TeaModel {
         private Long minimumEniIpv6AddressQuantity; 
         private Long minimumEniPrivateIpAddressQuantity; 
         private Long minimumEniQuantity; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstancePatterns model) {
+            this.architectures = model.architectures;
+            this.burstPerformanceOption = model.burstPerformanceOption;
+            this.core = model.core;
+            this.cores = model.cores;
+            this.cpuArchitectures = model.cpuArchitectures;
+            this.excludedInstanceTypes = model.excludedInstanceTypes;
+            this.instanceCategories = model.instanceCategories;
+            this.instanceFamilyLevel = model.instanceFamilyLevel;
+            this.instanceTypeFamilies = model.instanceTypeFamilies;
+            this.maxCpuCores = model.maxCpuCores;
+            this.maxMemorySize = model.maxMemorySize;
+            this.maxPrice = model.maxPrice;
+            this.maximumGpuAmount = model.maximumGpuAmount;
+            this.memory = model.memory;
+            this.minCpuCores = model.minCpuCores;
+            this.minMemorySize = model.minMemorySize;
+            this.minimumEniIpv6AddressQuantity = model.minimumEniIpv6AddressQuantity;
+            this.minimumEniPrivateIpAddressQuantity = model.minimumEniPrivateIpAddressQuantity;
+            this.minimumEniQuantity = model.minimumEniQuantity;
+        } 
 
         /**
          * architectures.

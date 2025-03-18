@@ -56,7 +56,7 @@ public class DeleteClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,6 +233,14 @@ public class DeleteClusterRequest extends Request {
         public static final class Builder {
             private String deleteMode; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteOptions model) {
+                this.deleteMode = model.deleteMode;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The deletion policy for the specified type of resource. Valid values:</p>

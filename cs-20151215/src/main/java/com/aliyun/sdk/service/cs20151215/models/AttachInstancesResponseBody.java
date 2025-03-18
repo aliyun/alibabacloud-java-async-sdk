@@ -36,6 +36,10 @@ public class AttachInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -53,6 +57,14 @@ public class AttachInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<List> list; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachInstancesResponseBody model) {
+            this.list = model.list;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The details of the added nodes.</p>
@@ -134,6 +146,15 @@ public class AttachInstancesResponseBody extends TeaModel {
             private String code; 
             private String instanceId; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The code that indicates the task result.</p>

@@ -103,7 +103,7 @@ public class CreateClusterNodePoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -280,7 +280,7 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether set the network type of the pod to host network.</p>
+         * <p>Specifies whether to set the network type of the pod to host network.</p>
          * <ul>
          * <li><code>true</code>: sets to host network.</li>
          * <li><code>false</code>: sets to container network.</li>
@@ -518,6 +518,19 @@ public class CreateClusterNodePoolRequest extends Request {
             private Long minInstances; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoScaling model) {
+                this.eipBandwidth = model.eipBandwidth;
+                this.eipInternetChargeType = model.eipInternetChargeType;
+                this.enable = model.enable;
+                this.isBondEip = model.isBondEip;
+                this.maxInstances = model.maxInstances;
+                this.minInstances = model.minInstances;
+                this.type = model.type;
+            } 
+
             /**
              * <p>This parameter is deprecated.</p>
              * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
@@ -715,6 +728,17 @@ public class CreateClusterNodePoolRequest extends Request {
             private String ccnRegionId; 
             private String cenId; 
             private String improvedPeriod; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterconnectConfig model) {
+                this.bandwidth = model.bandwidth;
+                this.ccnId = model.ccnId;
+                this.ccnRegionId = model.ccnRegionId;
+                this.cenId = model.cenId;
+                this.improvedPeriod = model.improvedPeriod;
+            } 
 
             /**
              * <p>This parameter is deprecated.</p>
@@ -923,13 +947,29 @@ public class CreateClusterNodePoolRequest extends Request {
             private Boolean unschedulable; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(KubernetesConfig model) {
+                this.cmsEnabled = model.cmsEnabled;
+                this.cpuPolicy = model.cpuPolicy;
+                this.labels = model.labels;
+                this.nodeNameMode = model.nodeNameMode;
+                this.preUserData = model.preUserData;
+                this.runtime = model.runtime;
+                this.runtimeVersion = model.runtimeVersion;
+                this.taints = model.taints;
+                this.unschedulable = model.unschedulable;
+                this.userData = model.userData;
+            } 
+
             /**
              * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After the CloudMonitor agent is installed on ECS nodes, you can view monitoring information about the instances in the CloudMonitor console. We recommend that you install the CloudMonitor agent. Valid values:</p>
              * <ul>
              * <li><code>true</code>: installs the CloudMonitor agent on ECS nodes.</li>
              * <li><code>false</code>: does not install the CloudMonitor agent on ECS nodes.</li>
              * </ul>
-             * <p>Default value: <code>false</code></p>
+             * <p>Default value: <code>false</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -940,7 +980,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+             * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
              * <ul>
              * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
              * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
@@ -1019,7 +1059,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the taint.</p>
+             * <p>The configurations of the taints.</p>
              */
             public Builder taints(java.util.List<Taint> taints) {
                 this.taints = taints;
@@ -1086,6 +1126,13 @@ public class CreateClusterNodePoolRequest extends Request {
 
         public static final class Builder {
             private Boolean restartNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoRepairPolicy model) {
+                this.restartNode = model.restartNode;
+            } 
 
             /**
              * <p>Specifies whether to allow node restart. This parameter takes effect only if <code>auto_repair</code> is set to true. Valid values:</p>
@@ -1166,11 +1213,20 @@ public class CreateClusterNodePoolRequest extends Request {
             private Boolean autoUpgradeOs; 
             private Boolean autoUpgradeRuntime; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoUpgradePolicy model) {
+                this.autoUpgradeKubelet = model.autoUpgradeKubelet;
+                this.autoUpgradeOs = model.autoUpgradeOs;
+                this.autoUpgradeRuntime = model.autoUpgradeRuntime;
+            } 
+
             /**
-             * <p>Specifies whether to allow auto update of the kubelet. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow the auto upgrade of the kubelet. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: allows auto update of the kubelet.</li>
-             * <li><code>false</code>: does not allow auto update of the kubelet.</li>
+             * <li><code>true</code>: allows the auto upgrade of the kubelet.</li>
+             * <li><code>false</code>: does not allow the auto upgrade of the kubelet.</li>
              * </ul>
              * <p>If <code>auto_upgrade</code> is set to true, the default value of this parameter is <code>true</code>. If <code>auto_upgrade</code> is set to false, the default value of this parameter is <code>false</code>.</p>
              * 
@@ -1183,10 +1239,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow auto update of the OS. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow the auto upgrade of the OS. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: allows auto update of the OS.</li>
-             * <li><code>false</code>: does not allow auto update of the OS.</li>
+             * <li><code>true</code>: allows the auto upgrade of the OS.</li>
+             * <li><code>false</code>: does not allow the auto upgrade of the OS.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              */
@@ -1196,10 +1252,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow auto update of the runtime. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow the auto upgrade of the runtime. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: allows auto update of the runtime.</li>
-             * <li><code>false</code>: does not allow auto update of the runtime.</li>
+             * <li><code>true</code>: allows the auto upgrade of the runtime.</li>
+             * <li><code>false</code>: does not allow the auto upgrade of the runtime.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              */
@@ -1259,6 +1315,14 @@ public class CreateClusterNodePoolRequest extends Request {
             private Boolean restartNode; 
             private String vulLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoVulFixPolicy model) {
+                this.restartNode = model.restartNode;
+                this.vulLevel = model.vulLevel;
+            } 
+
             /**
              * <p>Specifies whether to allow node restart. This parameter takes effect only if <code>auto_vul_fix</code> is set to true. Valid values:</p>
              * <ul>
@@ -1277,9 +1341,9 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <code>asap,later</code>. Valid values:</p>
              * <ul>
-             * <li><code>asap</code>: high</li>
-             * <li><code>later</code>: medium</li>
-             * <li><code>nntf</code>: low</li>
+             * <li><code>asap</code>: high.</li>
+             * <li><code>later</code>: medium.</li>
+             * <li><code>nntf</code>: low.</li>
              * </ul>
              * <p>If <code>auto_vul_fix</code> is set to true, the default value of this parameter is <code>asap</code>.</p>
              * 
@@ -1367,11 +1431,21 @@ public class CreateClusterNodePoolRequest extends Request {
             private Long surge; 
             private Long surgePercentage; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpgradeConfig model) {
+                this.autoUpgrade = model.autoUpgrade;
+                this.maxUnavailable = model.maxUnavailable;
+                this.surge = model.surge;
+                this.surgePercentage = model.surgePercentage;
+            } 
+
             /**
-             * <p>Specifies whether to enable auto update. Valid values:</p>
+             * <p>Specifies whether to enable auto upgrade. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables auto update.</li>
-             * <li><code>false</code>: disables auto update.</li>
+             * <li><code>true</code>: enables auto OS upgrade.</li>
+             * <li><code>false</code>: disables auto OS upgrade.</li>
              * </ul>
              * <p>**</p>
              * <p><strong>Caution</strong> This parameter is deprecated. Use the preceding auto_upgrade parameter instead.</p>
@@ -1397,7 +1471,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The number of additional nodes.</p>
+             * <p>The number of nodes that are temporarily added to the node pool during an auto upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1542,6 +1616,20 @@ public class CreateClusterNodePoolRequest extends Request {
             private Boolean enable; 
             private UpgradeConfig upgradeConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(Management model) {
+                this.autoRepair = model.autoRepair;
+                this.autoRepairPolicy = model.autoRepairPolicy;
+                this.autoUpgrade = model.autoUpgrade;
+                this.autoUpgradePolicy = model.autoUpgradePolicy;
+                this.autoVulFix = model.autoVulFix;
+                this.autoVulFixPolicy = model.autoVulFixPolicy;
+                this.enable = model.enable;
+                this.upgradeConfig = model.upgradeConfig;
+            } 
+
             /**
              * <p>Specifies whether to enable auto node repair. This parameter takes effect only if <code>enable</code> is set to true.</p>
              * <ul>
@@ -1567,10 +1655,10 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto node update. This parameter takes effect only if <code>enable</code> is set to true.</p>
+             * <p>Specifies whether to enable auto node upgrade. This parameter takes effect only if <code>enable</code> is set to true.</p>
              * <ul>
-             * <li><code>true</code>: enables auto node update.</li>
-             * <li><code>false</code>: disables auto node update.</li>
+             * <li><code>true</code>: enables auto node upgrade.</li>
+             * <li><code>false</code>: disables auto node upgrade.</li>
              * </ul>
              * <p>If <code>enable</code> is set to true, the default value of this parameter is <code>true</code>. If <code>enable</code> is set to false, the default value of this parameter is <code>false</code>.</p>
              * 
@@ -1583,7 +1671,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The auto node update policy.</p>
+             * <p>The auto node upgrade policy.</p>
              */
             public Builder autoUpgradePolicy(AutoUpgradePolicy autoUpgradePolicy) {
                 this.autoUpgradePolicy = autoUpgradePolicy;
@@ -1620,7 +1708,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>true</code>: enables the managed node pool feature.</li>
              * <li><code>false</code>: disables the managed node pool feature. Other parameters in this section take effect only if enable is set to true.</li>
              * </ul>
-             * <p>Default value: false</p>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1631,7 +1719,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configurations of auto update. The configurations take effects only if <code>enable</code> is set to true.</p>
+             * <p>The configurations of auto upgrade. The configurations take effects only if <code>enable</code> is set to true.</p>
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -1676,6 +1764,13 @@ public class CreateClusterNodePoolRequest extends Request {
 
         public static final class Builder {
             private KubeletConfig kubeletConfiguration; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeConfig model) {
+                this.kubeletConfiguration = model.kubeletConfiguration;
+            } 
 
             /**
              * <p>The configurations of the kubelet.</p>
@@ -1748,6 +1843,15 @@ public class CreateClusterNodePoolRequest extends Request {
             private String name; 
             private String resourceGroupId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodepoolInfo model) {
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the node pool.</p>
@@ -1839,6 +1943,14 @@ public class CreateClusterNodePoolRequest extends Request {
             private String id; 
             private String matchCriteria; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.matchCriteria = model.matchCriteria;
+            } 
+
             /**
              * <p>The ID of the private node pool.</p>
              * 
@@ -1917,6 +2029,14 @@ public class CreateClusterNodePoolRequest extends Request {
             private String instanceType; 
             private String priceLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpotPriceLimit model) {
+                this.instanceType = model.instanceType;
+                this.priceLimit = model.priceLimit;
+            } 
+
             /**
              * <p>The instance type of preemptible instances.</p>
              * 
@@ -1989,6 +2109,14 @@ public class CreateClusterNodePoolRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -2597,13 +2725,65 @@ public class CreateClusterNodePoolRequest extends Request {
             private java.util.List<Tags> tags; 
             private java.util.List<String> vswitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScalingGroup model) {
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.cisEnabled = model.cisEnabled;
+                this.compensateWithOnDemand = model.compensateWithOnDemand;
+                this.dataDisks = model.dataDisks;
+                this.deploymentsetId = model.deploymentsetId;
+                this.desiredSize = model.desiredSize;
+                this.imageId = model.imageId;
+                this.imageType = model.imageType;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instancePatterns = model.instancePatterns;
+                this.instanceTypes = model.instanceTypes;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.keyPair = model.keyPair;
+                this.loginAsNonRoot = model.loginAsNonRoot;
+                this.loginPassword = model.loginPassword;
+                this.multiAzPolicy = model.multiAzPolicy;
+                this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+                this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.platform = model.platform;
+                this.privatePoolOptions = model.privatePoolOptions;
+                this.ramRoleName = model.ramRoleName;
+                this.rdsInstances = model.rdsInstances;
+                this.scalingPolicy = model.scalingPolicy;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.securityHardeningOs = model.securityHardeningOs;
+                this.socEnabled = model.socEnabled;
+                this.spotInstancePools = model.spotInstancePools;
+                this.spotInstanceRemedy = model.spotInstanceRemedy;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDiskBurstingEnabled = model.systemDiskBurstingEnabled;
+                this.systemDiskCategories = model.systemDiskCategories;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskEncryptAlgorithm = model.systemDiskEncryptAlgorithm;
+                this.systemDiskEncrypted = model.systemDiskEncrypted;
+                this.systemDiskKmsKeyId = model.systemDiskKmsKeyId;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskProvisionedIops = model.systemDiskProvisionedIops;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.vswitchIds = model.vswitchIds;
+            } 
+
             /**
              * <p>Specifies whether to enable auto-renewal for nodes in the node pool. This parameter takes effect only when you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables auto-renewal.</li>
              * <li><code>false</code>: disables auto-renewal.</li>
              * </ul>
-             * <p>Default value: <code>false</code></p>
+             * <p>Default value: <code>false</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2616,10 +2796,10 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The auto-renewal period. Valid values:</p>
              * <ul>
-             * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3</li>
-             * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</li>
+             * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</li>
+             * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
              * </ul>
-             * <p>Default value: 1</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2630,7 +2810,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>This parameter is deprecated. Use the security_hardening_os parameter instead.</p>
+             * <p>This parameter is deprecated. Use security_hardening_os instead.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2701,13 +2881,14 @@ public class CreateClusterNodePoolRequest extends Request {
              * <ul>
              * <li><code>AliyunLinux</code>: Alibaba Cloud Linux 2.</li>
              * <li><code>AliyunLinuxSecurity</code>: Alibaba Cloud Linux 2 (UEFI).</li>
-             * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3.</li>
+             * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3</li>
              * <li><code>AliyunLinux3Arm64</code>: Alibaba Cloud Linux 3 (ARM).</li>
              * <li><code>AliyunLinux3Security</code>: Alibaba Cloud Linux 3 (UEFI).</li>
              * <li><code>CentOS</code>: CentOS.</li>
              * <li><code>Windows</code>: Windows.</li>
              * <li><code>WindowsCore</code>: Windows Core.</li>
              * <li><code>ContainerOS</code>: ContainerOS.</li>
+             * <li><code>AliyunLinux3ContainerOptimized</code>: Alibaba Cloud Linux 3 Container-optimized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2736,7 +2917,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The instance properties.</p>
+             * <p>The instance attributes.</p>
              */
             public Builder instancePatterns(java.util.List<InstancePatterns> instancePatterns) {
                 this.instancePatterns = instancePatterns;
@@ -2807,7 +2988,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The password for SSH logon. You must specify this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+             * <p>The password for SSH logon. You must set this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello1234</p>
@@ -2893,7 +3074,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The operating system distribution. Valid values:</p>
+             * <p>The OS distribution that is used. Valid values:</p>
              * <ul>
              * <li><code>CentOS</code></li>
              * <li><code>AliyunLinux</code></li>
@@ -2924,7 +3105,6 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li>If you do not specify this parameter, the default worker RAM role created by the cluster is used.</li>
              * <li>The specified RAM role must be a <strong>regular service role</strong> and the <strong>Select Trusted Service</strong> parameter must be set to <strong>Elastic Compute Service</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a normal service role</a>. If the specified RAM role is not the default worker RAM role created by the cluster, the name of the RAM role cannot start with <code>KubernetesMasterRole-</code> or <code>KubernetesWorkerRole-</code>.</li>
              * </ul>
-             * <p>This parameter is available only to users in the whitelist. To use this parameter, submit a ticket.</p>
              * <blockquote>
              * <p> This parameter is available only for ACK managed clusters that run Kubernetes 1.22 or later.</p>
              * </blockquote>
@@ -2938,7 +3118,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>A list of ApsaraDB RDS instances.</p>
+             * <p>The IDs of ApsaraDB RDS instances.</p>
              */
             public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -2948,7 +3128,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The scaling mode of the scaling group. Valid values:</p>
              * <ul>
-             * <li><code>release</code>: the standard mode. ECS instances are created and released based on the resource usage.</li>
+             * <li><code>release</code>: the standard mode. ECS instances are created and released based on resource usage.</li>
              * <li><code>recycle</code>: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.</li>
              * </ul>
              * <p>Default value: <code>release</code>.</p>
@@ -3016,7 +3196,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the supplementation of preemptible instances. If you set this parameter to true, when the scaling group receives a system message indicating that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</p>
+             * <p>Indicates whether preemptible instances can be supplemented. If you set this parameter to true, when the scaling group receives a system message indicating that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables the supplementation of preemptible instances.</li>
              * <li><code>false</code>: disables the supplementation of preemptible instances.</li>
@@ -3072,7 +3252,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values: Valid values:</p>
+             * <p>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values:</p>
              * <ul>
              * <li><code>cloud</code>: basic disk.</li>
              * <li><code>cloud_efficiency</code>: ultra disk.</li>
@@ -3088,12 +3268,12 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The category of the system disk for nodes. Valid values:</p>
+             * <p>The category of the system disk. Valid values:</p>
              * <ul>
              * <li><code>cloud</code>: basic disk.</li>
              * <li><code>cloud_efficiency</code>: ultra disk.</li>
              * <li><code>cloud_ssd</code>: standard SSD.</li>
-             * <li><code>cloud_essd</code>: ESSD.</li>
+             * <li><code>cloud_essd</code>: Enterprise ESSD (ESSD).</li>
              * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
              * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
              * </ul>
@@ -3108,7 +3288,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</p>
+             * <p>The encryption algorithm that is used to encrypt the system disk. The value is aes-256.</p>
              * 
              * <strong>example:</strong>
              * <p>aes-256</p>
@@ -3119,7 +3299,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
+             * <p>Specifies whether to encrypt the system disk. true: encrypts the system disk. false: does not encrypt the system disk.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3161,7 +3341,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The preset read/write IOPS of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <p>The preset IOPS of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
              * <p>This parameter is supported only when <code>SystemDiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
              * 
              * <strong>example:</strong>
@@ -3185,8 +3365,8 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The labels that you want to add only to ECS instances.</p>
-             * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
+             * <p>The tags that you want to add only to ECS instances.</p>
+             * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -3243,6 +3423,13 @@ public class CreateClusterNodePoolRequest extends Request {
 
         public static final class Builder {
             private Boolean teeEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(TeeConfig model) {
+                this.teeEnable = model.teeEnable;
+            } 
 
             /**
              * <p>Specifies whether to enable confidential computing for the cluster.</p>

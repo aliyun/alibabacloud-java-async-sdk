@@ -45,6 +45,10 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliuid
      */
@@ -78,6 +82,16 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
         private java.util.List<String> components; 
         private String logProject; 
         private String logTtl; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckControlPlaneLogEnableResponseBody model) {
+            this.aliuid = model.aliuid;
+            this.components = model.components;
+            this.logProject = model.logProject;
+            this.logTtl = model.logTtl;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>

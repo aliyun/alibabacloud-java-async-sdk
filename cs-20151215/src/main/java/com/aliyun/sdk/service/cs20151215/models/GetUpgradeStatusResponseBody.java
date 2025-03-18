@@ -48,6 +48,10 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMessage
      */
@@ -89,6 +93,17 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         private String status; 
         private String upgradeStep; 
         private UpgradeTask upgradeTask; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUpgradeStatusResponseBody model) {
+            this.errorMessage = model.errorMessage;
+            this.precheckReportId = model.precheckReportId;
+            this.status = model.status;
+            this.upgradeStep = model.upgradeStep;
+            this.upgradeTask = model.upgradeTask;
+        } 
 
         /**
          * <p>The error message returned during the update.</p>
@@ -204,6 +219,14 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeTask model) {
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The description of the update task.</p>

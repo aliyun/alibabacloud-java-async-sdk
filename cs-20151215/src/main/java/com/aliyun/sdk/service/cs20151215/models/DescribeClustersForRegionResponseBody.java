@@ -36,6 +36,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -54,8 +58,16 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         private java.util.List<Clusters> clusters; 
         private PageInfo pageInfo; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeClustersForRegionResponseBody model) {
+            this.clusters = model.clusters;
+            this.pageInfo = model.pageInfo;
+        } 
+
         /**
-         * <p>The details of the clusters.</p>
+         * <p>The information about the clusters returned.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -397,6 +409,37 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             private String vpcId; 
             private java.util.List<String> vswitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterDomain = model.clusterDomain;
+                this.clusterId = model.clusterId;
+                this.clusterSpec = model.clusterSpec;
+                this.clusterType = model.clusterType;
+                this.containerCidr = model.containerCidr;
+                this.created = model.created;
+                this.currentVersion = model.currentVersion;
+                this.deletionProtection = model.deletionProtection;
+                this.initVersion = model.initVersion;
+                this.ipStack = model.ipStack;
+                this.name = model.name;
+                this.nextVersion = model.nextVersion;
+                this.profile = model.profile;
+                this.proxyMode = model.proxyMode;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.serviceCidr = model.serviceCidr;
+                this.size = model.size;
+                this.state = model.state;
+                this.tags = model.tags;
+                this.timezone = model.timezone;
+                this.updated = model.updated;
+                this.vpcId = model.vpcId;
+                this.vswitchIds = model.vswitchIds;
+            } 
+
             /**
              * <p>The domain name of the cluster.</p>
              * 
@@ -543,7 +586,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype of the cluster. Valid values:</p>
+             * <p>The subtype of the clusters. Valid values:</p>
              * <ul>
              * <li>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
              * <li>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
@@ -657,7 +700,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags.</p>
+             * <p>The list of cluster tags.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
@@ -698,7 +741,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitches for the control plane of the cluster.</p>
+             * <p>The list of vSwitches on the control plane of the cluster.</p>
              */
             public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -767,6 +810,15 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of pages.</p>

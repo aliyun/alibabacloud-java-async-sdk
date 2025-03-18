@@ -44,6 +44,10 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkItems
      */
@@ -77,6 +81,16 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         private String code; 
         private Boolean isSuccess; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterDiagnosisCheckItemsResponseBody model) {
+            this.checkItems = model.checkItems;
+            this.code = model.code;
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The check item.</p>
@@ -240,6 +254,20 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             private String name; 
             private String refer; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckItems model) {
+                this.desc = model.desc;
+                this.display = model.display;
+                this.group = model.group;
+                this.level = model.level;
+                this.message = model.message;
+                this.name = model.name;
+                this.refer = model.refer;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description.</p>

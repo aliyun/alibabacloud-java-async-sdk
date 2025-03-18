@@ -36,6 +36,10 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auditEnabled
      */
@@ -53,6 +57,14 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean auditEnabled; 
         private String slsProjectName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterAuditProjectResponseBody model) {
+            this.auditEnabled = model.auditEnabled;
+            this.slsProjectName = model.slsProjectName;
+        } 
 
         /**
          * <p>Indicates whether the cluster auditing feature is enabled for the cluster. </p>

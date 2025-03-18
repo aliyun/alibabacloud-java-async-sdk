@@ -40,6 +40,10 @@ public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configSchema
      */
@@ -65,6 +69,15 @@ public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
         private String configSchema; 
         private String name; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterAddonMetadataResponseBody model) {
+            this.configSchema = model.configSchema;
+            this.name = model.name;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The component schema parameters.</p>

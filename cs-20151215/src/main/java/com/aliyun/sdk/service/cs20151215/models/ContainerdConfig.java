@@ -36,6 +36,10 @@ public class ContainerdConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return insecureRegistries
      */
@@ -53,6 +57,14 @@ public class ContainerdConfig extends TeaModel {
     public static final class Builder {
         private java.util.List<String> insecureRegistries; 
         private java.util.List<String> registryMirrors; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContainerdConfig model) {
+            this.insecureRegistries = model.insecureRegistries;
+            this.registryMirrors = model.registryMirrors;
+        } 
 
         /**
          * insecureRegistries.

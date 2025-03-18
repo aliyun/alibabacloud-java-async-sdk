@@ -56,6 +56,10 @@ public class GetClusterCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkId
      */
@@ -113,6 +117,19 @@ public class GetClusterCheckResponseBody extends TeaModel {
         private String message; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterCheckResponseBody model) {
+            this.checkId = model.checkId;
+            this.checkItems = model.checkItems;
+            this.createdAt = model.createdAt;
+            this.finishedAt = model.finishedAt;
+            this.message = model.message;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The ID of the cluster check task.</p>

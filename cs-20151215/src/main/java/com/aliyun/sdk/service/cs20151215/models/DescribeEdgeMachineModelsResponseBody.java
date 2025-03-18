@@ -32,6 +32,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return models
      */
@@ -41,6 +45,13 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Models> models; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEdgeMachineModelsResponseBody model) {
+            this.models = model.models;
+        } 
 
         /**
          * <p>The cloud-native box models.</p>
@@ -171,6 +182,20 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             private Integer memory; 
             private String model; 
             private String modelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Models model) {
+                this.cpu = model.cpu;
+                this.cpuArch = model.cpuArch;
+                this.created = model.created;
+                this.description = model.description;
+                this.manageRuntime = model.manageRuntime;
+                this.memory = model.memory;
+                this.model = model.model;
+                this.modelId = model.modelId;
+            } 
 
             /**
              * <p>The number of vCores.</p>

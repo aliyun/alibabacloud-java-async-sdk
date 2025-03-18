@@ -32,6 +32,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checks
      */
@@ -41,6 +45,13 @@ public class ListClusterChecksResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Checks> checks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterChecksResponseBody model) {
+            this.checks = model.checks;
+        } 
 
         /**
          * <p>The list of check items.</p>
@@ -147,6 +158,18 @@ public class ListClusterChecksResponseBody extends TeaModel {
             private String message; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Checks model) {
+                this.checkId = model.checkId;
+                this.createdAt = model.createdAt;
+                this.finishedAt = model.finishedAt;
+                this.message = model.message;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the cluster check task.</p>

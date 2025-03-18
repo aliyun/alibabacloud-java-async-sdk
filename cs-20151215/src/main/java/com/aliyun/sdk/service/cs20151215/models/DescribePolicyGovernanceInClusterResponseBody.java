@@ -44,6 +44,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return admitLog
      */
@@ -77,6 +81,16 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         private java.util.List<OnState> onState; 
         private TotalViolations totalViolations; 
         private Violations violations; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyGovernanceInClusterResponseBody model) {
+            this.admitLog = model.admitLog;
+            this.onState = model.onState;
+            this.totalViolations = model.totalViolations;
+            this.violations = model.violations;
+        } 
 
         /**
          * <p>The audit logs of the policies in the cluster.</p>
@@ -208,6 +222,18 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceNamespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.clusterId = model.clusterId;
+                this.constraintKind = model.constraintKind;
+                this.msg = model.msg;
+                this.resourceKind = model.resourceKind;
+                this.resourceName = model.resourceName;
+                this.resourceNamespace = model.resourceNamespace;
+            } 
+
             /**
              * <p>The cluster ID.</p>
              * 
@@ -337,6 +363,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Log log; 
             private String progress; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdmitLog model) {
+                this.count = model.count;
+                this.log = model.log;
+                this.progress = model.progress;
+            } 
+
             /**
              * <p>The number of audit log entries.</p>
              * 
@@ -434,6 +469,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String severity; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OnState model) {
+                this.enabledCount = model.enabledCount;
+                this.severity = model.severity;
+                this.total = model.total;
+            } 
+
             /**
              * <p>The number of policies that are enabled.</p>
              * 
@@ -518,6 +562,14 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String severity; 
             private Long violations; 
 
+            private Builder() {
+            } 
+
+            private Builder(Deny model) {
+                this.severity = model.severity;
+                this.violations = model.violations;
+            } 
+
             /**
              * <p>The severity level of the policy.</p>
              * 
@@ -591,6 +643,14 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String severity; 
             private Long violations; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warn model) {
+                this.severity = model.severity;
+                this.violations = model.violations;
+            } 
+
             /**
              * <p>The severity level of the policy.</p>
              * 
@@ -663,6 +723,14 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public static final class Builder {
             private Deny deny; 
             private Warn warn; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalViolations model) {
+                this.deny = model.deny;
+                this.warn = model.warn;
+            } 
 
             /**
              * <p>Details about the blocking events that are triggered by the policies of each severity level.</p>
@@ -754,6 +822,16 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String policyName; 
             private String severity; 
             private Long violations; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViolationsDeny model) {
+                this.policyDescription = model.policyDescription;
+                this.policyName = model.policyName;
+                this.severity = model.severity;
+                this.violations = model.violations;
+            } 
 
             /**
              * <p>The policy description.</p>
@@ -874,6 +952,16 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String severity; 
             private Long violations; 
 
+            private Builder() {
+            } 
+
+            private Builder(ViolationsWarn model) {
+                this.policyDescription = model.policyDescription;
+                this.policyName = model.policyName;
+                this.severity = model.severity;
+                this.violations = model.violations;
+            } 
+
             /**
              * <p>The policy description.</p>
              * 
@@ -968,6 +1056,14 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public static final class Builder {
             private ViolationsDeny deny; 
             private ViolationsWarn warn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Violations model) {
+                this.deny = model.deny;
+                this.warn = model.warn;
+            } 
 
             /**
              * <p>Details about the blocking events that are triggered by each policy.</p>

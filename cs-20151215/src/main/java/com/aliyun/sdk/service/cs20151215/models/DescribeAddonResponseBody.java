@@ -64,6 +64,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return architecture
      */
@@ -137,6 +141,21 @@ public class DescribeAddonResponseBody extends TeaModel {
         private java.util.List<NewerVersions> newerVersions; 
         private java.util.List<String> supportedActions; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAddonResponseBody model) {
+            this.architecture = model.architecture;
+            this.category = model.category;
+            this.configSchema = model.configSchema;
+            this.installByDefault = model.installByDefault;
+            this.managed = model.managed;
+            this.name = model.name;
+            this.newerVersions = model.newerVersions;
+            this.supportedActions = model.supportedActions;
+            this.version = model.version;
+        } 
 
         /**
          * <p>Architectures supported by the component. Valid values:</p>
@@ -299,6 +318,15 @@ public class DescribeAddonResponseBody extends TeaModel {
             private String minimumClusterVersion; 
             private Boolean upgradable; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(NewerVersions model) {
+                this.minimumClusterVersion = model.minimumClusterVersion;
+                this.upgradable = model.upgradable;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The minimum cluster version required by the component version.</p>

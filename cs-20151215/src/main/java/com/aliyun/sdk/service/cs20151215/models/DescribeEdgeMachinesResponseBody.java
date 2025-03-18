@@ -36,6 +36,10 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return edgeMachines
      */
@@ -53,6 +57,14 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EdgeMachines> edgeMachines; 
         private PageInfo pageInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEdgeMachinesResponseBody model) {
+            this.edgeMachines = model.edgeMachines;
+            this.pageInfo = model.pageInfo;
+        } 
 
         /**
          * <p>The list of cloud-native boxes.</p>
@@ -215,6 +227,22 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private String onlineState; 
             private String sn; 
             private String updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdgeMachines model) {
+                this.activeTime = model.activeTime;
+                this.created = model.created;
+                this.edgeMachineId = model.edgeMachineId;
+                this.hostname = model.hostname;
+                this.lifeState = model.lifeState;
+                this.model = model.model;
+                this.name = model.name;
+                this.onlineState = model.onlineState;
+                this.sn = model.sn;
+                this.updated = model.updated;
+            } 
 
             /**
              * <p>The time when the cloud-native box was activated.</p>
@@ -388,6 +416,15 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

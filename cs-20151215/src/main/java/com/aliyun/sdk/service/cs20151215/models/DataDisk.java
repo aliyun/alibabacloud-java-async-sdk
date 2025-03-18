@@ -84,6 +84,10 @@ public class DataDisk extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoFormat
      */
@@ -197,6 +201,26 @@ public class DataDisk extends TeaModel {
         private Long provisionedIops; 
         private Long size; 
         private String snapshotId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataDisk model) {
+            this.autoFormat = model.autoFormat;
+            this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+            this.burstingEnabled = model.burstingEnabled;
+            this.category = model.category;
+            this.device = model.device;
+            this.diskName = model.diskName;
+            this.encrypted = model.encrypted;
+            this.fileSystem = model.fileSystem;
+            this.kmsKeyId = model.kmsKeyId;
+            this.mountTarget = model.mountTarget;
+            this.performanceLevel = model.performanceLevel;
+            this.provisionedIops = model.provisionedIops;
+            this.size = model.size;
+            this.snapshotId = model.snapshotId;
+        } 
 
         /**
          * auto_format.

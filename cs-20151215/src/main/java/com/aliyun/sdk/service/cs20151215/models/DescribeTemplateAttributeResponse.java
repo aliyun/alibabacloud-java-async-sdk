@@ -37,7 +37,7 @@ public class DescribeTemplateAttributeResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -267,6 +267,22 @@ public class DescribeTemplateAttributeResponse extends Response {
             private String templateWithHistId; 
             private String created; 
             private String updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeTemplateAttributeResponseBody model) {
+                this.id = model.id;
+                this.acl = model.acl;
+                this.name = model.name;
+                this.template = model.template;
+                this.templateType = model.templateType;
+                this.description = model.description;
+                this.tags = model.tags;
+                this.templateWithHistId = model.templateWithHistId;
+                this.created = model.created;
+                this.updated = model.updated;
+            } 
 
             /**
              * <p>The ID of the template. When you update a template, a new template ID is generated.</p>

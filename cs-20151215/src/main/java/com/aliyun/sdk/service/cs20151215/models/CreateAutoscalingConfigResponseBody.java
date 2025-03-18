@@ -40,6 +40,10 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
         private String clusterId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAutoscalingConfigResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The cluster ID.</p>

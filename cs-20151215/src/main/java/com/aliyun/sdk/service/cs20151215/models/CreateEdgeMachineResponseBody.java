@@ -36,6 +36,10 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return edgeMachineId
      */
@@ -53,6 +57,14 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
     public static final class Builder {
         private String edgeMachineId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEdgeMachineResponseBody model) {
+            this.edgeMachineId = model.edgeMachineId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the cloud-native box.</p>

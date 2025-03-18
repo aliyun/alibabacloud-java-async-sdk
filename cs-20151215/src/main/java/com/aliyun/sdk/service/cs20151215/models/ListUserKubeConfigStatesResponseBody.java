@@ -36,6 +36,10 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return page
      */
@@ -53,6 +57,14 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
     public static final class Builder {
         private Page page; 
         private java.util.List<States> states; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserKubeConfigStatesResponseBody model) {
+            this.page = model.page;
+            this.states = model.states;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -131,6 +143,15 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>
@@ -251,6 +272,17 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String clusterState; 
+
+            private Builder() {
+            } 
+
+            private Builder(States model) {
+                this.certExpireTime = model.certExpireTime;
+                this.certState = model.certState;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterState = model.clusterState;
+            } 
 
             /**
              * <p>The expiration date of the certificate used in a kubeconfig file. Format: the UTC time in the RFC3339 format.</p>

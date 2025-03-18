@@ -32,6 +32,10 @@ public class ModifyPolicyInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -41,6 +45,13 @@ public class ModifyPolicyInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> instances; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyPolicyInstanceResponseBody model) {
+            this.instances = model.instances;
+        } 
 
         /**
          * <p>The list of policy instances that are updated.</p>

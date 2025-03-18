@@ -37,7 +37,7 @@ public class DescribeUserPermissionResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -219,6 +219,18 @@ public class DescribeUserPermissionResponse extends Response {
             private String roleType; 
             private Long isOwner; 
             private Long isRamRole; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeUserPermissionResponseBody model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.roleName = model.roleName;
+                this.roleType = model.roleType;
+                this.isOwner = model.isOwner;
+                this.isRamRole = model.isRamRole;
+            } 
 
             /**
              * <p>The authorization setting. Valid values:</p>

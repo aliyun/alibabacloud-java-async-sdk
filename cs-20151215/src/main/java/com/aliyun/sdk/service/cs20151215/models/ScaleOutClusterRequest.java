@@ -147,7 +147,7 @@ public class ScaleOutClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -404,7 +404,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * <p>The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
          * <ul>
          * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
          * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
@@ -477,10 +477,10 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to add to nodes. When you add labels to a node, the following rules apply:</p>
+         * <p>The labels that you want to add to the node. When you add labels to a node, the following rules apply:</p>
          * <ul>
          * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-         * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
          * </ul>
          */
         public Builder tags(java.util.List<Tag> tags) {
@@ -490,7 +490,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         public Builder taints(java.util.List<Taint> taints) {
             this.putBodyParameter("taints", taints);
@@ -524,9 +524,9 @@ public class ScaleOutClusterRequest extends Request {
          * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables auto-renewal.</li>
-         * <li><code>false</code>: disables auto-renewal.</li>
+         * <li><code>false</code>: does not enable auto-renewal.</li>
          * </ul>
-         * <p>Default value: <code>true</code>.</p>
+         * <p>Default value: <code>true</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -566,7 +566,7 @@ public class ScaleOutClusterRequest extends Request {
          * <li><code>PrePaid</code>: subscription.</li>
          * <li><code>PostPaid</code>: pay-as-you-go.</li>
          * </ul>
-         * <p>Default value: <code>PostPaid</code></p>
+         * <p>Default value: <code>PostPaid</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -590,7 +590,7 @@ public class ScaleOutClusterRequest extends Request {
         /**
          * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -603,7 +603,7 @@ public class ScaleOutClusterRequest extends Request {
 
         /**
          * <p>The billing cycle of worker nodes. This parameter is required only if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
-         * <p>Set the value to <code>Month</code>. Worker nodes are billed only on a monthly basis.</p>
+         * <p>Set the value to <code>Month</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -615,7 +615,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * <p>The system disk type of worker nodes. Valid values:</p>
+         * <p>The system disk category of worker nodes. Valid values:</p>
          * <ul>
          * <li><code>cloud_efficiency</code>: ultra disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
@@ -722,6 +722,16 @@ public class ScaleOutClusterRequest extends Request {
             private String category; 
             private String encrypted; 
             private String size; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkerDataDisks model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The ID of the automatic snapshot policy. The system performs automatic backup for a cloud disk based on the specified automatic snapshot policy.</p>

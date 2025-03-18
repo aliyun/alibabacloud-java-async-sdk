@@ -74,6 +74,10 @@ public class Nodepool extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoScaling
      */
@@ -163,6 +167,23 @@ public class Nodepool extends TeaModel {
         private NodepoolInfo nodepoolInfo; 
         private ScalingGroup scalingGroup; 
         private TeeConfig teeConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(Nodepool model) {
+            this.autoScaling = model.autoScaling;
+            this.count = model.count;
+            this.interconnectConfig = model.interconnectConfig;
+            this.interconnectMode = model.interconnectMode;
+            this.kubernetesConfig = model.kubernetesConfig;
+            this.management = model.management;
+            this.maxNodes = model.maxNodes;
+            this.nodeConfig = model.nodeConfig;
+            this.nodepoolInfo = model.nodepoolInfo;
+            this.scalingGroup = model.scalingGroup;
+            this.teeConfig = model.teeConfig;
+        } 
 
         /**
          * auto_scaling.
@@ -368,6 +389,19 @@ public class Nodepool extends TeaModel {
             private Long minInstances; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoScaling model) {
+                this.eipBandwidth = model.eipBandwidth;
+                this.eipInternetChargeType = model.eipInternetChargeType;
+                this.enable = model.enable;
+                this.isBondEip = model.isBondEip;
+                this.maxInstances = model.maxInstances;
+                this.minInstances = model.minInstances;
+                this.type = model.type;
+            } 
+
             /**
              * eip_bandwidth.
              */
@@ -524,6 +558,17 @@ public class Nodepool extends TeaModel {
             private String ccnRegionId; 
             private String cenId; 
             private String improvedPeriod; 
+
+            private Builder() {
+            } 
+
+            private Builder(InterconnectConfig model) {
+                this.bandwidth = model.bandwidth;
+                this.ccnId = model.ccnId;
+                this.ccnRegionId = model.ccnRegionId;
+                this.cenId = model.cenId;
+                this.improvedPeriod = model.improvedPeriod;
+            } 
 
             /**
              * bandwidth.
@@ -690,6 +735,20 @@ public class Nodepool extends TeaModel {
             private java.util.List<Taint> taints; 
             private String userData; 
 
+            private Builder() {
+            } 
+
+            private Builder(KubernetesConfig model) {
+                this.cmsEnabled = model.cmsEnabled;
+                this.cpuPolicy = model.cpuPolicy;
+                this.labels = model.labels;
+                this.nodeNameMode = model.nodeNameMode;
+                this.runtime = model.runtime;
+                this.runtimeVersion = model.runtimeVersion;
+                this.taints = model.taints;
+                this.userData = model.userData;
+            } 
+
             /**
              * cms_enabled.
              */
@@ -799,6 +858,13 @@ public class Nodepool extends TeaModel {
         public static final class Builder {
             private Boolean restartNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoRepairPolicy model) {
+                this.restartNode = model.restartNode;
+            } 
+
             /**
              * restart_node.
              */
@@ -845,6 +911,13 @@ public class Nodepool extends TeaModel {
 
         public static final class Builder {
             private Boolean autoUpgradeKubelet; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoUpgradePolicy model) {
+                this.autoUpgradeKubelet = model.autoUpgradeKubelet;
+            } 
 
             /**
              * auto_upgrade_kubelet.
@@ -904,6 +977,14 @@ public class Nodepool extends TeaModel {
         public static final class Builder {
             private Boolean restartNode; 
             private String vulLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoVulFixPolicy model) {
+                this.restartNode = model.restartNode;
+                this.vulLevel = model.vulLevel;
+            } 
 
             /**
              * restart_node.
@@ -995,6 +1076,16 @@ public class Nodepool extends TeaModel {
             private Long maxUnavailable; 
             private Long surge; 
             private Long surgePercentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeConfig model) {
+                this.autoUpgrade = model.autoUpgrade;
+                this.maxUnavailable = model.maxUnavailable;
+                this.surge = model.surge;
+                this.surgePercentage = model.surgePercentage;
+            } 
 
             /**
              * auto_upgrade.
@@ -1152,6 +1243,20 @@ public class Nodepool extends TeaModel {
             private Boolean enable; 
             private UpgradeConfig upgradeConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(Management model) {
+                this.autoRepair = model.autoRepair;
+                this.autoRepairPolicy = model.autoRepairPolicy;
+                this.autoUpgrade = model.autoUpgrade;
+                this.autoUpgradePolicy = model.autoUpgradePolicy;
+                this.autoVulFix = model.autoVulFix;
+                this.autoVulFixPolicy = model.autoVulFixPolicy;
+                this.enable = model.enable;
+                this.upgradeConfig = model.upgradeConfig;
+            } 
+
             /**
              * auto_repair.
              */
@@ -1258,6 +1363,13 @@ public class Nodepool extends TeaModel {
         public static final class Builder {
             private KubeletConfig kubeletConfiguration; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeConfig model) {
+                this.kubeletConfiguration = model.kubeletConfiguration;
+            } 
+
             /**
              * kubelet_configuration.
              */
@@ -1329,6 +1441,15 @@ public class Nodepool extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodepoolInfo model) {
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -1408,6 +1529,14 @@ public class Nodepool extends TeaModel {
             private String id; 
             private String matchCriteria; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.matchCriteria = model.matchCriteria;
+            } 
+
             /**
              * id.
              */
@@ -1475,6 +1604,14 @@ public class Nodepool extends TeaModel {
             private String instanceType; 
             private String priceLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpotPriceLimit model) {
+                this.instanceType = model.instanceType;
+                this.priceLimit = model.priceLimit;
+            } 
+
             /**
              * instance_type.
              */
@@ -1541,6 +1678,14 @@ public class Nodepool extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.
@@ -2093,6 +2238,54 @@ public class Nodepool extends TeaModel {
             private java.util.List<Tags> tags; 
             private java.util.List<String> vswitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScalingGroup model) {
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.compensateWithOnDemand = model.compensateWithOnDemand;
+                this.dataDisks = model.dataDisks;
+                this.deploymentsetId = model.deploymentsetId;
+                this.desiredSize = model.desiredSize;
+                this.imageId = model.imageId;
+                this.imageType = model.imageType;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceTypes = model.instanceTypes;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.keyPair = model.keyPair;
+                this.loginAsNonRoot = model.loginAsNonRoot;
+                this.loginPassword = model.loginPassword;
+                this.multiAzPolicy = model.multiAzPolicy;
+                this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+                this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.platform = model.platform;
+                this.privatePoolOptions = model.privatePoolOptions;
+                this.ramRoleName = model.ramRoleName;
+                this.rdsInstances = model.rdsInstances;
+                this.scalingPolicy = model.scalingPolicy;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.spotInstancePools = model.spotInstancePools;
+                this.spotInstanceRemedy = model.spotInstanceRemedy;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDiskBurstingEnabled = model.systemDiskBurstingEnabled;
+                this.systemDiskCategories = model.systemDiskCategories;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskEncryptAlgorithm = model.systemDiskEncryptAlgorithm;
+                this.systemDiskEncrypted = model.systemDiskEncrypted;
+                this.systemDiskKmsKeyId = model.systemDiskKmsKeyId;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskProvisionedIops = model.systemDiskProvisionedIops;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.vswitchIds = model.vswitchIds;
+            } 
+
             /**
              * auto_renew.
              */
@@ -2471,6 +2664,13 @@ public class Nodepool extends TeaModel {
 
         public static final class Builder {
             private Boolean teeEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(TeeConfig model) {
+                this.teeEnable = model.teeEnable;
+            } 
 
             /**
              * <p>This parameter is required.</p>

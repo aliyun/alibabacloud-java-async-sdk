@@ -32,6 +32,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return templateId
      */
@@ -41,6 +45,13 @@ public class CreateTemplateResponseBody extends TeaModel {
 
     public static final class Builder {
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTemplateResponseBody model) {
+            this.templateId = model.templateId;
+        } 
 
         /**
          * <p>The ID of the orchestration template.</p>

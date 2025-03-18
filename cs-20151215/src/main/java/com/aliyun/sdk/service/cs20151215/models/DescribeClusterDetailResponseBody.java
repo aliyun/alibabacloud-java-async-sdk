@@ -191,6 +191,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterDomain
      */
@@ -512,6 +516,52 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private java.util.List<String> vswitchIds; 
         private String workerRamRoleName; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterDetailResponseBody model) {
+            this.clusterDomain = model.clusterDomain;
+            this.clusterId = model.clusterId;
+            this.clusterSpec = model.clusterSpec;
+            this.clusterType = model.clusterType;
+            this.containerCidr = model.containerCidr;
+            this.controlPlaneConfig = model.controlPlaneConfig;
+            this.created = model.created;
+            this.currentVersion = model.currentVersion;
+            this.deletionProtection = model.deletionProtection;
+            this.dockerVersion = model.dockerVersion;
+            this.externalLoadbalancerId = model.externalLoadbalancerId;
+            this.initVersion = model.initVersion;
+            this.ipStack = model.ipStack;
+            this.maintenanceWindow = model.maintenanceWindow;
+            this.masterUrl = model.masterUrl;
+            this.metaData = model.metaData;
+            this.name = model.name;
+            this.networkMode = model.networkMode;
+            this.nextVersion = model.nextVersion;
+            this.nodeCidrMask = model.nodeCidrMask;
+            this.operationPolicy = model.operationPolicy;
+            this.parameters = model.parameters;
+            this.privateZone = model.privateZone;
+            this.profile = model.profile;
+            this.proxyMode = model.proxyMode;
+            this.regionId = model.regionId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.securityGroupId = model.securityGroupId;
+            this.serviceCidr = model.serviceCidr;
+            this.size = model.size;
+            this.state = model.state;
+            this.subnetCidr = model.subnetCidr;
+            this.tags = model.tags;
+            this.timezone = model.timezone;
+            this.updated = model.updated;
+            this.vpcId = model.vpcId;
+            this.vswitchId = model.vswitchId;
+            this.vswitchIds = model.vswitchIds;
+            this.workerRamRoleName = model.workerRamRoleName;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The domain name of the cluster.</p>
@@ -1291,6 +1341,35 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private Long systemDiskSize; 
             private String systemDiskSnapshotPolicyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ControlPlaneConfig model) {
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.chargeType = model.chargeType;
+                this.cloudMonitorFlags = model.cloudMonitorFlags;
+                this.cpuPolicy = model.cpuPolicy;
+                this.deploymentsetId = model.deploymentsetId;
+                this.imageId = model.imageId;
+                this.imageType = model.imageType;
+                this.instanceTypes = model.instanceTypes;
+                this.keyPair = model.keyPair;
+                this.nodePortRange = model.nodePortRange;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.runtime = model.runtime;
+                this.securityHardeningOs = model.securityHardeningOs;
+                this.size = model.size;
+                this.socEnabled = model.socEnabled;
+                this.systemDiskBurstingEnabled = model.systemDiskBurstingEnabled;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskProvisionedIops = model.systemDiskProvisionedIops;
+                this.systemDiskSize = model.systemDiskSize;
+                this.systemDiskSnapshotPolicyId = model.systemDiskSnapshotPolicyId;
+            } 
+
             /**
              * <p>Indicates whether auto-renewal is enabled for the nodes.</p>
              * 
@@ -1592,6 +1671,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private String channel; 
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterAutoUpgrade model) {
+                this.channel = model.channel;
+                this.enabled = model.enabled;
+            } 
+
             /**
              * <p>The frequency of auto cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
              * <p>Valid values:</p>
@@ -1658,6 +1745,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationPolicy model) {
+                this.clusterAutoUpgrade = model.clusterAutoUpgrade;
+            } 
 
             /**
              * <p>The configurations of auto cluster update.</p>

@@ -40,7 +40,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,6 +183,17 @@ public class UpgradeClusterAddonsRequest extends Request {
             private String nextVersion; 
             private String policy; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeClusterAddonsRequestBody model) {
+                this.componentName = model.componentName;
+                this.config = model.config;
+                this.nextVersion = model.nextVersion;
+                this.policy = model.policy;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the component.</p>

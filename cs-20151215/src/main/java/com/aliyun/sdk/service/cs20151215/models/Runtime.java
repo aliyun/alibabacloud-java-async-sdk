@@ -36,6 +36,10 @@ public class Runtime extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -53,6 +57,14 @@ public class Runtime extends TeaModel {
     public static final class Builder {
         private String name; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(Runtime model) {
+            this.name = model.name;
+            this.version = model.version;
+        } 
 
         /**
          * name.

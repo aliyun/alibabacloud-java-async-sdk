@@ -45,7 +45,7 @@ public class StopAlertRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule set to be disabled.</p>
+         * <p>The name of the alert rule group.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>
@@ -114,7 +114,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule to be disabled. If you do not specify an alert rule name, the alert rule set is disabled.</p>
+         * <p>The name of the alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>

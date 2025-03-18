@@ -37,7 +37,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -243,6 +243,20 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String osType; 
             private String imageCategory; 
             private String architecture; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.platform = model.platform;
+                this.osVersion = model.osVersion;
+                this.imageType = model.imageType;
+                this.osType = model.osType;
+                this.imageCategory = model.imageCategory;
+                this.architecture = model.architecture;
+            } 
 
             /**
              * <p>The image ID.</p>
@@ -493,6 +507,21 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String expirationDate; 
             private Boolean creatable; 
             private java.util.List<String> upgradableVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeKubernetesVersionMetadataResponseBody model) {
+                this.capabilities = model.capabilities;
+                this.images = model.images;
+                this.metaData = model.metaData;
+                this.runtimes = model.runtimes;
+                this.version = model.version;
+                this.releaseDate = model.releaseDate;
+                this.expirationDate = model.expirationDate;
+                this.creatable = model.creatable;
+                this.upgradableVersions = model.upgradableVersions;
+            } 
 
             /**
              * <p>Features of the queried Kubernetes version.</p>

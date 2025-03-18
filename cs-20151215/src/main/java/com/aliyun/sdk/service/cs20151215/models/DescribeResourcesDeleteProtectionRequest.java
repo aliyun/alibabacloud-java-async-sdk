@@ -51,7 +51,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</p>
+         * <p>The type of resources for which deletion protection is enabled or disabled. You can specify namespaces or services.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

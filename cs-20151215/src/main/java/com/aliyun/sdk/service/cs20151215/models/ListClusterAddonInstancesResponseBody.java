@@ -32,6 +32,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addons
      */
@@ -41,6 +45,13 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Addons> addons; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterAddonInstancesResponseBody model) {
+            this.addons = model.addons;
+        } 
 
         /**
          * <p>A list of components that are installed in the cluster.</p>
@@ -111,6 +122,15 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             private String name; 
             private String state; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.name = model.name;
+                this.state = model.state;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The component name.</p>

@@ -80,6 +80,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -185,6 +189,25 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private java.util.List<TaskResult> taskResult; 
         private String taskType; 
         private String updated; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskInfoResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.created = model.created;
+            this.currentStage = model.currentStage;
+            this.error = model.error;
+            this.events = model.events;
+            this.parameters = model.parameters;
+            this.stages = model.stages;
+            this.state = model.state;
+            this.target = model.target;
+            this.taskId = model.taskId;
+            this.taskResult = model.taskResult;
+            this.taskType = model.taskType;
+            this.updated = model.updated;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -366,6 +389,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The error code returned.</p>
              * 
@@ -486,6 +517,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String reason; 
             private String source; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.action = model.action;
+                this.level = model.level;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.source = model.source;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The action of the event.</p>
@@ -640,6 +683,17 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stages model) {
+                this.endTime = model.endTime;
+                this.message = model.message;
+                this.outputs = model.outputs;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The end time of the stage.</p>
              * 
@@ -743,6 +797,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String id; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The ID of the object.</p>
              * 
@@ -815,6 +877,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String data; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskResult model) {
+                this.data = model.data;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The resources that are managed by the task. For a scale-out task, the value of this parameter is the ID of the instance that is added by the task.</p>

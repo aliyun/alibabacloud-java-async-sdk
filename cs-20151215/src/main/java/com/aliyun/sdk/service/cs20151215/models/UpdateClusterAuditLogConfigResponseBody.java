@@ -40,6 +40,10 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         private String clusterId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateClusterAuditLogConfigResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The cluster ID.</p>

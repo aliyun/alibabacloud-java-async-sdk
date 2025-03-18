@@ -54,7 +54,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +127,10 @@ public class UpdateContactGroupForAlertRequest extends Request {
         }
 
         /**
-         * alert_rule_group_name.
+         * <p>The name of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder alertRuleGroupName(String alertRuleGroupName) {
             this.putBodyParameter("alert_rule_group_name", alertRuleGroupName);
@@ -136,7 +139,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         }
 
         /**
-         * contact_group_ids.
+         * <p>The list of contact group IDs.</p>
          */
         public Builder contactGroupIds(java.util.List<Long> contactGroupIds) {
             this.putBodyParameter("contact_group_ids", contactGroupIds);
@@ -145,7 +148,10 @@ public class UpdateContactGroupForAlertRequest extends Request {
         }
 
         /**
-         * cr_name.
+         * <p>The name of the container registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder crName(String crName) {
             this.putBodyParameter("cr_name", crName);
@@ -154,7 +160,10 @@ public class UpdateContactGroupForAlertRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace in which the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("namespace", namespace);

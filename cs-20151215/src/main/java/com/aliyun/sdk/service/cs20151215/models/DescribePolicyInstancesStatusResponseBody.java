@@ -36,6 +36,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instancesSeverityCount
      */
@@ -53,6 +57,14 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, ?> instancesSeverityCount; 
         private java.util.List<PolicyInstances> policyInstances; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyInstancesStatusResponseBody model) {
+            this.instancesSeverityCount = model.instancesSeverityCount;
+            this.policyInstances = model.policyInstances;
+        } 
 
         /**
          * <p>The number of policy instances that are deployed in the cluster at different severity levels.</p>
@@ -158,6 +170,17 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private Long policyInstancesCount; 
             private String policyName; 
             private String policySeverity; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyInstances model) {
+                this.policyCategory = model.policyCategory;
+                this.policyDescription = model.policyDescription;
+                this.policyInstancesCount = model.policyInstancesCount;
+                this.policyName = model.policyName;
+                this.policySeverity = model.policySeverity;
+            } 
 
             /**
              * <p>The type of the policy. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>

@@ -36,6 +36,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -53,6 +57,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private PageInfo pageInfo; 
         private java.util.List<Templates> templates; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTemplatesResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.templates = model.templates;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -131,6 +143,15 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>
@@ -311,6 +332,22 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String templateType; 
             private String templateWithHistId; 
             private String updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.acl = model.acl;
+                this.created = model.created;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.tags = model.tags;
+                this.template = model.template;
+                this.templateType = model.templateType;
+                this.templateWithHistId = model.templateWithHistId;
+                this.updated = model.updated;
+            } 
 
             /**
              * <p>The access control policy of the template. Valid values:</p>

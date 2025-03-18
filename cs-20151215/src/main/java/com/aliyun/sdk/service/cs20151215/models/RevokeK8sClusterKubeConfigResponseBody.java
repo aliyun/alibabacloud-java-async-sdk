@@ -28,7 +28,17 @@ public class RevokeK8sClusterKubeConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     public static final class Builder {
+
+        private Builder() {
+        } 
+
+        private Builder(RevokeK8sClusterKubeConfigResponseBody model) {
+        } 
 
         public RevokeK8sClusterKubeConfigResponseBody build() {
             return new RevokeK8sClusterKubeConfigResponseBody(this);

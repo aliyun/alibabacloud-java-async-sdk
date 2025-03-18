@@ -40,7 +40,7 @@ public class InstallClusterAddonsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +162,15 @@ public class InstallClusterAddonsRequest extends Request {
             private String config; 
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstallClusterAddonsRequestBody model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The custom component settings that you want to use. The value is a JSON string.</p>

@@ -37,7 +37,7 @@ public class DescribePolicyInstancesResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -333,6 +333,27 @@ public class DescribePolicyInstancesResponse extends Response {
             private Long totalViolations; 
             private Long isDeleted; 
 
+            private Builder() {
+            } 
+
+            private Builder(DescribePolicyInstancesResponseBody model) {
+                this.aliUid = model.aliUid;
+                this.clusterId = model.clusterId;
+                this.instanceName = model.instanceName;
+                this.policyName = model.policyName;
+                this.policyCategory = model.policyCategory;
+                this.policyDescription = model.policyDescription;
+                this.policyParameters = model.policyParameters;
+                this.policySeverity = model.policySeverity;
+                this.policyScope = model.policyScope;
+                this.policyAction = model.policyAction;
+                this.created = model.created;
+                this.updated = model.updated;
+                this.resourceId = model.resourceId;
+                this.totalViolations = model.totalViolations;
+                this.isDeleted = model.isDeleted;
+            } 
+
             /**
              * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
              * 
@@ -378,7 +399,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>The type of policy.</p>
+             * <p>The type of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s-general</p>
@@ -452,7 +473,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>Creation time (deprecated, do not use).</p>
+             * <p>The creation time of the instance. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T18:09:12+08:00</p>
@@ -463,7 +484,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>Update time (deprecated, do not use).</p>
+             * <p>The update time of the instance. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T18:09:12+08:00</p>
@@ -474,7 +495,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>Resource ID (deprecated, do not use).</p>
+             * <p>The ID of the resource. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>123456***</p>
@@ -485,7 +506,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>Violation count processing in the cluster (deprecated, do not use).</p>
+             * <p>The number of violations processed in the cluster. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -496,7 +517,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * <p>Deletion status (deprecated, do not use).</p>
+             * <p>The status of the deletion. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

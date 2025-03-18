@@ -48,6 +48,10 @@ public class MaintenanceWindow extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return duration
      */
@@ -89,6 +93,17 @@ public class MaintenanceWindow extends TeaModel {
         private String maintenanceTime; 
         private String recurrence; 
         private String weeklyPeriod; 
+
+        private Builder() {
+        } 
+
+        private Builder(MaintenanceWindow model) {
+            this.duration = model.duration;
+            this.enable = model.enable;
+            this.maintenanceTime = model.maintenanceTime;
+            this.recurrence = model.recurrence;
+            this.weeklyPeriod = model.weeklyPeriod;
+        } 
 
         /**
          * duration.

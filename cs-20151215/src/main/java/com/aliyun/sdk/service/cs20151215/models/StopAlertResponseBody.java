@@ -36,6 +36,10 @@ public class StopAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return msg
      */
@@ -53,6 +57,14 @@ public class StopAlertResponseBody extends TeaModel {
     public static final class Builder {
         private String msg; 
         private Boolean status; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopAlertResponseBody model) {
+            this.msg = model.msg;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The error message returned if the call fails.</p>

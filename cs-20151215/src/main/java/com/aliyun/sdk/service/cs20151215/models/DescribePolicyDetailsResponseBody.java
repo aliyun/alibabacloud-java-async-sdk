@@ -60,6 +60,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -125,6 +129,20 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         private Integer noConfig; 
         private String severity; 
         private String template; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyDetailsResponseBody model) {
+            this.action = model.action;
+            this.category = model.category;
+            this.description = model.description;
+            this.isDeleted = model.isDeleted;
+            this.name = model.name;
+            this.noConfig = model.noConfig;
+            this.severity = model.severity;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The action of the policy. Valid values:</p>

@@ -36,6 +36,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodes
      */
@@ -53,6 +57,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Nodes> nodes; 
         private Page page; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterNodesResponseBody model) {
+            this.nodes = model.nodes;
+            this.page = model.page;
+        } 
 
         /**
          * <p>The details of the nodes in the cluster.</p>
@@ -335,6 +347,32 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private String source; 
             private String spotStrategy; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.creationTime = model.creationTime;
+                this.errorMessage = model.errorMessage;
+                this.expiredTime = model.expiredTime;
+                this.hostName = model.hostName;
+                this.imageId = model.imageId;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceRole = model.instanceRole;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.ipAddress = model.ipAddress;
+                this.isAliyunNode = model.isAliyunNode;
+                this.nodeName = model.nodeName;
+                this.nodeStatus = model.nodeStatus;
+                this.nodepoolId = model.nodepoolId;
+                this.source = model.source;
+                this.spotStrategy = model.spotStrategy;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The time when the node was created.</p>
@@ -645,6 +683,15 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

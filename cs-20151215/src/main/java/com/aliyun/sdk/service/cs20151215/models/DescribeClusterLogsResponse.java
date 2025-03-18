@@ -37,7 +37,7 @@ public class DescribeClusterLogsResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -207,6 +207,17 @@ public class DescribeClusterLogsResponse extends Response {
             private String clusterLog; 
             private String created; 
             private String updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeClusterLogsResponseBody model) {
+                this.id = model.id;
+                this.clusterId = model.clusterId;
+                this.clusterLog = model.clusterLog;
+                this.created = model.created;
+                this.updated = model.updated;
+            } 
 
             /**
              * <p>The ID of the log entry.</p>

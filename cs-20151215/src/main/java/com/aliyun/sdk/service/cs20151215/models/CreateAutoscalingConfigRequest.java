@@ -115,7 +115,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -297,7 +297,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * <p>The waiting time before the auto scaling feature performs a scale-in activity. It is an interval between the time when the scale-in threshold is reached and the time when the scale-in activity (reduce the number of pods) starts. Unit: minutes. Default value: 10.</p>
+         * <p>The waiting time before the auto scaling feature performs a scale-in activity. It is an interval between the time when the scale-in threshold is reached and the time when the scale-in activity (reducing the number of pods) starts. Unit: minutes. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10 m</p>

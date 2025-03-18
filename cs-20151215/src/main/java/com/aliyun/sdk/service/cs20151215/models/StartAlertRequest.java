@@ -45,7 +45,7 @@ public class StartAlertRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,7 +88,7 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID. You can call the ListClusters operation to query the cluster ID.</p>
+         * <p>The instance ID. You can call the ListClusters operation to query the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule set to be enabled.</p>
+         * <p>The name of the alert rule group.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>
@@ -113,7 +113,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</p>
+         * <p>The name of the alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>sample</p>

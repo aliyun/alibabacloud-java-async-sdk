@@ -48,6 +48,10 @@ public class CreateTriggerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -89,6 +93,17 @@ public class CreateTriggerResponseBody extends TeaModel {
         private String id; 
         private String projectId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTriggerResponseBody model) {
+            this.action = model.action;
+            this.clusterId = model.clusterId;
+            this.id = model.id;
+            this.projectId = model.projectId;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>

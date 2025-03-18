@@ -37,6 +37,10 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -54,6 +58,14 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
     public static final class Builder {
         private String config; 
         private String expiration; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubaccountK8sClusterUserConfigResponseBody model) {
+            this.config = model.config;
+            this.expiration = model.expiration;
+        } 
 
         /**
          * <p>The cluster kubeconfig file. For more information about the content of the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>

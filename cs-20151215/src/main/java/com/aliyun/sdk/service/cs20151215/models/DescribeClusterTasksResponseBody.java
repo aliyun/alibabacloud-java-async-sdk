@@ -40,6 +40,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<Tasks> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterTasksResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -155,6 +168,15 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of the page returned.</p>
              * 
@@ -238,6 +260,14 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The error code returned.</p>
@@ -359,6 +389,18 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskType; 
             private String updated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.created = model.created;
+                this.error = model.error;
+                this.state = model.state;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.updated = model.updated;
+            } 
 
             /**
              * <p>The time when the task was created.</p>

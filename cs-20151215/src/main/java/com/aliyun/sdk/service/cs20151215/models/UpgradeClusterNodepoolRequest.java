@@ -76,7 +76,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -343,6 +343,15 @@ public class UpgradeClusterNodepoolRequest extends Request {
             private Integer batchInterval; 
             private Integer maxParallelism; 
             private String pausePolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(RollingPolicy model) {
+                this.batchInterval = model.batchInterval;
+                this.maxParallelism = model.maxParallelism;
+                this.pausePolicy = model.pausePolicy;
+            } 
 
             /**
              * <p>The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.</p>

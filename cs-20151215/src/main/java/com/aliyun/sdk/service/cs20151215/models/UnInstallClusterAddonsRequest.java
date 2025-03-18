@@ -40,7 +40,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +145,14 @@ public class UnInstallClusterAddonsRequest extends Request {
         public static final class Builder {
             private Boolean cleanupCloudResources; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.cleanupCloudResources = model.cleanupCloudResources;
+                this.name = model.name;
+            } 
 
             /**
              * <p>Specifies whether to clear cloud resources.</p>

@@ -40,6 +40,10 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodepoolId
      */
@@ -65,6 +69,15 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         private String nodepoolId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyClusterNodePoolResponseBody model) {
+            this.nodepoolId = model.nodepoolId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The node pool ID.</p>

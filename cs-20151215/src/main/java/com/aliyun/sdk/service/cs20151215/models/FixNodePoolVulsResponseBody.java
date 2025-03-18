@@ -32,6 +32,10 @@ public class FixNodePoolVulsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return taskId
      */
@@ -41,6 +45,13 @@ public class FixNodePoolVulsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FixNodePoolVulsResponseBody model) {
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The ID of the CVE patching task.</p>

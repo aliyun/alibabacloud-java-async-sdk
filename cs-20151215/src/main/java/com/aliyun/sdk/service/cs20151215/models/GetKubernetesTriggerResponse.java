@@ -37,7 +37,7 @@ public class GetKubernetesTriggerResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -231,6 +231,19 @@ public class GetKubernetesTriggerResponse extends Response {
             private String type; 
             private String action; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetKubernetesTriggerResponseBody model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.clusterId = model.clusterId;
+                this.projectId = model.projectId;
+                this.type = model.type;
+                this.action = model.action;
+                this.token = model.token;
+            } 
 
             /**
              * <p>The ID of the trigger.</p>

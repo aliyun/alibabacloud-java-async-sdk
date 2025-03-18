@@ -32,6 +32,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return vulRecords
      */
@@ -41,6 +45,13 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<VulRecords> vulRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterVulsResponseBody model) {
+            this.vulRecords = model.vulRecords;
+        } 
 
         /**
          * <p>An array of vulnerabilities.</p>
@@ -171,6 +182,20 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             private String vulAliasName; 
             private String vulName; 
             private String vulType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulRecords model) {
+                this.cveList = model.cveList;
+                this.necessity = model.necessity;
+                this.nodeCount = model.nodeCount;
+                this.nodepoolId = model.nodepoolId;
+                this.nodepoolName = model.nodepoolName;
+                this.vulAliasName = model.vulAliasName;
+                this.vulName = model.vulName;
+                this.vulType = model.vulType;
+            } 
 
             /**
              * <p>The CVE list.</p>

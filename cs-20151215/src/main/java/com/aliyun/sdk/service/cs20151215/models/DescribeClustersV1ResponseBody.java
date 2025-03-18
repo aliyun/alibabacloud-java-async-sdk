@@ -36,6 +36,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -54,8 +58,16 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private java.util.List<Clusters> clusters; 
         private PageInfo pageInfo; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeClustersV1ResponseBody model) {
+            this.clusters = model.clusters;
+            this.pageInfo = model.pageInfo;
+        } 
+
         /**
-         * <p>Details of the clusters.</p>
+         * <p>The queried cluster(s) details.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -119,6 +131,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public static final class Builder {
             private String channel; 
             private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterAutoUpgrade model) {
+                this.channel = model.channel;
+                this.enabled = model.enabled;
+            } 
 
             /**
              * <p>The frequency of auto cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
@@ -186,6 +206,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         public static final class Builder {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationPolicy model) {
+                this.clusterAutoUpgrade = model.clusterAutoUpgrade;
+            } 
 
             /**
              * <p>The configurations of auto cluster update.</p>
@@ -669,6 +696,49 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private String workerRamRoleName; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterDomain = model.clusterDomain;
+                this.clusterId = model.clusterId;
+                this.clusterSpec = model.clusterSpec;
+                this.clusterType = model.clusterType;
+                this.containerCidr = model.containerCidr;
+                this.created = model.created;
+                this.currentVersion = model.currentVersion;
+                this.deletionProtection = model.deletionProtection;
+                this.dockerVersion = model.dockerVersion;
+                this.externalLoadbalancerId = model.externalLoadbalancerId;
+                this.initVersion = model.initVersion;
+                this.ipStack = model.ipStack;
+                this.maintenanceWindow = model.maintenanceWindow;
+                this.masterUrl = model.masterUrl;
+                this.metaData = model.metaData;
+                this.name = model.name;
+                this.networkMode = model.networkMode;
+                this.nextVersion = model.nextVersion;
+                this.operationPolicy = model.operationPolicy;
+                this.privateZone = model.privateZone;
+                this.profile = model.profile;
+                this.proxyMode = model.proxyMode;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.serviceCidr = model.serviceCidr;
+                this.size = model.size;
+                this.state = model.state;
+                this.subnetCidr = model.subnetCidr;
+                this.tags = model.tags;
+                this.timezone = model.timezone;
+                this.updated = model.updated;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.vswitchIds = model.vswitchIds;
+                this.workerRamRoleName = model.workerRamRoleName;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The domain name of the cluster.</p>
              * 
@@ -1006,12 +1076,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * <li><code>initial</code>: The cluster is being created.</li>
              * <li><code>failed</code>: The cluster failed to be created.</li>
              * <li><code>running</code>: The cluster is running.</li>
-             * <li><code>updating</code>: The cluster is being updated.</li>
-             * <li><code>updating_failed</code>: The cluster failed to be updated.</li>
-             * <li><code>scaling</code>: The cluster is being scaled.</li>
-             * <li><code>stopped</code>: The cluster is stopped.</li>
+             * <li><code>upgrading</code>: The cluster is undergoing an upgrade.</li>
+             * <li><code>updating</code>: Cluster specification changes are being applied.</li>
+             * <li><code>removing</code>: Nodes are being removed from the node pool.</li>
+             * <li><code>draining</code>: Node draining is in progress.</li>
+             * <li><code>scaling</code>: Auto-scaling operation is in progress for the cluster.</li>
+             * <li><code>stopped</code>: The cluster has stopped running.</li>
              * <li><code>deleting</code>: The cluster is being deleted.</li>
-             * <li><code>deleted</code>: The cluster is deleted.</li>
+             * <li><code>deleted</code>: The cluster has been deleted.</li>
              * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
              * </ul>
              * 
@@ -1185,6 +1257,15 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

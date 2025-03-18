@@ -40,6 +40,10 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -66,8 +70,17 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(InstallClusterAddonsResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf****</p>
@@ -78,7 +91,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>48BD70F6-A7E6-543D-9F23-08DEB764C92E</p>
@@ -89,7 +102,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>T-5a54309c80282e39ea00002f</p>

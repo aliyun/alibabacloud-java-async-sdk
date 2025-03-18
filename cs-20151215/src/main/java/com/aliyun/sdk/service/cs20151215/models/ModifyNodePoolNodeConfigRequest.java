@@ -61,7 +61,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -166,7 +166,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the kubelet.</p>
+         * <p>The kubelet configuration.</p>
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -184,7 +184,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The rolling policy configuration.</p>
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -231,8 +231,15 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         public static final class Builder {
             private java.util.Map<String, ?> sysctl; 
 
+            private Builder() {
+            } 
+
+            private Builder(OsConfig model) {
+                this.sysctl = model.sysctl;
+            } 
+
             /**
-             * <p>The sysctl configuration.</p>
+             * <p>Configuration for sysctl kernel parameters.</p>
              */
             public Builder sysctl(java.util.Map<String, ?> sysctl) {
                 this.sysctl = sysctl;
@@ -277,6 +284,13 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
 
         public static final class Builder {
             private Long maxParallelism; 
+
+            private Builder() {
+            } 
+
+            private Builder(RollingPolicy model) {
+                this.maxParallelism = model.maxParallelism;
+            } 
 
             /**
              * <p>The maximum number of unavailable nodes.</p>

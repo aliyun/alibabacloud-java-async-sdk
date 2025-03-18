@@ -37,7 +37,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -196,6 +196,16 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             private String namespace; 
             private String resource; 
             private Boolean protection; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeResourcesDeleteProtectionResponseBody model) {
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.resource = model.resource;
+                this.protection = model.protection;
+            } 
 
             /**
              * <p>The name of the resource.</p>

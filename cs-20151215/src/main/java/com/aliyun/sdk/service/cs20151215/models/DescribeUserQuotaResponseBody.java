@@ -56,6 +56,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return amkClusterQuota
      */
@@ -113,6 +117,19 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota; 
         private Long nodeQuota; 
         private java.util.Map<String, QuotasValue> quotas; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserQuotaResponseBody model) {
+            this.amkClusterQuota = model.amkClusterQuota;
+            this.askClusterQuota = model.askClusterQuota;
+            this.clusterNodepoolQuota = model.clusterNodepoolQuota;
+            this.clusterQuota = model.clusterQuota;
+            this.edgeImprovedNodepoolQuota = model.edgeImprovedNodepoolQuota;
+            this.nodeQuota = model.nodeQuota;
+            this.quotas = model.quotas;
+        } 
 
         /**
          * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
@@ -247,6 +264,15 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             private Integer bandwidth; 
             private Integer count; 
             private Integer period; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdgeImprovedNodepoolQuota model) {
+                this.bandwidth = model.bandwidth;
+                this.count = model.count;
+                this.period = model.period;
+            } 
 
             /**
              * <p>This parameter is discontinued.</p>

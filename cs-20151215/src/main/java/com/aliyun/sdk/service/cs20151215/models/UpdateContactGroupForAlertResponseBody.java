@@ -36,6 +36,10 @@ public class UpdateContactGroupForAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return msg
      */
@@ -54,8 +58,19 @@ public class UpdateContactGroupForAlertResponseBody extends TeaModel {
         private String msg; 
         private Boolean status; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateContactGroupForAlertResponseBody model) {
+            this.msg = model.msg;
+            this.status = model.status;
+        } 
+
         /**
-         * msg.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contact group illegal.</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -63,7 +78,14 @@ public class UpdateContactGroupForAlertResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The update status.</p>
+         * <ul>
+         * <li>true: The update is successful.</li>
+         * <li>false: The update failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

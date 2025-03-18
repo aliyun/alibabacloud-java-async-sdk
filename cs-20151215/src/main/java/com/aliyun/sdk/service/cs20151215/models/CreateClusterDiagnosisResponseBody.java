@@ -40,6 +40,10 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         private String clusterId; 
         private String diagnosisId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateClusterDiagnosisResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.diagnosisId = model.diagnosisId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster ID.</p>

@@ -37,7 +37,7 @@ public class DeleteAlertContactGroupResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -183,6 +183,15 @@ public class DeleteAlertContactGroupResponse extends Response {
             private Boolean status; 
             private String msg; 
             private String contactGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteAlertContactGroupResponseBody model) {
+                this.status = model.status;
+                this.msg = model.msg;
+                this.contactGroupId = model.contactGroupId;
+            } 
 
             /**
              * <p>The deletion status.</p>

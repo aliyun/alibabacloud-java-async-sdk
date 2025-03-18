@@ -61,7 +61,7 @@ public class FixNodePoolVulsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,6 +233,13 @@ public class FixNodePoolVulsRequest extends Request {
 
         public static final class Builder {
             private Long maxParallelism; 
+
+            private Builder() {
+            } 
+
+            private Builder(RolloutPolicy model) {
+                this.maxParallelism = model.maxParallelism;
+            } 
 
             /**
              * <p>The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.</p>

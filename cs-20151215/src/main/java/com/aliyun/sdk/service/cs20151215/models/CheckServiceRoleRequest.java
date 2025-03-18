@@ -35,7 +35,7 @@ public class CheckServiceRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,8 +109,15 @@ public class CheckServiceRoleRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.name = model.name;
+            } 
+
             /**
-             * <p>The service role name.</p>
+             * <p>The name of the service role. For more information about ACK roles, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK roles</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

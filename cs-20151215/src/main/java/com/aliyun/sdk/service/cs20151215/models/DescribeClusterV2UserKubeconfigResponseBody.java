@@ -32,6 +32,10 @@ public class DescribeClusterV2UserKubeconfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -41,6 +45,13 @@ public class DescribeClusterV2UserKubeconfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String config; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterV2UserKubeconfigResponseBody model) {
+            this.config = model.config;
+        } 
 
         /**
          * config.

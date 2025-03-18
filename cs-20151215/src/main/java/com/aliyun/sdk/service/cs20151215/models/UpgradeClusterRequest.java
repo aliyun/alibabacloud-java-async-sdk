@@ -62,7 +62,7 @@ public class UpgradeClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is deprecated. No need to pass values.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s</p>
@@ -157,10 +157,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to update only the master nodes. Valid values:</p>
+         * <p>Specifies whether to upgrade only master nodes. Valid values:</p>
          * <ul>
-         * <li>true: updates only the master nodes.</li>
-         * <li>false: updates the master nodes and worker nodes.</li>
+         * <li>true: upgrades master nodes only.</li>
+         * <li>false: upgrades both master and worker nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The Kubernetes version to which you want to update the cluster.</p>
+         * <p>The target Kubernetes version for cluster upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>1.16.9-aliyun.1</p>
@@ -185,7 +185,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The rotation configuration.</p>
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -194,7 +194,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.</p>
+         * <p>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.14.8-aliyun.1</p>
@@ -244,8 +244,15 @@ public class UpgradeClusterRequest extends Request {
         public static final class Builder {
             private Integer maxParallelism; 
 
+            private Builder() {
+            } 
+
+            private Builder(RollingPolicy model) {
+                this.maxParallelism = model.maxParallelism;
+            } 
+
             /**
-             * <p>The maximum size of each batch.</p>
+             * <p>The maximum number of nodes concurrently upgraded per batch.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

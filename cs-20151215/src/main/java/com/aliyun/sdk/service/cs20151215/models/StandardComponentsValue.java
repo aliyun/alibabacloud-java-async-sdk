@@ -48,6 +48,10 @@ public class StandardComponentsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -89,6 +93,17 @@ public class StandardComponentsValue extends TeaModel {
         private String description; 
         private String required; 
         private Boolean disabled; 
+
+        private Builder() {
+        } 
+
+        private Builder(StandardComponentsValue model) {
+            this.name = model.name;
+            this.version = model.version;
+            this.description = model.description;
+            this.required = model.required;
+            this.disabled = model.disabled;
+        } 
 
         /**
          * <p>The name of the component.</p>

@@ -32,6 +32,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return plans
      */
@@ -41,6 +45,13 @@ public class ListOperationPlansResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Plans> plans; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationPlansResponseBody model) {
+            this.plans = model.plans;
+        } 
 
         /**
          * <p>The list of auto O&amp;M execution plans.</p>
@@ -195,6 +206,22 @@ public class ListOperationPlansResponseBody extends TeaModel {
             private String targetType; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plans model) {
+                this.clusterId = model.clusterId;
+                this.created = model.created;
+                this.endTime = model.endTime;
+                this.planId = model.planId;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The cluster ID.</p>

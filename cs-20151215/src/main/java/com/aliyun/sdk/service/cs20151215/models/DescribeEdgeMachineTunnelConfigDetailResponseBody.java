@@ -56,6 +56,10 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceName
      */
@@ -113,6 +117,19 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         private String sn; 
         private String token; 
         private String tunnelEndpoint; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEdgeMachineTunnelConfigDetailResponseBody model) {
+            this.deviceName = model.deviceName;
+            this.model = model.model;
+            this.productKey = model.productKey;
+            this.requestId = model.requestId;
+            this.sn = model.sn;
+            this.token = model.token;
+            this.tunnelEndpoint = model.tunnelEndpoint;
+        } 
 
         /**
          * <p>The device name.</p>

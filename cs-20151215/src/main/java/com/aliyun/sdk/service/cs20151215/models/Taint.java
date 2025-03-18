@@ -40,6 +40,10 @@ public class Taint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return effect
      */
@@ -65,6 +69,15 @@ public class Taint extends TeaModel {
         private String effect; 
         private String key; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Taint model) {
+            this.effect = model.effect;
+            this.key = model.key;
+            this.value = model.value;
+        } 
 
         /**
          * effect.

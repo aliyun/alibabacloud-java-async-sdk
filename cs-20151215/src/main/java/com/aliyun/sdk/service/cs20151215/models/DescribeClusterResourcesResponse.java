@@ -37,7 +37,7 @@ public class DescribeClusterResourcesResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -184,8 +184,20 @@ public class DescribeClusterResourcesResponse extends Response {
             private String resourceType; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.clusterId = model.clusterId;
+                this.resourceType = model.resourceType;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
-             * cluster_id.
+             * <p>The ID of the cluster to which the dependent resource is related.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc5ee03f63e43425cb6f71f1a1756****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -193,7 +205,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * resource_type.
+             * <p>The dependent resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::VPC::NatGateway</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -201,7 +216,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * instance_id.
+             * <p>The dependent resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-wz9sphwk42sdtjixo****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -270,6 +288,15 @@ public class DescribeClusterResourcesResponse extends Response {
             private String kind; 
             private String namespace; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedObject model) {
+                this.kind = model.kind;
+                this.namespace = model.namespace;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The Kubernetes object type.</p>
@@ -354,6 +381,14 @@ public class DescribeClusterResourcesResponse extends Response {
         public static final class Builder {
             private Boolean deleteByDefault; 
             private Boolean changeable; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteBehavior model) {
+                this.deleteByDefault = model.deleteByDefault;
+                this.changeable = model.changeable;
+            } 
 
             /**
              * <p>Specifies whether to delete the resource by default when the cluster is deleted.</p>
@@ -547,6 +582,24 @@ public class DescribeClusterResourcesResponse extends Response {
             private DeleteBehavior deleteBehavior; 
             private String creatorType; 
             private java.util.Map<String, ?> extraInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeClusterResourcesResponseBody model) {
+                this.clusterId = model.clusterId;
+                this.created = model.created;
+                this.instanceId = model.instanceId;
+                this.resourceInfo = model.resourceInfo;
+                this.resourceType = model.resourceType;
+                this.state = model.state;
+                this.autoCreate = model.autoCreate;
+                this.dependencies = model.dependencies;
+                this.associatedObject = model.associatedObject;
+                this.deleteBehavior = model.deleteBehavior;
+                this.creatorType = model.creatorType;
+                this.extraInfo = model.extraInfo;
+            } 
 
             /**
              * <p>The cluster ID.</p>

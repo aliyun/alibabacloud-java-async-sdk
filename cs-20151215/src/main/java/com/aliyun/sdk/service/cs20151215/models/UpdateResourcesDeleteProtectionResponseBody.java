@@ -48,6 +48,10 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return namespace
      */
@@ -89,6 +93,17 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         private String requestId; 
         private String resourceType; 
         private java.util.List<String> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateResourcesDeleteProtectionResponseBody model) {
+            this.namespace = model.namespace;
+            this.protection = model.protection;
+            this.requestId = model.requestId;
+            this.resourceType = model.resourceType;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>The namespace to which the resource belongs.</p>

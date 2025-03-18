@@ -32,6 +32,10 @@ public class DeletePolicyInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -41,6 +45,13 @@ public class DeletePolicyInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> instances; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeletePolicyInstanceResponseBody model) {
+            this.instances = model.instances;
+        } 
 
         /**
          * <p>A list of policy instances.</p>

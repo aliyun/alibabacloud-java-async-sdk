@@ -64,6 +64,10 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         private Long status; 
         private String target; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterDiagnosisResultResponseBody model) {
+            this.code = model.code;
+            this.created = model.created;
+            this.diagnosisId = model.diagnosisId;
+            this.finished = model.finished;
+            this.message = model.message;
+            this.result = model.result;
+            this.status = model.status;
+            this.target = model.target;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The code that indicates the diagnostic result. Valid values:</p>

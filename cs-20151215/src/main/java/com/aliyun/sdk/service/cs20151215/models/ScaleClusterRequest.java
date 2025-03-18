@@ -130,7 +130,7 @@ public class ScaleClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -544,6 +544,13 @@ public class ScaleClusterRequest extends Request {
         public static final class Builder {
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+            } 
+
             /**
              * key.
              */
@@ -614,6 +621,15 @@ public class ScaleClusterRequest extends Request {
             private String effect; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Taints model) {
+                this.effect = model.effect;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * effect.
@@ -701,6 +717,15 @@ public class ScaleClusterRequest extends Request {
             private String category; 
             private String encrypted; 
             private String size; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkerDataDisks model) {
+                this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.size = model.size;
+            } 
 
             /**
              * category.

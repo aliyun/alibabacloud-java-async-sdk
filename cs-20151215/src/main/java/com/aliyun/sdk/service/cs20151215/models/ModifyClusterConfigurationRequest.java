@@ -40,7 +40,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,6 +146,14 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the configuration item.</p>
              * 
@@ -218,6 +226,14 @@ public class ModifyClusterConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<Configs> configs; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomizeConfig model) {
+                this.configs = model.configs;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The custom configurations.</p>

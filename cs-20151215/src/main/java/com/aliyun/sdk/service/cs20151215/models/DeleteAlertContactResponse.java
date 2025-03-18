@@ -37,7 +37,7 @@ public class DeleteAlertContactResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -184,6 +184,15 @@ public class DeleteAlertContactResponse extends Response {
             private String msg; 
             private String contactId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.status = model.status;
+                this.msg = model.msg;
+                this.contactId = model.contactId;
+            } 
+
             /**
              * <p>The deletion status.</p>
              * <ul>
@@ -259,6 +268,13 @@ public class DeleteAlertContactResponse extends Response {
 
         public static final class Builder {
             private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteAlertContactResponseBody model) {
+                this.result = model.result;
+            } 
 
             /**
              * result.

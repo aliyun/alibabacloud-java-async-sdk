@@ -44,6 +44,10 @@ public class Addon extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -77,6 +81,16 @@ public class Addon extends TeaModel {
         private Boolean disabled; 
         private String name; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(Addon model) {
+            this.config = model.config;
+            this.disabled = model.disabled;
+            this.name = model.name;
+            this.version = model.version;
+        } 
 
         /**
          * config.

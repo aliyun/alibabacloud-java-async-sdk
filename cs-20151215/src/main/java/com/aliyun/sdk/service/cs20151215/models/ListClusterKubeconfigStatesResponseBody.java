@@ -36,6 +36,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return page
      */
@@ -53,6 +57,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
     public static final class Builder {
         private Page page; 
         private java.util.List<States> states; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterKubeconfigStatesResponseBody model) {
+            this.page = model.page;
+            this.states = model.states;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -131,6 +143,15 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>
@@ -287,6 +308,20 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private String certExpireTime; 
             private String certState; 
             private Boolean revokable; 
+
+            private Builder() {
+            } 
+
+            private Builder(States model) {
+                this.accountDisplayName = model.accountDisplayName;
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.accountState = model.accountState;
+                this.accountType = model.accountType;
+                this.certExpireTime = model.certExpireTime;
+                this.certState = model.certState;
+                this.revokable = model.revokable;
+            } 
 
             /**
              * <p>The displayed name or role name of the RAM user.</p>

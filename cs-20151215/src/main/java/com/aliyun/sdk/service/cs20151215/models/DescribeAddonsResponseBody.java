@@ -36,6 +36,10 @@ public class DescribeAddonsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return componentGroups
      */
@@ -53,6 +57,14 @@ public class DescribeAddonsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ComponentGroups> componentGroups; 
         private java.util.Map<String, StandardComponentsValue> standardComponents; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAddonsResponseBody model) {
+            this.componentGroups = model.componentGroups;
+            this.standardComponents = model.standardComponents;
+        } 
 
         /**
          * <p>The list of the returned components.</p>
@@ -107,6 +119,13 @@ public class DescribeAddonsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the component.</p>
@@ -169,6 +188,14 @@ public class DescribeAddonsResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
             private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentGroups model) {
+                this.groupName = model.groupName;
+                this.items = model.items;
+            } 
 
             /**
              * <p>The name of the component group.</p>

@@ -36,6 +36,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return vulRecords
      */
@@ -53,6 +57,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<VulRecords> vulRecords; 
         private Boolean vulsFixServicePurchased; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNodePoolVulsResponseBody model) {
+            this.vulRecords = model.vulRecords;
+            this.vulsFixServicePurchased = model.vulsFixServicePurchased;
+        } 
 
         /**
          * <p>The node pool vulnerabilities.</p>
@@ -158,6 +170,17 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private String name; 
             private String necessity; 
             private Boolean needReboot; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulList model) {
+                this.aliasName = model.aliasName;
+                this.cveList = model.cveList;
+                this.name = model.name;
+                this.necessity = model.necessity;
+                this.needReboot = model.needReboot;
+            } 
 
             /**
              * <p>The alias of the vulnerability.</p>
@@ -279,6 +302,15 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private String instanceId; 
             private String nodeName; 
             private java.util.List<VulList> vulList; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulRecords model) {
+                this.instanceId = model.instanceId;
+                this.nodeName = model.nodeName;
+                this.vulList = model.vulList;
+            } 
 
             /**
              * <p>The ID of the node.</p>

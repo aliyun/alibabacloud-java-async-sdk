@@ -48,6 +48,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -89,6 +93,17 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         private String name; 
         private String state; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterAddonInstanceResponseBody model) {
+            this.config = model.config;
+            this.logging = model.logging;
+            this.name = model.name;
+            this.state = model.state;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The custom configurations of the component.</p>
@@ -221,6 +236,16 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             private Boolean enabled; 
             private String logProject; 
             private String logstore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logging model) {
+                this.capable = model.capable;
+                this.enabled = model.enabled;
+                this.logProject = model.logProject;
+                this.logstore = model.logstore;
+            } 
 
             /**
              * <p>Indicates whether Simple Log Service is supported by the component.</p>

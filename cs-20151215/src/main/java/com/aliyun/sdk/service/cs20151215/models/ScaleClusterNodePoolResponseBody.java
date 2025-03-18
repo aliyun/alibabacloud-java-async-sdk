@@ -32,6 +32,10 @@ public class ScaleClusterNodePoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return taskId
      */
@@ -41,6 +45,13 @@ public class ScaleClusterNodePoolResponseBody extends TeaModel {
 
     public static final class Builder {
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScaleClusterNodePoolResponseBody model) {
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The task ID.</p>
