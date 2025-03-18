@@ -48,6 +48,10 @@ public class DescribeSampleDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -89,6 +93,17 @@ public class DescribeSampleDataResponseBody extends TeaModel {
         private Boolean hasSampleData; 
         private String requestId; 
         private String sampleDataStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSampleDataResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.errorMessage = model.errorMessage;
+            this.hasSampleData = model.hasSampleData;
+            this.requestId = model.requestId;
+            this.sampleDataStatus = model.sampleDataStatus;
+        } 
 
         /**
          * <p>The ID of the instance.</p>

@@ -44,6 +44,10 @@ public class GetStatementResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class GetStatementResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStatementResultResponseBody model) {
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The result of the asynchronous call.</p>
@@ -161,6 +175,13 @@ public class GetStatementResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ColumnMetadata> columnMetadata; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnMetadata model) {
+                this.columnMetadata = model.columnMetadata;
+            } 
+
             /**
              * ColumnMetadata.
              */
@@ -208,6 +229,13 @@ public class GetStatementResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Field> record; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+            } 
+
             /**
              * Record.
              */
@@ -254,6 +282,13 @@ public class GetStatementResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Records> records; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataRecords model) {
+                this.records = model.records;
+            } 
 
             /**
              * Records.
@@ -325,6 +360,15 @@ public class GetStatementResultResponseBody extends TeaModel {
             private ColumnMetadata columnMetadata; 
             private DataRecords records; 
             private Long totalNumRows; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columnMetadata = model.columnMetadata;
+                this.records = model.records;
+                this.totalNumRows = model.totalNumRows;
+            } 
 
             /**
              * <p>List of column metadata.</p>

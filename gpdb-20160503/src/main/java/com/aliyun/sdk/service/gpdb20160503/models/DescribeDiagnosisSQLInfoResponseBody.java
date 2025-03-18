@@ -80,6 +80,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return database
      */
@@ -185,6 +189,25 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         private String status; 
         private String textPlan; 
         private String user; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisSQLInfoResponseBody model) {
+            this.database = model.database;
+            this.duration = model.duration;
+            this.maxOutputRows = model.maxOutputRows;
+            this.queryID = model.queryID;
+            this.queryPlan = model.queryPlan;
+            this.requestId = model.requestId;
+            this.SQLStmt = model.SQLStmt;
+            this.sessionID = model.sessionID;
+            this.sortedMetrics = model.sortedMetrics;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.textPlan = model.textPlan;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The name of the database.</p>

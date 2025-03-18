@@ -52,6 +52,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupRetentionPeriod
      */
@@ -101,6 +105,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupTime; 
         private String recoveryPointPeriod; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.enableRecoveryPoint = model.enableRecoveryPoint;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.recoveryPointPeriod = model.recoveryPointPeriod;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of days for which data backup files are retained.</p>

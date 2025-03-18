@@ -56,6 +56,10 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupId
      */
@@ -113,6 +117,19 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         private String process; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupJobResponseBody model) {
+            this.backupId = model.backupId;
+            this.backupJobId = model.backupJobId;
+            this.backupMode = model.backupMode;
+            this.backupStatus = model.backupStatus;
+            this.process = model.process;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * BackupId.

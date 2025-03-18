@@ -56,6 +56,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMessage
      */
@@ -113,6 +117,19 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancePlansResponseBody model) {
+            this.errorMessage = model.errorMessage;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The error message.</p>
@@ -336,6 +353,22 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             private String planStatus; 
             private String planType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlanList model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.planConfig = model.planConfig;
+                this.planDesc = model.planDesc;
+                this.planEndDate = model.planEndDate;
+                this.planId = model.planId;
+                this.planName = model.planName;
+                this.planScheduleType = model.planScheduleType;
+                this.planStartDate = model.planStartDate;
+                this.planStatus = model.planStatus;
+                this.planType = model.planType;
+            } 
+
             /**
              * <p>The instance ID.</p>
              * 
@@ -514,6 +547,13 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PlanList> planList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.planList = model.planList;
+            } 
 
             /**
              * PlanList.

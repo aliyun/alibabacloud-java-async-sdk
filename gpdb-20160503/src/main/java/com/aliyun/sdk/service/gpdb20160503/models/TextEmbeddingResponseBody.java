@@ -48,6 +48,10 @@ public class TextEmbeddingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -89,6 +93,17 @@ public class TextEmbeddingResponseBody extends TeaModel {
         private Results results; 
         private String status; 
         private Integer textTokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextEmbeddingResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.status = model.status;
+            this.textTokens = model.textTokens;
+        } 
 
         /**
          * Message.
@@ -168,6 +183,13 @@ public class TextEmbeddingResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Double> embedding; 
 
+            private Builder() {
+            } 
+
+            private Builder(Embedding model) {
+                this.embedding = model.embedding;
+            } 
+
             /**
              * Embedding.
              */
@@ -227,6 +249,14 @@ public class TextEmbeddingResponseBody extends TeaModel {
             private Embedding embedding; 
             private Integer index; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultsResults model) {
+                this.embedding = model.embedding;
+                this.index = model.index;
+            } 
+
             /**
              * Embedding.
              */
@@ -281,6 +311,13 @@ public class TextEmbeddingResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResultsResults> results; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.results = model.results;
+            } 
 
             /**
              * Results.

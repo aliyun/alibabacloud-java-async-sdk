@@ -44,6 +44,10 @@ public class PauseInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class PauseInstanceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean status; 
+
+        private Builder() {
+        } 
+
+        private Builder(PauseInstanceResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The ID of the instance.</p>

@@ -36,6 +36,10 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String resourceManagementMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBResourceManagementModeResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceManagementMode = model.resourceManagementMode;
+        } 
 
         /**
          * <p>The request ID.</p>

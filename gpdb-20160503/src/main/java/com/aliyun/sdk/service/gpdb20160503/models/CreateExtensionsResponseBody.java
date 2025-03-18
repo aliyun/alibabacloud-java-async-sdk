@@ -36,6 +36,10 @@ public class CreateExtensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extensions
      */
@@ -53,6 +57,14 @@ public class CreateExtensionsResponseBody extends TeaModel {
     public static final class Builder {
         private String extensions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateExtensionsResponseBody model) {
+            this.extensions = model.extensions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the extension that you want to install. Multiple extension names are separated with commas (,).</p>

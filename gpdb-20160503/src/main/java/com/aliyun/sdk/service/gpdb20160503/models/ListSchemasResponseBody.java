@@ -48,6 +48,10 @@ public class ListSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -89,6 +93,17 @@ public class ListSchemasResponseBody extends TeaModel {
         private String requestId; 
         private Schemas schemas; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSchemasResponseBody model) {
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The returned message.</p>
@@ -183,6 +198,13 @@ public class ListSchemasResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> schemas; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.schemas = model.schemas;
+            } 
 
             /**
              * <p>The queried schemas.</p>

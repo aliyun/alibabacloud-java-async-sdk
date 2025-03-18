@@ -52,6 +52,10 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalBackupSize; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataBackupsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalBackupSize = model.totalBackupSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -346,6 +362,25 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             private Long consistentTime; 
             private String DBInstanceId; 
             private String dataType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backupEndTime = model.backupEndTime;
+                this.backupEndTimeLocal = model.backupEndTimeLocal;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupSetId = model.backupSetId;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStartTimeLocal = model.backupStartTimeLocal;
+                this.backupStatus = model.backupStatus;
+                this.baksetName = model.baksetName;
+                this.consistentTime = model.consistentTime;
+                this.DBInstanceId = model.DBInstanceId;
+                this.dataType = model.dataType;
+            } 
 
             /**
              * <p>The UTC time when the backup ended. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>

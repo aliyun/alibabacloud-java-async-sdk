@@ -48,6 +48,10 @@ public class RerankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -89,6 +93,17 @@ public class RerankResponseBody extends TeaModel {
         private Results results; 
         private String status; 
         private Integer tokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(RerankResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.status = model.status;
+            this.tokens = model.tokens;
+        } 
 
         /**
          * <p>Detailed information returned by the interface.</p>
@@ -208,6 +223,15 @@ public class RerankResponseBody extends TeaModel {
             private Integer index; 
             private Float relevanceScore; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultsResults model) {
+                this.document = model.document;
+                this.index = model.index;
+                this.relevanceScore = model.relevanceScore;
+            } 
+
             /**
              * <p>Re-ordered document information.</p>
              * 
@@ -279,6 +303,13 @@ public class RerankResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResultsResults> results; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.results = model.results;
+            } 
 
             /**
              * <p>Rerank results.</p>

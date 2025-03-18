@@ -48,6 +48,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return matches
      */
@@ -89,6 +93,17 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCollectionDataResponseBody model) {
+            this.matches = model.matches;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.total = model.total;
+        } 
 
         /**
          * <p>Data list.</p>
@@ -184,6 +199,13 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Double> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.value = model.value;
+            } 
+
             /**
              * value.
              */
@@ -267,6 +289,16 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             private Double score; 
             private Values values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Match model) {
+                this.id = model.id;
+                this.metadata = model.metadata;
+                this.score = model.score;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The unique ID of the vector data.</p>
              * 
@@ -343,6 +375,13 @@ public class QueryCollectionDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Match> match; 
+
+            private Builder() {
+            } 
+
+            private Builder(Matches model) {
+                this.match = model.match;
+            } 
 
             /**
              * match.

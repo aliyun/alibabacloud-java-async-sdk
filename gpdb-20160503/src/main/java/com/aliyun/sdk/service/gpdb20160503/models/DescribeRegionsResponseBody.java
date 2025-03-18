@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the regions.</p>
@@ -123,6 +135,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Boolean vpcEnabled; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.vpcEnabled = model.vpcEnabled;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>Indicates whether Virtual Private Cloud (VPC) is available.</p>
              * <ul>
@@ -188,6 +208,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Zone> zone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
+
             /**
              * Zone.
              */
@@ -247,6 +274,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
             private Zones zones; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.regionId = model.regionId;
+                this.zones = model.zones;
+            } 
+
             /**
              * <p>The ID of the region.</p>
              * 
@@ -304,6 +339,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

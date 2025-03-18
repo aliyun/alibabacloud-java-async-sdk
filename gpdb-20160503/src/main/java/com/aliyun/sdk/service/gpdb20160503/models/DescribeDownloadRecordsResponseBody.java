@@ -36,6 +36,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return records
      */
@@ -53,6 +57,14 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadRecordsResponseBody model) {
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The URL that is used to download the file.</p>
@@ -158,6 +170,17 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String exceptionMsg; 
             private String fileName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.downloadId = model.downloadId;
+                this.downloadUrl = model.downloadUrl;
+                this.exceptionMsg = model.exceptionMsg;
+                this.fileName = model.fileName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the download record.</p>

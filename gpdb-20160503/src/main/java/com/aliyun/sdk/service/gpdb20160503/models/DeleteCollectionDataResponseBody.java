@@ -44,6 +44,10 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appliedRows
      */
@@ -77,6 +81,16 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteCollectionDataResponseBody model) {
+            this.appliedRows = model.appliedRows;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The number of rows that are affected by the request.</p>

@@ -36,6 +36,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceAttributeResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried instance.</p>
@@ -123,6 +135,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Tag key.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1022,6 +1049,79 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String vectorConfigurationStatus; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceAttribute model) {
+                this.availabilityValue = model.availabilityValue;
+                this.connectionMode = model.connectionMode;
+                this.connectionString = model.connectionString;
+                this.coreVersion = model.coreVersion;
+                this.cpuCores = model.cpuCores;
+                this.cpuCoresPerNode = model.cpuCoresPerNode;
+                this.creationTime = model.creationTime;
+                this.DBInstanceCategory = model.DBInstanceCategory;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceClassType = model.DBInstanceClassType;
+                this.DBInstanceCpuCores = model.DBInstanceCpuCores;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceDiskMBPS = model.DBInstanceDiskMBPS;
+                this.DBInstanceGroupCount = model.DBInstanceGroupCount;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceMemory = model.DBInstanceMemory;
+                this.DBInstanceMode = model.DBInstanceMode;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.deployMode = model.deployMode;
+                this.encryptionKey = model.encryptionKey;
+                this.encryptionType = model.encryptionType;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.hostType = model.hostType;
+                this.idleTime = model.idleTime;
+                this.instanceNetworkType = model.instanceNetworkType;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.masterAISpec = model.masterAISpec;
+                this.masterCU = model.masterCU;
+                this.masterNodeNum = model.masterNodeNum;
+                this.maxConnections = model.maxConnections;
+                this.memoryPerNode = model.memoryPerNode;
+                this.memorySize = model.memorySize;
+                this.memoryUnit = model.memoryUnit;
+                this.minorVersion = model.minorVersion;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.prodType = model.prodType;
+                this.readDelayTime = model.readDelayTime;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.runningTime = model.runningTime;
+                this.securityIPList = model.securityIPList;
+                this.segDiskPerformanceLevel = model.segDiskPerformanceLevel;
+                this.segNodeNum = model.segNodeNum;
+                this.segmentAISpec = model.segmentAISpec;
+                this.segmentCounts = model.segmentCounts;
+                this.serverlessMode = model.serverlessMode;
+                this.serverlessResource = model.serverlessResource;
+                this.standbyZoneId = model.standbyZoneId;
+                this.startTime = model.startTime;
+                this.storagePerNode = model.storagePerNode;
+                this.storageSize = model.storageSize;
+                this.storageType = model.storageType;
+                this.storageUnit = model.storageUnit;
+                this.supportRestore = model.supportRestore;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vectorConfigurationStatus = model.vectorConfigurationStatus;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Queries the current instance availability status, in percentage (%).</p>
@@ -1924,6 +2024,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceAttribute = model.DBInstanceAttribute;
+            } 
 
             /**
              * DBInstanceAttribute.

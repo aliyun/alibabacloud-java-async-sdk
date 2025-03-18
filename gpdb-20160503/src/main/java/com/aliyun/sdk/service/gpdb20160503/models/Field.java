@@ -52,6 +52,10 @@ public class Field extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return blobValue
      */
@@ -101,6 +105,18 @@ public class Field extends TeaModel {
         private Boolean isNull; 
         private Long longValue; 
         private String stringValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(Field model) {
+            this.blobValue = model.blobValue;
+            this.booleanValue = model.booleanValue;
+            this.doubleValue = model.doubleValue;
+            this.isNull = model.isNull;
+            this.longValue = model.longValue;
+            this.stringValue = model.stringValue;
+        } 
 
         /**
          * BlobValue.

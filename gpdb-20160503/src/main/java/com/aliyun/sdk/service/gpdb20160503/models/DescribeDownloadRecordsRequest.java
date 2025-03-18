@@ -22,9 +22,14 @@ public class DescribeDownloadRecordsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadTaskType")
+    private String downloadTaskType;
+
     private DescribeDownloadRecordsRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.downloadTaskType = builder.downloadTaskType;
     }
 
     public static Builder builder() {
@@ -35,7 +40,7 @@ public class DescribeDownloadRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,8 +52,16 @@ public class DescribeDownloadRecordsRequest extends Request {
         return this.DBInstanceId;
     }
 
+    /**
+     * @return downloadTaskType
+     */
+    public String getDownloadTaskType() {
+        return this.downloadTaskType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDownloadRecordsRequest, Builder> {
         private String DBInstanceId; 
+        private String downloadTaskType; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DescribeDownloadRecordsRequest extends Request {
         private Builder(DescribeDownloadRecordsRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.downloadTaskType = request.downloadTaskType;
         } 
 
         /**
@@ -72,6 +86,15 @@ public class DescribeDownloadRecordsRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DownloadTaskType.
+         */
+        public Builder downloadTaskType(String downloadTaskType) {
+            this.putQueryParameter("DownloadTaskType", downloadTaskType);
+            this.downloadTaskType = downloadTaskType;
             return this;
         }
 

@@ -52,6 +52,10 @@ public class GetAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountDescription
      */
@@ -101,6 +105,18 @@ public class GetAccountResponseBody extends TeaModel {
         private String accountType; 
         private String DBInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountResponseBody model) {
+            this.accountDescription = model.accountDescription;
+            this.accountName = model.accountName;
+            this.accountStatus = model.accountStatus;
+            this.accountType = model.accountType;
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The new description of the database account.</p>

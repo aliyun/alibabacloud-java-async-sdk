@@ -133,7 +133,7 @@ public class QueryCollectionDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -711,6 +711,16 @@ public class QueryCollectionDataRequest extends Request {
             private String tableField; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationalTableFilter model) {
+                this.collectionMetadataField = model.collectionMetadataField;
+                this.condition = model.condition;
+                this.tableField = model.tableField;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The Metadata field of the vector collection, used to associate with the fields in the vector table.</p>
              * 
@@ -805,6 +815,14 @@ public class QueryCollectionDataRequest extends Request {
         public static final class Builder {
             private java.util.List<Long> indices; 
             private java.util.List<Double> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparseVector model) {
+                this.indices = model.indices;
+                this.values = model.values;
+            } 
 
             /**
              * Indices.

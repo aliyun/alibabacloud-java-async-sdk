@@ -44,6 +44,10 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         private String DBInstanceName; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeDBVersionResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>This parameter is no longer returned.</p>

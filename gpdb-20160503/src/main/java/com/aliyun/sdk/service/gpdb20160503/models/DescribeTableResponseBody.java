@@ -44,6 +44,10 @@ public class DescribeTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnList
      */
@@ -77,6 +81,16 @@ public class DescribeTableResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTableResponseBody model) {
+            this.columnList = model.columnList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The columns of the table.</p>
@@ -160,6 +174,13 @@ public class DescribeTableResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ColumnMetadata> columnList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.columnList = model.columnList;
+            } 
 
             /**
              * <p>The columns of the table.</p>

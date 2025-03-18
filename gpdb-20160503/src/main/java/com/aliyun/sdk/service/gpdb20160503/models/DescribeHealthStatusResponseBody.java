@@ -40,6 +40,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -65,6 +69,15 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         private String DBClusterId; 
         private String requestId; 
         private Status status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHealthStatusResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The ID of instance.</p>
@@ -150,6 +163,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbgpSegmentDiskUsagePercentMax model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The status corresponding to the maximum storage usage among all compute nodes. Valid values:</p>
              * <ul>
@@ -228,6 +249,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbpgConnectionStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The connection health status of the instance. Valid values:</p>
@@ -311,6 +340,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbpgDiskStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The storage status of the instance. Valid values:</p>
              * <ul>
@@ -393,6 +430,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbpgDiskUsagePercent model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The status corresponding to the storage usage of the instance. Valid values:</p>
              * <ul>
@@ -463,6 +508,13 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbpgInstanceColdDataGb model) {
+                this.value = model.value;
+            } 
+
             /**
              * <p>The total amount of cold data storage. Unit: GB.</p>
              * 
@@ -513,6 +565,13 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbpgInstanceHotDataGb model) {
+                this.value = model.value;
+            } 
+
             /**
              * <p>The total amount of hot data storage. Unit: GB.</p>
              * 
@@ -562,6 +621,13 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbpgInstanceTotalDataGb model) {
+                this.value = model.value;
+            } 
 
             /**
              * <p>The total amount of data storage of the instance. Unit: GB.</p>
@@ -624,6 +690,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbpgMasterDiskUsagePercentMax model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The status corresponding to the maximum storage usage of the coordinator node. Valid values:</p>
@@ -704,6 +778,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbpgMasterStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The availability status of the coordinator node. Valid values:</p>
              * <ul>
@@ -782,6 +864,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdbpgSegmentStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The availability status of compute nodes. Valid values:</p>
              * <ul>
@@ -859,6 +949,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdbpgStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The health status of the instance. Valid values:</p>
@@ -940,6 +1038,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeMasterConnectionStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The connection health status of the coordinator node. Valid values:</p>
@@ -1023,6 +1129,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private String status; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeMasterStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The health status of the coordinator node. Valid values:</p>
              * <ul>
@@ -1103,6 +1217,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSegmentConnectionStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The connection health status of compute nodes. Valid values:</p>
@@ -1185,6 +1307,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSegmentDiskStatus model) {
+                this.status = model.status;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The storage status of compute nodes. Valid values:</p>
@@ -1423,6 +1553,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private NodeMasterStatus nodeMasterStatus; 
             private NodeSegmentConnectionStatus nodeSegmentConnectionStatus; 
             private NodeSegmentDiskStatus nodeSegmentDiskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.adbgpSegmentDiskUsagePercentMax = model.adbgpSegmentDiskUsagePercentMax;
+                this.adbpgConnectionStatus = model.adbpgConnectionStatus;
+                this.adbpgDiskStatus = model.adbpgDiskStatus;
+                this.adbpgDiskUsagePercent = model.adbpgDiskUsagePercent;
+                this.adbpgInstanceColdDataGb = model.adbpgInstanceColdDataGb;
+                this.adbpgInstanceHotDataGb = model.adbpgInstanceHotDataGb;
+                this.adbpgInstanceTotalDataGb = model.adbpgInstanceTotalDataGb;
+                this.adbpgMasterDiskUsagePercentMax = model.adbpgMasterDiskUsagePercentMax;
+                this.adbpgMasterStatus = model.adbpgMasterStatus;
+                this.adbpgSegmentStatus = model.adbpgSegmentStatus;
+                this.adbpgStatus = model.adbpgStatus;
+                this.nodeMasterConnectionStatus = model.nodeMasterConnectionStatus;
+                this.nodeMasterStatus = model.nodeMasterStatus;
+                this.nodeSegmentConnectionStatus = model.nodeSegmentConnectionStatus;
+                this.nodeSegmentDiskStatus = model.nodeSegmentDiskStatus;
+            } 
 
             /**
              * <p>The information of maximum compute node storage usage.</p>

@@ -40,6 +40,10 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errMessage
      */
@@ -65,6 +69,15 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         private String errMessage; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetDataShareInstanceResponseBody model) {
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The error message returned if the operation fails.</p>

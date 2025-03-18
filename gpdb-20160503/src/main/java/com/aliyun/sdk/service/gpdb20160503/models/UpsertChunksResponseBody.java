@@ -44,6 +44,10 @@ public class UpsertChunksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return embeddingTokens
      */
@@ -77,6 +81,16 @@ public class UpsertChunksResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpsertChunksResponseBody model) {
+            this.embeddingTokens = model.embeddingTokens;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>Number of tokens used during vectorization.</p>

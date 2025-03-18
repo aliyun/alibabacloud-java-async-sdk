@@ -40,6 +40,10 @@ public class ModifyRemoteADBDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSourceItem
      */
@@ -65,6 +69,15 @@ public class ModifyRemoteADBDataSourceResponseBody extends TeaModel {
         private DataSourceItem dataSourceItem; 
         private String requestId; 
         private Integer taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyRemoteADBDataSourceResponseBody model) {
+            this.dataSourceItem = model.dataSourceItem;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>Returns the successfully modified data sharing service data.</p>
@@ -253,6 +266,23 @@ public class ModifyRemoteADBDataSourceResponseBody extends TeaModel {
             private String remoteInstanceName; 
             private String status; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceItem model) {
+                this.dataSourceName = model.dataSourceName;
+                this.description = model.description;
+                this.id = model.id;
+                this.localDatabase = model.localDatabase;
+                this.localInstanceName = model.localInstanceName;
+                this.managerUserName = model.managerUserName;
+                this.regionId = model.regionId;
+                this.remoteDatabase = model.remoteDatabase;
+                this.remoteInstanceName = model.remoteInstanceName;
+                this.status = model.status;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>Data source name.</p>

@@ -44,6 +44,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -77,6 +81,16 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceErrorLogResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The content of the error log.</p>
@@ -216,6 +230,18 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             private String logLevel; 
             private Long time; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.database = model.database;
+                this.host = model.host;
+                this.logContext = model.logContext;
+                this.logLevel = model.logLevel;
+                this.time = model.time;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The name of the database.</p>

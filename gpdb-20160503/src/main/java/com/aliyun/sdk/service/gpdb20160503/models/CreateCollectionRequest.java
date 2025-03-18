@@ -135,7 +135,7 @@ public class CreateCollectionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -664,6 +664,14 @@ public class CreateCollectionRequest extends Request {
         public static final class Builder {
             private Integer hnswEfConstruction; 
             private Integer hnswM; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparseVectorIndexConfig model) {
+                this.hnswEfConstruction = model.hnswEfConstruction;
+                this.hnswM = model.hnswM;
+            } 
 
             /**
              * HnswEfConstruction.

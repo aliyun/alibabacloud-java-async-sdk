@@ -88,6 +88,10 @@ public class ColumnMetadata extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnDefault
      */
@@ -209,6 +213,27 @@ public class ColumnMetadata extends TeaModel {
         private String schemaName; 
         private String tableName; 
         private String udtName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ColumnMetadata model) {
+            this.columnDefault = model.columnDefault;
+            this.comment = model.comment;
+            this.dataType = model.dataType;
+            this.isCaseSensitive = model.isCaseSensitive;
+            this.isCurrency = model.isCurrency;
+            this.isPrimaryKey = model.isPrimaryKey;
+            this.isSigned = model.isSigned;
+            this.maxLength = model.maxLength;
+            this.name = model.name;
+            this.nullable = model.nullable;
+            this.precision = model.precision;
+            this.scale = model.scale;
+            this.schemaName = model.schemaName;
+            this.tableName = model.tableName;
+            this.udtName = model.udtName;
+        } 
 
         /**
          * ColumnDefault.

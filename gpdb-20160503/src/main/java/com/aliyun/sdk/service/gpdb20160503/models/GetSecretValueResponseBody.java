@@ -68,6 +68,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -149,6 +153,22 @@ public class GetSecretValueResponseBody extends TeaModel {
         private String secretName; 
         private String status; 
         private String username; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSecretValueResponseBody model) {
+            this.code = model.code;
+            this.DBInstanceId = model.DBInstanceId;
+            this.description = model.description;
+            this.message = model.message;
+            this.password = model.password;
+            this.requestId = model.requestId;
+            this.secretArn = model.secretArn;
+            this.secretName = model.secretName;
+            this.status = model.status;
+            this.username = model.username;
+        } 
 
         /**
          * <p>The error code.</p>

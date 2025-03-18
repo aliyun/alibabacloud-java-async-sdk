@@ -73,7 +73,7 @@ public class UpsertChunksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -321,6 +321,14 @@ public class UpsertChunksRequest extends Request {
         public static final class Builder {
             private String content; 
             private java.util.Map<String, ?> metadata; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextChunks model) {
+                this.content = model.content;
+                this.metadata = model.metadata;
+            } 
 
             /**
              * <p>Document content.</p>

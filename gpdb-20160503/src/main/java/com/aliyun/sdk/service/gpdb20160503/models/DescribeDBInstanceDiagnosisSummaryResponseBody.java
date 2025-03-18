@@ -52,6 +52,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         private String requestId; 
         private SegmentStatusInfo segmentStatusInfo; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceDiagnosisSummaryResponseBody model) {
+            this.items = model.items;
+            this.masterStatusInfo = model.masterStatusInfo;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.segmentStatusInfo = model.segmentStatusInfo;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The group ID.</p>
@@ -316,6 +332,23 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             private String nodeRole; 
             private String nodeStatus; 
             private String nodeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.hostname = model.hostname;
+                this.nodeAddress = model.nodeAddress;
+                this.nodeCID = model.nodeCID;
+                this.nodeID = model.nodeID;
+                this.nodeName = model.nodeName;
+                this.nodePort = model.nodePort;
+                this.nodePreferredRole = model.nodePreferredRole;
+                this.nodeReplicationMode = model.nodeReplicationMode;
+                this.nodeRole = model.nodeRole;
+                this.nodeStatus = model.nodeStatus;
+                this.nodeType = model.nodeType;
+            } 
 
             /**
              * <p>The name of the node.</p>
@@ -560,6 +593,18 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             private Integer preferredNodeNum; 
             private Integer syncedNodeNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterStatusInfo model) {
+                this.exceptionNodeNum = model.exceptionNodeNum;
+                this.normalNodeNum = model.normalNodeNum;
+                this.notPreferredNodeNum = model.notPreferredNodeNum;
+                this.notSyncingNodeNum = model.notSyncingNodeNum;
+                this.preferredNodeNum = model.preferredNodeNum;
+                this.syncedNodeNum = model.syncedNodeNum;
+            } 
+
             /**
              * <p>The number of abnormal nodes.</p>
              * 
@@ -724,6 +769,18 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             private Integer notSyncingNodeNum; 
             private Integer preferredNodeNum; 
             private Integer syncedNodeNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentStatusInfo model) {
+                this.exceptionNodeNum = model.exceptionNodeNum;
+                this.normalNodeNum = model.normalNodeNum;
+                this.notPreferredNodeNum = model.notPreferredNodeNum;
+                this.notSyncingNodeNum = model.notSyncingNodeNum;
+                this.preferredNodeNum = model.preferredNodeNum;
+                this.syncedNodeNum = model.syncedNodeNum;
+            } 
 
             /**
              * <p>The number of abnormal nodes.</p>

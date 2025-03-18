@@ -44,6 +44,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -77,6 +81,16 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExternalDataSourcesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The Hadoop external table services.</p>
@@ -264,6 +278,22 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             private Integer externalDataServiceId; 
             private String modifyTime; 
             private String statusMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createTime = model.createTime;
+                this.dataSourceDescription = model.dataSourceDescription;
+                this.dataSourceDir = model.dataSourceDir;
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceName = model.dataSourceName;
+                this.dataSourceStatus = model.dataSourceStatus;
+                this.dataSourceType = model.dataSourceType;
+                this.externalDataServiceId = model.externalDataServiceId;
+                this.modifyTime = model.modifyTime;
+                this.statusMessage = model.statusMessage;
+            } 
 
             /**
              * <p>The time when the service was created.</p>
