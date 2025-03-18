@@ -36,6 +36,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupQps
      */
@@ -53,6 +57,14 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
     public static final class Builder {
         private GroupQps groupQps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupQpsResponseBody model) {
+            this.groupQps = model.groupQps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of requests directed to the API group.</p>
@@ -123,6 +135,14 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The point in time.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupQps model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

@@ -48,6 +48,10 @@ public class DescribePluginGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupSummarys
      */
@@ -89,6 +93,17 @@ public class DescribePluginGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePluginGroupsResponseBody model) {
+            this.groupSummarys = model.groupSummarys;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Collection of group information</p>
@@ -252,6 +267,19 @@ public class DescribePluginGroupsResponseBody extends TeaModel {
             private String stageAlias; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupPluginSummary model) {
+                this.basePath = model.basePath;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.regionId = model.regionId;
+                this.stageAlias = model.stageAlias;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>API root path</p>
              * 
@@ -372,6 +400,13 @@ public class DescribePluginGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GroupPluginSummary> groupPluginSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupSummarys model) {
+                this.groupPluginSummary = model.groupPluginSummary;
+            } 
 
             /**
              * GroupPluginSummary.

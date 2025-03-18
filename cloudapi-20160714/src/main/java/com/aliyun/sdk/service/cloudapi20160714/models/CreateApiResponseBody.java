@@ -36,6 +36,10 @@ public class CreateApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiId
      */
@@ -53,6 +57,14 @@ public class CreateApiResponseBody extends TeaModel {
     public static final class Builder {
         private String apiId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApiResponseBody model) {
+            this.apiId = model.apiId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the API.</p>

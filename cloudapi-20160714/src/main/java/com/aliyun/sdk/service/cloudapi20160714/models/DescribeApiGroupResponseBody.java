@@ -164,6 +164,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basePath
      */
@@ -437,6 +441,46 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String userLogConfig; 
         private String vpcDomain; 
         private String vpcSlbIntranetDomain; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiGroupResponseBody model) {
+            this.basePath = model.basePath;
+            this.billingStatus = model.billingStatus;
+            this.cloudMarketCommodity = model.cloudMarketCommodity;
+            this.cmsMonitorGroup = model.cmsMonitorGroup;
+            this.compatibleFlags = model.compatibleFlags;
+            this.createdTime = model.createdTime;
+            this.customAppCodeConfig = model.customAppCodeConfig;
+            this.customDomains = model.customDomains;
+            this.customTraceConfig = model.customTraceConfig;
+            this.customerConfigs = model.customerConfigs;
+            this.dedicatedInstanceType = model.dedicatedInstanceType;
+            this.defaultDomain = model.defaultDomain;
+            this.description = model.description;
+            this.disableInnerDomain = model.disableInnerDomain;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.httpsPolicy = model.httpsPolicy;
+            this.illegalStatus = model.illegalStatus;
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.ipv6Status = model.ipv6Status;
+            this.migrationError = model.migrationError;
+            this.migrationStatus = model.migrationStatus;
+            this.modifiedTime = model.modifiedTime;
+            this.passthroughHeaders = model.passthroughHeaders;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.stageItems = model.stageItems;
+            this.status = model.status;
+            this.subDomain = model.subDomain;
+            this.trafficLimit = model.trafficLimit;
+            this.userLogConfig = model.userLogConfig;
+            this.vpcDomain = model.vpcDomain;
+            this.vpcSlbIntranetDomain = model.vpcSlbIntranetDomain;
+        } 
 
         /**
          * <p>The root path of the API.</p>
@@ -1042,6 +1086,27 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private Boolean isHttpRedirectToHttps; 
             private String wildcardDomainPatterns; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainItem model) {
+                this.bindStageAlias = model.bindStageAlias;
+                this.bindStageName = model.bindStageName;
+                this.certificateId = model.certificateId;
+                this.certificateName = model.certificateName;
+                this.certificateValidEnd = model.certificateValidEnd;
+                this.certificateValidStart = model.certificateValidStart;
+                this.customDomainType = model.customDomainType;
+                this.domainBindingStatus = model.domainBindingStatus;
+                this.domainCNAMEStatus = model.domainCNAMEStatus;
+                this.domainLegalStatus = model.domainLegalStatus;
+                this.domainName = model.domainName;
+                this.domainRemark = model.domainRemark;
+                this.domainWebSocketStatus = model.domainWebSocketStatus;
+                this.isHttpRedirectToHttps = model.isHttpRedirectToHttps;
+                this.wildcardDomainPatterns = model.wildcardDomainPatterns;
+            } 
+
             /**
              * <p>The alias of the associated environment.</p>
              * 
@@ -1258,6 +1323,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DomainItem> domainItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomDomains model) {
+                this.domainItem = model.domainItem;
+            } 
+
             /**
              * DomainItem.
              */
@@ -1328,6 +1400,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String description; 
             private String stageId; 
             private String stageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageInfo model) {
+                this.description = model.description;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+            } 
 
             /**
              * <p>The environment description.</p>
@@ -1400,6 +1481,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StageInfo> stageInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageItems model) {
+                this.stageInfo = model.stageInfo;
+            } 
 
             /**
              * StageInfo.

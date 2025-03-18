@@ -36,6 +36,10 @@ public class SdkGenerateByAppForRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadLink
      */
@@ -53,6 +57,14 @@ public class SdkGenerateByAppForRegionResponseBody extends TeaModel {
     public static final class Builder {
         private String downloadLink; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SdkGenerateByAppForRegionResponseBody model) {
+            this.downloadLink = model.downloadLink;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The code of the SDK by using the Base64 scheme. You can obtain the file by using the Base64 decoding scheme.</p>

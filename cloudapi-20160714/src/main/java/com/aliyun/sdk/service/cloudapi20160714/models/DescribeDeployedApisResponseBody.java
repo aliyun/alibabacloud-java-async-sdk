@@ -48,6 +48,10 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deployedApis
      */
@@ -89,6 +93,17 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeployedApisResponseBody model) {
+            this.deployedApis = model.deployedApis;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned API information. It is an array consisting of DeployedApiItem data.</p>
@@ -300,6 +315,23 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             private String stageName; 
             private String visibility; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployedApiItem model) {
+                this.apiId = model.apiId;
+                this.apiMethod = model.apiMethod;
+                this.apiName = model.apiName;
+                this.apiPath = model.apiPath;
+                this.deployedTime = model.deployedTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.regionId = model.regionId;
+                this.stageName = model.stageName;
+                this.visibility = model.visibility;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -467,6 +499,13 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeployedApiItem> deployedApiItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployedApis model) {
+                this.deployedApiItem = model.deployedApiItem;
+            } 
 
             /**
              * DeployedApiItem.

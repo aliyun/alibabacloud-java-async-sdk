@@ -48,6 +48,10 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiInfos
      */
@@ -89,6 +93,17 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisBySignatureResponseBody model) {
+            this.apiInfos = model.apiInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
@@ -276,6 +291,21 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
             private String stageName; 
             private String visibility; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiInfo model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.boundTime = model.boundTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.regionId = model.regionId;
+                this.stageName = model.stageName;
+                this.visibility = model.visibility;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -421,6 +451,13 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiInfo> apiInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiInfos model) {
+                this.apiInfo = model.apiInfo;
+            } 
 
             /**
              * ApiInfo.

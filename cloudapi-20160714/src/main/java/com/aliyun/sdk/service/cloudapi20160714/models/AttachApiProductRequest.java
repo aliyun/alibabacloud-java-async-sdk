@@ -46,7 +46,7 @@ public class AttachApiProductRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,6 +172,14 @@ public class AttachApiProductRequest extends Request {
         public static final class Builder {
             private String apiId; 
             private String stageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apis model) {
+                this.apiId = model.apiId;
+                this.stageName = model.stageName;
+            } 
 
             /**
              * <p>The API ID.</p>

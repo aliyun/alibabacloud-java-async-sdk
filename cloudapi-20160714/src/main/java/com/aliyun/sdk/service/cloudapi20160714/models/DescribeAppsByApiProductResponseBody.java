@@ -48,6 +48,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizedApps
      */
@@ -89,6 +93,17 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppsByApiProductResponseBody model) {
+            this.authorizedApps = model.authorizedApps;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about authorized applications.</p>
@@ -240,6 +255,18 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             private String description; 
             private String extend; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedApp model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.authValidTime = model.authValidTime;
+                this.authorizedTime = model.authorizedTime;
+                this.description = model.description;
+                this.extend = model.extend;
+            } 
+
             /**
              * <p>The application ID.</p>
              * 
@@ -344,6 +371,13 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AuthorizedApp> authorizedApp; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedApps model) {
+                this.authorizedApp = model.authorizedApp;
+            } 
 
             /**
              * AuthorizedApp.

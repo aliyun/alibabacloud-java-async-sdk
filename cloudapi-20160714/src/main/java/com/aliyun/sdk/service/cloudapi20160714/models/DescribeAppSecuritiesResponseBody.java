@@ -36,6 +36,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appSecuritys
      */
@@ -53,6 +57,14 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
     public static final class Builder {
         private AppSecuritys appSecuritys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppSecuritiesResponseBody model) {
+            this.appSecuritys = model.appSecuritys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The associated security policy information.</p>
@@ -159,6 +171,17 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             private String createdTime; 
             private String modifiedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppSecurity model) {
+                this.appCode = model.appCode;
+                this.appKey = model.appKey;
+                this.appSecret = model.appSecret;
+                this.createdTime = model.createdTime;
+                this.modifiedTime = model.modifiedTime;
+            } 
+
             /**
              * <p>The application AppCode.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AppSecurity> appSecurity; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppSecuritys model) {
+                this.appSecurity = model.appSecurity;
+            } 
 
             /**
              * AppSecurity.

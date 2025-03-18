@@ -36,6 +36,10 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetInfo
      */
@@ -53,6 +57,14 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
     public static final class Builder {
         private DatasetInfo datasetInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatasetInfoResponseBody model) {
+            this.datasetInfo = model.datasetInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The dataset info.</p>
@@ -158,6 +170,17 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             private String datasetName; 
             private String datasetType; 
             private String modifiedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatasetInfo model) {
+                this.createdTime = model.createdTime;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.datasetType = model.datasetType;
+                this.modifiedTime = model.modifiedTime;
+            } 
 
             /**
              * <p>The creation time (UTC) of the dataset.</p>

@@ -36,6 +36,10 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instancePackets
      */
@@ -53,6 +57,14 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
     public static final class Builder {
         private InstancePackets instancePackets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancePacketsResponseBody model) {
+            this.instancePackets = model.instancePackets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of inbound and outbound data packets in the instance.</p>
@@ -135,6 +147,15 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.item = model.item;
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The metric. Valid values:</p>
              * <ul>
@@ -210,6 +231,13 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstancePackets model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

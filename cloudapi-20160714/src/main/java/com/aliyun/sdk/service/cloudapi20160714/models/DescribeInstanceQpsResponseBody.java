@@ -36,6 +36,10 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceQps
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceQps instanceQps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceQpsResponseBody model) {
+            this.instanceQps = model.instanceQps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of requests sent to the APIs in the instance.</p>
@@ -123,6 +135,14 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceQps model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

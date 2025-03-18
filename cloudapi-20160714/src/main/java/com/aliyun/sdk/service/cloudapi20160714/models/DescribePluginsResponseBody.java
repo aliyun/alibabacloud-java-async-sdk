@@ -48,6 +48,10 @@ public class DescribePluginsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePluginsResponseBody extends TeaModel {
         private Plugins plugins; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePluginsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.plugins = model.plugins;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -192,6 +207,14 @@ public class DescribePluginsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribePluginsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -396,6 +426,21 @@ public class DescribePluginsResponseBody extends TeaModel {
             private String regionId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(PluginAttribute model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.modifiedTime = model.modifiedTime;
+                this.pluginData = model.pluginData;
+                this.pluginId = model.pluginId;
+                this.pluginName = model.pluginName;
+                this.pluginType = model.pluginType;
+                this.regionId = model.regionId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The creation time (UTC) of the plug-in.</p>
              * 
@@ -530,6 +575,13 @@ public class DescribePluginsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PluginAttribute> pluginAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plugins model) {
+                this.pluginAttribute = model.pluginAttribute;
+            } 
 
             /**
              * PluginAttribute.

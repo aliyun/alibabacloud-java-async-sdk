@@ -60,6 +60,10 @@ public class SetDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainBindingStatus
      */
@@ -125,6 +129,20 @@ public class SetDomainResponseBody extends TeaModel {
         private String groupId; 
         private String requestId; 
         private String subDomain; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetDomainResponseBody model) {
+            this.domainBindingStatus = model.domainBindingStatus;
+            this.domainLegalStatus = model.domainLegalStatus;
+            this.domainName = model.domainName;
+            this.domainRemark = model.domainRemark;
+            this.domainWebSocketStatus = model.domainWebSocketStatus;
+            this.groupId = model.groupId;
+            this.requestId = model.requestId;
+            this.subDomain = model.subDomain;
+        } 
 
         /**
          * <p>The binding status of the custom domain name. Valid values:</p>

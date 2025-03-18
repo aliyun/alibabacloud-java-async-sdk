@@ -36,6 +36,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SystemParams systemParams; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSystemParametersResponseBody model) {
+            this.requestId = model.requestId;
+            this.systemParams = model.systemParams;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -147,6 +159,16 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             private String paramName; 
             private String paramType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemParamItem model) {
+                this.demoValue = model.demoValue;
+                this.description = model.description;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+            } 
+
             /**
              * <p>Examples</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SystemParamItem> systemParamItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemParams model) {
+                this.systemParamItem = model.systemParamItem;
+            } 
 
             /**
              * SystemParamItem.

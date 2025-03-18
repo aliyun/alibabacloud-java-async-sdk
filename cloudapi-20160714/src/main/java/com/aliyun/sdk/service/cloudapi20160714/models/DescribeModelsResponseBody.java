@@ -48,6 +48,10 @@ public class DescribeModelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return modelDetails
      */
@@ -89,6 +93,17 @@ public class DescribeModelsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeModelsResponseBody model) {
+            this.modelDetails = model.modelDetails;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned information about models. It is an array consisting of ModelDetail data.</p>
@@ -192,6 +207,14 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeModelsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -396,6 +426,21 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String schema; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelDetail model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+                this.modelRef = model.modelRef;
+                this.modifiedTime = model.modifiedTime;
+                this.schema = model.schema;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The time when the model was created.</p>
              * 
@@ -530,6 +575,13 @@ public class DescribeModelsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ModelDetail> modelDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelDetails model) {
+                this.modelDetail = model.modelDetail;
+            } 
 
             /**
              * ModelDetail.

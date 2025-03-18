@@ -48,6 +48,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizedApps
      */
@@ -89,6 +93,17 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuthorizedAppsResponseBody model) {
+            this.authorizedApps = model.authorizedApps;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The authorized applications.</p>
@@ -192,6 +207,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -419,6 +449,23 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             private String stageAlias; 
             private String stageName; 
             private Tag tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedApp model) {
+                this.appDescription = model.appDescription;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.authVaildTime = model.authVaildTime;
+                this.authorizationSource = model.authorizationSource;
+                this.authorizedTime = model.authorizedTime;
+                this.description = model.description;
+                this.operator = model.operator;
+                this.stageAlias = model.stageAlias;
+                this.stageName = model.stageName;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The application description.</p>
@@ -589,6 +636,13 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AuthorizedApp> authorizedApp; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedApps model) {
+                this.authorizedApp = model.authorizedApp;
+            } 
 
             /**
              * AuthorizedApp.

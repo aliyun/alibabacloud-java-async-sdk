@@ -36,6 +36,10 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TrafficControlItems trafficControlItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrafficControlsByApiResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficControlItems = model.trafficControlItems;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -135,6 +147,15 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             private String trafficControlItemId; 
             private String trafficControlItemName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlItem model) {
+                this.boundTime = model.boundTime;
+                this.trafficControlItemId = model.trafficControlItemId;
+                this.trafficControlItemName = model.trafficControlItemName;
+            } 
+
             /**
              * <p>The binding time of the policy.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TrafficControlItem> trafficControlItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlItems model) {
+                this.trafficControlItem = model.trafficControlItem;
+            } 
 
             /**
              * TrafficControlItem.

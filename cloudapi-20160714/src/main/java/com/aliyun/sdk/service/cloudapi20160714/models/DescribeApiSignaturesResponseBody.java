@@ -48,6 +48,10 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiSignatures
      */
@@ -89,6 +93,17 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiSignaturesResponseBody model) {
+            this.apiSignatures = model.apiSignatures;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned signature key information. It is an array consisting of ApiSignatureItem data.</p>
@@ -228,6 +243,17 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
             private String signatureId; 
             private String signatureName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiSignatureItem model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.boundTime = model.boundTime;
+                this.signatureId = model.signatureId;
+                this.signatureName = model.signatureName;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiSignatureItem> apiSignatureItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiSignatures model) {
+                this.apiSignatureItem = model.apiSignatureItem;
+            } 
 
             /**
              * ApiSignatureItem.

@@ -48,6 +48,10 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceClusters
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceClusterListResponseBody model) {
+            this.instanceClusters = model.instanceClusters;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instance cluster list.</p>
@@ -264,6 +279,20 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             private String modifiedTime; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceCluster model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.instanceClusterId = model.instanceClusterId;
+                this.instanceClusterName = model.instanceClusterName;
+                this.instanceClusterStatus = model.instanceClusterStatus;
+                this.instanceClusterType = model.instanceClusterType;
+                this.modifiedTime = model.modifiedTime;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The time when the cluster was created. The time is displayed in UTC.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceCluster> instanceCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceClusters model) {
+                this.instanceCluster = model.instanceCluster;
+            } 
 
             /**
              * InstanceCluster.

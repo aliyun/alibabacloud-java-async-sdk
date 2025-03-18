@@ -48,6 +48,10 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         private java.util.List<PrivateDNSList> privateDNSList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrivateDNSResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.privateDNSList = model.privateDNSList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -191,6 +206,14 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         public static final class Builder {
             private String record; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The resolution record.</p>
@@ -300,6 +323,17 @@ public class ListPrivateDNSResponseBody extends TeaModel {
             private String intranetDomain; 
             private java.util.List<Records> records; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateDNSList model) {
+                this.bindInstances = model.bindInstances;
+                this.createdTime = model.createdTime;
+                this.intranetDomain = model.intranetDomain;
+                this.records = model.records;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The instances that are associated with the resolution.</p>

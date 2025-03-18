@@ -56,7 +56,7 @@ public class CreateIpControlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -226,6 +226,14 @@ public class CreateIpControlRequest extends Request {
         public static final class Builder {
             private String appId; 
             private String cidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpControlPolicys model) {
+                this.appId = model.appId;
+                this.cidrIp = model.cidrIp;
+            } 
 
             /**
              * <p>The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.</p>

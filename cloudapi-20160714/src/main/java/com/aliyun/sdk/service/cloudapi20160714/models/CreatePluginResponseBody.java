@@ -40,6 +40,10 @@ public class CreatePluginResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pluginId
      */
@@ -65,6 +69,15 @@ public class CreatePluginResponseBody extends TeaModel {
         private String pluginId; 
         private String requestId; 
         private Boolean tagStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePluginResponseBody model) {
+            this.pluginId = model.pluginId;
+            this.requestId = model.requestId;
+            this.tagStatus = model.tagStatus;
+        } 
 
         /**
          * <p>The ID of the plug-in.</p>

@@ -48,6 +48,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendInfoList
      */
@@ -89,6 +93,17 @@ public class DescribeBackendListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackendListResponseBody model) {
+            this.backendInfoList = model.backendInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The backend services.</p>
@@ -191,6 +206,14 @@ public class DescribeBackendListResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the tag.</p>
@@ -324,6 +347,19 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String description; 
             private String modifiedTime; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendInfoList model) {
+                this.backendId = model.backendId;
+                this.backendName = model.backendName;
+                this.backendType = model.backendType;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.modifiedTime = model.modifiedTime;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the backend service.</p>

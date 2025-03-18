@@ -52,6 +52,10 @@ public class ModifyApiGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basePath
      */
@@ -101,6 +105,18 @@ public class ModifyApiGroupResponseBody extends TeaModel {
         private String groupName; 
         private String requestId; 
         private String subDomain; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyApiGroupResponseBody model) {
+            this.basePath = model.basePath;
+            this.description = model.description;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.requestId = model.requestId;
+            this.subDomain = model.subDomain;
+        } 
 
         /**
          * <p>The root path of the API.</p>

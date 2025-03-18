@@ -36,6 +36,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class QueryRequestLogsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RequestLogs requestLogs; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRequestLogsResponseBody model) {
+            this.requestId = model.requestId;
+            this.requestLogs = model.requestLogs;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -627,6 +639,56 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             private String totalLatency; 
             private String plugin; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestLog model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.appName = model.appName;
+                this.backendRequestEnd = model.backendRequestEnd;
+                this.backendRequestStart = model.backendRequestStart;
+                this.backendResponseEnd = model.backendResponseEnd;
+                this.backendResponseStart = model.backendResponseStart;
+                this.clientIp = model.clientIp;
+                this.clientNonce = model.clientNonce;
+                this.consumerAppId = model.consumerAppId;
+                this.consumerAppKey = model.consumerAppKey;
+                this.customTraceId = model.customTraceId;
+                this.domain = model.domain;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.exception = model.exception;
+                this.frontRequestEnd = model.frontRequestEnd;
+                this.frontRequestStart = model.frontRequestStart;
+                this.frontResponseEnd = model.frontResponseEnd;
+                this.frontResponseStart = model.frontResponseStart;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.httpMethod = model.httpMethod;
+                this.httpPath = model.httpPath;
+                this.initialRequestId = model.initialRequestId;
+                this.instanceId = model.instanceId;
+                this.jwtClaims = model.jwtClaims;
+                this.region = model.region;
+                this.requestBody = model.requestBody;
+                this.requestHeaders = model.requestHeaders;
+                this.requestId = model.requestId;
+                this.requestProtocol = model.requestProtocol;
+                this.requestQueryString = model.requestQueryString;
+                this.requestSize = model.requestSize;
+                this.requestTime = model.requestTime;
+                this.responseBody = model.responseBody;
+                this.responseHeaders = model.responseHeaders;
+                this.responseSize = model.responseSize;
+                this.serviceLatency = model.serviceLatency;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.statusCode = model.statusCode;
+                this.totalLatency = model.totalLatency;
+                this.plugin = model.plugin;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -1149,6 +1211,13 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RequestLog> requestLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestLogs model) {
+                this.requestLog = model.requestLog;
+            } 
 
             /**
              * RequestLog.

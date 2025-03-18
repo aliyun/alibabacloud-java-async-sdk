@@ -48,6 +48,10 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetItemInfoList
      */
@@ -89,6 +93,17 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatasetItemListResponseBody model) {
+            this.datasetItemInfoList = model.datasetItemInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The Dataset information.</p>
@@ -251,6 +266,19 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
             private String expiredTime; 
             private String modifiedTime; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatasetItemInfoList model) {
+                this.createdTime = model.createdTime;
+                this.datasetId = model.datasetId;
+                this.datasetItemId = model.datasetItemId;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.modifiedTime = model.modifiedTime;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The time when the data entry was created.</p>

@@ -36,6 +36,10 @@ public class CreateIpControlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipControlId
      */
@@ -53,6 +57,14 @@ public class CreateIpControlResponseBody extends TeaModel {
     public static final class Builder {
         private String ipControlId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIpControlResponseBody model) {
+            this.ipControlId = model.ipControlId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the ACL.</p>

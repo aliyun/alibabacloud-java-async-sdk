@@ -36,6 +36,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logInfos
      */
@@ -53,6 +57,14 @@ public class DescribeLogConfigResponseBody extends TeaModel {
     public static final class Builder {
         private LogInfos logInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogConfigResponseBody model) {
+            this.logInfos = model.logInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Info of the log config.</p>
@@ -147,6 +159,16 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             private String slsLogStore; 
             private String slsProject; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfo model) {
+                this.logType = model.logType;
+                this.regionId = model.regionId;
+                this.slsLogStore = model.slsLogStore;
+                this.slsProject = model.slsProject;
+            } 
+
             /**
              * <p>The log type.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeLogConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogInfo> logInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogInfos model) {
+                this.logInfo = model.logInfo;
+            } 
 
             /**
              * LogInfo.

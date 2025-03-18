@@ -48,6 +48,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiGroupAttributes
      */
@@ -89,6 +93,17 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiGroupsResponseBody model) {
+            this.apiGroupAttributes = model.apiGroupAttributes;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned group set.</p>
@@ -192,6 +207,14 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -468,6 +498,27 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             private Tags tags; 
             private Integer trafficLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiGroupAttribute model) {
+                this.basePath = model.basePath;
+                this.billingStatus = model.billingStatus;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.httpsPolicy = model.httpsPolicy;
+                this.illegalStatus = model.illegalStatus;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.modifiedTime = model.modifiedTime;
+                this.regionId = model.regionId;
+                this.subDomain = model.subDomain;
+                this.tags = model.tags;
+                this.trafficLimit = model.trafficLimit;
+            } 
+
             /**
              * <p>The basepath.</p>
              * 
@@ -676,6 +727,13 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiGroupAttribute> apiGroupAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiGroupAttributes model) {
+                this.apiGroupAttribute = model.apiGroupAttribute;
+            } 
 
             /**
              * ApiGroupAttribute.

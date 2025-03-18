@@ -36,6 +36,10 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiUpdateBackendResults
      */
@@ -53,6 +57,14 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
     public static final class Builder {
         private ApiUpdateBackendResults apiUpdateBackendResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpdateBackendTaskResponseBody model) {
+            this.apiUpdateBackendResults = model.apiUpdateBackendResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ApiUpdateBackendResults.
@@ -204,6 +216,21 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
             private String stageName; 
             private String updateStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiUpdateBackendResult model) {
+                this.apiName = model.apiName;
+                this.apiUid = model.apiUid;
+                this.backendId = model.backendId;
+                this.errorMsg = model.errorMsg;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.updateStatus = model.updateStatus;
+            } 
+
             /**
              * ApiName.
              */
@@ -314,6 +341,13 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiUpdateBackendResult> apiUpdateBackendResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiUpdateBackendResults model) {
+                this.apiUpdateBackendResult = model.apiUpdateBackendResult;
+            } 
 
             /**
              * ApiUpdateBackendResult.

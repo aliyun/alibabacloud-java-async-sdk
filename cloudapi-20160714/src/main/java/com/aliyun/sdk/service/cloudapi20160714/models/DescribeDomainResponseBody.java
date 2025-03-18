@@ -88,6 +88,10 @@ public class DescribeDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateBody
      */
@@ -209,6 +213,27 @@ public class DescribeDomainResponseBody extends TeaModel {
         private String groupId; 
         private String requestId; 
         private String subDomain; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainResponseBody model) {
+            this.certificateBody = model.certificateBody;
+            this.certificateId = model.certificateId;
+            this.certificateName = model.certificateName;
+            this.certificatePrivateKey = model.certificatePrivateKey;
+            this.certificateValidEnd = model.certificateValidEnd;
+            this.certificateValidStart = model.certificateValidStart;
+            this.domainBindingStatus = model.domainBindingStatus;
+            this.domainCNAMEStatus = model.domainCNAMEStatus;
+            this.domainLegalStatus = model.domainLegalStatus;
+            this.domainName = model.domainName;
+            this.domainRemark = model.domainRemark;
+            this.domainWebSocketStatus = model.domainWebSocketStatus;
+            this.groupId = model.groupId;
+            this.requestId = model.requestId;
+            this.subDomain = model.subDomain;
+        } 
 
         /**
          * <p>The content of the certificate.</p>

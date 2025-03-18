@@ -36,6 +36,10 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TrafficPerSecond trafficPerSecond; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupTrafficResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficPerSecond = model.trafficPerSecond;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -135,6 +147,15 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.item = model.item;
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The metric. Valid values:</p>
              * <ul>
@@ -210,6 +231,13 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficPerSecond model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

@@ -76,6 +76,10 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -173,6 +177,24 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         private String modifiedTime; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceClusterInfoResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.instanceClusterAttribute = model.instanceClusterAttribute;
+            this.instanceClusterId = model.instanceClusterId;
+            this.instanceClusterName = model.instanceClusterName;
+            this.instanceClusterStatus = model.instanceClusterStatus;
+            this.instanceClusterType = model.instanceClusterType;
+            this.instanceClusterVersion = model.instanceClusterVersion;
+            this.instanceList = model.instanceList;
+            this.modifiedTime = model.modifiedTime;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the cluster was created.</p>
@@ -590,6 +612,34 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             private Long vpcOwnerId; 
             private Boolean vpcSlbIntranetEnable; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceClusterAttribute model) {
+                this.connectCidrBlocks = model.connectCidrBlocks;
+                this.connectVpcId = model.connectVpcId;
+                this.egressIpv6Enable = model.egressIpv6Enable;
+                this.httpsPolicies = model.httpsPolicies;
+                this.IPV4AclId = model.IPV4AclId;
+                this.IPV4AclName = model.IPV4AclName;
+                this.IPV4AclStatus = model.IPV4AclStatus;
+                this.IPV4AclType = model.IPV4AclType;
+                this.IPV6AclId = model.IPV6AclId;
+                this.IPV6AclName = model.IPV6AclName;
+                this.IPV6AclStatus = model.IPV6AclStatus;
+                this.IPV6AclType = model.IPV6AclType;
+                this.internetEgressAddress = model.internetEgressAddress;
+                this.intranetEgressAddress = model.intranetEgressAddress;
+                this.intranetSegments = model.intranetSegments;
+                this.supportIpv6 = model.supportIpv6;
+                this.userVpcId = model.userVpcId;
+                this.userVswitchId = model.userVswitchId;
+                this.vipTypeList = model.vipTypeList;
+                this.vpcIntranetEnable = model.vpcIntranetEnable;
+                this.vpcOwnerId = model.vpcOwnerId;
+                this.vpcSlbIntranetEnable = model.vpcSlbIntranetEnable;
+            } 
+
             /**
              * <p>The internal CIDR block of the user VPC that can be accessed by the cluster if the cluster consists of VPC integration instances.</p>
              * 
@@ -920,6 +970,16 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             private String instanceName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.errorMessage = model.errorMessage;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if the call fails.</p>
              * 
@@ -1002,6 +1062,13 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

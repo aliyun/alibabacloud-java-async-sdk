@@ -48,6 +48,10 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiHisItems
      */
@@ -89,6 +93,17 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiHistoriesResponseBody model) {
+            this.apiHisItems = model.apiHisItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned API information. It is an array consisting of ApiHisItem data.</p>
@@ -288,6 +303,22 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
             private String stageName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiHisItem model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.deployedTime = model.deployedTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.historyVersion = model.historyVersion;
+                this.regionId = model.regionId;
+                this.stageName = model.stageName;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -440,6 +471,13 @@ public class DescribeApiHistoriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiHisItem> apiHisItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiHisItems model) {
+                this.apiHisItem = model.apiHisItem;
+            } 
 
             /**
              * ApiHisItem.

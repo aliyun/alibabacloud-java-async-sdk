@@ -36,6 +36,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callLatencys
      */
@@ -53,6 +57,14 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
     public static final class Builder {
         private CallLatencys callLatencys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiLatencyDataResponseBody model) {
+            this.callLatencys = model.callLatencys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about API call latency. It is an array consisting of MonitorItem data.</p>
@@ -123,6 +135,14 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallLatencys model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

@@ -36,6 +36,10 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceLatency
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceLatency instanceLatency; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceLatencyResponseBody model) {
+            this.instanceLatency = model.instanceLatency;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of average latencies in the instance.</p>
@@ -135,6 +147,15 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.item = model.item;
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The metric. Valid values:</p>
              * <ul>
@@ -210,6 +231,13 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceLatency model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

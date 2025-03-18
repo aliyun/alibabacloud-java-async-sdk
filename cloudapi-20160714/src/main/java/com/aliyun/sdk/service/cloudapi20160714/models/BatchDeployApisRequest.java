@@ -51,7 +51,7 @@ public class BatchDeployApisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,6 +203,14 @@ public class BatchDeployApisRequest extends Request {
         public static final class Builder {
             private String apiUid; 
             private String groupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Api model) {
+                this.apiUid = model.apiUid;
+                this.groupId = model.groupId;
+            } 
 
             /**
              * <p>The API ID.</p>

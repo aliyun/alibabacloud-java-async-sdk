@@ -48,6 +48,10 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiVpcAccessInfos
      */
@@ -89,6 +93,17 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisByVpcAccessResponseBody model) {
+            this.apiVpcAccessInfos = model.apiVpcAccessInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
@@ -336,6 +351,26 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiVpcAccessInfo model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.instanceId = model.instanceId;
+                this.method = model.method;
+                this.path = model.path;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -533,6 +568,13 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiVpcAccessInfo> apiVpcAccessInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiVpcAccessInfos model) {
+                this.apiVpcAccessInfo = model.apiVpcAccessInfo;
+            } 
 
             /**
              * ApiVpcAccessInfo.

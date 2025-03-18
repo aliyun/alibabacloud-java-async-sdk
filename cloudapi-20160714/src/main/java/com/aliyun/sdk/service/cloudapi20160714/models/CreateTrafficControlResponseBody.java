@@ -36,6 +36,10 @@ public class CreateTrafficControlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTrafficControlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String trafficControlId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTrafficControlResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficControlId = model.trafficControlId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -40,7 +40,7 @@ public class BatchAbolishApisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,6 +168,16 @@ public class BatchAbolishApisRequest extends Request {
             private String groupId; 
             private String stageId; 
             private String stageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Api model) {
+                this.apiUid = model.apiUid;
+                this.groupId = model.groupId;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+            } 
 
             /**
              * <p>The ID of the API.</p>

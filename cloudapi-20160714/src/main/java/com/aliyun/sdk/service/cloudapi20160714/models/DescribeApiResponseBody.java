@@ -172,6 +172,10 @@ public class DescribeApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowSignatureMethod
      */
@@ -461,6 +465,48 @@ public class DescribeApiResponseBody extends TeaModel {
         private TagList tagList; 
         private String visibility; 
         private String webSocketApiType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiResponseBody model) {
+            this.allowSignatureMethod = model.allowSignatureMethod;
+            this.apiId = model.apiId;
+            this.apiName = model.apiName;
+            this.appCodeAuthType = model.appCodeAuthType;
+            this.authType = model.authType;
+            this.backendConfig = model.backendConfig;
+            this.backendEnable = model.backendEnable;
+            this.constantParameters = model.constantParameters;
+            this.createdTime = model.createdTime;
+            this.customSystemParameters = model.customSystemParameters;
+            this.deployedInfos = model.deployedInfos;
+            this.description = model.description;
+            this.disableInternet = model.disableInternet;
+            this.errorCodeSamples = model.errorCodeSamples;
+            this.failResultSample = model.failResultSample;
+            this.forceNonceCheck = model.forceNonceCheck;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.mock = model.mock;
+            this.mockResult = model.mockResult;
+            this.modifiedTime = model.modifiedTime;
+            this.openIdConnectConfig = model.openIdConnectConfig;
+            this.regionId = model.regionId;
+            this.requestConfig = model.requestConfig;
+            this.requestId = model.requestId;
+            this.requestParameters = model.requestParameters;
+            this.resultBodyModel = model.resultBodyModel;
+            this.resultSample = model.resultSample;
+            this.resultType = model.resultType;
+            this.serviceConfig = model.serviceConfig;
+            this.serviceParameters = model.serviceParameters;
+            this.serviceParametersMap = model.serviceParametersMap;
+            this.systemParameters = model.systemParameters;
+            this.tagList = model.tagList;
+            this.visibility = model.visibility;
+            this.webSocketApiType = model.webSocketApiType;
+        } 
 
         /**
          * <p>If <strong>AuthType</strong> is set to <strong>APP</strong>, this value must be passed to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:</p>
@@ -925,6 +971,15 @@ public class DescribeApiResponseBody extends TeaModel {
             private String backendName; 
             private String backendType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.backendId = model.backendId;
+                this.backendName = model.backendName;
+                this.backendType = model.backendType;
+            } 
+
             /**
              * <p>The ID of the backend service.</p>
              * 
@@ -1033,6 +1088,16 @@ public class DescribeApiResponseBody extends TeaModel {
             private String location; 
             private String serviceParameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConstantParameter model) {
+                this.constantValue = model.constantValue;
+                this.description = model.description;
+                this.location = model.location;
+                this.serviceParameterName = model.serviceParameterName;
+            } 
+
             /**
              * <p>The constant parameter value.</p>
              * 
@@ -1115,6 +1180,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConstantParameter> constantParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConstantParameters model) {
+                this.constantParameter = model.constantParameter;
+            } 
 
             /**
              * ConstantParameter.
@@ -1211,6 +1283,17 @@ public class DescribeApiResponseBody extends TeaModel {
             private String parameterName; 
             private String serviceParameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomSystemParameter model) {
+                this.demoValue = model.demoValue;
+                this.description = model.description;
+                this.location = model.location;
+                this.parameterName = model.parameterName;
+                this.serviceParameterName = model.serviceParameterName;
+            } 
+
             /**
              * <p>The example value.</p>
              * 
@@ -1305,6 +1388,13 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CustomSystemParameter> customSystemParameter; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomSystemParameters model) {
+                this.customSystemParameter = model.customSystemParameter;
+            } 
+
             /**
              * CustomSystemParameter.
              */
@@ -1375,6 +1465,15 @@ public class DescribeApiResponseBody extends TeaModel {
             private String deployedStatus; 
             private String effectiveVersion; 
             private String stageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployedInfo model) {
+                this.deployedStatus = model.deployedStatus;
+                this.effectiveVersion = model.effectiveVersion;
+                this.stageName = model.stageName;
+            } 
 
             /**
              * <p>The deployment status. Valid values: DEPLOYED and NONDEPLOYED.</p>
@@ -1447,6 +1546,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeployedInfo> deployedInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployedInfos model) {
+                this.deployedInfo = model.deployedInfo;
+            } 
 
             /**
              * DeployedInfo.
@@ -1531,6 +1637,16 @@ public class DescribeApiResponseBody extends TeaModel {
             private String message; 
             private String model; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorCodeSample model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.message = model.message;
+                this.model = model.model;
+            } 
+
             /**
              * <p>The returned error code.</p>
              * 
@@ -1614,6 +1730,13 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ErrorCodeSample> errorCodeSample; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorCodeSamples model) {
+                this.errorCodeSample = model.errorCodeSample;
+            } 
+
             /**
              * ErrorCodeSample.
              */
@@ -1696,6 +1819,16 @@ public class DescribeApiResponseBody extends TeaModel {
             private String openIdApiType; 
             private String publicKey; 
             private String publicKeyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpenIdConnectConfig model) {
+                this.idTokenParamName = model.idTokenParamName;
+                this.openIdApiType = model.openIdApiType;
+                this.publicKey = model.publicKey;
+                this.publicKeyId = model.publicKeyId;
+            } 
 
             /**
              * <p>The name of the parameter that corresponds to the token.</p>
@@ -1867,6 +2000,20 @@ public class DescribeApiResponseBody extends TeaModel {
             private String requestMode; 
             private String requestPath; 
             private String requestProtocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestConfig model) {
+                this.bodyFormat = model.bodyFormat;
+                this.bodyModel = model.bodyModel;
+                this.escapePathParam = model.escapePathParam;
+                this.postBodyDescription = model.postBodyDescription;
+                this.requestHttpMethod = model.requestHttpMethod;
+                this.requestMode = model.requestMode;
+                this.requestPath = model.requestPath;
+                this.requestProtocol = model.requestProtocol;
+            } 
 
             /**
              * <p>This parameter takes effect only when the RequestMode parameter is set to MAPPING.********</p>
@@ -2188,6 +2335,29 @@ public class DescribeApiResponseBody extends TeaModel {
             private String regularExpression; 
             private String required; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestParameter model) {
+                this.apiParameterName = model.apiParameterName;
+                this.arrayItemsType = model.arrayItemsType;
+                this.defaultValue = model.defaultValue;
+                this.demoValue = model.demoValue;
+                this.description = model.description;
+                this.docOrder = model.docOrder;
+                this.docShow = model.docShow;
+                this.enumValue = model.enumValue;
+                this.jsonScheme = model.jsonScheme;
+                this.location = model.location;
+                this.maxLength = model.maxLength;
+                this.maxValue = model.maxValue;
+                this.minLength = model.minLength;
+                this.minValue = model.minValue;
+                this.parameterType = model.parameterType;
+                this.regularExpression = model.regularExpression;
+                this.required = model.required;
+            } 
+
             /**
              * <p>The parameter name.</p>
              * 
@@ -2414,6 +2584,13 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RequestParameter> requestParameter; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestParameters model) {
+                this.requestParameter = model.requestParameter;
+            } 
+
             /**
              * RequestParameter.
              */
@@ -2496,6 +2673,16 @@ public class DescribeApiResponseBody extends TeaModel {
             private String eventBus; 
             private String eventSource; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventBridgeConfig model) {
+                this.eventBridgeRegionId = model.eventBridgeRegionId;
+                this.eventBus = model.eventBus;
+                this.eventSource = model.eventSource;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The ID of the region where the EventBridge instance is located.</p>
@@ -2724,6 +2911,25 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceName; 
             private String triggerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionComputeConfig model) {
+                this.contentTypeCatagory = model.contentTypeCatagory;
+                this.contentTypeValue = model.contentTypeValue;
+                this.fcBaseUrl = model.fcBaseUrl;
+                this.fcType = model.fcType;
+                this.functionName = model.functionName;
+                this.method = model.method;
+                this.onlyBusinessPath = model.onlyBusinessPath;
+                this.path = model.path;
+                this.qualifier = model.qualifier;
+                this.regionId = model.regionId;
+                this.roleArn = model.roleArn;
+                this.serviceName = model.serviceName;
+                this.triggerName = model.triggerName;
+            } 
+
             /**
              * <p>The ContentType header type used when you call the backend service over HTTP.</p>
              * <ul>
@@ -2924,6 +3130,14 @@ public class DescribeApiResponseBody extends TeaModel {
             private String headerName; 
             private String headerValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MockHeader model) {
+                this.headerName = model.headerName;
+                this.headerValue = model.headerValue;
+            } 
+
             /**
              * <p>The HTTP header.</p>
              * 
@@ -2984,6 +3198,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MockHeader> mockHeader; 
+
+            private Builder() {
+            } 
+
+            private Builder(MockHeaders model) {
+                this.mockHeader = model.mockHeader;
+            } 
 
             /**
              * MockHeader.
@@ -3067,6 +3288,16 @@ public class DescribeApiResponseBody extends TeaModel {
             private String bucketName; 
             private String key; 
             private String ossRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssConfig model) {
+                this.action = model.action;
+                this.bucketName = model.bucketName;
+                this.key = model.key;
+                this.ossRegionId = model.ossRegionId;
+            } 
 
             /**
              * <p>The operation options on OSS. Valid values:</p>
@@ -3207,6 +3438,17 @@ public class DescribeApiResponseBody extends TeaModel {
             private Integer port; 
             private String vpcId; 
             private String vpcScheme; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcConfig model) {
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.port = model.port;
+                this.vpcId = model.vpcId;
+                this.vpcScheme = model.vpcScheme;
+            } 
 
             /**
              * <p>The ID of the ECS or SLB instance in the VPC.</p>
@@ -3494,6 +3736,29 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceVpcEnable; 
             private VpcConfig vpcConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceConfig model) {
+                this.aoneAppName = model.aoneAppName;
+                this.contentTypeCatagory = model.contentTypeCatagory;
+                this.contentTypeValue = model.contentTypeValue;
+                this.eventBridgeConfig = model.eventBridgeConfig;
+                this.functionComputeConfig = model.functionComputeConfig;
+                this.mock = model.mock;
+                this.mockHeaders = model.mockHeaders;
+                this.mockResult = model.mockResult;
+                this.mockStatusCode = model.mockStatusCode;
+                this.ossConfig = model.ossConfig;
+                this.serviceAddress = model.serviceAddress;
+                this.serviceHttpMethod = model.serviceHttpMethod;
+                this.servicePath = model.servicePath;
+                this.serviceProtocol = model.serviceProtocol;
+                this.serviceTimeout = model.serviceTimeout;
+                this.serviceVpcEnable = model.serviceVpcEnable;
+                this.vpcConfig = model.vpcConfig;
+            } 
+
             /**
              * <p>The application name in AONE.</p>
              * 
@@ -3739,6 +4004,15 @@ public class DescribeApiResponseBody extends TeaModel {
             private String parameterType; 
             private String serviceParameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceParameter model) {
+                this.location = model.location;
+                this.parameterType = model.parameterType;
+                this.serviceParameterName = model.serviceParameterName;
+            } 
+
             /**
              * <p>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</p>
              * 
@@ -3811,6 +4085,13 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ServiceParameter> serviceParameter; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceParameters model) {
+                this.serviceParameter = model.serviceParameter;
+            } 
+
             /**
              * ServiceParameter.
              */
@@ -3869,6 +4150,14 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private String requestParameterName; 
             private String serviceParameterName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceParameterMap model) {
+                this.requestParameterName = model.requestParameterName;
+                this.serviceParameterName = model.serviceParameterName;
+            } 
 
             /**
              * <p>The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.</p>
@@ -3930,6 +4219,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ServiceParameterMap> serviceParameterMap; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceParametersMap model) {
+                this.serviceParameterMap = model.serviceParameterMap;
+            } 
 
             /**
              * ServiceParameterMap.
@@ -4026,6 +4322,17 @@ public class DescribeApiResponseBody extends TeaModel {
             private String parameterName; 
             private String serviceParameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemParameter model) {
+                this.demoValue = model.demoValue;
+                this.description = model.description;
+                this.location = model.location;
+                this.parameterName = model.parameterName;
+                this.serviceParameterName = model.serviceParameterName;
+            } 
+
             /**
              * <p>The example value.</p>
              * 
@@ -4120,6 +4427,13 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SystemParameter> systemParameter; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemParameters model) {
+                this.systemParameter = model.systemParameter;
+            } 
+
             /**
              * SystemParameter.
              */
@@ -4178,6 +4492,14 @@ public class DescribeApiResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>Label key.</p>
@@ -4239,6 +4561,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

@@ -48,6 +48,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apps
      */
@@ -89,6 +93,17 @@ public class DescribeAppsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppsResponseBody model) {
+            this.apps = model.apps;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned app information. It is an array consisting of AppItem data.</p>
@@ -204,6 +219,15 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String appName; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppItem model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.description = model.description;
+            } 
+
             /**
              * <p>The ID of the app.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AppItem> appItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apps model) {
+                this.appItem = model.appItem;
+            } 
 
             /**
              * AppItem.

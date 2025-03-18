@@ -90,7 +90,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -430,6 +430,16 @@ public class ModifyInstanceAttributeRequest extends Request {
             private Boolean customized; 
             private String vswitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ToConnectVpcIpBlock model) {
+                this.cidrBlock = model.cidrBlock;
+                this.customized = model.customized;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The CIDR block of the VSwitch.</p>

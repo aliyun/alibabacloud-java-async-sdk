@@ -60,6 +60,10 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -125,6 +129,20 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePurchasedApiGroupResponseBody model) {
+            this.description = model.description;
+            this.domains = model.domains;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.purchasedTime = model.purchasedTime;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The description of the API group.</p>
@@ -253,6 +271,13 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String domainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainItem model) {
+                this.domainName = model.domainName;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -302,6 +327,13 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainItem> domainItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domainItem = model.domainItem;
+            } 
 
             /**
              * DomainItem.

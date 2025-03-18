@@ -36,6 +36,10 @@ public class SdkGenerateByAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadLink
      */
@@ -53,6 +57,14 @@ public class SdkGenerateByAppResponseBody extends TeaModel {
     public static final class Builder {
         private String downloadLink; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SdkGenerateByAppResponseBody model) {
+            this.downloadLink = model.downloadLink;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DownloadLink.

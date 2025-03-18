@@ -36,6 +36,10 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiUpdateVpcInfoResults
      */
@@ -53,6 +57,14 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
     public static final class Builder {
         private ApiUpdateVpcInfoResults apiUpdateVpcInfoResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpdateVpcInfoTaskResponseBody model) {
+            this.apiUpdateVpcInfoResults = model.apiUpdateVpcInfoResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ApiUpdateVpcInfoResults.
@@ -192,6 +204,20 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
             private String stageName; 
             private String updateStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiUpdateVpcInfoResult model) {
+                this.apiName = model.apiName;
+                this.apiUid = model.apiUid;
+                this.errorMsg = model.errorMsg;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+                this.updateStatus = model.updateStatus;
+            } 
+
             /**
              * ApiName.
              */
@@ -294,6 +320,13 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiUpdateVpcInfoResults model) {
+                this.apiUpdateVpcInfoResult = model.apiUpdateVpcInfoResult;
+            } 
 
             /**
              * ApiUpdateVpcInfoResult.

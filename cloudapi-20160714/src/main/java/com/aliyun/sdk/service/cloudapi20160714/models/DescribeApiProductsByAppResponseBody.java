@@ -48,6 +48,10 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiProductInfoList
      */
@@ -89,6 +93,17 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiProductsByAppResponseBody model) {
+            this.apiProductInfoList = model.apiProductInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about API products.</p>
@@ -180,6 +195,13 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         public static final class Builder {
             private String apiProductId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiProductInfo model) {
+                this.apiProductId = model.apiProductId;
+            } 
+
             /**
              * <p>The ID of the API product.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiProductInfo> apiProductInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiProductInfoList model) {
+                this.apiProductInfo = model.apiProductInfo;
+            } 
 
             /**
              * ApiProductInfo.

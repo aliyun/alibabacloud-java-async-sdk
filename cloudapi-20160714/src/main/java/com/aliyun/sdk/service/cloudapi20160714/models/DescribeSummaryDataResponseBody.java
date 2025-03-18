@@ -52,6 +52,10 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expireInstanceNum
      */
@@ -101,6 +105,18 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         private Integer usageApiNum; 
         private Integer usageGroupNum; 
         private Integer usageInstanceNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSummaryDataResponseBody model) {
+            this.expireInstanceNum = model.expireInstanceNum;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.usageApiNum = model.usageApiNum;
+            this.usageGroupNum = model.usageGroupNum;
+            this.usageInstanceNum = model.usageInstanceNum;
+        } 
 
         /**
          * <p>The number of subscription dedicated instances that expire in 14 days or less.</p>

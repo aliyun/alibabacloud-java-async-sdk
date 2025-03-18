@@ -68,6 +68,10 @@ public class CreateModelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -149,6 +153,22 @@ public class CreateModelResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String schema; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateModelResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.groupId = model.groupId;
+            this.modelId = model.modelId;
+            this.modelName = model.modelName;
+            this.modelRef = model.modelRef;
+            this.modifiedTime = model.modifiedTime;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.schema = model.schema;
+        } 
 
         /**
          * <p>The time when the model was created.</p>

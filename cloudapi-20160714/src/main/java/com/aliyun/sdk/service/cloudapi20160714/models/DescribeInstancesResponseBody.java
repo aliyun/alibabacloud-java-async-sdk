@@ -48,6 +48,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -89,6 +93,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the instances.</p>
@@ -192,6 +207,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String localName; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecAttribute model) {
+                this.localName = model.localName;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The variable name.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SpecAttribute> specAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpecAttributes model) {
+                this.specAttribute = model.specAttribute;
+            } 
 
             /**
              * SpecAttribute.
@@ -336,6 +366,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vswitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceAttribute model) {
+                this.cidrBlock = model.cidrBlock;
+                this.securityGroupId = model.securityGroupId;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The CIDR block of the vSwitch.</p>
              * 
@@ -419,6 +459,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaceAttributes model) {
+                this.networkInterfaceAttribute = model.networkInterfaceAttribute;
+            } 
+
             /**
              * NetworkInterfaceAttribute.
              */
@@ -465,6 +512,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> privateDns; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateDnsList model) {
+                this.privateDns = model.privateDns;
+            } 
 
             /**
              * PrivateDns.
@@ -524,6 +578,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the instance.</p>
@@ -585,6 +647,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -1149,6 +1218,56 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneLocalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceAttribute model) {
+                this.aclId = model.aclId;
+                this.aclName = model.aclName;
+                this.aclStatus = model.aclStatus;
+                this.aclType = model.aclType;
+                this.classicEgressAddress = model.classicEgressAddress;
+                this.connectCidrBlocks = model.connectCidrBlocks;
+                this.connectVpcId = model.connectVpcId;
+                this.createdTime = model.createdTime;
+                this.dedicatedInstanceType = model.dedicatedInstanceType;
+                this.egressIpv6Enable = model.egressIpv6Enable;
+                this.expiredTime = model.expiredTime;
+                this.httpsPolicies = model.httpsPolicies;
+                this.IPV6AclId = model.IPV6AclId;
+                this.IPV6AclName = model.IPV6AclName;
+                this.IPV6AclStatus = model.IPV6AclStatus;
+                this.IPV6AclType = model.IPV6AclType;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceCidrBlock = model.instanceCidrBlock;
+                this.instanceClusterId = model.instanceClusterId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceRpsLimit = model.instanceRpsLimit;
+                this.instanceSpec = model.instanceSpec;
+                this.instanceSpecAttributes = model.instanceSpecAttributes;
+                this.instanceType = model.instanceType;
+                this.internetEgressAddress = model.internetEgressAddress;
+                this.intranetSegments = model.intranetSegments;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.networkInterfaceAttributes = model.networkInterfaceAttributes;
+                this.newVpcEgressAddress = model.newVpcEgressAddress;
+                this.privateDnsList = model.privateDnsList;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.supportIpv6 = model.supportIpv6;
+                this.tags = model.tags;
+                this.userVpcId = model.userVpcId;
+                this.userVswitchId = model.userVswitchId;
+                this.vpcEgressAddress = model.vpcEgressAddress;
+                this.vpcIntranetEnable = model.vpcIntranetEnable;
+                this.vpcOwnerId = model.vpcOwnerId;
+                this.vpcSlbIntranetEnable = model.vpcSlbIntranetEnable;
+                this.zoneId = model.zoneId;
+                this.zoneLocalName = model.zoneLocalName;
+            } 
+
             /**
              * <p>The ACL ID.</p>
              * 
@@ -1691,6 +1810,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceAttribute> instanceAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instanceAttribute = model.instanceAttribute;
+            } 
 
             /**
              * InstanceAttribute.

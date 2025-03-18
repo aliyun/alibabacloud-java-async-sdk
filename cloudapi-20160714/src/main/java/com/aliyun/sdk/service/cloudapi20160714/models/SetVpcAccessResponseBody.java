@@ -36,6 +36,10 @@ public class SetVpcAccessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SetVpcAccessResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vpcAccessId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetVpcAccessResponseBody model) {
+            this.requestId = model.requestId;
+            this.vpcAccessId = model.vpcAccessId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -40,6 +40,10 @@ public class ValidateVpcConnectivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connected
      */
@@ -65,6 +69,15 @@ public class ValidateVpcConnectivityResponseBody extends TeaModel {
         private Boolean connected; 
         private String ipType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValidateVpcConnectivityResponseBody model) {
+            this.connected = model.connected;
+            this.ipType = model.ipType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the API Gateway instance is connected to the port. Valid values:</p>

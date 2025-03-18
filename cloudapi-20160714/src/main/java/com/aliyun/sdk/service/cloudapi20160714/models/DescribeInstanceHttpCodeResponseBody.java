@@ -36,6 +36,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceHttpCode
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceHttpCode instanceHttpCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceHttpCodeResponseBody model) {
+            this.instanceHttpCode = model.instanceHttpCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status codes.</p>
@@ -123,6 +135,14 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The HTTP status code returned.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceHttpCode model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

@@ -48,6 +48,10 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiIpControls
      */
@@ -89,6 +93,17 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiIpControlsResponseBody model) {
+            this.apiIpControls = model.apiIpControls;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the ACLs. The information is an array of ApiIpControlItem data.</p>
@@ -228,6 +243,17 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
             private String ipControlId; 
             private String ipControlName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiIpControlItem model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.boundTime = model.boundTime;
+                this.ipControlId = model.ipControlId;
+                this.ipControlName = model.ipControlName;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiIpControlItem> apiIpControlItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiIpControls model) {
+                this.apiIpControlItem = model.apiIpControlItem;
+            } 
 
             /**
              * ApiIpControlItem.

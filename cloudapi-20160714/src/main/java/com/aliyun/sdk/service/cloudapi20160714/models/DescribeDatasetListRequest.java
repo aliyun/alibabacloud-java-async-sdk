@@ -22,6 +22,10 @@ public class DescribeDatasetListRequest extends Request {
     private String datasetIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
+    private String datasetName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -40,6 +44,7 @@ public class DescribeDatasetListRequest extends Request {
     private DescribeDatasetListRequest(Builder builder) {
         super(builder);
         this.datasetIds = builder.datasetIds;
+        this.datasetName = builder.datasetName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
@@ -54,7 +59,7 @@ public class DescribeDatasetListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,6 +69,13 @@ public class DescribeDatasetListRequest extends Request {
      */
     public String getDatasetIds() {
         return this.datasetIds;
+    }
+
+    /**
+     * @return datasetName
+     */
+    public String getDatasetName() {
+        return this.datasetName;
     }
 
     /**
@@ -96,6 +108,7 @@ public class DescribeDatasetListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDatasetListRequest, Builder> {
         private String datasetIds; 
+        private String datasetName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityToken; 
@@ -108,6 +121,7 @@ public class DescribeDatasetListRequest extends Request {
         private Builder(DescribeDatasetListRequest request) {
             super(request);
             this.datasetIds = request.datasetIds;
+            this.datasetName = request.datasetName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
@@ -123,6 +137,15 @@ public class DescribeDatasetListRequest extends Request {
         public Builder datasetIds(String datasetIds) {
             this.putQueryParameter("DatasetIds", datasetIds);
             this.datasetIds = datasetIds;
+            return this;
+        }
+
+        /**
+         * DatasetName.
+         */
+        public Builder datasetName(String datasetName) {
+            this.putQueryParameter("DatasetName", datasetName);
+            this.datasetName = datasetName;
             return this;
         }
 
@@ -218,6 +241,14 @@ public class DescribeDatasetListRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

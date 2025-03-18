@@ -48,6 +48,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VpcAccessAttributes vpcAccessAttributes; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcAccessesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpcAccessAttributes = model.vpcAccessAttributes;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -192,6 +207,14 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -408,6 +438,22 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcTargetHostName; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcAccessAttribute model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.tags = model.tags;
+                this.vpcAccessId = model.vpcAccessId;
+                this.vpcId = model.vpcId;
+                this.vpcTargetHostName = model.vpcTargetHostName;
+            } 
+
             /**
              * <p>The time when the authorization was created.</p>
              * 
@@ -553,6 +599,13 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VpcAccessAttribute> vpcAccessAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcAccessAttributes model) {
+                this.vpcAccessAttribute = model.vpcAccessAttribute;
+            } 
 
             /**
              * VpcAccessAttribute.

@@ -48,6 +48,10 @@ public class DescribeApisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiSummarys
      */
@@ -89,6 +93,17 @@ public class DescribeApisResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisResponseBody model) {
+            this.apiSummarys = model.apiSummarys;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried API definitions.</p>
@@ -204,6 +219,15 @@ public class DescribeApisResponseBody extends TeaModel {
             private String effectiveVersion; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployedInfo model) {
+                this.deployedStatus = model.deployedStatus;
+                this.effectiveVersion = model.effectiveVersion;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>The deployment status. Valid values: DEPLOYED and NONDEPLOYED.</p>
              * 
@@ -281,6 +305,13 @@ public class DescribeApisResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DeployedInfo> deployedInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployedInfos model) {
+                this.deployedInfo = model.deployedInfo;
+            } 
+
             /**
              * DeployedInfo.
              */
@@ -339,6 +370,14 @@ public class DescribeApisResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -400,6 +439,13 @@ public class DescribeApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -592,6 +638,25 @@ public class DescribeApisResponseBody extends TeaModel {
             private TagList tagList; 
             private String visibility; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiSummary model) {
+                this.apiId = model.apiId;
+                this.apiMethod = model.apiMethod;
+                this.apiName = model.apiName;
+                this.apiPath = model.apiPath;
+                this.createdTime = model.createdTime;
+                this.deployedInfos = model.deployedInfos;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.modifiedTime = model.modifiedTime;
+                this.regionId = model.regionId;
+                this.tagList = model.tagList;
+                this.visibility = model.visibility;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -771,6 +836,13 @@ public class DescribeApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiSummary> apiSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiSummarys model) {
+                this.apiSummary = model.apiSummary;
+            } 
 
             /**
              * ApiSummary.

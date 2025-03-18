@@ -40,6 +40,10 @@ public class ModifySignatureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ModifySignatureResponseBody extends TeaModel {
         private String requestId; 
         private String signatureId; 
         private String signatureName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySignatureResponseBody model) {
+            this.requestId = model.requestId;
+            this.signatureId = model.signatureId;
+            this.signatureName = model.signatureName;
+        } 
 
         /**
          * <p>The ID of the request.</p>

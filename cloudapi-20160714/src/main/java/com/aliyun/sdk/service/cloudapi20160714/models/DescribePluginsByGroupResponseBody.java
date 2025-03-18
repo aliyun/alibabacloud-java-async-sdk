@@ -48,6 +48,10 @@ public class DescribePluginsByGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePluginsByGroupResponseBody extends TeaModel {
         private Plugins plugins; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePluginsByGroupResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.plugins = model.plugins;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Pagination parameter: current page number</p>
@@ -264,6 +279,20 @@ public class DescribePluginsByGroupResponseBody extends TeaModel {
             private String pluginType; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PluginAttribute model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.modifiedTime = model.modifiedTime;
+                this.pluginData = model.pluginData;
+                this.pluginId = model.pluginId;
+                this.pluginName = model.pluginName;
+                this.pluginType = model.pluginType;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>Creation time, in GMT</p>
              * 
@@ -390,6 +419,13 @@ public class DescribePluginsByGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PluginAttribute> pluginAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plugins model) {
+                this.pluginAttribute = model.pluginAttribute;
+            } 
 
             /**
              * PluginAttribute.

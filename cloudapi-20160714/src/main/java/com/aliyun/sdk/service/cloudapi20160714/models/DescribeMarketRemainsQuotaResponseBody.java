@@ -36,6 +36,10 @@ public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return remainsQuota
      */
@@ -53,6 +57,14 @@ public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
     public static final class Builder {
         private Long remainsQuota; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMarketRemainsQuotaResponseBody model) {
+            this.remainsQuota = model.remainsQuota;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The remaining quota.</p>

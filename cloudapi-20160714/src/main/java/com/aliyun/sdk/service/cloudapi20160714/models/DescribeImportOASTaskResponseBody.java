@@ -44,6 +44,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiResults
      */
@@ -77,6 +81,16 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         private ModelResults modelResults; 
         private String requestId; 
         private String taskStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImportOASTaskResponseBody model) {
+            this.apiResults = model.apiResults;
+            this.modelResults = model.modelResults;
+            this.requestId = model.requestId;
+            this.taskStatus = model.taskStatus;
+        } 
 
         /**
          * <p>The execution status of the subtask. Valid values:</p>
@@ -256,6 +270,20 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             private String path; 
             private String updateStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiResult model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.description = model.description;
+                this.errorMessage = model.errorMessage;
+                this.groupId = model.groupId;
+                this.method = model.method;
+                this.path = model.path;
+                this.updateStatus = model.updateStatus;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -390,6 +418,13 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ApiResult> apiResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiResults model) {
+                this.apiResult = model.apiResult;
+            } 
+
             /**
              * ApiResult.
              */
@@ -484,6 +519,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             private String modelId; 
             private String modelName; 
             private String updateStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelResult model) {
+                this.errorMessage = model.errorMessage;
+                this.groupId = model.groupId;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+                this.updateStatus = model.updateStatus;
+            } 
 
             /**
              * <p>The cause of the failure if the model fails to be imported.</p>
@@ -585,6 +631,13 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ModelResult> modelResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelResults model) {
+                this.modelResult = model.modelResult;
+            } 
 
             /**
              * ModelResult.

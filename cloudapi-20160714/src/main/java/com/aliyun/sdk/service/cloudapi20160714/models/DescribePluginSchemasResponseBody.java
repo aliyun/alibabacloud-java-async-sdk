@@ -36,6 +36,10 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pluginSchemas
      */
@@ -53,6 +57,14 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
     public static final class Builder {
         private PluginSchemas pluginSchemas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePluginSchemasResponseBody model) {
+            this.pluginSchemas = model.pluginSchemas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PluginSchemas.
@@ -156,6 +168,17 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             private Boolean supportClassic; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(PluginSchema model) {
+                this.description = model.description;
+                this.documentId = model.documentId;
+                this.name = model.name;
+                this.supportClassic = model.supportClassic;
+                this.title = model.title;
+            } 
+
             /**
              * Description.
              */
@@ -234,6 +257,13 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PluginSchema> pluginSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(PluginSchemas model) {
+                this.pluginSchema = model.pluginSchema;
+            } 
 
             /**
              * PluginSchema.

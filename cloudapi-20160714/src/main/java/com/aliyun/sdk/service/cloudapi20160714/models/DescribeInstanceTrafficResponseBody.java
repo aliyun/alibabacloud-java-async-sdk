@@ -36,6 +36,10 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTraffic
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceTraffic instanceTraffic; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceTrafficResponseBody model) {
+            this.instanceTraffic = model.instanceTraffic;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The traffic consumed by the requests and responses in the instance.</p>
@@ -135,6 +147,15 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.item = model.item;
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The metric. Valid values:</p>
              * <ul>
@@ -210,6 +231,13 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTraffic model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

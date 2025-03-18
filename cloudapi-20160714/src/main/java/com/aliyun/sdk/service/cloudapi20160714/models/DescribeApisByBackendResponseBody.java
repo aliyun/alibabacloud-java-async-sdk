@@ -48,6 +48,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiInfoList
      */
@@ -89,6 +93,17 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisByBackendResponseBody model) {
+            this.apiInfoList = model.apiInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the returned API list.</p>
@@ -252,6 +267,19 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             private String method; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiInfo model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.method = model.method;
+                this.path = model.path;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiInfo> apiInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiInfoList model) {
+                this.apiInfo = model.apiInfo;
+            } 
 
             /**
              * ApiInfo.

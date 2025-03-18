@@ -52,6 +52,10 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failed
      */
@@ -101,6 +105,18 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         private ModelSuccess modelSuccess; 
         private String requestId; 
         private Success success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DryRunSwaggerResponseBody model) {
+            this.failed = model.failed;
+            this.globalCondition = model.globalCondition;
+            this.modelFailed = model.modelFailed;
+            this.modelSuccess = model.modelSuccess;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The APIs that failed to be created based on the Swagger-compliant data imported this time.</p>
@@ -218,6 +234,15 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String httpMethod; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiImportSwaggerFailed model) {
+                this.errorMsg = model.errorMsg;
+                this.httpMethod = model.httpMethod;
+                this.path = model.path;
+            } 
+
             /**
              * <p>The error message returned when the API is created.</p>
              * 
@@ -290,6 +315,13 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed; 
 
+            private Builder() {
+            } 
+
+            private Builder(Failed model) {
+                this.apiImportSwaggerFailed = model.apiImportSwaggerFailed;
+            } 
+
             /**
              * ApiImportSwaggerFailed.
              */
@@ -360,6 +392,15 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String errorMsg; 
             private String groupId; 
             private String modelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiImportModelFailed model) {
+                this.errorMsg = model.errorMsg;
+                this.groupId = model.groupId;
+                this.modelName = model.modelName;
+            } 
 
             /**
              * <p>The error message.</p>
@@ -432,6 +473,13 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiImportModelFailed> apiImportModelFailed; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelFailed model) {
+                this.apiImportModelFailed = model.apiImportModelFailed;
+            } 
 
             /**
              * ApiImportModelFailed.
@@ -516,6 +564,16 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String modelOperation; 
             private String modelUid; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiImportModelSuccess model) {
+                this.groupId = model.groupId;
+                this.modelName = model.modelName;
+                this.modelOperation = model.modelOperation;
+                this.modelUid = model.modelUid;
+            } 
+
             /**
              * <p>The ID of the API group.</p>
              * 
@@ -598,6 +656,13 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiImportModelSuccess> apiImportModelSuccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelSuccess model) {
+                this.apiImportModelSuccess = model.apiImportModelSuccess;
+            } 
 
             /**
              * ApiImportModelSuccess.
@@ -694,6 +759,17 @@ public class DryRunSwaggerResponseBody extends TeaModel {
             private String httpMethod; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiDryRunSwaggerSuccess model) {
+                this.apiOperation = model.apiOperation;
+                this.apiSwagger = model.apiSwagger;
+                this.apiUid = model.apiUid;
+                this.httpMethod = model.httpMethod;
+                this.path = model.path;
+            } 
+
             /**
              * <p>Specifies whether the operation is CREATE or MODIFY.</p>
              * 
@@ -787,6 +863,13 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(Success model) {
+                this.apiDryRunSwaggerSuccess = model.apiDryRunSwaggerSuccess;
+            } 
 
             /**
              * ApiDryRunSwaggerSuccess.

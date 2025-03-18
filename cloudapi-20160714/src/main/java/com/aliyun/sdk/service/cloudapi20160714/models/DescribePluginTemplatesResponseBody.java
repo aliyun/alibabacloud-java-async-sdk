@@ -36,6 +36,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Templates templates; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePluginTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -159,6 +171,17 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             private String sample; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.description = model.description;
+                this.documentAnchor = model.documentAnchor;
+                this.documentId = model.documentId;
+                this.sample = model.sample;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Template> template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.template = model.template;
+            } 
 
             /**
              * Template.

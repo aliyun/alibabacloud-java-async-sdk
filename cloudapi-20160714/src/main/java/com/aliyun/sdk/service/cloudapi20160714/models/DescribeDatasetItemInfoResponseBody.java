@@ -36,6 +36,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetItemInfo
      */
@@ -53,6 +57,14 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
     public static final class Builder {
         private DatasetItemInfo datasetItemInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatasetItemInfoResponseBody model) {
+            this.datasetItemInfo = model.datasetItemInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Dataset information.</p>
@@ -182,6 +194,19 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             private String expiredTime; 
             private String modifiedTime; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatasetItemInfo model) {
+                this.createdTime = model.createdTime;
+                this.datasetId = model.datasetId;
+                this.datasetItemId = model.datasetItemId;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.modifiedTime = model.modifiedTime;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The creation time (UTC) of the data entry.</p>

@@ -40,6 +40,10 @@ public class CreateAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -65,6 +69,15 @@ public class CreateAppResponseBody extends TeaModel {
         private Long appId; 
         private String requestId; 
         private Boolean tagStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAppResponseBody model) {
+            this.appId = model.appId;
+            this.requestId = model.requestId;
+            this.tagStatus = model.tagStatus;
+        } 
 
         /**
          * <p>The unique ID of the application.</p>

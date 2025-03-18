@@ -36,6 +36,10 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deployedResults
      */
@@ -53,6 +57,14 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
     public static final class Builder {
         private DeployedResults deployedResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeployApiTaskResponseBody model) {
+            this.deployedResults = model.deployedResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -159,6 +171,17 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             private String groupId; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeployedResult model) {
+                this.apiUid = model.apiUid;
+                this.deployedStatus = model.deployedStatus;
+                this.errorMsg = model.errorMsg;
+                this.groupId = model.groupId;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -256,6 +279,13 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeployedResult> deployedResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeployedResults model) {
+                this.deployedResult = model.deployedResult;
+            } 
 
             /**
              * DeployedResult.

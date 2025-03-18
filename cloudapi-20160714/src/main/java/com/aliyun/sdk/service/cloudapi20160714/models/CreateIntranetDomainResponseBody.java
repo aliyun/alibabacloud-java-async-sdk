@@ -36,6 +36,10 @@ public class CreateIntranetDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -53,6 +57,14 @@ public class CreateIntranetDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String domainName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIntranetDomainResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

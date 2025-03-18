@@ -48,6 +48,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private TrafficControls trafficControls; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTrafficControlsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficControls = model.trafficControls;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -192,6 +207,14 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private String specialKey; 
             private Integer trafficValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Special model) {
+                this.specialKey = model.specialKey;
+                this.trafficValue = model.trafficValue;
+            } 
+
             /**
              * <p>The AppId or user account corresponding to SpecialType.</p>
              * 
@@ -253,6 +276,13 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Special> special; 
 
+            private Builder() {
+            } 
+
+            private Builder(Specials model) {
+                this.special = model.special;
+            } 
+
             /**
              * Special.
              */
@@ -311,6 +341,14 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         public static final class Builder {
             private String specialType; 
             private Specials specials; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecialPolicy model) {
+                this.specialType = model.specialType;
+                this.specials = model.specials;
+            } 
 
             /**
              * <p>The type of the special throttling policy. Valid values:</p>
@@ -373,6 +411,13 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SpecialPolicy> specialPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecialPolicies model) {
+                this.specialPolicy = model.specialPolicy;
+            } 
 
             /**
              * SpecialPolicy.
@@ -529,6 +574,22 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             private String trafficControlUnit; 
             private Integer userDefault; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficControl model) {
+                this.apiDefault = model.apiDefault;
+                this.appDefault = model.appDefault;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.modifiedTime = model.modifiedTime;
+                this.specialPolicies = model.specialPolicies;
+                this.trafficControlId = model.trafficControlId;
+                this.trafficControlName = model.trafficControlName;
+                this.trafficControlUnit = model.trafficControlUnit;
+                this.userDefault = model.userDefault;
+            } 
+
             /**
              * <p>The default throttling value for each API.</p>
              * 
@@ -679,6 +740,13 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TrafficControl> trafficControl; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControls model) {
+                this.trafficControl = model.trafficControl;
+            } 
 
             /**
              * TrafficControl.

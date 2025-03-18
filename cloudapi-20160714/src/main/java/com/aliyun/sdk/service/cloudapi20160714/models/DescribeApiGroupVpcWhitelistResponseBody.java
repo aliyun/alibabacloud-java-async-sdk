@@ -36,6 +36,10 @@ public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vpcIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiGroupVpcWhitelistResponseBody model) {
+            this.requestId = model.requestId;
+            this.vpcIds = model.vpcIds;
+        } 
 
         /**
          * <p>The ID of the request.</p>

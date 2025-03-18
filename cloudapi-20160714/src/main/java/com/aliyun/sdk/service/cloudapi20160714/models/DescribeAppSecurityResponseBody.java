@@ -52,6 +52,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appCode
      */
@@ -101,6 +105,18 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         private String createdTime; 
         private String modifiedTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppSecurityResponseBody model) {
+            this.appCode = model.appCode;
+            this.appKey = model.appKey;
+            this.appSecret = model.appSecret;
+            this.createdTime = model.createdTime;
+            this.modifiedTime = model.modifiedTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The AppCode of the app.</p>

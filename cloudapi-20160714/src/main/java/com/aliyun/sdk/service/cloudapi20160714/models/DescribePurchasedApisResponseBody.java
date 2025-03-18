@@ -48,6 +48,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         private PurchasedApis purchasedApis; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePurchasedApisResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.purchasedApis = model.purchasedApis;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -300,6 +315,23 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             private String stageName; 
             private String visibility; 
 
+            private Builder() {
+            } 
+
+            private Builder(PurchasedApi model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.deployedTime = model.deployedTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.modifiedTime = model.modifiedTime;
+                this.purchasedTime = model.purchasedTime;
+                this.regionId = model.regionId;
+                this.stageName = model.stageName;
+                this.visibility = model.visibility;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -468,6 +500,13 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PurchasedApi> purchasedApi; 
+
+            private Builder() {
+            } 
+
+            private Builder(PurchasedApis model) {
+                this.purchasedApi = model.purchasedApi;
+            } 
 
             /**
              * PurchasedApi.

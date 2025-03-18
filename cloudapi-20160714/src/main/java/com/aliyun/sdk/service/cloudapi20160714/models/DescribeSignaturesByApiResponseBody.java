@@ -36,6 +36,10 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Signatures signatures; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSignaturesByApiResponseBody model) {
+            this.requestId = model.requestId;
+            this.signatures = model.signatures;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -135,6 +147,15 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
             private String signatureId; 
             private String signatureName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SignatureItem model) {
+                this.boundTime = model.boundTime;
+                this.signatureId = model.signatureId;
+                this.signatureName = model.signatureName;
+            } 
+
             /**
              * <p>The time when the key was bound.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SignatureItem> signatureItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(Signatures model) {
+                this.signatureItem = model.signatureItem;
+            } 
 
             /**
              * SignatureItem.

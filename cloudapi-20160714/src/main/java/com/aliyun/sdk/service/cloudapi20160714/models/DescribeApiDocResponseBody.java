@@ -104,6 +104,10 @@ public class DescribeApiDocResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiId
      */
@@ -257,6 +261,31 @@ public class DescribeApiDocResponseBody extends TeaModel {
         private String resultType; 
         private String stageName; 
         private String visibility; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiDocResponseBody model) {
+            this.apiId = model.apiId;
+            this.apiName = model.apiName;
+            this.authType = model.authType;
+            this.deployedTime = model.deployedTime;
+            this.description = model.description;
+            this.disableInternet = model.disableInternet;
+            this.errorCodeSamples = model.errorCodeSamples;
+            this.failResultSample = model.failResultSample;
+            this.forceNonceCheck = model.forceNonceCheck;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.regionId = model.regionId;
+            this.requestConfig = model.requestConfig;
+            this.requestId = model.requestId;
+            this.requestParameters = model.requestParameters;
+            this.resultSample = model.resultSample;
+            this.resultType = model.resultType;
+            this.stageName = model.stageName;
+            this.visibility = model.visibility;
+        } 
 
         /**
          * <p>The ID of the API.</p>
@@ -530,6 +559,15 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String description; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorCodeSample model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The returned error code.</p>
              * 
@@ -601,6 +639,13 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ErrorCodeSample> errorCodeSample; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorCodeSamples model) {
+                this.errorCodeSample = model.errorCodeSample;
+            } 
 
             /**
              * ErrorCodeSample.
@@ -720,6 +765,19 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String requestMode; 
             private String requestPath; 
             private String requestProtocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestConfig model) {
+                this.bodyFormat = model.bodyFormat;
+                this.escapePathParam = model.escapePathParam;
+                this.postBodyDescription = model.postBodyDescription;
+                this.requestHttpMethod = model.requestHttpMethod;
+                this.requestMode = model.requestMode;
+                this.requestPath = model.requestPath;
+                this.requestProtocol = model.requestProtocol;
+            } 
 
             /**
              * <p>This parameter takes effect only when the RequestMode parameter is set to MAPPING.********</p>
@@ -1035,6 +1093,29 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String regularExpression; 
             private String required; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestParameter model) {
+                this.apiParameterName = model.apiParameterName;
+                this.arrayItemsType = model.arrayItemsType;
+                this.defaultValue = model.defaultValue;
+                this.demoValue = model.demoValue;
+                this.description = model.description;
+                this.docOrder = model.docOrder;
+                this.docShow = model.docShow;
+                this.enumValue = model.enumValue;
+                this.jsonScheme = model.jsonScheme;
+                this.location = model.location;
+                this.maxLength = model.maxLength;
+                this.maxValue = model.maxValue;
+                this.minLength = model.minLength;
+                this.minValue = model.minValue;
+                this.parameterType = model.parameterType;
+                this.regularExpression = model.regularExpression;
+                this.required = model.required;
+            } 
+
             /**
              * <p>The name of the parameter in the API request.</p>
              * 
@@ -1260,6 +1341,13 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RequestParameter> requestParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestParameters model) {
+                this.requestParameter = model.requestParameter;
+            } 
 
             /**
              * RequestParameter.

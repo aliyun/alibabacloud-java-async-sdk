@@ -40,6 +40,10 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callFails
      */
@@ -65,6 +69,15 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         private CallFails callFails; 
         private CallSuccesses callSuccesses; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiQpsDataResponseBody model) {
+            this.callFails = model.callFails;
+            this.callSuccesses = model.callSuccesses;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about failed API calls. It is an array consisting of MonitorItem data.</p>
@@ -143,6 +156,14 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
              * 
@@ -204,6 +225,13 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallFails model) {
+                this.monitorItem = model.monitorItem;
+            } 
+
             /**
              * MonitorItem.
              */
@@ -262,6 +290,14 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         public static final class Builder {
             private String itemTime; 
             private String itemValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallSuccessesMonitorItem model) {
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
 
             /**
              * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
@@ -323,6 +359,13 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CallSuccessesMonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallSuccesses model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

@@ -56,6 +56,10 @@ public class DescribeAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -113,6 +117,19 @@ public class DescribeAppResponseBody extends TeaModel {
         private String extend; 
         private String modifiedTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppResponseBody model) {
+            this.appId = model.appId;
+            this.appName = model.appName;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.extend = model.extend;
+            this.modifiedTime = model.modifiedTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the app.</p>

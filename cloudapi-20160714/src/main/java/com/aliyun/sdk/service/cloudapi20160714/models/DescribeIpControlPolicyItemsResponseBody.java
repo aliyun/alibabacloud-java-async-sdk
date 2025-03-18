@@ -48,6 +48,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipControlPolicyItems
      */
@@ -89,6 +93,17 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpControlPolicyItemsResponseBody model) {
+            this.ipControlPolicyItems = model.ipControlPolicyItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about policies. The information is an array of IpControlPolicyItem data.</p>
@@ -228,6 +243,17 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             private String modifiedTime; 
             private String policyItemId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpControlPolicyItem model) {
+                this.appId = model.appId;
+                this.cidrIp = model.cidrIp;
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.policyItemId = model.policyItemId;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IpControlPolicyItem> ipControlPolicyItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpControlPolicyItems model) {
+                this.ipControlPolicyItem = model.ipControlPolicyItem;
+            } 
 
             /**
              * IpControlPolicyItem.

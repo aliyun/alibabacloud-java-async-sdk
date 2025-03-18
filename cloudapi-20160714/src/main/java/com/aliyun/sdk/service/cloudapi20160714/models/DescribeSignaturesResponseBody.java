@@ -48,6 +48,10 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSignaturesResponseBody extends TeaModel {
         private String requestId; 
         private SignatureInfos signatureInfos; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSignaturesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.signatureInfos = model.signatureInfos;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -252,6 +267,19 @@ public class DescribeSignaturesResponseBody extends TeaModel {
             private String signatureName; 
             private String signatureSecret; 
 
+            private Builder() {
+            } 
+
+            private Builder(SignatureInfo model) {
+                this.createdTime = model.createdTime;
+                this.modifiedTime = model.modifiedTime;
+                this.regionId = model.regionId;
+                this.signatureId = model.signatureId;
+                this.signatureKey = model.signatureKey;
+                this.signatureName = model.signatureName;
+                this.signatureSecret = model.signatureSecret;
+            } 
+
             /**
              * <p>The creation time of the key.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeSignaturesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SignatureInfo> signatureInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SignatureInfos model) {
+                this.signatureInfo = model.signatureInfo;
+            } 
 
             /**
              * SignatureInfo.

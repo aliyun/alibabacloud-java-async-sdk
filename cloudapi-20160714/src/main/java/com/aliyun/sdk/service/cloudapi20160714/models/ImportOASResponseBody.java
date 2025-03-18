@@ -60,6 +60,10 @@ public class ImportOASResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMessages
      */
@@ -125,6 +129,20 @@ public class ImportOASResponseBody extends TeaModel {
         private SuccessApis successApis; 
         private SuccessModels successModels; 
         private WarningMessages warningMessages; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportOASResponseBody model) {
+            this.errorMessages = model.errorMessages;
+            this.failedApis = model.failedApis;
+            this.failedModels = model.failedModels;
+            this.operationId = model.operationId;
+            this.requestId = model.requestId;
+            this.successApis = model.successApis;
+            this.successModels = model.successModels;
+            this.warningMessages = model.warningMessages;
+        } 
 
         /**
          * <p>The error messages that appear due to the invalid data in the imported file.</p>
@@ -234,6 +252,13 @@ public class ImportOASResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> errorMessage; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorMessages model) {
+                this.errorMessage = model.errorMessage;
+            } 
+
             /**
              * ErrorMessage.
              */
@@ -304,6 +329,15 @@ public class ImportOASResponseBody extends TeaModel {
             private String errorMsg; 
             private String httpMethod; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedApi model) {
+                this.errorMsg = model.errorMsg;
+                this.httpMethod = model.httpMethod;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The error message.</p>
@@ -377,6 +411,13 @@ public class ImportOASResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedApi> failedApi; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailedApis model) {
+                this.failedApi = model.failedApi;
+            } 
+
             /**
              * FailedApi.
              */
@@ -447,6 +488,15 @@ public class ImportOASResponseBody extends TeaModel {
             private String errorMsg; 
             private String groupId; 
             private String modelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedModel model) {
+                this.errorMsg = model.errorMsg;
+                this.groupId = model.groupId;
+                this.modelName = model.modelName;
+            } 
 
             /**
              * <p>The error message.</p>
@@ -519,6 +569,13 @@ public class ImportOASResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FailedModel> failedModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedModels model) {
+                this.failedModel = model.failedModel;
+            } 
 
             /**
              * FailedModel.
@@ -603,6 +660,16 @@ public class ImportOASResponseBody extends TeaModel {
             private String httpMethod; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuccessApi model) {
+                this.apiId = model.apiId;
+                this.apiOperation = model.apiOperation;
+                this.httpMethod = model.httpMethod;
+                this.path = model.path;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -685,6 +752,13 @@ public class ImportOASResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SuccessApi> successApi; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessApis model) {
+                this.successApi = model.successApi;
+            } 
 
             /**
              * SuccessApi.
@@ -769,6 +843,16 @@ public class ImportOASResponseBody extends TeaModel {
             private String modelOperation; 
             private String modelUid; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuccessModel model) {
+                this.groupId = model.groupId;
+                this.modelName = model.modelName;
+                this.modelOperation = model.modelOperation;
+                this.modelUid = model.modelUid;
+            } 
+
             /**
              * <p>The ID of the API group.</p>
              * 
@@ -852,6 +936,13 @@ public class ImportOASResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SuccessModel> successModel; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuccessModels model) {
+                this.successModel = model.successModel;
+            } 
+
             /**
              * SuccessModel.
              */
@@ -898,6 +989,13 @@ public class ImportOASResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> warningMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarningMessages model) {
+                this.warningMessage = model.warningMessage;
+            } 
 
             /**
              * WarningMessage.

@@ -36,6 +36,10 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclId
      */
@@ -53,6 +57,14 @@ public class CreateAccessControlListResponseBody extends TeaModel {
     public static final class Builder {
         private String aclId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessControlListResponseBody model) {
+            this.aclId = model.aclId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ACL ID.</p>

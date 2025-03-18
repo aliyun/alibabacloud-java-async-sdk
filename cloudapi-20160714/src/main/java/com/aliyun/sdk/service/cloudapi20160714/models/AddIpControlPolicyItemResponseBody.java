@@ -36,6 +36,10 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyItemId
      */
@@ -53,6 +57,14 @@ public class AddIpControlPolicyItemResponseBody extends TeaModel {
     public static final class Builder {
         private String policyItemId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddIpControlPolicyItemResponseBody model) {
+            this.policyItemId = model.policyItemId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the policy. The ID is unique.</p>

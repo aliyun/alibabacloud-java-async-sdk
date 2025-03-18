@@ -36,6 +36,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendInfo
      */
@@ -53,6 +57,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     public static final class Builder {
         private BackendInfo backendInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackendInfoResponseBody model) {
+            this.backendInfo = model.backendInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the backend service.</p>
@@ -218,6 +230,22 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String serverAddress; 
             private String serviceName; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NacosConfig model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.clusters = model.clusters;
+                this.groupName = model.groupName;
+                this.namespace = model.namespace;
+                this.password = model.password;
+                this.secretKey = model.secretKey;
+                this.serverAddress = model.serverAddress;
+                this.serviceName = model.serviceName;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).</p>
@@ -392,6 +420,15 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String namespace; 
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZookeeperConfig model) {
+                this.connectString = model.connectString;
+                this.namespace = model.namespace;
+                this.serviceName = model.serviceName;
+            } 
+
             /**
              * <p>The connection URL of the ZooKeeper server.</p>
              * 
@@ -487,6 +524,15 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private NacosConfig nacosConfig; 
             private String rcType; 
             private ZookeeperConfig zookeeperConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscoveryConfig model) {
+                this.nacosConfig = model.nacosConfig;
+                this.rcType = model.rcType;
+                this.zookeeperConfig = model.zookeeperConfig;
+            } 
 
             /**
              * <p>The Nacos configurations.</p>
@@ -625,6 +671,19 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String mseInstanceId; 
             private String registryType; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdasConfig model) {
+                this.edasAppId = model.edasAppId;
+                this.microserviceNamespace = model.microserviceNamespace;
+                this.microserviceNamespaceId = model.microserviceNamespaceId;
+                this.microserviceNamespaceName = model.microserviceNamespaceName;
+                this.mseInstanceId = model.mseInstanceId;
+                this.registryType = model.registryType;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The EDAS application ID.</p>
@@ -777,6 +836,16 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String eventBus; 
             private String eventSource; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventBridgeConfig model) {
+                this.eventBridgeRegionId = model.eventBridgeRegionId;
+                this.eventBus = model.eventBus;
+                this.eventSource = model.eventSource;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The region ID of the event bus in EventBridge.</p>
@@ -957,6 +1026,21 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String serviceName; 
             private String triggerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionComputeConfig model) {
+                this.fcBaseUrl = model.fcBaseUrl;
+                this.fcRegionId = model.fcRegionId;
+                this.fcType = model.fcType;
+                this.functionName = model.functionName;
+                this.onlyBusinessPath = model.onlyBusinessPath;
+                this.qualifier = model.qualifier;
+                this.roleArn = model.roleArn;
+                this.serviceName = model.serviceName;
+                this.triggerName = model.triggerName;
+            } 
+
             /**
              * <p>The root path of the Function Compute service.</p>
              * 
@@ -1108,6 +1192,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String headerName; 
             private String headerValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MockHeaders model) {
+                this.headerName = model.headerName;
+                this.headerValue = model.headerValue;
+            } 
+
             /**
              * <p>The header name.</p>
              * 
@@ -1193,6 +1285,15 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String mockResult; 
             private String mockStatusCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(MockConfig model) {
+                this.mockHeaders = model.mockHeaders;
+                this.mockResult = model.mockResult;
+                this.mockStatusCode = model.mockStatusCode;
+            } 
+
             /**
              * <p>The header in the mocked response.</p>
              */
@@ -1273,6 +1374,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String bucketName; 
             private String ossRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssConfig model) {
+                this.bucketName = model.bucketName;
+                this.ossRegionId = model.ossRegionId;
+            } 
 
             /**
              * <p>The name of the OSS bucket.</p>
@@ -1406,6 +1515,19 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcScheme; 
             private String vpcTargetHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcConfig model) {
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.port = model.port;
+                this.vpcAccessId = model.vpcAccessId;
+                this.vpcId = model.vpcId;
+                this.vpcScheme = model.vpcScheme;
+                this.vpcTargetHostName = model.vpcTargetHostName;
+            } 
 
             /**
              * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
@@ -1643,6 +1765,23 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String type; 
             private VpcConfig vpcConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.discoveryConfig = model.discoveryConfig;
+                this.edasConfig = model.edasConfig;
+                this.eventBridgeConfig = model.eventBridgeConfig;
+                this.functionComputeConfig = model.functionComputeConfig;
+                this.httpTargetHostName = model.httpTargetHostName;
+                this.mockConfig = model.mockConfig;
+                this.ossConfig = model.ossConfig;
+                this.serviceAddress = model.serviceAddress;
+                this.serviceTimeout = model.serviceTimeout;
+                this.type = model.type;
+                this.vpcConfig = model.vpcConfig;
+            } 
+
             /**
              * <p>The information about the backend service when the backend service is of the Service Discovery type.</p>
              */
@@ -1854,6 +1993,19 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String stageModeId; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendModels model) {
+                this.backendConfig = model.backendConfig;
+                this.backendModelId = model.backendModelId;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.stageModeId = model.stageModeId;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>The backend service configurations.</p>
              */
@@ -2038,6 +2190,19 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String createdTime; 
             private String description; 
             private String modifiedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendInfo model) {
+                this.backendId = model.backendId;
+                this.backendModels = model.backendModels;
+                this.backendName = model.backendName;
+                this.backendType = model.backendType;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.modifiedTime = model.modifiedTime;
+            } 
 
             /**
              * <p>The ID of the backend service.</p>

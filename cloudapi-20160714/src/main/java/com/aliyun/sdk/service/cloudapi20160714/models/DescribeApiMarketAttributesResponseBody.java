@@ -44,6 +44,10 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiId
      */
@@ -77,6 +81,16 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         private String marketChargingMode; 
         private String needCharging; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiMarketAttributesResponseBody model) {
+            this.apiId = model.apiId;
+            this.marketChargingMode = model.marketChargingMode;
+            this.needCharging = model.needCharging;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the API.</p>

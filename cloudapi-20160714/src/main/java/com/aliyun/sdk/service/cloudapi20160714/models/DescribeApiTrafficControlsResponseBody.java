@@ -48,6 +48,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiTrafficControls
      */
@@ -89,6 +93,17 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiTrafficControlsResponseBody model) {
+            this.apiTrafficControls = model.apiTrafficControls;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.</p>
@@ -228,6 +243,17 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
             private String trafficControlId; 
             private String trafficControlName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiTrafficControlItem model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.boundTime = model.boundTime;
+                this.trafficControlId = model.trafficControlId;
+                this.trafficControlName = model.trafficControlName;
+            } 
+
             /**
              * <p>The ID of the API.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiTrafficControlItem> apiTrafficControlItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiTrafficControls model) {
+                this.apiTrafficControlItem = model.apiTrafficControlItem;
+            } 
 
             /**
              * ApiTrafficControlItem.

@@ -48,6 +48,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acls
      */
@@ -89,6 +93,17 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessControlListsResponseBody model) {
+            this.acls = model.acls;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ACLs.</p>
@@ -204,6 +219,15 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String aclName; 
             private String addressIPVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Acl model) {
+                this.aclId = model.aclId;
+                this.aclName = model.aclName;
+                this.addressIPVersion = model.addressIPVersion;
+            } 
+
             /**
              * <p>The ID of the access control policy.</p>
              * 
@@ -279,6 +303,13 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Acl> acl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Acls model) {
+                this.acl = model.acl;
+            } 
 
             /**
              * Acl.

@@ -48,6 +48,10 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiInfoList
      */
@@ -89,6 +93,17 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiProductApisResponseBody model) {
+            this.apiInfoList = model.apiInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the returned APIs.</p>
@@ -276,6 +291,21 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             private String regionId; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiInfo model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.method = model.method;
+                this.path = model.path;
+                this.regionId = model.regionId;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -418,6 +448,13 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiInfo> apiInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiInfoList model) {
+                this.apiInfo = model.apiInfo;
+            } 
 
             /**
              * ApiInfo.

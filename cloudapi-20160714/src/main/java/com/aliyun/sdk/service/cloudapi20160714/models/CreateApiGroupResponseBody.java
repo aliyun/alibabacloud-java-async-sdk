@@ -64,6 +64,10 @@ public class CreateApiGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return basePath
      */
@@ -137,6 +141,21 @@ public class CreateApiGroupResponseBody extends TeaModel {
         private String requestId; 
         private String subDomain; 
         private Boolean tagStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApiGroupResponseBody model) {
+            this.basePath = model.basePath;
+            this.description = model.description;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.requestId = model.requestId;
+            this.subDomain = model.subDomain;
+            this.tagStatus = model.tagStatus;
+        } 
 
         /**
          * BasePath.

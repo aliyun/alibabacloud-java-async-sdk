@@ -48,6 +48,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipControlInfos
      */
@@ -89,6 +93,17 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpControlsResponseBody model) {
+            this.ipControlInfos = model.ipControlInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.</p>
@@ -252,6 +267,19 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             private String modifiedTime; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpControlInfo model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.ipControlId = model.ipControlId;
+                this.ipControlName = model.ipControlName;
+                this.ipControlType = model.ipControlType;
+                this.modifiedTime = model.modifiedTime;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The time when the ACL was created. The time is displayed in UTC.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeIpControlsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IpControlInfo> ipControlInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpControlInfos model) {
+                this.ipControlInfo = model.ipControlInfo;
+            } 
 
             /**
              * IpControlInfo.

@@ -103,7 +103,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -503,6 +503,14 @@ public class CreateInstanceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -599,6 +607,16 @@ public class CreateInstanceRequest extends Request {
             private String securityGroupId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneVSwitchSecurityGroup model) {
+                this.cidrBlock = model.cidrBlock;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The IPv4 CIDR block for the vSwitch.</p>

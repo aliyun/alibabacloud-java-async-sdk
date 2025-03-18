@@ -36,6 +36,10 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return latencyPacket
      */
@@ -53,6 +57,14 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
     public static final class Builder {
         private LatencyPacket latencyPacket; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupLatencyResponseBody model) {
+            this.latencyPacket = model.latencyPacket;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The latency information.</p>
@@ -135,6 +147,15 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.item = model.item;
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The metric. Valid values:</p>
              * <ul>
@@ -210,6 +231,13 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(LatencyPacket model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

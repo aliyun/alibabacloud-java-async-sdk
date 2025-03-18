@@ -48,6 +48,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetInfoList
      */
@@ -89,6 +93,17 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatasetListResponseBody model) {
+            this.datasetInfoList = model.datasetInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned dataset information. It is an array consisting of datasetinfo.</p>
@@ -191,6 +206,14 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -312,6 +335,18 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String datasetType; 
             private String modifiedTime; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatasetInfoList model) {
+                this.createdTime = model.createdTime;
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.datasetType = model.datasetType;
+                this.modifiedTime = model.modifiedTime;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The time when the dataset was created. The time is displayed in UTC.</p>

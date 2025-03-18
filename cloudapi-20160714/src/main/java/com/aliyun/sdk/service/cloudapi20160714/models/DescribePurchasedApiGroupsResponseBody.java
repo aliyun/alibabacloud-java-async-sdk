@@ -48,6 +48,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         private PurchasedApiGroupAttributes purchasedApiGroupAttributes; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePurchasedApiGroupsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.purchasedApiGroupAttributes = model.purchasedApiGroupAttributes;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -288,6 +303,22 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PurchasedApiGroupAttribute model) {
+                this.billingType = model.billingType;
+                this.description = model.description;
+                this.expireTime = model.expireTime;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.invokeTimesMax = model.invokeTimesMax;
+                this.invokeTimesNow = model.invokeTimesNow;
+                this.purchasedTime = model.purchasedTime;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The billing method.</p>
              * 
@@ -440,6 +471,13 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(PurchasedApiGroupAttributes model) {
+                this.purchasedApiGroupAttribute = model.purchasedApiGroupAttribute;
+            } 
 
             /**
              * PurchasedApiGroupAttribute.

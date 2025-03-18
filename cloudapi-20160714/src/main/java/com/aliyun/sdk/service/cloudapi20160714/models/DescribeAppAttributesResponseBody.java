@@ -48,6 +48,10 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apps
      */
@@ -89,6 +93,17 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppAttributesResponseBody model) {
+            this.apps = model.apps;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned app information. It is an array that consists of AppAttribute data.</p>
@@ -192,6 +207,14 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagInfo model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagInfo> tagInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagInfo = model.tagInfo;
+            } 
 
             /**
              * TagInfo.
@@ -372,6 +402,19 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private String modifiedTime; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppAttribute model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.extend = model.extend;
+                this.modifiedTime = model.modifiedTime;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The ID of the app.</p>
              * 
@@ -484,6 +527,13 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AppAttribute> appAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apps model) {
+                this.appAttribute = model.appAttribute;
+            } 
 
             /**
              * AppAttribute.

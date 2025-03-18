@@ -36,6 +36,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceSlbConnect
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
     public static final class Builder {
         private InstanceSlbConnect instanceSlbConnect; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceSlbConnectResponseBody model) {
+            this.instanceSlbConnect = model.instanceSlbConnect;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of concurrent connections in the instance.</p>
@@ -135,6 +147,15 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             private String itemTime; 
             private String itemValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItem model) {
+                this.item = model.item;
+                this.itemTime = model.itemTime;
+                this.itemValue = model.itemValue;
+            } 
+
             /**
              * <p>The metric. Valid values:</p>
              * <ul>
@@ -211,6 +232,13 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MonitorItem> monitorItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSlbConnect model) {
+                this.monitorItem = model.monitorItem;
+            } 
 
             /**
              * MonitorItem.

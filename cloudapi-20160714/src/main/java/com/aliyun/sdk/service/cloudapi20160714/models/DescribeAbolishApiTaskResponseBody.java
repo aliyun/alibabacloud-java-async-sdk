@@ -36,6 +36,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiAbolishResults
      */
@@ -53,6 +57,14 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
     public static final class Builder {
         private ApiAbolishResults apiAbolishResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAbolishApiTaskResponseBody model) {
+            this.apiAbolishResults = model.apiAbolishResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result returned.</p>
@@ -195,6 +207,20 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             private String stageId; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiAbolishResult model) {
+                this.abolishStatus = model.abolishStatus;
+                this.apiName = model.apiName;
+                this.apiUid = model.apiUid;
+                this.errorMsg = model.errorMsg;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.stageId = model.stageId;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>The unpublishing status.</p>
              * 
@@ -325,6 +351,13 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiAbolishResult> apiAbolishResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiAbolishResults model) {
+                this.apiAbolishResult = model.apiAbolishResult;
+            } 
 
             /**
              * ApiAbolishResult.

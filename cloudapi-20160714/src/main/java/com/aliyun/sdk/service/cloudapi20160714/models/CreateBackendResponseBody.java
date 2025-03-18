@@ -36,6 +36,10 @@ public class CreateBackendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendId
      */
@@ -53,6 +57,14 @@ public class CreateBackendResponseBody extends TeaModel {
     public static final class Builder {
         private String backendId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBackendResponseBody model) {
+            this.backendId = model.backendId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the backend service.</p>

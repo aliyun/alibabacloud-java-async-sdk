@@ -48,6 +48,10 @@ public class DescribePluginApisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiSummarys
      */
@@ -89,6 +93,17 @@ public class DescribePluginApisResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePluginApisResponseBody model) {
+            this.apiSummarys = model.apiSummarys;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about APIs.</p>
@@ -288,6 +303,22 @@ public class DescribePluginApisResponseBody extends TeaModel {
             private String stageAlias; 
             private String stageName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiPluginSummary model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.method = model.method;
+                this.path = model.path;
+                this.regionId = model.regionId;
+                this.stageAlias = model.stageAlias;
+                this.stageName = model.stageName;
+            } 
+
             /**
              * <p>The API ID.</p>
              * 
@@ -441,6 +472,13 @@ public class DescribePluginApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ApiPluginSummary> apiPluginSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiSummarys model) {
+                this.apiPluginSummary = model.apiPluginSummary;
+            } 
 
             /**
              * ApiPluginSummary.

@@ -52,7 +52,7 @@ public class UpdatePrivateDNSRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,6 +203,14 @@ public class UpdatePrivateDNSRequest extends Request {
         public static final class Builder {
             private String record; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The resolution record.</p>

@@ -36,6 +36,10 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apis
      */
@@ -53,6 +57,14 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
     public static final class Builder {
         private Apis apis; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveVpcAccessResponseBody model) {
+            this.apis = model.apis;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>API operations</p>
@@ -135,6 +147,15 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
             private String groupId; 
             private String stageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Api model) {
+                this.apiId = model.apiId;
+                this.groupId = model.groupId;
+                this.stageId = model.stageId;
+            } 
+
             /**
              * <p>API Id</p>
              * 
@@ -206,6 +227,13 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Api> api; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apis model) {
+                this.api = model.api;
+            } 
 
             /**
              * Api.
