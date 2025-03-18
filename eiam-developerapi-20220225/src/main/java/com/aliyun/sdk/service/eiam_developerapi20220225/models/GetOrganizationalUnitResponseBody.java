@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link GetOrganizationalUnitResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrganizationalUnitResponseBody</p>
  */
 public class GetOrganizationalUnitResponseBody extends TeaModel {
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("organizationalUnitExternalId")
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitExternalId")
     private String organizationalUnitExternalId;
 
-    @NameInMap("organizationalUnitId")
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitId")
     private String organizationalUnitId;
 
-    @NameInMap("organizationalUnitName")
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitName")
     private String organizationalUnitName;
 
-    @NameInMap("organizationalUnitSourceId")
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitSourceId")
     private String organizationalUnitSourceId;
 
-    @NameInMap("organizationalUnitSourceType")
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitSourceType")
     private String organizationalUnitSourceType;
 
-    @NameInMap("parentId")
+    @com.aliyun.core.annotation.NameInMap("parentId")
     private String parentId;
 
-    @NameInMap("updateTime")
+    @com.aliyun.core.annotation.NameInMap("updateTime")
     private Long updateTime;
 
     private GetOrganizationalUnitResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
 
     public static GetOrganizationalUnitResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -145,8 +154,27 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         private String parentId; 
         private Long updateTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetOrganizationalUnitResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.instanceId = model.instanceId;
+            this.organizationalUnitExternalId = model.organizationalUnitExternalId;
+            this.organizationalUnitId = model.organizationalUnitId;
+            this.organizationalUnitName = model.organizationalUnitName;
+            this.organizationalUnitSourceId = model.organizationalUnitSourceId;
+            this.organizationalUnitSourceType = model.organizationalUnitSourceType;
+            this.parentId = model.parentId;
+            this.updateTime = model.updateTime;
+        } 
+
         /**
-         * createTime.
+         * <p>The time when the organizational unit was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652083425923</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -154,7 +182,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -162,7 +193,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -170,7 +204,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * organizationalUnitExternalId.
+         * <p>The external ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
             this.organizationalUnitExternalId = organizationalUnitExternalId;
@@ -178,7 +215,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * organizationalUnitId.
+         * <p>The ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
@@ -186,7 +226,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * organizationalUnitName.
+         * <p>The name of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.organizationalUnitName = organizationalUnitName;
@@ -194,7 +237,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * organizationalUnitSourceId.
+         * <p>The source ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitSourceId(String organizationalUnitSourceId) {
             this.organizationalUnitSourceId = organizationalUnitSourceId;
@@ -202,7 +248,16 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * organizationalUnitSourceType.
+         * <p>The source type of the organizational unit. Valid values:</p>
+         * <ul>
+         * <li>build_in: The organizational unit was created in Identity as a Service (IDaaS).</li>
+         * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
+         * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
+         * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         public Builder organizationalUnitSourceType(String organizationalUnitSourceType) {
             this.organizationalUnitSourceType = organizationalUnitSourceType;
@@ -210,7 +265,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * parentId.
+         * <p>The ID of the parent organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder parentId(String parentId) {
             this.parentId = parentId;
@@ -218,7 +276,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The time when the organizational unit was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652083425923</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitsRequest} extends {@link RequestModel}
  *
  * <p>ListOrganizationalUnitsRequest</p>
  */
 public class ListOrganizationalUnitsRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("parentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentId;
 
     private ListOrganizationalUnitsRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +156,11 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -160,7 +169,11 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -169,7 +182,11 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer AT8csE2seYxxxxxij</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -178,7 +195,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -187,7 +207,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -196,7 +219,11 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * parentId.
+         * <p>The ID of the parent organizational unit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("parentId", parentId);

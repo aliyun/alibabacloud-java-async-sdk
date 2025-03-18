@@ -1,88 +1,93 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Body
-    @NameInMap("customFields")
-    private java.util.List < CustomFields> customFields;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customFields")
+    private java.util.List<CustomFields> customFields;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("displayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
 
-    @Body
-    @NameInMap("email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("email")
     private String email;
 
-    @Body
-    @NameInMap("emailVerified")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("emailVerified")
     private Boolean emailVerified;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Body
-    @NameInMap("passwordInitializationConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passwordInitializationConfig")
     private PasswordInitializationConfig passwordInitializationConfig;
 
-    @Body
-    @NameInMap("phoneNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneNumber")
     private String phoneNumber;
 
-    @Body
-    @NameInMap("phoneNumberVerified")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneNumberVerified")
     private Boolean phoneNumberVerified;
 
-    @Body
-    @NameInMap("phoneRegion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneRegion")
     private String phoneRegion;
 
-    @Body
-    @NameInMap("primaryOrganizationalUnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("primaryOrganizationalUnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryOrganizationalUnitId;
 
-    @Body
-    @NameInMap("userExternalId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userExternalId")
     private String userExternalId;
 
-    @Body
-    @NameInMap("username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private CreateUserRequest(Builder builder) {
@@ -114,7 +119,7 @@ public class CreateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -150,7 +155,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return customFields
      */
-    public java.util.List < CustomFields> getCustomFields() {
+    public java.util.List<CustomFields> getCustomFields() {
         return this.customFields;
     }
 
@@ -243,7 +248,7 @@ public class CreateUserRequest extends Request {
         private String instanceId; 
         private String applicationId; 
         private String authorization; 
-        private java.util.List < CustomFields> customFields; 
+        private java.util.List<CustomFields> customFields; 
         private String description; 
         private String displayName; 
         private String email; 
@@ -292,7 +297,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -301,7 +310,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -310,7 +323,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer AT8csE2seYxxxxxij</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -319,16 +336,19 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * customFields.
+         * <p>Custom fields</p>
          */
-        public Builder customFields(java.util.List < CustomFields> customFields) {
+        public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putBodyParameter("customFields", customFields);
             this.customFields = customFields;
             return this;
         }
 
         /**
-         * description.
+         * <p>The description of the account. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test user</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -337,7 +357,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>display_name001</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -346,7 +369,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * email.
+         * <p>The email address of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:example@example.com">example@example.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -355,7 +381,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * emailVerified.
+         * <p>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putBodyParameter("emailVerified", emailVerified);
@@ -364,7 +393,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The password of the account. For information about the password rules, go to the Create User panel in the Identity as a Service (IDaaS) console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -373,7 +405,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * passwordInitializationConfig.
+         * <p>Configure the initial password</p>
          */
         public Builder passwordInitializationConfig(PasswordInitializationConfig passwordInitializationConfig) {
             this.putBodyParameter("passwordInitializationConfig", passwordInitializationConfig);
@@ -382,7 +414,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * phoneNumber.
+         * <p>The mobile number of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156xxxxxxx</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("phoneNumber", phoneNumber);
@@ -391,7 +426,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * phoneNumberVerified.
+         * <p>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putBodyParameter("phoneNumberVerified", phoneNumberVerified);
@@ -400,7 +438,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * phoneRegion.
+         * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +. This parameter is required if a mobile number is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putBodyParameter("phoneRegion", phoneRegion);
@@ -409,7 +450,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * primaryOrganizationalUnitId.
+         * <p>The ID of the primary organizational unit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
             this.putBodyParameter("primaryOrganizationalUnitId", primaryOrganizationalUnitId);
@@ -418,7 +463,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * userExternalId.
+         * <p>The external ID of the account. The external ID can be used to map external data to the data of the account in EIAM of Identity as a Service (IDaaS). By default, the external ID is the account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userExternalId(String userExternalId) {
             this.putBodyParameter("userExternalId", userExternalId);
@@ -427,7 +475,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);
@@ -442,11 +494,17 @@ public class CreateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserRequest</p>
+     */
     public static class CustomFields extends TeaModel {
-        @NameInMap("fieldName")
+        @com.aliyun.core.annotation.NameInMap("fieldName")
         private String fieldName;
 
-        @NameInMap("fieldValue")
+        @com.aliyun.core.annotation.NameInMap("fieldValue")
         private String fieldValue;
 
         private CustomFields(Builder builder) {
@@ -480,8 +538,19 @@ public class CreateUserRequest extends Request {
             private String fieldName; 
             private String fieldValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+            } 
+
             /**
-             * fieldName.
+             * <p>Field name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -489,7 +558,10 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * fieldValue.
+             * <p>Filed value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fieldValue_001</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -503,18 +575,24 @@ public class CreateUserRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUserRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserRequest</p>
+     */
     public static class PasswordInitializationConfig extends TeaModel {
-        @NameInMap("passwordForcedUpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("passwordForcedUpdateStatus")
         private String passwordForcedUpdateStatus;
 
-        @NameInMap("passwordInitializationPolicyPriority")
+        @com.aliyun.core.annotation.NameInMap("passwordInitializationPolicyPriority")
         private String passwordInitializationPolicyPriority;
 
-        @NameInMap("passwordInitializationType")
+        @com.aliyun.core.annotation.NameInMap("passwordInitializationType")
         private String passwordInitializationType;
 
-        @NameInMap("userNotificationChannels")
-        private java.util.List < String > userNotificationChannels;
+        @com.aliyun.core.annotation.NameInMap("userNotificationChannels")
+        private java.util.List<String> userNotificationChannels;
 
         private PasswordInitializationConfig(Builder builder) {
             this.passwordForcedUpdateStatus = builder.passwordForcedUpdateStatus;
@@ -555,7 +633,7 @@ public class CreateUserRequest extends Request {
         /**
          * @return userNotificationChannels
          */
-        public java.util.List < String > getUserNotificationChannels() {
+        public java.util.List<String> getUserNotificationChannels() {
             return this.userNotificationChannels;
         }
 
@@ -563,10 +641,23 @@ public class CreateUserRequest extends Request {
             private String passwordForcedUpdateStatus; 
             private String passwordInitializationPolicyPriority; 
             private String passwordInitializationType; 
-            private java.util.List < String > userNotificationChannels; 
+            private java.util.List<String> userNotificationChannels; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordInitializationConfig model) {
+                this.passwordForcedUpdateStatus = model.passwordForcedUpdateStatus;
+                this.passwordInitializationPolicyPriority = model.passwordInitializationPolicyPriority;
+                this.passwordInitializationType = model.passwordInitializationType;
+                this.userNotificationChannels = model.userNotificationChannels;
+            } 
 
             /**
-             * passwordForcedUpdateStatus.
+             * <p>Password  forced update</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
                 this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
@@ -574,7 +665,10 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * passwordInitializationPolicyPriority.
+             * <p>Password policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder passwordInitializationPolicyPriority(String passwordInitializationPolicyPriority) {
                 this.passwordInitializationPolicyPriority = passwordInitializationPolicyPriority;
@@ -582,7 +676,10 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * passwordInitializationType.
+             * <p>Password Initialization Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>random</p>
              */
             public Builder passwordInitializationType(String passwordInitializationType) {
                 this.passwordInitializationType = passwordInitializationType;
@@ -590,9 +687,12 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * userNotificationChannels.
+             * <p>User Notification Channels</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sms</p>
              */
-            public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
+            public Builder userNotificationChannels(java.util.List<String> userNotificationChannels) {
                 this.userNotificationChannels = userNotificationChannels;
                 return this;
             }

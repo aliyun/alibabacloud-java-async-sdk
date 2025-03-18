@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link RevokeTokenRequest} extends {@link RequestModel}
  *
  * <p>RevokeTokenRequest</p>
  */
 public class RevokeTokenRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Query
-    @NameInMap("client_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("client_id")
     private String clientId;
 
-    @Query
-    @NameInMap("client_secret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("client_secret")
     private String clientSecret;
 
-    @Query
-    @NameInMap("token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String token;
 
-    @Query
-    @NameInMap("token_type_hint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("token_type_hint")
     private String tokenTypeHint;
 
     private RevokeTokenRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class RevokeTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -150,7 +155,11 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -159,7 +168,11 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -168,7 +181,10 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * client_id.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("client_id", clientId);
@@ -177,7 +193,10 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * client_secret.
+         * <p>The client secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("client_secret", clientSecret);
@@ -186,7 +205,11 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * token.
+         * <p>The token to be revoked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATxxxx</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("token", token);
@@ -195,7 +218,10 @@ public class RevokeTokenRequest extends Request {
         }
 
         /**
-         * token_type_hint.
+         * <p>The type of the token. Valid values: access_token refresh_token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_token</p>
          */
         public Builder tokenTypeHint(String tokenTypeHint) {
             this.putQueryParameter("token_type_hint", tokenTypeHint);

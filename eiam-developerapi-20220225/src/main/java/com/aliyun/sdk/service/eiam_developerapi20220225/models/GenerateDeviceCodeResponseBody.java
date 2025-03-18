@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link GenerateDeviceCodeResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateDeviceCodeResponseBody</p>
  */
 public class GenerateDeviceCodeResponseBody extends TeaModel {
-    @NameInMap("device_code")
+    @com.aliyun.core.annotation.NameInMap("device_code")
     private String deviceCode;
 
-    @NameInMap("expires_at")
+    @com.aliyun.core.annotation.NameInMap("expires_at")
     private Long expiresAt;
 
-    @NameInMap("expires_in")
+    @com.aliyun.core.annotation.NameInMap("expires_in")
     private Long expiresIn;
 
-    @NameInMap("interval")
+    @com.aliyun.core.annotation.NameInMap("interval")
     private Long interval;
 
-    @NameInMap("user_code")
+    @com.aliyun.core.annotation.NameInMap("user_code")
     private String userCode;
 
-    @NameInMap("verification_uri")
+    @com.aliyun.core.annotation.NameInMap("verification_uri")
     private String verificationUri;
 
-    @NameInMap("verification_uri_complete")
+    @com.aliyun.core.annotation.NameInMap("verification_uri_complete")
     private String verificationUriComplete;
 
     private GenerateDeviceCodeResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
 
     public static GenerateDeviceCodeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         private String verificationUri; 
         private String verificationUriComplete; 
 
+        private Builder() {
+        } 
+
+        private Builder(GenerateDeviceCodeResponseBody model) {
+            this.deviceCode = model.deviceCode;
+            this.expiresAt = model.expiresAt;
+            this.expiresIn = model.expiresIn;
+            this.interval = model.interval;
+            this.userCode = model.userCode;
+            this.verificationUri = model.verificationUri;
+            this.verificationUriComplete = model.verificationUriComplete;
+        } 
+
         /**
-         * device_code.
+         * <p>The device code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder deviceCode(String deviceCode) {
             this.deviceCode = deviceCode;
@@ -118,7 +143,10 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * expires_at.
+         * <p>The time when the token expires. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653288641</p>
          */
         public Builder expiresAt(Long expiresAt) {
             this.expiresAt = expiresAt;
@@ -126,7 +154,10 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * expires_in.
+         * <p>The remaining validity period of the device code. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         public Builder expiresIn(Long expiresIn) {
             this.expiresIn = expiresIn;
@@ -134,7 +165,10 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * interval.
+         * <p>The timeout period of the request token. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder interval(Long interval) {
             this.interval = interval;
@@ -142,7 +176,10 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * user_code.
+         * <p>The user authorization code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder userCode(String userCode) {
             this.userCode = userCode;
@@ -150,7 +187,10 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * verification_uri.
+         * <p>The verification URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/authorize/device">https://example.com/authorize/device</a></p>
          */
         public Builder verificationUri(String verificationUri) {
             this.verificationUri = verificationUri;
@@ -158,7 +198,11 @@ public class GenerateDeviceCodeResponseBody extends TeaModel {
         }
 
         /**
-         * verification_uri_complete.
+         * <p>The complete verification URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/authorize/device?user_code=">https://example.com/authorize/device?user_code=</a>
+         * xxxx</p>
          */
         public Builder verificationUriComplete(String verificationUriComplete) {
             this.verificationUriComplete = verificationUriComplete;

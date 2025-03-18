@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link PatchUserRequest} extends {@link RequestModel}
  *
  * <p>PatchUserRequest</p>
  */
 public class PatchUserRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Path
-    @NameInMap("userId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("userId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Body
-    @NameInMap("customFields")
-    private java.util.List < CustomFields> customFields;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customFields")
+    private java.util.List<CustomFields> customFields;
 
-    @Body
-    @NameInMap("displayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
 
-    @Body
-    @NameInMap("email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("email")
     private String email;
 
-    @Body
-    @NameInMap("emailVerified")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("emailVerified")
     private Boolean emailVerified;
 
-    @Body
-    @NameInMap("phoneNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneNumber")
     private String phoneNumber;
 
-    @Body
-    @NameInMap("phoneNumberVerified")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneNumberVerified")
     private Boolean phoneNumberVerified;
 
-    @Body
-    @NameInMap("phoneRegion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneRegion")
     private String phoneRegion;
 
-    @Body
-    @NameInMap("username")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("username")
     private String username;
 
     private PatchUserRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class PatchUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -136,7 +141,7 @@ public class PatchUserRequest extends Request {
     /**
      * @return customFields
      */
-    public java.util.List < CustomFields> getCustomFields() {
+    public java.util.List<CustomFields> getCustomFields() {
         return this.customFields;
     }
 
@@ -195,7 +200,7 @@ public class PatchUserRequest extends Request {
         private String applicationId; 
         private String userId; 
         private String authorization; 
-        private java.util.List < CustomFields> customFields; 
+        private java.util.List<CustomFields> customFields; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
@@ -235,7 +240,11 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -244,7 +253,11 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -253,7 +266,11 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>The account ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.putPathParameter("userId", userId);
@@ -262,7 +279,11 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer AT8csE2seYxxxxxij</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -273,14 +294,17 @@ public class PatchUserRequest extends Request {
         /**
          * customFields.
          */
-        public Builder customFields(java.util.List < CustomFields> customFields) {
+        public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putBodyParameter("customFields", customFields);
             this.customFields = customFields;
             return this;
         }
 
         /**
-         * displayName.
+         * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>display_name001</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -289,7 +313,10 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * email.
+         * <p>The email address of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:example@example.com">example@example.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -298,7 +325,10 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * emailVerified.
+         * <p>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putBodyParameter("emailVerified", emailVerified);
@@ -307,7 +337,10 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * phoneNumber.
+         * <p>The mobile number of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156xxxxxxx</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("phoneNumber", phoneNumber);
@@ -316,7 +349,10 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * phoneNumberVerified.
+         * <p>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putBodyParameter("phoneNumberVerified", phoneNumberVerified);
@@ -325,7 +361,10 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * phoneRegion.
+         * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +. This parameter is required if a mobile number is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putBodyParameter("phoneRegion", phoneRegion);
@@ -334,7 +373,10 @@ public class PatchUserRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);
@@ -349,17 +391,23 @@ public class PatchUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PatchUserRequest} extends {@link TeaModel}
+     *
+     * <p>PatchUserRequest</p>
+     */
     public static class CustomFields extends TeaModel {
-        @NameInMap("fieldName")
+        @com.aliyun.core.annotation.NameInMap("fieldName")
         private String fieldName;
 
-        @NameInMap("fieldValue")
+        @com.aliyun.core.annotation.NameInMap("fieldValue")
         private String fieldValue;
 
-        @NameInMap("operation")
+        @com.aliyun.core.annotation.NameInMap("operation")
         private String operation;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         @Deprecated
         private String operator;
 
@@ -412,6 +460,16 @@ public class PatchUserRequest extends Request {
             private String operation; 
             private String operator; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+                this.operation = model.operation;
+                this.operator = model.operator;
+            } 
+
             /**
              * fieldName.
              */
@@ -429,11 +487,15 @@ public class PatchUserRequest extends Request {
             }
 
             /**
-             * 字段操作类型，取值可选范围：
-             * <p>
-             * - add：添加。
-             * - replace：替换。若对应扩展字段无设置值，会转换为add操作。
-             * - remove：移除。
+             * <p>字段操作类型，取值可选范围：</p>
+             * <ul>
+             * <li>add：添加。</li>
+             * <li>replace：替换。若对应扩展字段无设置值，会转换为add操作。</li>
+             * <li>remove：移除。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>replace</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;

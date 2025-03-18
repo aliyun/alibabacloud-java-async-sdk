@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddUserToOrganizationalUnits  AddUserToOrganizationalUnitsRequest
+     * @return AddUserToOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<AddUserToOrganizationalUnitsResponse> addUserToOrganizationalUnits(AddUserToOrganizationalUnitsRequest request) {
         try {
@@ -53,6 +57,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUsersToGroup  AddUsersToGroupRequest
+     * @return AddUsersToGroupResponse
+     */
+    @Override
+    public CompletableFuture<AddUsersToGroupResponse> addUsersToGroup(AddUsersToGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddUsersToGroup").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/{applicationId}/groups/{groupId}/actions/addUsersToGroup").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddUsersToGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddUsersToGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroup").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/{applicationId}/groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateOrganizationalUnit  CreateOrganizationalUnitRequest
+     * @return CreateOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<CreateOrganizationalUnitResponse> createOrganizationalUnit(CreateOrganizationalUnitRequest request) {
         try {
@@ -67,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -81,6 +129,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteGroup").setMethod(HttpMethod.DELETE).setPathRegex("/v2/{instanceId}/{applicationId}/groups/{groupId}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteOrganizationalUnit  DeleteOrganizationalUnitRequest
+     * @return DeleteOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<DeleteOrganizationalUnitResponse> deleteOrganizationalUnit(DeleteOrganizationalUnitRequest request) {
         try {
@@ -95,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -109,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableUser  DisableUserRequest
+     * @return DisableUserResponse
+     */
     @Override
     public CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request) {
         try {
@@ -123,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableUser  EnableUserRequest
+     * @return EnableUserResponse
+     */
     @Override
     public CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request) {
         try {
@@ -137,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateDeviceCode  GenerateDeviceCodeRequest
+     * @return GenerateDeviceCodeResponse
+     */
     @Override
     public CompletableFuture<GenerateDeviceCodeResponse> generateDeviceCode(GenerateDeviceCodeRequest request) {
         try {
@@ -151,6 +237,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GenerateToken  GenerateTokenRequest
+     * @return GenerateTokenResponse
+     */
     @Override
     public CompletableFuture<GenerateTokenResponse> generateToken(GenerateTokenRequest request) {
         try {
@@ -165,6 +262,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetApplicationProvisioningScope  GetApplicationProvisioningScopeRequest
+     * @return GetApplicationProvisioningScopeResponse
+     */
     @Override
     public CompletableFuture<GetApplicationProvisioningScopeResponse> getApplicationProvisioningScope(GetApplicationProvisioningScopeRequest request) {
         try {
@@ -179,6 +287,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGroup  GetGroupRequest
+     * @return GetGroupResponse
+     */
+    @Override
+    public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGroup").setMethod(HttpMethod.GET).setPathRegex("/v2/{instanceId}/{applicationId}/groups/{groupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetOrganizationalUnit  GetOrganizationalUnitRequest
+     * @return GetOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<GetOrganizationalUnitResponse> getOrganizationalUnit(GetOrganizationalUnitRequest request) {
         try {
@@ -193,6 +323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrganizationalUnitIdByExternalId  GetOrganizationalUnitIdByExternalIdRequest
+     * @return GetOrganizationalUnitIdByExternalIdResponse
+     */
     @Override
     public CompletableFuture<GetOrganizationalUnitIdByExternalIdResponse> getOrganizationalUnitIdByExternalId(GetOrganizationalUnitIdByExternalIdRequest request) {
         try {
@@ -207,6 +341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -221,6 +359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserIdByEmail  GetUserIdByEmailRequest
+     * @return GetUserIdByEmailResponse
+     */
     @Override
     public CompletableFuture<GetUserIdByEmailResponse> getUserIdByEmail(GetUserIdByEmailRequest request) {
         try {
@@ -235,6 +377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserIdByPhoneNumber  GetUserIdByPhoneNumberRequest
+     * @return GetUserIdByPhoneNumberResponse
+     */
     @Override
     public CompletableFuture<GetUserIdByPhoneNumberResponse> getUserIdByPhoneNumber(GetUserIdByPhoneNumberRequest request) {
         try {
@@ -249,6 +395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserIdByUserExternalId  GetUserIdByUserExternalIdRequest
+     * @return GetUserIdByUserExternalIdResponse
+     */
     @Override
     public CompletableFuture<GetUserIdByUserExternalIdResponse> getUserIdByUserExternalId(GetUserIdByUserExternalIdRequest request) {
         try {
@@ -263,6 +413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserIdByUsername  GetUserIdByUsernameRequest
+     * @return GetUserIdByUsernameResponse
+     */
     @Override
     public CompletableFuture<GetUserIdByUsernameResponse> getUserIdByUsername(GetUserIdByUsernameRequest request) {
         try {
@@ -277,6 +431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserInfo  GetUserInfoRequest
+     * @return GetUserInfoResponse
+     */
     @Override
     public CompletableFuture<GetUserInfoResponse> getUserInfo(GetUserInfoRequest request) {
         try {
@@ -291,6 +449,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroups  ListGroupsRequest
+     * @return ListGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListGroups").setMethod(HttpMethod.GET).setPathRegex("/v2/{instanceId}/{applicationId}/groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
+     * @return ListGroupsForUserResponse
+     */
+    @Override
+    public CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListGroupsForUser").setMethod(HttpMethod.GET).setPathRegex("/v2/{instanceId}/{applicationId}/users/{userId}/actions/listGroupsForUser").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGroupsForUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGroupsForUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOrganizationalUnitParentIds  ListOrganizationalUnitParentIdsRequest
+     * @return ListOrganizationalUnitParentIdsResponse
+     */
     @Override
     public CompletableFuture<ListOrganizationalUnitParentIdsResponse> listOrganizationalUnitParentIds(ListOrganizationalUnitParentIdsRequest request) {
         try {
@@ -305,6 +503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOrganizationalUnits  ListOrganizationalUnitsRequest
+     * @return ListOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<ListOrganizationalUnitsResponse> listOrganizationalUnits(ListOrganizationalUnitsRequest request) {
         try {
@@ -319,6 +521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -333,6 +539,49 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersForGroup  ListUsersForGroupRequest
+     * @return ListUsersForGroupResponse
+     */
+    @Override
+    public CompletableFuture<ListUsersForGroupResponse> listUsersForGroup(ListUsersForGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListUsersForGroup").setMethod(HttpMethod.GET).setPathRegex("/v2/{instanceId}/{applicationId}/groups/{groupId}/actions/listUsersForGroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUsersForGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUsersForGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PatchGroup  PatchGroupRequest
+     * @return PatchGroupResponse
+     */
+    @Override
+    public CompletableFuture<PatchGroupResponse> patchGroup(PatchGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PatchGroup").setMethod(HttpMethod.PATCH).setPathRegex("/v2/{instanceId}/{applicationId}/groups/{groupId}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PatchGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PatchGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The operation conforms to the HTTP PATCH request method. The value of a parameter is modified only if the parameter is specified in the request.</p>
+     * 
+     * @param request the request parameters of PatchOrganizationalUnit  PatchOrganizationalUnitRequest
+     * @return PatchOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<PatchOrganizationalUnitResponse> patchOrganizationalUnit(PatchOrganizationalUnitRequest request) {
         try {
@@ -347,6 +596,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>The operation conforms to the HTTP PATCH request method. The value of a parameter is modified only if the parameter is specified in the request.</p>
+     * 
+     * @param request the request parameters of PatchUser  PatchUserRequest
+     * @return PatchUserResponse
+     */
     @Override
     public CompletableFuture<PatchUserResponse> patchUser(PatchUserRequest request) {
         try {
@@ -361,6 +617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
+     * @return RemoveUserFromOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<RemoveUserFromOrganizationalUnitsResponse> removeUserFromOrganizationalUnits(RemoveUserFromOrganizationalUnitsRequest request) {
         try {
@@ -375,6 +635,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUsersFromGroup  RemoveUsersFromGroupRequest
+     * @return RemoveUsersFromGroupResponse
+     */
+    @Override
+    public CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveUsersFromGroup").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/{applicationId}/groups/{groupId}/actions/removeUsersFromGroup").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveUsersFromGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveUsersFromGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeToken  RevokeTokenRequest
+     * @return RevokeTokenResponse
+     */
     @Override
     public CompletableFuture<RevokeTokenResponse> revokeToken(RevokeTokenRequest request) {
         try {
@@ -389,6 +671,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetUserPrimaryOrganizationalUnit  SetUserPrimaryOrganizationalUnitRequest
+     * @return SetUserPrimaryOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<SetUserPrimaryOrganizationalUnitResponse> setUserPrimaryOrganizationalUnit(SetUserPrimaryOrganizationalUnitRequest request) {
         try {
@@ -403,6 +689,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserPassword  UpdateUserPasswordRequest
+     * @return UpdateUserPasswordResponse
+     */
     @Override
     public CompletableFuture<UpdateUserPasswordResponse> updateUserPassword(UpdateUserPasswordRequest request) {
         try {

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link UpdateUserPasswordRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserPasswordRequest</p>
  */
 public class UpdateUserPasswordRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Path
-    @NameInMap("userId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("userId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
     private UpdateUserPasswordRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class UpdateUserPasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +142,10 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -146,7 +154,10 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -155,7 +166,10 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.putPathParameter("userId", userId);
@@ -164,7 +178,10 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer xxxx</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);

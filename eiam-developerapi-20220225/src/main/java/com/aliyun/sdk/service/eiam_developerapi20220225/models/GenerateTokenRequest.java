@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link GenerateTokenRequest} extends {@link RequestModel}
  *
  * <p>GenerateTokenRequest</p>
  */
 public class GenerateTokenRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Query
-    @NameInMap("client_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("client_id")
     private String clientId;
 
-    @Query
-    @NameInMap("client_secret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("client_secret")
     private String clientSecret;
 
-    @Query
-    @NameInMap("code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @Query
-    @NameInMap("code_verifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("code_verifier")
     private String codeVerifier;
 
-    @Query
-    @NameInMap("device_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("device_code")
     private String deviceCode;
 
-    @Query
-    @NameInMap("exclusive_tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("exclusive_tag")
     private String exclusiveTag;
 
-    @Query
-    @NameInMap("grant_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("grant_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String grantType;
 
-    @Query
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Query
-    @NameInMap("redirect_uri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("redirect_uri")
     private String redirectUri;
 
-    @Query
-    @NameInMap("refresh_token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("refresh_token")
     private String refreshToken;
 
-    @Query
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Query
-    @NameInMap("username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("username")
     private String username;
 
     private GenerateTokenRequest(Builder builder) {
@@ -102,7 +107,7 @@ public class GenerateTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -262,7 +267,11 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -271,7 +280,11 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -280,7 +293,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * client_id.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("client_id", clientId);
@@ -289,7 +305,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * client_secret.
+         * <p>The client secret. This parameter is required if grant_type is set to client_credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("client_secret", clientSecret);
@@ -298,7 +317,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * code.
+         * <p>The authorization code. This parameter is required if grant_type is set to authorization_code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("code", code);
@@ -307,7 +329,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * code_verifier.
+         * <p>The verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder codeVerifier(String codeVerifier) {
             this.putQueryParameter("code_verifier", codeVerifier);
@@ -316,7 +341,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * device_code.
+         * <p>The device code. This parameter is required if grant_type is set to authorization_code.urn:ietf:params:oauth:grant-type:device_code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder deviceCode(String deviceCode) {
             this.putQueryParameter("device_code", deviceCode);
@@ -325,7 +353,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * exclusive_tag.
+         * <p>The excluded tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATxxx</p>
          */
         public Builder exclusiveTag(String exclusiveTag) {
             this.putQueryParameter("exclusive_tag", exclusiveTag);
@@ -334,7 +365,27 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * grant_type.
+         * <p>The authorization type. Valid values:</p>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li>authorization_code</li>
+         * <li>urn:ietf:params:oauth:grant-type:device_code</li>
+         * <li>refresh_token</li>
+         * <li>client_credentials: You must specify the client_id and client_secret parameters.</li>
+         * <li>password: This option is not supported.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_credentials</p>
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("grant_type", grantType);
@@ -343,7 +394,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("password", password);
@@ -352,7 +406,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * redirect_uri.
+         * <p>The redirect URI. This parameter is required if grant_type is set to authorization_code. The value of this parameter must be the same as the redirect URI in the request to obtain the authorization code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder redirectUri(String redirectUri) {
             this.putQueryParameter("redirect_uri", redirectUri);
@@ -361,7 +418,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * refresh_token.
+         * <p>The refreshed token. This parameter is required if grant_type is set to refresh_token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATxxx</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.putQueryParameter("refresh_token", refreshToken);
@@ -370,7 +430,16 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>The authorization scope. Valid values:</p>
+         * <ul>
+         * <li>openid</li>
+         * <li>email</li>
+         * <li>phone</li>
+         * <li>profile</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
@@ -379,7 +448,10 @@ public class GenerateTokenRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uesrname_001</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("username", username);

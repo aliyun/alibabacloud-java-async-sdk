@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link PatchOrganizationalUnitRequest} extends {@link RequestModel}
  *
  * <p>PatchOrganizationalUnitRequest</p>
  */
 public class PatchOrganizationalUnitRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Path
-    @NameInMap("organizationalUnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationalUnitId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("organizationalUnitName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitName")
     private String organizationalUnitName;
 
     private PatchOrganizationalUnitRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class PatchOrganizationalUnitRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +156,11 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -160,7 +169,11 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -169,7 +182,11 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * organizationalUnitId.
+         * <p>The ID of the organizational unit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putPathParameter("organizationalUnitId", organizationalUnitId);
@@ -178,7 +195,11 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer AT8csE2seYxxxxxij</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -187,7 +208,10 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test organizational unit</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -196,7 +220,10 @@ public class PatchOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * organizationalUnitName.
+         * <p>The name of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putBodyParameter("organizationalUnitName", organizationalUnitName);

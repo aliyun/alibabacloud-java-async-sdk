@@ -1,27 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitParentIdsResponse} extends {@link TeaModel}
  *
  * <p>ListOrganizationalUnitParentIdsResponse</p>
  */
 public class ListOrganizationalUnitParentIdsResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("body")
     private ListOrganizationalUnitParentIdsResponseBody body;
 
     private ListOrganizationalUnitParentIdsResponse(BuilderImpl builder) {
@@ -35,7 +37,7 @@ public class ListOrganizationalUnitParentIdsResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -43,7 +45,7 @@ public class ListOrganizationalUnitParentIdsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -63,7 +65,7 @@ public class ListOrganizationalUnitParentIdsResponse extends Response {
 
     public interface Builder extends Response.Builder<ListOrganizationalUnitParentIdsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -77,7 +79,7 @@ public class ListOrganizationalUnitParentIdsResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<ListOrganizationalUnitParentIdsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private ListOrganizationalUnitParentIdsResponseBody body; 
 
@@ -96,7 +98,7 @@ public class ListOrganizationalUnitParentIdsResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

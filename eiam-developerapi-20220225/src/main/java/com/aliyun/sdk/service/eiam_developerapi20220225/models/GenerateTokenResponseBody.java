@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link GenerateTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateTokenResponseBody</p>
  */
 public class GenerateTokenResponseBody extends TeaModel {
-    @NameInMap("access_token")
+    @com.aliyun.core.annotation.NameInMap("access_token")
     private String accessToken;
 
-    @NameInMap("expires_at")
+    @com.aliyun.core.annotation.NameInMap("expires_at")
     private Long expiresAt;
 
-    @NameInMap("expires_in")
+    @com.aliyun.core.annotation.NameInMap("expires_in")
     private Long expiresIn;
 
-    @NameInMap("id_token")
+    @com.aliyun.core.annotation.NameInMap("id_token")
     private String idToken;
 
-    @NameInMap("refresh_token")
+    @com.aliyun.core.annotation.NameInMap("refresh_token")
     private String refreshToken;
 
-    @NameInMap("token_type")
+    @com.aliyun.core.annotation.NameInMap("token_type")
     private String tokenType;
 
     private GenerateTokenResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GenerateTokenResponseBody extends TeaModel {
 
     public static GenerateTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class GenerateTokenResponseBody extends TeaModel {
         private String refreshToken; 
         private String tokenType; 
 
+        private Builder() {
+        } 
+
+        private Builder(GenerateTokenResponseBody model) {
+            this.accessToken = model.accessToken;
+            this.expiresAt = model.expiresAt;
+            this.expiresIn = model.expiresIn;
+            this.idToken = model.idToken;
+            this.refreshToken = model.refreshToken;
+            this.tokenType = model.tokenType;
+        } 
+
         /**
-         * access_token。
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATxxx</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -106,7 +130,10 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * expires_at.
+         * <p>The time when the token expires. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653288641</p>
          */
         public Builder expiresAt(Long expiresAt) {
             this.expiresAt = expiresAt;
@@ -114,7 +141,10 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * expires_in.
+         * <p>The remaining validity period of the token. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         public Builder expiresIn(Long expiresIn) {
             this.expiresIn = expiresIn;
@@ -122,7 +152,10 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * id_token。
+         * <p>The ID token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder idToken(String idToken) {
             this.idToken = idToken;
@@ -130,7 +163,10 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * refresh_token。
+         * <p>The refresh token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RTxxx</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.refreshToken = refreshToken;
@@ -138,7 +174,10 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * token_type.
+         * <p>The type of the token. Valid values: Basic Bearer</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer</p>
          */
         public Builder tokenType(String tokenType) {
             this.tokenType = tokenType;

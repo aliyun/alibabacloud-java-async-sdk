@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link GetOrganizationalUnitIdByExternalIdRequest} extends {@link RequestModel}
  *
  * <p>GetOrganizationalUnitIdByExternalIdRequest</p>
  */
 public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Body
-    @NameInMap("organizationalUnitExternalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitExternalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationalUnitExternalId;
 
-    @Body
-    @NameInMap("organizationalUnitSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationalUnitSourceId;
 
-    @Body
-    @NameInMap("organizationalUnitSourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationalUnitSourceType;
 
     private GetOrganizationalUnitIdByExternalIdRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +158,11 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -162,7 +171,11 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -171,7 +184,11 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer AT8csE2seYxxxxxij</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -180,7 +197,12 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         }
 
         /**
-         * organizationalUnitExternalId.
+         * <p>The external ID of the organizational unit. The external ID can be used to map external data to the data of the organizational unit in Employee Identity and Access Management (EIAM) of Identity as a Service (IDaaS). By default, the external ID is the organizational unit ID.</p>
+         * <p>Note: For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
             this.putBodyParameter("organizationalUnitExternalId", organizationalUnitExternalId);
@@ -189,7 +211,12 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         }
 
         /**
-         * organizationalUnitSourceId.
+         * <p>The source ID of the organizational unit.</p>
+         * <p>If the organizational unit was created in IDaaS, its source ID is the ID of the IDaaS instance. If the organizational unit was imported, its source ID is the enterprise ID in the source. For example, if the organizational unit was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder organizationalUnitSourceId(String organizationalUnitSourceId) {
             this.putBodyParameter("organizationalUnitSourceId", organizationalUnitSourceId);
@@ -198,7 +225,17 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends Request {
         }
 
         /**
-         * organizationalUnitSourceType.
+         * <p>The source type of the organizational unit. Valid values:</p>
+         * <ul>
+         * <li>build_in: The organizational unit was created in IDaaS.</li>
+         * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
+         * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
+         * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         public Builder organizationalUnitSourceType(String organizationalUnitSourceType) {
             this.putBodyParameter("organizationalUnitSourceType", organizationalUnitSourceType);

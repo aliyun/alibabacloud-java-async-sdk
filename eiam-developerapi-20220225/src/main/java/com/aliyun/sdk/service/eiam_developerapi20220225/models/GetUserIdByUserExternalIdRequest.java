@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link GetUserIdByUserExternalIdRequest} extends {@link RequestModel}
  *
  * <p>GetUserIdByUserExternalIdRequest</p>
  */
 public class GetUserIdByUserExternalIdRequest extends Request {
-    @Host
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("applicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("applicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Header
-    @NameInMap("Authorization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Authorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    @Body
-    @NameInMap("userExternalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userExternalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userExternalId;
 
-    @Body
-    @NameInMap("userSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userSourceId;
 
-    @Body
-    @NameInMap("userSourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userSourceType;
 
     private GetUserIdByUserExternalIdRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +158,11 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -162,7 +171,11 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * applicationId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -171,7 +184,11 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * Authorization.
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer AT8csE2seYxxxxxij</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -180,7 +197,11 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * userExternalId.
+         * <p>The external ID of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx001</p>
          */
         public Builder userExternalId(String userExternalId) {
             this.putBodyParameter("userExternalId", userExternalId);
@@ -189,7 +210,11 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * userSourceId.
+         * <p>The source ID of the account. If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder userSourceId(String userSourceId) {
             this.putBodyParameter("userSourceId", userSourceId);
@@ -198,7 +223,17 @@ public class GetUserIdByUserExternalIdRequest extends Request {
         }
 
         /**
-         * userSourceType.
+         * <p>The source type of the account. Valid values:</p>
+         * <ul>
+         * <li>build_in: The account was created in Identity as a Service (IDaaS).</li>
+         * <li>ding_talk: The account was imported from DingTalk.</li>
+         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
+         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         public Builder userSourceType(String userSourceType) {
             this.putBodyParameter("userSourceType", userSourceType);

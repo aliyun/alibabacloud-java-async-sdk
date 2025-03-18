@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam_developerapi20220225.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.eiam.dev.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
+ * 
  * {@link CreateUserResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserResponseBody</p>
  */
 public class CreateUserResponseBody extends TeaModel {
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private CreateUserResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class CreateUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return userId
      */
@@ -37,8 +46,18 @@ public class CreateUserResponseBody extends TeaModel {
     public static final class Builder {
         private String userId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateUserResponseBody model) {
+            this.userId = model.userId;
+        } 
+
         /**
-         * userId.
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
