@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,6 +39,10 @@ public class DescribeSoarRecordsRequest extends Request {
     private String playbookUuid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestUuid")
+    private String requestUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartMillis")
     private Long startMillis;
 
@@ -56,6 +65,7 @@ public class DescribeSoarRecordsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.playbookUuid = builder.playbookUuid;
+        this.requestUuid = builder.requestUuid;
         this.startMillis = builder.startMillis;
         this.taskStatus = builder.taskStatus;
         this.taskflowMd5 = builder.taskflowMd5;
@@ -70,7 +80,7 @@ public class DescribeSoarRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,6 +121,13 @@ public class DescribeSoarRecordsRequest extends Request {
     }
 
     /**
+     * @return requestUuid
+     */
+    public String getRequestUuid() {
+        return this.requestUuid;
+    }
+
+    /**
      * @return startMillis
      */
     public Long getStartMillis() {
@@ -144,6 +161,7 @@ public class DescribeSoarRecordsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String playbookUuid; 
+        private String requestUuid; 
         private Long startMillis; 
         private String taskStatus; 
         private String taskflowMd5; 
@@ -160,6 +178,7 @@ public class DescribeSoarRecordsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.playbookUuid = request.playbookUuid;
+            this.requestUuid = request.requestUuid;
             this.startMillis = request.startMillis;
             this.taskStatus = request.taskStatus;
             this.taskflowMd5 = request.taskflowMd5;
@@ -167,7 +186,7 @@ public class DescribeSoarRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+         * <p>The end time of the task execution, in 13-digit timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1683772744953</p>
@@ -179,7 +198,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Set the language type for requests and received messages. The default is <strong>zh</strong>. Values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -195,7 +214,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * <p>Set which page to start displaying the query results from. The default value is 1, indicating the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,9 +226,9 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
+         * <p>Specify the maximum number of data entries per page when performing a paginated query. The default number of entries per page is 20. If the PageSize parameter is empty, it will return 10 entries by default.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>It is recommended not to leave the PageSize value empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,9 +241,9 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The playbook UUID.</p>
+         * <p>The UUID of the playbook.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -238,7 +257,22 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a 13-byte timestamp.</p>
+         * <p>UUID of the playbook task execution.</p>
+         * <blockquote>
+         * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>6d412cfa-0905-4567-8a83-xxxxxx</p>
+         */
+        public Builder requestUuid(String requestUuid) {
+            this.putQueryParameter("RequestUuid", requestUuid);
+            this.requestUuid = requestUuid;
+            return this;
+        }
+
+        /**
+         * <p>The start time of the task execution, in 13-digit timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1683526284584</p>
@@ -250,11 +284,11 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The status of the task execution. Values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>inprogress</strong></li>
+         * <li><strong>success</strong>: Successful task.</li>
+         * <li><strong>failed</strong>: Failed task.</li>
+         * <li><strong>inprogress</strong>: Task in progress</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +301,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The MD5 value of the playbook.</p>
+         * <p>The MD5 value of the playbook configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>be0a4ef084dd174abe478df52xxxxx</p>
@@ -279,7 +313,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
+         * <p>The Alibaba Cloud account ID that executed the playbook task.</p>
          * 
          * <strong>example:</strong>
          * <p>127xxxx4392</p>

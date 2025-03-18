@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExecutePlaybooksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PlaybookMetrics")
-    private java.util.List < PlaybookMetrics> playbookMetrics;
+    private java.util.List<PlaybookMetrics> playbookMetrics;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playbookMetrics
      */
-    public java.util.List < PlaybookMetrics> getPlaybookMetrics() {
+    public java.util.List<PlaybookMetrics> getPlaybookMetrics() {
         return this.playbookMetrics;
     }
 
@@ -46,13 +55,21 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PlaybookMetrics> playbookMetrics; 
+        private java.util.List<PlaybookMetrics> playbookMetrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExecutePlaybooksResponseBody model) {
+            this.playbookMetrics = model.playbookMetrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The playbook.</p>
          */
-        public Builder playbookMetrics(java.util.List < PlaybookMetrics> playbookMetrics) {
+        public Builder playbookMetrics(java.util.List<PlaybookMetrics> playbookMetrics) {
             this.playbookMetrics = playbookMetrics;
             return this;
         }
@@ -153,6 +170,17 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             private String paramConfig; 
             private String paramType; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlaybookMetrics model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.paramConfig = model.paramConfig;
+                this.paramType = model.paramType;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The playbook description.</p>

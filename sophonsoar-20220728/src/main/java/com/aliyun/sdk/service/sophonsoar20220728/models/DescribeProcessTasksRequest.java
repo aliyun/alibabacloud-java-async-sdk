@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,12 +34,16 @@ public class DescribeProcessTasksRequest extends Request {
     private String entityUuid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventUuid")
+    private String eventUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Long pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -85,6 +94,10 @@ public class DescribeProcessTasksRequest extends Request {
     private String taskStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerSource")
+    private String triggerSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("YunCode")
     private String yunCode;
 
@@ -94,6 +107,7 @@ public class DescribeProcessTasksRequest extends Request {
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
         this.entityUuid = builder.entityUuid;
+        this.eventUuid = builder.eventUuid;
         this.orderField = builder.orderField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -108,6 +122,7 @@ public class DescribeProcessTasksRequest extends Request {
         this.source = builder.source;
         this.taskId = builder.taskId;
         this.taskStatus = builder.taskStatus;
+        this.triggerSource = builder.triggerSource;
         this.yunCode = builder.yunCode;
     }
 
@@ -119,7 +134,7 @@ public class DescribeProcessTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,6 +168,13 @@ public class DescribeProcessTasksRequest extends Request {
     }
 
     /**
+     * @return eventUuid
+     */
+    public String getEventUuid() {
+        return this.eventUuid;
+    }
+
+    /**
      * @return orderField
      */
     public String getOrderField() {
@@ -162,7 +184,7 @@ public class DescribeProcessTasksRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Long getPageNumber() {
         return this.pageNumber;
     }
 
@@ -251,6 +273,13 @@ public class DescribeProcessTasksRequest extends Request {
     }
 
     /**
+     * @return triggerSource
+     */
+    public String getTriggerSource() {
+        return this.triggerSource;
+    }
+
+    /**
      * @return yunCode
      */
     public String getYunCode() {
@@ -262,8 +291,9 @@ public class DescribeProcessTasksRequest extends Request {
         private String entityName; 
         private String entityType; 
         private String entityUuid; 
+        private String eventUuid; 
         private String orderField; 
-        private String pageNumber; 
+        private Long pageNumber; 
         private Integer pageSize; 
         private String paramContent; 
         private Long processActionEnd; 
@@ -276,6 +306,7 @@ public class DescribeProcessTasksRequest extends Request {
         private String source; 
         private String taskId; 
         private String taskStatus; 
+        private String triggerSource; 
         private String yunCode; 
 
         private Builder() {
@@ -288,6 +319,7 @@ public class DescribeProcessTasksRequest extends Request {
             this.entityName = request.entityName;
             this.entityType = request.entityType;
             this.entityUuid = request.entityUuid;
+            this.eventUuid = request.eventUuid;
             this.orderField = request.orderField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -302,6 +334,7 @@ public class DescribeProcessTasksRequest extends Request {
             this.source = request.source;
             this.taskId = request.taskId;
             this.taskStatus = request.taskStatus;
+            this.triggerSource = request.triggerSource;
             this.yunCode = request.yunCode;
         } 
 
@@ -360,6 +393,15 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
+         * EventUuid.
+         */
+        public Builder eventUuid(String eventUuid) {
+            this.putQueryParameter("EventUuid", eventUuid);
+            this.eventUuid = eventUuid;
+            return this;
+        }
+
+        /**
          * <p>The field that you use to sort the result.</p>
          * <blockquote>
          * <p> You can obtain the field from the response result.</p>
@@ -380,7 +422,7 @@ public class DescribeProcessTasksRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -557,6 +599,15 @@ public class DescribeProcessTasksRequest extends Request {
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
             this.taskStatus = taskStatus;
+            return this;
+        }
+
+        /**
+         * TriggerSource.
+         */
+        public Builder triggerSource(String triggerSource) {
+            this.putQueryParameter("TriggerSource", triggerSource);
+            this.triggerSource = triggerSource;
             return this;
         }
 

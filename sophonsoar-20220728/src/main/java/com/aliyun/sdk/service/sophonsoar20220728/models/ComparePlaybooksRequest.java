@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class ComparePlaybooksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,9 +120,9 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the second version.</p>
+         * <p>The ID of the second version.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+         * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -131,9 +136,9 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the first version.</p>
+         * <p>The ID of the first version.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+         * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

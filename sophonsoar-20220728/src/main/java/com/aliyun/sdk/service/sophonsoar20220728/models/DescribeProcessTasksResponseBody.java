@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
     private Page page;
 
     @com.aliyun.core.annotation.NameInMap("ProcessTasks")
-    private java.util.List < ProcessTasks> processTasks;
+    private java.util.List<ProcessTasks> processTasks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return page
      */
@@ -45,7 +54,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
     /**
      * @return processTasks
      */
-    public java.util.List < ProcessTasks> getProcessTasks() {
+    public java.util.List<ProcessTasks> getProcessTasks() {
         return this.processTasks;
     }
 
@@ -58,8 +67,17 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private Page page; 
-        private java.util.List < ProcessTasks> processTasks; 
+        private java.util.List<ProcessTasks> processTasks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProcessTasksResponseBody model) {
+            this.page = model.page;
+            this.processTasks = model.processTasks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -72,7 +90,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         /**
          * <p>The handling tasks.</p>
          */
-        public Builder processTasks(java.util.List < ProcessTasks> processTasks) {
+        public Builder processTasks(java.util.List<ProcessTasks> processTasks) {
             this.processTasks = processTasks;
             return this;
         }
@@ -150,6 +168,15 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The page number.</p>
              * 
@@ -218,6 +245,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrTip")
         private String errTip;
 
+        @com.aliyun.core.annotation.NameInMap("EventUuid")
+        private String eventUuid;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreateMillis")
         private Long gmtCreateMillis;
 
@@ -235,6 +265,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RemoveTime")
         private Long removeTime;
+
+        @com.aliyun.core.annotation.NameInMap("ReqUuid")
+        private String reqUuid;
 
         @com.aliyun.core.annotation.NameInMap("SceneCode")
         private String sceneCode;
@@ -254,6 +287,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
+        @com.aliyun.core.annotation.NameInMap("TriggerSource")
+        private String triggerSource;
+
         @com.aliyun.core.annotation.NameInMap("YunCode")
         private String yunCode;
 
@@ -265,18 +301,21 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             this.errCode = builder.errCode;
             this.errMsg = builder.errMsg;
             this.errTip = builder.errTip;
+            this.eventUuid = builder.eventUuid;
             this.gmtCreateMillis = builder.gmtCreateMillis;
             this.gmtModifiedMillis = builder.gmtModifiedMillis;
             this.inputParams = builder.inputParams;
             this.processStrategyUuid = builder.processStrategyUuid;
             this.processTime = builder.processTime;
             this.removeTime = builder.removeTime;
+            this.reqUuid = builder.reqUuid;
             this.sceneCode = builder.sceneCode;
             this.sceneName = builder.sceneName;
             this.scope = builder.scope;
             this.source = builder.source;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
+            this.triggerSource = builder.triggerSource;
             this.yunCode = builder.yunCode;
         }
 
@@ -338,6 +377,13 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventUuid
+         */
+        public String getEventUuid() {
+            return this.eventUuid;
+        }
+
+        /**
          * @return gmtCreateMillis
          */
         public Long getGmtCreateMillis() {
@@ -377,6 +423,13 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
          */
         public Long getRemoveTime() {
             return this.removeTime;
+        }
+
+        /**
+         * @return reqUuid
+         */
+        public String getReqUuid() {
+            return this.reqUuid;
         }
 
         /**
@@ -422,6 +475,13 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return triggerSource
+         */
+        public String getTriggerSource() {
+            return this.triggerSource;
+        }
+
+        /**
          * @return yunCode
          */
         public String getYunCode() {
@@ -436,19 +496,51 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private String errCode; 
             private String errMsg; 
             private String errTip; 
+            private String eventUuid; 
             private Long gmtCreateMillis; 
             private Long gmtModifiedMillis; 
             private String inputParams; 
             private String processStrategyUuid; 
             private Long processTime; 
             private Long removeTime; 
+            private String reqUuid; 
             private String sceneCode; 
             private String sceneName; 
             private String scope; 
             private String source; 
             private String taskId; 
             private Integer taskStatus; 
+            private String triggerSource; 
             private String yunCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessTasks model) {
+                this.creator = model.creator;
+                this.entityName = model.entityName;
+                this.entityType = model.entityType;
+                this.entityUuid = model.entityUuid;
+                this.errCode = model.errCode;
+                this.errMsg = model.errMsg;
+                this.errTip = model.errTip;
+                this.eventUuid = model.eventUuid;
+                this.gmtCreateMillis = model.gmtCreateMillis;
+                this.gmtModifiedMillis = model.gmtModifiedMillis;
+                this.inputParams = model.inputParams;
+                this.processStrategyUuid = model.processStrategyUuid;
+                this.processTime = model.processTime;
+                this.removeTime = model.removeTime;
+                this.reqUuid = model.reqUuid;
+                this.sceneCode = model.sceneCode;
+                this.sceneName = model.sceneName;
+                this.scope = model.scope;
+                this.source = model.source;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.triggerSource = model.triggerSource;
+                this.yunCode = model.yunCode;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account that is used to submit the handling task.</p>
@@ -525,6 +617,14 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
+             * EventUuid.
+             */
+            public Builder eventUuid(String eventUuid) {
+                this.eventUuid = eventUuid;
+                return this;
+            }
+
+            /**
              * <p>The creation time of the handling task. The value is a 13-digit timestamp.</p>
              * 
              * <strong>example:</strong>
@@ -591,6 +691,14 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
+             * ReqUuid.
+             */
+            public Builder reqUuid(String reqUuid) {
+                this.reqUuid = reqUuid;
+                return this;
+            }
+
+            /**
              * <p>The scenario code of the handling task.</p>
              * 
              * <strong>example:</strong>
@@ -653,6 +761,14 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
+                return this;
+            }
+
+            /**
+             * TriggerSource.
+             */
+            public Builder triggerSource(String triggerSource) {
+                this.triggerSource = triggerSource;
                 return this;
             }
 

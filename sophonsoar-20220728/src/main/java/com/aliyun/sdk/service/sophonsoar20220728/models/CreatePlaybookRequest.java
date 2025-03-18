@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,7 +50,7 @@ public class CreatePlaybookRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,7 @@ public class CreatePlaybookRequest extends Request {
         } 
 
         /**
-         * <p>The description of the playbook.</p>
+         * <p>Description of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a new version</p>
@@ -109,7 +114,7 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * <p>The name of the playbook.</p>
+         * <p>Name of the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +127,7 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the response. Valid values:</p>
+         * <p>Language type for receiving messages. Values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -138,7 +143,14 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * TaskflowType.
+         * <p>Playbook TaskFlow type.</p>
+         * <ul>
+         * <li><strong>x6</strong> : x6</li>
+         * <li><strong>bpmn</strong>: bpmn</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x6</p>
          */
         public Builder taskflowType(String taskflowType) {
             this.putBodyParameter("TaskflowType", taskflowType);

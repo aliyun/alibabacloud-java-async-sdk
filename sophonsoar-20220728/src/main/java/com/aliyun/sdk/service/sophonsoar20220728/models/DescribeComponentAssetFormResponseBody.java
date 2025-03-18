@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeComponentAssetFormResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return componentAssetForm
      */
@@ -48,6 +57,14 @@ public class DescribeComponentAssetFormResponseBody extends TeaModel {
     public static final class Builder {
         private String componentAssetForm; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeComponentAssetFormResponseBody model) {
+            this.componentAssetForm = model.componentAssetForm;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The metadata of the asset in the component. The value is a JSON array and contains the following fields:</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compareResult
      */
@@ -48,6 +57,14 @@ public class ComparePlaybooksResponseBody extends TeaModel {
     public static final class Builder {
         private CompareResult compareResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ComparePlaybooksResponseBody model) {
+            this.compareResult = model.compareResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The comparison result.</p>
@@ -130,6 +147,15 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             private Boolean _new; 
             private Boolean same; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompareResult model) {
+                this.description = model.description;
+                this._new = model._new;
+                this.same = model.same;
+            } 
+
             /**
              * <p>The description of the comparison result.</p>
              * 
@@ -157,7 +183,11 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the configurations of the two versions are the same. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <p>Indicates whether the configurations of the two versions are the same. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>

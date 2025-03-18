@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePopApiResponseBody extends TeaModel {
     private String apiName;
 
     @com.aliyun.core.annotation.NameInMap("OpenApiMetaList")
-    private java.util.List < OpenApiMetaList> openApiMetaList;
+    private java.util.List<OpenApiMetaList> openApiMetaList;
 
     @com.aliyun.core.annotation.NameInMap("PopCode")
     private String popCode;
@@ -43,6 +48,10 @@ public class DescribePopApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiName
      */
@@ -53,7 +62,7 @@ public class DescribePopApiResponseBody extends TeaModel {
     /**
      * @return openApiMetaList
      */
-    public java.util.List < OpenApiMetaList> getOpenApiMetaList() {
+    public java.util.List<OpenApiMetaList> getOpenApiMetaList() {
         return this.openApiMetaList;
     }
 
@@ -80,10 +89,21 @@ public class DescribePopApiResponseBody extends TeaModel {
 
     public static final class Builder {
         private String apiName; 
-        private java.util.List < OpenApiMetaList> openApiMetaList; 
+        private java.util.List<OpenApiMetaList> openApiMetaList; 
         private String popCode; 
         private String requestId; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePopApiResponseBody model) {
+            this.apiName = model.apiName;
+            this.openApiMetaList = model.openApiMetaList;
+            this.popCode = model.popCode;
+            this.requestId = model.requestId;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The name of the API.</p>
@@ -99,7 +119,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         /**
          * <p>The information about the API.</p>
          */
-        public Builder openApiMetaList(java.util.List < OpenApiMetaList> openApiMetaList) {
+        public Builder openApiMetaList(java.util.List<OpenApiMetaList> openApiMetaList) {
             this.openApiMetaList = openApiMetaList;
             return this;
         }
@@ -222,6 +242,17 @@ public class DescribePopApiResponseBody extends TeaModel {
             private String name; 
             private Boolean required; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpenApiMetaList model) {
+                this.description = model.description;
+                this.exampleValue = model.exampleValue;
+                this.name = model.name;
+                this.required = model.required;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The parameter description.</p>

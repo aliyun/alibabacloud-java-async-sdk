@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playbook
      */
@@ -48,6 +57,14 @@ public class DescribePlaybookResponseBody extends TeaModel {
     public static final class Builder {
         private Playbook playbook; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlaybookResponseBody model) {
+            this.playbook = model.playbook;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration of the playbook.</p>
@@ -81,9 +98,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
      * <p>DescribePlaybookResponseBody</p>
      */
     public static class Playbook extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Creator")
-        private String creator;
-
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -104,9 +118,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LastExeTime")
         private Long lastExeTime;
-
-        @com.aliyun.core.annotation.NameInMap("Modifier")
-        private String modifier;
 
         @com.aliyun.core.annotation.NameInMap("OnlineActive")
         private Boolean onlineActive;
@@ -130,7 +141,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
         private String taskflowType;
 
         private Playbook(Builder builder) {
-            this.creator = builder.creator;
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.failExeNum = builder.failExeNum;
@@ -138,7 +148,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.inputParams = builder.inputParams;
             this.lastExeTime = builder.lastExeTime;
-            this.modifier = builder.modifier;
             this.onlineActive = builder.onlineActive;
             this.onlineReleaseTaskflowMd5 = builder.onlineReleaseTaskflowMd5;
             this.ownType = builder.ownType;
@@ -154,13 +163,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
 
         public static Playbook create() {
             return builder().build();
-        }
-
-        /**
-         * @return creator
-         */
-        public String getCreator() {
-            return this.creator;
         }
 
         /**
@@ -213,13 +215,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * @return modifier
-         */
-        public String getModifier() {
-            return this.modifier;
-        }
-
-        /**
          * @return onlineActive
          */
         public Boolean getOnlineActive() {
@@ -269,7 +264,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String creator; 
             private String description; 
             private String displayName; 
             private Integer failExeNum; 
@@ -277,7 +271,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
             private String gmtModified; 
             private String inputParams; 
             private Long lastExeTime; 
-            private String modifier; 
             private Boolean onlineActive; 
             private String onlineReleaseTaskflowMd5; 
             private String ownType; 
@@ -286,16 +279,25 @@ public class DescribePlaybookResponseBody extends TeaModel {
             private String taskflow; 
             private String taskflowType; 
 
-            /**
-             * <p>The ID of the Alibaba Cloud account that is used to create the playbook.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>124xxxxx3435</p>
-             */
-            public Builder creator(String creator) {
-                this.creator = creator;
-                return this;
-            }
+            private Builder() {
+            } 
+
+            private Builder(Playbook model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.failExeNum = model.failExeNum;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.inputParams = model.inputParams;
+                this.lastExeTime = model.lastExeTime;
+                this.onlineActive = model.onlineActive;
+                this.onlineReleaseTaskflowMd5 = model.onlineReleaseTaskflowMd5;
+                this.ownType = model.ownType;
+                this.playbookUuid = model.playbookUuid;
+                this.successExeNum = model.successExeNum;
+                this.taskflow = model.taskflow;
+                this.taskflowType = model.taskflowType;
+            } 
 
             /**
              * <p>The description of the playbook.</p>
@@ -384,17 +386,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
              */
             public Builder lastExeTime(Long lastExeTime) {
                 this.lastExeTime = lastExeTime;
-                return this;
-            }
-
-            /**
-             * <p>The ID of the Alibaba Cloud account that is used to modify the playbook.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>124xxxxx3435</p>
-             */
-            public Builder modifier(String modifier) {
-                this.modifier = modifier;
                 return this;
             }
 

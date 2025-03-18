@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSophonCommandsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,13 +55,21 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSophonCommandsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The commands.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -142,6 +159,16 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             private Boolean necessary; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamConfig model) {
+                this.checkField = model.checkField;
+                this.field = model.field;
+                this.necessary = model.necessary;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</p>
              * 
@@ -214,7 +241,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ParamConfig")
-        private java.util.List < ParamConfig> paramConfig;
+        private java.util.List<ParamConfig> paramConfig;
 
         private Data(Builder builder) {
             this.description = builder.description;
@@ -255,7 +282,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         /**
          * @return paramConfig
          */
-        public java.util.List < ParamConfig> getParamConfig() {
+        public java.util.List<ParamConfig> getParamConfig() {
             return this.paramConfig;
         }
 
@@ -263,7 +290,17 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String name; 
-            private java.util.List < ParamConfig> paramConfig; 
+            private java.util.List<ParamConfig> paramConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.paramConfig = model.paramConfig;
+            } 
 
             /**
              * <p>The description of the command.</p>
@@ -301,7 +338,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             /**
              * <p>The parameter configurations.</p>
              */
-            public Builder paramConfig(java.util.List < ParamConfig> paramConfig) {
+            public Builder paramConfig(java.util.List<ParamConfig> paramConfig) {
                 this.paramConfig = paramConfig;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeComponentPlaybookResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Playbooks")
-    private java.util.List < Playbooks> playbooks;
+    private java.util.List<Playbooks> playbooks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playbooks
      */
-    public java.util.List < Playbooks> getPlaybooks() {
+    public java.util.List<Playbooks> getPlaybooks() {
         return this.playbooks;
     }
 
@@ -46,13 +55,21 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Playbooks> playbooks; 
+        private java.util.List<Playbooks> playbooks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeComponentPlaybookResponseBody model) {
+            this.playbooks = model.playbooks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the predefined components.</p>
          */
-        public Builder playbooks(java.util.List < Playbooks> playbooks) {
+        public Builder playbooks(java.util.List<Playbooks> playbooks) {
             this.playbooks = playbooks;
             return this;
         }
@@ -129,6 +146,15 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String inputParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(Playbooks model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.inputParams = model.inputParams;
+            } 
 
             /**
              * <p>The description of the predefined component.</p>

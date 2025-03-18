@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeNodeUsedInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeUsedInfos
      */
@@ -48,6 +57,14 @@ public class DescribeNodeUsedInfosResponseBody extends TeaModel {
     public static final class Builder {
         private String nodeUsedInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNodeUsedInfosResponseBody model) {
+            this.nodeUsedInfos = model.nodeUsedInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The node reference information. The value is in the JSON format and contains the following fields:</p>

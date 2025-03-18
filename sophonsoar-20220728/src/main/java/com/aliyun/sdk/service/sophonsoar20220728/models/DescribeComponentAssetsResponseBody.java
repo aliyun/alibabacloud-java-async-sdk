@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeComponentAssetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ComponentAssets")
-    private java.util.List < ComponentAssets> componentAssets;
+    private java.util.List<ComponentAssets> componentAssets;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return componentAssets
      */
-    public java.util.List < ComponentAssets> getComponentAssets() {
+    public java.util.List<ComponentAssets> getComponentAssets() {
         return this.componentAssets;
     }
 
@@ -46,13 +55,21 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ComponentAssets> componentAssets; 
+        private java.util.List<ComponentAssets> componentAssets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeComponentAssetsResponseBody model) {
+            this.componentAssets = model.componentAssets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the assets.</p>
          */
-        public Builder componentAssets(java.util.List < ComponentAssets> componentAssets) {
+        public Builder componentAssets(java.util.List<ComponentAssets> componentAssets) {
             this.componentAssets = componentAssets;
             return this;
         }
@@ -177,6 +194,19 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private String params; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentAssets model) {
+                this.assetUuid = model.assetUuid;
+                this.componentname = model.componentname;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.params = model.params;
+            } 
 
             /**
              * <p>The UUID of the asset.</p>

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeApiListResponse} extends {@link TeaModel}
+ * {@link DescribeGroupProductionsResponse} extends {@link TeaModel}
  *
- * <p>DescribeApiListResponse</p>
+ * <p>DescribeGroupProductionsResponse</p>
  */
-public class DescribeApiListResponse extends Response {
+public class DescribeGroupProductionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeApiListResponseBody body;
+    private DescribeGroupProductionsResponseBody body;
 
-    private DescribeApiListResponse(BuilderImpl builder) {
+    private DescribeGroupProductionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeApiListResponse create() {
+    public static DescribeGroupProductionsResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class DescribeApiListResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class DescribeApiListResponse extends Response {
     /**
      * @return body
      */
-    public DescribeApiListResponseBody getBody() {
+    public DescribeGroupProductionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeApiListResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeGroupProductionsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeApiListResponseBody body);
+        Builder body(DescribeGroupProductionsResponseBody body);
 
         @Override
-        DescribeApiListResponse build();
+        DescribeGroupProductionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeApiListResponse, Builder>
+            extends Response.BuilderImpl<DescribeGroupProductionsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeApiListResponseBody body; 
+        private DescribeGroupProductionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeApiListResponse response) {
+        private BuilderImpl(DescribeGroupProductionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class DescribeApiListResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class DescribeApiListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeApiListResponseBody body) {
+        public Builder body(DescribeGroupProductionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeApiListResponse build() {
-            return new DescribeApiListResponse(this);
+        public DescribeGroupProductionsResponse build() {
+            return new DescribeGroupProductionsResponse(this);
         } 
 
     } 

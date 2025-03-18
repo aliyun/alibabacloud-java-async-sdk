@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Syntax")
-    private java.util.List < Syntax> syntax;
+    private java.util.List<Syntax> syntax;
 
     private VerifyPythonFileResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class VerifyPythonFileResponseBody extends TeaModel {
     /**
      * @return syntax
      */
-    public java.util.List < Syntax> getSyntax() {
+    public java.util.List<Syntax> getSyntax() {
         return this.syntax;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Syntax> syntax; 
+        private java.util.List<Syntax> syntax; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyPythonFileResponseBody model) {
+            this.requestId = model.requestId;
+            this.syntax = model.syntax;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         /**
          * <p>The verification result. If the parameter is left empty, the syntax of the code snippet is correct.</p>
          */
-        public Builder syntax(java.util.List < Syntax> syntax) {
+        public Builder syntax(java.util.List<Syntax> syntax) {
             this.syntax = syntax;
             return this;
         }
@@ -165,6 +182,18 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             private Integer severity; 
             private Integer startColumn; 
             private Integer startLineNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Syntax model) {
+                this.endColumn = model.endColumn;
+                this.endLineNumber = model.endLineNumber;
+                this.message = model.message;
+                this.severity = model.severity;
+                this.startColumn = model.startColumn;
+                this.startLineNumber = model.startLineNumber;
+            } 
 
             /**
              * <p>The number that indicates the end column of the error code.</p>

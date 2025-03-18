@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return details
      */
@@ -48,6 +57,14 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     public static final class Builder {
         private Details details; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSoarTaskAndActionsResponseBody model) {
+            this.details = model.details;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The execution details of each task.</p>
@@ -238,6 +255,24 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             private String taskStatus; 
             private String triggerUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.action = model.action;
+                this.actionUuid = model.actionUuid;
+                this.assetName = model.assetName;
+                this.component = model.component;
+                this.endTime = model.endTime;
+                this.nodeName = model.nodeName;
+                this.requestUuid = model.requestUuid;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+                this.triggerUser = model.triggerUser;
+            } 
+
             /**
              * <p>The action name of the component.</p>
              * 
@@ -392,7 +427,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
      */
     public static class Details extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
-        private java.util.List < Actions> actions;
+        private java.util.List<Actions> actions;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -461,7 +496,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -557,7 +592,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private Long endTime; 
             private String errorMsg; 
             private String rawEventReq; 
@@ -572,10 +607,30 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             private String triggerType; 
             private String triggerUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.actions = model.actions;
+                this.endTime = model.endTime;
+                this.errorMsg = model.errorMsg;
+                this.rawEventReq = model.rawEventReq;
+                this.requestUuid = model.requestUuid;
+                this.resultLevel = model.resultLevel;
+                this.resultMessage = model.resultMessage;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskFlowMd5 = model.taskFlowMd5;
+                this.taskName = model.taskName;
+                this.taskTenantId = model.taskTenantId;
+                this.triggerType = model.triggerType;
+                this.triggerUser = model.triggerUser;
+            } 
+
             /**
              * <p>The list of component actions during the running of the playbook.</p>
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }

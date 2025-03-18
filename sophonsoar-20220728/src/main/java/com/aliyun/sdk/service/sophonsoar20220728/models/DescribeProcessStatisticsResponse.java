@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribePopApiVersionListResponse} extends {@link TeaModel}
+ * {@link DescribeProcessStatisticsResponse} extends {@link TeaModel}
  *
- * <p>DescribePopApiVersionListResponse</p>
+ * <p>DescribeProcessStatisticsResponse</p>
  */
-public class DescribePopApiVersionListResponse extends Response {
+public class DescribeProcessStatisticsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribePopApiVersionListResponseBody body;
+    private DescribeProcessStatisticsResponseBody body;
 
-    private DescribePopApiVersionListResponse(BuilderImpl builder) {
+    private DescribeProcessStatisticsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribePopApiVersionListResponse create() {
+    public static DescribeProcessStatisticsResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class DescribePopApiVersionListResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class DescribePopApiVersionListResponse extends Response {
     /**
      * @return body
      */
-    public DescribePopApiVersionListResponseBody getBody() {
+    public DescribeProcessStatisticsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribePopApiVersionListResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeProcessStatisticsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribePopApiVersionListResponseBody body);
+        Builder body(DescribeProcessStatisticsResponseBody body);
 
         @Override
-        DescribePopApiVersionListResponse build();
+        DescribeProcessStatisticsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribePopApiVersionListResponse, Builder>
+            extends Response.BuilderImpl<DescribeProcessStatisticsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribePopApiVersionListResponseBody body; 
+        private DescribeProcessStatisticsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribePopApiVersionListResponse response) {
+        private BuilderImpl(DescribeProcessStatisticsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class DescribePopApiVersionListResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class DescribePopApiVersionListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribePopApiVersionListResponseBody body) {
+        public Builder body(DescribeProcessStatisticsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribePopApiVersionListResponse build() {
-            return new DescribePopApiVersionListResponse(this);
+        public DescribeProcessStatisticsResponse build() {
+            return new DescribeProcessStatisticsResponse(this);
         } 
 
     } 

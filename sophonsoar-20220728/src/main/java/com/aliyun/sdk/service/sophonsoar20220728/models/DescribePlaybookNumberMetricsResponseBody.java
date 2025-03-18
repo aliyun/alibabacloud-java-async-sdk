@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -48,6 +57,14 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
     public static final class Builder {
         private Metrics metrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlaybookNumberMetricsResponseBody model) {
+            this.metrics = model.metrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics.</p>
@@ -117,6 +134,14 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer startUpNum; 
             private Integer totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.startUpNum = model.startUpNum;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * <p>The number of enabled playbooks.</p>

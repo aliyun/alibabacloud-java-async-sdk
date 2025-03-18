@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,11 +43,11 @@ public class DescribePlaybooksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Long pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParamTypes")
@@ -51,6 +56,10 @@ public class DescribePlaybooksRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuids")
+    private String playbookUuids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sort")
@@ -72,6 +81,7 @@ public class DescribePlaybooksRequest extends Request {
         this.pageSize = builder.pageSize;
         this.paramTypes = builder.paramTypes;
         this.playbookUuid = builder.playbookUuid;
+        this.playbookUuids = builder.playbookUuids;
         this.sort = builder.sort;
         this.startMillis = builder.startMillis;
     }
@@ -84,7 +94,7 @@ public class DescribePlaybooksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -134,14 +144,14 @@ public class DescribePlaybooksRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Long getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -157,6 +167,13 @@ public class DescribePlaybooksRequest extends Request {
      */
     public String getPlaybookUuid() {
         return this.playbookUuid;
+    }
+
+    /**
+     * @return playbookUuids
+     */
+    public String getPlaybookUuids() {
+        return this.playbookUuids;
     }
 
     /**
@@ -180,10 +197,11 @@ public class DescribePlaybooksRequest extends Request {
         private String name; 
         private String order; 
         private String ownType; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Long pageNumber; 
+        private Integer pageSize; 
         private String paramTypes; 
         private String playbookUuid; 
+        private String playbookUuids; 
         private String sort; 
         private Long startMillis; 
 
@@ -203,15 +221,16 @@ public class DescribePlaybooksRequest extends Request {
             this.pageSize = request.pageSize;
             this.paramTypes = request.paramTypes;
             this.playbookUuid = request.playbookUuid;
+            this.playbookUuids = request.playbookUuids;
             this.sort = request.sort;
             this.startMillis = request.startMillis;
         } 
 
         /**
-         * <p>The status of the playbook. Valid values:</p>
+         * <p>Activation status of the playbook. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: Indicates the playbook is activated.</li>
+         * <li><strong>0</strong>: Indicates the playbook is not activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +243,7 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+         * <p>End time for the query, in 13-digit timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1683858064361</p>
@@ -236,10 +255,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language type for the request and response, default is <strong>zh</strong>. Values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,10 +283,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The sorting order. Default value: desc. Valid values:</p>
+         * <p>The sorting logic, with a default value of <strong>desc</strong>. Values:</p>
          * <ul>
-         * <li>desc: descending order</li>
-         * <li>asc: ascending order</li>
+         * <li><strong>desc</strong>: Descending order.</li>
+         * <li><strong>asc</strong>: Ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,10 +299,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The type of the playbook. Valid values:</p>
+         * <p>Type of the playbook. Values:</p>
          * <ul>
-         * <li><strong>preset</strong>: predefined playbook</li>
-         * <li><strong>user</strong>: custom playbook</li>
+         * <li><strong>preset</strong>: Predefined playbook.</li>
+         * <li><strong>user</strong>: Custom playbook.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,34 +315,48 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * <p>Sets the page number from which to start displaying the query results. The default value is 1, indicating the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+         * <p>Specifies the maximum number of items to display per page in a paginated query. The default number of items per page is 20. If the PageSize parameter is empty, it will return 10 items by default.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>It is recommended that the PageSize value is not empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * ParamTypes.
+         * <p>The trigger method for the playbook, with a default value of <strong>query all</strong>. Values:</p>
+         * <ul>
+         * <li><strong>template-incident</strong>: Security incident.</li>
+         * <li><strong>template-ip</strong>: IP entity.</li>
+         * <li><strong>template-file</strong>: File entity.</li>
+         * <li><strong>template-process</strong>: Process entity.</li>
+         * <li><strong>template-alert</strong>: Security alert.</li>
+         * <li><strong>template-domain</strong>: Domain entity.</li>
+         * <li><strong>template-container</strong>: Container entity.</li>
+         * <li><strong>template-host</strong>: Host entity.</li>
+         * <li><strong>template-custom</strong>: Custom.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>template-alert</p>
          */
         public Builder paramTypes(String paramTypes) {
             this.putQueryParameter("ParamTypes", paramTypes);
@@ -332,13 +365,13 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The playbook UUID.</p>
+         * <p>The UUID of the playbook.</p>
          * <blockquote>
-         * <p> You can use the UUID to query the information about a specific playbook.</p>
-         * </blockquote>
+         * <p>You can use the UUID to query specific playbook information.</p>
          * <ul>
-         * <li>You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</li>
+         * <li>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> API to obtain this parameter.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8baa6cff-319e-4ede-97bc-1xxxxxx</p>
@@ -350,10 +383,24 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The sorting basis. Default value: 1. Valid values:</p>
+         * <p>UUID List of the playbook.</p>
+         * <p>Note You can use the UUID list to query specific playbook information.
+         * Call the DescribePlaybooks API to obtain this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-1xxxxxx,7745e6cff-319e-4ede-97bc-1xxxxxx</p>
+         */
+        public Builder playbookUuids(String playbookUuids) {
+            this.putQueryParameter("PlaybookUuids", playbookUuids);
+            this.playbookUuids = playbookUuids;
+            return this;
+        }
+
+        /**
+         * <p>The sorting basis, with a default value of <strong>1</strong>. Values:</p>
          * <ul>
-         * <li>1: last modification time</li>
-         * <li>2: last execution time</li>
+         * <li><strong>1</strong>: Last modified time.</li>
+         * <li><strong>2</strong>: Most recent execution time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,7 +413,7 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a 13-digit timestamp.</p>
+         * <p>Start time for the query, in 13-digit timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1683526277415</p>

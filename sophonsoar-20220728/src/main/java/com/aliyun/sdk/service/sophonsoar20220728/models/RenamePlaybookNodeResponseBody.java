@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return renameResult
      */
@@ -48,6 +57,14 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
     public static final class Builder {
         private String renameResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenamePlaybookNodeResponseBody model) {
+            this.renameResult = model.renameResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned new name of the node.</p>

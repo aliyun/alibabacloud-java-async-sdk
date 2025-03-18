@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class VerifyPlaybookResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckTaskInfos")
-    private java.util.List < CheckTaskInfos> checkTaskInfos;
+    private java.util.List<CheckTaskInfos> checkTaskInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkTaskInfos
      */
-    public java.util.List < CheckTaskInfos> getCheckTaskInfos() {
+    public java.util.List<CheckTaskInfos> getCheckTaskInfos() {
         return this.checkTaskInfos;
     }
 
@@ -46,13 +55,21 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckTaskInfos> checkTaskInfos; 
+        private java.util.List<CheckTaskInfos> checkTaskInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyPlaybookResponseBody model) {
+            this.checkTaskInfos = model.checkTaskInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of the verification.</p>
          */
-        public Builder checkTaskInfos(java.util.List < CheckTaskInfos> checkTaskInfos) {
+        public Builder checkTaskInfos(java.util.List<CheckTaskInfos> checkTaskInfos) {
             this.checkTaskInfos = checkTaskInfos;
             return this;
         }
@@ -129,6 +146,15 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             private String detail; 
             private String nodeName; 
             private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckTaskInfos model) {
+                this.detail = model.detail;
+                this.nodeName = model.nodeName;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The error message returned when the playbook does not pass the check.</p>

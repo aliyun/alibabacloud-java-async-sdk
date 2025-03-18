@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playbookNodeSchema
      */
@@ -48,6 +57,14 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
     public static final class Builder {
         private PlaybookNodeSchema playbookNodeSchema; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLatestRecordSchemaResponseBody model) {
+            this.playbookNodeSchema = model.playbookNodeSchema;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The output structure information of the playbook.</p>
@@ -91,7 +108,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         private String nodeName;
 
         @com.aliyun.core.annotation.NameInMap("OutputFields")
-        private java.util.List < String > outputFields;
+        private java.util.List<String> outputFields;
 
         private NodeSchema(Builder builder) {
             this.actionName = builder.actionName;
@@ -132,7 +149,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         /**
          * @return outputFields
          */
-        public java.util.List < String > getOutputFields() {
+        public java.util.List<String> getOutputFields() {
             return this.outputFields;
         }
 
@@ -140,7 +157,17 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             private String actionName; 
             private String componentName; 
             private String nodeName; 
-            private java.util.List < String > outputFields; 
+            private java.util.List<String> outputFields; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSchema model) {
+                this.actionName = model.actionName;
+                this.componentName = model.componentName;
+                this.nodeName = model.nodeName;
+                this.outputFields = model.outputFields;
+            } 
 
             /**
              * <p>The action name of the component.</p>
@@ -178,7 +205,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             /**
              * <p>The output fields.</p>
              */
-            public Builder outputFields(java.util.List < String > outputFields) {
+            public Builder outputFields(java.util.List<String> outputFields) {
                 this.outputFields = outputFields;
                 return this;
             }
@@ -198,7 +225,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
      */
     public static class PlaybookNodeSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeSchema")
-        private java.util.List < NodeSchema> nodeSchema;
+        private java.util.List<NodeSchema> nodeSchema;
 
         private PlaybookNodeSchema(Builder builder) {
             this.nodeSchema = builder.nodeSchema;
@@ -215,17 +242,24 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         /**
          * @return nodeSchema
          */
-        public java.util.List < NodeSchema> getNodeSchema() {
+        public java.util.List<NodeSchema> getNodeSchema() {
             return this.nodeSchema;
         }
 
         public static final class Builder {
-            private java.util.List < NodeSchema> nodeSchema; 
+            private java.util.List<NodeSchema> nodeSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlaybookNodeSchema model) {
+                this.nodeSchema = model.nodeSchema;
+            } 
 
             /**
              * <p>The structure information.</p>
              */
-            public Builder nodeSchema(java.util.List < NodeSchema> nodeSchema) {
+            public Builder nodeSchema(java.util.List<NodeSchema> nodeSchema) {
                 this.nodeSchema = nodeSchema;
                 return this;
             }

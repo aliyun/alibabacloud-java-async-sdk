@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TriggerSophonPlaybookResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details that is returned after the command or playbook is triggered.</p>
@@ -105,6 +122,13 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
 
         public static final class Builder {
             private String sophonTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.sophonTaskId = model.sophonTaskId;
+            } 
 
             /**
              * <p>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</p>

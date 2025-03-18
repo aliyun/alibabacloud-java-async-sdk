@@ -32,6 +32,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ComparePlaybooksResponse> comparePlaybooks(ComparePlaybooksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the orchestration product before using this interface.</p>
+     * 
+     * @param request the request parameters of ConvertPlaybook  ConvertPlaybookRequest
+     * @return ConvertPlaybookResponse
+     */
+    CompletableFuture<ConvertPlaybookResponse> convertPlaybook(ConvertPlaybookRequest request);
+
+    /**
+     * @param request the request parameters of CopyPlaybook  CopyPlaybookRequest
+     * @return CopyPlaybookResponse
+     */
+    CompletableFuture<CopyPlaybookResponse> copyPlaybook(CopyPlaybookRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Create Playbook.</p>
+     * 
      * @param request the request parameters of CreatePlaybook  CreatePlaybookRequest
      * @return CreatePlaybookResponse
      */
@@ -54,12 +72,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePlaybookResponse
      */
     CompletableFuture<DeletePlaybookResponse> deletePlaybook(DeletePlaybookRequest request);
-
-    /**
-     * @param request the request parameters of DescribeApiList  DescribeApiListRequest
-     * @return DescribeApiListResponse
-     */
-    CompletableFuture<DescribeApiListResponse> describeApiList(DescribeApiListRequest request);
 
     /**
      * @param request the request parameters of DescribeComponentAssetForm  DescribeComponentAssetFormRequest
@@ -116,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFieldResponse> describeField(DescribeFieldRequest request);
 
     /**
+     * @param request the request parameters of DescribeGroupProductions  DescribeGroupProductionsRequest
+     * @return DescribeGroupProductionsResponse
+     */
+    CompletableFuture<DescribeGroupProductionsResponse> describeGroupProductions(DescribeGroupProductionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeLatestRecordSchema  DescribeLatestRecordSchemaRequest
      * @return DescribeLatestRecordSchemaResponse
      */
@@ -132,6 +150,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNodeUsedInfosResponse
      */
     CompletableFuture<DescribeNodeUsedInfosResponse> describeNodeUsedInfos(DescribeNodeUsedInfosRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNotifyTemplateList  DescribeNotifyTemplateListRequest
+     * @return DescribeNotifyTemplateListResponse
+     */
+    CompletableFuture<DescribeNotifyTemplateListResponse> describeNotifyTemplateList(DescribeNotifyTemplateListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenApiInfo  DescribeOpenApiInfoRequest
+     * @return DescribeOpenApiInfoResponse
+     */
+    CompletableFuture<DescribeOpenApiInfoResponse> describeOpenApiInfo(DescribeOpenApiInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenApiList  DescribeOpenApiListRequest
+     * @return DescribeOpenApiListResponse
+     */
+    CompletableFuture<DescribeOpenApiListResponse> describeOpenApiList(DescribeOpenApiListRequest request);
 
     /**
      * @param request the request parameters of DescribePlaybook  DescribePlaybookRequest
@@ -188,10 +224,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePopApiItemListResponse> describePopApiItemList(DescribePopApiItemListRequest request);
 
     /**
-     * @param request the request parameters of DescribePopApiVersionList  DescribePopApiVersionListRequest
-     * @return DescribePopApiVersionListResponse
+     * @param request the request parameters of DescribeProcessStatistics  DescribeProcessStatisticsRequest
+     * @return DescribeProcessStatisticsResponse
      */
-    CompletableFuture<DescribePopApiVersionListResponse> describePopApiVersionList(DescribePopApiVersionListRequest request);
+    CompletableFuture<DescribeProcessStatisticsResponse> describeProcessStatistics(DescribeProcessStatisticsRequest request);
 
     /**
      * @param request the request parameters of DescribeProcessTaskCount  DescribeProcessTaskCountRequest
@@ -234,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSophonCommandsResponse
      */
     CompletableFuture<DescribeSophonCommandsResponse> describeSophonCommands(DescribeSophonCommandsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVendorApiList  DescribeVendorApiListRequest
+     * @return DescribeVendorApiListResponse
+     */
+    CompletableFuture<DescribeVendorApiListResponse> describeVendorApiList(DescribeVendorApiListRequest request);
 
     /**
      * @param request the request parameters of DescriberPython3ScriptLogs  DescriberPython3ScriptLogsRequest
@@ -288,6 +330,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevertPlaybookReleaseResponse
      */
     CompletableFuture<RevertPlaybookReleaseResponse> revertPlaybookRelease(RevertPlaybookReleaseRequest request);
+
+    /**
+     * @param request the request parameters of RunNotifyComponentWithEmail  RunNotifyComponentWithEmailRequest
+     * @return RunNotifyComponentWithEmailResponse
+     */
+    CompletableFuture<RunNotifyComponentWithEmailResponse> runNotifyComponentWithEmail(RunNotifyComponentWithEmailRequest request);
+
+    /**
+     * @param request the request parameters of RunNotifyComponentWithMessageCenter  RunNotifyComponentWithMessageCenterRequest
+     * @return RunNotifyComponentWithMessageCenterResponse
+     */
+    CompletableFuture<RunNotifyComponentWithMessageCenterResponse> runNotifyComponentWithMessageCenter(RunNotifyComponentWithMessageCenterRequest request);
+
+    /**
+     * @param request the request parameters of RunNotifyComponentWithWebhook  RunNotifyComponentWithWebhookRequest
+     * @return RunNotifyComponentWithWebhookResponse
+     */
+    CompletableFuture<RunNotifyComponentWithWebhookResponse> runNotifyComponentWithWebhook(RunNotifyComponentWithWebhookRequest request);
 
     /**
      * <b>description</b> :

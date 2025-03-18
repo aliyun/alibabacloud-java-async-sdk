@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playbookNodesOutput
      */
@@ -48,6 +57,14 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
     public static final class Builder {
         private PlaybookNodesOutput playbookNodesOutput; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlaybookNodesOutputResponseBody model) {
+            this.playbookNodesOutput = model.playbookNodesOutput;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The output data of the component node.</p>
@@ -117,6 +134,14 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeName; 
             private String nodeOutput; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlaybookNodesOutput model) {
+                this.nodeName = model.nodeName;
+                this.nodeOutput = model.nodeOutput;
+            } 
 
             /**
              * <p>The name of the component node.</p>

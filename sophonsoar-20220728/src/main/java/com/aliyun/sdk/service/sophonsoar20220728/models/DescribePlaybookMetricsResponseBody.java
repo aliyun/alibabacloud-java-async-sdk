@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
@@ -48,6 +57,14 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
     public static final class Builder {
         private Metrics metrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlaybookMetricsResponseBody model) {
+            this.metrics = model.metrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the playbook.</p>
@@ -213,6 +230,22 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             private String ownType; 
             private String playbookUuid; 
             private Integer succNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.active = model.active;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.failNum = model.failNum;
+                this.gmtCreate = model.gmtCreate;
+                this.historyMd5 = model.historyMd5;
+                this.lastRuntime = model.lastRuntime;
+                this.ownType = model.ownType;
+                this.playbookUuid = model.playbookUuid;
+                this.succNum = model.succNum;
+            } 
 
             /**
              * <p>The status of the playbook. Valid values:</p>

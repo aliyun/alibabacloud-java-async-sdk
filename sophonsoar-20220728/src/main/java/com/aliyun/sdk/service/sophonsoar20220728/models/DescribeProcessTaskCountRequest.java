@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DescribeProcessTaskCountRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntityUuidList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > entityUuidList;
+    private java.util.List<String> entityUuidList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -45,7 +50,7 @@ public class DescribeProcessTaskCountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +58,7 @@ public class DescribeProcessTaskCountRequest extends Request {
     /**
      * @return entityUuidList
      */
-    public java.util.List < String > getEntityUuidList() {
+    public java.util.List<String> getEntityUuidList() {
         return this.entityUuidList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeProcessTaskCountRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeProcessTaskCountRequest, Builder> {
-        private java.util.List < String > entityUuidList; 
+        private java.util.List<String> entityUuidList; 
         private String lang; 
         private Long roleFor; 
         private String roleType; 
@@ -97,16 +102,26 @@ public class DescribeProcessTaskCountRequest extends Request {
         } 
 
         /**
+         * <p>Collection of entity UUIDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder entityUuidList(java.util.List < String > entityUuidList) {
+        public Builder entityUuidList(java.util.List<String> entityUuidList) {
             this.putQueryParameter("EntityUuidList", entityUuidList);
             this.entityUuidList = entityUuidList;
             return this;
         }
 
         /**
-         * Lang.
+         * <p>Language type for request and response messages. Values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +130,10 @@ public class DescribeProcessTaskCountRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>User ID for administrators to switch to other member&quot;s perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>104739******259</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -124,7 +142,14 @@ public class DescribeProcessTaskCountRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>View type.</p>
+         * <ul>
+         * <li><strong>0</strong>: Current Alibaba Cloud account view.</li>
+         * <li><strong>1</strong>: View for all accounts under the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

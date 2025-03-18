@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePopApiItemListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Names")
-    private java.util.List < String > names;
+    private java.util.List<String> names;
 
     @com.aliyun.core.annotation.NameInMap("PopCode")
     private String popCode;
@@ -43,10 +48,14 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return names
      */
-    public java.util.List < String > getNames() {
+    public java.util.List<String> getNames() {
         return this.names;
     }
 
@@ -79,16 +88,27 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > names; 
+        private java.util.List<String> names; 
         private String popCode; 
         private String requestId; 
         private Long total; 
         private String version; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePopApiItemListResponseBody model) {
+            this.names = model.names;
+            this.popCode = model.popCode;
+            this.requestId = model.requestId;
+            this.total = model.total;
+            this.version = model.version;
+        } 
+
         /**
          * <p>The names of API operations.</p>
          */
-        public Builder names(java.util.List < String > names) {
+        public Builder names(java.util.List<String> names) {
             this.names = names;
             return this;
         }

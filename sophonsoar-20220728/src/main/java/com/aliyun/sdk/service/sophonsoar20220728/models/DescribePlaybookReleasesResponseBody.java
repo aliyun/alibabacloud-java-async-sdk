@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     private Page page;
 
     @com.aliyun.core.annotation.NameInMap("Records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return page
      */
@@ -45,7 +54,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -58,8 +67,17 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Page page; 
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlaybookReleasesResponseBody model) {
+            this.page = model.page;
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -72,7 +90,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         /**
          * <p>The information about the playbook version.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -149,6 +167,15 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>
@@ -281,6 +308,18 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             private Long gmtModified; 
             private Integer id; 
             private String taskflowMd5; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.creator = model.creator;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.taskflowMd5 = model.taskflowMd5;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account that is used to publish the version.</p>

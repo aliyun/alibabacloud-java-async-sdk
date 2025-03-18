@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class QueryTreeDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playbooks
      */
@@ -48,6 +57,14 @@ public class QueryTreeDataResponseBody extends TeaModel {
     public static final class Builder {
         private String playbooks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTreeDataResponseBody model) {
+            this.playbooks = model.playbooks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about the playbook. The value is a JSON string.</p>
