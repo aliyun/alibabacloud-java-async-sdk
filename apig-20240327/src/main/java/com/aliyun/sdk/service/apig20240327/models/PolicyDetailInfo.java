@@ -52,6 +52,10 @@ public class PolicyDetailInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return classId
      */
@@ -101,6 +105,18 @@ public class PolicyDetailInfo extends TeaModel {
         private String description; 
         private String name; 
         private String policyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PolicyDetailInfo model) {
+            this.classId = model.classId;
+            this.className = model.className;
+            this.config = model.config;
+            this.description = model.description;
+            this.name = model.name;
+            this.policyId = model.policyId;
+        } 
 
         /**
          * classId.

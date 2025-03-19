@@ -54,6 +54,10 @@ public class HttpApiParameter extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -103,6 +107,18 @@ public class HttpApiParameter extends TeaModel {
         private String name; 
         private Boolean required; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiParameter model) {
+            this.defaultValue = model.defaultValue;
+            this.description = model.description;
+            this.exampleValue = model.exampleValue;
+            this.name = model.name;
+            this.required = model.required;
+            this.type = model.type;
+        } 
 
         /**
          * defaultValue.

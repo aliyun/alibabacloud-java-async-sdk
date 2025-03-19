@@ -44,6 +44,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyAttachmentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2C3B9A12-3868-5EB9-fBEA-F99E03DD1***</p>
@@ -223,8 +243,24 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             private String policyAttachmentId; 
             private String policyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attachResourceId = model.attachResourceId;
+                this.attachResourceType = model.attachResourceType;
+                this.config = model.config;
+                this.environmentId = model.environmentId;
+                this.gatewayId = model.gatewayId;
+                this.policyAttachmentId = model.policyAttachmentId;
+                this.policyId = model.policyId;
+            } 
+
             /**
-             * attachResourceId.
+             * <p>Attached Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op-csbkd9llhtgqhqua***</p>
              */
             public Builder attachResourceId(String attachResourceId) {
                 this.attachResourceId = attachResourceId;
@@ -232,7 +268,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * attachResourceType.
+             * <p>Attached resource type, HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, Domain</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Operation</p>
              */
             public Builder attachResourceType(String attachResourceType) {
                 this.attachResourceType = attachResourceType;
@@ -240,7 +279,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>Policy attachment configuration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;unitNum&quot;:1,&quot;timeUnit&quot;:&quot;s&quot;,&quot;enable&quot;:true}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -248,7 +290,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>Environment ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cq7l5s5lhtgi6qa***</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -256,7 +301,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>Gateway Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cq2vundlhtg***</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -264,7 +312,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * policyAttachmentId.
+             * <p>Policy Attachment ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pr-cqoojualhtgquuj***</p>
              */
             public Builder policyAttachmentId(String policyAttachmentId) {
                 this.policyAttachmentId = policyAttachmentId;
@@ -272,7 +323,10 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * policyId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-cq7l5s5bblhtgi6qas***</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;

@@ -44,6 +44,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetEnvironmentResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEnvironmentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response code.</p>
@@ -168,6 +182,14 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ResourceStatistic> resourceStatistics; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatisticsInfo model) {
+                this.resourceStatistics = model.resourceStatistics;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The array of related resource information.</p>
@@ -346,6 +368,23 @@ public class GetEnvironmentResponseBody extends TeaModel {
             private StatisticsInfo statisticsInfo; 
             private java.util.List<SubDomainInfo> subDomainInfos; 
             private Long updateTimestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alias = model.alias;
+                this.createTimestamp = model.createTimestamp;
+                this._default = model._default;
+                this.description = model.description;
+                this.environmentId = model.environmentId;
+                this.gatewayInfo = model.gatewayInfo;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.statisticsInfo = model.statisticsInfo;
+                this.subDomainInfos = model.subDomainInfos;
+                this.updateTimestamp = model.updateTimestamp;
+            } 
 
             /**
              * <p>Environment alias.</p>

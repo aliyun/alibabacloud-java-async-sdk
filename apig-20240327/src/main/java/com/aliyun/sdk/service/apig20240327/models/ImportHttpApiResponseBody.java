@@ -44,6 +44,10 @@ public class ImportHttpApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ImportHttpApiResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportHttpApiResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response status code.</p>
@@ -169,6 +183,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private String errorMessage; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailureComponents model) {
+                this.errorMessage = model.errorMessage;
+                this.name = model.name;
+            } 
+
             /**
              * <p>Error message.</p>
              * 
@@ -254,6 +276,15 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private String method; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailureOperations model) {
+                this.errorMessage = model.errorMessage;
+                this.method = model.method;
+                this.path = model.path;
+            } 
+
             /**
              * <p>Error message</p>
              * 
@@ -337,6 +368,14 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public static final class Builder {
             private String action; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessComponents model) {
+                this.action = model.action;
+                this.name = model.name;
+            } 
 
             /**
              * <p>Action to be executed after the precheck.</p>
@@ -438,6 +477,16 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private String method; 
             private String name; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessOperations model) {
+                this.action = model.action;
+                this.method = model.method;
+                this.name = model.name;
+                this.path = model.path;
+            } 
 
             /**
              * <p>Action to be executed after the precheck.</p>
@@ -598,6 +647,19 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private java.util.List<SuccessOperations> successOperations; 
             private java.util.List<String> warningMessages; 
 
+            private Builder() {
+            } 
+
+            private Builder(DryRunInfo model) {
+                this.errorMessages = model.errorMessages;
+                this.existHttpApiInfo = model.existHttpApiInfo;
+                this.failureComponents = model.failureComponents;
+                this.failureOperations = model.failureOperations;
+                this.successComponents = model.successComponents;
+                this.successOperations = model.successOperations;
+                this.warningMessages = model.warningMessages;
+            } 
+
             /**
              * <p>Error messages. If there are any error messages, the API cannot be imported successfully.</p>
              */
@@ -716,6 +778,15 @@ public class ImportHttpApiResponseBody extends TeaModel {
             private DryRunInfo dryRunInfo; 
             private String httpApiId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dryRunInfo = model.dryRunInfo;
+                this.httpApiId = model.httpApiId;
+                this.name = model.name;
+            } 
 
             /**
              * <p>Pre-import check result.</p>

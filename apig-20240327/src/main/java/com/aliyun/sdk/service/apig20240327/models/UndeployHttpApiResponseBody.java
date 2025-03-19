@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteDomainResponseBody} extends {@link TeaModel}
+ * {@link UndeployHttpApiResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteDomainResponseBody</p>
+ * <p>UndeployHttpApiResponseBody</p>
  */
-public class DeleteDomainResponseBody extends TeaModel {
+public class UndeployHttpApiResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -26,7 +26,7 @@ public class DeleteDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private DeleteDomainResponseBody(Builder builder) {
+    private UndeployHttpApiResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteDomainResponseBody create() {
+    public static UndeployHttpApiResponseBody create() {
         return builder().build();
     }
 
@@ -73,17 +73,14 @@ public class DeleteDomainResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DeleteDomainResponseBody model) {
+        private Builder(UndeployHttpApiResponseBody model) {
             this.code = model.code;
             this.message = model.message;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>Response code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ok</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -91,10 +88,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,18 +96,15 @@ public class DeleteDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, used for tracing the API call chain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteDomainResponseBody build() {
-            return new DeleteDomainResponseBody(this);
+        public UndeployHttpApiResponseBody build() {
+            return new UndeployHttpApiResponseBody(this);
         } 
 
     } 

@@ -44,6 +44,10 @@ public class GetDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetDomainResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDomainResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response code.</p>
@@ -169,8 +183,16 @@ public class GetDomainResponseBody extends TeaModel {
             private java.util.List<ResourceStatistic> resourceStatistics; 
             private String totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatisticsInfo model) {
+                this.resourceStatistics = model.resourceStatistics;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * resourceStatistics.
+             * <p>The array of related resource infomations.</p>
              */
             public Builder resourceStatistics(java.util.List<ResourceStatistic> resourceStatistics) {
                 this.resourceStatistics = resourceStatistics;
@@ -178,7 +200,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;
@@ -500,6 +525,36 @@ public class GetDomainResponseBody extends TeaModel {
             private String tlsMin; 
             private Long updatetimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.caCertIdentifier = model.caCertIdentifier;
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.clientCACert = model.clientCACert;
+                this.createFrom = model.createFrom;
+                this.createTimestamp = model.createTimestamp;
+                this._default = model._default;
+                this.domainId = model.domainId;
+                this.forceHttps = model.forceHttps;
+                this.http2Option = model.http2Option;
+                this.issuer = model.issuer;
+                this.mTLSEnabled = model.mTLSEnabled;
+                this.name = model.name;
+                this.notAfterTimstamp = model.notAfterTimstamp;
+                this.notBeforeTimestamp = model.notBeforeTimestamp;
+                this.protocol = model.protocol;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sans = model.sans;
+                this.statisticsInfo = model.statisticsInfo;
+                this.tlsCipherSuitesConfig = model.tlsCipherSuitesConfig;
+                this.tlsMax = model.tlsMax;
+                this.tlsMin = model.tlsMin;
+                this.updatetimestamp = model.updatetimestamp;
+            } 
+
             /**
              * <p>Encryption algorithm name</p>
              * 
@@ -512,7 +567,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * caCertIdentifier.
+             * <p>CA certificate identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>876****-cn-hangzhou</p>
              */
             public Builder caCertIdentifier(String caCertIdentifier) {
                 this.caCertIdentifier = caCertIdentifier;
@@ -520,7 +578,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * certIdentifier.
+             * <p>Certificate Identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>645****-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -539,7 +600,17 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * clientCACert.
+             * <p>Client CA Cert</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----
+             * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/mpTQwDQYJKoZIhvcNAQEL
+             * BxSbrGeJ8i0576Gn7Qezyho9abZOUhGaPeoB
+             * AIHWWl428uUSG/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+             * yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy+ZMJ8r4swA4swHwYDVR0jBBgwFoAU
+             * qroVyYKk7ylhcSn+ZMJ8r4swA4swDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B
+             * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+             * -----END CERTIFICATE-----</p>
              */
             public Builder clientCACert(String clientCACert) {
                 this.clientCACert = clientCACert;
@@ -624,7 +695,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * mTLSEnabled.
+             * <p>true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder mTLSEnabled(Boolean mTLSEnabled) {
                 this.mTLSEnabled = mTLSEnabled;
@@ -680,7 +754,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzvlxzgo5b4si</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -699,7 +776,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * statisticsInfo.
+             * <p>The array of domain related resource information</p>
              */
             public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
                 this.statisticsInfo = statisticsInfo;
@@ -707,7 +784,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * tlsCipherSuitesConfig.
+             * <p>The TLS cipher suites config.</p>
              */
             public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
                 this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;

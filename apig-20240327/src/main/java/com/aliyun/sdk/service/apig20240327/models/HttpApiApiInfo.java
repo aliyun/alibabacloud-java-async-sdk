@@ -84,6 +84,10 @@ public class HttpApiApiInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aiProtocols
      */
@@ -197,6 +201,26 @@ public class HttpApiApiInfo extends TeaModel {
         private String resourceGroupId; 
         private String type; 
         private HttpApiVersionInfo versionInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiApiInfo model) {
+            this.aiProtocols = model.aiProtocols;
+            this.authConfig = model.authConfig;
+            this.basePath = model.basePath;
+            this.deployConfigs = model.deployConfigs;
+            this.description = model.description;
+            this.enabelAuth = model.enabelAuth;
+            this.environments = model.environments;
+            this.httpApiId = model.httpApiId;
+            this.ingressInfo = model.ingressInfo;
+            this.name = model.name;
+            this.protocols = model.protocols;
+            this.resourceGroupId = model.resourceGroupId;
+            this.type = model.type;
+            this.versionInfo = model.versionInfo;
+        } 
 
         /**
          * aiProtocols.
@@ -360,6 +384,14 @@ public class HttpApiApiInfo extends TeaModel {
             private String gatewayId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(GatewayInfo model) {
+                this.gatewayId = model.gatewayId;
+                this.name = model.name;
+            } 
+
             /**
              * gatewayId.
              */
@@ -499,6 +531,20 @@ public class HttpApiApiInfo extends TeaModel {
             private String version; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceConfigs model) {
+                this.gatewayServiceId = model.gatewayServiceId;
+                this.match = model.match;
+                this.name = model.name;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.serviceId = model.serviceId;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
+
             /**
              * gatewayServiceId.
              */
@@ -637,6 +683,16 @@ public class HttpApiApiInfo extends TeaModel {
             private String name; 
             private String networkType; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDomains model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+                this.networkType = model.networkType;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * domainId.
@@ -817,6 +873,22 @@ public class HttpApiApiInfo extends TeaModel {
             private java.util.List<ServiceConfigs> serviceConfigs; 
             private java.util.List<SubDomains> subDomains; 
 
+            private Builder() {
+            } 
+
+            private Builder(Environments model) {
+                this.alias = model.alias;
+                this.backendScene = model.backendScene;
+                this.backendType = model.backendType;
+                this.customDomains = model.customDomains;
+                this.deployStatus = model.deployStatus;
+                this.environmentId = model.environmentId;
+                this.gatewayInfo = model.gatewayInfo;
+                this.name = model.name;
+                this.serviceConfigs = model.serviceConfigs;
+                this.subDomains = model.subDomains;
+            } 
+
             /**
              * alias.
              */
@@ -936,6 +1008,13 @@ public class HttpApiApiInfo extends TeaModel {
         public static final class Builder {
             private String environmentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentInfo model) {
+                this.environmentId = model.environmentId;
+            } 
+
             /**
              * environmentId.
              */
@@ -982,6 +1061,13 @@ public class HttpApiApiInfo extends TeaModel {
 
         public static final class Builder {
             private String clusterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(K8sClusterInfo model) {
+                this.clusterId = model.clusterId;
+            } 
 
             /**
              * clusterId.
@@ -1089,6 +1175,18 @@ public class HttpApiApiInfo extends TeaModel {
             private Boolean overrideIngressIp; 
             private String sourceId; 
             private String watchNamespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngressInfo model) {
+                this.environmentInfo = model.environmentInfo;
+                this.ingressClass = model.ingressClass;
+                this.k8sClusterInfo = model.k8sClusterInfo;
+                this.overrideIngressIp = model.overrideIngressIp;
+                this.sourceId = model.sourceId;
+                this.watchNamespace = model.watchNamespace;
+            } 
 
             /**
              * environmentInfo.

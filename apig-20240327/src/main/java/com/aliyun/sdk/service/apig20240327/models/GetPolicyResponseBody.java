@@ -44,6 +44,10 @@ public class GetPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class GetPolicyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(PolicyDetailInfo data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

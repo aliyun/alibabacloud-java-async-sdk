@@ -49,7 +49,7 @@ public class ChangeResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupId.
+         * <p>Target resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzdrfx2xdnaja</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -110,7 +113,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>Resource ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-ct4i14um1hkn0tpqfae0</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -119,7 +125,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -128,7 +137,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * Service.
+         * <p>Service name, fixed value apig</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apig</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

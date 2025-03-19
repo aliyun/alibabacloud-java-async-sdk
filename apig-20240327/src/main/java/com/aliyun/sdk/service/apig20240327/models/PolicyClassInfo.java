@@ -80,6 +80,10 @@ public class PolicyClassInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alias
      */
@@ -185,6 +189,25 @@ public class PolicyClassInfo extends TeaModel {
         private String name; 
         private String type; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(PolicyClassInfo model) {
+            this.alias = model.alias;
+            this.attachableResourceTypes = model.attachableResourceTypes;
+            this.classId = model.classId;
+            this.configExample = model.configExample;
+            this.deprecated = model.deprecated;
+            this.description = model.description;
+            this.direction = model.direction;
+            this.enableLog = model.enableLog;
+            this.executePriority = model.executePriority;
+            this.executeStage = model.executeStage;
+            this.name = model.name;
+            this.type = model.type;
+            this.version = model.version;
+        } 
 
         /**
          * alias.

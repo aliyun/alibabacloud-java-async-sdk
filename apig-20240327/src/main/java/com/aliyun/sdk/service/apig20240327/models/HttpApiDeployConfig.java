@@ -52,6 +52,10 @@ public class HttpApiDeployConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoDeploy
      */
@@ -101,6 +105,18 @@ public class HttpApiDeployConfig extends TeaModel {
         private String environmentId; 
         private java.util.List<PolicyConfigs> policyConfigs; 
         private java.util.List<ServiceConfigs> serviceConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiDeployConfig model) {
+            this.autoDeploy = model.autoDeploy;
+            this.backendScene = model.backendScene;
+            this.customDomainIds = model.customDomainIds;
+            this.environmentId = model.environmentId;
+            this.policyConfigs = model.policyConfigs;
+            this.serviceConfigs = model.serviceConfigs;
+        } 
 
         /**
          * autoDeploy.
@@ -188,6 +204,13 @@ public class HttpApiDeployConfig extends TeaModel {
         public static final class Builder {
             private java.util.List<String> serviceIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(AiFallbackConfig model) {
+                this.serviceIds = model.serviceIds;
+            } 
+
             /**
              * serviceIds.
              */
@@ -258,6 +281,15 @@ public class HttpApiDeployConfig extends TeaModel {
             private AiFallbackConfig aiFallbackConfig; 
             private Boolean enable; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyConfigs model) {
+                this.aiFallbackConfig = model.aiFallbackConfig;
+                this.enable = model.enable;
+                this.type = model.type;
+            } 
 
             /**
              * aiFallbackConfig.
@@ -357,6 +389,16 @@ public class HttpApiDeployConfig extends TeaModel {
             private String modelNamePattern; 
             private String serviceId; 
             private Long weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceConfigs model) {
+                this.modelName = model.modelName;
+                this.modelNamePattern = model.modelNamePattern;
+                this.serviceId = model.serviceId;
+                this.weight = model.weight;
+            } 
 
             /**
              * modelName.

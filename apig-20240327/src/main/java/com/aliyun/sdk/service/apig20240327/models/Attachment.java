@@ -48,6 +48,10 @@ public class Attachment extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachResourceIds
      */
@@ -89,6 +93,17 @@ public class Attachment extends TeaModel {
         private String environmentId; 
         private String gatewayId; 
         private String policyAttachmentId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Attachment model) {
+            this.attachResourceIds = model.attachResourceIds;
+            this.attachResourceType = model.attachResourceType;
+            this.environmentId = model.environmentId;
+            this.gatewayId = model.gatewayId;
+            this.policyAttachmentId = model.policyAttachmentId;
+        } 
 
         /**
          * attachResourceIds.

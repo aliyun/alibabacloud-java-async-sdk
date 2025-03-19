@@ -76,6 +76,10 @@ public class DomainInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certIdentifier
      */
@@ -173,6 +177,24 @@ public class DomainInfo extends TeaModel {
         private String resourceGroupId; 
         private String status; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DomainInfo model) {
+            this.certIdentifier = model.certIdentifier;
+            this.clientCACert = model.clientCACert;
+            this.createFrom = model.createFrom;
+            this.createTimestamp = model.createTimestamp;
+            this.domainId = model.domainId;
+            this.forceHttps = model.forceHttps;
+            this.mTLSEnabled = model.mTLSEnabled;
+            this.name = model.name;
+            this.protocol = model.protocol;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * certIdentifier.

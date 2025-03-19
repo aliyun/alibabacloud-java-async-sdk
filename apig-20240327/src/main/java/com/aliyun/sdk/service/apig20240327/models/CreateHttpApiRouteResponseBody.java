@@ -44,6 +44,10 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,18 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateHttpApiRouteResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -90,7 +104,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +112,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -109,7 +123,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
@@ -157,8 +171,15 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String routeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.routeId = model.routeId;
+            } 
+
             /**
-             * <p>Route ID。</p>
+             * <p>The route ID.</p>
              * 
              * <strong>example:</strong>
              * <p>hr-cr82undlhtgrlej***</p>

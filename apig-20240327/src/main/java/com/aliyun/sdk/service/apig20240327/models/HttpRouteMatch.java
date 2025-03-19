@@ -48,6 +48,10 @@ public class HttpRouteMatch extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return headers
      */
@@ -89,6 +93,17 @@ public class HttpRouteMatch extends TeaModel {
         private java.util.List<String> methods; 
         private HttpRouteMatchPath path; 
         private java.util.List<QueryParams> queryParams; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpRouteMatch model) {
+            this.headers = model.headers;
+            this.ignoreUriCase = model.ignoreUriCase;
+            this.methods = model.methods;
+            this.path = model.path;
+            this.queryParams = model.queryParams;
+        } 
 
         /**
          * headers.
@@ -192,6 +207,15 @@ public class HttpRouteMatch extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * name.
              */
@@ -266,6 +290,14 @@ public class HttpRouteMatch extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpRouteMatchPath model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * type.
@@ -345,6 +377,15 @@ public class HttpRouteMatch extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryParams model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * name.

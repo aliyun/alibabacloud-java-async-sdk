@@ -36,6 +36,10 @@ public class ParentResourceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiInfo
      */
@@ -53,6 +57,14 @@ public class ParentResourceInfo extends TeaModel {
     public static final class Builder {
         private HttpApiApiInfo apiInfo; 
         private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ParentResourceInfo model) {
+            this.apiInfo = model.apiInfo;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * apiInfo.

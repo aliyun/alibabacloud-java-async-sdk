@@ -44,6 +44,10 @@ public class GatewayInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engineVersion
      */
@@ -77,6 +81,16 @@ public class GatewayInfo extends TeaModel {
         private String gatewayId; 
         private String name; 
         private VpcInfo vpcInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GatewayInfo model) {
+            this.engineVersion = model.engineVersion;
+            this.gatewayId = model.gatewayId;
+            this.name = model.name;
+            this.vpcInfo = model.vpcInfo;
+        } 
 
         /**
          * engineVersion.
@@ -159,6 +173,14 @@ public class GatewayInfo extends TeaModel {
         public static final class Builder {
             private String name; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcInfo model) {
+                this.name = model.name;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * name.

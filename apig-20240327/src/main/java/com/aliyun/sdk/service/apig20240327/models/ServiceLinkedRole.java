@@ -60,6 +60,10 @@ public class ServiceLinkedRole extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arn
      */
@@ -125,6 +129,20 @@ public class ServiceLinkedRole extends TeaModel {
         private String roleId; 
         private String roleName; 
         private String rolePrincipalName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ServiceLinkedRole model) {
+            this.arn = model.arn;
+            this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
+            this.createDate = model.createDate;
+            this.description = model.description;
+            this.isServiceLinkedRole = model.isServiceLinkedRole;
+            this.roleId = model.roleId;
+            this.roleName = model.roleName;
+            this.rolePrincipalName = model.rolePrincipalName;
+        } 
 
         /**
          * arn.

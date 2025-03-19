@@ -40,6 +40,10 @@ public class AuthorizationResourceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return environmentId
      */
@@ -65,6 +69,15 @@ public class AuthorizationResourceInfo extends TeaModel {
         private String environmentId; 
         private String parentResourceId; 
         private String resourceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AuthorizationResourceInfo model) {
+            this.environmentId = model.environmentId;
+            this.parentResourceId = model.parentResourceId;
+            this.resourceId = model.resourceId;
+        } 
 
         /**
          * environmentId.

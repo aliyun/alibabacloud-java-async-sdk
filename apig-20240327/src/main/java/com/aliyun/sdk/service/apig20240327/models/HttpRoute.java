@@ -68,6 +68,10 @@ public class HttpRoute extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backend
      */
@@ -149,6 +153,22 @@ public class HttpRoute extends TeaModel {
         private String name; 
         private String routeId; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpRoute model) {
+            this.backend = model.backend;
+            this.createTimestamp = model.createTimestamp;
+            this.deployStatus = model.deployStatus;
+            this.description = model.description;
+            this.domainInfos = model.domainInfos;
+            this.environmentInfo = model.environmentInfo;
+            this.match = model.match;
+            this.name = model.name;
+            this.routeId = model.routeId;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * backend.
@@ -292,6 +312,15 @@ public class HttpRoute extends TeaModel {
             private String name; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainInfos model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+                this.protocol = model.protocol;
+            } 
+
             /**
              * domainId.
              */
@@ -366,6 +395,14 @@ public class HttpRoute extends TeaModel {
         public static final class Builder {
             private String gatewayId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewayInfo model) {
+                this.gatewayId = model.gatewayId;
+                this.name = model.name;
+            } 
 
             /**
              * gatewayId.
@@ -457,6 +494,16 @@ public class HttpRoute extends TeaModel {
             private String name; 
             private String networkType; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDomains model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+                this.networkType = model.networkType;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * domainId.
@@ -576,6 +623,17 @@ public class HttpRoute extends TeaModel {
             private GatewayInfo gatewayInfo; 
             private String name; 
             private java.util.List<SubDomains> subDomains; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentInfo model) {
+                this.alias = model.alias;
+                this.environmentId = model.environmentId;
+                this.gatewayInfo = model.gatewayInfo;
+                this.name = model.name;
+                this.subDomains = model.subDomains;
+            } 
 
             /**
              * alias.

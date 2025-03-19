@@ -80,6 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The interface supports creating multiple services.</p>
+     * 
      * @param request the request parameters of CreateService  CreateServiceRequest
      * @return CreateServiceResponse
      */
@@ -299,6 +302,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartGatewayResponse> restartGateway(RestartGatewayRequest request);
 
     /**
+     * @param request the request parameters of UndeployHttpApi  UndeployHttpApiRequest
+     * @return UndeployHttpApiResponse
+     */
+    CompletableFuture<UndeployHttpApiResponse> undeployHttpApi(UndeployHttpApiRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>只有类型为<strong>容器服务</strong>的来源允许更新监听Ingress的配置。</p>
+     * 
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
      * @return UpdateDomainResponse
      */

@@ -44,6 +44,10 @@ public class ListZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ListZonesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListZonesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,10 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8079207-B651-592A-A565-23E9EE5673B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,8 +171,18 @@ public class ListZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * zoneId.
+             * <p>可用区ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -195,8 +228,15 @@ public class ListZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Items> items; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+            } 
+
             /**
-             * items.
+             * <p>List of availability zones.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

@@ -91,7 +91,7 @@ public class CreateDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -239,7 +239,14 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * clientCACert.
+         * <p>Client CA Certificate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+         * BQAwE************************************************2VwVOJ2gqX3
+         * YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+         * -----END CERTIFICATE-----</p>
          */
         public Builder clientCACert(String clientCACert) {
             this.putBodyParameter("clientCACert", clientCACert);
@@ -272,7 +279,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * mTLSEnabled.
+         * <p>Whether to enable mTLS mutual authentication</p>
          */
         public Builder mTLSEnabled(Boolean mTLSEnabled) {
             this.putBodyParameter("mTLSEnabled", mTLSEnabled);

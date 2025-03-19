@@ -44,6 +44,10 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHttpApiOperationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response status code.</p>
@@ -157,6 +171,13 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         public static final class Builder {
             private String operationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Operations model) {
+                this.operationId = model.operationId;
+            } 
+
             /**
              * <p>Operation ID.</p>
              * 
@@ -206,6 +227,13 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Operations> operations; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.operations = model.operations;
+            } 
 
             /**
              * <p>Operation information.</p>

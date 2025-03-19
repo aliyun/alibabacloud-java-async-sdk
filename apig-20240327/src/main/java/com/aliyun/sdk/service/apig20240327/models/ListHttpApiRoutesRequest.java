@@ -99,7 +99,7 @@ public class ListHttpApiRoutesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,7 +241,7 @@ public class ListHttpApiRoutesRequest extends Request {
         } 
 
         /**
-         * <p>HTTP API ID。</p>
+         * <p>HTTP API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31f***</p>
@@ -253,7 +253,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * consumerAuthorizationRuleId.
+         * <p>Filter the interface list based on a specific consumer authorization rule ID. The interface list in the response will only include authorized interfaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-xxx</p>
          */
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putQueryParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
@@ -262,7 +265,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * deployStatuses.
+         * <p>Deployment status of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotDeployed</p>
          */
         public Builder deployStatuses(String deployStatuses) {
             this.putQueryParameter("deployStatuses", deployStatuses);
@@ -271,7 +277,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * domainId.
+         * <p>Filter route information by domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xxx</p>
          */
         public Builder domainId(String domainId) {
             this.putQueryParameter("domainId", domainId);
@@ -280,7 +289,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * <p>Environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cpqnr6tlhtgubc***</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("environmentId", environmentId);
@@ -289,7 +301,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>Cloud-native API Gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdl****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -298,7 +313,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>itemcenter-gateway</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -307,7 +325,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>Fuzzy search by route name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -316,7 +337,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, starting from 1. Default is 1 if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -325,7 +349,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, valid range [1, 100]. Default is 10 if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -334,7 +361,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * pathLike.
+         * <p>Fuzzy search by route path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1</p>
          */
         public Builder pathLike(String pathLike) {
             this.putQueryParameter("pathLike", pathLike);
@@ -343,7 +373,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * withAuthPolicyInfo.
+         * <p>The response includes consumer authorization information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withAuthPolicyInfo(Boolean withAuthPolicyInfo) {
             this.putQueryParameter("withAuthPolicyInfo", withAuthPolicyInfo);
@@ -352,7 +385,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * withConsumerInfoById.
+         * <p>Each route information in the response carries the list of authorization rules for the specified consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-xxx</p>
          */
         public Builder withConsumerInfoById(String withConsumerInfoById) {
             this.putQueryParameter("withConsumerInfoById", withConsumerInfoById);
@@ -361,7 +397,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * withPluginAttachmentByPluginId.
+         * <p>Each route information in the response carries the attachment information for the specified plugin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-xxx</p>
          */
         public Builder withPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
             this.putQueryParameter("withPluginAttachmentByPluginId", withPluginAttachmentByPluginId);

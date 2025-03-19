@@ -44,6 +44,10 @@ public class ListSslCertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ListSslCertsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSslCertsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,10 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AADF7197-3384-52AF-A2DE-A66696734129</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -184,8 +207,18 @@ public class ListSslCertsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * items.
+             * <p>List of certificate information.</p>
              */
             public Builder items(java.util.List<SslCertMetaInfo> items) {
                 this.items = items;
@@ -193,7 +226,10 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -201,7 +237,10 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -209,7 +248,10 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

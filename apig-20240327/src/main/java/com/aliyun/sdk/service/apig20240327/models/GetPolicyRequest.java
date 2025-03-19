@@ -35,7 +35,7 @@ public class GetPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
+         * <p>Policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

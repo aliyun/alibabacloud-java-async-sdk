@@ -34,7 +34,7 @@ public class GetServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,10 @@ public class GetServiceRequest extends Request {
         } 
 
         /**
-         * serviceId.
+         * <p>Service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr6pk4tlhtgm58e***</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("serviceId", serviceId);

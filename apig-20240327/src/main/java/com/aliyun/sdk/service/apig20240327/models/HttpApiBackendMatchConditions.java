@@ -36,6 +36,10 @@ public class HttpApiBackendMatchConditions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
@@ -53,6 +57,14 @@ public class HttpApiBackendMatchConditions extends TeaModel {
     public static final class Builder {
         private java.util.List<HttpApiBackendMatchCondition> conditions; 
         private Boolean _default; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiBackendMatchConditions model) {
+            this.conditions = model.conditions;
+            this._default = model._default;
+        } 
 
         /**
          * conditions.

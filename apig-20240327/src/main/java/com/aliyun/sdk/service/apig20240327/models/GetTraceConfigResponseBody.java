@@ -48,6 +48,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,8 +94,22 @@ public class GetTraceConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTraceConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Response Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -99,7 +117,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -107,7 +125,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error Message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +136,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +147,12 @@ public class GetTraceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Boolean	Request Result, with the following values:
+         * true: Request succeeded.
+         * false: Request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -216,8 +245,24 @@ public class GetTraceConfigResponseBody extends TeaModel {
             private String servicePort; 
             private String traceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enable = model.enable;
+                this.sampleRatio = model.sampleRatio;
+                this.serviceId = model.serviceId;
+                this.servicePort = model.servicePort;
+                this.traceType = model.traceType;
+            } 
+
             /**
-             * enable.
+             * <p>Whether to Enable Tracing:
+             * true: Enabled
+             * false: Disabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -225,7 +270,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * sampleRatio.
+             * <p>Sampling Rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder sampleRatio(Integer sampleRatio) {
                 this.sampleRatio = sampleRatio;
@@ -233,7 +281,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>Service ID, present when the tracing type is SKYWALKING</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-co370icmjeu****</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -241,7 +292,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * servicePort.
+             * <p>服务端口，链路追踪类型为SKYWALKING时存在该参数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8090</p>
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -249,7 +303,16 @@ public class GetTraceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * traceType.
+             * <p>Tracing Type:</p>
+             * <ul>
+             * <li>XTRACE</li>
+             * <li>SKYWALKING</li>
+             * <li>OPENTELEMETRY</li>
+             * <li>OTSKYWALKING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SKYWALKING</p>
              */
             public Builder traceType(String traceType) {
                 this.traceType = traceType;

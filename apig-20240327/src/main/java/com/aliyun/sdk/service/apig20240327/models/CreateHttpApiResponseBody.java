@@ -44,6 +44,10 @@ public class CreateHttpApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateHttpApiResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHttpApiResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Status code.</p>
@@ -168,6 +182,14 @@ public class CreateHttpApiResponseBody extends TeaModel {
         public static final class Builder {
             private String httpApiId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.httpApiId = model.httpApiId;
+                this.name = model.name;
+            } 
 
             /**
              * <p>HTTP API ID.</p>

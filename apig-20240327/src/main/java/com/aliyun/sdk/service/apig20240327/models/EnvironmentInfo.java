@@ -68,6 +68,10 @@ public class EnvironmentInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alias
      */
@@ -149,6 +153,22 @@ public class EnvironmentInfo extends TeaModel {
         private String resourceGroupId; 
         private java.util.List<SubDomainInfo> subDomainInfos; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(EnvironmentInfo model) {
+            this.alias = model.alias;
+            this.createTimestamp = model.createTimestamp;
+            this._default = model._default;
+            this.description = model.description;
+            this.environmentId = model.environmentId;
+            this.gatewayInfo = model.gatewayInfo;
+            this.name = model.name;
+            this.resourceGroupId = model.resourceGroupId;
+            this.subDomainInfos = model.subDomainInfos;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * alias.

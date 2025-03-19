@@ -59,7 +59,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,6 +120,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         } 
 
         /**
+         * <p>Attached resource ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         }
 
         /**
+         * <p>Attached resource type, such as HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, Domain</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         }
 
         /**
+         * <p>Environment ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         }
 
         /**
+         * <p>Gateway instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         }
 
         /**
+         * <p>Policy ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

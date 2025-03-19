@@ -36,6 +36,10 @@ public class ResourceStatistic extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resourceCount
      */
@@ -53,6 +57,14 @@ public class ResourceStatistic extends TeaModel {
     public static final class Builder {
         private Integer resourceCount; 
         private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceStatistic model) {
+            this.resourceCount = model.resourceCount;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * resourceCount.

@@ -81,7 +81,7 @@ public class UpdateHttpApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -187,7 +187,7 @@ public class UpdateHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to be updated.</p>
+         * <p>The HTTP API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>List of AI protocols.</p>
+         * <p>The AI protocols.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -209,7 +209,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * authConfig.
+         * <p>The authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.putBodyParameter("authConfig", authConfig);
@@ -218,7 +218,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Base path of the API, which must start with a &quot;/&quot;.</p>
+         * <p>The API base path, which must start with a forward slash (/).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>List of API deployment configurations.</p>
+         * <p>The deployment configurations.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -240,10 +240,10 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>API description.</p>
+         * <p>The API description.</p>
          * 
          * <strong>example:</strong>
-         * <p>更新API描述</p>
+         * <p>API for testing</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -252,7 +252,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * enableAuth.
+         * <p>Specifies whether to enable authentication.</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.putBodyParameter("enableAuth", enableAuth);
@@ -261,7 +261,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Configuration information for the HTTP Ingress API.</p>
+         * <p>The HTTP Ingress API configurations.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -270,7 +270,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>List of API access protocols.</p>
+         * <p>The protocols that are used to access the API.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.putBodyParameter("protocols", protocols);
@@ -279,7 +279,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>API versioning configuration.</p>
+         * <p>The versioning configurations.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
@@ -374,8 +374,19 @@ public class UpdateHttpApiRequest extends Request {
             private String sourceId; 
             private String watchNamespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(IngressConfig model) {
+                this.environmentId = model.environmentId;
+                this.ingressClass = model.ingressClass;
+                this.overrideIngressIp = model.overrideIngressIp;
+                this.sourceId = model.sourceId;
+                this.watchNamespace = model.watchNamespace;
+            } 
+
             /**
-             * <p>Environment ID.</p>
+             * <p>The environment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>env-cr6ql0tlhtgmc****</p>
@@ -386,7 +397,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Ingress Class being listened to.</p>
+             * <p>The Ingress class for listening.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -397,7 +408,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Whether to update the address in the Ingress Status.</p>
+             * <p>Specifies whether to update the address in Ingress Status.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -408,7 +419,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Source ID.</p>
+             * <p>The source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>src-crdddallhtgtr****</p>
@@ -419,7 +430,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Watched namespace.</p>
+             * <p>The namespace for listening.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

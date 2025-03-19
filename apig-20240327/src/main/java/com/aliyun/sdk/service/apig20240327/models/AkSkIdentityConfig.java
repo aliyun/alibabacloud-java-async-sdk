@@ -44,6 +44,10 @@ public class AkSkIdentityConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ak
      */
@@ -77,6 +81,16 @@ public class AkSkIdentityConfig extends TeaModel {
         private String generateMode; 
         private String sk; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AkSkIdentityConfig model) {
+            this.ak = model.ak;
+            this.generateMode = model.generateMode;
+            this.sk = model.sk;
+            this.type = model.type;
+        } 
 
         /**
          * ak.

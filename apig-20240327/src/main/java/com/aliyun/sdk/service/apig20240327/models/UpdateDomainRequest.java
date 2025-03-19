@@ -86,7 +86,7 @@ public class UpdateDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -214,7 +214,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * caCertIdentifier.
+         * <p>CA certificate identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder caCertIdentifier(String caCertIdentifier) {
             this.putBodyParameter("caCertIdentifier", caCertIdentifier);
@@ -223,7 +226,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * certIdentifier.
+         * <p>Certificate identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putBodyParameter("certIdentifier", certIdentifier);
@@ -232,7 +238,14 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * clientCACert.
+         * <p>Client CA Certificate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+         * BQAwE************************************************2VwVOJ2gqX3
+         * YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+         * -----END CERTIFICATE-----</p>
          */
         public Builder clientCACert(String clientCACert) {
             this.putBodyParameter("clientCACert", clientCACert);
@@ -265,7 +278,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * mTLSEnabled.
+         * <p>Whether to enable mTLS mutual authentication</p>
          */
         public Builder mTLSEnabled(Boolean mTLSEnabled) {
             this.putBodyParameter("mTLSEnabled", mTLSEnabled);

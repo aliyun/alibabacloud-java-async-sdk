@@ -39,7 +39,7 @@ public class GetTraceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,10 @@ public class GetTraceConfigRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>Gateway Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -82,7 +85,12 @@ public class GetTraceConfigRequest extends Request {
         }
 
         /**
-         * acceptLanguage.
+         * <p>Language Type:
+         * zh: Chinese
+         * en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);

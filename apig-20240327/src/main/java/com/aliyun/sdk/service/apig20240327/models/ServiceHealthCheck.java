@@ -60,6 +60,10 @@ public class ServiceHealthCheck extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -125,6 +129,20 @@ public class ServiceHealthCheck extends TeaModel {
         private String protocol; 
         private Integer timeout; 
         private Integer unhealthyThreshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(ServiceHealthCheck model) {
+            this.enable = model.enable;
+            this.healthyThreshold = model.healthyThreshold;
+            this.httpHost = model.httpHost;
+            this.httpPath = model.httpPath;
+            this.interval = model.interval;
+            this.protocol = model.protocol;
+            this.timeout = model.timeout;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+        } 
 
         /**
          * enable.

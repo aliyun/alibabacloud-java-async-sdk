@@ -40,6 +40,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apikeySource
      */
@@ -65,6 +69,15 @@ public class ApiKeyIdentityConfig extends TeaModel {
         private ApikeySource apikeySource; 
         private java.util.List<Credentials> credentials; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApiKeyIdentityConfig model) {
+            this.apikeySource = model.apikeySource;
+            this.credentials = model.credentials;
+            this.type = model.type;
+        } 
 
         /**
          * apikeySource.
@@ -140,6 +153,14 @@ public class ApiKeyIdentityConfig extends TeaModel {
             private String source; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApikeySource model) {
+                this.source = model.source;
+                this.value = model.value;
+            } 
+
             /**
              * source.
              */
@@ -206,6 +227,14 @@ public class ApiKeyIdentityConfig extends TeaModel {
         public static final class Builder {
             private String apikey; 
             private String generateMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.apikey = model.apikey;
+                this.generateMode = model.generateMode;
+            } 
 
             /**
              * apikey.

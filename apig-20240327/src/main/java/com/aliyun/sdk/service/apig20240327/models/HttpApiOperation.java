@@ -67,6 +67,10 @@ public class HttpApiOperation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authConfig
      */
@@ -140,6 +144,21 @@ public class HttpApiOperation extends TeaModel {
         private String path; 
         private HttpApiRequestContract request; 
         private HttpApiResponseContract response; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiOperation model) {
+            this.authConfig = model.authConfig;
+            this.description = model.description;
+            this.enableAuth = model.enableAuth;
+            this.method = model.method;
+            this.mock = model.mock;
+            this.name = model.name;
+            this.path = model.path;
+            this.request = model.request;
+            this.response = model.response;
+        } 
 
         /**
          * authConfig.

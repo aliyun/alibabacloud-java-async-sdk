@@ -44,6 +44,10 @@ public class CreateServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class CreateServiceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,10 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C67DED2B-F19B-5BEC-88C1-D6EB854CD0D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,8 +171,15 @@ public class CreateServiceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> serviceIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.serviceIds = model.serviceIds;
+            } 
+
             /**
-             * serviceIds.
+             * <p>List of service IDs.</p>
              */
             public Builder serviceIds(java.util.List<String> serviceIds) {
                 this.serviceIds = serviceIds;

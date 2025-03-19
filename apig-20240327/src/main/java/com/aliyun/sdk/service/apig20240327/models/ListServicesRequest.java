@@ -59,7 +59,7 @@ public class ListServicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,10 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>Cloud-native API Gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdl*****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -138,7 +141,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Exact query by service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-service</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -147,7 +153,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, starting from 1. Default is 1 if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -156,7 +165,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, valid range [1, 100]. Default is 10 if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -165,7 +177,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxxe5rc6cvla</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -174,7 +189,17 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>Query by service source type. Service sources:</p>
+         * <ul>
+         * <li>MSE_NACOS: Services from MSE Nacos.</li>
+         * <li>K8S: Services from K8S clusters in container services.</li>
+         * <li>FC3: Services from function computing.</li>
+         * <li>VIP: Services from a fixed address.</li>
+         * <li>DNS: Services from a domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_NACOS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

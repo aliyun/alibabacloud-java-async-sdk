@@ -44,6 +44,10 @@ public class UpdateDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class UpdateDomainResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateDomainResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response code.</p>
@@ -156,6 +170,13 @@ public class UpdateDomainResponseBody extends TeaModel {
 
         public static final class Builder {
             private String deployRevisionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deployRevisionId = model.deployRevisionId;
+            } 
 
             /**
              * <p>Deploy revision id.</p>

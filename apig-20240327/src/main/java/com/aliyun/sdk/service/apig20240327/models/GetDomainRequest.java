@@ -40,7 +40,7 @@ public class GetDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * withStatistics.
+         * <p>Indicates whether include domain related resource information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withStatistics(Boolean withStatistics) {
             this.putQueryParameter("withStatistics", withStatistics);

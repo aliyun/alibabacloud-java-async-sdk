@@ -44,7 +44,7 @@ public class DeployHttpApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,7 @@ public class DeployHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>HTTP API ID。</p>
+         * <p>HTTP API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31fb***</p>
@@ -99,7 +99,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * restApiConfig.
+         * <p>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</p>
          */
         public Builder restApiConfig(RestApiConfig restApiConfig) {
             this.putBodyParameter("restApiConfig", restApiConfig);
@@ -108,7 +108,10 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * routeId.
+         * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr-cr82undlhtgrl***</p>
          */
         public Builder routeId(String routeId) {
             this.putBodyParameter("routeId", routeId);
@@ -215,8 +218,20 @@ public class DeployHttpApiRequest extends Request {
             private String version; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceConfigs model) {
+                this.match = model.match;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.serviceId = model.serviceId;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
+
             /**
-             * match.
+             * <p>Configuration of matching conditions related to API deployment.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -224,7 +239,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * port.
+             * <p>Service port, do not provide for dynamic ports.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -232,7 +250,14 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>Service protocol:</p>
+             * <ul>
+             * <li>HTTP.</li>
+             * <li>HTTPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -240,7 +265,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * serviceId.
+             * <p>Service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cr6pk4tlhtgm58e***</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -248,7 +276,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>Service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -256,7 +287,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * weight.
+             * <p>Weight, range [1,100], valid only in the by-ratio scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -338,8 +372,21 @@ public class DeployHttpApiRequest extends Request {
             private String environmentId; 
             private java.util.List<ServiceConfigs> serviceConfigs; 
 
+            private Builder() {
+            } 
+
+            private Builder(Environment model) {
+                this.backendScene = model.backendScene;
+                this.customDomainIds = model.customDomainIds;
+                this.environmentId = model.environmentId;
+                this.serviceConfigs = model.serviceConfigs;
+            } 
+
             /**
-             * backendScene.
+             * <p>API publication scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SingleService</p>
              */
             public Builder backendScene(String backendScene) {
                 this.backendScene = backendScene;
@@ -347,7 +394,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * customDomainIds.
+             * <p>List of user domains.</p>
              */
             public Builder customDomainIds(java.util.List<String> customDomainIds) {
                 this.customDomainIds = customDomainIds;
@@ -355,7 +402,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * environmentId.
+             * <p>Environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cpqnr6tlhtgubc***</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -363,7 +413,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * serviceConfigs.
+             * <p>Existing service configurations. Only one entry is allowed in a single-service scenario, while multiple entries are allowed in scenarios such as by ratio or by content.</p>
              */
             public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
                 this.serviceConfigs = serviceConfigs;
@@ -433,8 +483,20 @@ public class DeployHttpApiRequest extends Request {
             private Environment environment; 
             private String revisionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RestApiConfig model) {
+                this.description = model.description;
+                this.environment = model.environment;
+                this.revisionId = model.revisionId;
+            } 
+
             /**
-             * description.
+             * <p>Publication description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用户服务API发布。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -442,7 +504,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * environment.
+             * <p>Publication environment configuration.</p>
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
@@ -450,7 +512,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * revisionId.
+             * <p>Historical version number. If this field is specified, the publication information will be based on the historical version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apr-xxx</p>
              */
             public Builder revisionId(String revisionId) {
                 this.revisionId = revisionId;

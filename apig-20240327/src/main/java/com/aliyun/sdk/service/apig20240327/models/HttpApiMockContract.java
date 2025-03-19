@@ -40,6 +40,10 @@ public class HttpApiMockContract extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -65,6 +69,15 @@ public class HttpApiMockContract extends TeaModel {
         private Boolean enable; 
         private Integer responseCode; 
         private String responseContent; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiMockContract model) {
+            this.enable = model.enable;
+            this.responseCode = model.responseCode;
+            this.responseContent = model.responseContent;
+        } 
 
         /**
          * enable.

@@ -44,6 +44,10 @@ public class HttpApiBackendMatchCondition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -77,6 +81,16 @@ public class HttpApiBackendMatchCondition extends TeaModel {
         private String operator; 
         private String type; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiBackendMatchCondition model) {
+            this.key = model.key;
+            this.operator = model.operator;
+            this.type = model.type;
+            this.value = model.value;
+        } 
 
         /**
          * key.

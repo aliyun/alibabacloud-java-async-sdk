@@ -32,6 +32,10 @@ public class CheckServiceLinkedRoleResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return existed
      */
@@ -41,6 +45,13 @@ public class CheckServiceLinkedRoleResult extends TeaModel {
 
     public static final class Builder {
         private Boolean existed; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceLinkedRoleResult model) {
+            this.existed = model.existed;
+        } 
 
         /**
          * existed.

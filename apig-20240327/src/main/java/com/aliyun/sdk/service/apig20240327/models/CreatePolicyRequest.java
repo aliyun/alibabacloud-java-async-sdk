@@ -52,7 +52,7 @@ public class CreatePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,6 +104,7 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
+         * <p>Policy type, including RateLimit, ConcurrencyLimit, CircuitBreaker, HttpRewrite, HeaderModify, Cors, Authentication, FlowCopy, Timeout, Retry, IpAccessControl, DirectResponse, Redirect, Fallback, ServiceTls, ServiceLb, ServicePortTls, Waf, JWTAuth, OIDCAuth, ExternalZAuth, AiProxy, ModelRouter, AiStatistics, AiSecurityGuard, AiFallback, ModelMapper, AiTokenRateLimit, AiCache, DynamicRoute</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy configuration</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Policy description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timeout policy</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -137,6 +142,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

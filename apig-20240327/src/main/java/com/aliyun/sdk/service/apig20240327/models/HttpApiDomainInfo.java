@@ -40,6 +40,10 @@ public class HttpApiDomainInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainId
      */
@@ -65,6 +69,15 @@ public class HttpApiDomainInfo extends TeaModel {
         private String domainId; 
         private String name; 
         private String protocol; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiDomainInfo model) {
+            this.domainId = model.domainId;
+            this.name = model.name;
+            this.protocol = model.protocol;
+        } 
 
         /**
          * domainId.

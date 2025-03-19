@@ -96,6 +96,10 @@ public class PluginClassInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alias
      */
@@ -233,6 +237,29 @@ public class PluginClassInfo extends TeaModel {
         private String versionDescription; 
         private String wasmLanguage; 
         private String wasmUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(PluginClassInfo model) {
+            this.alias = model.alias;
+            this.configExample = model.configExample;
+            this.description = model.description;
+            this.executePriority = model.executePriority;
+            this.executeStage = model.executeStage;
+            this.imageName = model.imageName;
+            this.innerPlugin = model.innerPlugin;
+            this.mode = model.mode;
+            this.name = model.name;
+            this.pluginClassId = model.pluginClassId;
+            this.source = model.source;
+            this.supportedMinGatewayVersion = model.supportedMinGatewayVersion;
+            this.type = model.type;
+            this.version = model.version;
+            this.versionDescription = model.versionDescription;
+            this.wasmLanguage = model.wasmLanguage;
+            this.wasmUrl = model.wasmUrl;
+        } 
 
         /**
          * alias.

@@ -40,6 +40,10 @@ public class ConsumerInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return consumerId
      */
@@ -65,6 +69,15 @@ public class ConsumerInfo extends TeaModel {
         private String consumerId; 
         private Boolean enable; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConsumerInfo model) {
+            this.consumerId = model.consumerId;
+            this.enable = model.enable;
+            this.name = model.name;
+        } 
 
         /**
          * consumerId.

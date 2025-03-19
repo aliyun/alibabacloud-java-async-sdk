@@ -104,6 +104,10 @@ public class SslCertMetaInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithm
      */
@@ -257,6 +261,31 @@ public class SslCertMetaInfo extends TeaModel {
         private String serialNo; 
         private String sha2; 
         private String signAlgorithm; 
+
+        private Builder() {
+        } 
+
+        private Builder(SslCertMetaInfo model) {
+            this.algorithm = model.algorithm;
+            this.certId = model.certId;
+            this.certIdentifier = model.certIdentifier;
+            this.certName = model.certName;
+            this.commonName = model.commonName;
+            this.domain = model.domain;
+            this.domainMatchCert = model.domainMatchCert;
+            this.fingerprint = model.fingerprint;
+            this.instanceId = model.instanceId;
+            this.isChainCompleted = model.isChainCompleted;
+            this.issuer = model.issuer;
+            this.keySize = model.keySize;
+            this.md5 = model.md5;
+            this.notAfterTimestamp = model.notAfterTimestamp;
+            this.notBeforeTimestamp = model.notBeforeTimestamp;
+            this.sans = model.sans;
+            this.serialNo = model.serialNo;
+            this.sha2 = model.sha2;
+            this.signAlgorithm = model.signAlgorithm;
+        } 
 
         /**
          * algorithm.

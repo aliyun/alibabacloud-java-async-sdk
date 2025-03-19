@@ -44,6 +44,10 @@ public class HttpDubboTranscoder extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dubboServiceGroup
      */
@@ -77,6 +81,16 @@ public class HttpDubboTranscoder extends TeaModel {
         private String dubboServiceName; 
         private String dubboServiceVersion; 
         private java.util.List<MothedMapList> mothedMapList; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpDubboTranscoder model) {
+            this.dubboServiceGroup = model.dubboServiceGroup;
+            this.dubboServiceName = model.dubboServiceName;
+            this.dubboServiceVersion = model.dubboServiceVersion;
+            this.mothedMapList = model.mothedMapList;
+        } 
 
         /**
          * dubboServiceGroup.
@@ -171,6 +185,15 @@ public class HttpDubboTranscoder extends TeaModel {
             private String extractKey; 
             private String extractKeySpec; 
             private String mappingType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamMapsList model) {
+                this.extractKey = model.extractKey;
+                this.extractKeySpec = model.extractKeySpec;
+                this.mappingType = model.mappingType;
+            } 
 
             /**
              * extractKey.
@@ -294,6 +317,18 @@ public class HttpDubboTranscoder extends TeaModel {
             private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
             private java.util.List<String> passThroughList; 
+
+            private Builder() {
+            } 
+
+            private Builder(MothedMapList model) {
+                this.dubboMothedName = model.dubboMothedName;
+                this.httpMothed = model.httpMothed;
+                this.mothedpath = model.mothedpath;
+                this.paramMapsList = model.paramMapsList;
+                this.passThroughAllHeaders = model.passThroughAllHeaders;
+                this.passThroughList = model.passThroughList;
+            } 
 
             /**
              * dubboMothedName.

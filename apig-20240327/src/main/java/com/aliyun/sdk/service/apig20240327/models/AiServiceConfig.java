@@ -48,6 +48,10 @@ public class AiServiceConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -89,6 +93,17 @@ public class AiServiceConfig extends TeaModel {
         private Boolean enableHealthCheck; 
         private java.util.List<String> protocols; 
         private String provider; 
+
+        private Builder() {
+        } 
+
+        private Builder(AiServiceConfig model) {
+            this.address = model.address;
+            this.apiKeys = model.apiKeys;
+            this.enableHealthCheck = model.enableHealthCheck;
+            this.protocols = model.protocols;
+            this.provider = model.provider;
+        } 
 
         /**
          * address.

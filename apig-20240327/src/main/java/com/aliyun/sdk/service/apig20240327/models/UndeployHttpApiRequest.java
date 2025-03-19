@@ -12,22 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetHttpApiRouteRequest} extends {@link RequestModel}
+ * {@link UndeployHttpApiRequest} extends {@link RequestModel}
  *
- * <p>GetHttpApiRouteRequest</p>
+ * <p>UndeployHttpApiRequest</p>
  */
-public class GetHttpApiRouteRequest extends Request {
+public class UndeployHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("httpApiId")
     private String httpApiId;
 
-    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("environmentId")
+    private String environmentId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("routeId")
     private String routeId;
 
-    private GetHttpApiRouteRequest(Builder builder) {
+    private UndeployHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.environmentId = builder.environmentId;
         this.routeId = builder.routeId;
     }
 
@@ -35,7 +40,7 @@ public class GetHttpApiRouteRequest extends Request {
         return new Builder();
     }
 
-    public static GetHttpApiRouteRequest create() {
+    public static UndeployHttpApiRequest create() {
         return builder().build();
     }
 
@@ -52,28 +57,37 @@ public class GetHttpApiRouteRequest extends Request {
     }
 
     /**
+     * @return environmentId
+     */
+    public String getEnvironmentId() {
+        return this.environmentId;
+    }
+
+    /**
      * @return routeId
      */
     public String getRouteId() {
         return this.routeId;
     }
 
-    public static final class Builder extends Request.Builder<GetHttpApiRouteRequest, Builder> {
+    public static final class Builder extends Request.Builder<UndeployHttpApiRequest, Builder> {
         private String httpApiId; 
+        private String environmentId; 
         private String routeId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetHttpApiRouteRequest request) {
+        private Builder(UndeployHttpApiRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.environmentId = request.environmentId;
             this.routeId = request.routeId;
         } 
 
         /**
-         * <p>HTTP API ID.</p>
+         * <p>HTTP API ID。</p>
          * 
          * <strong>example:</strong>
          * <p>api-cqu95allhtgii6***</p>
@@ -85,20 +99,26 @@ public class GetHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hr-cr82undlhtgrl***</p>
+         * environmentId.
+         */
+        public Builder environmentId(String environmentId) {
+            this.putBodyParameter("environmentId", environmentId);
+            this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * routeId.
          */
         public Builder routeId(String routeId) {
-            this.putPathParameter("routeId", routeId);
+            this.putBodyParameter("routeId", routeId);
             this.routeId = routeId;
             return this;
         }
 
         @Override
-        public GetHttpApiRouteRequest build() {
-            return new GetHttpApiRouteRequest(this);
+        public UndeployHttpApiRequest build() {
+            return new UndeployHttpApiRequest(this);
         } 
 
     } 

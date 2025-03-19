@@ -44,6 +44,10 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListHttpApiRoutesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,10 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBEEB8C1-108E-50F0-9BEA-DED79553C309</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -184,8 +207,18 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * items.
+             * <p>List of routes.</p>
              */
             public Builder items(java.util.List<HttpRoute> items) {
                 this.items = items;
@@ -193,7 +226,10 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -201,7 +237,10 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -209,7 +248,10 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

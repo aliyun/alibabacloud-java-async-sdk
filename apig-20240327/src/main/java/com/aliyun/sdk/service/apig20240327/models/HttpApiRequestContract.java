@@ -44,6 +44,10 @@ public class HttpApiRequestContract extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return body
      */
@@ -77,6 +81,16 @@ public class HttpApiRequestContract extends TeaModel {
         private java.util.List<HttpApiParameter> headerParameters; 
         private java.util.List<HttpApiParameter> pathParameters; 
         private java.util.List<HttpApiParameter> queryParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiRequestContract model) {
+            this.body = model.body;
+            this.headerParameters = model.headerParameters;
+            this.pathParameters = model.pathParameters;
+            this.queryParameters = model.queryParameters;
+        } 
 
         /**
          * body.
@@ -183,6 +197,16 @@ public class HttpApiRequestContract extends TeaModel {
             private String description; 
             private String example; 
             private String jsonSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpApiRequestContractBody model) {
+                this.contentType = model.contentType;
+                this.description = model.description;
+                this.example = model.example;
+                this.jsonSchema = model.jsonSchema;
+            } 
 
             /**
              * contentType.

@@ -35,7 +35,7 @@ public class DeleteHttpApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DeleteHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to be deleted.</p>
+         * <p>The HTTP API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

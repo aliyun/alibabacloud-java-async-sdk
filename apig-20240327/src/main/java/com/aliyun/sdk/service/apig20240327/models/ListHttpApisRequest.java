@@ -99,7 +99,7 @@ public class ListHttpApisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -277,7 +277,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Page number, starting from 1, default is 1 if not provided.</p>
+         * <p>Page number, starting from 1, default is 1 if not specified.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -289,7 +289,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Page size, valid range [1, 100], default is 10 if not provided.</p>
+         * <p>Page size, valid range [1, 100], default is 10 if not specified.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -301,7 +301,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ahr5uil8raz0rq3b</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -310,7 +313,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Type of HTTP API. Supports multiple types, separated by &quot;,&quot;.</p>
+         * <p>Type of HTTP API. Multiple types can be passed, separated by &quot;,&quot;.</p>
          * <ul>
          * <li>Http</li>
          * <li>Rest</li>
@@ -328,7 +331,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Each API information in the response carries consumer authentication policy information under the specified environment ID.</p>
+         * <p>Each API information in the response carries consumer authentication policy information for the specified environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -340,7 +343,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withAuthPolicyList.
+         * <p>Whether the authentication policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withAuthPolicyList(Boolean withAuthPolicyList) {
             this.putQueryParameter("withAuthPolicyList", withAuthPolicyList);
@@ -361,7 +367,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withEnvironmentInfo.
+         * <p>Environment information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withEnvironmentInfo(Boolean withEnvironmentInfo) {
             this.putQueryParameter("withEnvironmentInfo", withEnvironmentInfo);
@@ -370,7 +379,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withEnvironmentInfoById.
+         * <p>Environment ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-ctovu5mm1hksb4q8ln40</p>
          */
         public Builder withEnvironmentInfoById(String withEnvironmentInfoById) {
             this.putQueryParameter("withEnvironmentInfoById", withEnvironmentInfoById);
@@ -379,7 +391,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withIngressInfo.
+         * <p>Ingress information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withIngressInfo(Boolean withIngressInfo) {
             this.putQueryParameter("withIngressInfo", withIngressInfo);
@@ -388,7 +403,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withPluginAttachmentByPluginId.
+         * <p>Plugin ID, used to get plugin release information based on this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-ct9qn3um1hktue8dqol0</p>
          */
         public Builder withPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
             this.putQueryParameter("withPluginAttachmentByPluginId", withPluginAttachmentByPluginId);

@@ -79,7 +79,7 @@ public class ImportHttpApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -366,6 +366,15 @@ public class ImportHttpApiRequest extends Request {
             private String bucketName; 
             private String objectKey; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecOssConfig model) {
+                this.bucketName = model.bucketName;
+                this.objectKey = model.objectKey;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The name of the Object Storage Service (OSS) bucket that stores the dictionary file.</p>

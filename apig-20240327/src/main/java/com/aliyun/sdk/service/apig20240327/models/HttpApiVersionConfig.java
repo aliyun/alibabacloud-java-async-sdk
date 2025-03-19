@@ -48,6 +48,10 @@ public class HttpApiVersionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -89,6 +93,17 @@ public class HttpApiVersionConfig extends TeaModel {
         private String queryName; 
         private String scheme; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiVersionConfig model) {
+            this.enable = model.enable;
+            this.headerName = model.headerName;
+            this.queryName = model.queryName;
+            this.scheme = model.scheme;
+            this.version = model.version;
+        } 
 
         /**
          * enable.

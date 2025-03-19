@@ -40,6 +40,10 @@ public class DeployHttpApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -66,8 +70,20 @@ public class DeployHttpApiResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeployHttpApiResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -75,7 +91,10 @@ public class DeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>响应消息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -83,7 +102,10 @@ public class DeployHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

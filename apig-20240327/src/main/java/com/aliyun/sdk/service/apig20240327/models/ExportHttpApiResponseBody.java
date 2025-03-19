@@ -44,6 +44,10 @@ public class ExportHttpApiResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ExportHttpApiResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportHttpApiResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response status code.</p>
@@ -156,6 +170,13 @@ public class ExportHttpApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private String specContentBase64; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.specContentBase64 = model.specContentBase64;
+            } 
 
             /**
              * <p>Base64编码的API定义。</p>

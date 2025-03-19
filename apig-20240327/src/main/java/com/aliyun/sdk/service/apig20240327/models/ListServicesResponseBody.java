@@ -44,6 +44,10 @@ public class ListServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ListServicesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListServicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,10 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -184,8 +207,18 @@ public class ListServicesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
-             * items.
+             * <p>Service list.</p>
              */
             public Builder items(java.util.List<Service> items) {
                 this.items = items;
@@ -193,7 +226,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -201,7 +237,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -209,7 +248,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

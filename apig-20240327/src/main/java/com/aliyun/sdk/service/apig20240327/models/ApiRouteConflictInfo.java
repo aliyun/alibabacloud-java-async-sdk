@@ -36,6 +36,10 @@ public class ApiRouteConflictInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conflicts
      */
@@ -53,6 +57,14 @@ public class ApiRouteConflictInfo extends TeaModel {
     public static final class Builder {
         private java.util.List<Conflicts> conflicts; 
         private DomainInfo domainInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApiRouteConflictInfo model) {
+            this.conflicts = model.conflicts;
+            this.domainInfo = model.domainInfo;
+        } 
 
         /**
          * conflicts.
@@ -119,6 +131,14 @@ public class ApiRouteConflictInfo extends TeaModel {
         public static final class Builder {
             private String name; 
             private String operationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationInfo model) {
+                this.name = model.name;
+                this.operationId = model.operationId;
+            } 
 
             /**
              * name.
@@ -187,6 +207,14 @@ public class ApiRouteConflictInfo extends TeaModel {
             private HttpRouteMatch match; 
             private OperationInfo operationInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConflictingMatch model) {
+                this.match = model.match;
+                this.operationInfo = model.operationInfo;
+            } 
+
             /**
              * match.
              */
@@ -254,6 +282,14 @@ public class ApiRouteConflictInfo extends TeaModel {
             private String name; 
             private String operationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetectedMatchOperationInfo model) {
+                this.name = model.name;
+                this.operationId = model.operationId;
+            } 
+
             /**
              * name.
              */
@@ -320,6 +356,14 @@ public class ApiRouteConflictInfo extends TeaModel {
         public static final class Builder {
             private HttpRouteMatch match; 
             private DetectedMatchOperationInfo operationInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectedMatch model) {
+                this.match = model.match;
+                this.operationInfo = model.operationInfo;
+            } 
 
             /**
              * match.
@@ -400,6 +444,15 @@ public class ApiRouteConflictInfo extends TeaModel {
             private DetectedMatch detectedMatch; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.conflictingMatch = model.conflictingMatch;
+                this.detectedMatch = model.detectedMatch;
+                this.level = model.level;
+            } 
+
             /**
              * conflictingMatch.
              */
@@ -475,6 +528,14 @@ public class ApiRouteConflictInfo extends TeaModel {
             private String environmentId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentInfo model) {
+                this.environmentId = model.environmentId;
+                this.name = model.name;
+            } 
+
             /**
              * environmentId.
              */
@@ -541,6 +602,14 @@ public class ApiRouteConflictInfo extends TeaModel {
         public static final class Builder {
             private String name; 
             private String routeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteInfo model) {
+                this.name = model.name;
+                this.routeId = model.routeId;
+            } 
 
             /**
              * name.
@@ -657,6 +726,18 @@ public class ApiRouteConflictInfo extends TeaModel {
             private String resourceType; 
             private RouteInfo routeInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conflicts model) {
+                this.details = model.details;
+                this.environmentInfo = model.environmentInfo;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.routeInfo = model.routeInfo;
+            } 
+
             /**
              * details.
              */
@@ -755,6 +836,14 @@ public class ApiRouteConflictInfo extends TeaModel {
         public static final class Builder {
             private String domainId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainInfo model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+            } 
 
             /**
              * domainId.

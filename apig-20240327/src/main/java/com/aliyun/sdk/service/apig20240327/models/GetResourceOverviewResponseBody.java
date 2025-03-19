@@ -44,6 +44,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetResourceOverviewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Resource information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD19A442-93C5-5C97-AFA0-B9C57EBD781B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,8 +183,19 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             private Long publishedCount; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Api model) {
+                this.publishedCount = model.publishedCount;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * publishedCount.
+             * <p>Number of published APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishedCount(Long publishedCount) {
                 this.publishedCount = publishedCount;
@@ -169,7 +203,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>Number of APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -227,8 +264,19 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             private Long runningCount; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Gateway model) {
+                this.runningCount = model.runningCount;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * runningCount.
+             * <p>Number of running gateways.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningCount(Long runningCount) {
                 this.runningCount = runningCount;
@@ -236,7 +284,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>Number of gateway instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -294,8 +345,16 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             private Api api; 
             private Gateway gateway; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.api = model.api;
+                this.gateway = model.gateway;
+            } 
+
             /**
-             * api.
+             * <p>API information.</p>
              */
             public Builder api(Api api) {
                 this.api = api;
@@ -303,7 +362,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * gateway.
+             * <p>Gateway information.</p>
              */
             public Builder gateway(Gateway gateway) {
                 this.gateway = gateway;

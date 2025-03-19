@@ -44,6 +44,10 @@ public class GetGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetGatewayResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGatewayResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response status code.</p>
@@ -181,6 +195,15 @@ public class GetGatewayResponseBody extends TeaModel {
             private String environmentId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Environments model) {
+                this.alias = model.alias;
+                this.environmentId = model.environmentId;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The environment alias.</p>
              * 
@@ -264,6 +287,14 @@ public class GetGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>Port number.</p>
@@ -425,6 +456,21 @@ public class GetGatewayResponseBody extends TeaModel {
             private java.util.List<Ports> ports; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.address = model.address;
+                this.addressIpVersion = model.addressIpVersion;
+                this.addressType = model.addressType;
+                this.gatewayDefault = model.gatewayDefault;
+                this.loadBalancerId = model.loadBalancerId;
+                this.mode = model.mode;
+                this.ports = model.ports;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The address of the load balancer.</p>
@@ -592,6 +638,14 @@ public class GetGatewayResponseBody extends TeaModel {
             private String name; 
             private String securityGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroup model) {
+                this.name = model.name;
+                this.securityGroupId = model.securityGroupId;
+            } 
+
             /**
              * <p>Security group name.</p>
              * 
@@ -664,6 +718,14 @@ public class GetGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the resource.</p>
@@ -738,6 +800,14 @@ public class GetGatewayResponseBody extends TeaModel {
             private String name; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitch model) {
+                this.name = model.name;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>Virtual switch name.</p>
              * 
@@ -811,6 +881,14 @@ public class GetGatewayResponseBody extends TeaModel {
             private String name; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vpc model) {
+                this.name = model.name;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>VPC gateway name.</p>
              * 
@@ -883,6 +961,14 @@ public class GetGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZonesVSwitch model) {
+                this.name = model.name;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>Virtual switch name.</p>
@@ -968,6 +1054,15 @@ public class GetGatewayResponseBody extends TeaModel {
             private String name; 
             private ZonesVSwitch vSwitch; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.name = model.name;
+                this.vSwitch = model.vSwitch;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Availability zone name.</p>
@@ -1265,6 +1360,32 @@ public class GetGatewayResponseBody extends TeaModel {
             private String version; 
             private Vpc vpc; 
             private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chargeType = model.chargeType;
+                this.createFrom = model.createFrom;
+                this.createTimestamp = model.createTimestamp;
+                this.environments = model.environments;
+                this.expireTimestamp = model.expireTimestamp;
+                this.gatewayId = model.gatewayId;
+                this.loadBalancers = model.loadBalancers;
+                this.name = model.name;
+                this.replicas = model.replicas;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroup = model.securityGroup;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.targetVersion = model.targetVersion;
+                this.updateTimestamp = model.updateTimestamp;
+                this.vSwitch = model.vSwitch;
+                this.version = model.version;
+                this.vpc = model.vpc;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>Charge type</p>

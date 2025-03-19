@@ -52,6 +52,10 @@ public class GetDashboardResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,23 @@ public class GetDashboardResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDashboardResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * code.
+         * <p>Response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -111,7 +130,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -119,7 +138,10 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>Backend error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -127,7 +149,10 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +160,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -146,7 +171,10 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,8 +255,21 @@ public class GetDashboardResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gatewayId = model.gatewayId;
+                this.name = model.name;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
-             * gatewayId.
+             * <p>Gateway unique identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-co370icmjeu****</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -236,7 +277,10 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Dashboard name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLUGIN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -244,7 +288,10 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Dashboard title</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APIG Plugin</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -252,7 +299,10 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>Dashboard URL link</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

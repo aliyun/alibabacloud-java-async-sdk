@@ -36,6 +36,10 @@ public class AuthConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authMode
      */
@@ -53,6 +57,14 @@ public class AuthConfig extends TeaModel {
     public static final class Builder {
         private String authMode; 
         private String authType; 
+
+        private Builder() {
+        } 
+
+        private Builder(AuthConfig model) {
+            this.authMode = model.authMode;
+            this.authType = model.authType;
+        } 
 
         /**
          * authMode.

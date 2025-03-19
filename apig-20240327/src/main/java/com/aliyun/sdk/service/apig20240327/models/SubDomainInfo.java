@@ -44,6 +44,10 @@ public class SubDomainInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainId
      */
@@ -77,6 +81,16 @@ public class SubDomainInfo extends TeaModel {
         private String name; 
         private String networkType; 
         private String protocol; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubDomainInfo model) {
+            this.domainId = model.domainId;
+            this.name = model.name;
+            this.networkType = model.networkType;
+            this.protocol = model.protocol;
+        } 
 
         /**
          * domainId.

@@ -44,6 +44,10 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreatePolicyAttachmentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,7 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>585657D2-1C20-5B8A-AF17-D727C64***</p>
@@ -151,8 +171,18 @@ public class CreatePolicyAttachmentResponseBody extends TeaModel {
         public static final class Builder {
             private String policyAttachmentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.policyAttachmentId = model.policyAttachmentId;
+            } 
+
             /**
-             * policyAttachmentId.
+             * <p>Policy Mount ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pr-cqooju5lhtgquuj6***</p>
              */
             public Builder policyAttachmentId(String policyAttachmentId) {
                 this.policyAttachmentId = policyAttachmentId;

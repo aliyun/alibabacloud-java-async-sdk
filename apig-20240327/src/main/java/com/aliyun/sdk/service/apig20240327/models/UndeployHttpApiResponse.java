@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChangeResourceGroupResponse} extends {@link TeaModel}
+ * {@link UndeployHttpApiResponse} extends {@link TeaModel}
  *
- * <p>ChangeResourceGroupResponse</p>
+ * <p>UndeployHttpApiResponse</p>
  */
-public class ChangeResourceGroupResponse extends Response {
+public class UndeployHttpApiResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ChangeResourceGroupResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ChangeResourceGroupResponseBody body;
+    private UndeployHttpApiResponseBody body;
 
-    private ChangeResourceGroupResponse(BuilderImpl builder) {
+    private UndeployHttpApiResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ChangeResourceGroupResponse create() {
+    public static UndeployHttpApiResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ChangeResourceGroupResponse extends Response {
     /**
      * @return body
      */
-    public ChangeResourceGroupResponseBody getBody() {
+    public UndeployHttpApiResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ChangeResourceGroupResponse, Builder> {
+    public interface Builder extends Response.Builder<UndeployHttpApiResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ChangeResourceGroupResponseBody body);
+        Builder body(UndeployHttpApiResponseBody body);
 
         @Override
-        ChangeResourceGroupResponse build();
+        UndeployHttpApiResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ChangeResourceGroupResponse, Builder>
+            extends Response.BuilderImpl<UndeployHttpApiResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ChangeResourceGroupResponseBody body; 
+        private UndeployHttpApiResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ChangeResourceGroupResponse response) {
+        private BuilderImpl(UndeployHttpApiResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ChangeResourceGroupResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ChangeResourceGroupResponseBody body) {
+        public Builder body(UndeployHttpApiResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ChangeResourceGroupResponse build() {
-            return new ChangeResourceGroupResponse(this);
+        public UndeployHttpApiResponse build() {
+            return new UndeployHttpApiResponse(this);
         } 
 
     } 

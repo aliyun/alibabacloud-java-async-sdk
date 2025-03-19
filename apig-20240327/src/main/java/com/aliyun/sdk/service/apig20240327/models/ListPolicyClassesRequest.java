@@ -54,7 +54,7 @@ public class ListPolicyClassesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,19 @@ public class ListPolicyClassesRequest extends Request {
         } 
 
         /**
-         * attachResourceType.
+         * <p>Types of attachment points supported by the policy.</p>
+         * <ul>
+         * <li>HttpApi: HttpApi.</li>
+         * <li>Operation: Operation of HttpApi.</li>
+         * <li>GatewayRoute: Gateway route.</li>
+         * <li>GatewayService: Gateway service.</li>
+         * <li>GatewayServicePort: Gateway service port.</li>
+         * <li>Domain: Gateway domain.</li>
+         * <li>Gateway: Gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation</p>
          */
         public Builder attachResourceType(String attachResourceType) {
             this.putQueryParameter("attachResourceType", attachResourceType);
@@ -124,7 +136,15 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * direction.
+         * <p>Direction of the policy.</p>
+         * <ul>
+         * <li>Outbound: OutBound.</li>
+         * <li>Inbound: InBound.</li>
+         * <li>Both directions: Both.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InBound</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -133,7 +153,10 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -142,7 +165,10 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -151,7 +177,10 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Type of the policy template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowControl</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

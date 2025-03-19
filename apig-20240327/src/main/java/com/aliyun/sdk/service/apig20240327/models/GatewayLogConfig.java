@@ -32,6 +32,10 @@ public class GatewayLogConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return slsConfig
      */
@@ -41,6 +45,13 @@ public class GatewayLogConfig extends TeaModel {
 
     public static final class Builder {
         private SlsConfig slsConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(GatewayLogConfig model) {
+            this.slsConfig = model.slsConfig;
+        } 
 
         /**
          * slsConfig.
@@ -87,6 +98,13 @@ public class GatewayLogConfig extends TeaModel {
 
         public static final class Builder {
             private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsConfig model) {
+                this.enable = model.enable;
+            } 
 
             /**
              * enable.

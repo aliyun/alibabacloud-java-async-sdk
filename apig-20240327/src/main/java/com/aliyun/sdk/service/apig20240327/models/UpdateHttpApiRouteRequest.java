@@ -64,7 +64,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -304,6 +304,17 @@ public class UpdateHttpApiRouteRequest extends Request {
             private String version; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.serviceId = model.serviceId;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>Service port, do not pass in for dynamic ports.</p>
              * 
@@ -413,6 +424,14 @@ public class UpdateHttpApiRouteRequest extends Request {
         public static final class Builder {
             private String scene; 
             private java.util.List<Services> services; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.scene = model.scene;
+                this.services = model.services;
+            } 
 
             /**
              * <p>Backend service scenario.</p>

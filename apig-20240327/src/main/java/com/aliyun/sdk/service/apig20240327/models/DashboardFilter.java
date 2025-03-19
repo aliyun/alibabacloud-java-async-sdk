@@ -32,6 +32,10 @@ public class DashboardFilter extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return routeName
      */
@@ -41,6 +45,13 @@ public class DashboardFilter extends TeaModel {
 
     public static final class Builder {
         private String routeName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DashboardFilter model) {
+            this.routeName = model.routeName;
+        } 
 
         /**
          * routeName.

@@ -44,6 +44,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreatePolicyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E7406754***</p>
@@ -151,8 +171,18 @@ public class CreatePolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String policyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.policyId = model.policyId;
+            } 
+
             /**
-             * policyId.
+             * <p>Policy ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-cq7l5s5lhtgi6qasr***</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;

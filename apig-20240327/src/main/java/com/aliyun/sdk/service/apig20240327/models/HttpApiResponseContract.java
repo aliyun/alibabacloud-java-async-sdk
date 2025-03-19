@@ -37,6 +37,10 @@ public class HttpApiResponseContract extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentType
      */
@@ -54,6 +58,14 @@ public class HttpApiResponseContract extends TeaModel {
     public static final class Builder {
         private String contentType; 
         private java.util.List<Items> items; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiResponseContract model) {
+            this.contentType = model.contentType;
+            this.items = model.items;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -147,6 +159,16 @@ public class HttpApiResponseContract extends TeaModel {
             private String description; 
             private String example; 
             private String jsonSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.example = model.example;
+                this.jsonSchema = model.jsonSchema;
+            } 
 
             /**
              * code.

@@ -44,6 +44,10 @@ public class ResourceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resourceId
      */
@@ -77,6 +81,16 @@ public class ResourceInfo extends TeaModel {
         private String resourceName; 
         private String resourceType; 
         private String resourceVersion; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceInfo model) {
+            this.resourceId = model.resourceId;
+            this.resourceName = model.resourceName;
+            this.resourceType = model.resourceType;
+            this.resourceVersion = model.resourceVersion;
+        } 
 
         /**
          * resourceId.

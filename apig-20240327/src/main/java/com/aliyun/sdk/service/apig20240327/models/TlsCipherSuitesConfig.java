@@ -36,6 +36,10 @@ public class TlsCipherSuitesConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configType
      */
@@ -53,6 +57,14 @@ public class TlsCipherSuitesConfig extends TeaModel {
     public static final class Builder {
         private String configType; 
         private java.util.List<TlsCipherSuite> tlsCipherSuite; 
+
+        private Builder() {
+        } 
+
+        private Builder(TlsCipherSuitesConfig model) {
+            this.configType = model.configType;
+            this.tlsCipherSuite = model.tlsCipherSuite;
+        } 
 
         /**
          * configType.
@@ -119,6 +131,14 @@ public class TlsCipherSuitesConfig extends TeaModel {
         public static final class Builder {
             private String name; 
             private java.util.List<String> supportVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(TlsCipherSuite model) {
+                this.name = model.name;
+                this.supportVersions = model.supportVersions;
+            } 
 
             /**
              * name.

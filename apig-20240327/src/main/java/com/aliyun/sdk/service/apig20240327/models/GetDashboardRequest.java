@@ -64,7 +64,7 @@ public class GetDashboardRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,10 @@ public class GetDashboardRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>Gateway unique identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-co370icmjeu****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -152,7 +155,11 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * acceptLanguage.
+         * <p>zh: Chinese
+         * en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);
@@ -161,7 +168,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * apiId.
+         * <p>API ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-c9uuekzmia8q2****</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("apiId", apiId);
@@ -170,7 +180,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>Filter configuration</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -180,7 +190,14 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Dashboard name:</p>
+         * <ul>
+         * <li>LOG: Access log</li>
+         * <li>PLUGIN: Plugin log</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PLUGIN</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -189,7 +206,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * pluginClassId.
+         * <p>Plugin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pls-dn82a9djd8z****</p>
          */
         public Builder pluginClassId(String pluginClassId) {
             this.putQueryParameter("pluginClassId", pluginClassId);
@@ -198,7 +218,13 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>Dashboard source:</p>
+         * <ul>
+         * <li>SLS: Log dashboard</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);
@@ -245,8 +271,18 @@ public class GetDashboardRequest extends Request {
         public static final class Builder {
             private String routeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.routeName = model.routeName;
+            } 
+
             /**
-             * routeName.
+             * <p>Route name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-route</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;

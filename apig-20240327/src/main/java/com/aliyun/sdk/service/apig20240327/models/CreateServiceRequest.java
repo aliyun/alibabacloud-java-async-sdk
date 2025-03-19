@@ -49,7 +49,7 @@ public class CreateServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>Gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7l5s5lhtg***</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -110,7 +113,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -119,7 +125,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * serviceConfigs.
+         * <p>List of service configuration information.</p>
          */
         public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.putBodyParameter("serviceConfigs", serviceConfigs);
@@ -128,7 +134,18 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>Service source:</p>
+         * <ul>
+         * <li>MSE_NACOS: Services in MSE Nacos.</li>
+         * <li>K8S: Services in the K8S cluster of container service.</li>
+         * <li>VIP: Fixed address service.</li>
+         * <li>DNS: DNS domain name service.</li>
+         * <li>FC3: Function Compute service.</li>
+         * <li>SAE_K8S_SERVICE: SAE K8S service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_NACOS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("sourceType", sourceType);
@@ -247,8 +264,21 @@ public class CreateServiceRequest extends Request {
             private String namespace; 
             private String qualifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceConfigs model) {
+                this.addresses = model.addresses;
+                this.aiServiceConfig = model.aiServiceConfig;
+                this.dnsServers = model.dnsServers;
+                this.groupName = model.groupName;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.qualifier = model.qualifier;
+            } 
+
             /**
-             * addresses.
+             * <p>List of domain names or fixed addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -256,7 +286,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * aiServiceConfig.
+             * <p>AI service configuration.</p>
              */
             public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
                 this.aiServiceConfig = aiServiceConfig;
@@ -264,7 +294,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * dnsServers.
+             * <p>List of DNS server addresses.</p>
              */
             public Builder dnsServers(java.util.List<String> dnsServers) {
                 this.dnsServers = dnsServers;
@@ -272,7 +302,11 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * groupName.
+             * <p>Service group name.
+             * Needs to be specified when <code>sourceType</code> is MSE_NACOS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -280,7 +314,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +325,15 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * namespace.
+             * <p>Namespace of the service:</p>
+             * <ul>
+             * <li>When <code>sourceType</code> is K8S, it represents the namespace where the K8S service is located.</li>
+             * <li>When <code>sourceType</code> is MSE_NACOS, it represents the namespace in Nacos.</li>
+             * </ul>
+             * <p>It needs to be specified when <code>sourceType</code> is K8S or MSE_NACOS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -296,7 +341,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * qualifier.
+             * <p>Function version or alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LATEST</p>
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;

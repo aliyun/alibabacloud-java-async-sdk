@@ -52,7 +52,7 @@ public class UpdatePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,6 +104,7 @@ public class UpdatePolicyRequest extends Request {
         } 
 
         /**
+         * <p>Policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy configuration</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a timeout policy description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -137,6 +142,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

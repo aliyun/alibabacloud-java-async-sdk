@@ -44,6 +44,10 @@ public class HttpApiInfoByName extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -77,6 +81,16 @@ public class HttpApiInfoByName extends TeaModel {
         private String type; 
         private Boolean versionEnabled; 
         private java.util.List<HttpApiApiInfo> versionedHttpApis; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiInfoByName model) {
+            this.name = model.name;
+            this.type = model.type;
+            this.versionEnabled = model.versionEnabled;
+            this.versionedHttpApis = model.versionedHttpApis;
+        } 
 
         /**
          * name.

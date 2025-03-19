@@ -64,7 +64,7 @@ public class CreateHttpApiRouteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,7 @@ public class CreateHttpApiRouteRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to which the route belongs.</p>
+         * <p>The HTTP API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cqoob7llhtgq***</p>
@@ -155,7 +155,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Backend service configuration for the route.</p>
+         * <p>The backend service configurations of the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -164,10 +164,10 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route description.</p>
+         * <p>The route description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户登陆路由。</p>
+         * <p>User logon route</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -176,7 +176,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Domain IDs.</p>
+         * <p>The domain name IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -185,7 +185,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cpqnr6tlhtgubcv***</p>
@@ -197,7 +197,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route match rules.</p>
+         * <p>The rule for matching the route.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -206,7 +206,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>Route name.</p>
+         * <p>The route name.</p>
          * 
          * <strong>example:</strong>
          * <p>login</p>
@@ -304,8 +304,19 @@ public class CreateHttpApiRouteRequest extends Request {
             private String version; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.serviceId = model.serviceId;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
+
             /**
-             * <p>Service port, not provided for dynamic ports.</p>
+             * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -316,10 +327,10 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Service protocol:</p>
+             * <p>The protocol. Valid values:</p>
              * <ul>
-             * <li>HTTP.</li>
-             * <li>HTTPS.</li>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -331,7 +342,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Service ID.</p>
+             * <p>The service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-crbgq0dlhtgr***</p>
@@ -342,7 +353,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Service version, valid only in label-based scenarios.</p>
+             * <p>The service version. Pass this parameter for tag-based routing.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -353,7 +364,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>Percentage value of traffic distribution.</p>
+             * <p>The percentage value of traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -414,13 +425,21 @@ public class CreateHttpApiRouteRequest extends Request {
             private String scene; 
             private java.util.List<Services> services; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.scene = model.scene;
+                this.services = model.services;
+            } 
+
             /**
-             * <p>Backend service scenario.</p>
+             * <p>The scenario of the backend service.</p>
              * <ul>
-             * <li>SingleService: Single service.</li>
-             * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
-             * <li>Mock: Mock service.</li>
-             * <li>Redirect: Redirect service.</li>
+             * <li>SingleService</li>
+             * <li>MultiServiceByRatio</li>
+             * <li>Mock</li>
+             * <li>Redirect</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -432,7 +451,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>List of backend services.</p>
+             * <p>The backend services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;

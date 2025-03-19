@@ -95,7 +95,7 @@ public class CreateHttpApiRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -452,6 +452,17 @@ public class CreateHttpApiRequest extends Request {
             private Boolean overrideIngressIp; 
             private String sourceId; 
             private String watchNamespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngressConfig model) {
+                this.environmentId = model.environmentId;
+                this.ingressClass = model.ingressClass;
+                this.overrideIngressIp = model.overrideIngressIp;
+                this.sourceId = model.sourceId;
+                this.watchNamespace = model.watchNamespace;
+            } 
 
             /**
              * <p>Environment ID.</p>

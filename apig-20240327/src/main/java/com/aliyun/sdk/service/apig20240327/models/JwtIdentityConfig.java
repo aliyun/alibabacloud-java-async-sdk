@@ -48,6 +48,10 @@ public class JwtIdentityConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jwks
      */
@@ -89,6 +93,17 @@ public class JwtIdentityConfig extends TeaModel {
         private JwtTokenConfig jwtTokenConfig; 
         private String secretType; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(JwtIdentityConfig model) {
+            this.jwks = model.jwks;
+            this.jwtPayloadConfig = model.jwtPayloadConfig;
+            this.jwtTokenConfig = model.jwtTokenConfig;
+            this.secretType = model.secretType;
+            this.type = model.type;
+        } 
 
         /**
          * jwks.
@@ -180,6 +195,14 @@ public class JwtIdentityConfig extends TeaModel {
             private String payloadKeyName; 
             private String payloadKeyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(JwtPayloadConfig model) {
+                this.payloadKeyName = model.payloadKeyName;
+                this.payloadKeyValue = model.payloadKeyValue;
+            } 
+
             /**
              * payloadKeyName.
              */
@@ -270,6 +293,16 @@ public class JwtIdentityConfig extends TeaModel {
             private Boolean pass; 
             private String position; 
             private String prefix; 
+
+            private Builder() {
+            } 
+
+            private Builder(JwtTokenConfig model) {
+                this.key = model.key;
+                this.pass = model.pass;
+                this.position = model.position;
+                this.prefix = model.prefix;
+            } 
 
             /**
              * key.

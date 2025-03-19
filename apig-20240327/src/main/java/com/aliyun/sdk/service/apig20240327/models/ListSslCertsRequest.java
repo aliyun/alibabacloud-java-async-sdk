@@ -49,7 +49,7 @@ public class ListSslCertsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class ListSslCertsRequest extends Request {
         } 
 
         /**
-         * certNameLike.
+         * <p>Name matching keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali</p>
          */
         public Builder certNameLike(String certNameLike) {
             this.putQueryParameter("certNameLike", certNameLike);
@@ -110,7 +113,10 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * domainName.
+         * <p>Domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fun.iot.evideocloud.com.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);
@@ -119,7 +125,10 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, default is 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

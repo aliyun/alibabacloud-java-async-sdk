@@ -36,6 +36,10 @@ public class Backend extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return scene
      */
@@ -53,6 +57,14 @@ public class Backend extends TeaModel {
     public static final class Builder {
         private String scene; 
         private java.util.List<Services> services; 
+
+        private Builder() {
+        } 
+
+        private Builder(Backend model) {
+            this.scene = model.scene;
+            this.services = model.services;
+        } 
 
         /**
          * scene.
@@ -167,6 +179,18 @@ public class Backend extends TeaModel {
             private String serviceId; 
             private String version; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.name = model.name;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.serviceId = model.serviceId;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
 
             /**
              * name.

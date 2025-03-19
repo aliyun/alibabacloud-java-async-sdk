@@ -96,6 +96,10 @@ public class Service extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addresses
      */
@@ -233,6 +237,29 @@ public class Service extends TeaModel {
         private String sourceType; 
         private java.util.List<String> unhealthyEndpoints; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(Service model) {
+            this.addresses = model.addresses;
+            this.aiServiceConfig = model.aiServiceConfig;
+            this.createTimestamp = model.createTimestamp;
+            this.gatewayId = model.gatewayId;
+            this.groupName = model.groupName;
+            this.healthCheck = model.healthCheck;
+            this.healthStatus = model.healthStatus;
+            this.name = model.name;
+            this.namespace = model.namespace;
+            this.ports = model.ports;
+            this.protocol = model.protocol;
+            this.qualifier = model.qualifier;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceId = model.serviceId;
+            this.sourceType = model.sourceType;
+            this.unhealthyEndpoints = model.unhealthyEndpoints;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * addresses.
@@ -431,6 +458,15 @@ public class Service extends TeaModel {
             private String name; 
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.name = model.name;
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * name.

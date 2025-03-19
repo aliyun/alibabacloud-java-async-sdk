@@ -80,6 +80,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backendScene
      */
@@ -185,6 +189,25 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         private java.util.List<ServiceConfigs> serviceConfigs; 
         private java.util.List<HttpApiDomainInfo> subDomains; 
         private java.util.List<VipConfigs> vipConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpApiPublishRevisionInfo model) {
+            this.backendScene = model.backendScene;
+            this.backendType = model.backendType;
+            this.cloudProductConfig = model.cloudProductConfig;
+            this.createTimestamp = model.createTimestamp;
+            this.customDomains = model.customDomains;
+            this.dnsConfigs = model.dnsConfigs;
+            this.environmentInfo = model.environmentInfo;
+            this.isCurrentVersion = model.isCurrentVersion;
+            this.operations = model.operations;
+            this.revisionId = model.revisionId;
+            this.serviceConfigs = model.serviceConfigs;
+            this.subDomains = model.subDomains;
+            this.vipConfigs = model.vipConfigs;
+        } 
 
         /**
          * backendScene.
@@ -400,6 +423,19 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private String protocol; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerServiceConfigs model) {
+                this.gatewayServiceId = model.gatewayServiceId;
+                this.match = model.match;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.weight = model.weight;
+            } 
+
             /**
              * gatewayServiceId.
              */
@@ -543,6 +579,17 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private String qualifier; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionConfigs model) {
+                this.gatewayServiceId = model.gatewayServiceId;
+                this.match = model.match;
+                this.name = model.name;
+                this.qualifier = model.qualifier;
+                this.weight = model.weight;
+            } 
+
             /**
              * gatewayServiceId.
              */
@@ -682,6 +729,18 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private String namespace; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(MseNacosConfigs model) {
+                this.gatewayServiceId = model.gatewayServiceId;
+                this.groupName = model.groupName;
+                this.match = model.match;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.weight = model.weight;
+            } 
+
             /**
              * gatewayServiceId.
              */
@@ -805,6 +864,16 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private java.util.List<FunctionConfigs> functionConfigs; 
             private java.util.List<MseNacosConfigs> mseNacosConfigs; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudProductConfig model) {
+                this.cloudProductType = model.cloudProductType;
+                this.containerServiceConfigs = model.containerServiceConfigs;
+                this.functionConfigs = model.functionConfigs;
+                this.mseNacosConfigs = model.mseNacosConfigs;
+            } 
+
             /**
              * cloudProductType.
              */
@@ -900,6 +969,15 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private HttpApiBackendMatchConditions match; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsConfigs model) {
+                this.dnsList = model.dnsList;
+                this.match = model.match;
+                this.weight = model.weight;
+            } 
+
             /**
              * dnsList.
              */
@@ -974,6 +1052,14 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public static final class Builder {
             private String gatewayId; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewayInfo model) {
+                this.gatewayId = model.gatewayId;
+                this.name = model.name;
+            } 
 
             /**
              * gatewayId.
@@ -1065,6 +1151,16 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private String environmentId; 
             private GatewayInfo gatewayInfo; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentInfo model) {
+                this.alias = model.alias;
+                this.environmentId = model.environmentId;
+                this.gatewayInfo = model.gatewayInfo;
+                this.name = model.name;
+            } 
 
             /**
              * alias.
@@ -1197,6 +1293,18 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private String version; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceConfigs model) {
+                this.gatewayServiceId = model.gatewayServiceId;
+                this.match = model.match;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
+
             /**
              * gatewayServiceId.
              */
@@ -1307,6 +1415,15 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             private java.util.List<String> endpoints; 
             private HttpApiBackendMatchConditions match; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(VipConfigs model) {
+                this.endpoints = model.endpoints;
+                this.match = model.match;
+                this.weight = model.weight;
+            } 
 
             /**
              * endpoints.
