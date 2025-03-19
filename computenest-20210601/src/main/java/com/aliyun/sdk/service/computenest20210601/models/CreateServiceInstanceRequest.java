@@ -126,7 +126,7 @@ public class CreateServiceInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -648,6 +648,17 @@ public class CreateServiceInstanceRequest extends Request {
             private Long payPeriod; 
             private String payPeriodUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.autoPay = model.autoPay;
+                this.autoRenew = model.autoRenew;
+                this.couponId = model.couponId;
+                this.payPeriod = model.payPeriod;
+                this.payPeriodUnit = model.payPeriodUnit;
+            } 
+
             /**
              * <p>Specifies whether to automatically complete the payment. Valid values:</p>
              * <ul>
@@ -803,6 +814,17 @@ public class CreateServiceInstanceRequest extends Request {
             private String serviceInstanceId; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationMetadata model) {
+                this.endTime = model.endTime;
+                this.extraInfo = model.extraInfo;
+                this.resources = model.resources;
+                this.serviceInstanceId = model.serviceInstanceId;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The operation end time.</p>
              * 
@@ -918,6 +940,14 @@ public class CreateServiceInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListServiceInstanceUpgradeHistoryRequest} extends {@link RequestModel}
+ * {@link ListPoliciesRequest} extends {@link RequestModel}
  *
- * <p>ListServiceInstanceUpgradeHistoryRequest</p>
+ * <p>ListPoliciesRequest</p>
  */
-public class ListServiceInstanceUpgradeHistoryRequest extends Request {
+public class ListPoliciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -27,27 +27,20 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String serviceInstanceId;
-
-    private ListServiceInstanceUpgradeHistoryRequest(Builder builder) {
+    private ListPoliciesRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.serviceInstanceId = builder.serviceInstanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListServiceInstanceUpgradeHistoryRequest create() {
+    public static ListPoliciesRequest create() {
         return builder().build();
     }
 
@@ -77,33 +70,24 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return serviceInstanceId
-     */
-    public String getServiceInstanceId() {
-        return this.serviceInstanceId;
-    }
-
-    public static final class Builder extends Request.Builder<ListServiceInstanceUpgradeHistoryRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListPoliciesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private String serviceInstanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListServiceInstanceUpgradeHistoryRequest request) {
+        private Builder(ListPoliciesRequest request) {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
-            this.serviceInstanceId = request.serviceInstanceId;
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -115,7 +99,7 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>Token for the next query, an empty nextToken indicates there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -127,8 +111,7 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * <p>This parameter is required.</p>
+         * <p>Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -139,22 +122,9 @@ public class ListServiceInstanceUpgradeHistoryRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The ID of the service instance.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>si-70a3b15bb62643xxxxxx</p>
-         */
-        public Builder serviceInstanceId(String serviceInstanceId) {
-            this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
-            this.serviceInstanceId = serviceInstanceId;
-            return this;
-        }
-
         @Override
-        public ListServiceInstanceUpgradeHistoryRequest build() {
-            return new ListServiceInstanceUpgradeHistoryRequest(this);
+        public ListPoliciesRequest build() {
+            return new ListPoliciesRequest(this);
         } 
 
     } 

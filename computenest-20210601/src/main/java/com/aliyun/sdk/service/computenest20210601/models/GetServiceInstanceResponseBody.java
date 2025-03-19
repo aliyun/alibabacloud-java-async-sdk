@@ -164,6 +164,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizStatus
      */
@@ -437,6 +441,46 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String templateName; 
         private String updateTime; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceInstanceResponseBody model) {
+            this.bizStatus = model.bizStatus;
+            this.components = model.components;
+            this.createTime = model.createTime;
+            this.enableInstanceOps = model.enableInstanceOps;
+            this.enableUserPrometheus = model.enableUserPrometheus;
+            this.endTime = model.endTime;
+            this.grafanaDashBoardUrl = model.grafanaDashBoardUrl;
+            this.isOperated = model.isOperated;
+            this.licenseEndTime = model.licenseEndTime;
+            this.marketInstanceId = model.marketInstanceId;
+            this.name = model.name;
+            this.networkConfig = model.networkConfig;
+            this.operatedServiceInstanceId = model.operatedServiceInstanceId;
+            this.operationEndTime = model.operationEndTime;
+            this.operationStartTime = model.operationStartTime;
+            this.outputs = model.outputs;
+            this.parameters = model.parameters;
+            this.payType = model.payType;
+            this.predefinedParameterName = model.predefinedParameterName;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.resources = model.resources;
+            this.service = model.service;
+            this.serviceInstanceId = model.serviceInstanceId;
+            this.serviceType = model.serviceType;
+            this.source = model.source;
+            this.status = model.status;
+            this.statusDetail = model.statusDetail;
+            this.supplierUid = model.supplierUid;
+            this.tags = model.tags;
+            this.templateName = model.templateName;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+        } 
 
         /**
          * <p>The business state of the service instance. Valid values:</p>
@@ -984,6 +1028,21 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private java.util.List<String> vSwitches; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionConfigs model) {
+                this.connectBandwidth = model.connectBandwidth;
+                this.domainName = model.domainName;
+                this.endpointIps = model.endpointIps;
+                this.ingressEndpointStatus = model.ingressEndpointStatus;
+                this.networkServiceStatus = model.networkServiceStatus;
+                this.regionId = model.regionId;
+                this.securityGroups = model.securityGroups;
+                this.vSwitches = model.vSwitches;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The bandwidth limit for the private connection established based on the private network interconnection mode of Compute Nest.</p>
              * 
@@ -1175,6 +1234,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String privateZoneName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateVpcConnections model) {
+                this.connectionConfigs = model.connectionConfigs;
+                this.endpointId = model.endpointId;
+                this.privateZoneId = model.privateZoneId;
+                this.privateZoneName = model.privateZoneName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The network configurations, which are mainly used for private connections.</p>
              */
@@ -1266,6 +1336,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String endpointId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReversePrivateVpcConnections model) {
+                this.endpointId = model.endpointId;
+            } 
+
             /**
              * <p>The endpoint ID of the reverse private connection.</p>
              * 
@@ -1351,6 +1428,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private java.util.List<PrivateVpcConnections> privateVpcConnections; 
             private String privateZoneId; 
             private java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.endpointId = model.endpointId;
+                this.privateVpcConnections = model.privateVpcConnections;
+                this.privateZoneId = model.privateZoneId;
+                this.reversePrivateVpcConnections = model.reversePrivateVpcConnections;
+            } 
 
             /**
              * <p>The ID of the endpoint for the private connection.</p>
@@ -1468,6 +1555,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String name; 
             private String shortDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfos model) {
+                this.image = model.image;
+                this.locale = model.locale;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+            } 
+
             /**
              * <p>The URL of the service icon.</p>
              * 
@@ -1562,6 +1659,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String version; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradableServiceInfos model) {
+                this.version = model.version;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>An upgradable service version.</p>
@@ -1803,6 +1908,28 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String upgradeMetadata; 
             private String version; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Service model) {
+                this.deployMetadata = model.deployMetadata;
+                this.deployType = model.deployType;
+                this.publishTime = model.publishTime;
+                this.serviceDocUrl = model.serviceDocUrl;
+                this.serviceId = model.serviceId;
+                this.serviceInfos = model.serviceInfos;
+                this.serviceProductUrl = model.serviceProductUrl;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.supplierUrl = model.supplierUrl;
+                this.upgradableServiceInfos = model.upgradableServiceInfos;
+                this.upgradableServiceVersions = model.upgradableServiceVersions;
+                this.upgradeMetadata = model.upgradeMetadata;
+                this.version = model.version;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
@@ -2068,6 +2195,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

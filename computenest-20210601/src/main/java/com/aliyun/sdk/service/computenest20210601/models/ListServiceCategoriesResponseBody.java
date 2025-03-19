@@ -36,6 +36,10 @@ public class ListServiceCategoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categories
      */
@@ -53,6 +57,14 @@ public class ListServiceCategoriesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> categories; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceCategoriesResponseBody model) {
+            this.categories = model.categories;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The category list of the service.</p>

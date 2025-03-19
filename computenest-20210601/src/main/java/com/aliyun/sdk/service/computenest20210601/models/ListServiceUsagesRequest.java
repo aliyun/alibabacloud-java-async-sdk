@@ -44,7 +44,7 @@ public class ListServiceUsagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +169,14 @@ public class ListServiceUsagesRequest extends Request {
         public static final class Builder {
             private String name; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>

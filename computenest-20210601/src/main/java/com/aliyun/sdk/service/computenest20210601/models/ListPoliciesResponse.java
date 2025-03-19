@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RenewServiceInstanceResourcesResponse} extends {@link TeaModel}
+ * {@link ListPoliciesResponse} extends {@link TeaModel}
  *
- * <p>RenewServiceInstanceResourcesResponse</p>
+ * <p>ListPoliciesResponse</p>
  */
-public class RenewServiceInstanceResourcesResponse extends Response {
+public class ListPoliciesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class RenewServiceInstanceResourcesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RenewServiceInstanceResourcesResponseBody body;
+    private ListPoliciesResponseBody body;
 
-    private RenewServiceInstanceResourcesResponse(BuilderImpl builder) {
+    private ListPoliciesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RenewServiceInstanceResourcesResponse create() {
+    public static ListPoliciesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class RenewServiceInstanceResourcesResponse extends Response {
     /**
      * @return body
      */
-    public RenewServiceInstanceResourcesResponseBody getBody() {
+    public ListPoliciesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RenewServiceInstanceResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<ListPoliciesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RenewServiceInstanceResourcesResponseBody body);
+        Builder body(ListPoliciesResponseBody body);
 
         @Override
-        RenewServiceInstanceResourcesResponse build();
+        ListPoliciesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RenewServiceInstanceResourcesResponse, Builder>
+            extends Response.BuilderImpl<ListPoliciesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private RenewServiceInstanceResourcesResponseBody body; 
+        private ListPoliciesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RenewServiceInstanceResourcesResponse response) {
+        private BuilderImpl(ListPoliciesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class RenewServiceInstanceResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RenewServiceInstanceResourcesResponseBody body) {
+        public Builder body(ListPoliciesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RenewServiceInstanceResourcesResponse build() {
-            return new RenewServiceInstanceResourcesResponse(this);
+        public ListPoliciesResponse build() {
+            return new ListPoliciesResponse(this);
         } 
 
     } 

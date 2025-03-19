@@ -36,6 +36,10 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkResults
      */
@@ -53,6 +57,14 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CheckResults> checkResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceDeployableResponseBody model) {
+            this.checkResults = model.checkResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Inspection result.</p>
@@ -134,6 +146,15 @@ public class CheckServiceDeployableResponseBody extends TeaModel {
             private String message; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckResults model) {
+                this.message = model.message;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Returns a hint message for the result.</p>

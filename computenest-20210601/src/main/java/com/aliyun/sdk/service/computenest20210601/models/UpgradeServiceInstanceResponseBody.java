@@ -36,6 +36,10 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> upgradeRequiredParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeServiceInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.upgradeRequiredParameters = model.upgradeRequiredParameters;
+        } 
 
         /**
          * <p>The request ID.</p>

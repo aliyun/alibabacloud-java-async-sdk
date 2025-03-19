@@ -36,6 +36,10 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResourcePrices> resourcePrices; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceInstanceSubscriptionEstimateCostResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourcePrices = model.resourcePrices;
+        } 
 
         /**
          * <p>Request ID.</p>
@@ -146,6 +158,16 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             private Float originalAmount; 
             private String resource; 
             private Float tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfos model) {
+                this.discountAmount = model.discountAmount;
+                this.originalAmount = model.originalAmount;
+                this.resource = model.resource;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * <p>Discount amount.</p>
@@ -253,6 +275,15 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             private String description; 
             private String name; 
             private Long ruleDescId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.ruleDescId = model.ruleDescId;
+            } 
 
             /**
              * <p>Promotion description.</p>
@@ -421,6 +452,21 @@ public class GetServiceInstanceSubscriptionEstimateCostResponseBody extends TeaM
             private String resourceArn; 
             private java.util.List<Rules> rules; 
             private Float tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePrices model) {
+                this.currency = model.currency;
+                this.detailInfos = model.detailInfos;
+                this.discountAmount = model.discountAmount;
+                this.originalAmount = model.originalAmount;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.resourceArn = model.resourceArn;
+                this.rules = model.rules;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * <p>Currency. Valid values:</p>

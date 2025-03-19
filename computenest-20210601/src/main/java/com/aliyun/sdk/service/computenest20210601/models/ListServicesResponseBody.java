@@ -48,6 +48,10 @@ public class ListServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Services> services; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServicesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.services = model.services;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -192,6 +207,14 @@ public class ListServicesResponseBody extends TeaModel {
             private String commodityCode; 
             private String deployPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.commodityCode = model.commodityCode;
+                this.deployPage = model.deployPage;
+            } 
+
             /**
              * <p>The commodity code.</p>
              * 
@@ -289,6 +312,16 @@ public class ListServicesResponseBody extends TeaModel {
             private String locale; 
             private String name; 
             private String shortDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfos model) {
+                this.image = model.image;
+                this.locale = model.locale;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+            } 
 
             /**
              * <p>The URL of the service icon.</p>
@@ -388,6 +421,14 @@ public class ListServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -716,6 +757,35 @@ public class ListServicesResponseBody extends TeaModel {
             private String version; 
             private String versionName; 
             private String virtualInternetService; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.categories = model.categories;
+                this.commodity = model.commodity;
+                this.commodityCode = model.commodityCode;
+                this.deployFrom = model.deployFrom;
+                this.deployType = model.deployType;
+                this.publishTime = model.publishTime;
+                this.score = model.score;
+                this.serviceId = model.serviceId;
+                this.serviceInfos = model.serviceInfos;
+                this.serviceProductUrl = model.serviceProductUrl;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.supplierNameEng = model.supplierNameEng;
+                this.supplierUid = model.supplierUid;
+                this.supplierUrl = model.supplierUrl;
+                this.tags = model.tags;
+                this.tenantType = model.tenantType;
+                this.trialDuration = model.trialDuration;
+                this.trialType = model.trialType;
+                this.version = model.version;
+                this.versionName = model.versionName;
+                this.virtualInternetService = model.virtualInternetService;
+            } 
 
             /**
              * <p>The category of the service.</p>

@@ -48,6 +48,10 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceInstances> serviceInstances; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceInstancesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serviceInstances = model.serviceInstances;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -192,6 +207,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String saasBoostMetadata; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.saasBoostMetadata = model.saasBoostMetadata;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The configuration metadata related to SaaS Boost.</p>
              * 
@@ -293,6 +316,16 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String locale; 
             private String name; 
             private String shortDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfos model) {
+                this.image = model.image;
+                this.locale = model.locale;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+            } 
 
             /**
              * <p>The URL of the service icon.</p>
@@ -497,6 +530,23 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String version; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Service model) {
+                this.commodity = model.commodity;
+                this.deployType = model.deployType;
+                this.publishTime = model.publishTime;
+                this.serviceId = model.serviceId;
+                this.serviceInfos = model.serviceInfos;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.supplierUrl = model.supplierUrl;
+                this.version = model.version;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * <p>The commodity details.</p>
              */
@@ -674,6 +724,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1023,6 +1081,37 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String templateName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInstances model) {
+                this.bizStatus = model.bizStatus;
+                this.createTime = model.createTime;
+                this.enableInstanceOps = model.enableInstanceOps;
+                this.endTime = model.endTime;
+                this.marketInstanceId = model.marketInstanceId;
+                this.name = model.name;
+                this.operatedServiceInstanceId = model.operatedServiceInstanceId;
+                this.operationEndTime = model.operationEndTime;
+                this.operationStartTime = model.operationStartTime;
+                this.orderId = model.orderId;
+                this.outputs = model.outputs;
+                this.parameters = model.parameters;
+                this.payType = model.payType;
+                this.progress = model.progress;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resources = model.resources;
+                this.service = model.service;
+                this.serviceInstanceId = model.serviceInstanceId;
+                this.serviceType = model.serviceType;
+                this.source = model.source;
+                this.status = model.status;
+                this.statusDetail = model.statusDetail;
+                this.tags = model.tags;
+                this.templateName = model.templateName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The business state of the service instance. Valid values:</p>

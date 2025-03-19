@@ -66,7 +66,7 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -289,6 +289,15 @@ public class GetServiceInstanceSubscriptionEstimateCostRequest extends Request {
             private Integer period; 
             private String periodUnit; 
             private String resourceArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePeriod model) {
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.resourceArn = model.resourceArn;
+            } 
 
             /**
              * <p>Renewal duration. The unit is specified by PeriodUnit.</p>

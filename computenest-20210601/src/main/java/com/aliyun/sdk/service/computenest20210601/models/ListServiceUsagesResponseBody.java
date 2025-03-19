@@ -48,6 +48,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -90,8 +94,19 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private java.util.List<ServiceUsages> serviceUsages; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListServiceUsagesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serviceUsages = model.serviceUsages;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -132,7 +147,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -273,6 +291,21 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             private Long userAliUid; 
             private java.util.Map<String, String> userInformation; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceUsages model) {
+                this.comments = model.comments;
+                this.createTime = model.createTime;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.supplierName = model.supplierName;
+                this.updateTime = model.updateTime;
+                this.userAliUid = model.userAliUid;
+                this.userInformation = model.userInformation;
+            } 
+
             /**
              * <p>The review comment.</p>
              * 
@@ -310,7 +343,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
              * <p>The service name.</p>
              * 
              * <strong>example:</strong>
-             * <p>LobeChat社区版</p>
+             * <p>LobelChat</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -368,7 +401,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the applicant.</p>
+             * <p>The information about the applicants.</p>
              */
             public Builder userInformation(java.util.Map<String, String> userInformation) {
                 this.userInformation = userInformation;

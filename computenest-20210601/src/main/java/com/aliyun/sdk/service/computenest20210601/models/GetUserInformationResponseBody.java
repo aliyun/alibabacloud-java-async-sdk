@@ -36,6 +36,10 @@ public class GetUserInformationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliverySettings
      */
@@ -53,6 +57,14 @@ public class GetUserInformationResponseBody extends TeaModel {
     public static final class Builder {
         private DeliverySettings deliverySettings; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserInformationResponseBody model) {
+            this.deliverySettings = model.deliverySettings;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The delivery settings.</p>
@@ -158,6 +170,17 @@ public class GetUserInformationResponseBody extends TeaModel {
             private Boolean ossEnabled; 
             private Long ossExpirationDays; 
             private String ossPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliverySettings model) {
+                this.actiontrailDeliveryToOssEnabled = model.actiontrailDeliveryToOssEnabled;
+                this.ossBucketName = model.ossBucketName;
+                this.ossEnabled = model.ossEnabled;
+                this.ossExpirationDays = model.ossExpirationDays;
+                this.ossPath = model.ossPath;
+            } 
 
             /**
              * <p>Indicates whether screencast delivery to OSS is enabled. Valid values:</p>

@@ -85,7 +85,7 @@ public class GetServiceEstimateCostRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -397,6 +397,15 @@ public class GetServiceEstimateCostRequest extends Request {
             private String couponId; 
             private Integer payPeriod; 
             private String payPeriodUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.couponId = model.couponId;
+                this.payPeriod = model.payPeriod;
+                this.payPeriodUnit = model.payPeriodUnit;
+            } 
 
             /**
              * <p>优惠券ID</p>

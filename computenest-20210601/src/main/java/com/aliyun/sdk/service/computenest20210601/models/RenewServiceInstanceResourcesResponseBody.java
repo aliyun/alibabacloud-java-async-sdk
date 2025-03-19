@@ -40,6 +40,10 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failureDetails
      */
@@ -65,6 +69,15 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
         private java.util.List<FailureDetails> failureDetails; 
         private RenewalResult renewalResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewServiceInstanceResourcesResponseBody model) {
+            this.failureDetails = model.failureDetails;
+            this.renewalResult = model.renewalResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of failed renewals.</p>
@@ -154,6 +167,15 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String resourceArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailureDetails model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.resourceArn = model.resourceArn;
+            } 
 
             /**
              * <p>Error code.</p>
@@ -250,6 +272,15 @@ public class RenewServiceInstanceResourcesResponseBody extends TeaModel {
             private Integer failed; 
             private Integer succeeded; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RenewalResult model) {
+                this.failed = model.failed;
+                this.succeeded = model.succeeded;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Number of failed renewals.</p>

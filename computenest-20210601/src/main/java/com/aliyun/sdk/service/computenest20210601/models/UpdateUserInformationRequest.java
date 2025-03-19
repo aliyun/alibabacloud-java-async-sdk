@@ -40,7 +40,7 @@ public class UpdateUserInformationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,6 +181,17 @@ public class UpdateUserInformationRequest extends Request {
             private Boolean ossEnabled; 
             private Long ossExpirationDays; 
             private String ossPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliverySettings model) {
+                this.actiontrailDeliveryToOssEnabled = model.actiontrailDeliveryToOssEnabled;
+                this.ossBucketName = model.ossBucketName;
+                this.ossEnabled = model.ossEnabled;
+                this.ossExpirationDays = model.ossExpirationDays;
+                this.ossPath = model.ossPath;
+            } 
 
             /**
              * <p>Specifies whether to enable screencast delivery to OSS. Valid values:</p>

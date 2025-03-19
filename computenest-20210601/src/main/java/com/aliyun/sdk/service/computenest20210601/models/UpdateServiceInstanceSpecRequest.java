@@ -70,7 +70,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -314,6 +314,13 @@ public class UpdateServiceInstanceSpecRequest extends Request {
 
         public static final class Builder {
             private Boolean autoPay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.autoPay = model.autoPay;
+            } 
 
             /**
              * <p>Specifies whether to enable automatic payment.</p>

@@ -40,6 +40,10 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return familyConstraints
      */
@@ -65,6 +69,15 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         private java.util.List<String> familyConstraints; 
         private java.util.List<ParameterConstraints> parameterConstraints; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceTemplateParameterConstraintsResponseBody model) {
+            this.familyConstraints = model.familyConstraints;
+            this.parameterConstraints = model.parameterConstraints;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The package family constraints.</p>
@@ -166,6 +179,16 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String propertyName; 
             private String resourceName; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginalConstraints model) {
+                this.allowedValues = model.allowedValues;
+                this.propertyName = model.propertyName;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The valid values of the parameter.</p>
@@ -270,6 +293,15 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String errorMessage; 
             private String resourceName; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryErrors model) {
+                this.errorMessage = model.errorMessage;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The error message.</p>
@@ -426,6 +458,20 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String parameterKey; 
             private java.util.List<QueryErrors> queryErrors; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterConstraints model) {
+                this.allowedValues = model.allowedValues;
+                this.associationParameterNames = model.associationParameterNames;
+                this.behavior = model.behavior;
+                this.behaviorReason = model.behaviorReason;
+                this.originalConstraints = model.originalConstraints;
+                this.parameterKey = model.parameterKey;
+                this.queryErrors = model.queryErrors;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The valid values of the parameter.</p>

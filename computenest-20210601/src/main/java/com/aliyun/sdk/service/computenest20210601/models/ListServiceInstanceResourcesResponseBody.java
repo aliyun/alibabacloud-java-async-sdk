@@ -44,6 +44,10 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceInstanceResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -264,6 +278,22 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             private String renewalPeriodUnit; 
             private String resourceARN; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.payType = model.payType;
+                this.productCode = model.productCode;
+                this.productType = model.productType;
+                this.renewStatus = model.renewStatus;
+                this.renewalPeriod = model.renewalPeriod;
+                this.renewalPeriodUnit = model.renewalPeriodUnit;
+                this.resourceARN = model.resourceARN;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the resource was created.</p>

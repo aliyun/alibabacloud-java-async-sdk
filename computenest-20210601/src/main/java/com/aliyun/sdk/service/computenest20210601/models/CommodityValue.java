@@ -32,6 +32,10 @@ public class CommodityValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return result
      */
@@ -41,6 +45,13 @@ public class CommodityValue extends TeaModel {
 
     public static final class Builder {
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommodityValue model) {
+            this.result = model.result;
+        } 
 
         /**
          * <p>Result模型。</p>
@@ -123,6 +134,16 @@ public class CommodityValue extends TeaModel {
             private String tradeAmount; 
             private String discountAmount; 
             private String originalAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.currency = model.currency;
+                this.tradeAmount = model.tradeAmount;
+                this.discountAmount = model.discountAmount;
+                this.originalAmount = model.originalAmount;
+            } 
 
             /**
              * <p>货币代码。</p>
@@ -254,6 +275,17 @@ public class CommodityValue extends TeaModel {
             private String code; 
             private String value; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleAttrs model) {
+                this.type = model.type;
+                this.name = model.name;
+                this.code = model.code;
+                this.value = model.value;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>属性类型，可选值：</p>
@@ -475,6 +507,23 @@ public class CommodityValue extends TeaModel {
             private String priceType; 
             private java.util.List<ModuleAttrs> moduleAttrs; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleInstance model) {
+                this.moduleId = model.moduleId;
+                this.moduleName = model.moduleName;
+                this.moduleCode = model.moduleCode;
+                this.totalProductFee = model.totalProductFee;
+                this.discountFee = model.discountFee;
+                this.payFee = model.payFee;
+                this.priceUnit = model.priceUnit;
+                this.isPricingModule = model.isPricingModule;
+                this.needOrderPay = model.needOrderPay;
+                this.priceType = model.priceType;
+                this.moduleAttrs = model.moduleAttrs;
+            } 
+
             /**
              * <p>模块ID。</p>
              * 
@@ -632,6 +681,13 @@ public class CommodityValue extends TeaModel {
         public static final class Builder {
             private java.util.List<ModuleInstance> moduleInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrder model) {
+                this.moduleInstance = model.moduleInstance;
+            } 
+
             /**
              * <p>模块（实例）信息。</p>
              */
@@ -678,6 +734,13 @@ public class CommodityValue extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubOrder> subOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubOrders model) {
+                this.subOrder = model.subOrder;
+            } 
 
             /**
              * <p>订单子项。</p>
@@ -773,6 +836,17 @@ public class CommodityValue extends TeaModel {
             private String couponName; 
             private String couponOptionNo; 
             private Boolean selected; 
+
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.canPromFee = model.canPromFee;
+                this.couponDesc = model.couponDesc;
+                this.couponName = model.couponName;
+                this.couponOptionNo = model.couponOptionNo;
+                this.selected = model.selected;
+            } 
 
             /**
              * <p>可支付金额。</p>
@@ -903,6 +977,16 @@ public class CommodityValue extends TeaModel {
             private String inquiryType; 
             private SubOrders subOrders; 
             private java.util.List<Coupons> coupons; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.order = model.order;
+                this.inquiryType = model.inquiryType;
+                this.subOrders = model.subOrders;
+                this.coupons = model.coupons;
+            } 
 
             /**
              * <p>订单信息。</p>

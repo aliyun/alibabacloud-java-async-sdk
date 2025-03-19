@@ -18,14 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceInstanceResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ExpireTimeEnd")
-    private String expireTimeEnd;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ExpireTimeStart")
-    private String expireTimeStart;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List<Filters> filters;
 
@@ -38,16 +30,8 @@ public class ListServiceInstanceResourcesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PayType")
-    private String payType;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceARN")
-    private java.util.List<String> resourceARN;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
@@ -64,14 +48,10 @@ public class ListServiceInstanceResourcesRequest extends Request {
 
     private ListServiceInstanceResourcesRequest(Builder builder) {
         super(builder);
-        this.expireTimeEnd = builder.expireTimeEnd;
-        this.expireTimeStart = builder.expireTimeStart;
         this.filters = builder.filters;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.payType = builder.payType;
         this.regionId = builder.regionId;
-        this.resourceARN = builder.resourceARN;
         this.serviceInstanceId = builder.serviceInstanceId;
         this.serviceInstanceResourceType = builder.serviceInstanceResourceType;
         this.tag = builder.tag;
@@ -85,23 +65,9 @@ public class ListServiceInstanceResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return expireTimeEnd
-     */
-    public String getExpireTimeEnd() {
-        return this.expireTimeEnd;
-    }
-
-    /**
-     * @return expireTimeStart
-     */
-    public String getExpireTimeStart() {
-        return this.expireTimeStart;
     }
 
     /**
@@ -126,24 +92,10 @@ public class ListServiceInstanceResourcesRequest extends Request {
     }
 
     /**
-     * @return payType
-     */
-    public String getPayType() {
-        return this.payType;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return resourceARN
-     */
-    public java.util.List<String> getResourceARN() {
-        return this.resourceARN;
     }
 
     /**
@@ -168,14 +120,10 @@ public class ListServiceInstanceResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServiceInstanceResourcesRequest, Builder> {
-        private String expireTimeEnd; 
-        private String expireTimeStart; 
         private java.util.List<Filters> filters; 
         private Integer maxResults; 
         private String nextToken; 
-        private String payType; 
         private String regionId; 
-        private java.util.List<String> resourceARN; 
         private String serviceInstanceId; 
         private String serviceInstanceResourceType; 
         private java.util.List<Tag> tag; 
@@ -186,44 +134,14 @@ public class ListServiceInstanceResourcesRequest extends Request {
 
         private Builder(ListServiceInstanceResourcesRequest request) {
             super(request);
-            this.expireTimeEnd = request.expireTimeEnd;
-            this.expireTimeStart = request.expireTimeStart;
             this.filters = request.filters;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
-            this.payType = request.payType;
             this.regionId = request.regionId;
-            this.resourceARN = request.resourceARN;
             this.serviceInstanceId = request.serviceInstanceId;
             this.serviceInstanceResourceType = request.serviceInstanceResourceType;
             this.tag = request.tag;
         } 
-
-        /**
-         * <p>End time of resource usage. 
-         * <notice>Note: Only supports querying service instances on private deployments.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-03-01T12:00:00</p>
-         */
-        public Builder expireTimeEnd(String expireTimeEnd) {
-            this.putQueryParameter("ExpireTimeEnd", expireTimeEnd);
-            this.expireTimeEnd = expireTimeEnd;
-            return this;
-        }
-
-        /**
-         * <p>Start time of resource usage. 
-         * <notice>Note: Only supports querying service instances on private deployments.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-01-01T12:00:00</p>
-         */
-        public Builder expireTimeStart(String expireTimeStart) {
-            this.putQueryParameter("ExpireTimeStart", expireTimeStart);
-            this.expireTimeStart = expireTimeStart;
-            return this;
-        }
 
         /**
          * <p>The filter conditions. Vaild values:</p>
@@ -284,22 +202,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the read-only instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Subscription</p>
-         */
-        public Builder payType(String payType) {
-            this.putQueryParameter("PayType", payType);
-            this.payType = payType;
-            return this;
-        }
-
-        /**
          * <p>The region ID. Valid values:</p>
          * <ul>
          * <li>cn-hangzhou: China (Hangzhou).</li>
@@ -312,15 +214,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
-         */
-        public Builder resourceARN(java.util.List<String> resourceARN) {
-            this.putQueryParameter("ResourceARN", resourceARN);
-            this.resourceARN = resourceARN;
             return this;
         }
 
@@ -409,6 +302,14 @@ public class ListServiceInstanceResourcesRequest extends Request {
             private String name; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
+
             /**
              * <p>Vaild values:</p>
              * <ul>
@@ -484,6 +385,14 @@ public class ListServiceInstanceResourcesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

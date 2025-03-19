@@ -164,6 +164,10 @@ public class GetServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmMetadata
      */
@@ -437,6 +441,46 @@ public class GetServiceResponseBody extends TeaModel {
         private String trialType; 
         private String version; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceResponseBody model) {
+            this.alarmMetadata = model.alarmMetadata;
+            this.categories = model.categories;
+            this.commodity = model.commodity;
+            this.deployFrom = model.deployFrom;
+            this.deployMetadata = model.deployMetadata;
+            this.deployType = model.deployType;
+            this.duration = model.duration;
+            this.instanceRoleInfos = model.instanceRoleInfos;
+            this.isSupportOperated = model.isSupportOperated;
+            this.licenseMetadata = model.licenseMetadata;
+            this.logMetadata = model.logMetadata;
+            this.operationMetadata = model.operationMetadata;
+            this.permission = model.permission;
+            this.policyNames = model.policyNames;
+            this.publishTime = model.publishTime;
+            this.requestId = model.requestId;
+            this.serviceDocumentInfos = model.serviceDocumentInfos;
+            this.serviceId = model.serviceId;
+            this.serviceInfos = model.serviceInfos;
+            this.serviceProductUrl = model.serviceProductUrl;
+            this.serviceType = model.serviceType;
+            this.shareType = model.shareType;
+            this.status = model.status;
+            this.supplierDesc = model.supplierDesc;
+            this.supplierLogo = model.supplierLogo;
+            this.supplierName = model.supplierName;
+            this.supplierUid = model.supplierUid;
+            this.supplierUrl = model.supplierUrl;
+            this.tags = model.tags;
+            this.tenantType = model.tenantType;
+            this.trialDuration = model.trialDuration;
+            this.trialType = model.trialType;
+            this.version = model.version;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>The alert configurations of the service.</p>
@@ -900,6 +944,14 @@ public class GetServiceResponseBody extends TeaModel {
             private java.util.Map<String, String> mappings; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComponentsMappings model) {
+                this.mappings = model.mappings;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>The mappings.</p>
              */
@@ -957,6 +1009,13 @@ public class GetServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ComponentsMappings> componentsMappings; 
+
+            private Builder() {
+            } 
+
+            private Builder(CssMetadata model) {
+                this.componentsMappings = model.componentsMappings;
+            } 
 
             /**
              * <p>The mapping information about the billing items.</p>
@@ -1028,6 +1087,15 @@ public class GetServiceResponseBody extends TeaModel {
             private String specificationCode; 
             private String specificationName; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecificationMappings model) {
+                this.specificationCode = model.specificationCode;
+                this.specificationName = model.specificationName;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>The specification code of the service in Alibaba Cloud Marketplace.</p>
@@ -1101,6 +1169,13 @@ public class GetServiceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SpecificationMappings> specificationMappings; 
 
+            private Builder() {
+            } 
+
+            private Builder(MarketplaceMetadata model) {
+                this.specificationMappings = model.specificationMappings;
+            } 
+
             /**
              * <p>The mappings between the service specifications and the template or package.</p>
              */
@@ -1171,6 +1246,15 @@ public class GetServiceResponseBody extends TeaModel {
             private String code; 
             private String name; 
             private java.util.List<String> times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Specifications model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The commodity code.</p>
@@ -1336,6 +1420,21 @@ public class GetServiceResponseBody extends TeaModel {
             private String saasBoostMetadata; 
             private java.util.List<Specifications> specifications; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commodity model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.cssMetadata = model.cssMetadata;
+                this.deployPage = model.deployPage;
+                this.marketplaceMetadata = model.marketplaceMetadata;
+                this.orderTime = model.orderTime;
+                this.saasBoostMetadata = model.saasBoostMetadata;
+                this.specifications = model.specifications;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The billing method of the service. Valid values:</p>
@@ -1510,6 +1609,16 @@ public class GetServiceResponseBody extends TeaModel {
             private String roleName; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceRoleInfos model) {
+                this.policyDocument = model.policyDocument;
+                this.principals = model.principals;
+                this.roleName = model.roleName;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>The content of the policy.</p>
              * 
@@ -1614,6 +1723,15 @@ public class GetServiceResponseBody extends TeaModel {
             private String locale; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceDocumentInfos model) {
+                this.documentUrl = model.documentUrl;
+                this.locale = model.locale;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>The URL that is used to access the document.</p>
              * 
@@ -1698,6 +1816,14 @@ public class GetServiceResponseBody extends TeaModel {
             private String name; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Agreements model) {
+                this.name = model.name;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The agreement name.</p>
              * 
@@ -1770,6 +1896,14 @@ public class GetServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Softwares model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the Software.</p>
@@ -1892,6 +2026,18 @@ public class GetServiceResponseBody extends TeaModel {
             private String shortDescription; 
             private java.util.List<Softwares> softwares; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInfos model) {
+                this.agreements = model.agreements;
+                this.image = model.image;
+                this.locale = model.locale;
+                this.name = model.name;
+                this.shortDescription = model.shortDescription;
+                this.softwares = model.softwares;
+            } 
+
             /**
              * <p>The agreement information about the service.</p>
              */
@@ -2006,6 +2152,14 @@ public class GetServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
