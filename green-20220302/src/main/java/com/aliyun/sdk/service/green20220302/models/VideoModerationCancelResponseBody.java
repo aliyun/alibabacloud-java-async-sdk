@@ -40,10 +40,6 @@ public class VideoModerationCancelResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -69,15 +65,6 @@ public class VideoModerationCancelResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(VideoModerationCancelResponseBody model) {
-            this.code = model.code;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>

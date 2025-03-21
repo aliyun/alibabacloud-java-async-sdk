@@ -44,10 +44,6 @@ public class ImageModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class ImageModerationResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ImageModerationResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.msg = model.msg;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -195,15 +181,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private String libId; 
             private String libName; 
 
-            private Builder() {
-            } 
-
-            private Builder(CustomImage model) {
-                this.imageId = model.imageId;
-                this.libId = model.libId;
-                this.libName = model.libName;
-            } 
-
             /**
              * <p>The image ID.</p>
              * 
@@ -288,14 +265,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float confidence; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Bang model) {
-                this.confidence = model.confidence;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The confidence level of the bang recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
              * 
@@ -368,14 +337,6 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private Float confidence; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Gender model) {
-                this.confidence = model.confidence;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The confidence level of the gender recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
@@ -455,14 +416,6 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private Float confidence; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Hairstyle model) {
-                this.confidence = model.confidence;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The confidence level of the hairstyle recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
@@ -544,14 +497,6 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private Float confidence; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Hat model) {
-                this.confidence = model.confidence;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The confidence level of the result of wearing the hat. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
@@ -656,16 +601,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
-            private Builder() {
-            } 
-
-            private Builder(Location model) {
-                this.h = model.h;
-                this.w = model.w;
-                this.x = model.x;
-                this.y = model.y;
-            } 
-
             /**
              * <p>The height of the face area. Unit: pixels.</p>
              * 
@@ -761,14 +696,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float confidence; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Mask model) {
-                this.confidence = model.confidence;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The confidence level of the result of wearing the mask. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
              * 
@@ -847,14 +774,6 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private Float confidence; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Mustache model) {
-                this.confidence = model.confidence;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The confidence level of the result of the beard. Valid values: 0 to 100. A higher value indicates a more credible result.</p>
@@ -970,17 +889,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float pitch; 
             private Float roll; 
             private Float yaw; 
-
-            private Builder() {
-            } 
-
-            private Builder(Quality model) {
-                this.blur = model.blur;
-                this.integrity = model.integrity;
-                this.pitch = model.pitch;
-                this.roll = model.roll;
-                this.yaw = model.yaw;
-            } 
 
             /**
              * <p>The blur of the face image. Valid values: 0 to 100. The higher the score, the more fuzzy it is.
@@ -1200,23 +1108,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Quality quality; 
             private Float smile; 
 
-            private Builder() {
-            } 
-
-            private Builder(FaceData model) {
-                this.age = model.age;
-                this.bang = model.bang;
-                this.gender = model.gender;
-                this.glasses = model.glasses;
-                this.hairstyle = model.hairstyle;
-                this.hat = model.hat;
-                this.location = model.location;
-                this.mask = model.mask;
-                this.mustache = model.mustache;
-                this.quality = model.quality;
-                this.smile = model.smile;
-            } 
-
             /**
              * <p>The age recognition result.</p>
              * 
@@ -1397,16 +1288,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
-            private Builder() {
-            } 
-
-            private Builder(LogoDataLocation model) {
-                this.h = model.h;
-                this.w = model.w;
-                this.x = model.x;
-                this.y = model.y;
-            } 
-
             /**
              * <p>The height of the text area, in pixels.</p>
              * 
@@ -1514,15 +1395,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private String label; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(Logo model) {
-                this.confidence = model.confidence;
-                this.label = model.label;
-                this.name = model.name;
-            } 
-
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
              * 
@@ -1606,14 +1478,6 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private LogoDataLocation location; 
             private java.util.List<Logo> logo; 
-
-            private Builder() {
-            } 
-
-            private Builder(LogoData model) {
-                this.location = model.location;
-                this.logo = model.logo;
-            } 
 
             /**
              * <p>Location information.</p>
@@ -1705,16 +1569,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer w; 
             private Integer x; 
             private Integer y; 
-
-            private Builder() {
-            } 
-
-            private Builder(OcrResultLocation model) {
-                this.h = model.h;
-                this.w = model.w;
-                this.x = model.x;
-                this.y = model.y;
-            } 
 
             /**
              * <p>The height of the text area, in pixels.</p>
@@ -1811,14 +1665,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private OcrResultLocation location; 
             private String text; 
 
-            private Builder() {
-            } 
-
-            private Builder(OcrResult model) {
-                this.location = model.location;
-                this.text = model.text;
-            } 
-
             /**
              * <p>Location information.</p>
              */
@@ -1912,16 +1758,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer w; 
             private Integer x; 
             private Integer y; 
-
-            private Builder() {
-            } 
-
-            private Builder(PublicFigureLocation model) {
-                this.h = model.h;
-                this.w = model.w;
-                this.x = model.x;
-                this.y = model.y;
-            } 
 
             /**
              * <p>The height</p>
@@ -2030,15 +1866,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private String figureName; 
             private java.util.List<PublicFigureLocation> location; 
 
-            private Builder() {
-            } 
-
-            private Builder(PublicFigure model) {
-                this.figureId = model.figureId;
-                this.figureName = model.figureName;
-                this.location = model.location;
-            } 
-
             /**
              * <p>Identified person coding information.</p>
              * 
@@ -2119,14 +1946,6 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private String classification; 
             private Float confidence; 
-
-            private Builder() {
-            } 
-
-            private Builder(Recognition model) {
-                this.classification = model.classification;
-                this.confidence = model.confidence;
-            } 
 
             /**
              * <p>The category of image recognition.</p>
@@ -2212,15 +2031,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private String keyWords; 
             private String libId; 
             private String libName; 
-
-            private Builder() {
-            } 
-
-            private Builder(CustomText model) {
-                this.keyWords = model.keyWords;
-                this.libId = model.libId;
-                this.libName = model.libName;
-            } 
 
             /**
              * <p>Custom words, multiple words separated by commas.</p>
@@ -2330,16 +2140,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
-            private Builder() {
-            } 
-
-            private Builder(TextInImageOcrResultLocation model) {
-                this.h = model.h;
-                this.w = model.w;
-                this.x = model.x;
-                this.y = model.y;
-            } 
-
             /**
              * <p>The height of the text area, in pixels.</p>
              * 
@@ -2435,14 +2235,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private TextInImageOcrResultLocation location; 
             private String text; 
 
-            private Builder() {
-            } 
-
-            private Builder(TextInImageOcrResult model) {
-                this.location = model.location;
-                this.text = model.text;
-            } 
-
             /**
              * <p>Location information.</p>
              */
@@ -2525,15 +2317,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List<TextInImageOcrResult> ocrResult; 
             private java.util.List<String> riskWord; 
 
-            private Builder() {
-            } 
-
-            private Builder(TextInImage model) {
-                this.customText = model.customText;
-                this.ocrResult = model.ocrResult;
-                this.riskWord = model.riskWord;
-            } 
-
             /**
              * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
              */
@@ -2596,13 +2379,6 @@ public class ImageModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String outputText; 
-
-            private Builder() {
-            } 
-
-            private Builder(VlContent model) {
-                this.outputText = model.outputText;
-            } 
 
             /**
              * <p>the vl output content</p>
@@ -2737,20 +2513,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List<Recognition> recognition; 
             private TextInImage textInImage; 
             private VlContent vlContent; 
-
-            private Builder() {
-            } 
-
-            private Builder(Ext model) {
-                this.customImage = model.customImage;
-                this.faceData = model.faceData;
-                this.logoData = model.logoData;
-                this.ocrResult = model.ocrResult;
-                this.publicFigure = model.publicFigure;
-                this.recognition = model.recognition;
-                this.textInImage = model.textInImage;
-                this.vlContent = model.vlContent;
-            } 
 
             /**
              * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
@@ -2891,16 +2653,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private String label; 
             private String riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.confidence = model.confidence;
-                this.description = model.description;
-                this.label = model.label;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
              * 
@@ -3016,16 +2768,6 @@ public class ImageModerationResponseBody extends TeaModel {
             private Ext ext; 
             private java.util.List<Result> result; 
             private String riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.ext = model.ext;
-                this.result = model.result;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The ID of the moderated object.</p>

@@ -44,10 +44,6 @@ public class TextModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class TextModerationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(TextModerationResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -230,18 +216,6 @@ public class TextModerationResponseBody extends TeaModel {
             private String deviceId; 
             private String labels; 
             private String reason; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.accountId = model.accountId;
-                this.dataId = model.dataId;
-                this.descriptions = model.descriptions;
-                this.deviceId = model.deviceId;
-                this.labels = model.labels;
-                this.reason = model.reason;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

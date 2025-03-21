@@ -44,10 +44,6 @@ public class TextModerationPlusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(TextModerationPlusResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -195,15 +181,6 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String hitLabel; 
             private String hitLibName; 
 
-            private Builder() {
-            } 
-
-            private Builder(Advice model) {
-                this.answer = model.answer;
-                this.hitLabel = model.hitLabel;
-                this.hitLibName = model.hitLibName;
-            } 
-
             /**
              * <p>The answer.</p>
              * 
@@ -239,6 +216,125 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
             public Advice build() {
                 return new Advice(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationPlusResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationPlusResponseBody</p>
+     */
+    public static class AttackResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttackLevel")
+        private String attackLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        private AttackResult(Builder builder) {
+            this.attackLevel = builder.attackLevel;
+            this.confidence = builder.confidence;
+            this.description = builder.description;
+            this.label = builder.label;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AttackResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attackLevel
+         */
+        public String getAttackLevel() {
+            return this.attackLevel;
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        public static final class Builder {
+            private String attackLevel; 
+            private Float confidence; 
+            private String description; 
+            private String label; 
+
+            /**
+             * <p>The level of prompt attack</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder attackLevel(String attackLevel) {
+                this.attackLevel = attackLevel;
+                return this;
+            }
+
+            /**
+             * <p>The confidence</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>safe</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>safe</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            public AttackResult build() {
+                return new AttackResult(this);
             } 
 
         } 
@@ -287,14 +383,6 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public static final class Builder {
             private String keyWords; 
             private String libName; 
-
-            private Builder() {
-            } 
-
-            private Builder(CustomizedHit model) {
-                this.keyWords = model.keyWords;
-                this.libName = model.libName;
-            } 
 
             /**
              * <p>The terms that are hit. Multiple terms are separated by commas (,).</p>
@@ -405,17 +493,6 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String label; 
             private String riskWords; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.confidence = model.confidence;
-                this.customizedHit = model.customizedHit;
-                this.description = model.description;
-                this.label = model.label;
-                this.riskWords = model.riskWords;
-            } 
-
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
              * 
@@ -481,9 +558,131 @@ public class TextModerationPlusResponseBody extends TeaModel {
      *
      * <p>TextModerationPlusResponseBody</p>
      */
+    public static class SensitiveResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("SensitiveData")
+        private java.util.List<String> sensitiveData;
+
+        @com.aliyun.core.annotation.NameInMap("SensitiveLevel")
+        private String sensitiveLevel;
+
+        private SensitiveResult(Builder builder) {
+            this.description = builder.description;
+            this.label = builder.label;
+            this.sensitiveData = builder.sensitiveData;
+            this.sensitiveLevel = builder.sensitiveLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return sensitiveData
+         */
+        public java.util.List<String> getSensitiveData() {
+            return this.sensitiveData;
+        }
+
+        /**
+         * @return sensitiveLevel
+         */
+        public String getSensitiveLevel() {
+            return this.sensitiveLevel;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String label; 
+            private java.util.List<String> sensitiveData; 
+            private String sensitiveLevel; 
+
+            /**
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * <p>The sensitive data.</p>
+             */
+            public Builder sensitiveData(java.util.List<String> sensitiveData) {
+                this.sensitiveData = sensitiveData;
+                return this;
+            }
+
+            /**
+             * <p>The level of sensitivity data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S1</p>
+             */
+            public Builder sensitiveLevel(String sensitiveLevel) {
+                this.sensitiveLevel = sensitiveLevel;
+                return this;
+            }
+
+            public SensitiveResult build() {
+                return new SensitiveResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationPlusResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationPlusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advice")
         private java.util.List<Advice> advice;
+
+        @com.aliyun.core.annotation.NameInMap("AttackLevel")
+        private String attackLevel;
+
+        @com.aliyun.core.annotation.NameInMap("AttackResult")
+        private java.util.List<AttackResult> attackResult;
 
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
@@ -497,12 +696,22 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
+        @com.aliyun.core.annotation.NameInMap("SensitiveLevel")
+        private String sensitiveLevel;
+
+        @com.aliyun.core.annotation.NameInMap("SensitiveResult")
+        private java.util.List<SensitiveResult> sensitiveResult;
+
         private Data(Builder builder) {
             this.advice = builder.advice;
+            this.attackLevel = builder.attackLevel;
+            this.attackResult = builder.attackResult;
             this.dataId = builder.dataId;
             this.result = builder.result;
             this.riskLevel = builder.riskLevel;
             this.score = builder.score;
+            this.sensitiveLevel = builder.sensitiveLevel;
+            this.sensitiveResult = builder.sensitiveResult;
         }
 
         public static Builder builder() {
@@ -518,6 +727,20 @@ public class TextModerationPlusResponseBody extends TeaModel {
          */
         public java.util.List<Advice> getAdvice() {
             return this.advice;
+        }
+
+        /**
+         * @return attackLevel
+         */
+        public String getAttackLevel() {
+            return this.attackLevel;
+        }
+
+        /**
+         * @return attackResult
+         */
+        public java.util.List<AttackResult> getAttackResult() {
+            return this.attackResult;
         }
 
         /**
@@ -548,23 +771,30 @@ public class TextModerationPlusResponseBody extends TeaModel {
             return this.score;
         }
 
+        /**
+         * @return sensitiveLevel
+         */
+        public String getSensitiveLevel() {
+            return this.sensitiveLevel;
+        }
+
+        /**
+         * @return sensitiveResult
+         */
+        public java.util.List<SensitiveResult> getSensitiveResult() {
+            return this.sensitiveResult;
+        }
+
         public static final class Builder {
             private java.util.List<Advice> advice; 
+            private String attackLevel; 
+            private java.util.List<AttackResult> attackResult; 
             private String dataId; 
             private java.util.List<Result> result; 
             private String riskLevel; 
             private Float score; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.advice = model.advice;
-                this.dataId = model.dataId;
-                this.result = model.result;
-                this.riskLevel = model.riskLevel;
-                this.score = model.score;
-            } 
+            private String sensitiveLevel; 
+            private java.util.List<SensitiveResult> sensitiveResult; 
 
             /**
              * <p>The suggestion.</p>
@@ -575,7 +805,29 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * <p>The level of prompt attack</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder attackLevel(String attackLevel) {
+                this.attackLevel = attackLevel;
+                return this;
+            }
+
+            /**
+             * <p>The result of prompt attack detect</p>
+             */
+            public Builder attackResult(java.util.List<AttackResult> attackResult) {
+                this.attackResult = attackResult;
+                return this;
+            }
+
+            /**
+             * <p>The id of data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -609,6 +861,25 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder score(Float score) {
                 this.score = score;
+                return this;
+            }
+
+            /**
+             * <p>The level of sensitivity data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S0</p>
+             */
+            public Builder sensitiveLevel(String sensitiveLevel) {
+                this.sensitiveLevel = sensitiveLevel;
+                return this;
+            }
+
+            /**
+             * <p>The result of sensitivity data detect</p>
+             */
+            public Builder sensitiveResult(java.util.List<SensitiveResult> sensitiveResult) {
+                this.sensitiveResult = sensitiveResult;
                 return this;
             }
 

@@ -44,10 +44,6 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageModerationResultResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.msg = model.msg;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -206,16 +192,6 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String description; 
             private String label; 
             private String riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.confidence = model.confidence;
-                this.description = model.description;
-                this.label = model.label;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -356,18 +332,6 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String reqId; 
             private java.util.List<Result> result; 
             private String riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.frame = model.frame;
-                this.frameNum = model.frameNum;
-                this.reqId = model.reqId;
-                this.result = model.result;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>

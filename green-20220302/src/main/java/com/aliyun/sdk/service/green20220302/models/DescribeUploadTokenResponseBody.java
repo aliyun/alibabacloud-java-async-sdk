@@ -44,10 +44,6 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUploadTokenResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.msg = model.msg;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -254,20 +240,6 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             private String ossInternalEndPoint; 
             private String ossInternetEndPoint; 
             private String securityToken; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.accessKeyId = model.accessKeyId;
-                this.accessKeySecret = model.accessKeySecret;
-                this.bucketName = model.bucketName;
-                this.expiration = model.expiration;
-                this.fileNamePrefix = model.fileNamePrefix;
-                this.ossInternalEndPoint = model.ossInternalEndPoint;
-                this.ossInternetEndPoint = model.ossInternetEndPoint;
-                this.securityToken = model.securityToken;
-            } 
 
             /**
              * <p>The AccessKey ID.</p>

@@ -44,10 +44,6 @@ public class FileModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class FileModerationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(FileModerationResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -170,13 +156,6 @@ public class FileModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String taskId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.taskId = model.taskId;
-            } 
 
             /**
              * <p>The task ID.</p>

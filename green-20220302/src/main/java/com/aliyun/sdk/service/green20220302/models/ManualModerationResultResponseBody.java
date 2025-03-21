@@ -44,10 +44,6 @@ public class ManualModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class ManualModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ManualModerationResultResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Code.
@@ -176,14 +162,6 @@ public class ManualModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String label; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.description = model.description;
-                this.label = model.label;
-            } 
 
             /**
              * Description.
@@ -275,16 +253,6 @@ public class ManualModerationResultResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private String riskLevel; 
             private String taskId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.result = model.result;
-                this.riskLevel = model.riskLevel;
-                this.taskId = model.taskId;
-            } 
 
             /**
              * DataId.

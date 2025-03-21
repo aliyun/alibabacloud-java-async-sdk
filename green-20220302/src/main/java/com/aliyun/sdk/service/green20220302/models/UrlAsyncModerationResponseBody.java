@@ -44,10 +44,6 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(UrlAsyncModerationResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.msg = model.msg;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -182,14 +168,6 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String reqId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.reqId = model.reqId;
-            } 
 
             /**
              * <p>The ID of the moderated object.</p>

@@ -44,10 +44,6 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(VoiceModerationResultResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -326,26 +312,6 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private Long startTimestamp; 
             private String text; 
             private String url; 
-
-            private Builder() {
-            } 
-
-            private Builder(SliceDetails model) {
-                this.descriptions = model.descriptions;
-                this.endTime = model.endTime;
-                this.endTimestamp = model.endTimestamp;
-                this.extend = model.extend;
-                this.labels = model.labels;
-                this.originAlgoResult = model.originAlgoResult;
-                this.riskLevel = model.riskLevel;
-                this.riskTips = model.riskTips;
-                this.riskWords = model.riskWords;
-                this.score = model.score;
-                this.startTime = model.startTime;
-                this.startTimestamp = model.startTimestamp;
-                this.text = model.text;
-                this.url = model.url;
-            } 
 
             /**
              * Descriptions.
@@ -596,18 +562,6 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private java.util.List<SliceDetails> sliceDetails; 
             private String taskId; 
             private String url; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.liveId = model.liveId;
-                this.riskLevel = model.riskLevel;
-                this.sliceDetails = model.sliceDetails;
-                this.taskId = model.taskId;
-                this.url = model.url;
-            } 
 
             /**
              * <p>The ID of the moderated object.</p>

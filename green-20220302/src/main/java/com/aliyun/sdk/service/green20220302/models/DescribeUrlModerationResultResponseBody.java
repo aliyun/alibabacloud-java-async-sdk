@@ -44,10 +44,6 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUrlModerationResultResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.msg = model.msg;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -195,15 +181,6 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private String icpType; 
             private String siteType; 
 
-            private Builder() {
-            } 
-
-            private Builder(ExtraInfo model) {
-                this.icpNo = model.icpNo;
-                this.icpType = model.icpType;
-                this.siteType = model.siteType;
-            } 
-
             /**
              * <p>The ICP number.</p>
              * 
@@ -287,14 +264,6 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private Float confidence; 
             private String label; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.confidence = model.confidence;
-                this.label = model.label;
-            } 
 
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -392,16 +361,6 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private ExtraInfo extraInfo; 
             private String reqId; 
             private java.util.List<Result> result; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.extraInfo = model.extraInfo;
-                this.reqId = model.reqId;
-                this.result = model.result;
-            } 
 
             /**
              * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>

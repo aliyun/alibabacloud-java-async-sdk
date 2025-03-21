@@ -44,10 +44,6 @@ public class VoiceModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class VoiceModerationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(VoiceModerationResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -182,14 +168,6 @@ public class VoiceModerationResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String taskId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dataId = model.dataId;
-                this.taskId = model.taskId;
-            } 
 
             /**
              * <p>The ID of the moderated object.</p>
