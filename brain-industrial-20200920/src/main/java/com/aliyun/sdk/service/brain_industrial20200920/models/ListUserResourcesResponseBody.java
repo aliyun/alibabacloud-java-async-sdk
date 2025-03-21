@@ -155,7 +155,10 @@ public class ListUserResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65308A66-8764-53EE-8D4A-201E86CA88C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

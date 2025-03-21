@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserResourcesResponse> listUserResources(ListUserResourcesRequest request);
 
     /**
+     * @param request the request parameters of OpenApiInvoke  OpenApiInvokeRequest
+     * @return OpenApiInvokeResponse
+     */
+    CompletableFuture<OpenApiInvokeResponse> openApiInvoke(OpenApiInvokeRequest request);
+
+    /**
      * @param request the request parameters of UpdateLicenseDescription  UpdateLicenseDescriptionRequest
      * @return UpdateLicenseDescriptionResponse
      */

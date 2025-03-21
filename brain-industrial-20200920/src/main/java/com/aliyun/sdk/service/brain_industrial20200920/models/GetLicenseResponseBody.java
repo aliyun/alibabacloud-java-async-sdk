@@ -637,6 +637,9 @@ public class GetLicenseResponseBody extends TeaModel {
 
             /**
              * <p>代表资源一级ID的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-29 15:03:12</p>
              */
             public Builder activateTime(String activateTime) {
                 this.activateTime = activateTime;
@@ -669,6 +672,9 @@ public class GetLicenseResponseBody extends TeaModel {
 
             /**
              * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-29 15:01:15</p>
              */
             public Builder buyTime(String buyTime) {
                 this.buyTime = buyTime;
@@ -717,6 +723,9 @@ public class GetLicenseResponseBody extends TeaModel {
 
             /**
              * <p>代表创建时间的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -724,7 +733,10 @@ public class GetLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;

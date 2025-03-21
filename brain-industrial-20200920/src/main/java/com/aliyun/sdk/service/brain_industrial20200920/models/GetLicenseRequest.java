@@ -73,7 +73,10 @@ public class GetLicenseRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
