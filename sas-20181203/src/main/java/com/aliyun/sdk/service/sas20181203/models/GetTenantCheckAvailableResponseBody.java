@@ -36,10 +36,6 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetTenantCheckAvailableResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -134,14 +122,6 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         public static final class Builder {
             private Long nextScanTime; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.nextScanTime = model.nextScanTime;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The timestamp when you can submit a quick scan task.</p>

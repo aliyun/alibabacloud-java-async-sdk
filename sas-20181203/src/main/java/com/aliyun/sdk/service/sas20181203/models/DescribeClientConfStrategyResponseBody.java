@@ -40,10 +40,6 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TargetList> targetList; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeClientConfStrategyResponseBody model) {
-            this.requestId = model.requestId;
-            this.targetList = model.targetList;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -146,13 +133,6 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(TargetList model) {
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The UUID of the Security Center agent.</p>

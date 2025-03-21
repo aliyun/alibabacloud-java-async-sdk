@@ -44,10 +44,6 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -81,16 +77,6 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Summary summary; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCheckRiskStatisticsResponseBody model) {
-            this.count = model.count;
-            this.data = model.data;
-            this.requestId = model.requestId;
-            this.summary = model.summary;
-        } 
 
         /**
          * <p>The number of risk scenarios.</p>
@@ -239,19 +225,6 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer passCount; 
             private Integer totalCount; 
             private String typeName; 
-
-            private Builder() {
-            } 
-
-            private Builder(SubStatistics model) {
-                this.alias = model.alias;
-                this.highWarningCount = model.highWarningCount;
-                this.lowWarningCount = model.lowWarningCount;
-                this.mediumWarningCount = model.mediumWarningCount;
-                this.passCount = model.passCount;
-                this.totalCount = model.totalCount;
-                this.typeName = model.typeName;
-            } 
 
             /**
              * <p>The name of the baseline type.</p>
@@ -441,19 +414,6 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private java.util.List<SubStatistics> subStatistics; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.highWarningCount = model.highWarningCount;
-                this.lowWarningCount = model.lowWarningCount;
-                this.mediumWarningCount = model.mediumWarningCount;
-                this.passCount = model.passCount;
-                this.sceneName = model.sceneName;
-                this.subStatistics = model.subStatistics;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The number of high-risk items.</p>
              * 
@@ -626,18 +586,6 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer riskCheckCnt; 
             private Integer riskDays; 
             private Integer riskWarningCnt; 
-
-            private Builder() {
-            } 
-
-            private Builder(Summary model) {
-                this.handledCheckToday = model.handledCheckToday;
-                this.handledCheckTotal = model.handledCheckTotal;
-                this.handledDays = model.handledDays;
-                this.riskCheckCnt = model.riskCheckCnt;
-                this.riskDays = model.riskDays;
-                this.riskWarningCnt = model.riskWarningCnt;
-            } 
 
             /**
              * <p>Check items handled today.</p>

@@ -36,10 +36,6 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return levelsOn
      */
@@ -57,14 +53,6 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> levelsOn; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSuspEventUserSettingResponseBody model) {
-            this.levelsOn = model.levelsOn;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the risk levels of alert notifications. Valid values:</p>

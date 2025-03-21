@@ -36,10 +36,6 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SuspStatistics suspStatistics; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetClusterSuspEventStatisticsResponseBody model) {
-            this.requestId = model.requestId;
-            this.suspStatistics = model.suspStatistics;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -146,15 +134,6 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             private Integer remind; 
             private Integer serious; 
             private Integer suspicious; 
-
-            private Builder() {
-            } 
-
-            private Builder(SuspStatistics model) {
-                this.remind = model.remind;
-                this.serious = model.serious;
-                this.suspicious = model.suspicious;
-            } 
 
             /**
              * <p>The number of alerts whose Emergency level is Reminder.</p>

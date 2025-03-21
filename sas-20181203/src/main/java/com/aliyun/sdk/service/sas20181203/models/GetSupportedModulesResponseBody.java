@@ -36,10 +36,6 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetSupportedModulesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SupportedModuleResponse> supportedModuleResponse; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetSupportedModulesResponseBody model) {
-            this.requestId = model.requestId;
-            this.supportedModuleResponse = model.supportedModuleResponse;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,14 +122,6 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         public static final class Builder {
             private String module; 
             private String moduleDisp; 
-
-            private Builder() {
-            } 
-
-            private Builder(SupportedModules model) {
-                this.module = model.module;
-                this.moduleDisp = model.moduleDisp;
-            } 
 
             /**
              * <p>The code of the module. Valid values:</p>
@@ -221,14 +201,6 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SupportedModules> supportedModules; 
             private String vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(SupportedModuleResponse model) {
-                this.supportedModules = model.supportedModules;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The modules supported by the cloud service provider.</p>

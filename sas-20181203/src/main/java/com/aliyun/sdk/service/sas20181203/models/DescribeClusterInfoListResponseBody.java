@@ -36,10 +36,6 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return clusterList
      */
@@ -57,14 +53,6 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ClusterList> clusterList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeClusterInfoListResponseBody model) {
-            this.clusterList = model.clusterList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the information about clusters.</p>
@@ -182,18 +170,6 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             private String regionId; 
             private String state; 
             private Boolean targetResult; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClusterList model) {
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.clusterType = model.clusterType;
-                this.regionId = model.regionId;
-                this.state = model.state;
-                this.targetResult = model.targetResult;
-            } 
 
             /**
              * <p>The ID of the container cluster.</p>

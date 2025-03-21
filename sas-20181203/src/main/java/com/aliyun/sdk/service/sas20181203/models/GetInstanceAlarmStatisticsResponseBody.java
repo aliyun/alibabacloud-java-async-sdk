@@ -36,10 +36,6 @@ public class GetInstanceAlarmStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetInstanceAlarmStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetInstanceAlarmStatisticsResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Data structure.</p>
@@ -146,15 +134,6 @@ public class GetInstanceAlarmStatisticsResponseBody extends TeaModel {
             private Integer remindCount; 
             private Integer seriousCount; 
             private Integer suspiciousCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.remindCount = model.remindCount;
-                this.seriousCount = model.seriousCount;
-                this.suspiciousCount = model.suspiciousCount;
-            } 
 
             /**
              * <p>Reminder alarm count.</p>

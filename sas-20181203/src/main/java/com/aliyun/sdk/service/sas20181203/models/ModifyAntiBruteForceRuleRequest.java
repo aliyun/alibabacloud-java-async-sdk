@@ -80,7 +80,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -273,7 +273,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * <p>The protocol types supported by the anti-brute force rule for interception.</p>
          */
         public Builder protocolType(ProtocolType protocolType) {
             String protocolTypeShrink = shrink(protocolType, "ProtocolType", "json");
@@ -397,17 +397,15 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
             private String sqlServer; 
             private String ssh; 
 
-            private Builder() {
-            } 
-
-            private Builder(ProtocolType model) {
-                this.rdp = model.rdp;
-                this.sqlServer = model.sqlServer;
-                this.ssh = model.ssh;
-            } 
-
             /**
-             * Rdp.
+             * <p>Whether to modify the RDP interception method, which is enabled by default. Values:</p>
+             * <ul>
+             * <li><strong>on</strong>: Enable</li>
+             * <li><strong>off</strong>: Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder rdp(String rdp) {
                 this.rdp = rdp;
@@ -415,7 +413,14 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
             }
 
             /**
-             * SqlServer.
+             * <p>Whether to modify the SQL Server interception method, which is disabled by default. Values:</p>
+             * <ul>
+             * <li><strong>on</strong>: Enable</li>
+             * <li><strong>off</strong>: Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder sqlServer(String sqlServer) {
                 this.sqlServer = sqlServer;
@@ -423,7 +428,14 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
             }
 
             /**
-             * Ssh.
+             * <p>Whether to modify the SSH interception method, which is enabled by default. Values:</p>
+             * <ul>
+             * <li><strong>on</strong>: Enable</li>
+             * <li><strong>off</strong>: Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ssh(String ssh) {
                 this.ssh = ssh;

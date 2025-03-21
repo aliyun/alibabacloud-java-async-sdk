@@ -36,10 +36,6 @@ public class GetServiceTrailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetServiceTrailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ServiceTrail serviceTrail; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetServiceTrailResponseBody model) {
-            this.requestId = model.requestId;
-            this.serviceTrail = model.serviceTrail;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,15 +134,6 @@ public class GetServiceTrailResponseBody extends TeaModel {
             private String config; 
             private Long createTime; 
             private Long updateTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(ServiceTrail model) {
-                this.config = model.config;
-                this.createTime = model.createTime;
-                this.updateTime = model.updateTime;
-            } 
 
             /**
              * <p>The status of the service trail. Valid values:</p>

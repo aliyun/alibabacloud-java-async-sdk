@@ -36,10 +36,6 @@ public class DescribeSupervisonInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return latestScanTime
      */
@@ -57,14 +53,6 @@ public class DescribeSupervisonInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Long latestScanTime; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSupervisonInfoResponseBody model) {
-            this.latestScanTime = model.latestScanTime;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The time of the last system vulnerability scan. The value is a UNIX timestamp. Unit: milliseconds.</p>

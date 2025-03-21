@@ -52,10 +52,6 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetHoneypotPresetResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -246,15 +230,6 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String fileId; 
             private String fileName; 
             private String ossUrl; 
-
-            private Builder() {
-            } 
-
-            private Builder(FileInfoList model) {
-                this.fileId = model.fileId;
-                this.fileName = model.fileName;
-                this.ossUrl = model.ossUrl;
-            } 
 
             /**
              * <p>The ID of the uploaded file.</p>
@@ -423,21 +398,6 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String nodeId; 
             private String presetName; 
             private String presetType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.controlNodeName = model.controlNodeName;
-                this.fileInfoList = model.fileInfoList;
-                this.honeypotImageDisplayName = model.honeypotImageDisplayName;
-                this.honeypotImageName = model.honeypotImageName;
-                this.honeypotPresetId = model.honeypotPresetId;
-                this.meta = model.meta;
-                this.nodeId = model.nodeId;
-                this.presetName = model.presetName;
-                this.presetType = model.presetType;
-            } 
 
             /**
              * <p>The name of the management node.</p>

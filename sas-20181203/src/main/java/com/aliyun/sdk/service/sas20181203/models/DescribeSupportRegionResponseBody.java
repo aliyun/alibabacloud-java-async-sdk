@@ -36,10 +36,6 @@ public class DescribeSupportRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeSupportRegionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> supportRegion; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSupportRegionResponseBody model) {
-            this.requestId = model.requestId;
-            this.supportRegion = model.supportRegion;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

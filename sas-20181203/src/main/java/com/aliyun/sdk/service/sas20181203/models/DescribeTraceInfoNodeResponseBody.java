@@ -36,10 +36,6 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return node
      */
@@ -57,14 +53,6 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
     public static final class Builder {
         private Node node; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeTraceInfoNodeResponseBody model) {
-            this.node = model.node;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details about the node.</p>
@@ -134,14 +122,6 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(PropertyList model) {
-                this.name = model.name;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The name of the property.</p>
@@ -227,15 +207,6 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             private String name; 
             private java.util.List<PropertyList> propertyList; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Node model) {
-                this.name = model.name;
-                this.propertyList = model.propertyList;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The name of the node.</p>

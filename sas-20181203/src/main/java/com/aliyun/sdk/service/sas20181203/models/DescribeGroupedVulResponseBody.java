@@ -48,10 +48,6 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return currentPage
      */
@@ -93,17 +89,6 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeGroupedVulResponseBody model) {
-            this.currentPage = model.currentPage;
-            this.groupedVulItems = model.groupedVulItems;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The page number.</p>
@@ -350,26 +335,6 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private String tags; 
             private Long totalFixCount; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedVulItems model) {
-                this.aliasName = model.aliasName;
-                this.asapCount = model.asapCount;
-                this.gmtFirst = model.gmtFirst;
-                this.gmtLast = model.gmtLast;
-                this.handledCount = model.handledCount;
-                this.languageType = model.languageType;
-                this.laterCount = model.laterCount;
-                this.name = model.name;
-                this.nntfCount = model.nntfCount;
-                this.raspDefend = model.raspDefend;
-                this.related = model.related;
-                this.tags = model.tags;
-                this.totalFixCount = model.totalFixCount;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

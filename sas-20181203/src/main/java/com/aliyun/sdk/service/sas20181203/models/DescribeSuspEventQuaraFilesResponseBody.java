@@ -52,10 +52,6 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -105,18 +101,6 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         private java.util.List<QuaraFiles> quaraFiles; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSuspEventQuaraFilesResponseBody model) {
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.quaraFiles = model.quaraFiles;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -386,27 +370,6 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             private String status; 
             private String tag; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(QuaraFiles model) {
-                this.eventName = model.eventName;
-                this.eventType = model.eventType;
-                this.id = model.id;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.ip = model.ip;
-                this.link = model.link;
-                this.md5 = model.md5;
-                this.modifyTime = model.modifyTime;
-                this.path = model.path;
-                this.status = model.status;
-                this.tag = model.tag;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The name of the event.</p>

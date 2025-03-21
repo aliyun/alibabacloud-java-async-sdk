@@ -40,10 +40,6 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<SecurityEventsResponse> securityEventsResponse; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSimilarSecurityEventsResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.securityEventsResponse = model.securityEventsResponse;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -332,18 +309,6 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             private Long occurrenceTime; 
             private Long securityEventId; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityEventsResponse model) {
-                this.eventName = model.eventName;
-                this.eventType = model.eventType;
-                this.lastTime = model.lastTime;
-                this.occurrenceTime = model.occurrenceTime;
-                this.securityEventId = model.securityEventId;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The name of the alert event.</p>

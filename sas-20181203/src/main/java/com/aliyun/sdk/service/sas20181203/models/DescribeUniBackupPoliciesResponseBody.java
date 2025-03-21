@@ -40,10 +40,6 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<UniBackupPolicies> uniBackupPolicies; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUniBackupPoliciesResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.uniBackupPolicies = model.uniBackupPolicies;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -464,29 +441,6 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             private String policyName; 
             private String policyStatus; 
             private String uniRegionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(UniBackupPolicies model) {
-                this.agentErrorMessage = model.agentErrorMessage;
-                this.agentStatus = model.agentStatus;
-                this.databaseName = model.databaseName;
-                this.databaseType = model.databaseType;
-                this.errorCode = model.errorCode;
-                this.errorMessage = model.errorMessage;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.instanceStatus = model.instanceStatus;
-                this.instanceUuid = model.instanceUuid;
-                this.latestBackResult = model.latestBackResult;
-                this.latestBackupTime = model.latestBackupTime;
-                this.planStatus = model.planStatus;
-                this.policyId = model.policyId;
-                this.policyName = model.policyName;
-                this.policyStatus = model.policyStatus;
-                this.uniRegionId = model.uniRegionId;
-            } 
 
             /**
              * <p>The error message for the anti-ransomware agent.</p>

@@ -56,10 +56,6 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return accessid
      */
@@ -117,19 +113,6 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         private String policy; 
         private String requestId; 
         private String signature; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDynamicDictUploadInfoResponseBody model) {
-            this.accessid = model.accessid;
-            this.expire = model.expire;
-            this.host = model.host;
-            this.key = model.key;
-            this.policy = model.policy;
-            this.requestId = model.requestId;
-            this.signature = model.signature;
-        } 
 
         /**
          * <p>The AccessKey ID that is used to access OSS.</p>

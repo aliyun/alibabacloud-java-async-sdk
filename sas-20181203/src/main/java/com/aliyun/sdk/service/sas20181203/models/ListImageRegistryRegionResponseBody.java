@@ -36,10 +36,6 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return regions
      */
@@ -57,14 +53,6 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Regions> regions; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListImageRegistryRegionResponseBody model) {
-            this.regions = model.regions;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of regions.</p>
@@ -134,14 +122,6 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
         public static final class Builder {
             private String regionId; 
             private String regionName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Regions model) {
-                this.regionId = model.regionId;
-                this.regionName = model.regionName;
-            } 
 
             /**
              * <p>The region ID of the image.</p>

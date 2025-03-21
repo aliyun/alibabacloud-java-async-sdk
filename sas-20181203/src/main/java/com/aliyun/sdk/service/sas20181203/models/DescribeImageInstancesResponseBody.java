@@ -40,10 +40,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return imageInstanceList
      */
@@ -69,15 +65,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         private java.util.List<ImageInstanceList> imageInstanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageInstancesResponseBody model) {
-            this.imageInstanceList = model.imageInstanceList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the images.</p>
@@ -467,40 +454,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private String uuid; 
             private Integer vulCount; 
             private String vulStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageInstanceList model) {
-                this.alarmCount = model.alarmCount;
-                this.alarmStatus = model.alarmStatus;
-                this.deployed = model.deployed;
-                this.digest = model.digest;
-                this.endpoints = model.endpoints;
-                this.hcCount = model.hcCount;
-                this.hcStatus = model.hcStatus;
-                this.imageCreate = model.imageCreate;
-                this.imageId = model.imageId;
-                this.imageSize = model.imageSize;
-                this.imageUpdate = model.imageUpdate;
-                this.instanceId = model.instanceId;
-                this.lastScanTime = model.lastScanTime;
-                this.regionId = model.regionId;
-                this.registryType = model.registryType;
-                this.repoId = model.repoId;
-                this.repoName = model.repoName;
-                this.repoNamespace = model.repoNamespace;
-                this.repoType = model.repoType;
-                this.riskStatus = model.riskStatus;
-                this.scaProgress = model.scaProgress;
-                this.scaResult = model.scaResult;
-                this.scaStatus = model.scaStatus;
-                this.status = model.status;
-                this.tag = model.tag;
-                this.uuid = model.uuid;
-                this.vulCount = model.vulCount;
-                this.vulStatus = model.vulStatus;
-            } 
 
             /**
              * <p>The number of alerts that are generated for the image.</p>
@@ -938,16 +891,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of images returned on the current page.</p>

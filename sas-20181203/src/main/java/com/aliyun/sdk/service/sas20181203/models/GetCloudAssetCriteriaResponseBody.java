@@ -36,10 +36,6 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return criteriaList
      */
@@ -57,14 +53,6 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCloudAssetCriteriaResponseBody model) {
-            this.criteriaList = model.criteriaList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array consisting of the information about the filter conditions that are used to search for cloud assets.</p>
@@ -158,16 +146,6 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String values; 
-
-            private Builder() {
-            } 
-
-            private Builder(CriteriaList model) {
-                this.multiValues = model.multiValues;
-                this.name = model.name;
-                this.type = model.type;
-                this.values = model.values;
-            } 
 
             /**
              * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>

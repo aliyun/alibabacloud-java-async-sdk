@@ -40,10 +40,6 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return instanceList
      */
@@ -69,15 +65,6 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         private java.util.List<InstanceList> instanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCustomBlockInstancesResponseBody model) {
-            this.instanceList = model.instanceList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The server ID.</p>
@@ -239,21 +226,6 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             private Integer status; 
             private String successInfo; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstanceList model) {
-                this.aliNetOnline = model.aliNetOnline;
-                this.blockType = model.blockType;
-                this.errorCode = model.errorCode;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.status = model.status;
-                this.successInfo = model.successInfo;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The status of the host network extension. Valid values:</p>
@@ -441,16 +413,6 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -40,10 +40,6 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return list
      */
@@ -69,15 +65,6 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAgentlessMaliciousFilesResponseBody model) {
-            this.list = model.list;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The malicious files.</p>
@@ -179,16 +166,6 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String nameKey; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Details model) {
-                this.name = model.name;
-                this.nameKey = model.nameKey;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The name of the detailed item.</p>
@@ -296,15 +273,6 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String note; 
             private String noteId; 
             private String noteTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Notes model) {
-                this.note = model.note;
-                this.noteId = model.noteId;
-                this.noteTime = model.noteTime;
-            } 
 
             /**
              * <p>The remark.</p>
@@ -630,34 +598,6 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String targetType; 
             private String uuid; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.details = model.details;
-                this.downloadUrl = model.downloadUrl;
-                this.filePath = model.filePath;
-                this.firstScanTimestamp = model.firstScanTimestamp;
-                this.highLight = model.highLight;
-                this.id = model.id;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.latestScanTimestamp = model.latestScanTimestamp;
-                this.level = model.level;
-                this.maliciousMd5 = model.maliciousMd5;
-                this.maliciousName = model.maliciousName;
-                this.maliciousType = model.maliciousType;
-                this.notes = model.notes;
-                this.operateResult = model.operateResult;
-                this.operateTimestamp = model.operateTimestamp;
-                this.partition = model.partition;
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-                this.targetType = model.targetType;
-                this.uuid = model.uuid;
-            } 
-
             /**
              * <p>The details of the alert event.</p>
              */
@@ -976,16 +916,6 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

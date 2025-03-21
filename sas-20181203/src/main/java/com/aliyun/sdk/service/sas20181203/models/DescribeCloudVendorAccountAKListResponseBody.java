@@ -40,10 +40,6 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cloudVendorAccountAKs
      */
@@ -69,15 +65,6 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         private java.util.List<CloudVendorAccountAKs> cloudVendorAccountAKs; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCloudVendorAccountAKListResponseBody model) {
-            this.cloudVendorAccountAKs = model.cloudVendorAccountAKs;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the AccessKey pairs.</p>
@@ -227,20 +214,6 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private String moduleStatement; 
             private String trailMessage; 
             private String trailStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(AuthModules model) {
-                this.message = model.message;
-                this.module = model.module;
-                this.moduleAssetType = model.moduleAssetType;
-                this.moduleDisp = model.moduleDisp;
-                this.moduleServiceStatus = model.moduleServiceStatus;
-                this.moduleStatement = model.moduleStatement;
-                this.trailMessage = model.trailMessage;
-                this.trailStatus = model.trailStatus;
-            } 
 
             /**
              * <p>The error message of the module.</p>
@@ -485,21 +458,6 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private String vendor; 
             private String vendorAuthAlias; 
 
-            private Builder() {
-            } 
-
-            private Builder(CloudVendorAccountAKs model) {
-                this.akType = model.akType;
-                this.authId = model.authId;
-                this.authModules = model.authModules;
-                this.message = model.message;
-                this.secretId = model.secretId;
-                this.serviceStatus = model.serviceStatus;
-                this.status = model.status;
-                this.vendor = model.vendor;
-                this.vendorAuthAlias = model.vendorAuthAlias;
-            } 
-
             /**
              * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
              * <ul>
@@ -690,16 +648,6 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

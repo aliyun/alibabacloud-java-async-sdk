@@ -40,10 +40,6 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetAssetsPropertyDetailResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.propertys = model.propertys;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -548,36 +525,6 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String user; 
             private String uuid; 
             private String webPath; 
-
-            private Builder() {
-            } 
-
-            private Builder(Propertys model) {
-                this.containerName = model.containerName;
-                this.createTimestamp = model.createTimestamp;
-                this.domain = model.domain;
-                this.filepath = model.filepath;
-                this.imageName = model.imageName;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.ip = model.ip;
-                this.listenProtocol = model.listenProtocol;
-                this.moduleName = model.moduleName;
-                this.path = model.path;
-                this.pathMode = model.pathMode;
-                this.pid = model.pid;
-                this.port = model.port;
-                this.processStarted = model.processStarted;
-                this.regionId = model.regionId;
-                this.serverType = model.serverType;
-                this.size = model.size;
-                this.usedByCount = model.usedByCount;
-                this.user = model.user;
-                this.uuid = model.uuid;
-                this.webPath = model.webPath;
-            } 
 
             /**
              * <p>The name of the container.</p>

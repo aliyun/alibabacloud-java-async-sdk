@@ -44,10 +44,6 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -81,16 +77,6 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SensitiveFileList> sensitiveFileList; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAgentlessSensitiveFileByKeyResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.sensitiveFileList = model.sensitiveFileList;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -207,16 +193,6 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -456,26 +432,6 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             private Integer status; 
             private String targetName; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(SensitiveFileList model) {
-                this.filePath = model.filePath;
-                this.firstScanTime = model.firstScanTime;
-                this.id = model.id;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.lastScanTime = model.lastScanTime;
-                this.md5 = model.md5;
-                this.prompt = model.prompt;
-                this.riskLevel = model.riskLevel;
-                this.sensitiveFileKey = model.sensitiveFileKey;
-                this.status = model.status;
-                this.targetName = model.targetName;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The path to the sensitive file.</p>

@@ -40,10 +40,6 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return alarmList
      */
@@ -69,15 +65,6 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         private java.util.List<AlarmList> alarmList; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDomainSecureAlarmListResponseBody model) {
-            this.alarmList = model.alarmList;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The security alerts in your website assets.</p>
@@ -470,40 +457,6 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             private Long startTime; 
             private Integer suspiciousEventCount; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(AlarmList model) {
-                this.alarmEventName = model.alarmEventName;
-                this.alarmEventNameOriginal = model.alarmEventNameOriginal;
-                this.alarmEventType = model.alarmEventType;
-                this.alarmUniqueInfo = model.alarmUniqueInfo;
-                this.autoBreaking = model.autoBreaking;
-                this.canBeDealOnLine = model.canBeDealOnLine;
-                this.canCancelFault = model.canCancelFault;
-                this.containHwMode = model.containHwMode;
-                this.dataSource = model.dataSource;
-                this.dealed = model.dealed;
-                this.description = model.description;
-                this.endTime = model.endTime;
-                this.gmtModified = model.gmtModified;
-                this.hasTraceInfo = model.hasTraceInfo;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.level = model.level;
-                this.operateErrorCode = model.operateErrorCode;
-                this.operateTime = model.operateTime;
-                this.saleVersion = model.saleVersion;
-                this.securityEventIds = model.securityEventIds;
-                this.solution = model.solution;
-                this.stages = model.stages;
-                this.startTime = model.startTime;
-                this.suspiciousEventCount = model.suspiciousEventCount;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The name of the alert event.</p>

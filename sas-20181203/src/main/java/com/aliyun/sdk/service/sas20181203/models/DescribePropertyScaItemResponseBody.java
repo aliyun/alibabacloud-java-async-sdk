@@ -40,10 +40,6 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<PropertyItems> propertyItems; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePropertyScaItemResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.propertyItems = model.propertyItems;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -308,16 +285,6 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             private Integer count; 
             private String name; 
             private String typeDisplay; 
-
-            private Builder() {
-            } 
-
-            private Builder(PropertyItems model) {
-                this.bizType = model.bizType;
-                this.count = model.count;
-                this.name = model.name;
-                this.typeDisplay = model.typeDisplay;
-            } 
 
             /**
              * <p>The type of the middleware, database, or web service. Valid values:</p>

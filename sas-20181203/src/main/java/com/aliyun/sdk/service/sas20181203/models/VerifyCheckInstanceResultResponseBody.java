@@ -36,10 +36,6 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(VerifyCheckInstanceResultResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -146,15 +134,6 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             private java.util.List<String> failInstances; 
             private String operateCode; 
             private String taskId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.failInstances = model.failInstances;
-                this.operateCode = model.operateCode;
-                this.taskId = model.taskId;
-            } 
 
             /**
              * <p>An array consisting of instances that failed the check.</p>

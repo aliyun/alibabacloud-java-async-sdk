@@ -48,10 +48,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return basicData
      */
@@ -93,17 +89,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         private java.util.List<Columns> columns; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCheckInstanceResultResponseBody model) {
-            this.basicData = model.basicData;
-            this.checks = model.checks;
-            this.columns = model.columns;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The basic information about the affected instances.</p>
@@ -221,15 +206,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String showName; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Config model) {
-                this.name = model.name;
-                this.showName = model.showName;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The name of the configuration item, which is unique.</p>
              * 
@@ -325,15 +301,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private java.util.List<Config> config; 
             private Long firstUpdateTime; 
             private Long lastUpdateTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstanceInfo model) {
-                this.config = model.config;
-                this.firstUpdateTime = model.firstUpdateTime;
-                this.lastUpdateTime = model.lastUpdateTime;
-            } 
 
             /**
              * <p>The information about the configuration item whose risks are fixed for the instance.</p>
@@ -475,19 +442,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String statusMessage; 
-
-            private Builder() {
-            } 
-
-            private Builder(BasicData model) {
-                this.id = model.id;
-                this.instanceId = model.instanceId;
-                this.instanceInfo = model.instanceInfo;
-                this.instanceName = model.instanceName;
-                this.regionId = model.regionId;
-                this.status = model.status;
-                this.statusMessage = model.statusMessage;
-            } 
 
             /**
              * <p>The ID of the check result for the instance.</p>
@@ -633,15 +587,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String showName; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(Grids model) {
-                this.key = model.key;
-                this.showName = model.showName;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The search condition.</p>
              * 
@@ -777,18 +722,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String searchKey; 
             private String showName; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Columns model) {
-                this.grids = model.grids;
-                this.key = model.key;
-                this.search = model.search;
-                this.searchKey = model.searchKey;
-                this.showName = model.showName;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The metadata information about the details of the instance.</p>
@@ -935,16 +868,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -40,10 +40,6 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return enableStatus
      */
@@ -69,15 +65,6 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         private Boolean enableStatus; 
         private String requestId; 
         private java.util.List<SecurityScoreRuleList> securityScoreRuleList; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetSecurityScoreRuleResponseBody model) {
-            this.enableStatus = model.enableStatus;
-            this.requestId = model.requestId;
-            this.securityScoreRuleList = model.securityScoreRuleList;
-        } 
 
         /**
          * <p>The status of the custom settings of the security score feature.</p>
@@ -186,16 +173,6 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             private Integer scoreThreshold; 
             private String subRuleType; 
             private String title; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityScoreItemList model) {
-                this.score = model.score;
-                this.scoreThreshold = model.scoreThreshold;
-                this.subRuleType = model.subRuleType;
-                this.title = model.title;
-            } 
 
             /**
              * <p>The penalty point of the deduction item.</p>
@@ -364,16 +341,6 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             private Integer score; 
             private java.util.List<SecurityScoreItemList> securityScoreItemList; 
             private String title; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityScoreRuleList model) {
-                this.ruleType = model.ruleType;
-                this.score = model.score;
-                this.securityScoreItemList = model.securityScoreItemList;
-                this.title = model.title;
-            } 
 
             /**
              * <p>The deduction module that is supported by the security score feature. Valid values:</p>

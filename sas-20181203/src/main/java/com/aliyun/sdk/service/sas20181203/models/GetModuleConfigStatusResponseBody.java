@@ -36,10 +36,6 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetModuleConfigStatusResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,14 +122,6 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String moduleName; 
             private Boolean pass; 
-
-            private Builder() {
-            } 
-
-            private Builder(ModuleConfigResults model) {
-                this.moduleName = model.moduleName;
-                this.pass = model.pass;
-            } 
 
             /**
              * <p>The name of the check item. Valid values:</p>
@@ -214,13 +194,6 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ModuleConfigResults> moduleConfigResults; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.moduleConfigResults = model.moduleConfigResults;
-            } 
 
             /**
              * <p>The check results of the service modules.</p>

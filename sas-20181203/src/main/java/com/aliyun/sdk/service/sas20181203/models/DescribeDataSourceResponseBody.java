@@ -36,10 +36,6 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return metaDatas
      */
@@ -57,14 +53,6 @@ public class DescribeDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MetaDatas> metaDatas; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDataSourceResponseBody model) {
-            this.metaDatas = model.metaDatas;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The metadata of the data sources.</p>
@@ -134,14 +122,6 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(OperatorList model) {
-                this.description = model.description;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The description of the operator.</p>
@@ -251,17 +231,6 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             private java.util.List<OperatorList> operatorList; 
             private String sample; 
             private String valueType; 
-
-            private Builder() {
-            } 
-
-            private Builder(MetaDataFields model) {
-                this.filed = model.filed;
-                this.filedName = model.filedName;
-                this.operatorList = model.operatorList;
-                this.sample = model.sample;
-                this.valueType = model.valueType;
-            } 
 
             /**
              * <p>The key of the field.</p>
@@ -389,16 +358,6 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             private String dataSourceName; 
             private String description; 
             private java.util.List<MetaDataFields> metaDataFields; 
-
-            private Builder() {
-            } 
-
-            private Builder(MetaDatas model) {
-                this.dataSourceId = model.dataSourceId;
-                this.dataSourceName = model.dataSourceName;
-                this.description = model.description;
-                this.metaDataFields = model.metaDataFields;
-            } 
 
             /**
              * <p>The ID of the data source.</p>

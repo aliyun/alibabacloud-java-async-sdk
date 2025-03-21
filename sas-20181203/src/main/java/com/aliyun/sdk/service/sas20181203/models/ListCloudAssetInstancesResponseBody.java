@@ -44,10 +44,6 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return instances
      */
@@ -81,16 +77,6 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCloudAssetInstancesResponseBody model) {
-            this.instances = model.instances;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The details of the cloud assets.</p>
@@ -315,25 +301,6 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private String riskStatus; 
             private String securityInfo; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(Instances model) {
-                this.alarmStatus = model.alarmStatus;
-                this.assetSubType = model.assetSubType;
-                this.assetSubTypeName = model.assetSubTypeName;
-                this.assetType = model.assetType;
-                this.assetTypeName = model.assetTypeName;
-                this.createdTime = model.createdTime;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.regionId = model.regionId;
-                this.riskStatus = model.riskStatus;
-                this.securityInfo = model.securityInfo;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>Indicates whether alerts are generated for the cloud asset. Valid values:</p>
@@ -722,16 +689,6 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

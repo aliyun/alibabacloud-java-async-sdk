@@ -36,10 +36,6 @@ public class ListOssBucketResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListOssBucketResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListOssBucketResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -182,18 +170,6 @@ public class ListOssBucketResponseBody extends TeaModel {
             private String storageClass; 
             private Boolean support; 
             private String supportConfig; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.bucketName = model.bucketName;
-                this.message = model.message;
-                this.regionId = model.regionId;
-                this.storageClass = model.storageClass;
-                this.support = model.support;
-                this.supportConfig = model.supportConfig;
-            } 
 
             /**
              * <p>The name of the bucket.</p>

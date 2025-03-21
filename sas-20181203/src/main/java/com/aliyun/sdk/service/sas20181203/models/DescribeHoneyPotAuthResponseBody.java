@@ -40,10 +40,6 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return honeyPotAuthCount
      */
@@ -69,15 +65,6 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         private Long honeyPotAuthCount; 
         private Integer honeyPotCount; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeHoneyPotAuthResponseBody model) {
-            this.honeyPotAuthCount = model.honeyPotAuthCount;
-            this.honeyPotCount = model.honeyPotCount;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The total quota.</p>

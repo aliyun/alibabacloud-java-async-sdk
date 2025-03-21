@@ -56,10 +56,6 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListHoneypotAttackerSourceResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.list = model.list;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -304,18 +287,6 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             private String riskLevel; 
             private String srcIp; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.eventCount = model.eventCount;
-                this.lastTargetHoneypot = model.lastTargetHoneypot;
-                this.lastTargetIp = model.lastTargetIp;
-                this.lastTime = model.lastTime;
-                this.riskLevel = model.riskLevel;
-                this.srcIp = model.srcIp;
-            } 
-
             /**
              * <p>The total number of attack events.</p>
              * 
@@ -461,16 +432,6 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

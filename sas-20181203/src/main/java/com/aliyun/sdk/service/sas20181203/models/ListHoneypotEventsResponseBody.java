@@ -40,10 +40,6 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return honeypotEvents
      */
@@ -69,15 +65,6 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         private java.util.List<HoneypotEvents> honeypotEvents; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListHoneypotEventsResponseBody model) {
-            this.honeypotEvents = model.honeypotEvents;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The intrusion events.</p>
@@ -179,16 +166,6 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String fieldKey; 
             private String fieldType; 
             private String fieldValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(MergeFieldList model) {
-                this.fieldExtInfo = model.fieldExtInfo;
-                this.fieldKey = model.fieldKey;
-                this.fieldType = model.fieldType;
-                this.fieldValue = model.fieldValue;
-            } 
 
             /**
              * <p>The supplementary information about the field.</p>
@@ -416,25 +393,6 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String riskLevel; 
             private Long securityEventId; 
             private String srcIp; 
-
-            private Builder() {
-            } 
-
-            private Builder(HoneypotEvents model) {
-                this.agentId = model.agentId;
-                this.agentName = model.agentName;
-                this.alarmEventId = model.alarmEventId;
-                this.dstIp = model.dstIp;
-                this.firstTime = model.firstTime;
-                this.honeypotName = model.honeypotName;
-                this.lastTime = model.lastTime;
-                this.location = model.location;
-                this.mergeFieldList = model.mergeFieldList;
-                this.protocol = model.protocol;
-                this.riskLevel = model.riskLevel;
-                this.securityEventId = model.securityEventId;
-                this.srcIp = model.srcIp;
-            } 
 
             /**
              * <p>The probe ID.</p>
@@ -683,18 +641,6 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.lastRowKey = model.lastRowKey;
-                this.nextToken = model.nextToken;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -60,7 +60,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -279,15 +279,6 @@ public class ListCloudAssetInstancesRequest extends Request {
             private Integer assetSubType; 
             private Integer assetType; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(CloudAssetTypes model) {
-                this.assetSubType = model.assetSubType;
-                this.assetType = model.assetType;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The subtype of the cloud asset.</p>

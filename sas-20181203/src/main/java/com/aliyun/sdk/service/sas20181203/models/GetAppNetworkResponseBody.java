@@ -36,10 +36,6 @@ public class GetAppNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return appNetwork
      */
@@ -57,14 +53,6 @@ public class GetAppNetworkResponseBody extends TeaModel {
     public static final class Builder {
         private AppNetwork appNetwork; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetAppNetworkResponseBody model) {
-            this.appNetwork = model.appNetwork;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the application network topology.</p>
@@ -182,18 +170,6 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private String port; 
             private String srcNodeId; 
             private String srcNodeType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Edge model) {
-                this.dstNodeId = model.dstNodeId;
-                this.dstNodeType = model.dstNodeType;
-                this.id = model.id;
-                this.port = model.port;
-                this.srcNodeId = model.srcNodeId;
-                this.srcNodeType = model.srcNodeType;
-            } 
 
             /**
              * <p>The ID of the destination node.</p>
@@ -320,14 +296,6 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(Namespace model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
-
             /**
              * <p>The ID of the namespace.</p>
              * 
@@ -448,18 +416,6 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private String namespaceId; 
             private String riskLevel; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Node model) {
-                this.containerIds = model.containerIds;
-                this.id = model.id;
-                this.name = model.name;
-                this.namespaceId = model.namespaceId;
-                this.riskLevel = model.riskLevel;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The list of the container IDs.</p>
@@ -597,15 +553,6 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private java.util.List<Edge> edge; 
             private java.util.List<Namespace> namespace; 
             private java.util.List<Node> node; 
-
-            private Builder() {
-            } 
-
-            private Builder(AppNetwork model) {
-                this.edge = model.edge;
-                this.namespace = model.namespace;
-                this.node = model.node;
-            } 
 
             /**
              * <p>The information about the topology edge.</p>

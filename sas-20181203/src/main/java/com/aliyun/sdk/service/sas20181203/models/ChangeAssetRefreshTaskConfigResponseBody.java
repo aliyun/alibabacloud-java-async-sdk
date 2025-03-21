@@ -40,10 +40,6 @@ public class ChangeAssetRefreshTaskConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class ChangeAssetRefreshTaskConfigResponseBody extends TeaModel {
         private Boolean data; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ChangeAssetRefreshTaskConfigResponseBody model) {
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>

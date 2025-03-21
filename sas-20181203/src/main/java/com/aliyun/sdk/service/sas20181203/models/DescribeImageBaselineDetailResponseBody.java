@@ -36,10 +36,6 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return baselineDetail
      */
@@ -57,14 +53,6 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
     public static final class Builder {
         private BaselineDetail baselineDetail; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageBaselineDetailResponseBody model) {
-            this.baselineDetail = model.baselineDetail;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details about the image baseline.</p>
@@ -218,21 +206,6 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             private String level; 
             private String prompt; 
             private String resultId; 
-
-            private Builder() {
-            } 
-
-            private Builder(BaselineDetail model) {
-                this.advice = model.advice;
-                this.baselineClassAlias = model.baselineClassAlias;
-                this.baselineItemAlias = model.baselineItemAlias;
-                this.baselineItemKey = model.baselineItemKey;
-                this.baselineNameAlias = model.baselineNameAlias;
-                this.description = model.description;
-                this.level = model.level;
-                this.prompt = model.prompt;
-                this.resultId = model.resultId;
-            } 
 
             /**
              * <p>The suggestion for the management of the risk item.</p>

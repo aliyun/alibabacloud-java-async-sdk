@@ -48,10 +48,6 @@ public class AddImageEventOperationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class AddImageEventOperationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddImageEventOperationResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -270,19 +255,6 @@ public class AddImageEventOperationResponseBody extends TeaModel {
             private Long id; 
             private String operationCode; 
             private String scenarios; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.conditions = model.conditions;
-                this.eventKey = model.eventKey;
-                this.eventName = model.eventName;
-                this.eventType = model.eventType;
-                this.id = model.id;
-                this.operationCode = model.operationCode;
-                this.scenarios = model.scenarios;
-            } 
 
             /**
              * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>

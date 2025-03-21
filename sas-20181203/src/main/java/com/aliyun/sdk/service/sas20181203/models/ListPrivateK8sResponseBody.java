@@ -36,10 +36,6 @@ public class ListPrivateK8sResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return privateK8sInfos
      */
@@ -57,14 +53,6 @@ public class ListPrivateK8sResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PrivateK8sInfos> privateK8sInfos; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListPrivateK8sResponseBody model) {
-            this.privateK8sInfos = model.privateK8sInfos;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the self-managed Kubernetes clusters.</p>
@@ -218,21 +206,6 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             private Long netType; 
             private String regionId; 
             private String vpcId; 
-
-            private Builder() {
-            } 
-
-            private Builder(PrivateK8sInfos model) {
-                this.aliUid = model.aliUid;
-                this.apiServerIp = model.apiServerIp;
-                this.clusterName = model.clusterName;
-                this.id = model.id;
-                this.k8sVersion = model.k8sVersion;
-                this.kubeConfig = model.kubeConfig;
-                this.netType = model.netType;
-                this.regionId = model.regionId;
-                this.vpcId = model.vpcId;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

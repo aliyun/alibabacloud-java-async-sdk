@@ -40,10 +40,6 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return baselineItemInfos
      */
@@ -69,15 +65,6 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         private java.util.List<BaselineItemInfos> baselineItemInfos; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageBaselineItemListResponseBody model) {
-            this.baselineItemInfos = model.baselineItemInfos;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of baseline check items.</p>
@@ -227,20 +214,6 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             private String baselineNameKey; 
             private Integer status; 
             private Integer whiteList; 
-
-            private Builder() {
-            } 
-
-            private Builder(BaselineItemInfos model) {
-                this.baselineClassAlias = model.baselineClassAlias;
-                this.baselineClassKey = model.baselineClassKey;
-                this.baselineItemAlias = model.baselineItemAlias;
-                this.baselineItemKey = model.baselineItemKey;
-                this.baselineNameAlias = model.baselineNameAlias;
-                this.baselineNameKey = model.baselineNameKey;
-                this.status = model.status;
-                this.whiteList = model.whiteList;
-            } 
 
             /**
              * <p>The alias of the baseline type.</p>
@@ -414,16 +387,6 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

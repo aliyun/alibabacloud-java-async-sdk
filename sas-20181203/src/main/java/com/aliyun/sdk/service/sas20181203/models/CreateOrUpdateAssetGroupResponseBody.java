@@ -36,10 +36,6 @@ public class CreateOrUpdateAssetGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupId
      */
@@ -57,14 +53,6 @@ public class CreateOrUpdateAssetGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Long groupId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateOrUpdateAssetGroupResponseBody model) {
-            this.groupId = model.groupId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the server group.</p>

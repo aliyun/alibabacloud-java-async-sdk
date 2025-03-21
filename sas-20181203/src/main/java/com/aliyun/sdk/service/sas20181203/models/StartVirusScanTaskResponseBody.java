@@ -36,10 +36,6 @@ public class StartVirusScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class StartVirusScanTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long scanTaskId; 
-
-        private Builder() {
-        } 
-
-        private Builder(StartVirusScanTaskResponseBody model) {
-            this.requestId = model.requestId;
-            this.scanTaskId = model.scanTaskId;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

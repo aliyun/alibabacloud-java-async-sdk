@@ -48,10 +48,6 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageBuildRiskByKeyResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code.</p>
@@ -307,22 +292,6 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             private String riskKeyName; 
             private String riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.advice = model.advice;
-                this.description = model.description;
-                this.layerCmd = model.layerCmd;
-                this.layerDigest = model.layerDigest;
-                this.promt = model.promt;
-                this.riskClass = model.riskClass;
-                this.riskClassName = model.riskClassName;
-                this.riskKey = model.riskKey;
-                this.riskKeyName = model.riskKeyName;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The suggestion on how to handle the risk.</p>
              * 
@@ -501,15 +470,6 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The page number. Default value: <strong>1</strong>.</p>
              * 
@@ -596,14 +556,6 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private PageInfo pageInfo; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.list = model.list;
-                this.pageInfo = model.pageInfo;
-            } 
 
             /**
              * <p>The risks.</p>

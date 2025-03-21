@@ -56,10 +56,6 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timeCost; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryIncidentIconListResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.infoList = model.infoList;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.timeCost = model.timeCost;
-        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -370,23 +353,6 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
             private String traceSuccessFlag; 
-
-            private Builder() {
-            } 
-
-            private Builder(EntityTypeList model) {
-                this.displayColor = model.displayColor;
-                this.displayIcon = model.displayIcon;
-                this.displayOrder = model.displayOrder;
-                this.displayTemplate = model.displayTemplate;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.isVirtualNode = model.isVirtualNode;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.traceSuccessFlag = model.traceSuccessFlag;
-            } 
 
             /**
              * <p>The display color of the entity.</p>
@@ -660,22 +626,6 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             private String namespace; 
             private String showType; 
 
-            private Builder() {
-            } 
-
-            private Builder(RelationTypeList model) {
-                this.directed = model.directed;
-                this.displayColor = model.displayColor;
-                this.displayIcon = model.displayIcon;
-                this.displayTemplate = model.displayTemplate;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.showType = model.showType;
-            } 
-
             /**
              * <p>The direction of the edge. Valid values:</p>
              * <ul>
@@ -840,14 +790,6 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<EntityTypeList> entityTypeList; 
             private java.util.List<RelationTypeList> relationTypeList; 
-
-            private Builder() {
-            } 
-
-            private Builder(InfoList model) {
-                this.entityTypeList = model.entityTypeList;
-                this.relationTypeList = model.relationTypeList;
-            } 
 
             /**
              * <p>The information about the entities.</p>

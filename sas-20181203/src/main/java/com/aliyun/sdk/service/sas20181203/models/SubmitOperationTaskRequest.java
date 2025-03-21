@@ -61,7 +61,7 @@ public class SubmitOperationTaskRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -287,16 +287,6 @@ public class SubmitOperationTaskRequest extends Request {
             private String taskId; 
             private String vendor; 
 
-            private Builder() {
-            } 
-
-            private Builder(OperationTaskInstances model) {
-                this.instanceId = model.instanceId;
-                this.regionId = model.regionId;
-                this.taskId = model.taskId;
-                this.vendor = model.vendor;
-            } 
-
             /**
              * <p>The instance ID of the server.</p>
              * 
@@ -398,14 +388,6 @@ public class SubmitOperationTaskRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(RepairTempParam model) {
-                this.name = model.name;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The name of the temporary repair parameter.</p>

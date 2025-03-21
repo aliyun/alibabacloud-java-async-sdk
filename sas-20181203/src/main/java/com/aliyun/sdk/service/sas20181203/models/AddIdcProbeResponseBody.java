@@ -40,10 +40,6 @@ public class AddIdcProbeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return addIdcProbeFailedList
      */
@@ -69,15 +65,6 @@ public class AddIdcProbeResponseBody extends TeaModel {
         private java.util.List<AddIdcProbeFailedList> addIdcProbeFailedList; 
         private String count; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddIdcProbeResponseBody model) {
-            this.addIdcProbeFailedList = model.addIdcProbeFailedList;
-            this.count = model.count;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The records of failure.</p>
@@ -242,21 +229,6 @@ public class AddIdcProbeResponseBody extends TeaModel {
             private String intranetIp; 
             private String ipSegments; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(AddIdcProbeFailedList model) {
-                this.errorMsg = model.errorMsg;
-                this.idcName = model.idcName;
-                this.idcRegion = model.idcRegion;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.ipSegments = model.ipSegments;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The error message that is returned.</p>

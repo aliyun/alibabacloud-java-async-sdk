@@ -40,10 +40,6 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListVirusScanMachineResponseBody model) {
-            this.data = model.data;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned data.</p>
@@ -203,18 +190,6 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.eventCount = model.eventCount;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The number of times that the alert is triggered.</p>
@@ -344,15 +319,6 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number.</p>

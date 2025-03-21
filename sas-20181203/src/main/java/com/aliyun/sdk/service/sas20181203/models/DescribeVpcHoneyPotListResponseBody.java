@@ -40,10 +40,6 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<VpcHoneyPotDTOList> vpcHoneyPotDTOList; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeVpcHoneyPotListResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.vpcHoneyPotDTOList = model.vpcHoneyPotDTOList;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -296,15 +273,6 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private String vpcSwitchId; 
             private String vpcSwitchName; 
             private String zoneId; 
-
-            private Builder() {
-            } 
-
-            private Builder(VpcSwitchIdList model) {
-                this.vpcSwitchId = model.vpcSwitchId;
-                this.vpcSwitchName = model.vpcSwitchName;
-                this.zoneId = model.zoneId;
-            } 
 
             /**
              * <p>The ID of the vSwitch.</p>
@@ -509,24 +477,6 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private String vpcRegionId; 
             private String vpcStatus; 
             private java.util.List<VpcSwitchIdList> vpcSwitchIdList; 
-
-            private Builder() {
-            } 
-
-            private Builder(VpcHoneyPotDTOList model) {
-                this.cidrBlock = model.cidrBlock;
-                this.createTime = model.createTime;
-                this.honeyPotEcsInstanceStatus = model.honeyPotEcsInstanceStatus;
-                this.honeyPotEniInstanceId = model.honeyPotEniInstanceId;
-                this.honeyPotExistence = model.honeyPotExistence;
-                this.honeyPotInstanceStatus = model.honeyPotInstanceStatus;
-                this.honeyPotVpcSwitchId = model.honeyPotVpcSwitchId;
-                this.vpcId = model.vpcId;
-                this.vpcName = model.vpcName;
-                this.vpcRegionId = model.vpcRegionId;
-                this.vpcStatus = model.vpcStatus;
-                this.vpcSwitchIdList = model.vpcSwitchIdList;
-            } 
 
             /**
              * <p>The CIDR block of the VPC.</p>

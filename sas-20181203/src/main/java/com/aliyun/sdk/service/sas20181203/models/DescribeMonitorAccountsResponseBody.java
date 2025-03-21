@@ -36,10 +36,6 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return accountIds
      */
@@ -57,14 +53,6 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> accountIds; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeMonitorAccountsResponseBody model) {
-            this.accountIds = model.accountIds;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The IDs of the members.</p>

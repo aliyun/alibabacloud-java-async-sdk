@@ -52,10 +52,6 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -105,18 +101,6 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         private java.util.List<ProblemTypes> problemTypes; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeClientProblemTypeResponseBody model) {
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.problemTypes = model.problemTypes;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -242,15 +226,6 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             private String problemDetail; 
             private String problemId; 
             private String problemType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ProblemTypes model) {
-                this.problemDetail = model.problemDetail;
-                this.problemId = model.problemId;
-                this.problemType = model.problemType;
-            } 
 
             /**
              * <p>The description of the issue type.</p>

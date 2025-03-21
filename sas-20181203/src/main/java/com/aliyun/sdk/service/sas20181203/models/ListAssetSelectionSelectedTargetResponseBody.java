@@ -36,10 +36,6 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAssetSelectionSelectedTargetResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,14 +122,6 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         public static final class Builder {
             private String targetId; 
             private String targetName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-            } 
 
             /**
              * <p>The ID of the asset.</p>

@@ -52,10 +52,6 @@ public class GetOpaClusterImageListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetOpaClusterImageListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetOpaClusterImageListResponseBody model) {
-            this.code = model.code;
-            this.count = model.count;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -222,13 +206,6 @@ public class GetOpaClusterImageListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String imageName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.imageName = model.imageName;
-            } 
 
             /**
              * <p>The name of the image.</p>

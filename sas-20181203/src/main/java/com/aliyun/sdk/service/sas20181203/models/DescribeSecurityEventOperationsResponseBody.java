@@ -36,10 +36,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSecurityEventOperationsResponseBody model) {
-            this.requestId = model.requestId;
-            this.securityEventOperationsResponse = model.securityEventOperationsResponse;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -218,21 +206,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String showName; 
             private String showValue; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(MappingMarkFields model) {
-                this.description = model.description;
-                this.fillType = model.fillType;
-                this.maxLength = model.maxLength;
-                this.minLength = model.minLength;
-                this.name = model.name;
-                this.required = model.required;
-                this.showName = model.showName;
-                this.showValue = model.showValue;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The description of the field that is added to the whitelist.</p>
@@ -440,18 +413,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private java.util.List<String> supportedMisType; 
             private String uuid; 
 
-            private Builder() {
-            } 
-
-            private Builder(MarkField model) {
-                this.filedAliasName = model.filedAliasName;
-                this.filedName = model.filedName;
-                this.markMisType = model.markMisType;
-                this.markMisValue = model.markMisValue;
-                this.supportedMisType = model.supportedMisType;
-                this.uuid = model.uuid;
-            } 
-
             /**
              * <p>The alias of the field that is used in the whitelist rule.</p>
              * 
@@ -597,16 +558,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String markMisValue; 
             private java.util.List<String> supportedMisType; 
 
-            private Builder() {
-            } 
-
-            private Builder(MarkFieldsSource model) {
-                this.filedAliasName = model.filedAliasName;
-                this.filedName = model.filedName;
-                this.markMisValue = model.markMisValue;
-                this.supportedMisType = model.supportedMisType;
-            } 
-
             /**
              * <p>The alias of the field that can be used in the whitelist rule.</p>
              * 
@@ -746,18 +697,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String operationCode; 
             private String operationParams; 
             private Boolean userCanOperate; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityEventOperationsResponse model) {
-                this.mappingMarkFields = model.mappingMarkFields;
-                this.markField = model.markField;
-                this.markFieldsSource = model.markFieldsSource;
-                this.operationCode = model.operationCode;
-                this.operationParams = model.operationParams;
-                this.userCanOperate = model.userCanOperate;
-            } 
 
             /**
              * <p>The objects on which the operations are performed. This parameter is required when you add the alert to the whitelist by configuring precise defense rules.</p>

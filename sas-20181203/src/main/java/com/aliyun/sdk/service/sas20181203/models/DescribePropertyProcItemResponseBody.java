@@ -40,10 +40,6 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<PropertyItems> propertyItems; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePropertyProcItemResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.propertyItems = model.propertyItems;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -180,16 +167,6 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -284,14 +261,6 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(PropertyItems model) {
-                this.count = model.count;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The number of servers on which the process runs.</p>

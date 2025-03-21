@@ -36,10 +36,6 @@ public class DescribeChartListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return chartList
      */
@@ -57,14 +53,6 @@ public class DescribeChartListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ChartList> chartList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeChartListResponseBody model) {
-            this.chartList = model.chartList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The charts.</p>
@@ -170,17 +158,6 @@ public class DescribeChartListResponseBody extends TeaModel {
             private String chartId; 
             private String chartName; 
             private String chartType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ChartList model) {
-                this.businessName = model.businessName;
-                this.businessType = model.businessType;
-                this.chartId = model.chartId;
-                this.chartName = model.chartName;
-                this.chartType = model.chartType;
-            } 
 
             /**
              * <p>The name of the business type. Valid values:</p>

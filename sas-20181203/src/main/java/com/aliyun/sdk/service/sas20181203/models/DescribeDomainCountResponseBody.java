@@ -44,10 +44,6 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -81,16 +77,6 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         private Integer rootDomainsCount; 
         private Integer subDomainsCount; 
         private Integer totalDomainsCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDomainCountResponseBody model) {
-            this.requestId = model.requestId;
-            this.rootDomainsCount = model.rootDomainsCount;
-            this.subDomainsCount = model.subDomainsCount;
-            this.totalDomainsCount = model.totalDomainsCount;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

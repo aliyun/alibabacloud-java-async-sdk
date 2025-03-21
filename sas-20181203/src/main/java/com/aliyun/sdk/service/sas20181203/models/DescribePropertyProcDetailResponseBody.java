@@ -40,10 +40,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePropertyProcDetailResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.propertys = model.propertys;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -476,30 +453,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private String state; 
             private String user; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Propertys model) {
-                this.cmdline = model.cmdline;
-                this.createTimestamp = model.createTimestamp;
-                this.euidName = model.euidName;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.isPackage = model.isPackage;
-                this.md5 = model.md5;
-                this.name = model.name;
-                this.path = model.path;
-                this.pid = model.pid;
-                this.pname = model.pname;
-                this.startTime = model.startTime;
-                this.startTimeDt = model.startTimeDt;
-                this.state = model.state;
-                this.user = model.user;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The startup parameter of the process.</p>

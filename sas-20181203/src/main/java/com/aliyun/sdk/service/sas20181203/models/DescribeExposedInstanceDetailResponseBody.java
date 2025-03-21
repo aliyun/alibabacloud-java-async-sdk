@@ -36,10 +36,6 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return exposedChains
      */
@@ -57,14 +53,6 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ExposedChains> exposedChains; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeExposedInstanceDetailResponseBody model) {
-            this.exposedChains = model.exposedChains;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The list of exposure details of the server or database.</p>
@@ -170,17 +158,6 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String necessity; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(AllVulList model) {
-                this.aliasName = model.aliasName;
-                this.name = model.name;
-                this.necessity = model.necessity;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>
@@ -387,21 +364,6 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String regionId; 
             private String riskLevel; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(CspmRiskList model) {
-                this.assetSubType = model.assetSubType;
-                this.assetSubTypeName = model.assetSubTypeName;
-                this.assetType = model.assetType;
-                this.assetTypeName = model.assetTypeName;
-                this.checkName = model.checkName;
-                this.instanceId = model.instanceId;
-                this.regionId = model.regionId;
-                this.riskLevel = model.riskLevel;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The subtype of the cloud asset. Valid values:</p>
@@ -634,17 +596,6 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String necessity; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(RealVulList model) {
-                this.aliasName = model.aliasName;
-                this.name = model.name;
-                this.necessity = model.necessity;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>
@@ -923,27 +874,6 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private java.util.List<RealVulList> realVulList; 
             private String regionId; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExposedChains model) {
-                this.allVulList = model.allVulList;
-                this.cspmRiskList = model.cspmRiskList;
-                this.exposureComponent = model.exposureComponent;
-                this.exposureIp = model.exposureIp;
-                this.exposurePort = model.exposurePort;
-                this.exposureType = model.exposureType;
-                this.exposureTypeId = model.exposureTypeId;
-                this.groupNo = model.groupNo;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.realVulList = model.realVulList;
-                this.regionId = model.regionId;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The information about all vulnerabilities on the server.</p>

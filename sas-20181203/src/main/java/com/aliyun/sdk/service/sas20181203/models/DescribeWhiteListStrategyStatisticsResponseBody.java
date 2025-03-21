@@ -52,10 +52,6 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -105,18 +101,6 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Strategies> strategies; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWhiteListStrategyStatisticsResponseBody model) {
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.strategies = model.strategies;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -314,21 +298,6 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             private Integer suspiciousProcCount; 
             private Integer trustProcCount; 
             private Integer virusProcCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Strategies model) {
-                this.assetCount = model.assetCount;
-                this.progress = model.progress;
-                this.status = model.status;
-                this.strategyId = model.strategyId;
-                this.strategyName = model.strategyName;
-                this.studyTime = model.studyTime;
-                this.suspiciousProcCount = model.suspiciousProcCount;
-                this.trustProcCount = model.trustProcCount;
-                this.virusProcCount = model.virusProcCount;
-            } 
 
             /**
              * <p>The number of the servers on which the policy takes effect.</p>

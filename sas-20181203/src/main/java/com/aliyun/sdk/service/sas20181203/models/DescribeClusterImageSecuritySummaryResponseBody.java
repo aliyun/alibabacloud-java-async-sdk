@@ -36,10 +36,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return clusterImageEvent
      */
@@ -57,14 +53,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterImageEvent clusterImageEvent; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeClusterImageSecuritySummaryResponseBody model) {
-            this.clusterImageEvent = model.clusterImageEvent;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the image-related security events.</p>
@@ -134,14 +122,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageBaseline model) {
-                this.count = model.count;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The number of baselines.</p>
@@ -221,14 +201,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private Long count; 
             private String riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(ImageCveVul model) {
-                this.count = model.count;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The number of vulnerabilities.</p>
              * 
@@ -307,14 +279,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private Long count; 
             private String riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(ImageMaliciousFile model) {
-                this.count = model.count;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The number of malicious samples.</p>
              * 
@@ -392,14 +356,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageScaVul model) {
-                this.count = model.count;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The number of image application vulnerabilities.</p>
@@ -502,16 +458,6 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private java.util.List<ImageCveVul> imageCveVul; 
             private java.util.List<ImageMaliciousFile> imageMaliciousFile; 
             private java.util.List<ImageScaVul> imageScaVul; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClusterImageEvent model) {
-                this.imageBaseline = model.imageBaseline;
-                this.imageCveVul = model.imageCveVul;
-                this.imageMaliciousFile = model.imageMaliciousFile;
-                this.imageScaVul = model.imageScaVul;
-            } 
 
             /**
              * <p>The information about image baseline risks.</p>

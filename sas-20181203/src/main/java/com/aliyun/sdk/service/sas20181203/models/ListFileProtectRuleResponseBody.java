@@ -40,10 +40,6 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return fileProtectList
      */
@@ -69,15 +65,6 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         private java.util.List<FileProtectList> fileProtectList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListFileProtectRuleResponseBody model) {
-            this.fileProtectList = model.fileProtectList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of returned data.</p>
@@ -287,25 +274,6 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer status; 
             private String switchId; 
-
-            private Builder() {
-            } 
-
-            private Builder(FileProtectList model) {
-                this.action = model.action;
-                this.alertLevel = model.alertLevel;
-                this.effectInstanceCount = model.effectInstanceCount;
-                this.fileOps = model.fileOps;
-                this.filePaths = model.filePaths;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.platform = model.platform;
-                this.procPaths = model.procPaths;
-                this.ruleName = model.ruleName;
-                this.status = model.status;
-                this.switchId = model.switchId;
-            } 
 
             /**
              * <p>The handling method of the rule. Valid values:</p>
@@ -521,15 +489,6 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number.</p>

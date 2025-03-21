@@ -44,10 +44,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return clientInstallRatio
      */
@@ -81,16 +77,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         private ClientOnlineRatio clientOnlineRatio; 
         private java.util.List<Long> dates; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetClientRatioStatisticResponseBody model) {
-            this.clientInstallRatio = model.clientInstallRatio;
-            this.clientOnlineRatio = model.clientOnlineRatio;
-            this.dates = model.dates;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The statistics on the client installation rate.</p>
@@ -201,16 +187,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Double installRatio; 
             private Integer installedAssetCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.assetTotalCount = model.assetTotalCount;
-                this.calculateTime = model.calculateTime;
-                this.installRatio = model.installRatio;
-                this.installedAssetCount = model.installedAssetCount;
-            } 
-
             /**
              * <p>The total number of assets.</p>
              * 
@@ -305,14 +281,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Items> items; 
             private Long vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(CurrentItems model) {
-                this.items = model.items;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The list of the statistics on the installation rate of the client by vendor.</p>
@@ -415,16 +383,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Double installRatio; 
             private Integer installedAssetCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(HistoryItemsItems model) {
-                this.assetTotalCount = model.assetTotalCount;
-                this.calculateTime = model.calculateTime;
-                this.installRatio = model.installRatio;
-                this.installedAssetCount = model.installedAssetCount;
-            } 
-
             /**
              * <p>The total number of assets.</p>
              * 
@@ -520,14 +478,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private java.util.List<HistoryItemsItems> items; 
             private Long vendor; 
 
-            private Builder() {
-            } 
-
-            private Builder(HistoryItems model) {
-                this.items = model.items;
-                this.vendor = model.vendor;
-            } 
-
             /**
              * <p>The list of statistics on the client installation rate.</p>
              */
@@ -604,14 +554,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CurrentItems> currentItems; 
             private java.util.List<HistoryItems> historyItems; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClientInstallRatio model) {
-                this.currentItems = model.currentItems;
-                this.historyItems = model.historyItems;
-            } 
 
             /**
              * <p>The list of current statistics on the installation rate of the client.</p>
@@ -703,16 +645,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Long calculateTime; 
             private Integer onlineAssetCount; 
             private Double onlineRatio; 
-
-            private Builder() {
-            } 
-
-            private Builder(CurrentItemsItems model) {
-                this.assetInstallCount = model.assetInstallCount;
-                this.calculateTime = model.calculateTime;
-                this.onlineAssetCount = model.onlineAssetCount;
-                this.onlineRatio = model.onlineRatio;
-            } 
 
             /**
              * <p>The number of assets on which the client is installed.</p>
@@ -808,14 +740,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CurrentItemsItems> items; 
             private Long vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClientOnlineRatioCurrentItems model) {
-                this.items = model.items;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The list of current statistics on the online rate of the client by vendor.</p>
@@ -918,16 +842,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Integer onlineAssetCount; 
             private Double onlineRatio; 
 
-            private Builder() {
-            } 
-
-            private Builder(ClientOnlineRatioHistoryItemsItems model) {
-                this.assetInstallCount = model.assetInstallCount;
-                this.calculateTime = model.calculateTime;
-                this.onlineAssetCount = model.onlineAssetCount;
-                this.onlineRatio = model.onlineRatio;
-            } 
-
             /**
              * <p>The number of assets on which the client is installed.</p>
              * 
@@ -1023,14 +937,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private java.util.List<ClientOnlineRatioHistoryItemsItems> items; 
             private Long vendor; 
 
-            private Builder() {
-            } 
-
-            private Builder(ClientOnlineRatioHistoryItems model) {
-                this.items = model.items;
-                this.vendor = model.vendor;
-            } 
-
             /**
              * <p>The list of historical statistics on the online rate of the client by vendor.</p>
              */
@@ -1107,14 +1013,6 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ClientOnlineRatioCurrentItems> currentItems; 
             private java.util.List<ClientOnlineRatioHistoryItems> historyItems; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClientOnlineRatio model) {
-                this.currentItems = model.currentItems;
-                this.historyItems = model.historyItems;
-            } 
 
             /**
              * <p>The list of current statistics on the online rate of the client.</p>

@@ -36,10 +36,6 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Task> task; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageLatestScanTaskResponseBody model) {
-            this.requestId = model.requestId;
-            this.task = model.task;
-        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -266,25 +254,6 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             private String targetType; 
             private String taskId; 
             private String taskType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Task model) {
-                this.create = model.create;
-                this.finish = model.finish;
-                this.finishTime = model.finishTime;
-                this.id = model.id;
-                this.modified = model.modified;
-                this.name = model.name;
-                this.source = model.source;
-                this.startTime = model.startTime;
-                this.status = model.status;
-                this.target = model.target;
-                this.targetType = model.targetType;
-                this.taskId = model.taskId;
-                this.taskType = model.taskType;
-            } 
 
             /**
              * <p>The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>

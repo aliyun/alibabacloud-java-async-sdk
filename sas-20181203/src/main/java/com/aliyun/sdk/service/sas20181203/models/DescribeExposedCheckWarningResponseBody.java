@@ -40,10 +40,6 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -69,15 +65,6 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         private Integer count; 
         private String requestId; 
         private java.util.List<WarningList> warningList; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeExposedCheckWarningResponseBody model) {
-            this.count = model.count;
-            this.requestId = model.requestId;
-            this.warningList = model.warningList;
-        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -194,17 +181,6 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             private String subTypeAlias; 
             private String typeAlias; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(WarningList model) {
-                this.riskId = model.riskId;
-                this.riskName = model.riskName;
-                this.subTypeAlias = model.subTypeAlias;
-                this.typeAlias = model.typeAlias;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the baseline.</p>

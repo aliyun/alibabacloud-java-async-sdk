@@ -40,10 +40,6 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeContainerScanConfigResponseBody model) {
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -194,17 +181,6 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             private Integer chooseCount; 
             private String clusterId; 
             private String clusterName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.allCount = model.allCount;
-                this.appNames = model.appNames;
-                this.chooseCount = model.chooseCount;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-            } 
 
             /**
              * <p>The total number of container applications in the cluster.</p>

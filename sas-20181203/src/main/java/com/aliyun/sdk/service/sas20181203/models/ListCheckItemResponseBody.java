@@ -40,10 +40,6 @@ public class ListCheckItemResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkItems
      */
@@ -69,15 +65,6 @@ public class ListCheckItemResponseBody extends TeaModel {
         private java.util.List<CheckItems> checkItems; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCheckItemResponseBody model) {
-            this.checkItems = model.checkItems;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The check items.</p>
@@ -192,17 +179,6 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String typeDefine; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(CustomConfigs model) {
-                this.defaultValue = model.defaultValue;
-                this.name = model.name;
-                this.showName = model.showName;
-                this.typeDefine = model.typeDefine;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The default value of the check item. The value is a string.</p>
              * 
@@ -308,14 +284,6 @@ public class ListCheckItemResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Description model) {
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The type of the description of the check item. Valid value:</p>
@@ -488,22 +456,6 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String riskLevel; 
             private java.util.List<Long> sectionIds; 
             private String vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckItems model) {
-                this.checkId = model.checkId;
-                this.checkShowName = model.checkShowName;
-                this.customConfigs = model.customConfigs;
-                this.description = model.description;
-                this.estimatedCount = model.estimatedCount;
-                this.instanceSubType = model.instanceSubType;
-                this.instanceType = model.instanceType;
-                this.riskLevel = model.riskLevel;
-                this.sectionIds = model.sectionIds;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The ID of the check item.</p>
@@ -749,16 +701,6 @@ public class ListCheckItemResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

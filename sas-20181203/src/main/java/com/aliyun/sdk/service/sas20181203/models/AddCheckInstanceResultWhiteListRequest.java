@@ -59,7 +59,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,14 +250,6 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String regionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstanceList model) {
-                this.instanceId = model.instanceId;
-                this.regionId = model.regionId;
-            } 
 
             /**
              * <p>The instance ID of the asset.</p>

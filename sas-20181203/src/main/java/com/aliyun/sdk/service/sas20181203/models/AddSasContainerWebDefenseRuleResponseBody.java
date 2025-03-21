@@ -36,10 +36,6 @@ public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Long data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddSasContainerWebDefenseRuleResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The unique value of the created rule.</p>

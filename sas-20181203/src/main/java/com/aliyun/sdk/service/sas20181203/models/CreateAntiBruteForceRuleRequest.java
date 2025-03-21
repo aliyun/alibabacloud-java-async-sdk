@@ -79,7 +79,7 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,9 +181,6 @@ public class CreateAntiBruteForceRuleRequest extends Request {
          * <li><strong>true</strong>: yes</li>
          * <li><strong>false</strong>: no</li>
          * </ul>
-         * <blockquote>
-         * <p> If no defense rule is created for a server, the default rule is applied to the server.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -210,15 +207,15 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         /**
          * <p>The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:</p>
          * <ul>
-         * <li><strong>5</strong>: 5 minutes</li>
-         * <li><strong>15</strong>: 15 minutes</li>
-         * <li><strong>30</strong>: 30 minutes</li>
-         * <li><strong>60</strong>: 1 hour</li>
-         * <li><strong>120</strong>: 2 hours</li>
-         * <li><strong>360</strong>: 6 hours</li>
-         * <li><strong>720</strong>: 12 hours</li>
-         * <li><strong>1440</strong>: 24 hours</li>
-         * <li><strong>10080</strong>: 7 days</li>
+         * <li><strong>5</strong></li>
+         * <li><strong>15</strong></li>
+         * <li><strong>30</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>120</strong></li>
+         * <li><strong>360</strong></li>
+         * <li><strong>720</strong></li>
+         * <li><strong>1440</strong></li>
+         * <li><strong>10080</strong></li>
          * <li><strong>52560000</strong>: permanent</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -246,7 +243,7 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * <p>The types of protocols supported for interception by the brute force attack rule creation.</p>
          */
         public Builder protocolType(ProtocolType protocolType) {
             String protocolTypeShrink = shrink(protocolType, "ProtocolType", "json");
@@ -372,17 +369,15 @@ public class CreateAntiBruteForceRuleRequest extends Request {
             private String sqlServer; 
             private String ssh; 
 
-            private Builder() {
-            } 
-
-            private Builder(ProtocolType model) {
-                this.rdp = model.rdp;
-                this.sqlServer = model.sqlServer;
-                this.ssh = model.ssh;
-            } 
-
             /**
-             * Rdp.
+             * <p>Whether to enable RDP interception, default is on. Values: </p>
+             * <ul>
+             * <li><strong>on</strong>: Enable </li>
+             * <li><strong>off</strong>: Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder rdp(String rdp) {
                 this.rdp = rdp;
@@ -390,7 +385,14 @@ public class CreateAntiBruteForceRuleRequest extends Request {
             }
 
             /**
-             * SqlServer.
+             * <p>Whether to enable the SqlServer interception method, default is off. Values: </p>
+             * <ul>
+             * <li><strong>on</strong>: Enable </li>
+             * <li><strong>off</strong>: Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder sqlServer(String sqlServer) {
                 this.sqlServer = sqlServer;
@@ -398,7 +400,14 @@ public class CreateAntiBruteForceRuleRequest extends Request {
             }
 
             /**
-             * Ssh.
+             * <p>Whether to enable SSH interception, default is on. Values: </p>
+             * <ul>
+             * <li><strong>on</strong>: Enable </li>
+             * <li><strong>off</strong>: Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ssh(String ssh) {
                 this.ssh = ssh;

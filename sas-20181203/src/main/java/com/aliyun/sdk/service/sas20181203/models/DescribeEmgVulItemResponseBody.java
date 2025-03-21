@@ -48,10 +48,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return currentPage
      */
@@ -93,17 +89,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeEmgVulItemResponseBody model) {
-            this.currentPage = model.currentPage;
-            this.groupedVulItems = model.groupedVulItems;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
@@ -302,22 +287,6 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             private Integer raspDefend; 
             private Integer status; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedVulItems model) {
-                this.aliasName = model.aliasName;
-                this.checkType = model.checkType;
-                this.gmtLastCheck = model.gmtLastCheck;
-                this.gmtPublish = model.gmtPublish;
-                this.name = model.name;
-                this.pendingCount = model.pendingCount;
-                this.progress = model.progress;
-                this.raspDefend = model.raspDefend;
-                this.status = model.status;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The name of the urgent vulnerability.</p>

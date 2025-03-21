@@ -36,10 +36,6 @@ public class DescribeContainerAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeContainerAppsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> tagValues; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeContainerAppsResponseBody model) {
-            this.requestId = model.requestId;
-            this.tagValues = model.tagValues;
-        } 
 
         /**
          * <p>The request ID.</p>

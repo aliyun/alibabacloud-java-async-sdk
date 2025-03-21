@@ -36,10 +36,6 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assetsSummary
      */
@@ -57,14 +53,6 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private AssetsSummary assetsSummary; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAssetSummaryResponseBody model) {
-            this.assetsSummary = model.assetsSummary;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The statistical information about the assets.</p>
@@ -146,15 +134,6 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
             private Integer totalAssetAllRegion; 
             private Integer totalCoreAllRegion; 
             private Integer totalCoreNum; 
-
-            private Builder() {
-            } 
-
-            private Builder(AssetsSummary model) {
-                this.totalAssetAllRegion = model.totalAssetAllRegion;
-                this.totalCoreAllRegion = model.totalCoreAllRegion;
-                this.totalCoreNum = model.totalCoreNum;
-            } 
 
             /**
              * <p>The total number of protected assets in all regions.</p>

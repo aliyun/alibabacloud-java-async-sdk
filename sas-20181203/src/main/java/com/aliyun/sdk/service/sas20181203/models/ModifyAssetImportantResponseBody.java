@@ -48,10 +48,6 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return errCode
      */
@@ -93,17 +89,6 @@ public class ModifyAssetImportantResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyAssetImportantResponseBody model) {
-            this.errCode = model.errCode;
-            this.errMessage = model.errMessage;
-            this.httpStatusCode = model.httpStatusCode;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

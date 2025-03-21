@@ -36,10 +36,6 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VulRecords> vulRecords; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCanFixVulListResponseBody model) {
-            this.requestId = model.requestId;
-            this.vulRecords = model.vulRecords;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -206,20 +194,6 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             private String path; 
             private String updateCmd; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(RpmEntityList model) {
-                this.fullVersion = model.fullVersion;
-                this.layer = model.layer;
-                this.matchDetail = model.matchDetail;
-                this.matchList = model.matchList;
-                this.name = model.name;
-                this.path = model.path;
-                this.updateCmd = model.updateCmd;
-                this.version = model.version;
-            } 
 
             /**
              * <p>The complete version number of the software package.</p>
@@ -368,15 +342,6 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             private String os; 
             private String osRelease; 
             private java.util.List<RpmEntityList> rpmEntityList; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExtendContentJson model) {
-                this.os = model.os;
-                this.osRelease = model.osRelease;
-                this.rpmEntityList = model.rpmEntityList;
-            } 
 
             /**
              * <p>The name of the operating system.</p>
@@ -830,45 +795,6 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             private String targetType; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulRecords model) {
-                this.aliasName = model.aliasName;
-                this.canFix = model.canFix;
-                this.canUpdate = model.canUpdate;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.containerId = model.containerId;
-                this.extendContentJson = model.extendContentJson;
-                this.firstTs = model.firstTs;
-                this.image = model.image;
-                this.imageDigest = model.imageDigest;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.lastTs = model.lastTs;
-                this.layers = model.layers;
-                this.maliciousSource = model.maliciousSource;
-                this.modifyTs = model.modifyTs;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.necessity = model.necessity;
-                this.pod = model.pod;
-                this.primaryId = model.primaryId;
-                this.related = model.related;
-                this.repoName = model.repoName;
-                this.repoNamespace = model.repoNamespace;
-                this.scanTime = model.scanTime;
-                this.status = model.status;
-                this.tag = model.tag;
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-                this.targetType = model.targetType;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

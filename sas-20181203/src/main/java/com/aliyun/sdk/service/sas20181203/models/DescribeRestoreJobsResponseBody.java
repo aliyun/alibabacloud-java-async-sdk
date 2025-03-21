@@ -40,10 +40,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<RestoreJobs> restoreJobs; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRestoreJobsResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.restoreJobs = model.restoreJobs;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of restoration tasks returned on the current page.</p>
@@ -752,53 +729,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private String uuid; 
             private String vaultId; 
             private String vaultRegionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(RestoreJobs model) {
-                this.actualBytes = model.actualBytes;
-                this.bytesDone = model.bytesDone;
-                this.bytesTotal = model.bytesTotal;
-                this.clientId = model.clientId;
-                this.completeTime = model.completeTime;
-                this.createdTime = model.createdTime;
-                this.duration = model.duration;
-                this.errorCount = model.errorCount;
-                this.errorFile = model.errorFile;
-                this.errorFileUrl = model.errorFileUrl;
-                this.errorType = model.errorType;
-                this.eta = model.eta;
-                this.excludes = model.excludes;
-                this.exitCode = model.exitCode;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.includes = model.includes;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.itemsDone = model.itemsDone;
-                this.itemsTotal = model.itemsTotal;
-                this.message = model.message;
-                this.percentage = model.percentage;
-                this.requestId = model.requestId;
-                this.restoreId = model.restoreId;
-                this.restoreName = model.restoreName;
-                this.restoreType = model.restoreType;
-                this.snapshotHash = model.snapshotHash;
-                this.snapshotId = model.snapshotId;
-                this.snapshotVersion = model.snapshotVersion;
-                this.source = model.source;
-                this.sourceClientId = model.sourceClientId;
-                this.speed = model.speed;
-                this.status = model.status;
-                this.target = model.target;
-                this.updatedTime = model.updatedTime;
-                this.uuid = model.uuid;
-                this.vaultId = model.vaultId;
-                this.vaultRegionId = model.vaultRegionId;
-            } 
 
             /**
              * <p>The size of backup data. Unit: bytes.</p>

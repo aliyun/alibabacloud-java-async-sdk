@@ -40,10 +40,6 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<ResultList> resultList; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCompressFileDetectResultResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.resultList = model.resultList;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,15 +154,6 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number.</p>
@@ -308,18 +286,6 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
             private Integer result; 
             private Integer score; 
             private String virusType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResultList model) {
-                this.ext = model.ext;
-                this.hashKey = model.hashKey;
-                this.path = model.path;
-                this.result = model.result;
-                this.score = model.score;
-                this.virusType = model.virusType;
-            } 
 
             /**
              * <p>The extended information about the file detection result.</p>

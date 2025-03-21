@@ -36,10 +36,6 @@ public class GetSasContainerWebDefenseRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return containerWebDefenseRule
      */
@@ -57,14 +53,6 @@ public class GetSasContainerWebDefenseRuleResponseBody extends TeaModel {
     public static final class Builder {
         private ContainerWebDefenseRule containerWebDefenseRule; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetSasContainerWebDefenseRuleResponseBody model) {
-            this.containerWebDefenseRule = model.containerWebDefenseRule;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Details of the container file defense rule.</p>
@@ -230,22 +218,6 @@ public class GetSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private String includeFile; 
             private String includeFileType; 
             private java.util.List<String> processPathList; 
-
-            private Builder() {
-            } 
-
-            private Builder(PathConfDTOList model) {
-                this.backupPath = model.backupPath;
-                this.defenseMode = model.defenseMode;
-                this.defensePath = model.defensePath;
-                this.excludeFile = model.excludeFile;
-                this.excludeFilePath = model.excludeFilePath;
-                this.excludeFileType = model.excludeFileType;
-                this.guardType = model.guardType;
-                this.includeFile = model.includeFile;
-                this.includeFileType = model.includeFileType;
-                this.processPathList = model.processPathList;
-            } 
 
             /**
              * <p>Backup path.</p>
@@ -484,20 +456,6 @@ public class GetSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private java.util.List<PathConfDTOList> pathConfDTOList; 
             private String ruleName; 
             private Integer ruleStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(ContainerWebDefenseRule model) {
-                this.aliUid = model.aliUid;
-                this.appTotalCount = model.appTotalCount;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.pathConfDTOList = model.pathConfDTOList;
-                this.ruleName = model.ruleName;
-                this.ruleStatus = model.ruleStatus;
-            } 
 
             /**
              * <p>User ID.</p>

@@ -40,10 +40,6 @@ public class ListAgentlessAssetResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assetList
      */
@@ -69,15 +65,6 @@ public class ListAgentlessAssetResponseBody extends TeaModel {
         private java.util.List<AssetList> assetList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAgentlessAssetResponseBody model) {
-            this.assetList = model.assetList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The list of returned assets.</p>
@@ -203,18 +190,6 @@ public class ListAgentlessAssetResponseBody extends TeaModel {
             private String platform; 
             private String regionId; 
             private Integer targetType; 
-
-            private Builder() {
-            } 
-
-            private Builder(AssetList model) {
-                this.diskType = model.diskType;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.platform = model.platform;
-                this.regionId = model.regionId;
-                this.targetType = model.targetType;
-            } 
 
             /**
              * <p>The type of the cloud disk. Values:</p>
@@ -356,15 +331,6 @@ public class ListAgentlessAssetResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The current page number in a paginated query.</p>

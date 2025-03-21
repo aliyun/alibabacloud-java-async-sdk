@@ -52,10 +52,6 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return bindCount
      */
@@ -105,18 +101,6 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         private String requestId; 
         private Integer resultCode; 
         private Integer unBindCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(BindAuthToMachineResponseBody model) {
-            this.bindCount = model.bindCount;
-            this.insufficientCoreCount = model.insufficientCoreCount;
-            this.insufficientEcsCount = model.insufficientEcsCount;
-            this.requestId = model.requestId;
-            this.resultCode = model.resultCode;
-            this.unBindCount = model.unBindCount;
-        } 
 
         /**
          * <p>The number of bound servers.</p>

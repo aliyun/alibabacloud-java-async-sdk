@@ -44,10 +44,6 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -81,16 +77,6 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         private Integer vulAsapSum; 
         private Integer vulLaterSum; 
         private Integer vulNntfSum; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetVulStatisticsResponseBody model) {
-            this.requestId = model.requestId;
-            this.vulAsapSum = model.vulAsapSum;
-            this.vulLaterSum = model.vulLaterSum;
-            this.vulNntfSum = model.vulNntfSum;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

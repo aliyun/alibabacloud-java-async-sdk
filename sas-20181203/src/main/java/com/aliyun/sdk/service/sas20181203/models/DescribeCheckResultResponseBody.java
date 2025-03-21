@@ -36,10 +36,6 @@ public class DescribeCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkResultList
      */
@@ -57,14 +53,6 @@ public class DescribeCheckResultResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CheckResultList> checkResultList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCheckResultResponseBody model) {
-            this.checkResultList = model.checkResultList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The check results.</p>
@@ -134,14 +122,6 @@ public class DescribeCheckResultResponseBody extends TeaModel {
         public static final class Builder {
             private Integer complianceStatus; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckResultList model) {
-                this.complianceStatus = model.complianceStatus;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The compliance status. Valid values:</p>

@@ -36,10 +36,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return installCodes
      */
@@ -57,14 +53,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstallCodes> installCodes; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeInstallCodesResponseBody model) {
-            this.installCodes = model.installCodes;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the installation commands.</p>
@@ -218,21 +206,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private Long privateLinkEndpointId; 
             private String proxyCluster; 
             private String vendorName; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstallCodes model) {
-                this.captchaCode = model.captchaCode;
-                this.expiredDate = model.expiredDate;
-                this.groupId = model.groupId;
-                this.groupName = model.groupName;
-                this.onlyImage = model.onlyImage;
-                this.os = model.os;
-                this.privateLinkEndpointId = model.privateLinkEndpointId;
-                this.proxyCluster = model.proxyCluster;
-                this.vendorName = model.vendorName;
-            } 
 
             /**
              * <p>The verification code for you to manually install the Security Center agent.</p>

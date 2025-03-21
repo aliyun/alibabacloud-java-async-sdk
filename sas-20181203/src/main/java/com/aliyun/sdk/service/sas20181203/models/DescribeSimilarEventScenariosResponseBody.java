@@ -36,10 +36,6 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Scenarios> scenarios; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSimilarEventScenariosResponseBody model) {
-            this.requestId = model.requestId;
-            this.scenarios = model.scenarios;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,13 +110,6 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-
-            private Builder() {
-            } 
-
-            private Builder(Scenarios model) {
-                this.code = model.code;
-            } 
 
             /**
              * <p>The code of the scenario. Valid values:</p>

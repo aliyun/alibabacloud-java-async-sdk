@@ -36,10 +36,6 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetClusterCheckItemWarningStatisticsResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The statistics on risk items by risk level.</p>
@@ -146,15 +134,6 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             private Integer highWarningCount; 
             private Integer lowWarningCount; 
             private Integer mediumWarningCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.highWarningCount = model.highWarningCount;
-                this.lowWarningCount = model.lowWarningCount;
-                this.mediumWarningCount = model.mediumWarningCount;
-            } 
 
             /**
              * <p>The number of high-risk items.</p>

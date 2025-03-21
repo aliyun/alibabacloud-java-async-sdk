@@ -40,10 +40,6 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateContainerScanTaskByAppNameResponseBody model) {
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned if the request was successful.</p>
@@ -242,21 +229,6 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.canCreate = model.canCreate;
-                this.collectTime = model.collectTime;
-                this.execTime = model.execTime;
-                this.finishCount = model.finishCount;
-                this.progress = model.progress;
-                this.result = model.result;
-                this.status = model.status;
-                this.taskId = model.taskId;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>Indicates whether you can create more scan tasks. Valid values:</p>

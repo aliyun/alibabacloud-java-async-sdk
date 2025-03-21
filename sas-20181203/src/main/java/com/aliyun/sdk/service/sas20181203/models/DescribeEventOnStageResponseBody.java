@@ -36,10 +36,6 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityEventStageResponse securityEventStageResponse; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeEventOnStageResponseBody model) {
-            this.requestId = model.requestId;
-            this.securityEventStageResponse = model.securityEventStageResponse;
-        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,13 +110,6 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.Map<String, ?> securityEventOnStag; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityEventStageResponse model) {
-                this.securityEventOnStag = model.securityEventOnStag;
-            } 
 
             /**
              * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>

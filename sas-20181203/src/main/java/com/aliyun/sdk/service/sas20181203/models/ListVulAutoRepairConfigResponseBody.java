@@ -56,10 +56,6 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListVulAutoRepairConfigResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.vulAutoRepairConfigList = model.vulAutoRepairConfigList;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -280,16 +263,6 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -420,17 +393,6 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
             private String name; 
             private String reason; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulAutoRepairConfigList model) {
-                this.aliasName = model.aliasName;
-                this.id = model.id;
-                this.name = model.name;
-                this.reason = model.reason;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

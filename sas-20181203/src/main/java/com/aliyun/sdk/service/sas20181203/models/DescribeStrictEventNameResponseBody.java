@@ -36,10 +36,6 @@ public class DescribeStrictEventNameResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeStrictEventNameResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeStrictEventNameResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Returned data.</p>
@@ -170,17 +158,6 @@ public class DescribeStrictEventNameResponseBody extends TeaModel {
             private String showEventName; 
             private String showEventType; 
             private Boolean switchConfig; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.eventName = model.eventName;
-                this.eventType = model.eventType;
-                this.showEventName = model.showEventName;
-                this.showEventType = model.showEventType;
-                this.switchConfig = model.switchConfig;
-            } 
 
             /**
              * <p>Alarm name.</p>

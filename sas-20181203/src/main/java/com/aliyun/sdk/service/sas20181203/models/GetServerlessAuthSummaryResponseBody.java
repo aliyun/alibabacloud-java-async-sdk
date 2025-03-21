@@ -40,10 +40,6 @@ public class GetServerlessAuthSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class GetServerlessAuthSummaryResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetServerlessAuthSummaryResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>Returned data details.</p>
@@ -318,27 +305,6 @@ public class GetServerlessAuthSummaryResponseBody extends TeaModel {
             private Integer totalUnBindAppCount; 
             private Integer totalUnBindCoreCount; 
             private Integer totalUnBindInstanceCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.autoBind = model.autoBind;
-                this.hasPreBindSetting = model.hasPreBindSetting;
-                this.isPostPaid = model.isPostPaid;
-                this.isServerlessPostPaidValid = model.isServerlessPostPaidValid;
-                this.postPaidModuleSwitch = model.postPaidModuleSwitch;
-                this.postPaidOpenTime = model.postPaidOpenTime;
-                this.postPaidStatus = model.postPaidStatus;
-                this.postpaidInstanceId = model.postpaidInstanceId;
-                this.regionId = model.regionId;
-                this.totalBindAppCount = model.totalBindAppCount;
-                this.totalBindCoreCount = model.totalBindCoreCount;
-                this.totalBindInstanceCount = model.totalBindInstanceCount;
-                this.totalUnBindAppCount = model.totalUnBindAppCount;
-                this.totalUnBindCoreCount = model.totalUnBindCoreCount;
-                this.totalUnBindInstanceCount = model.totalUnBindInstanceCount;
-            } 
 
             /**
              * <p>Enable auto-binding. Values: </p>

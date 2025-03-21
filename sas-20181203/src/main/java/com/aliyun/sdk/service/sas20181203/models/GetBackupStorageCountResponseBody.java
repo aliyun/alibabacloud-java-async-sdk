@@ -36,10 +36,6 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return backupStorageCount
      */
@@ -57,14 +53,6 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
     public static final class Builder {
         private BackupStorageCount backupStorageCount; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetBackupStorageCountResponseBody model) {
-            this.backupStorageCount = model.backupStorageCount;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details about the anti-ransomware capacity.</p>
@@ -170,17 +158,6 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             private Integer overflow; 
             private Long uniUsageStorageByte; 
             private Long usageStorageByte; 
-
-            private Builder() {
-            } 
-
-            private Builder(BackupStorageCount model) {
-                this.buyStorageByte = model.buyStorageByte;
-                this.ecsUsageStorageByte = model.ecsUsageStorageByte;
-                this.overflow = model.overflow;
-                this.uniUsageStorageByte = model.uniUsageStorageByte;
-                this.usageStorageByte = model.usageStorageByte;
-            } 
 
             /**
              * <p>The anti-ransomware capacity that you purchased. Unit: bytes.</p>

@@ -48,10 +48,6 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageEventOperationConditionResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code.</p>
@@ -223,15 +208,6 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             private String conditionName; 
             private java.util.List<String> supportedMisType; 
 
-            private Builder() {
-            } 
-
-            private Builder(Conditions model) {
-                this.conditionKey = model.conditionKey;
-                this.conditionName = model.conditionName;
-                this.supportedMisType = model.supportedMisType;
-            } 
-
             /**
              * <p>The keyword of the condition. Valid values:</p>
              * <ul>
@@ -329,15 +305,6 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             private String operationCode; 
             private String operationName; 
 
-            private Builder() {
-            } 
-
-            private Builder(Operations model) {
-                this.conditions = model.conditions;
-                this.operationCode = model.operationCode;
-                this.operationName = model.operationName;
-            } 
-
             /**
              * <p>The rule conditions.</p>
              */
@@ -433,15 +400,6 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             private String eventType; 
             private java.util.List<Operations> operations; 
             private java.util.List<String> scenarios; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.eventType = model.eventType;
-                this.operations = model.operations;
-                this.scenarios = model.scenarios;
-            } 
 
             /**
              * <p>The alert type.</p>

@@ -56,10 +56,6 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetHoneypotEventTrendResponseBody model) {
-            this.code = model.code;
-            this.count = model.count;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -270,15 +253,6 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             private Integer count; 
             private String keyName; 
             private Long timeStamp; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.count = model.count;
-                this.keyName = model.keyName;
-                this.timeStamp = model.timeStamp;
-            } 
 
             /**
              * <p>The number of attacks that occurred.</p>

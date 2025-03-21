@@ -52,10 +52,6 @@ public class DescribeWebPathResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return configList
      */
@@ -105,18 +101,6 @@ public class DescribeWebPathResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWebPathResponseBody model) {
-            this.configList = model.configList;
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>An array that consists of the paths to the web directories.</p>
@@ -231,14 +215,6 @@ public class DescribeWebPathResponseBody extends TeaModel {
             private String target; 
             private String targetType; 
 
-            private Builder() {
-            } 
-
-            private Builder(TargetList model) {
-                this.target = model.target;
-                this.targetType = model.targetType;
-            } 
-
             /**
              * <p>The object.</p>
              * 
@@ -326,15 +302,6 @@ public class DescribeWebPathResponseBody extends TeaModel {
             private java.util.List<TargetList> targetList; 
             private String webPath; 
             private String webPathType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ConfigList model) {
-                this.targetList = model.targetList;
-                this.webPath = model.webPath;
-                this.webPathType = model.webPathType;
-            } 
 
             /**
              * <p>An array consisting of the servers on which the web directories are scanned.</p>

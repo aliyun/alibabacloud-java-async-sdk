@@ -36,10 +36,6 @@ public class GetAccountLabelResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return accountLabelList
      */
@@ -57,14 +53,6 @@ public class GetAccountLabelResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AccountLabelList> accountLabelList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetAccountLabelResponseBody model) {
-            this.accountLabelList = model.accountLabelList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The tag list.</p>
@@ -134,14 +122,6 @@ public class GetAccountLabelResponseBody extends TeaModel {
         public static final class Builder {
             private String labelSeries; 
             private Boolean labelStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(AccountLabelList model) {
-                this.labelSeries = model.labelSeries;
-                this.labelStatus = model.labelStatus;
-            } 
 
             /**
              * <p>The tag information.</p>

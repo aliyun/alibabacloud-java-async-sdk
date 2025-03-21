@@ -54,7 +54,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -276,18 +276,6 @@ public class CreateHoneypotProbeBindRequest extends Request {
             private String proto; 
             private Integer startPort; 
             private Integer targetPort; 
-
-            private Builder() {
-            } 
-
-            private Builder(BindPortList model) {
-                this.bindPort = model.bindPort;
-                this.endPort = model.endPort;
-                this.fixed = model.fixed;
-                this.proto = model.proto;
-                this.startPort = model.startPort;
-                this.targetPort = model.targetPort;
-            } 
 
             /**
              * <p>Specifies whether to bind the port. Valid values:</p>

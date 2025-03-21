@@ -41,7 +41,7 @@ public class OperateApplicationRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,16 +174,6 @@ public class OperateApplicationRequest extends Request {
             private String flag; 
             private Long id; 
             private String tag; 
-
-            private Builder() {
-            } 
-
-            private Builder(ContainerWebDefenseApplicationDTOS model) {
-                this.clusterId = model.clusterId;
-                this.flag = model.flag;
-                this.id = model.id;
-                this.tag = model.tag;
-            } 
 
             /**
              * <p>The ID of the cluster to which the container belongs.</p>

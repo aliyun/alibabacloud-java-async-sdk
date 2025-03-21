@@ -36,10 +36,6 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageSecurityScanCountResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Returned data.</p>
@@ -158,16 +146,6 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
             private Integer imageCveVulCount; 
             private Integer imageMaliciousFileCount; 
             private Integer imageScaVulCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.imageBaselineCount = model.imageBaselineCount;
-                this.imageCveVulCount = model.imageCveVulCount;
-                this.imageMaliciousFileCount = model.imageMaliciousFileCount;
-                this.imageScaVulCount = model.imageScaVulCount;
-            } 
 
             /**
              * <p>Number of image baseline risk points in the current asset.</p>

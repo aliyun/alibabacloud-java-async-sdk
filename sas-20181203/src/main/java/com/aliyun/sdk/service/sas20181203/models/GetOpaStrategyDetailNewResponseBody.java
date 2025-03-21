@@ -52,10 +52,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetOpaStrategyDetailNewResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -235,14 +219,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(Item model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
-
             /**
              * <p>The ID of the baseline check item.</p>
              * 
@@ -316,14 +292,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List<Item> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(Baseline model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The information about the baseline check item.</p>
              */
@@ -390,14 +358,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(BuildRiskItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the image build risk.</p>
@@ -478,14 +438,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List<BuildRiskItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(BuildRisk model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The configuration of image build risk.</p>
              */
@@ -552,14 +504,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(MaliciousFileItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the malicious sample.</p>
@@ -634,14 +578,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List<MaliciousFileItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(MaliciousFile model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The information about the malicious sample.</p>
              */
@@ -708,14 +644,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(SensitiveFileItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the sensitive files.</p>
@@ -796,14 +724,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List<SensitiveFileItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(SensitiveFile model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The configuration of sensitive file.</p>
              */
@@ -870,14 +790,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the vulnerability.</p>
@@ -951,14 +863,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(RiskClass model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the vulnerability types. Valid values:</p>
@@ -1052,15 +956,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List<VulItem> item; 
             private java.util.List<RiskClass> riskClass; 
             private java.util.List<String> riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Vul model) {
-                this.item = model.item;
-                this.riskClass = model.riskClass;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The information about the vulnerability.</p>
@@ -1172,17 +1067,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private MaliciousFile maliciousFile; 
             private SensitiveFile sensitiveFile; 
             private Vul vul; 
-
-            private Builder() {
-            } 
-
-            private Builder(AlarmDetail model) {
-                this.baseline = model.baseline;
-                this.buildRisk = model.buildRisk;
-                this.maliciousFile = model.maliciousFile;
-                this.sensitiveFile = model.sensitiveFile;
-                this.vul = model.vul;
-            } 
 
             /**
              * <p>The baseline check configuration.</p>
@@ -1298,16 +1182,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private Integer allNamespace; 
             private String clusterId; 
             private java.util.List<String> namespaceList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Scopes model) {
-                this.ackPolicyInstanceId = model.ackPolicyInstanceId;
-                this.allNamespace = model.allNamespace;
-                this.clusterId = model.clusterId;
-                this.namespaceList = model.namespaceList;
-            } 
 
             /**
              * <p>The rule instance ID of the cluster.</p>
@@ -1584,29 +1458,6 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private Long strategyTemplateId; 
             private Boolean unScanedImage; 
             private java.util.List<String> whiteList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.alarmDetail = model.alarmDetail;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.currentPage = model.currentPage;
-                this.description = model.description;
-                this.imageName = model.imageName;
-                this.label = model.label;
-                this.lang = model.lang;
-                this.maliciousImage = model.maliciousImage;
-                this.pageSize = model.pageSize;
-                this.ruleAction = model.ruleAction;
-                this.scopes = model.scopes;
-                this.strategyId = model.strategyId;
-                this.strategyName = model.strategyName;
-                this.strategyTemplateId = model.strategyTemplateId;
-                this.unScanedImage = model.unScanedImage;
-                this.whiteList = model.whiteList;
-            } 
 
             /**
              * <p>The rule configuration.</p>

@@ -36,10 +36,6 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return conditionList
      */
@@ -57,14 +53,6 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConditionList> conditionList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSearchConditionResponseBody model) {
-            this.conditionList = model.conditionList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the filter conditions.</p>
@@ -158,16 +146,6 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             private String filterConditions; 
             private String name; 
             private String nameKey; 
-
-            private Builder() {
-            } 
-
-            private Builder(ConditionList model) {
-                this.conditionType = model.conditionType;
-                this.filterConditions = model.filterConditions;
-                this.name = model.name;
-                this.nameKey = model.nameKey;
-            } 
 
             /**
              * <p>The type of the filter condition. Valid values:</p>

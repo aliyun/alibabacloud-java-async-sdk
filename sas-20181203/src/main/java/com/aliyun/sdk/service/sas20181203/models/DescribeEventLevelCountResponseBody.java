@@ -48,10 +48,6 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeEventLevelCountResponseBody model) {
-            this.code = model.code;
-            this.eventLevels = model.eventLevels;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -222,15 +207,6 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             private Integer remind; 
             private Integer serious; 
             private Integer suspicious; 
-
-            private Builder() {
-            } 
-
-            private Builder(EventLevels model) {
-                this.remind = model.remind;
-                this.serious = model.serious;
-                this.suspicious = model.suspicious;
-            } 
 
             /**
              * <p>The number of alerts whose Emergency level is Reminder.</p>

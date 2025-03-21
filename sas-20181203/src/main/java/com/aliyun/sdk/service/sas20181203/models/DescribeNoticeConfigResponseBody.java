@@ -36,10 +36,6 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return noticeConfigList
      */
@@ -57,14 +53,6 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<NoticeConfigList> noticeConfigList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeNoticeConfigResponseBody model) {
-            this.noticeConfigList = model.noticeConfigList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the notification settings.</p>
@@ -170,17 +158,6 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
             private String project; 
             private Integer route; 
             private Integer timeLimit; 
-
-            private Builder() {
-            } 
-
-            private Builder(NoticeConfigList model) {
-                this.aliUid = model.aliUid;
-                this.currentPage = model.currentPage;
-                this.project = model.project;
-                this.route = model.route;
-                this.timeLimit = model.timeLimit;
-            } 
 
             /**
              * <p>The ID of the user.</p>

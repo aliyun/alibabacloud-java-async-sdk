@@ -40,10 +40,6 @@ public class ListCheckRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkRules
      */
@@ -69,15 +65,6 @@ public class ListCheckRuleResponseBody extends TeaModel {
         private java.util.List<CheckRules> checkRules; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCheckRuleResponseBody model) {
-            this.checkRules = model.checkRules;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Check rules.</p>
@@ -143,13 +130,6 @@ public class ListCheckRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String sectionShowName; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckPolicies model) {
-                this.sectionShowName = model.sectionShowName;
-            } 
 
             /**
              * <p>Display name of the item&quot;s chapter.</p>
@@ -356,26 +336,6 @@ public class ListCheckRuleResponseBody extends TeaModel {
             private String scopeType; 
             private Integer vendor; 
             private String vendorName; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckRules model) {
-                this.aliUid = model.aliUid;
-                this.assetSubType = model.assetSubType;
-                this.assetType = model.assetType;
-                this.checkId = model.checkId;
-                this.checkPolicies = model.checkPolicies;
-                this.checkShowName = model.checkShowName;
-                this.instanceSubType = model.instanceSubType;
-                this.instanceType = model.instanceType;
-                this.remark = model.remark;
-                this.ruleId = model.ruleId;
-                this.ruleType = model.ruleType;
-                this.scopeType = model.scopeType;
-                this.vendor = model.vendor;
-                this.vendorName = model.vendorName;
-            } 
 
             /**
              * <p>The UID of the current user.</p>
@@ -621,16 +581,6 @@ public class ListCheckRuleResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of data entries displayed on the current page.</p>

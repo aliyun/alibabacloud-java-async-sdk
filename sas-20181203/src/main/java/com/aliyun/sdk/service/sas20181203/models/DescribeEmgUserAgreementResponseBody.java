@@ -36,10 +36,6 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return auth
      */
@@ -57,14 +53,6 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean auth; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeEmgUserAgreementResponseBody model) {
-            this.auth = model.auth;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:</p>

@@ -36,10 +36,6 @@ public class CheckStsTokenAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class CheckStsTokenAuthResponseBody extends TeaModel {
     public static final class Builder {
         private Long data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CheckStsTokenAuthResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>

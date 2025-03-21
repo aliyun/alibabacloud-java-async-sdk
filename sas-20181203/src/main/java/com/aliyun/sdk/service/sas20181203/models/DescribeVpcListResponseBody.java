@@ -40,10 +40,6 @@ public class DescribeVpcListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -69,15 +65,6 @@ public class DescribeVpcListResponseBody extends TeaModel {
         private Integer count; 
         private String requestId; 
         private java.util.List<VpcList> vpcList; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeVpcListResponseBody model) {
-            this.count = model.count;
-            this.requestId = model.requestId;
-            this.vpcList = model.vpcList;
-        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -194,17 +181,6 @@ public class DescribeVpcListResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(VpcList model) {
-                this.ecsCount = model.ecsCount;
-                this.instanceDesc = model.instanceDesc;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.regionId = model.regionId;
-            } 
 
             /**
              * <p>The number of Elastic Compute Service (ECS) instances.</p>

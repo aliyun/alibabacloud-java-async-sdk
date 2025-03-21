@@ -36,10 +36,6 @@ public class GetCheckSaleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkSale
      */
@@ -57,14 +53,6 @@ public class GetCheckSaleResponseBody extends TeaModel {
     public static final class Builder {
         private CheckSale checkSale; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCheckSaleResponseBody model) {
-            this.checkSale = model.checkSale;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The sales information about the configuration assessment quota.</p>
@@ -158,16 +146,6 @@ public class GetCheckSaleResponseBody extends TeaModel {
             private Boolean loyalUser; 
             private Long purchaseCount; 
             private Integer saleUserType; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckSale model) {
-                this.consumeCount = model.consumeCount;
-                this.loyalUser = model.loyalUser;
-                this.purchaseCount = model.purchaseCount;
-                this.saleUserType = model.saleUserType;
-            } 
 
             /**
              * <p>The consumed quota.</p>

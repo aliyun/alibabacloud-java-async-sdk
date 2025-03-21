@@ -52,10 +52,6 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return canFix
      */
@@ -105,18 +101,6 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         private Integer repairedCount; 
         private String requestId; 
         private Boolean isTrial; 
-
-        private Builder() {
-        } 
-
-        private Builder(CheckTrialFixCountResponseBody model) {
-            this.canFix = model.canFix;
-            this.expendCount = model.expendCount;
-            this.remainCount = model.remainCount;
-            this.repairedCount = model.repairedCount;
-            this.requestId = model.requestId;
-            this.isTrial = model.isTrial;
-        } 
 
         /**
          * <p>Indicates whether the vulnerability can be fixed. Valid values:</p>

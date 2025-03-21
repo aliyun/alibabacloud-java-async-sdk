@@ -48,10 +48,6 @@ public class GetDefenceCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return defenceCount15Days
      */
@@ -93,17 +89,6 @@ public class GetDefenceCountResponseBody extends TeaModel {
         private String requestId; 
         private Integer tamperProof15Days; 
         private Integer tamperProofTotal; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetDefenceCountResponseBody model) {
-            this.defenceCount15Days = model.defenceCount15Days;
-            this.defenceCountTotal = model.defenceCountTotal;
-            this.requestId = model.requestId;
-            this.tamperProof15Days = model.tamperProof15Days;
-            this.tamperProofTotal = model.tamperProofTotal;
-        } 
 
         /**
          * <p>The number of handled alerts of the precise defense type in the last 15 days.</p>

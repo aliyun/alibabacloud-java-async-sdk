@@ -40,10 +40,6 @@ public class DescribeWebLockInclusiveFileTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return inclusiveFileType
      */
@@ -69,15 +65,6 @@ public class DescribeWebLockInclusiveFileTypeResponseBody extends TeaModel {
         private java.util.List<String> inclusiveFileType; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWebLockInclusiveFileTypeResponseBody model) {
-            this.inclusiveFileType = model.inclusiveFileType;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>An array that consists of the types of files that can be protected by web tamper proofing.</p>

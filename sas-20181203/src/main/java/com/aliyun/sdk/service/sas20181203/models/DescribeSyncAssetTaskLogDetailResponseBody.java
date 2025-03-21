@@ -40,10 +40,6 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<TaskRecordDetails> taskRecordDetails; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSyncAssetTaskLogDetailResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.taskRecordDetails = model.taskRecordDetails;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries on the current page.</p>
@@ -344,19 +321,6 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             private String taskMsg; 
             private Long taskReportTime; 
             private Integer unprotectedAssetCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(TaskRecordDetails model) {
-                this.assetCount = model.assetCount;
-                this.idcRegion = model.idcRegion;
-                this.leafTaskId = model.leafTaskId;
-                this.leafTaskStatus = model.leafTaskStatus;
-                this.taskMsg = model.taskMsg;
-                this.taskReportTime = model.taskReportTime;
-                this.unprotectedAssetCount = model.unprotectedAssetCount;
-            } 
 
             /**
              * <p>The total number of assets.</p>

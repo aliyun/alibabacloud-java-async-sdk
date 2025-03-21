@@ -36,10 +36,6 @@ public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return createMark
      */
@@ -57,14 +53,6 @@ public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String createMark; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(StartDiscoverDatabaseTaskResponseBody model) {
-            this.createMark = model.createMark;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the scan task.</p>

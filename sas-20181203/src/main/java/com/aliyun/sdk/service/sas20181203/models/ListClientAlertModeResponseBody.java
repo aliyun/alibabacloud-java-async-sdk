@@ -36,10 +36,6 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListClientAlertModeResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListClientAlertModeResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -134,14 +122,6 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private java.util.List<String> uuids; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.count = model.count;
-                this.uuids = model.uuids;
-            } 
 
             /**
              * <p>The total number of entries returned.</p>

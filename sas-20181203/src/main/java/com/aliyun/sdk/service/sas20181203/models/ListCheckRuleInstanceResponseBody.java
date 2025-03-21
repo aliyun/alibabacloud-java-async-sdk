@@ -56,10 +56,6 @@ public class ListCheckRuleInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return aliUid
      */
@@ -117,19 +113,6 @@ public class ListCheckRuleInstanceResponseBody extends TeaModel {
         private java.util.List<CheckRuleInstances> checkRuleInstances; 
         private String requestId; 
         private String vendor; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCheckRuleInstanceResponseBody model) {
-            this.aliUid = model.aliUid;
-            this.assetSubType = model.assetSubType;
-            this.assetType = model.assetType;
-            this.checkId = model.checkId;
-            this.checkRuleInstances = model.checkRuleInstances;
-            this.requestId = model.requestId;
-            this.vendor = model.vendor;
-        } 
 
         /**
          * <p>Alibaba Cloud account ID.</p>
@@ -272,15 +255,6 @@ public class ListCheckRuleInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckRuleInstances model) {
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.regionId = model.regionId;
-            } 
 
             /**
              * <p>The instance ID of the asset.</p>

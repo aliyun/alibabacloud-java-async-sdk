@@ -36,10 +36,6 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListSupportObjectSuffixResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned data.</p>

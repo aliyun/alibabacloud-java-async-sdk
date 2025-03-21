@@ -45,7 +45,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,14 +186,6 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         public static final class Builder {
             private Integer fileSize; 
             private String hashKey; 
-
-            private Builder() {
-            } 
-
-            private Builder(HashKeyContextList model) {
-                this.fileSize = model.fileSize;
-                this.hashKey = model.hashKey;
-            } 
 
             /**
              * <p>The size of the file. Unit: bytes.</p>

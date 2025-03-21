@@ -48,10 +48,6 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageNumber
      */
@@ -93,17 +89,6 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SoarStrategies> soarStrategies; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSoarSubscribedStrategyResponseBody model) {
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.soarStrategies = model.soarStrategies;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The page number. Pages start from page 1.</p>
@@ -290,21 +275,6 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             private String name; 
             private String runMode; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(SoarStrategies model) {
-                this.creator = model.creator;
-                this.description = model.description;
-                this.executeNum = model.executeNum;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.name = model.name;
-                this.runMode = model.runMode;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the creator.</p>

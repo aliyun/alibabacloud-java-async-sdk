@@ -40,10 +40,6 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeBackUpExportInfoResponseBody model) {
-            this.data = model.data;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -239,21 +226,6 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             private Integer progress; 
             private String status; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.currentCount = model.currentCount;
-                this.fileName = model.fileName;
-                this.gmtCreate = model.gmtCreate;
-                this.id = model.id;
-                this.link = model.link;
-                this.message = model.message;
-                this.progress = model.progress;
-                this.status = model.status;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of exported entries.</p>
@@ -433,16 +405,6 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -36,10 +36,6 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return imageScan
      */
@@ -57,14 +53,6 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
     public static final class Builder {
         private ImageScan imageScan; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageScanAuthCountResponseBody model) {
-            this.imageScan = model.imageScan;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details about the quota for container image scan.</p>
@@ -146,15 +134,6 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             private Long imageScanCapacity; 
             private String instanceId; 
             private Long scanCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageScan model) {
-                this.imageScanCapacity = model.imageScanCapacity;
-                this.instanceId = model.instanceId;
-                this.scanCount = model.scanCount;
-            } 
 
             /**
              * <p>The quota for container image scan.</p>

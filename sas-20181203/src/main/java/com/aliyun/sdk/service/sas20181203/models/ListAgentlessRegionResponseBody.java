@@ -36,10 +36,6 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return regionList
      */
@@ -57,14 +53,6 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> regionList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAgentlessRegionResponseBody model) {
-            this.regionList = model.regionList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the regions.</p>

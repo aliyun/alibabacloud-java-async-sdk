@@ -44,10 +44,6 @@ public class RemoveCheckResultWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -81,16 +77,6 @@ public class RemoveCheckResultWhiteListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(RemoveCheckResultWhiteListResponseBody model) {
-            this.code = model.code;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>

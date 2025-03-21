@@ -99,7 +99,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -470,14 +470,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String id; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(Item model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
-
             /**
              * <p>The ID of the baseline check item.</p>
              * <blockquote>
@@ -557,14 +549,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List<Item> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(Baseline model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The baseline check items.</p>
              */
@@ -631,14 +615,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(BuildRiskItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the image build risk.</p>
@@ -719,14 +695,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List<BuildRiskItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(BuildRisk model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The configuration of image build risk.</p>
              */
@@ -793,14 +761,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(MaliciousFileItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the malicious sample.</p>
@@ -881,14 +841,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List<MaliciousFileItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(MaliciousFile model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The malicious samples.</p>
              */
@@ -955,14 +907,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(SensitiveFileItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the sensitive files.</p>
@@ -1043,14 +987,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List<SensitiveFileItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(SensitiveFile model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The configuration of sensitive file.</p>
              */
@@ -1117,14 +1053,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the vulnerability.</p>
@@ -1204,14 +1132,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(RiskClass model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the vulnerability types. Valid values:</p>
@@ -1305,15 +1225,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List<VulItem> item; 
             private java.util.List<RiskClass> riskClass; 
             private java.util.List<String> riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Vul model) {
-                this.item = model.item;
-                this.riskClass = model.riskClass;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The vulnerabilities.</p>
@@ -1425,17 +1336,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private MaliciousFile maliciousFile; 
             private SensitiveFile sensitiveFile; 
             private Vul vul; 
-
-            private Builder() {
-            } 
-
-            private Builder(AlarmDetail model) {
-                this.baseline = model.baseline;
-                this.buildRisk = model.buildRisk;
-                this.maliciousFile = model.maliciousFile;
-                this.sensitiveFile = model.sensitiveFile;
-                this.vul = model.vul;
-            } 
 
             /**
              * <p>The baseline risks.</p>
@@ -1551,16 +1451,6 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private Integer allNamespace; 
             private String clusterId; 
             private java.util.List<String> namespaceList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Scopes model) {
-                this.ackPolicyInstanceId = model.ackPolicyInstanceId;
-                this.allNamespace = model.allNamespace;
-                this.clusterId = model.clusterId;
-                this.namespaceList = model.namespaceList;
-            } 
 
             /**
              * <p>The ID of the cluster node to which the rule is applied.</p>

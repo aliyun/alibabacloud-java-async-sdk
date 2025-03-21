@@ -36,10 +36,6 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VulStat vulStat; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeClusterVulStatisticsResponseBody model) {
-            this.requestId = model.requestId;
-            this.vulStat = model.vulStat;
-        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,15 +134,6 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             private String asapCount; 
             private String laterCount; 
             private String nntfCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulStat model) {
-                this.asapCount = model.asapCount;
-                this.laterCount = model.laterCount;
-                this.nntfCount = model.nntfCount;
-            } 
 
             /**
              * <p>The number of high-risk vulnerabilities.</p>

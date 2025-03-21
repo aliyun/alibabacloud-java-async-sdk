@@ -36,10 +36,6 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cves
      */
@@ -57,14 +53,6 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Cves> cves; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeVulDetailsResponseBody model) {
-            this.cves = model.cves;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the vulnerability.</p>
@@ -146,15 +134,6 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String classify; 
             private String demoVideoUrl; 
             private String description; 
-
-            private Builder() {
-            } 
-
-            private Builder(Classifys model) {
-                this.classify = model.classify;
-                this.demoVideoUrl = model.demoVideoUrl;
-                this.description = model.description;
-            } 
 
             /**
              * <p>The type of the vulnerability.</p>
@@ -527,38 +506,6 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String title; 
             private String vendor; 
             private String vulLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Cves model) {
-                this.classify = model.classify;
-                this.classifys = model.classifys;
-                this.cnvdId = model.cnvdId;
-                this.complexity = model.complexity;
-                this.content = model.content;
-                this.cveId = model.cveId;
-                this.cveLink = model.cveLink;
-                this.cvssScore = model.cvssScore;
-                this.cvssVector = model.cvssVector;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.otherId = model.otherId;
-                this.poc = model.poc;
-                this.pocCreateTime = model.pocCreateTime;
-                this.pocDisclosureTime = model.pocDisclosureTime;
-                this.product = model.product;
-                this.reference = model.reference;
-                this.releaseTime = model.releaseTime;
-                this.solution = model.solution;
-                this.summary = model.summary;
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-                this.title = model.title;
-                this.vendor = model.vendor;
-                this.vulLevel = model.vulLevel;
-            } 
 
             /**
              * <p>The type of the vulnerability.</p>

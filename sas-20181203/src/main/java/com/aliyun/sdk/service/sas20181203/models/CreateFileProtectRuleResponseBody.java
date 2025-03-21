@@ -36,10 +36,6 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long ruleId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateFileProtectRuleResponseBody model) {
-            this.requestId = model.requestId;
-            this.ruleId = model.ruleId;
-        } 
 
         /**
          * <p>The request ID.</p>

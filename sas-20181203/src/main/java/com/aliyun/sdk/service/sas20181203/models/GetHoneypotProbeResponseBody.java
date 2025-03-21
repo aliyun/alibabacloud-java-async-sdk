@@ -52,10 +52,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetHoneypotProbeResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -247,15 +231,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeName; 
 
-            private Builder() {
-            } 
-
-            private Builder(ControlNode model) {
-                this.ecsInstanceId = model.ecsInstanceId;
-                this.nodeId = model.nodeId;
-                this.nodeName = model.nodeName;
-            } 
-
             /**
              * <p>The instance ID of the management node.</p>
              * 
@@ -375,17 +350,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private String probeId; 
             private java.util.List<String> serviceIpList; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(HoneyPotProbeScanPort model) {
-                this.id = model.id;
-                this.ports = model.ports;
-                this.probeId = model.probeId;
-                this.serviceIpList = model.serviceIpList;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The unique ID of the service that is monitored.</p>
@@ -593,22 +557,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer status; 
             private Integer targetPort; 
 
-            private Builder() {
-            } 
-
-            private Builder(BindPortList model) {
-                this.bindPort = model.bindPort;
-                this.endPort = model.endPort;
-                this.err = model.err;
-                this.fixed = model.fixed;
-                this.id = model.id;
-                this.msg = model.msg;
-                this.proto = model.proto;
-                this.startPort = model.startPort;
-                this.status = model.status;
-                this.targetPort = model.targetPort;
-            } 
-
             /**
              * <p>Indicates whether the port is bound.</p>
              * 
@@ -809,17 +757,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private String honeypotId; 
             private java.util.List<String> serviceIpList; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(HoneypotProbeBindList model) {
-                this.bindId = model.bindId;
-                this.bindPortList = model.bindPortList;
-                this.honeypotId = model.honeypotId;
-                this.serviceIpList = model.serviceIpList;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The unique ID of the honeypot that is bound to the probe.</p>
@@ -1152,33 +1089,6 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer status; 
             private String uuid; 
             private String vpcId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.arp = model.arp;
-                this.canListenIpList = model.canListenIpList;
-                this.cidrList = model.cidrList;
-                this.controlNode = model.controlNode;
-                this.cpuLoad = model.cpuLoad;
-                this.deployTime = model.deployTime;
-                this.displayName = model.displayName;
-                this.honeyPotProbeScanPort = model.honeyPotProbeScanPort;
-                this.honeypotProbeBindList = model.honeypotProbeBindList;
-                this.hostIp = model.hostIp;
-                this.listenIpList = model.listenIpList;
-                this.memoryLoad = model.memoryLoad;
-                this.osType = model.osType;
-                this.ping = model.ping;
-                this.probeId = model.probeId;
-                this.probeType = model.probeType;
-                this.probeVersion = model.probeVersion;
-                this.proxyIp = model.proxyIp;
-                this.status = model.status;
-                this.uuid = model.uuid;
-                this.vpcId = model.vpcId;
-            } 
 
             /**
              * <p>Indicates whether address resolution protocol (ARP) is enabled for the check type.</p>

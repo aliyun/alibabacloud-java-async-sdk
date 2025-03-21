@@ -36,10 +36,6 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetOssBucketScanStatisticResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -230,22 +218,6 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             private Long scanObject; 
             private Integer totalBucket; 
             private Long totalObject; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.expireTime = model.expireTime;
-                this.highRisk = model.highRisk;
-                this.lowRisk = model.lowRisk;
-                this.mediumRisk = model.mediumRisk;
-                this.noScanBucket = model.noScanBucket;
-                this.remainAuth = model.remainAuth;
-                this.riskBucket = model.riskBucket;
-                this.scanObject = model.scanObject;
-                this.totalBucket = model.totalBucket;
-                this.totalObject = model.totalObject;
-            } 
 
             /**
              * <p>The expiration time of the purchased quota.</p>

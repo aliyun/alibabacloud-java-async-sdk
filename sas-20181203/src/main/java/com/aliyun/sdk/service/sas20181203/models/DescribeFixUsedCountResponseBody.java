@@ -44,10 +44,6 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -81,16 +77,6 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         private Integer usedCount; 
         private Integer usedCountCn; 
         private Integer usedCountSg; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeFixUsedCountResponseBody model) {
-            this.requestId = model.requestId;
-            this.usedCount = model.usedCount;
-            this.usedCountCn = model.usedCountCn;
-            this.usedCountSg = model.usedCountSg;
-        } 
 
         /**
          * <p>The request ID.</p>

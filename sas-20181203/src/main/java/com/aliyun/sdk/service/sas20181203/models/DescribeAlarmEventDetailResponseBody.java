@@ -36,10 +36,6 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAlarmEventDetailResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the alert event.</p>
@@ -146,15 +134,6 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Value model) {
-                this.name = model.name;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The name of the field that displays the tracing information.</p>
@@ -243,14 +222,6 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private java.util.List<Value> value; 
-
-            private Builder() {
-            } 
-
-            private Builder(CauseDetails model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The key that is used to trace the alert event.</p>
@@ -621,39 +592,6 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private Long startTime; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.alarmEventAliasName = model.alarmEventAliasName;
-                this.alarmEventDesc = model.alarmEventDesc;
-                this.alarmUniqueInfo = model.alarmUniqueInfo;
-                this.appName = model.appName;
-                this.canBeDealOnLine = model.canBeDealOnLine;
-                this.canCancelFault = model.canCancelFault;
-                this.causeDetails = model.causeDetails;
-                this.containHwMode = model.containHwMode;
-                this.containerId = model.containerId;
-                this.containerImageId = model.containerImageId;
-                this.containerImageName = model.containerImageName;
-                this.dataSource = model.dataSource;
-                this.endTime = model.endTime;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.k8sClusterId = model.k8sClusterId;
-                this.k8sClusterName = model.k8sClusterName;
-                this.k8sNamespace = model.k8sNamespace;
-                this.k8sNodeId = model.k8sNodeId;
-                this.k8sNodeName = model.k8sNodeName;
-                this.k8sPodName = model.k8sPodName;
-                this.level = model.level;
-                this.solution = model.solution;
-                this.startTime = model.startTime;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The name of the alert event.</p>

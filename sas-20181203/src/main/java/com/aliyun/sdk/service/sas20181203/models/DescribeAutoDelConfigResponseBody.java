@@ -36,10 +36,6 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return days
      */
@@ -57,14 +53,6 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Integer days; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAutoDelConfigResponseBody model) {
-            this.days = model.days;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The number of days during which a detected vulnerability is retained before the vulnerability is automatically deleted.</p>

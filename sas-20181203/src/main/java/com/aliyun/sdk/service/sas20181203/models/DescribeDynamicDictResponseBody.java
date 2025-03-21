@@ -56,10 +56,6 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -117,19 +113,6 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         private String ossUrl; 
         private String requestId; 
         private Long uploadTime; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDynamicDictResponseBody model) {
-            this.count = model.count;
-            this.fileName = model.fileName;
-            this.fileSize = model.fileSize;
-            this.limit = model.limit;
-            this.ossUrl = model.ossUrl;
-            this.requestId = model.requestId;
-            this.uploadTime = model.uploadTime;
-        } 
 
         /**
          * <p>The number of weak password rules that are added.</p>

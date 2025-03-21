@@ -36,10 +36,6 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyImageFixCycleConfigResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates whether the configurations of the scheduled image fix are modified.</p>

@@ -41,7 +41,7 @@ public class UpdateTargetListByBatchRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,16 +171,6 @@ public class UpdateTargetListByBatchRequest extends Request {
             private String operation; 
             private String uuid; 
             private String vpcInstanceId; 
-
-            private Builder() {
-            } 
-
-            private Builder(OperationList model) {
-                this.groupId = model.groupId;
-                this.operation = model.operation;
-                this.uuid = model.uuid;
-                this.vpcInstanceId = model.vpcInstanceId;
-            } 
 
             /**
              * <p>The ID of the server group.</p>

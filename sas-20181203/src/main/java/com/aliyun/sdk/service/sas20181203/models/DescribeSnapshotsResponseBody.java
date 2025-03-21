@@ -40,10 +40,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSnapshotsResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.snapshots = model.snapshots;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -191,17 +178,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.nextToken = model.nextToken;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -572,36 +548,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
             private String uuid; 
             private String vaultId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Snapshots model) {
-                this.actualBytes = model.actualBytes;
-                this.actualItems = model.actualItems;
-                this.bytesDone = model.bytesDone;
-                this.bytesTotal = model.bytesTotal;
-                this.clientId = model.clientId;
-                this.clientVersion = model.clientVersion;
-                this.createdTime = model.createdTime;
-                this.errorFile = model.errorFile;
-                this.instanceId = model.instanceId;
-                this.itemsDone = model.itemsDone;
-                this.itemsTotal = model.itemsTotal;
-                this.jobId = model.jobId;
-                this.parentSnapshotHash = model.parentSnapshotHash;
-                this.path = model.path;
-                this.paths = model.paths;
-                this.planId = model.planId;
-                this.regionId = model.regionId;
-                this.retention = model.retention;
-                this.snapshotHash = model.snapshotHash;
-                this.snapshotId = model.snapshotId;
-                this.sourceType = model.sourceType;
-                this.status = model.status;
-                this.uuid = model.uuid;
-                this.vaultId = model.vaultId;
-            } 
 
             /**
              * <p>The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.</p>

@@ -36,10 +36,6 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkCountStatisticDTO
      */
@@ -57,14 +53,6 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private CheckCountStatisticDTO checkCountStatisticDTO; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCheckCountStatisticResponseBody model) {
-            this.checkCountStatisticDTO = model.checkCountStatisticDTO;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>List of risk item count statistics results.</p>
@@ -218,21 +206,6 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
             private String regionId; 
             private Integer riskCount; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckCountStatisticItems model) {
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.instanceSubType = model.instanceSubType;
-                this.instanceSubTypeName = model.instanceSubTypeName;
-                this.instanceType = model.instanceType;
-                this.instanceTypeName = model.instanceTypeName;
-                this.regionId = model.regionId;
-                this.riskCount = model.riskCount;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>Cloud product instance ID.</p>
@@ -451,14 +424,6 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CheckCountStatisticItems> checkCountStatisticItems; 
             private String statisticType; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckCountStatisticDTO model) {
-                this.checkCountStatisticItems = model.checkCountStatisticItems;
-                this.statisticType = model.statisticType;
-            } 
 
             /**
              * <p>Risk item count statistics results.</p>

@@ -56,10 +56,6 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListContainerDefenseRuleResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.list = model.list;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -327,20 +310,6 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer ruleSwitch; 
             private Integer ruleType; 
-
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.clusterCount = model.clusterCount;
-                this.clusterIdList = model.clusterIdList;
-                this.description = model.description;
-                this.ruleAction = model.ruleAction;
-                this.ruleId = model.ruleId;
-                this.ruleName = model.ruleName;
-                this.ruleSwitch = model.ruleSwitch;
-                this.ruleType = model.ruleType;
-            } 
 
             /**
              * <p>The total number of clusters.</p>
@@ -540,18 +509,6 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.lastRowKey = model.lastRowKey;
-                this.nextToken = model.nextToken;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

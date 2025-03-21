@@ -36,10 +36,6 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RuleTarget ruleTarget; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetInterceptionTargetDetailResponseBody model) {
-            this.requestId = model.requestId;
-            this.ruleTarget = model.ruleTarget;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -218,21 +206,6 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             private Long targetId; 
             private String targetName; 
             private String targetType; 
-
-            private Builder() {
-            } 
-
-            private Builder(RuleTarget model) {
-                this.appName = model.appName;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.imageList = model.imageList;
-                this.namespace = model.namespace;
-                this.tagList = model.tagList;
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-                this.targetType = model.targetType;
-            } 
 
             /**
              * <p>The name of the application to which the network object belongs.</p>

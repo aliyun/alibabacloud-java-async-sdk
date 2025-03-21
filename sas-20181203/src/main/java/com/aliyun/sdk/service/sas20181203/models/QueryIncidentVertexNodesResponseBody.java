@@ -40,10 +40,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private VertexNodes vertexNodes; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryIncidentVertexNodesResponseBody model) {
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.vertexNodes = model.vertexNodes;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -342,29 +329,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String typeName; 
             private String updateTime; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(EdgeList model) {
-                this.aliuid = model.aliuid;
-                this.endId = model.endId;
-                this.endType = model.endType;
-                this.name = model.name;
-                this.origin = model.origin;
-                this.properties = model.properties;
-                this.property = model.property;
-                this.ruleId = model.ruleId;
-                this.showType = model.showType;
-                this.startId = model.startId;
-                this.startType = model.startType;
-                this.time = model.time;
-                this.timestamp = model.timestamp;
-                this.type = model.type;
-                this.typeName = model.typeName;
-                this.updateTime = model.updateTime;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the edge belongs.</p>
@@ -747,25 +711,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private Integer syncId; 
             private Integer traceSuccessFlag; 
 
-            private Builder() {
-            } 
-
-            private Builder(EntityTypeList model) {
-                this.currentVersionId = model.currentVersionId;
-                this.displayColor = model.displayColor;
-                this.displayIcon = model.displayIcon;
-                this.displayOrder = model.displayOrder;
-                this.displayTemplate = model.displayTemplate;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.isVirtualNode = model.isVirtualNode;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.syncId = model.syncId;
-                this.traceSuccessFlag = model.traceSuccessFlag;
-            } 
-
             /**
              * <p>The version of the entity.</p>
              * 
@@ -1084,24 +1029,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String showType; 
             private Integer syncId; 
 
-            private Builder() {
-            } 
-
-            private Builder(RelationTypeList model) {
-                this.currentVersionId = model.currentVersionId;
-                this.dIsplayIcon = model.dIsplayIcon;
-                this.directed = model.directed;
-                this.displayColor = model.displayColor;
-                this.displayTemplate = model.displayTemplate;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.showType = model.showType;
-                this.syncId = model.syncId;
-            } 
-
             /**
              * <p>The version of the relationship.</p>
              * 
@@ -1289,14 +1216,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(DisplayInfo model) {
-                this.name = model.name;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The display name of the property.</p>
              * 
@@ -1381,15 +1300,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private Integer count; 
             private Boolean hasMore; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(NeighborList model) {
-                this.count = model.count;
-                this.hasMore = model.hasMore;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The number of neighboring nodes.</p>
@@ -1629,26 +1539,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String type; 
             private String updateTime; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(VertexList model) {
-                this.aliuid = model.aliuid;
-                this.displayInfo = model.displayInfo;
-                this.id = model.id;
-                this.lang = model.lang;
-                this.name = model.name;
-                this.neighborList = model.neighborList;
-                this.properties = model.properties;
-                this.property = model.property;
-                this.ruleId = model.ruleId;
-                this.time = model.time;
-                this.timestamp = model.timestamp;
-                this.type = model.type;
-                this.updateTime = model.updateTime;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the node belongs.</p>
@@ -1892,17 +1782,6 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String lang; 
             private java.util.List<RelationTypeList> relationTypeList; 
             private java.util.List<VertexList> vertexList; 
-
-            private Builder() {
-            } 
-
-            private Builder(VertexNodes model) {
-                this.edgeList = model.edgeList;
-                this.entityTypeList = model.entityTypeList;
-                this.lang = model.lang;
-                this.relationTypeList = model.relationTypeList;
-                this.vertexList = model.vertexList;
-            } 
 
             /**
              * <p>The edges that are returned.</p>

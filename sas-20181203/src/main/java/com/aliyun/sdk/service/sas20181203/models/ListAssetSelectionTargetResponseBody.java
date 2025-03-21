@@ -40,10 +40,6 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -69,15 +65,6 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAssetSelectionTargetResponseBody model) {
-            this.data = model.data;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -155,14 +142,6 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         public static final class Builder {
             private String targetId; 
             private String targetName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-            } 
 
             /**
              * <p>The ID of the asset.</p>
@@ -248,15 +227,6 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number of the returned page.</p>

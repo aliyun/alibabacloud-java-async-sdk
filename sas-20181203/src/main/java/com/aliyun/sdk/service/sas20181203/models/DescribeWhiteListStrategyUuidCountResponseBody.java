@@ -36,10 +36,6 @@ public class DescribeWhiteListStrategyUuidCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeWhiteListStrategyUuidCountResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer uuidCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWhiteListStrategyUuidCountResponseBody model) {
-            this.requestId = model.requestId;
-            this.uuidCount = model.uuidCount;
-        } 
 
         /**
          * <p>The request ID.</p>

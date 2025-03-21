@@ -36,10 +36,6 @@ public class SaveWhiteListStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class SaveWhiteListStrategyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long strategyId; 
-
-        private Builder() {
-        } 
-
-        private Builder(SaveWhiteListStrategyResponseBody model) {
-            this.requestId = model.requestId;
-            this.strategyId = model.strategyId;
-        } 
 
         /**
          * <p>The request ID.</p>

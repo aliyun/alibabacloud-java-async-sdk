@@ -36,10 +36,6 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assetRefreshConfig
      */
@@ -57,14 +53,6 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AssetRefreshConfig> assetRefreshConfig; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAssetRefreshTaskConfigResponseBody model) {
-            this.assetRefreshConfig = model.assetRefreshConfig;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The asset synchronization configuration.</p>
@@ -158,16 +146,6 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
             private Integer schedulePeriod; 
             private Integer status; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(AssetRefreshConfig model) {
-                this.refreshConfigType = model.refreshConfigType;
-                this.schedulePeriod = model.schedulePeriod;
-                this.status = model.status;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The type of the configuration. Valid values:</p>

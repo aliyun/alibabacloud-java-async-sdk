@@ -36,10 +36,6 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return modifyResult
      */
@@ -57,14 +53,6 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean modifyResult; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyPropertyScheduleConfigResponseBody model) {
-            this.modifyResult = model.modifyResult;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates whether the collection frequency of asset fingerprints is modified. Valid values:</p>

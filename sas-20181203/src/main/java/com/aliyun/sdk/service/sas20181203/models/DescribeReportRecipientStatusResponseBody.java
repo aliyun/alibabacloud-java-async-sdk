@@ -36,10 +36,6 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return reportRecipientList
      */
@@ -57,14 +53,6 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ReportRecipientList> reportRecipientList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeReportRecipientStatusResponseBody model) {
-            this.reportRecipientList = model.reportRecipientList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The report recipients.</p>
@@ -134,14 +122,6 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer isVerify; 
             private String recipient; 
-
-            private Builder() {
-            } 
-
-            private Builder(ReportRecipientList model) {
-                this.isVerify = model.isVerify;
-                this.recipient = model.recipient;
-            } 
 
             /**
              * <p>Indicates whether the email address is verified. Valid values:</p>

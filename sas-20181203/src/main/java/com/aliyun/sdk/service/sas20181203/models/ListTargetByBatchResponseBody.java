@@ -40,10 +40,6 @@ public class ListTargetByBatchResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class ListTargetByBatchResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<String> targetList; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListTargetByBatchResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.targetList = model.targetList;
-        } 
 
         /**
          * <p>Pagination information.</p>
@@ -167,15 +154,6 @@ public class ListTargetByBatchResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number of the current page in a paginated query.</p>

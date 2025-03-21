@@ -50,7 +50,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,14 +204,6 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         public static final class Builder {
             private String operation; 
             private String target; 
-
-            private Builder() {
-            } 
-
-            private Builder(TargetOperationList model) {
-                this.operation = model.operation;
-                this.target = model.target;
-            } 
 
             /**
              * <p>The type of the operation. Valid values:</p>

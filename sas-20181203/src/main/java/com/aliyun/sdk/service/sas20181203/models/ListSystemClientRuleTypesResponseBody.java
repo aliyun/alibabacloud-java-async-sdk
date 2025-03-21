@@ -36,10 +36,6 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> ruleTypes; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListSystemClientRuleTypesResponseBody model) {
-            this.requestId = model.requestId;
-            this.ruleTypes = model.ruleTypes;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

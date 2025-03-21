@@ -40,10 +40,6 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return list
      */
@@ -69,15 +65,6 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListVirusScanTaskResponseBody model) {
-            this.list = model.list;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned virus scan tasks.</p>
@@ -275,24 +262,6 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.endTime = model.endTime;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.progress = model.progress;
-                this.scanPath = model.scanPath;
-                this.scanType = model.scanType;
-                this.startTime = model.startTime;
-                this.status = model.status;
-                this.taskId = model.taskId;
-                this.taskName = model.taskName;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The timestamp when the virus scan task ended. Unit: milliseconds.</p>
@@ -498,15 +467,6 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number.</p>

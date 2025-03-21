@@ -56,10 +56,6 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCloudVendorRegionsResponseBody model) {
-            this.code = model.code;
-            this.count = model.count;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The return code.</p>
@@ -282,16 +265,6 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
             private Integer disable; 
             private String regionId; 
             private Integer selected; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.area = model.area;
-                this.disable = model.disable;
-                this.regionId = model.regionId;
-                this.selected = model.selected;
-            } 
 
             /**
              * <p>The area to which the region belongs. The valid values vary based on the value of the Vendor parameter.</p>

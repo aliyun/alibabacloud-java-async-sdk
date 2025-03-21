@@ -52,10 +52,6 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkWarnings
      */
@@ -105,18 +101,6 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCheckWarningsResponseBody model) {
-            this.checkWarnings = model.checkWarnings;
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The information about the check item.</p>
@@ -362,25 +346,6 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             private Integer status; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckWarnings model) {
-                this.checkId = model.checkId;
-                this.checkWarningId = model.checkWarningId;
-                this.containerId = model.containerId;
-                this.containerName = model.containerName;
-                this.execErrorMessage = model.execErrorMessage;
-                this.fixStatus = model.fixStatus;
-                this.item = model.item;
-                this.lastHandleTime = model.lastHandleTime;
-                this.level = model.level;
-                this.reason = model.reason;
-                this.status = model.status;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the check item.</p>

@@ -36,10 +36,6 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddSasModuleTrialResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -183,18 +171,6 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             private String moduleCode; 
             private Integer status; 
 
-            private Builder() {
-            } 
-
-            private Builder(TrialRecordList model) {
-                this.authLimit = model.authLimit;
-                this.authLimitList = model.authLimitList;
-                this.gmtEnd = model.gmtEnd;
-                this.gmtStart = model.gmtStart;
-                this.moduleCode = model.moduleCode;
-                this.status = model.status;
-            } 
-
             /**
              * <p>The quota.</p>
              * 
@@ -307,13 +283,6 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TrialRecordList> trialRecordList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.trialRecordList = model.trialRecordList;
-            } 
 
             /**
              * <p>The information about the trial use.</p>

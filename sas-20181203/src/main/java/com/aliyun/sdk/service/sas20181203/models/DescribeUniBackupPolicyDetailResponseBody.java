@@ -36,10 +36,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UniBackupPolicyDTO uniBackupPolicyDTO; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUniBackupPolicyDetailResponseBody model) {
-            this.requestId = model.requestId;
-            this.uniBackupPolicyDTO = model.uniBackupPolicyDTO;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -158,16 +146,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             private Integer interval; 
             private String planType; 
             private String startTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(FullPlan model) {
-                this.days = model.days;
-                this.interval = model.interval;
-                this.planType = model.planType;
-                this.startTime = model.startTime;
-            } 
 
             /**
              * <p>An array that consists of the days of a week on which the backup is performed.</p>
@@ -289,16 +267,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             private Integer interval; 
             private String planType; 
             private String startTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(IncPlan model) {
-                this.days = model.days;
-                this.interval = model.interval;
-                this.planType = model.planType;
-                this.startTime = model.startTime;
-            } 
 
             /**
              * <p>An array that consists of the days of a week on which the backup is performed.</p>
@@ -516,24 +484,6 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             private String policyStatus; 
             private Integer retention; 
             private Long speedLimiter; 
-
-            private Builder() {
-            } 
-
-            private Builder(UniBackupPolicyDTO model) {
-                this.accountName = model.accountName;
-                this.agentStatus = model.agentStatus;
-                this.databaseType = model.databaseType;
-                this.fullPlan = model.fullPlan;
-                this.incPlan = model.incPlan;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.policyId = model.policyId;
-                this.policyName = model.policyName;
-                this.policyStatus = model.policyStatus;
-                this.retention = model.retention;
-                this.speedLimiter = model.speedLimiter;
-            } 
 
             /**
              * <p>The name of the database account.</p>

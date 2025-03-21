@@ -36,10 +36,6 @@ public class GetCheckStructureResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return checkStructureResponse
      */
@@ -57,14 +53,6 @@ public class GetCheckStructureResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CheckStructureResponse> checkStructureResponse; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCheckStructureResponseBody model) {
-            this.checkStructureResponse = model.checkStructureResponse;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The structure information about check items provided by the configuration assessment feature.</p>
@@ -134,14 +122,6 @@ public class GetCheckStructureResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String showName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Sections model) {
-                this.id = model.id;
-                this.showName = model.showName;
-            } 
 
             /**
              * <p>The ID of the section for the check item.</p>
@@ -239,16 +219,6 @@ public class GetCheckStructureResponseBody extends TeaModel {
             private java.util.List<Sections> sections; 
             private String showName; 
             private Integer totalCheckCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Requirements model) {
-                this.id = model.id;
-                this.sections = model.sections;
-                this.showName = model.showName;
-                this.totalCheckCount = model.totalCheckCount;
-            } 
 
             /**
              * <p>The ID of the requirement item for the check item.</p>
@@ -366,16 +336,6 @@ public class GetCheckStructureResponseBody extends TeaModel {
             private String showName; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(Standards model) {
-                this.id = model.id;
-                this.requirements = model.requirements;
-                this.showName = model.showName;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The standard ID of the check item.</p>
              * 
@@ -472,14 +432,6 @@ public class GetCheckStructureResponseBody extends TeaModel {
         public static final class Builder {
             private String standardType; 
             private java.util.List<Standards> standards; 
-
-            private Builder() {
-            } 
-
-            private Builder(CheckStructureResponse model) {
-                this.standardType = model.standardType;
-                this.standards = model.standards;
-            } 
 
             /**
              * <p>The type of the check item.</p>

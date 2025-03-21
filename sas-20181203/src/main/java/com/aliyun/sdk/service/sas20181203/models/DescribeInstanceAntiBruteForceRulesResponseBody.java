@@ -40,10 +40,6 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<Rules> rules; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeInstanceAntiBruteForceRulesResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.rules = model.rules;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of servers returned on the current page.</p>
@@ -296,15 +273,6 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Rules model) {
-                this.id = model.id;
-                this.name = model.name;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the defense rule.</p>

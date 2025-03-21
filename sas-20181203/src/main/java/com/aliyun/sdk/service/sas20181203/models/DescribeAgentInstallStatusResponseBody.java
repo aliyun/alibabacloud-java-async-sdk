@@ -36,10 +36,6 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return aegisClientInvokeStatusResponseList
      */
@@ -57,14 +53,6 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAgentInstallStatusResponseBody model) {
-            this.aegisClientInvokeStatusResponseList = model.aegisClientInvokeStatusResponseList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The status of servers.</p>
@@ -158,16 +146,6 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
             private String resuleCode; 
             private Integer result; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(AegisClientInvokeStatusResponseList model) {
-                this.message = model.message;
-                this.resuleCode = model.resuleCode;
-                this.result = model.result;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The returned message.</p>

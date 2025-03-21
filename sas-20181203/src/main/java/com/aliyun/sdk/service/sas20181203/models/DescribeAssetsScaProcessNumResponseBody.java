@@ -36,10 +36,6 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAssetsScaProcessNumResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The statistical results.</p>
@@ -134,14 +122,6 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.count = model.count;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The number of Java processes.</p>

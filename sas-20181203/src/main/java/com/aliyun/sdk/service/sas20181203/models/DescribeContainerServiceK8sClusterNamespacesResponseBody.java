@@ -36,10 +36,6 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return k8sClusterNamespaces
      */
@@ -57,14 +53,6 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
     public static final class Builder {
         private java.util.List<K8sClusterNamespaces> k8sClusterNamespaces; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeContainerServiceK8sClusterNamespacesResponseBody model) {
-            this.k8sClusterNamespaces = model.k8sClusterNamespaces;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The namespaces.</p>
@@ -122,13 +110,6 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
 
         public static final class Builder {
             private String namespace; 
-
-            private Builder() {
-            } 
-
-            private Builder(K8sClusterNamespaces model) {
-                this.namespace = model.namespace;
-            } 
 
             /**
              * <p>The namespace.</p>

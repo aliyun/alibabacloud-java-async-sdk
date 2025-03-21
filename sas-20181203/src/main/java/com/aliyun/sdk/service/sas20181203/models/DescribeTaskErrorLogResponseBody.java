@@ -36,10 +36,6 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return logs
      */
@@ -57,14 +53,6 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Logs> logs; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeTaskErrorLogResponseBody model) {
-            this.logs = model.logs;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the error logs.</p>
@@ -122,13 +110,6 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private String text; 
-
-            private Builder() {
-            } 
-
-            private Builder(Logs model) {
-                this.text = model.text;
-            } 
 
             /**
              * <p>The text content of the log.</p>

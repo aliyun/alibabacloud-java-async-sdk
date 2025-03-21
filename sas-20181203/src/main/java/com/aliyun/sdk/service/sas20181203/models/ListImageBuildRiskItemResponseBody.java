@@ -36,10 +36,6 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListImageBuildRiskItemResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -134,14 +122,6 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
         public static final class Builder {
             private String itemKey; 
             private String itemName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.itemKey = model.itemKey;
-                this.itemName = model.itemName;
-            } 
 
             /**
              * <p>The type key of the risky build command.</p>

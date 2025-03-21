@@ -48,10 +48,6 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return currentPage
      */
@@ -93,17 +89,6 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageGroupedVulListResponseBody model) {
-            this.currentPage = model.currentPage;
-            this.groupedVulItems = model.groupedVulItems;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -314,23 +299,6 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             private Integer status; 
             private String tags; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedVulItems model) {
-                this.aliasName = model.aliasName;
-                this.asapCount = model.asapCount;
-                this.canFix = model.canFix;
-                this.gmtLast = model.gmtLast;
-                this.lastScanTime = model.lastScanTime;
-                this.laterCount = model.laterCount;
-                this.name = model.name;
-                this.nntfCount = model.nntfCount;
-                this.status = model.status;
-                this.tags = model.tags;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

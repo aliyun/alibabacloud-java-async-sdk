@@ -36,10 +36,6 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assets
      */
@@ -57,14 +53,6 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Assets> assets; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWhiteListAssetResponseBody model) {
-            this.assets = model.assets;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the servers.</p>
@@ -194,19 +182,6 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             private String machineName; 
             private Integer selected; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Assets model) {
-                this.allowSelected = model.allowSelected;
-                this.groupId = model.groupId;
-                this.id = model.id;
-                this.machineIp = model.machineIp;
-                this.machineName = model.machineName;
-                this.selected = model.selected;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>Indicates whether the server can be selected. Valid values:</p>

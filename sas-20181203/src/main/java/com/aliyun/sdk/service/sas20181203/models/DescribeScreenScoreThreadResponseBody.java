@@ -36,10 +36,6 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeScreenScoreThreadResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned data.</p>
@@ -134,14 +122,6 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> socreThread; 
             private java.util.List<String> socreThreadDate; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.socreThread = model.socreThread;
-                this.socreThreadDate = model.socreThreadDate;
-            } 
 
             /**
              * <p>The trends of the scores on the security dashboard.</p>

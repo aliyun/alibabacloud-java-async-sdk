@@ -48,10 +48,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetStrategyTemplateDetailResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -211,14 +196,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(Item model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
-
             /**
              * <p>The unique identifier of the baseline check item.</p>
              * 
@@ -292,14 +269,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List<Item> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(Baseline model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The baseline items.</p>
              */
@@ -371,14 +340,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(MaliciousFileItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The unique identifier of the malicious sample.</p>
@@ -453,14 +414,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List<MaliciousFileItem> item; 
             private java.util.List<String> riskLevel; 
 
-            private Builder() {
-            } 
-
-            private Builder(MaliciousFile model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
-
             /**
              * <p>The items on which malicious samples are detected.</p>
              */
@@ -527,14 +480,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulItem model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the vulnerability.</p>
@@ -608,14 +553,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<VulItem> item; 
             private java.util.List<String> riskLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Vul model) {
-                this.item = model.item;
-                this.riskLevel = model.riskLevel;
-            } 
 
             /**
              * <p>The items on which vulnerabilities are detected.</p>
@@ -695,15 +632,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private Baseline baseline; 
             private MaliciousFile maliciousFile; 
             private Vul vul; 
-
-            private Builder() {
-            } 
-
-            private Builder(AlarmDetail model) {
-                this.baseline = model.baseline;
-                this.maliciousFile = model.maliciousFile;
-                this.vul = model.vul;
-            } 
 
             /**
              * <p>The configuration of the baseline.</p>
@@ -923,26 +851,6 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private Long strategyTemplateId; 
             private Boolean unScanedImage; 
             private java.util.List<String> whiteList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.alarmDetail = model.alarmDetail;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.description = model.description;
-                this.imageName = model.imageName;
-                this.label = model.label;
-                this.maliciousImage = model.maliciousImage;
-                this.namespace = model.namespace;
-                this.ruleAction = model.ruleAction;
-                this.strategyId = model.strategyId;
-                this.strategyName = model.strategyName;
-                this.strategyTemplateId = model.strategyTemplateId;
-                this.unScanedImage = model.unScanedImage;
-                this.whiteList = model.whiteList;
-            } 
 
             /**
              * <p>The configuration of the rule.</p>

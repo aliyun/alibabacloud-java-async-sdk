@@ -36,10 +36,6 @@ public class CreateBatchUploadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class CreateBatchUploadUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UploadUrlList> uploadUrlList; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateBatchUploadUrlResponseBody model) {
-            this.requestId = model.requestId;
-            this.uploadUrlList = model.uploadUrlList;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -158,16 +146,6 @@ public class CreateBatchUploadUrlResponseBody extends TeaModel {
             private String ossKey; 
             private String policy; 
             private String signature; 
-
-            private Builder() {
-            } 
-
-            private Builder(Context model) {
-                this.accessId = model.accessId;
-                this.ossKey = model.ossKey;
-                this.policy = model.policy;
-                this.signature = model.signature;
-            } 
 
             /**
              * <p>The AccessKey ID that is used to access the OSS bucket.</p>
@@ -311,18 +289,6 @@ public class CreateBatchUploadUrlResponseBody extends TeaModel {
             private String internalUrl; 
             private String md5; 
             private String publicUrl; 
-
-            private Builder() {
-            } 
-
-            private Builder(UploadUrlList model) {
-                this.context = model.context;
-                this.expire = model.expire;
-                this.fileExist = model.fileExist;
-                this.internalUrl = model.internalUrl;
-                this.md5 = model.md5;
-                this.publicUrl = model.publicUrl;
-            } 
 
             /**
              * <p>The signature information.</p>

@@ -52,10 +52,6 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assets
      */
@@ -105,18 +101,6 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWhiteListEffectiveAssetsResponseBody model) {
-            this.assets = model.assets;
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The servers on which the policy takes effect.</p>
@@ -302,20 +286,6 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             private String strategyName; 
             private Integer suspiciousEventCount; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Assets model) {
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.machineName = model.machineName;
-                this.processMethod = model.processMethod;
-                this.strategyId = model.strategyId;
-                this.strategyName = model.strategyName;
-                this.suspiciousEventCount = model.suspiciousEventCount;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The public IP address of the server.</p>

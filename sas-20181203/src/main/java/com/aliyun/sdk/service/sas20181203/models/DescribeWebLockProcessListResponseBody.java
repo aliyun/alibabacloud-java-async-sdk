@@ -48,10 +48,6 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return currentPage
      */
@@ -93,17 +89,6 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWebLockProcessListResponseBody model) {
-            this.currentPage = model.currentPage;
-            this.list = model.list;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -278,20 +263,6 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             private String processPath; 
             private Integer status; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.count = model.count;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.processName = model.processName;
-                this.processPath = model.processPath;
-                this.status = model.status;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

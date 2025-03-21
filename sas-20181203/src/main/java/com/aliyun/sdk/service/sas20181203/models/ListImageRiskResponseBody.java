@@ -40,10 +40,6 @@ public class ListImageRiskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return imageRiskList
      */
@@ -69,15 +65,6 @@ public class ListImageRiskResponseBody extends TeaModel {
         private java.util.List<ImageRiskList> imageRiskList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListImageRiskResponseBody model) {
-            this.imageRiskList = model.imageRiskList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of security information about the image.</p>
@@ -155,14 +142,6 @@ public class ListImageRiskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> domains; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(EndPointList model) {
-                this.domains = model.domains;
-                this.type = model.type;
-            } 
 
             /**
              * <p>An array that consists the details of the domain name in the endpoint.</p>
@@ -429,30 +408,6 @@ public class ListImageRiskResponseBody extends TeaModel {
             private Integer tagImmutable; 
             private String uuid; 
             private String vpcURLs; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageRiskList model) {
-                this.digest = model.digest;
-                this.endPointList = model.endPointList;
-                this.endpoints = model.endpoints;
-                this.image = model.image;
-                this.imageAccessType = model.imageAccessType;
-                this.imageId = model.imageId;
-                this.internetURLs = model.internetURLs;
-                this.regionId = model.regionId;
-                this.registryType = model.registryType;
-                this.repoId = model.repoId;
-                this.repoName = model.repoName;
-                this.repoNamespace = model.repoNamespace;
-                this.repoType = model.repoType;
-                this.statistics = model.statistics;
-                this.tag = model.tag;
-                this.tagImmutable = model.tagImmutable;
-                this.uuid = model.uuid;
-                this.vpcURLs = model.vpcURLs;
-            } 
 
             /**
              * <p>The digest value of the image.</p>
@@ -745,16 +700,6 @@ public class ListImageRiskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

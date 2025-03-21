@@ -52,10 +52,6 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timeCost; 
-
-        private Builder() {
-        } 
-
-        private Builder(OperationCancelIgnoreSuspEventResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.timeCost = model.timeCost;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>

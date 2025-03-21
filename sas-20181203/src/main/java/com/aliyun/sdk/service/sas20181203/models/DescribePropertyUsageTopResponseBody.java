@@ -44,10 +44,6 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return itemCount
      */
@@ -81,16 +77,6 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TopStatisticItems> topStatisticItems; 
         private String type; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePropertyUsageTopResponseBody model) {
-            this.itemCount = model.itemCount;
-            this.requestId = model.requestId;
-            this.topStatisticItems = model.topStatisticItems;
-            this.type = model.type;
-        } 
 
         /**
          * <p>The number of fingerprints.</p>
@@ -189,14 +175,6 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(TopStatisticItems model) {
-                this.count = model.count;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The quantity.</p>

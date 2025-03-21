@@ -40,10 +40,6 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return fixStat
      */
@@ -69,15 +65,6 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
         private java.util.List<FixStat> fixStat; 
         private FixTotal fixTotal; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeVulFixStatisticsResponseBody model) {
-            this.fixStat = model.fixStat;
-            this.fixTotal = model.fixTotal;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the statistics of vulnerability fixes by vulnerability type.</p>
@@ -191,17 +178,6 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             private Integer fixingNum; 
             private Integer needFixNum; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(FixStat model) {
-                this.fixedTodayNum = model.fixedTodayNum;
-                this.fixedTotalNum = model.fixedTotalNum;
-                this.fixingNum = model.fixingNum;
-                this.needFixNum = model.needFixNum;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The number of vulnerabilities that are fixed on the current day.</p>
@@ -339,16 +315,6 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
             private Integer fixedTotalNum; 
             private Integer fixingNum; 
             private Integer needFixNum; 
-
-            private Builder() {
-            } 
-
-            private Builder(FixTotal model) {
-                this.fixedTodayNum = model.fixedTodayNum;
-                this.fixedTotalNum = model.fixedTotalNum;
-                this.fixingNum = model.fixingNum;
-                this.needFixNum = model.needFixNum;
-            } 
 
             /**
              * <p>The number of vulnerabilities that are fixed on the current day.</p>

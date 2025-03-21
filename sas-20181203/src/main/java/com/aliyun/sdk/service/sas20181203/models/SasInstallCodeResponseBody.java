@@ -36,10 +36,6 @@ public class SasInstallCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class SasInstallCodeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String data; 
-
-        private Builder() {
-        } 
-
-        private Builder(SasInstallCodeResponseBody model) {
-            this.requestId = model.requestId;
-            this.data = model.data;
-        } 
 
         /**
          * <p>The ID of the request.</p>

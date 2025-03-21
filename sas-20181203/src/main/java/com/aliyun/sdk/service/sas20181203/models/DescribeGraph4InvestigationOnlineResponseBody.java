@@ -48,10 +48,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeGraph4InvestigationOnlineResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>Result code, where <strong>200</strong> indicates success. Any other value indicates failure, and the caller can use this field to determine the reason for the failure.</p>
@@ -270,19 +255,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
             private String startType; 
             private String time; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(EdgeList model) {
-                this.endId = model.endId;
-                this.endType = model.endType;
-                this.name = model.name;
-                this.startId = model.startId;
-                this.startType = model.startType;
-                this.time = model.time;
-                this.type = model.type;
-            } 
 
             /**
              * <p>ID of the end point of the edge.</p>
@@ -462,17 +434,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(EntityTypeList model) {
-                this.displayColor = model.displayColor;
-                this.displayIcon = model.displayIcon;
-                this.displayOrder = model.displayOrder;
-                this.id = model.id;
-                this.name = model.name;
-            } 
-
             /**
              * <p>Vertex rendering color.</p>
              * 
@@ -603,16 +564,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
             private String displayIcon; 
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(RelationTypeList model) {
-                this.directed = model.directed;
-                this.displayColor = model.displayColor;
-                this.displayIcon = model.displayIcon;
-                this.name = model.name;
-            } 
-
             /**
              * <p>Direction of the edge. Possible values:</p>
              * <ul>
@@ -723,15 +674,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
             private Integer count; 
             private Boolean hasMore; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(NeighborList model) {
-                this.count = model.count;
-                this.hasMore = model.hasMore;
-                this.type = model.type;
-            } 
 
             /**
              * <p>Number of neighboring nodes.</p>
@@ -864,18 +806,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
             private String time; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(VertexList model) {
-                this.name = model.name;
-                this.neighborList = model.neighborList;
-                this.properties = model.properties;
-                this.time = model.time;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>Vertex name.</p>
@@ -1014,16 +944,6 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
             private java.util.List<EntityTypeList> entityTypeList; 
             private java.util.List<RelationTypeList> relationTypeList; 
             private java.util.List<VertexList> vertexList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.edgeList = model.edgeList;
-                this.entityTypeList = model.entityTypeList;
-                this.relationTypeList = model.relationTypeList;
-                this.vertexList = model.vertexList;
-            } 
 
             /**
              * <p>List of edges.</p>

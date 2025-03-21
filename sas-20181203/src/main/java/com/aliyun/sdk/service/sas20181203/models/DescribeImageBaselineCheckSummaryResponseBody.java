@@ -40,10 +40,6 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return baselineResultSummary
      */
@@ -69,15 +65,6 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         private java.util.List<BaselineResultSummary> baselineResultSummary; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageBaselineCheckSummaryResponseBody model) {
-            this.baselineResultSummary = model.baselineResultSummary;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the check results of image baselines.</p>
@@ -263,23 +250,6 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             private Integer lowRiskImage; 
             private Integer middleRiskImage; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(BaselineResultSummary model) {
-                this.baselineClassAlias = model.baselineClassAlias;
-                this.baselineClassKey = model.baselineClassKey;
-                this.baselineNameAlias = model.baselineNameAlias;
-                this.baselineNameKey = model.baselineNameKey;
-                this.baselineNameLevel = model.baselineNameLevel;
-                this.firstScanTime = model.firstScanTime;
-                this.highRiskImage = model.highRiskImage;
-                this.lastScanTime = model.lastScanTime;
-                this.lowRiskImage = model.lowRiskImage;
-                this.middleRiskImage = model.middleRiskImage;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The category of the baseline.</p>
@@ -487,16 +457,6 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

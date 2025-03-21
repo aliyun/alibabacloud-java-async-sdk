@@ -36,10 +36,6 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return imageScanData
      */
@@ -57,14 +53,6 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
     public static final class Builder {
         private ImageScanData imageScanData; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetImageScanNumInPeriodResponseBody model) {
-            this.imageScanData = model.imageScanData;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -122,13 +110,6 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer imageScanCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageScanData model) {
-                this.imageScanCount = model.imageScanCount;
-            } 
 
             /**
              * <p>The number of image scans.</p>

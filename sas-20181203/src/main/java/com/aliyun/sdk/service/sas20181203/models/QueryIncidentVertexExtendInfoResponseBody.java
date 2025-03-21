@@ -44,10 +44,6 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -81,16 +77,6 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<VertexExtendInfo> vertexExtendInfo; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryIncidentVertexExtendInfoResponseBody model) {
-            this.count = model.count;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.vertexExtendInfo = model.vertexExtendInfo;
-        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -187,14 +173,6 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(DisplayInfo model) {
-                this.name = model.name;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The display name of the property.</p>
              * 
@@ -279,15 +257,6 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
             private Integer count; 
             private Boolean hasMore; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(NeighborList model) {
-                this.count = model.count;
-                this.hasMore = model.hasMore;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The number of nodes.</p>
@@ -647,36 +616,6 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
             private String mainUserId; 
             private String occurTime; 
             private String subUserId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Property model) {
-                this.alertDesc = model.alertDesc;
-                this.alertDetail = model.alertDetail;
-                this.alertLevel = model.alertLevel;
-                this.alertName = model.alertName;
-                this.alertNameCode = model.alertNameCode;
-                this.alertNameEn = model.alertNameEn;
-                this.alertSrcProd = model.alertSrcProd;
-                this.alertSrcProdModule = model.alertSrcProdModule;
-                this.alertTitle = model.alertTitle;
-                this.alertType = model.alertType;
-                this.alertTypeCode = model.alertTypeCode;
-                this.alertTypeEn = model.alertTypeEn;
-                this.alertUuid = model.alertUuid;
-                this.assetList = model.assetList;
-                this.attCk = model.attCk;
-                this.cloudCode = model.cloudCode;
-                this.entityList = model.entityList;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.logTime = model.logTime;
-                this.logUuid = model.logUuid;
-                this.mainUserId = model.mainUserId;
-                this.occurTime = model.occurTime;
-                this.subUserId = model.subUserId;
-            } 
 
             /**
              * <p>The alert description.</p>
@@ -1131,25 +1070,6 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
             private Long timestamp; 
             private String type; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(VertexExtendInfo model) {
-                this.aliuid = model.aliuid;
-                this.displayInfo = model.displayInfo;
-                this.id = model.id;
-                this.lang = model.lang;
-                this.name = model.name;
-                this.neighborList = model.neighborList;
-                this.properties = model.properties;
-                this.property = model.property;
-                this.ruleId = model.ruleId;
-                this.time = model.time;
-                this.timestamp = model.timestamp;
-                this.type = model.type;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

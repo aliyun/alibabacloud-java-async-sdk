@@ -60,10 +60,6 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -129,20 +125,6 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timeCost; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageVulWhiteListResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.imageVulWhitelist = model.imageVulWhitelist;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.timeCost = model.timeCost;
-        } 
 
         /**
          * <p>The status code returned. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.</p>
@@ -328,18 +310,6 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             private String target; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(ImageVulWhitelist model) {
-                this.aliasName = model.aliasName;
-                this.id = model.id;
-                this.name = model.name;
-                this.reason = model.reason;
-                this.target = model.target;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
              * 
@@ -488,16 +458,6 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

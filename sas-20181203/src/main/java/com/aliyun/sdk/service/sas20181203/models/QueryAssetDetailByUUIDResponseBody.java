@@ -60,10 +60,6 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -129,20 +125,6 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timeCost; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryAssetDetailByUUIDResponseBody model) {
-            this.code = model.code;
-            this.count = model.count;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.timeCost = model.timeCost;
-        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -574,38 +556,6 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.aliUid = model.aliUid;
-                this.authVersion = model.authVersion;
-                this.bid = model.bid;
-                this.bind = model.bind;
-                this.clientStatus = model.clientStatus;
-                this.clusterId = model.clusterId;
-                this.eip = model.eip;
-                this.flag = model.flag;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.groupId = model.groupId;
-                this.id = model.id;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.machineInstanceId = model.machineInstanceId;
-                this.machineIp = model.machineIp;
-                this.machineIpType = model.machineIpType;
-                this.machineName = model.machineName;
-                this.machineRegion = model.machineRegion;
-                this.machineType = model.machineType;
-                this.online = model.online;
-                this.os = model.os;
-                this.osName = model.osName;
-                this.regionId = model.regionId;
-                this.status = model.status;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the user.</p>

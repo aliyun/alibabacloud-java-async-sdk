@@ -40,10 +40,6 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return illegalCustomConfigs
      */
@@ -69,15 +65,6 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         private java.util.List<IllegalCustomConfigs> illegalCustomConfigs; 
         private java.util.List<IllegalRepairConfigs> illegalRepairConfigs; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ChangeCheckCustomConfigResponseBody model) {
-            this.illegalCustomConfigs = model.illegalCustomConfigs;
-            this.illegalRepairConfigs = model.illegalRepairConfigs;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the invalid custom configuration items of the check item.</p>
@@ -144,13 +131,6 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
-            private Builder() {
-            } 
-
-            private Builder(IllegalCustomConfigs model) {
-                this.name = model.name;
-            } 
-
             /**
              * <p>The name of the custom configuration item, which is unique in a check item.</p>
              * 
@@ -200,13 +180,6 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(IllegalRepairConfigs model) {
-                this.name = model.name;
-            } 
 
             /**
              * <p>The name of the invalid parameter required for fixing a risk item.</p>

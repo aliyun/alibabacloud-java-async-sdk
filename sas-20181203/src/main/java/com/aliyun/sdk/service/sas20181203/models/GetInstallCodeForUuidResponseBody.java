@@ -52,10 +52,6 @@ public class GetInstallCodeForUuidResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetInstallCodeForUuidResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetInstallCodeForUuidResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.installCode = model.installCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>API status code.</p>
@@ -278,18 +262,6 @@ public class GetInstallCodeForUuidResponseBody extends TeaModel {
             private String groupName; 
             private String os; 
             private String vendorName; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstallCode model) {
-                this.captchaCode = model.captchaCode;
-                this.expiredDate = model.expiredDate;
-                this.groupId = model.groupId;
-                this.groupName = model.groupName;
-                this.os = model.os;
-                this.vendorName = model.vendorName;
-            } 
 
             /**
              * <p>Installation verification code for manually installing the Cloud Security Center client.</p>

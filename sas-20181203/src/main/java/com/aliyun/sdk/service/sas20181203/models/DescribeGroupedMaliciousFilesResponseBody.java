@@ -40,10 +40,6 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupedMaliciousFileResponse
      */
@@ -69,15 +65,6 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         private java.util.List<GroupedMaliciousFileResponse> groupedMaliciousFileResponse; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeGroupedMaliciousFilesResponseBody model) {
-            this.groupedMaliciousFileResponse = model.groupedMaliciousFileResponse;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the malicious image sample.</p>
@@ -227,20 +214,6 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             private String maliciousMd5; 
             private String maliciousName; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedMaliciousFileResponse model) {
-                this.firstScanTimestamp = model.firstScanTimestamp;
-                this.imageCount = model.imageCount;
-                this.latestScanTimestamp = model.latestScanTimestamp;
-                this.level = model.level;
-                this.maliciousKey = model.maliciousKey;
-                this.maliciousMd5 = model.maliciousMd5;
-                this.maliciousName = model.maliciousName;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
@@ -415,16 +388,6 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

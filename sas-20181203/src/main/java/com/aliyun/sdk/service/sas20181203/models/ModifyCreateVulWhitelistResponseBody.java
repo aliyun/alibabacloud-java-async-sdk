@@ -36,10 +36,6 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VulWhitelistList> vulWhitelistList; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyCreateVulWhitelistResponseBody model) {
-            this.requestId = model.requestId;
-            this.vulWhitelistList = model.vulWhitelistList;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -122,13 +110,6 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulWhitelistList model) {
-                this.id = model.id;
-            } 
 
             /**
              * <p>The ID of the whitelist.</p>

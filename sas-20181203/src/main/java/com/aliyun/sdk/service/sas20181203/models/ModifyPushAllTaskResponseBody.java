@@ -36,10 +36,6 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pushTaskRsp
      */
@@ -57,14 +53,6 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
     public static final class Builder {
         private PushTaskRsp pushTaskRsp; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyPushAllTaskResponseBody model) {
-            this.pushTaskRsp = model.pushTaskRsp;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The results of security check tasks.</p>
@@ -231,22 +219,6 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             private Boolean success; 
             private String uuid; 
 
-            private Builder() {
-            } 
-
-            private Builder(PushTaskResultList model) {
-                this.groupId = model.groupId;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.ip = model.ip;
-                this.message = model.message;
-                this.online = model.online;
-                this.osVersion = model.osVersion;
-                this.region = model.region;
-                this.success = model.success;
-                this.uuid = model.uuid;
-            } 
-
             /**
              * <p>The ID of the server group to which the server belongs.</p>
              * 
@@ -406,13 +378,6 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PushTaskResultList> pushTaskResultList; 
-
-            private Builder() {
-            } 
-
-            private Builder(PushTaskRsp model) {
-                this.pushTaskResultList = model.pushTaskResultList;
-            } 
 
             /**
              * <p>An array consisting of the servers on which security check tasks failed.</p>

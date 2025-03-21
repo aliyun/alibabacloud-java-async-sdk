@@ -62,10 +62,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assistInfo
      */
@@ -131,20 +127,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
         private Integer repairSupportType; 
         private String requestId; 
         private Solution solution; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCheckDetailResponseBody model) {
-            this.assistInfo = model.assistInfo;
-            this.customConfigs = model.customConfigs;
-            this.description = model.description;
-            this.repairReset = model.repairReset;
-            this.repairSetting = model.repairSetting;
-            this.repairSupportType = model.repairSupportType;
-            this.requestId = model.requestId;
-            this.solution = model.solution;
-        } 
 
         /**
          * <p>The help information about the check item.</p>
@@ -285,15 +267,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(AssistInfo model) {
-                this.link = model.link;
-                this.type = model.type;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The link to the help information about the risk item when the Type parameter is set to link.</p>
              * 
@@ -418,17 +391,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String typeDefine; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(CustomConfigs model) {
-                this.defaultValue = model.defaultValue;
-                this.name = model.name;
-                this.showName = model.showName;
-                this.typeDefine = model.typeDefine;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The default value of the custom configuration item. The value is a string.</p>
              * 
@@ -547,15 +509,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Description model) {
-                this.link = model.link;
-                this.type = model.type;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The link to the description of the check item.</p>
              * 
@@ -639,14 +592,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String showText; 
             private String step; 
-
-            private Builder() {
-            } 
-
-            private Builder(FlowStep model) {
-                this.showText = model.showText;
-                this.step = model.step;
-            } 
 
             /**
              * <p>The text description of the fixing step.</p>
@@ -840,24 +785,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String typeDefine; 
             private String usageType; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(RepairConfigs model) {
-                this.consoleParamType = model.consoleParamType;
-                this.customFlag = model.customFlag;
-                this.dataTransformType = model.dataTransformType;
-                this.defaultValue = model.defaultValue;
-                this.emptyParamSwitch = model.emptyParamSwitch;
-                this.exclusiveName = model.exclusiveName;
-                this.flowId = model.flowId;
-                this.name = model.name;
-                this.showName = model.showName;
-                this.typeDefine = model.typeDefine;
-                this.usageType = model.usageType;
-                this.value = model.value;
-            } 
 
             /**
              * <p>Indicates whether the value of the parameter is displayed in the console. Valid values:</p>
@@ -1099,17 +1026,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private Boolean repairSupport; 
             private Integer repairSupportType; 
 
-            private Builder() {
-            } 
-
-            private Builder(RepairSetting model) {
-                this.flowStep = model.flowStep;
-                this.repairConfigs = model.repairConfigs;
-                this.repairReset = model.repairReset;
-                this.repairSupport = model.repairSupport;
-                this.repairSupportType = model.repairSupportType;
-            } 
-
             /**
              * <p>The description of the fixing workflow.</p>
              */
@@ -1234,15 +1150,6 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String link; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Solution model) {
-                this.link = model.link;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The link to the solution to handle the risk item when the Type parameter is set to link.</p>

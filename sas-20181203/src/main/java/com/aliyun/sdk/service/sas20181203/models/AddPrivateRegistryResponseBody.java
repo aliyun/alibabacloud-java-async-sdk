@@ -36,10 +36,6 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddPrivateRegistryResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The handling result.</p>
@@ -278,26 +266,6 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             private Integer transPerHour; 
             private String userName; 
             private String vpcId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.aliUid = model.aliUid;
-                this.domainName = model.domainName;
-                this.id = model.id;
-                this.netType = model.netType;
-                this.password = model.password;
-                this.protocolType = model.protocolType;
-                this.regionId = model.regionId;
-                this.registryHostIp = model.registryHostIp;
-                this.registryType = model.registryType;
-                this.registryVersion = model.registryVersion;
-                this.token = model.token;
-                this.transPerHour = model.transPerHour;
-                this.userName = model.userName;
-                this.vpcId = model.vpcId;
-            } 
 
             /**
              * <p>The ID of the user.</p>

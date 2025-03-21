@@ -36,10 +36,6 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupedFields
      */
@@ -57,14 +53,6 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private GroupedFields groupedFields; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCloudAssetSummaryResponseBody model) {
-            this.groupedFields = model.groupedFields;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The summary of cloud services.</p>
@@ -170,17 +158,6 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer instanceCount; 
             private Integer instanceRiskCount; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(CloudAssetSummaryMetas model) {
-                this.assetSubType = model.assetSubType;
-                this.assetType = model.assetType;
-                this.instanceCount = model.instanceCount;
-                this.instanceRiskCount = model.instanceRiskCount;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>The subtype of the cloud service.</p>
@@ -333,15 +310,6 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas; 
             private Integer instanceCountTotal; 
             private Integer instanceRiskCountTotal; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedFields model) {
-                this.cloudAssetSummaryMetas = model.cloudAssetSummaryMetas;
-                this.instanceCountTotal = model.instanceCountTotal;
-                this.instanceRiskCountTotal = model.instanceRiskCountTotal;
-            } 
 
             /**
              * <p>The statistics of cloud services.</p>

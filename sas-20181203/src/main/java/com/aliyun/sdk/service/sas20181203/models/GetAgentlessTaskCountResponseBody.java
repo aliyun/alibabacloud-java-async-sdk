@@ -72,10 +72,6 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return baselineCheckCount
      */
@@ -165,23 +161,6 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         private Integer sensitiveFileCount; 
         private String sysVulCount; 
         private Integer vulnerability; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetAgentlessTaskCountResponseBody model) {
-            this.baselineCheckCount = model.baselineCheckCount;
-            this.cveVulCount = model.cveVulCount;
-            this.lastTaskTime = model.lastTaskTime;
-            this.maliciousFile = model.maliciousFile;
-            this.requestId = model.requestId;
-            this.riskMachine = model.riskMachine;
-            this.scaVulCount = model.scaVulCount;
-            this.scanMachine = model.scanMachine;
-            this.sensitiveFileCount = model.sensitiveFileCount;
-            this.sysVulCount = model.sysVulCount;
-            this.vulnerability = model.vulnerability;
-        } 
 
         /**
          * <p>The number of baseline checks.</p>

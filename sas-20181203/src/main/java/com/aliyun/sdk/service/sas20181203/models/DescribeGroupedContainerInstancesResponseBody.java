@@ -40,10 +40,6 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupedContainerInstanceList
      */
@@ -69,15 +65,6 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         private java.util.List<GroupedContainerInstanceList> groupedContainerInstanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeGroupedContainerInstancesResponseBody model) {
-            this.groupedContainerInstanceList = model.groupedContainerInstanceList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the container.</p>
@@ -455,39 +442,6 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer syncOpen; 
             private Integer syncStatus; 
             private Integer vulCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedContainerInstanceList model) {
-                this.alarmCount = model.alarmCount;
-                this.appName = model.appName;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.clusterType = model.clusterType;
-                this.createTime = model.createTime;
-                this.custerState = model.custerState;
-                this.hcCount = model.hcCount;
-                this.hostIp = model.hostIp;
-                this.image = model.image;
-                this.imageDigest = model.imageDigest;
-                this.imageRepoName = model.imageRepoName;
-                this.imageRepoNamespace = model.imageRepoNamespace;
-                this.imageRepoTag = model.imageRepoTag;
-                this.imageUuid = model.imageUuid;
-                this.instanceCount = model.instanceCount;
-                this.instanceId = model.instanceId;
-                this.namespace = model.namespace;
-                this.pod = model.pod;
-                this.podIp = model.podIp;
-                this.regionId = model.regionId;
-                this.riskInstanceCount = model.riskInstanceCount;
-                this.riskLevel = model.riskLevel;
-                this.riskStatus = model.riskStatus;
-                this.syncOpen = model.syncOpen;
-                this.syncStatus = model.syncStatus;
-                this.vulCount = model.vulCount;
-            } 
 
             /**
              * <p>The number of alerts that are detected for the current pod, application, namespace, or cluster.</p>
@@ -889,16 +843,6 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of container assets returned on the current page.</p>

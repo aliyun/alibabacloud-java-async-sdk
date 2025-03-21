@@ -36,10 +36,6 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return registryTypeInfos
      */
@@ -57,14 +53,6 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<RegistryTypeInfos> registryTypeInfos; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListPrivateRegistryTypeResponseBody model) {
-            this.registryTypeInfos = model.registryTypeInfos;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of image repository types.</p>
@@ -134,14 +122,6 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String registryType; 
-
-            private Builder() {
-            } 
-
-            private Builder(RegistryTypeInfos model) {
-                this.count = model.count;
-                this.registryType = model.registryType;
-            } 
 
             /**
              * <p>The number of image repositories.</p>

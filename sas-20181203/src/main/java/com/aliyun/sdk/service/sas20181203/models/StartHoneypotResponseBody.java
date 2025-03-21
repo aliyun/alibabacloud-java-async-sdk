@@ -36,10 +36,6 @@ public class StartHoneypotResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class StartHoneypotResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(StartHoneypotResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the honeypot.</p>
@@ -206,20 +194,6 @@ public class StartHoneypotResponseBody extends TeaModel {
             private String nodeId; 
             private String presetId; 
             private java.util.List<String> state; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.controlNodeName = model.controlNodeName;
-                this.honeypotId = model.honeypotId;
-                this.honeypotImageDisplayName = model.honeypotImageDisplayName;
-                this.honeypotImageName = model.honeypotImageName;
-                this.honeypotName = model.honeypotName;
-                this.nodeId = model.nodeId;
-                this.presetId = model.presetId;
-                this.state = model.state;
-            } 
 
             /**
              * <p>The name of the management node to which the honeypot belongs.</p>

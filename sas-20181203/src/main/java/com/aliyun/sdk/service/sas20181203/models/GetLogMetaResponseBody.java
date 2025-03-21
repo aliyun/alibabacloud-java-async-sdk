@@ -36,10 +36,6 @@ public class GetLogMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return logMeta
      */
@@ -57,14 +53,6 @@ public class GetLogMetaResponseBody extends TeaModel {
     public static final class Builder {
         private LogMeta logMeta; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetLogMetaResponseBody model) {
-            this.logMeta = model.logMeta;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data of a data shipping task.</p>
@@ -146,15 +134,6 @@ public class GetLogMetaResponseBody extends TeaModel {
             private String logStore; 
             private String project; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(LogMeta model) {
-                this.logStore = model.logStore;
-                this.project = model.project;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The name of the dedicated Logstore in which logs are stored.</p>

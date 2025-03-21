@@ -40,10 +40,6 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Suggestions> suggestions; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSecureSuggestionResponseBody model) {
-            this.requestId = model.requestId;
-            this.suggestions = model.suggestions;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -170,15 +157,6 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             private String description; 
             private String subType; 
             private String title; 
-
-            private Builder() {
-            } 
-
-            private Builder(Detail model) {
-                this.description = model.description;
-                this.subType = model.subType;
-                this.title = model.title;
-            } 
 
             /**
              * <p>The description of the suggestion.</p>
@@ -315,15 +293,6 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             private java.util.List<Detail> detail; 
             private Integer points; 
             private String suggestType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Suggestions model) {
-                this.detail = model.detail;
-                this.points = model.points;
-                this.suggestType = model.suggestType;
-            } 
 
             /**
              * <p>The details of the suggestion.</p>

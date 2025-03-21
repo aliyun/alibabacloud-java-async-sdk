@@ -36,10 +36,6 @@ public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return installVersion
      */
@@ -57,14 +53,6 @@ public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String installVersion; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDefaultProxyInstallVersionResponseBody model) {
-            this.installVersion = model.installVersion;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The default installation version.</p>

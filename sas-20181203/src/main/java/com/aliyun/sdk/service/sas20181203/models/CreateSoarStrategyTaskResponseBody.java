@@ -36,10 +36,6 @@ public class CreateSoarStrategyTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class CreateSoarStrategyTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long strategyTaskId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateSoarStrategyTaskResponseBody model) {
-            this.requestId = model.requestId;
-            this.strategyTaskId = model.strategyTaskId;
-        } 
 
         /**
          * <p>The request ID.</p>

@@ -52,10 +52,6 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -105,18 +101,6 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VulWhitelists> vulWhitelists; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeVulWhitelistResponseBody model) {
-            this.count = model.count;
-            this.currentPage = model.currentPage;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-            this.vulWhitelists = model.vulWhitelists;
-        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -290,19 +274,6 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             private String targetInfo; 
             private String type; 
             private String whitelist; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulWhitelists model) {
-                this.aliasName = model.aliasName;
-                this.id = model.id;
-                this.name = model.name;
-                this.reason = model.reason;
-                this.targetInfo = model.targetInfo;
-                this.type = model.type;
-                this.whitelist = model.whitelist;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

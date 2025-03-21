@@ -36,10 +36,6 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupedFields
      */
@@ -57,14 +53,6 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private GroupedFields groupedFields; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeFieldStatisticsResponseBody model) {
-            this.groupedFields = model.groupedFields;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about servers that are returned.</p>
@@ -494,44 +482,6 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Long unprotectedInstanceCoreCount; 
             private Integer unprotectedInstanceCount; 
             private Integer vpcCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedFields model) {
-                this.aliYunInstanceCount = model.aliYunInstanceCount;
-                this.awsInstanceCount = model.awsInstanceCount;
-                this.azureInstanceCount = model.azureInstanceCount;
-                this.exposedInstanceCoreCount = model.exposedInstanceCoreCount;
-                this.exposedInstanceCount = model.exposedInstanceCount;
-                this.generalAssetCount = model.generalAssetCount;
-                this.groupCount = model.groupCount;
-                this.huaweiInstanceCount = model.huaweiInstanceCount;
-                this.idcInstanceCount = model.idcInstanceCount;
-                this.importantAssetCount = model.importantAssetCount;
-                this.instanceCoreCount = model.instanceCoreCount;
-                this.instanceCount = model.instanceCount;
-                this.instanceSyncTaskCount = model.instanceSyncTaskCount;
-                this.newInstanceCoreCount = model.newInstanceCoreCount;
-                this.newInstanceCount = model.newInstanceCount;
-                this.noRiskInstanceCount = model.noRiskInstanceCount;
-                this.notBindMachineInstanceCount = model.notBindMachineInstanceCount;
-                this.notRunningStatusCoreCount = model.notRunningStatusCoreCount;
-                this.notRunningStatusCount = model.notRunningStatusCount;
-                this.offlineInstanceCount = model.offlineInstanceCount;
-                this.outMachineInstanceCount = model.outMachineInstanceCount;
-                this.pauseInstanceCount = model.pauseInstanceCount;
-                this.regionCount = model.regionCount;
-                this.riskInstanceCoreCount = model.riskInstanceCoreCount;
-                this.riskInstanceCount = model.riskInstanceCount;
-                this.tencentInstanceCount = model.tencentInstanceCount;
-                this.testAssetCount = model.testAssetCount;
-                this.tripartiteInstanceCount = model.tripartiteInstanceCount;
-                this.unKnowStatusInstanceCount = model.unKnowStatusInstanceCount;
-                this.unprotectedInstanceCoreCount = model.unprotectedInstanceCoreCount;
-                this.unprotectedInstanceCount = model.unprotectedInstanceCount;
-                this.vpcCount = model.vpcCount;
-            } 
 
             /**
              * <p>The number of assets that are deployed on Alibaba Cloud.</p>

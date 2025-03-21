@@ -40,10 +40,6 @@ public class DescribeSoarStrategyTaskResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeSoarStrategyTaskResultResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<String> records; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSoarStrategyTaskResultResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.records = model.records;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Pagination information.</p>
@@ -167,15 +154,6 @@ public class DescribeSoarStrategyTaskResultResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The current page number during paginated queries.</p>

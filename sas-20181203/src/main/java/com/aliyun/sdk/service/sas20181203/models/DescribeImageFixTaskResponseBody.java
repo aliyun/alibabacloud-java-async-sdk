@@ -40,10 +40,6 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return buildTasks
      */
@@ -69,15 +65,6 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         private java.util.List<BuildTasks> buildTasks; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageFixTaskResponseBody model) {
-            this.buildTasks = model.buildTasks;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The tasks returned.</p>
@@ -287,25 +274,6 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private Integer status; 
             private String taskType; 
             private String vulAlias; 
-
-            private Builder() {
-            } 
-
-            private Builder(BuildTasks model) {
-                this.buildTaskId = model.buildTaskId;
-                this.finishTime = model.finishTime;
-                this.fixTime = model.fixTime;
-                this.newTag = model.newTag;
-                this.newUuid = model.newUuid;
-                this.oldTag = model.oldTag;
-                this.oldUuid = model.oldUuid;
-                this.regionId = model.regionId;
-                this.repoName = model.repoName;
-                this.repoNamespace = model.repoNamespace;
-                this.status = model.status;
-                this.taskType = model.taskType;
-                this.vulAlias = model.vulAlias;
-            } 
 
             /**
              * <p>The ID of the task.</p>
@@ -529,16 +497,6 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of tasks returned on the current page.</p>

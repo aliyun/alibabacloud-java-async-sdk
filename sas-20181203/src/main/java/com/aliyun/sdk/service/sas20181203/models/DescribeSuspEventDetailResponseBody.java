@@ -100,10 +100,6 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return canBeDealOnLine
      */
@@ -249,30 +245,6 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         private String requestId; 
         private String saleVersion; 
         private String uuid; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSuspEventDetailResponseBody model) {
-            this.canBeDealOnLine = model.canBeDealOnLine;
-            this.dataSource = model.dataSource;
-            this.details = model.details;
-            this.eventDesc = model.eventDesc;
-            this.eventName = model.eventName;
-            this.eventStatus = model.eventStatus;
-            this.eventTypeDesc = model.eventTypeDesc;
-            this.id = model.id;
-            this.instanceName = model.instanceName;
-            this.internetIp = model.internetIp;
-            this.intranetIp = model.intranetIp;
-            this.lastTime = model.lastTime;
-            this.level = model.level;
-            this.operateErrorCode = model.operateErrorCode;
-            this.operateMsg = model.operateMsg;
-            this.requestId = model.requestId;
-            this.saleVersion = model.saleVersion;
-            this.uuid = model.uuid;
-        } 
 
         /**
          * <p>Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:</p>
@@ -553,15 +525,6 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             private String nameDisplay; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Details model) {
-                this.nameDisplay = model.nameDisplay;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The display name of the alert event.</p>

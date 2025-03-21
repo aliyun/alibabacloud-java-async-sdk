@@ -32,10 +32,6 @@ public class OperateBucketScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -45,13 +41,6 @@ public class OperateBucketScanTaskResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(OperateBucketScanTaskResponseBody model) {
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The request ID.</p>

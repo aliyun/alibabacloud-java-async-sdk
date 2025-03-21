@@ -40,10 +40,6 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return alertLevels
      */
@@ -69,15 +65,6 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         private java.util.List<String> alertLevels; 
         private Integer invalidWarningKeepDays; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUserSettingResponseBody model) {
-            this.alertLevels = model.alertLevels;
-            this.invalidWarningKeepDays = model.invalidWarningKeepDays;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The severities of alerts. If this parameter is empty, no custom alerts are generated.</p>

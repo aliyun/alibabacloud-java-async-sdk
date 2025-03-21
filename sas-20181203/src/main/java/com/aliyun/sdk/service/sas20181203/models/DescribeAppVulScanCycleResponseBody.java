@@ -36,10 +36,6 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cycle
      */
@@ -57,14 +53,6 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
     public static final class Builder {
         private String cycle; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAppVulScanCycleResponseBody model) {
-            this.cycle = model.cycle;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The scan cycle for application vulnerabilities.</p>

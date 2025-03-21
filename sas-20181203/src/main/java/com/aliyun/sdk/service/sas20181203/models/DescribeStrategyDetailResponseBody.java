@@ -36,10 +36,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Strategy strategy; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeStrategyDetailResponseBody model) {
-            this.requestId = model.requestId;
-            this.strategy = model.strategy;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -206,20 +194,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String paramName; 
             private Integer paramType; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(ParamList model) {
-                this.enumValue = model.enumValue;
-                this.maxValue = model.maxValue;
-                this.minValue = model.minValue;
-                this.paramDefaultValue = model.paramDefaultValue;
-                this.paramDesc = model.paramDesc;
-                this.paramName = model.paramName;
-                this.paramType = model.paramType;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The options that can be selected for the rule parameter if the value of ParamType is set to 2.</p>
@@ -400,17 +374,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String ruleDesc; 
             private String ruleId; 
 
-            private Builder() {
-            } 
-
-            private Builder(Rules model) {
-                this.defaultValue = model.defaultValue;
-                this.optional = model.optional;
-                this.paramList = model.paramList;
-                this.ruleDesc = model.ruleDesc;
-                this.ruleId = model.ruleId;
-            } 
-
             /**
              * <p>The default value of the rule.</p>
              * 
@@ -542,16 +505,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String checkItem; 
             private java.util.List<Rules> rules; 
 
-            private Builder() {
-            } 
-
-            private Builder(CheckDetails model) {
-                this.checkDesc = model.checkDesc;
-                this.checkId = model.checkId;
-                this.checkItem = model.checkItem;
-                this.rules = model.rules;
-            } 
-
             /**
              * <p>The description of the check item.</p>
              * 
@@ -679,17 +632,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private Boolean on; 
             private String supportedOs; 
             private String typeName; 
-
-            private Builder() {
-            } 
-
-            private Builder(SubTypes model) {
-                this.alias = model.alias;
-                this.checkDetails = model.checkDetails;
-                this.on = model.on;
-                this.supportedOs = model.supportedOs;
-                this.typeName = model.typeName;
-            } 
 
             /**
              * <p>The alias of the check item.</p>
@@ -825,16 +767,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private Boolean on; 
             private java.util.List<SubTypes> subTypes; 
             private String typeName; 
-
-            private Builder() {
-            } 
-
-            private Builder(RiskTypeWhiteListQueryResultList model) {
-                this.alias = model.alias;
-                this.on = model.on;
-                this.subTypes = model.subTypes;
-                this.typeName = model.typeName;
-            } 
 
             /**
              * <p>The alias of the check item.</p>
@@ -1039,23 +971,6 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String startTime; 
             private String targetType; 
             private Integer type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Strategy model) {
-                this.customType = model.customType;
-                this.cycleDays = model.cycleDays;
-                this.cycleStartTime = model.cycleStartTime;
-                this.endTime = model.endTime;
-                this.id = model.id;
-                this.name = model.name;
-                this.riskSubTypeName = model.riskSubTypeName;
-                this.riskTypeWhiteListQueryResultList = model.riskTypeWhiteListQueryResultList;
-                this.startTime = model.startTime;
-                this.targetType = model.targetType;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The type of the baseline check policy that you want to query. Valid values:</p>

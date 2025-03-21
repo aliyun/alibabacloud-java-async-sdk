@@ -36,10 +36,6 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VulGlobalConfigList> vulGlobalConfigList; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListVulGlobalConfigResponseBody model) {
-            this.requestId = model.requestId;
-            this.vulGlobalConfigList = model.vulGlobalConfigList;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,14 +122,6 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String configKey; 
             private String configValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulGlobalConfigList model) {
-                this.configKey = model.configKey;
-                this.configValue = model.configValue;
-            } 
 
             /**
              * <p>The key of the configuration item.</p>

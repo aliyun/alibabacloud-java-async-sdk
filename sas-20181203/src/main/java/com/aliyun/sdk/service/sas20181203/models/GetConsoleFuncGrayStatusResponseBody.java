@@ -36,10 +36,6 @@ public class GetConsoleFuncGrayStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetConsoleFuncGrayStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetConsoleFuncGrayStatusResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Return result.</p>
@@ -146,15 +134,6 @@ public class GetConsoleFuncGrayStatusResponseBody extends TeaModel {
             private String action; 
             private String code; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExcludeApiList model) {
-                this.action = model.action;
-                this.code = model.code;
-                this.version = model.version;
-            } 
 
             /**
              * <p>Action corresponding to the API.</p>
@@ -239,14 +218,6 @@ public class GetConsoleFuncGrayStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ExcludeApiList> excludeApiList; 
             private Boolean hit; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.excludeApiList = model.excludeApiList;
-                this.hit = model.hit;
-            } 
 
             /**
              * <p>List of APIs not hit.</p>

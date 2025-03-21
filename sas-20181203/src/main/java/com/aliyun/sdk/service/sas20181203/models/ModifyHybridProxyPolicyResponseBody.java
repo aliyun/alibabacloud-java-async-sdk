@@ -36,10 +36,6 @@ public class ModifyHybridProxyPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return messgae
      */
@@ -57,14 +53,6 @@ public class ModifyHybridProxyPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String messgae; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyHybridProxyPolicyResponseBody model) {
-            this.messgae = model.messgae;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The message of the request.</p>

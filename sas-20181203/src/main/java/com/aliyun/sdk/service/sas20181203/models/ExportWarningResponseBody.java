@@ -40,10 +40,6 @@ public class ExportWarningResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return fileName
      */
@@ -69,15 +65,6 @@ public class ExportWarningResponseBody extends TeaModel {
         private String fileName; 
         private Long id; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ExportWarningResponseBody model) {
-            this.fileName = model.fileName;
-            this.id = model.id;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The name of the file that contains exported baseline check results.</p>

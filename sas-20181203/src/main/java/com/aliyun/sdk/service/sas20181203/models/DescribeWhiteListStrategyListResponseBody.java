@@ -36,10 +36,6 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Strategies> strategies; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWhiteListStrategyListResponseBody model) {
-            this.requestId = model.requestId;
-            this.strategies = model.strategies;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,16 +146,6 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
             private Long strategyId; 
             private String strategyName; 
             private Integer studyTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Strategies model) {
-                this.status = model.status;
-                this.strategyId = model.strategyId;
-                this.strategyName = model.strategyName;
-                this.studyTime = model.studyTime;
-            } 
 
             /**
              * <p>The status of the policy. Valid values:</p>

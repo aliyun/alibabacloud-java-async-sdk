@@ -36,10 +36,6 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(PublicSyncAndCreateImageScanTaskResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned if the call is successful.</p>
@@ -218,21 +206,6 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.canCreate = model.canCreate;
-                this.collectTime = model.collectTime;
-                this.execTime = model.execTime;
-                this.finishCount = model.finishCount;
-                this.progress = model.progress;
-                this.result = model.result;
-                this.status = model.status;
-                this.taskId = model.taskId;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>Indicates whether you can create more image scan tasks. Valid values:</p>

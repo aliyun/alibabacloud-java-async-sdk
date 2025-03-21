@@ -40,10 +40,6 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return clusterConfigList
      */
@@ -69,15 +65,6 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         private java.util.List<ClusterConfigList> clusterConfigList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListClusterInterceptionConfigResponseBody model) {
-            this.clusterConfigList = model.clusterConfigList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the configurations of the cluster.</p>
@@ -227,20 +214,6 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             private Long openRuleCount; 
             private Boolean supportCNNF; 
             private Long totalRuleCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClusterConfigList model) {
-                this.clusterCNNFStatus = model.clusterCNNFStatus;
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.clusterType = model.clusterType;
-                this.interceptionSwitch = model.interceptionSwitch;
-                this.openRuleCount = model.openRuleCount;
-                this.supportCNNF = model.supportCNNF;
-                this.totalRuleCount = model.totalRuleCount;
-            } 
 
             /**
              * <p>The status of the container firewall feature. Valid values:</p>
@@ -421,16 +394,6 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             private Integer currrentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currrentPage = model.currrentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

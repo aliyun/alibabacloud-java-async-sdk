@@ -40,10 +40,6 @@ public class DescribeRisksResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class DescribeRisksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Risks> risks; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRisksResponseBody model) {
-            this.requestId = model.requestId;
-            this.risks = model.risks;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -218,19 +205,6 @@ public class DescribeRisksResponseBody extends TeaModel {
             private String subRiskType; 
             private String subTypeAlias; 
             private String typeAlias; 
-
-            private Builder() {
-            } 
-
-            private Builder(Risks model) {
-                this.riskDetail = model.riskDetail;
-                this.riskId = model.riskId;
-                this.riskName = model.riskName;
-                this.riskType = model.riskType;
-                this.subRiskType = model.subRiskType;
-                this.subTypeAlias = model.subTypeAlias;
-                this.typeAlias = model.typeAlias;
-            } 
 
             /**
              * <p>The description of the baseline.</p>

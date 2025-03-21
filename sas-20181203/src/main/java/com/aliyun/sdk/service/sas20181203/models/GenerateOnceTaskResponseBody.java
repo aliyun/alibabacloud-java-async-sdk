@@ -56,10 +56,6 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return canCreate
      */
@@ -117,19 +113,6 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(GenerateOnceTaskResponseBody model) {
-            this.canCreate = model.canCreate;
-            this.collectTime = model.collectTime;
-            this.finishCount = model.finishCount;
-            this.lastTask = model.lastTask;
-            this.requestId = model.requestId;
-            this.taskId = model.taskId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>Indicates whether you can create more scan tasks. Valid values:</p>

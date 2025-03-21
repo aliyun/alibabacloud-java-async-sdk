@@ -36,10 +36,6 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RoleStatus roleStatus; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeServiceLinkedRoleStatusResponseBody model) {
-            this.requestId = model.requestId;
-            this.roleStatus = model.roleStatus;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -122,13 +110,6 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean status; 
-
-            private Builder() {
-            } 
-
-            private Builder(RoleStatus model) {
-                this.status = model.status;
-            } 
 
             /**
              * <p>Indicates whether the service-linked role is created. Valid values:</p>

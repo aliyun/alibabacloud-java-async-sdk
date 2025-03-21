@@ -56,10 +56,6 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAvailableHoneypotResponseBody model) {
-            this.code = model.code;
-            this.count = model.count;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -342,21 +325,6 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             private String proto; 
             private String servicePort; 
             private String template; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.honeypotImageDisplayName = model.honeypotImageDisplayName;
-                this.honeypotImageId = model.honeypotImageId;
-                this.honeypotImageName = model.honeypotImageName;
-                this.honeypotImageType = model.honeypotImageType;
-                this.honeypotImageVersion = model.honeypotImageVersion;
-                this.multiports = model.multiports;
-                this.proto = model.proto;
-                this.servicePort = model.servicePort;
-                this.template = model.template;
-            } 
 
             /**
              * <p>The display name of the image.</p>

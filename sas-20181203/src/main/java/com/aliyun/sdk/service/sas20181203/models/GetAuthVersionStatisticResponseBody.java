@@ -36,10 +36,6 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Statistics> statistics; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetAuthVersionStatisticResponseBody model) {
-            this.requestId = model.requestId;
-            this.statistics = model.statistics;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,14 +122,6 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Integer authVersion; 
             private Integer count; 
-
-            private Builder() {
-            } 
-
-            private Builder(Statistics model) {
-                this.authVersion = model.authVersion;
-                this.count = model.count;
-            } 
 
             /**
              * <p>The edition of Security Center. Valid values:</p>

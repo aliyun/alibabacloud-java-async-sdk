@@ -36,10 +36,6 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse; 
-
-        private Builder() {
-        } 
-
-        private Builder(AdvanceSecurityEventOperationsResponseBody model) {
-            this.requestId = model.requestId;
-            this.securityEventOperationsResponse = model.securityEventOperationsResponse;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -170,17 +158,6 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private String markMisType; 
             private String markMisValue; 
             private java.util.List<String> supportedMisType; 
-
-            private Builder() {
-            } 
-
-            private Builder(MarkField model) {
-                this.filedAliasName = model.filedAliasName;
-                this.filedName = model.filedName;
-                this.markMisType = model.markMisType;
-                this.markMisValue = model.markMisValue;
-                this.supportedMisType = model.supportedMisType;
-            } 
 
             /**
              * <p>The alias of the field that is used in the whitelist rule.</p>
@@ -323,16 +300,6 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private String markMisValue; 
             private java.util.List<String> supportedMisType; 
 
-            private Builder() {
-            } 
-
-            private Builder(MarkFieldsSource model) {
-                this.filedAliasName = model.filedAliasName;
-                this.filedName = model.filedName;
-                this.markMisValue = model.markMisValue;
-                this.supportedMisType = model.supportedMisType;
-            } 
-
             /**
              * <p>The alias of the field that can be used in the whitelist rule.</p>
              * 
@@ -467,17 +434,6 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private String operationCode; 
             private String operationParams; 
             private Boolean userCanOperate; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityEventOperationsResponse model) {
-                this.markField = model.markField;
-                this.markFieldsSource = model.markFieldsSource;
-                this.operationCode = model.operationCode;
-                this.operationParams = model.operationParams;
-                this.userCanOperate = model.userCanOperate;
-            } 
 
             /**
              * <p>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to <strong>advance_mark_mis_info</strong>.</p>

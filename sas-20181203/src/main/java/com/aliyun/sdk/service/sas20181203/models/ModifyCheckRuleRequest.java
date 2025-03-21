@@ -60,7 +60,7 @@ public class ModifyCheckRuleRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -257,14 +257,6 @@ public class ModifyCheckRuleRequest extends Request {
             private String instanceId; 
             private String regionId; 
 
-            private Builder() {
-            } 
-
-            private Builder(AddInstanceList model) {
-                this.instanceId = model.instanceId;
-                this.regionId = model.regionId;
-            } 
-
             /**
              * <p>The instance ID of the asset.</p>
              * 
@@ -337,14 +329,6 @@ public class ModifyCheckRuleRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String regionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(DeleteInstanceList model) {
-                this.instanceId = model.instanceId;
-                this.regionId = model.regionId;
-            } 
 
             /**
              * <p>The instance ID of the asset.</p>

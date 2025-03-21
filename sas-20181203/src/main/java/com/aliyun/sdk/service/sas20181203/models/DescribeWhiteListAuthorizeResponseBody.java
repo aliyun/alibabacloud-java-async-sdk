@@ -36,10 +36,6 @@ public class DescribeWhiteListAuthorizeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return availableAuthorizeNum
      */
@@ -57,14 +53,6 @@ public class DescribeWhiteListAuthorizeResponseBody extends TeaModel {
     public static final class Builder {
         private Integer availableAuthorizeNum; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWhiteListAuthorizeResponseBody model) {
-            this.availableAuthorizeNum = model.availableAuthorizeNum;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The available quota.</p>

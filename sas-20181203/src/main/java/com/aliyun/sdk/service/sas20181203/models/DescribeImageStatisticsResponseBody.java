@@ -40,10 +40,6 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return instanceCount
      */
@@ -69,15 +65,6 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         private Integer instanceCount; 
         private String requestId; 
         private Integer riskInstanceCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageStatisticsResponseBody model) {
-            this.instanceCount = model.instanceCount;
-            this.requestId = model.requestId;
-            this.riskInstanceCount = model.riskInstanceCount;
-        } 
 
         /**
          * <p>The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.</p>

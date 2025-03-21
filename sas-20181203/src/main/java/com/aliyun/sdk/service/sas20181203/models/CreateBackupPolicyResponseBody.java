@@ -36,10 +36,6 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return backupPolicy
      */
@@ -57,14 +53,6 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private BackupPolicy backupPolicy; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateBackupPolicyResponseBody model) {
-            this.backupPolicy = model.backupPolicy;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the anti-ransomware policy.</p>
@@ -134,14 +122,6 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(BackupPolicy model) {
-                this.id = model.id;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The ID of the anti-ransomware policy.</p>

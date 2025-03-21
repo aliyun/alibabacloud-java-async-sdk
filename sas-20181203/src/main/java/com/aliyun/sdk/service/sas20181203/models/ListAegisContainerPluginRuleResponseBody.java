@@ -40,10 +40,6 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<RuleList> ruleList; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAegisContainerPluginRuleResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.ruleList = model.ruleList;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -168,15 +155,6 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The page number.</p>
              * 
@@ -260,14 +238,6 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String policyKey; 
             private String policyName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Policies model) {
-                this.policyKey = model.policyKey;
-                this.policyName = model.policyName;
-            } 
 
             /**
              * <p>The policy key.</p>
@@ -461,24 +431,6 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private java.util.List<String> selectedPolicy; 
             private String switchId; 
             private java.util.List<String> whiteImages; 
-
-            private Builder() {
-            } 
-
-            private Builder(RuleList model) {
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.mode = model.mode;
-                this.policies = model.policies;
-                this.ruleDescription = model.ruleDescription;
-                this.ruleId = model.ruleId;
-                this.ruleName = model.ruleName;
-                this.ruleTemplateId = model.ruleTemplateId;
-                this.ruleTemplateName = model.ruleTemplateName;
-                this.selectedPolicy = model.selectedPolicy;
-                this.switchId = model.switchId;
-                this.whiteImages = model.whiteImages;
-            } 
 
             /**
              * <p>The time when the rule was created. Unit: milliseconds.</p>

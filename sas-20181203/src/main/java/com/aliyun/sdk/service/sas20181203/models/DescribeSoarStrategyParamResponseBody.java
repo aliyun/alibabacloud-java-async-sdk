@@ -40,10 +40,6 @@ public class DescribeSoarStrategyParamResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return params
      */
@@ -69,15 +65,6 @@ public class DescribeSoarStrategyParamResponseBody extends TeaModel {
         private String params; 
         private String processInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSoarStrategyParamResponseBody model) {
-            this.params = model.params;
-            this.processInfo = model.processInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The parameters of the policy.</p>

@@ -36,10 +36,6 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return clusterRuleSummary
      */
@@ -57,14 +53,6 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterRuleSummary clusterRuleSummary; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetClusterRuleSummaryResponseBody model) {
-            this.clusterRuleSummary = model.clusterRuleSummary;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The overall information about the cluster defense rules.</p>
@@ -194,19 +182,6 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             private Integer openRuleCount; 
             private Integer ruleCount; 
             private Integer suggestRuleCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(ClusterRuleSummary model) {
-                this.closeRuleCount = model.closeRuleCount;
-                this.interceptionCount7Day = model.interceptionCount7Day;
-                this.interceptionSwitch = model.interceptionSwitch;
-                this.interceptionType = model.interceptionType;
-                this.openRuleCount = model.openRuleCount;
-                this.ruleCount = model.ruleCount;
-                this.suggestRuleCount = model.suggestRuleCount;
-            } 
 
             /**
              * <p>The number of disabled cluster defense rules.</p>

@@ -48,10 +48,6 @@ public class GetModuleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return httpStatusCode
      */
@@ -93,17 +89,6 @@ public class GetModuleConfigResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetModuleConfigResponseBody model) {
-            this.httpStatusCode = model.httpStatusCode;
-            this.moduleConfigList = model.moduleConfigList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code returned.</p>
@@ -252,18 +237,6 @@ public class GetModuleConfigResponseBody extends TeaModel {
             private String region; 
             private String uuid; 
 
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.groupId = model.groupId;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.ip = model.ip;
-                this.region = model.region;
-                this.uuid = model.uuid;
-            } 
-
             /**
              * <p>The ID of the server group to which the server belongs.</p>
              * 
@@ -393,15 +366,6 @@ public class GetModuleConfigResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String moduleName; 
 
-            private Builder() {
-            } 
-
-            private Builder(ModuleConfigList model) {
-                this.configName = model.configName;
-                this.items = model.items;
-                this.moduleName = model.moduleName;
-            } 
-
             /**
              * <p>The name of the configuration.</p>
              * 
@@ -506,16 +470,6 @@ public class GetModuleConfigResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

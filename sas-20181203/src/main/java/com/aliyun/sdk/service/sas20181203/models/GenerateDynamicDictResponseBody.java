@@ -36,10 +36,6 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return keywordList
      */
@@ -57,14 +53,6 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> keywordList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GenerateDynamicDictResponseBody model) {
-            this.keywordList = model.keywordList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The custom weak passwords.</p>

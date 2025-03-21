@@ -56,10 +56,6 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListHoneypotAttackerPortraitResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.list = model.list;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -268,15 +251,6 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private java.util.List<String> internalIp; 
             private java.util.List<String> realIp; 
 
-            private Builder() {
-            } 
-
-            private Builder(Network model) {
-                this.externalIp = model.externalIp;
-                this.internalIp = model.internalIp;
-                this.realIp = model.realIp;
-            } 
-
             /**
              * <p>The public IP addresses.</p>
              */
@@ -411,19 +385,6 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private Network network; 
             private String portraitId; 
             private java.util.List<String> social; 
-
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.attackCount = model.attackCount;
-                this.browser = model.browser;
-                this.host = model.host;
-                this.lastTime = model.lastTime;
-                this.network = model.network;
-                this.portraitId = model.portraitId;
-                this.social = model.social;
-            } 
 
             /**
              * <p>The number of attacks.</p>
@@ -564,16 +525,6 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -40,10 +40,6 @@ public class ListMachineAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return appList
      */
@@ -69,15 +65,6 @@ public class ListMachineAppsResponseBody extends TeaModel {
         private java.util.List<AppList> appList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListMachineAppsResponseBody model) {
-            this.appList = model.appList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Application list.</p>
@@ -167,15 +154,6 @@ public class ListMachineAppsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String appRegionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(AppList model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.appRegionId = model.appRegionId;
-            } 
 
             /**
              * <p>SAE application ID.</p>
@@ -272,15 +250,6 @@ public class ListMachineAppsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The current page number in a paginated query.</p>

@@ -36,10 +36,6 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityEventOperationStatusResponse securityEventOperationStatusResponse; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSecurityEventOperationStatusResponseBody model) {
-            this.requestId = model.requestId;
-            this.securityEventOperationStatusResponse = model.securityEventOperationStatusResponse;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -146,15 +134,6 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             private String errorCode; 
             private String securityEventId; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityEventOperationStatuses model) {
-                this.errorCode = model.errorCode;
-                this.securityEventId = model.securityEventId;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The code that indicates the handling result of the alert event.</p>
@@ -244,14 +223,6 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SecurityEventOperationStatuses> securityEventOperationStatuses; 
             private String taskStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(SecurityEventOperationStatusResponse model) {
-                this.securityEventOperationStatuses = model.securityEventOperationStatuses;
-                this.taskStatus = model.taskStatus;
-            } 
 
             /**
              * <p>An array consisting of the status of the alert events handled by the task.</p>

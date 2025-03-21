@@ -48,10 +48,6 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetOpaClusterBaseLineListResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -234,16 +219,6 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             private String classKey; 
             private String itemKey; 
             private String nameKey; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.alias = model.alias;
-                this.classKey = model.classKey;
-                this.itemKey = model.itemKey;
-                this.nameKey = model.nameKey;
-            } 
 
             /**
              * <p>The alias of the baseline.</p>

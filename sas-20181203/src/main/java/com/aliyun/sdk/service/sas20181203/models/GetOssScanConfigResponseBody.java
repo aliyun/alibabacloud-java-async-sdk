@@ -36,10 +36,6 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetOssScanConfigResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -314,29 +302,6 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             private String name; 
             private java.util.List<Integer> scanDayList; 
             private String startTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.allKeyPrefix = model.allKeyPrefix;
-                this.bucketCount = model.bucketCount;
-                this.bucketName = model.bucketName;
-                this.bucketNameList = model.bucketNameList;
-                this.decompressMaxFileCount = model.decompressMaxFileCount;
-                this.decompressMaxLayer = model.decompressMaxLayer;
-                this.decryptionList = model.decryptionList;
-                this.enable = model.enable;
-                this.endTime = model.endTime;
-                this.id = model.id;
-                this.keyPrefixList = model.keyPrefixList;
-                this.keySuffixList = model.keySuffixList;
-                this.lastModifiedStartTime = model.lastModifiedStartTime;
-                this.lastUpdateTime = model.lastUpdateTime;
-                this.name = model.name;
-                this.scanDayList = model.scanDayList;
-                this.startTime = model.startTime;
-            } 
 
             /**
              * <p>Indicates whether the prefixes of all objects are matched.</p>

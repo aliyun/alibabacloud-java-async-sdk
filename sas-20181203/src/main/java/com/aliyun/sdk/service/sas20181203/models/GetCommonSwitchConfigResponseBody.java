@@ -36,10 +36,6 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCommonSwitchConfigResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,14 +122,6 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String targetDefault; 
             private String targetSyncStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.targetDefault = model.targetDefault;
-                this.targetSyncStatus = model.targetSyncStatus;
-            } 
 
             /**
              * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>

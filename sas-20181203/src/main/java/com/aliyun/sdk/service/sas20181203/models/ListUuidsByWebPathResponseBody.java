@@ -40,10 +40,6 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return list
      */
@@ -69,15 +65,6 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListUuidsByWebPathResponseBody model) {
-            this.list = model.list;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the protected assets.</p>
@@ -179,16 +166,6 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             private String intranetIp; 
             private String machineName; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.machineName = model.machineName;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The public IP address of the server.</p>
@@ -308,16 +285,6 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

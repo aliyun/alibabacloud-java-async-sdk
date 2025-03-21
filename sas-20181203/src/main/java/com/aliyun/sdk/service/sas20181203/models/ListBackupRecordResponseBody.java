@@ -40,10 +40,6 @@ public class ListBackupRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return backupRecordList
      */
@@ -69,15 +65,6 @@ public class ListBackupRecordResponseBody extends TeaModel {
         private java.util.List<BackupRecordList> backupRecordList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListBackupRecordResponseBody model) {
-            this.backupRecordList = model.backupRecordList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the backup record.</p>
@@ -311,27 +298,6 @@ public class ListBackupRecordResponseBody extends TeaModel {
             private String ip; 
             private String regionId; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(BackupRecordList model) {
-                this.backupEndTime = model.backupEndTime;
-                this.backupJobId = model.backupJobId;
-                this.backupPlanId = model.backupPlanId;
-                this.backupStartTime = model.backupStartTime;
-                this.backupStatus = model.backupStatus;
-                this.clientId = model.clientId;
-                this.errorCode = model.errorCode;
-                this.errorMessage = model.errorMessage;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.ip = model.ip;
-                this.regionId = model.regionId;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
@@ -577,16 +543,6 @@ public class ListBackupRecordResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

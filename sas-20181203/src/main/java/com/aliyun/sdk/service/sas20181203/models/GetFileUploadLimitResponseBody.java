@@ -36,10 +36,6 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetFileUploadLimitResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned if the request is successful.</p>
@@ -122,13 +110,6 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
 
         public static final class Builder {
             private String limit; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.limit = model.limit;
-            } 
 
             /**
              * <p>The QPS limit on the files uploaded from the client.</p>

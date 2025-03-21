@@ -40,10 +40,6 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<RecordList> recordList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCustomBlockRecordsResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.recordList = model.recordList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -180,16 +167,6 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -284,14 +261,6 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String target; 
             private String targetType; 
-
-            private Builder() {
-            } 
-
-            private Builder(TargetList model) {
-                this.target = model.target;
-                this.targetType = model.targetType;
-            } 
 
             /**
              * <p>The ID of the destination asset.</p>
@@ -452,21 +421,6 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private String source; 
             private Integer status; 
             private java.util.List<TargetList> targetList; 
-
-            private Builder() {
-            } 
-
-            private Builder(RecordList model) {
-                this.blockExpireDate = model.blockExpireDate;
-                this.blockIp = model.blockIp;
-                this.bound = model.bound;
-                this.enableCount = model.enableCount;
-                this.id = model.id;
-                this.serverCount = model.serverCount;
-                this.source = model.source;
-                this.status = model.status;
-                this.targetList = model.targetList;
-            } 
 
             /**
              * <p>The timestamp generated when the block action on the IP address becomes invalid.</p>

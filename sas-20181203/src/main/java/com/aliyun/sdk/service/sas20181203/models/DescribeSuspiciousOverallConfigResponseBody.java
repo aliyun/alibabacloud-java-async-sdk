@@ -36,10 +36,6 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return overallConfig
      */
@@ -57,14 +53,6 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
     public static final class Builder {
         private OverallConfig overallConfig; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSuspiciousOverallConfigResponseBody model) {
-            this.overallConfig = model.overallConfig;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The configuration.</p>
@@ -134,14 +122,6 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String config; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(OverallConfig model) {
-                this.config = model.config;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The status of the feature. Valid values:</p>

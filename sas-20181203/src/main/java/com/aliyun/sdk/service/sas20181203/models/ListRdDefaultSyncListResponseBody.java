@@ -36,10 +36,6 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListRdDefaultSyncListResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned if the call is successful.</p>
@@ -122,13 +110,6 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String folderIds; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.folderIds = model.folderIds;
-            } 
 
             /**
              * <p>The IDs of the folders in the resource directory.</p>

@@ -36,10 +36,6 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return overallList
      */
@@ -57,14 +53,6 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<OverallList> overallList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCommonOverallConfigListResponseBody model) {
-            this.overallList = model.overallList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the configuration items.</p>
@@ -158,16 +146,6 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
             private String config; 
             private Integer totalCount; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(OverallList model) {
-                this.authVersionList = model.authVersionList;
-                this.config = model.config;
-                this.totalCount = model.totalCount;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The editions of Security Center.</p>

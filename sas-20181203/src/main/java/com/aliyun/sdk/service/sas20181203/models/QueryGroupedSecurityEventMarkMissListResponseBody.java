@@ -52,10 +52,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryGroupedSecurityEventMarkMissListResponseBody model) {
-            this.code = model.code;
-            this.list = model.list;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
@@ -340,23 +324,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private String operate; 
             private String uuids; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.aliUid = model.aliUid;
-                this.disposalWay = model.disposalWay;
-                this.eventName = model.eventName;
-                this.eventNameOriginal = model.eventNameOriginal;
-                this.eventType = model.eventType;
-                this.eventTypeOriginal = model.eventTypeOriginal;
-                this.field = model.field;
-                this.fieldValue = model.fieldValue;
-                this.filedAliasName = model.filedAliasName;
-                this.operate = model.operate;
-                this.uuids = model.uuids;
-            } 
-
             /**
              * <p>The ID of the user.</p>
              * 
@@ -563,16 +530,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -36,10 +36,6 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return logShipperStatus
      */
@@ -57,14 +53,6 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
     public static final class Builder {
         private LogShipperStatus logShipperStatus; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeLogShipperStatusResponseBody model) {
-            this.logShipperStatus = model.logShipperStatus;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The status information.</p>
@@ -206,20 +194,6 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             private String postPaidSupportStatus; 
             private String slsProjectStatus; 
             private String slsServiceStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(LogShipperStatus model) {
-                this.authStatus = model.authStatus;
-                this.buyStatus = model.buyStatus;
-                this.etlMetaVersion = model.etlMetaVersion;
-                this.openStatus = model.openStatus;
-                this.postPaidOpenStatus = model.postPaidOpenStatus;
-                this.postPaidSupportStatus = model.postPaidSupportStatus;
-                this.slsProjectStatus = model.slsProjectStatus;
-                this.slsServiceStatus = model.slsServiceStatus;
-            } 
 
             /**
              * <p>Indicates whether Security Center is authorized to access Log Service. Valid values:</p>

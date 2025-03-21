@@ -36,10 +36,6 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Vendors> vendors; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListInstanceCatalogResponseBody model) {
-            this.requestId = model.requestId;
-            this.vendors = model.vendors;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -122,13 +110,6 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstanceSubTypes model) {
-                this.name = model.name;
-            } 
 
             /**
              * <p>The name of the asset subtype.</p>
@@ -191,14 +172,6 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InstanceSubTypes> instanceSubTypes; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstanceTypes model) {
-                this.instanceSubTypes = model.instanceSubTypes;
-                this.name = model.name;
-            } 
 
             /**
              * <p>An array that consists of asset subtypes.</p>
@@ -269,14 +242,6 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InstanceTypes> instanceTypes; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(Vendors model) {
-                this.instanceTypes = model.instanceTypes;
-                this.name = model.name;
-            } 
 
             /**
              * <p>An array that consists of asset types.</p>

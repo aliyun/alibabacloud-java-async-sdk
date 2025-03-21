@@ -36,10 +36,6 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return containerGroupedFields
      */
@@ -57,14 +53,6 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private ContainerGroupedFields containerGroupedFields; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeContainerFieldStatisticsResponseBody model) {
-            this.containerGroupedFields = model.containerGroupedFields;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The statistical information about containers.</p>
@@ -266,25 +254,6 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             private Integer riskImageCount; 
             private Integer riskInstanceCount; 
             private Integer riskPodCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(ContainerGroupedFields model) {
-                this.appCount = model.appCount;
-                this.clusterCount = model.clusterCount;
-                this.containerCount = model.containerCount;
-                this.imageCount = model.imageCount;
-                this.instanceCount = model.instanceCount;
-                this.namespaceCount = model.namespaceCount;
-                this.podCount = model.podCount;
-                this.riskAppCount = model.riskAppCount;
-                this.riskClusterCount = model.riskClusterCount;
-                this.riskContainerCount = model.riskContainerCount;
-                this.riskImageCount = model.riskImageCount;
-                this.riskInstanceCount = model.riskInstanceCount;
-                this.riskPodCount = model.riskPodCount;
-            } 
 
             /**
              * <p>The number of applications.</p>

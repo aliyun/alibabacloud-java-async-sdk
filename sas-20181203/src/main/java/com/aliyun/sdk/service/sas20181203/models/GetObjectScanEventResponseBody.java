@@ -36,10 +36,6 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetObjectScanEventResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetObjectScanEventResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -182,18 +170,6 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             private String type; 
             private String value; 
             private String valueDisplay; 
-
-            private Builder() {
-            } 
-
-            private Builder(Details model) {
-                this.infoType = model.infoType;
-                this.name = model.name;
-                this.nameDisplay = model.nameDisplay;
-                this.type = model.type;
-                this.value = model.value;
-                this.valueDisplay = model.valueDisplay;
-            } 
 
             /**
              * <p>The type of the item.</p>
@@ -335,16 +311,6 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             private String eventName; 
             private String fileName; 
             private String md5; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.details = model.details;
-                this.eventName = model.eventName;
-                this.fileName = model.fileName;
-                this.md5 = model.md5;
-            } 
 
             /**
              * <p>The details of the alert event.</p>

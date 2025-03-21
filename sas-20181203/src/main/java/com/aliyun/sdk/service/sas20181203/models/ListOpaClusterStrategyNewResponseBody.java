@@ -56,10 +56,6 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListOpaClusterStrategyNewResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.list = model.list;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -352,22 +335,6 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             private String strategyName; 
             private Boolean unScanedImage; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.action = model.action;
-                this.clusterCount = model.clusterCount;
-                this.clusterIdList = model.clusterIdList;
-                this.description = model.description;
-                this.imageName = model.imageName;
-                this.label = model.label;
-                this.maliciousImage = model.maliciousImage;
-                this.strategyId = model.strategyId;
-                this.strategyName = model.strategyName;
-                this.unScanedImage = model.unScanedImage;
-            } 
-
             /**
              * <p>The action of the rule. Valid values:</p>
              * <ul>
@@ -556,16 +523,6 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

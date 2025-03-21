@@ -36,10 +36,6 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageContentResource
      */
@@ -57,14 +53,6 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
     public static final class Builder {
         private PageContentResource pageContentResource; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRiskCheckItemResultResponseBody model) {
-            this.pageContentResource = model.pageContentResource;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -182,18 +170,6 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             private Integer pageCount; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageContentResource model) {
-                this.contentResource = model.contentResource;
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageCount = model.pageCount;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The data of the affected assets on each page in a dynamic table.</p>

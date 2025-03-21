@@ -40,10 +40,6 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<RestorePlans> restorePlans; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRestorePlansResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.restorePlans = model.restorePlans;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -392,23 +369,6 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             private String targetInstanceId; 
             private String targetInstanceName; 
             private Long updatedTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(RestorePlans model) {
-                this.createdTime = model.createdTime;
-                this.databaseName = model.databaseName;
-                this.instanceName = model.instanceName;
-                this.policyId = model.policyId;
-                this.policyName = model.policyName;
-                this.restorePoint = model.restorePoint;
-                this.status = model.status;
-                this.targetDatabaseName = model.targetDatabaseName;
-                this.targetInstanceId = model.targetInstanceId;
-                this.targetInstanceName = model.targetInstanceName;
-                this.updatedTime = model.updatedTime;
-            } 
 
             /**
              * <p>The timestamp when the restoration task was created. Unit: milliseconds.</p>

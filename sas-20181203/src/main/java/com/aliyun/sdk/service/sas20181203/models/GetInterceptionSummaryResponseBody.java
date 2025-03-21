@@ -36,10 +36,6 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return interceptionSummary
      */
@@ -57,14 +53,6 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private InterceptionSummary interceptionSummary; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetInterceptionSummaryResponseBody model) {
-            this.interceptionSummary = model.interceptionSummary;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The statistics.</p>
@@ -230,22 +218,6 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             private Long riskCount30Day; 
             private Long riskCountToday; 
             private Integer ruleCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(InterceptionSummary model) {
-                this.closeClusterCount = model.closeClusterCount;
-                this.closeRuleCount = model.closeRuleCount;
-                this.clusterCount = model.clusterCount;
-                this.interceptionCountInDays = model.interceptionCountInDays;
-                this.openClusterCount = model.openClusterCount;
-                this.openRuleCount = model.openRuleCount;
-                this.riskCount180Day = model.riskCount180Day;
-                this.riskCount30Day = model.riskCount30Day;
-                this.riskCountToday = model.riskCountToday;
-                this.ruleCount = model.ruleCount;
-            } 
 
             /**
              * <p>The number of clusters that are not protected.</p>

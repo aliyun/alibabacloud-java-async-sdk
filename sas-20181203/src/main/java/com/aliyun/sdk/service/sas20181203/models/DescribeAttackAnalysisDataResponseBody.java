@@ -48,10 +48,6 @@ public class DescribeAttackAnalysisDataResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -93,17 +89,6 @@ public class DescribeAttackAnalysisDataResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAttackAnalysisDataResponseBody model) {
-            this.data = model.data;
-            this.page = model.page;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.total = model.total;
-        } 
 
         /**
          * <p>The attack events. The value contains the following fields:</p>

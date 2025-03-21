@@ -40,10 +40,6 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -69,15 +65,6 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Instances> instances; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCloudAssetDetailResponseBody model) {
-            this.count = model.count;
-            this.instances = model.instances;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The number of instances in the list of cloud assets returned.</p>
@@ -302,26 +289,6 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             private String riskStatus; 
             private String securityInfo; 
             private Integer vendor; 
-
-            private Builder() {
-            } 
-
-            private Builder(Instances model) {
-                this.alarmStatus = model.alarmStatus;
-                this.assetSubType = model.assetSubType;
-                this.assetSubTypeName = model.assetSubTypeName;
-                this.assetType = model.assetType;
-                this.assetTypeName = model.assetTypeName;
-                this.createdTime = model.createdTime;
-                this.detailLink = model.detailLink;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.regionId = model.regionId;
-                this.riskStatus = model.riskStatus;
-                this.securityInfo = model.securityInfo;
-                this.vendor = model.vendor;
-            } 
 
             /**
              * <p>Indicates whether alerts are generated for the current cloud asset. Valid values:</p>

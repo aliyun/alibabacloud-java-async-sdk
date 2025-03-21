@@ -36,10 +36,6 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return assetList
      */
@@ -57,14 +53,6 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AssetList> assetList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAssetDetailByUuidsResponseBody model) {
-            this.assetList = model.assetList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the details of the instances.</p>
@@ -506,45 +494,6 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
             private String tag; 
             private String uuid; 
             private String vpcInstanceId; 
-
-            private Builder() {
-            } 
-
-            private Builder(AssetList model) {
-                this.assetType = model.assetType;
-                this.authModifyTime = model.authModifyTime;
-                this.authVersion = model.authVersion;
-                this.bind = model.bind;
-                this.clientStatus = model.clientStatus;
-                this.clientVersion = model.clientVersion;
-                this.cpu = model.cpu;
-                this.cpuInfo = model.cpuInfo;
-                this.createTime = model.createTime;
-                this.diskInfoList = model.diskInfoList;
-                this.flag = model.flag;
-                this.groupTrace = model.groupTrace;
-                this.hostName = model.hostName;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.ip = model.ip;
-                this.ipList = model.ipList;
-                this.kernel = model.kernel;
-                this.macList = model.macList;
-                this.mem = model.mem;
-                this.memory = model.memory;
-                this.os = model.os;
-                this.osDetail = model.osDetail;
-                this.osName = model.osName;
-                this.region = model.region;
-                this.regionId = model.regionId;
-                this.regionName = model.regionName;
-                this.sysInfo = model.sysInfo;
-                this.tag = model.tag;
-                this.uuid = model.uuid;
-                this.vpcInstanceId = model.vpcInstanceId;
-            } 
 
             /**
              * <p>The type of the asset.</p>

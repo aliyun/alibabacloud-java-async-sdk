@@ -40,10 +40,6 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return attestors
      */
@@ -69,15 +65,6 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         private java.util.List<Attestors> attestors; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAttestorsResponseBody model) {
-            this.attestors = model.attestors;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The witnesses.</p>
@@ -191,17 +178,6 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             private String keyVersionId; 
             private String name; 
             private String remark; 
-
-            private Builder() {
-            } 
-
-            private Builder(Attestors model) {
-                this.keyId = model.keyId;
-                this.keyRegionId = model.keyRegionId;
-                this.keyVersionId = model.keyVersionId;
-                this.name = model.name;
-                this.remark = model.remark;
-            } 
 
             /**
              * <p>The ID of the KMS key.</p>
@@ -332,16 +308,6 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

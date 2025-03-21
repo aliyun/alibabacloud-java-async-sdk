@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCycleTaskListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private String configId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -31,11 +35,11 @@ public class DescribeCycleTaskListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private DescribeCycleTaskListRequest(Builder builder) {
         super(builder);
+        this.configId = builder.configId;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.taskName = builder.taskName;
@@ -50,9 +54,16 @@ public class DescribeCycleTaskListRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
     }
 
     /**
@@ -84,6 +95,7 @@ public class DescribeCycleTaskListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCycleTaskListRequest, Builder> {
+        private String configId; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String taskName; 
@@ -95,11 +107,21 @@ public class DescribeCycleTaskListRequest extends Request {
 
         private Builder(DescribeCycleTaskListRequest request) {
             super(request);
+            this.configId = request.configId;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
             this.taskName = request.taskName;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * ConfigId.
+         */
+        public Builder configId(String configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
+            return this;
+        }
 
         /**
          * <p>The number of the page to return.</p>
@@ -149,7 +171,6 @@ public class DescribeCycleTaskListRequest extends Request {
          * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
          * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE_SCAN</p>

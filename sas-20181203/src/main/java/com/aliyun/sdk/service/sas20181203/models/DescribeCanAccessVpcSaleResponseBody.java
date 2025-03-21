@@ -36,10 +36,6 @@ public class DescribeCanAccessVpcSaleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return canAccess
      */
@@ -57,14 +53,6 @@ public class DescribeCanAccessVpcSaleResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean canAccess; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCanAccessVpcSaleResponseBody model) {
-            this.canAccess = model.canAccess;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates whether the purchase can be made according to VPC.</p>

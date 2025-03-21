@@ -40,10 +40,6 @@ public class GetRulesCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class GetRulesCountResponseBody extends TeaModel {
         private String requestId; 
         private Long totalSystemClientRuleCount; 
         private Long totalUserDefineRuleCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetRulesCountResponseBody model) {
-            this.requestId = model.requestId;
-            this.totalSystemClientRuleCount = model.totalSystemClientRuleCount;
-            this.totalUserDefineRuleCount = model.totalUserDefineRuleCount;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

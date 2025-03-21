@@ -40,10 +40,6 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -69,15 +65,6 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         private Integer count; 
         private String requestId; 
         private java.util.List<String> UUIDList; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSuspiciousUUIDConfigResponseBody model) {
-            this.count = model.count;
-            this.requestId = model.requestId;
-            this.UUIDList = model.UUIDList;
-        } 
 
         /**
          * <p>The total number of servers on which proactive defense of the specified type takes effect.</p>

@@ -40,10 +40,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pageInfo
      */
@@ -69,15 +65,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePropertyUserDetailResponseBody model) {
-            this.pageInfo = model.pageInfo;
-            this.propertys = model.propertys;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The pagination information.</p>
@@ -179,16 +166,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -524,34 +501,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private String status; 
             private String user; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Propertys model) {
-                this.accountsExpirationDate = model.accountsExpirationDate;
-                this.createTimestamp = model.createTimestamp;
-                this.groupNames = model.groupNames;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.ip = model.ip;
-                this.isCouldLogin = model.isCouldLogin;
-                this.isPasswdExpired = model.isPasswdExpired;
-                this.isPasswdLocked = model.isPasswdLocked;
-                this.isRoot = model.isRoot;
-                this.isSudoer = model.isSudoer;
-                this.isUserExpired = model.isUserExpired;
-                this.lastLoginIp = model.lastLoginIp;
-                this.lastLoginTime = model.lastLoginTime;
-                this.lastLoginTimeDt = model.lastLoginTimeDt;
-                this.lastLoginTimestamp = model.lastLoginTimestamp;
-                this.passwordExpirationDate = model.passwordExpirationDate;
-                this.status = model.status;
-                this.user = model.user;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The date on which the account expires.</p>

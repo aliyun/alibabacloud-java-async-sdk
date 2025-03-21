@@ -40,10 +40,6 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VulList> vulList; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDomainSecureVulListResponseBody model) {
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-            this.vulList = model.vulList;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -242,21 +229,6 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             private Integer nntfCount; 
             private String tags; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(VulList model) {
-                this.aliasName = model.aliasName;
-                this.asapCount = model.asapCount;
-                this.gmtLast = model.gmtLast;
-                this.handledCount = model.handledCount;
-                this.laterCount = model.laterCount;
-                this.name = model.name;
-                this.nntfCount = model.nntfCount;
-                this.tags = model.tags;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

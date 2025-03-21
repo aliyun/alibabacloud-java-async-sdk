@@ -36,10 +36,6 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetCurrentVersionPublishResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -230,22 +218,6 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             private String latestVersionDesc; 
             private Integer publishStatus; 
             private String upgradeVersion; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.autoUpgrade = model.autoUpgrade;
-                this.bigCustomer = model.bigCustomer;
-                this.curVersion = model.curVersion;
-                this.forceUpgradeTime = model.forceUpgradeTime;
-                this.graySwitchStatus = model.graySwitchStatus;
-                this.latestVersion = model.latestVersion;
-                this.latestVersionCreate = model.latestVersionCreate;
-                this.latestVersionDesc = model.latestVersionDesc;
-                this.publishStatus = model.publishStatus;
-                this.upgradeVersion = model.upgradeVersion;
-            } 
 
             /**
              * <p>Indicates whether automatic upgrade is enabled. Valid values:</p>

@@ -56,10 +56,6 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListMaliciousFileWhitelistConfigsResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.list = model.list;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -364,23 +347,6 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private String targetType; 
             private String targetValue; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.count = model.count;
-                this.eventName = model.eventName;
-                this.field = model.field;
-                this.fieldValue = model.fieldValue;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.operator = model.operator;
-                this.source = model.source;
-                this.targetType = model.targetType;
-                this.targetValue = model.targetValue;
-            } 
-
             /**
              * <p>The number of the assets on which the rule takes effect.</p>
              * <blockquote>
@@ -596,16 +562,6 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

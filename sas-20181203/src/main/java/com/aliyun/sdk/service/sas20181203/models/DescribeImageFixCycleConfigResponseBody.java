@@ -36,10 +36,6 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageFixCycleConfigResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -158,16 +146,6 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             private String imageFixSwitch; 
             private String imageFixTarget; 
             private Integer imageTimeRange; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.imageFixCycle = model.imageFixCycle;
-                this.imageFixSwitch = model.imageFixSwitch;
-                this.imageFixTarget = model.imageFixTarget;
-                this.imageTimeRange = model.imageTimeRange;
-            } 
 
             /**
              * <p>The cycle of the scheduled fix. Unit: day.</p>

@@ -36,10 +36,6 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class VerifyCheckResultResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(VerifyCheckResultResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -146,15 +134,6 @@ public class VerifyCheckResultResponseBody extends TeaModel {
             private String operateCode; 
             private String taskId; 
             private Integer throttlingTimeSecond; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.operateCode = model.operateCode;
-                this.taskId = model.taskId;
-                this.throttlingTimeSecond = model.throttlingTimeSecond;
-            } 
 
             /**
              * <p>The operation code of the cloud service configuration task. Valid values:</p>

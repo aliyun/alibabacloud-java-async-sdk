@@ -36,10 +36,6 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return frontPatchList
      */
@@ -57,14 +53,6 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FrontPatchList> frontPatchList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeFrontVulPatchListResponseBody model) {
-            this.frontPatchList = model.frontPatchList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array consisting of the information about the pre-patches that are required to fix the specified Windows system vulnerability.</p>
@@ -134,14 +122,6 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         public static final class Builder {
             private String aliasName; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(PatchList model) {
-                this.aliasName = model.aliasName;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The name of the vulnerability.</p>
@@ -215,14 +195,6 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PatchList> patchList; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(FrontPatchList model) {
-                this.patchList = model.patchList;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>An array consisting of the pre-patches that are required to fix the specified Windows system vulnerability on the server.</p>

@@ -36,10 +36,6 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RiskCheckSummary riskCheckSummary; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRiskCheckSummaryResponseBody model) {
-            this.requestId = model.requestId;
-            this.riskCheckSummary = model.riskCheckSummary;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -134,14 +122,6 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(CountByStatus model) {
-                this.count = model.count;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The number of detected risk items.</p>
@@ -268,18 +248,6 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String status; 
             private String title; 
 
-            private Builder() {
-            } 
-
-            private Builder(Groups model) {
-                this.countByStatus = model.countByStatus;
-                this.id = model.id;
-                this.remainingTime = model.remainingTime;
-                this.sort = model.sort;
-                this.status = model.status;
-                this.title = model.title;
-            } 
-
             /**
              * <p>An array that consists of the statistics about check results.</p>
              */
@@ -399,14 +367,6 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String key; 
-
-            private Builder() {
-            } 
-
-            private Builder(RiskLevelCount model) {
-                this.count = model.count;
-                this.key = model.key;
-            } 
 
             /**
              * <p>The number of check items at the specified risk level.</p>
@@ -581,22 +541,6 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private Integer riskCount; 
             private java.util.List<RiskLevelCount> riskLevelCount; 
             private Float riskRate; 
-
-            private Builder() {
-            } 
-
-            private Builder(RiskCheckSummary model) {
-                this.affectedAssetCount = model.affectedAssetCount;
-                this.disabledRiskCount = model.disabledRiskCount;
-                this.enabledRiskCount = model.enabledRiskCount;
-                this.groups = model.groups;
-                this.itemCount = model.itemCount;
-                this.previousCount = model.previousCount;
-                this.previousTime = model.previousTime;
-                this.riskCount = model.riskCount;
-                this.riskLevelCount = model.riskLevelCount;
-                this.riskRate = model.riskRate;
-            } 
 
             /**
              * <p>The number of affected assets.</p>

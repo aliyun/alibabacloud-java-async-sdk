@@ -36,10 +36,6 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SasPmAgentList> sasPmAgentList; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSasPmAgentListResponseBody model) {
-            this.requestId = model.requestId;
-            this.sasPmAgentList = model.sasPmAgentList;
-        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,19 +182,6 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             private Integer monitorInstallResult; 
             private Integer monitorInstallStatus; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(SasPmAgentList model) {
-                this.aliyunAssistId = model.aliyunAssistId;
-                this.aliyunMonitorId = model.aliyunMonitorId;
-                this.assistInstallResult = model.assistInstallResult;
-                this.assistInstallStatus = model.assistInstallStatus;
-                this.monitorInstallResult = model.monitorInstallResult;
-                this.monitorInstallStatus = model.monitorInstallStatus;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of Cloud Assistant.</p>

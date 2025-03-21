@@ -34,7 +34,7 @@ public class ListInstanceRiskLevelsRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,14 +117,6 @@ public class ListInstanceRiskLevelsRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(InstanceList model) {
-                this.instanceId = model.instanceId;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The ID of the instance.</p>

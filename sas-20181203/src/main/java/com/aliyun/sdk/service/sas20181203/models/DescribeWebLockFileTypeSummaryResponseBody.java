@@ -40,10 +40,6 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return list
      */
@@ -69,15 +65,6 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWebLockFileTypeSummaryResponseBody model) {
-            this.list = model.list;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>An array that consists of events on web tamper proofing returned.</p>
@@ -158,14 +145,6 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.count = model.count;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The number of attempts.</p>

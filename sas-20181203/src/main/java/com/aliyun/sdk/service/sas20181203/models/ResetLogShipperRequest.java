@@ -44,7 +44,7 @@ public class ResetLogShipperRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,16 +199,6 @@ public class ResetLogShipperRequest extends Request {
             private Integer hotTtl; 
             private String status; 
             private Integer ttl; 
-
-            private Builder() {
-            } 
-
-            private Builder(LogMetaList model) {
-                this.configLogStore = model.configLogStore;
-                this.hotTtl = model.hotTtl;
-                this.status = model.status;
-                this.ttl = model.ttl;
-            } 
 
             /**
              * <p>The Logstore that you want to configure.</p>

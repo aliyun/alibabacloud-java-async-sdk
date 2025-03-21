@@ -52,10 +52,6 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetMaliciousFileWhitelistConfigResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -342,23 +326,6 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             private String source; 
             private String targetType; 
             private String targetValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.count = model.count;
-                this.eventName = model.eventName;
-                this.field = model.field;
-                this.fieldValue = model.fieldValue;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.operator = model.operator;
-                this.source = model.source;
-                this.targetType = model.targetType;
-                this.targetValue = model.targetValue;
-            } 
 
             /**
              * <p>The number of assets on which the whitelist rule takes effect.</p>

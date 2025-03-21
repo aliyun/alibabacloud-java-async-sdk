@@ -44,10 +44,6 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return itemCount
      */
@@ -81,16 +77,6 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         private java.util.List<NewestStatisticItems> newestStatisticItems; 
         private String requestId; 
         private String type; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePropertyUsageNewestResponseBody model) {
-            this.itemCount = model.itemCount;
-            this.newestStatisticItems = model.newestStatisticItems;
-            this.requestId = model.requestId;
-            this.type = model.type;
-        } 
 
         /**
          * ItemCount.
@@ -173,14 +159,6 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
         public static final class Builder {
             private Long create; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(NewestStatisticItems model) {
-                this.create = model.create;
-                this.name = model.name;
-            } 
 
             /**
              * Create.

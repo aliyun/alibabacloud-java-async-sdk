@@ -48,10 +48,6 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -93,17 +89,6 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeGroupedTagsResponseBody model) {
-            this.count = model.count;
-            this.groupedFileds = model.groupedFileds;
-            this.httpStatusCode = model.httpStatusCode;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>This parameter is deprecated.</p>
@@ -222,15 +207,6 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             private String count; 
             private String name; 
             private Integer tagId; 
-
-            private Builder() {
-            } 
-
-            private Builder(GroupedFileds model) {
-                this.count = model.count;
-                this.name = model.name;
-                this.tagId = model.tagId;
-            } 
 
             /**
              * <p>The number of assets to which the tag is added.</p>

@@ -36,10 +36,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return imageBaselines
      */
@@ -57,14 +53,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     public static final class Builder {
         private ImageBaselines imageBaselines; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAllImageBaselineResponseBody model) {
-            this.imageBaselines = model.imageBaselines;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The baselines that are used in image baseline checks.</p>
@@ -158,16 +146,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private String classKey; 
             private String itemKey; 
             private String nameKey; 
-
-            private Builder() {
-            } 
-
-            private Builder(BaselineItemList model) {
-                this.alias = model.alias;
-                this.classKey = model.classKey;
-                this.itemKey = model.itemKey;
-                this.nameKey = model.nameKey;
-            } 
 
             /**
              * <p>The alias of the baseline check item.</p>
@@ -288,16 +266,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private String classKey; 
             private String nameKey; 
 
-            private Builder() {
-            } 
-
-            private Builder(BaselineNameList model) {
-                this.alias = model.alias;
-                this.baselineItemList = model.baselineItemList;
-                this.classKey = model.classKey;
-                this.nameKey = model.nameKey;
-            } 
-
             /**
              * <p>The alias of the baseline.</p>
              * 
@@ -402,15 +370,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private java.util.List<BaselineNameList> baselineNameList; 
             private String classKey; 
 
-            private Builder() {
-            } 
-
-            private Builder(BaselineClassList model) {
-                this.alias = model.alias;
-                this.baselineNameList = model.baselineNameList;
-                this.classKey = model.classKey;
-            } 
-
             /**
              * <p>The alias of the baseline type.</p>
              * 
@@ -479,13 +438,6 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BaselineClassList> baselineClassList; 
-
-            private Builder() {
-            } 
-
-            private Builder(ImageBaselines model) {
-                this.baselineClassList = model.baselineClassList;
-            } 
 
             /**
              * <p>An array that consists of baseline types.</p>

@@ -36,10 +36,6 @@ public class ListCheckStandardResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class ListCheckStandardResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Standards> standards; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListCheckStandardResponseBody model) {
-            this.requestId = model.requestId;
-            this.standards = model.standards;
-        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -158,16 +146,6 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private Long riskCheckCount; 
             private String showName; 
             private Integer showPriorityLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Requirements model) {
-                this.id = model.id;
-                this.riskCheckCount = model.riskCheckCount;
-                this.showName = model.showName;
-                this.showPriorityLevel = model.showPriorityLevel;
-            } 
 
             /**
              * <p>The ID of the requirement.</p>
@@ -311,18 +289,6 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private String showName; 
             private Integer showPriorityLevel; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Standards model) {
-                this.bindVendor = model.bindVendor;
-                this.id = model.id;
-                this.requirements = model.requirements;
-                this.showName = model.showName;
-                this.showPriorityLevel = model.showPriorityLevel;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The cloud service provider that uses the standard. Valid values:</p>

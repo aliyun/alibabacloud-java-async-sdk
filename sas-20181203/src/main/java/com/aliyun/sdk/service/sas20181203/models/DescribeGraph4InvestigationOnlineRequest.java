@@ -55,7 +55,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }

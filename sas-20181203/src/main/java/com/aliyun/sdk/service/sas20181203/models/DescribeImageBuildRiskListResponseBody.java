@@ -48,10 +48,6 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageBuildRiskListResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -295,21 +280,6 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             private String riskLevel; 
             private Integer unprocessedNum; 
 
-            private Builder() {
-            } 
-
-            private Builder(List model) {
-                this.count = model.count;
-                this.firstScanTime = model.firstScanTime;
-                this.lastScanTime = model.lastScanTime;
-                this.riskClass = model.riskClass;
-                this.riskClassName = model.riskClassName;
-                this.riskKey = model.riskKey;
-                this.riskKeyName = model.riskKeyName;
-                this.riskLevel = model.riskLevel;
-                this.unprocessedNum = model.unprocessedNum;
-            } 
-
             /**
              * <p>The number of affected images.</p>
              * 
@@ -477,15 +447,6 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
-
             /**
              * <p>The page number. Default value: <strong>1</strong>.</p>
              * 
@@ -572,14 +533,6 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private PageInfo pageInfo; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.list = model.list;
-                this.pageInfo = model.pageInfo;
-            } 
 
             /**
              * <p>The risks.</p>

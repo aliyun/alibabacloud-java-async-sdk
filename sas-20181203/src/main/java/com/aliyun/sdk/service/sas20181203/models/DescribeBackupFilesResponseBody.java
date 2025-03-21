@@ -40,10 +40,6 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return backupFiles
      */
@@ -69,15 +65,6 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private java.util.List<BackupFiles> backupFiles; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeBackupFilesResponseBody model) {
-            this.backupFiles = model.backupFiles;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the backup files returned.</p>
@@ -179,16 +166,6 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private Long size; 
             private String subtree; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(BackupFiles model) {
-                this.name = model.name;
-                this.size = model.size;
-                this.subtree = model.subtree;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The name of the anti-ransomware policy.</p>
@@ -312,16 +289,6 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of backup files returned on the current page.</p>

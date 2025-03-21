@@ -36,10 +36,6 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetVirusScanConfigResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned if the request was successful.</p>
@@ -230,22 +218,6 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             private Integer targetEndTime; 
             private Integer targetStartTime; 
             private String taskType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.configId = model.configId;
-                this.enable = model.enable;
-                this.intervalPeriod = model.intervalPeriod;
-                this.periodUnit = model.periodUnit;
-                this.scanPath = model.scanPath;
-                this.scanType = model.scanType;
-                this.selectionKey = model.selectionKey;
-                this.targetEndTime = model.targetEndTime;
-                this.targetStartTime = model.targetStartTime;
-                this.taskType = model.taskType;
-            } 
 
             /**
              * <p>The ID of the task configuration.</p>

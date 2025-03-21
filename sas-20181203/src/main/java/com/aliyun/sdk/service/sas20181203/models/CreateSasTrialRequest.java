@@ -54,7 +54,7 @@ public class CreateSasTrialRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,13 +233,6 @@ public class CreateSasTrialRequest extends Request {
 
         public static final class Builder {
             private String tryReason; 
-
-            private Builder() {
-            } 
-
-            private Builder(RequestForm model) {
-                this.tryReason = model.tryReason;
-            } 
 
             /**
              * <p>The reason why you apply for the trial.</p>

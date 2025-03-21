@@ -40,10 +40,6 @@ public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
         private String requestId; 
         private java.util.Map<String, Integer> subNodesCount; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryIncidentSubNodesCountResponseBody model) {
-            this.requestId = model.requestId;
-            this.subNodesCount = model.subNodesCount;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The request ID.</p>

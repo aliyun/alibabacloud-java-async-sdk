@@ -36,10 +36,6 @@ public class GetFileProtectEventCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetFileProtectEventCountResponseBody extends TeaModel {
     public static final class Builder {
         private Integer data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetFileProtectEventCountResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data returned if the request is successful.</p>

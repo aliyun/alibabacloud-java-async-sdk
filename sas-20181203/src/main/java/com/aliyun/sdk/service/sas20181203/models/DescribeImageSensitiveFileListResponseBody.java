@@ -56,10 +56,6 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SensitiveFileList> sensitiveFileList; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageSensitiveFileListResponseBody model) {
-            this.code = model.code;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-            this.sensitiveFileList = model.sensitiveFileList;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -291,17 +274,6 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             private String lastRowKey; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.lastRowKey = model.lastRowKey;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -528,24 +500,6 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             private String sensitiveFileName; 
             private Integer status; 
             private Integer unprocessedNum; 
-
-            private Builder() {
-            } 
-
-            private Builder(SensitiveFileList model) {
-                this.advice = model.advice;
-                this.classKey = model.classKey;
-                this.className = model.className;
-                this.count = model.count;
-                this.description = model.description;
-                this.firstScanTime = model.firstScanTime;
-                this.lastScanTime = model.lastScanTime;
-                this.riskLevel = model.riskLevel;
-                this.sensitiveFileKey = model.sensitiveFileKey;
-                this.sensitiveFileName = model.sensitiveFileName;
-                this.status = model.status;
-                this.unprocessedNum = model.unprocessedNum;
-            } 
 
             /**
              * <p>The suggestion.</p>

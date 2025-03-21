@@ -36,10 +36,6 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return interceptionRuleDetail
      */
@@ -57,14 +53,6 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     public static final class Builder {
         private InterceptionRuleDetail interceptionRuleDetail; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetInterceptionRuleDetailResponseBody model) {
-            this.interceptionRuleDetail = model.interceptionRuleDetail;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the rule.</p>
@@ -218,21 +206,6 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private Integer targetId; 
             private String targetName; 
             private String targetType; 
-
-            private Builder() {
-            } 
-
-            private Builder(DstTarget model) {
-                this.appName = model.appName;
-                this.imageList = model.imageList;
-                this.namespace = model.namespace;
-                this.ports = model.ports;
-                this.ruleType = model.ruleType;
-                this.tagList = model.tagList;
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-                this.targetType = model.targetType;
-            } 
 
             /**
              * <p>The name of the application.</p>
@@ -447,20 +420,6 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private String targetName; 
             private String targetType; 
 
-            private Builder() {
-            } 
-
-            private Builder(SrcTarget model) {
-                this.appName = model.appName;
-                this.imageList = model.imageList;
-                this.namespace = model.namespace;
-                this.ruleType = model.ruleType;
-                this.tagList = model.tagList;
-                this.targetId = model.targetId;
-                this.targetName = model.targetName;
-                this.targetType = model.targetType;
-            } 
-
             /**
              * <p>The name of the application.</p>
              * 
@@ -665,20 +624,6 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private Integer ruleSwitch; 
             private String ruleType; 
             private SrcTarget srcTarget; 
-
-            private Builder() {
-            } 
-
-            private Builder(InterceptionRuleDetail model) {
-                this.dstTarget = model.dstTarget;
-                this.interceptType = model.interceptType;
-                this.orderIndex = model.orderIndex;
-                this.ruleId = model.ruleId;
-                this.ruleName = model.ruleName;
-                this.ruleSwitch = model.ruleSwitch;
-                this.ruleType = model.ruleType;
-                this.srcTarget = model.srcTarget;
-            } 
 
             /**
              * <p>The destination network object.</p>

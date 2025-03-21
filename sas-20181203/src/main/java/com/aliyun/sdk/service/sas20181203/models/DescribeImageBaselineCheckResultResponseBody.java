@@ -40,10 +40,6 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return baselineResult
      */
@@ -69,15 +65,6 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         private java.util.List<BaselineResult> baselineResult; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImageBaselineCheckResultResponseBody model) {
-            this.baselineResult = model.baselineResult;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>An array that consists of the check results of image baselines.</p>
@@ -263,23 +250,6 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             private Integer lowRiskItemCount; 
             private Integer middleRiskItemCount; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(BaselineResult model) {
-                this.baselineClassAlias = model.baselineClassAlias;
-                this.baselineItemCount = model.baselineItemCount;
-                this.baselineNameAlias = model.baselineNameAlias;
-                this.baselineNameKey = model.baselineNameKey;
-                this.baselineNameLevel = model.baselineNameLevel;
-                this.firstScanTime = model.firstScanTime;
-                this.highRiskItemCount = model.highRiskItemCount;
-                this.lastScanTime = model.lastScanTime;
-                this.lowRiskItemCount = model.lowRiskItemCount;
-                this.middleRiskItemCount = model.middleRiskItemCount;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The key of the image baseline type.</p>
@@ -485,16 +455,6 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.count = model.count;
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

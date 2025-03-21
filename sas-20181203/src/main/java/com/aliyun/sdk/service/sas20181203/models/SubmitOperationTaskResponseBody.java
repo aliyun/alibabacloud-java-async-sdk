@@ -40,10 +40,6 @@ public class SubmitOperationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return operateCode
      */
@@ -69,15 +65,6 @@ public class SubmitOperationTaskResponseBody extends TeaModel {
         private String operateCode; 
         private String requestId; 
         private String rootTaskId; 
-
-        private Builder() {
-        } 
-
-        private Builder(SubmitOperationTaskResponseBody model) {
-            this.operateCode = model.operateCode;
-            this.requestId = model.requestId;
-            this.rootTaskId = model.rootTaskId;
-        } 
 
         /**
          * <p>The handling result code. Valid values:</p>

@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCycleTaskResponseBody</p>
  */
 public class CreateCycleTaskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private String configId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCycleTaskResponseBody(Builder builder) {
+        this.configId = builder.configId;
         this.requestId = builder.requestId;
     }
 
@@ -32,8 +36,11 @@ public class CreateCycleTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
+    /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
     }
 
     /**
@@ -44,14 +51,16 @@ public class CreateCycleTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String configId; 
         private String requestId; 
 
-        private Builder() {
-        } 
-
-        private Builder(CreateCycleTaskResponseBody model) {
-            this.requestId = model.requestId;
-        } 
+        /**
+         * ConfigId.
+         */
+        public Builder configId(String configId) {
+            this.configId = configId;
+            return this;
+        }
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

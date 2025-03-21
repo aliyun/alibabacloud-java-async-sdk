@@ -36,10 +36,6 @@ public class ConfirmVirusEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class ConfirmVirusEventsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean result; 
-
-        private Builder() {
-        } 
-
-        private Builder(ConfirmVirusEventsResponseBody model) {
-            this.requestId = model.requestId;
-            this.result = model.result;
-        } 
 
         /**
          * <p>The ID of the request.</p>

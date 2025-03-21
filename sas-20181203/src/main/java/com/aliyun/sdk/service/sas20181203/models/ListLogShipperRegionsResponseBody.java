@@ -36,10 +36,6 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return logShipperRegionList
      */
@@ -57,14 +53,6 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<LogShipperRegionList> logShipperRegionList; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListLogShipperRegionsResponseBody model) {
-            this.logShipperRegionList = model.logShipperRegionList;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The regions supported by the log delivery feature.</p>
@@ -122,13 +110,6 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String regionId; 
-
-            private Builder() {
-            } 
-
-            private Builder(LogShipperRegionList model) {
-                this.regionId = model.regionId;
-            } 
 
             /**
              * <p>The ID of the region.</p>

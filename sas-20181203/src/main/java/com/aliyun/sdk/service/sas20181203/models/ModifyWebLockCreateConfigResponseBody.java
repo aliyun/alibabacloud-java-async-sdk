@@ -36,10 +36,6 @@ public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return configId
      */
@@ -57,14 +53,6 @@ public class ModifyWebLockCreateConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String configId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyWebLockCreateConfigResponseBody model) {
-            this.configId = model.configId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The configuration ID of the protected directory.</p>

@@ -32,10 +32,6 @@ public class CreateAttestorResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -45,13 +41,6 @@ public class CreateAttestorResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateAttestorResponseBody model) {
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The request ID.</p>

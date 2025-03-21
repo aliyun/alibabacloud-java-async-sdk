@@ -40,10 +40,6 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return eventList
      */
@@ -69,15 +65,6 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         private java.util.List<EventList> eventList; 
         private PageInfo pageInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListFileProtectEventResponseBody model) {
-            this.eventList = model.eventList;
-            this.pageInfo = model.pageInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The events.</p>
@@ -347,30 +334,6 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private String ruleName; 
             private Integer status; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(EventList model) {
-                this.alertLevel = model.alertLevel;
-                this.cmdLine = model.cmdLine;
-                this.filePath = model.filePath;
-                this.handleTime = model.handleTime;
-                this.id = model.id;
-                this.instanceName = model.instanceName;
-                this.internetIp = model.internetIp;
-                this.intranetIp = model.intranetIp;
-                this.latestTime = model.latestTime;
-                this.operation = model.operation;
-                this.platform = model.platform;
-                this.procPath = model.procPath;
-                this.procPermission = model.procPermission;
-                this.processId = model.processId;
-                this.remark = model.remark;
-                this.ruleName = model.ruleName;
-                this.status = model.status;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The severity of the alert. Valid values:</p>
@@ -648,15 +611,6 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(PageInfo model) {
-                this.currentPage = model.currentPage;
-                this.pageSize = model.pageSize;
-                this.totalCount = model.totalCount;
-            } 
 
             /**
              * <p>The page number.</p>

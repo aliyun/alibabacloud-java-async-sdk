@@ -40,10 +40,6 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -69,15 +65,6 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Groups> groups; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeAllGroupsResponseBody model) {
-            this.count = model.count;
-            this.groups = model.groups;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The total number of server groups.</p>
@@ -170,15 +157,6 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             private Integer groupFlag; 
             private Integer groupId; 
             private String groupName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Groups model) {
-                this.groupFlag = model.groupFlag;
-                this.groupId = model.groupId;
-                this.groupName = model.groupName;
-            } 
 
             /**
              * <p>The type of the server group. Valid values:</p>

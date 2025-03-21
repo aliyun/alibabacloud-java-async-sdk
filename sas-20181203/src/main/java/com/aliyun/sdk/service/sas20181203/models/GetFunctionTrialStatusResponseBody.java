@@ -36,10 +36,6 @@ public class GetFunctionTrialStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class GetFunctionTrialStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Integer data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetFunctionTrialStatusResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates eligibility. Values:</p>

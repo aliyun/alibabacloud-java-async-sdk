@@ -56,10 +56,6 @@ public class DescribeReportExportResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return downloadUrl
      */
@@ -117,19 +113,6 @@ public class DescribeReportExportResponseBody extends TeaModel {
         private Long reportId; 
         private String requestId; 
         private Long urlExpiredTime; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeReportExportResponseBody model) {
-            this.downloadUrl = model.downloadUrl;
-            this.exportDate = model.exportDate;
-            this.exportId = model.exportId;
-            this.exportStatus = model.exportStatus;
-            this.reportId = model.reportId;
-            this.requestId = model.requestId;
-            this.urlExpiredTime = model.urlExpiredTime;
-        } 
 
         /**
          * <p>The download URL of the report.</p>

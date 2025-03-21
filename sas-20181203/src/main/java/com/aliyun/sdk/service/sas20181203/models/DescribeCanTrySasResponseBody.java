@@ -36,10 +36,6 @@ public class DescribeCanTrySasResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return canTry
      */
@@ -57,14 +53,6 @@ public class DescribeCanTrySasResponseBody extends TeaModel {
     public static final class Builder {
         private Integer canTry; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCanTrySasResponseBody model) {
-            this.canTry = model.canTry;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Indicates whether you have the permissions on the trial use of Security Center. Valid values:</p>
