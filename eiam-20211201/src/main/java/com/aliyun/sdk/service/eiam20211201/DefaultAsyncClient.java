@@ -169,6 +169,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create Conditional Access Policy</p>
+     * 
+     * @param request the request parameters of CreateConditionalAccessPolicy  CreateConditionalAccessPolicyRequest
+     * @return CreateConditionalAccessPolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateConditionalAccessPolicyResponse> createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateConditionalAccessPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateConditionalAccessPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateConditionalAccessPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDomain  CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -346,6 +367,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteApplicationClientSecretResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
+     * 
+     * @param request the request parameters of DeleteConditionalAccessPolicy  DeleteConditionalAccessPolicyRequest
+     * @return DeleteConditionalAccessPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteConditionalAccessPolicyResponse> deleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteConditionalAccessPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteConditionalAccessPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteConditionalAccessPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -610,6 +652,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * @param request the request parameters of DisableConditionalAccessPolicy  DisableConditionalAccessPolicyRequest
+     * @return DisableConditionalAccessPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DisableConditionalAccessPolicyResponse> disableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableConditionalAccessPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableConditionalAccessPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableConditionalAccessPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableDomainProxyToken  DisableDomainProxyTokenRequest
      * @return DisableDomainProxyTokenResponse
      */
@@ -772,6 +835,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * @param request the request parameters of EnableConditionalAccessPolicy  EnableConditionalAccessPolicyRequest
+     * @return EnableConditionalAccessPolicyResponse
+     */
+    @Override
+    public CompletableFuture<EnableConditionalAccessPolicyResponse> enableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableConditionalAccessPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableConditionalAccessPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableConditionalAccessPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnableDomainProxyToken  EnableDomainProxyTokenRequest
      * @return EnableDomainProxyTokenResponse
      */
@@ -928,6 +1012,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetApplicationSsoConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Query Conditional Access Policy</p>
+     * 
+     * @param request the request parameters of GetConditionalAccessPolicy  GetConditionalAccessPolicyRequest
+     * @return GetConditionalAccessPolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetConditionalAccessPolicyResponse> getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetConditionalAccessPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetConditionalAccessPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetConditionalAccessPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1312,6 +1417,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListApplicationsForUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Paginated query for the list of conditional access policies</p>
+     * 
+     * @param request the request parameters of ListConditionalAccessPolicies  ListConditionalAccessPoliciesRequest
+     * @return ListConditionalAccessPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListConditionalAccessPoliciesResponse> listConditionalAccessPolicies(ListConditionalAccessPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListConditionalAccessPolicies").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConditionalAccessPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConditionalAccessPoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>List Conditional Access Policies Associated with Network Zones</p>
+     * 
+     * @param request the request parameters of ListConditionalAccessPoliciesForNetworkZone  ListConditionalAccessPoliciesForNetworkZoneRequest
+     * @return ListConditionalAccessPoliciesForNetworkZoneResponse
+     */
+    @Override
+    public CompletableFuture<ListConditionalAccessPoliciesForNetworkZoneResponse> listConditionalAccessPoliciesForNetworkZone(ListConditionalAccessPoliciesForNetworkZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListConditionalAccessPoliciesForNetworkZone").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConditionalAccessPoliciesForNetworkZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConditionalAccessPoliciesForNetworkZoneResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2107,6 +2254,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateApplicationDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy</p>
+     * 
+     * @param request the request parameters of UpdateConditionalAccessPolicy  UpdateConditionalAccessPolicyRequest
+     * @return UpdateConditionalAccessPolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateConditionalAccessPolicyResponse> updateConditionalAccessPolicy(UpdateConditionalAccessPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateConditionalAccessPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateConditionalAccessPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateConditionalAccessPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy Description</p>
+     * 
+     * @param request the request parameters of UpdateConditionalAccessPolicyDescription  UpdateConditionalAccessPolicyDescriptionRequest
+     * @return UpdateConditionalAccessPolicyDescriptionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateConditionalAccessPolicyDescriptionResponse> updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateConditionalAccessPolicyDescription").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateConditionalAccessPolicyDescriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateConditionalAccessPolicyDescriptionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -247,6 +247,93 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
      *
      * <p>GetIdentityProviderUdPullConfigurationResponseBody</p>
      */
+    public static class PeriodicSyncConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncCron")
+        private String periodicSyncCron;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncTimes")
+        private Integer periodicSyncTimes;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncType")
+        private String periodicSyncType;
+
+        private PeriodicSyncConfig(Builder builder) {
+            this.periodicSyncCron = builder.periodicSyncCron;
+            this.periodicSyncTimes = builder.periodicSyncTimes;
+            this.periodicSyncType = builder.periodicSyncType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PeriodicSyncConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return periodicSyncCron
+         */
+        public String getPeriodicSyncCron() {
+            return this.periodicSyncCron;
+        }
+
+        /**
+         * @return periodicSyncTimes
+         */
+        public Integer getPeriodicSyncTimes() {
+            return this.periodicSyncTimes;
+        }
+
+        /**
+         * @return periodicSyncType
+         */
+        public String getPeriodicSyncType() {
+            return this.periodicSyncType;
+        }
+
+        public static final class Builder {
+            private String periodicSyncCron; 
+            private Integer periodicSyncTimes; 
+            private String periodicSyncType; 
+
+            /**
+             * PeriodicSyncCron.
+             */
+            public Builder periodicSyncCron(String periodicSyncCron) {
+                this.periodicSyncCron = periodicSyncCron;
+                return this;
+            }
+
+            /**
+             * PeriodicSyncTimes.
+             */
+            public Builder periodicSyncTimes(Integer periodicSyncTimes) {
+                this.periodicSyncTimes = periodicSyncTimes;
+                return this;
+            }
+
+            /**
+             * PeriodicSyncType.
+             */
+            public Builder periodicSyncType(String periodicSyncType) {
+                this.periodicSyncType = periodicSyncType;
+                return this;
+            }
+
+            public PeriodicSyncConfig build() {
+                return new PeriodicSyncConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetIdentityProviderUdPullConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIdentityProviderUdPullConfigurationResponseBody</p>
+     */
     public static class PullProtectedRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupDeletedThreshold")
         private Integer groupDeletedThreshold;
@@ -429,6 +516,9 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("LdapUdPullConfig")
         private LdapUdPullConfig ldapUdPullConfig;
 
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncConfig")
+        private PeriodicSyncConfig periodicSyncConfig;
+
         @com.aliyun.core.annotation.NameInMap("PeriodicSyncStatus")
         private String periodicSyncStatus;
 
@@ -444,6 +534,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             this.incrementalCallbackStatus = builder.incrementalCallbackStatus;
             this.instanceId = builder.instanceId;
             this.ldapUdPullConfig = builder.ldapUdPullConfig;
+            this.periodicSyncConfig = builder.periodicSyncConfig;
             this.periodicSyncStatus = builder.periodicSyncStatus;
             this.pullProtectedRule = builder.pullProtectedRule;
             this.udSyncScopeConfig = builder.udSyncScopeConfig;
@@ -493,6 +584,13 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         }
 
         /**
+         * @return periodicSyncConfig
+         */
+        public PeriodicSyncConfig getPeriodicSyncConfig() {
+            return this.periodicSyncConfig;
+        }
+
+        /**
          * @return periodicSyncStatus
          */
         public String getPeriodicSyncStatus() {
@@ -519,6 +617,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             private String incrementalCallbackStatus; 
             private String instanceId; 
             private LdapUdPullConfig ldapUdPullConfig; 
+            private PeriodicSyncConfig periodicSyncConfig; 
             private String periodicSyncStatus; 
             private PullProtectedRule pullProtectedRule; 
             private UdSyncScopeConfig udSyncScopeConfig; 
@@ -572,6 +671,14 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
              */
             public Builder ldapUdPullConfig(LdapUdPullConfig ldapUdPullConfig) {
                 this.ldapUdPullConfig = ldapUdPullConfig;
+                return this;
+            }
+
+            /**
+             * PeriodicSyncConfig.
+             */
+            public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
+                this.periodicSyncConfig = periodicSyncConfig;
                 return this;
             }
 

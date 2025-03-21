@@ -65,6 +65,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationClientSecretResponse> createApplicationClientSecret(CreateApplicationClientSecretRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Create Conditional Access Policy</p>
+     * 
+     * @param request the request parameters of CreateConditionalAccessPolicy  CreateConditionalAccessPolicyRequest
+     * @return CreateConditionalAccessPolicyResponse
+     */
+    CompletableFuture<CreateConditionalAccessPolicyResponse> createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateDomain  CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -126,6 +135,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteApplicationClientSecretResponse
      */
     CompletableFuture<DeleteApplicationClientSecretResponse> deleteApplicationClientSecret(DeleteApplicationClientSecretRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
+     * 
+     * @param request the request parameters of DeleteConditionalAccessPolicy  DeleteConditionalAccessPolicyRequest
+     * @return DeleteConditionalAccessPolicyResponse
+     */
+    CompletableFuture<DeleteConditionalAccessPolicyResponse> deleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
@@ -218,6 +236,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableApplicationSsoResponse> disableApplicationSso(DisableApplicationSsoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * @param request the request parameters of DisableConditionalAccessPolicy  DisableConditionalAccessPolicyRequest
+     * @return DisableConditionalAccessPolicyResponse
+     */
+    CompletableFuture<DisableConditionalAccessPolicyResponse> disableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request);
+
+    /**
      * @param request the request parameters of DisableDomainProxyToken  DisableDomainProxyTokenRequest
      * @return DisableDomainProxyTokenResponse
      */
@@ -272,6 +299,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableApplicationSsoResponse> enableApplicationSso(EnableApplicationSsoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * @param request the request parameters of EnableConditionalAccessPolicy  EnableConditionalAccessPolicyRequest
+     * @return EnableConditionalAccessPolicyResponse
+     */
+    CompletableFuture<EnableConditionalAccessPolicyResponse> enableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request);
+
+    /**
      * @param request the request parameters of EnableDomainProxyToken  EnableDomainProxyTokenRequest
      * @return EnableDomainProxyTokenResponse
      */
@@ -324,6 +360,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetApplicationSsoConfigResponse
      */
     CompletableFuture<GetApplicationSsoConfigResponse> getApplicationSsoConfig(GetApplicationSsoConfigRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Query Conditional Access Policy</p>
+     * 
+     * @param request the request parameters of GetConditionalAccessPolicy  GetConditionalAccessPolicyRequest
+     * @return GetConditionalAccessPolicyResponse
+     */
+    CompletableFuture<GetConditionalAccessPolicyResponse> getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request);
 
     /**
      * @param request the request parameters of GetDomain  GetDomainRequest
@@ -456,6 +501,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApplicationsForUserResponse
      */
     CompletableFuture<ListApplicationsForUserResponse> listApplicationsForUser(ListApplicationsForUserRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Paginated query for the list of conditional access policies</p>
+     * 
+     * @param request the request parameters of ListConditionalAccessPolicies  ListConditionalAccessPoliciesRequest
+     * @return ListConditionalAccessPoliciesResponse
+     */
+    CompletableFuture<ListConditionalAccessPoliciesResponse> listConditionalAccessPolicies(ListConditionalAccessPoliciesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>List Conditional Access Policies Associated with Network Zones</p>
+     * 
+     * @param request the request parameters of ListConditionalAccessPoliciesForNetworkZone  ListConditionalAccessPoliciesForNetworkZoneRequest
+     * @return ListConditionalAccessPoliciesForNetworkZoneResponse
+     */
+    CompletableFuture<ListConditionalAccessPoliciesForNetworkZoneResponse> listConditionalAccessPoliciesForNetworkZone(ListConditionalAccessPoliciesForNetworkZoneRequest request);
 
     /**
      * @param request the request parameters of ListDomainProxyTokens  ListDomainProxyTokensRequest
@@ -723,6 +786,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApplicationDescriptionResponse
      */
     CompletableFuture<UpdateApplicationDescriptionResponse> updateApplicationDescription(UpdateApplicationDescriptionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy</p>
+     * 
+     * @param request the request parameters of UpdateConditionalAccessPolicy  UpdateConditionalAccessPolicyRequest
+     * @return UpdateConditionalAccessPolicyResponse
+     */
+    CompletableFuture<UpdateConditionalAccessPolicyResponse> updateConditionalAccessPolicy(UpdateConditionalAccessPolicyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy Description</p>
+     * 
+     * @param request the request parameters of UpdateConditionalAccessPolicyDescription  UpdateConditionalAccessPolicyDescriptionRequest
+     * @return UpdateConditionalAccessPolicyDescriptionResponse
+     */
+    CompletableFuture<UpdateConditionalAccessPolicyDescriptionResponse> updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateGroup  UpdateGroupRequest
