@@ -36,10 +36,6 @@ public class PushMessageToiOSResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return messageId
      */
@@ -57,14 +53,6 @@ public class PushMessageToiOSResponseBody extends TeaModel {
     public static final class Builder {
         private String messageId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(PushMessageToiOSResponseBody model) {
-            this.messageId = model.messageId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * MessageId.

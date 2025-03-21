@@ -47,7 +47,7 @@ public class MassPushRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -266,13 +266,14 @@ public class MassPushRequest extends Request {
         private String androidXiaoMiNotifyTitle;
 
         @com.aliyun.core.annotation.NameInMap("AndroidXiaomiBigPictureUrl")
+        @Deprecated
         private String androidXiaomiBigPictureUrl;
 
         @com.aliyun.core.annotation.NameInMap("AndroidXiaomiImageUrl")
+        @Deprecated
         private String androidXiaomiImageUrl;
 
         @com.aliyun.core.annotation.NameInMap("Body")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String body;
 
         @com.aliyun.core.annotation.NameInMap("DeviceType")
@@ -388,6 +389,27 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("iOSInterruptionLevel")
         private String iOSInterruptionLevel;
 
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityAttributes")
+        private String iOSLiveActivityAttributes;
+
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityAttributesType")
+        private String iOSLiveActivityAttributesType;
+
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityContentState")
+        private String iOSLiveActivityContentState;
+
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityDismissalDate")
+        private Long iOSLiveActivityDismissalDate;
+
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityEvent")
+        private String iOSLiveActivityEvent;
+
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityId")
+        private String iOSLiveActivityId;
+
+        @com.aliyun.core.annotation.NameInMap("iOSLiveActivityStaleDate")
+        private Long iOSLiveActivityStaleDate;
+
         @com.aliyun.core.annotation.NameInMap("iOSMusic")
         private String iOSMusic;
 
@@ -501,6 +523,13 @@ public class MassPushRequest extends Request {
             this.iOSBadgeAutoIncrement = builder.iOSBadgeAutoIncrement;
             this.iOSExtParameters = builder.iOSExtParameters;
             this.iOSInterruptionLevel = builder.iOSInterruptionLevel;
+            this.iOSLiveActivityAttributes = builder.iOSLiveActivityAttributes;
+            this.iOSLiveActivityAttributesType = builder.iOSLiveActivityAttributesType;
+            this.iOSLiveActivityContentState = builder.iOSLiveActivityContentState;
+            this.iOSLiveActivityDismissalDate = builder.iOSLiveActivityDismissalDate;
+            this.iOSLiveActivityEvent = builder.iOSLiveActivityEvent;
+            this.iOSLiveActivityId = builder.iOSLiveActivityId;
+            this.iOSLiveActivityStaleDate = builder.iOSLiveActivityStaleDate;
             this.iOSMusic = builder.iOSMusic;
             this.iOSMutableContent = builder.iOSMutableContent;
             this.iOSNotificationCategory = builder.iOSNotificationCategory;
@@ -1096,6 +1125,55 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return iOSLiveActivityAttributes
+         */
+        public String getIOSLiveActivityAttributes() {
+            return this.iOSLiveActivityAttributes;
+        }
+
+        /**
+         * @return iOSLiveActivityAttributesType
+         */
+        public String getIOSLiveActivityAttributesType() {
+            return this.iOSLiveActivityAttributesType;
+        }
+
+        /**
+         * @return iOSLiveActivityContentState
+         */
+        public String getIOSLiveActivityContentState() {
+            return this.iOSLiveActivityContentState;
+        }
+
+        /**
+         * @return iOSLiveActivityDismissalDate
+         */
+        public Long getIOSLiveActivityDismissalDate() {
+            return this.iOSLiveActivityDismissalDate;
+        }
+
+        /**
+         * @return iOSLiveActivityEvent
+         */
+        public String getIOSLiveActivityEvent() {
+            return this.iOSLiveActivityEvent;
+        }
+
+        /**
+         * @return iOSLiveActivityId
+         */
+        public String getIOSLiveActivityId() {
+            return this.iOSLiveActivityId;
+        }
+
+        /**
+         * @return iOSLiveActivityStaleDate
+         */
+        public Long getIOSLiveActivityStaleDate() {
+            return this.iOSLiveActivityStaleDate;
+        }
+
+        /**
          * @return iOSMusic
          */
         public String getIOSMusic() {
@@ -1248,6 +1326,13 @@ public class MassPushRequest extends Request {
             private Boolean iOSBadgeAutoIncrement; 
             private String iOSExtParameters; 
             private String iOSInterruptionLevel; 
+            private String iOSLiveActivityAttributes; 
+            private String iOSLiveActivityAttributesType; 
+            private String iOSLiveActivityContentState; 
+            private Long iOSLiveActivityDismissalDate; 
+            private String iOSLiveActivityEvent; 
+            private String iOSLiveActivityId; 
+            private Long iOSLiveActivityStaleDate; 
             private String iOSMusic; 
             private Boolean iOSMutableContent; 
             private String iOSNotificationCategory; 
@@ -1258,104 +1343,6 @@ public class MassPushRequest extends Request {
             private String iOSRemindBody; 
             private Boolean iOSSilentNotification; 
             private String iOSSubtitle; 
-
-            private Builder() {
-            } 
-
-            private Builder(PushTask model) {
-                this.androidActivity = model.androidActivity;
-                this.androidBadgeAddNum = model.androidBadgeAddNum;
-                this.androidBadgeClass = model.androidBadgeClass;
-                this.androidBadgeSetNum = model.androidBadgeSetNum;
-                this.androidBigBody = model.androidBigBody;
-                this.androidBigPictureUrl = model.androidBigPictureUrl;
-                this.androidBigTitle = model.androidBigTitle;
-                this.androidExtParameters = model.androidExtParameters;
-                this.androidHonorTargetUserType = model.androidHonorTargetUserType;
-                this.androidHuaweiReceiptId = model.androidHuaweiReceiptId;
-                this.androidHuaweiTargetUserType = model.androidHuaweiTargetUserType;
-                this.androidImageUrl = model.androidImageUrl;
-                this.androidInboxBody = model.androidInboxBody;
-                this.androidMessageHuaweiCategory = model.androidMessageHuaweiCategory;
-                this.androidMessageHuaweiUrgency = model.androidMessageHuaweiUrgency;
-                this.androidMessageOppoCategory = model.androidMessageOppoCategory;
-                this.androidMessageOppoNotifyLevel = model.androidMessageOppoNotifyLevel;
-                this.androidMessageVivoCategory = model.androidMessageVivoCategory;
-                this.androidMusic = model.androidMusic;
-                this.androidNotificationBarPriority = model.androidNotificationBarPriority;
-                this.androidNotificationBarType = model.androidNotificationBarType;
-                this.androidNotificationChannel = model.androidNotificationChannel;
-                this.androidNotificationGroup = model.androidNotificationGroup;
-                this.androidNotificationHonorChannel = model.androidNotificationHonorChannel;
-                this.androidNotificationHuaweiChannel = model.androidNotificationHuaweiChannel;
-                this.androidNotificationNotifyId = model.androidNotificationNotifyId;
-                this.androidNotificationThreadId = model.androidNotificationThreadId;
-                this.androidNotificationVivoChannel = model.androidNotificationVivoChannel;
-                this.androidNotificationXiaomiChannel = model.androidNotificationXiaomiChannel;
-                this.androidNotifyType = model.androidNotifyType;
-                this.androidOpenType = model.androidOpenType;
-                this.androidOpenUrl = model.androidOpenUrl;
-                this.androidPopupActivity = model.androidPopupActivity;
-                this.androidPopupBody = model.androidPopupBody;
-                this.androidPopupTitle = model.androidPopupTitle;
-                this.androidRemind = model.androidRemind;
-                this.androidRenderStyle = model.androidRenderStyle;
-                this.androidTargetUserType = model.androidTargetUserType;
-                this.androidVivoPushMode = model.androidVivoPushMode;
-                this.androidVivoReceiptId = model.androidVivoReceiptId;
-                this.androidXiaoMiActivity = model.androidXiaoMiActivity;
-                this.androidXiaoMiNotifyBody = model.androidXiaoMiNotifyBody;
-                this.androidXiaoMiNotifyTitle = model.androidXiaoMiNotifyTitle;
-                this.androidXiaomiBigPictureUrl = model.androidXiaomiBigPictureUrl;
-                this.androidXiaomiImageUrl = model.androidXiaomiImageUrl;
-                this.body = model.body;
-                this.deviceType = model.deviceType;
-                this.expireTime = model.expireTime;
-                this.harmonyAction = model.harmonyAction;
-                this.harmonyActionType = model.harmonyActionType;
-                this.harmonyBadgeAddNum = model.harmonyBadgeAddNum;
-                this.harmonyBadgeSetNum = model.harmonyBadgeSetNum;
-                this.harmonyCategory = model.harmonyCategory;
-                this.harmonyExtParameters = model.harmonyExtParameters;
-                this.harmonyExtensionExtraData = model.harmonyExtensionExtraData;
-                this.harmonyExtensionPush = model.harmonyExtensionPush;
-                this.harmonyImageUrl = model.harmonyImageUrl;
-                this.harmonyInboxContent = model.harmonyInboxContent;
-                this.harmonyNotificationSlotType = model.harmonyNotificationSlotType;
-                this.harmonyNotifyId = model.harmonyNotifyId;
-                this.harmonyReceiptId = model.harmonyReceiptId;
-                this.harmonyRemind = model.harmonyRemind;
-                this.harmonyRemindBody = model.harmonyRemindBody;
-                this.harmonyRemindTitle = model.harmonyRemindTitle;
-                this.harmonyRenderStyle = model.harmonyRenderStyle;
-                this.harmonyTestMessage = model.harmonyTestMessage;
-                this.harmonyUri = model.harmonyUri;
-                this.jobKey = model.jobKey;
-                this.pushTime = model.pushTime;
-                this.pushType = model.pushType;
-                this.sendChannels = model.sendChannels;
-                this.sendSpeed = model.sendSpeed;
-                this.storeOffline = model.storeOffline;
-                this.target = model.target;
-                this.targetValue = model.targetValue;
-                this.title = model.title;
-                this.trim = model.trim;
-                this.iOSApnsEnv = model.iOSApnsEnv;
-                this.iOSBadge = model.iOSBadge;
-                this.iOSBadgeAutoIncrement = model.iOSBadgeAutoIncrement;
-                this.iOSExtParameters = model.iOSExtParameters;
-                this.iOSInterruptionLevel = model.iOSInterruptionLevel;
-                this.iOSMusic = model.iOSMusic;
-                this.iOSMutableContent = model.iOSMutableContent;
-                this.iOSNotificationCategory = model.iOSNotificationCategory;
-                this.iOSNotificationCollapseId = model.iOSNotificationCollapseId;
-                this.iOSNotificationThreadId = model.iOSNotificationThreadId;
-                this.iOSRelevanceScore = model.iOSRelevanceScore;
-                this.iOSRemind = model.iOSRemind;
-                this.iOSRemindBody = model.iOSRemindBody;
-                this.iOSSilentNotification = model.iOSSilentNotification;
-                this.iOSSubtitle = model.iOSSubtitle;
-            } 
 
             /**
              * AndroidActivity.
@@ -1718,10 +1705,7 @@ public class MassPushRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hello</p>
+             * Body.
              */
             public Builder body(String body) {
                 this.body = body;
@@ -2025,6 +2009,62 @@ public class MassPushRequest extends Request {
              */
             public Builder iOSInterruptionLevel(String iOSInterruptionLevel) {
                 this.iOSInterruptionLevel = iOSInterruptionLevel;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityAttributes.
+             */
+            public Builder iOSLiveActivityAttributes(String iOSLiveActivityAttributes) {
+                this.iOSLiveActivityAttributes = iOSLiveActivityAttributes;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityAttributesType.
+             */
+            public Builder iOSLiveActivityAttributesType(String iOSLiveActivityAttributesType) {
+                this.iOSLiveActivityAttributesType = iOSLiveActivityAttributesType;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityContentState.
+             */
+            public Builder iOSLiveActivityContentState(String iOSLiveActivityContentState) {
+                this.iOSLiveActivityContentState = iOSLiveActivityContentState;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityDismissalDate.
+             */
+            public Builder iOSLiveActivityDismissalDate(Long iOSLiveActivityDismissalDate) {
+                this.iOSLiveActivityDismissalDate = iOSLiveActivityDismissalDate;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityEvent.
+             */
+            public Builder iOSLiveActivityEvent(String iOSLiveActivityEvent) {
+                this.iOSLiveActivityEvent = iOSLiveActivityEvent;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityId.
+             */
+            public Builder iOSLiveActivityId(String iOSLiveActivityId) {
+                this.iOSLiveActivityId = iOSLiveActivityId;
+                return this;
+            }
+
+            /**
+             * iOSLiveActivityStaleDate.
+             */
+            public Builder iOSLiveActivityStaleDate(Long iOSLiveActivityStaleDate) {
+                this.iOSLiveActivityStaleDate = iOSLiveActivityStaleDate;
                 return this;
             }
 

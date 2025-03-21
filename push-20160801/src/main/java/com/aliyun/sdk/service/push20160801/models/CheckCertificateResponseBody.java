@@ -48,10 +48,6 @@ public class CheckCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return android
      */
@@ -93,17 +89,6 @@ public class CheckCertificateResponseBody extends TeaModel {
         private Boolean IOS; 
         private ProductionCertInfo productionCertInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CheckCertificateResponseBody model) {
-            this.android = model.android;
-            this.developmentCertInfo = model.developmentCertInfo;
-            this.IOS = model.IOS;
-            this.productionCertInfo = model.productionCertInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Android.
@@ -195,14 +180,6 @@ public class CheckCertificateResponseBody extends TeaModel {
             private Long exipreTime; 
             private String status; 
 
-            private Builder() {
-            } 
-
-            private Builder(DevelopmentCertInfo model) {
-                this.exipreTime = model.exipreTime;
-                this.status = model.status;
-            } 
-
             /**
              * ExipreTime.
              */
@@ -269,14 +246,6 @@ public class CheckCertificateResponseBody extends TeaModel {
         public static final class Builder {
             private Long exipreTime; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(ProductionCertInfo model) {
-                this.exipreTime = model.exipreTime;
-                this.status = model.status;
-            } 
 
             /**
              * ExipreTime.

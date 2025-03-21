@@ -52,10 +52,6 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return nextToken
      */
@@ -105,18 +101,6 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         private PushInfos pushInfos; 
         private String requestId; 
         private Integer total; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryPushRecordsResponseBody model) {
-            this.nextToken = model.nextToken;
-            this.page = model.page;
-            this.pageSize = model.pageSize;
-            this.pushInfos = model.pushInfos;
-            this.requestId = model.requestId;
-            this.total = model.total;
-        } 
 
         /**
          * NextToken.
@@ -312,22 +296,6 @@ public class QueryPushRecordsResponseBody extends TeaModel {
             private String target; 
             private String title; 
 
-            private Builder() {
-            } 
-
-            private Builder(PushInfo model) {
-                this.appKey = model.appKey;
-                this.body = model.body;
-                this.deviceType = model.deviceType;
-                this.messageId = model.messageId;
-                this.pushTime = model.pushTime;
-                this.pushType = model.pushType;
-                this.source = model.source;
-                this.status = model.status;
-                this.target = model.target;
-                this.title = model.title;
-            } 
-
             /**
              * AppKey.
              */
@@ -446,13 +414,6 @@ public class QueryPushRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PushInfo> pushInfo; 
-
-            private Builder() {
-            } 
-
-            private Builder(PushInfos model) {
-                this.pushInfo = model.pushInfo;
-            } 
 
             /**
              * PushInfo.

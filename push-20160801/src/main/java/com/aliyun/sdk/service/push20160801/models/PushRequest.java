@@ -198,10 +198,12 @@ public class PushRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidXiaomiBigPictureUrl")
+    @Deprecated
     private String androidXiaomiBigPictureUrl;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidXiaomiImageUrl")
+    @Deprecated
     private String androidXiaomiImageUrl;
 
     @com.aliyun.core.annotation.Query
@@ -211,7 +213,6 @@ public class PushRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Body")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String body;
 
     @com.aliyun.core.annotation.Query
@@ -390,6 +391,34 @@ public class PushRequest extends Request {
     private String iOSInterruptionLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityAttributes")
+    private String iOSLiveActivityAttributes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityAttributesType")
+    private String iOSLiveActivityAttributesType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityContentState")
+    private String iOSLiveActivityContentState;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityDismissalDate")
+    private Long iOSLiveActivityDismissalDate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityEvent")
+    private String iOSLiveActivityEvent;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityId")
+    private String iOSLiveActivityId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSLiveActivityStaleDate")
+    private Long iOSLiveActivityStaleDate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("iOSMusic")
     private String iOSMusic;
 
@@ -520,6 +549,13 @@ public class PushRequest extends Request {
         this.iOSBadgeAutoIncrement = builder.iOSBadgeAutoIncrement;
         this.iOSExtParameters = builder.iOSExtParameters;
         this.iOSInterruptionLevel = builder.iOSInterruptionLevel;
+        this.iOSLiveActivityAttributes = builder.iOSLiveActivityAttributes;
+        this.iOSLiveActivityAttributesType = builder.iOSLiveActivityAttributesType;
+        this.iOSLiveActivityContentState = builder.iOSLiveActivityContentState;
+        this.iOSLiveActivityDismissalDate = builder.iOSLiveActivityDismissalDate;
+        this.iOSLiveActivityEvent = builder.iOSLiveActivityEvent;
+        this.iOSLiveActivityId = builder.iOSLiveActivityId;
+        this.iOSLiveActivityStaleDate = builder.iOSLiveActivityStaleDate;
         this.iOSMusic = builder.iOSMusic;
         this.iOSMutableContent = builder.iOSMutableContent;
         this.iOSNotificationCategory = builder.iOSNotificationCategory;
@@ -540,7 +576,7 @@ public class PushRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1169,6 +1205,55 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return iOSLiveActivityAttributes
+     */
+    public String getIOSLiveActivityAttributes() {
+        return this.iOSLiveActivityAttributes;
+    }
+
+    /**
+     * @return iOSLiveActivityAttributesType
+     */
+    public String getIOSLiveActivityAttributesType() {
+        return this.iOSLiveActivityAttributesType;
+    }
+
+    /**
+     * @return iOSLiveActivityContentState
+     */
+    public String getIOSLiveActivityContentState() {
+        return this.iOSLiveActivityContentState;
+    }
+
+    /**
+     * @return iOSLiveActivityDismissalDate
+     */
+    public Long getIOSLiveActivityDismissalDate() {
+        return this.iOSLiveActivityDismissalDate;
+    }
+
+    /**
+     * @return iOSLiveActivityEvent
+     */
+    public String getIOSLiveActivityEvent() {
+        return this.iOSLiveActivityEvent;
+    }
+
+    /**
+     * @return iOSLiveActivityId
+     */
+    public String getIOSLiveActivityId() {
+        return this.iOSLiveActivityId;
+    }
+
+    /**
+     * @return iOSLiveActivityStaleDate
+     */
+    public Long getIOSLiveActivityStaleDate() {
+        return this.iOSLiveActivityStaleDate;
+    }
+
+    /**
      * @return iOSMusic
      */
     public String getIOSMusic() {
@@ -1328,6 +1413,13 @@ public class PushRequest extends Request {
         private Boolean iOSBadgeAutoIncrement; 
         private String iOSExtParameters; 
         private String iOSInterruptionLevel; 
+        private String iOSLiveActivityAttributes; 
+        private String iOSLiveActivityAttributesType; 
+        private String iOSLiveActivityContentState; 
+        private Long iOSLiveActivityDismissalDate; 
+        private String iOSLiveActivityEvent; 
+        private String iOSLiveActivityId; 
+        private Long iOSLiveActivityStaleDate; 
         private String iOSMusic; 
         private Boolean iOSMutableContent; 
         private String iOSNotificationCategory; 
@@ -1434,6 +1526,13 @@ public class PushRequest extends Request {
             this.iOSBadgeAutoIncrement = request.iOSBadgeAutoIncrement;
             this.iOSExtParameters = request.iOSExtParameters;
             this.iOSInterruptionLevel = request.iOSInterruptionLevel;
+            this.iOSLiveActivityAttributes = request.iOSLiveActivityAttributes;
+            this.iOSLiveActivityAttributesType = request.iOSLiveActivityAttributesType;
+            this.iOSLiveActivityContentState = request.iOSLiveActivityContentState;
+            this.iOSLiveActivityDismissalDate = request.iOSLiveActivityDismissalDate;
+            this.iOSLiveActivityEvent = request.iOSLiveActivityEvent;
+            this.iOSLiveActivityId = request.iOSLiveActivityId;
+            this.iOSLiveActivityStaleDate = request.iOSLiveActivityStaleDate;
             this.iOSMusic = request.iOSMusic;
             this.iOSMutableContent = request.iOSMutableContent;
             this.iOSNotificationCategory = request.iOSNotificationCategory;
@@ -1864,10 +1963,7 @@ public class PushRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hello</p>
+         * Body.
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -2262,6 +2358,69 @@ public class PushRequest extends Request {
         public Builder iOSInterruptionLevel(String iOSInterruptionLevel) {
             this.putQueryParameter("iOSInterruptionLevel", iOSInterruptionLevel);
             this.iOSInterruptionLevel = iOSInterruptionLevel;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityAttributes.
+         */
+        public Builder iOSLiveActivityAttributes(String iOSLiveActivityAttributes) {
+            this.putQueryParameter("iOSLiveActivityAttributes", iOSLiveActivityAttributes);
+            this.iOSLiveActivityAttributes = iOSLiveActivityAttributes;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityAttributesType.
+         */
+        public Builder iOSLiveActivityAttributesType(String iOSLiveActivityAttributesType) {
+            this.putQueryParameter("iOSLiveActivityAttributesType", iOSLiveActivityAttributesType);
+            this.iOSLiveActivityAttributesType = iOSLiveActivityAttributesType;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityContentState.
+         */
+        public Builder iOSLiveActivityContentState(String iOSLiveActivityContentState) {
+            this.putQueryParameter("iOSLiveActivityContentState", iOSLiveActivityContentState);
+            this.iOSLiveActivityContentState = iOSLiveActivityContentState;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityDismissalDate.
+         */
+        public Builder iOSLiveActivityDismissalDate(Long iOSLiveActivityDismissalDate) {
+            this.putQueryParameter("iOSLiveActivityDismissalDate", iOSLiveActivityDismissalDate);
+            this.iOSLiveActivityDismissalDate = iOSLiveActivityDismissalDate;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityEvent.
+         */
+        public Builder iOSLiveActivityEvent(String iOSLiveActivityEvent) {
+            this.putQueryParameter("iOSLiveActivityEvent", iOSLiveActivityEvent);
+            this.iOSLiveActivityEvent = iOSLiveActivityEvent;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityId.
+         */
+        public Builder iOSLiveActivityId(String iOSLiveActivityId) {
+            this.putQueryParameter("iOSLiveActivityId", iOSLiveActivityId);
+            this.iOSLiveActivityId = iOSLiveActivityId;
+            return this;
+        }
+
+        /**
+         * iOSLiveActivityStaleDate.
+         */
+        public Builder iOSLiveActivityStaleDate(Long iOSLiveActivityStaleDate) {
+            this.putQueryParameter("iOSLiveActivityStaleDate", iOSLiveActivityStaleDate);
+            this.iOSLiveActivityStaleDate = iOSLiveActivityStaleDate;
             return this;
         }
 

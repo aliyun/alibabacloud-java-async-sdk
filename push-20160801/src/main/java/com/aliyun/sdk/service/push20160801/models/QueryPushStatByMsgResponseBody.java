@@ -36,10 +36,6 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return pushStats
      */
@@ -57,14 +53,6 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
     public static final class Builder {
         private PushStats pushStats; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryPushStatByMsgResponseBody model) {
-            this.pushStats = model.pushStats;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * PushStats.
@@ -240,23 +228,6 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
             private Long smsSentCount; 
             private Long smsSkipCount; 
 
-            private Builder() {
-            } 
-
-            private Builder(PushStat model) {
-                this.acceptCount = model.acceptCount;
-                this.deletedCount = model.deletedCount;
-                this.messageId = model.messageId;
-                this.openedCount = model.openedCount;
-                this.receivedCount = model.receivedCount;
-                this.sentCount = model.sentCount;
-                this.smsFailedCount = model.smsFailedCount;
-                this.smsReceiveFailedCount = model.smsReceiveFailedCount;
-                this.smsReceiveSuccessCount = model.smsReceiveSuccessCount;
-                this.smsSentCount = model.smsSentCount;
-                this.smsSkipCount = model.smsSkipCount;
-            } 
-
             /**
              * AcceptCount.
              */
@@ -383,13 +354,6 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PushStat> pushStat; 
-
-            private Builder() {
-            } 
-
-            private Builder(PushStats model) {
-                this.pushStat = model.pushStat;
-            } 
 
             /**
              * PushStat.

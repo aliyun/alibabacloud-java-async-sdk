@@ -36,10 +36,6 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return deviceInfo
      */
@@ -57,14 +53,6 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
     public static final class Builder {
         private DeviceInfo deviceInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryDeviceInfoResponseBody model) {
-            this.deviceInfo = model.deviceInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * DeviceInfo.
@@ -251,24 +239,6 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             private String phoneNumber; 
             private Boolean pushEnabled; 
             private String tags; 
-
-            private Builder() {
-            } 
-
-            private Builder(DeviceInfo model) {
-                this.account = model.account;
-                this.alias = model.alias;
-                this.brand = model.brand;
-                this.deviceId = model.deviceId;
-                this.deviceToken = model.deviceToken;
-                this.deviceType = model.deviceType;
-                this.lastOnlineTime = model.lastOnlineTime;
-                this.model = model.model;
-                this.online = model.online;
-                this.phoneNumber = model.phoneNumber;
-                this.pushEnabled = model.pushEnabled;
-                this.tags = model.tags;
-            } 
 
             /**
              * Account.
