@@ -55,7 +55,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory resourceDirectory; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDirectory.
+         * <p>The information about the resource directory.</p>
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.resourceDirectory = resourceDirectory;
@@ -205,7 +208,16 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             private String rootFolderId; 
 
             /**
-             * ControlPolicyStatus.
+             * <p>The status of the Control Policy feature. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The feature is enabled.</li>
+             * <li>PendingEnable: The feature is being enabled.</li>
+             * <li>Disabled: The feature is disabled.</li>
+             * <li>PendingDisable: The feature is being disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder controlPolicyStatus(String controlPolicyStatus) {
                 this.controlPolicyStatus = controlPolicyStatus;
@@ -213,7 +225,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the resource directory was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-18T15:32:10.473Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -221,7 +236,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityInformation.
+             * <p>The real-name verification information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** Co., Ltd.</p>
              */
             public Builder identityInformation(String identityInformation) {
                 this.identityInformation = identityInformation;
@@ -229,7 +247,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountId.
+             * <p>The ID of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172845045600****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -237,7 +258,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountName.
+             * <p>The name of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-admin</p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -245,7 +269,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MemberAccountDisplayNameSyncStatus.
+             * <p>The status of the Member Display Name Synchronization feature. Valid values:</p>
+             * <ul>
+             * <li>Enabled</li>
+             * <li>Disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder memberAccountDisplayNameSyncStatus(String memberAccountDisplayNameSyncStatus) {
                 this.memberAccountDisplayNameSyncStatus = memberAccountDisplayNameSyncStatus;
@@ -253,7 +284,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MemberDeletionStatus.
+             * <p>The status of the member deletion feature. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The feature is enabled. You can call the <a href="~~DeleteAccount~~">DeleteAccount</a> operation to delete members of the resource account type.</li>
+             * <li>Disabled: The feature is disabled. You cannot delete members of the resource account type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder memberDeletionStatus(String memberDeletionStatus) {
                 this.memberDeletionStatus = memberDeletionStatus;
@@ -261,7 +299,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryId.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-St****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -269,7 +310,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * RootFolderId.
+             * <p>The ID of the Root folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-Zo****</p>
              */
             public Builder rootFolderId(String rootFolderId) {
                 this.rootFolderId = rootFolderId;

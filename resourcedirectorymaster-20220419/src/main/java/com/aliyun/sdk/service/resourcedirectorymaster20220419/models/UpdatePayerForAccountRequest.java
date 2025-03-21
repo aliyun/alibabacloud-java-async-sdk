@@ -75,6 +75,7 @@ public class UpdatePayerForAccountRequest extends Request {
         } 
 
         /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UpdatePayerForAccountRequest extends Request {
         }
 
         /**
+         * <p>The ID of the billing account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

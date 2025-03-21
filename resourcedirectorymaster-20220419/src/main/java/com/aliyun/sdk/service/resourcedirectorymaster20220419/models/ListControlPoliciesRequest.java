@@ -137,8 +137,8 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number.</p>
+         * <p>Page starts from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -239,7 +239,10 @@ public class ListControlPoliciesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -247,7 +250,10 @@ public class ListControlPoliciesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -91,7 +91,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The information of the access control policies.</p>
+         * <p>The access control policies.</p>
          */
         public Builder controlPolicies(ControlPolicies controlPolicies) {
             this.controlPolicies = controlPolicies;
@@ -193,7 +193,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -201,7 +204,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -476,7 +482,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

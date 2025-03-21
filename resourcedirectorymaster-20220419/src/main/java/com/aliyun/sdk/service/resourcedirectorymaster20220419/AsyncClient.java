@@ -492,6 +492,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetMemberDeletionPermissionResponse> setMemberDeletionPermission(SetMemberDeletionPermissionRequest request);
 
     /**
+     * @param request the request parameters of SetMemberDisplayNameSyncStatus  SetMemberDisplayNameSyncStatusRequest
+     * @return SetMemberDisplayNameSyncStatusResponse
+     */
+    CompletableFuture<SetMemberDisplayNameSyncStatusResponse> setMemberDisplayNameSyncStatus(SetMemberDisplayNameSyncStatusRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
