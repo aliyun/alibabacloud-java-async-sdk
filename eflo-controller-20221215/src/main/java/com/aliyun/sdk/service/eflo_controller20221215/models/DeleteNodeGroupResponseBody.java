@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
+ * {@link DeleteNodeGroupResponseBody} extends {@link TeaModel}
  *
- * <p>ChangeResourceGroupResponseBody</p>
+ * <p>DeleteNodeGroupResponseBody</p>
  */
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class DeleteNodeGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ChangeResourceGroupResponseBody(Builder builder) {
+    private DeleteNodeGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChangeResourceGroupResponseBody create() {
+    public static DeleteNodeGroupResponseBody create() {
         return builder().build();
     }
 
@@ -46,15 +46,15 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
+         * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ChangeResourceGroupResponseBody build() {
-            return new ChangeResourceGroupResponseBody(this);
+        public DeleteNodeGroupResponseBody build() {
+            return new DeleteNodeGroupResponseBody(this);
         } 
 
     } 

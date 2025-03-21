@@ -264,6 +264,12 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -280,6 +286,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
             this.nodeId = builder.nodeId;
             this.operatingState = builder.operatingState;
             this.sn = builder.sn;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
         }
 
@@ -376,6 +384,20 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -395,6 +417,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String nodeId; 
             private String operatingState; 
             private String sn; 
+            private String vSwitchId; 
+            private String vpcId; 
             private String zoneId; 
 
             /**
@@ -523,6 +547,22 @@ public class ListClusterNodesResponseBody extends TeaModel {
              */
             public Builder sn(String sn) {
                 this.sn = sn;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

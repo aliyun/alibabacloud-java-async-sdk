@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
+ * {@link UpdateNodeGroupResponseBody} extends {@link TeaModel}
  *
- * <p>ChangeResourceGroupResponseBody</p>
+ * <p>UpdateNodeGroupResponseBody</p>
  */
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class UpdateNodeGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ChangeResourceGroupResponseBody(Builder builder) {
+    private UpdateNodeGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChangeResourceGroupResponseBody create() {
+    public static UpdateNodeGroupResponseBody create() {
         return builder().build();
     }
 
@@ -53,8 +53,8 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
             return this;
         }
 
-        public ChangeResourceGroupResponseBody build() {
-            return new ChangeResourceGroupResponseBody(this);
+        public UpdateNodeGroupResponseBody build() {
+            return new UpdateNodeGroupResponseBody(this);
         } 
 
     } 

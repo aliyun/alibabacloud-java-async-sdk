@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNetTestTaskResponse> createNetTestTask(CreateNetTestTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateNodeGroup  CreateNodeGroupRequest
+     * @return CreateNodeGroupResponse
+     */
+    CompletableFuture<CreateNodeGroupResponse> createNodeGroup(CreateNodeGroupRequest request);
+
+    /**
      * <b>description</b> :
      * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
      * 
@@ -77,10 +83,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteNodeGroup  DeleteNodeGroupRequest
+     * @return DeleteNodeGroupResponse
+     */
+    CompletableFuture<DeleteNodeGroupResponse> deleteNodeGroup(DeleteNodeGroupRequest request);
+
+    /**
      * @param request the request parameters of DescribeCluster  DescribeClusterRequest
      * @return DescribeClusterResponse
      */
     CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDiagnosticResult  DescribeDiagnosticResultRequest
+     * @return DescribeDiagnosticResultResponse
+     */
+    CompletableFuture<DescribeDiagnosticResultResponse> describeDiagnosticResult(DescribeDiagnosticResultRequest request);
 
     /**
      * @param request the request parameters of DescribeInvocations  DescribeInvocationsRequest
@@ -264,5 +282,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNodeGroup  UpdateNodeGroupRequest
+     * @return UpdateNodeGroupResponse
+     */
+    CompletableFuture<UpdateNodeGroupResponse> updateNodeGroup(UpdateNodeGroupRequest request);
 
 }

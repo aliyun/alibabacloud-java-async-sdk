@@ -104,7 +104,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Target Resource Group</p>
+         * <p>System-defined parameter. Value: <strong>ChangeResourceGroup</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource ID</p>
+         * <p>$.parameters[1].schema.example</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>Resource Group Change</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>$.parameters[3].schema.enumValueTitles</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
