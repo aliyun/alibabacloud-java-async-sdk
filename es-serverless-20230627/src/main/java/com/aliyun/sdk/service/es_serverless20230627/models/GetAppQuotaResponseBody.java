@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppQuotaResponseBody</p>
@@ -70,6 +76,12 @@ public class GetAppQuotaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppQuotaResponseBody</p>
+     */
     public static class Limiters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("immutable")
         private Boolean immutable;
@@ -171,9 +183,15 @@ public class GetAppQuotaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppQuotaResponseBody</p>
+     */
     public static class LimiterInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limiters")
-        private java.util.List < Limiters> limiters;
+        private java.util.List<Limiters> limiters;
 
         private LimiterInfo(Builder builder) {
             this.limiters = builder.limiters;
@@ -190,17 +208,17 @@ public class GetAppQuotaResponseBody extends TeaModel {
         /**
          * @return limiters
          */
-        public java.util.List < Limiters> getLimiters() {
+        public java.util.List<Limiters> getLimiters() {
             return this.limiters;
         }
 
         public static final class Builder {
-            private java.util.List < Limiters> limiters; 
+            private java.util.List<Limiters> limiters; 
 
             /**
              * limiters.
              */
-            public Builder limiters(java.util.List < Limiters> limiters) {
+            public Builder limiters(java.util.List<Limiters> limiters) {
                 this.limiters = limiters;
                 return this;
             }
@@ -212,12 +230,18 @@ public class GetAppQuotaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppQuotaResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limiterInfo")
         private LimiterInfo limiterInfo;
 
         @com.aliyun.core.annotation.NameInMap("quotaInfo")
-        private java.util.Map < String, ? > quotaInfo;
+        private java.util.Map<String, ?> quotaInfo;
 
         private Result(Builder builder) {
             this.limiterInfo = builder.limiterInfo;
@@ -242,13 +266,13 @@ public class GetAppQuotaResponseBody extends TeaModel {
         /**
          * @return quotaInfo
          */
-        public java.util.Map < String, ? > getQuotaInfo() {
+        public java.util.Map<String, ?> getQuotaInfo() {
             return this.quotaInfo;
         }
 
         public static final class Builder {
             private LimiterInfo limiterInfo; 
-            private java.util.Map < String, ? > quotaInfo; 
+            private java.util.Map<String, ?> quotaInfo; 
 
             /**
              * limiterInfo.
@@ -261,7 +285,7 @@ public class GetAppQuotaResponseBody extends TeaModel {
             /**
              * quotaInfo.
              */
-            public Builder quotaInfo(java.util.Map < String, ? > quotaInfo) {
+            public Builder quotaInfo(java.util.Map<String, ?> quotaInfo) {
                 this.quotaInfo = quotaInfo;
                 return this;
             }

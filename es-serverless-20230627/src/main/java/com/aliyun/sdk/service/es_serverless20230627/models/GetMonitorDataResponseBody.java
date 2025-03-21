@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetMonitorDataResponseBody</p>
@@ -21,7 +27,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -81,7 +87,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -130,9 +136,15 @@ public class GetMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMonitorDataResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dps")
-        private java.util.Map < String, ? > dps;
+        private java.util.Map<String, ?> dps;
 
         @com.aliyun.core.annotation.NameInMap("integrity")
         private Float integrity;
@@ -147,7 +159,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
         private Float summary;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         private Result(Builder builder) {
             this.dps = builder.dps;
@@ -169,7 +181,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
         /**
          * @return dps
          */
-        public java.util.Map < String, ? > getDps() {
+        public java.util.Map<String, ?> getDps() {
             return this.dps;
         }
 
@@ -204,22 +216,22 @@ public class GetMonitorDataResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > dps; 
+            private java.util.Map<String, ?> dps; 
             private Float integrity; 
             private Long messageWatermark; 
             private String metric; 
             private Float summary; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
 
             /**
              * dps.
              */
-            public Builder dps(java.util.Map < String, ? > dps) {
+            public Builder dps(java.util.Map<String, ?> dps) {
                 this.dps = dps;
                 return this;
             }
@@ -259,7 +271,7 @@ public class GetMonitorDataResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

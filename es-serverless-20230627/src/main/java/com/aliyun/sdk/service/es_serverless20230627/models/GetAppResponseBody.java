@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppResponseBody</p>
@@ -70,12 +76,18 @@ public class GetAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class WhiteIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         private WhiteIpGroup(Builder builder) {
             this.groupName = builder.groupName;
@@ -100,13 +112,13 @@ public class GetAppResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
 
             /**
              * groupName.
@@ -119,7 +131,7 @@ public class GetAppResponseBody extends TeaModel {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -131,6 +143,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
@@ -145,7 +163,7 @@ public class GetAppResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
-        private java.util.List < WhiteIpGroup> whiteIpGroup;
+        private java.util.List<WhiteIpGroup> whiteIpGroup;
 
         private Network(Builder builder) {
             this.domain = builder.domain;
@@ -194,7 +212,7 @@ public class GetAppResponseBody extends TeaModel {
         /**
          * @return whiteIpGroup
          */
-        public java.util.List < WhiteIpGroup> getWhiteIpGroup() {
+        public java.util.List<WhiteIpGroup> getWhiteIpGroup() {
             return this.whiteIpGroup;
         }
 
@@ -203,7 +221,7 @@ public class GetAppResponseBody extends TeaModel {
             private Boolean enabled; 
             private Integer port; 
             private String type; 
-            private java.util.List < WhiteIpGroup> whiteIpGroup; 
+            private java.util.List<WhiteIpGroup> whiteIpGroup; 
 
             /**
              * domain.
@@ -240,7 +258,7 @@ public class GetAppResponseBody extends TeaModel {
             /**
              * whiteIpGroup.
              */
-            public Builder whiteIpGroup(java.util.List < WhiteIpGroup> whiteIpGroup) {
+            public Builder whiteIpGroup(java.util.List<WhiteIpGroup> whiteIpGroup) {
                 this.whiteIpGroup = whiteIpGroup;
                 return this;
             }
@@ -252,12 +270,18 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class PrivateNetworkWhiteIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         private PrivateNetworkWhiteIpGroup(Builder builder) {
             this.groupName = builder.groupName;
@@ -282,13 +306,13 @@ public class GetAppResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
 
             /**
              * groupName.
@@ -301,7 +325,7 @@ public class GetAppResponseBody extends TeaModel {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -313,6 +337,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class PrivateNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
@@ -333,7 +363,7 @@ public class GetAppResponseBody extends TeaModel {
         private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
-        private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup;
+        private java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup;
 
         private PrivateNetwork(Builder builder) {
             this.domain = builder.domain;
@@ -398,7 +428,7 @@ public class GetAppResponseBody extends TeaModel {
         /**
          * @return whiteIpGroup
          */
-        public java.util.List < PrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
+        public java.util.List<PrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
             return this.whiteIpGroup;
         }
 
@@ -409,7 +439,7 @@ public class GetAppResponseBody extends TeaModel {
             private String pvlEndpointId; 
             private String type; 
             private String vpcId; 
-            private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup; 
+            private java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup; 
 
             /**
              * domain.
@@ -462,7 +492,7 @@ public class GetAppResponseBody extends TeaModel {
             /**
              * whiteIpGroup.
              */
-            public Builder whiteIpGroup(java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup) {
+            public Builder whiteIpGroup(java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup) {
                 this.whiteIpGroup = whiteIpGroup;
                 return this;
             }
@@ -474,6 +504,12 @@ public class GetAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -497,13 +533,13 @@ public class GetAppResponseBody extends TeaModel {
         private String modifiedTime;
 
         @com.aliyun.core.annotation.NameInMap("network")
-        private java.util.List < Network> network;
+        private java.util.List<Network> network;
 
         @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
         @com.aliyun.core.annotation.NameInMap("privateNetwork")
-        private java.util.List < PrivateNetwork> privateNetwork;
+        private java.util.List<PrivateNetwork> privateNetwork;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -590,7 +626,7 @@ public class GetAppResponseBody extends TeaModel {
         /**
          * @return network
          */
-        public java.util.List < Network> getNetwork() {
+        public java.util.List<Network> getNetwork() {
             return this.network;
         }
 
@@ -604,7 +640,7 @@ public class GetAppResponseBody extends TeaModel {
         /**
          * @return privateNetwork
          */
-        public java.util.List < PrivateNetwork> getPrivateNetwork() {
+        public java.util.List<PrivateNetwork> getPrivateNetwork() {
             return this.privateNetwork;
         }
 
@@ -637,9 +673,9 @@ public class GetAppResponseBody extends TeaModel {
             private String description; 
             private String instanceId; 
             private String modifiedTime; 
-            private java.util.List < Network> network; 
+            private java.util.List<Network> network; 
             private String ownerId; 
-            private java.util.List < PrivateNetwork> privateNetwork; 
+            private java.util.List<PrivateNetwork> privateNetwork; 
             private String regionId; 
             private String status; 
             private String version; 
@@ -703,7 +739,7 @@ public class GetAppResponseBody extends TeaModel {
             /**
              * network.
              */
-            public Builder network(java.util.List < Network> network) {
+            public Builder network(java.util.List<Network> network) {
                 this.network = network;
                 return this;
             }
@@ -719,7 +755,7 @@ public class GetAppResponseBody extends TeaModel {
             /**
              * privateNetwork.
              */
-            public Builder privateNetwork(java.util.List < PrivateNetwork> privateNetwork) {
+            public Builder privateNetwork(java.util.List<PrivateNetwork> privateNetwork) {
                 this.privateNetwork = privateNetwork;
                 return this;
             }

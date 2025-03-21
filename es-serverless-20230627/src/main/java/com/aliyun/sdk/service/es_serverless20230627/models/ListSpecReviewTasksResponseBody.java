@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSpecReviewTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListSpecReviewTasksResponseBody</p>
@@ -15,7 +21,7 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -57,11 +63,14 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55F7B3FE-05D8-5F0F-BD55-A18967D447DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,7 +80,7 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -90,6 +99,12 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSpecReviewTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSpecReviewTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -189,7 +204,10 @@ public class ListSpecReviewTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>代表资源一级ID的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>339</p>
              */
             public Builder id(String id) {
                 this.id = id;

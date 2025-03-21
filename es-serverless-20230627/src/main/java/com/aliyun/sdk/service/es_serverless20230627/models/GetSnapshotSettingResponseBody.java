@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSnapshotSettingResponseBody} extends {@link TeaModel}
  *
  * <p>GetSnapshotSettingResponseBody</p>
@@ -70,6 +76,12 @@ public class GetSnapshotSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSnapshotSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSnapshotSettingResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;

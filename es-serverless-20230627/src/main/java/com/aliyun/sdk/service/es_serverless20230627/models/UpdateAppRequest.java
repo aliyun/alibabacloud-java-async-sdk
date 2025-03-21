@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppRequest</p>
@@ -38,11 +44,11 @@ public class UpdateAppRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("network")
-    private java.util.List < Network> network;
+    private java.util.List<Network> network;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("privateNetwork")
-    private java.util.List < PrivateNetwork> privateNetwork;
+    private java.util.List<PrivateNetwork> privateNetwork;
 
     private UpdateAppRequest(Builder builder) {
         super(builder);
@@ -114,14 +120,14 @@ public class UpdateAppRequest extends Request {
     /**
      * @return network
      */
-    public java.util.List < Network> getNetwork() {
+    public java.util.List<Network> getNetwork() {
         return this.network;
     }
 
     /**
      * @return privateNetwork
      */
-    public java.util.List < PrivateNetwork> getPrivateNetwork() {
+    public java.util.List<PrivateNetwork> getPrivateNetwork() {
         return this.privateNetwork;
     }
 
@@ -132,8 +138,8 @@ public class UpdateAppRequest extends Request {
         private String contactInfo; 
         private String description; 
         private LimiterInfo limiterInfo; 
-        private java.util.List < Network> network; 
-        private java.util.List < PrivateNetwork> privateNetwork; 
+        private java.util.List<Network> network; 
+        private java.util.List<PrivateNetwork> privateNetwork; 
 
         private Builder() {
             super();
@@ -152,7 +158,10 @@ public class UpdateAppRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-severless-test-app</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -188,7 +197,7 @@ public class UpdateAppRequest extends Request {
         }
 
         /**
-         * 应用备注
+         * <p>应用备注</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -208,7 +217,7 @@ public class UpdateAppRequest extends Request {
         /**
          * network.
          */
-        public Builder network(java.util.List < Network> network) {
+        public Builder network(java.util.List<Network> network) {
             this.putBodyParameter("network", network);
             this.network = network;
             return this;
@@ -217,7 +226,7 @@ public class UpdateAppRequest extends Request {
         /**
          * privateNetwork.
          */
-        public Builder privateNetwork(java.util.List < PrivateNetwork> privateNetwork) {
+        public Builder privateNetwork(java.util.List<PrivateNetwork> privateNetwork) {
             this.putBodyParameter("privateNetwork", privateNetwork);
             this.privateNetwork = privateNetwork;
             return this;
@@ -230,6 +239,12 @@ public class UpdateAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class BasicAuth extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("password")
         private String password;
@@ -291,9 +306,15 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class Authentication extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("basicAuth")
-        private java.util.List < BasicAuth> basicAuth;
+        private java.util.List<BasicAuth> basicAuth;
 
         private Authentication(Builder builder) {
             this.basicAuth = builder.basicAuth;
@@ -310,17 +331,17 @@ public class UpdateAppRequest extends Request {
         /**
          * @return basicAuth
          */
-        public java.util.List < BasicAuth> getBasicAuth() {
+        public java.util.List<BasicAuth> getBasicAuth() {
             return this.basicAuth;
         }
 
         public static final class Builder {
-            private java.util.List < BasicAuth> basicAuth; 
+            private java.util.List<BasicAuth> basicAuth; 
 
             /**
              * basicAuth.
              */
-            public Builder basicAuth(java.util.List < BasicAuth> basicAuth) {
+            public Builder basicAuth(java.util.List<BasicAuth> basicAuth) {
                 this.basicAuth = basicAuth;
                 return this;
             }
@@ -332,6 +353,12 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class Limiters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxValue")
         private Integer maxValue;
@@ -343,7 +370,7 @@ public class UpdateAppRequest extends Request {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Limiters(Builder builder) {
             this.maxValue = builder.maxValue;
@@ -384,7 +411,7 @@ public class UpdateAppRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
@@ -392,7 +419,7 @@ public class UpdateAppRequest extends Request {
             private Integer maxValue; 
             private Integer minValue; 
             private String type; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * maxValue.
@@ -421,7 +448,7 @@ public class UpdateAppRequest extends Request {
             /**
              * values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -433,9 +460,15 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class LimiterInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limiters")
-        private java.util.List < Limiters> limiters;
+        private java.util.List<Limiters> limiters;
 
         private LimiterInfo(Builder builder) {
             this.limiters = builder.limiters;
@@ -452,17 +485,17 @@ public class UpdateAppRequest extends Request {
         /**
          * @return limiters
          */
-        public java.util.List < Limiters> getLimiters() {
+        public java.util.List<Limiters> getLimiters() {
             return this.limiters;
         }
 
         public static final class Builder {
-            private java.util.List < Limiters> limiters; 
+            private java.util.List<Limiters> limiters; 
 
             /**
              * limiters.
              */
-            public Builder limiters(java.util.List < Limiters> limiters) {
+            public Builder limiters(java.util.List<Limiters> limiters) {
                 this.limiters = limiters;
                 return this;
             }
@@ -474,12 +507,18 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class WhiteIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         private WhiteIpGroup(Builder builder) {
             this.groupName = builder.groupName;
@@ -504,13 +543,13 @@ public class UpdateAppRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
 
             /**
              * groupName.
@@ -523,7 +562,7 @@ public class UpdateAppRequest extends Request {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -535,6 +574,12 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
@@ -549,7 +594,7 @@ public class UpdateAppRequest extends Request {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
-        private java.util.List < WhiteIpGroup> whiteIpGroup;
+        private java.util.List<WhiteIpGroup> whiteIpGroup;
 
         private Network(Builder builder) {
             this.domain = builder.domain;
@@ -598,7 +643,7 @@ public class UpdateAppRequest extends Request {
         /**
          * @return whiteIpGroup
          */
-        public java.util.List < WhiteIpGroup> getWhiteIpGroup() {
+        public java.util.List<WhiteIpGroup> getWhiteIpGroup() {
             return this.whiteIpGroup;
         }
 
@@ -607,7 +652,7 @@ public class UpdateAppRequest extends Request {
             private Boolean enabled; 
             private Integer port; 
             private String type; 
-            private java.util.List < WhiteIpGroup> whiteIpGroup; 
+            private java.util.List<WhiteIpGroup> whiteIpGroup; 
 
             /**
              * domain.
@@ -644,7 +689,7 @@ public class UpdateAppRequest extends Request {
             /**
              * whiteIpGroup.
              */
-            public Builder whiteIpGroup(java.util.List < WhiteIpGroup> whiteIpGroup) {
+            public Builder whiteIpGroup(java.util.List<WhiteIpGroup> whiteIpGroup) {
                 this.whiteIpGroup = whiteIpGroup;
                 return this;
             }
@@ -656,12 +701,18 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class PrivateNetworkWhiteIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         private PrivateNetworkWhiteIpGroup(Builder builder) {
             this.groupName = builder.groupName;
@@ -686,13 +737,13 @@ public class UpdateAppRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
 
             /**
              * groupName.
@@ -705,7 +756,7 @@ public class UpdateAppRequest extends Request {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -717,6 +768,12 @@ public class UpdateAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateAppRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppRequest</p>
+     */
     public static class PrivateNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
@@ -731,7 +788,7 @@ public class UpdateAppRequest extends Request {
         private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
-        private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup;
+        private java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup;
 
         private PrivateNetwork(Builder builder) {
             this.enabled = builder.enabled;
@@ -780,7 +837,7 @@ public class UpdateAppRequest extends Request {
         /**
          * @return whiteIpGroup
          */
-        public java.util.List < PrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
+        public java.util.List<PrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
             return this.whiteIpGroup;
         }
 
@@ -789,7 +846,7 @@ public class UpdateAppRequest extends Request {
             private String pvlEndpointId; 
             private String type; 
             private String vpcId; 
-            private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup; 
+            private java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup; 
 
             /**
              * enabled.
@@ -826,7 +883,7 @@ public class UpdateAppRequest extends Request {
             /**
              * whiteIpGroup.
              */
-            public Builder whiteIpGroup(java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup) {
+            public Builder whiteIpGroup(java.util.List<PrivateNetworkWhiteIpGroup> whiteIpGroup) {
                 this.whiteIpGroup = whiteIpGroup;
                 return this;
             }

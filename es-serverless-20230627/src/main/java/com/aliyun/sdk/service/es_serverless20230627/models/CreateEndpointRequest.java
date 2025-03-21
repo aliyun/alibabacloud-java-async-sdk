@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateEndpointRequest</p>
@@ -14,7 +20,7 @@ public class CreateEndpointRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endpointZones")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < EndpointZones> endpointZones;
+    private java.util.List<EndpointZones> endpointZones;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
@@ -53,7 +59,7 @@ public class CreateEndpointRequest extends Request {
     /**
      * @return endpointZones
      */
-    public java.util.List < EndpointZones> getEndpointZones() {
+    public java.util.List<EndpointZones> getEndpointZones() {
         return this.endpointZones;
     }
 
@@ -79,7 +85,7 @@ public class CreateEndpointRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateEndpointRequest, Builder> {
-        private java.util.List < EndpointZones> endpointZones; 
+        private java.util.List<EndpointZones> endpointZones; 
         private String name; 
         private String vpcId; 
         private String type; 
@@ -97,9 +103,9 @@ public class CreateEndpointRequest extends Request {
         } 
 
         /**
-         * endpointZones.
+         * <p>This parameter is required.</p>
          */
-        public Builder endpointZones(java.util.List < EndpointZones> endpointZones) {
+        public Builder endpointZones(java.util.List<EndpointZones> endpointZones) {
             this.putBodyParameter("endpointZones", endpointZones);
             this.endpointZones = endpointZones;
             return this;
@@ -115,7 +121,10 @@ public class CreateEndpointRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf664nyle5khp5***</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -139,6 +148,12 @@ public class CreateEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointRequest</p>
+     */
     public static class EndpointZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;

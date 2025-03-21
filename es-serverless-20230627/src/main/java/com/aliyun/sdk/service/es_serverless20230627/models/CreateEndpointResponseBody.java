@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEndpointResponseBody</p>
@@ -49,7 +55,10 @@ public class CreateEndpointResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C5DAA30-****-5181-9B87-9D6181016197</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class CreateEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpointId")
         private String endpointId;

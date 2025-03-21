@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpecReviewTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetSpecReviewTaskResponseBody</p>
@@ -70,6 +76,12 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSpecReviewTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSpecReviewTaskResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -78,19 +90,19 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         private String appName;
 
         @com.aliyun.core.annotation.NameInMap("applyLimiter")
-        private java.util.Map < String, ? > applyLimiter;
+        private java.util.Map<String, ?> applyLimiter;
 
         @com.aliyun.core.annotation.NameInMap("applyQuota")
-        private java.util.Map < String, ? > applyQuota;
+        private java.util.Map<String, ?> applyQuota;
 
         @com.aliyun.core.annotation.NameInMap("applyReason")
         private String applyReason;
 
         @com.aliyun.core.annotation.NameInMap("effectiveLimiter")
-        private java.util.Map < String, ? > effectiveLimiter;
+        private java.util.Map<String, ?> effectiveLimiter;
 
         @com.aliyun.core.annotation.NameInMap("effectiveQuota")
-        private java.util.Map < String, ? > effectiveQuota;
+        private java.util.Map<String, ?> effectiveQuota;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
@@ -99,10 +111,10 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("oldLimiter")
-        private java.util.Map < String, ? > oldLimiter;
+        private java.util.Map<String, ?> oldLimiter;
 
         @com.aliyun.core.annotation.NameInMap("oldQuota")
-        private java.util.Map < String, ? > oldQuota;
+        private java.util.Map<String, ?> oldQuota;
 
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
@@ -155,14 +167,14 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         /**
          * @return applyLimiter
          */
-        public java.util.Map < String, ? > getApplyLimiter() {
+        public java.util.Map<String, ?> getApplyLimiter() {
             return this.applyLimiter;
         }
 
         /**
          * @return applyQuota
          */
-        public java.util.Map < String, ? > getApplyQuota() {
+        public java.util.Map<String, ?> getApplyQuota() {
             return this.applyQuota;
         }
 
@@ -176,14 +188,14 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         /**
          * @return effectiveLimiter
          */
-        public java.util.Map < String, ? > getEffectiveLimiter() {
+        public java.util.Map<String, ?> getEffectiveLimiter() {
             return this.effectiveLimiter;
         }
 
         /**
          * @return effectiveQuota
          */
-        public java.util.Map < String, ? > getEffectiveQuota() {
+        public java.util.Map<String, ?> getEffectiveQuota() {
             return this.effectiveQuota;
         }
 
@@ -204,14 +216,14 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         /**
          * @return oldLimiter
          */
-        public java.util.Map < String, ? > getOldLimiter() {
+        public java.util.Map<String, ?> getOldLimiter() {
             return this.oldLimiter;
         }
 
         /**
          * @return oldQuota
          */
-        public java.util.Map < String, ? > getOldQuota() {
+        public java.util.Map<String, ?> getOldQuota() {
             return this.oldQuota;
         }
 
@@ -239,21 +251,24 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String appName; 
-            private java.util.Map < String, ? > applyLimiter; 
-            private java.util.Map < String, ? > applyQuota; 
+            private java.util.Map<String, ?> applyLimiter; 
+            private java.util.Map<String, ?> applyQuota; 
             private String applyReason; 
-            private java.util.Map < String, ? > effectiveLimiter; 
-            private java.util.Map < String, ? > effectiveQuota; 
+            private java.util.Map<String, ?> effectiveLimiter; 
+            private java.util.Map<String, ?> effectiveQuota; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.Map < String, ? > oldLimiter; 
-            private java.util.Map < String, ? > oldQuota; 
+            private java.util.Map<String, ?> oldLimiter; 
+            private java.util.Map<String, ?> oldQuota; 
             private String source; 
             private String status; 
             private String type; 
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>代表资源一级ID的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>339</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -271,7 +286,7 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             /**
              * applyLimiter.
              */
-            public Builder applyLimiter(java.util.Map < String, ? > applyLimiter) {
+            public Builder applyLimiter(java.util.Map<String, ?> applyLimiter) {
                 this.applyLimiter = applyLimiter;
                 return this;
             }
@@ -279,7 +294,7 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             /**
              * applyQuota.
              */
-            public Builder applyQuota(java.util.Map < String, ? > applyQuota) {
+            public Builder applyQuota(java.util.Map<String, ?> applyQuota) {
                 this.applyQuota = applyQuota;
                 return this;
             }
@@ -295,7 +310,7 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             /**
              * effectiveLimiter.
              */
-            public Builder effectiveLimiter(java.util.Map < String, ? > effectiveLimiter) {
+            public Builder effectiveLimiter(java.util.Map<String, ?> effectiveLimiter) {
                 this.effectiveLimiter = effectiveLimiter;
                 return this;
             }
@@ -303,7 +318,7 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             /**
              * effectiveQuota.
              */
-            public Builder effectiveQuota(java.util.Map < String, ? > effectiveQuota) {
+            public Builder effectiveQuota(java.util.Map<String, ?> effectiveQuota) {
                 this.effectiveQuota = effectiveQuota;
                 return this;
             }
@@ -327,7 +342,7 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             /**
              * oldLimiter.
              */
-            public Builder oldLimiter(java.util.Map < String, ? > oldLimiter) {
+            public Builder oldLimiter(java.util.Map<String, ?> oldLimiter) {
                 this.oldLimiter = oldLimiter;
                 return this;
             }
@@ -335,7 +350,7 @@ public class GetSpecReviewTaskResponseBody extends TeaModel {
             /**
              * oldQuota.
              */
-            public Builder oldQuota(java.util.Map < String, ? > oldQuota) {
+            public Builder oldQuota(java.util.Map<String, ?> oldQuota) {
                 this.oldQuota = oldQuota;
                 return this;
             }

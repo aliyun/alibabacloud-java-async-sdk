@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotRequest</p>
@@ -113,7 +119,10 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -122,7 +131,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * repository.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_auto_snapshot</p>
          */
         public Builder repository(String repository) {
             this.putPathParameter("repository", repository);
@@ -131,7 +143,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * indices.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_info</p>
          */
         public Builder indices(String indices) {
             this.putBodyParameter("indices", indices);
@@ -140,7 +155,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * snapshot.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qingning</p>
          */
         public Builder snapshot(String snapshot) {
             this.putBodyParameter("snapshot", snapshot);

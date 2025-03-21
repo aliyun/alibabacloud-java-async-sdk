@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelSpecReviewTask  CancelSpecReviewTaskRequest
+     * @return CancelSpecReviewTaskResponse
+     */
     @Override
     public CompletableFuture<CancelSpecReviewTaskResponse> cancelSpecReviewTask(CancelSpecReviewTaskRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApp  CreateAppRequest
+     * @return CreateAppResponse
+     */
     @Override
     public CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEndpoint  CreateEndpointRequest
+     * @return CreateEndpointResponse
+     */
     @Override
     public CompletableFuture<CreateEndpointResponse> createEndpoint(CreateEndpointRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
     @Override
     public CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApp  DeleteAppRequest
+     * @return DeleteAppResponse
+     */
     @Override
     public CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDict  DeleteDictRequest
+     * @return DeleteDictResponse
+     */
     @Override
     public CompletableFuture<DeleteDictResponse> deleteDict(DeleteDictRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEndpoint  DeleteEndpointRequest
+     * @return DeleteEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteEndpointResponse> deleteEndpoint(DeleteEndpointRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
+     */
     @Override
     public CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApp  GetAppRequest
+     * @return GetAppResponse
+     */
     @Override
     public CompletableFuture<GetAppResponse> getApp(GetAppRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppQuota  GetAppQuotaRequest
+     * @return GetAppQuotaResponse
+     */
     @Override
     public CompletableFuture<GetAppQuotaResponse> getAppQuota(GetAppQuotaRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMonitorData  GetMonitorDataRequest
+     * @return GetMonitorDataResponse
+     */
     @Override
     public CompletableFuture<GetMonitorDataResponse> getMonitorData(GetMonitorDataRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSnapshotSetting  GetSnapshotSettingRequest
+     * @return GetSnapshotSettingResponse
+     */
     @Override
     public CompletableFuture<GetSnapshotSettingResponse> getSnapshotSetting(GetSnapshotSettingRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSpecReviewTask  GetSpecReviewTaskRequest
+     * @return GetSpecReviewTaskResponse
+     */
     @Override
     public CompletableFuture<GetSpecReviewTaskResponse> getSpecReviewTask(GetSpecReviewTaskRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApps  ListAppsRequest
+     * @return ListAppsResponse
+     */
     @Override
     public CompletableFuture<ListAppsResponse> listApps(ListAppsRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDicts  ListDictsRequest
+     * @return ListDictsResponse
+     */
     @Override
     public CompletableFuture<ListDictsResponse> listDicts(ListDictsRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEndpoints  ListEndpointsRequest
+     * @return ListEndpointsResponse
+     */
     @Override
     public CompletableFuture<ListEndpointsResponse> listEndpoints(ListEndpointsRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIndices  ListIndicesRequest
+     * @return ListIndicesResponse
+     */
     @Override
     public CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSnapshotRepositories  ListSnapshotRepositoriesRequest
+     * @return ListSnapshotRepositoriesResponse
+     */
     @Override
     public CompletableFuture<ListSnapshotRepositoriesResponse> listSnapshotRepositories(ListSnapshotRepositoriesRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
     @Override
     public CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSpecReviewTasks  ListSpecReviewTasksRequest
+     * @return ListSpecReviewTasksResponse
+     */
     @Override
     public CompletableFuture<ListSpecReviewTasksResponse> listSpecReviewTasks(ListSpecReviewTasksRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApp  UpdateAppRequest
+     * @return UpdateAppResponse
+     */
     @Override
     public CompletableFuture<UpdateAppResponse> updateApp(UpdateAppRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDict  UpdateDictRequest
+     * @return UpdateDictResponse
+     */
     @Override
     public CompletableFuture<UpdateDictResponse> updateDict(UpdateDictRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEndpoint  UpdateEndpointRequest
+     * @return UpdateEndpointResponse
+     */
     @Override
     public CompletableFuture<UpdateEndpointResponse> updateEndpoint(UpdateEndpointRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSnapshotSetting  UpdateSnapshotSettingRequest
+     * @return UpdateSnapshotSettingResponse
+     */
     @Override
     public CompletableFuture<UpdateSnapshotSettingResponse> updateSnapshotSetting(UpdateSnapshotSettingRequest request) {
         try {

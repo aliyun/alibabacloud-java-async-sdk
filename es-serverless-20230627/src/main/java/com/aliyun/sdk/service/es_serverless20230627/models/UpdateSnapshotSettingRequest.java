@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSnapshotSettingRequest} extends {@link RequestModel}
  *
  * <p>UpdateSnapshotSettingRequest</p>
@@ -84,7 +90,10 @@ public class UpdateSnapshotSettingRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -93,7 +102,10 @@ public class UpdateSnapshotSettingRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -102,7 +114,10 @@ public class UpdateSnapshotSettingRequest extends Request {
         }
 
         /**
-         * quartzRegex.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 01 ? * * *</p>
          */
         public Builder quartzRegex(String quartzRegex) {
             this.putBodyParameter("quartzRegex", quartzRegex);

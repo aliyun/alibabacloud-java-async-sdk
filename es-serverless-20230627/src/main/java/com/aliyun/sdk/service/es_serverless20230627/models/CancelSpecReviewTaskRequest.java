@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelSpecReviewTaskRequest} extends {@link RequestModel}
  *
  * <p>CancelSpecReviewTaskRequest</p>
@@ -69,7 +75,10 @@ public class CancelSpecReviewTaskRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -78,7 +87,10 @@ public class CancelSpecReviewTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>339</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

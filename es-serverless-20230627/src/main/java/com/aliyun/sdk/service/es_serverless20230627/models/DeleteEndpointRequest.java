@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEndpointRequest} extends {@link RequestModel}
  *
  * <p>DeleteEndpointRequest</p>
@@ -54,7 +60,10 @@ public class DeleteEndpointRequest extends Request {
         } 
 
         /**
-         * endpointId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>essep-2f46b743f60****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putPathParameter("endpointId", endpointId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListAppsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -45,7 +51,7 @@ public class ListAppsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +64,7 @@ public class ListAppsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
         /**
@@ -72,13 +78,16 @@ public class ListAppsResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * totalCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,6 +100,12 @@ public class ListAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -246,7 +261,10 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-severless-test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -262,7 +280,10 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>代表创建时间的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-27T07:09:11.000Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +291,7 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * 应用备注
+             * <p>应用备注</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +315,10 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerID账号ID
+             * <p>OwnerID账号ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*********7595</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -302,7 +326,10 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * 代表region的资源属性字段
+             * <p>代表region的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +337,10 @@ public class ListAppsResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源状态的资源属性字段
+             * <p>代表资源状态的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDictRequest} extends {@link RequestModel}
  *
  * <p>UpdateDictRequest</p>
@@ -23,7 +29,7 @@ public class UpdateDictRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("files")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceType")
@@ -77,7 +83,7 @@ public class UpdateDictRequest extends Request {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -105,7 +111,7 @@ public class UpdateDictRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDictRequest, Builder> {
         private String appName; 
         private Boolean allowCover; 
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private String sourceType; 
         private String type; 
         private Boolean dryRun; 
@@ -125,7 +131,10 @@ public class UpdateDictRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -143,9 +152,9 @@ public class UpdateDictRequest extends Request {
         }
 
         /**
-         * files.
+         * <p>This parameter is required.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.putBodyParameter("files", files);
             this.files = files;
             return this;
@@ -185,6 +194,12 @@ public class UpdateDictRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDictRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDictRequest</p>
+     */
     public static class OssObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bucketName")
         private String bucketName;
@@ -246,6 +261,12 @@ public class UpdateDictRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDictRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDictRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;

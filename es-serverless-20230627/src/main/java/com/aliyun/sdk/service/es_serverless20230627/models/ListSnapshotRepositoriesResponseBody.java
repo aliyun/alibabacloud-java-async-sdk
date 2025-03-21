@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotRepositoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotRepositoriesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListSnapshotRepositoriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < java.util.Map<String, ?>> result;
+    private java.util.List<java.util.Map<String, ?>> result;
 
     private ListSnapshotRepositoriesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,13 +46,13 @@ public class ListSnapshotRepositoriesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < java.util.Map<String, ?>> getResult() {
+    public java.util.List<java.util.Map<String, ?>> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> result; 
+        private java.util.List<java.util.Map<String, ?>> result; 
 
         /**
          * requestId.
@@ -59,7 +65,7 @@ public class ListSnapshotRepositoriesResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < java.util.Map<String, ?>> result) {
+        public Builder result(java.util.List<java.util.Map<String, ?>> result) {
             this.result = result;
             return this;
         }
