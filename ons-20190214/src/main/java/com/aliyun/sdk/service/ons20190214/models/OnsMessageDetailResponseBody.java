@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -184,7 +189,7 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         private String msgId;
 
         @com.aliyun.core.annotation.NameInMap("PropertyList")
-        private java.util.List < PropertyList> propertyList;
+        private java.util.List<PropertyList> propertyList;
 
         @com.aliyun.core.annotation.NameInMap("ReconsumeTimes")
         private Integer reconsumeTimes;
@@ -277,7 +282,7 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         /**
          * @return propertyList
          */
-        public java.util.List < PropertyList> getPropertyList() {
+        public java.util.List<PropertyList> getPropertyList() {
             return this.propertyList;
         }
 
@@ -324,7 +329,7 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             private Long bornTimestamp; 
             private String instanceId; 
             private String msgId; 
-            private java.util.List < PropertyList> propertyList; 
+            private java.util.List<PropertyList> propertyList; 
             private Integer reconsumeTimes; 
             private String storeHost; 
             private Integer storeSize; 
@@ -411,7 +416,7 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             /**
              * <p>The attributes of the message.</p>
              */
-            public Builder propertyList(java.util.List < PropertyList> propertyList) {
+            public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
                 return this;
             }

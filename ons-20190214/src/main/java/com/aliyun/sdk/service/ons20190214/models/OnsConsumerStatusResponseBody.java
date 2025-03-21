@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class ConnectionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionDo")
-        private java.util.List < ConnectionDo> connectionDo;
+        private java.util.List<ConnectionDo> connectionDo;
 
         private ConnectionSet(Builder builder) {
             this.connectionDo = builder.connectionDo;
@@ -241,17 +246,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return connectionDo
          */
-        public java.util.List < ConnectionDo> getConnectionDo() {
+        public java.util.List<ConnectionDo> getConnectionDo() {
             return this.connectionDo;
         }
 
         public static final class Builder {
-            private java.util.List < ConnectionDo> connectionDo; 
+            private java.util.List<ConnectionDo> connectionDo; 
 
             /**
              * ConnectionDo.
              */
-            public Builder connectionDo(java.util.List < ConnectionDo> connectionDo) {
+            public Builder connectionDo(java.util.List<ConnectionDo> connectionDo) {
                 this.connectionDo = connectionDo;
                 return this;
             }
@@ -271,7 +276,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class TrackList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Track")
-        private java.util.List < String > track;
+        private java.util.List<String> track;
 
         private TrackList(Builder builder) {
             this.track = builder.track;
@@ -288,17 +293,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return track
          */
-        public java.util.List < String > getTrack() {
+        public java.util.List<String> getTrack() {
             return this.track;
         }
 
         public static final class Builder {
-            private java.util.List < String > track; 
+            private java.util.List<String> track; 
 
             /**
              * Track.
              */
-            public Builder track(java.util.List < String > track) {
+            public Builder track(java.util.List<String> track) {
                 this.track = track;
                 return this;
             }
@@ -388,7 +393,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class Jstack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ThreadTrackDo")
-        private java.util.List < ThreadTrackDo> threadTrackDo;
+        private java.util.List<ThreadTrackDo> threadTrackDo;
 
         private Jstack(Builder builder) {
             this.threadTrackDo = builder.threadTrackDo;
@@ -405,17 +410,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return threadTrackDo
          */
-        public java.util.List < ThreadTrackDo> getThreadTrackDo() {
+        public java.util.List<ThreadTrackDo> getThreadTrackDo() {
             return this.threadTrackDo;
         }
 
         public static final class Builder {
-            private java.util.List < ThreadTrackDo> threadTrackDo; 
+            private java.util.List<ThreadTrackDo> threadTrackDo; 
 
             /**
              * ThreadTrackDo.
              */
-            public Builder threadTrackDo(java.util.List < ThreadTrackDo> threadTrackDo) {
+            public Builder threadTrackDo(java.util.List<ThreadTrackDo> threadTrackDo) {
                 this.threadTrackDo = threadTrackDo;
                 return this;
             }
@@ -577,7 +582,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class RunningDataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerRunningDataDo")
-        private java.util.List < ConsumerRunningDataDo> consumerRunningDataDo;
+        private java.util.List<ConsumerRunningDataDo> consumerRunningDataDo;
 
         private RunningDataList(Builder builder) {
             this.consumerRunningDataDo = builder.consumerRunningDataDo;
@@ -594,17 +599,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return consumerRunningDataDo
          */
-        public java.util.List < ConsumerRunningDataDo> getConsumerRunningDataDo() {
+        public java.util.List<ConsumerRunningDataDo> getConsumerRunningDataDo() {
             return this.consumerRunningDataDo;
         }
 
         public static final class Builder {
-            private java.util.List < ConsumerRunningDataDo> consumerRunningDataDo; 
+            private java.util.List<ConsumerRunningDataDo> consumerRunningDataDo; 
 
             /**
              * ConsumerRunningDataDo.
              */
-            public Builder consumerRunningDataDo(java.util.List < ConsumerRunningDataDo> consumerRunningDataDo) {
+            public Builder consumerRunningDataDo(java.util.List<ConsumerRunningDataDo> consumerRunningDataDo) {
                 this.consumerRunningDataDo = consumerRunningDataDo;
                 return this;
             }
@@ -624,7 +629,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class TagsSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < String > tag;
+        private java.util.List<String> tag;
 
         private TagsSet(Builder builder) {
             this.tag = builder.tag;
@@ -641,17 +646,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < String > getTag() {
+        public java.util.List<String> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < String > tag; 
+            private java.util.List<String> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < String > tag) {
+            public Builder tag(java.util.List<String> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -789,7 +794,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class SubscriptionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubscriptionData")
-        private java.util.List < SubscriptionData> subscriptionData;
+        private java.util.List<SubscriptionData> subscriptionData;
 
         private SubscriptionSet(Builder builder) {
             this.subscriptionData = builder.subscriptionData;
@@ -806,17 +811,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return subscriptionData
          */
-        public java.util.List < SubscriptionData> getSubscriptionData() {
+        public java.util.List<SubscriptionData> getSubscriptionData() {
             return this.subscriptionData;
         }
 
         public static final class Builder {
-            private java.util.List < SubscriptionData> subscriptionData; 
+            private java.util.List<SubscriptionData> subscriptionData; 
 
             /**
              * SubscriptionData.
              */
-            public Builder subscriptionData(java.util.List < SubscriptionData> subscriptionData) {
+            public Builder subscriptionData(java.util.List<SubscriptionData> subscriptionData) {
                 this.subscriptionData = subscriptionData;
                 return this;
             }
@@ -1141,7 +1146,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class ConsumerConnectionInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerConnectionInfoDo")
-        private java.util.List < ConsumerConnectionInfoDo> consumerConnectionInfoDo;
+        private java.util.List<ConsumerConnectionInfoDo> consumerConnectionInfoDo;
 
         private ConsumerConnectionInfoList(Builder builder) {
             this.consumerConnectionInfoDo = builder.consumerConnectionInfoDo;
@@ -1158,17 +1163,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return consumerConnectionInfoDo
          */
-        public java.util.List < ConsumerConnectionInfoDo> getConsumerConnectionInfoDo() {
+        public java.util.List<ConsumerConnectionInfoDo> getConsumerConnectionInfoDo() {
             return this.consumerConnectionInfoDo;
         }
 
         public static final class Builder {
-            private java.util.List < ConsumerConnectionInfoDo> consumerConnectionInfoDo; 
+            private java.util.List<ConsumerConnectionInfoDo> consumerConnectionInfoDo; 
 
             /**
              * ConsumerConnectionInfoDo.
              */
-            public Builder consumerConnectionInfoDo(java.util.List < ConsumerConnectionInfoDo> consumerConnectionInfoDo) {
+            public Builder consumerConnectionInfoDo(java.util.List<ConsumerConnectionInfoDo> consumerConnectionInfoDo) {
                 this.consumerConnectionInfoDo = consumerConnectionInfoDo;
                 return this;
             }
@@ -1308,7 +1313,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
      */
     public static class DetailInTopicList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetailInTopicDo")
-        private java.util.List < DetailInTopicDo> detailInTopicDo;
+        private java.util.List<DetailInTopicDo> detailInTopicDo;
 
         private DetailInTopicList(Builder builder) {
             this.detailInTopicDo = builder.detailInTopicDo;
@@ -1325,17 +1330,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         /**
          * @return detailInTopicDo
          */
-        public java.util.List < DetailInTopicDo> getDetailInTopicDo() {
+        public java.util.List<DetailInTopicDo> getDetailInTopicDo() {
             return this.detailInTopicDo;
         }
 
         public static final class Builder {
-            private java.util.List < DetailInTopicDo> detailInTopicDo; 
+            private java.util.List<DetailInTopicDo> detailInTopicDo; 
 
             /**
              * DetailInTopicDo.
              */
-            public Builder detailInTopicDo(java.util.List < DetailInTopicDo> detailInTopicDo) {
+            public Builder detailInTopicDo(java.util.List<DetailInTopicDo> detailInTopicDo) {
                 this.detailInTopicDo = detailInTopicDo;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -254,7 +259,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
      */
     public static class ClientList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubClientInfoDo")
-        private java.util.List < SubClientInfoDo> subClientInfoDo;
+        private java.util.List<SubClientInfoDo> subClientInfoDo;
 
         private ClientList(Builder builder) {
             this.subClientInfoDo = builder.subClientInfoDo;
@@ -271,17 +276,17 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         /**
          * @return subClientInfoDo
          */
-        public java.util.List < SubClientInfoDo> getSubClientInfoDo() {
+        public java.util.List<SubClientInfoDo> getSubClientInfoDo() {
             return this.subClientInfoDo;
         }
 
         public static final class Builder {
-            private java.util.List < SubClientInfoDo> subClientInfoDo; 
+            private java.util.List<SubClientInfoDo> subClientInfoDo; 
 
             /**
              * SubClientInfoDo.
              */
-            public Builder subClientInfoDo(java.util.List < SubClientInfoDo> subClientInfoDo) {
+            public Builder subClientInfoDo(java.util.List<SubClientInfoDo> subClientInfoDo) {
                 this.subClientInfoDo = subClientInfoDo;
                 return this;
             }
@@ -417,7 +422,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
      */
     public static class SubList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubMapDo")
-        private java.util.List < SubMapDo> subMapDo;
+        private java.util.List<SubMapDo> subMapDo;
 
         private SubList(Builder builder) {
             this.subMapDo = builder.subMapDo;
@@ -434,17 +439,17 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         /**
          * @return subMapDo
          */
-        public java.util.List < SubMapDo> getSubMapDo() {
+        public java.util.List<SubMapDo> getSubMapDo() {
             return this.subMapDo;
         }
 
         public static final class Builder {
-            private java.util.List < SubMapDo> subMapDo; 
+            private java.util.List<SubMapDo> subMapDo; 
 
             /**
              * SubMapDo.
              */
-            public Builder subMapDo(java.util.List < SubMapDo> subMapDo) {
+            public Builder subMapDo(java.util.List<SubMapDo> subMapDo) {
                 this.subMapDo = subMapDo;
                 return this;
             }
@@ -725,7 +730,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
      */
     public static class TraceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TraceMapDo")
-        private java.util.List < TraceMapDo> traceMapDo;
+        private java.util.List<TraceMapDo> traceMapDo;
 
         private TraceList(Builder builder) {
             this.traceMapDo = builder.traceMapDo;
@@ -742,17 +747,17 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         /**
          * @return traceMapDo
          */
-        public java.util.List < TraceMapDo> getTraceMapDo() {
+        public java.util.List<TraceMapDo> getTraceMapDo() {
             return this.traceMapDo;
         }
 
         public static final class Builder {
-            private java.util.List < TraceMapDo> traceMapDo; 
+            private java.util.List<TraceMapDo> traceMapDo; 
 
             /**
              * TraceMapDo.
              */
-            public Builder traceMapDo(java.util.List < TraceMapDo> traceMapDo) {
+            public Builder traceMapDo(java.util.List<TraceMapDo> traceMapDo) {
                 this.traceMapDo = traceMapDo;
                 return this;
             }

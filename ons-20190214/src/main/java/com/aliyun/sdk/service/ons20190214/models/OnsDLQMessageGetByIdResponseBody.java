@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,7 +167,7 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
      */
     public static class PropertyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MessageProperty")
-        private java.util.List < MessageProperty> messageProperty;
+        private java.util.List<MessageProperty> messageProperty;
 
         private PropertyList(Builder builder) {
             this.messageProperty = builder.messageProperty;
@@ -179,17 +184,17 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
         /**
          * @return messageProperty
          */
-        public java.util.List < MessageProperty> getMessageProperty() {
+        public java.util.List<MessageProperty> getMessageProperty() {
             return this.messageProperty;
         }
 
         public static final class Builder {
-            private java.util.List < MessageProperty> messageProperty; 
+            private java.util.List<MessageProperty> messageProperty; 
 
             /**
              * MessageProperty.
              */
-            public Builder messageProperty(java.util.List < MessageProperty> messageProperty) {
+            public Builder messageProperty(java.util.List<MessageProperty> messageProperty) {
                 this.messageProperty = messageProperty;
                 return this;
             }

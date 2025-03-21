@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -185,7 +190,7 @@ public class OnsMessageTraceResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MessageTrack")
-        private java.util.List < MessageTrack> messageTrack;
+        private java.util.List<MessageTrack> messageTrack;
 
         private Data(Builder builder) {
             this.messageTrack = builder.messageTrack;
@@ -202,17 +207,17 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         /**
          * @return messageTrack
          */
-        public java.util.List < MessageTrack> getMessageTrack() {
+        public java.util.List<MessageTrack> getMessageTrack() {
             return this.messageTrack;
         }
 
         public static final class Builder {
-            private java.util.List < MessageTrack> messageTrack; 
+            private java.util.List<MessageTrack> messageTrack; 
 
             /**
              * MessageTrack.
              */
-            public Builder messageTrack(java.util.List < MessageTrack> messageTrack) {
+            public Builder messageTrack(java.util.List<MessageTrack> messageTrack) {
                 this.messageTrack = messageTrack;
                 return this;
             }

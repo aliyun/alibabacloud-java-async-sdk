@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -157,7 +162,7 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
      */
     public static class DataSubscriptionDataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubscriptionDataList")
-        private java.util.List < SubscriptionDataList> subscriptionDataList;
+        private java.util.List<SubscriptionDataList> subscriptionDataList;
 
         private DataSubscriptionDataList(Builder builder) {
             this.subscriptionDataList = builder.subscriptionDataList;
@@ -174,17 +179,17 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
         /**
          * @return subscriptionDataList
          */
-        public java.util.List < SubscriptionDataList> getSubscriptionDataList() {
+        public java.util.List<SubscriptionDataList> getSubscriptionDataList() {
             return this.subscriptionDataList;
         }
 
         public static final class Builder {
-            private java.util.List < SubscriptionDataList> subscriptionDataList; 
+            private java.util.List<SubscriptionDataList> subscriptionDataList; 
 
             /**
              * SubscriptionDataList.
              */
-            public Builder subscriptionDataList(java.util.List < SubscriptionDataList> subscriptionDataList) {
+            public Builder subscriptionDataList(java.util.List<SubscriptionDataList> subscriptionDataList) {
                 this.subscriptionDataList = subscriptionDataList;
                 return this;
             }

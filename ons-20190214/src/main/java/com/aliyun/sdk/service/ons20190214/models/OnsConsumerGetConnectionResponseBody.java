@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
      */
     public static class ConnectionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionDo")
-        private java.util.List < ConnectionDo> connectionDo;
+        private java.util.List<ConnectionDo> connectionDo;
 
         private ConnectionList(Builder builder) {
             this.connectionDo = builder.connectionDo;
@@ -218,17 +223,17 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         /**
          * @return connectionDo
          */
-        public java.util.List < ConnectionDo> getConnectionDo() {
+        public java.util.List<ConnectionDo> getConnectionDo() {
             return this.connectionDo;
         }
 
         public static final class Builder {
-            private java.util.List < ConnectionDo> connectionDo; 
+            private java.util.List<ConnectionDo> connectionDo; 
 
             /**
              * ConnectionDo.
              */
-            public Builder connectionDo(java.util.List < ConnectionDo> connectionDo) {
+            public Builder connectionDo(java.util.List<ConnectionDo> connectionDo) {
                 this.connectionDo = connectionDo;
                 return this;
             }
@@ -250,8 +255,12 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionList")
         private ConnectionList connectionList;
 
+        @com.aliyun.core.annotation.NameInMap("MessageModel")
+        private String messageModel;
+
         private Data(Builder builder) {
             this.connectionList = builder.connectionList;
+            this.messageModel = builder.messageModel;
         }
 
         public static Builder builder() {
@@ -269,14 +278,30 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             return this.connectionList;
         }
 
+        /**
+         * @return messageModel
+         */
+        public String getMessageModel() {
+            return this.messageModel;
+        }
+
         public static final class Builder {
             private ConnectionList connectionList; 
+            private String messageModel; 
 
             /**
              * <p>The client connection information of the consumer group.</p>
              */
             public Builder connectionList(ConnectionList connectionList) {
                 this.connectionList = connectionList;
+                return this;
+            }
+
+            /**
+             * MessageModel.
+             */
+            public Builder messageModel(String messageModel) {
+                this.messageModel = messageModel;
                 return this;
             }
 

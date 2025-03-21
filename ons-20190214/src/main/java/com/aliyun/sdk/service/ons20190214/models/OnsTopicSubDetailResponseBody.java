@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -87,12 +92,16 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MessageModel")
         private String messageModel;
 
+        @com.aliyun.core.annotation.NameInMap("Online")
+        private String online;
+
         @com.aliyun.core.annotation.NameInMap("SubString")
         private String subString;
 
         private SubscriptionDataList(Builder builder) {
             this.groupId = builder.groupId;
             this.messageModel = builder.messageModel;
+            this.online = builder.online;
             this.subString = builder.subString;
         }
 
@@ -119,6 +128,13 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return online
+         */
+        public String getOnline() {
+            return this.online;
+        }
+
+        /**
          * @return subString
          */
         public String getSubString() {
@@ -128,6 +144,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String groupId; 
             private String messageModel; 
+            private String online; 
             private String subString; 
 
             /**
@@ -154,6 +171,14 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
+                return this;
+            }
+
+            /**
+             * Online.
+             */
+            public Builder online(String online) {
+                this.online = online;
                 return this;
             }
 
@@ -185,7 +210,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
      */
     public static class DataSubscriptionDataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubscriptionDataList")
-        private java.util.List < SubscriptionDataList> subscriptionDataList;
+        private java.util.List<SubscriptionDataList> subscriptionDataList;
 
         private DataSubscriptionDataList(Builder builder) {
             this.subscriptionDataList = builder.subscriptionDataList;
@@ -202,17 +227,17 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         /**
          * @return subscriptionDataList
          */
-        public java.util.List < SubscriptionDataList> getSubscriptionDataList() {
+        public java.util.List<SubscriptionDataList> getSubscriptionDataList() {
             return this.subscriptionDataList;
         }
 
         public static final class Builder {
-            private java.util.List < SubscriptionDataList> subscriptionDataList; 
+            private java.util.List<SubscriptionDataList> subscriptionDataList; 
 
             /**
              * SubscriptionDataList.
              */
-            public Builder subscriptionDataList(java.util.List < SubscriptionDataList> subscriptionDataList) {
+            public Builder subscriptionDataList(java.util.List<SubscriptionDataList> subscriptionDataList) {
                 this.subscriptionDataList = subscriptionDataList;
                 return this;
             }

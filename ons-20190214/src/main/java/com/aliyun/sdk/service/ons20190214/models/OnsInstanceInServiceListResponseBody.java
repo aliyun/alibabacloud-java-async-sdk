@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -172,17 +177,17 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -472,7 +477,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceVO")
-        private java.util.List < InstanceVO> instanceVO;
+        private java.util.List<InstanceVO> instanceVO;
 
         private Data(Builder builder) {
             this.instanceVO = builder.instanceVO;
@@ -489,17 +494,17 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         /**
          * @return instanceVO
          */
-        public java.util.List < InstanceVO> getInstanceVO() {
+        public java.util.List<InstanceVO> getInstanceVO() {
             return this.instanceVO;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceVO> instanceVO; 
+            private java.util.List<InstanceVO> instanceVO; 
 
             /**
              * InstanceVO.
              */
-            public Builder instanceVO(java.util.List < InstanceVO> instanceVO) {
+            public Builder instanceVO(java.util.List<InstanceVO> instanceVO) {
                 this.instanceVO = instanceVO;
                 return this;
             }
