@@ -79,7 +79,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         private TranscodeTask transcodeTask; 
 
         /**
-         * NonExistJobIds.
+         * <p>The nonexistent job ID.</p>
          */
         public Builder nonExistJobIds(java.util.List<String> nonExistJobIds) {
             this.nonExistJobIds = nonExistJobIds;
@@ -98,7 +98,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TranscodeJobInfoList.
+         * <p>List of transcode job information.</p>
          */
         public Builder transcodeJobInfoList(java.util.List<TranscodeJobInfoList> transcodeJobInfoList) {
             this.transcodeJobInfoList = transcodeJobInfoList;
@@ -296,7 +296,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * AudioStreamList.
+             * <p>List of audio streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;AudioStreamList&quot;: &quot;[{&quot;Bitrate&quot;:&quot;64.533&quot;,&quot;ChannelLayout&quot;:&quot;stereo&quot;,&quot;Channels&quot;:&quot;2&quot;,&quot;CodecLongName&quot;:&quot;AAC (Advanced Audio Coding)&quot;,&quot;CodecName&quot;:&quot;aac&quot;,&quot;CodecTag&quot;:&quot;0x6134706d&quot;,&quot;CodecTagString&quot;:&quot;mp4a&quot;,&quot;CodecTimeBase&quot;:&quot;1/44100&quot;,&quot;Duration&quot;:&quot;12.615533&quot;,&quot;Index&quot;:&quot;1&quot;,&quot;Lang&quot;:&quot;und&quot;,&quot;SampleFmt&quot;:&quot;fltp&quot;,&quot;Samplerate&quot;:&quot;44100&quot;,&quot;StartTime&quot;:&quot;-0.046440&quot;,&quot;Timebase&quot;:&quot;1/44100&quot;}]</p>
              */
             public Builder audioStreamList(String audioStreamList) {
                 this.audioStreamList = audioStreamList;
@@ -304,7 +307,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>Average bitrate of the transcoded output file. Unit: Kbps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>964</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -312,7 +318,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Duration of the transcoded output file. Unit: seconds (s).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -320,7 +329,14 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Encryption.
+             * <p>Encryption configuration used for the transcoded output file. Values:</p>
+             * <ul>
+             * <li>AliyunVoDEncryption: Alibaba Cloud Video Encryption (private encryption).</li>
+             * <li>HLSEncryption: HLS standard encryption.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;EncryptType&quot;:&quot;AliyunVoDEncryption&quot;}</p>
              */
             public Builder encryption(String encryption) {
                 this.encryption = encryption;
@@ -328,7 +344,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Filesize.
+             * <p>Size of the transcoded output file. Unit: bytes (B).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>851076</p>
              */
             public Builder filesize(Long filesize) {
                 this.filesize = filesize;
@@ -336,7 +355,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>Container format of the transcoded output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m3u8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -344,7 +366,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>Frame rate of the transcoded output file. Unit: frames per second (fps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -352,7 +377,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>Height of the video frame in the transcoded output file. Unit: pixels (px).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -360,7 +388,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFileUrl.
+             * <p>OSS address of the transcoded output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-%7BDestMd5%7D-od-S00000001-200000.mp4">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-{DestMd5}-od-S00000001-200000.mp4</a></p>
              */
             public Builder outputFileUrl(String outputFileUrl) {
                 this.outputFileUrl = outputFileUrl;
@@ -368,7 +399,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamList.
+             * <p>List of subtitle streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder subtitleStreamList(String subtitleStreamList) {
                 this.subtitleStreamList = subtitleStreamList;
@@ -376,7 +410,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamList.
+             * <p>List of video streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;AvgFPS&quot;:&quot;30.0&quot;,&quot;Bitrate&quot;:&quot;933.814&quot;,&quot;CodecLongName&quot;:&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10&quot;,&quot;CodecName&quot;:&quot;h264&quot;,&quot;CodecTag&quot;:&quot;0x31637661&quot;,&quot;CodecTagString&quot;:&quot;avc1&quot;,&quot;CodecTimeBase&quot;:&quot;1/60&quot;,&quot;Dar&quot;:&quot;9:16&quot;,&quot;Duration&quot;:&quot;12.033333&quot;,&quot;Fps&quot;:&quot;30.0&quot;,&quot;HasBFrames&quot;:&quot;2&quot;,&quot;Height&quot;:&quot;360&quot;,&quot;Index&quot;:&quot;0&quot;,&quot;Lang&quot;:&quot;und&quot;,&quot;Level&quot;:&quot;30&quot;,&quot;PixFmt&quot;:&quot;yuv420p&quot;,&quot;Profile&quot;:&quot;High&quot;,&quot;Sar&quot;:&quot;81:256&quot;,&quot;StartTime&quot;:&quot;0.000000&quot;,&quot;Timebase&quot;:&quot;1/15360&quot;,&quot;Width&quot;:&quot;640&quot;}]</p>
              */
             public Builder videoStreamList(String videoStreamList) {
                 this.videoStreamList = videoStreamList;
@@ -384,7 +421,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkIdList.
+             * <p>List of watermarks used for transcoding.</p>
              */
             public Builder watermarkIdList(java.util.List<String> watermarkIdList) {
                 this.watermarkIdList = watermarkIdList;
@@ -392,7 +429,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>Width of the video frame in the transcoded output file. Unit: pixels (px).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -571,7 +611,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String transcodeTemplateId; 
 
             /**
-             * CompleteTime.
+             * <p>The complete time of the transcoding job. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ssZ (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-26T08:30:16Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -579,7 +622,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time of the transcoding job. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ssZ (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-26T08:27:16Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -587,7 +633,24 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Definition.
+             * <p>The clarity and audio quality types are defined as follows:</p>
+             * <ul>
+             * <li>SD: Standard Definition.</li>
+             * <li>HD: High Definition.</li>
+             * <li>FHD: Full High Definition.</li>
+             * <li>OD: Original Definition.</li>
+             * <li>2K: 2K.</li>
+             * <li>4K: 4K.</li>
+             * <li>SQ: Standard Audio Quality.</li>
+             * <li>HQ: High Audio Quality.</li>
+             * <li>AUTO: Adaptive Bitrate.  This is only available when the transcoding template is configured with packaging settings. Please refer to <a href="https://api.aliyun-inc.com/~~52839~~?spm=openapi-amp.newDocPublishment.0.0.65b0281fNUFIXC">the Transcoding Template Configuration - Package Setting</a> for more details.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This value represents the clarity label configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>LD</p>
              */
             public Builder definition(String definition) {
                 this.definition = definition;
@@ -595,7 +658,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -603,7 +669,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ErrorMessage</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -611,7 +680,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InputFileUrl.
+             * <p>The OSS address of the source file for transcoding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv</a></p>
              */
             public Builder inputFileUrl(String inputFileUrl) {
                 this.inputFileUrl = inputFileUrl;
@@ -619,7 +691,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFile.
+             * <p>Information about the transcoded output files.</p>
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -627,7 +699,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the transcoding task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -635,7 +710,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeJobId.
+             * <p>The ID of the transcode job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38f0e513c88*****85515f9d50be188</p>
              */
             public Builder transcodeJobId(String transcodeJobId) {
                 this.transcodeJobId = transcodeJobId;
@@ -643,7 +721,13 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeJobStatus.
+             * <p>The status of the transcoding job:</p>
+             * <p>Transcoding: Transcoding in progress.
+             * TranscodeSuccess: Transcoding successful.
+             * TranscodeFail: Transcoding failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Transcoding</p>
              */
             public Builder transcodeJobStatus(String transcodeJobStatus) {
                 this.transcodeJobStatus = transcodeJobStatus;
@@ -651,7 +735,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeProgress.
+             * <p>The processing progress of the transcoding job. The value range is [0, 100].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder transcodeProgress(Long transcodeProgress) {
                 this.transcodeProgress = transcodeProgress;
@@ -659,7 +746,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeTemplateId.
+             * <p>The ID of the template used for the transcode job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>174b0534fea3*****b51c8f0ad1374</p>
              */
             public Builder transcodeTemplateId(String transcodeTemplateId) {
                 this.transcodeTemplateId = transcodeTemplateId;

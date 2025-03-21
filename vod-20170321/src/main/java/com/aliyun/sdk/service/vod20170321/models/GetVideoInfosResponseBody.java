@@ -607,7 +607,10 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>Custom settings. This is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, please refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

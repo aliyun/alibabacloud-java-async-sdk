@@ -79,7 +79,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobInfoList.
+         * <p>The historical tasks of the last 6 months.</p>
          */
         public Builder jobInfoList(java.util.List<JobInfoList> jobInfoList) {
             this.jobInfoList = jobInfoList;
@@ -87,7 +87,15 @@ public class ListJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li>transcode</li>
+         * <li>snapshot</li>
+         * <li>ai</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>transcode</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -95,7 +103,10 @@ public class ListJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30e5d7**********bd900764de7c0102</p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -103,7 +114,10 @@ public class ListJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6708D849-F109-1A6C-AC91-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +211,10 @@ public class ListJobInfoResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * CompleteTime.
+             * <p>The time when the task was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-14T07:39:34Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -205,7 +222,10 @@ public class ListJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-14T07:39:25Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -213,7 +233,10 @@ public class ListJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5c9dff751ba**********59d50a967f5</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -221,7 +244,10 @@ public class ListJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -229,7 +255,10 @@ public class ListJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user who submitted the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139109*****84930</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

@@ -75,6 +75,7 @@ public class GetJobDetailRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,12 @@ public class GetJobDetailRequest extends Request {
         }
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>transcode</li>
+         * <li>snapshot</li>
+         * <li>ai</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

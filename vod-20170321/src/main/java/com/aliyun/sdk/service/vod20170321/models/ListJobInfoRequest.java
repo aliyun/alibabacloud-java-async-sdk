@@ -75,6 +75,12 @@ public class ListJobInfoRequest extends Request {
         } 
 
         /**
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li>transcode</li>
+         * <li>snapshot</li>
+         * <li>ai</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +93,7 @@ public class ListJobInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the media asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

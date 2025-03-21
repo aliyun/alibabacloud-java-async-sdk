@@ -125,7 +125,7 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzko7fsuj****</p>

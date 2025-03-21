@@ -286,7 +286,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>地域。</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>

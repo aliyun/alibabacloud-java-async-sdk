@@ -55,7 +55,7 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertificateListModel.
+         * <p>The information about certificates.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -63,7 +63,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +184,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
 
             /**
-             * CertId.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235437</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -189,7 +195,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video-ssl</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -197,7 +206,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertRegion.
+             * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder certRegion(String certRegion) {
                 this.certRegion = certRegion;
@@ -205,7 +217,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder common(String common) {
                 this.common = common;
@@ -213,7 +228,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * <p>The fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -221,7 +239,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -229,7 +250,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * <p>The time when the certificate was last modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1512388610</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -359,7 +383,7 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             private Long pageSize; 
 
             /**
-             * CertList.
+             * <p>The list of certificates.</p>
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -367,7 +391,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of certificates that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -375,7 +402,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Pages start from page 1. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -383,7 +413,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Valid values: integers from 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;

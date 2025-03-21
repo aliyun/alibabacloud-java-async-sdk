@@ -129,7 +129,10 @@ public class DescribeVodSSLCertificateListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,7 +150,10 @@ public class DescribeVodSSLCertificateListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +162,10 @@ public class DescribeVodSSLCertificateListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: integers from 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +174,10 @@ public class DescribeVodSSLCertificateListRequest extends Request {
         }
 
         /**
-         * SearchKeyword.
+         * <p>The keyword that is used to query certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>certabc</p>
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putQueryParameter("SearchKeyword", searchKeyword);

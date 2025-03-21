@@ -129,7 +129,14 @@ public class DescribeVodDomainMax95BpsDataRequest extends Request {
         } 
 
         /**
-         * Cycle.
+         * <p>The cycle to query the 95th percentile bandwidth data. Valid values:</p>
+         * <ul>
+         * <li>day (default)</li>
+         * <li>month</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);
@@ -138,7 +145,13 @@ public class DescribeVodDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name to be queried for acceleration. If the parameter is empty, the data merged from all accelerated domain names will be returned by default.</p>
+         * <blockquote>
+         * <p>Batch domain name queries are not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,7 +160,10 @@ public class DescribeVodDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time point. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd&quot;T&quot;HH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-12T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,7 +181,10 @@ public class DescribeVodDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time point. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd&quot;T&quot;HH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -174,7 +193,10 @@ public class DescribeVodDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * TimePoint.
+         * <p>The start time point for getting the data. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd&quot;T&quot;HH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-21T10:00:00Z</p>
          */
         public Builder timePoint(String timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

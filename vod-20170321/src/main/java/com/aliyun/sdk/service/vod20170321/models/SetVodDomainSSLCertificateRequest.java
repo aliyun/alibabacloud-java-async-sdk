@@ -201,7 +201,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         } 
 
         /**
-         * CertId.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12342707</p>
          */
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);
@@ -210,7 +213,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * CertName.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert_name</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -219,7 +225,15 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * CertRegion.
+         * <p>The region of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+         * </ul>
+         * <p>Default value: <strong>cn-hangzhou</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegion(String certRegion) {
             this.putQueryParameter("CertRegion", certRegion);
@@ -228,7 +242,14 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * CertType.
+         * <p>The type of the certificate.</p>
+         * <ul>
+         * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
+         * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cas</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -237,6 +258,7 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
+         * <p>VOD acceleration domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +271,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -267,7 +292,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * SSLPri.
+         * <p>The private key. This parameter is required only if you enable the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -276,6 +304,11 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +321,10 @@ public class SetVodDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * SSLPub.
+         * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

@@ -43,7 +43,10 @@ public class SetVodDomainSSLCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4C6D5BE-BF13-45*****6C-516EA8906DCD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

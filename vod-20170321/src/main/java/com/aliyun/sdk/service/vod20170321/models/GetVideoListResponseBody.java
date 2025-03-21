@@ -207,6 +207,9 @@ public class GetVideoListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
+        @com.aliyun.core.annotation.NameInMap("UserData")
+        private String userData;
+
         @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
@@ -228,6 +231,7 @@ public class GetVideoListResponseBody extends TeaModel {
             this.storageLocation = builder.storageLocation;
             this.tags = builder.tags;
             this.title = builder.title;
+            this.userData = builder.userData;
             this.videoId = builder.videoId;
         }
 
@@ -359,6 +363,13 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
+        /**
          * @return videoId
          */
         public String getVideoId() {
@@ -383,6 +394,7 @@ public class GetVideoListResponseBody extends TeaModel {
             private String storageLocation; 
             private String tags; 
             private String title; 
+            private String userData; 
             private String videoId; 
 
             /**
@@ -594,6 +606,14 @@ public class GetVideoListResponseBody extends TeaModel {
              */
             public Builder title(String title) {
                 this.title = title;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
                 return this;
             }
 

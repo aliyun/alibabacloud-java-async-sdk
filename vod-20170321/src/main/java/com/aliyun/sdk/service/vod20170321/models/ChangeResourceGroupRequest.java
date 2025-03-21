@@ -104,6 +104,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of resource</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of resource</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AppInfo</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

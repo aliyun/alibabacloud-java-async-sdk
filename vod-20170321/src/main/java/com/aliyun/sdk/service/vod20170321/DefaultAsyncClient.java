@@ -324,6 +324,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can specify up to 20 audio or video file IDs in each request.</p>
+     * <ul>
+     * <li>After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event and call this operation to query information about a media file after you receive notifications for the <a href="https://help.aliyun.com/document_detail/99935.html">VideoAnalysisComplete</a> event. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BatchGetMediaInfos  BatchGetMediaInfosRequest
      * @return BatchGetMediaInfosResponse
      */
@@ -1034,6 +1040,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is available only in the China (Shanghai) region.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the previous 7 days. If you set both the parameters, the request returns the data collected within the specified time range.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeMediaDistribution  DescribeMediaDistributionRequest
      * @return DescribeMediaDistributionResponse
      */
@@ -2099,6 +2111,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVodEditingUsageData  DescribeVodEditingUsageDataRequest
+     * @return DescribeVodEditingUsageDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVodEditingUsageDataResponse> describeVodEditingUsageData(DescribeVodEditingUsageDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVodEditingUsageData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVodEditingUsageDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVodEditingUsageDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>
@@ -2625,6 +2655,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDailyPlayRegionStatis  GetDailyPlayRegionStatisRequest
+     * @return GetDailyPlayRegionStatisResponse
+     */
+    @Override
+    public CompletableFuture<GetDailyPlayRegionStatisResponse> getDailyPlayRegionStatis(GetDailyPlayRegionStatisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDailyPlayRegionStatis").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDailyPlayRegionStatisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDailyPlayRegionStatisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Regions that support this operation: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * <ul>
@@ -2756,6 +2804,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * <p>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
+     * <strong>QPS limit</strong>
+     * You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</p>
+     * 
      * @param request the request parameters of GetJobDetail  GetJobDetailRequest
      * @return GetJobDetailResponse
      */
@@ -3379,6 +3433,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * <ul>
+     * <li>You can call the <a href="https://apiworkbench.aliyun-inc.com/document/vod/2017-03-21/GetJobDetail?spm=openapi-amp.newDocPublishment.0.0.616a281fSegn0e">GetJobDetail</a> operation to query detailed information about the tasks.</li>
+     * <li>You can call this operation to query only asynchronous tasks of the last six months. The types of tasks that you can query include transcoding tasks, snapshot tasks, and AI tasks.
+     * <strong>QPS limits</strong>
+     * You can call this operation up to 15 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListJobInfo  ListJobInfoRequest
      * @return ListJobInfoResponse
      */
@@ -4413,7 +4476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The specific parameter of a video is updated only when a new value is passed in the parameter.</p>
+     * <h3><a href="#"></a></h3>
+     * <p>You can call this operation to modify information such as the title, tags, and description about audio and video files based on audio or video IDs. You must pass in the parameters that you want to modify. Otherwise, parameter configurations are not overwritten.</p>
+     * <h3><a href="#qps-"></a>Queries per second (QPS) limit</h3>
+     * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits on API operations</a>.</p>
      * 
      * @param request the request parameters of UpdateVideoInfo  UpdateVideoInfoRequest
      * @return UpdateVideoInfoResponse

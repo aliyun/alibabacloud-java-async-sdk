@@ -73,7 +73,11 @@ public class GetTranscodeTaskRequest extends Request {
         } 
 
         /**
-         * JobIds.
+         * <p>Transcoding job ID. Supports up to 10 IDs, and multiple IDs should be separated by a comma (,). You can obtain this value in the following ways:</p>
+         * <p>When initiating a transcoding task through the <a href="https://help.aliyun.com/document_detail/454920.html">SubmitTranscodeJobs</a> interface, it is the value of the returned parameter JobId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86c1925fba0****,7afb201e7fa****,2cc4997378****</p>
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

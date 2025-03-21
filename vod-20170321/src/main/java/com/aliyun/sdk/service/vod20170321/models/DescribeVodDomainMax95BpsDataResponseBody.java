@@ -127,7 +127,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DetailData.
+         * <p>Details of the 95th percentile bandwidth.</p>
          */
         public Builder detailData(DetailData detailData) {
             this.detailData = detailData;
@@ -135,7 +135,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name for CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -143,7 +146,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomesticMax95Bps.
+         * <p>The 95th percentile bandwidth in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16777590.28</p>
          */
         public Builder domesticMax95Bps(String domesticMax95Bps) {
             this.domesticMax95Bps = domesticMax95Bps;
@@ -151,7 +157,14 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -159,7 +172,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * Max95Bps.
+         * <p>The 95th percentile bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16777590.28</p>
          */
         public Builder max95Bps(String max95Bps) {
             this.max95Bps = max95Bps;
@@ -167,7 +183,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * OverseasMax95Bps.
+         * <p>The 95th percentile bandwidth outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder overseasMax95Bps(String overseasMax95Bps) {
             this.overseasMax95Bps = overseasMax95Bps;
@@ -175,7 +194,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +205,11 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -265,7 +291,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Area.
+             * <p>The billable region where the peak 95 data was collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -273,7 +302,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Max95Bps.
+             * <p>The 95th percentile bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16777590.28</p>
              */
             public Builder max95Bps(Float max95Bps) {
                 this.max95Bps = max95Bps;
@@ -281,7 +313,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Max95BpsPeakTime.
+             * <p>The time corresponding to the 95th percentile bandwidth peak.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-11T21:05:00Z</p>
              */
             public Builder max95BpsPeakTime(String max95BpsPeakTime) {
                 this.max95BpsPeakTime = max95BpsPeakTime;
@@ -289,7 +324,10 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-18 10:11:32</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

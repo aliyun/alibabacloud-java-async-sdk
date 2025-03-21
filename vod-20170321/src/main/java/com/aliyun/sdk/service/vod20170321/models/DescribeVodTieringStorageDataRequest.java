@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVodTieringStorageDataRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    private String appId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -39,6 +43,7 @@ public class DescribeVodTieringStorageDataRequest extends Request {
 
     private DescribeVodTieringStorageDataRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
         this.region = builder.region;
@@ -57,6 +62,13 @@ public class DescribeVodTieringStorageDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -95,6 +107,7 @@ public class DescribeVodTieringStorageDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVodTieringStorageDataRequest, Builder> {
+        private String appId; 
         private String endTime; 
         private Long ownerId; 
         private String region; 
@@ -107,12 +120,22 @@ public class DescribeVodTieringStorageDataRequest extends Request {
 
         private Builder(DescribeVodTieringStorageDataRequest request) {
             super(request);
+            this.appId = request.appId;
             this.endTime = request.endTime;
             this.ownerId = request.ownerId;
             this.region = request.region;
             this.startTime = request.startTime;
             this.storageClass = request.storageClass;
         } 
+
+        /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * <p>The end time at which data is obtained. The end time must be later than the start time. The difference cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>

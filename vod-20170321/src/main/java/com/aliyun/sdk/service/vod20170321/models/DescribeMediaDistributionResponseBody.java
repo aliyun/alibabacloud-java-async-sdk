@@ -67,7 +67,7 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * MediaDistributionList.
+         * <p>The distribution list of media assets. The data is displayed based on the statistical cycle of the natural hour, day, week, or month of the start and end time.</p>
          */
         public Builder mediaDistributionList(java.util.List<MediaDistributionList> mediaDistributionList) {
             this.mediaDistributionList = mediaDistributionList;
@@ -75,7 +75,10 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +86,10 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of media assets returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -153,7 +159,10 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Count.
+             * <p>The number of media assets that are queried during the specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -161,7 +170,10 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end of the time range during which data is queried (exclusive). The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-14T00:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -169,7 +181,10 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start of the time range during which data is queried (inclusive). The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-13T00:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
