@@ -255,4 +255,22 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWebSearch  GetWebSearchRequest
+     * @return GetWebSearchResponse
+     */
+    @Override
+    public CompletableFuture<GetWebSearchResponse> getWebSearch(GetWebSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWebSearch").setMethod(HttpMethod.POST).setPathRegex("/v3/openapi/workspaces/{workspace_name}/web-search/{service_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWebSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWebSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }

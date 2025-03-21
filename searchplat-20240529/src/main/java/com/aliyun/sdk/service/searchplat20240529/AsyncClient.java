@@ -91,4 +91,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetTextSparseEmbeddingResponse> getTextSparseEmbedding(GetTextSparseEmbeddingRequest request);
 
+    /**
+     * @param request the request parameters of GetWebSearch  GetWebSearchRequest
+     * @return GetWebSearchResponse
+     */
+    CompletableFuture<GetWebSearchResponse> getWebSearch(GetWebSearchRequest request);
+
 }

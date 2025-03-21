@@ -122,11 +122,82 @@ public class GetTextGenerationResponseBody extends TeaModel {
      *
      * <p>GetTextGenerationResponseBody</p>
      */
+    public static class SearchResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private SearchResults(Builder builder) {
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String title; 
+            private String url; 
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public SearchResults build() {
+                return new SearchResults(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetTextGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextGenerationResponseBody</p>
+     */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("search_results")
+        private java.util.List<SearchResults> searchResults;
+
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
         private Result(Builder builder) {
+            this.searchResults = builder.searchResults;
             this.text = builder.text;
         }
 
@@ -139,6 +210,13 @@ public class GetTextGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchResults
+         */
+        public java.util.List<SearchResults> getSearchResults() {
+            return this.searchResults;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -146,7 +224,16 @@ public class GetTextGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<SearchResults> searchResults; 
             private String text; 
+
+            /**
+             * search_results.
+             */
+            public Builder searchResults(java.util.List<SearchResults> searchResults) {
+                this.searchResults = searchResults;
+                return this;
+            }
 
             /**
              * text.

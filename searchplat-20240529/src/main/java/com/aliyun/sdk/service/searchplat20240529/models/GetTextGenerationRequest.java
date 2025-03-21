@@ -32,13 +32,17 @@ public class GetTextGenerationRequest extends Request {
     private String csiLevel;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enable_search")
+    private Boolean enableSearch;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messages")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map<String, String> parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
@@ -49,6 +53,7 @@ public class GetTextGenerationRequest extends Request {
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
         this.csiLevel = builder.csiLevel;
+        this.enableSearch = builder.enableSearch;
         this.messages = builder.messages;
         this.parameters = builder.parameters;
         this.stream = builder.stream;
@@ -89,6 +94,13 @@ public class GetTextGenerationRequest extends Request {
     }
 
     /**
+     * @return enableSearch
+     */
+    public Boolean getEnableSearch() {
+        return this.enableSearch;
+    }
+
+    /**
      * @return messages
      */
     public java.util.List<Messages> getMessages() {
@@ -98,7 +110,7 @@ public class GetTextGenerationRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map<String, String> getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -113,8 +125,9 @@ public class GetTextGenerationRequest extends Request {
         private String workspaceName; 
         private String serviceId; 
         private String csiLevel; 
+        private Boolean enableSearch; 
         private java.util.List<Messages> messages; 
-        private java.util.Map<String, String> parameters; 
+        private java.util.Map<String, ?> parameters; 
         private Boolean stream; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class GetTextGenerationRequest extends Request {
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
             this.csiLevel = request.csiLevel;
+            this.enableSearch = request.enableSearch;
             this.messages = request.messages;
             this.parameters = request.parameters;
             this.stream = request.stream;
@@ -159,6 +173,15 @@ public class GetTextGenerationRequest extends Request {
         }
 
         /**
+         * enable_search.
+         */
+        public Builder enableSearch(Boolean enableSearch) {
+            this.putBodyParameter("enable_search", enableSearch);
+            this.enableSearch = enableSearch;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
@@ -170,7 +193,7 @@ public class GetTextGenerationRequest extends Request {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.Map<String, String> parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;
