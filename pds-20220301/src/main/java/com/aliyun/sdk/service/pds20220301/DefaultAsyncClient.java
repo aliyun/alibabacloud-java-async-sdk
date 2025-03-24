@@ -97,6 +97,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AuditLogExport  AuditLogExportRequest
+     * @return AuditLogExportResponse
+     */
+    @Override
+    public CompletableFuture<AuditLogExportResponse> auditLogExport(AuditLogExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AuditLogExport").setMethod(HttpMethod.POST).setPathRegex("/v2/audit_log/export").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AuditLogExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AuditLogExportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>For more information, see &quot;OAuth 2.0 For Web Server Applications&quot; at <a href="https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a> in User Guide.</p>
      * 

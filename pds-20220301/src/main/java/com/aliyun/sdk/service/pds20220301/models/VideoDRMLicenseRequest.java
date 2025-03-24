@@ -97,6 +97,12 @@ public class VideoDRMLicenseRequest extends Request {
         }
 
         /**
+         * <p>The type of DRM encryption.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>fairplay</li>
+         * <li>widevine</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +115,10 @@ public class VideoDRMLicenseRequest extends Request {
         }
 
         /**
-         * licenseRequest.
+         * <p>The request that is initiated to obtain the license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAES6B8SQgpACioSENGxDhqCLIVwwCBOyPayyWoSENGxDhqCLIVwwCBOyPayyWpI88aJmwYQARoQdRV32</p>
          */
         public Builder licenseRequest(String licenseRequest) {
             this.putBodyParameter("licenseRequest", licenseRequest);

@@ -41,6 +41,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssignRoleResponse> assignRole(AssignRoleRequest request);
 
     /**
+     * @param request the request parameters of AuditLogExport  AuditLogExportRequest
+     * @return AuditLogExportResponse
+     */
+    CompletableFuture<AuditLogExportResponse> auditLogExport(AuditLogExportRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For more information, see &quot;OAuth 2.0 For Web Server Applications&quot; at <a href="https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a> in User Guide.</p>
      * 

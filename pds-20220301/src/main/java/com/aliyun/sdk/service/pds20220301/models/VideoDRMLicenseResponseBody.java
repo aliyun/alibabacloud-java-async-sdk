@@ -67,7 +67,10 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
         private String states; 
 
         /**
-         * data.
+         * <p>The returned DRM license.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb9swCy8P50H9KePsxET3jZ1tm41bDs9HTsxbWnsjf3bsf6QGdiS4kZPhDaskimbNyAfNjmhQRmWFt3AhwNF3</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * device_info.
+         * <p>The information about the device from which the DRM request was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder deviceInfo(String deviceInfo) {
             this.deviceInfo = deviceInfo;
@@ -83,7 +89,10 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * states.
+         * <p>The request state returned by the DRM server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder states(String states) {
             this.states = states;
