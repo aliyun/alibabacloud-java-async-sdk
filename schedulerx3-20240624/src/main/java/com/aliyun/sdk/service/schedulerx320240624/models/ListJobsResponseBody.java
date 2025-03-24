@@ -154,6 +154,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Calendar")
         private String calendar;
 
+        @com.aliyun.core.annotation.NameInMap("ChildJobId")
+        private String childJobId;
+
         @com.aliyun.core.annotation.NameInMap("CleanMode")
         private String cleanMode;
 
@@ -236,6 +239,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.attemptInterval = builder.attemptInterval;
             this.calendar = builder.calendar;
+            this.childJobId = builder.childJobId;
             this.cleanMode = builder.cleanMode;
             this.creator = builder.creator;
             this.currentExecuteStatus = builder.currentExecuteStatus;
@@ -291,6 +295,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getCalendar() {
             return this.calendar;
+        }
+
+        /**
+         * @return childJobId
+         */
+        public String getChildJobId() {
+            return this.childJobId;
         }
 
         /**
@@ -479,6 +490,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String appName; 
             private Integer attemptInterval; 
             private String calendar; 
+            private String childJobId; 
             private String cleanMode; 
             private String creator; 
             private Integer currentExecuteStatus; 
@@ -527,6 +539,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder calendar(String calendar) {
                 this.calendar = calendar;
+                return this;
+            }
+
+            /**
+             * ChildJobId.
+             */
+            public Builder childJobId(String childJobId) {
+                this.childJobId = childJobId;
                 return this;
             }
 

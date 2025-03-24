@@ -35,6 +35,10 @@ public class UpdateJobRequest extends Request {
     private String calendar;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChildJobId")
+    private String childJobId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
@@ -116,6 +120,7 @@ public class UpdateJobRequest extends Request {
         this.appName = builder.appName;
         this.attemptInterval = builder.attemptInterval;
         this.calendar = builder.calendar;
+        this.childJobId = builder.childJobId;
         this.clusterId = builder.clusterId;
         this.description = builder.description;
         this.executorBlockStrategy = builder.executorBlockStrategy;
@@ -174,6 +179,13 @@ public class UpdateJobRequest extends Request {
      */
     public String getCalendar() {
         return this.calendar;
+    }
+
+    /**
+     * @return childJobId
+     */
+    public String getChildJobId() {
+        return this.childJobId;
     }
 
     /**
@@ -300,6 +312,7 @@ public class UpdateJobRequest extends Request {
         private String appName; 
         private Integer attemptInterval; 
         private String calendar; 
+        private String childJobId; 
         private String clusterId; 
         private String description; 
         private Integer executorBlockStrategy; 
@@ -328,6 +341,7 @@ public class UpdateJobRequest extends Request {
             this.appName = request.appName;
             this.attemptInterval = request.attemptInterval;
             this.calendar = request.calendar;
+            this.childJobId = request.childJobId;
             this.clusterId = request.clusterId;
             this.description = request.description;
             this.executorBlockStrategy = request.executorBlockStrategy;
@@ -383,6 +397,15 @@ public class UpdateJobRequest extends Request {
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
             this.calendar = calendar;
+            return this;
+        }
+
+        /**
+         * ChildJobId.
+         */
+        public Builder childJobId(String childJobId) {
+            this.putBodyParameter("ChildJobId", childJobId);
+            this.childJobId = childJobId;
             return this;
         }
 
