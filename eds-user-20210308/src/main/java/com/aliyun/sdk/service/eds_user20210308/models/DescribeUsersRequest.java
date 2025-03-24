@@ -33,6 +33,10 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResource")
+    private java.util.Map<String, String> filterWithAssignedResource;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResources")
     private java.util.Map<String, Boolean> filterWithAssignedResources;
@@ -72,6 +76,7 @@ public class DescribeUsersRequest extends Request {
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
+        this.filterWithAssignedResource = builder.filterWithAssignedResource;
         this.filterWithAssignedResources = builder.filterWithAssignedResources;
         this.groupId = builder.groupId;
         this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
@@ -121,6 +126,13 @@ public class DescribeUsersRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return filterWithAssignedResource
+     */
+    public java.util.Map<String, String> getFilterWithAssignedResource() {
+        return this.filterWithAssignedResource;
     }
 
     /**
@@ -184,6 +196,7 @@ public class DescribeUsersRequest extends Request {
         private java.util.List<String> endUserIds; 
         private java.util.List<String> excludeEndUserIds; 
         private String filter; 
+        private java.util.Map<String, String> filterWithAssignedResource; 
         private java.util.Map<String, Boolean> filterWithAssignedResources; 
         private String groupId; 
         private Boolean isQueryAllSubOrgs; 
@@ -203,6 +216,7 @@ public class DescribeUsersRequest extends Request {
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
+            this.filterWithAssignedResource = request.filterWithAssignedResource;
             this.filterWithAssignedResources = request.filterWithAssignedResources;
             this.groupId = request.groupId;
             this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
@@ -249,6 +263,16 @@ public class DescribeUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * FilterWithAssignedResource.
+         */
+        public Builder filterWithAssignedResource(java.util.Map<String, String> filterWithAssignedResource) {
+            String filterWithAssignedResourceShrink = shrink(filterWithAssignedResource, "FilterWithAssignedResource", "json");
+            this.putQueryParameter("FilterWithAssignedResource", filterWithAssignedResourceShrink);
+            this.filterWithAssignedResource = filterWithAssignedResource;
             return this;
         }
 

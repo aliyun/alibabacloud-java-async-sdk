@@ -301,6 +301,73 @@ public class DescribeUsersResponseBody extends TeaModel {
      *
      * <p>DescribeUsersResponseBody</p>
      */
+    public static class Properties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Properties(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Properties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Properties build() {
+                return new Properties(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -313,6 +380,9 @@ public class DescribeUsersResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
+
+        @com.aliyun.core.annotation.NameInMap("ExternalName")
+        private String externalName;
 
         @com.aliyun.core.annotation.NameInMap("Extras")
         private Extras extras;
@@ -344,6 +414,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private java.util.List<Properties> properties;
+
         @com.aliyun.core.annotation.NameInMap("RealNickName")
         private String realNickName;
 
@@ -361,6 +434,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.avatar = builder.avatar;
             this.email = builder.email;
             this.endUserId = builder.endUserId;
+            this.externalName = builder.externalName;
             this.extras = builder.extras;
             this.groups = builder.groups;
             this.id = builder.id;
@@ -371,6 +445,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.orgs = builder.orgs;
             this.ownerType = builder.ownerType;
             this.phone = builder.phone;
+            this.properties = builder.properties;
             this.realNickName = builder.realNickName;
             this.remark = builder.remark;
             this.status = builder.status;
@@ -411,6 +486,13 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return externalName
+         */
+        public String getExternalName() {
+            return this.externalName;
         }
 
         /**
@@ -484,6 +566,13 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return properties
+         */
+        public java.util.List<Properties> getProperties() {
+            return this.properties;
+        }
+
+        /**
          * @return realNickName
          */
         public String getRealNickName() {
@@ -516,6 +605,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String avatar; 
             private String email; 
             private String endUserId; 
+            private String externalName; 
             private Extras extras; 
             private java.util.List<Groups> groups; 
             private Long id; 
@@ -526,6 +616,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private java.util.List<Orgs> orgs; 
             private String ownerType; 
             private String phone; 
+            private java.util.List<Properties> properties; 
             private String realNickName; 
             private String remark; 
             private Long status; 
@@ -572,6 +663,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * ExternalName.
+             */
+            public Builder externalName(String externalName) {
+                this.externalName = externalName;
                 return this;
             }
 
@@ -700,6 +799,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * Properties.
+             */
+            public Builder properties(java.util.List<Properties> properties) {
+                this.properties = properties;
                 return this;
             }
 

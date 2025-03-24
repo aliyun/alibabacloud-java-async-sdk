@@ -34,6 +34,14 @@ public class FilterUsersRequest extends Request {
     private Boolean includeDesktopGroupCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeOrgInfo")
+    private Boolean includeOrgInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeSupportIdps")
+    private Boolean includeSupportIdps;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsQueryAllSubOrgs")
     private Boolean isQueryAllSubOrgs;
 
@@ -76,6 +84,8 @@ public class FilterUsersRequest extends Request {
         this.filter = builder.filter;
         this.includeDesktopCount = builder.includeDesktopCount;
         this.includeDesktopGroupCount = builder.includeDesktopGroupCount;
+        this.includeOrgInfo = builder.includeOrgInfo;
+        this.includeSupportIdps = builder.includeSupportIdps;
         this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -126,6 +136,20 @@ public class FilterUsersRequest extends Request {
      */
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    /**
+     * @return includeOrgInfo
+     */
+    public Boolean getIncludeOrgInfo() {
+        return this.includeOrgInfo;
+    }
+
+    /**
+     * @return includeSupportIdps
+     */
+    public Boolean getIncludeSupportIdps() {
+        return this.includeSupportIdps;
     }
 
     /**
@@ -196,6 +220,8 @@ public class FilterUsersRequest extends Request {
         private String filter; 
         private Boolean includeDesktopCount; 
         private Boolean includeDesktopGroupCount; 
+        private Boolean includeOrgInfo; 
+        private Boolean includeSupportIdps; 
         private Boolean isQueryAllSubOrgs; 
         private Long maxResults; 
         private String nextToken; 
@@ -216,6 +242,8 @@ public class FilterUsersRequest extends Request {
             this.filter = request.filter;
             this.includeDesktopCount = request.includeDesktopCount;
             this.includeDesktopGroupCount = request.includeDesktopGroupCount;
+            this.includeOrgInfo = request.includeOrgInfo;
+            this.includeSupportIdps = request.includeSupportIdps;
             this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -301,6 +329,24 @@ public class FilterUsersRequest extends Request {
         public Builder includeDesktopGroupCount(Boolean includeDesktopGroupCount) {
             this.putQueryParameter("IncludeDesktopGroupCount", includeDesktopGroupCount);
             this.includeDesktopGroupCount = includeDesktopGroupCount;
+            return this;
+        }
+
+        /**
+         * IncludeOrgInfo.
+         */
+        public Builder includeOrgInfo(Boolean includeOrgInfo) {
+            this.putQueryParameter("IncludeOrgInfo", includeOrgInfo);
+            this.includeOrgInfo = includeOrgInfo;
+            return this;
+        }
+
+        /**
+         * IncludeSupportIdps.
+         */
+        public Builder includeSupportIdps(Boolean includeSupportIdps) {
+            this.putQueryParameter("IncludeSupportIdps", includeSupportIdps);
+            this.includeSupportIdps = includeSupportIdps;
             return this;
         }
 

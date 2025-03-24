@@ -181,6 +181,140 @@ public class FilterUsersResponseBody extends TeaModel {
      *
      * <p>FilterUsersResponseBody</p>
      */
+    public static class OrgList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OrgId")
+        private String orgId;
+
+        @com.aliyun.core.annotation.NameInMap("OrgName")
+        private String orgName;
+
+        private OrgList(Builder builder) {
+            this.orgId = builder.orgId;
+            this.orgName = builder.orgName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrgList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return orgId
+         */
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        /**
+         * @return orgName
+         */
+        public String getOrgName() {
+            return this.orgName;
+        }
+
+        public static final class Builder {
+            private String orgId; 
+            private String orgName; 
+
+            /**
+             * OrgId.
+             */
+            public Builder orgId(String orgId) {
+                this.orgId = orgId;
+                return this;
+            }
+
+            /**
+             * OrgName.
+             */
+            public Builder orgName(String orgName) {
+                this.orgName = orgName;
+                return this;
+            }
+
+            public OrgList build() {
+                return new OrgList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
+    public static class SupportLoginIdps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IdpId")
+        private String idpId;
+
+        @com.aliyun.core.annotation.NameInMap("IdpName")
+        private String idpName;
+
+        private SupportLoginIdps(Builder builder) {
+            this.idpId = builder.idpId;
+            this.idpName = builder.idpName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportLoginIdps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return idpId
+         */
+        public String getIdpId() {
+            return this.idpId;
+        }
+
+        /**
+         * @return idpName
+         */
+        public String getIdpName() {
+            return this.idpName;
+        }
+
+        public static final class Builder {
+            private String idpId; 
+            private String idpName; 
+
+            /**
+             * IdpId.
+             */
+            public Builder idpId(String idpId) {
+                this.idpId = idpId;
+                return this;
+            }
+
+            /**
+             * IdpName.
+             */
+            public Builder idpName(String idpName) {
+                this.idpName = idpName;
+                return this;
+            }
+
+            public SupportLoginIdps build() {
+                return new SupportLoginIdps(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
@@ -444,6 +578,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsTenantManager")
         private Boolean isTenantManager;
 
+        @com.aliyun.core.annotation.NameInMap("OrgList")
+        private java.util.List<OrgList> orgList;
+
         @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
@@ -465,6 +602,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
+        @com.aliyun.core.annotation.NameInMap("SupportLoginIdps")
+        private java.util.List<SupportLoginIdps> supportLoginIdps;
+
         @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
         private java.util.List<UserSetPropertiesModels> userSetPropertiesModels;
 
@@ -478,6 +618,7 @@ public class FilterUsersResponseBody extends TeaModel {
             this.externalInfo = builder.externalInfo;
             this.id = builder.id;
             this.isTenantManager = builder.isTenantManager;
+            this.orgList = builder.orgList;
             this.ownerType = builder.ownerType;
             this.passwordExpireDays = builder.passwordExpireDays;
             this.passwordExpireRestDays = builder.passwordExpireRestDays;
@@ -485,6 +626,7 @@ public class FilterUsersResponseBody extends TeaModel {
             this.realNickName = builder.realNickName;
             this.remark = builder.remark;
             this.status = builder.status;
+            this.supportLoginIdps = builder.supportLoginIdps;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
         }
 
@@ -560,6 +702,13 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return orgList
+         */
+        public java.util.List<OrgList> getOrgList() {
+            return this.orgList;
+        }
+
+        /**
          * @return ownerType
          */
         public String getOwnerType() {
@@ -609,6 +758,13 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportLoginIdps
+         */
+        public java.util.List<SupportLoginIdps> getSupportLoginIdps() {
+            return this.supportLoginIdps;
+        }
+
+        /**
          * @return userSetPropertiesModels
          */
         public java.util.List<UserSetPropertiesModels> getUserSetPropertiesModels() {
@@ -625,6 +781,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private ExternalInfo externalInfo; 
             private Long id; 
             private Boolean isTenantManager; 
+            private java.util.List<OrgList> orgList; 
             private String ownerType; 
             private Integer passwordExpireDays; 
             private Integer passwordExpireRestDays; 
@@ -632,6 +789,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private String realNickName; 
             private String remark; 
             private Long status; 
+            private java.util.List<SupportLoginIdps> supportLoginIdps; 
             private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
@@ -760,6 +918,14 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
+             * OrgList.
+             */
+            public Builder orgList(java.util.List<OrgList> orgList) {
+                this.orgList = orgList;
+                return this;
+            }
+
+            /**
              * <p>The type of the account ownership.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -848,6 +1014,14 @@ public class FilterUsersResponseBody extends TeaModel {
              */
             public Builder status(Long status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SupportLoginIdps.
+             */
+            public Builder supportLoginIdps(java.util.List<SupportLoginIdps> supportLoginIdps) {
+                this.supportLoginIdps = supportLoginIdps;
                 return this;
             }
 
