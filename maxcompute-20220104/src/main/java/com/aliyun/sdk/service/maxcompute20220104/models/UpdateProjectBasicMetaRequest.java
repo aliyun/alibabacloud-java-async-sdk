@@ -317,6 +317,9 @@ public class UpdateProjectBasicMetaRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
+        @com.aliyun.core.annotation.NameInMap("enableDr")
+        private Boolean enableDr;
+
         @com.aliyun.core.annotation.NameInMap("enableTunnelQuotaRoute")
         private Boolean enableTunnelQuotaRoute;
 
@@ -344,6 +347,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
         private Properties(Builder builder) {
             this.allowFullScan = builder.allowFullScan;
             this.enableDecimal2 = builder.enableDecimal2;
+            this.enableDr = builder.enableDr;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
             this.retentionDays = builder.retentionDays;
@@ -374,6 +378,13 @@ public class UpdateProjectBasicMetaRequest extends Request {
          */
         public Boolean getEnableDecimal2() {
             return this.enableDecimal2;
+        }
+
+        /**
+         * @return enableDr
+         */
+        public Boolean getEnableDr() {
+            return this.enableDr;
         }
 
         /**
@@ -435,6 +446,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
         public static final class Builder {
             private Boolean allowFullScan; 
             private Boolean enableDecimal2; 
+            private Boolean enableDr; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
             private Long retentionDays; 
@@ -463,6 +475,14 @@ public class UpdateProjectBasicMetaRequest extends Request {
              */
             public Builder enableDecimal2(Boolean enableDecimal2) {
                 this.enableDecimal2 = enableDecimal2;
+                return this;
+            }
+
+            /**
+             * enableDr.
+             */
+            public Builder enableDr(Boolean enableDr) {
+                this.enableDr = enableDr;
                 return this;
             }
 
