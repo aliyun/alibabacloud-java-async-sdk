@@ -64,10 +64,6 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -141,21 +137,6 @@ public class ListClustersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListClustersResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -306,14 +287,6 @@ public class ListClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private String startTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(MaintenancePeriod model) {
-                this.endTime = model.endTime;
-                this.startTime = model.startTime;
-            } 
 
             /**
              * EndTime.
@@ -609,33 +582,6 @@ public class ListClustersResponseBody extends TeaModel {
             private java.util.Map<String, ?> tags; 
             private String versionCode; 
             private String vpcId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.appVersion = model.appVersion;
-                this.canUpdate = model.canUpdate;
-                this.chargeType = model.chargeType;
-                this.clusterAliasName = model.clusterAliasName;
-                this.clusterName = model.clusterName;
-                this.clusterType = model.clusterType;
-                this.createTime = model.createTime;
-                this.endDate = model.endDate;
-                this.initStatus = model.initStatus;
-                this.instanceCount = model.instanceCount;
-                this.instanceId = model.instanceId;
-                this.internetAddress = model.internetAddress;
-                this.internetDomain = model.internetDomain;
-                this.intranetAddress = model.intranetAddress;
-                this.intranetDomain = model.intranetDomain;
-                this.maintenancePeriod = model.maintenancePeriod;
-                this.mseVersion = model.mseVersion;
-                this.resourceGroupId = model.resourceGroupId;
-                this.tags = model.tags;
-                this.versionCode = model.versionCode;
-                this.vpcId = model.vpcId;
-            } 
 
             /**
              * <p>The application version.</p>

@@ -51,7 +51,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,14 +204,6 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         public static final class Builder {
             private Long routeId; 
             private String routeName; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceList model) {
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-            } 
 
             /**
              * <p>The route ID.</p>

@@ -64,10 +64,6 @@ public class ListNamingTrackResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return errorCode
      */
@@ -141,21 +137,6 @@ public class ListNamingTrackResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private java.util.List<Traces> traces; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListNamingTrackResponseBody model) {
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-            this.traces = model.traces;
-        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -390,21 +371,6 @@ public class ListNamingTrackResponseBody extends TeaModel {
             private String pushTimeNetwork; 
             private String serverName; 
             private String slaTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Traces model) {
-                this.clientIp = model.clientIp;
-                this.group = model.group;
-                this.instanceSize = model.instanceSize;
-                this.nodeName = model.nodeName;
-                this.pushTime = model.pushTime;
-                this.pushTimeAll = model.pushTimeAll;
-                this.pushTimeNetwork = model.pushTimeNetwork;
-                this.serverName = model.serverName;
-                this.slaTime = model.slaTime;
-            } 
 
             /**
              * <p>The IP address of the client.</p>

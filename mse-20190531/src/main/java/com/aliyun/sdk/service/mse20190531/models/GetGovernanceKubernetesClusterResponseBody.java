@@ -44,10 +44,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -81,16 +77,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetGovernanceKubernetesClusterResponseBody model) {
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -186,14 +172,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String mseNamespace; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(Namespaces model) {
-                this.mseNamespace = model.mseNamespace;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The name of the MSE namespace that you want to access.</p>
@@ -339,20 +317,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String pilotStartTime; 
             private String region; 
             private String updateTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.clusterId = model.clusterId;
-                this.clusterName = model.clusterName;
-                this.k8sVersion = model.k8sVersion;
-                this.namespaceInfos = model.namespaceInfos;
-                this.namespaces = model.namespaces;
-                this.pilotStartTime = model.pilotStartTime;
-                this.region = model.region;
-                this.updateTime = model.updateTime;
-            } 
 
             /**
              * <p>The ID of the instance.</p>

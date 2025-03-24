@@ -64,10 +64,6 @@ public class ListAnsServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -141,21 +137,6 @@ public class ListAnsServicesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAnsServicesResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -354,18 +335,6 @@ public class ListAnsServicesResponseBody extends TeaModel {
             private Integer ipCount; 
             private String name; 
             private String source; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.clusterCount = model.clusterCount;
-                this.groupName = model.groupName;
-                this.healthyInstanceCount = model.healthyInstanceCount;
-                this.ipCount = model.ipCount;
-                this.name = model.name;
-                this.source = model.source;
-            } 
 
             /**
              * <p>The total number of clusters.</p>

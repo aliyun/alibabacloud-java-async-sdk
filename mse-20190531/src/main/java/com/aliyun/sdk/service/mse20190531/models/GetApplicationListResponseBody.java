@@ -44,10 +44,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -81,16 +77,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetApplicationListResponseBody model) {
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -177,6 +163,9 @@ public class GetApplicationListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
@@ -190,6 +179,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.source = builder.source;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.userId = builder.userId;
         }
 
@@ -265,6 +255,13 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -281,23 +278,8 @@ public class GetApplicationListResponseBody extends TeaModel {
             private String regionId; 
             private String source; 
             private Long status; 
+            private java.util.Map<String, ?> tags; 
             private String userId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.extraInfo = model.extraInfo;
-                this.instancesNumber = model.instancesNumber;
-                this.language = model.language;
-                this.namespace = model.namespace;
-                this.regionId = model.regionId;
-                this.source = model.source;
-                this.status = model.status;
-                this.userId = model.userId;
-            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -399,6 +381,14 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map<String, ?> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
@@ -483,16 +473,6 @@ public class GetApplicationListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * <p>The page number of the returned page.</p>

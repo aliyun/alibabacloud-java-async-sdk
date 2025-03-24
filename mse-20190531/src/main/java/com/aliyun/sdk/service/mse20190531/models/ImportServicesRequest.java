@@ -74,7 +74,7 @@ public class ImportServicesRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -399,19 +399,6 @@ public class ImportServicesRequest extends Request {
             private String namespace; 
             private Long servicePort; 
             private String serviceProtocol; 
-
-            private Builder() {
-            } 
-
-            private Builder(ServiceList model) {
-                this.dnsServerList = model.dnsServerList;
-                this.groupName = model.groupName;
-                this.ips = model.ips;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.servicePort = model.servicePort;
-                this.serviceProtocol = model.serviceProtocol;
-            } 
 
             /**
              * DnsServerList.

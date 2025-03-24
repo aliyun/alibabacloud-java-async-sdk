@@ -48,10 +48,6 @@ public class QueryNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -93,17 +89,6 @@ public class QueryNamespaceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(QueryNamespaceResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -197,14 +182,6 @@ public class QueryNamespaceResponseBody extends TeaModel {
         public static final class Builder {
             private String namespace; 
             private String region; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.namespace = model.namespace;
-                this.region = model.region;
-            } 
 
             /**
              * <p>The name of the namespace.</p>

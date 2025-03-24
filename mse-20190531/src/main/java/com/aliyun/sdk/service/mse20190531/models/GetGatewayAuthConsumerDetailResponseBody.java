@@ -64,10 +64,6 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -141,21 +137,6 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetGatewayAuthConsumerDetailResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicCode = model.dynamicCode;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code. A value of 200 is returned if the request is successful.</p>
@@ -381,20 +362,6 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private Boolean resourceStatus; 
             private Long routeId; 
             private String routeName; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceList model) {
-                this.consumerId = model.consumerId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.resourceStatus = model.resourceStatus;
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-            } 
 
             /**
              * <p>The consumer ID.</p>
@@ -730,30 +697,6 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String tokenPosition; 
             private String tokenPrefix; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.consumerStatus = model.consumerStatus;
-                this.description = model.description;
-                this.encodeType = model.encodeType;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.jwks = model.jwks;
-                this.keyName = model.keyName;
-                this.keyValue = model.keyValue;
-                this.name = model.name;
-                this.primaryUser = model.primaryUser;
-                this.resourceList = model.resourceList;
-                this.tokenName = model.tokenName;
-                this.tokenPass = model.tokenPass;
-                this.tokenPosition = model.tokenPosition;
-                this.tokenPrefix = model.tokenPrefix;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The status of the consumer. Valid values:</p>

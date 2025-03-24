@@ -64,10 +64,6 @@ public class GetServiceListenersResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -141,21 +137,6 @@ public class GetServiceListenersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetServiceListenersResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The returned data.</p>
@@ -382,20 +363,6 @@ public class GetServiceListenersResponseBody extends TeaModel {
             private String namespaceId; 
             private String port; 
             private String serviceName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.addr = model.addr;
-                this.agent = model.agent;
-                this.app = model.app;
-                this.cluster = model.cluster;
-                this.ip = model.ip;
-                this.namespaceId = model.namespaceId;
-                this.port = model.port;
-                this.serviceName = model.serviceName;
-            } 
 
             /**
              * <p>The IP address of the listener.</p>

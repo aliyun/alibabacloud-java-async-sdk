@@ -56,10 +56,6 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -117,19 +113,6 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(FetchLosslessRuleListResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code returned.</p>
@@ -361,23 +344,6 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             private Boolean related; 
             private Integer warmupTime; 
 
-            private Builder() {
-            } 
-
-            private Builder(Results model) {
-                this.aligned = model.aligned;
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.count = model.count;
-                this.delayTime = model.delayTime;
-                this.enable = model.enable;
-                this.funcType = model.funcType;
-                this.lossLessDetail = model.lossLessDetail;
-                this.notice = model.notice;
-                this.related = model.related;
-                this.warmupTime = model.warmupTime;
-            } 
-
             /**
              * <p>Indicates whether service registration is complete before readiness probe.</p>
              * 
@@ -577,16 +543,6 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Results> results; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.results = model.results;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * <p>The page number of the returned page.</p>

@@ -57,7 +57,7 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -220,13 +220,6 @@ public class UpdateGatewayRouteAuthRequest extends Request {
 
         public static final class Builder {
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(AuthJSON model) {
-                this.type = model.type;
-            } 
 
             /**
              * <p>The authentication type. If an empty string is passed, no authentication type is available. Valid values:</p>

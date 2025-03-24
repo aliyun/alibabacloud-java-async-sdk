@@ -64,10 +64,6 @@ public class GetPluginsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -141,21 +137,6 @@ public class GetPluginsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetPluginsResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicCode = model.dynamicCode;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The returned code.</p>
@@ -482,29 +463,6 @@ public class GetPluginsResponseBody extends TeaModel {
             private String version; 
             private String wasmFile; 
             private Integer wasmLang; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.category = model.category;
-                this.configCheck = model.configCheck;
-                this.id = model.id;
-                this.maxVersion = model.maxVersion;
-                this.mode = model.mode;
-                this.name = model.name;
-                this.newVersionPublishingFlag = model.newVersionPublishingFlag;
-                this.phase = model.phase;
-                this.primaryUser = model.primaryUser;
-                this.priority = model.priority;
-                this.publishState = model.publishState;
-                this.status = model.status;
-                this.summary = model.summary;
-                this.summaryEn = model.summaryEn;
-                this.version = model.version;
-                this.wasmFile = model.wasmFile;
-                this.wasmLang = model.wasmLang;
-            } 
 
             /**
              * <p>The type of the plug-in. Valid values:</p>

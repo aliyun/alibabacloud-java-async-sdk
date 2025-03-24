@@ -59,7 +59,7 @@ public class ListGatewayRouteRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -338,21 +338,6 @@ public class ListGatewayRouteRequest extends Request {
             private String path; 
             private Integer routeOrder; 
             private Integer status; 
-
-            private Builder() {
-            } 
-
-            private Builder(FilterParams model) {
-                this.defaultServiceId = model.defaultServiceId;
-                this.domainId = model.domainId;
-                this.domainName = model.domainName;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.name = model.name;
-                this.path = model.path;
-                this.routeOrder = model.routeOrder;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The default service ID.</p>

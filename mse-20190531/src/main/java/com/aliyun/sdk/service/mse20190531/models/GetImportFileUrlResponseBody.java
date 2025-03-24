@@ -60,10 +60,6 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -129,20 +125,6 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetImportFileUrlResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -270,13 +252,6 @@ public class GetImportFileUrlResponseBody extends TeaModel {
 
         public static final class Builder {
             private String url; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.url = model.url;
-            } 
 
             /**
              * <p>The URL that is used to upload the configuration file.</p>

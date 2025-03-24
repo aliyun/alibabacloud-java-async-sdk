@@ -52,10 +52,6 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListGatewaySlbResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -258,16 +242,6 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String protocol; 
             private String vServerGroupId; 
             private String vServerGroupName; 
-
-            private Builder() {
-            } 
-
-            private Builder(VServiceList model) {
-                this.port = model.port;
-                this.protocol = model.protocol;
-                this.vServerGroupId = model.vServerGroupId;
-                this.vServerGroupName = model.vServerGroupName;
-            } 
 
             /**
              * Port.
@@ -555,31 +529,6 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String vServerGroupId; 
             private java.util.List<VServiceList> vServiceList; 
             private String vsMetaInfo; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.editEnable = model.editEnable;
-                this.gatewayId = model.gatewayId;
-                this.gatewaySlbMode = model.gatewaySlbMode;
-                this.gatewaySlbStatus = model.gatewaySlbStatus;
-                this.gmtCreate = model.gmtCreate;
-                this.httpPort = model.httpPort;
-                this.httpsPort = model.httpsPort;
-                this.httpsVServerGroupId = model.httpsVServerGroupId;
-                this.id = model.id;
-                this.serviceWeight = model.serviceWeight;
-                this.slbId = model.slbId;
-                this.slbIp = model.slbIp;
-                this.slbPort = model.slbPort;
-                this.slbType = model.slbType;
-                this.statusDesc = model.statusDesc;
-                this.type = model.type;
-                this.vServerGroupId = model.vServerGroupId;
-                this.vServiceList = model.vServiceList;
-                this.vsMetaInfo = model.vsMetaInfo;
-            } 
 
             /**
              * <p>Indicates whether the edit operation is supported.</p>

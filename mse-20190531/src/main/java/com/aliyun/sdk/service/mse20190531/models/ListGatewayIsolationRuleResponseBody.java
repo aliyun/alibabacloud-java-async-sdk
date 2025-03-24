@@ -36,10 +36,6 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListGatewayIsolationRuleResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Data.
@@ -287,27 +275,6 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             private Integer responseStatusCode; 
             private Long routeId; 
             private String routeName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.behaviorType = model.behaviorType;
-                this.bodyEncoding = model.bodyEncoding;
-                this.enable = model.enable;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.id = model.id;
-                this.idList = model.idList;
-                this.limitMode = model.limitMode;
-                this.maxConcurrency = model.maxConcurrency;
-                this.responseAdditionalHeaders = model.responseAdditionalHeaders;
-                this.responseContentBody = model.responseContentBody;
-                this.responseRedirectUrl = model.responseRedirectUrl;
-                this.responseStatusCode = model.responseStatusCode;
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-            } 
 
             /**
              * BehaviorType.
@@ -636,27 +603,6 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             private Long routeId; 
             private String routeName; 
 
-            private Builder() {
-            } 
-
-            private Builder(Results model) {
-                this.behaviorType = model.behaviorType;
-                this.bodyEncoding = model.bodyEncoding;
-                this.enable = model.enable;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.id = model.id;
-                this.idList = model.idList;
-                this.limitMode = model.limitMode;
-                this.maxConcurrency = model.maxConcurrency;
-                this.responseAdditionalHeaders = model.responseAdditionalHeaders;
-                this.responseContentBody = model.responseContentBody;
-                this.responseRedirectUrl = model.responseRedirectUrl;
-                this.responseStatusCode = model.responseStatusCode;
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-            } 
-
             /**
              * BehaviorType.
              */
@@ -863,17 +809,6 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private java.util.List<Results> results; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.results = model.results;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * PageNumber.

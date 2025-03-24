@@ -44,10 +44,6 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -81,16 +77,6 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetServiceMethodPageResponseBody model) {
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * Data.
@@ -185,15 +171,6 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(ParameterDefinitions model) {
-                this.description = model.description;
-                this.name = model.name;
-                this.type = model.type;
-            } 
 
             /**
              * Description.
@@ -366,22 +343,6 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String returnDetails; 
             private String returnType; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.methodController = model.methodController;
-                this.name = model.name;
-                this.nameDetail = model.nameDetail;
-                this.parameterDefinitions = model.parameterDefinitions;
-                this.parameterDetails = model.parameterDetails;
-                this.parameterTypes = model.parameterTypes;
-                this.paths = model.paths;
-                this.requestMethods = model.requestMethods;
-                this.returnDetails = model.returnDetails;
-                this.returnType = model.returnType;
-            } 
-
             /**
              * MethodController.
              */
@@ -536,16 +497,6 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * PageNumber.

@@ -79,7 +79,7 @@ public class UpdateServiceSourceRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -389,16 +389,6 @@ public class UpdateServiceSourceRequest extends Request {
             private Boolean enableStatus; 
             private String ingressClass; 
             private String watchNamespace; 
-
-            private Builder() {
-            } 
-
-            private Builder(IngressOptionsRequest model) {
-                this.enableIngress = model.enableIngress;
-                this.enableStatus = model.enableStatus;
-                this.ingressClass = model.ingressClass;
-                this.watchNamespace = model.watchNamespace;
-            } 
 
             /**
              * <p>Specifies whether to enable Ingress.</p>

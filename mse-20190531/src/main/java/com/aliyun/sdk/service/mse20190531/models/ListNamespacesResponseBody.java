@@ -36,10 +36,6 @@ public class ListNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListNamespacesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListNamespacesResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Data.
@@ -113,6 +101,9 @@ public class ListNamespacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
@@ -129,6 +120,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             this.instanceCount = builder.instanceCount;
             this.namespace = builder.namespace;
             this.region = builder.region;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
             this.version = builder.version;
@@ -185,6 +177,13 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateTime
          */
         public Long getUpdateTime() {
@@ -212,24 +211,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             private Long instanceCount; 
             private String namespace; 
             private String region; 
+            private java.util.Map<String, ?> tags; 
             private Long updateTime; 
             private String userId; 
             private Integer version; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.appCount = model.appCount;
-                this.createTime = model.createTime;
-                this.describe = model.describe;
-                this.instanceCount = model.instanceCount;
-                this.namespace = model.namespace;
-                this.region = model.region;
-                this.updateTime = model.updateTime;
-                this.userId = model.userId;
-                this.version = model.version;
-            } 
 
             /**
              * AppCount.
@@ -276,6 +261,14 @@ public class ListNamespacesResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map<String, ?> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -438,21 +431,6 @@ public class ListNamespacesResponseBody extends TeaModel {
             private String userId; 
             private Integer version; 
 
-            private Builder() {
-            } 
-
-            private Builder(Results model) {
-                this.appCount = model.appCount;
-                this.createTime = model.createTime;
-                this.describe = model.describe;
-                this.instanceCount = model.instanceCount;
-                this.namespace = model.namespace;
-                this.region = model.region;
-                this.updateTime = model.updateTime;
-                this.userId = model.userId;
-                this.version = model.version;
-            } 
-
             /**
              * AppCount.
              */
@@ -611,17 +589,6 @@ public class ListNamespacesResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private java.util.List<Results> results; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.results = model.results;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * PageNumber.

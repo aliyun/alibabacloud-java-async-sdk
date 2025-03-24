@@ -98,7 +98,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -530,22 +530,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String type; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(RestItems model) {
-                this.cond = model.cond;
-                this.datum = model.datum;
-                this.divisor = model.divisor;
-                this.name = model.name;
-                this.nameList = model.nameList;
-                this.operator = model.operator;
-                this.rate = model.rate;
-                this.remainder = model.remainder;
-                this.type = model.type;
-                this.value = model.value;
-            } 
-
             /**
              * Cond.
              */
@@ -705,16 +689,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private Integer priority; 
             private java.util.List<RestItems> restItems; 
 
-            private Builder() {
-            } 
-
-            private Builder(EntryRules model) {
-                this.condition = model.condition;
-                this.paths = model.paths;
-                this.priority = model.priority;
-                this.restItems = model.restItems;
-            } 
-
             /**
              * Condition.
              */
@@ -822,16 +796,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String type; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Conditions model) {
-                this.cond = model.cond;
-                this.name = model.name;
-                this.type = model.type;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The matching condition. Valid values:</p>
              * <ul>
@@ -935,14 +899,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         public static final class Builder {
             private Integer percentage; 
             private Long routeId; 
-
-            private Builder() {
-            } 
-
-            private Builder(RouteIndependentPercentageList model) {
-                this.percentage = model.percentage;
-                this.routeId = model.routeId;
-            } 
 
             /**
              * Percentage.
@@ -1094,21 +1050,6 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private java.util.List<Long> routeIdList; 
             private Boolean routeIndependentPercentageEnable; 
             private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList; 
-
-            private Builder() {
-            } 
-
-            private Builder(GatewaySwimmingLaneRouteJson model) {
-                this.canaryModel = model.canaryModel;
-                this.condition = model.condition;
-                this.conditions = model.conditions;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.percentage = model.percentage;
-                this.routeIdList = model.routeIdList;
-                this.routeIndependentPercentageEnable = model.routeIndependentPercentageEnable;
-                this.routeIndependentPercentageList = model.routeIndependentPercentageList;
-            } 
 
             /**
              * CanaryModel.

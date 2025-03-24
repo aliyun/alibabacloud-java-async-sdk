@@ -52,10 +52,6 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetKubernetesSourceResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -234,14 +218,6 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         public static final class Builder {
             private String cluster; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.cluster = model.cluster;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the ACK cluster.</p>

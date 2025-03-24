@@ -64,10 +64,6 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -141,21 +137,6 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GatewayBlackWhiteListResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicCode = model.dynamicCode;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code. A value of 200 is returned if the request is successful.</p>
@@ -463,27 +444,6 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.content = model.content;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.isWhite = model.isWhite;
-                this.name = model.name;
-                this.note = model.note;
-                this.resourceId = model.resourceId;
-                this.resourceIdJsonList = model.resourceIdJsonList;
-                this.resourceIdNameJson = model.resourceIdNameJson;
-                this.resourceType = model.resourceType;
-                this.status = model.status;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The content of the blacklist.</p>
              * 
@@ -733,16 +693,6 @@ public class GatewayBlackWhiteListResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * <p>The page number.</p>

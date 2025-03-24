@@ -48,10 +48,6 @@ public class GetNacosConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return configuration
      */
@@ -93,17 +89,6 @@ public class GetNacosConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetNacosConfigResponseBody model) {
-            this.configuration = model.configuration;
-            this.errorCode = model.errorCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>Configuration information.</p>
@@ -234,16 +219,6 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private Integer priority; 
             private String rule; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(GrayVersions model) {
-                this.name = model.name;
-                this.priority = model.priority;
-                this.rule = model.rule;
-                this.type = model.type;
-            } 
 
             /**
              * <p>Gray version name</p>
@@ -447,23 +422,6 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String md5; 
             private String tags; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Configuration model) {
-                this.appName = model.appName;
-                this.betaIps = model.betaIps;
-                this.content = model.content;
-                this.dataId = model.dataId;
-                this.desc = model.desc;
-                this.encryptedDataKey = model.encryptedDataKey;
-                this.grayVersions = model.grayVersions;
-                this.group = model.group;
-                this.md5 = model.md5;
-                this.tags = model.tags;
-                this.type = model.type;
-            } 
 
             /**
              * <p>Application name.</p>

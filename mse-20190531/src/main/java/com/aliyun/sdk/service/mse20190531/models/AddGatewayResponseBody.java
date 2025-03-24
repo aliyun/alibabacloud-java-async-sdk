@@ -52,10 +52,6 @@ public class AddGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class AddGatewayResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddGatewayResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
@@ -226,13 +210,6 @@ public class AddGatewayResponseBody extends TeaModel {
 
         public static final class Builder {
             private String gatewayUniqueId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.gatewayUniqueId = model.gatewayUniqueId;
-            } 
 
             /**
              * <p>code</p>

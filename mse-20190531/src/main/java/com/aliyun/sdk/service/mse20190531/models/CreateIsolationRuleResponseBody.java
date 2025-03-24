@@ -48,10 +48,6 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateIsolationRuleResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * Code.
@@ -278,21 +263,6 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             private String regionId; 
             private String resource; 
             private Float threshold; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.enable = model.enable;
-                this.id = model.id;
-                this.limitApp = model.limitApp;
-                this.namespace = model.namespace;
-                this.regionId = model.regionId;
-                this.resource = model.resource;
-                this.threshold = model.threshold;
-            } 
 
             /**
              * AppId.

@@ -52,10 +52,6 @@ public class DeleteNacosConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class DeleteNacosConfigsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DeleteNacosConfigsResponseBody model) {
-            this.code = model.code;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code returned.</p>

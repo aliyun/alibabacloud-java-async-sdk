@@ -48,10 +48,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -93,17 +89,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddMigrationTaskResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>Data structure.</p>
@@ -318,23 +303,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             private String targetClusterUrl; 
             private String targetInstanceId; 
             private String userId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.clusterType = model.clusterType;
-                this.id = model.id;
-                this.originInstanceAddress = model.originInstanceAddress;
-                this.originInstanceName = model.originInstanceName;
-                this.originInstanceNamespace = model.originInstanceNamespace;
-                this.projectDesc = model.projectDesc;
-                this.syncType = model.syncType;
-                this.targetClusterName = model.targetClusterName;
-                this.targetClusterUrl = model.targetClusterUrl;
-                this.targetInstanceId = model.targetInstanceId;
-                this.userId = model.userId;
-            } 
 
             /**
              * <p>Cluster type.</p>

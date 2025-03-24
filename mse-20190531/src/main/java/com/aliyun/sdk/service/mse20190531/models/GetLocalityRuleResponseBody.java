@@ -52,10 +52,6 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetLocalityRuleResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * Code.

@@ -120,7 +120,7 @@ public class AddGatewayRouteRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -563,14 +563,6 @@ public class AddGatewayRouteRequest extends Request {
             private String body; 
             private Long code; 
 
-            private Builder() {
-            } 
-
-            private Builder(DirectResponseJSON model) {
-                this.body = model.body;
-                this.code = model.code;
-            } 
-
             /**
              * <p>The mock return value.</p>
              * 
@@ -727,21 +719,6 @@ public class AddGatewayRouteRequest extends Request {
             private Integer servicePort; 
             private String sourceType; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(FallbackServices model) {
-                this.agreementType = model.agreementType;
-                this.groupName = model.groupName;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.percent = model.percent;
-                this.serviceId = model.serviceId;
-                this.servicePort = model.servicePort;
-                this.sourceType = model.sourceType;
-                this.version = model.version;
-            } 
 
             /**
              * <p>The type of the protocol.</p>
@@ -905,15 +882,6 @@ public class AddGatewayRouteRequest extends Request {
             private String type; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(HeaderPredicates model) {
-                this.key = model.key;
-                this.type = model.type;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The key of the request header.</p>
              * 
@@ -1009,15 +977,6 @@ public class AddGatewayRouteRequest extends Request {
             private Boolean ignoreCase; 
             private String path; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(PathPredicates model) {
-                this.ignoreCase = model.ignoreCase;
-                this.path = model.path;
-                this.type = model.type;
-            } 
 
             /**
              * <p>Specifies whether to ignore case sensitivity.</p>
@@ -1119,15 +1078,6 @@ public class AddGatewayRouteRequest extends Request {
             private String key; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(QueryPredicates model) {
-                this.key = model.key;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The name of the parameter.</p>
@@ -1237,16 +1187,6 @@ public class AddGatewayRouteRequest extends Request {
             private PathPredicates pathPredicates; 
             private java.util.List<QueryPredicates> queryPredicates; 
 
-            private Builder() {
-            } 
-
-            private Builder(Predicates model) {
-                this.headerPredicates = model.headerPredicates;
-                this.methodPredicates = model.methodPredicates;
-                this.pathPredicates = model.pathPredicates;
-                this.queryPredicates = model.queryPredicates;
-            } 
-
             /**
              * <p>The information about header matching.</p>
              */
@@ -1341,15 +1281,6 @@ public class AddGatewayRouteRequest extends Request {
             private Integer code; 
             private String host; 
             private String path; 
-
-            private Builder() {
-            } 
-
-            private Builder(RedirectJSON model) {
-                this.code = model.code;
-                this.host = model.host;
-                this.path = model.path;
-            } 
 
             /**
              * <p>The status code returned.</p>
@@ -1446,15 +1377,6 @@ public class AddGatewayRouteRequest extends Request {
             private String extractKey; 
             private String extractKeySpec; 
             private String mappingType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ParamMapsList model) {
-                this.extractKey = model.extractKey;
-                this.extractKeySpec = model.extractKeySpec;
-                this.mappingType = model.mappingType;
-            } 
 
             /**
              * <p>The key extracted from the input parameter.</p>
@@ -1600,18 +1522,6 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
             private java.util.List<String> passThroughList; 
-
-            private Builder() {
-            } 
-
-            private Builder(MothedMapList model) {
-                this.dubboMothedName = model.dubboMothedName;
-                this.httpMothed = model.httpMothed;
-                this.mothedpath = model.mothedpath;
-                this.paramMapsList = model.paramMapsList;
-                this.passThroughAllHeaders = model.passThroughAllHeaders;
-                this.passThroughList = model.passThroughList;
-            } 
 
             /**
              * <p>The method name of the Dubbo service.</p>
@@ -1773,16 +1683,6 @@ public class AddGatewayRouteRequest extends Request {
             private String dubboServiceName; 
             private String dubboServiceVersion; 
             private java.util.List<MothedMapList> mothedMapList; 
-
-            private Builder() {
-            } 
-
-            private Builder(HttpDubboTranscoder model) {
-                this.dubboServiceGroup = model.dubboServiceGroup;
-                this.dubboServiceName = model.dubboServiceName;
-                this.dubboServiceVersion = model.dubboServiceVersion;
-                this.mothedMapList = model.mothedMapList;
-            } 
 
             /**
              * <p>The name of the service group.</p>
@@ -1971,22 +1871,6 @@ public class AddGatewayRouteRequest extends Request {
             private Integer servicePort; 
             private String sourceType; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(Services model) {
-                this.agreementType = model.agreementType;
-                this.groupName = model.groupName;
-                this.httpDubboTranscoder = model.httpDubboTranscoder;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.percent = model.percent;
-                this.serviceId = model.serviceId;
-                this.servicePort = model.servicePort;
-                this.sourceType = model.sourceType;
-                this.version = model.version;
-            } 
 
             /**
              * <p>The type of the protocol.</p>

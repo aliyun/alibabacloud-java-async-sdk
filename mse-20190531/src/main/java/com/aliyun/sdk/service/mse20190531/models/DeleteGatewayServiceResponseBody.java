@@ -52,10 +52,6 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DeleteGatewayServiceResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code returned.</p>
@@ -366,25 +350,6 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             private String serviceNameInRegistry; 
             private Long sourceId; 
             private String sourceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.groupName = model.groupName;
-                this.id = model.id;
-                this.ips = model.ips;
-                this.metaInfo = model.metaInfo;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.serviceNameInRegistry = model.serviceNameInRegistry;
-                this.sourceId = model.sourceId;
-                this.sourceType = model.sourceType;
-            } 
 
             /**
              * <p>The ID of the gateway.</p>

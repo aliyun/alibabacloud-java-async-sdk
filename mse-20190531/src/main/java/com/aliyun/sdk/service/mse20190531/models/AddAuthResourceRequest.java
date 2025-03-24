@@ -69,7 +69,7 @@ public class AddAuthResourceRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -321,15 +321,6 @@ public class AddAuthResourceRequest extends Request {
             private String headerKey; 
             private String headerMethod; 
             private String headerValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(AuthResourceHeaderList model) {
-                this.headerKey = model.headerKey;
-                this.headerMethod = model.headerMethod;
-                this.headerValue = model.headerValue;
-            } 
 
             /**
              * <p>The parameter of the HTTP header.</p>

@@ -48,10 +48,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -93,17 +89,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListApplicationsWithTagRulesResponseBody model) {
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response parameters.</p>
@@ -310,22 +295,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer rate; 
             private Integer remainder; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(ArgumentItems model) {
-                this.cond = model.cond;
-                this.datum = model.datum;
-                this.divisor = model.divisor;
-                this.expr = model.expr;
-                this.index = model.index;
-                this.nameList = model.nameList;
-                this.operator = model.operator;
-                this.rate = model.rate;
-                this.remainder = model.remainder;
-                this.value = model.value;
-            } 
 
             /**
              * cond.
@@ -554,22 +523,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String triggerPolicy; 
             private String version; 
 
-            private Builder() {
-            } 
-
-            private Builder(Dubbo model) {
-                this.appId = model.appId;
-                this.argumentItems = model.argumentItems;
-                this.condition = model.condition;
-                this.group = model.group;
-                this.methodName = model.methodName;
-                this.paramTypes = model.paramTypes;
-                this.serviceName = model.serviceName;
-                this.tags = model.tags;
-                this.triggerPolicy = model.triggerPolicy;
-                this.version = model.version;
-            } 
-
             /**
              * appId.
              */
@@ -797,22 +750,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(RestItems model) {
-                this.cond = model.cond;
-                this.datum = model.datum;
-                this.divisor = model.divisor;
-                this.name = model.name;
-                this.nameList = model.nameList;
-                this.operator = model.operator;
-                this.rate = model.rate;
-                this.remainder = model.remainder;
-                this.type = model.type;
-                this.value = model.value;
-            } 
-
             /**
              * cond.
              */
@@ -1028,21 +965,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private java.util.List<String> tags; 
             private String triggerPolicy; 
 
-            private Builder() {
-            } 
-
-            private Builder(Springcloud model) {
-                this.appId = model.appId;
-                this.condition = model.condition;
-                this.enable = model.enable;
-                this.path = model.path;
-                this.paths = model.paths;
-                this.priority = model.priority;
-                this.restItems = model.restItems;
-                this.tags = model.tags;
-                this.triggerPolicy = model.triggerPolicy;
-            } 
-
             /**
              * appId.
              */
@@ -1165,14 +1087,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Dubbo> dubbo; 
             private java.util.List<Springcloud> springcloud; 
-
-            private Builder() {
-            } 
-
-            private Builder(Rules model) {
-                this.dubbo = model.dubbo;
-                this.springcloud = model.springcloud;
-            } 
 
             /**
              * dubbo.
@@ -1312,20 +1226,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Rules rules; 
             private Integer status; 
             private String tag; 
-
-            private Builder() {
-            } 
-
-            private Builder(RouteRules model) {
-                this.enable = model.enable;
-                this.id = model.id;
-                this.instanceNum = model.instanceNum;
-                this.name = model.name;
-                this.rate = model.rate;
-                this.rules = model.rules;
-                this.status = model.status;
-                this.tag = model.tag;
-            } 
 
             /**
              * <p>Indicates whether the alert rule is enabled. Valid values:</p>
@@ -1521,17 +1421,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private java.util.List<RouteRules> routeRules; 
             private Long routeStatus; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.namespace = model.namespace;
-                this.routeRules = model.routeRules;
-                this.routeStatus = model.routeStatus;
-            } 
-
             /**
              * <p>The application ID.</p>
              * 
@@ -1662,16 +1551,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * <p>The page number of the returned page.</p>

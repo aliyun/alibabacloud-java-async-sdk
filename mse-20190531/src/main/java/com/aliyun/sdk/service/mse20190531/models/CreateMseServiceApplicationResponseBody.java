@@ -44,10 +44,6 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -81,16 +77,6 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateMseServiceApplicationResponseBody model) {
-            this.data = model.data;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The data structure.</p>
@@ -306,24 +292,6 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.createTime = model.createTime;
-                this.extraInfo = model.extraInfo;
-                this.language = model.language;
-                this.licenseKey = model.licenseKey;
-                this.regionId = model.regionId;
-                this.source = model.source;
-                this.status = model.status;
-                this.updateTime = model.updateTime;
-                this.userId = model.userId;
-                this.version = model.version;
-            } 
 
             /**
              * <p>The application ID.</p>

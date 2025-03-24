@@ -48,10 +48,6 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return configuration
      */
@@ -93,17 +89,6 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetNacosHistoryConfigResponseBody model) {
-            this.configuration = model.configuration;
-            this.errorCode = model.errorCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The configuration information.</p>
@@ -270,19 +255,6 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             private String group; 
             private String md5; 
             private String opType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Configuration model) {
-                this.appName = model.appName;
-                this.content = model.content;
-                this.dataId = model.dataId;
-                this.encryptedDataKey = model.encryptedDataKey;
-                this.group = model.group;
-                this.md5 = model.md5;
-                this.opType = model.opType;
-            } 
 
             /**
              * <p>The name of the application.</p>

@@ -64,10 +64,6 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -141,21 +137,6 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAnsInstancesResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -522,32 +503,6 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             private Integer port; 
             private String serviceName; 
             private Integer weight; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.app = model.app;
-                this.clusterName = model.clusterName;
-                this.datumKey = model.datumKey;
-                this.defaultKey = model.defaultKey;
-                this.enabled = model.enabled;
-                this.ephemeral = model.ephemeral;
-                this.failCount = model.failCount;
-                this.healthy = model.healthy;
-                this.instanceHeartBeatInterval = model.instanceHeartBeatInterval;
-                this.instanceHeartBeatTimeOut = model.instanceHeartBeatTimeOut;
-                this.instanceId = model.instanceId;
-                this.ip = model.ip;
-                this.ipDeleteTimeout = model.ipDeleteTimeout;
-                this.lastBeat = model.lastBeat;
-                this.marked = model.marked;
-                this.metadata = model.metadata;
-                this.okCount = model.okCount;
-                this.port = model.port;
-                this.serviceName = model.serviceName;
-                this.weight = model.weight;
-            } 
 
             /**
              * <p>The name of the application.</p>

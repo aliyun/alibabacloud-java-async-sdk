@@ -68,10 +68,6 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -153,22 +149,6 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListNacosConfigsResponseBody model) {
-            this.code = model.code;
-            this.configurations = model.configurations;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -354,16 +334,6 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             private String dataId; 
             private String group; 
             private String id; 
-
-            private Builder() {
-            } 
-
-            private Builder(Configurations model) {
-                this.appName = model.appName;
-                this.dataId = model.dataId;
-                this.group = model.group;
-                this.id = model.id;
-            } 
 
             /**
              * <p>The name of the application.</p>

@@ -52,6 +52,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SwitchEnable")
     private String switchEnable;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
@@ -62,6 +66,7 @@ public class CreateApplicationRequest extends Request {
         this.sentinelEnable = builder.sentinelEnable;
         this.source = builder.source;
         this.switchEnable = builder.switchEnable;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -72,7 +77,7 @@ public class CreateApplicationRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,6 +138,13 @@ public class CreateApplicationRequest extends Request {
         return this.switchEnable;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String acceptLanguage; 
         private String appName; 
@@ -142,6 +154,7 @@ public class CreateApplicationRequest extends Request {
         private String sentinelEnable; 
         private String source; 
         private String switchEnable; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -157,6 +170,7 @@ public class CreateApplicationRequest extends Request {
             this.sentinelEnable = request.sentinelEnable;
             this.source = request.source;
             this.switchEnable = request.switchEnable;
+            this.tags = request.tags;
         } 
 
         /**
@@ -261,6 +275,16 @@ public class CreateApplicationRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateApplicationRequest build() {
             return new CreateApplicationRequest(this);
@@ -268,4 +292,71 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

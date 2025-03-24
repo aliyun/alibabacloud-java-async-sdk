@@ -52,10 +52,6 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetGatewayDomainDetailResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -462,33 +446,6 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String sans; 
             private String tlsMax; 
             private String tlsMin; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.afterDate = model.afterDate;
-                this.algorithm = model.algorithm;
-                this.beforeDate = model.beforeDate;
-                this.certIdentifier = model.certIdentifier;
-                this.certName = model.certName;
-                this.commonName = model.commonName;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtAfter = model.gmtAfter;
-                this.gmtBefore = model.gmtBefore;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.http2 = model.http2;
-                this.id = model.id;
-                this.issuer = model.issuer;
-                this.mustHttps = model.mustHttps;
-                this.name = model.name;
-                this.protocol = model.protocol;
-                this.sans = model.sans;
-                this.tlsMax = model.tlsMax;
-                this.tlsMin = model.tlsMin;
-            } 
 
             /**
              * <p>The start time.</p>

@@ -68,10 +68,6 @@ public class GatewayDomain extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return certIdentifier
      */
@@ -153,22 +149,6 @@ public class GatewayDomain extends TeaModel {
         private String mustHttps; 
         private String name; 
         private String protocol; 
-
-        private Builder() {
-        } 
-
-        private Builder(GatewayDomain model) {
-            this.certIdentifier = model.certIdentifier;
-            this.gatewayId = model.gatewayId;
-            this.gatewayName = model.gatewayName;
-            this.gatewayUniqueId = model.gatewayUniqueId;
-            this.gmtCreate = model.gmtCreate;
-            this.gmtModified = model.gmtModified;
-            this.id = model.id;
-            this.mustHttps = model.mustHttps;
-            this.name = model.name;
-            this.protocol = model.protocol;
-        } 
 
         /**
          * CertIdentifier.

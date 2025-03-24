@@ -54,7 +54,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,16 +250,6 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             private java.util.List<String> httpCodes; 
             private java.util.List<String> retryOn; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(RetryJSON model) {
-                this.attempts = model.attempts;
-                this.httpCodes = model.httpCodes;
-                this.retryOn = model.retryOn;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The number of retries.</p>

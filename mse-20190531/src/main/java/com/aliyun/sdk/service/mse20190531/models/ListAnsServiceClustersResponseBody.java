@@ -52,10 +52,6 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -105,18 +101,6 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListAnsServiceClustersResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The data returned.</p>
@@ -318,21 +302,6 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Integer healthyCheckTimes; 
             private Integer port; 
             private Integer unhealthyCheckTimes; 
-
-            private Builder() {
-            } 
-
-            private Builder(AppDetail model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.checkInternal = model.checkInternal;
-                this.checkPath = model.checkPath;
-                this.checkTimeout = model.checkTimeout;
-                this.checkType = model.checkType;
-                this.healthyCheckTimes = model.healthyCheckTimes;
-                this.port = model.port;
-                this.unhealthyCheckTimes = model.unhealthyCheckTimes;
-            } 
 
             /**
              * <p>The ID of the application for which Microservices Governance is enabled.</p>
@@ -549,19 +518,6 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private String serviceName; 
             private Boolean useIPPort4Check; 
 
-            private Builder() {
-            } 
-
-            private Builder(Clusters model) {
-                this.defaultCheckPort = model.defaultCheckPort;
-                this.defaultPort = model.defaultPort;
-                this.healthCheckerType = model.healthCheckerType;
-                this.metadata = model.metadata;
-                this.name = model.name;
-                this.serviceName = model.serviceName;
-                this.useIPPort4Check = model.useIPPort4Check;
-            } 
-
             /**
              * <p>The default port used for a health check.</p>
              * 
@@ -773,21 +729,6 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Float protectThreshold; 
             private String selectorType; 
             private String source; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.appDetail = model.appDetail;
-                this.clusters = model.clusters;
-                this.ephemeral = model.ephemeral;
-                this.groupName = model.groupName;
-                this.metadata = model.metadata;
-                this.name = model.name;
-                this.protectThreshold = model.protectThreshold;
-                this.selectorType = model.selectorType;
-                this.source = model.source;
-            } 
 
             /**
              * <p>The information about the associated application for which Microservices Governance is enabled when the Source parameter is set to governance.</p>

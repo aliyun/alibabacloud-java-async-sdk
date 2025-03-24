@@ -59,7 +59,7 @@ public class ListGatewayServiceRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -300,18 +300,6 @@ public class ListGatewayServiceRequest extends Request {
             private String namespace; 
             private String serviceProtocol; 
             private String sourceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(FilterParams model) {
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.groupName = model.groupName;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.serviceProtocol = model.serviceProtocol;
-                this.sourceType = model.sourceType;
-            } 
 
             /**
              * <p>The unique ID of the gateway.</p>

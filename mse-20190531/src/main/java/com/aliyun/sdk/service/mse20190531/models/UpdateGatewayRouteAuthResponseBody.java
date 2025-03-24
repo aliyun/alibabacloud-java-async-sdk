@@ -64,10 +64,6 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -141,21 +137,6 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(UpdateGatewayRouteAuthResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicCode = model.dynamicCode;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>

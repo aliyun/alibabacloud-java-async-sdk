@@ -60,10 +60,6 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -129,20 +125,6 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ImportNacosConfigResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The error message returned.</p>
@@ -298,15 +280,6 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private String group; 
             private String reason; 
 
-            private Builder() {
-            } 
-
-            private Builder(FailData model) {
-                this.dataId = model.dataId;
-                this.group = model.group;
-                this.reason = model.reason;
-            } 
-
             /**
              * <p>The ID of the group.</p>
              * 
@@ -384,14 +357,6 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String group; 
-
-            private Builder() {
-            } 
-
-            private Builder(SkipData model) {
-                this.dataId = model.dataId;
-                this.group = model.group;
-            } 
 
             /**
              * <p>The ID of the group.</p>
@@ -489,16 +454,6 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private Integer skipCount; 
             private java.util.List<SkipData> skipData; 
             private Integer succCount; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.failData = model.failData;
-                this.skipCount = model.skipCount;
-                this.skipData = model.skipData;
-                this.succCount = model.succCount;
-            } 
 
             /**
              * <p>The data structure.</p>

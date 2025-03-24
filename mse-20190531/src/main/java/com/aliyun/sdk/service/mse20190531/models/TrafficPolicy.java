@@ -36,10 +36,6 @@ public class TrafficPolicy extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return loadBalancerSettings
      */
@@ -57,14 +53,6 @@ public class TrafficPolicy extends TeaModel {
     public static final class Builder {
         private LoadBalancerSettings loadBalancerSettings; 
         private TlsSetting tlsSetting; 
-
-        private Builder() {
-        } 
-
-        private Builder(TrafficPolicy model) {
-            this.loadBalancerSettings = model.loadBalancerSettings;
-            this.tlsSetting = model.tlsSetting;
-        } 
 
         /**
          * LoadBalancerSettings.
@@ -143,15 +131,6 @@ public class TrafficPolicy extends TeaModel {
             private String name; 
             private String path; 
             private String TTL; 
-
-            private Builder() {
-            } 
-
-            private Builder(HttpCookie model) {
-                this.name = model.name;
-                this.path = model.path;
-                this.TTL = model.TTL;
-            } 
 
             /**
              * Name.
@@ -240,15 +219,6 @@ public class TrafficPolicy extends TeaModel {
             private HttpCookie httpCookie; 
             private String parameterName; 
 
-            private Builder() {
-            } 
-
-            private Builder(ConsistentHashLBConfig model) {
-                this.consistentHashLBType = model.consistentHashLBType;
-                this.httpCookie = model.httpCookie;
-                this.parameterName = model.parameterName;
-            } 
-
             /**
              * ConsistentHashLBType.
              */
@@ -335,15 +305,6 @@ public class TrafficPolicy extends TeaModel {
             private ConsistentHashLBConfig consistentHashLBConfig; 
             private String loadbalancerType; 
             private Long warmupDuration; 
-
-            private Builder() {
-            } 
-
-            private Builder(LoadBalancerSettings model) {
-                this.consistentHashLBConfig = model.consistentHashLBConfig;
-                this.loadbalancerType = model.loadbalancerType;
-                this.warmupDuration = model.warmupDuration;
-            } 
 
             /**
              * ConsistentHashLBConfig.
@@ -444,16 +405,6 @@ public class TrafficPolicy extends TeaModel {
             private String certId; 
             private String sni; 
             private String tlsMode; 
-
-            private Builder() {
-            } 
-
-            private Builder(TlsSetting model) {
-                this.caCertContent = model.caCertContent;
-                this.certId = model.certId;
-                this.sni = model.sni;
-                this.tlsMode = model.tlsMode;
-            } 
 
             /**
              * CaCertContent.

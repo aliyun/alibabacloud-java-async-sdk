@@ -52,10 +52,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetGatewayServiceDetailResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code returned.</p>
@@ -234,14 +218,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private java.util.List<String> values; 
-
-            private Builder() {
-            } 
-
-            private Builder(LabelDetails model) {
-                this.key = model.key;
-                this.values = model.values;
-            } 
 
             /**
              * <p>The tag.</p>
@@ -373,19 +349,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private Integer servicePort; 
             private TrafficPolicy trafficPolicy; 
 
-            private Builder() {
-            } 
-
-            private Builder(PortTrafficPolicyList model) {
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.serviceId = model.serviceId;
-                this.servicePort = model.servicePort;
-                this.trafficPolicy = model.trafficPolicy;
-            } 
-
             /**
              * <p>The unique ID of the gateway.</p>
              * 
@@ -511,14 +474,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Labels model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The tag.</p>
              * 
@@ -591,14 +546,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Labels> labels; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(ServiceVersion model) {
-                this.labels = model.labels;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The tag.</p>
@@ -681,15 +628,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private Integer endpointNum; 
             private String endpointNumPercent; 
             private ServiceVersion serviceVersion; 
-
-            private Builder() {
-            } 
-
-            private Builder(VersionDetails model) {
-                this.endpointNum = model.endpointNum;
-                this.endpointNumPercent = model.endpointNumPercent;
-                this.serviceVersion = model.serviceVersion;
-            } 
 
             /**
              * <p>The number of instances.</p>
@@ -783,15 +721,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String label; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Versions model) {
-                this.label = model.label;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag.</p>
@@ -1152,37 +1081,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String sourceType; 
             private java.util.List<VersionDetails> versionDetails; 
             private java.util.List<Versions> versions; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.dnsServerList = model.dnsServerList;
-                this.gatewayId = model.gatewayId;
-                this.gatewayTrafficPolicy = model.gatewayTrafficPolicy;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.groupName = model.groupName;
-                this.healthCheck = model.healthCheck;
-                this.healthStatus = model.healthStatus;
-                this.id = model.id;
-                this.ips = model.ips;
-                this.labelDetails = model.labelDetails;
-                this.metaInfo = model.metaInfo;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.portTrafficPolicyList = model.portTrafficPolicyList;
-                this.ports = model.ports;
-                this.serviceFQDN = model.serviceFQDN;
-                this.serviceNameInRegistry = model.serviceNameInRegistry;
-                this.servicePort = model.servicePort;
-                this.serviceProtocol = model.serviceProtocol;
-                this.sourceId = model.sourceId;
-                this.sourceType = model.sourceType;
-                this.versionDetails = model.versionDetails;
-                this.versions = model.versions;
-            } 
 
             /**
              * DnsServerList.

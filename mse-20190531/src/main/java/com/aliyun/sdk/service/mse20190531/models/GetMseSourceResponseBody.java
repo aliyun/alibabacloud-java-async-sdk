@@ -52,10 +52,6 @@ public class GetMseSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class GetMseSourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetMseSourceResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -274,17 +258,6 @@ public class GetMseSourceResponseBody extends TeaModel {
             private String instanceId; 
             private String name; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.address = model.address;
-                this.clusterId = model.clusterId;
-                this.instanceId = model.instanceId;
-                this.name = model.name;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The endpoint of the instance.</p>

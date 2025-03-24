@@ -36,10 +36,6 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(UpdateGatewayFlowRuleResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Data.
@@ -299,28 +287,6 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             private String routeName; 
             private Integer statDurationMs; 
             private Integer threshold; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.behaviorType = model.behaviorType;
-                this.bodyEncoding = model.bodyEncoding;
-                this.enable = model.enable;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.id = model.id;
-                this.idList = model.idList;
-                this.limitMode = model.limitMode;
-                this.responseAdditionalHeaders = model.responseAdditionalHeaders;
-                this.responseContentBody = model.responseContentBody;
-                this.responseRedirectUrl = model.responseRedirectUrl;
-                this.responseStatusCode = model.responseStatusCode;
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-                this.statDurationMs = model.statDurationMs;
-                this.threshold = model.threshold;
-            } 
 
             /**
              * BehaviorType.

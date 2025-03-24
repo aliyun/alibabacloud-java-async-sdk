@@ -64,10 +64,6 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -141,21 +137,6 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListEurekaInstancesResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -450,26 +431,6 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             private Integer securePort; 
             private String status; 
             private String vipAddress; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.app = model.app;
-                this.durationInSecs = model.durationInSecs;
-                this.homePageUrl = model.homePageUrl;
-                this.hostName = model.hostName;
-                this.instanceId = model.instanceId;
-                this.ipAddr = model.ipAddr;
-                this.lastDirtyTimestamp = model.lastDirtyTimestamp;
-                this.lastUpdatedTimestamp = model.lastUpdatedTimestamp;
-                this.metadata = model.metadata;
-                this.port = model.port;
-                this.renewalIntervalInSecs = model.renewalIntervalInSecs;
-                this.securePort = model.securePort;
-                this.status = model.status;
-                this.vipAddress = model.vipAddress;
-            } 
 
             /**
              * <p>The name of the application.</p>

@@ -52,10 +52,6 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DeleteGatewayDomainResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -318,21 +302,6 @@ public class DeleteGatewayDomainResponseBody extends TeaModel {
             private Boolean mustHttps; 
             private String name; 
             private String protocol; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.certIdentifier = model.certIdentifier;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.mustHttps = model.mustHttps;
-                this.name = model.name;
-                this.protocol = model.protocol;
-            } 
 
             /**
              * <p>The ID of the certificate.</p>

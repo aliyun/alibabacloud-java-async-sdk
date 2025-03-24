@@ -52,10 +52,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListGatewayServiceResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The return value.</p>
@@ -247,15 +231,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String path; 
             private String ttl; 
 
-            private Builder() {
-            } 
-
-            private Builder(HttpCookie model) {
-                this.name = model.name;
-                this.path = model.path;
-                this.ttl = model.ttl;
-            } 
-
             /**
              * <p>The name of the cookie.</p>
              * 
@@ -363,16 +338,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private HttpCookie httpCookie; 
             private Long minimumRingSize; 
             private String parameterName; 
-
-            private Builder() {
-            } 
-
-            private Builder(ConsistentHashLBConfig model) {
-                this.consistentHashLBType = model.consistentHashLBType;
-                this.httpCookie = model.httpCookie;
-                this.minimumRingSize = model.minimumRingSize;
-                this.parameterName = model.parameterName;
-            } 
 
             /**
              * <p>The type based on which consistent hashing load balancing is performed.</p>
@@ -483,15 +448,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private ConsistentHashLBConfig consistentHashLBConfig; 
             private String loadbalancerType; 
             private Integer warmupDuration; 
-
-            private Builder() {
-            } 
-
-            private Builder(LoadBalancerSettings model) {
-                this.consistentHashLBConfig = model.consistentHashLBConfig;
-                this.loadbalancerType = model.loadbalancerType;
-                this.warmupDuration = model.warmupDuration;
-            } 
 
             /**
              * <p>The consistent hashing settings.</p>
@@ -628,18 +584,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String sni; 
             private java.util.List<String> subjectAltNames; 
 
-            private Builder() {
-            } 
-
-            private Builder(Tls model) {
-                this.caCertContent = model.caCertContent;
-                this.caCertId = model.caCertId;
-                this.certId = model.certId;
-                this.mode = model.mode;
-                this.sni = model.sni;
-                this.subjectAltNames = model.subjectAltNames;
-            } 
-
             /**
              * <p>The public key of the CA certificate .</p>
              * 
@@ -759,14 +703,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public static final class Builder {
             private LoadBalancerSettings loadBalancerSettings; 
             private Tls tls; 
-
-            private Builder() {
-            } 
-
-            private Builder(GatewayTrafficPolicy model) {
-                this.loadBalancerSettings = model.loadBalancerSettings;
-                this.tls = model.tls;
-            } 
 
             /**
              * <p>The load balancing settings.</p>
@@ -919,21 +855,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Integer timeout; 
             private Integer unhealthyThreshold; 
 
-            private Builder() {
-            } 
-
-            private Builder(HealthCheckInfo model) {
-                this.check = model.check;
-                this.expectedStatuses = model.expectedStatuses;
-                this.healthyThreshold = model.healthyThreshold;
-                this.httpHost = model.httpHost;
-                this.httpPath = model.httpPath;
-                this.interval = model.interval;
-                this.protocol = model.protocol;
-                this.timeout = model.timeout;
-                this.unhealthyThreshold = model.unhealthyThreshold;
-            } 
-
             /**
              * <p>Indicates whether checks are performed.</p>
              * 
@@ -1068,13 +989,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(Versions model) {
-                this.name = model.name;
-            } 
 
             /**
              * <p>The version number.</p>
@@ -1414,37 +1328,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private java.util.List<String> unhealthyEndpoints; 
             private java.util.List<Versions> versions; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.dnsServerList = model.dnsServerList;
-                this.gatewayId = model.gatewayId;
-                this.gatewayTrafficPolicy = model.gatewayTrafficPolicy;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.groupName = model.groupName;
-                this.healehStatus = model.healehStatus;
-                this.healthCheck = model.healthCheck;
-                this.healthCheckInfo = model.healthCheckInfo;
-                this.healthStatus = model.healthStatus;
-                this.id = model.id;
-                this.ips = model.ips;
-                this.metaInfo = model.metaInfo;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.ports = model.ports;
-                this.serviceFQDN = model.serviceFQDN;
-                this.serviceNameInRegistry = model.serviceNameInRegistry;
-                this.servicePort = model.servicePort;
-                this.serviceProtocol = model.serviceProtocol;
-                this.sourceId = model.sourceId;
-                this.sourceType = model.sourceType;
-                this.unhealthyEndpoints = model.unhealthyEndpoints;
-                this.versions = model.versions;
-            } 
-
             /**
              * DnsServerList.
              */
@@ -1780,16 +1663,6 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Long totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * <p>The number of the returned page.</p>

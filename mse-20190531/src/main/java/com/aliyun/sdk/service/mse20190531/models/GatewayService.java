@@ -60,10 +60,6 @@ public class GatewayService extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return gatewayTrafficPolicy
      */
@@ -129,20 +125,6 @@ public class GatewayService extends TeaModel {
         private String name; 
         private String namespace; 
         private String sourceType; 
-
-        private Builder() {
-        } 
-
-        private Builder(GatewayService model) {
-            this.gatewayTrafficPolicy = model.gatewayTrafficPolicy;
-            this.gatewayUniqueId = model.gatewayUniqueId;
-            this.groupName = model.groupName;
-            this.id = model.id;
-            this.metaInfo = model.metaInfo;
-            this.name = model.name;
-            this.namespace = model.namespace;
-            this.sourceType = model.sourceType;
-        } 
 
         /**
          * GatewayTrafficPolicy.

@@ -64,10 +64,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -141,21 +137,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetGatewayConfigResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.dynamicCode = model.dynamicCode;
-            this.dynamicMessage = model.dynamicMessage;
-            this.errorCode = model.errorCode;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * Code.
@@ -303,16 +284,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private String labelKey; 
             private String labelValue; 
 
-            private Builder() {
-            } 
-
-            private Builder(EnableK8sSourceWorkloadFilter model) {
-                this.enable = model.enable;
-                this.filterOpt = model.filterOpt;
-                this.labelKey = model.labelKey;
-                this.labelValue = model.labelValue;
-            } 
-
             /**
              * Enable.
              */
@@ -395,14 +366,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
             private String ipListContent; 
-
-            private Builder() {
-            } 
-
-            private Builder(EnableXffTrustedCidrs model) {
-                this.enable = model.enable;
-                this.ipListContent = model.ipListContent;
-            } 
 
             /**
              * Enable.
@@ -554,21 +517,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private String logStoreName; 
             private Boolean nginxCompatible; 
             private String projectName; 
-
-            private Builder() {
-            } 
-
-            private Builder(SlsConfigDetails model) {
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.logOn = model.logOn;
-                this.logStoreName = model.logStoreName;
-                this.nginxCompatible = model.nginxCompatible;
-                this.projectName = model.projectName;
-            } 
 
             /**
              * GatewayId.
@@ -788,22 +736,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private String servicePort; 
             private Boolean traceOn; 
             private String traceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(XtraceDetails model) {
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.sample = model.sample;
-                this.serviceId = model.serviceId;
-                this.servicePort = model.servicePort;
-                this.traceOn = model.traceOn;
-                this.traceType = model.traceType;
-            } 
 
             /**
              * GatewayId.
@@ -1271,42 +1203,6 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private Integer xffTrustedNum; 
             private XtraceDetails xtraceDetails; 
             private String zipAlgorithm; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.accessLogHeader = model.accessLogHeader;
-                this.downstreamConnectionBufferLimits = model.downstreamConnectionBufferLimits;
-                this.downstreamHttp2MaxConcurrentStream = model.downstreamHttp2MaxConcurrentStream;
-                this.downstreamIdleTime = model.downstreamIdleTime;
-                this.enableCustomAuthConfigPush = model.enableCustomAuthConfigPush;
-                this.enableGenerateRequestId = model.enableGenerateRequestId;
-                this.enableGzip = model.enableGzip;
-                this.enableHardwareAccelerate = model.enableHardwareAccelerate;
-                this.enableHttp2 = model.enableHttp2;
-                this.enableHttp3 = model.enableHttp3;
-                this.enableK8sSourceWorkloadFilter = model.enableK8sSourceWorkloadFilter;
-                this.enableProxyProtocol = model.enableProxyProtocol;
-                this.enableSlashMerge = model.enableSlashMerge;
-                this.enableWaf = model.enableWaf;
-                this.enableXffTrustedCidrs = model.enableXffTrustedCidrs;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.initialConnectionWindowSize = model.initialConnectionWindowSize;
-                this.initialStreamWindowSize = model.initialStreamWindowSize;
-                this.keepaliveHeaderTimeout = model.keepaliveHeaderTimeout;
-                this.logFilterConfig = model.logFilterConfig;
-                this.noSupportedConfigList = model.noSupportedConfigList;
-                this.pathWithEscapedSlashes = model.pathWithEscapedSlashes;
-                this.preserveHeaderFormat = model.preserveHeaderFormat;
-                this.slsConfigDetails = model.slsConfigDetails;
-                this.supportWaf = model.supportWaf;
-                this.upstreamIdleTimeout = model.upstreamIdleTimeout;
-                this.websocketTermGracePeriod = model.websocketTermGracePeriod;
-                this.xffTrustedNum = model.xffTrustedNum;
-                this.xtraceDetails = model.xtraceDetails;
-                this.zipAlgorithm = model.zipAlgorithm;
-            } 
 
             /**
              * AccessLogHeader.

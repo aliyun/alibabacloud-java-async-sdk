@@ -59,7 +59,7 @@ public class ListGatewayRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -312,19 +312,6 @@ public class ListGatewayRequest extends Request {
             private String name; 
             private String resourceGroupId; 
             private String vpc; 
-
-            private Builder() {
-            } 
-
-            private Builder(FilterParams model) {
-                this.gatewayType = model.gatewayType;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.instanceId = model.instanceId;
-                this.mseTag = model.mseTag;
-                this.name = model.name;
-                this.resourceGroupId = model.resourceGroupId;
-                this.vpc = model.vpc;
-            } 
 
             /**
              * <p>The type of the gateway.</p>

@@ -48,10 +48,6 @@ public class GatewayOption extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return disableHttp2Alpn
      */
@@ -93,17 +89,6 @@ public class GatewayOption extends TeaModel {
         private Boolean enableWaf; 
         private LogConfigDetails logConfigDetails; 
         private TraceDetails traceDetails; 
-
-        private Builder() {
-        } 
-
-        private Builder(GatewayOption model) {
-            this.disableHttp2Alpn = model.disableHttp2Alpn;
-            this.enableHardwareAcceleration = model.enableHardwareAcceleration;
-            this.enableWaf = model.enableWaf;
-            this.logConfigDetails = model.logConfigDetails;
-            this.traceDetails = model.traceDetails;
-        } 
 
         /**
          * DisableHttp2Alpn.
@@ -207,15 +192,6 @@ public class GatewayOption extends TeaModel {
             private Boolean logEnabled; 
             private String logStoreName; 
             private String projectName; 
-
-            private Builder() {
-            } 
-
-            private Builder(LogConfigDetails model) {
-                this.logEnabled = model.logEnabled;
-                this.logStoreName = model.logStoreName;
-                this.projectName = model.projectName;
-            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -328,17 +304,6 @@ public class GatewayOption extends TeaModel {
             private String servicePort; 
             private Boolean traceEnabled; 
             private String traceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(TraceDetails model) {
-                this.sample = model.sample;
-                this.serviceId = model.serviceId;
-                this.servicePort = model.servicePort;
-                this.traceEnabled = model.traceEnabled;
-                this.traceType = model.traceType;
-            } 
 
             /**
              * Sample.

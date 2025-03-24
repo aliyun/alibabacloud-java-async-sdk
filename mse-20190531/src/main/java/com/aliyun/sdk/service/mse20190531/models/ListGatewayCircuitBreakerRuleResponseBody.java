@@ -36,10 +36,6 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListGatewayCircuitBreakerRuleResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Data.
@@ -347,32 +335,6 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             private Integer statDurationSec; 
             private Integer strategy; 
             private Integer triggerRatio; 
-
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.behaviorType = model.behaviorType;
-                this.bodyEncoding = model.bodyEncoding;
-                this.enable = model.enable;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.id = model.id;
-                this.idList = model.idList;
-                this.limitMode = model.limitMode;
-                this.maxAllowedMs = model.maxAllowedMs;
-                this.minRequestAmount = model.minRequestAmount;
-                this.recoveryTimeoutSec = model.recoveryTimeoutSec;
-                this.responseAdditionalHeaders = model.responseAdditionalHeaders;
-                this.responseContentBody = model.responseContentBody;
-                this.responseRedirectUrl = model.responseRedirectUrl;
-                this.responseStatusCode = model.responseStatusCode;
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-                this.statDurationSec = model.statDurationSec;
-                this.strategy = model.strategy;
-                this.triggerRatio = model.triggerRatio;
-            } 
 
             /**
              * BehaviorType.
@@ -801,32 +763,6 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             private Integer strategy; 
             private Integer triggerRatio; 
 
-            private Builder() {
-            } 
-
-            private Builder(Results model) {
-                this.behaviorType = model.behaviorType;
-                this.bodyEncoding = model.bodyEncoding;
-                this.enable = model.enable;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.id = model.id;
-                this.idList = model.idList;
-                this.limitMode = model.limitMode;
-                this.maxAllowedMs = model.maxAllowedMs;
-                this.minRequestAmount = model.minRequestAmount;
-                this.recoveryTimeoutSec = model.recoveryTimeoutSec;
-                this.responseAdditionalHeaders = model.responseAdditionalHeaders;
-                this.responseContentBody = model.responseContentBody;
-                this.responseRedirectUrl = model.responseRedirectUrl;
-                this.responseStatusCode = model.responseStatusCode;
-                this.routeId = model.routeId;
-                this.routeName = model.routeName;
-                this.statDurationSec = model.statDurationSec;
-                this.strategy = model.strategy;
-                this.triggerRatio = model.triggerRatio;
-            } 
-
             /**
              * BehaviorType.
              */
@@ -1073,17 +1009,6 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             private java.util.List<Result> result; 
             private java.util.List<Results> results; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.results = model.results;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * PageNumber.

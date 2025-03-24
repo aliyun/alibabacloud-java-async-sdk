@@ -52,10 +52,6 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListIsolationRulesResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * Code.
@@ -312,22 +296,6 @@ public class ListIsolationRulesResponseBody extends TeaModel {
             private Long ruleId; 
             private Integer threshold; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.appId = model.appId;
-                this.appName = model.appName;
-                this.enable = model.enable;
-                this.fallbackObject = model.fallbackObject;
-                this.limitApp = model.limitApp;
-                this.namespace = model.namespace;
-                this.regionId = model.regionId;
-                this.resource = model.resource;
-                this.ruleId = model.ruleId;
-                this.threshold = model.threshold;
-            } 
-
             /**
              * AppId.
              */
@@ -482,16 +450,6 @@ public class ListIsolationRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Integer totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * PageNumber.

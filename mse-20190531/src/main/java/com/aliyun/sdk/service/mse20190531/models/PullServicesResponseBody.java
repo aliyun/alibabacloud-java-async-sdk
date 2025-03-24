@@ -52,10 +52,6 @@ public class PullServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class PullServicesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(PullServicesResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -283,18 +267,6 @@ public class PullServicesResponseBody extends TeaModel {
             private java.util.List<Long> sourceIdList; 
             private String sourceType; 
 
-            private Builder() {
-            } 
-
-            private Builder(Services model) {
-                this.groupName = model.groupName;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.sourceId = model.sourceId;
-                this.sourceIdList = model.sourceIdList;
-                this.sourceType = model.sourceType;
-            } 
-
             /**
              * <p>The name of the group.</p>
              * 
@@ -432,16 +404,6 @@ public class PullServicesResponseBody extends TeaModel {
             private String namespace; 
             private String namespaceShowName; 
             private java.util.List<Services> services; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.groupName = model.groupName;
-                this.namespace = model.namespace;
-                this.namespaceShowName = model.namespaceShowName;
-                this.services = model.services;
-            } 
 
             /**
              * <p>The name of the group.</p>

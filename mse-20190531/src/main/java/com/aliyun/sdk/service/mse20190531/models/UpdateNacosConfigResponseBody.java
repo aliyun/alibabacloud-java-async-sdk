@@ -48,10 +48,6 @@ public class UpdateNacosConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return errorCode
      */
@@ -93,17 +89,6 @@ public class UpdateNacosConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(UpdateNacosConfigResponseBody model) {
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

@@ -36,10 +36,6 @@ public class DeleteGatewayFlowRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DeleteGatewayFlowRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DeleteGatewayFlowRuleResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Data.

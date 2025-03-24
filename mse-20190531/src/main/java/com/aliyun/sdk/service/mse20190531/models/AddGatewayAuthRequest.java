@@ -144,7 +144,7 @@ public class AddGatewayAuthRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -690,15 +690,6 @@ public class AddGatewayAuthRequest extends Request {
             private String headerMethod; 
             private String headerValue; 
 
-            private Builder() {
-            } 
-
-            private Builder(AuthResourceHeaderList model) {
-                this.headerKey = model.headerKey;
-                this.headerMethod = model.headerMethod;
-                this.headerValue = model.headerValue;
-            } 
-
             /**
              * HeaderKey.
              */
@@ -809,17 +800,6 @@ public class AddGatewayAuthRequest extends Request {
             private Boolean ignoreCase; 
             private String matchType; 
             private String path; 
-
-            private Builder() {
-            } 
-
-            private Builder(AuthResourceList model) {
-                this.authResourceHeaderList = model.authResourceHeaderList;
-                this.domainId = model.domainId;
-                this.ignoreCase = model.ignoreCase;
-                this.matchType = model.matchType;
-                this.path = model.path;
-            } 
 
             /**
              * AuthResourceHeaderList.
@@ -1013,22 +993,6 @@ public class AddGatewayAuthRequest extends Request {
             private String tokenKey; 
             private Boolean withRematchRoute; 
             private Boolean withRequestBody; 
-
-            private Builder() {
-            } 
-
-            private Builder(ExternalAuthZJSON model) {
-                this.allowRequestHeaders = model.allowRequestHeaders;
-                this.allowUpstreamHeaders = model.allowUpstreamHeaders;
-                this.bodyMaxBytes = model.bodyMaxBytes;
-                this.isRestrict = model.isRestrict;
-                this.prefixPath = model.prefixPath;
-                this.serviceId = model.serviceId;
-                this.timeout = model.timeout;
-                this.tokenKey = model.tokenKey;
-                this.withRematchRoute = model.withRematchRoute;
-                this.withRequestBody = model.withRequestBody;
-            } 
 
             /**
              * <p>The header that can be carried in an authentication request.</p>

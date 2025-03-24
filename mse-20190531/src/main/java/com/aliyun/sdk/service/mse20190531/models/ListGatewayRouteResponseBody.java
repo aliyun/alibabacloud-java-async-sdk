@@ -52,10 +52,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListGatewayRouteResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The code returned.</p>
@@ -223,13 +207,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
 
-            private Builder() {
-            } 
-
-            private Builder(Comment model) {
-                this.status = model.status;
-            } 
-
             /**
              * <p>The status.</p>
              * 
@@ -291,14 +268,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String body; 
             private Integer code; 
-
-            private Builder() {
-            } 
-
-            private Builder(DirectResponse model) {
-                this.body = model.body;
-                this.code = model.code;
-            } 
 
             /**
              * <p>The return value for service mocking.</p>
@@ -468,22 +437,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Integer servicePort; 
             private String sourceType; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(FallbackServices model) {
-                this.agreementType = model.agreementType;
-                this.groupName = model.groupName;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.percent = model.percent;
-                this.serviceId = model.serviceId;
-                this.serviceName = model.serviceName;
-                this.servicePort = model.servicePort;
-                this.sourceType = model.sourceType;
-                this.version = model.version;
-            } 
 
             /**
              * <p>The type of the protocol.</p>
@@ -658,15 +611,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String host; 
             private String path; 
 
-            private Builder() {
-            } 
-
-            private Builder(Redirect model) {
-                this.code = model.code;
-                this.host = model.host;
-                this.path = model.path;
-            } 
-
             /**
              * <p>The response code returned.</p>
              * 
@@ -762,15 +706,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String key; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(HeaderPredicates model) {
-                this.key = model.key;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The header key.</p>
@@ -868,15 +803,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String path; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(PathPredicates model) {
-                this.ignoreCase = model.ignoreCase;
-                this.path = model.path;
-                this.type = model.type;
-            } 
-
             /**
              * <p>Indicates whether case sensitivity is ignored.</p>
              * 
@@ -972,15 +898,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String key; 
             private String type; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(QueryPredicates model) {
-                this.key = model.key;
-                this.type = model.type;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The key.</p>
@@ -1090,16 +1007,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private PathPredicates pathPredicates; 
             private java.util.List<QueryPredicates> queryPredicates; 
 
-            private Builder() {
-            } 
-
-            private Builder(RoutePredicates model) {
-                this.headerPredicates = model.headerPredicates;
-                this.methodPredicates = model.methodPredicates;
-                this.pathPredicates = model.pathPredicates;
-                this.queryPredicates = model.queryPredicates;
-            } 
-
             /**
              * <p>The headers used for route matching.</p>
              */
@@ -1194,15 +1101,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String extractKey; 
             private String extractKeySpec; 
             private String mappingType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ParamMapsList model) {
-                this.extractKey = model.extractKey;
-                this.extractKeySpec = model.extractKeySpec;
-                this.mappingType = model.mappingType;
-            } 
 
             /**
              * <p>The key extracted from the input parameter.</p>
@@ -1348,18 +1246,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
             private java.util.List<String> passThroughList; 
-
-            private Builder() {
-            } 
-
-            private Builder(MothedMapList model) {
-                this.dubboMothedName = model.dubboMothedName;
-                this.httpMothed = model.httpMothed;
-                this.mothedpath = model.mothedpath;
-                this.paramMapsList = model.paramMapsList;
-                this.passThroughAllHeaders = model.passThroughAllHeaders;
-                this.passThroughList = model.passThroughList;
-            } 
 
             /**
              * <p>The method name of the Dubbo service.</p>
@@ -1521,16 +1407,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String dubboServiceName; 
             private String dubboServiceVersion; 
             private java.util.List<MothedMapList> mothedMapList; 
-
-            private Builder() {
-            } 
-
-            private Builder(HttpDubboTranscoder model) {
-                this.dubboServiceGroup = model.dubboServiceGroup;
-                this.dubboServiceName = model.dubboServiceName;
-                this.dubboServiceVersion = model.dubboServiceVersion;
-                this.mothedMapList = model.mothedMapList;
-            } 
 
             /**
              * <p>The Dubbo service group.</p>
@@ -1755,25 +1631,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String sourceType; 
             private java.util.List<String> unhealthyEndpoints; 
             private String version; 
-
-            private Builder() {
-            } 
-
-            private Builder(RouteServices model) {
-                this.agreementType = model.agreementType;
-                this.groupName = model.groupName;
-                this.healthStatus = model.healthStatus;
-                this.httpDubboTranscoder = model.httpDubboTranscoder;
-                this.name = model.name;
-                this.namespace = model.namespace;
-                this.percent = model.percent;
-                this.serviceId = model.serviceId;
-                this.serviceName = model.serviceName;
-                this.servicePort = model.servicePort;
-                this.sourceType = model.sourceType;
-                this.unhealthyEndpoints = model.unhealthyEndpoints;
-                this.version = model.version;
-            } 
 
             /**
              * <p>The type of the protocol.</p>
@@ -2260,39 +2117,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Integer status; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(Result model) {
-                this.comment = model.comment;
-                this.defaultServiceId = model.defaultServiceId;
-                this.defaultServiceName = model.defaultServiceName;
-                this.destinationType = model.destinationType;
-                this.directResponse = model.directResponse;
-                this.domainId = model.domainId;
-                this.domainIdList = model.domainIdList;
-                this.domainName = model.domainName;
-                this.domainNameList = model.domainNameList;
-                this.dynamicRoute = model.dynamicRoute;
-                this.enableWaf = model.enableWaf;
-                this.fallback = model.fallback;
-                this.fallbackServices = model.fallbackServices;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.id = model.id;
-                this.name = model.name;
-                this.predicates = model.predicates;
-                this.redirect = model.redirect;
-                this.routeOrder = model.routeOrder;
-                this.routePredicates = model.routePredicates;
-                this.routeServices = model.routeServices;
-                this.services = model.services;
-                this.status = model.status;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The route comment (ingress).</p>
              */
@@ -2637,16 +2461,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Result> result; 
             private Long totalSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.pageNumber = model.pageNumber;
-                this.pageSize = model.pageSize;
-                this.result = model.result;
-                this.totalSize = model.totalSize;
-            } 
 
             /**
              * <p>The page number of the returned page.</p>

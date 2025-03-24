@@ -48,10 +48,6 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -93,17 +89,6 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(UpdateEngineNamespaceResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The details of the data.</p>
@@ -258,18 +243,6 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             private String namespaceShowName; 
             private Integer quota; 
             private Integer type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.configCount = model.configCount;
-                this.namespace = model.namespace;
-                this.namespaceDesc = model.namespaceDesc;
-                this.namespaceShowName = model.namespaceShowName;
-                this.quota = model.quota;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The quota value.</p>

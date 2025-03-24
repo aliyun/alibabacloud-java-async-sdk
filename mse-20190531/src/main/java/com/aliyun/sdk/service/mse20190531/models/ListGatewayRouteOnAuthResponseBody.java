@@ -52,10 +52,6 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListGatewayRouteOnAuthResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The response code.</p>
@@ -235,14 +219,6 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             private String path; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(PathPredicates model) {
-                this.path = model.path;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The path.</p>
              * 
@@ -303,13 +279,6 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
 
         public static final class Builder {
             private PathPredicates pathPredicates; 
-
-            private Builder() {
-            } 
-
-            private Builder(RoutePredicates model) {
-                this.pathPredicates = model.pathPredicates;
-            } 
 
             /**
              * <p>The information about route matching.</p>
@@ -453,21 +422,6 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             private Integer id; 
             private String name; 
             private RoutePredicates routePredicates; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.domainId = model.domainId;
-                this.domainIdList = model.domainIdList;
-                this.domainName = model.domainName;
-                this.domainNameList = model.domainNameList;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.id = model.id;
-                this.name = model.name;
-                this.routePredicates = model.routePredicates;
-            } 
 
             /**
              * <p>The domain ID.</p>

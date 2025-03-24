@@ -52,10 +52,6 @@ public class AddMockRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class AddMockRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddMockRuleResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -378,26 +362,6 @@ public class AddMockRuleResponseBody extends TeaModel {
             private String region; 
             private String scMockItemJson; 
             private String source; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.accountId = model.accountId;
-                this.consumerAppId = model.consumerAppId;
-                this.consumerAppName = model.consumerAppName;
-                this.enable = model.enable;
-                this.extraJson = model.extraJson;
-                this.id = model.id;
-                this.mockType = model.mockType;
-                this.name = model.name;
-                this.namespaceId = model.namespaceId;
-                this.providerAppId = model.providerAppId;
-                this.providerAppName = model.providerAppName;
-                this.region = model.region;
-                this.scMockItemJson = model.scMockItemJson;
-                this.source = model.source;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

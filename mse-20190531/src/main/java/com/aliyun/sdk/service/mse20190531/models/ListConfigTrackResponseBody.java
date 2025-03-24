@@ -64,10 +64,6 @@ public class ListConfigTrackResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return errorCode
      */
@@ -141,21 +137,6 @@ public class ListConfigTrackResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private java.util.List<Traces> traces; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListConfigTrackResponseBody model) {
-            this.errorCode = model.errorCode;
-            this.httpCode = model.httpCode;
-            this.message = model.message;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.success = model.success;
-            this.totalCount = model.totalCount;
-            this.traces = model.traces;
-        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -438,25 +419,6 @@ public class ListConfigTrackResponseBody extends TeaModel {
             private String result; 
             private String ts; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Traces model) {
-                this.client = model.client;
-                this.dataId = model.dataId;
-                this.delay = model.delay;
-                this.event = model.event;
-                this.group = model.group;
-                this.logDate = model.logDate;
-                this.md5 = model.md5;
-                this.push = model.push;
-                this.requestIp = model.requestIp;
-                this.responseIp = model.responseIp;
-                this.result = model.result;
-                this.ts = model.ts;
-                this.type = model.type;
-            } 
 
             /**
              * <p>Indicates whether the request is sent from the client. Valid values:</p>

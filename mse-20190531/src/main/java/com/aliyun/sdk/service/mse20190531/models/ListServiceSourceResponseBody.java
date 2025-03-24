@@ -52,10 +52,6 @@ public class ListServiceSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -105,18 +101,6 @@ public class ListServiceSourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListServiceSourceResponseBody model) {
-            this.code = model.code;
-            this.data = model.data;
-            this.httpStatusCode = model.httpStatusCode;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The status code returned.</p>
@@ -258,16 +242,6 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private Boolean enableStatus; 
             private String ingressClass; 
             private String watchNamespace; 
-
-            private Builder() {
-            } 
-
-            private Builder(IngressOptions model) {
-                this.enableIngress = model.enableIngress;
-                this.enableStatus = model.enableStatus;
-                this.ingressClass = model.ingressClass;
-                this.watchNamespace = model.watchNamespace;
-            } 
 
             /**
              * <p>Indicates whether Ingresses are enabled.</p>
@@ -519,27 +493,6 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String source; 
             private String sourceUniqueId; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.address = model.address;
-                this.bindingWithGateway = model.bindingWithGateway;
-                this.gatewayId = model.gatewayId;
-                this.gatewayUniqueId = model.gatewayUniqueId;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.groupList = model.groupList;
-                this.id = model.id;
-                this.ingressOptions = model.ingressOptions;
-                this.invalid = model.invalid;
-                this.name = model.name;
-                this.pathList = model.pathList;
-                this.source = model.source;
-                this.sourceUniqueId = model.sourceUniqueId;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.</p>
