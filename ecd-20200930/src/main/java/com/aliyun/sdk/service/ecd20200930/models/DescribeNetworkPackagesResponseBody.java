@@ -40,10 +40,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return networkPackages
      */
@@ -69,15 +65,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         private java.util.List<NetworkPackages> networkPackages; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeNetworkPackagesResponseBody model) {
-            this.networkPackages = model.networkPackages;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The premium bandwidth plans.</p>
@@ -314,27 +301,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             private String reservationActiveTime; 
             private Integer reservationBandwidth; 
             private String reservationInternetChargeType; 
-
-            private Builder() {
-            } 
-
-            private Builder(NetworkPackages model) {
-                this.bandwidth = model.bandwidth;
-                this.businessStatus = model.businessStatus;
-                this.createTime = model.createTime;
-                this.eipAddresses = model.eipAddresses;
-                this.expiredTime = model.expiredTime;
-                this.internetChargeType = model.internetChargeType;
-                this.networkPackageId = model.networkPackageId;
-                this.networkPackageStatus = model.networkPackageStatus;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-                this.officeSiteVpcType = model.officeSiteVpcType;
-                this.payType = model.payType;
-                this.reservationActiveTime = model.reservationActiveTime;
-                this.reservationBandwidth = model.reservationBandwidth;
-                this.reservationInternetChargeType = model.reservationInternetChargeType;
-            } 
 
             /**
              * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>

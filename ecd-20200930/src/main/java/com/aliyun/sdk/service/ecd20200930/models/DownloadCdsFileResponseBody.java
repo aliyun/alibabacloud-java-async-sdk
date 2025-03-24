@@ -44,10 +44,6 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return downloadFileModel
      */
@@ -81,16 +77,6 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DownloadCdsFileResponseBody model) {
-            this.downloadFileModel = model.downloadFileModel;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * DownloadFileModel.
@@ -233,19 +219,6 @@ public class DownloadCdsFileResponseBody extends TeaModel {
             private String fileId; 
             private Long size; 
             private String streamUrl; 
-
-            private Builder() {
-            } 
-
-            private Builder(DownloadFileModel model) {
-                this.downloadType = model.downloadType;
-                this.downloadUrl = model.downloadUrl;
-                this.expirationSecond = model.expirationSecond;
-                this.expirationTime = model.expirationTime;
-                this.fileId = model.fileId;
-                this.size = model.size;
-                this.streamUrl = model.streamUrl;
-            } 
 
             /**
              * DownloadType.

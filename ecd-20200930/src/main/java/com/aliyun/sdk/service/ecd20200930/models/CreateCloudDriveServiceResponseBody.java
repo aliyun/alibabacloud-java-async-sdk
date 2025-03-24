@@ -68,10 +68,6 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cdsId
      */
@@ -153,22 +149,6 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         private String officeSiteType; 
         private String orderId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateCloudDriveServiceResponseBody model) {
-            this.cdsId = model.cdsId;
-            this.cdsName = model.cdsName;
-            this.cenId = model.cenId;
-            this.conflictCdsAndOrder = model.conflictCdsAndOrder;
-            this.domainName = model.domainName;
-            this.errorCode = model.errorCode;
-            this.maxSize = model.maxSize;
-            this.officeSiteType = model.officeSiteType;
-            this.orderId = model.orderId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the attached cloud disk.</p>
@@ -312,14 +292,6 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             private String cdsId; 
             private String regionId; 
 
-            private Builder() {
-            } 
-
-            private Builder(ConflictCds model) {
-                this.cdsId = model.cdsId;
-                this.regionId = model.regionId;
-            } 
-
             /**
              * <p>The ID of the attached cloud disk.</p>
              * 
@@ -402,15 +374,6 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             private String orderId; 
             private String regionId; 
 
-            private Builder() {
-            } 
-
-            private Builder(ConflictOrder model) {
-                this.cdsId = model.cdsId;
-                this.orderId = model.orderId;
-                this.regionId = model.regionId;
-            } 
-
             /**
              * <p>The ID of the attached cloud disk.</p>
              * 
@@ -488,14 +451,6 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ConflictCds> conflictCds; 
             private java.util.List<ConflictOrder> conflictOrder; 
-
-            private Builder() {
-            } 
-
-            private Builder(ConflictCdsAndOrder model) {
-                this.conflictCds = model.conflictCds;
-                this.conflictOrder = model.conflictOrder;
-            } 
 
             /**
              * ConflictCds.

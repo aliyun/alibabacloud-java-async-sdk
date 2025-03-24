@@ -40,10 +40,6 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -69,15 +65,6 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Sessions> sessions; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDesktopSessionsResponseBody model) {
-            this.requestId = model.requestId;
-            this.sessions = model.sessions;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -362,31 +349,6 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             private String sessionStatus; 
             private String subPayType; 
             private Long totalConnectionTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Sessions model) {
-                this.clientIp = model.clientIp;
-                this.clientOS = model.clientOS;
-                this.clientVersion = model.clientVersion;
-                this.desktopId = model.desktopId;
-                this.desktopName = model.desktopName;
-                this.endUserApplyCoordinateTime = model.endUserApplyCoordinateTime;
-                this.endUserId = model.endUserId;
-                this.latestConnectionTime = model.latestConnectionTime;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-                this.osSessionStatus = model.osSessionStatus;
-                this.osType = model.osType;
-                this.protocolType = model.protocolType;
-                this.sessionEndTime = model.sessionEndTime;
-                this.sessionIdleTime = model.sessionIdleTime;
-                this.sessionStartTime = model.sessionStartTime;
-                this.sessionStatus = model.sessionStatus;
-                this.subPayType = model.subPayType;
-                this.totalConnectionTime = model.totalConnectionTime;
-            } 
 
             /**
              * <p>The IP address of the client.</p>

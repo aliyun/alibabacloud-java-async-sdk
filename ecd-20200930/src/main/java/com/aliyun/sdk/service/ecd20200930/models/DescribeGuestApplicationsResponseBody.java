@@ -36,10 +36,6 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return applications
      */
@@ -57,14 +53,6 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Applications> applications; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeGuestApplicationsResponseBody model) {
-            this.applications = model.applications;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the applications.</p>
@@ -206,20 +194,6 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             private Double memPercent; 
             private Integer pid; 
             private String processPath; 
-
-            private Builder() {
-            } 
-
-            private Builder(ProcessData model) {
-                this.applicationName = model.applicationName;
-                this.applicationVersion = model.applicationVersion;
-                this.cpuPercent = model.cpuPercent;
-                this.gpuPercent = model.gpuPercent;
-                this.iospeed = model.iospeed;
-                this.memPercent = model.memPercent;
-                this.pid = model.pid;
-                this.processPath = model.processPath;
-            } 
 
             /**
              * <p>The application name.</p>
@@ -467,23 +441,6 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             private java.util.List<ProcessData> processData; 
             private String processPath; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(Applications model) {
-                this.applicationName = model.applicationName;
-                this.applicationVersion = model.applicationVersion;
-                this.cpuPercent = model.cpuPercent;
-                this.gpuPercent = model.gpuPercent;
-                this.iconUrl = model.iconUrl;
-                this.ioSpeed = model.ioSpeed;
-                this.memPercent = model.memPercent;
-                this.pid = model.pid;
-                this.processData = model.processData;
-                this.processPath = model.processPath;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The application name.</p>

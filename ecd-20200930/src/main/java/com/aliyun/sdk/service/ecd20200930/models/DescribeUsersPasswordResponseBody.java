@@ -36,10 +36,6 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return desktopUsers
      */
@@ -57,14 +53,6 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DesktopUsers> desktopUsers; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUsersPasswordResponseBody model) {
-            this.desktopUsers = model.desktopUsers;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The authorized users of the cloud computer.</p>
@@ -146,15 +134,6 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             private String displayName; 
             private String endUserId; 
             private String password; 
-
-            private Builder() {
-            } 
-
-            private Builder(DesktopUsers model) {
-                this.displayName = model.displayName;
-                this.endUserId = model.endUserId;
-                this.password = model.password;
-            } 
 
             /**
              * <p>The display name of the end user.</p>

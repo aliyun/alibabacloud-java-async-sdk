@@ -44,10 +44,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return nextToken
      */
@@ -81,16 +77,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Sessions> sessions; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDesktopGroupSessionsResponseBody model) {
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-            this.sessions = model.sessions;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -386,31 +372,6 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             private Long sessionIdleTime; 
             private String sessionStatus; 
             private Long totalConnectionDuration; 
-
-            private Builder() {
-            } 
-
-            private Builder(Sessions model) {
-                this.clientIp = model.clientIp;
-                this.clientOS = model.clientOS;
-                this.clientVersion = model.clientVersion;
-                this.desktopGroupId = model.desktopGroupId;
-                this.desktopGroupName = model.desktopGroupName;
-                this.desktopId = model.desktopId;
-                this.endUserApplyCoordinateTime = model.endUserApplyCoordinateTime;
-                this.endUserId = model.endUserId;
-                this.lastSessionEndTime = model.lastSessionEndTime;
-                this.lastSessionStartTime = model.lastSessionStartTime;
-                this.latestConnectionTime = model.latestConnectionTime;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-                this.osType = model.osType;
-                this.ownType = model.ownType;
-                this.protocolType = model.protocolType;
-                this.sessionIdleTime = model.sessionIdleTime;
-                this.sessionStatus = model.sessionStatus;
-                this.totalConnectionDuration = model.totalConnectionDuration;
-            } 
 
             /**
              * <p>The IP address of the client.</p>

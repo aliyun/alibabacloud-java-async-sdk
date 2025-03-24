@@ -36,10 +36,6 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return policyGroupId
      */
@@ -57,14 +53,6 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String policyGroupId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreatePolicyGroupResponseBody model) {
-            this.policyGroupId = model.policyGroupId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The cloud computer policy ID.</p>

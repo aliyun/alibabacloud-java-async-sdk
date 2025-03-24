@@ -36,10 +36,6 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return headers
      */
@@ -57,14 +53,6 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Headers> headers; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCustomizedListHeadersResponseBody model) {
-            this.headers = model.headers;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Headers.
@@ -143,15 +131,6 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             private String displayType; 
             private String headerKey; 
             private String headerName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Headers model) {
-                this.displayType = model.displayType;
-                this.headerKey = model.headerKey;
-                this.headerName = model.headerName;
-            } 
 
             /**
              * DisplayType.

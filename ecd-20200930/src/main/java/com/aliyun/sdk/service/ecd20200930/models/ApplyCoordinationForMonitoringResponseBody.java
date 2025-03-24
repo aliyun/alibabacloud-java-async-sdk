@@ -36,10 +36,6 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return coordinateFlowModels
      */
@@ -57,14 +53,6 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CoordinateFlowModels> coordinateFlowModels; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ApplyCoordinationForMonitoringResponseBody model) {
-            this.coordinateFlowModels = model.coordinateFlowModels;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The list of stream collaboration models.</p>
@@ -194,19 +182,6 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             private String ownerUserId; 
             private String resourceId; 
             private String resourceName; 
-
-            private Builder() {
-            } 
-
-            private Builder(CoordinateFlowModels model) {
-                this.coId = model.coId;
-                this.coordinateStatus = model.coordinateStatus;
-                this.coordinateTicket = model.coordinateTicket;
-                this.initiatorType = model.initiatorType;
-                this.ownerUserId = model.ownerUserId;
-                this.resourceId = model.resourceId;
-                this.resourceName = model.resourceName;
-            } 
 
             /**
              * <p>The ID of the stream collaboration.</p>

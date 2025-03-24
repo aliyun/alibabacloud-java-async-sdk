@@ -40,10 +40,6 @@ public class AddDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -69,15 +65,6 @@ public class AddDevicesResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(AddDevicesResponseBody model) {
-            this.code = model.code;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The execution result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>

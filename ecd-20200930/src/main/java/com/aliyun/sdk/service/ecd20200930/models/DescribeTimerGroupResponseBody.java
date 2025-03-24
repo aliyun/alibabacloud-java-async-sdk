@@ -36,10 +36,6 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeTimerGroupResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the configuration group.</p>
@@ -218,21 +206,6 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             private String resetType; 
             private String timerType; 
             private String triggerType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ConfigTimers model) {
-                this.allowClientSetting = model.allowClientSetting;
-                this.cronExpression = model.cronExpression;
-                this.enforce = model.enforce;
-                this.interval = model.interval;
-                this.operationType = model.operationType;
-                this.processWhitelist = model.processWhitelist;
-                this.resetType = model.resetType;
-                this.timerType = model.timerType;
-                this.triggerType = model.triggerType;
-            } 
 
             /**
              * <p>Indicates whether end users can configure scheduled tasks.</p>
@@ -492,21 +465,6 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             private String productType; 
             private String status; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.bindCount = model.bindCount;
-                this.bindCountMap = model.bindCountMap;
-                this.configTimers = model.configTimers;
-                this.description = model.description;
-                this.groupId = model.groupId;
-                this.name = model.name;
-                this.productType = model.productType;
-                this.status = model.status;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The number of resources that are bound to the configuration group.</p>

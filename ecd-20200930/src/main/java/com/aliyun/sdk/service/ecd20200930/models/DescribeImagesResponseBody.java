@@ -40,10 +40,6 @@ public class DescribeImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return images
      */
@@ -69,15 +65,6 @@ public class DescribeImagesResponseBody extends TeaModel {
         private java.util.List<Images> images; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImagesResponseBody model) {
-            this.images = model.images;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details of the images.</p>
@@ -386,33 +373,6 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String updateTime; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
-
-            private Builder() {
-            } 
-
-            private Builder(Images model) {
-                this.appVersion = model.appVersion;
-                this.creationTime = model.creationTime;
-                this.dataDiskSize = model.dataDiskSize;
-                this.description = model.description;
-                this.gpuCategory = model.gpuCategory;
-                this.gpuDriverVersion = model.gpuDriverVersion;
-                this.imageId = model.imageId;
-                this.imageType = model.imageType;
-                this.name = model.name;
-                this.osType = model.osType;
-                this.platform = model.platform;
-                this.progress = model.progress;
-                this.protocolType = model.protocolType;
-                this.sessionType = model.sessionType;
-                this.sharedCount = model.sharedCount;
-                this.size = model.size;
-                this.status = model.status;
-                this.supportedLanguages = model.supportedLanguages;
-                this.updateTime = model.updateTime;
-                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
-                this.volumeEncryptionKey = model.volumeEncryptionKey;
-            } 
 
             /**
              * <p>The version of the image.</p>

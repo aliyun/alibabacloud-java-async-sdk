@@ -40,10 +40,6 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return connectionRecords
      */
@@ -70,17 +66,8 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
 
-        private Builder() {
-        } 
-
-        private Builder(DescribeUserConnectionRecordsResponseBody model) {
-            this.connectionRecords = model.connectionRecords;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
-
         /**
-         * <p>Details about connection records of the end user.</p>
+         * <p>The connection records.</p>
          */
         public Builder connectionRecords(java.util.List<ConnectionRecords> connectionRecords) {
             this.connectionRecords = connectionRecords;
@@ -207,20 +194,8 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
 
-            private Builder() {
-            } 
-
-            private Builder(ConnectionRecords model) {
-                this.connectDuration = model.connectDuration;
-                this.connectEndTime = model.connectEndTime;
-                this.connectStartTime = model.connectStartTime;
-                this.connectionRecordId = model.connectionRecordId;
-                this.desktopId = model.desktopId;
-                this.desktopName = model.desktopName;
-            } 
-
             /**
-             * <p>The duration for which the end user is connected to the cloud computer. Unit: seconds.</p>
+             * <p>The connection duration. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3405035000</p>

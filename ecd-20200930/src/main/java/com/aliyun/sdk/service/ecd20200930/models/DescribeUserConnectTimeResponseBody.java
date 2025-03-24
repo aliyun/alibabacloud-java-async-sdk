@@ -44,10 +44,6 @@ public class DescribeUserConnectTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -81,16 +77,6 @@ public class DescribeUserConnectTimeResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeUserConnectTimeResponseBody model) {
-            this.count = model.count;
-            this.data = model.data;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Count.
@@ -221,18 +207,6 @@ public class DescribeUserConnectTimeResponseBody extends TeaModel {
             private String startConnectTime; 
             private String userDesktopId; 
             private String userGroupId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.endConnectTime = model.endConnectTime;
-                this.endUserId = model.endUserId;
-                this.oversoldGroupId = model.oversoldGroupId;
-                this.startConnectTime = model.startConnectTime;
-                this.userDesktopId = model.userDesktopId;
-                this.userGroupId = model.userGroupId;
-            } 
 
             /**
              * EndConnectTime.

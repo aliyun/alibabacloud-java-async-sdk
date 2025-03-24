@@ -61,7 +61,7 @@ public class RenewDesktopGroupRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,7 +165,7 @@ public class RenewDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>The ID of the shared group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

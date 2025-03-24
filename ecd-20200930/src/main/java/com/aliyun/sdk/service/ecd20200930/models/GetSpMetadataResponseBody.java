@@ -36,10 +36,6 @@ public class GetSpMetadataResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetSpMetadataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String spMetadata; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetSpMetadataResponseBody model) {
-            this.requestId = model.requestId;
-            this.spMetadata = model.spMetadata;
-        } 
 
         /**
          * <p>The request ID.</p>

@@ -36,10 +36,6 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cloudDrivePermissionModels
      */
@@ -57,14 +53,6 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CloudDrivePermissionModels> cloudDrivePermissionModels; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCloudDrivePermissionsResponseBody model) {
-            this.cloudDrivePermissionModels = model.cloudDrivePermissionModels;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * CloudDrivePermissionModels.
@@ -131,14 +119,6 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> endUsers; 
             private String permission; 
-
-            private Builder() {
-            } 
-
-            private Builder(CloudDrivePermissionModels model) {
-                this.endUsers = model.endUsers;
-                this.permission = model.permission;
-            } 
 
             /**
              * EndUsers.

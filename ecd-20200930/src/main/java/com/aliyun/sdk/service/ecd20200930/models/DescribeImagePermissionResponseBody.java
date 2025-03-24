@@ -36,10 +36,6 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return aliUids
      */
@@ -57,14 +53,6 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> aliUids; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeImagePermissionResponseBody model) {
-            this.aliUids = model.aliUids;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The IDs of the Alibaba Cloud accounts with which the image is shared.</p>

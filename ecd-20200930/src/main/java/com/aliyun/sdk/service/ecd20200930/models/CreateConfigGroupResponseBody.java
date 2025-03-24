@@ -40,10 +40,6 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupId
      */
@@ -69,15 +65,6 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         private String groupId; 
         private String message; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateConfigGroupResponseBody model) {
-            this.groupId = model.groupId;
-            this.message = model.message;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the configuration group.</p>

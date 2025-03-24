@@ -36,10 +36,6 @@ public class BindConfigGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return groupId
      */
@@ -57,14 +53,6 @@ public class BindConfigGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String groupId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(BindConfigGroupResponseBody model) {
-            this.groupId = model.groupId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the configuration group.</p>

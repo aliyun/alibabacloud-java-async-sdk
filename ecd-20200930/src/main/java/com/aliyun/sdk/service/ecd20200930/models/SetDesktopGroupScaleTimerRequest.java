@@ -46,7 +46,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,20 +245,6 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             private Integer minResAmount; 
             private Float ratioThreshold; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(ScaleTimerInfos model) {
-                this.buyResAmount = model.buyResAmount;
-                this.cron = model.cron;
-                this.keepDuration = model.keepDuration;
-                this.loadPolicy = model.loadPolicy;
-                this.maxResAmount = model.maxResAmount;
-                this.minResAmount = model.minResAmount;
-                this.ratioThreshold = model.ratioThreshold;
-                this.type = model.type;
-            } 
 
             /**
              * <p>One option for the auto scaling policy. This option specifies the number of cloud computers that you want to create in the cloud computer pool. Valid values: 0 to 200.</p>

@@ -36,10 +36,6 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return rebuildResults
      */
@@ -57,14 +53,6 @@ public class RebuildDesktopsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<RebuildResults> rebuildResults; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(RebuildDesktopsResponseBody model) {
-            this.rebuildResults = model.rebuildResults;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The recreation results.</p>
@@ -146,15 +134,6 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             private String code; 
             private String desktopId; 
             private String message; 
-
-            private Builder() {
-            } 
-
-            private Builder(RebuildResults model) {
-                this.code = model.code;
-                this.desktopId = model.desktopId;
-                this.message = model.message;
-            } 
 
             /**
              * <p>The recreation result code. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>

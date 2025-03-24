@@ -44,10 +44,6 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -81,16 +77,6 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDesktopOversoldGroupResponseBody model) {
-            this.count = model.count;
-            this.data = model.data;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Count.
@@ -377,31 +363,6 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
             private String status; 
             private Long stopDuration; 
             private Integer systemDiskSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.concurrenceCount = model.concurrenceCount;
-                this.curConcurrenceCount = model.curConcurrenceCount;
-                this.dataDiskSize = model.dataDiskSize;
-                this.description = model.description;
-                this.desktopType = model.desktopType;
-                this.directoryId = model.directoryId;
-                this.expireTime = model.expireTime;
-                this.idleDisconnectDuration = model.idleDisconnectDuration;
-                this.imageId = model.imageId;
-                this.keepDuration = model.keepDuration;
-                this.name = model.name;
-                this.oversoldGroupId = model.oversoldGroupId;
-                this.oversoldUserCount = model.oversoldUserCount;
-                this.oversoldWarn = model.oversoldWarn;
-                this.policyGroupId = model.policyGroupId;
-                this.saleStatus = model.saleStatus;
-                this.status = model.status;
-                this.stopDuration = model.stopDuration;
-                this.systemDiskSize = model.systemDiskSize;
-            } 
 
             /**
              * ConcurrenceCount.

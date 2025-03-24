@@ -128,10 +128,6 @@ public class CdsFileShareLinkModel extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return accessCount
      */
@@ -333,37 +329,6 @@ public class CdsFileShareLinkModel extends TeaModel {
         private String sharePwd; 
         private String status; 
         private Long videoPreviewCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(CdsFileShareLinkModel model) {
-            this.accessCount = model.accessCount;
-            this.createTime = model.createTime;
-            this.creator = model.creator;
-            this.description = model.description;
-            this.disableDownload = model.disableDownload;
-            this.disablePreview = model.disablePreview;
-            this.disableSave = model.disableSave;
-            this.downloadCount = model.downloadCount;
-            this.downloadLimit = model.downloadLimit;
-            this.driveId = model.driveId;
-            this.expiration = model.expiration;
-            this.expired = model.expired;
-            this.fileIds = model.fileIds;
-            this.modifiyTime = model.modifiyTime;
-            this.previewCount = model.previewCount;
-            this.previewLimit = model.previewLimit;
-            this.reportCount = model.reportCount;
-            this.saveCount = model.saveCount;
-            this.saveLimit = model.saveLimit;
-            this.shareId = model.shareId;
-            this.shareLink = model.shareLink;
-            this.shareName = model.shareName;
-            this.sharePwd = model.sharePwd;
-            this.status = model.status;
-            this.videoPreviewCount = model.videoPreviewCount;
-        } 
 
         /**
          * AccessCount.

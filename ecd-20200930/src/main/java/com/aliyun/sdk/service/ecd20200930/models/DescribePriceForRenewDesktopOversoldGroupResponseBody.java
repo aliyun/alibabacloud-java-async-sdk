@@ -36,10 +36,6 @@ public class DescribePriceForRenewDesktopOversoldGroupResponseBody extends TeaMo
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return data
      */
@@ -57,14 +53,6 @@ public class DescribePriceForRenewDesktopOversoldGroupResponseBody extends TeaMo
     public static final class Builder {
         private Data data; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribePriceForRenewDesktopOversoldGroupResponseBody model) {
-            this.data = model.data;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Data.
@@ -119,13 +107,6 @@ public class DescribePriceForRenewDesktopOversoldGroupResponseBody extends TeaMo
 
         public static final class Builder {
             private String price; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.price = model.price;
-            } 
 
             /**
              * Price.

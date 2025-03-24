@@ -1509,7 +1509,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can call this operation to reset only cloud computers in a cloud computer pool.</p>
+     * <p> You can call this operation to reset only cloud computers from a cloud computer share.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetDesktops  ResetDesktopsRequest

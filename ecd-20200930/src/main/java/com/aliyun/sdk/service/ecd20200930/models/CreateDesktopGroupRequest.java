@@ -239,6 +239,10 @@ public class CreateDesktopGroupRequest extends Request {
     private String timerGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserOuPath")
+    private String userOuPath;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
     private Boolean volumeEncryptionEnabled;
 
@@ -305,6 +309,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.systemDiskSize = builder.systemDiskSize;
         this.tag = builder.tag;
         this.timerGroupId = builder.timerGroupId;
+        this.userOuPath = builder.userOuPath;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
         this.volumeEncryptionKey = builder.volumeEncryptionKey;
         this.vpcId = builder.vpcId;
@@ -318,7 +323,7 @@ public class CreateDesktopGroupRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -695,6 +700,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return userOuPath
+     */
+    public String getUserOuPath() {
+        return this.userOuPath;
+    }
+
+    /**
      * @return volumeEncryptionEnabled
      */
     public Boolean getVolumeEncryptionEnabled() {
@@ -769,6 +781,7 @@ public class CreateDesktopGroupRequest extends Request {
         private Integer systemDiskSize; 
         private java.util.List<Tag> tag; 
         private String timerGroupId; 
+        private String userOuPath; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
         private String vpcId; 
@@ -832,6 +845,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.systemDiskSize = request.systemDiskSize;
             this.tag = request.tag;
             this.timerGroupId = request.timerGroupId;
+            this.userOuPath = request.userOuPath;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
             this.volumeEncryptionKey = request.volumeEncryptionKey;
             this.vpcId = request.vpcId;
@@ -1631,6 +1645,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * UserOuPath.
+         */
+        public Builder userOuPath(String userOuPath) {
+            this.putQueryParameter("UserOuPath", userOuPath);
+            this.userOuPath = userOuPath;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to enable disk encryption.</p>
          * 
          * <strong>example:</strong>
@@ -1721,14 +1744,6 @@ public class CreateDesktopGroupRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>

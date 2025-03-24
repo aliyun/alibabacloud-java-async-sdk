@@ -36,10 +36,6 @@ public class ListFilePermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return filePermissions
      */
@@ -57,14 +53,6 @@ public class ListFilePermissionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FilePermissionMember> filePermissions; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListFilePermissionResponseBody model) {
-            this.filePermissions = model.filePermissions;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The permissions on the shared file.</p>

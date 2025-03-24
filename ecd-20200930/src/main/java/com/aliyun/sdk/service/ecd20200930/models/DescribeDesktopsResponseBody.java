@@ -52,10 +52,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return desktops
      */
@@ -105,18 +101,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDesktopsResponseBody model) {
-            this.desktops = model.desktops;
-            this.nextToken = model.nextToken;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The information about the cloud computers.</p>
@@ -351,24 +335,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long totalDuration; 
             private Long usedDuration; 
 
-            private Builder() {
-            } 
-
-            private Builder(DesktopDurationList model) {
-                this.orderInstanceId = model.orderInstanceId;
-                this.packageCreationTime = model.packageCreationTime;
-                this.packageExpiredTime = model.packageExpiredTime;
-                this.packageId = model.packageId;
-                this.packageStatus = model.packageStatus;
-                this.packageType = model.packageType;
-                this.packageUsedUpStrategy = model.packageUsedUpStrategy;
-                this.periodEndTime = model.periodEndTime;
-                this.periodStartTime = model.periodStartTime;
-                this.postPaidLimitFee = model.postPaidLimitFee;
-                this.totalDuration = model.totalDuration;
-                this.usedDuration = model.usedDuration;
-            } 
-
             /**
              * OrderInstanceId.
              */
@@ -551,17 +517,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Integer diskSize; 
             private String diskType; 
             private String performanceLevel; 
-
-            private Builder() {
-            } 
-
-            private Builder(Disks model) {
-                this.diskCategory = model.diskCategory;
-                this.diskId = model.diskId;
-                this.diskSize = model.diskSize;
-                this.diskType = model.diskType;
-                this.performanceLevel = model.performanceLevel;
-            } 
 
             /**
              * <p>The type of the disk. Valid values:</p>
@@ -746,18 +701,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String releaseNoteJp; 
             private Long size; 
 
-            private Builder() {
-            } 
-
-            private Builder(FotaUpdate model) {
-                this.currentAppVersion = model.currentAppVersion;
-                this.newAppVersion = model.newAppVersion;
-                this.releaseNote = model.releaseNote;
-                this.releaseNoteEn = model.releaseNoteEn;
-                this.releaseNoteJp = model.releaseNoteJp;
-                this.size = model.size;
-            } 
-
             /**
              * <p>The current image version of the cloud computer.</p>
              * 
@@ -837,6 +780,180 @@ public class DescribeDesktopsResponseBody extends TeaModel {
      *
      * <p>DescribeDesktopsResponseBody</p>
      */
+    public static class Packages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Kb")
+        private String kb;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private Packages(Builder builder) {
+            this.description = builder.description;
+            this.kb = builder.kb;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Packages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return kb
+         */
+        public String getKb() {
+            return this.kb;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String kb; 
+            private String title; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Kb.
+             */
+            public Builder kb(String kb) {
+                this.kb = kb;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public Packages build() {
+                return new Packages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopsResponseBody</p>
+     */
+    public static class OsUpdate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheckId")
+        private String checkId;
+
+        @com.aliyun.core.annotation.NameInMap("PackageCount")
+        private Integer packageCount;
+
+        @com.aliyun.core.annotation.NameInMap("Packages")
+        private java.util.List<Packages> packages;
+
+        private OsUpdate(Builder builder) {
+            this.checkId = builder.checkId;
+            this.packageCount = builder.packageCount;
+            this.packages = builder.packages;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OsUpdate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkId
+         */
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return packageCount
+         */
+        public Integer getPackageCount() {
+            return this.packageCount;
+        }
+
+        /**
+         * @return packages
+         */
+        public java.util.List<Packages> getPackages() {
+            return this.packages;
+        }
+
+        public static final class Builder {
+            private String checkId; 
+            private Integer packageCount; 
+            private java.util.List<Packages> packages; 
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(String checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * PackageCount.
+             */
+            public Builder packageCount(Integer packageCount) {
+                this.packageCount = packageCount;
+                return this;
+            }
+
+            /**
+             * Packages.
+             */
+            public Builder packages(java.util.List<Packages> packages) {
+                this.packages = packages;
+                return this;
+            }
+
+            public OsUpdate build() {
+                return new OsUpdate(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopsResponseBody</p>
+     */
     public static class ResourceGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -874,14 +991,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceGroups model) {
-                this.id = model.id;
-                this.name = model.name;
-            } 
 
             /**
              * <p>The ID of the enterprise resource group.</p>
@@ -968,15 +1077,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String establishmentTime; 
             private String externalUserName; 
 
-            private Builder() {
-            } 
-
-            private Builder(Sessions model) {
-                this.endUserId = model.endUserId;
-                this.establishmentTime = model.establishmentTime;
-                this.externalUserName = model.externalUserName;
-            } 
-
             /**
              * <p>The ID of the end user that connects to the cloud computer.</p>
              * 
@@ -1060,14 +1160,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag key.</p>
@@ -1228,6 +1320,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
+        @com.aliyun.core.annotation.NameInMap("OsUpdate")
+        private OsUpdate osUpdate;
+
         @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
@@ -1333,6 +1428,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.officeSiteType = builder.officeSiteType;
             this.officeSiteVpcType = builder.officeSiteVpcType;
             this.osType = builder.osType;
+            this.osUpdate = builder.osUpdate;
             this.platform = builder.platform;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupIdList = builder.policyGroupIdList;
@@ -1652,6 +1748,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return osUpdate
+         */
+        public OsUpdate getOsUpdate() {
+            return this.osUpdate;
+        }
+
+        /**
          * @return platform
          */
         public String getPlatform() {
@@ -1840,6 +1943,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String officeSiteType; 
             private String officeSiteVpcType; 
             private String osType; 
+            private OsUpdate osUpdate; 
             private String platform; 
             private String policyGroupId; 
             private java.util.List<String> policyGroupIdList; 
@@ -1861,74 +1965,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
             private String zoneType; 
-
-            private Builder() {
-            } 
-
-            private Builder(Desktops model) {
-                this.bindAmount = model.bindAmount;
-                this.bundleId = model.bundleId;
-                this.bundleName = model.bundleName;
-                this.chargeType = model.chargeType;
-                this.connectionStatus = model.connectionStatus;
-                this.cpu = model.cpu;
-                this.creationTime = model.creationTime;
-                this.dataDiskCategory = model.dataDiskCategory;
-                this.dataDiskSize = model.dataDiskSize;
-                this.desktopDurationList = model.desktopDurationList;
-                this.desktopGroupId = model.desktopGroupId;
-                this.desktopId = model.desktopId;
-                this.desktopName = model.desktopName;
-                this.desktopStatus = model.desktopStatus;
-                this.desktopType = model.desktopType;
-                this.directoryId = model.directoryId;
-                this.directoryType = model.directoryType;
-                this.disks = model.disks;
-                this.downgradeQuota = model.downgradeQuota;
-                this.downgradedTimes = model.downgradedTimes;
-                this.endUserIds = model.endUserIds;
-                this.expiredTime = model.expiredTime;
-                this.fotaUpdate = model.fotaUpdate;
-                this.gpuCategory = model.gpuCategory;
-                this.gpuCount = model.gpuCount;
-                this.gpuDriverVersion = model.gpuDriverVersion;
-                this.gpuSpec = model.gpuSpec;
-                this.hibernationBeta = model.hibernationBeta;
-                this.hibernationOptionsConfigured = model.hibernationOptionsConfigured;
-                this.hostName = model.hostName;
-                this.imageId = model.imageId;
-                this.managementFlag = model.managementFlag;
-                this.managementFlags = model.managementFlags;
-                this.memory = model.memory;
-                this.networkInterfaceId = model.networkInterfaceId;
-                this.networkInterfaceIp = model.networkInterfaceIp;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-                this.officeSiteType = model.officeSiteType;
-                this.officeSiteVpcType = model.officeSiteVpcType;
-                this.osType = model.osType;
-                this.platform = model.platform;
-                this.policyGroupId = model.policyGroupId;
-                this.policyGroupIdList = model.policyGroupIdList;
-                this.policyGroupName = model.policyGroupName;
-                this.policyGroupNameList = model.policyGroupNameList;
-                this.progress = model.progress;
-                this.protocolType = model.protocolType;
-                this.resourceGroups = model.resourceGroups;
-                this.sessionType = model.sessionType;
-                this.sessions = model.sessions;
-                this.snapshotPolicyId = model.snapshotPolicyId;
-                this.snapshotPolicyName = model.snapshotPolicyName;
-                this.standardStartTime = model.standardStartTime;
-                this.startTime = model.startTime;
-                this.supportHibernation = model.supportHibernation;
-                this.systemDiskCategory = model.systemDiskCategory;
-                this.systemDiskSize = model.systemDiskSize;
-                this.tags = model.tags;
-                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
-                this.volumeEncryptionKey = model.volumeEncryptionKey;
-                this.zoneType = model.zoneType;
-            } 
 
             /**
              * <p>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</p>
@@ -2418,6 +2454,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * OsUpdate.
+             */
+            public Builder osUpdate(OsUpdate osUpdate) {
+                this.osUpdate = osUpdate;
                 return this;
             }
 

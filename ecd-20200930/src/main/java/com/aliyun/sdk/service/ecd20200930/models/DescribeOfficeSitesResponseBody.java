@@ -44,10 +44,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return nextToken
      */
@@ -81,16 +77,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private java.util.List<OfficeSites> officeSites; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeOfficeSitesResponseBody model) {
-            this.nextToken = model.nextToken;
-            this.officeSites = model.officeSites;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
@@ -230,18 +216,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String specification; 
             private String trustKey; 
             private String vSwitchId; 
-
-            private Builder() {
-            } 
-
-            private Builder(ADConnectors model) {
-                this.ADConnectorAddress = model.ADConnectorAddress;
-                this.connectorStatus = model.connectorStatus;
-                this.networkInterfaceId = model.networkInterfaceId;
-                this.specification = model.specification;
-                this.trustKey = model.trustKey;
-                this.vSwitchId = model.vSwitchId;
-            } 
 
             /**
              * <p>The connection address of the AD connector.</p>
@@ -397,16 +371,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String step; 
             private String timeStamp; 
 
-            private Builder() {
-            } 
-
-            private Builder(Logs model) {
-                this.level = model.level;
-                this.message = model.message;
-                this.step = model.step;
-                this.timeStamp = model.timeStamp;
-            } 
-
             /**
              * <p>The log severity.</p>
              * <p>Valid values:</p>
@@ -507,14 +471,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public static final class Builder {
             private Long amount; 
             private String resourceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceAmounts model) {
-                this.amount = model.amount;
-                this.resourceType = model.resourceType;
-            } 
 
             /**
              * <p>The amount of resources.</p>
@@ -1240,68 +1196,6 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcType; 
-
-            private Builder() {
-            } 
-
-            private Builder(OfficeSites model) {
-                this.ADConnectors = model.ADConnectors;
-                this.acceleratorId = model.acceleratorId;
-                this.adHostname = model.adHostname;
-                this.backupDCHostname = model.backupDCHostname;
-                this.backupDns = model.backupDns;
-                this.bandwidth = model.bandwidth;
-                this.cenAttachStatus = model.cenAttachStatus;
-                this.cenId = model.cenId;
-                this.cidrBlock = model.cidrBlock;
-                this.cloudBoxOfficeSite = model.cloudBoxOfficeSite;
-                this.creationTime = model.creationTime;
-                this.customAccessPoint = model.customAccessPoint;
-                this.customDnsAddress = model.customDnsAddress;
-                this.customSecurityGroupId = model.customSecurityGroupId;
-                this.desktopAccessType = model.desktopAccessType;
-                this.desktopCount = model.desktopCount;
-                this.desktopVpcEndpoint = model.desktopVpcEndpoint;
-                this.dnsAddress = model.dnsAddress;
-                this.dnsUserName = model.dnsUserName;
-                this.domainName = model.domainName;
-                this.domainPassword = model.domainPassword;
-                this.domainUserName = model.domainUserName;
-                this.enableAdminAccess = model.enableAdminAccess;
-                this.enableCrossDesktopAccess = model.enableCrossDesktopAccess;
-                this.enableInternetAccess = model.enableInternetAccess;
-                this.enableServiceRoute = model.enableServiceRoute;
-                this.fileSystemIds = model.fileSystemIds;
-                this.logs = model.logs;
-                this.mfaEnabled = model.mfaEnabled;
-                this.name = model.name;
-                this.needVerifyLoginRisk = model.needVerifyLoginRisk;
-                this.needVerifyZeroDevice = model.needVerifyZeroDevice;
-                this.networkPackageId = model.networkPackageId;
-                this.nmVersion = model.nmVersion;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteType = model.officeSiteType;
-                this.ouName = model.ouName;
-                this.protocolType = model.protocolType;
-                this.rdsLicenseAddress = model.rdsLicenseAddress;
-                this.rdsLicenseDomainName = model.rdsLicenseDomainName;
-                this.rdsLicenseStatus = model.rdsLicenseStatus;
-                this.resourceAmounts = model.resourceAmounts;
-                this.securityProtection = model.securityProtection;
-                this.ssoEnabled = model.ssoEnabled;
-                this.ssoType = model.ssoType;
-                this.status = model.status;
-                this.subDnsAddress = model.subDnsAddress;
-                this.subDomainName = model.subDomainName;
-                this.subnetMode = model.subnetMode;
-                this.totalEdsCount = model.totalEdsCount;
-                this.totalEdsCountForGroup = model.totalEdsCountForGroup;
-                this.totalResourceAmount = model.totalResourceAmount;
-                this.trustPassword = model.trustPassword;
-                this.vSwitchIds = model.vSwitchIds;
-                this.vpcId = model.vpcId;
-                this.vpcType = model.vpcType;
-            } 
 
             /**
              * <p>Details of AD connectors.</p>

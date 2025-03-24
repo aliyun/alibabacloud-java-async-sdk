@@ -36,10 +36,6 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return invalidSessions
      */
@@ -57,14 +53,6 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InvalidSessions> invalidSessions; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DisconnectDesktopSessionsResponseBody model) {
-            this.invalidSessions = model.invalidSessions;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The list of invalid sessions.</p>
@@ -134,14 +122,6 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
         public static final class Builder {
             private String desktopId; 
             private String endUserId; 
-
-            private Builder() {
-            } 
-
-            private Builder(InvalidSessions model) {
-                this.desktopId = model.desktopId;
-                this.endUserId = model.endUserId;
-            } 
 
             /**
              * <p>The cloud desktop ID.</p>

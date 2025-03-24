@@ -90,7 +90,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -214,13 +214,11 @@ public class ExportDesktopGroupInfoRequest extends Request {
         } 
 
         /**
-         * <p>The billing method of the cloud computer pool.</p>
+         * <p>The billing method of the cloud computer share.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>PostPaid: pay-as-you-go.</p>
-         * </li>
-         * <li><p>PrePaid: subscription.</p>
-         * </li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +231,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer pools.</p>
+         * <p>The IDs of the cloud computer shares.</p>
          */
         public Builder desktopGroupId(java.util.List<String> desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -242,7 +240,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer pool.</p>
+         * <p>The name of the cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -254,7 +252,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The authorized user IDs of cloud computer pools.</p>
+         * <p>The IDs of the users to be authorized.</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -263,7 +261,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The time when the subscription cloud computer pool expires.</p>
+         * <p>The expiration date of the subscription cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-31T15:59Z</p>
@@ -313,7 +311,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network to which the cloud computer pool belongs.</p>
+         * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-467671****</p>
@@ -325,7 +323,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy that is associated with the cloud computer pool.</p>
+         * <p>The ID of the security policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-53iyi2aar0nd6****</p>
@@ -350,7 +348,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
+         * <p>The tags. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -409,16 +407,8 @@ public class ExportDesktopGroupInfoRequest extends Request {
             private String key; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
             /**
-             * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+             * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -429,7 +419,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

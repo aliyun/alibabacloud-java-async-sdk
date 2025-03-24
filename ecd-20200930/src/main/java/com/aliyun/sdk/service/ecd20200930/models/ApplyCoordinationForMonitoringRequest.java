@@ -63,7 +63,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -338,19 +338,6 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             private String resourceProperties; 
             private String resourceRegionId; 
             private String resourceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceCandidates model) {
-                this.ownerAliUid = model.ownerAliUid;
-                this.ownerEndUserId = model.ownerEndUserId;
-                this.resourceId = model.resourceId;
-                this.resourceName = model.resourceName;
-                this.resourceProperties = model.resourceProperties;
-                this.resourceRegionId = model.resourceRegionId;
-                this.resourceType = model.resourceType;
-            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the current cloud desktop belongs.</p>

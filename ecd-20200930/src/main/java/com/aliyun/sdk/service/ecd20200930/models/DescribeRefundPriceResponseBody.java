@@ -36,10 +36,6 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return priceInfo
      */
@@ -57,14 +53,6 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRefundPriceResponseBody model) {
-            this.priceInfo = model.priceInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The price details.</p>
@@ -134,14 +122,6 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         public static final class Builder {
             private String currency; 
             private Float refundFee; 
-
-            private Builder() {
-            } 
-
-            private Builder(PriceInfo model) {
-                this.currency = model.currency;
-                this.refundFee = model.refundFee;
-            } 
 
             /**
              * <p>The unit of currency (USD).</p>

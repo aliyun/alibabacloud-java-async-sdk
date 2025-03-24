@@ -31,13 +31,16 @@ public class AddUserToDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserOuPath")
+    private String userOuPath;
 
     private AddUserToDesktopGroupRequest(Builder builder) {
         super(builder);
@@ -46,6 +49,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         this.desktopGroupIds = builder.desktopGroupIds;
         this.endUserIds = builder.endUserIds;
         this.regionId = builder.regionId;
+        this.userOuPath = builder.userOuPath;
     }
 
     public static Builder builder() {
@@ -56,7 +60,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,12 +100,20 @@ public class AddUserToDesktopGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return userOuPath
+     */
+    public String getUserOuPath() {
+        return this.userOuPath;
+    }
+
     public static final class Builder extends Request.Builder<AddUserToDesktopGroupRequest, Builder> {
         private String clientToken; 
         private String desktopGroupId; 
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> endUserIds; 
         private String regionId; 
+        private String userOuPath; 
 
         private Builder() {
             super();
@@ -114,6 +126,7 @@ public class AddUserToDesktopGroupRequest extends Request {
             this.desktopGroupIds = request.desktopGroupIds;
             this.endUserIds = request.endUserIds;
             this.regionId = request.regionId;
+            this.userOuPath = request.userOuPath;
         } 
 
         /**
@@ -129,7 +142,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the desktop group that you want to assign to more regular users.</p>
+         * <p>The ID of the cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -141,7 +154,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the desktop groups.</p>
+         * <p>The IDs of the cloud computer shares.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -151,7 +164,6 @@ public class AddUserToDesktopGroupRequest extends Request {
 
         /**
          * <p>The regular users to whom you want to assign the desktop group.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -169,6 +181,15 @@ public class AddUserToDesktopGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UserOuPath.
+         */
+        public Builder userOuPath(String userOuPath) {
+            this.putQueryParameter("UserOuPath", userOuPath);
+            this.userOuPath = userOuPath;
             return this;
         }
 

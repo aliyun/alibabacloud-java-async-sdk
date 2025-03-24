@@ -40,10 +40,6 @@ public class CreateDesktopsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return desktopId
      */
@@ -69,15 +65,6 @@ public class CreateDesktopsResponseBody extends TeaModel {
         private java.util.List<String> desktopId; 
         private String orderId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateDesktopsResponseBody model) {
-            this.desktopId = model.desktopId;
-            this.orderId = model.orderId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The IDs of the cloud computers that are created. If multiple cloud computers are created, multiple IDs are returned.</p>

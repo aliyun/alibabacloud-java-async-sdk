@@ -40,10 +40,6 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return fileSystems
      */
@@ -69,15 +65,6 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         private java.util.List<FileSystems> fileSystems; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeNASFileSystemsResponseBody model) {
-            this.fileSystems = model.fileSystems;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Details about the NAS file systems.</p>
@@ -159,14 +146,6 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String appInstanceGroupId; 
             private String appInstanceGroupName; 
 
-            private Builder() {
-            } 
-
-            private Builder(AppInstanceGroups model) {
-                this.appInstanceGroupId = model.appInstanceGroupId;
-                this.appInstanceGroupName = model.appInstanceGroupName;
-            } 
-
             /**
              * <p>The ID of the delivery group.</p>
              * 
@@ -240,14 +219,6 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String desktopGroupId; 
             private String desktopGroupName; 
 
-            private Builder() {
-            } 
-
-            private Builder(DesktopGroups model) {
-                this.desktopGroupId = model.desktopGroupId;
-                this.desktopGroupName = model.desktopGroupName;
-            } 
-
             /**
              * <p>The ID of the desktop group.</p>
              * 
@@ -320,14 +291,6 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private String officeSiteId; 
             private String officeSiteName; 
-
-            private Builder() {
-            } 
-
-            private Builder(OfficeSites model) {
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-            } 
 
             /**
              * <p>The ID of the office network.</p>
@@ -653,35 +616,6 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String storageType; 
             private Boolean supportAcl; 
             private String zoneId; 
-
-            private Builder() {
-            } 
-
-            private Builder(FileSystems model) {
-                this.allowOperateUserDrive = model.allowOperateUserDrive;
-                this.appInstanceGroups = model.appInstanceGroups;
-                this.capacity = model.capacity;
-                this.createTime = model.createTime;
-                this.description = model.description;
-                this.desktopGroups = model.desktopGroups;
-                this.encryptionEnabled = model.encryptionEnabled;
-                this.fileSystemId = model.fileSystemId;
-                this.fileSystemName = model.fileSystemName;
-                this.fileSystemStatus = model.fileSystemStatus;
-                this.fileSystemType = model.fileSystemType;
-                this.meteredSize = model.meteredSize;
-                this.mountTargetDomain = model.mountTargetDomain;
-                this.mountTargetStatus = model.mountTargetStatus;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-                this.officeSites = model.officeSites;
-                this.profileCompatible = model.profileCompatible;
-                this.regionId = model.regionId;
-                this.scene = model.scene;
-                this.storageType = model.storageType;
-                this.supportAcl = model.supportAcl;
-                this.zoneId = model.zoneId;
-            } 
 
             /**
              * <blockquote>

@@ -40,10 +40,6 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return nextToken
      */
@@ -69,15 +65,6 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Recordings> recordings; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRecordingsResponseBody model) {
-            this.nextToken = model.nextToken;
-            this.recordings = model.recordings;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * NextToken.
@@ -248,22 +235,6 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             private String recordingType; 
             private String signedUrl; 
             private String startTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Recordings model) {
-                this.desktopId = model.desktopId;
-                this.desktopName = model.desktopName;
-                this.endTime = model.endTime;
-                this.endUserIds = model.endUserIds;
-                this.filePath = model.filePath;
-                this.policyGroupId = model.policyGroupId;
-                this.recordingSize = model.recordingSize;
-                this.recordingType = model.recordingType;
-                this.signedUrl = model.signedUrl;
-                this.startTime = model.startTime;
-            } 
 
             /**
              * DesktopId.

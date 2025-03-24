@@ -36,10 +36,6 @@ public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return officeSiteId
      */
@@ -57,14 +53,6 @@ public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
     public static final class Builder {
         private String officeSiteId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateSimpleOfficeSiteResponseBody model) {
-            this.officeSiteId = model.officeSiteId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The office network ID.</p>

@@ -36,10 +36,6 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -58,14 +54,6 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         private String requestId; 
         private String url; 
 
-        private Builder() {
-        } 
-
-        private Builder(ExportDesktopGroupInfoResponseBody model) {
-            this.requestId = model.requestId;
-            this.url = model.url;
-        } 
-
         /**
          * <p>The ID of the request.</p>
          * 
@@ -78,18 +66,18 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL from which you can download the exported cloud computer pools. The details of the cloud computer pools include:</p>
+         * <p>The download URL of the XLSX file that contains cloud computer shares. The XLSX file provides the following information:</p>
          * <ul>
-         * <li>IDs and names of the cloud computer pools</li>
-         * <li>IDs and names of the office networks</li>
-         * <li>Cloud computer pool templates</li>
-         * <li>Number of CPU cores and memory size</li>
-         * <li>System disks and data disks</li>
-         * <li>Names of security policies</li>
-         * <li>Number of current authorized users</li>
-         * <li>Billing methods</li>
-         * <li>The time when the cloud computer pools were created</li>
-         * <li>The time when the cloud computer pools expire</li>
+         * <li>Cloud computer share ID/name</li>
+         * <li>Office network ID/name</li>
+         * <li>Cloud computer share template</li>
+         * <li>vCPUs/Memory size</li>
+         * <li>System disk/Data disk</li>
+         * <li>Security policy name</li>
+         * <li>Number of authorized users</li>
+         * <li>Billing method</li>
+         * <li>Creation time</li>
+         * <li>Expiration time</li>
          * </ul>
          * 
          * <strong>example:</strong>

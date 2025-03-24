@@ -46,7 +46,7 @@ public class UnbindConfigGroupRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,16 +201,6 @@ public class UnbindConfigGroupRequest extends Request {
             private String resourceId; 
             private String resourceRegionId; 
             private String resourceType; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceInfos model) {
-                this.productType = model.productType;
-                this.resourceId = model.resourceId;
-                this.resourceRegionId = model.resourceRegionId;
-                this.resourceType = model.resourceType;
-            } 
 
             /**
              * <p>The service type of the resource.</p>

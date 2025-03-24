@@ -40,10 +40,6 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return nextToken
      */
@@ -69,15 +65,6 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<VirtualMFADevices> virtualMFADevices; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeVirtualMFADevicesResponseBody model) {
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-            this.virtualMFADevices = model.virtualMFADevices;
-        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
@@ -230,20 +217,6 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             private String officeSiteId; 
             private String serialNumber; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(VirtualMFADevices model) {
-                this.consecutiveFails = model.consecutiveFails;
-                this.directoryId = model.directoryId;
-                this.endUserId = model.endUserId;
-                this.gmtEnabled = model.gmtEnabled;
-                this.gmtUnlock = model.gmtUnlock;
-                this.officeSiteId = model.officeSiteId;
-                this.serialNumber = model.serialNumber;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</p>

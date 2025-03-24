@@ -63,7 +63,7 @@ public class AddFilePermissionRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -259,14 +259,6 @@ public class AddFilePermissionRequest extends Request {
             private String id; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(CdsIdentity model) {
-                this.id = model.id;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The ID of the user.</p>
              * <p>This parameter is required.</p>
@@ -383,16 +375,6 @@ public class AddFilePermissionRequest extends Request {
             private Boolean disinheritSubGroup; 
             private Long expireTime; 
             private String roleId; 
-
-            private Builder() {
-            } 
-
-            private Builder(MemberList model) {
-                this.cdsIdentity = model.cdsIdentity;
-                this.disinheritSubGroup = model.disinheritSubGroup;
-                this.expireTime = model.expireTime;
-                this.roleId = model.roleId;
-            } 
 
             /**
              * <p>The user of the cloud disk.</p>

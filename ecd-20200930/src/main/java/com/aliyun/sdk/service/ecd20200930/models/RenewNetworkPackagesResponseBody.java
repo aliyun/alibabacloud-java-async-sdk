@@ -36,10 +36,6 @@ public class RenewNetworkPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return orderId
      */
@@ -57,14 +53,6 @@ public class RenewNetworkPackagesResponseBody extends TeaModel {
     public static final class Builder {
         private String orderId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(RenewNetworkPackagesResponseBody model) {
-            this.orderId = model.orderId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the order.</p>

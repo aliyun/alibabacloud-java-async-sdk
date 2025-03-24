@@ -48,10 +48,6 @@ public class CopyCdsFileResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class CopyCdsFileResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
-
-        private Builder() {
-        } 
-
-        private Builder(CopyCdsFileResponseBody model) {
-            this.code = model.code;
-            this.copyCdsFileModel = model.copyCdsFileModel;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
@@ -222,14 +207,6 @@ public class CopyCdsFileResponseBody extends TeaModel {
         public static final class Builder {
             private String asyncTaskId; 
             private String fileId; 
-
-            private Builder() {
-            } 
-
-            private Builder(CopyCdsFileModel model) {
-                this.asyncTaskId = model.asyncTaskId;
-                this.fileId = model.fileId;
-            } 
 
             /**
              * <p>The ID of the asynchronous task. This parameter is not returned if you copy a file. This parameter is returned if you copy a folder in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>

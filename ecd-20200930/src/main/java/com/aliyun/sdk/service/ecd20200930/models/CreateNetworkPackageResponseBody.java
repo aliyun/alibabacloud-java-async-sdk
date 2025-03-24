@@ -40,10 +40,6 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return networkPackageId
      */
@@ -69,15 +65,6 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         private String networkPackageId; 
         private String orderId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateNetworkPackageResponseBody model) {
-            this.networkPackageId = model.networkPackageId;
-            this.orderId = model.orderId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the premium bandwidth plan.</p>

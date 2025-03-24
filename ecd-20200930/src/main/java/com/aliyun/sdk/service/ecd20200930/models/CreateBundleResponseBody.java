@@ -36,10 +36,6 @@ public class CreateBundleResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return bundleId
      */
@@ -57,14 +53,6 @@ public class CreateBundleResponseBody extends TeaModel {
     public static final class Builder {
         private String bundleId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateBundleResponseBody model) {
-            this.bundleId = model.bundleId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the cloud computer template.</p>

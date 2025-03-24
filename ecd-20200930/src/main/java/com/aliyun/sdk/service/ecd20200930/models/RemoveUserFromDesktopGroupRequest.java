@@ -27,7 +27,6 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
@@ -35,12 +34,17 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserOuPath")
+    private String userOuPath;
+
     private RemoveUserFromDesktopGroupRequest(Builder builder) {
         super(builder);
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupIds = builder.desktopGroupIds;
         this.endUserIds = builder.endUserIds;
         this.regionId = builder.regionId;
+        this.userOuPath = builder.userOuPath;
     }
 
     public static Builder builder() {
@@ -51,7 +55,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,11 +88,19 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return userOuPath
+     */
+    public String getUserOuPath() {
+        return this.userOuPath;
+    }
+
     public static final class Builder extends Request.Builder<RemoveUserFromDesktopGroupRequest, Builder> {
         private String desktopGroupId; 
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> endUserIds; 
         private String regionId; 
+        private String userOuPath; 
 
         private Builder() {
             super();
@@ -100,10 +112,11 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
             this.desktopGroupIds = request.desktopGroupIds;
             this.endUserIds = request.endUserIds;
             this.regionId = request.regionId;
+            this.userOuPath = request.userOuPath;
         } 
 
         /**
-         * <p>The ID of the cloud computer pool for which you want to remove the authorized users.</p>
+         * <p>The ID of the cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -115,7 +128,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of cloud computer pools.</p>
+         * <p>The IDs of the cloud computer shares.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -125,7 +138,6 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
 
         /**
          * <p>The IDs of the authorized users that you want to remove.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -143,6 +155,15 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UserOuPath.
+         */
+        public Builder userOuPath(String userOuPath) {
+            this.putQueryParameter("UserOuPath", userOuPath);
+            this.userOuPath = userOuPath;
             return this;
         }
 

@@ -36,10 +36,6 @@ public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean ssoStatus; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetOfficeSiteSsoStatusResponseBody model) {
-            this.requestId = model.requestId;
-            this.ssoStatus = model.ssoStatus;
-        } 
 
         /**
          * <p>The request ID.</p>

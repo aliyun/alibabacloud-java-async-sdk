@@ -48,10 +48,6 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return code
      */
@@ -93,17 +89,6 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         private String message; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeFotaTasksResponseBody model) {
-            this.code = model.code;
-            this.fotaTasks = model.fotaTasks;
-            this.message = model.message;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The returned message. If the request was successful, a <code>success</code> is returned. If the request failed, an error message is returned.</p>
@@ -290,21 +275,6 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             private Integer size; 
             private String status; 
             private String taskUid; 
-
-            private Builder() {
-            } 
-
-            private Builder(FotaTasks model) {
-                this.appVersion = model.appVersion;
-                this.fotaProject = model.fotaProject;
-                this.pendingCustomImageCount = model.pendingCustomImageCount;
-                this.pendingDesktopCount = model.pendingDesktopCount;
-                this.publishTime = model.publishTime;
-                this.releaseNote = model.releaseNote;
-                this.size = model.size;
-                this.status = model.status;
-                this.taskUid = model.taskUid;
-            } 
 
             /**
              * <p>The image version. You can call the <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> operation to obtain the value of this parameter.</p>

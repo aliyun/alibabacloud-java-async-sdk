@@ -81,7 +81,7 @@ public class DescribeUsersInGroupRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,7 +204,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>The ID of the cloud computer share.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

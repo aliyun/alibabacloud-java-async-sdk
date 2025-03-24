@@ -48,10 +48,6 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cloudDriveGroups
      */
@@ -93,17 +89,6 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCloudDriveGroupsResponseBody model) {
-            this.cloudDriveGroups = model.cloudDriveGroups;
-            this.count = model.count;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-            this.success = model.success;
-        } 
 
         /**
          * <p>The list of team spaces.</p>
@@ -266,19 +251,6 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             private String phone; 
             private String realNickName; 
             private String remark; 
-
-            private Builder() {
-            } 
-
-            private Builder(AdminUserInfos model) {
-                this.email = model.email;
-                this.endUserId = model.endUserId;
-                this.jobNumber = model.jobNumber;
-                this.nickName = model.nickName;
-                this.phone = model.phone;
-                this.realNickName = model.realNickName;
-                this.remark = model.remark;
-            } 
 
             /**
              * Email.
@@ -506,24 +478,6 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             private String status; 
             private Long totalSize; 
             private String usedSize; 
-
-            private Builder() {
-            } 
-
-            private Builder(CloudDriveGroups model) {
-                this.adminUserIds = model.adminUserIds;
-                this.adminUserInfos = model.adminUserInfos;
-                this.createTime = model.createTime;
-                this.directoryId = model.directoryId;
-                this.driveId = model.driveId;
-                this.groupId = model.groupId;
-                this.groupName = model.groupName;
-                this.orgId = model.orgId;
-                this.recycleBinSize = model.recycleBinSize;
-                this.status = model.status;
-                this.totalSize = model.totalSize;
-                this.usedSize = model.usedSize;
-            } 
 
             /**
              * AdminUserIds.

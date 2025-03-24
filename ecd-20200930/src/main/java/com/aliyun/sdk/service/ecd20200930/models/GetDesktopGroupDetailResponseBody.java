@@ -36,10 +36,6 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return desktops
      */
@@ -57,14 +53,6 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Desktops desktops; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetDesktopGroupDetailResponseBody model) {
-            this.desktops = model.desktops;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The information about the cloud computer pool.</p>
@@ -206,20 +194,6 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private Integer minResAmount; 
             private Float ratioThreshold; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(ScaleTimerInfos model) {
-                this.buyResAmount = model.buyResAmount;
-                this.cron = model.cron;
-                this.keepDuration = model.keepDuration;
-                this.loadPolicy = model.loadPolicy;
-                this.maxResAmount = model.maxResAmount;
-                this.minResAmount = model.minResAmount;
-                this.ratioThreshold = model.ratioThreshold;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The number of cloud computers that you purchase in the cloud computer pool. This parameter is one of the auto scaling parameters. Valid values: 0 to 200.</p>
@@ -398,16 +372,6 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private Boolean forced; 
             private Integer status; 
             private Integer timerType; 
-
-            private Builder() {
-            } 
-
-            private Builder(TimerInfos model) {
-                this.cronExpression = model.cronExpression;
-                this.forced = model.forced;
-                this.status = model.status;
-                this.timerType = model.timerType;
-            } 
 
             /**
              * <p>The cron expression.</p>
@@ -1092,62 +1056,6 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private java.util.List<TimerInfos> timerInfos; 
             private String timingStrategyInfo; 
             private Long version; 
-
-            private Builder() {
-            } 
-
-            private Builder(Desktops model) {
-                this.allowAutoSetup = model.allowAutoSetup;
-                this.allowBufferCount = model.allowBufferCount;
-                this.bindAmount = model.bindAmount;
-                this.buyDesktopsCount = model.buyDesktopsCount;
-                this.comments = model.comments;
-                this.connectDuration = model.connectDuration;
-                this.cpu = model.cpu;
-                this.creationTime = model.creationTime;
-                this.creator = model.creator;
-                this.dataDiskCategory = model.dataDiskCategory;
-                this.dataDiskSize = model.dataDiskSize;
-                this.desktopGroupId = model.desktopGroupId;
-                this.desktopGroupName = model.desktopGroupName;
-                this.directoryId = model.directoryId;
-                this.directoryType = model.directoryType;
-                this.expiredTime = model.expiredTime;
-                this.gpuCount = model.gpuCount;
-                this.gpuSpec = model.gpuSpec;
-                this.idleDisconnectDuration = model.idleDisconnectDuration;
-                this.imageId = model.imageId;
-                this.keepDuration = model.keepDuration;
-                this.loadPolicy = model.loadPolicy;
-                this.maxDesktopsCount = model.maxDesktopsCount;
-                this.memory = model.memory;
-                this.minDesktopsCount = model.minDesktopsCount;
-                this.nasFileSystemID = model.nasFileSystemID;
-                this.nasFileSystemName = model.nasFileSystemName;
-                this.officeSiteId = model.officeSiteId;
-                this.officeSiteName = model.officeSiteName;
-                this.officeSiteType = model.officeSiteType;
-                this.ownBundleId = model.ownBundleId;
-                this.ownBundleName = model.ownBundleName;
-                this.ownType = model.ownType;
-                this.payType = model.payType;
-                this.policyGroupId = model.policyGroupId;
-                this.policyGroupIds = model.policyGroupIds;
-                this.policyGroupName = model.policyGroupName;
-                this.policyGroupNames = model.policyGroupNames;
-                this.profileFollowSwitch = model.profileFollowSwitch;
-                this.ratioThreshold = model.ratioThreshold;
-                this.resType = model.resType;
-                this.resetType = model.resetType;
-                this.scaleTimerInfos = model.scaleTimerInfos;
-                this.status = model.status;
-                this.stopDuration = model.stopDuration;
-                this.systemDiskCategory = model.systemDiskCategory;
-                this.systemDiskSize = model.systemDiskSize;
-                this.timerInfos = model.timerInfos;
-                this.timingStrategyInfo = model.timingStrategyInfo;
-                this.version = model.version;
-            } 
 
             /**
              * <p>Indicates whether cloud computers can be automatically created in the subscription cloud computer pool.</p>

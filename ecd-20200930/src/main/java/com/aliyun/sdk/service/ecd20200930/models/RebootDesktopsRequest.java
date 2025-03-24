@@ -23,6 +23,10 @@ public class RebootDesktopsRequest extends Request {
     private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsUpdate")
+    private Boolean osUpdate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -30,6 +34,7 @@ public class RebootDesktopsRequest extends Request {
     private RebootDesktopsRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
+        this.osUpdate = builder.osUpdate;
         this.regionId = builder.regionId;
     }
 
@@ -41,7 +46,7 @@ public class RebootDesktopsRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,6 +59,13 @@ public class RebootDesktopsRequest extends Request {
     }
 
     /**
+     * @return osUpdate
+     */
+    public Boolean getOsUpdate() {
+        return this.osUpdate;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -62,6 +74,7 @@ public class RebootDesktopsRequest extends Request {
 
     public static final class Builder extends Request.Builder<RebootDesktopsRequest, Builder> {
         private java.util.List<String> desktopId; 
+        private Boolean osUpdate; 
         private String regionId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class RebootDesktopsRequest extends Request {
         private Builder(RebootDesktopsRequest request) {
             super(request);
             this.desktopId = request.desktopId;
+            this.osUpdate = request.osUpdate;
             this.regionId = request.regionId;
         } 
 
@@ -84,6 +98,15 @@ public class RebootDesktopsRequest extends Request {
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * OsUpdate.
+         */
+        public Builder osUpdate(Boolean osUpdate) {
+            this.putQueryParameter("OsUpdate", osUpdate);
+            this.osUpdate = osUpdate;
             return this;
         }
 

@@ -40,10 +40,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return invocations
      */
@@ -69,15 +65,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private java.util.List<Invocations> invocations; 
         private String nextToken; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeInvocationsResponseBody model) {
-            this.invocations = model.invocations;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Details about execution records of the command.</p>
@@ -302,26 +289,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String startTime; 
             private String stopTime; 
             private String updateTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(InvokeDesktops model) {
-                this.creationTime = model.creationTime;
-                this.desktopId = model.desktopId;
-                this.desktopName = model.desktopName;
-                this.dropped = model.dropped;
-                this.errorCode = model.errorCode;
-                this.errorInfo = model.errorInfo;
-                this.exitCode = model.exitCode;
-                this.finishTime = model.finishTime;
-                this.invocationStatus = model.invocationStatus;
-                this.output = model.output;
-                this.repeats = model.repeats;
-                this.startTime = model.startTime;
-                this.stopTime = model.stopTime;
-                this.updateTime = model.updateTime;
-            } 
 
             /**
              * <p>The time when the command execution was performed.</p>
@@ -647,21 +614,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private Integer invokeDesktopSucceedCount; 
             private java.util.List<InvokeDesktops> invokeDesktops; 
             private String invokeId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Invocations model) {
-                this.commandContent = model.commandContent;
-                this.commandType = model.commandType;
-                this.creationTime = model.creationTime;
-                this.endUserId = model.endUserId;
-                this.invocationStatus = model.invocationStatus;
-                this.invokeDesktopCount = model.invokeDesktopCount;
-                this.invokeDesktopSucceedCount = model.invokeDesktopSucceedCount;
-                this.invokeDesktops = model.invokeDesktops;
-                this.invokeId = model.invokeId;
-            } 
 
             /**
              * <p>The Base64-encoded command content.</p>

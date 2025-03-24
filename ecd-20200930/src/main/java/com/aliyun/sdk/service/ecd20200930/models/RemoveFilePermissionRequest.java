@@ -63,7 +63,7 @@ public class RemoveFilePermissionRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -256,14 +256,6 @@ public class RemoveFilePermissionRequest extends Request {
             private String id; 
             private String type; 
 
-            private Builder() {
-            } 
-
-            private Builder(CdsIdentity model) {
-                this.id = model.id;
-                this.type = model.type;
-            } 
-
             /**
              * <p>The user ID or group ID.</p>
              * <p>This parameter is required.</p>
@@ -360,14 +352,6 @@ public class RemoveFilePermissionRequest extends Request {
         public static final class Builder {
             private CdsIdentity cdsIdentity; 
             private String roleId; 
-
-            private Builder() {
-            } 
-
-            private Builder(MemberList model) {
-                this.cdsIdentity = model.cdsIdentity;
-                this.roleId = model.roleId;
-            } 
 
             /**
              * <p>The permission information.</p>

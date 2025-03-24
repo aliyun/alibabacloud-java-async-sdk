@@ -48,10 +48,6 @@ public class DescribeCensResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cens
      */
@@ -93,17 +89,6 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCensResponseBody model) {
-            this.cens = model.cens;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>Details of the CEN instances.</p>
@@ -195,13 +180,6 @@ public class DescribeCensResponseBody extends TeaModel {
         public static final class Builder {
             private String packageId; 
 
-            private Builder() {
-            } 
-
-            private Builder(PackageIds model) {
-                this.packageId = model.packageId;
-            } 
-
             /**
              * <p>The ID of the bandwidth plan that is bound to the CEN instance.</p>
              * 
@@ -263,14 +241,6 @@ public class DescribeCensResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -428,21 +398,6 @@ public class DescribeCensResponseBody extends TeaModel {
             private String protectionLevel; 
             private String status; 
             private java.util.List<Tags> tags; 
-
-            private Builder() {
-            } 
-
-            private Builder(Cens model) {
-                this.cenId = model.cenId;
-                this.creationTime = model.creationTime;
-                this.description = model.description;
-                this.ipv6Level = model.ipv6Level;
-                this.name = model.name;
-                this.packageIds = model.packageIds;
-                this.protectionLevel = model.protectionLevel;
-                this.status = model.status;
-                this.tags = model.tags;
-            } 
 
             /**
              * <p>The ID of the CEN instance.</p>
