@@ -1,35 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210903.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListLFUAppRequest} extends {@link RequestModel}
+ * {@link RestartAppResourcesRequest} extends {@link RequestModel}
  *
- * <p>ListLFUAppRequest</p>
+ * <p>RestartAppResourcesRequest</p>
  */
-public class ListLFUAppRequest extends Request {
+public class RestartAppResourcesRequest extends Request {
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("AliUid")
-    private Long aliUid;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ApiType")
-    private String apiType;
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String appInstanceGroupId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClientChannel")
-    private String clientChannel;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
     @com.aliyun.core.annotation.Body
@@ -49,73 +48,55 @@ public class ListLFUAppRequest extends Request {
     private String endUserId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ExtendsAccessToken")
-    private String extendsAccessToken;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("IdpId")
-    private String idpId;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoginRegionId")
     private String loginRegionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TraceId")
-    private String traceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("WyId")
-    private String wyId;
-
-    private ListLFUAppRequest(Builder builder) {
+    private RestartAppResourcesRequest(Builder builder) {
         super(builder);
-        this.aliUid = builder.aliUid;
-        this.apiType = builder.apiType;
+        this.appInstanceGroupId = builder.appInstanceGroupId;
         this.bizRegionId = builder.bizRegionId;
-        this.clientChannel = builder.clientChannel;
         this.clientId = builder.clientId;
         this.clientIp = builder.clientIp;
         this.clientOS = builder.clientOS;
         this.clientVersion = builder.clientVersion;
         this.endUserId = builder.endUserId;
-        this.extendsAccessToken = builder.extendsAccessToken;
-        this.idpId = builder.idpId;
         this.loginRegionId = builder.loginRegionId;
         this.loginToken = builder.loginToken;
         this.productType = builder.productType;
-        this.regionId = builder.regionId;
+        this.resourceIds = builder.resourceIds;
         this.sessionId = builder.sessionId;
-        this.traceId = builder.traceId;
         this.uuid = builder.uuid;
-        this.wyId = builder.wyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListLFUAppRequest create() {
+    public static RestartAppResourcesRequest create() {
         return builder().build();
     }
 
@@ -125,17 +106,10 @@ public class ListLFUAppRequest extends Request {
     }
 
     /**
-     * @return aliUid
+     * @return appInstanceGroupId
      */
-    public Long getAliUid() {
-        return this.aliUid;
-    }
-
-    /**
-     * @return apiType
-     */
-    public String getApiType() {
-        return this.apiType;
+    public String getAppInstanceGroupId() {
+        return this.appInstanceGroupId;
     }
 
     /**
@@ -143,13 +117,6 @@ public class ListLFUAppRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
-    }
-
-    /**
-     * @return clientChannel
-     */
-    public String getClientChannel() {
-        return this.clientChannel;
     }
 
     /**
@@ -188,20 +155,6 @@ public class ListLFUAppRequest extends Request {
     }
 
     /**
-     * @return extendsAccessToken
-     */
-    public String getExtendsAccessToken() {
-        return this.extendsAccessToken;
-    }
-
-    /**
-     * @return idpId
-     */
-    public String getIdpId() {
-        return this.idpId;
-    }
-
-    /**
      * @return loginRegionId
      */
     public String getLoginRegionId() {
@@ -223,10 +176,10 @@ public class ListLFUAppRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return resourceIds
      */
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
     }
 
     /**
@@ -237,89 +190,57 @@ public class ListLFUAppRequest extends Request {
     }
 
     /**
-     * @return traceId
-     */
-    public String getTraceId() {
-        return this.traceId;
-    }
-
-    /**
      * @return uuid
      */
     public String getUuid() {
         return this.uuid;
     }
 
-    /**
-     * @return wyId
-     */
-    public String getWyId() {
-        return this.wyId;
-    }
-
-    public static final class Builder extends Request.Builder<ListLFUAppRequest, Builder> {
-        private Long aliUid; 
-        private String apiType; 
+    public static final class Builder extends Request.Builder<RestartAppResourcesRequest, Builder> {
+        private String appInstanceGroupId; 
         private String bizRegionId; 
-        private String clientChannel; 
         private String clientId; 
         private String clientIp; 
         private String clientOS; 
         private String clientVersion; 
         private String endUserId; 
-        private String extendsAccessToken; 
-        private String idpId; 
         private String loginRegionId; 
         private String loginToken; 
         private String productType; 
-        private String regionId; 
+        private java.util.List<String> resourceIds; 
         private String sessionId; 
-        private String traceId; 
         private String uuid; 
-        private String wyId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListLFUAppRequest request) {
+        private Builder(RestartAppResourcesRequest request) {
             super(request);
-            this.aliUid = request.aliUid;
-            this.apiType = request.apiType;
+            this.appInstanceGroupId = request.appInstanceGroupId;
             this.bizRegionId = request.bizRegionId;
-            this.clientChannel = request.clientChannel;
             this.clientId = request.clientId;
             this.clientIp = request.clientIp;
             this.clientOS = request.clientOS;
             this.clientVersion = request.clientVersion;
             this.endUserId = request.endUserId;
-            this.extendsAccessToken = request.extendsAccessToken;
-            this.idpId = request.idpId;
             this.loginRegionId = request.loginRegionId;
             this.loginToken = request.loginToken;
             this.productType = request.productType;
-            this.regionId = request.regionId;
+            this.resourceIds = request.resourceIds;
             this.sessionId = request.sessionId;
-            this.traceId = request.traceId;
             this.uuid = request.uuid;
-            this.wyId = request.wyId;
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-53fvrq1oanz6c****</p>
          */
-        public Builder aliUid(Long aliUid) {
-            this.putBodyParameter("AliUid", aliUid);
-            this.aliUid = aliUid;
-            return this;
-        }
-
-        /**
-         * ApiType.
-         */
-        public Builder apiType(String apiType) {
-            this.putBodyParameter("ApiType", apiType);
-            this.apiType = apiType;
+        public Builder appInstanceGroupId(String appInstanceGroupId) {
+            this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
+            this.appInstanceGroupId = appInstanceGroupId;
             return this;
         }
 
@@ -333,16 +254,10 @@ public class ListLFUAppRequest extends Request {
         }
 
         /**
-         * ClientChannel.
-         */
-        public Builder clientChannel(String clientChannel) {
-            this.putBodyParameter("ClientChannel", clientChannel);
-            this.clientChannel = clientChannel;
-            return this;
-        }
-
-        /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eac19bef-1e45-4190-a03a-4ea74b699ca7</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -387,24 +302,6 @@ public class ListLFUAppRequest extends Request {
         }
 
         /**
-         * ExtendsAccessToken.
-         */
-        public Builder extendsAccessToken(String extendsAccessToken) {
-            this.putBodyParameter("ExtendsAccessToken", extendsAccessToken);
-            this.extendsAccessToken = extendsAccessToken;
-            return this;
-        }
-
-        /**
-         * IdpId.
-         */
-        public Builder idpId(String idpId) {
-            this.putBodyParameter("IdpId", idpId);
-            this.idpId = idpId;
-            return this;
-        }
-
-        /**
          * LoginRegionId.
          */
         public Builder loginRegionId(String loginRegionId) {
@@ -414,7 +311,10 @@ public class ListLFUAppRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1124500957832f30b3e716406562071655aa43b2a723ed2be0837815483d54e025db13ba5469f06f2410d0efc4d302e36</p>
          */
         public Builder loginToken(String loginToken) {
             this.putBodyParameter("LoginToken", loginToken);
@@ -423,7 +323,10 @@ public class ListLFUAppRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AndroidCloud</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -432,29 +335,23 @@ public class ListLFUAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
-        public Builder regionId(String regionId) {
-            this.putBodyParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder resourceIds(java.util.List<String> resourceIds) {
+            this.putBodyParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c261a6a1-e242-4f4b-813c-5fe807e49f03</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
             this.sessionId = sessionId;
-            return this;
-        }
-
-        /**
-         * TraceId.
-         */
-        public Builder traceId(String traceId) {
-            this.putBodyParameter("TraceId", traceId);
-            this.traceId = traceId;
             return this;
         }
 
@@ -467,18 +364,9 @@ public class ListLFUAppRequest extends Request {
             return this;
         }
 
-        /**
-         * WyId.
-         */
-        public Builder wyId(String wyId) {
-            this.putBodyParameter("WyId", wyId);
-            this.wyId = wyId;
-            return this;
-        }
-
         @Override
-        public ListLFUAppRequest build() {
-            return new ListLFUAppRequest(this);
+        public RestartAppResourcesRequest build() {
+            return new RestartAppResourcesRequest(this);
         } 
 
     } 

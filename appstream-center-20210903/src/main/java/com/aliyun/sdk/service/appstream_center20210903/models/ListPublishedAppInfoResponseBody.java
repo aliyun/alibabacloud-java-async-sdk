@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210903.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPublishedAppInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppModels")
-    private java.util.List < AppModels> appModels;
+    private java.util.List<AppModels> appModels;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
     /**
      * @return appModels
      */
-    public java.util.List < AppModels> getAppModels() {
+    public java.util.List<AppModels> getAppModels() {
         return this.appModels;
     }
 
@@ -57,14 +62,14 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppModels> appModels; 
+        private java.util.List<AppModels> appModels; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>appModels</p>
          */
-        public Builder appModels(java.util.List < AppModels> appModels) {
+        public Builder appModels(java.util.List<AppModels> appModels) {
             this.appModels = appModels;
             return this;
         }

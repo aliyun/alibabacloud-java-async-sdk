@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListRunningAppsResponse} extends {@link TeaModel}
+ * {@link StopAppResourcesResponse} extends {@link TeaModel}
  *
- * <p>ListRunningAppsResponse</p>
+ * <p>StopAppResourcesResponse</p>
  */
-public class ListRunningAppsResponse extends Response {
+public class StopAppResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListRunningAppsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListRunningAppsResponseBody body;
+    private StopAppResourcesResponseBody body;
 
-    private ListRunningAppsResponse(BuilderImpl builder) {
+    private StopAppResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListRunningAppsResponse create() {
+    public static StopAppResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListRunningAppsResponse extends Response {
     /**
      * @return body
      */
-    public ListRunningAppsResponseBody getBody() {
+    public StopAppResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListRunningAppsResponse, Builder> {
+    public interface Builder extends Response.Builder<StopAppResourcesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListRunningAppsResponseBody body);
+        Builder body(StopAppResourcesResponseBody body);
 
         @Override
-        ListRunningAppsResponse build();
+        StopAppResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListRunningAppsResponse, Builder>
+            extends Response.BuilderImpl<StopAppResourcesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListRunningAppsResponseBody body; 
+        private StopAppResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListRunningAppsResponse response) {
+        private BuilderImpl(StopAppResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListRunningAppsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListRunningAppsResponseBody body) {
+        public Builder body(StopAppResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListRunningAppsResponse build() {
-            return new ListRunningAppsResponse(this);
+        public StopAppResourcesResponse build() {
+            return new StopAppResourcesResponse(this);
         } 
 
     } 

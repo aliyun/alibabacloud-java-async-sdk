@@ -12,77 +12,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListPublishedAppInfoRequest} extends {@link RequestModel}
+ * {@link StartAppResourcesRequest} extends {@link RequestModel}
  *
- * <p>ListPublishedAppInfoRequest</p>
+ * <p>StartAppResourcesRequest</p>
  */
-public class ListPublishedAppInfoRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AppName")
-    private String appName;
+public class StartAppResourcesRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String appInstanceGroupId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CategoryId")
-    private Long categoryId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CategoryType")
-    private Long categoryType;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientOS")
     private String clientOS;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoginRegionId")
     private String loginRegionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OrderParam")
-    private String orderParam;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SortType")
-    private String sortType;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    private String uuid;
 
-    private ListPublishedAppInfoRequest(Builder builder) {
+    private StartAppResourcesRequest(Builder builder) {
         super(builder);
-        this.appName = builder.appName;
+        this.appInstanceGroupId = builder.appInstanceGroupId;
         this.bizRegionId = builder.bizRegionId;
-        this.categoryId = builder.categoryId;
-        this.categoryType = builder.categoryType;
         this.clientId = builder.clientId;
         this.clientIp = builder.clientIp;
         this.clientOS = builder.clientOS;
@@ -90,17 +86,17 @@ public class ListPublishedAppInfoRequest extends Request {
         this.endUserId = builder.endUserId;
         this.loginRegionId = builder.loginRegionId;
         this.loginToken = builder.loginToken;
-        this.orderParam = builder.orderParam;
         this.productType = builder.productType;
+        this.resourceIds = builder.resourceIds;
         this.sessionId = builder.sessionId;
-        this.sortType = builder.sortType;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListPublishedAppInfoRequest create() {
+    public static StartAppResourcesRequest create() {
         return builder().build();
     }
 
@@ -110,10 +106,10 @@ public class ListPublishedAppInfoRequest extends Request {
     }
 
     /**
-     * @return appName
+     * @return appInstanceGroupId
      */
-    public String getAppName() {
-        return this.appName;
+    public String getAppInstanceGroupId() {
+        return this.appInstanceGroupId;
     }
 
     /**
@@ -121,20 +117,6 @@ public class ListPublishedAppInfoRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
-    }
-
-    /**
-     * @return categoryId
-     */
-    public Long getCategoryId() {
-        return this.categoryId;
-    }
-
-    /**
-     * @return categoryType
-     */
-    public Long getCategoryType() {
-        return this.categoryType;
     }
 
     /**
@@ -187,17 +169,17 @@ public class ListPublishedAppInfoRequest extends Request {
     }
 
     /**
-     * @return orderParam
-     */
-    public String getOrderParam() {
-        return this.orderParam;
-    }
-
-    /**
      * @return productType
      */
     public String getProductType() {
         return this.productType;
+    }
+
+    /**
+     * @return resourceIds
+     */
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
     }
 
     /**
@@ -208,17 +190,15 @@ public class ListPublishedAppInfoRequest extends Request {
     }
 
     /**
-     * @return sortType
+     * @return uuid
      */
-    public String getSortType() {
-        return this.sortType;
+    public String getUuid() {
+        return this.uuid;
     }
 
-    public static final class Builder extends Request.Builder<ListPublishedAppInfoRequest, Builder> {
-        private String appName; 
+    public static final class Builder extends Request.Builder<StartAppResourcesRequest, Builder> {
+        private String appInstanceGroupId; 
         private String bizRegionId; 
-        private Long categoryId; 
-        private Long categoryType; 
         private String clientId; 
         private String clientIp; 
         private String clientOS; 
@@ -226,21 +206,19 @@ public class ListPublishedAppInfoRequest extends Request {
         private String endUserId; 
         private String loginRegionId; 
         private String loginToken; 
-        private String orderParam; 
         private String productType; 
+        private java.util.List<String> resourceIds; 
         private String sessionId; 
-        private String sortType; 
+        private String uuid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListPublishedAppInfoRequest request) {
+        private Builder(StartAppResourcesRequest request) {
             super(request);
-            this.appName = request.appName;
+            this.appInstanceGroupId = request.appInstanceGroupId;
             this.bizRegionId = request.bizRegionId;
-            this.categoryId = request.categoryId;
-            this.categoryType = request.categoryType;
             this.clientId = request.clientId;
             this.clientIp = request.clientIp;
             this.clientOS = request.clientOS;
@@ -248,18 +226,21 @@ public class ListPublishedAppInfoRequest extends Request {
             this.endUserId = request.endUserId;
             this.loginRegionId = request.loginRegionId;
             this.loginToken = request.loginToken;
-            this.orderParam = request.orderParam;
             this.productType = request.productType;
+            this.resourceIds = request.resourceIds;
             this.sessionId = request.sessionId;
-            this.sortType = request.sortType;
+            this.uuid = request.uuid;
         } 
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
-        public Builder appName(String appName) {
-            this.putQueryParameter("AppName", appName);
-            this.appName = appName;
+        public Builder appInstanceGroupId(String appInstanceGroupId) {
+            this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
+            this.appInstanceGroupId = appInstanceGroupId;
             return this;
         }
 
@@ -267,34 +248,19 @@ public class ListPublishedAppInfoRequest extends Request {
          * BizRegionId.
          */
         public Builder bizRegionId(String bizRegionId) {
-            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.putBodyParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
             return this;
         }
 
         /**
-         * CategoryId.
-         */
-        public Builder categoryId(Long categoryId) {
-            this.putQueryParameter("CategoryId", categoryId);
-            this.categoryId = categoryId;
-            return this;
-        }
-
-        /**
-         * CategoryType.
-         */
-        public Builder categoryType(Long categoryType) {
-            this.putQueryParameter("CategoryType", categoryType);
-            this.categoryType = categoryType;
-            return this;
-        }
-
-        /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eac19bef-1e45-4190-a03a-4ea74b69****</p>
          */
         public Builder clientId(String clientId) {
-            this.putQueryParameter("ClientId", clientId);
+            this.putBodyParameter("ClientId", clientId);
             this.clientId = clientId;
             return this;
         }
@@ -303,7 +269,7 @@ public class ListPublishedAppInfoRequest extends Request {
          * ClientIp.
          */
         public Builder clientIp(String clientIp) {
-            this.putQueryParameter("ClientIp", clientIp);
+            this.putBodyParameter("ClientIp", clientIp);
             this.clientIp = clientIp;
             return this;
         }
@@ -312,7 +278,7 @@ public class ListPublishedAppInfoRequest extends Request {
          * ClientOS.
          */
         public Builder clientOS(String clientOS) {
-            this.putQueryParameter("ClientOS", clientOS);
+            this.putBodyParameter("ClientOS", clientOS);
             this.clientOS = clientOS;
             return this;
         }
@@ -321,7 +287,7 @@ public class ListPublishedAppInfoRequest extends Request {
          * ClientVersion.
          */
         public Builder clientVersion(String clientVersion) {
-            this.putQueryParameter("ClientVersion", clientVersion);
+            this.putBodyParameter("ClientVersion", clientVersion);
             this.clientVersion = clientVersion;
             return this;
         }
@@ -330,7 +296,7 @@ public class ListPublishedAppInfoRequest extends Request {
          * EndUserId.
          */
         public Builder endUserId(String endUserId) {
-            this.putQueryParameter("EndUserId", endUserId);
+            this.putBodyParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
         }
@@ -339,59 +305,68 @@ public class ListPublishedAppInfoRequest extends Request {
          * LoginRegionId.
          */
         public Builder loginRegionId(String loginRegionId) {
-            this.putQueryParameter("LoginRegionId", loginRegionId);
+            this.putBodyParameter("LoginRegionId", loginRegionId);
             this.loginRegionId = loginRegionId;
             return this;
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v185fdd7f6d39fa7861981639366085772e150a390a5bb7b43c4e62440d94fc392b945770e1596cebe90085ce0af4d****</p>
          */
         public Builder loginToken(String loginToken) {
-            this.putQueryParameter("LoginToken", loginToken);
+            this.putBodyParameter("LoginToken", loginToken);
             this.loginToken = loginToken;
             return this;
         }
 
         /**
-         * OrderParam.
-         */
-        public Builder orderParam(String orderParam) {
-            this.putQueryParameter("OrderParam", orderParam);
-            this.orderParam = orderParam;
-            return this;
-        }
-
-        /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AndroidCloud</p>
          */
         public Builder productType(String productType) {
-            this.putQueryParameter("ProductType", productType);
+            this.putBodyParameter("ProductType", productType);
             this.productType = productType;
             return this;
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         */
+        public Builder resourceIds(java.util.List<String> resourceIds) {
+            this.putBodyParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a863f4c3-2f1d-4971-8cf7-e2b92ae9****</p>
          */
         public Builder sessionId(String sessionId) {
-            this.putQueryParameter("SessionId", sessionId);
+            this.putBodyParameter("SessionId", sessionId);
             this.sessionId = sessionId;
             return this;
         }
 
         /**
-         * SortType.
+         * Uuid.
          */
-        public Builder sortType(String sortType) {
-            this.putQueryParameter("SortType", sortType);
-            this.sortType = sortType;
+        public Builder uuid(String uuid) {
+            this.putBodyParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 
         @Override
-        public ListPublishedAppInfoRequest build() {
-            return new ListPublishedAppInfoRequest(this);
+        public StartAppResourcesRequest build() {
+            return new StartAppResourcesRequest(this);
         } 
 
     } 

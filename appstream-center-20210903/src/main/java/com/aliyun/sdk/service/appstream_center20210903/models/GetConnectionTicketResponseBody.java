@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210903.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -361,14 +366,17 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      * <p>GetConnectionTicketResponseBody</p>
      */
     public static class BindQueueInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Length")
-        private Integer length;
+        @com.aliyun.core.annotation.NameInMap("QueueStatus")
+        private String queueStatus;
 
         @com.aliyun.core.annotation.NameInMap("Rank")
         private Integer rank;
 
-        @com.aliyun.core.annotation.NameInMap("RemainingTimeMin")
-        private Integer remainingTimeMin;
+        @com.aliyun.core.annotation.NameInMap("ReadyTimeout")
+        private Long readyTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
+        private Long remainingTime;
 
         @com.aliyun.core.annotation.NameInMap("RequestKey")
         private String requestKey;
@@ -376,16 +384,17 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @com.aliyun.core.annotation.NameInMap("WaitTimeMin")
-        private Integer waitTimeMin;
+        @com.aliyun.core.annotation.NameInMap("WaitTime")
+        private Long waitTime;
 
         private BindQueueInfo(Builder builder) {
-            this.length = builder.length;
+            this.queueStatus = builder.queueStatus;
             this.rank = builder.rank;
-            this.remainingTimeMin = builder.remainingTimeMin;
+            this.readyTimeout = builder.readyTimeout;
+            this.remainingTime = builder.remainingTime;
             this.requestKey = builder.requestKey;
             this.targetId = builder.targetId;
-            this.waitTimeMin = builder.waitTimeMin;
+            this.waitTime = builder.waitTime;
         }
 
         public static Builder builder() {
@@ -397,10 +406,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * @return length
+         * @return queueStatus
          */
-        public Integer getLength() {
-            return this.length;
+        public String getQueueStatus() {
+            return this.queueStatus;
         }
 
         /**
@@ -411,10 +420,17 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * @return remainingTimeMin
+         * @return readyTimeout
          */
-        public Integer getRemainingTimeMin() {
-            return this.remainingTimeMin;
+        public Long getReadyTimeout() {
+            return this.readyTimeout;
+        }
+
+        /**
+         * @return remainingTime
+         */
+        public Long getRemainingTime() {
+            return this.remainingTime;
         }
 
         /**
@@ -432,25 +448,26 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * @return waitTimeMin
+         * @return waitTime
          */
-        public Integer getWaitTimeMin() {
-            return this.waitTimeMin;
+        public Long getWaitTime() {
+            return this.waitTime;
         }
 
         public static final class Builder {
-            private Integer length; 
+            private String queueStatus; 
             private Integer rank; 
-            private Integer remainingTimeMin; 
+            private Long readyTimeout; 
+            private Long remainingTime; 
             private String requestKey; 
             private String targetId; 
-            private Integer waitTimeMin; 
+            private Long waitTime; 
 
             /**
-             * Length.
+             * QueueStatus.
              */
-            public Builder length(Integer length) {
-                this.length = length;
+            public Builder queueStatus(String queueStatus) {
+                this.queueStatus = queueStatus;
                 return this;
             }
 
@@ -463,10 +480,18 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingTimeMin.
+             * ReadyTimeout.
              */
-            public Builder remainingTimeMin(Integer remainingTimeMin) {
-                this.remainingTimeMin = remainingTimeMin;
+            public Builder readyTimeout(Long readyTimeout) {
+                this.readyTimeout = readyTimeout;
+                return this;
+            }
+
+            /**
+             * RemainingTime.
+             */
+            public Builder remainingTime(Long remainingTime) {
+                this.remainingTime = remainingTime;
                 return this;
             }
 
@@ -487,10 +512,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * WaitTimeMin.
+             * WaitTime.
              */
-            public Builder waitTimeMin(Integer waitTimeMin) {
-                this.waitTimeMin = waitTimeMin;
+            public Builder waitTime(Long waitTime) {
+                this.waitTime = waitTime;
                 return this;
             }
 

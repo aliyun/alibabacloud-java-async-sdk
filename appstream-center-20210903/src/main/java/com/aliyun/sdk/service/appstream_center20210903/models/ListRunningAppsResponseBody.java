@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210903.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListRunningAppsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RunningCloudApps")
-    private java.util.List < RunningCloudApps> runningCloudApps;
+    private java.util.List<RunningCloudApps> runningCloudApps;
 
     private ListRunningAppsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListRunningAppsResponseBody extends TeaModel {
     /**
      * @return runningCloudApps
      */
-    public java.util.List < RunningCloudApps> getRunningCloudApps() {
+    public java.util.List<RunningCloudApps> getRunningCloudApps() {
         return this.runningCloudApps;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RunningCloudApps> runningCloudApps; 
+        private java.util.List<RunningCloudApps> runningCloudApps; 
 
         /**
          * <p>Id of the request</p>
@@ -63,7 +68,7 @@ public class ListRunningAppsResponseBody extends TeaModel {
         /**
          * RunningCloudApps.
          */
-        public Builder runningCloudApps(java.util.List < RunningCloudApps> runningCloudApps) {
+        public Builder runningCloudApps(java.util.List<RunningCloudApps> runningCloudApps) {
             this.runningCloudApps = runningCloudApps;
             return this;
         }

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210903.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListLFUAppResponse} extends {@link TeaModel}
+ * {@link RestartAppResourcesResponse} extends {@link TeaModel}
  *
- * <p>ListLFUAppResponse</p>
+ * <p>RestartAppResourcesResponse</p>
  */
-public class ListLFUAppResponse extends Response {
+public class RestartAppResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListLFUAppResponseBody body;
+    private RestartAppResourcesResponseBody body;
 
-    private ListLFUAppResponse(BuilderImpl builder) {
+    private RestartAppResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListLFUAppResponse create() {
+    public static RestartAppResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -40,7 +45,7 @@ public class ListLFUAppResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class ListLFUAppResponse extends Response {
     /**
      * @return body
      */
-    public ListLFUAppResponseBody getBody() {
+    public RestartAppResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListLFUAppResponse, Builder> {
+    public interface Builder extends Response.Builder<RestartAppResourcesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListLFUAppResponseBody body);
+        Builder body(RestartAppResourcesResponseBody body);
 
         @Override
-        ListLFUAppResponse build();
+        RestartAppResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListLFUAppResponse, Builder>
+            extends Response.BuilderImpl<RestartAppResourcesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListLFUAppResponseBody body; 
+        private RestartAppResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListLFUAppResponse response) {
+        private BuilderImpl(RestartAppResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class ListLFUAppResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class ListLFUAppResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListLFUAppResponseBody body) {
+        public Builder body(RestartAppResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListLFUAppResponse build() {
-            return new ListLFUAppResponse(this);
+        public RestartAppResourcesResponse build() {
+            return new RestartAppResourcesResponse(this);
         } 
 
     } 

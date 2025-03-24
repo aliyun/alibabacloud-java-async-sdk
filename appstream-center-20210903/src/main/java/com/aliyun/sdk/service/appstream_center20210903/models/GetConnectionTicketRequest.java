@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210903.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,6 +34,10 @@ public class GetConnectionTicketRequest extends Request {
     private String appVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoConnectInQueue")
+    private Boolean autoConnectInQueue;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -45,6 +54,10 @@ public class GetConnectionTicketRequest extends Request {
     private String clientOS;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    private String clientType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
@@ -55,6 +68,10 @@ public class GetConnectionTicketRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvironmentConfig")
+    private String environmentConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoginRegionId")
@@ -99,13 +116,16 @@ public class GetConnectionTicketRequest extends Request {
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
         this.appVersion = builder.appVersion;
+        this.autoConnectInQueue = builder.autoConnectInQueue;
         this.bizRegionId = builder.bizRegionId;
         this.clientId = builder.clientId;
         this.clientIp = builder.clientIp;
         this.clientOS = builder.clientOS;
+        this.clientType = builder.clientType;
         this.clientVersion = builder.clientVersion;
         this.connectionProperties = builder.connectionProperties;
         this.endUserId = builder.endUserId;
+        this.environmentConfig = builder.environmentConfig;
         this.loginRegionId = builder.loginRegionId;
         this.loginToken = builder.loginToken;
         this.param = builder.param;
@@ -159,6 +179,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return autoConnectInQueue
+     */
+    public Boolean getAutoConnectInQueue() {
+        return this.autoConnectInQueue;
+    }
+
+    /**
      * @return bizRegionId
      */
     public String getBizRegionId() {
@@ -187,6 +214,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return clientType
+     */
+    public String getClientType() {
+        return this.clientType;
+    }
+
+    /**
      * @return clientVersion
      */
     public String getClientVersion() {
@@ -205,6 +239,13 @@ public class GetConnectionTicketRequest extends Request {
      */
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    /**
+     * @return environmentConfig
+     */
+    public String getEnvironmentConfig() {
+        return this.environmentConfig;
     }
 
     /**
@@ -275,13 +316,16 @@ public class GetConnectionTicketRequest extends Request {
         private String appInstanceGroupId; 
         private String appInstanceId; 
         private String appVersion; 
+        private Boolean autoConnectInQueue; 
         private String bizRegionId; 
         private String clientId; 
         private String clientIp; 
         private String clientOS; 
+        private String clientType; 
         private String clientVersion; 
         private String connectionProperties; 
         private String endUserId; 
+        private String environmentConfig; 
         private String loginRegionId; 
         private String loginToken; 
         private String param; 
@@ -302,13 +346,16 @@ public class GetConnectionTicketRequest extends Request {
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
             this.appVersion = request.appVersion;
+            this.autoConnectInQueue = request.autoConnectInQueue;
             this.bizRegionId = request.bizRegionId;
             this.clientId = request.clientId;
             this.clientIp = request.clientIp;
             this.clientOS = request.clientOS;
+            this.clientType = request.clientType;
             this.clientVersion = request.clientVersion;
             this.connectionProperties = request.connectionProperties;
             this.endUserId = request.endUserId;
+            this.environmentConfig = request.environmentConfig;
             this.loginRegionId = request.loginRegionId;
             this.loginToken = request.loginToken;
             this.param = request.param;
@@ -357,6 +404,15 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
+         * AutoConnectInQueue.
+         */
+        public Builder autoConnectInQueue(Boolean autoConnectInQueue) {
+            this.putBodyParameter("AutoConnectInQueue", autoConnectInQueue);
+            this.autoConnectInQueue = autoConnectInQueue;
+            return this;
+        }
+
+        /**
          * BizRegionId.
          */
         public Builder bizRegionId(String bizRegionId) {
@@ -393,6 +449,15 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
+         * ClientType.
+         */
+        public Builder clientType(String clientType) {
+            this.putBodyParameter("ClientType", clientType);
+            this.clientType = clientType;
+            return this;
+        }
+
+        /**
          * ClientVersion.
          */
         public Builder clientVersion(String clientVersion) {
@@ -416,6 +481,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * EnvironmentConfig.
+         */
+        public Builder environmentConfig(String environmentConfig) {
+            this.putBodyParameter("EnvironmentConfig", environmentConfig);
+            this.environmentConfig = environmentConfig;
             return this;
         }
 

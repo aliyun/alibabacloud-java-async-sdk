@@ -26,12 +26,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request);
 
     /**
-     * @param request the request parameters of ListLFUApp  ListLFUAppRequest
-     * @return ListLFUAppResponse
-     */
-    CompletableFuture<ListLFUAppResponse> listLFUApp(ListLFUAppRequest request);
-
-    /**
      * @param request the request parameters of ListPublishedAppInfo  ListPublishedAppInfoRequest
      * @return ListPublishedAppInfoResponse
      */
@@ -44,10 +38,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRunningAppsResponse> listRunningApps(ListRunningAppsRequest request);
 
     /**
+     * @param request the request parameters of ResetAppResources  ResetAppResourcesRequest
+     * @return ResetAppResourcesResponse
+     */
+    CompletableFuture<ResetAppResourcesResponse> resetAppResources(ResetAppResourcesRequest request);
+
+    /**
+     * @param request the request parameters of RestartAppResources  RestartAppResourcesRequest
+     * @return RestartAppResourcesResponse
+     */
+    CompletableFuture<RestartAppResourcesResponse> restartAppResources(RestartAppResourcesRequest request);
+
+    /**
+     * @param request the request parameters of StartAppResources  StartAppResourcesRequest
+     * @return StartAppResourcesResponse
+     */
+    CompletableFuture<StartAppResourcesResponse> startAppResources(StartAppResourcesRequest request);
+
+    /**
      * @param request the request parameters of StopApp  StopAppRequest
      * @return StopAppResponse
      */
     CompletableFuture<StopAppResponse> stopApp(StopAppRequest request);
+
+    /**
+     * @param request the request parameters of StopAppResources  StopAppResourcesRequest
+     * @return StopAppResourcesResponse
+     */
+    CompletableFuture<StopAppResourcesResponse> stopAppResources(StopAppResourcesRequest request);
 
     /**
      * @param request the request parameters of Unbind  UnbindRequest
