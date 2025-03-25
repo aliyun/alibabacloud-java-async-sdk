@@ -56,10 +56,6 @@ public class DescribeIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return collection
      */
@@ -117,19 +113,6 @@ public class DescribeIndexResponseBody extends TeaModel {
         private String namespace; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeIndexResponseBody model) {
-            this.collection = model.collection;
-            this.indexDef = model.indexDef;
-            this.indexName = model.indexName;
-            this.message = model.message;
-            this.namespace = model.namespace;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * Collection.

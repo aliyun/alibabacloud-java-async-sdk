@@ -40,10 +40,6 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return database
      */
@@ -69,15 +65,6 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
         private String database; 
         private java.util.List<Items> items; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWaitingSQLInfoResponseBody model) {
-            this.database = model.database;
-            this.items = model.items;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The name of the database.</p>
@@ -254,22 +241,6 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             private String PID; 
             private String SQLStmt; 
             private String user; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.application = model.application;
-                this.blockedByApplication = model.blockedByApplication;
-                this.blockedByPID = model.blockedByPID;
-                this.blockedBySQLStmt = model.blockedBySQLStmt;
-                this.blockedByUser = model.blockedByUser;
-                this.grantLocks = model.grantLocks;
-                this.notGrantLocks = model.notGrantLocks;
-                this.PID = model.PID;
-                this.SQLStmt = model.SQLStmt;
-                this.user = model.user;
-            } 
 
             /**
              * <p>The application that sent the query.</p>

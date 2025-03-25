@@ -40,10 +40,6 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceId
      */
@@ -69,15 +65,6 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         private String DBInstanceId; 
         private Performances performances; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstanceSupportMaxPerformanceResponseBody model) {
-            this.DBInstanceId = model.DBInstanceId;
-            this.performances = model.performances;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The instance ID.</p>
@@ -183,16 +170,6 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             private String unit; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Performance model) {
-                this.bottleneck = model.bottleneck;
-                this.key = model.key;
-                this.unit = model.unit;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The performance bottleneck type.</p>
              * 
@@ -275,13 +252,6 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
 
         public static final class Builder {
             private java.util.List<Performance> performance; 
-
-            private Builder() {
-            } 
-
-            private Builder(Performances model) {
-                this.performance = model.performance;
-            } 
 
             /**
              * Performance.

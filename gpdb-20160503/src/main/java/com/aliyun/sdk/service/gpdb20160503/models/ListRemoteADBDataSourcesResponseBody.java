@@ -40,10 +40,6 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return dataSourceItems
      */
@@ -69,15 +65,6 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
         private DataSourceItems dataSourceItems; 
         private String requestId; 
         private Integer taskId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListRemoteADBDataSourcesResponseBody model) {
-            this.dataSourceItems = model.dataSourceItems;
-            this.requestId = model.requestId;
-            this.taskId = model.taskId;
-        } 
 
         /**
          * <p>Returns the successfully added data sharing service data.</p>
@@ -267,23 +254,6 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
             private String status; 
             private String userName; 
 
-            private Builder() {
-            } 
-
-            private Builder(RemoteDataSources model) {
-                this.dataSourceName = model.dataSourceName;
-                this.description = model.description;
-                this.id = model.id;
-                this.localDatabase = model.localDatabase;
-                this.localInstanceName = model.localInstanceName;
-                this.managerUserName = model.managerUserName;
-                this.regionId = model.regionId;
-                this.remoteDatabase = model.remoteDatabase;
-                this.remoteInstanceName = model.remoteInstanceName;
-                this.status = model.status;
-                this.userName = model.userName;
-            } 
-
             /**
              * <p>Data source name</p>
              * 
@@ -446,13 +416,6 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RemoteDataSources> remoteDataSources; 
-
-            private Builder() {
-            } 
-
-            private Builder(DataSourceItems model) {
-                this.remoteDataSources = model.remoteDataSources;
-            } 
 
             /**
              * RemoteDataSources.

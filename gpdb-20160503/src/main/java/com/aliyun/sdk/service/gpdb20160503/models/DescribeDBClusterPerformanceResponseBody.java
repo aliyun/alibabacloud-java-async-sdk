@@ -48,10 +48,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBClusterId
      */
@@ -93,17 +89,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private java.util.List<PerformanceKeys> performanceKeys; 
         private String requestId; 
         private String startTime; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBClusterPerformanceResponseBody model) {
-            this.DBClusterId = model.DBClusterId;
-            this.endTime = model.endTime;
-            this.performanceKeys = model.performanceKeys;
-            this.requestId = model.requestId;
-            this.startTime = model.startTime;
-        } 
 
         /**
          * <p>The instance ID.</p>
@@ -195,13 +180,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> point; 
 
-            private Builder() {
-            } 
-
-            private Builder(Values model) {
-                this.point = model.point;
-            } 
-
             /**
              * <p>The value of the performance metric and the time when the metric value was collected.</p>
              */
@@ -272,15 +250,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String name; 
             private String role; 
             private java.util.List<Values> values; 
-
-            private Builder() {
-            } 
-
-            private Builder(Series model) {
-                this.name = model.name;
-                this.role = model.role;
-                this.values = model.values;
-            } 
 
             /**
              * <p>The name of the compute node or compute group.</p>
@@ -379,15 +348,6 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String name; 
             private java.util.List<Series> series; 
             private String unit; 
-
-            private Builder() {
-            } 
-
-            private Builder(PerformanceKeys model) {
-                this.name = model.name;
-                this.series = model.series;
-                this.unit = model.unit;
-            } 
 
             /**
              * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>

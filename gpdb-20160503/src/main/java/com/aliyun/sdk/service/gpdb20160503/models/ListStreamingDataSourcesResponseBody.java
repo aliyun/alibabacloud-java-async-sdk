@@ -44,10 +44,6 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return dataSourceItems
      */
@@ -81,16 +77,6 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalRecordCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListStreamingDataSourcesResponseBody model) {
-            this.dataSourceItems = model.dataSourceItems;
-            this.pageNumber = model.pageNumber;
-            this.requestId = model.requestId;
-            this.totalRecordCount = model.totalRecordCount;
-        } 
 
         /**
          * <p>The queried data sources.</p>
@@ -278,22 +264,6 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             private String modifyTime; 
             private Integer serviceId; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(DataSourceItems model) {
-                this.createTime = model.createTime;
-                this.dataSourceConfig = model.dataSourceConfig;
-                this.dataSourceDescription = model.dataSourceDescription;
-                this.dataSourceId = model.dataSourceId;
-                this.dataSourceName = model.dataSourceName;
-                this.dataSourceType = model.dataSourceType;
-                this.errorMessage = model.errorMessage;
-                this.modifyTime = model.modifyTime;
-                this.serviceId = model.serviceId;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The time when the data source was created.</p>

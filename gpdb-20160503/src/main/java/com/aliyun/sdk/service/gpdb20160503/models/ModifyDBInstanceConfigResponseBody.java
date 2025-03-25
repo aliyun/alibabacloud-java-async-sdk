@@ -44,10 +44,6 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return dbInstanceId
      */
@@ -81,16 +77,6 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean status; 
-
-        private Builder() {
-        } 
-
-        private Builder(ModifyDBInstanceConfigResponseBody model) {
-            this.dbInstanceId = model.dbInstanceId;
-            this.errorMessage = model.errorMessage;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The ID of the instance.</p>

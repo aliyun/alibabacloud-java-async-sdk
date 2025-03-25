@@ -48,10 +48,6 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -93,17 +89,6 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListDocumentCollectionsResponseBody model) {
-            this.count = model.count;
-            this.items = model.items;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -271,19 +256,6 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             private String metrics; 
             private String parser; 
 
-            private Builder() {
-            } 
-
-            private Builder(CollectionList model) {
-                this.collectionName = model.collectionName;
-                this.dimension = model.dimension;
-                this.embeddingModel = model.embeddingModel;
-                this.fullTextRetrievalFields = model.fullTextRetrievalFields;
-                this.metadata = model.metadata;
-                this.metrics = model.metrics;
-                this.parser = model.parser;
-            } 
-
             /**
              * <p>The name of the document collection.</p>
              * 
@@ -399,13 +371,6 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CollectionList> collectionList; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.collectionList = model.collectionList;
-            } 
 
             /**
              * CollectionList.

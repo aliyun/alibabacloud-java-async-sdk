@@ -48,10 +48,6 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return jobItems
      */
@@ -93,17 +89,6 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListStreamingJobsResponseBody model) {
-            this.jobItems = model.jobItems;
-            this.pageNumber = model.pageNumber;
-            this.pageRecordCount = model.pageRecordCount;
-            this.requestId = model.requestId;
-            this.totalRecordCount = model.totalRecordCount;
-        } 
 
         /**
          * <p>The queried jobs.</p>
@@ -446,34 +431,6 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             private String status; 
             private java.util.List<String> updateColumns; 
             private String writeMode; 
-
-            private Builder() {
-            } 
-
-            private Builder(JobItems model) {
-                this.account = model.account;
-                this.consistency = model.consistency;
-                this.createTime = model.createTime;
-                this.dataSourceId = model.dataSourceId;
-                this.dataSourceName = model.dataSourceName;
-                this.destColumns = model.destColumns;
-                this.destDatabase = model.destDatabase;
-                this.destSchema = model.destSchema;
-                this.destTable = model.destTable;
-                this.errorMessage = model.errorMessage;
-                this.fallbackOffset = model.fallbackOffset;
-                this.jobDescription = model.jobDescription;
-                this.jobId = model.jobId;
-                this.jobName = model.jobName;
-                this.matchColumns = model.matchColumns;
-                this.mode = model.mode;
-                this.modifyTime = model.modifyTime;
-                this.password = model.password;
-                this.srcColumns = model.srcColumns;
-                this.status = model.status;
-                this.updateColumns = model.updateColumns;
-                this.writeMode = model.writeMode;
-            } 
 
             /**
              * <p>The name of the database account.</p>

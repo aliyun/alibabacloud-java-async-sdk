@@ -36,10 +36,6 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceGroupItems resourceGroupItems; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBResourceGroupResponseBody model) {
-            this.requestId = model.requestId;
-            this.resourceGroupItems = model.resourceGroupItems;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,13 +110,6 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> role; 
-
-            private Builder() {
-            } 
-
-            private Builder(RoleList model) {
-                this.role = model.role;
-            } 
 
             /**
              * Role.
@@ -200,15 +181,6 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String resourceGroupConfig; 
             private String resourceGroupName; 
             private RoleList roleList; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceGroupItem model) {
-                this.resourceGroupConfig = model.resourceGroupConfig;
-                this.resourceGroupName = model.resourceGroupName;
-                this.roleList = model.roleList;
-            } 
 
             /**
              * <p>The configurations of the resource group.</p>
@@ -292,13 +264,6 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourceGroupItem> resourceGroupItem; 
-
-            private Builder() {
-            } 
-
-            private Builder(ResourceGroupItems model) {
-                this.resourceGroupItem = model.resourceGroupItem;
-            } 
 
             /**
              * ResourceGroupItem.

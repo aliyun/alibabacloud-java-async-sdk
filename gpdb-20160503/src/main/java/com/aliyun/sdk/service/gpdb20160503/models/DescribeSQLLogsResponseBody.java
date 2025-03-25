@@ -44,10 +44,6 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -81,16 +77,6 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSQLLogsResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.pageRecordCount = model.pageRecordCount;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The queried SQL execution logs.</p>
@@ -326,26 +312,6 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             private Long scanRowCounts; 
             private String sourceIP; 
             private Integer sourcePort; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.accountName = model.accountName;
-                this.DBName = model.DBName;
-                this.DBRole = model.DBRole;
-                this.executeCost = model.executeCost;
-                this.executeState = model.executeState;
-                this.operationClass = model.operationClass;
-                this.operationExecuteTime = model.operationExecuteTime;
-                this.operationType = model.operationType;
-                this.returnRowCounts = model.returnRowCounts;
-                this.SQLPlan = model.SQLPlan;
-                this.SQLText = model.SQLText;
-                this.scanRowCounts = model.scanRowCounts;
-                this.sourceIP = model.sourceIP;
-                this.sourcePort = model.sourcePort;
-            } 
 
             /**
              * <p>The database account that executes the SQL statement.</p>

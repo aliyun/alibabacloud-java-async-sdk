@@ -48,10 +48,6 @@ public class ListTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return message
      */
@@ -93,17 +89,6 @@ public class ListTablesResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Tables tables; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListTablesResponseBody model) {
-            this.message = model.message;
-            this.nextToken = model.nextToken;
-            this.requestId = model.requestId;
-            this.status = model.status;
-            this.tables = model.tables;
-        } 
 
         /**
          * <p>The returned message.</p>
@@ -198,13 +183,6 @@ public class ListTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> tables; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tables model) {
-                this.tables = model.tables;
-            } 
 
             /**
              * <p>The queried tables.</p>

@@ -72,7 +72,7 @@ public class UpsertCollectionDataRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -313,14 +313,6 @@ public class UpsertCollectionDataRequest extends Request {
             private java.util.List<Long> indices; 
             private java.util.List<Double> values; 
 
-            private Builder() {
-            } 
-
-            private Builder(SparseVector model) {
-                this.indices = model.indices;
-                this.values = model.values;
-            } 
-
             /**
              * Indices.
              */
@@ -412,16 +404,6 @@ public class UpsertCollectionDataRequest extends Request {
             private java.util.Map<String, String> metadata; 
             private SparseVector sparseVector; 
             private java.util.List<Double> vector; 
-
-            private Builder() {
-            } 
-
-            private Builder(Rows model) {
-                this.id = model.id;
-                this.metadata = model.metadata;
-                this.sparseVector = model.sparseVector;
-                this.vector = model.vector;
-            } 
 
             /**
              * Id.

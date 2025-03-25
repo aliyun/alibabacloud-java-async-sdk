@@ -52,10 +52,6 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -105,18 +101,6 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Long totalLogSize; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeLogBackupsResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-            this.totalLogSize = model.totalLogSize;
-        } 
 
         /**
          * <p>Details of the backup sets.</p>
@@ -278,18 +262,6 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             private Long logFileSize; 
             private String logTime; 
             private String segmentName; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.backupId = model.backupId;
-                this.DBInstanceId = model.DBInstanceId;
-                this.logFileName = model.logFileName;
-                this.logFileSize = model.logFileSize;
-                this.logTime = model.logTime;
-                this.segmentName = model.segmentName;
-            } 
 
             /**
              * <p>The ID of the backup set.</p>

@@ -104,10 +104,6 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return createTime
      */
@@ -261,31 +257,6 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         private String requestId; 
         private String statusMessage; 
         private String yarnConf; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeHadoopDataSourceResponseBody model) {
-            this.createTime = model.createTime;
-            this.dataSourceDescription = model.dataSourceDescription;
-            this.dataSourceDir = model.dataSourceDir;
-            this.dataSourceId = model.dataSourceId;
-            this.dataSourceName = model.dataSourceName;
-            this.dataSourceStatus = model.dataSourceStatus;
-            this.dataSourceType = model.dataSourceType;
-            this.emrInstanceId = model.emrInstanceId;
-            this.externalDataServiceId = model.externalDataServiceId;
-            this.HDFSConf = model.HDFSConf;
-            this.hadoopCoreConf = model.hadoopCoreConf;
-            this.hadoopCreateType = model.hadoopCreateType;
-            this.hadoopHostsAddress = model.hadoopHostsAddress;
-            this.hiveConf = model.hiveConf;
-            this.mapReduceConf = model.mapReduceConf;
-            this.modifyTime = model.modifyTime;
-            this.requestId = model.requestId;
-            this.statusMessage = model.statusMessage;
-            this.yarnConf = model.yarnConf;
-        } 
 
         /**
          * <p>The time when the service was created.</p>

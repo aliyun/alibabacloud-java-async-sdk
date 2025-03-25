@@ -52,10 +52,6 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceId
      */
@@ -105,18 +101,6 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private java.util.List<String> performanceKeys; 
         private String requestId; 
         private String startTime; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstancePerformanceResponseBody model) {
-            this.DBInstanceId = model.DBInstanceId;
-            this.endTime = model.endTime;
-            this.engine = model.engine;
-            this.performanceKeys = model.performanceKeys;
-            this.requestId = model.requestId;
-            this.startTime = model.startTime;
-        } 
 
         /**
          * <p>The instance ID.</p>

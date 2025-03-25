@@ -56,10 +56,6 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceId
      */
@@ -117,19 +113,6 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeNamespaceResponseBody model) {
-            this.DBInstanceId = model.DBInstanceId;
-            this.message = model.message;
-            this.namespace = model.namespace;
-            this.namespaceInfo = model.namespaceInfo;
-            this.regionId = model.regionId;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The instance ID.</p>

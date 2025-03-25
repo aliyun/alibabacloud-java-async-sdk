@@ -40,10 +40,6 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return errorMessage
      */
@@ -69,15 +65,6 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean status; 
-
-        private Builder() {
-        } 
-
-        private Builder(DeleteStreamingDataServiceResponseBody model) {
-            this.errorMessage = model.errorMessage;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The error message returned if the operation fails.</p>

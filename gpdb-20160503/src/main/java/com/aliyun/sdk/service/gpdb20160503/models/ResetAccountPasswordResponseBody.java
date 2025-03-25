@@ -32,10 +32,6 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -45,13 +41,6 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ResetAccountPasswordResponseBody model) {
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The new password for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>

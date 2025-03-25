@@ -40,10 +40,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceNetInfos
      */
@@ -69,15 +65,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private DBInstanceNetInfos DBInstanceNetInfos; 
         private String instanceNetworkType; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstanceNetInfoResponseBody model) {
-            this.DBInstanceNetInfos = model.DBInstanceNetInfos;
-            this.instanceNetworkType = model.instanceNetworkType;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The connection information of the instance.</p>
@@ -235,20 +222,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcInstanceId; 
 
-            private Builder() {
-            } 
-
-            private Builder(DBInstanceNetInfo model) {
-                this.addressType = model.addressType;
-                this.connectionString = model.connectionString;
-                this.IPAddress = model.IPAddress;
-                this.IPType = model.IPType;
-                this.port = model.port;
-                this.VPCId = model.VPCId;
-                this.vSwitchId = model.vSwitchId;
-                this.vpcInstanceId = model.vpcInstanceId;
-            } 
-
             /**
              * <p>The type of the endpoint.</p>
              * 
@@ -379,13 +352,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo; 
-
-            private Builder() {
-            } 
-
-            private Builder(DBInstanceNetInfos model) {
-                this.DBInstanceNetInfo = model.DBInstanceNetInfo;
-            } 
 
             /**
              * DBInstanceNetInfo.

@@ -44,10 +44,6 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -81,16 +77,6 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstanceDataBloatResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The queried data bloat.</p>
@@ -302,24 +288,6 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             private String tableName; 
             private String timeLastUpdated; 
             private String timeLastVacuumed; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.bloatCeoff = model.bloatCeoff;
-                this.bloatSize = model.bloatSize;
-                this.databaseName = model.databaseName;
-                this.expectTableSize = model.expectTableSize;
-                this.realTableSize = model.realTableSize;
-                this.schemaName = model.schemaName;
-                this.sequence = model.sequence;
-                this.storageType = model.storageType;
-                this.suggestedAction = model.suggestedAction;
-                this.tableName = model.tableName;
-                this.timeLastUpdated = model.timeLastUpdated;
-                this.timeLastVacuumed = model.timeLastVacuumed;
-            } 
 
             /**
              * <p>The coefficient of data bloat. It is calculated by using the following formula:</p>

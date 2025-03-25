@@ -48,10 +48,6 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return accessDeniedDetail
      */
@@ -93,17 +89,6 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSQLLogsV2ResponseBody model) {
-            this.accessDeniedDetail = model.accessDeniedDetail;
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.pageRecordCount = model.pageRecordCount;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -386,29 +371,6 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             private String sessionId; 
             private String sourceIP; 
             private Integer sourcePort; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.accountName = model.accountName;
-                this.DBName = model.DBName;
-                this.DBRole = model.DBRole;
-                this.errorCode = model.errorCode;
-                this.errorMsg = model.errorMsg;
-                this.executeCost = model.executeCost;
-                this.executeState = model.executeState;
-                this.operationClass = model.operationClass;
-                this.operationExecuteTime = model.operationExecuteTime;
-                this.operationType = model.operationType;
-                this.queryId = model.queryId;
-                this.returnRowCounts = model.returnRowCounts;
-                this.SQLText = model.SQLText;
-                this.scanRowCounts = model.scanRowCounts;
-                this.sessionId = model.sessionId;
-                this.sourceIP = model.sourceIP;
-                this.sourcePort = model.sourcePort;
-            } 
 
             /**
              * <p>The database account that executes the SQL statement.</p>

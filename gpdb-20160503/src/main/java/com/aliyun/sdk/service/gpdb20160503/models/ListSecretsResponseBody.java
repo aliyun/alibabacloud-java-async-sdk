@@ -48,10 +48,6 @@ public class ListSecretsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -93,17 +89,6 @@ public class ListSecretsResponseBody extends TeaModel {
         private String requestId; 
         private Secrets secrets; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListSecretsResponseBody model) {
-            this.count = model.count;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.secrets = model.secrets;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The number of access credentials.</p>
@@ -271,19 +256,6 @@ public class ListSecretsResponseBody extends TeaModel {
             private String secretName; 
             private String username; 
 
-            private Builder() {
-            } 
-
-            private Builder(SecretsSecrets model) {
-                this.accountId = model.accountId;
-                this.DBInstanceId = model.DBInstanceId;
-                this.description = model.description;
-                this.regionId = model.regionId;
-                this.secretArn = model.secretArn;
-                this.secretName = model.secretName;
-                this.username = model.username;
-            } 
-
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
@@ -399,13 +371,6 @@ public class ListSecretsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecretsSecrets> secrets; 
-
-            private Builder() {
-            } 
-
-            private Builder(Secrets model) {
-                this.secrets = model.secrets;
-            } 
 
             /**
              * <p>The queried access credentials.</p>

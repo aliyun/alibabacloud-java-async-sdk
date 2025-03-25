@@ -40,10 +40,6 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return connectionMessage
      */
@@ -69,15 +65,6 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         private String connectionMessage; 
         private String connectionStatus; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CheckHadoopNetConnectionResponseBody model) {
-            this.connectionMessage = model.connectionMessage;
-            this.connectionStatus = model.connectionStatus;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Return message: Returns error information if the connection fails, otherwise returns an empty string (&quot;&quot;).</p>

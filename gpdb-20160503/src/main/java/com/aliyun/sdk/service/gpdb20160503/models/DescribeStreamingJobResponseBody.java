@@ -132,10 +132,6 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return account
      */
@@ -345,38 +341,6 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         private String status; 
         private java.util.List<String> updateColumns; 
         private String writeMode; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeStreamingJobResponseBody model) {
-            this.account = model.account;
-            this.consistency = model.consistency;
-            this.createTime = model.createTime;
-            this.dataSourceId = model.dataSourceId;
-            this.dataSourceName = model.dataSourceName;
-            this.destColumns = model.destColumns;
-            this.destDatabase = model.destDatabase;
-            this.destSchema = model.destSchema;
-            this.destTable = model.destTable;
-            this.errorLimitCount = model.errorLimitCount;
-            this.errorMessage = model.errorMessage;
-            this.fallbackOffset = model.fallbackOffset;
-            this.groupName = model.groupName;
-            this.jobConfig = model.jobConfig;
-            this.jobDescription = model.jobDescription;
-            this.jobId = model.jobId;
-            this.jobName = model.jobName;
-            this.matchColumns = model.matchColumns;
-            this.mode = model.mode;
-            this.modifyTime = model.modifyTime;
-            this.password = model.password;
-            this.requestId = model.requestId;
-            this.srcColumns = model.srcColumns;
-            this.status = model.status;
-            this.updateColumns = model.updateColumns;
-            this.writeMode = model.writeMode;
-        } 
 
         /**
          * <p>Target database account.</p>

@@ -36,10 +36,6 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return dataReDistributeInfo
      */
@@ -57,14 +53,6 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
     public static final class Builder {
         private DataReDistributeInfo dataReDistributeInfo; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDataReDistributeInfoResponseBody model) {
-            this.dataReDistributeInfo = model.dataReDistributeInfo;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The data redistribution information.</p>
@@ -182,18 +170,6 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String type; 
-
-            private Builder() {
-            } 
-
-            private Builder(DataReDistributeInfo model) {
-                this.message = model.message;
-                this.progress = model.progress;
-                this.remainTime = model.remainTime;
-                this.startTime = model.startTime;
-                this.status = model.status;
-                this.type = model.type;
-            } 
 
             /**
              * <p>The execution information. If an error occurs, the error message is returned.</p>

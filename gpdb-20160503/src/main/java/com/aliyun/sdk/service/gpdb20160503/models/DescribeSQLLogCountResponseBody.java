@@ -48,10 +48,6 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBClusterId
      */
@@ -93,17 +89,6 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String requestId; 
         private String startTime; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeSQLLogCountResponseBody model) {
-            this.DBClusterId = model.DBClusterId;
-            this.endTime = model.endTime;
-            this.items = model.items;
-            this.requestId = model.requestId;
-            this.startTime = model.startTime;
-        } 
 
         /**
          * <p>The instance ID.</p>
@@ -195,13 +180,6 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> point; 
 
-            private Builder() {
-            } 
-
-            private Builder(Values model) {
-                this.point = model.point;
-            } 
-
             /**
              * <p>The time when the audit logs were generated and the number of the audit logs.</p>
              */
@@ -248,13 +226,6 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Values> values; 
-
-            private Builder() {
-            } 
-
-            private Builder(Series model) {
-                this.values = model.values;
-            } 
 
             /**
              * <p>Details of the audit logs.</p>
@@ -314,14 +285,6 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private java.util.List<Series> series; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.name = model.name;
-                this.series = model.series;
-            } 
 
             /**
              * <p>The name of the table.</p>

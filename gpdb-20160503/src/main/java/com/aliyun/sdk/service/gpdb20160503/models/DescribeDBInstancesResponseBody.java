@@ -48,10 +48,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -93,17 +89,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstancesResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.pageRecordCount = model.pageRecordCount;
-            this.requestId = model.requestId;
-            this.totalRecordCount = model.totalRecordCount;
-        } 
 
         /**
          * <p>The queried instances.</p>
@@ -207,14 +192,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The key of tag N.</p>
              * 
@@ -275,13 +252,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.tag = model.tag;
-            } 
 
             /**
              * Tag.
@@ -653,40 +623,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
-
-            private Builder() {
-            } 
-
-            private Builder(DBInstance model) {
-                this.connectionMode = model.connectionMode;
-                this.createTime = model.createTime;
-                this.DBInstanceCategory = model.DBInstanceCategory;
-                this.DBInstanceDescription = model.DBInstanceDescription;
-                this.DBInstanceId = model.DBInstanceId;
-                this.DBInstanceMode = model.DBInstanceMode;
-                this.DBInstanceNetType = model.DBInstanceNetType;
-                this.DBInstanceStatus = model.DBInstanceStatus;
-                this.engine = model.engine;
-                this.engineVersion = model.engineVersion;
-                this.expireTime = model.expireTime;
-                this.instanceDeployType = model.instanceDeployType;
-                this.instanceNetworkType = model.instanceNetworkType;
-                this.lockMode = model.lockMode;
-                this.lockReason = model.lockReason;
-                this.masterNodeNum = model.masterNodeNum;
-                this.payType = model.payType;
-                this.prodType = model.prodType;
-                this.regionId = model.regionId;
-                this.resourceGroupId = model.resourceGroupId;
-                this.segNodeNum = model.segNodeNum;
-                this.serverlessMode = model.serverlessMode;
-                this.storageSize = model.storageSize;
-                this.storageType = model.storageType;
-                this.tags = model.tags;
-                this.vSwitchId = model.vSwitchId;
-                this.vpcId = model.vpcId;
-                this.zoneId = model.zoneId;
-            } 
 
             /**
              * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
@@ -1091,13 +1027,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.DBInstance = model.DBInstance;
-            } 
 
             /**
              * DBInstance.

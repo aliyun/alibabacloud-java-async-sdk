@@ -36,10 +36,6 @@ public class CreateJDBCDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return dataSourceId
      */
@@ -57,14 +53,6 @@ public class CreateJDBCDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private String dataSourceId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateJDBCDataSourceResponseBody model) {
-            this.dataSourceId = model.dataSourceId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Data source ID.</p>

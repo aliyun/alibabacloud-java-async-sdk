@@ -40,10 +40,6 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return databases
      */
@@ -69,15 +65,6 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         private java.util.List<String> databases; 
         private String requestId; 
         private java.util.List<String> userNames; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDiagnosisDimensionsResponseBody model) {
-            this.databases = model.databases;
-            this.requestId = model.requestId;
-            this.userNames = model.userNames;
-        } 
 
         /**
          * <p>The names of the databases.</p>

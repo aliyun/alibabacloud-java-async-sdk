@@ -44,10 +44,6 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -81,16 +77,6 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstanceIndexUsageResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The queried index usage.</p>
@@ -278,22 +264,6 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
             private String timeLastUpdated; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.databaseName = model.databaseName;
-                this.indexDef = model.indexDef;
-                this.indexName = model.indexName;
-                this.indexScanTimes = model.indexScanTimes;
-                this.indexSize = model.indexSize;
-                this.isPartitionTable = model.isPartitionTable;
-                this.parentTableName = model.parentTableName;
-                this.schemaName = model.schemaName;
-                this.tableName = model.tableName;
-                this.timeLastUpdated = model.timeLastUpdated;
-            } 
 
             /**
              * <p>The name of the database.</p>

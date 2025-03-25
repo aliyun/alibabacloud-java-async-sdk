@@ -36,10 +36,6 @@ public class DeleteRemoteADBDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DeleteRemoteADBDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer taskId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DeleteRemoteADBDataSourceResponseBody model) {
-            this.requestId = model.requestId;
-            this.taskId = model.taskId;
-        } 
 
         /**
          * <p>The request ID.</p>

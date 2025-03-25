@@ -44,10 +44,6 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -81,16 +77,6 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeWaitingSQLRecordsResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The list of lock diagnostics records.</p>
@@ -254,20 +240,6 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             private String status; 
             private String user; 
             private Long waitingTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.database = model.database;
-                this.PID = model.PID;
-                this.SQLStmt = model.SQLStmt;
-                this.sessionID = model.sessionID;
-                this.startTime = model.startTime;
-                this.status = model.status;
-                this.user = model.user;
-                this.waitingTime = model.waitingTime;
-            } 
 
             /**
              * <p>The name of the database.</p>

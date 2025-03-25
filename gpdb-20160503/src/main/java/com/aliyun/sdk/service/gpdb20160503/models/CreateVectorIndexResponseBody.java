@@ -40,10 +40,6 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return message
      */
@@ -69,15 +65,6 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateVectorIndexResponseBody model) {
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>Detailed information returned by the API.</p>

@@ -44,10 +44,6 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -81,16 +77,6 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDBInstanceDataSkewResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>Details about data skew.</p>
@@ -266,21 +252,6 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             private String tableSize; 
             private String tableSkew; 
             private String timeLastUpdated; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.databaseName = model.databaseName;
-                this.distributeKey = model.distributeKey;
-                this.owner = model.owner;
-                this.schemaName = model.schemaName;
-                this.sequence = model.sequence;
-                this.tableName = model.tableName;
-                this.tableSize = model.tableSize;
-                this.tableSkew = model.tableSkew;
-                this.timeLastUpdated = model.timeLastUpdated;
-            } 
 
             /**
              * <p>The name of the database.</p>

@@ -40,10 +40,6 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return message
      */
@@ -69,15 +65,6 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(CheckHadoopDataSourceResponseBody model) {
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The returned message. If the service failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>

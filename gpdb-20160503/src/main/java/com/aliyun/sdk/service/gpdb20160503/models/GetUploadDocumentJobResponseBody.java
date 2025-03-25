@@ -52,10 +52,6 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return chunkResult
      */
@@ -105,18 +101,6 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Usage usage; 
-
-        private Builder() {
-        } 
-
-        private Builder(GetUploadDocumentJobResponseBody model) {
-            this.chunkResult = model.chunkResult;
-            this.job = model.job;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.status = model.status;
-            this.usage = model.usage;
-        } 
 
         /**
          * <p>The chunking result.</p>
@@ -228,14 +212,6 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         public static final class Builder {
             private String chunkFileUrl; 
             private String plainChunkFileUrl; 
-
-            private Builder() {
-            } 
-
-            private Builder(ChunkResult model) {
-                this.chunkFileUrl = model.chunkFileUrl;
-                this.plainChunkFileUrl = model.plainChunkFileUrl;
-            } 
 
             /**
              * <p>The URL of the file after chunking. The validity period of the URL is 2 hours. The file is in the JSONL format. Each line is in the <code>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</code> format.</p>
@@ -381,20 +357,6 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private Integer progress; 
             private String status; 
             private String updateTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(Job model) {
-                this.completed = model.completed;
-                this.createTime = model.createTime;
-                this.error = model.error;
-                this.errorCode = model.errorCode;
-                this.id = model.id;
-                this.progress = model.progress;
-                this.status = model.status;
-                this.updateTime = model.updateTime;
-            } 
 
             /**
              * <p>Indicates whether the operation is complete.</p>
@@ -543,14 +505,6 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         public static final class Builder {
             private Integer embeddingEntries; 
             private Integer embeddingTokens; 
-
-            private Builder() {
-            } 
-
-            private Builder(Usage model) {
-                this.embeddingEntries = model.embeddingEntries;
-                this.embeddingTokens = model.embeddingTokens;
-            } 
 
             /**
              * <p>The count of embedding entries.</p>

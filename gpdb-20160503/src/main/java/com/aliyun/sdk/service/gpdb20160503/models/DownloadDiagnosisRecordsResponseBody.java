@@ -40,10 +40,6 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceId
      */
@@ -69,15 +65,6 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String downloadId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DownloadDiagnosisRecordsResponseBody model) {
-            this.DBInstanceId = model.DBInstanceId;
-            this.downloadId = model.downloadId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The ID of the instance.</p>

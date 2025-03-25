@@ -40,10 +40,6 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceId
      */
@@ -69,15 +65,6 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         private String DBInstanceId; 
         private java.util.List<Queries> queries; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeActiveSQLRecordsResponseBody model) {
-            this.DBInstanceId = model.DBInstanceId;
-            this.queries = model.queries;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The instance ID.</p>
@@ -266,23 +253,6 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             private String sqlTruncatedThreshold; 
             private String state; 
             private String user; 
-
-            private Builder() {
-            } 
-
-            private Builder(Queries model) {
-                this.clientAddr = model.clientAddr;
-                this.database = model.database;
-                this.PID = model.PID;
-                this.query = model.query;
-                this.queryDuration = model.queryDuration;
-                this.queryStart = model.queryStart;
-                this.sessionID = model.sessionID;
-                this.sqlTruncated = model.sqlTruncated;
-                this.sqlTruncatedThreshold = model.sqlTruncatedThreshold;
-                this.state = model.state;
-                this.user = model.user;
-            } 
 
             /**
              * <p>The IP address of the client.</p>

@@ -36,10 +36,6 @@ public class ListBackupJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -57,14 +53,6 @@ public class ListBackupJobsResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListBackupJobsResponseBody model) {
-            this.items = model.items;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * Items.
@@ -168,17 +156,6 @@ public class ListBackupJobsResponseBody extends TeaModel {
             private String process; 
             private String startTime; 
 
-            private Builder() {
-            } 
-
-            private Builder(BackupJob model) {
-                this.backupJobId = model.backupJobId;
-                this.backupMode = model.backupMode;
-                this.backupStatus = model.backupStatus;
-                this.process = model.process;
-                this.startTime = model.startTime;
-            } 
-
             /**
              * BackupJobId.
              */
@@ -257,13 +234,6 @@ public class ListBackupJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackupJob> backupJob; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.backupJob = model.backupJob;
-            } 
 
             /**
              * BackupJob.

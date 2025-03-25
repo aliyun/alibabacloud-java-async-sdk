@@ -92,10 +92,6 @@ public class DescribeDocumentResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return chunkFileUrl
      */
@@ -225,28 +221,6 @@ public class DescribeDocumentResponseBody extends TeaModel {
         private String source; 
         private String status; 
         private String textSplitter; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDocumentResponseBody model) {
-            this.chunkFileUrl = model.chunkFileUrl;
-            this.docsCount = model.docsCount;
-            this.documentLoader = model.documentLoader;
-            this.fileExt = model.fileExt;
-            this.fileMd5 = model.fileMd5;
-            this.fileMtime = model.fileMtime;
-            this.fileName = model.fileName;
-            this.fileSize = model.fileSize;
-            this.fileUrl = model.fileUrl;
-            this.fileVersion = model.fileVersion;
-            this.message = model.message;
-            this.plainChunkFileUrl = model.plainChunkFileUrl;
-            this.requestId = model.requestId;
-            this.source = model.source;
-            this.status = model.status;
-            this.textSplitter = model.textSplitter;
-        } 
 
         /**
          * <p>URL of the split file, valid for 2 hours. The file format is JSONL, with each line formatted as <code>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</code>.</p>

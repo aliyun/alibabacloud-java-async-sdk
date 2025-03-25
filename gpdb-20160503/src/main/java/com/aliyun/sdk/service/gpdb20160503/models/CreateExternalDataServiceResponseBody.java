@@ -36,10 +36,6 @@ public class CreateExternalDataServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class CreateExternalDataServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer serviceId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateExternalDataServiceResponseBody model) {
-            this.requestId = model.requestId;
-            this.serviceId = model.serviceId;
-        } 
 
         /**
          * <p>Request ID.</p>

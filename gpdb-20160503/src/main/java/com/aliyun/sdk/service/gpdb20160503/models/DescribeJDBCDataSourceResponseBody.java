@@ -80,10 +80,6 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return createTime
      */
@@ -189,25 +185,6 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         private String modifyTime; 
         private String requestId; 
         private String statusMessage; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeJDBCDataSourceResponseBody model) {
-            this.createTime = model.createTime;
-            this.dataSourceDescription = model.dataSourceDescription;
-            this.dataSourceId = model.dataSourceId;
-            this.dataSourceName = model.dataSourceName;
-            this.dataSourceStatus = model.dataSourceStatus;
-            this.dataSourceType = model.dataSourceType;
-            this.externalDataServiceId = model.externalDataServiceId;
-            this.JDBCConnectionString = model.JDBCConnectionString;
-            this.JDBCPassword = model.JDBCPassword;
-            this.JDBCUserName = model.JDBCUserName;
-            this.modifyTime = model.modifyTime;
-            this.requestId = model.requestId;
-            this.statusMessage = model.statusMessage;
-        } 
 
         /**
          * <p>The time when the service was created.</p>

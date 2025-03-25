@@ -80,10 +80,6 @@ public class DescribeCollectionResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return DBInstanceId
      */
@@ -189,25 +185,6 @@ public class DescribeCollectionResponseBody extends TeaModel {
         private String sparseVectorMetrics; 
         private String status; 
         private Boolean supportSparse; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCollectionResponseBody model) {
-            this.DBInstanceId = model.DBInstanceId;
-            this.dimension = model.dimension;
-            this.fullTextRetrievalFields = model.fullTextRetrievalFields;
-            this.message = model.message;
-            this.metadata = model.metadata;
-            this.metrics = model.metrics;
-            this.namespace = model.namespace;
-            this.parser = model.parser;
-            this.regionId = model.regionId;
-            this.requestId = model.requestId;
-            this.sparseVectorMetrics = model.sparseVectorMetrics;
-            this.status = model.status;
-            this.supportSparse = model.supportSparse;
-        } 
 
         /**
          * <p>The instance ID.</p>

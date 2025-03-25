@@ -259,7 +259,7 @@ public class CreateDBInstanceRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1488,14 +1488,6 @@ public class CreateDBInstanceRequest extends Request {
             private String AINodeNum; 
             private String AINodeSpec; 
 
-            private Builder() {
-            } 
-
-            private Builder(AINodeSpecInfos model) {
-                this.AINodeNum = model.AINodeNum;
-                this.AINodeSpec = model.AINodeSpec;
-            } 
-
             /**
              * AINodeNum.
              */
@@ -1562,14 +1554,6 @@ public class CreateDBInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>Tag key. The restrictions are as follows:</p>

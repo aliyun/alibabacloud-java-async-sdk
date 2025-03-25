@@ -44,10 +44,6 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return performances
      */
@@ -81,16 +77,6 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         private Integer performancesThreshold; 
         private Boolean performancesTruncated; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDiagnosisMonitorPerformanceResponseBody model) {
-            this.performances = model.performances;
-            this.performancesThreshold = model.performancesThreshold;
-            this.performancesTruncated = model.performancesTruncated;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Details of query execution.</p>
@@ -234,18 +220,6 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
             private String user; 
-
-            private Builder() {
-            } 
-
-            private Builder(Performances model) {
-                this.cost = model.cost;
-                this.database = model.database;
-                this.queryID = model.queryID;
-                this.startTime = model.startTime;
-                this.status = model.status;
-                this.user = model.user;
-            } 
 
             /**
              * <p>The execution duration of the query. Unit: milliseconds.</p>

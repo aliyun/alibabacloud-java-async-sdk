@@ -48,10 +48,6 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return items
      */
@@ -93,17 +89,6 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListInstanceExtensionsResponseBody model) {
-            this.items = model.items;
-            this.pageNumber = model.pageNumber;
-            this.pageRecordCount = model.pageRecordCount;
-            this.requestId = model.requestId;
-            this.totalRecordCount = model.totalRecordCount;
-        } 
 
         /**
          * <p>The queried extensions.</p>
@@ -278,20 +263,6 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             private String latestVersion; 
             private String name; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(Items model) {
-                this.currentVersion = model.currentVersion;
-                this.description = model.description;
-                this.extensionId = model.extensionId;
-                this.installedDatabases = model.installedDatabases;
-                this.isInstallNeedRestart = model.isInstallNeedRestart;
-                this.latestVersion = model.latestVersion;
-                this.name = model.name;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The current version.</p>

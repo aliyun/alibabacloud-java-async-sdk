@@ -36,10 +36,6 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Vpcs vpcs; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeRdsVpcsResponseBody model) {
-            this.requestId = model.requestId;
-            this.vpcs = model.vpcs;
-        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -206,20 +194,6 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vSwitchName; 
-
-            private Builder() {
-            } 
-
-            private Builder(VSwitchs model) {
-                this.cidrBlock = model.cidrBlock;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.isDefault = model.isDefault;
-                this.izNo = model.izNo;
-                this.status = model.status;
-                this.vSwitchId = model.vSwitchId;
-                this.vSwitchName = model.vSwitchName;
-            } 
 
             /**
              * <p>The CIDR block of the vSwitch.</p>
@@ -472,23 +446,6 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
 
-            private Builder() {
-            } 
-
-            private Builder(Vpc model) {
-                this.aliUid = model.aliUid;
-                this.bid = model.bid;
-                this.cidrBlock = model.cidrBlock;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.isDefault = model.isDefault;
-                this.regionNo = model.regionNo;
-                this.status = model.status;
-                this.vSwitchs = model.vSwitchs;
-                this.vpcId = model.vpcId;
-                this.vpcName = model.vpcName;
-            } 
-
             /**
              * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
              * 
@@ -649,13 +606,6 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Vpc> vpc; 
-
-            private Builder() {
-            } 
-
-            private Builder(Vpcs model) {
-                this.vpc = model.vpc;
-            } 
 
             /**
              * <p>The queried VPC.</p>

@@ -68,10 +68,6 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return createTime
      */
@@ -153,22 +149,6 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         private String requestId; 
         private Integer serviceId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeStreamingDataSourceResponseBody model) {
-            this.createTime = model.createTime;
-            this.dataSourceConfig = model.dataSourceConfig;
-            this.dataSourceDescription = model.dataSourceDescription;
-            this.dataSourceId = model.dataSourceId;
-            this.dataSourceName = model.dataSourceName;
-            this.dataSourceType = model.dataSourceType;
-            this.errorMessage = model.errorMessage;
-            this.requestId = model.requestId;
-            this.serviceId = model.serviceId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>Creation time.</p>

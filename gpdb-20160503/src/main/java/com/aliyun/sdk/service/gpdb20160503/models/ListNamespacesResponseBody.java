@@ -56,10 +56,6 @@ public class ListNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return count
      */
@@ -117,19 +113,6 @@ public class ListNamespacesResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListNamespacesResponseBody model) {
-            this.count = model.count;
-            this.DBInstanceId = model.DBInstanceId;
-            this.message = model.message;
-            this.namespaces = model.namespaces;
-            this.regionId = model.regionId;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -246,13 +229,6 @@ public class ListNamespacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> namespace; 
-
-            private Builder() {
-            } 
-
-            private Builder(Namespaces model) {
-                this.namespace = model.namespace;
-            } 
 
             /**
              * Namespace.

@@ -76,10 +76,6 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return createTime
      */
@@ -177,24 +173,6 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         private Integer servicePort; 
         private String serviceSpec; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeStreamingDataServiceResponseBody model) {
-            this.createTime = model.createTime;
-            this.modifyTime = model.modifyTime;
-            this.requestId = model.requestId;
-            this.serviceDescription = model.serviceDescription;
-            this.serviceId = model.serviceId;
-            this.serviceIp = model.serviceIp;
-            this.serviceManaged = model.serviceManaged;
-            this.serviceName = model.serviceName;
-            this.serviceOwnerId = model.serviceOwnerId;
-            this.servicePort = model.servicePort;
-            this.serviceSpec = model.serviceSpec;
-            this.status = model.status;
-        } 
 
         /**
          * <p>The time when the service was created.</p>

@@ -44,10 +44,6 @@ public class CreateIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return jobId
      */
@@ -81,16 +77,6 @@ public class CreateIndexResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateIndexResponseBody model) {
-            this.jobId = model.jobId;
-            this.message = model.message;
-            this.requestId = model.requestId;
-            this.status = model.status;
-        } 
 
         /**
          * JobId.
