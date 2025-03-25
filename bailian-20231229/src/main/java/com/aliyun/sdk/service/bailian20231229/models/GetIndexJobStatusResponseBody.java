@@ -191,6 +191,9 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocName")
         private String docName;
 
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private Long gmtModified;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
@@ -201,6 +204,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             this.code = builder.code;
             this.docId = builder.docId;
             this.docName = builder.docName;
+            this.gmtModified = builder.gmtModified;
             this.message = builder.message;
             this.status = builder.status;
         }
@@ -235,6 +239,13 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtModified
+         */
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
@@ -252,6 +263,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
             private String code; 
             private String docId; 
             private String docName; 
+            private Long gmtModified; 
             private String message; 
             private String status; 
 
@@ -282,6 +294,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
              */
             public Builder docName(String docName) {
                 this.docName = docName;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(Long gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 

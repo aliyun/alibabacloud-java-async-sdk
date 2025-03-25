@@ -117,6 +117,7 @@ public class UpdatePromptTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class UpdatePromptTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,7 @@ public class UpdatePromptTemplateRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>The template content.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);
@@ -159,7 +161,7 @@ public class UpdatePromptTemplateRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

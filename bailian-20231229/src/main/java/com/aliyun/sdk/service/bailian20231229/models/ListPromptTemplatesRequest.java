@@ -130,6 +130,7 @@ public class ListPromptTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class ListPromptTemplatesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -160,7 +164,7 @@ public class ListPromptTemplatesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The keyword that is used to search for templates.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -169,7 +173,10 @@ public class ListPromptTemplatesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc270401186b433f975d7e1faaa34e0e</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -178,7 +185,10 @@ public class ListPromptTemplatesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the template. Valid values: · System · Custom</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

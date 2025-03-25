@@ -103,7 +103,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         private String workspaceId; 
 
         /**
-         * maxResults.
+         * <p>The maximum number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -111,7 +114,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token that determines the start position of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc270401186b433f975d7e1faaa34e0e</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -119,7 +125,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * promptTemplates.
+         * <p>The templates.</p>
          */
         public Builder promptTemplates(java.util.List<PromptTemplates> promptTemplates) {
             this.promptTemplates = promptTemplates;
@@ -127,7 +133,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9B6CBF-47E6-5D76-9C5D-B814DD5AB071</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -237,7 +252,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             private java.util.List<String> variables; 
 
             /**
-             * content.
+             * <p>The template content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -245,7 +260,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The template name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -253,7 +268,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * promptTemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d6935b7efbe34d11b13df9307151cf8c</p>
              */
             public Builder promptTemplateId(String promptTemplateId) {
                 this.promptTemplateId = promptTemplateId;
@@ -261,7 +279,10 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The template type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;System&quot;</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -269,7 +290,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * variables.
+             * <p>The variables of the template.</p>
              */
             public Builder variables(java.util.List<String> variables) {
                 this.variables = variables;

@@ -103,7 +103,7 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         private String workspaceId; 
 
         /**
-         * content.
+         * <p>The template content.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -111,7 +111,7 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -119,7 +119,10 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * promptTemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6e49109bfeb94a39bb268f4e483ccxxx</p>
          */
         public Builder promptTemplateId(String promptTemplateId) {
             this.promptTemplateId = promptTemplateId;
@@ -127,7 +130,10 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C56C7AF-6573-19CE-B018-E05E1EDCF4C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +141,10 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * variables.
+         * <p>The variables of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;theme&quot;]</p>
          */
         public Builder variables(java.util.List<String> variables) {
             this.variables = variables;
@@ -143,7 +152,10 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * workspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-us9hjmt32nysdxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

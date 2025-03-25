@@ -188,6 +188,9 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocumentType")
         private String documentType;
 
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private Long gmtModified;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -209,6 +212,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         private Documents(Builder builder) {
             this.code = builder.code;
             this.documentType = builder.documentType;
+            this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.message = builder.message;
             this.name = builder.name;
@@ -237,6 +241,13 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
          */
         public String getDocumentType() {
             return this.documentType;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public Long getGmtModified() {
+            return this.gmtModified;
         }
 
         /**
@@ -284,6 +295,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String documentType; 
+            private Long gmtModified; 
             private String id; 
             private String message; 
             private String name; 
@@ -310,6 +322,14 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
              */
             public Builder documentType(String documentType) {
                 this.documentType = documentType;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(Long gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 
