@@ -36,10 +36,6 @@ public class ListPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return plans
      */
@@ -57,14 +53,6 @@ public class ListPlansResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Plans> plans; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListPlansResponseBody model) {
-            this.plans = model.plans;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>Details about the plans.</p>
@@ -97,6 +85,93 @@ public class ListPlansResponseBody extends TeaModel {
      *
      * <p>ListPlansResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CnTitle")
+        private String cnTitle;
+
+        @com.aliyun.core.annotation.NameInMap("Color")
+        private String color;
+
+        @com.aliyun.core.annotation.NameInMap("EnTitle")
+        private String enTitle;
+
+        private Tags(Builder builder) {
+            this.cnTitle = builder.cnTitle;
+            this.color = builder.color;
+            this.enTitle = builder.enTitle;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cnTitle
+         */
+        public String getCnTitle() {
+            return this.cnTitle;
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return enTitle
+         */
+        public String getEnTitle() {
+            return this.enTitle;
+        }
+
+        public static final class Builder {
+            private String cnTitle; 
+            private String color; 
+            private String enTitle; 
+
+            /**
+             * CnTitle.
+             */
+            public Builder cnTitle(String cnTitle) {
+                this.cnTitle = cnTitle;
+                return this;
+            }
+
+            /**
+             * Color.
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * EnTitle.
+             */
+            public Builder enTitle(String enTitle) {
+                this.enTitle = enTitle;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlansResponseBody</p>
+     */
     public static class Plans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
@@ -116,11 +191,14 @@ public class ListPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private Integer flow;
 
+        @com.aliyun.core.annotation.NameInMap("IspType")
+        private String ispType;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
-        private Integer memory;
+        private Float memory;
 
         @com.aliyun.core.annotation.NameInMap("OriginPrice")
-        private Double originPrice;
+        private String originPrice;
 
         @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
@@ -128,8 +206,14 @@ public class ListPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
+        @com.aliyun.core.annotation.NameInMap("PublicIpNum")
+        private String publicIpNum;
+
         @com.aliyun.core.annotation.NameInMap("SupportPlatform")
         private String supportPlatform;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Plans(Builder builder) {
             this.bandwidth = builder.bandwidth;
@@ -138,11 +222,14 @@ public class ListPlansResponseBody extends TeaModel {
             this.diskSize = builder.diskSize;
             this.diskType = builder.diskType;
             this.flow = builder.flow;
+            this.ispType = builder.ispType;
             this.memory = builder.memory;
             this.originPrice = builder.originPrice;
             this.planId = builder.planId;
             this.planType = builder.planType;
+            this.publicIpNum = builder.publicIpNum;
             this.supportPlatform = builder.supportPlatform;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -196,16 +283,23 @@ public class ListPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return ispType
+         */
+        public String getIspType() {
+            return this.ispType;
+        }
+
+        /**
          * @return memory
          */
-        public Integer getMemory() {
+        public Float getMemory() {
             return this.memory;
         }
 
         /**
          * @return originPrice
          */
-        public Double getOriginPrice() {
+        public String getOriginPrice() {
             return this.originPrice;
         }
 
@@ -224,10 +318,24 @@ public class ListPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicIpNum
+         */
+        public String getPublicIpNum() {
+            return this.publicIpNum;
+        }
+
+        /**
          * @return supportPlatform
          */
         public String getSupportPlatform() {
             return this.supportPlatform;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -237,28 +345,14 @@ public class ListPlansResponseBody extends TeaModel {
             private Integer diskSize; 
             private String diskType; 
             private Integer flow; 
-            private Integer memory; 
-            private Double originPrice; 
+            private String ispType; 
+            private Float memory; 
+            private String originPrice; 
             private String planId; 
             private String planType; 
+            private String publicIpNum; 
             private String supportPlatform; 
-
-            private Builder() {
-            } 
-
-            private Builder(Plans model) {
-                this.bandwidth = model.bandwidth;
-                this.core = model.core;
-                this.currency = model.currency;
-                this.diskSize = model.diskSize;
-                this.diskType = model.diskType;
-                this.flow = model.flow;
-                this.memory = model.memory;
-                this.originPrice = model.originPrice;
-                this.planId = model.planId;
-                this.planType = model.planType;
-                this.supportPlatform = model.supportPlatform;
-            } 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The peak bandwidth. Unit: Mbit/s.</p>
@@ -338,12 +432,20 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
+             * IspType.
+             */
+            public Builder ispType(String ispType) {
+                this.ispType = ispType;
+                return this;
+            }
+
+            /**
              * <p>The memory size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
              */
-            public Builder memory(Integer memory) {
+            public Builder memory(Float memory) {
                 this.memory = memory;
                 return this;
             }
@@ -354,7 +456,7 @@ public class ListPlansResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>60</p>
              */
-            public Builder originPrice(Double originPrice) {
+            public Builder originPrice(String originPrice) {
                 this.originPrice = originPrice;
                 return this;
             }
@@ -379,6 +481,14 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
+             * PublicIpNum.
+             */
+            public Builder publicIpNum(String publicIpNum) {
+                this.publicIpNum = publicIpNum;
+                return this;
+            }
+
+            /**
              * <p>The operating system types supported by the plan.</p>
              * 
              * <strong>example:</strong>
@@ -386,6 +496,14 @@ public class ListPlansResponseBody extends TeaModel {
              */
             public Builder supportPlatform(String supportPlatform) {
                 this.supportPlatform = supportPlatform;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

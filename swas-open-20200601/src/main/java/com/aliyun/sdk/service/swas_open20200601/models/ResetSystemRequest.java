@@ -56,7 +56,7 @@ public class ResetSystemRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -225,14 +225,6 @@ public class ResetSystemRequest extends Request {
         public static final class Builder {
             private String keyPairName; 
             private String password; 
-
-            private Builder() {
-            } 
-
-            private Builder(LoginCredentials model) {
-                this.keyPairName = model.keyPairName;
-                this.password = model.password;
-            } 
 
             /**
              * KeyPairName.

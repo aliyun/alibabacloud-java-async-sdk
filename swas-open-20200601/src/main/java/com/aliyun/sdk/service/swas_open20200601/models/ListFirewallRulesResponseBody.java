@@ -48,10 +48,6 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return firewallRules
      */
@@ -93,17 +89,6 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListFirewallRulesResponseBody model) {
-            this.firewallRules = model.firewallRules;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>Details of the firewall rules.</p>
@@ -206,14 +191,6 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag key.</p>
@@ -347,19 +324,6 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             private String ruleProtocol; 
             private String sourceCidrIp; 
             private java.util.List<Tags> tags; 
-
-            private Builder() {
-            } 
-
-            private Builder(FirewallRules model) {
-                this.policy = model.policy;
-                this.port = model.port;
-                this.remark = model.remark;
-                this.ruleId = model.ruleId;
-                this.ruleProtocol = model.ruleProtocol;
-                this.sourceCidrIp = model.sourceCidrIp;
-                this.tags = model.tags;
-            } 
 
             /**
              * <p>The firewall policy. Valid values:</p>

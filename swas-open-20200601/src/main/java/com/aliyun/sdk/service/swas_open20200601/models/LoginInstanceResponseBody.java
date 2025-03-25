@@ -36,10 +36,6 @@ public class LoginInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return redirectUrl
      */
@@ -57,14 +53,6 @@ public class LoginInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String redirectUrl; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(LoginInstanceResponseBody model) {
-            this.redirectUrl = model.redirectUrl;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The URL that you use to log on to the server.</p>

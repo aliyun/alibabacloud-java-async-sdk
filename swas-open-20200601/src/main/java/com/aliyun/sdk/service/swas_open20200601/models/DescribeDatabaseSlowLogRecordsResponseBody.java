@@ -56,10 +56,6 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return engine
      */
@@ -117,19 +113,6 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SlowLogs> slowLogs; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDatabaseSlowLogRecordsResponseBody model) {
-            this.engine = model.engine;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.physicalIORead = model.physicalIORead;
-            this.requestId = model.requestId;
-            this.slowLogs = model.slowLogs;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The database engine that the instance runs.</p>
@@ -341,21 +324,6 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             private Long queryTimes; 
             private Long returnRowCounts; 
             private String SQLText; 
-
-            private Builder() {
-            } 
-
-            private Builder(SlowLogs model) {
-                this.DBName = model.DBName;
-                this.executionStartTime = model.executionStartTime;
-                this.hostAddress = model.hostAddress;
-                this.lockTimes = model.lockTimes;
-                this.parseRowCounts = model.parseRowCounts;
-                this.queryTimeMS = model.queryTimeMS;
-                this.queryTimes = model.queryTimes;
-                this.returnRowCounts = model.returnRowCounts;
-                this.SQLText = model.SQLText;
-            } 
 
             /**
              * <p>The name of the database.</p>

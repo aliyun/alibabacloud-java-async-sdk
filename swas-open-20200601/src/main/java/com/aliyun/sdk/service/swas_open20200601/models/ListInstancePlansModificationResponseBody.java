@@ -36,10 +36,6 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return plans
      */
@@ -57,14 +53,6 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Plans> plans; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListInstancePlansModificationResponseBody model) {
-            this.plans = model.plans;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The operating system types supported by the plan.</p>
@@ -230,22 +218,6 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
             private Double originPrice; 
             private String planId; 
             private String supportPlatform; 
-
-            private Builder() {
-            } 
-
-            private Builder(Plans model) {
-                this.bandwidth = model.bandwidth;
-                this.core = model.core;
-                this.currency = model.currency;
-                this.diskSize = model.diskSize;
-                this.diskType = model.diskType;
-                this.flow = model.flow;
-                this.memory = model.memory;
-                this.originPrice = model.originPrice;
-                this.planId = model.planId;
-                this.supportPlatform = model.supportPlatform;
-            } 
 
             /**
              * <p>The peak bandwidth. Unit: Mbit/s.</p>

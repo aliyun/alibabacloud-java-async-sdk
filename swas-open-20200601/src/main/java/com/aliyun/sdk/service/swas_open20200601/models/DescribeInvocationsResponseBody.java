@@ -48,10 +48,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return invocations
      */
@@ -93,17 +89,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeInvocationsResponseBody model) {
-            this.invocations = model.invocations;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The command name.</p>
@@ -278,20 +263,6 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invokeId; 
             private String invokeStatus; 
             private java.util.Map<String, ?> parameters; 
-
-            private Builder() {
-            } 
-
-            private Builder(Invocations model) {
-                this.commandContent = model.commandContent;
-                this.commandName = model.commandName;
-                this.commandType = model.commandType;
-                this.creationTime = model.creationTime;
-                this.invocationStatus = model.invocationStatus;
-                this.invokeId = model.invokeId;
-                this.invokeStatus = model.invokeStatus;
-                this.parameters = model.parameters;
-            } 
 
             /**
              * <p>The content of the command, which is Base64-encoded.</p>

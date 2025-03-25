@@ -48,10 +48,6 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return instances
      */
@@ -93,17 +89,6 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListInstancesResponseBody model) {
-            this.instances = model.instances;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>Details about the queried simple application servers.</p>
@@ -206,14 +191,6 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(DiskTags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag key.</p>
@@ -419,25 +396,6 @@ public class ListInstancesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Integer size; 
             private String status; 
-
-            private Builder() {
-            } 
-
-            private Builder(Disks model) {
-                this.category = model.category;
-                this.creationTime = model.creationTime;
-                this.device = model.device;
-                this.diskChargeType = model.diskChargeType;
-                this.diskId = model.diskId;
-                this.diskName = model.diskName;
-                this.diskTags = model.diskTags;
-                this.diskType = model.diskType;
-                this.regionId = model.regionId;
-                this.remark = model.remark;
-                this.resourceGroupId = model.resourceGroupId;
-                this.size = model.size;
-                this.status = model.status;
-            } 
 
             /**
              * <p>The category of the disk. Valid values:</p>
@@ -695,18 +653,6 @@ public class ListInstancesResponseBody extends TeaModel {
             private String imageVersion; 
             private String osType; 
 
-            private Builder() {
-            } 
-
-            private Builder(Image model) {
-                this.imageContact = model.imageContact;
-                this.imageIconUrl = model.imageIconUrl;
-                this.imageName = model.imageName;
-                this.imageType = model.imageType;
-                this.imageVersion = model.imageVersion;
-                this.osType = model.osType;
-            } 
-
             /**
              * <p>The image provider.</p>
              * 
@@ -853,16 +799,6 @@ public class ListInstancesResponseBody extends TeaModel {
             private String publicIpAddress; 
             private String publicIpDdosStatus; 
 
-            private Builder() {
-            } 
-
-            private Builder(NetworkAttributes model) {
-                this.peakBandwidth = model.peakBandwidth;
-                this.privateIpAddress = model.privateIpAddress;
-                this.publicIpAddress = model.publicIpAddress;
-                this.publicIpDdosStatus = model.publicIpDdosStatus;
-            } 
-
             /**
              * PeakBandwidth.
              */
@@ -994,18 +930,6 @@ public class ListInstancesResponseBody extends TeaModel {
             private Double flow; 
             private Double memory; 
 
-            private Builder() {
-            } 
-
-            private Builder(ResourceSpec model) {
-                this.bandwidth = model.bandwidth;
-                this.cpu = model.cpu;
-                this.diskCategory = model.diskCategory;
-                this.diskSize = model.diskSize;
-                this.flow = model.flow;
-                this.memory = model.memory;
-            } 
-
             /**
              * <p>The bandwidth. Unit: Mbit/s.</p>
              * 
@@ -1132,14 +1056,6 @@ public class ListInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
             /**
              * <p>The tag key of the simple application server.</p>
              * 
@@ -1224,6 +1140,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
+        @com.aliyun.core.annotation.NameInMap("PlanType")
+        private String planType;
+
         @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private String publicIpAddress;
 
@@ -1262,6 +1181,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.networkAttributes = builder.networkAttributes;
             this.planId = builder.planId;
+            this.planType = builder.planType;
             this.publicIpAddress = builder.publicIpAddress;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -1392,6 +1312,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return planType
+         */
+        public String getPlanType() {
+            return this.planType;
+        }
+
+        /**
          * @return publicIpAddress
          */
         public String getPublicIpAddress() {
@@ -1457,6 +1384,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private java.util.List<NetworkAttributes> networkAttributes; 
             private String planId; 
+            private String planType; 
             private String publicIpAddress; 
             private String regionId; 
             private String resourceGroupId; 
@@ -1464,35 +1392,6 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String uuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Instances model) {
-                this.businessStatus = model.businessStatus;
-                this.chargeType = model.chargeType;
-                this.combination = model.combination;
-                this.combinationInstanceId = model.combinationInstanceId;
-                this.creationTime = model.creationTime;
-                this.ddosStatus = model.ddosStatus;
-                this.disableReason = model.disableReason;
-                this.disks = model.disks;
-                this.expiredTime = model.expiredTime;
-                this.image = model.image;
-                this.imageId = model.imageId;
-                this.innerIpAddress = model.innerIpAddress;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.networkAttributes = model.networkAttributes;
-                this.planId = model.planId;
-                this.publicIpAddress = model.publicIpAddress;
-                this.regionId = model.regionId;
-                this.resourceGroupId = model.resourceGroupId;
-                this.resourceSpec = model.resourceSpec;
-                this.status = model.status;
-                this.tags = model.tags;
-                this.uuid = model.uuid;
-            } 
 
             /**
              * <p>The status of the server. Valid values:</p>
@@ -1673,6 +1572,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder planId(String planId) {
                 this.planId = planId;
+                return this;
+            }
+
+            /**
+             * PlanType.
+             */
+            public Builder planType(String planType) {
+                this.planType = planType;
                 return this;
             }
 

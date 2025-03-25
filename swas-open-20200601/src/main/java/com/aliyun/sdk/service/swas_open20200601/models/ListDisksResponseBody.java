@@ -48,10 +48,6 @@ public class ListDisksResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return disks
      */
@@ -93,17 +89,6 @@ public class ListDisksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(ListDisksResponseBody model) {
-            this.disks = model.disks;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The queried disks.</p>
@@ -206,14 +191,6 @@ public class ListDisksResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag key.</p>
@@ -443,27 +420,6 @@ public class ListDisksResponseBody extends TeaModel {
             private Integer size; 
             private String status; 
             private java.util.List<Tags> tags; 
-
-            private Builder() {
-            } 
-
-            private Builder(Disks model) {
-                this.category = model.category;
-                this.creationTime = model.creationTime;
-                this.device = model.device;
-                this.diskChargeType = model.diskChargeType;
-                this.diskId = model.diskId;
-                this.diskName = model.diskName;
-                this.diskType = model.diskType;
-                this.instanceId = model.instanceId;
-                this.instanceName = model.instanceName;
-                this.regionId = model.regionId;
-                this.remark = model.remark;
-                this.resourceGroupId = model.resourceGroupId;
-                this.size = model.size;
-                this.status = model.status;
-                this.tags = model.tags;
-            } 
 
             /**
              * <p>The category of the disk. Valid values:</p>

@@ -40,6 +40,10 @@ public class ListInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanType")
+    private String planType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
     private String publicIpAddresses;
 
@@ -67,6 +71,7 @@ public class ListInstancesRequest extends Request {
         this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.planType = builder.planType;
         this.publicIpAddresses = builder.publicIpAddresses;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -82,7 +87,7 @@ public class ListInstancesRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,6 +125,13 @@ public class ListInstancesRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return planType
+     */
+    public String getPlanType() {
+        return this.planType;
     }
 
     /**
@@ -163,6 +175,7 @@ public class ListInstancesRequest extends Request {
         private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String planType; 
         private String publicIpAddresses; 
         private String regionId; 
         private String resourceGroupId; 
@@ -180,6 +193,7 @@ public class ListInstancesRequest extends Request {
             this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.planType = request.planType;
             this.publicIpAddresses = request.publicIpAddresses;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -250,6 +264,15 @@ public class ListInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PlanType.
+         */
+        public Builder planType(String planType) {
+            this.putQueryParameter("PlanType", planType);
+            this.planType = planType;
             return this;
         }
 
@@ -374,14 +397,6 @@ public class ListInstancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The tag key of the simple application servers. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>

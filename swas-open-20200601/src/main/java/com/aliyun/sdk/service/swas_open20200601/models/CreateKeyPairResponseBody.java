@@ -40,10 +40,6 @@ public class CreateKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return keyPairName
      */
@@ -69,15 +65,6 @@ public class CreateKeyPairResponseBody extends TeaModel {
         private String keyPairName; 
         private String privateKeyBody; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateKeyPairResponseBody model) {
-            this.keyPairName = model.keyPairName;
-            this.privateKeyBody = model.privateKeyBody;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The name of the key pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>

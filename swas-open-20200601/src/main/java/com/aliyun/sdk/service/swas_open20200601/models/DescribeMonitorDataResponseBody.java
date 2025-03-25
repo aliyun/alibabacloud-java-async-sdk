@@ -44,10 +44,6 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return datapoints
      */
@@ -81,16 +77,6 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         private String nextToken; 
         private String period; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeMonitorDataResponseBody model) {
-            this.datapoints = model.datapoints;
-            this.nextToken = model.nextToken;
-            this.period = model.period;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The monitoring data.</p>

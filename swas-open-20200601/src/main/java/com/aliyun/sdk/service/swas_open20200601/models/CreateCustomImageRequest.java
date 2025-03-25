@@ -77,7 +77,7 @@ public class CreateCustomImageRequest extends Request {
         return builder().build();
     }
 
-@Override
+    @Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -331,14 +331,6 @@ public class CreateCustomImageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tag model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
 
             /**
              * <p>The key of tag N that you want to add to the custom image. Valid values of N: 1 to 20.</p>

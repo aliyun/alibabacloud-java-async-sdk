@@ -40,10 +40,6 @@ public class DescribeInstanceKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return fingerprint
      */
@@ -69,15 +65,6 @@ public class DescribeInstanceKeyPairResponseBody extends TeaModel {
         private String fingerprint; 
         private String keyPairName; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeInstanceKeyPairResponseBody model) {
-            this.fingerprint = model.fingerprint;
-            this.keyPairName = model.keyPairName;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The fingerprint of the key pair.</p>

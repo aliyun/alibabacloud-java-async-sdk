@@ -36,10 +36,6 @@ public class CreateCommandResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return commandId
      */
@@ -57,14 +53,6 @@ public class CreateCommandResponseBody extends TeaModel {
     public static final class Builder {
         private String commandId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(CreateCommandResponseBody model) {
-            this.commandId = model.commandId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The command ID.</p>

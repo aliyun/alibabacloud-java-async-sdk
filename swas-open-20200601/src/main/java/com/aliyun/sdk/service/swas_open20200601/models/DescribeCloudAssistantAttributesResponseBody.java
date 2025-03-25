@@ -48,10 +48,6 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return cloudAssistant
      */
@@ -93,17 +89,6 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeCloudAssistantAttributesResponseBody model) {
-            this.cloudAssistant = model.cloudAssistant;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The Command Assistant information.</p>
@@ -290,21 +275,6 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             private String lastInvokedTime; 
             private String OSType; 
             private Boolean supportSessionManager; 
-
-            private Builder() {
-            } 
-
-            private Builder(CloudAssistant model) {
-                this.activeTaskCount = model.activeTaskCount;
-                this.cloudAssistantStatus = model.cloudAssistantStatus;
-                this.cloudAssistantVersion = model.cloudAssistantVersion;
-                this.instanceId = model.instanceId;
-                this.invocationCount = model.invocationCount;
-                this.lastHeartbeatTime = model.lastHeartbeatTime;
-                this.lastInvokedTime = model.lastInvokedTime;
-                this.OSType = model.OSType;
-                this.supportSessionManager = model.supportSessionManager;
-            } 
 
             /**
              * <p>The number of active tasks in Command Assistant.</p>

@@ -48,10 +48,6 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return databaseInstances
      */
@@ -93,17 +89,6 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeDatabaseInstancesResponseBody model) {
-            this.databaseInstances = model.databaseInstances;
-            this.pageNumber = model.pageNumber;
-            this.pageSize = model.pageSize;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-        } 
 
         /**
          * <p>The information about the Simple Database Service instances.</p>
@@ -374,28 +359,6 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             private String regionId; 
             private Integer storage; 
             private String superAccountName; 
-
-            private Builder() {
-            } 
-
-            private Builder(DatabaseInstances model) {
-                this.businessStatus = model.businessStatus;
-                this.chargeType = model.chargeType;
-                this.cpu = model.cpu;
-                this.creationTime = model.creationTime;
-                this.databaseInstanceEdition = model.databaseInstanceEdition;
-                this.databaseInstanceId = model.databaseInstanceId;
-                this.databaseInstanceName = model.databaseInstanceName;
-                this.databaseInstanceStatus = model.databaseInstanceStatus;
-                this.databaseVersion = model.databaseVersion;
-                this.expiredTime = model.expiredTime;
-                this.memory = model.memory;
-                this.privateConnection = model.privateConnection;
-                this.publicConnection = model.publicConnection;
-                this.regionId = model.regionId;
-                this.storage = model.storage;
-                this.superAccountName = model.superAccountName;
-            } 
 
             /**
              * <p>The business status of the instance. Valid values:</p>

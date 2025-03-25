@@ -36,10 +36,6 @@ public class InvokeCommandResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return invokeId
      */
@@ -57,14 +53,6 @@ public class InvokeCommandResponseBody extends TeaModel {
     public static final class Builder {
         private String invokeId; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(InvokeCommandResponseBody model) {
-            this.invokeId = model.invokeId;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The execution ID of the command.</p>

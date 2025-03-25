@@ -36,10 +36,6 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return requestId
      */
@@ -57,14 +53,6 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
     public static final class Builder {
         private String requestId; 
         private java.util.List<Data> data; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeFirewallTemplateRulesApplyResultResponseBody model) {
-            this.requestId = model.requestId;
-            this.data = model.data;
-        } 
 
         /**
          * <p>The request ID.</p>
@@ -194,19 +182,6 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             private String ruleProtocol; 
             private String sourceCidrIp; 
             private Boolean success; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.errorCode = model.errorCode;
-                this.errorInfo = model.errorInfo;
-                this.port = model.port;
-                this.remark = model.remark;
-                this.ruleProtocol = model.ruleProtocol;
-                this.sourceCidrIp = model.sourceCidrIp;
-                this.success = model.success;
-            } 
 
             /**
              * <p>The error codes when the firewall template rule fails to be applied.</p>

@@ -36,10 +36,6 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
-    public Builder toBuilder() {
-        return new Builder(this);
-    }
-
     /**
      * @return invocationResult
      */
@@ -57,14 +53,6 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
     public static final class Builder {
         private InvocationResult invocationResult; 
         private String requestId; 
-
-        private Builder() {
-        } 
-
-        private Builder(DescribeInvocationResultResponseBody model) {
-            this.invocationResult = model.invocationResult;
-            this.requestId = model.requestId;
-        } 
 
         /**
          * <p>The execution results.</p>
@@ -242,23 +230,6 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             private String invokeUser; 
             private String output; 
             private String startTime; 
-
-            private Builder() {
-            } 
-
-            private Builder(InvocationResult model) {
-                this.errorCode = model.errorCode;
-                this.errorInfo = model.errorInfo;
-                this.exitCode = model.exitCode;
-                this.finishedTime = model.finishedTime;
-                this.instanceId = model.instanceId;
-                this.invocationStatus = model.invocationStatus;
-                this.invokeId = model.invokeId;
-                this.invokeRecordStatus = model.invokeRecordStatus;
-                this.invokeUser = model.invokeUser;
-                this.output = model.output;
-                this.startTime = model.startTime;
-            } 
 
             /**
              * <p>The error code that is returned if the command failed to be sent or executed.</p>
