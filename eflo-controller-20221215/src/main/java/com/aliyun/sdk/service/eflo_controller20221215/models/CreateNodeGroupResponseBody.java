@@ -40,6 +40,10 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeGroupId
      */
@@ -65,6 +69,15 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         private String nodeGroupId; 
         private String nodeGroupName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNodeGroupResponseBody model) {
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeGroupName = model.nodeGroupName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * NodeGroupId.

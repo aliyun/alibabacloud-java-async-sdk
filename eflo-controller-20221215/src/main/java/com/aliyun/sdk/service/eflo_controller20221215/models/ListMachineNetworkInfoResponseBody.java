@@ -36,6 +36,10 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machineNetworkInfo
      */
@@ -53,6 +57,14 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MachineNetworkInfo> machineNetworkInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMachineNetworkInfoResponseBody model) {
+            this.machineNetworkInfo = model.machineNetworkInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Array</p>
@@ -182,6 +194,19 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             private String machineType; 
             private String netArch; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineNetworkInfo model) {
+                this.clusterNet = model.clusterNet;
+                this.enableJumboFrame = model.enableJumboFrame;
+                this.hpnZone = model.hpnZone;
+                this.isDpuMode = model.isDpuMode;
+                this.machineType = model.machineType;
+                this.netArch = model.netArch;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>Cluster network</p>

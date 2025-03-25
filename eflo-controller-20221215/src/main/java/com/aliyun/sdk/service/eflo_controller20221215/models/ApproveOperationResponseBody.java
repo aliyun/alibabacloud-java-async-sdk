@@ -36,6 +36,10 @@ public class ApproveOperationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMessage
      */
@@ -53,6 +57,14 @@ public class ApproveOperationResponseBody extends TeaModel {
     public static final class Builder {
         private String errorMessage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApproveOperationResponseBody model) {
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Error Message</p>

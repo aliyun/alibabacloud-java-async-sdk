@@ -68,6 +68,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -149,6 +153,22 @@ public class DescribeTaskResponseBody extends TeaModel {
         private String taskState; 
         private String taskType; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.createTime = model.createTime;
+            this.message = model.message;
+            this.nodeIds = model.nodeIds;
+            this.requestId = model.requestId;
+            this.steps = model.steps;
+            this.taskState = model.taskState;
+            this.taskType = model.taskType;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>Cluster ID</p>
@@ -352,6 +372,18 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String taskType; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubTasks model) {
+                this.createTime = model.createTime;
+                this.message = model.message;
+                this.taskId = model.taskId;
+                this.taskState = model.taskState;
+                this.taskType = model.taskType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>Creation Time</p>
              * 
@@ -540,6 +572,20 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String stepType; 
             private java.util.List<SubTasks> subTasks; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Steps model) {
+                this.message = model.message;
+                this.stageTag = model.stageTag;
+                this.startTime = model.startTime;
+                this.stepName = model.stepName;
+                this.stepState = model.stepState;
+                this.stepType = model.stepType;
+                this.subTasks = model.subTasks;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>Step Failure Message</p>

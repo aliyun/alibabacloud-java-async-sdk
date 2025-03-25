@@ -39,7 +39,7 @@ public class ListMachineNetworkInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,6 +153,15 @@ public class ListMachineNetworkInfoRequest extends Request {
             private String hpnZone; 
             private String machineType; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineHpnInfo model) {
+                this.hpnZone = model.hpnZone;
+                this.machineType = model.machineType;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>Cluster ID</p>

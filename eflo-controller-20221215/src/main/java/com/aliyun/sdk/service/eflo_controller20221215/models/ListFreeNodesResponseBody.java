@@ -40,6 +40,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListFreeNodesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Nodes> nodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFreeNodesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.nodes = model.nodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The query token value returned by this call.</p>
@@ -108,7 +121,85 @@ public class ListFreeNodesResponseBody extends TeaModel {
      *
      * <p>ListFreeNodesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListFreeNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFreeNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
+        private String commodityCode;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -124,23 +215,32 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("OperatingState")
+        private String operatingState;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Nodes(Builder builder) {
+            this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.expiredTime = builder.expiredTime;
             this.hpnZone = builder.hpnZone;
             this.machineType = builder.machineType;
             this.nodeId = builder.nodeId;
+            this.operatingState = builder.operatingState;
             this.resourceGroupId = builder.resourceGroupId;
             this.sn = builder.sn;
+            this.tags = builder.tags;
             this.zoneId = builder.zoneId;
         }
 
@@ -150,6 +250,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
 
         public static Nodes create() {
             return builder().build();
+        }
+
+        /**
+         * @return commodityCode
+         */
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
         /**
@@ -188,6 +295,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return operatingState
+         */
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -202,6 +316,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -209,14 +330,42 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String commodityCode; 
             private String createTime; 
             private String expiredTime; 
             private String hpnZone; 
             private String machineType; 
             private String nodeId; 
+            private String operatingState; 
             private String resourceGroupId; 
             private String sn; 
+            private java.util.List<Tags> tags; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.expiredTime = model.expiredTime;
+                this.hpnZone = model.hpnZone;
+                this.machineType = model.machineType;
+                this.nodeId = model.nodeId;
+                this.operatingState = model.operatingState;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sn = model.sn;
+                this.tags = model.tags;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * CommodityCode.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
+                return this;
+            }
 
             /**
              * <p>Creation time</p>
@@ -274,6 +423,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
+             * OperatingState.
+             */
+            public Builder operatingState(String operatingState) {
+                this.operatingState = operatingState;
+                return this;
+            }
+
+            /**
              * <p>Resource group ID</p>
              * 
              * <strong>example:</strong>
@@ -292,6 +449,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
              */
             public Builder sn(String sn) {
                 this.sn = sn;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

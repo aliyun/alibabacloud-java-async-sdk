@@ -40,6 +40,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListClusterNodesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Nodes> nodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterNodesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.nodes = model.nodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The query token value returned by this call.</p>
@@ -170,6 +183,16 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String subnetId; 
             private String vpdId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Networks model) {
+                this.bondName = model.bondName;
+                this.ip = model.ip;
+                this.subnetId = model.subnetId;
+                this.vpdId = model.vpdId;
+            } 
+
             /**
              * <p>Machine network interface name</p>
              * 
@@ -227,7 +250,85 @@ public class ListClusterNodesResponseBody extends TeaModel {
      *
      * <p>ListClusterNodesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListClusterNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
+        private String commodityCode;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -242,6 +343,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
 
         @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
@@ -264,6 +368,12 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -274,11 +384,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
         private String zoneId;
 
         private Nodes(Builder builder) {
+            this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.expiredTime = builder.expiredTime;
             this.hostname = builder.hostname;
             this.hpnZone = builder.hpnZone;
             this.imageId = builder.imageId;
+            this.imageName = builder.imageName;
             this.machineType = builder.machineType;
             this.networks = builder.networks;
             this.nodeGroupId = builder.nodeGroupId;
@@ -286,6 +398,8 @@ public class ListClusterNodesResponseBody extends TeaModel {
             this.nodeId = builder.nodeId;
             this.operatingState = builder.operatingState;
             this.sn = builder.sn;
+            this.tags = builder.tags;
+            this.taskId = builder.taskId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
@@ -297,6 +411,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
         public static Nodes create() {
             return builder().build();
+        }
+
+        /**
+         * @return commodityCode
+         */
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
         /**
@@ -332,6 +453,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
         }
 
         /**
@@ -384,6 +512,20 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -405,11 +547,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String commodityCode; 
             private String createTime; 
             private String expiredTime; 
             private String hostname; 
             private String hpnZone; 
             private String imageId; 
+            private String imageName; 
             private String machineType; 
             private java.util.List<Networks> networks; 
             private String nodeGroupId; 
@@ -417,9 +561,44 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String nodeId; 
             private String operatingState; 
             private String sn; 
+            private java.util.List<Tags> tags; 
+            private String taskId; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.expiredTime = model.expiredTime;
+                this.hostname = model.hostname;
+                this.hpnZone = model.hpnZone;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.machineType = model.machineType;
+                this.networks = model.networks;
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodeGroupName = model.nodeGroupName;
+                this.nodeId = model.nodeId;
+                this.operatingState = model.operatingState;
+                this.sn = model.sn;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * CommodityCode.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
+                return this;
+            }
 
             /**
              * <p>Creation time</p>
@@ -473,6 +652,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
                 return this;
             }
 
@@ -551,7 +738,26 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * <p>专有网络交换机ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1mxqhw8o20tgv3xk47h</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -559,7 +765,10 @@ public class ListClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>专有网络ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-0jltf9vinjz3if3lltdy7</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

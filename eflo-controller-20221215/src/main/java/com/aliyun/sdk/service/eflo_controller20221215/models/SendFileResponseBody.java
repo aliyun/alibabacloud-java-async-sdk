@@ -36,6 +36,10 @@ public class SendFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return invokeId
      */
@@ -53,6 +57,14 @@ public class SendFileResponseBody extends TeaModel {
     public static final class Builder {
         private String invokeId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendFileResponseBody model) {
+            this.invokeId = model.invokeId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Command execution ID.</p>

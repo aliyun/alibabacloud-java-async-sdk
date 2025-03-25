@@ -40,6 +40,10 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterTypes
      */
@@ -65,6 +69,15 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
         private java.util.List<ClusterTypes> clusterTypes; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserClusterTypesResponseBody model) {
+            this.clusterTypes = model.clusterTypes;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of cluster types. The number of array elements N ranges from 1 to 100.</p>
@@ -145,6 +158,14 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
         public static final class Builder {
             private String accessType; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterTypes model) {
+                this.accessType = model.accessType;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>访问类型。</p>

@@ -29,11 +29,16 @@ public class UpdateNodeGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
     private UpdateNodeGroupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.newNodeGroupName = builder.newNodeGroupName;
         this.nodeGroupId = builder.nodeGroupId;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -44,7 +49,7 @@ public class UpdateNodeGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,10 +75,18 @@ public class UpdateNodeGroupRequest extends Request {
         return this.nodeGroupId;
     }
 
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
     public static final class Builder extends Request.Builder<UpdateNodeGroupRequest, Builder> {
         private String regionId; 
         private String newNodeGroupName; 
         private String nodeGroupId; 
+        private String userData; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpdateNodeGroupRequest extends Request {
             this.regionId = request.regionId;
             this.newNodeGroupName = request.newNodeGroupName;
             this.nodeGroupId = request.nodeGroupId;
+            this.userData = request.userData;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class UpdateNodeGroupRequest extends Request {
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);
             this.nodeGroupId = nodeGroupId;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putBodyParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 

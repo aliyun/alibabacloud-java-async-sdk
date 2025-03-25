@@ -40,6 +40,10 @@ public class CloseSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CloseSessionResponseBody extends TeaModel {
         private String requestId; 
         private String sessionId; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(CloseSessionResponseBody model) {
+            this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
+            this.state = model.state;
+        } 
 
         /**
          * <p>Request ID.</p>

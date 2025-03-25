@@ -100,6 +100,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterDescription
      */
@@ -245,6 +249,30 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String taskId; 
         private String updateTime; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterResponseBody model) {
+            this.clusterDescription = model.clusterDescription;
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.clusterType = model.clusterType;
+            this.components = model.components;
+            this.computingIpVersion = model.computingIpVersion;
+            this.createTime = model.createTime;
+            this.hpnZone = model.hpnZone;
+            this.networks = model.networks;
+            this.nodeCount = model.nodeCount;
+            this.nodeGroupCount = model.nodeGroupCount;
+            this.openEniJumboFrame = model.openEniJumboFrame;
+            this.operatingState = model.operatingState;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.taskId = model.taskId;
+            this.updateTime = model.updateTime;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>Cluster Description</p>
@@ -488,6 +516,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String componentId; 
             private String componentType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentId = model.componentId;
+                this.componentType = model.componentType;
+            } 
+
             /**
              * <p>Component ID</p>
              * 
@@ -548,6 +584,13 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String vpdId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Networks model) {
+                this.vpdId = model.vpdId;
+            } 
 
             /**
              * <p>VPC Segment ID</p>

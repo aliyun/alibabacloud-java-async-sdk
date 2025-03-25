@@ -68,6 +68,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -89,6 +92,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.sn = builder.sn;
+        this.userData = builder.userData;
         this.zoneId = builder.zoneId;
     }
 
@@ -98,6 +102,10 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     public static DescribeNodeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -220,6 +228,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -244,7 +259,33 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String sn; 
+        private String userData; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNodeResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.createTime = model.createTime;
+            this.expiredTime = model.expiredTime;
+            this.hostname = model.hostname;
+            this.hpnZone = model.hpnZone;
+            this.imageId = model.imageId;
+            this.imageName = model.imageName;
+            this.machineType = model.machineType;
+            this.networks = model.networks;
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeGroupName = model.nodeGroupName;
+            this.nodeId = model.nodeId;
+            this.operatingState = model.operatingState;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.sn = model.sn;
+            this.userData = model.userData;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>Cluster ID</p>
@@ -431,6 +472,14 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+
+        /**
          * <p>Zone ID</p>
          * 
          * <strong>example:</strong>
@@ -514,6 +563,16 @@ public class DescribeNodeResponseBody extends TeaModel {
             private String ip; 
             private String subnetId; 
             private String vpdId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Networks model) {
+                this.bondName = model.bondName;
+                this.ip = model.ip;
+                this.subnetId = model.subnetId;
+                this.vpdId = model.vpdId;
+            } 
 
             /**
              * <p>Network interface port information</p>

@@ -74,7 +74,7 @@ public class CreateNetTestTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -345,6 +345,16 @@ public class CreateNetTestTaskRequest extends Request {
             private String resourceId; 
             private String serverName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.ip = model.ip;
+                this.nodeId = model.nodeId;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
+
             /**
              * <p>IP address.</p>
              * 
@@ -463,6 +473,16 @@ public class CreateNetTestTaskRequest extends Request {
             private java.util.List<Hosts> hosts; 
             private String model; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommTest model) {
+                this.GPUNum = model.GPUNum;
+                this.hosts = model.hosts;
+                this.model = model.model;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Number of GPUs</p>
@@ -592,6 +612,17 @@ public class CreateNetTestTaskRequest extends Request {
             private String resourceId; 
             private String serverName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DelayTestHosts model) {
+                this.bond = model.bond;
+                this.ip = model.ip;
+                this.nodeId = model.nodeId;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
+
             /**
              * <p>Network interface bond port</p>
              * 
@@ -685,6 +716,13 @@ public class CreateNetTestTaskRequest extends Request {
 
         public static final class Builder {
             private java.util.List<DelayTestHosts> hosts; 
+
+            private Builder() {
+            } 
+
+            private Builder(DelayTest model) {
+                this.hosts = model.hosts;
+            } 
 
             /**
              * <p>输入测试节点的hosts</p>
@@ -780,6 +818,17 @@ public class CreateNetTestTaskRequest extends Request {
             private String nodeId; 
             private String resourceId; 
             private String serverName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.bond = model.bond;
+                this.ip = model.ip;
+                this.nodeId = model.nodeId;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
 
             /**
              * <p>Network card bond interface</p>
@@ -922,6 +971,17 @@ public class CreateNetTestTaskRequest extends Request {
             private String nodeId; 
             private String resourceId; 
             private String serverName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.bond = model.bond;
+                this.ip = model.ip;
+                this.nodeId = model.nodeId;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
 
             /**
              * <p>Network card bond interface</p>
@@ -1088,6 +1148,19 @@ public class CreateNetTestTaskRequest extends Request {
             private Long qp; 
             private java.util.List<Servers> servers; 
             private String trafficModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficTest model) {
+                this.clients = model.clients;
+                this.duration = model.duration;
+                this.GDR = model.GDR;
+                this.protocol = model.protocol;
+                this.qp = model.qp;
+                this.servers = model.servers;
+                this.trafficModel = model.trafficModel;
+            } 
 
             /**
              * <p>Resource ID.</p>

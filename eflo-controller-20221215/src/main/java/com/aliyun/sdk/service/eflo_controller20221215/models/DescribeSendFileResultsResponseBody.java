@@ -40,6 +40,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return invocations
      */
@@ -65,6 +69,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         private Invocations invocations; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSendFileResultsResponseBody model) {
+            this.invocations = model.invocations;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Record of file distribution.</p>
@@ -217,6 +230,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private String nodeId; 
             private String startTime; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvokeNode model) {
+                this.creationTime = model.creationTime;
+                this.errorCode = model.errorCode;
+                this.errorInfo = model.errorInfo;
+                this.finishTime = model.finishTime;
+                this.invocationStatus = model.invocationStatus;
+                this.nodeId = model.nodeId;
+                this.startTime = model.startTime;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The creation time of the file distribution task.</p>
@@ -393,6 +420,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InvokeNode> invokeNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvokeNodes model) {
+                this.invokeNode = model.invokeNode;
+            } 
 
             /**
              * <p>Record of file distribution for the node.</p>
@@ -584,6 +618,25 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private Integer nodeCount; 
             private Boolean overwrite; 
             private String targetDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocation model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.fileGroup = model.fileGroup;
+                this.fileMode = model.fileMode;
+                this.fileOwner = model.fileOwner;
+                this.invocationStatus = model.invocationStatus;
+                this.invokeNodes = model.invokeNodes;
+                this.name = model.name;
+                this.nodeCount = model.nodeCount;
+                this.overwrite = model.overwrite;
+                this.targetDir = model.targetDir;
+            } 
 
             /**
              * <p>Output information after command execution.</p>
@@ -787,6 +840,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Invocation> invocation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invocations model) {
+                this.invocation = model.invocation;
+            } 
 
             /**
              * <p>Command execution ID.</p>

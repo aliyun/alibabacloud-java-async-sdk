@@ -40,6 +40,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machineTypes
      */
@@ -65,6 +69,15 @@ public class ListMachineTypesResponseBody extends TeaModel {
         private java.util.List<MachineTypes> machineTypes; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMachineTypesResponseBody model) {
+            this.machineTypes = model.machineTypes;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the machine types</p>
@@ -241,6 +254,22 @@ public class ListMachineTypesResponseBody extends TeaModel {
             private String nodeCount; 
             private Integer totalCpuCore; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineTypes model) {
+                this.bondNum = model.bondNum;
+                this.cpuInfo = model.cpuInfo;
+                this.diskInfo = model.diskInfo;
+                this.gpuInfo = model.gpuInfo;
+                this.memoryInfo = model.memoryInfo;
+                this.name = model.name;
+                this.networkInfo = model.networkInfo;
+                this.nodeCount = model.nodeCount;
+                this.totalCpuCore = model.totalCpuCore;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Number of bonds</p>

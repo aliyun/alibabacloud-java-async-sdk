@@ -54,7 +54,7 @@ public class ReimageNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -244,6 +244,16 @@ public class ReimageNodesRequest extends Request {
             private String imageId; 
             private String loginPassword; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.hostname = model.hostname;
+                this.imageId = model.imageId;
+                this.loginPassword = model.loginPassword;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>Hostname</p>

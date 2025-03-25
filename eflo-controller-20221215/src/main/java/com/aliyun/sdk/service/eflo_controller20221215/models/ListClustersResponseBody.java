@@ -40,6 +40,10 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -65,6 +69,15 @@ public class ListClustersResponseBody extends TeaModel {
         private java.util.List<Clusters> clusters; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Cluster information</p>
@@ -108,6 +121,81 @@ public class ListClustersResponseBody extends TeaModel {
      *
      * <p>ListClustersResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterDescription")
         private String clusterDescription;
@@ -145,6 +233,9 @@ public class ListClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
@@ -167,6 +258,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.nodeGroupCount = builder.nodeGroupCount;
             this.operatingState = builder.operatingState;
             this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
             this.taskId = builder.taskId;
             this.updateTime = builder.updateTime;
             this.vpcId = builder.vpcId;
@@ -265,6 +357,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -298,9 +397,32 @@ public class ListClustersResponseBody extends TeaModel {
             private Long nodeGroupCount; 
             private String operatingState; 
             private String resourceGroupId; 
+            private java.util.List<Tags> tags; 
             private String taskId; 
             private String updateTime; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterDescription = model.clusterDescription;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.components = model.components;
+                this.computingIpVersion = model.computingIpVersion;
+                this.createTime = model.createTime;
+                this.hpnZone = model.hpnZone;
+                this.nodeCount = model.nodeCount;
+                this.nodeGroupCount = model.nodeGroupCount;
+                this.operatingState = model.operatingState;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+                this.updateTime = model.updateTime;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>Cluster description</p>
@@ -431,6 +553,14 @@ public class ListClustersResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

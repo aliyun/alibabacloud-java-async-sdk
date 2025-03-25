@@ -49,7 +49,7 @@ public class ShrinkClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,6 +182,13 @@ public class ShrinkClusterRequest extends Request {
         public static final class Builder {
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>Node ID</p>
              * 
@@ -243,6 +250,14 @@ public class ShrinkClusterRequest extends Request {
         public static final class Builder {
             private String nodeGroupId; 
             private java.util.List<Nodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeGroups model) {
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodes = model.nodes;
+            } 
 
             /**
              * <p>Node group ID</p>

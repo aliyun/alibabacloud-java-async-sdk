@@ -51,7 +51,7 @@ public class CreateNodeGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,12 +176,16 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String nodeGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("UserData")
+        private String userData;
+
         private NodeGroup(Builder builder) {
             this.az = builder.az;
             this.imageId = builder.imageId;
             this.machineType = builder.machineType;
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
+            this.userData = builder.userData;
         }
 
         public static Builder builder() {
@@ -227,12 +231,32 @@ public class CreateNodeGroupRequest extends Request {
             return this.nodeGroupName;
         }
 
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
         public static final class Builder {
             private String az; 
             private String imageId; 
             private String machineType; 
             private String nodeGroupDescription; 
             private String nodeGroupName; 
+            private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeGroup model) {
+                this.az = model.az;
+                this.imageId = model.imageId;
+                this.machineType = model.machineType;
+                this.nodeGroupDescription = model.nodeGroupDescription;
+                this.nodeGroupName = model.nodeGroupName;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -283,6 +307,14 @@ public class CreateNodeGroupRequest extends Request {
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
                 return this;
             }
 

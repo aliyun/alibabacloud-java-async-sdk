@@ -36,6 +36,10 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String testId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNetTestTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.testId = model.testId;
+        } 
 
         /**
          * <p>ID of the request</p>

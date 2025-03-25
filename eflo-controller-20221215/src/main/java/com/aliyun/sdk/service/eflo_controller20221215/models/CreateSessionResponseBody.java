@@ -48,6 +48,10 @@ public class CreateSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class CreateSessionResponseBody extends TeaModel {
         private String sessionId; 
         private String sessionToken; 
         private String wssEndpoint; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSessionResponseBody model) {
+            this.requestId = model.requestId;
+            this.serverSn = model.serverSn;
+            this.sessionId = model.sessionId;
+            this.sessionToken = model.sessionToken;
+            this.wssEndpoint = model.wssEndpoint;
+        } 
 
         /**
          * <p>ID of the request</p>

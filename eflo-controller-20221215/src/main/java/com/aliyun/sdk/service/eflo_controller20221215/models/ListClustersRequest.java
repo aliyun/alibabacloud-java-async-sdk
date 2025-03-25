@@ -33,12 +33,17 @@ public class ListClustersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private ListClustersRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -49,7 +54,7 @@ public class ListClustersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,11 +87,19 @@ public class ListClustersRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListClustersRequest, Builder> {
         private String regionId; 
         private Long maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ListClustersRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class ListClustersRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public ListClustersRequest build() {
             return new ListClustersRequest(this);
@@ -152,4 +175,81 @@ public class ListClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListClustersRequest} extends {@link TeaModel}
+     *
+     * <p>ListClustersRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(maxLength = 129)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 129)
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

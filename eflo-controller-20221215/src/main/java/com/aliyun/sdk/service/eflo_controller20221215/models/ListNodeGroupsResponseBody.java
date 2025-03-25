@@ -40,6 +40,10 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -65,6 +69,15 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         private java.util.List<Groups> groups; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodeGroupsResponseBody model) {
+            this.groups = model.groups;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Cluster group information</p>
@@ -265,6 +278,24 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             private Long nodeCount; 
             private String updateTime; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.machineType = model.machineType;
+                this.nodeCount = model.nodeCount;
+                this.updateTime = model.updateTime;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Cluster ID</p>

@@ -54,7 +54,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -218,6 +218,14 @@ public class CreateDiagnosticTaskRequest extends Request {
             private String datetime; 
             private String logContent; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.datetime = model.datetime;
+                this.logContent = model.logContent;
+            } 
+
             /**
              * <p>Sent date, in the format yyyymmdd.</p>
              * 
@@ -302,6 +310,15 @@ public class CreateDiagnosticTaskRequest extends Request {
             private String aiInstance; 
             private java.util.List<Logs> logs; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiJobLogs model) {
+                this.aiInstance = model.aiInstance;
+                this.logs = model.logs;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>Instance ID</p>
@@ -395,6 +412,15 @@ public class CreateDiagnosticTaskRequest extends Request {
             private java.util.List<AiJobLogs> aiJobLogs; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiJobLogInfo model) {
+                this.aiJobLogs = model.aiJobLogs;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>Task logs</p>

@@ -64,7 +64,7 @@ public class ExtendClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -268,6 +268,14 @@ public class ExtendClusterRequest extends Request {
             private String name; 
             private String subnet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Bonds model) {
+                this.name = model.name;
+                this.subnet = model.subnet;
+            } 
+
             /**
              * <p>Bond name</p>
              * 
@@ -341,6 +349,14 @@ public class ExtendClusterRequest extends Request {
             private String bondDefaultSubnet; 
             private java.util.List<Bonds> bonds; 
 
+            private Builder() {
+            } 
+
+            private Builder(BondPolicy model) {
+                this.bondDefaultSubnet = model.bondDefaultSubnet;
+                this.bonds = model.bonds;
+            } 
+
             /**
              * <p>Default bond cluster subnet</p>
              * 
@@ -410,6 +426,14 @@ public class ExtendClusterRequest extends Request {
         public static final class Builder {
             private String name; 
             private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineTypePolicyBonds model) {
+                this.name = model.name;
+                this.subnet = model.subnet;
+            } 
 
             /**
              * <p>Bond name</p>
@@ -484,6 +508,14 @@ public class ExtendClusterRequest extends Request {
             private java.util.List<MachineTypePolicyBonds> bonds; 
             private String machineType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MachineTypePolicy model) {
+                this.bonds = model.bonds;
+                this.machineType = model.machineType;
+            } 
+
             /**
              * <p>Bond information</p>
              */
@@ -553,6 +585,14 @@ public class ExtendClusterRequest extends Request {
         public static final class Builder {
             private String name; 
             private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePolicyBonds model) {
+                this.name = model.name;
+                this.subnet = model.subnet;
+            } 
 
             /**
              * <p>Bond name</p>
@@ -626,6 +666,14 @@ public class ExtendClusterRequest extends Request {
         public static final class Builder {
             private java.util.List<NodePolicyBonds> bonds; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePolicy model) {
+                this.bonds = model.bonds;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>Bond information</p>
@@ -708,6 +756,15 @@ public class ExtendClusterRequest extends Request {
             private BondPolicy bondPolicy; 
             private java.util.List<MachineTypePolicy> machineTypePolicy; 
             private java.util.List<NodePolicy> nodePolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpAllocationPolicy model) {
+                this.bondPolicy = model.bondPolicy;
+                this.machineTypePolicy = model.machineTypePolicy;
+                this.nodePolicy = model.nodePolicy;
+            } 
 
             /**
              * <p>Specify the cluster subnet ID based on the bond name</p>
@@ -819,6 +876,17 @@ public class ExtendClusterRequest extends Request {
             private String nodeId; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.hostname = model.hostname;
+                this.loginPassword = model.loginPassword;
+                this.nodeId = model.nodeId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>Hostname</p>
@@ -949,6 +1017,16 @@ public class ExtendClusterRequest extends Request {
             private java.util.List<Nodes> nodes; 
             private String userData; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeGroups model) {
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodes = model.nodes;
+                this.userData = model.userData;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Node Group ID</p>

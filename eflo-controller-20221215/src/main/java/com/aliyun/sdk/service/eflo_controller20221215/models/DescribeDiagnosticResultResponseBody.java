@@ -64,6 +64,10 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -137,6 +141,21 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         private String endTime; 
         private java.util.List<String> nodeIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosticResultResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.createdTime = model.createdTime;
+            this.diagnosticId = model.diagnosticId;
+            this.diagnosticResults = model.diagnosticResults;
+            this.diagnosticState = model.diagnosticState;
+            this.diagnosticType = model.diagnosticType;
+            this.endTime = model.endTime;
+            this.nodeIds = model.nodeIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ClusterId.

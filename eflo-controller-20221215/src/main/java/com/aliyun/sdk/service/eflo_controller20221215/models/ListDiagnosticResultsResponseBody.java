@@ -44,6 +44,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnosticResults
      */
@@ -77,6 +81,16 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDiagnosticResultsResponseBody model) {
+            this.diagnosticResults = model.diagnosticResults;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Diagnostic information</p>
@@ -267,6 +281,22 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             private String resourceId; 
             private String serverName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiagnosticResults model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.creationTime = model.creationTime;
+                this.diagContent = model.diagContent;
+                this.diagId = model.diagId;
+                this.diagResult = model.diagResult;
+                this.finishedTime = model.finishedTime;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Cluster ID</p>

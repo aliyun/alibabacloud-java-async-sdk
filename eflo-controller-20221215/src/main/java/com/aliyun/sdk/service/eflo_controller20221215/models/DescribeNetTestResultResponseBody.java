@@ -80,6 +80,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -185,6 +189,25 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         private String status; 
         private String testId; 
         private TrafficTest trafficTest; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetTestResultResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.commTest = model.commTest;
+            this.creationTime = model.creationTime;
+            this.delayTest = model.delayTest;
+            this.finishedTime = model.finishedTime;
+            this.netTestType = model.netTestType;
+            this.port = model.port;
+            this.requestId = model.requestId;
+            this.resultDetial = model.resultDetial;
+            this.status = model.status;
+            this.testId = model.testId;
+            this.trafficTest = model.trafficTest;
+        } 
 
         /**
          * <p>Cluster ID.</p>
@@ -387,6 +410,15 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             private String resourceId; 
             private String serverName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.ip = model.ip;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
+
             /**
              * <p>IP address</p>
              * 
@@ -494,6 +526,16 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             private java.util.List<Hosts> hosts; 
             private String model; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommTest model) {
+                this.GPUNum = model.GPUNum;
+                this.hosts = model.hosts;
+                this.model = model.model;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Number of GPUs</p>
@@ -611,6 +653,16 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             private String resourceId; 
             private String serverName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DelayTestHosts model) {
+                this.bond = model.bond;
+                this.ip = model.ip;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
+
             /**
              * <p>Network card bond interface</p>
              * 
@@ -694,6 +746,13 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DelayTestHosts> hosts; 
 
+            private Builder() {
+            } 
+
+            private Builder(DelayTest model) {
+                this.hosts = model.hosts;
+            } 
+
             /**
              * <p>Input the hosts of the test nodes</p>
              */
@@ -776,6 +835,16 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             private String ip; 
             private String resourceId; 
             private String serverName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.bond = model.bond;
+                this.ip = model.ip;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
 
             /**
              * <p>Network card bond interface</p>
@@ -895,6 +964,16 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             private String ip; 
             private String resourceId; 
             private String serverName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.bond = model.bond;
+                this.ip = model.ip;
+                this.resourceId = model.resourceId;
+                this.serverName = model.serverName;
+            } 
 
             /**
              * <p>Network card bond interface</p>
@@ -1050,6 +1129,19 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             private Long qp; 
             private java.util.List<Servers> servers; 
             private String trafficModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficTest model) {
+                this.clients = model.clients;
+                this.duration = model.duration;
+                this.GDR = model.GDR;
+                this.protocol = model.protocol;
+                this.qp = model.qp;
+                this.servers = model.servers;
+                this.trafficModel = model.trafficModel;
+            } 
 
             /**
              * <p>Resource ID.</p>

@@ -94,7 +94,7 @@ public class CreateClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -419,6 +419,14 @@ public class CreateClusterRequest extends Request {
             private Object basicArgs; 
             private java.util.List<?> nodeUnits; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComponentConfig model) {
+                this.basicArgs = model.basicArgs;
+                this.nodeUnits = model.nodeUnits;
+            } 
+
             /**
              * <p>Basic component parameters</p>
              * 
@@ -517,6 +525,14 @@ public class CreateClusterRequest extends Request {
             private ComponentConfig componentConfig; 
             private String componentType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentConfig = model.componentConfig;
+                this.componentType = model.componentType;
+            } 
+
             /**
              * <p>Component configuration</p>
              */
@@ -586,6 +602,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String name; 
             private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bonds model) {
+                this.name = model.name;
+                this.subnet = model.subnet;
+            } 
 
             /**
              * <p>Bond name</p>
@@ -660,6 +684,14 @@ public class CreateClusterRequest extends Request {
             private String bondDefaultSubnet; 
             private java.util.List<Bonds> bonds; 
 
+            private Builder() {
+            } 
+
+            private Builder(BondPolicy model) {
+                this.bondDefaultSubnet = model.bondDefaultSubnet;
+                this.bonds = model.bonds;
+            } 
+
             /**
              * <p>Default bond cluster subnet</p>
              * 
@@ -729,6 +761,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String name; 
             private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineTypePolicyBonds model) {
+                this.name = model.name;
+                this.subnet = model.subnet;
+            } 
 
             /**
              * <p>Bond name</p>
@@ -803,6 +843,14 @@ public class CreateClusterRequest extends Request {
             private java.util.List<MachineTypePolicyBonds> bonds; 
             private String machineType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MachineTypePolicy model) {
+                this.bonds = model.bonds;
+                this.machineType = model.machineType;
+            } 
+
             /**
              * <p>Bond information</p>
              */
@@ -872,6 +920,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String name; 
             private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePolicyBonds model) {
+                this.name = model.name;
+                this.subnet = model.subnet;
+            } 
 
             /**
              * <p>Bond name</p>
@@ -945,6 +1001,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private java.util.List<NodePolicyBonds> bonds; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePolicy model) {
+                this.bonds = model.bonds;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>Bond information</p>
@@ -1027,6 +1091,15 @@ public class CreateClusterRequest extends Request {
             private BondPolicy bondPolicy; 
             private java.util.List<MachineTypePolicy> machineTypePolicy; 
             private java.util.List<NodePolicy> nodePolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpAllocationPolicy model) {
+                this.bondPolicy = model.bondPolicy;
+                this.machineTypePolicy = model.machineTypePolicy;
+                this.nodePolicy = model.nodePolicy;
+            } 
 
             /**
              * <p>Bond policy</p>
@@ -1114,6 +1187,15 @@ public class CreateClusterRequest extends Request {
             private String subnetCidr; 
             private String subnetType; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdSubnets model) {
+                this.subnetCidr = model.subnetCidr;
+                this.subnetType = model.subnetType;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Subnet CIDR</p>
@@ -1259,6 +1341,19 @@ public class CreateClusterRequest extends Request {
             private String vpdCidr; 
             private java.util.List<VpdSubnets> vpdSubnets; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewVpdInfo model) {
+                this.cenId = model.cenId;
+                this.cloudLinkCidr = model.cloudLinkCidr;
+                this.cloudLinkId = model.cloudLinkId;
+                this.monitorVpcId = model.monitorVpcId;
+                this.monitorVswitchId = model.monitorVswitchId;
+                this.vpdCidr = model.vpdCidr;
+                this.vpdSubnets = model.vpdSubnets;
+            } 
+
             /**
              * <p>Cloud Enterprise Network ID</p>
              * 
@@ -1383,6 +1478,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String vpdId; 
             private java.util.List<String> vpdSubnets; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdInfo model) {
+                this.vpdId = model.vpdId;
+                this.vpdSubnets = model.vpdSubnets;
+            } 
 
             /**
              * <p>VPC ID</p>
@@ -1525,6 +1628,20 @@ public class CreateClusterRequest extends Request {
             private String vSwitchZoneId; 
             private String vpcId; 
             private VpdInfo vpdInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Networks model) {
+                this.ipAllocationPolicy = model.ipAllocationPolicy;
+                this.newVpdInfo = model.newVpdInfo;
+                this.securityGroupId = model.securityGroupId;
+                this.tailIpVersion = model.tailIpVersion;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchZoneId = model.vSwitchZoneId;
+                this.vpcId = model.vpcId;
+                this.vpdInfo = model.vpdInfo;
+            } 
 
             /**
              * <p>IP allocation policy</p>
@@ -1692,6 +1809,17 @@ public class CreateClusterRequest extends Request {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.hostname = model.hostname;
+                this.loginPassword = model.loginPassword;
+                this.nodeId = model.nodeId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>Hostname</p>
              * 
@@ -1858,6 +1986,19 @@ public class CreateClusterRequest extends Request {
             private String userData; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeGroups model) {
+                this.imageId = model.imageId;
+                this.machineType = model.machineType;
+                this.nodeGroupDescription = model.nodeGroupDescription;
+                this.nodeGroupName = model.nodeGroupName;
+                this.nodes = model.nodes;
+                this.userData = model.userData;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>System image ID</p>
              * 
@@ -1982,6 +2123,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Key</p>
