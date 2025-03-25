@@ -631,6 +631,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
+     * @return DescribeHistoryTasksResponse
+     */
+    CompletableFuture<DescribeHistoryTasksResponse> describeHistoryTasks(DescribeHistoryTasksRequest request);
+
+    /**
      * @param request the request parameters of DescribeLicenseOrderDetails  DescribeLicenseOrderDetailsRequest
      * @return DescribeLicenseOrderDetailsResponse
      */

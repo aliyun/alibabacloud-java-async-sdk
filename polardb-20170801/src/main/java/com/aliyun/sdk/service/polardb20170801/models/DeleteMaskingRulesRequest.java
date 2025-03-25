@@ -105,7 +105,11 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * InterfaceVersion.
+         * <p>Deletes data masking or encryption rules. Valid values:</p>
+         * <p>v1: deletes data masking rules. v2: deletes data encryption rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder interfaceVersion(String interfaceVersion) {
             this.putQueryParameter("InterfaceVersion", interfaceVersion);

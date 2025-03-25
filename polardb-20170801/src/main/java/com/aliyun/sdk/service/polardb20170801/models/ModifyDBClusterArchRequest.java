@@ -101,7 +101,10 @@ public class ModifyDBClusterArchRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -110,7 +113,14 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * HotStandbyCluster.
+         * <p>Specifies whether to enable the hot standby storage cluster feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables hot standby storage cluster.</li>
+         * <li><strong>equal</strong>: Enable a peer-to-peer cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hotStandbyCluster(String hotStandbyCluster) {
             this.putQueryParameter("HotStandbyCluster", hotStandbyCluster);
@@ -119,7 +129,13 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +144,16 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * StandbyAZ.
+         * <p>The zone of the hot standby storage cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>auto</strong> (default): The zone is automatically selected.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can use the default value when HotStandbyCluster is set to on. If HotStandbyCluster is set to equal, specify the zone of the hot standby storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query information about zones.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-i</p>
          */
         public Builder standbyAZ(String standbyAZ) {
             this.putQueryParameter("StandbyAZ", standbyAZ);

@@ -332,7 +332,11 @@ public class ModifyDBClusterRequest extends Request {
         /**
          * <p>The fault injection method. Valid values:</p>
          * <ul>
-         * <li>CrashSQLInjection: <code>Crash SQL</code>-based fault injection.</li>
+         * <li>0: <code>Crash SQL</code>-based fault injection.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CrashSQLInjection: CrashSQLInjection.</li>
          * </ul>
          * 
          * <strong>example:</strong>

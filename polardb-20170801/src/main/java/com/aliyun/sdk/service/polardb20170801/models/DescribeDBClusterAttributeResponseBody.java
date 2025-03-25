@@ -26,6 +26,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
+    @com.aliyun.core.annotation.NameInMap("AutoUpgradeMinorVersion")
+    private String autoUpgradeMinorVersion;
+
     @com.aliyun.core.annotation.NameInMap("BlktagTotal")
     private Long blktagTotal;
 
@@ -216,6 +219,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.aiCreatingTime = builder.aiCreatingTime;
         this.aiType = builder.aiType;
         this.architecture = builder.architecture;
+        this.autoUpgradeMinorVersion = builder.autoUpgradeMinorVersion;
         this.blktagTotal = builder.blktagTotal;
         this.blktagUsed = builder.blktagUsed;
         this.burstingEnabled = builder.burstingEnabled;
@@ -311,6 +315,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return autoUpgradeMinorVersion
+     */
+    public String getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -751,6 +762,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String aiCreatingTime; 
         private String aiType; 
         private String architecture; 
+        private String autoUpgradeMinorVersion; 
         private Long blktagTotal; 
         private Long blktagUsed; 
         private String burstingEnabled; 
@@ -821,6 +833,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.aiCreatingTime = model.aiCreatingTime;
             this.aiType = model.aiType;
             this.architecture = model.architecture;
+            this.autoUpgradeMinorVersion = model.autoUpgradeMinorVersion;
             this.blktagTotal = model.blktagTotal;
             this.blktagUsed = model.blktagUsed;
             this.burstingEnabled = model.burstingEnabled;
@@ -923,6 +936,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder architecture(String architecture) {
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * AutoUpgradeMinorVersion.
+         */
+        public Builder autoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
+            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
@@ -1812,6 +1833,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubCluster")
         private String subCluster;
 
+        @com.aliyun.core.annotation.NameInMap("SubGroupDescription")
+        private String subGroupDescription;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -1840,6 +1864,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.serverWeight = builder.serverWeight;
             this.serverlessType = builder.serverlessType;
             this.subCluster = builder.subCluster;
+            this.subGroupDescription = builder.subGroupDescription;
             this.zoneId = builder.zoneId;
         }
 
@@ -2020,6 +2045,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return subGroupDescription
+         */
+        public String getSubGroupDescription() {
+            return this.subGroupDescription;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -2051,6 +2083,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String serverWeight; 
             private String serverlessType; 
             private String subCluster; 
+            private String subGroupDescription; 
             private String zoneId; 
 
             private Builder() {
@@ -2081,6 +2114,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.serverWeight = model.serverWeight;
                 this.serverlessType = model.serverlessType;
                 this.subCluster = model.subCluster;
+                this.subGroupDescription = model.subGroupDescription;
                 this.zoneId = model.zoneId;
             } 
 
@@ -2388,6 +2422,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder subCluster(String subCluster) {
                 this.subCluster = subCluster;
+                return this;
+            }
+
+            /**
+             * SubGroupDescription.
+             */
+            public Builder subGroupDescription(String subGroupDescription) {
+                this.subGroupDescription = subGroupDescription;
                 return this;
             }
 
