@@ -73,7 +73,7 @@ public class AddSmsSignRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -320,6 +320,14 @@ public class AddSmsSignRequest extends Request {
         public static final class Builder {
             private String fileContents; 
             private String fileSuffix; 
+
+            private Builder() {
+            } 
+
+            private Builder(SignFileList model) {
+                this.fileContents = model.fileContents;
+                this.fileSuffix = model.fileSuffix;
+            } 
 
             /**
              * <p>The Base64-encoded string of the qualification document. An image cannot exceed 2 MB in size. In some scenarios, you must upload supporting documents to apply for signatures. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>.</p>

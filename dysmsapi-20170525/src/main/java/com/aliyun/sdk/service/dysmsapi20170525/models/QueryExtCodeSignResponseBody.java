@@ -52,6 +52,10 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -101,6 +105,18 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryExtCodeSignResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -236,6 +252,17 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
             private String signName; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.active = model.active;
+                this.extCode = model.extCode;
+                this.sendCount = model.sendCount;
+                this.signName = model.signName;
+                this.source = model.source;
+            } 
+
             /**
              * <p>是否可回收</p>
              * 
@@ -365,6 +392,16 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * List.

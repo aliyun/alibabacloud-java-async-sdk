@@ -44,6 +44,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySendStatisticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -209,6 +223,17 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             private String sendDate; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetList model) {
+                this.noRespondedCount = model.noRespondedCount;
+                this.respondedFailCount = model.respondedFailCount;
+                this.respondedSuccessCount = model.respondedSuccessCount;
+                this.sendDate = model.sendDate;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of messages without a delivery receipt.</p>
              * 
@@ -314,6 +339,14 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TargetList> targetList; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.targetList = model.targetList;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The details of the data returned.</p>

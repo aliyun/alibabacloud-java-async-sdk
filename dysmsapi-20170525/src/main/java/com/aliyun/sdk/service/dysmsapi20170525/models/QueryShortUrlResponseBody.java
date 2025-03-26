@@ -44,6 +44,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QueryShortUrlResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryShortUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -244,6 +258,20 @@ public class QueryShortUrlResponseBody extends TeaModel {
             private String shortUrlStatus; 
             private String sourceUrl; 
             private String uniqueVisitorCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createDate = model.createDate;
+                this.expireDate = model.expireDate;
+                this.pageViewCount = model.pageViewCount;
+                this.shortUrl = model.shortUrl;
+                this.shortUrlName = model.shortUrlName;
+                this.shortUrlStatus = model.shortUrlStatus;
+                this.sourceUrl = model.sourceUrl;
+                this.uniqueVisitorCount = model.uniqueVisitorCount;
+            } 
 
             /**
              * <p>The time when the short URL was created.</p>

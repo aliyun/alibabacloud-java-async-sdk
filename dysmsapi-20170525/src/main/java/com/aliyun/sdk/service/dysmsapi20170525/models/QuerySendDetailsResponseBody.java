@@ -48,6 +48,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         private String requestId; 
         private SmsSendDetailDTOs smsSendDetailDTOs; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySendDetailsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.smsSendDetailDTOs = model.smsSendDetailDTOs;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -268,6 +283,20 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             private Long sendStatus; 
             private String templateCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(SmsSendDetailDTO model) {
+                this.content = model.content;
+                this.errCode = model.errCode;
+                this.outId = model.outId;
+                this.phoneNum = model.phoneNum;
+                this.receiveDate = model.receiveDate;
+                this.sendDate = model.sendDate;
+                this.sendStatus = model.sendStatus;
+                this.templateCode = model.templateCode;
+            } 
+
             /**
              * <p>The content of the message.</p>
              * 
@@ -403,6 +432,13 @@ public class QuerySendDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SmsSendDetailDTO> smsSendDetailDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmsSendDetailDTOs model) {
+                this.smsSendDetailDTO = model.smsSendDetailDTO;
+            } 
 
             /**
              * SmsSendDetailDTO.

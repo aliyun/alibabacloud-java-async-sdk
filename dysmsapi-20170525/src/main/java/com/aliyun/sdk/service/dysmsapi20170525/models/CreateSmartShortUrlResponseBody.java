@@ -44,6 +44,10 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
         private String message; 
         private java.util.List<Model> model; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSmartShortUrlResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -195,6 +209,17 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
             private String phoneNumber; 
             private String shortName; 
             private String shortUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.domain = model.domain;
+                this.expiration = model.expiration;
+                this.phoneNumber = model.phoneNumber;
+                this.shortName = model.shortName;
+                this.shortUrl = model.shortUrl;
+            } 
 
             /**
              * Domain.

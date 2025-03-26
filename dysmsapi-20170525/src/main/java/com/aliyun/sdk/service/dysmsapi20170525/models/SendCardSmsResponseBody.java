@@ -44,6 +44,10 @@ public class SendCardSmsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class SendCardSmsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendCardSmsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -224,6 +238,18 @@ public class SendCardSmsResponseBody extends TeaModel {
             private Integer cardTmpState; 
             private String mediaMobiles; 
             private String notMediaMobiles; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizCardId = model.bizCardId;
+                this.bizDigitalId = model.bizDigitalId;
+                this.bizSmsId = model.bizSmsId;
+                this.cardTmpState = model.cardTmpState;
+                this.mediaMobiles = model.mediaMobiles;
+                this.notMediaMobiles = model.notMediaMobiles;
+            } 
 
             /**
              * <p>The ID of the card message.</p>

@@ -40,6 +40,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         private String code; 
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UntagResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>

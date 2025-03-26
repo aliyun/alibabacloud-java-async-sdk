@@ -40,6 +40,10 @@ public class TagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class TagResourcesResponseBody extends TeaModel {
         private String code; 
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TagResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>

@@ -56,6 +56,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SmsSignList> smsSignList; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmsSignListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.smsSignList = model.smsSignList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -254,6 +271,15 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             private String rejectInfo; 
             private String rejectSubInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reason model) {
+                this.rejectDate = model.rejectDate;
+                this.rejectInfo = model.rejectInfo;
+                this.rejectSubInfo = model.rejectSubInfo;
+            } 
+
             /**
              * <p>The time when the signature was rejected. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
@@ -385,6 +411,18 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             private String orderId; 
             private Reason reason; 
             private String signName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmsSignList model) {
+                this.auditStatus = model.auditStatus;
+                this.businessType = model.businessType;
+                this.createDate = model.createDate;
+                this.orderId = model.orderId;
+                this.reason = model.reason;
+                this.signName = model.signName;
+            } 
 
             /**
              * <p>The approval status of the signature. Valid values:</p>

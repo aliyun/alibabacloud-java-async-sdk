@@ -44,6 +44,10 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCardSmsTemplateReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -164,6 +178,13 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<java.util.Map<String, ?>> model; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.model = model.model;
+            } 
 
             /**
              * <p>The details of the data returned.</p>

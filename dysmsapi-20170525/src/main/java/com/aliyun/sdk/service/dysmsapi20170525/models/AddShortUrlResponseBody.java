@@ -44,6 +44,10 @@ public class AddShortUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class AddShortUrlResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddShortUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -184,6 +198,15 @@ public class AddShortUrlResponseBody extends TeaModel {
             private String expireDate; 
             private String shortUrl; 
             private String sourceUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.expireDate = model.expireDate;
+                this.shortUrl = model.shortUrl;
+                this.sourceUrl = model.sourceUrl;
+            } 
 
             /**
              * <p>The time when the short URL expires.</p>

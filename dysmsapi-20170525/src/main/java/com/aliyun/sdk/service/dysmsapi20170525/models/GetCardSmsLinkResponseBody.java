@@ -44,6 +44,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCardSmsLinkResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -212,6 +226,17 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
             private String cardSmsLinks; 
             private Integer cardTmpState; 
             private String notMediaMobiles; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cardPhoneNumbers = model.cardPhoneNumbers;
+                this.cardSignNames = model.cardSignNames;
+                this.cardSmsLinks = model.cardSmsLinks;
+                this.cardTmpState = model.cardTmpState;
+                this.notMediaMobiles = model.notMediaMobiles;
+            } 
 
             /**
              * <p>The mobile phone numbers that support card messages.</p>

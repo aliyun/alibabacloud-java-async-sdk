@@ -68,6 +68,10 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -149,6 +153,22 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         private String templateName; 
         private Integer templateStatus; 
         private Integer templateType; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmsTemplateResponseBody model) {
+            this.code = model.code;
+            this.createDate = model.createDate;
+            this.message = model.message;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.templateCode = model.templateCode;
+            this.templateContent = model.templateContent;
+            this.templateName = model.templateName;
+            this.templateStatus = model.templateStatus;
+            this.templateType = model.templateType;
+        } 
 
         /**
          * <p>The HTTP status code.</p>

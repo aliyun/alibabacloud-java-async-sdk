@@ -44,6 +44,10 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckMobilesCardSupportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -177,6 +191,14 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
             private String mobile; 
             private Boolean support; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryResult model) {
+                this.mobile = model.mobile;
+                this.support = model.support;
+            } 
+
             /**
              * <p>The mobile phone number.</p>
              * 
@@ -241,6 +263,13 @@ public class CheckMobilesCardSupportResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<QueryResult> queryResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.queryResult = model.queryResult;
+            } 
 
             /**
              * <p>The list of returned results.</p>

@@ -48,6 +48,10 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCardSmsDetailsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.cardSendDetailDTO = model.cardSendDetailDTO;
+            this.code = model.code;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Access denied detail; this field is returned only if the RAM check fails.</p>
@@ -307,6 +322,23 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
             private String smsContent; 
             private String templateCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.errCode = model.errCode;
+                this.outId = model.outId;
+                this.phoneNumber = model.phoneNumber;
+                this.receiveDate = model.receiveDate;
+                this.receiveType = model.receiveType;
+                this.renderDate = model.renderDate;
+                this.renderStatus = model.renderStatus;
+                this.sendDate = model.sendDate;
+                this.sendStatus = model.sendStatus;
+                this.smsContent = model.smsContent;
+                this.templateCode = model.templateCode;
+            } 
+
             /**
              * <p>Error code for sending</p>
              * 
@@ -502,6 +534,16 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
             private Long pageSize; 
             private java.util.List<Records> records; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CardSendDetailDTO model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Current page number</p>

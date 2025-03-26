@@ -44,6 +44,10 @@ public class SendSmsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizId
      */
@@ -77,6 +81,16 @@ public class SendSmsResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendSmsResponseBody model) {
+            this.bizId = model.bizId;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the delivery receipt.</p>

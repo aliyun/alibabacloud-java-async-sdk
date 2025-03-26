@@ -44,6 +44,10 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaResourceIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -176,6 +190,14 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         public static final class Builder {
             private String resUrlDownload; 
             private Long resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resUrlDownload = model.resUrlDownload;
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * <p>The download URL of the resource.</p>

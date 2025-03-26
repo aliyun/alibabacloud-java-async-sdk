@@ -44,6 +44,10 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOSSInfoForCardTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -248,6 +262,20 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
             private String policy; 
             private String signature; 
             private String startPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.aliUid = model.aliUid;
+                this.bucket = model.bucket;
+                this.expireTime = model.expireTime;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+                this.startPath = model.startPath;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>

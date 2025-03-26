@@ -52,6 +52,10 @@ public class CreateSmsTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateSmsTemplateResponseBody extends TeaModel {
         private String requestId; 
         private String templateCode; 
         private String templateName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSmsTemplateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.templateCode = model.templateCode;
+            this.templateName = model.templateName;
+        } 
 
         /**
          * <p>Request status code.</p>

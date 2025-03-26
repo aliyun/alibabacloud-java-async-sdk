@@ -48,6 +48,10 @@ public class GetOSSInfoForUploadFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetOSSInfoForUploadFileResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOSSInfoForUploadFileResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Request status code.</p>
@@ -247,6 +262,18 @@ public class GetOSSInfoForUploadFileResponseBody extends TeaModel {
             private String policy; 
             private String signature; 
             private String startPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.accessKeyId = model.accessKeyId;
+                this.expireTime = model.expireTime;
+                this.host = model.host;
+                this.policy = model.policy;
+                this.signature = model.signature;
+                this.startPath = model.startPath;
+            } 
 
             /**
              * <p>AccessKey ID used for signing.</p>

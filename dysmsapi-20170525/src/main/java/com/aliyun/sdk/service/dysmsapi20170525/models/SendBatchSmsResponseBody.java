@@ -44,6 +44,10 @@ public class SendBatchSmsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizId
      */
@@ -77,6 +81,16 @@ public class SendBatchSmsResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendBatchSmsResponseBody model) {
+            this.bizId = model.bizId;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.</p>

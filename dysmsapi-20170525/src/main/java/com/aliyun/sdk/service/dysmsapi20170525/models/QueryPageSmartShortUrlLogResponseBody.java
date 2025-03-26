@@ -48,6 +48,10 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
         private Model model; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPageSmartShortUrlLogResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -228,6 +243,18 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
             private String shortName; 
             private String shortUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.clickState = model.clickState;
+                this.clickTime = model.clickTime;
+                this.createTime = model.createTime;
+                this.phoneNumber = model.phoneNumber;
+                this.shortName = model.shortName;
+                this.shortUrl = model.shortUrl;
+            } 
+
             /**
              * ClickState.
              */
@@ -362,6 +389,17 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
             private Long pageSize; 
             private Long totalCount; 
             private Long totalPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
 
             /**
              * List.

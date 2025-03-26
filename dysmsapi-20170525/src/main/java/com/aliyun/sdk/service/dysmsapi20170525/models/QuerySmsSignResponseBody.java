@@ -56,6 +56,10 @@ public class QuerySmsSignResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QuerySmsSignResponseBody extends TeaModel {
         private String requestId; 
         private String signName; 
         private Integer signStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmsSignResponseBody model) {
+            this.code = model.code;
+            this.createDate = model.createDate;
+            this.message = model.message;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.signName = model.signName;
+            this.signStatus = model.signStatus;
+        } 
 
         /**
          * <p>The response code.</p>

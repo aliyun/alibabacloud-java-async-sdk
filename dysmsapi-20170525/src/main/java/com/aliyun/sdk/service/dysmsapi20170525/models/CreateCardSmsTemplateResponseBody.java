@@ -44,6 +44,10 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCardSmsTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -164,6 +178,13 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String templateCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.templateCode = model.templateCode;
+            } 
 
             /**
              * <p>The code of the message template.</p>

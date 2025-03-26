@@ -96,6 +96,10 @@ public class GetSmsSignResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applyScene
      */
@@ -233,6 +237,29 @@ public class GetSmsSignResponseBody extends TeaModel {
         private String signTag; 
         private String signUsage; 
         private Boolean thirdParty; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSmsSignResponseBody model) {
+            this.applyScene = model.applyScene;
+            this.auditInfo = model.auditInfo;
+            this.code = model.code;
+            this.createDate = model.createDate;
+            this.fileUrlList = model.fileUrlList;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.qualificationId = model.qualificationId;
+            this.registerResult = model.registerResult;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.signCode = model.signCode;
+            this.signName = model.signName;
+            this.signStatus = model.signStatus;
+            this.signTag = model.signTag;
+            this.signUsage = model.signUsage;
+            this.thirdParty = model.thirdParty;
+        } 
 
         /**
          * <p>Content of application scenarios.</p>
@@ -484,6 +511,14 @@ public class GetSmsSignResponseBody extends TeaModel {
         public static final class Builder {
             private String auditDate; 
             private String rejectInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuditInfo model) {
+                this.auditDate = model.auditDate;
+                this.rejectInfo = model.rejectInfo;
+            } 
 
             /**
              * <p>Audit date and time.</p>

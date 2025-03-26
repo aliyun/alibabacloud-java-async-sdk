@@ -56,6 +56,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SmsTemplateList> smsTemplateList; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySmsTemplateListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.smsTemplateList = model.smsTemplateList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -253,6 +270,15 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String rejectDate; 
             private String rejectInfo; 
             private String rejectSubInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reason model) {
+                this.rejectDate = model.rejectDate;
+                this.rejectInfo = model.rejectInfo;
+                this.rejectSubInfo = model.rejectSubInfo;
+            } 
 
             /**
              * <p>The time when the message template was rejected. Format: yyyy-MM-dd HH:mm:ss.</p>
@@ -421,6 +447,21 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String templateContent; 
             private String templateName; 
             private Integer templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmsTemplateList model) {
+                this.auditStatus = model.auditStatus;
+                this.createDate = model.createDate;
+                this.orderId = model.orderId;
+                this.outerTemplateType = model.outerTemplateType;
+                this.reason = model.reason;
+                this.templateCode = model.templateCode;
+                this.templateContent = model.templateContent;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The approval status of the message template. Valid values:</p>

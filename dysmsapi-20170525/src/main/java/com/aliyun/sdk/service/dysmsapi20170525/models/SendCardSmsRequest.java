@@ -93,7 +93,7 @@ public class SendCardSmsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -458,6 +458,15 @@ public class SendCardSmsRequest extends Request {
             private String customUrl; 
             private String dyncParams; 
             private String mobile; 
+
+            private Builder() {
+            } 
+
+            private Builder(CardObjects model) {
+                this.customUrl = model.customUrl;
+                this.dyncParams = model.dyncParams;
+                this.mobile = model.mobile;
+            } 
 
             /**
              * <p>The URL to which the message is redirected if the message fails to be rendered.</p>

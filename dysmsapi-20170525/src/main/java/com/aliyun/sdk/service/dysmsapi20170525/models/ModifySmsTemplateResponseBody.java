@@ -44,6 +44,10 @@ public class ModifySmsTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ModifySmsTemplateResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String templateCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySmsTemplateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.templateCode = model.templateCode;
+        } 
 
         /**
          * <p>The response code.</p>

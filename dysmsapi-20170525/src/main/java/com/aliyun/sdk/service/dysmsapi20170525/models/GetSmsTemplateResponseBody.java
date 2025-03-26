@@ -74,6 +74,9 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("VariableAttribute")
     private String variableAttribute;
 
+    @com.aliyun.core.annotation.NameInMap("VendorAuditStatus")
+    private java.util.Map<String, ?> vendorAuditStatus;
+
     private GetSmsTemplateResponseBody(Builder builder) {
         this.applyScene = builder.applyScene;
         this.auditInfo = builder.auditInfo;
@@ -94,6 +97,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         this.templateTag = builder.templateTag;
         this.templateType = builder.templateType;
         this.variableAttribute = builder.variableAttribute;
+        this.vendorAuditStatus = builder.vendorAuditStatus;
     }
 
     public static Builder builder() {
@@ -102,6 +106,10 @@ public class GetSmsTemplateResponseBody extends TeaModel {
 
     public static GetSmsTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -237,6 +245,13 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         return this.variableAttribute;
     }
 
+    /**
+     * @return vendorAuditStatus
+     */
+    public java.util.Map<String, ?> getVendorAuditStatus() {
+        return this.vendorAuditStatus;
+    }
+
     public static final class Builder {
         private String applyScene; 
         private AuditInfo auditInfo; 
@@ -257,6 +272,33 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         private Integer templateTag; 
         private String templateType; 
         private String variableAttribute; 
+        private java.util.Map<String, ?> vendorAuditStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSmsTemplateResponseBody model) {
+            this.applyScene = model.applyScene;
+            this.auditInfo = model.auditInfo;
+            this.code = model.code;
+            this.createDate = model.createDate;
+            this.fileUrlList = model.fileUrlList;
+            this.intlType = model.intlType;
+            this.message = model.message;
+            this.moreDataFileUrlList = model.moreDataFileUrlList;
+            this.orderId = model.orderId;
+            this.relatedSignName = model.relatedSignName;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.templateCode = model.templateCode;
+            this.templateContent = model.templateContent;
+            this.templateName = model.templateName;
+            this.templateStatus = model.templateStatus;
+            this.templateTag = model.templateTag;
+            this.templateType = model.templateType;
+            this.variableAttribute = model.variableAttribute;
+            this.vendorAuditStatus = model.vendorAuditStatus;
+        } 
 
         /**
          * <p>Application scenario content.</p>
@@ -490,6 +532,14 @@ public class GetSmsTemplateResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * VendorAuditStatus.
+         */
+        public Builder vendorAuditStatus(java.util.Map<String, ?> vendorAuditStatus) {
+            this.vendorAuditStatus = vendorAuditStatus;
+            return this;
+        }
+
         public GetSmsTemplateResponseBody build() {
             return new GetSmsTemplateResponseBody(this);
         } 
@@ -539,6 +589,14 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String auditDate; 
             private String rejectInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuditInfo model) {
+                this.auditDate = model.auditDate;
+                this.rejectInfo = model.rejectInfo;
+            } 
 
             /**
              * <p>Audit date and time.</p>
@@ -601,6 +659,13 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> fileUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileUrlList model) {
+                this.fileUrl = model.fileUrl;
+            } 
+
             /**
              * FileUrl.
              */
@@ -647,6 +712,13 @@ public class GetSmsTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> moreDataFileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(MoreDataFileUrlList model) {
+                this.moreDataFileUrl = model.moreDataFileUrl;
+            } 
 
             /**
              * MoreDataFileUrl.

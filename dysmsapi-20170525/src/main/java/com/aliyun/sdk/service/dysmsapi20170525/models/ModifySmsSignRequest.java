@@ -73,7 +73,7 @@ public class ModifySmsSignRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -315,6 +315,14 @@ public class ModifySmsSignRequest extends Request {
         public static final class Builder {
             private String fileContents; 
             private String fileSuffix; 
+
+            private Builder() {
+            } 
+
+            private Builder(SignFileList model) {
+                this.fileContents = model.fileContents;
+                this.fileSuffix = model.fileSuffix;
+            } 
 
             /**
              * <p>The base64-encoded string of the signed files. The size of the image cannot exceed 2 MB.</p>
