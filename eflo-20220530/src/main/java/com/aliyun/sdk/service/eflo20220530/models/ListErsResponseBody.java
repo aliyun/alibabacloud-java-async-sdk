@@ -48,6 +48,10 @@ public class ListErsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListErsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListErsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -321,6 +339,25 @@ public class ListErsResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.erId = model.erId;
+                this.erName = model.erName;
+                this.gmtModified = model.gmtModified;
+                this.masterZoneId = model.masterZoneId;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeMaps = model.routeMaps;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>The number of connections to the Lingjun HUB network instance.</p>
              * 
@@ -514,6 +551,14 @@ public class ListErsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>lingjun hub information list.</p>

@@ -48,6 +48,10 @@ public class ListVccsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListVccsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListVccsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -309,6 +327,24 @@ public class ListVccsResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErInfos model) {
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.erId = model.erId;
+                this.erName = model.erName;
+                this.gmtModified = model.gmtModified;
+                this.masterZoneId = model.masterZoneId;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.routeMaps = model.routeMaps;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>Connections</p>
              * 
@@ -492,6 +528,14 @@ public class ListVccsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <p>You cannot specify an empty string as a tag key. It can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
@@ -592,6 +636,16 @@ public class ListVccsResponseBody extends TeaModel {
             private String createTime; 
             private String vpdId; 
             private String vpdName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdBaseInfo model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.vpdId = model.vpdId;
+                this.vpdName = model.vpdName;
+            } 
 
             /**
              * <p>The CIDR block of the VPD.</p>
@@ -1028,6 +1082,42 @@ public class ListVccsResponseBody extends TeaModel {
             private String vpdId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessPointId = model.accessPointId;
+                this.bandwidthStr = model.bandwidthStr;
+                this.bgpAsn = model.bgpAsn;
+                this.bgpCidr = model.bgpCidr;
+                this.cenId = model.cenId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.commodityCode = model.commodityCode;
+                this.connectionType = model.connectionType;
+                this.createTime = model.createTime;
+                this.currentNode = model.currentNode;
+                this.erInfos = model.erInfos;
+                this.expirationDate = model.expirationDate;
+                this.gmtModified = model.gmtModified;
+                this.lineOperator = model.lineOperator;
+                this.message = model.message;
+                this.portType = model.portType;
+                this.rate = model.rate;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+                this.tenantId = model.tenantId;
+                this.vccId = model.vccId;
+                this.vccName = model.vccName;
+                this.vpcId = model.vpcId;
+                this.vpdBaseInfo = model.vpdBaseInfo;
+                this.vpdId = model.vpdId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>Express Connect circuit access point ID:</p>
              * <ul>
@@ -1417,6 +1507,14 @@ public class ListVccsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Lingjun Connection Information List</p>

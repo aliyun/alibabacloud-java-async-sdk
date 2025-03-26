@@ -48,6 +48,10 @@ public class GetFabricTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetFabricTopologyResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFabricTopologyResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -203,6 +218,15 @@ public class GetFabricTopologyResponseBody extends TeaModel {
             private String layerName; 
             private String layerType; 
             private java.util.List<?> nextLayer; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopoInfo model) {
+                this.layerName = model.layerName;
+                this.layerType = model.layerType;
+                this.nextLayer = model.nextLayer;
+            } 
 
             /**
              * <p>The resource name.</p>
@@ -328,6 +352,17 @@ public class GetFabricTopologyResponseBody extends TeaModel {
             private java.util.List<TopoInfo> topoInfo; 
             private String vpcId; 
             private String vpdId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.clusterId = model.clusterId;
+                this.regionId = model.regionId;
+                this.topoInfo = model.topoInfo;
+                this.vpcId = model.vpcId;
+                this.vpdId = model.vpdId;
+            } 
 
             /**
              * <p>The cluster ID.</p>

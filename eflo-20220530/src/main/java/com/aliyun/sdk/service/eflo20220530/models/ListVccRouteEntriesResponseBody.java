@@ -48,6 +48,10 @@ public class ListVccRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListVccRouteEntriesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListVccRouteEntriesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -321,6 +339,25 @@ public class ListVccRouteEntriesResponseBody extends TeaModel {
             private String vccId; 
             private String vccRouteEntryId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.routeType = model.routeType;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.vccId = model.vccId;
+                this.vccRouteEntryId = model.vccRouteEntryId;
+            } 
+
             /**
              * <p>Destination CIDR block</p>
              * 
@@ -514,6 +551,14 @@ public class ListVccRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>List of Lingjun Connection Route Entries</p>

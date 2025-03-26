@@ -48,6 +48,10 @@ public class GetErRouteEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetErRouteEntryResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetErRouteEntryResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -299,6 +314,23 @@ public class GetErRouteEntryResponseBody extends TeaModel {
             private String routeType; 
             private String status; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.erId = model.erId;
+                this.erRouteEntryId = model.erRouteEntryId;
+                this.gmtModified = model.gmtModified;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeType = model.routeType;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>Destination CIDR Block</p>

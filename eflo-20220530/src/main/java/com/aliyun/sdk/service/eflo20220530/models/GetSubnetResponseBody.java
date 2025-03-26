@@ -48,6 +48,10 @@ public class GetSubnetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetSubnetResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSubnetResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -192,6 +207,14 @@ public class GetSubnetResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <p>You cannot specify an empty string as a tag key. It can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
@@ -292,6 +315,16 @@ public class GetSubnetResponseBody extends TeaModel {
             private String createTime; 
             private String vpdId; 
             private String vpdName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdBaseInfo model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.vpdId = model.vpdId;
+                this.vpdName = model.vpdName;
+            } 
 
             /**
              * <p>The CIDR block of the VPD.</p>
@@ -607,6 +640,32 @@ public class GetSubnetResponseBody extends TeaModel {
             private VpdBaseInfo vpdBaseInfo; 
             private String vpdId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.availableIps = model.availableIps;
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.gmtModified = model.gmtModified;
+                this.lbCount = model.lbCount;
+                this.message = model.message;
+                this.ncCount = model.ncCount;
+                this.networkInterfaceCount = model.networkInterfaceCount;
+                this.privateIpCount = model.privateIpCount;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.subnetId = model.subnetId;
+                this.subnetName = model.subnetName;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.vpdBaseInfo = model.vpdBaseInfo;
+                this.vpdId = model.vpdId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The number of available IP addresses.</p>

@@ -48,6 +48,10 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLniPrivateIpAddressResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -273,6 +291,21 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.ipAddressMac = model.ipAddressMac;
+                this.ipName = model.ipName;
+                this.message = model.message;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.privateIpAddress = model.privateIpAddress;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The instance description.</p>
              * 
@@ -422,6 +455,14 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The returned result.</p>

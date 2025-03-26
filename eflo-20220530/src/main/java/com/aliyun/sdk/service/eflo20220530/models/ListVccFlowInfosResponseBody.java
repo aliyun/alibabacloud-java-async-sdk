@@ -48,6 +48,10 @@ public class ListVccFlowInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListVccFlowInfosResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListVccFlowInfosResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>访问被拒绝的详细原因。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -237,6 +255,18 @@ public class ListVccFlowInfosResponseBody extends TeaModel {
             private Double value; 
             private String vccId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.direction = model.direction;
+                this.metricName = model.metricName;
+                this.regionId = model.regionId;
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+                this.vccId = model.vccId;
+            } 
+
             /**
              * <p>The direction.</p>
              * 
@@ -353,6 +383,14 @@ public class ListVccFlowInfosResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Lingjun Connection Traffic Information</p>

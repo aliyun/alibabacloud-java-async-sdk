@@ -48,6 +48,10 @@ public class RefundVccResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class RefundVccResponseBody extends TeaModel {
         private Object content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundVccResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>

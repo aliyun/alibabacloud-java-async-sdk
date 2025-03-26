@@ -48,6 +48,10 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeInfoForPodResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the failed permission verification.</p>
@@ -287,6 +302,22 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             private java.util.List<String> vSwitches; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.clusterId = model.clusterId;
+                this.hdeniQuota = model.hdeniQuota;
+                this.leniQuota = model.leniQuota;
+                this.leniSipQuota = model.leniSipQuota;
+                this.lniSipQuota = model.lniSipQuota;
+                this.nodeId = model.nodeId;
+                this.regionId = model.regionId;
+                this.vSwitches = model.vSwitches;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The cluster ID.</p>

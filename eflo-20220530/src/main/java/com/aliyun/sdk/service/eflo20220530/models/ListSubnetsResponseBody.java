@@ -48,6 +48,10 @@ public class ListSubnetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListSubnetsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSubnetsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -188,6 +206,14 @@ public class ListSubnetsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -289,6 +315,16 @@ public class ListSubnetsResponseBody extends TeaModel {
             private String createTime; 
             private String vpdId; 
             private String vpdName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdBaseInfo model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.vpdId = model.vpdId;
+                this.vpdName = model.vpdName;
+            } 
 
             /**
              * <p>The CIDR block of the VPD.</p>
@@ -569,6 +605,29 @@ public class ListSubnetsResponseBody extends TeaModel {
             private String vpdId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.ncCount = model.ncCount;
+                this.networkInterfaceCount = model.networkInterfaceCount;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.subnetId = model.subnetId;
+                this.subnetName = model.subnetName;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.type = model.type;
+                this.vpdBaseInfo = model.vpdBaseInfo;
+                this.vpdId = model.vpdId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The CIDR block of the Subnet.</p>
              * <ul>
@@ -817,6 +876,14 @@ public class ListSubnetsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Lingjun subnet information list</p>

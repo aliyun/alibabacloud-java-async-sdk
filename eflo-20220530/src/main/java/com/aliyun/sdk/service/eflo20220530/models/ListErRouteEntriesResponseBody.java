@@ -48,6 +48,10 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListErRouteEntriesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -309,6 +327,24 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.erId = model.erId;
+                this.erRouteEntryId = model.erRouteEntryId;
+                this.gmtModified = model.gmtModified;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.routeType = model.routeType;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>Destination CIDR Block</p>
              * 
@@ -495,6 +531,14 @@ public class ListErRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Lingjun HUB Route Entry Information List</p>

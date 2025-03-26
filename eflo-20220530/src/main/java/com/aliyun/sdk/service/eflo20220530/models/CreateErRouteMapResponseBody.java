@@ -48,6 +48,10 @@ public class CreateErRouteMapResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CreateErRouteMapResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateErRouteMapResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</p>
@@ -179,6 +194,13 @@ public class CreateErRouteMapResponseBody extends TeaModel {
 
         public static final class Builder {
             private String erRouteMapId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.erRouteMapId = model.erRouteMapId;
+            } 
 
             /**
              * <p>routing policy ID</p>

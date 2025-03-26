@@ -48,6 +48,10 @@ public class GetErResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetErResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetErResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -359,6 +374,28 @@ public class GetErResponseBody extends TeaModel {
             private String resourceTenantId; 
             private String status; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErAttachments model) {
+                this.across = model.across;
+                this.autoReceiveAllRoute = model.autoReceiveAllRoute;
+                this.createTime = model.createTime;
+                this.erAttachmentId = model.erAttachmentId;
+                this.erAttachmentName = model.erAttachmentName;
+                this.erId = model.erId;
+                this.gmtModified = model.gmtModified;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>Cross-account</p>
@@ -711,6 +748,24 @@ public class GetErResponseBody extends TeaModel {
             private String routeType; 
             private String status; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErRouteEntrys model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.erId = model.erId;
+                this.erRouteEntryId = model.erRouteEntryId;
+                this.gmtModified = model.gmtModified;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.routeType = model.routeType;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>Destination CIDR Block</p>
@@ -1134,6 +1189,34 @@ public class GetErResponseBody extends TeaModel {
             private String transmissionInstanceName; 
             private String transmissionInstanceOwner; 
             private String transmissionInstanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErRouteMaps model) {
+                this.action = model.action;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.erId = model.erId;
+                this.erRouteMapId = model.erRouteMapId;
+                this.erRouteMapName = model.erRouteMapName;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.receptionInstanceId = model.receptionInstanceId;
+                this.receptionInstanceName = model.receptionInstanceName;
+                this.receptionInstanceOwner = model.receptionInstanceOwner;
+                this.receptionInstanceType = model.receptionInstanceType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeMapNum = model.routeMapNum;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.transmissionInstanceId = model.transmissionInstanceId;
+                this.transmissionInstanceName = model.transmissionInstanceName;
+                this.transmissionInstanceOwner = model.transmissionInstanceOwner;
+                this.transmissionInstanceType = model.transmissionInstanceType;
+            } 
 
             /**
              * <p>Policy behavior</p>
@@ -1576,6 +1659,26 @@ public class GetErResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.erAttachments = model.erAttachments;
+                this.erId = model.erId;
+                this.erName = model.erName;
+                this.erRouteEntrys = model.erRouteEntrys;
+                this.erRouteMaps = model.erRouteMaps;
+                this.gmtModified = model.gmtModified;
+                this.masterZoneId = model.masterZoneId;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>The time when the data address was created.</p>

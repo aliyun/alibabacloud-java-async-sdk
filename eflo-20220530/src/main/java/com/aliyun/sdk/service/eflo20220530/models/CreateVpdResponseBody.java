@@ -48,6 +48,10 @@ public class CreateVpdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CreateVpdResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpdResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the failed permission verification.</p>
@@ -191,6 +206,14 @@ public class CreateVpdResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> subnetIds; 
             private String vpdId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.subnetIds = model.subnetIds;
+                this.vpdId = model.vpdId;
+            } 
 
             /**
              * <p>Lingjun subnet ID list</p>

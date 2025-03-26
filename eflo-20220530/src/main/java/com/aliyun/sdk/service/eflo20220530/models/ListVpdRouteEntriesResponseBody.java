@@ -48,6 +48,10 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpdRouteEntriesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -312,6 +327,24 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
             private String vpdId; 
             private String vpdRouteEntryId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.gmtModified = model.gmtModified;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.routeType = model.routeType;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.vpdId = model.vpdId;
+                this.vpdRouteEntryId = model.vpdRouteEntryId;
+            } 
+
             /**
              * <p>Destination CIDR block</p>
              * 
@@ -494,6 +527,14 @@ public class ListVpdRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Lingjun CIDR block route entry list</p>

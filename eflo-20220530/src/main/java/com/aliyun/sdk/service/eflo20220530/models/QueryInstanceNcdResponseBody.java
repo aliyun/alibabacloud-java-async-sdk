@@ -48,6 +48,10 @@ public class QueryInstanceNcdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class QueryInstanceNcdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryInstanceNcdResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -212,6 +230,16 @@ public class QueryInstanceNcdResponseBody extends TeaModel {
             private String instanceId2; 
             private String instanceType; 
             private Integer ncd; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.instanceId1 = model.instanceId1;
+                this.instanceId2 = model.instanceId2;
+                this.instanceType = model.instanceType;
+                this.ncd = model.ncd;
+            } 
 
             /**
              * <p>Instance 1ID</p>

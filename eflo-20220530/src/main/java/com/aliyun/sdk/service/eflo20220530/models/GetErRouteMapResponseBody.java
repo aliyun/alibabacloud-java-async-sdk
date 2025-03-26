@@ -48,6 +48,10 @@ public class GetErRouteMapResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetErRouteMapResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetErRouteMapResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -431,6 +446,34 @@ public class GetErRouteMapResponseBody extends TeaModel {
             private String transmissionInstanceName; 
             private String transmissionInstanceOwner; 
             private String transmissionInstanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.action = model.action;
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.erId = model.erId;
+                this.erRouteMapId = model.erRouteMapId;
+                this.erRouteMapName = model.erRouteMapName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.receptionInstanceId = model.receptionInstanceId;
+                this.receptionInstanceName = model.receptionInstanceName;
+                this.receptionInstanceOwner = model.receptionInstanceOwner;
+                this.receptionInstanceType = model.receptionInstanceType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeMapNum = model.routeMapNum;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.transmissionInstanceId = model.transmissionInstanceId;
+                this.transmissionInstanceName = model.transmissionInstanceName;
+                this.transmissionInstanceOwner = model.transmissionInstanceOwner;
+                this.transmissionInstanceType = model.transmissionInstanceType;
+            } 
 
             /**
              * <p>Policy behavior; optional values:</p>

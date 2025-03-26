@@ -48,6 +48,10 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListVpdGrantRulesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -297,6 +315,23 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
             private String tenantId; 
             private Boolean used; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.erId = model.erId;
+                this.grantRuleId = model.grantRuleId;
+                this.grantTenantId = model.grantTenantId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tenantId = model.tenantId;
+                this.used = model.used;
+            } 
+
             /**
              * <p>The time when the data address was created.</p>
              * 
@@ -473,6 +508,14 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Lingjun CIDR block authorization information list</p>

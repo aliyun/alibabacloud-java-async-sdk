@@ -48,6 +48,10 @@ public class AssignPrivateIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class AssignPrivateIpAddressResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssignPrivateIpAddressResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed reason why the access was denied.</p>
@@ -191,6 +206,14 @@ public class AssignPrivateIpAddressResponseBody extends TeaModel {
         public static final class Builder {
             private String ipName; 
             private String networkInterfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.ipName = model.ipName;
+                this.networkInterfaceId = model.networkInterfaceId;
+            } 
 
             /**
              * <p>The unique IP identifier.</p>

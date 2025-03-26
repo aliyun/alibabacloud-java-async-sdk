@@ -48,6 +48,10 @@ public class GetVpdGrantRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetVpdGrantRuleResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpdGrantRuleResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -299,6 +314,23 @@ public class GetVpdGrantRuleResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String tenantId; 
             private Boolean used; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.createTime = model.createTime;
+                this.erId = model.erId;
+                this.grantRuleId = model.grantRuleId;
+                this.grantTenantId = model.grantTenantId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tenantId = model.tenantId;
+                this.used = model.used;
+            } 
 
             /**
              * <p>The time when the data address was created.</p>

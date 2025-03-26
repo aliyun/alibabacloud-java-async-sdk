@@ -48,6 +48,10 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNetworkInterfaceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -240,6 +255,18 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddressMacGroup model) {
+                this.description = model.description;
+                this.ipAddressMac = model.ipAddressMac;
+                this.ipName = model.ipName;
+                this.message = model.message;
+                this.privateIpAddress = model.privateIpAddress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The instance description.</p>
              * 
@@ -381,6 +408,16 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
             private String subnetId; 
             private String subnetName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubnetBaseInfo model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.subnetId = model.subnetId;
+                this.subnetName = model.subnetName;
+            } 
+
             /**
              * <p>Network address segment</p>
              * 
@@ -499,6 +536,16 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
             private String createTime; 
             private String vpdId; 
             private String vpdName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdBaseInfo model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.vpdId = model.vpdId;
+                this.vpdName = model.vpdName;
+            } 
 
             /**
              * <p>The network segment of the Lingjun subnet.</p>
@@ -780,6 +827,29 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
             private String tenantId; 
             private VpdBaseInfo vpdBaseInfo; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.createTime = model.createTime;
+                this.ethernet = model.ethernet;
+                this.gateway = model.gateway;
+                this.ip = model.ip;
+                this.ncType = model.ncType;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfaceName = model.networkInterfaceName;
+                this.nodeId = model.nodeId;
+                this.privateIpAddressMacGroup = model.privateIpAddressMacGroup;
+                this.quota = model.quota;
+                this.regionId = model.regionId;
+                this.serviceMac = model.serviceMac;
+                this.status = model.status;
+                this.subnetBaseInfo = model.subnetBaseInfo;
+                this.tenantId = model.tenantId;
+                this.vpdBaseInfo = model.vpdBaseInfo;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The time when the data address was created.</p>

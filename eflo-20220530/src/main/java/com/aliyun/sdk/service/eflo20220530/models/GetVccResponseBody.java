@@ -48,6 +48,10 @@ public class GetVccResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetVccResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVccResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -239,6 +254,18 @@ public class GetVccResponseBody extends TeaModel {
             private String peerGatewayIp; 
             private String vbrId; 
             private String vlanId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliyunRouterInfo model) {
+                this.localGatewayIp = model.localGatewayIp;
+                this.mask = model.mask;
+                this.pcId = model.pcId;
+                this.peerGatewayIp = model.peerGatewayIp;
+                this.vbrId = model.vbrId;
+                this.vlanId = model.vlanId;
+            } 
 
             /**
              * <p>IPv4 address of Alibaba Cloud-side interconnection</p>
@@ -405,6 +432,18 @@ public class GetVccResponseBody extends TeaModel {
             private String subnetMask; 
             private String vlanId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CcInfos model) {
+                this.ccId = model.ccId;
+                this.localGatewayIp = model.localGatewayIp;
+                this.remoteGatewayIp = model.remoteGatewayIp;
+                this.status = model.status;
+                this.subnetMask = model.subnetMask;
+                this.vlanId = model.vlanId;
+            } 
+
             /**
              * <p>Leased Line ID</p>
              * 
@@ -521,6 +560,14 @@ public class GetVccResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CcInfos> ccInfos; 
             private String ccrId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CisRouterInfo model) {
+                this.ccInfos = model.ccInfos;
+                this.ccrId = model.ccrId;
+            } 
 
             /**
              * <p>Leased Line Information List</p>
@@ -712,6 +759,24 @@ public class GetVccResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErInfos model) {
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.erId = model.erId;
+                this.erName = model.erName;
+                this.gmtModified = model.gmtModified;
+                this.masterZoneId = model.masterZoneId;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.routeMaps = model.routeMaps;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>Connections</p>
              * 
@@ -895,6 +960,14 @@ public class GetVccResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <p>You cannot specify an empty string as a tag key. It can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
@@ -1007,6 +1080,17 @@ public class GetVccResponseBody extends TeaModel {
             private String peerAsn; 
             private String peerIpAddress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(VbrBgpPeers model) {
+                this.bgpGroupId = model.bgpGroupId;
+                this.bgpPeerId = model.bgpPeerId;
+                this.peerAsn = model.peerAsn;
+                this.peerIpAddress = model.peerIpAddress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>BGP Group ID</p>
@@ -1170,6 +1254,18 @@ public class GetVccResponseBody extends TeaModel {
             private java.util.List<VbrBgpPeers> vbrBgpPeers; 
             private String vbrId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VbrInfos model) {
+                this.cenId = model.cenId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.status = model.status;
+                this.vbrBgpPeers = model.vbrBgpPeers;
+                this.vbrId = model.vbrId;
+            } 
+
             /**
              * <p>CEN ID</p>
              * 
@@ -1316,6 +1412,16 @@ public class GetVccResponseBody extends TeaModel {
             private String createTime; 
             private String vpdId; 
             private String vpdName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpdBaseInfo model) {
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.vpdId = model.vpdId;
+                this.vpdName = model.vpdName;
+            } 
 
             /**
              * <p>Network address segment</p>
@@ -1843,6 +1949,50 @@ public class GetVccResponseBody extends TeaModel {
             private VpdBaseInfo vpdBaseInfo; 
             private String vpdId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.accessPointId = model.accessPointId;
+                this.aliyunRouterInfo = model.aliyunRouterInfo;
+                this.attachErStatus = model.attachErStatus;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthStr = model.bandwidthStr;
+                this.bgpAsn = model.bgpAsn;
+                this.bgpCidr = model.bgpCidr;
+                this.cenId = model.cenId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.cisRouterInfo = model.cisRouterInfo;
+                this.commodityCode = model.commodityCode;
+                this.connectionType = model.connectionType;
+                this.createTime = model.createTime;
+                this.currentNode = model.currentNode;
+                this.duration = model.duration;
+                this.erInfos = model.erInfos;
+                this.expirationDate = model.expirationDate;
+                this.gmtModified = model.gmtModified;
+                this.internetChargeType = model.internetChargeType;
+                this.lineOperator = model.lineOperator;
+                this.message = model.message;
+                this.payType = model.payType;
+                this.portType = model.portType;
+                this.pricingCycle = model.pricingCycle;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.vSwitchId = model.vSwitchId;
+                this.vbrInfos = model.vbrInfos;
+                this.vccId = model.vccId;
+                this.vccName = model.vccName;
+                this.vpcId = model.vpcId;
+                this.vpdBaseInfo = model.vpdBaseInfo;
+                this.vpdId = model.vpdId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Express Connect circuit access point ID:</p>

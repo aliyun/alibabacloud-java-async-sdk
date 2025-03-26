@@ -48,6 +48,10 @@ public class UpdateElasticNetworkInterfaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class UpdateElasticNetworkInterfaceResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateElasticNetworkInterfaceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -191,6 +206,14 @@ public class UpdateElasticNetworkInterfaceResponseBody extends TeaModel {
         public static final class Builder {
             private String elasticNetworkInterfaceId; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.elasticNetworkInterfaceId = model.elasticNetworkInterfaceId;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>Lingjun Elastic Network Interface ID</p>

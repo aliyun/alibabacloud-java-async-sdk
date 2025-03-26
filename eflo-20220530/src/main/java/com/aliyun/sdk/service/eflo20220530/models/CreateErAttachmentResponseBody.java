@@ -48,6 +48,10 @@ public class CreateErAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CreateErAttachmentResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateErAttachmentResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed information about the failed permission verification.</p>
@@ -179,6 +194,13 @@ public class CreateErAttachmentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String erAttachmentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.erAttachmentId = model.erAttachmentId;
+            } 
 
             /**
              * <p>The ID of the network connection instance.</p>

@@ -48,6 +48,10 @@ public class ListErRouteMapsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListErRouteMapsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListErRouteMapsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -417,6 +435,33 @@ public class ListErRouteMapsResponseBody extends TeaModel {
             private String transmissionInstanceOwner; 
             private String transmissionInstanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.action = model.action;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.erId = model.erId;
+                this.erRouteMapId = model.erRouteMapId;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.receptionInstanceId = model.receptionInstanceId;
+                this.receptionInstanceName = model.receptionInstanceName;
+                this.receptionInstanceOwner = model.receptionInstanceOwner;
+                this.receptionInstanceType = model.receptionInstanceType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeMapNum = model.routeMapNum;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.transmissionInstanceId = model.transmissionInstanceId;
+                this.transmissionInstanceName = model.transmissionInstanceName;
+                this.transmissionInstanceOwner = model.transmissionInstanceOwner;
+                this.transmissionInstanceType = model.transmissionInstanceType;
+            } 
+
             /**
              * <p>Policy behavior; optional values:</p>
              * <ul>
@@ -718,6 +763,14 @@ public class ListErRouteMapsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>routing policy information list</p>

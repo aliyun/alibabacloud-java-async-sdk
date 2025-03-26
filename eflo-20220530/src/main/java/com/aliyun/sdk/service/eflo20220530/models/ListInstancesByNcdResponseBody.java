@@ -48,6 +48,10 @@ public class ListInstancesByNcdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListInstancesByNcdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesByNcdResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -189,6 +207,14 @@ public class ListInstancesByNcdResponseBody extends TeaModel {
             private String instanceId; 
             private Integer ncd; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceInfos model) {
+                this.instanceId = model.instanceId;
+                this.ncd = model.ncd;
+            } 
+
             /**
              * <p>The instance ID.</p>
              * 
@@ -285,6 +311,16 @@ public class ListInstancesByNcdResponseBody extends TeaModel {
             private String instanceType; 
             private Integer maxNcd; 
             private String sourceInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.instanceInfos = model.instanceInfos;
+                this.instanceType = model.instanceType;
+                this.maxNcd = model.maxNcd;
+                this.sourceInstanceId = model.sourceInstanceId;
+            } 
 
             /**
              * <p>A collection of instances whose network communication distance from the source instance ID does not exceed maxNcd</p>

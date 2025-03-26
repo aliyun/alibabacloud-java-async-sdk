@@ -48,6 +48,10 @@ public class CreateVccResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CreateVccResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVccResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed information about the failed permission verification.</p>
@@ -179,6 +194,13 @@ public class CreateVccResponseBody extends TeaModel {
 
         public static final class Builder {
             private String vccId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.vccId = model.vccId;
+            } 
 
             /**
              * <p>The ID of the Lingjun connection instance.</p>

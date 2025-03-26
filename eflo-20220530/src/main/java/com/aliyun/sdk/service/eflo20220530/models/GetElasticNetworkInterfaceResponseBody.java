@@ -48,6 +48,10 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetElasticNetworkInterfaceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -275,6 +290,21 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
             private String message; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Addresses model) {
+                this.description = model.description;
+                this.elasticNetworkInterfaceId = model.elasticNetworkInterfaceId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ipName = model.ipName;
+                this.ipv6Address = model.ipv6Address;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The instance description.</p>
@@ -509,6 +539,21 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddresses model) {
+                this.description = model.description;
+                this.elasticNetworkInterfaceId = model.elasticNetworkInterfaceId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ipName = model.ipName;
+                this.message = model.message;
+                this.privateIpAddress = model.privateIpAddress;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The instance description.</p>
@@ -875,6 +920,32 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.elasticNetworkInterfaceId = model.elasticNetworkInterfaceId;
+                this.enableJumboFrame = model.enableJumboFrame;
+                this.gateway = model.gateway;
+                this.gmtModified = model.gmtModified;
+                this.ip = model.ip;
+                this.ipv6Addresses = model.ipv6Addresses;
+                this.mac = model.mac;
+                this.mask = model.mask;
+                this.message = model.message;
+                this.nodeId = model.nodeId;
+                this.privateIpAddresses = model.privateIpAddresses;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The time when the data address was created.</p>

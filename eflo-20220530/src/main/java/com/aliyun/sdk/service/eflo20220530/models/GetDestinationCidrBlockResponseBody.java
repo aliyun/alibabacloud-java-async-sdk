@@ -48,6 +48,10 @@ public class GetDestinationCidrBlockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class GetDestinationCidrBlockResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDestinationCidrBlockResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -176,6 +194,13 @@ public class GetDestinationCidrBlockResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> destinationCidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+            } 
 
             /**
              * <p>List of destination CIDR block information for the current network instance</p>

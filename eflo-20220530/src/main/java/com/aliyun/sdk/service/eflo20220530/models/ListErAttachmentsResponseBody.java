@@ -48,6 +48,10 @@ public class ListErAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -90,8 +94,22 @@ public class ListErAttachmentsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListErAttachmentsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -357,6 +375,28 @@ public class ListErAttachmentsResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.across = model.across;
+                this.autoReceiveAllRoute = model.autoReceiveAllRoute;
+                this.createTime = model.createTime;
+                this.erAttachmentId = model.erAttachmentId;
+                this.erAttachmentName = model.erAttachmentName;
+                this.erId = model.erId;
+                this.gmtModified = model.gmtModified;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>Whether to cross accounts. Valid values:</p>
              * <ul>
@@ -603,6 +643,14 @@ public class ListErAttachmentsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The list of Lingjun HUB network instances.</p>

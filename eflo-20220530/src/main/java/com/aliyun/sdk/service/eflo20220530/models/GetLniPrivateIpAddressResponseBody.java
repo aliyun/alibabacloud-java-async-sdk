@@ -48,6 +48,10 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLniPrivateIpAddressResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -288,6 +303,22 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             private String status; 
             private String subnetId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.ipAddressMac = model.ipAddressMac;
+                this.ipName = model.ipName;
+                this.message = model.message;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.privateIpAddress = model.privateIpAddress;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.subnetId = model.subnetId;
+            } 
+
             /**
              * <p>The instance description.</p>
              * 
@@ -388,7 +419,10 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * SubnetId.
+             * <p>The subnet instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-aj93mko8</p>
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;

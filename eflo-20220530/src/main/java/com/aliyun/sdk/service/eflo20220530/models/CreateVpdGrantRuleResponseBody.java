@@ -48,6 +48,10 @@ public class CreateVpdGrantRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CreateVpdGrantRuleResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpdGrantRuleResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -182,6 +197,13 @@ public class CreateVpdGrantRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String grantRuleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.grantRuleId = model.grantRuleId;
+            } 
 
             /**
              * <p>Authorized resource primary key ID</p>

@@ -48,6 +48,10 @@ public class GetVpdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetVpdResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpdResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -312,6 +327,24 @@ public class GetVpdResponseBody extends TeaModel {
             private String status; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErInfos model) {
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.erId = model.erId;
+                this.erName = model.erName;
+                this.gmtModified = model.gmtModified;
+                this.masterZoneId = model.masterZoneId;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.routeMaps = model.routeMaps;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * <p>The number of connections.</p>
              * 
@@ -494,6 +527,14 @@ public class GetVpdResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -787,6 +828,32 @@ public class GetVpdResponseBody extends TeaModel {
             private String tenantId; 
             private String vpdId; 
             private String vpdName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.attachErStatus = model.attachErStatus;
+                this.cidr = model.cidr;
+                this.createTime = model.createTime;
+                this.erInfos = model.erInfos;
+                this.gmtModified = model.gmtModified;
+                this.message = model.message;
+                this.ncCount = model.ncCount;
+                this.networkInterfaceCount = model.networkInterfaceCount;
+                this.privateIpCount = model.privateIpCount;
+                this.quota = model.quota;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondaryCidrBlocks = model.secondaryCidrBlocks;
+                this.serviceCidr = model.serviceCidr;
+                this.status = model.status;
+                this.subnetCount = model.subnetCount;
+                this.tags = model.tags;
+                this.tenantId = model.tenantId;
+                this.vpdId = model.vpdId;
+                this.vpdName = model.vpdName;
+            } 
 
             /**
              * <p>Whether the Lingjun HUB(ER) has been bound.</p>

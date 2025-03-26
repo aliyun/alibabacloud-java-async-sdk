@@ -48,6 +48,10 @@ public class GetErAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetErAttachmentResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetErAttachmentResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -359,6 +374,28 @@ public class GetErAttachmentResponseBody extends TeaModel {
             private String resourceTenantId; 
             private String status; 
             private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.across = model.across;
+                this.autoReceiveAllRoute = model.autoReceiveAllRoute;
+                this.createTime = model.createTime;
+                this.erAttachmentId = model.erAttachmentId;
+                this.erAttachmentName = model.erAttachmentName;
+                this.erId = model.erId;
+                this.gmtModified = model.gmtModified;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.message = model.message;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTenantId = model.resourceTenantId;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * <p>Whether cross-account. Valid values:</p>

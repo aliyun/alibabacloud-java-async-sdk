@@ -48,6 +48,10 @@ public class UpdateSubnetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class UpdateSubnetResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateSubnetResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -179,6 +194,13 @@ public class UpdateSubnetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String subnetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.subnetId = model.subnetId;
+            } 
 
             /**
              * <p>The subnet instance ID.</p>

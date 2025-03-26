@@ -48,6 +48,10 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListElasticNetworkInterfacesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -372,6 +387,29 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.elasticNetworkInterfaceId = model.elasticNetworkInterfaceId;
+                this.gateway = model.gateway;
+                this.gmtModified = model.gmtModified;
+                this.ip = model.ip;
+                this.mac = model.mac;
+                this.mask = model.mask;
+                this.message = model.message;
+                this.nodeId = model.nodeId;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.type = model.type;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the data address was created.</p>
              * 
@@ -614,6 +652,14 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.data = model.data;
+                this.total = model.total;
+            } 
 
             /**
              * <p>lingjun Elastic Network Interface information list</p>

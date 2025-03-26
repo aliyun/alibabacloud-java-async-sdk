@@ -48,6 +48,10 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLeniPrivateIpAddressResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -275,6 +290,21 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.description = model.description;
+                this.elasticNetworkInterfaceId = model.elasticNetworkInterfaceId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ipName = model.ipName;
+                this.message = model.message;
+                this.privateIpAddress = model.privateIpAddress;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The description.</p>

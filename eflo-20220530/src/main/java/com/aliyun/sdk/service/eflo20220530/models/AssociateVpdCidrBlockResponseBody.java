@@ -48,6 +48,10 @@ public class AssociateVpdCidrBlockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class AssociateVpdCidrBlockResponseBody extends TeaModel {
         private Content content; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssociateVpdCidrBlockResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.content = model.content;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed reason why the access was denied.</p>
@@ -179,6 +194,13 @@ public class AssociateVpdCidrBlockResponseBody extends TeaModel {
 
         public static final class Builder {
             private String vpdId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.vpdId = model.vpdId;
+            } 
 
             /**
              * <p>The ID of the Lingjun CIDR block.</p>
