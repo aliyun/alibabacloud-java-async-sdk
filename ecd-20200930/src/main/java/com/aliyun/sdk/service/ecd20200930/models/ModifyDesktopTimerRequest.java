@@ -51,7 +51,7 @@ public class ModifyDesktopTimerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -256,6 +256,19 @@ public class ModifyDesktopTimerRequest extends Request {
             private String operationType; 
             private String resetType; 
             private String timerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopTimers model) {
+                this.allowClientSetting = model.allowClientSetting;
+                this.cronExpression = model.cronExpression;
+                this.enforce = model.enforce;
+                this.interval = model.interval;
+                this.operationType = model.operationType;
+                this.resetType = model.resetType;
+                this.timerType = model.timerType;
+            } 
 
             /**
              * <p>Specifies whether to allow end users to configure the scheduled task.</p>

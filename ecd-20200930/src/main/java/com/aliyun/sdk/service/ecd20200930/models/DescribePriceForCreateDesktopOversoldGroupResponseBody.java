@@ -36,6 +36,10 @@ public class DescribePriceForCreateDesktopOversoldGroupResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribePriceForCreateDesktopOversoldGroupResponseBody extends TeaM
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceForCreateDesktopOversoldGroupResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -107,6 +119,13 @@ public class DescribePriceForCreateDesktopOversoldGroupResponseBody extends TeaM
 
         public static final class Builder {
             private String price; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.price = model.price;
+            } 
 
             /**
              * Price.

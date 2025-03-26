@@ -36,6 +36,10 @@ public class CreateCdsFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileModel
      */
@@ -53,6 +57,14 @@ public class CreateCdsFileResponseBody extends TeaModel {
     public static final class Builder {
         private FileModel fileModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCdsFileResponseBody model) {
+            this.fileModel = model.fileModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FileModel.
@@ -134,6 +146,15 @@ public class CreateCdsFileResponseBody extends TeaModel {
             private String fileId; 
             private String uploadId; 
             private String uploadUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileModel model) {
+                this.fileId = model.fileId;
+                this.uploadId = model.uploadId;
+                this.uploadUrl = model.uploadUrl;
+            } 
 
             /**
              * FileId.

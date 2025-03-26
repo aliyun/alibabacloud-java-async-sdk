@@ -44,6 +44,10 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageModifiedRecords
      */
@@ -77,6 +81,16 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageModifiedRecordsResponseBody model) {
+            this.imageModifiedRecords = model.imageModifiedRecords;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the image modification record.</p>
@@ -216,6 +230,18 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             private String newImageName; 
             private Integer status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageModifiedRecords model) {
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.newImageId = model.newImageId;
+                this.newImageName = model.newImageName;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the original image.</p>

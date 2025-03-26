@@ -72,6 +72,10 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -161,6 +165,23 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private Integer runningPrePaidDesktopsCount; 
         private Integer stopedPrePaidDesktopsCount; 
         private Integer stoppedPrePaidDesktopsCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDesktopsInGroupResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.onlinePrePaidDesktopsCount = model.onlinePrePaidDesktopsCount;
+            this.paidDesktops = model.paidDesktops;
+            this.paidDesktopsCount = model.paidDesktopsCount;
+            this.postPaidDesktops = model.postPaidDesktops;
+            this.postPaidDesktopsCount = model.postPaidDesktopsCount;
+            this.postPaidDesktopsTotalAmount = model.postPaidDesktopsTotalAmount;
+            this.requestId = model.requestId;
+            this.runningPrePaidDesktopsCount = model.runningPrePaidDesktopsCount;
+            this.stopedPrePaidDesktopsCount = model.stopedPrePaidDesktopsCount;
+            this.stoppedPrePaidDesktopsCount = model.stoppedPrePaidDesktopsCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.
@@ -555,6 +576,33 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String protocolType; 
             private String resetTime; 
             private Integer systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(PaidDesktops model) {
+                this.connectionStatus = model.connectionStatus;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.desktopStatus = model.desktopStatus;
+                this.diskType = model.diskType;
+                this.endUserId = model.endUserId;
+                this.endUserIds = model.endUserIds;
+                this.endUserName = model.endUserName;
+                this.endUserNames = model.endUserNames;
+                this.fotaVersion = model.fotaVersion;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.managementFlag = model.managementFlag;
+                this.managementFlags = model.managementFlags;
+                this.memberEniIp = model.memberEniIp;
+                this.osType = model.osType;
+                this.primaryEniIp = model.primaryEniIp;
+                this.protocolType = model.protocolType;
+                this.resetTime = model.resetTime;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * <p>The connection status of the cloud computer.</p>
@@ -1237,6 +1285,36 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String releaseTime; 
             private String resetTime; 
             private Integer systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(PostPaidDesktops model) {
+                this.connectionStatus = model.connectionStatus;
+                this.createDuration = model.createDuration;
+                this.createTime = model.createTime;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.desktopStatus = model.desktopStatus;
+                this.diskType = model.diskType;
+                this.endUserId = model.endUserId;
+                this.endUserIds = model.endUserIds;
+                this.endUserName = model.endUserName;
+                this.endUserNames = model.endUserNames;
+                this.fotaVersion = model.fotaVersion;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.managementFlag = model.managementFlag;
+                this.managementFlags = model.managementFlags;
+                this.memberEniIp = model.memberEniIp;
+                this.osType = model.osType;
+                this.primaryEniIp = model.primaryEniIp;
+                this.protocolType = model.protocolType;
+                this.releaseTime = model.releaseTime;
+                this.resetTime = model.resetTime;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * <p>The connection status of the cloud computer.</p>

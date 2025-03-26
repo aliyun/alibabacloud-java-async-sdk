@@ -40,6 +40,10 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<OUNames> OUNames; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserAdOrganizationUnitsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.OUNames = model.OUNames;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A pagination token.</p>
@@ -157,6 +170,15 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             private String displayOUName; 
             private String OUName; 
             private String officeSiteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OUNames model) {
+                this.displayOUName = model.displayOUName;
+                this.OUName = model.OUName;
+                this.officeSiteId = model.officeSiteId;
+            } 
 
             /**
              * <p>The name of the OU.</p>

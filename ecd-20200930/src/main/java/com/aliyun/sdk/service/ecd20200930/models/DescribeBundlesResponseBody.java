@@ -40,6 +40,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bundles
      */
@@ -65,6 +69,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
         private java.util.List<Bundles> bundles; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBundlesResponseBody model) {
+            this.bundles = model.bundles;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the cloud computer templates.</p>
@@ -169,6 +182,16 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private Float gpuCount; 
             private String gpuSpec; 
             private Integer memorySize; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopTypeAttribute model) {
+                this.cpuCount = model.cpuCount;
+                this.gpuCount = model.gpuCount;
+                this.gpuSpec = model.gpuSpec;
+                this.memorySize = model.memorySize;
+            } 
 
             /**
              * <p>The number of vCPUs.</p>
@@ -276,6 +299,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String diskPerformanceLevel; 
             private Integer diskSize; 
             private String diskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.diskPerformanceLevel = model.diskPerformanceLevel;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+            } 
 
             /**
              * <p>The PL of the disk.</p>
@@ -646,6 +678,34 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String systemDiskCategory; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bundles model) {
+                this.bundleId = model.bundleId;
+                this.bundleName = model.bundleName;
+                this.bundleType = model.bundleType;
+                this.creationTime = model.creationTime;
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.description = model.description;
+                this.desktopType = model.desktopType;
+                this.desktopTypeAttribute = model.desktopTypeAttribute;
+                this.desktopTypeFamily = model.desktopTypeFamily;
+                this.disks = model.disks;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageStatus = model.imageStatus;
+                this.language = model.language;
+                this.osType = model.osType;
+                this.platform = model.platform;
+                this.protocolType = model.protocolType;
+                this.sessionType = model.sessionType;
+                this.stockState = model.stockState;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
+                this.volumeEncryptionKey = model.volumeEncryptionKey;
+            } 
 
             /**
              * <p>The ID of the cloud computer template.</p>

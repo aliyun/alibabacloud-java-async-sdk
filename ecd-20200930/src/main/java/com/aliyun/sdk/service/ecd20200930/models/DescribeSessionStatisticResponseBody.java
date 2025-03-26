@@ -40,6 +40,10 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Statistic> statistic; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSessionStatisticResponseBody model) {
+            this.requestId = model.requestId;
+            this.statistic = model.statistic;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -145,6 +158,14 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private Long timePoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistic model) {
+                this.count = model.count;
+                this.timePoint = model.timePoint;
+            } 
 
             /**
              * <p>The total number of sessions in the time range.</p>

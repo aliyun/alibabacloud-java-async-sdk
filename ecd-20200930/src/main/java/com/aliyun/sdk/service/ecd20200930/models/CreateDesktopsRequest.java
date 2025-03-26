@@ -202,7 +202,7 @@ public class CreateDesktopsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1120,6 +1120,19 @@ public class CreateDesktopsRequest extends Request {
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(BundleModels model) {
+                this.amount = model.amount;
+                this.bundleId = model.bundleId;
+                this.desktopName = model.desktopName;
+                this.endUserIds = model.endUserIds;
+                this.hostname = model.hostname;
+                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
+                this.volumeEncryptionKey = model.volumeEncryptionKey;
+            } 
+
             /**
              * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.</p>
              * 
@@ -1344,6 +1357,21 @@ public class CreateDesktopsRequest extends Request {
             private String systemDiskCategory; 
             private String systemDiskPerLevel; 
             private Integer systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopAttachment model) {
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskPerLevel = model.dataDiskPerLevel;
+                this.dataDiskSize = model.dataDiskSize;
+                this.defaultLanguage = model.defaultLanguage;
+                this.desktopType = model.desktopType;
+                this.imageId = model.imageId;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskPerLevel = model.systemDiskPerLevel;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * <p>The category of the data disk. Valid values:</p>
@@ -1577,6 +1605,19 @@ public class CreateDesktopsRequest extends Request {
             private String resetType; 
             private String timerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DesktopTimers model) {
+                this.allowClientSetting = model.allowClientSetting;
+                this.cronExpression = model.cronExpression;
+                this.enforce = model.enforce;
+                this.interval = model.interval;
+                this.operationType = model.operationType;
+                this.resetType = model.resetType;
+                this.timerType = model.timerType;
+            } 
+
             /**
              * <p>Specifies whether to allow the end user to configure the scheduled task.</p>
              * 
@@ -1768,6 +1809,15 @@ public class CreateDesktopsRequest extends Request {
             private String desktopId; 
             private Integer useDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonthDesktopSetting model) {
+                this.buyerId = model.buyerId;
+                this.desktopId = model.desktopId;
+                this.useDuration = model.useDuration;
+            } 
+
             /**
              * <blockquote>
              * <p>This parameter is not publicly available.</p>
@@ -1858,6 +1908,14 @@ public class CreateDesktopsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag. You can specify 1 to 20 keys for a tag.</p>
              * 
@@ -1943,6 +2001,15 @@ public class CreateDesktopsRequest extends Request {
             private String content; 
             private String contentEncoding; 
             private String contentType; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserCommands model) {
+                this.content = model.content;
+                this.contentEncoding = model.contentEncoding;
+                this.contentType = model.contentType;
+            } 
 
             /**
              * <p>The command content.</p>

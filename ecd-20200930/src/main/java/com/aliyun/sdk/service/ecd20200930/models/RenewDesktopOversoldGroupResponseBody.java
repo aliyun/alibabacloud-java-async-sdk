@@ -36,6 +36,10 @@ public class RenewDesktopOversoldGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class RenewDesktopOversoldGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewDesktopOversoldGroupResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -119,6 +131,14 @@ public class RenewDesktopOversoldGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Long orderId; 
             private String oversoldGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderId = model.orderId;
+                this.oversoldGroupId = model.oversoldGroupId;
+            } 
 
             /**
              * OrderId.

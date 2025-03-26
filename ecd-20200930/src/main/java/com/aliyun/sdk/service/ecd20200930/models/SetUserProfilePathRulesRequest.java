@@ -50,7 +50,7 @@ public class SetUserProfilePathRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,6 +223,14 @@ public class SetUserProfilePathRulesRequest extends Request {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlackPath model) {
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The blacklist path.</p>
              * 
@@ -313,6 +321,14 @@ public class SetUserProfilePathRulesRequest extends Request {
             private String path; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(WhitePaths model) {
+                this.path = model.path;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The whitelist path.</p>
              * 
@@ -401,6 +417,14 @@ public class SetUserProfilePathRulesRequest extends Request {
         public static final class Builder {
             private BlackPath blackPath; 
             private java.util.List<WhitePaths> whitePaths; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProfilePathRule model) {
+                this.blackPath = model.blackPath;
+                this.whitePaths = model.whitePaths;
+            } 
 
             /**
              * <p>The directory in the blacklist.</p>

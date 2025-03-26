@@ -48,6 +48,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystemId
      */
@@ -89,6 +93,17 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         private String mountTargetDomain; 
         private String officeSiteId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNASFileSystemResponseBody model) {
+            this.fileSystemId = model.fileSystemId;
+            this.fileSystemName = model.fileSystemName;
+            this.mountTargetDomain = model.mountTargetDomain;
+            this.officeSiteId = model.officeSiteId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>ID of the NAS file system.</p>

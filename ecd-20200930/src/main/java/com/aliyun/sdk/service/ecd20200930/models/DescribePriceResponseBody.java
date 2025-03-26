@@ -36,6 +36,10 @@ public class DescribePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -53,6 +57,14 @@ public class DescribePriceResponseBody extends TeaModel {
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The price details.</p>
@@ -158,6 +170,17 @@ public class DescribePriceResponseBody extends TeaModel {
             private String promotionId; 
             private String promotionName; 
             private Boolean selected; 
+
+            private Builder() {
+            } 
+
+            private Builder(Promotions model) {
+                this.optionCode = model.optionCode;
+                this.promotionDesc = model.promotionDesc;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+                this.selected = model.selected;
+            } 
 
             /**
              * <p>The description of the promotion rule.</p>
@@ -325,6 +348,19 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long spPrice; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.orderLines = model.orderLines;
+                this.originalPrice = model.originalPrice;
+                this.promotions = model.promotions;
+                this.spPrice = model.spPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The unit of currency (USD).</p>
              * 
@@ -447,6 +483,14 @@ public class DescribePriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the rule.</p>
              * 
@@ -543,6 +587,16 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long freeCdsSize; 
             private Price price; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.freeCdsQuota = model.freeCdsQuota;
+                this.freeCdsSize = model.freeCdsSize;
+                this.price = model.price;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>Indicates whether a free enterprise drive is available.</p>

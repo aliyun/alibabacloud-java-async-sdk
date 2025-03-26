@@ -45,7 +45,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,6 +180,14 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         public static final class Builder {
             private String displayType; 
             private String headerKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.displayType = model.displayType;
+                this.headerKey = model.headerKey;
+            } 
 
             /**
              * <p>The display type of the header.</p>

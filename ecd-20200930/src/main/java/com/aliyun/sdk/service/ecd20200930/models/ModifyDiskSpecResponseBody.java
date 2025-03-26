@@ -36,6 +36,10 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
     public static final class Builder {
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDiskSpecResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the order. You can obtain the ID of an order from the <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs &gt; Orders</a> page.</p>

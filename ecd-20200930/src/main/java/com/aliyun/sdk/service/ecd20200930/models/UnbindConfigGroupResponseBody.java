@@ -36,6 +36,10 @@ public class UnbindConfigGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupIds
      */
@@ -53,6 +57,14 @@ public class UnbindConfigGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> groupIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnbindConfigGroupResponseBody model) {
+            this.groupIds = model.groupIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the configuration groups.</p>

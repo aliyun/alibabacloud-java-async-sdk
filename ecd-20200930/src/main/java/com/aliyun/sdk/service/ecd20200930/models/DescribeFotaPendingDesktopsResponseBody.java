@@ -48,6 +48,10 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         private String message; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFotaPendingDesktopsResponseBody model) {
+            this.code = model.code;
+            this.fotaPendingDesktops = model.fotaPendingDesktops;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -179,6 +194,13 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String endUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.endUserId = model.endUserId;
+            } 
 
             /**
              * <p>The ID of the end user that connects to the cloud computer.</p>
@@ -301,6 +323,19 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private String officeSiteId; 
             private java.util.List<Sessions> sessions; 
             private Long status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FotaPendingDesktops model) {
+                this.currentAppVersion = model.currentAppVersion;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.fotaProject = model.fotaProject;
+                this.officeSiteId = model.officeSiteId;
+                this.sessions = model.sessions;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The current version of the image used by the cloud computer.</p>

@@ -40,6 +40,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+        } 
 
         /**
          * <p>If the NextToken parameter is empty, no next page exists.</p>
@@ -361,6 +374,32 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.creationTime = model.creationTime;
+                this.creator = model.creator;
+                this.deletionTime = model.deletionTime;
+                this.description = model.description;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.desktopStatus = model.desktopStatus;
+                this.progress = model.progress;
+                this.protocolType = model.protocolType;
+                this.remainTime = model.remainTime;
+                this.restorePointId = model.restorePointId;
+                this.restorePointName = model.restorePointName;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.snapshotType = model.snapshotType;
+                this.sourceDiskSize = model.sourceDiskSize;
+                this.sourceDiskType = model.sourceDiskType;
+                this.status = model.status;
+                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
+                this.volumeEncryptionKey = model.volumeEncryptionKey;
+            } 
 
             /**
              * <p>The point in time at which the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>

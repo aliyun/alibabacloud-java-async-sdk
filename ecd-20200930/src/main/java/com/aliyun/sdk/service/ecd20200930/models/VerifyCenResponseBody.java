@@ -44,6 +44,10 @@ public class VerifyCenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrBlocks
      */
@@ -77,6 +81,16 @@ public class VerifyCenResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<RouteEntries> routeEntries; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyCenResponseBody model) {
+            this.cidrBlocks = model.cidrBlocks;
+            this.requestId = model.requestId;
+            this.routeEntries = model.routeEntries;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the <code>Status</code> value is <code>Conflict</code>.</p>
@@ -198,6 +212,16 @@ public class VerifyCenResponseBody extends TeaModel {
             private String nextHopInstanceId; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntries model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.nextHopInstanceId = model.nextHopInstanceId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The CIDR block of the route.</p>

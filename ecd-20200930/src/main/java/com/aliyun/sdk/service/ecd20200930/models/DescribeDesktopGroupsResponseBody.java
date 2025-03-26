@@ -40,6 +40,10 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktopGroups
      */
@@ -65,6 +69,15 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private java.util.List<DesktopGroups> desktopGroups; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDesktopGroupsResponseBody model) {
+            this.desktopGroups = model.desktopGroups;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cloud computer pools.</p>
@@ -145,6 +158,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CountPerStatus model) {
+                this.count = model.count;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The total number of cloud computers.</p>
@@ -276,6 +297,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -913,6 +942,61 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private Integer version; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopGroups model) {
+                this.bindAmount = model.bindAmount;
+                this.buyDesktopsCount = model.buyDesktopsCount;
+                this.comments = model.comments;
+                this.connectDuration = model.connectDuration;
+                this.countPerStatus = model.countPerStatus;
+                this.cpu = model.cpu;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskSize = model.dataDiskSize;
+                this.desktopCount = model.desktopCount;
+                this.desktopGroupId = model.desktopGroupId;
+                this.desktopGroupName = model.desktopGroupName;
+                this.desktopType = model.desktopType;
+                this.endUserCount = model.endUserCount;
+                this.expiredTime = model.expiredTime;
+                this.gpuCount = model.gpuCount;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuSpec = model.gpuSpec;
+                this.idleDisconnectDuration = model.idleDisconnectDuration;
+                this.imageId = model.imageId;
+                this.keepDuration = model.keepDuration;
+                this.loadPolicy = model.loadPolicy;
+                this.maxDesktopsCount = model.maxDesktopsCount;
+                this.memory = model.memory;
+                this.minDesktopsCount = model.minDesktopsCount;
+                this.officeSiteId = model.officeSiteId;
+                this.officeSiteName = model.officeSiteName;
+                this.officeSiteType = model.officeSiteType;
+                this.osType = model.osType;
+                this.ownBundleId = model.ownBundleId;
+                this.ownBundleName = model.ownBundleName;
+                this.ownType = model.ownType;
+                this.payType = model.payType;
+                this.policyGroupId = model.policyGroupId;
+                this.policyGroupName = model.policyGroupName;
+                this.protocolType = model.protocolType;
+                this.ratioThreshold = model.ratioThreshold;
+                this.resetType = model.resetType;
+                this.status = model.status;
+                this.stopDuration = model.stopDuration;
+                this.subnetId = model.subnetId;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.userOuPath = model.userOuPath;
+                this.version = model.version;
+                this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
+                this.volumeEncryptionKey = model.volumeEncryptionKey;
+            } 
 
             /**
              * <p>The number of concurrent sessions that is allowed for each cloud computer pool in a multi-session cloud computer pool.</p>

@@ -44,6 +44,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adConnectors
      */
@@ -77,6 +81,16 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         private String directoryId; 
         private String requestId; 
         private String trustPassword; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateADConnectorDirectoryResponseBody model) {
+            this.adConnectors = model.adConnectors;
+            this.directoryId = model.directoryId;
+            this.requestId = model.requestId;
+            this.trustPassword = model.trustPassword;
+        } 
 
         /**
          * <p>The details of AD connectors.</p>
@@ -156,6 +170,13 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String address; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdConnectors model) {
+                this.address = model.address;
+            } 
 
             /**
              * <p>The connection address.</p>

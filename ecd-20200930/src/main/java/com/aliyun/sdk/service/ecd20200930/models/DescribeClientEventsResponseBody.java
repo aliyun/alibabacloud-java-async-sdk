@@ -40,6 +40,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -65,6 +69,15 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         private java.util.List<Events> events; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClientEventsResponseBody model) {
+            this.events = model.events;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the events of an end user.</p>
@@ -397,6 +410,35 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String officeSiteType; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.aliUid = model.aliUid;
+                this.bytesReceived = model.bytesReceived;
+                this.bytesSend = model.bytesSend;
+                this.clientIp = model.clientIp;
+                this.clientOS = model.clientOS;
+                this.clientVersion = model.clientVersion;
+                this.description = model.description;
+                this.desktopGroupId = model.desktopGroupId;
+                this.desktopGroupName = model.desktopGroupName;
+                this.desktopId = model.desktopId;
+                this.desktopIp = model.desktopIp;
+                this.desktopName = model.desktopName;
+                this.directoryId = model.directoryId;
+                this.directoryType = model.directoryType;
+                this.endUserId = model.endUserId;
+                this.eventId = model.eventId;
+                this.eventTime = model.eventTime;
+                this.eventType = model.eventType;
+                this.officeSiteId = model.officeSiteId;
+                this.officeSiteName = model.officeSiteName;
+                this.officeSiteType = model.officeSiteType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account with which the event is associated.</p>

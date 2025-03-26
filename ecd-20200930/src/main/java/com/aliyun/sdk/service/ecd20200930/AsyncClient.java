@@ -154,6 +154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelCopyImageResponse> cancelCopyImage(CancelCopyImageRequest request);
 
     /**
+     * @param request the request parameters of CloneCenterPolicy  CloneCenterPolicyRequest
+     * @return CloneCenterPolicyResponse
+     */
+    CompletableFuture<CloneCenterPolicyResponse> cloneCenterPolicy(CloneCenterPolicyRequest request);
+
+    /**
      * @param request the request parameters of ClonePolicyGroup  ClonePolicyGroupRequest
      * @return ClonePolicyGroupResponse
      */
@@ -261,6 +267,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCdsFileShareLinkResponse
      */
     CompletableFuture<CreateCdsFileShareLinkResponse> createCdsFileShareLink(CreateCdsFileShareLinkRequest request);
+
+    /**
+     * @param request the request parameters of CreateCenterPolicy  CreateCenterPolicyRequest
+     * @return CreateCenterPolicyResponse
+     */
+    CompletableFuture<CreateCenterPolicyResponse> createCenterPolicy(CreateCenterPolicyRequest request);
 
     /**
      * @param request the request parameters of CreateCloudDriveService  CreateCloudDriveServiceRequest
@@ -409,6 +421,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCdsFileResponse
      */
     CompletableFuture<DeleteCdsFileResponse> deleteCdsFile(DeleteCdsFileRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCenterPolicy  DeleteCenterPolicyRequest
+     * @return DeleteCenterPolicyResponse
+     */
+    CompletableFuture<DeleteCenterPolicyResponse> deleteCenterPolicy(DeleteCenterPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteCloudDriveGroups  DeleteCloudDriveGroupsRequest
@@ -579,6 +597,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCensResponse
      */
     CompletableFuture<DescribeCensResponse> describeCens(DescribeCensRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCenterPolicyList  DescribeCenterPolicyListRequest
+     * @return DescribeCenterPolicyListResponse
+     */
+    CompletableFuture<DescribeCenterPolicyListResponse> describeCenterPolicyList(DescribeCenterPolicyListRequest request);
 
     /**
      * <b>description</b> :
@@ -860,6 +884,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRenewalPriceResponse
      */
     CompletableFuture<DescribeRenewalPriceResponse> describeRenewalPrice(DescribeRenewalPriceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeResourceByCenterPolicyId  DescribeResourceByCenterPolicyIdRequest
+     * @return DescribeResourceByCenterPolicyIdResponse
+     */
+    CompletableFuture<DescribeResourceByCenterPolicyIdResponse> describeResourceByCenterPolicyId(DescribeResourceByCenterPolicyIdRequest request);
 
     /**
      * <b>description</b> :
@@ -1176,6 +1206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCdsFileShareLinkResponse> modifyCdsFileShareLink(ModifyCdsFileShareLinkRequest request);
 
     /**
+     * @param request the request parameters of ModifyCenterPolicy  ModifyCenterPolicyRequest
+     * @return ModifyCenterPolicyResponse
+     */
+    CompletableFuture<ModifyCenterPolicyResponse> modifyCenterPolicy(ModifyCenterPolicyRequest request);
+
+    /**
      * @param request the request parameters of ModifyCloudDriveGroups  ModifyCloudDriveGroupsRequest
      * @return ModifyCloudDriveGroupsResponse
      */
@@ -1411,6 +1447,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyGroupResponse
      */
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyResourceCenterPolicy  ModifyResourceCenterPolicyRequest
+     * @return ModifyResourceCenterPolicyResponse
+     */
+    CompletableFuture<ModifyResourceCenterPolicyResponse> modifyResourceCenterPolicy(ModifyResourceCenterPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyTimerGroup  ModifyTimerGroupRequest

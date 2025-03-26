@@ -36,6 +36,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktopTypes
      */
@@ -53,6 +57,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DesktopTypes> desktopTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDesktopTypesResponseBody model) {
+            this.desktopTypes = model.desktopTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of cloud desktop types.</p>
@@ -254,6 +266,25 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private java.util.List<String> scopes; 
             private String stockState; 
             private String systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopTypes model) {
+                this.cpuCount = model.cpuCount;
+                this.dataDiskSize = model.dataDiskSize;
+                this.desktopTypeId = model.desktopTypeId;
+                this.desktopTypeStatus = model.desktopTypeStatus;
+                this.gpuCount = model.gpuCount;
+                this.gpuMemory = model.gpuMemory;
+                this.gpuSpec = model.gpuSpec;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.maxSessionCount = model.maxSessionCount;
+                this.memorySize = model.memorySize;
+                this.scopes = model.scopes;
+                this.stockState = model.stockState;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * <p>The number of vCPUs.</p>

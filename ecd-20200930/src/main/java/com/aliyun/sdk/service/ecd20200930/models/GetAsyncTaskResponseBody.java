@@ -44,6 +44,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsyncTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
@@ -228,6 +242,19 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             private String status; 
             private Long totalProcess; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asyncTaskId = model.asyncTaskId;
+                this.consumedProcess = model.consumedProcess;
+                this.errCode = model.errCode;
+                this.message = model.message;
+                this.status = model.status;
+                this.totalProcess = model.totalProcess;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The asynchronous task ID.</p>

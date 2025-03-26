@@ -44,6 +44,10 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -77,6 +81,16 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDesktopOversoldUserResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Count.
@@ -183,6 +197,16 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
             private String oversoldGroupId; 
             private String userDesktopId; 
             private String userGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endUserId = model.endUserId;
+                this.oversoldGroupId = model.oversoldGroupId;
+                this.userDesktopId = model.userDesktopId;
+                this.userGroupId = model.userGroupId;
+            } 
 
             /**
              * EndUserId.

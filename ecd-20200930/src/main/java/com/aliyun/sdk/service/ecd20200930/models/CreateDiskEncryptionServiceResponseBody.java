@@ -40,6 +40,10 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDiskEncryptionServiceResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The order ID.</p>

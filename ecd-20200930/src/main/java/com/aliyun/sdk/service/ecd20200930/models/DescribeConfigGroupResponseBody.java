@@ -48,6 +48,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConfigGroupResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The configuration groups.</p>
@@ -263,6 +278,20 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             private String productType; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bindCount = model.bindCount;
+                this.bindCountMap = model.bindCountMap;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.name = model.name;
+                this.productType = model.productType;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of resources that are bound to the configuration group.</p>

@@ -48,6 +48,10 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coId
      */
@@ -89,6 +93,17 @@ public class GetCoordinateTicketResponseBody extends TeaModel {
         private String taskId; 
         private String taskStatus; 
         private String ticket; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCoordinateTicketResponseBody model) {
+            this.coId = model.coId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskStatus = model.taskStatus;
+            this.ticket = model.ticket;
+        } 
 
         /**
          * <p>The ID of the stream collaboration.</p>

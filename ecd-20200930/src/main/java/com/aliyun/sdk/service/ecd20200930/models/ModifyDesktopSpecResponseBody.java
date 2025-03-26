@@ -40,6 +40,10 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         private String orderId; 
         private java.util.List<Long> orderIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDesktopSpecResponseBody model) {
+            this.orderId = model.orderId;
+            this.orderIds = model.orderIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the order.</p>

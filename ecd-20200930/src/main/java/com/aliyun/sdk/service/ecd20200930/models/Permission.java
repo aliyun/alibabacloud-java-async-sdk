@@ -68,6 +68,10 @@ public class Permission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -149,6 +153,22 @@ public class Permission extends TeaModel {
         private String priority; 
         private String sourceCidrIp; 
         private String sourcePortRange; 
+
+        private Builder() {
+        } 
+
+        private Builder(Permission model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.destCidrIp = model.destCidrIp;
+            this.ipProtocol = model.ipProtocol;
+            this.nicType = model.nicType;
+            this.policy = model.policy;
+            this.portRange = model.portRange;
+            this.priority = model.priority;
+            this.sourceCidrIp = model.sourceCidrIp;
+            this.sourcePortRange = model.sourcePortRange;
+        } 
 
         /**
          * CreateTime.

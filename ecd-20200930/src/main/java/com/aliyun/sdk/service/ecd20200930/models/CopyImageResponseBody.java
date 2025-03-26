@@ -36,6 +36,10 @@ public class CopyImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageId
      */
@@ -53,6 +57,14 @@ public class CopyImageResponseBody extends TeaModel {
     public static final class Builder {
         private String imageId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CopyImageResponseBody model) {
+            this.imageId = model.imageId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the image that is being copied.</p>

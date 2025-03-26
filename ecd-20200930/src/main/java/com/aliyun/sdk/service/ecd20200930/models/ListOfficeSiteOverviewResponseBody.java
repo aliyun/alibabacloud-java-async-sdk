@@ -40,6 +40,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<OfficeSiteOverviewResults> officeSiteOverviewResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOfficeSiteOverviewResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.officeSiteOverviewResults = model.officeSiteOverviewResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The token that is used to start the next query. If this parameter is empty, all results are returned.</p>
@@ -277,6 +290,25 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             private String vpcType; 
             private Integer willExpiredEdsCount; 
             private Integer willExpiredEdsCountForGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(OfficeSiteOverviewResults model) {
+                this.hasExpiredEdsCount = model.hasExpiredEdsCount;
+                this.hasExpiredEdsCountForGroup = model.hasExpiredEdsCountForGroup;
+                this.officeSiteId = model.officeSiteId;
+                this.officeSiteName = model.officeSiteName;
+                this.officeSiteStatus = model.officeSiteStatus;
+                this.regionId = model.regionId;
+                this.runningEdsCount = model.runningEdsCount;
+                this.runningEdsCountForGroup = model.runningEdsCountForGroup;
+                this.totalEdsCount = model.totalEdsCount;
+                this.totalEdsCountForGroup = model.totalEdsCountForGroup;
+                this.vpcType = model.vpcType;
+                this.willExpiredEdsCount = model.willExpiredEdsCount;
+                this.willExpiredEdsCountForGroup = model.willExpiredEdsCountForGroup;
+            } 
 
             /**
              * <p>The number of expired cloud computers in the office network.</p>
