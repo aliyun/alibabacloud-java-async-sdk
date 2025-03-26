@@ -48,6 +48,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6TranslatorAcls
      */
@@ -89,6 +93,17 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIPv6TranslatorAclListsResponseBody model) {
+            this.ipv6TranslatorAcls = model.ipv6TranslatorAcls;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of network ACLs.</p>
@@ -192,6 +207,14 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             private String aclId; 
             private String aclName; 
 
+            private Builder() {
+            } 
+
+            private Builder(IPv6TranslatorAcl model) {
+                this.aclId = model.aclId;
+                this.aclName = model.aclName;
+            } 
+
             /**
              * <p>The ACL ID.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6TranslatorAcls model) {
+                this.iPv6TranslatorAcl = model.iPv6TranslatorAcl;
+            } 
 
             /**
              * IPv6TranslatorAcl.

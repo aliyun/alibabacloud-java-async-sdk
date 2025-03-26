@@ -84,6 +84,10 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessStatus
      */
@@ -197,6 +201,26 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         private String status; 
         private Tags tags; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpv6GatewayAttributeResponseBody model) {
+            this.businessStatus = model.businessStatus;
+            this.creationTime = model.creationTime;
+            this.description = model.description;
+            this.expiredTime = model.expiredTime;
+            this.gatewayRouteTableId = model.gatewayRouteTableId;
+            this.instanceChargeType = model.instanceChargeType;
+            this.ipv6GatewayId = model.ipv6GatewayId;
+            this.name = model.name;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The status of the IPv6 gateway. Valid values:</p>
@@ -411,6 +435,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
              * <p>The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -473,6 +505,13 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.

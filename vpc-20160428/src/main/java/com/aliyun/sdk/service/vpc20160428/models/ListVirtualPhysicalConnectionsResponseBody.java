@@ -48,6 +48,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VirtualPhysicalConnections> virtualPhysicalConnections; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVirtualPhysicalConnectionsResponseBody model) {
+            this.count = model.count;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.virtualPhysicalConnections = model.virtualPhysicalConnections;
+        } 
 
         /**
          * <p>The number of entries returned in this query.</p>
@@ -195,6 +210,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
@@ -618,6 +641,43 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             private String type; 
             private String virtualPhysicalConnectionStatus; 
             private String vlanId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualPhysicalConnections model) {
+                this.accessPointId = model.accessPointId;
+                this.adLocation = model.adLocation;
+                this.aliUid = model.aliUid;
+                this.bandwidth = model.bandwidth;
+                this.businessStatus = model.businessStatus;
+                this.chargeType = model.chargeType;
+                this.circuitCode = model.circuitCode;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.enabledTime = model.enabledTime;
+                this.endTime = model.endTime;
+                this.expectSpec = model.expectSpec;
+                this.lineOperator = model.lineOperator;
+                this.loaStatus = model.loaStatus;
+                this.name = model.name;
+                this.orderMode = model.orderMode;
+                this.parentPhysicalConnectionAliUid = model.parentPhysicalConnectionAliUid;
+                this.parentPhysicalConnectionId = model.parentPhysicalConnectionId;
+                this.peerLocation = model.peerLocation;
+                this.physicalConnectionId = model.physicalConnectionId;
+                this.portNumber = model.portNumber;
+                this.portType = model.portType;
+                this.productType = model.productType;
+                this.redundantPhysicalConnectionId = model.redundantPhysicalConnectionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.virtualPhysicalConnectionStatus = model.virtualPhysicalConnectionStatus;
+                this.vlanId = model.vlanId;
+            } 
 
             /**
              * <p>The ID of the access point that is associated with the Express Connect circuit.</p>

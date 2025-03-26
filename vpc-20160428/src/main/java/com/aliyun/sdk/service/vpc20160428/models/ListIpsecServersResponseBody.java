@@ -48,6 +48,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipsecServers
      */
@@ -89,6 +93,17 @@ public class ListIpsecServersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIpsecServersResponseBody model) {
+            this.ipsecServers = model.ipsecServers;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of IPsec servers.</p>
@@ -268,6 +283,20 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String localId; 
             private String remoteId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.remoteId = model.remoteId;
+            } 
+
             /**
              * <p>The IKE authentication algorithm.</p>
              * 
@@ -431,6 +460,16 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String ipsecEncAlg; 
             private Long ipsecLifetime; 
             private String ipsecPfs; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
 
             /**
              * <p>The IPsec authentication algorithm.</p>
@@ -718,6 +757,30 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String vpnGatewayId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpsecServers model) {
+                this.clientIpPool = model.clientIpPool;
+                this.creationTime = model.creationTime;
+                this.effectImmediately = model.effectImmediately;
+                this.iDaaSInstanceId = model.iDaaSInstanceId;
+                this.ikeConfig = model.ikeConfig;
+                this.internetIp = model.internetIp;
+                this.ipsecConfig = model.ipsecConfig;
+                this.ipsecServerId = model.ipsecServerId;
+                this.ipsecServerName = model.ipsecServerName;
+                this.localSubnet = model.localSubnet;
+                this.maxConnections = model.maxConnections;
+                this.multiFactorAuthEnabled = model.multiFactorAuthEnabled;
+                this.onlineClientCount = model.onlineClientCount;
+                this.psk = model.psk;
+                this.pskEnabled = model.pskEnabled;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.vpnGatewayId = model.vpnGatewayId;
+            } 
 
             /**
              * <p>The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.</p>

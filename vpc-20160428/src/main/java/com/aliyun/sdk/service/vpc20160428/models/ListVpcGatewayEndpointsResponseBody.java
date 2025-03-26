@@ -48,6 +48,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpoints
      */
@@ -89,6 +93,17 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcGatewayEndpointsResponseBody model) {
+            this.endpoints = model.endpoints;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of gateway endpoints.</p>
@@ -195,6 +210,14 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>
@@ -376,6 +399,23 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String serviceName; 
             private java.util.List<Tags> tags; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.associatedRouteTables = model.associatedRouteTables;
+                this.creationTime = model.creationTime;
+                this.endpointDescription = model.endpointDescription;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointStatus = model.endpointStatus;
+                this.policyDocument = model.policyDocument;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceName = model.serviceName;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The ID of the route table associated with the gateway endpoint.</p>

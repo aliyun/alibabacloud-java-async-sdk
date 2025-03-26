@@ -76,7 +76,7 @@ public class PublishVpcRouteEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -311,6 +311,14 @@ public class PublishVpcRouteEntriesRequest extends Request {
         public static final class Builder {
             private String destinationCidrBlock; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntries model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

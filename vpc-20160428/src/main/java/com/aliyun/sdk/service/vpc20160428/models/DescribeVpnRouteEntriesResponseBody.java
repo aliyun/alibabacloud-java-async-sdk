@@ -52,6 +52,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
         private VpnRouteCounts vpnRouteCounts; 
         private VpnRouteEntries vpnRouteEntries; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnRouteEntriesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpnRouteCounts = model.vpnRouteCounts;
+            this.vpnRouteEntries = model.vpnRouteEntries;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -227,6 +243,15 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private String routeEntryType; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpnRouteCount model) {
+                this.routeCount = model.routeCount;
+                this.routeEntryType = model.routeEntryType;
+                this.source = model.source;
+            } 
+
             /**
              * <p>The number of route entries.</p>
              * 
@@ -306,6 +331,13 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VpnRouteCount> vpnRouteCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnRouteCounts model) {
+                this.vpnRouteCount = model.vpnRouteCount;
+            } 
 
             /**
              * VpnRouteCount.
@@ -473,6 +505,23 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private String state; 
             private String vpnInstanceId; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnRouteEntry model) {
+                this.asPath = model.asPath;
+                this.community = model.community;
+                this.createTime = model.createTime;
+                this.nextHop = model.nextHop;
+                this.nextHopTunnelId = model.nextHopTunnelId;
+                this.routeDest = model.routeDest;
+                this.routeEntryType = model.routeEntryType;
+                this.source = model.source;
+                this.state = model.state;
+                this.vpnInstanceId = model.vpnInstanceId;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The AS path of the route entry.</p>
@@ -652,6 +701,13 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VpnRouteEntry> vpnRouteEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnRouteEntries model) {
+                this.vpnRouteEntry = model.vpnRouteEntry;
+            } 
 
             /**
              * VpnRouteEntry.

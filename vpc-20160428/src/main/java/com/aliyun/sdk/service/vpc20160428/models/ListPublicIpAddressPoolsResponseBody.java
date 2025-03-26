@@ -44,6 +44,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         private java.util.List<PublicIpAddressPoolList> publicIpAddressPoolList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPublicIpAddressPoolsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.publicIpAddressPoolList = model.publicIpAddressPoolList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -172,6 +186,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N.</p>
@@ -449,6 +471,31 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private Integer usedIpNum; 
             private String userType; 
             private java.util.List<String> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddressPoolList model) {
+                this.bizType = model.bizType;
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ipAddressRemaining = model.ipAddressRemaining;
+                this.isp = model.isp;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.publicIpAddressPoolId = model.publicIpAddressPoolId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityProtectionTypes = model.securityProtectionTypes;
+                this.shareType = model.shareType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.totalIpNum = model.totalIpNum;
+                this.usedIpNum = model.usedIpNum;
+                this.userType = model.userType;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>The service type of the IP address pool.</p>

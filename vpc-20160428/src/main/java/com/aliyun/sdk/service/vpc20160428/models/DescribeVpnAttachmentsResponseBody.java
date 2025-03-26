@@ -48,6 +48,10 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VpnAttachments> vpnAttachments; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnAttachmentsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpnAttachments = model.vpnAttachments;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -191,6 +206,14 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the IPsec-VPN connection.</p>
@@ -348,6 +371,21 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String transitRouterId; 
             private String transitRouterName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnAttachments model) {
+                this.attachType = model.attachType;
+                this.crossAccountAuthorized = model.crossAccountAuthorized;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.tag = model.tag;
+                this.tags = model.tags;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterName = model.transitRouterName;
+            } 
 
             /**
              * <p>The type of resource that is associated with the IPsec-VPN connection. The value is set to <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router.</p>

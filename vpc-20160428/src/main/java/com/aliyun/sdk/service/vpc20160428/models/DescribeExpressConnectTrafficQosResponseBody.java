@@ -52,6 +52,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         private java.util.List<QosList> qosList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectTrafficQosResponseBody model) {
+            this.count = model.count;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.qosList = model.qosList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -242,6 +258,16 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private Integer instanceProgressing; 
             private String instanceStatus; 
             private String instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedInstanceList model) {
+                this.instanceId = model.instanceId;
+                this.instanceProgressing = model.instanceProgressing;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * <p>The ID of the instance to which the QoS policy is associated.</p>
@@ -403,6 +429,19 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private String queueType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueueList model) {
+                this.bandwidthPercent = model.bandwidthPercent;
+                this.qosId = model.qosId;
+                this.queueDescription = model.queueDescription;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.queueType = model.queueType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The percentage of bandwidth allocated to a QoS queue.</p>
              * <ul>
@@ -549,6 +588,14 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -706,6 +753,21 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(QosList model) {
+                this.associatedInstanceList = model.associatedInstanceList;
+                this.progressing = model.progressing;
+                this.qosDescription = model.qosDescription;
+                this.qosId = model.qosId;
+                this.qosName = model.qosName;
+                this.queueList = model.queueList;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The information about the instances to which the QoS policy is associated.</p>

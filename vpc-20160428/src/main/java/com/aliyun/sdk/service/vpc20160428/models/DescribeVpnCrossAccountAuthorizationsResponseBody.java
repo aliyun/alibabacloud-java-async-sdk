@@ -48,6 +48,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return crossAccountAuthorizations
      */
@@ -89,6 +93,17 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnCrossAccountAuthorizationsResponseBody model) {
+            this.crossAccountAuthorizations = model.crossAccountAuthorizations;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cross-account authorization information about the IPsec-VPN connection.</p>
@@ -239,6 +254,18 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             private Long bindUid; 
             private Long creationTime; 
             private String vpnConnectionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CrossAccountAuthorizations model) {
+                this.aliUid = model.aliUid;
+                this.bindInstance = model.bindInstance;
+                this.bindProduct = model.bindProduct;
+                this.bindUid = model.bindUid;
+                this.creationTime = model.creationTime;
+                this.vpnConnectionId = model.vpnConnectionId;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>

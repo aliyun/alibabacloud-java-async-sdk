@@ -36,6 +36,10 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePhysicalConnectionOccupancyOrderResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details.</p>
@@ -110,6 +122,13 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
 
         public static final class Builder {
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderId = model.orderId;
+            } 
 
             /**
              * <p>The ID of the order that is placed.</p>

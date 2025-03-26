@@ -48,6 +48,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natGateways
      */
@@ -89,6 +93,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNatGatewaysResponseBody model) {
+            this.natGateways = model.natGateways;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the NAT gateway.</p>
@@ -192,6 +207,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String modeValue; 
             private String tunnelType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessMode model) {
+                this.modeValue = model.modeValue;
+                this.tunnelType = model.tunnelType;
+            } 
+
             /**
              * ModeValue.
              */
@@ -247,6 +270,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> forwardTableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableIds model) {
+                this.forwardTableId = model.forwardTableId;
+            } 
+
             /**
              * ForwardTableId.
              */
@@ -293,6 +323,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> fullNatTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullNatTableIds model) {
+                this.fullNatTableId = model.fullNatTableId;
+            } 
 
             /**
              * FullNatTableId.
@@ -388,6 +425,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String privateIpAddress; 
             private Boolean snatEntryEnabled; 
             private String usingStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpList model) {
+                this.allocationId = model.allocationId;
+                this.ipAddress = model.ipAddress;
+                this.privateIpAddress = model.privateIpAddress;
+                this.snatEntryEnabled = model.snatEntryEnabled;
+                this.usingStatus = model.usingStatus;
+            } 
 
             /**
              * <p>The ID of the EIP associated with the NAT gateway.</p>
@@ -492,6 +540,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IpList> ipList; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpLists model) {
+                this.ipList = model.ipList;
+            } 
 
             /**
              * IpList.
@@ -624,6 +679,20 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NatGatewayPrivateInfo model) {
+                this.eniInstanceId = model.eniInstanceId;
+                this.eniType = model.eniType;
+                this.izNo = model.izNo;
+                this.maxBandwidth = model.maxBandwidth;
+                this.maxSessionEstablishRate = model.maxSessionEstablishRate;
+                this.maxSessionQuota = model.maxSessionQuota;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * <p>The ID of the elastic network interface (ENI).</p>
              * 
@@ -755,6 +824,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> snatTableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnatTableIds model) {
+                this.snatTableId = model.snatTableId;
+            } 
+
             /**
              * SnatTableId.
              */
@@ -813,6 +889,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the instance.</p>
@@ -874,6 +958,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1281,6 +1372,43 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatGateway model) {
+                this.accessMode = model.accessMode;
+                this.autoPay = model.autoPay;
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.ecsMetricEnabled = model.ecsMetricEnabled;
+                this.eipBindMode = model.eipBindMode;
+                this.enableSessionLog = model.enableSessionLog;
+                this.expiredTime = model.expiredTime;
+                this.forwardTableIds = model.forwardTableIds;
+                this.fullNatTableIds = model.fullNatTableIds;
+                this.icmpReplyEnabled = model.icmpReplyEnabled;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+                this.ipLists = model.ipLists;
+                this.name = model.name;
+                this.natGatewayId = model.natGatewayId;
+                this.natGatewayPrivateInfo = model.natGatewayPrivateInfo;
+                this.natType = model.natType;
+                this.networkType = model.networkType;
+                this.privateLinkEnabled = model.privateLinkEnabled;
+                this.privateLinkMode = model.privateLinkMode;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityProtectionEnabled = model.securityProtectionEnabled;
+                this.snatTableIds = model.snatTableIds;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * AccessMode.
@@ -1695,6 +1823,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NatGateway> natGateway; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatGateways model) {
+                this.natGateway = model.natGateway;
+            } 
 
             /**
              * NatGateway.

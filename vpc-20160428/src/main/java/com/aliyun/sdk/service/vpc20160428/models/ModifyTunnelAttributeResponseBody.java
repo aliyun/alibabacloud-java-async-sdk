@@ -80,6 +80,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customerGatewayId
      */
@@ -185,6 +189,25 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         private TunnelIkeConfig tunnelIkeConfig; 
         private TunnelIpsecConfig tunnelIpsecConfig; 
         private String zoneNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTunnelAttributeResponseBody model) {
+            this.customerGatewayId = model.customerGatewayId;
+            this.enableDpd = model.enableDpd;
+            this.enableNatTraversal = model.enableNatTraversal;
+            this.internetIp = model.internetIp;
+            this.remoteCaCertificate = model.remoteCaCertificate;
+            this.requestId = model.requestId;
+            this.role = model.role;
+            this.state = model.state;
+            this.tunnelBgpConfig = model.tunnelBgpConfig;
+            this.tunnelId = model.tunnelId;
+            this.tunnelIkeConfig = model.tunnelIkeConfig;
+            this.tunnelIpsecConfig = model.tunnelIpsecConfig;
+            this.zoneNo = model.zoneNo;
+        } 
 
         /**
          * <p>The ID of the customer gateway associated with the customer gateway.</p>
@@ -435,6 +458,18 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String peerBgpIp; 
             private String tunnelCidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelBgpConfig model) {
+                this.enableBgp = model.enableBgp;
+                this.localAsn = model.localAsn;
+                this.localBgpIp = model.localBgpIp;
+                this.peerAsn = model.peerAsn;
+                this.peerBgpIp = model.peerBgpIp;
+                this.tunnelCidr = model.tunnelCidr;
+            } 
+
             /**
              * <p>Indicates whether the BGP feature is enabled. Valid values:</p>
              * <ul>
@@ -640,6 +675,21 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String psk; 
             private String remoteId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelIkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
+
             /**
              * <p>The IKE authentication algorithm.</p>
              * 
@@ -822,6 +872,16 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String ipsecEncAlg; 
             private Long ipsecLifetime; 
             private String ipsecPfs; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelIpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
 
             /**
              * <p>The IPsec authentication algorithm.</p>

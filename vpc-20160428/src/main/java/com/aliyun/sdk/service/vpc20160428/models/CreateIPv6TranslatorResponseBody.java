@@ -48,6 +48,10 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6TranslatorId
      */
@@ -89,6 +93,17 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private String spec; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIPv6TranslatorResponseBody model) {
+            this.ipv6TranslatorId = model.ipv6TranslatorId;
+            this.name = model.name;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.spec = model.spec;
+        } 
 
         /**
          * <p>The ID of the IPv6 Translation Service instance.</p>

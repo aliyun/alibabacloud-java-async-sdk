@@ -94,6 +94,10 @@ public class AllocateEipAddressProRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
     private java.util.List<String> securityProtectionTypes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private AllocateEipAddressProRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -115,6 +119,7 @@ public class AllocateEipAddressProRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityProtectionTypes = builder.securityProtectionTypes;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -125,7 +130,7 @@ public class AllocateEipAddressProRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -263,6 +268,13 @@ public class AllocateEipAddressProRequest extends Request {
         return this.securityProtectionTypes;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<AllocateEipAddressProRequest, Builder> {
         private Boolean autoPay; 
         private String bandwidth; 
@@ -283,6 +295,7 @@ public class AllocateEipAddressProRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List<String> securityProtectionTypes; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -309,6 +322,7 @@ public class AllocateEipAddressProRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityProtectionTypes = request.securityProtectionTypes;
+            this.tag = request.tag;
         } 
 
         /**
@@ -592,6 +606,15 @@ public class AllocateEipAddressProRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public AllocateEipAddressProRequest build() {
             return new AllocateEipAddressProRequest(this);
@@ -599,4 +622,79 @@ public class AllocateEipAddressProRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateEipAddressProRequest} extends {@link TeaModel}
+     *
+     * <p>AllocateEipAddressProRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

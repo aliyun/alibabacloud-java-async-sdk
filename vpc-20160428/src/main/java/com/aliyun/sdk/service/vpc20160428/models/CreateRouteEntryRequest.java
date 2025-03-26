@@ -96,7 +96,7 @@ public class CreateRouteEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -458,6 +458,15 @@ public class CreateRouteEntryRequest extends Request {
             private String nextHopId; 
             private String nextHopType; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHopList model) {
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The ID of the next hop of the ECMP route.</p>

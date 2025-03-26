@@ -36,6 +36,10 @@ public class CreateBgpGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bgpGroupId
      */
@@ -53,6 +57,14 @@ public class CreateBgpGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String bgpGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBgpGroupResponseBody model) {
+            this.bgpGroupId = model.bgpGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the BGP group.</p>

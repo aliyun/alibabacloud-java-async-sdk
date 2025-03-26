@@ -64,6 +64,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creationTime
      */
@@ -137,6 +141,21 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         private String status; 
         private String vbrHaId; 
         private String vbrId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVbrHaResponseBody model) {
+            this.creationTime = model.creationTime;
+            this.description = model.description;
+            this.name = model.name;
+            this.peerVbrId = model.peerVbrId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.vbrHaId = model.vbrHaId;
+            this.vbrId = model.vbrId;
+        } 
 
         /**
          * <p>The time when the VBR was created.</p>

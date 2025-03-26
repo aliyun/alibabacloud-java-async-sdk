@@ -40,6 +40,10 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OpenFlowLogServiceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>

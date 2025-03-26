@@ -36,6 +36,10 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RouteEntrySummarys> routeEntrySummarys; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpcRouteEntrySummaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.routeEntrySummarys = model.routeEntrySummarys;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String routeEntryType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntrySummarys model) {
+                this.count = model.count;
+                this.routeEntryType = model.routeEntryType;
+            } 
 
             /**
              * <p>The number of entries returned.</p>
@@ -202,6 +222,14 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<EntrySummarys> entrySummarys; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntrySummarys model) {
+                this.entrySummarys = model.entrySummarys;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The information about the routes of different types in one route table.</p>

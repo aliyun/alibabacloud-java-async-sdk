@@ -48,6 +48,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VpnPbrRouteEntries vpnPbrRouteEntries; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnPbrRouteEntriesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpnPbrRouteEntries = model.vpnPbrRouteEntries;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -276,6 +291,21 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             private String vpnInstanceId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpnPbrRouteEntry model) {
+                this.createTime = model.createTime;
+                this.nextHop = model.nextHop;
+                this.nextHopTunnelId = model.nextHopTunnelId;
+                this.priority = model.priority;
+                this.routeDest = model.routeDest;
+                this.routeSource = model.routeSource;
+                this.state = model.state;
+                this.vpnInstanceId = model.vpnInstanceId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The time when the policy-based route was created. Unit: millisecond.</p>
              * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -428,6 +458,13 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VpnPbrRouteEntry> vpnPbrRouteEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnPbrRouteEntries model) {
+                this.vpnPbrRouteEntry = model.vpnPbrRouteEntry;
+            } 
 
             /**
              * VpnPbrRouteEntry.

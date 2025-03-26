@@ -48,6 +48,10 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrReservationUsages
      */
@@ -89,6 +93,17 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVSwitchCidrReservationUsageResponseBody model) {
+            this.cidrReservationUsages = model.cidrReservationUsages;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of reserved CIDR blocks that are in use.</p>
@@ -243,6 +258,18 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
             private String resourceType; 
             private String vSwitchCidrReservationId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CidrReservationUsages model) {
+                this.ipPrefixCidr = model.ipPrefixCidr;
+                this.ipPrefixId = model.ipPrefixId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.vSwitchCidrReservationId = model.vSwitchCidrReservationId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The CIDR block allocated to the ENI from the reserved CIDR block.</p>

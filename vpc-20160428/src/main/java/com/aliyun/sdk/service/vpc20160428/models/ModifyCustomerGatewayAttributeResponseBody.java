@@ -56,6 +56,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -113,6 +117,19 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCustomerGatewayAttributeResponseBody model) {
+            this.createTime = model.createTime;
+            this.customerGatewayId = model.customerGatewayId;
+            this.description = model.description;
+            this.ipAddress = model.ipAddress;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The timestamp generated when the customer gateway was created.</p>

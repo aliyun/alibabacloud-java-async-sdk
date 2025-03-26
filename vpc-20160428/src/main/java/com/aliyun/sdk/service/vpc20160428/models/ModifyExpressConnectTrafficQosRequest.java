@@ -81,7 +81,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -349,6 +349,14 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             private String instanceId; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddInstanceList model) {
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
              * <p>The ID of the instance to be associated.</p>
              * 
@@ -421,6 +429,14 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemoveInstanceList model) {
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * <p>The ID of the associated instance.</p>

@@ -36,6 +36,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quota
      */
@@ -53,6 +57,14 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
     public static final class Builder {
         private Long quota; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody model) {
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of endpoints that can be created.</p>

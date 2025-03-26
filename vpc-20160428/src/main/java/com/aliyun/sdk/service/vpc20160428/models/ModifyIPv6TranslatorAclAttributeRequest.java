@@ -72,7 +72,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

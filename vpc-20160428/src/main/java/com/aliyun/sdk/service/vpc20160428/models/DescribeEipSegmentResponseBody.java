@@ -48,6 +48,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipSegments
      */
@@ -89,6 +93,17 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEipSegmentResponseBody model) {
+            this.eipSegments = model.eipSegments;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the contiguous EIP group.</p>
@@ -276,6 +291,21 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             private String status; 
             private String zone; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipSegment model) {
+                this.creationTime = model.creationTime;
+                this.descritpion = model.descritpion;
+                this.instanceId = model.instanceId;
+                this.ipCount = model.ipCount;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.segment = model.segment;
+                this.status = model.status;
+                this.zone = model.zone;
+            } 
+
             /**
              * <p>The time when the contiguous EIP group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -418,6 +448,13 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EipSegment> eipSegment; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipSegments model) {
+                this.eipSegment = model.eipSegment;
+            } 
 
             /**
              * EipSegment.

@@ -48,6 +48,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return haVips
      */
@@ -89,6 +93,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHaVipsResponseBody model) {
+            this.haVips = model.haVips;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the HAVIP.</p>
@@ -180,6 +195,13 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> associatedEipAddresse; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedEipAddresses model) {
+                this.associatedEipAddresse = model.associatedEipAddresse;
+            } 
+
             /**
              * associatedEipAddresse.
              */
@@ -226,6 +248,13 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> associatedInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedInstances model) {
+                this.associatedInstance = model.associatedInstance;
+            } 
 
             /**
              * associatedInstance.
@@ -285,6 +314,14 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>
@@ -346,6 +383,13 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -574,6 +618,28 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaVip model) {
+                this.associatedEipAddresses = model.associatedEipAddresses;
+                this.associatedInstanceType = model.associatedInstanceType;
+                this.associatedInstances = model.associatedInstances;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.haVipId = model.haVipId;
+                this.ipAddress = model.ipAddress;
+                this.masterInstanceId = model.masterInstanceId;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The list of EIPs associated with the HAVIP.</p>
              */
@@ -788,6 +854,13 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HaVip> haVip; 
+
+            private Builder() {
+            } 
+
+            private Builder(HaVips model) {
+                this.haVip = model.haVip;
+            } 
 
             /**
              * HaVip.

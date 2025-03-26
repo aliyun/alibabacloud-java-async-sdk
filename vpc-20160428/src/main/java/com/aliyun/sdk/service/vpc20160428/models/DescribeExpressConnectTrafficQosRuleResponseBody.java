@@ -36,6 +36,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleList> ruleList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectTrafficQosRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleList = model.ruleList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -290,6 +302,28 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             private String srcIPv6Cidr; 
             private String srcPortRange; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.dstCidr = model.dstCidr;
+                this.dstIPv6Cidr = model.dstIPv6Cidr;
+                this.dstPortRange = model.dstPortRange;
+                this.matchDscp = model.matchDscp;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.qosId = model.qosId;
+                this.queueId = model.queueId;
+                this.remarkingDscp = model.remarkingDscp;
+                this.ruleDescription = model.ruleDescription;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.srcCidr = model.srcCidr;
+                this.srcIPv6Cidr = model.srcIPv6Cidr;
+                this.srcPortRange = model.srcPortRange;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The destination IPv4 CIDR block that matches the QoS rule traffic.</p>

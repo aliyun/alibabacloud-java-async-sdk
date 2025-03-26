@@ -344,16 +344,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p><em>AllocateEipSegmentAddress</em>* is an asynchronous operation. After a request is sent, the system returns the ID of a contiguous EIP group and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/156063.html">DescribeEipSegment</a> operation to query the status of the task.</p>
-     * <ul>
-     * <li>If the contiguous EIP group is in the <strong>Allocating</strong> state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.</li>
-     * <li>If the contiguous EIP group is in the <strong>Allocated</strong> state, the EIPs are allocated.</li>
-     * </ul>
+     * @deprecated OpenAPI AllocateEipSegmentAddress is deprecated  * @description **AllocateEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns the ID of a contiguous EIP group and runs the task in the background. You can call the [DescribeEipSegment](https://help.aliyun.com/document_detail/156063.html) operation to query the status of the task.
+     * *   If the contiguous EIP group is in the **Allocating** state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.
+     * *   If the contiguous EIP group is in the **Allocated** state, the EIPs are allocated.
      * 
      * @param request the request parameters of AllocateEipSegmentAddress  AllocateEipSegmentAddressRequest
      * @return AllocateEipSegmentAddressResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AllocateEipSegmentAddressResponse> allocateEipSegmentAddress(AllocateEipSegmentAddressRequest request) {
         try {

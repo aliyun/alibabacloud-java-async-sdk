@@ -64,6 +64,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePublicIpAddressResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.publicIpAddress = model.publicIpAddress;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status codes returned.</p>

@@ -68,6 +68,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associateVpcs
      */
@@ -149,6 +153,22 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String status; 
         private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDhcpOptionsSetResponseBody model) {
+            this.associateVpcs = model.associateVpcs;
+            this.dhcpOptions = model.dhcpOptions;
+            this.dhcpOptionsSetDescription = model.dhcpOptionsSetDescription;
+            this.dhcpOptionsSetId = model.dhcpOptionsSetId;
+            this.dhcpOptionsSetName = model.dhcpOptionsSetName;
+            this.ownerId = model.ownerId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.tags = model.tags;
+        } 
 
         /**
          * <p>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</p>
@@ -307,6 +327,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String associateStatus; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociateVpcs model) {
+                this.associateStatus = model.associateStatus;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The status of the VPC that is associated with the DHCP options set. Valid values:</p>
              * <ul>
@@ -407,6 +435,16 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String domainNameServers; 
             private String ipv6LeaseTime; 
             private String leaseTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DhcpOptions model) {
+                this.domainName = model.domainName;
+                this.domainNameServers = model.domainNameServers;
+                this.ipv6LeaseTime = model.ipv6LeaseTime;
+                this.leaseTime = model.leaseTime;
+            } 
 
             /**
              * <p>The suffix of the hostname.</p>
@@ -510,6 +548,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

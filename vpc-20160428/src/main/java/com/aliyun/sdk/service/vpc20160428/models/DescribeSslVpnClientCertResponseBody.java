@@ -80,6 +80,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return caCert
      */
@@ -185,6 +189,25 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         private String sslVpnClientCertId; 
         private String sslVpnServerId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSslVpnClientCertResponseBody model) {
+            this.caCert = model.caCert;
+            this.clientCert = model.clientCert;
+            this.clientConfig = model.clientConfig;
+            this.clientKey = model.clientKey;
+            this.createTime = model.createTime;
+            this.endTime = model.endTime;
+            this.name = model.name;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.sslVpnClientCertId = model.sslVpnClientCertId;
+            this.sslVpnServerId = model.sslVpnServerId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The CA certificate.</p>

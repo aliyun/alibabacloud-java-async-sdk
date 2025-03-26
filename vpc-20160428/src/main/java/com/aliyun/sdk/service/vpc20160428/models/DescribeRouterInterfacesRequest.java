@@ -81,7 +81,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -349,6 +349,14 @@ public class DescribeRouterInterfacesRequest extends Request {
             private String key; 
             private java.util.List<String> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
              * <ul>
@@ -436,6 +444,14 @@ public class DescribeRouterInterfacesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>

@@ -44,6 +44,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv4GatewayModels
      */
@@ -77,6 +81,16 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIpv4GatewaysResponseBody model) {
+            this.ipv4GatewayModels = model.ipv4GatewayModels;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of IPv4 gateways.</p>
@@ -172,6 +186,14 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -341,6 +363,22 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv4GatewayModels model) {
+                this.enabled = model.enabled;
+                this.gmtCreate = model.gmtCreate;
+                this.ipv4GatewayDescription = model.ipv4GatewayDescription;
+                this.ipv4GatewayId = model.ipv4GatewayId;
+                this.ipv4GatewayName = model.ipv4GatewayName;
+                this.ipv4GatewayRouteTableId = model.ipv4GatewayRouteTableId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>

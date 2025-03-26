@@ -44,6 +44,10 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natIpCidrs
      */
@@ -77,6 +81,16 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNatIpCidrsResponseBody model) {
+            this.natIpCidrs = model.natIpCidrs;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The CIDR blocks of the NAT gateway.</p>
@@ -244,6 +258,20 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
             private String natIpCidrId; 
             private String natIpCidrName; 
             private String natIpCidrStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatIpCidrs model) {
+                this.creationTime = model.creationTime;
+                this.isDefault = model.isDefault;
+                this.natGatewayId = model.natGatewayId;
+                this.natIpCidr = model.natIpCidr;
+                this.natIpCidrDescription = model.natIpCidrDescription;
+                this.natIpCidrId = model.natIpCidrId;
+                this.natIpCidrName = model.natIpCidrName;
+                this.natIpCidrStatus = model.natIpCidrStatus;
+            } 
 
             /**
              * <p>The time when the CIDR block was created.</p>

@@ -44,6 +44,10 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         private String routeTableId; 
         private String vRouterId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDefaultVpcResponseBody model) {
+            this.requestId = model.requestId;
+            this.routeTableId = model.routeTableId;
+            this.vRouterId = model.vRouterId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The request ID.</p>

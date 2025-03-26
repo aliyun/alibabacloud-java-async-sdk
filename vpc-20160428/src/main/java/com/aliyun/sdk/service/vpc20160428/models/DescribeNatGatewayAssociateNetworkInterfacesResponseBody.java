@@ -56,6 +56,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associateNetworkInterfaces
      */
@@ -113,6 +117,19 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNatGatewayAssociateNetworkInterfacesResponseBody model) {
+            this.associateNetworkInterfaces = model.associateNetworkInterfaces;
+            this.count = model.count;
+            this.maxResults = model.maxResults;
+            this.natGatewayId = model.natGatewayId;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AssociateNetworkInterfaces.
@@ -220,6 +237,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             private String iPv4Address; 
             private Boolean primary; 
 
+            private Builder() {
+            } 
+
+            private Builder(IPv4Set model) {
+                this.iPv4Address = model.iPv4Address;
+                this.primary = model.primary;
+            } 
+
             /**
              * IPv4Address.
              */
@@ -274,6 +299,13 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
 
         public static final class Builder {
             private java.util.List<IPv4Set> iPv4Set; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPv4Sets model) {
+                this.iPv4Set = model.iPv4Set;
+            } 
 
             /**
              * IPv4Set.
@@ -382,6 +414,18 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             private String resourceType; 
             private String tunnelIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociateNetworkInterface model) {
+                this.iPv4Sets = model.iPv4Sets;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.resourceId = model.resourceId;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceType = model.resourceType;
+                this.tunnelIndex = model.tunnelIndex;
+            } 
+
             /**
              * IPv4Sets.
              */
@@ -468,6 +512,13 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
 
         public static final class Builder {
             private java.util.List<AssociateNetworkInterface> associateNetworkInterface; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociateNetworkInterfaces model) {
+                this.associateNetworkInterface = model.associateNetworkInterface;
+            } 
 
             /**
              * AssociateNetworkInterface.

@@ -48,6 +48,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipAddresses
      */
@@ -89,6 +93,17 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEipAddressesResponseBody model) {
+            this.eipAddresses = model.eipAddresses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the EIPs.</p>
@@ -180,6 +195,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the EIP is locked. Valid values:</p>
              * <ul>
@@ -234,6 +256,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LockReason> lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the EIP is locked. Valid values:</p>
              * <ul>
@@ -287,6 +316,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityProtectionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityProtectionTypes model) {
+                this.securityProtectionType = model.securityProtectionType;
+            } 
 
             /**
              * SecurityProtectionType.
@@ -346,6 +382,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the EIP.</p>
@@ -407,6 +451,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -946,6 +997,54 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private Tags tags; 
             private String vpcId; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipAddress model) {
+                this.allocationId = model.allocationId;
+                this.allocationTime = model.allocationTime;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthPackageBandwidth = model.bandwidthPackageBandwidth;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bandwidthPackageType = model.bandwidthPackageType;
+                this.bizType = model.bizType;
+                this.businessStatus = model.businessStatus;
+                this.chargeType = model.chargeType;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.eipBandwidth = model.eipBandwidth;
+                this.expiredTime = model.expiredTime;
+                this.HDMonitorStatus = model.HDMonitorStatus;
+                this.hasReservationData = model.hasReservationData;
+                this.ISP = model.ISP;
+                this.instanceId = model.instanceId;
+                this.instanceRegionId = model.instanceRegionId;
+                this.instanceType = model.instanceType;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.netmode = model.netmode;
+                this.operationLocks = model.operationLocks;
+                this.privateIpAddress = model.privateIpAddress;
+                this.publicIpAddressPoolId = model.publicIpAddressPoolId;
+                this.regionId = model.regionId;
+                this.reservationActiveTime = model.reservationActiveTime;
+                this.reservationBandwidth = model.reservationBandwidth;
+                this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.reservationOrderType = model.reservationOrderType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.secondLimited = model.secondLimited;
+                this.securityProtectionTypes = model.securityProtectionTypes;
+                this.segmentInstanceId = model.segmentInstanceId;
+                this.serviceID = model.serviceID;
+                this.serviceManaged = model.serviceManaged;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.zone = model.zone;
+            } 
 
             /**
              * <p>The ID of the EIP.</p>
@@ -1531,6 +1630,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EipAddress> eipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipAddresses model) {
+                this.eipAddress = model.eipAddress;
+            } 
 
             /**
              * EipAddress.

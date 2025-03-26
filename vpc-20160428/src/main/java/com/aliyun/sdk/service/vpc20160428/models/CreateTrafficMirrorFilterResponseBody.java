@@ -40,6 +40,10 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String trafficMirrorFilterId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTrafficMirrorFilterResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.trafficMirrorFilterId = model.trafficMirrorFilterId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -40,6 +40,10 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<RouteEntries> routeEntries; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcPublishedRouteEntriesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.routeEntries = model.routeEntries;
+        } 
 
         /**
          * NextToken.
@@ -151,6 +164,15 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             private String publishStatus; 
             private String publishTargetInstanceId; 
             private String publishTargetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoutePublishTargets model) {
+                this.publishStatus = model.publishStatus;
+                this.publishTargetInstanceId = model.publishTargetInstanceId;
+                this.publishTargetType = model.publishTargetType;
+            } 
 
             /**
              * PublishStatus.
@@ -250,6 +272,16 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             private String routeEntryId; 
             private java.util.List<RoutePublishTargets> routePublishTargets; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntries model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.routeEntryId = model.routeEntryId;
+                this.routePublishTargets = model.routePublishTargets;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * DestinationCidrBlock.

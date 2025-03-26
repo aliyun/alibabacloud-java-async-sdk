@@ -48,6 +48,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<VSwitchCidrReservations> vSwitchCidrReservations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVSwitchCidrReservationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitchCidrReservations = model.vSwitchCidrReservations;
+        } 
 
         /**
          * <p>The number of entries to return per page.</p>
@@ -195,6 +210,14 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -400,6 +423,25 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             private String vSwitchCidrReservationName; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchCidrReservations model) {
+                this.assignedCidrCount = model.assignedCidrCount;
+                this.availableCidrCount = model.availableCidrCount;
+                this.creationTime = model.creationTime;
+                this.ipVersion = model.ipVersion;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.vSwitchCidrReservationCidr = model.vSwitchCidrReservationCidr;
+                this.vSwitchCidrReservationDescription = model.vSwitchCidrReservationDescription;
+                this.vSwitchCidrReservationId = model.vSwitchCidrReservationId;
+                this.vSwitchCidrReservationName = model.vSwitchCidrReservationName;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The number of used prefixes in the reserved CIDR block.</p>

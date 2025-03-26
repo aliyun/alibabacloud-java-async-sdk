@@ -36,6 +36,10 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -53,6 +57,14 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean enabled; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPublicIpAddressPoolServiceStatusResponseBody model) {
+            this.enabled = model.enabled;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the IP address pool feature is enabled. Valid values:</p>

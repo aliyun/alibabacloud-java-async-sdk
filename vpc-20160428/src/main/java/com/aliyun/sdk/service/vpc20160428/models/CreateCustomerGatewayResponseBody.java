@@ -52,6 +52,10 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -101,6 +105,18 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         private String ipAddress; 
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCustomerGatewayResponseBody model) {
+            this.createTime = model.createTime;
+            this.customerGatewayId = model.customerGatewayId;
+            this.description = model.description;
+            this.ipAddress = model.ipAddress;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>

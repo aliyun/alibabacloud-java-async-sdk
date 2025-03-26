@@ -40,6 +40,10 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrBlock
      */
@@ -65,6 +69,15 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
         private String cidrBlock; 
         private String ipVersion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssociateVpcCidrBlockResponseBody model) {
+            this.cidrBlock = model.cidrBlock;
+            this.ipVersion = model.ipVersion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CidrBlock.

@@ -91,7 +91,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -500,6 +500,21 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             private String port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(EgressAclEntries model) {
+                this.description = model.description;
+                this.destinationCidrIp = model.destinationCidrIp;
+                this.entryType = model.entryType;
+                this.ipVersion = model.ipVersion;
+                this.networkAclEntryId = model.networkAclEntryId;
+                this.networkAclEntryName = model.networkAclEntryName;
+                this.policy = model.policy;
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
              * <p>The description of the outbound rule.</p>
              * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
@@ -755,6 +770,21 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             private String port; 
             private String protocol; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngressAclEntries model) {
+                this.description = model.description;
+                this.entryType = model.entryType;
+                this.ipVersion = model.ipVersion;
+                this.networkAclEntryId = model.networkAclEntryId;
+                this.networkAclEntryName = model.networkAclEntryName;
+                this.policy = model.policy;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The description of the inbound rule.</p>

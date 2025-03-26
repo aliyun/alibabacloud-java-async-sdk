@@ -48,6 +48,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         private String requestId; 
         private Integer totalCount; 
         private VirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.virtualBorderRouterForPhysicalConnectionSet = model.virtualBorderRouterForPhysicalConnectionSet;
+        } 
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>
@@ -444,6 +459,35 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             private Long vbrOwnerUid; 
             private Integer vlanId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterForPhysicalConnectionType model) {
+                this.activationTime = model.activationTime;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthStatus = model.bandwidthStatus;
+                this.circuitCode = model.circuitCode;
+                this.creationTime = model.creationTime;
+                this.eccId = model.eccId;
+                this.enableIpv6 = model.enableIpv6;
+                this.localGatewayIp = model.localGatewayIp;
+                this.localIpv6GatewayIp = model.localIpv6GatewayIp;
+                this.pConnVbrBussinessStatus = model.pConnVbrBussinessStatus;
+                this.pConnVbrChargeType = model.pConnVbrChargeType;
+                this.pConnVbrExpireTime = model.pConnVbrExpireTime;
+                this.peerGatewayIp = model.peerGatewayIp;
+                this.peerIpv6GatewayIp = model.peerIpv6GatewayIp;
+                this.peeringIpv6SubnetMask = model.peeringIpv6SubnetMask;
+                this.peeringSubnetMask = model.peeringSubnetMask;
+                this.recoveryTime = model.recoveryTime;
+                this.status = model.status;
+                this.terminationTime = model.terminationTime;
+                this.type = model.type;
+                this.vbrId = model.vbrId;
+                this.vbrOwnerUid = model.vbrOwnerUid;
+                this.vlanId = model.vlanId;
+            } 
+
             /**
              * <p>The time when the VBR was first activated.</p>
              * 
@@ -763,6 +807,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
 
         public static final class Builder {
             private java.util.List<VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterForPhysicalConnectionSet model) {
+                this.virtualBorderRouterForPhysicalConnectionType = model.virtualBorderRouterForPhysicalConnectionType;
+            } 
 
             /**
              * VirtualBorderRouterForPhysicalConnectionType.

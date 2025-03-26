@@ -48,6 +48,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6Addresses
      */
@@ -89,6 +93,17 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpv6AddressesResponseBody model) {
+            this.ipv6Addresses = model.ipv6Addresses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the IPv6 address.</p>
@@ -288,6 +303,22 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String reservationInternetChargeType; 
             private String reservationOrderType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6InternetBandwidth model) {
+                this.bandwidth = model.bandwidth;
+                this.businessStatus = model.businessStatus;
+                this.hasReservationData = model.hasReservationData;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+                this.ipv6InternetBandwidthId = model.ipv6InternetBandwidthId;
+                this.reservationActiveTime = model.reservationActiveTime;
+                this.reservationBandwidth = model.reservationBandwidth;
+                this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.reservationOrderType = model.reservationOrderType;
+            } 
+
             /**
              * <p>The dedicated Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
              * 
@@ -467,6 +498,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
              * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -530,6 +569,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -794,6 +840,31 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Address model) {
+                this.addressType = model.addressType;
+                this.allocationTime = model.allocationTime;
+                this.associatedInstanceId = model.associatedInstanceId;
+                this.associatedInstanceType = model.associatedInstanceType;
+                this.ipv6Address = model.ipv6Address;
+                this.ipv6AddressDescription = model.ipv6AddressDescription;
+                this.ipv6AddressId = model.ipv6AddressId;
+                this.ipv6AddressName = model.ipv6AddressName;
+                this.ipv6GatewayId = model.ipv6GatewayId;
+                this.ipv6InternetBandwidth = model.ipv6InternetBandwidth;
+                this.ipv6Isp = model.ipv6Isp;
+                this.networkType = model.networkType;
+                this.realBandwidth = model.realBandwidth;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceManaged = model.serviceManaged;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The type of IPv6 address. Valid values:</p>
              * <ul>
@@ -1057,6 +1128,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Address> ipv6Address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Addresses model) {
+                this.ipv6Address = model.ipv6Address;
+            } 
 
             /**
              * <p>The IPv6 address.</p>

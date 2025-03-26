@@ -36,6 +36,10 @@ public class CreateRouteTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateRouteTableResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String routeTableId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRouteTableResponseBody model) {
+            this.requestId = model.requestId;
+            this.routeTableId = model.routeTableId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -36,6 +36,10 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipSegmentInstanceId
      */
@@ -53,6 +57,14 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
     public static final class Builder {
         private String eipSegmentInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateEipSegmentAddressResponseBody model) {
+            this.eipSegmentInstanceId = model.eipSegmentInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the contiguous EIP group.</p>

@@ -36,6 +36,10 @@ public class CreateVbrHaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateVbrHaResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vbrHaId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVbrHaResponseBody model) {
+            this.requestId = model.requestId;
+            this.vbrHaId = model.vbrHaId;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -76,6 +76,10 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creationTime
      */
@@ -173,6 +177,24 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         private String serviceName; 
         private java.util.List<Tags> tags; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpcGatewayEndpointAttributeResponseBody model) {
+            this.creationTime = model.creationTime;
+            this.endpointDescription = model.endpointDescription;
+            this.endpointId = model.endpointId;
+            this.endpointName = model.endpointName;
+            this.endpointStatus = model.endpointStatus;
+            this.policyDocument = model.policyDocument;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.routeTables = model.routeTables;
+            this.serviceName = model.serviceName;
+            this.tags = model.tags;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -357,6 +379,14 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>

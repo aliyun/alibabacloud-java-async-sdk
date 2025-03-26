@@ -48,6 +48,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6Translators
      */
@@ -89,6 +93,17 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIPv6TranslatorsResponseBody model) {
+            this.ipv6Translators = model.ipv6Translators;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of IPv6 Translation Service instances.</p>
@@ -179,6 +194,13 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipv6TranslatorEntryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6TranslatorEntryIds model) {
+                this.ipv6TranslatorEntryId = model.ipv6TranslatorEntryId;
+            } 
 
             /**
              * Ipv6TranslatorEntryId.
@@ -395,6 +417,27 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             private String spec; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Translator model) {
+                this.allocateIpv4Addr = model.allocateIpv4Addr;
+                this.allocateIpv6Addr = model.allocateIpv6Addr;
+                this.availableBandwidth = model.availableBandwidth;
+                this.bandwidth = model.bandwidth;
+                this.businessStatus = model.businessStatus;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.ipv6TranslatorEntryIds = model.ipv6TranslatorEntryIds;
+                this.ipv6TranslatorId = model.ipv6TranslatorId;
+                this.name = model.name;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.spec = model.spec;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
              * 
@@ -603,6 +646,13 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Translator> ipv6Translator; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Translators model) {
+                this.ipv6Translator = model.ipv6Translator;
+            } 
 
             /**
              * Ipv6Translator.

@@ -79,7 +79,7 @@ public class DeleteRouteEntryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -344,6 +344,14 @@ public class DeleteRouteEntryRequest extends Request {
         public static final class Builder {
             private String nextHopId; 
             private String nextHopType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHopList model) {
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+            } 
 
             /**
              * <p>The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.</p>

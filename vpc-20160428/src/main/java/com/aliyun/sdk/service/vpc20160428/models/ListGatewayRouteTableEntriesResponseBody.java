@@ -44,6 +44,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayRouteEntryModels
      */
@@ -77,6 +81,16 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayRouteTableEntriesResponseBody model) {
+            this.gatewayRouteEntryModels = model.gatewayRouteEntryModels;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the routes in the gateway route table.</p>
@@ -196,6 +210,16 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String nextHopId; 
             private String nextHopType; 
             private String weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHops model) {
+                this.enabled = model.enabled;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>Indicates whether the route is available. Valid values:</p>
@@ -365,6 +389,19 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String nextHopType; 
             private java.util.List<NextHops> nextHops; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewayRouteEntryModels model) {
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.name = model.name;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.nextHops = model.nextHops;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the route entry.</p>

@@ -36,6 +36,10 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAclAttribute
      */
@@ -53,6 +57,14 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     public static final class Builder {
         private NetworkAclAttribute networkAclAttribute; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkAclAttributesResponseBody model) {
+            this.networkAclAttribute = model.networkAclAttribute;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the network ACLs.</p>
@@ -206,6 +218,21 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             private String policy; 
             private String port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(EgressAclEntry model) {
+                this.description = model.description;
+                this.destinationCidrIp = model.destinationCidrIp;
+                this.entryType = model.entryType;
+                this.ipVersion = model.ipVersion;
+                this.networkAclEntryId = model.networkAclEntryId;
+                this.networkAclEntryName = model.networkAclEntryName;
+                this.policy = model.policy;
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The description of the outbound rule.</p>
@@ -370,6 +397,13 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<EgressAclEntry> egressAclEntry; 
 
+            private Builder() {
+            } 
+
+            private Builder(EgressAclEntries model) {
+                this.egressAclEntry = model.egressAclEntry;
+            } 
+
             /**
              * EgressAclEntry.
              */
@@ -512,6 +546,21 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             private String port; 
             private String protocol; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngressAclEntry model) {
+                this.description = model.description;
+                this.entryType = model.entryType;
+                this.ipVersion = model.ipVersion;
+                this.networkAclEntryId = model.networkAclEntryId;
+                this.networkAclEntryName = model.networkAclEntryName;
+                this.policy = model.policy;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The description of the inbound rule.</p>
@@ -676,6 +725,13 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<IngressAclEntry> ingressAclEntry; 
 
+            private Builder() {
+            } 
+
+            private Builder(IngressAclEntries model) {
+                this.ingressAclEntry = model.ingressAclEntry;
+            } 
+
             /**
              * IngressAclEntry.
              */
@@ -746,6 +802,15 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the associated resource.</p>
@@ -824,6 +889,13 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Resource> resource; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
+
             /**
              * Resource.
              */
@@ -882,6 +954,14 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>
@@ -943,6 +1023,13 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1122,6 +1209,24 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAclAttribute model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.egressAclEntries = model.egressAclEntries;
+                this.ingressAclEntries = model.ingressAclEntries;
+                this.networkAclId = model.networkAclId;
+                this.networkAclName = model.networkAclName;
+                this.ownerId = model.ownerId;
+                this.regionId = model.regionId;
+                this.resources = model.resources;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The time when the network ACL was created.</p>

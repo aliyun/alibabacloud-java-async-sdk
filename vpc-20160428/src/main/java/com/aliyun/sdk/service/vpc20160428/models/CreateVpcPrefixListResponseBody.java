@@ -40,6 +40,10 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return prefixListId
      */
@@ -65,6 +69,15 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         private String prefixListId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcPrefixListResponseBody model) {
+            this.prefixListId = model.prefixListId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The ID of the prefix list.</p>

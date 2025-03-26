@@ -36,6 +36,10 @@ public class CreateExpressCloudConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eccId
      */
@@ -53,6 +57,14 @@ public class CreateExpressCloudConnectionResponseBody extends TeaModel {
     public static final class Builder {
         private String eccId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateExpressCloudConnectionResponseBody model) {
+            this.eccId = model.eccId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the ECC instance.</p>

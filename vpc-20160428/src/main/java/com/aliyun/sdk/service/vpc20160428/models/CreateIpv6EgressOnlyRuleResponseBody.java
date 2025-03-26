@@ -36,6 +36,10 @@ public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6EgressRuleId
      */
@@ -53,6 +57,14 @@ public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String ipv6EgressRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIpv6EgressOnlyRuleResponseBody model) {
+            this.ipv6EgressRuleId = model.ipv6EgressRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the egress-only rule.</p>

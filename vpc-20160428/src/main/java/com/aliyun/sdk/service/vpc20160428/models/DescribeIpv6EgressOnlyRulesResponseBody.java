@@ -48,6 +48,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6EgressOnlyRules
      */
@@ -89,6 +93,17 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpv6EgressOnlyRulesResponseBody model) {
+            this.ipv6EgressOnlyRules = model.ipv6EgressOnlyRules;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the egress-only rules.</p>
@@ -240,6 +255,18 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             private String name; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6EgressOnlyRule model) {
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.ipv6EgressOnlyRuleId = model.ipv6EgressOnlyRuleId;
+                this.name = model.name;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The description of the egress-only rule.</p>
              * 
@@ -344,6 +371,13 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6EgressOnlyRule> ipv6EgressOnlyRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6EgressOnlyRules model) {
+                this.ipv6EgressOnlyRule = model.ipv6EgressOnlyRule;
+            } 
 
             /**
              * Ipv6EgressOnlyRule.

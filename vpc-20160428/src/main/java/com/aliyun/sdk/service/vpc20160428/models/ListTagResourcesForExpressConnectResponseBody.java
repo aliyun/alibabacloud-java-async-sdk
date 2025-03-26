@@ -40,6 +40,10 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private TagResources tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesForExpressConnectResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -174,6 +187,16 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The resource ID.</p>
              * 
@@ -261,6 +284,13 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagResource> tagResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.tagResource = model.tagResource;
+            } 
 
             /**
              * TagResource.

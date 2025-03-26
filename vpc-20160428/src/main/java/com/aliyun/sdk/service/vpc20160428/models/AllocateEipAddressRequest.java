@@ -107,6 +107,10 @@ public class AllocateEipAddressRequest extends Request {
     private java.util.List<String> securityProtectionTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
@@ -134,6 +138,7 @@ public class AllocateEipAddressRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityProtectionTypes = builder.securityProtectionTypes;
+        this.tag = builder.tag;
         this.zone = builder.zone;
     }
 
@@ -145,7 +150,7 @@ public class AllocateEipAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -305,6 +310,13 @@ public class AllocateEipAddressRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return zone
      */
     public String getZone() {
@@ -334,6 +346,7 @@ public class AllocateEipAddressRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List<String> securityProtectionTypes; 
+        private java.util.List<Tag> tag; 
         private String zone; 
 
         private Builder() {
@@ -364,6 +377,7 @@ public class AllocateEipAddressRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityProtectionTypes = request.securityProtectionTypes;
+            this.tag = request.tag;
             this.zone = request.zone;
         } 
 
@@ -692,6 +706,15 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The zone of the EIP.</p>
          * <p>When the service type of the IP address pool specified by <strong>PublicIpAddressPoolId</strong> is CloudBox, the default value is the zone of the IP address pool.</p>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a>.</p>
@@ -712,4 +735,79 @@ public class AllocateEipAddressRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateEipAddressRequest} extends {@link TeaModel}
+     *
+     * <p>AllocateEipAddressRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

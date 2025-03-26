@@ -56,6 +56,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fullNatEntries
      */
@@ -113,6 +117,19 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFullNatEntriesResponseBody model) {
+            this.fullNatEntries = model.fullNatEntries;
+            this.fullNatTableId = model.fullNatTableId;
+            this.maxResults = model.maxResults;
+            this.natGatewayId = model.natGatewayId;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the FULLNAT entries that are queried.</p>
@@ -373,6 +390,25 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             private String natIpPort; 
             private String networkInterfaceId; 
             private String networkInterfaceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullNatEntries model) {
+                this.accessIp = model.accessIp;
+                this.accessPort = model.accessPort;
+                this.creationTime = model.creationTime;
+                this.fullNatEntryDescription = model.fullNatEntryDescription;
+                this.fullNatEntryId = model.fullNatEntryId;
+                this.fullNatEntryName = model.fullNatEntryName;
+                this.fullNatEntryStatus = model.fullNatEntryStatus;
+                this.fullNatTableId = model.fullNatTableId;
+                this.ipProtocol = model.ipProtocol;
+                this.natIp = model.natIp;
+                this.natIpPort = model.natIpPort;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.networkInterfaceType = model.networkInterfaceType;
+            } 
 
             /**
              * <p>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</p>

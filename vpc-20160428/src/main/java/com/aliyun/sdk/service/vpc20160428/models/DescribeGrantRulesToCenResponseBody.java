@@ -48,6 +48,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cenGrantRules
      */
@@ -89,6 +93,17 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGrantRulesToCenResponseBody model) {
+            this.cenGrantRules = model.cenGrantRules;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the authorization.</p>
@@ -204,6 +219,15 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private Long cenOwnerId; 
             private String creationTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CbnGrantRule model) {
+                this.cenInstanceId = model.cenInstanceId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.creationTime = model.creationTime;
+            } 
+
             /**
              * <p>The ID of the authorized CEN instance.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CbnGrantRule> cbnGrantRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(CenGrantRules model) {
+                this.cbnGrantRule = model.cbnGrantRule;
+            } 
 
             /**
              * CbnGrantRule.

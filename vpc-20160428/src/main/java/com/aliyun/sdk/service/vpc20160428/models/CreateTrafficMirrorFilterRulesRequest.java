@@ -81,7 +81,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -410,6 +410,19 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             private String sourceCidrBlock; 
             private String sourcePortRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(EgressRules model) {
+                this.action = model.action;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.destinationPortRange = model.destinationPortRange;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.sourceCidrBlock = model.sourceCidrBlock;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
+
             /**
              * <p>The action of the outbound rule. Valid values:</p>
              * <ul>
@@ -613,6 +626,19 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
             private String protocol; 
             private String sourceCidrBlock; 
             private String sourcePortRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngressRules model) {
+                this.action = model.action;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.destinationPortRange = model.destinationPortRange;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.sourceCidrBlock = model.sourceCidrBlock;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
 
             /**
              * <p>The action of the inbound rule. Valid values:</p>

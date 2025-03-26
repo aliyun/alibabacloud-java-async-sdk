@@ -56,6 +56,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String vpnConnectionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpnAttachmentResponseBody model) {
+            this.code = model.code;
+            this.createTime = model.createTime;
+            this.message = model.message;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.vpnConnectionId = model.vpnConnectionId;
+        } 
 
         /**
          * <p>The status code returned by the current operation. <strong>200</strong> indicates that the operation is successful.</p>

@@ -44,6 +44,10 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6Address
      */
@@ -77,6 +81,16 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         private String ipv6AddressId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateIpv6AddressResponseBody model) {
+            this.ipv6Address = model.ipv6Address;
+            this.ipv6AddressId = model.ipv6AddressId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The IPv6 address.</p>

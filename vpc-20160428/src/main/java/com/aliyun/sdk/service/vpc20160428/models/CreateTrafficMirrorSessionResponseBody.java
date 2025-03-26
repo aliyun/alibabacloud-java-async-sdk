@@ -40,6 +40,10 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String trafficMirrorSessionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTrafficMirrorSessionResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.trafficMirrorSessionId = model.trafficMirrorSessionId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

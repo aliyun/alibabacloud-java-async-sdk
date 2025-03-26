@@ -48,6 +48,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         private String requestId; 
         private RouterInterfaceSet routerInterfaceSet; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouterInterfacesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routerInterfaceSet = model.routerInterfaceSet;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>
@@ -192,6 +207,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>
              * <p>A tag key can support up to 128 characters, cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, and cannot contain &quot;http://&quot; or &quot;https://&quot;.</p>
@@ -254,6 +277,13 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouterInterfaceTypeTags model) {
+                this.tags = model.tags;
+            } 
 
             /**
              * Tags.
@@ -782,6 +812,53 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private RouterInterfaceTypeTags tags; 
             private String vpcInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouterInterfaceType model) {
+                this.accessPointId = model.accessPointId;
+                this.bandwidth = model.bandwidth;
+                this.businessStatus = model.businessStatus;
+                this.chargeType = model.chargeType;
+                this.connectedTime = model.connectedTime;
+                this.creationTime = model.creationTime;
+                this.crossBorder = model.crossBorder;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.fastLinkMode = model.fastLinkMode;
+                this.hasReservationData = model.hasReservationData;
+                this.hcRate = model.hcRate;
+                this.hcThreshold = model.hcThreshold;
+                this.healthCheckSourceIp = model.healthCheckSourceIp;
+                this.healthCheckTargetIp = model.healthCheckTargetIp;
+                this.ipv6Status = model.ipv6Status;
+                this.name = model.name;
+                this.oppositeAccessPointId = model.oppositeAccessPointId;
+                this.oppositeBandwidth = model.oppositeBandwidth;
+                this.oppositeInterfaceBusinessStatus = model.oppositeInterfaceBusinessStatus;
+                this.oppositeInterfaceId = model.oppositeInterfaceId;
+                this.oppositeInterfaceOwnerId = model.oppositeInterfaceOwnerId;
+                this.oppositeInterfaceSpec = model.oppositeInterfaceSpec;
+                this.oppositeInterfaceStatus = model.oppositeInterfaceStatus;
+                this.oppositeRegionId = model.oppositeRegionId;
+                this.oppositeRouterId = model.oppositeRouterId;
+                this.oppositeRouterType = model.oppositeRouterType;
+                this.oppositeVpcInstanceId = model.oppositeVpcInstanceId;
+                this.reservationActiveTime = model.reservationActiveTime;
+                this.reservationBandwidth = model.reservationBandwidth;
+                this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.reservationOrderType = model.reservationOrderType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.role = model.role;
+                this.routerId = model.routerId;
+                this.routerInterfaceId = model.routerInterfaceId;
+                this.routerType = model.routerType;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
+
             /**
              * <p>The ID of the access point.</p>
              * 
@@ -1291,6 +1368,13 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouterInterfaceType> routerInterfaceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouterInterfaceSet model) {
+                this.routerInterfaceType = model.routerInterfaceType;
+            } 
 
             /**
              * RouterInterfaceType.

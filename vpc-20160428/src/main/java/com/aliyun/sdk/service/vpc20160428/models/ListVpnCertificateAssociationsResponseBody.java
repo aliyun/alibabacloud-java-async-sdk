@@ -48,6 +48,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VpnCertificateRelations> vpnCertificateRelations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpnCertificateAssociationsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpnCertificateRelations = model.vpnCertificateRelations;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -231,6 +246,17 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             private String certificateType; 
             private String regionId; 
             private String vpnGatewayId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnCertificateRelations model) {
+                this.associationTime = model.associationTime;
+                this.certificateId = model.certificateId;
+                this.certificateType = model.certificateType;
+                this.regionId = model.regionId;
+                this.vpnGatewayId = model.vpnGatewayId;
+            } 
 
             /**
              * <p>The time when the Anycast EIP was associated.</p>

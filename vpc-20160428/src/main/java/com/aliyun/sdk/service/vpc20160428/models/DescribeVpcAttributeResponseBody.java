@@ -140,6 +140,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associatedCens
      */
@@ -365,6 +369,40 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private VSwitchIds vSwitchIds; 
         private String vpcId; 
         private String vpcName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpcAttributeResponseBody model) {
+            this.associatedCens = model.associatedCens;
+            this.associatedPropagationSources = model.associatedPropagationSources;
+            this.cidrBlock = model.cidrBlock;
+            this.classicLinkEnabled = model.classicLinkEnabled;
+            this.cloudResources = model.cloudResources;
+            this.creationTime = model.creationTime;
+            this.description = model.description;
+            this.dhcpOptionsSetId = model.dhcpOptionsSetId;
+            this.dhcpOptionsSetStatus = model.dhcpOptionsSetStatus;
+            this.dnsHostnameStatus = model.dnsHostnameStatus;
+            this.enabledIpv6 = model.enabledIpv6;
+            this.ipv4GatewayId = model.ipv4GatewayId;
+            this.ipv6CidrBlock = model.ipv6CidrBlock;
+            this.ipv6CidrBlocks = model.ipv6CidrBlocks;
+            this.isDefault = model.isDefault;
+            this.ownerId = model.ownerId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.secondaryCidrBlocks = model.secondaryCidrBlocks;
+            this.status = model.status;
+            this.supportIpv4Gateway = model.supportIpv4Gateway;
+            this.tags = model.tags;
+            this.userCidrs = model.userCidrs;
+            this.vRouterId = model.vRouterId;
+            this.vSwitchIds = model.vSwitchIds;
+            this.vpcId = model.vpcId;
+            this.vpcName = model.vpcName;
+        } 
 
         /**
          * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
@@ -736,6 +774,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private Long cenOwnerId; 
             private String cenStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedCen model) {
+                this.cenId = model.cenId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.cenStatus = model.cenStatus;
+            } 
+
             /**
              * <p>The ID of the CEN instance to which the VPC is attached.</p>
              * 
@@ -808,6 +855,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AssociatedCen> associatedCen; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedCens model) {
+                this.associatedCen = model.associatedCen;
+            } 
 
             /**
              * AssociatedCen.
@@ -903,6 +957,17 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private Long sourceOwnerId; 
             private String sourceType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedPropagationSourcesAssociatedPropagationSources model) {
+                this.routePropagated = model.routePropagated;
+                this.sourceInstanceId = model.sourceInstanceId;
+                this.sourceOwnerId = model.sourceOwnerId;
+                this.sourceType = model.sourceType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether routes are advertised to the VPC.</p>
@@ -1009,6 +1074,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedPropagationSources model) {
+                this.associatedPropagationSources = model.associatedPropagationSources;
+            } 
+
             /**
              * <p>The route source associated with the VPC.</p>
              */
@@ -1067,6 +1139,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer resourceCount; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudResourceSetType model) {
+                this.resourceCount = model.resourceCount;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The number of resources in the VPC.</p>
@@ -1134,6 +1214,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CloudResourceSetType> cloudResourceSetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudResources model) {
+                this.cloudResourceSetType = model.cloudResourceSetType;
+            } 
+
             /**
              * CloudResourceSetType.
              */
@@ -1192,6 +1279,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String ipv6CidrBlock; 
             private String ipv6Isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlock model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+                this.ipv6Isp = model.ipv6Isp;
+            } 
 
             /**
              * <p>The IPv6 CIDR block of the VPC.</p>
@@ -1263,6 +1358,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6CidrBlocks model) {
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+            } 
+
             /**
              * <p>The IPv6 CIDR block of the VPC.</p>
              * 
@@ -1312,6 +1414,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> secondaryCidrBlock; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecondaryCidrBlocks model) {
+                this.secondaryCidrBlock = model.secondaryCidrBlock;
+            } 
 
             /**
              * SecondaryCidrBlock.
@@ -1371,6 +1480,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N.</p>
@@ -1433,6 +1550,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -1480,6 +1604,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> userCidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserCidrs model) {
+                this.userCidr = model.userCidr;
+            } 
+
             /**
              * UserCidr.
              */
@@ -1526,6 +1657,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * VSwitchId.

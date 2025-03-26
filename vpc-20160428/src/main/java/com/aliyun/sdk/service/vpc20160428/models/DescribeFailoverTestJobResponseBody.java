@@ -36,6 +36,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failoverTestJobModel
      */
@@ -53,6 +57,14 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
     public static final class Builder {
         private FailoverTestJobModel failoverTestJobModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFailoverTestJobResponseBody model) {
+            this.failoverTestJobModel = model.failoverTestJobModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The failover test.</p>
@@ -218,6 +230,22 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String stopTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailoverTestJobModel model) {
+                this.description = model.description;
+                this.jobDuration = model.jobDuration;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.name = model.name;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.stopTime = model.stopTime;
+            } 
 
             /**
              * <p>The description of the failover test.</p>

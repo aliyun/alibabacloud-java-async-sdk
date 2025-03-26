@@ -48,6 +48,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         private String requestId; 
         private SslVpnServers sslVpnServers; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSslVpnServersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sslVpnServers = model.sslVpnServers;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of the page to return.</p>
@@ -408,6 +423,32 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             private String sslVpnServerId; 
             private String vpnGatewayId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SslVpnServer model) {
+                this.cipher = model.cipher;
+                this.clientIpPool = model.clientIpPool;
+                this.compress = model.compress;
+                this.connections = model.connections;
+                this.createTime = model.createTime;
+                this.enableMultiFactorAuth = model.enableMultiFactorAuth;
+                this.iDaaSApplicationId = model.iDaaSApplicationId;
+                this.iDaaSInstanceId = model.iDaaSInstanceId;
+                this.iDaaSInstanceVersion = model.iDaaSInstanceVersion;
+                this.iDaaSRegionId = model.iDaaSRegionId;
+                this.internetIp = model.internetIp;
+                this.localSubnet = model.localSubnet;
+                this.maxConnections = model.maxConnections;
+                this.name = model.name;
+                this.port = model.port;
+                this.proto = model.proto;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sslVpnServerId = model.sslVpnServerId;
+                this.vpnGatewayId = model.vpnGatewayId;
+            } 
+
             /**
              * <p>The encryption algorithm.</p>
              * 
@@ -679,6 +720,13 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SslVpnServer> sslVpnServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(SslVpnServers model) {
+                this.sslVpnServer = model.sslVpnServer;
+            } 
 
             /**
              * SslVpnServer.

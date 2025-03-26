@@ -156,7 +156,7 @@ public class DescribeEipAddressesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -798,6 +798,14 @@ public class DescribeEipAddressesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The filter key used to query resources. Set the value to <strong>CreationStartTime</strong>, which specifies the time when the system started to create the resource.</p>
              * 
@@ -870,6 +878,14 @@ public class DescribeEipAddressesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

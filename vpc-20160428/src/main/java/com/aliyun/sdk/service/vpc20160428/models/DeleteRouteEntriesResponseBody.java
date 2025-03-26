@@ -44,6 +44,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedCount
      */
@@ -77,6 +81,16 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         private java.util.List<FailedRouteEntries> failedRouteEntries; 
         private String requestId; 
         private Integer successCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteRouteEntriesResponseBody model) {
+            this.failedCount = model.failedCount;
+            this.failedRouteEntries = model.failedRouteEntries;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+        } 
 
         /**
          * <p>The number of route entries that failed to be deleted.</p>
@@ -204,6 +218,17 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             private String failedMessage; 
             private String nextHop; 
             private String routeEntryId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedRouteEntries model) {
+                this.dstCidrBlock = model.dstCidrBlock;
+                this.failedCode = model.failedCode;
+                this.failedMessage = model.failedMessage;
+                this.nextHop = model.nextHop;
+                this.routeEntryId = model.routeEntryId;
+            } 
 
             /**
              * <p>The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.</p>

@@ -60,7 +60,7 @@ public class CreateRouteEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -302,6 +302,19 @@ public class CreateRouteEntriesRequest extends Request {
             private String nextHop; 
             private String nextHopType; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntries model) {
+                this.description = model.description;
+                this.dstCidrBlock = model.dstCidrBlock;
+                this.ipVersion = model.ipVersion;
+                this.name = model.name;
+                this.nextHop = model.nextHop;
+                this.nextHopType = model.nextHopType;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The description of the custom route. You can specify at most 50 descriptions.</p>

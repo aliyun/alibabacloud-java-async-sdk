@@ -27,6 +27,7 @@ public class DeleteRouteEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -59,7 +60,7 @@ public class DeleteRouteEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -149,6 +150,7 @@ public class DeleteRouteEntriesRequest extends Request {
         /**
          * <p>The region ID of the route table.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -261,6 +263,16 @@ public class DeleteRouteEntriesRequest extends Request {
             private String nextHop; 
             private String routeEntryId; 
             private String routeTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntries model) {
+                this.dstCidrBlock = model.dstCidrBlock;
+                this.nextHop = model.nextHop;
+                this.routeEntryId = model.routeEntryId;
+                this.routeTableId = model.routeTableId;
+            } 
 
             /**
              * <p>The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</p>

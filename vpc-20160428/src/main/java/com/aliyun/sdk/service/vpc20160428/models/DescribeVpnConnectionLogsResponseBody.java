@@ -52,6 +52,10 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnConnectionLogsResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.isCompleted = model.isCompleted;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries on the current page.</p>
@@ -206,6 +222,13 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> logs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.logs = model.logs;
+            } 
 
             /**
              * Logs.

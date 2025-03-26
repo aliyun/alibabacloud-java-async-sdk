@@ -40,6 +40,10 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         private Long count; 
         private java.util.List<String> geographicSubRegions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGeographicSubRegionsResponseBody model) {
+            this.count = model.count;
+            this.geographicSubRegions = model.geographicSubRegions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries.</p>

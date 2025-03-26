@@ -40,6 +40,10 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZoneIdList
      */
@@ -65,6 +69,15 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
         private java.util.List<AvailableZoneIdList> availableZoneIdList; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnGatewayAvailableZonesResponseBody model) {
+            this.availableZoneIdList = model.availableZoneIdList;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The zones.</p>
@@ -145,6 +158,14 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String zoneId; 
             private String zoneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZoneIdList model) {
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
 
             /**
              * <p>The zone ID.</p>

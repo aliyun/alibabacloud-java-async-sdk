@@ -52,6 +52,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
         private java.util.List<VcoRouteEntries> vcoRouteEntries; 
         private java.util.List<VpnRouteCounts> vpnRouteCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVcoRouteEntriesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vcoRouteEntries = model.vcoRouteEntries;
+            this.vpnRouteCounts = model.vpnRouteCounts;
+        } 
 
         /**
          * <p>The number of the returned page.</p>
@@ -323,6 +339,23 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private String vpnConnectionId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(VcoRouteEntries model) {
+                this.asPath = model.asPath;
+                this.community = model.community;
+                this.createTime = model.createTime;
+                this.nextHop = model.nextHop;
+                this.nextHopTunnelIdList = model.nextHopTunnelIdList;
+                this.routeDest = model.routeDest;
+                this.routeEntryType = model.routeEntryType;
+                this.source = model.source;
+                this.state = model.state;
+                this.vpnConnectionId = model.vpnConnectionId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The list of autonomous system (AS) numbers that the BGP route goes through.</p>
              * 
@@ -525,6 +558,15 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private Integer routeCount; 
             private String routeEntryType; 
             private String source; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnRouteCounts model) {
+                this.routeCount = model.routeCount;
+                this.routeEntryType = model.routeEntryType;
+                this.source = model.source;
+            } 
 
             /**
              * <p>The number of route entries.</p>

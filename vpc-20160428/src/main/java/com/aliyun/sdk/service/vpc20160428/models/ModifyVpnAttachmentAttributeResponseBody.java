@@ -124,6 +124,10 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachInstanceId
      */
@@ -317,6 +321,36 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         private VpnBgpConfig vpnBgpConfig; 
         private String vpnConnectionId; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyVpnAttachmentAttributeResponseBody model) {
+            this.attachInstanceId = model.attachInstanceId;
+            this.attachType = model.attachType;
+            this.createTime = model.createTime;
+            this.customerGatewayId = model.customerGatewayId;
+            this.description = model.description;
+            this.effectImmediately = model.effectImmediately;
+            this.enableDpd = model.enableDpd;
+            this.enableNatTraversal = model.enableNatTraversal;
+            this.enableTunnelsBgp = model.enableTunnelsBgp;
+            this.ikeConfig = model.ikeConfig;
+            this.ipsecConfig = model.ipsecConfig;
+            this.localSubnet = model.localSubnet;
+            this.name = model.name;
+            this.networkType = model.networkType;
+            this.remoteSubnet = model.remoteSubnet;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.spec = model.spec;
+            this.status = model.status;
+            this.tunnelOptionsSpecification = model.tunnelOptionsSpecification;
+            this.vcoHealthCheck = model.vcoHealthCheck;
+            this.vpnBgpConfig = model.vpnBgpConfig;
+            this.vpnConnectionId = model.vpnConnectionId;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the transit router associated with the IPsec-VPN connection belongs.</p>
@@ -745,6 +779,21 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private String psk; 
             private String remoteId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
+
             /**
              * <p>The authentication algorithm that is used in Phase 1 negotiations.</p>
              * 
@@ -931,6 +980,16 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private Long ipsecLifetime; 
             private String ipsecPfs; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
+
             /**
              * <p>The authentication algorithm that is used in Phase 2 negotiations.</p>
              * 
@@ -1061,6 +1120,17 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private Long peerAsn; 
             private String peerBgpIp; 
             private String tunnelCidr; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelBgpConfig model) {
+                this.localAsn = model.localAsn;
+                this.localBgpIp = model.localBgpIp;
+                this.peerAsn = model.peerAsn;
+                this.peerBgpIp = model.peerBgpIp;
+                this.tunnelCidr = model.tunnelCidr;
+            } 
 
             /**
              * <p>The ASN on the Alibaba Cloud side.</p>
@@ -1252,6 +1322,21 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private String psk; 
             private String remoteId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelIkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
+
             /**
              * <p>The authentication algorithm in the IKE phase.</p>
              * 
@@ -1429,6 +1514,16 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private String ipsecEncAlg; 
             private Long ipsecLifetime; 
             private String ipsecPfs; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelIpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
 
             /**
              * <p>The authentication algorithm in the IPsec phase.</p>
@@ -1632,6 +1727,23 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private TunnelIkeConfig tunnelIkeConfig; 
             private Integer tunnelIndex; 
             private TunnelIpsecConfig tunnelIpsecConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelOptionsSpecification model) {
+                this.customerGatewayId = model.customerGatewayId;
+                this.enableDpd = model.enableDpd;
+                this.enableNatTraversal = model.enableNatTraversal;
+                this.internetIp = model.internetIp;
+                this.role = model.role;
+                this.state = model.state;
+                this.tunnelBgpConfig = model.tunnelBgpConfig;
+                this.tunnelId = model.tunnelId;
+                this.tunnelIkeConfig = model.tunnelIkeConfig;
+                this.tunnelIndex = model.tunnelIndex;
+                this.tunnelIpsecConfig = model.tunnelIpsecConfig;
+            } 
 
             /**
              * <p>The ID of the customer gateway that is associated with the tunnel.</p>
@@ -1865,6 +1977,18 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private Integer retry; 
             private String sip; 
 
+            private Builder() {
+            } 
+
+            private Builder(VcoHealthCheck model) {
+                this.dip = model.dip;
+                this.enable = model.enable;
+                this.interval = model.interval;
+                this.policy = model.policy;
+                this.retry = model.retry;
+                this.sip = model.sip;
+            } 
+
             /**
              * <p>The destination IP address that is used for health checks.</p>
              * 
@@ -2049,6 +2173,19 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
             private String peerBgpIp; 
             private String status; 
             private String tunnelCidr; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnBgpConfig model) {
+                this.enableBgp = model.enableBgp;
+                this.localAsn = model.localAsn;
+                this.localBgpIp = model.localBgpIp;
+                this.peerAsn = model.peerAsn;
+                this.peerBgpIp = model.peerBgpIp;
+                this.status = model.status;
+                this.tunnelCidr = model.tunnelCidr;
+            } 
 
             /**
              * <p>Indicates whether BGP is enabled for the IPsec-VPN connection. Valid values:</p>

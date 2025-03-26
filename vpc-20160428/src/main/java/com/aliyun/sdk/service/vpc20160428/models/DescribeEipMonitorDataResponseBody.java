@@ -36,6 +36,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eipMonitorDatas
      */
@@ -53,6 +57,14 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
     public static final class Builder {
         private EipMonitorDatas eipMonitorDatas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEipMonitorDataResponseBody model) {
+            this.eipMonitorDatas = model.eipMonitorDatas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed information about the monitoring data of the EIP.</p>
@@ -171,6 +183,18 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             private Long eipTX; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipMonitorData model) {
+                this.eipBandwidth = model.eipBandwidth;
+                this.eipFlow = model.eipFlow;
+                this.eipPackets = model.eipPackets;
+                this.eipRX = model.eipRX;
+                this.eipTX = model.eipTX;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * EipBandwidth.
              */
@@ -272,6 +296,13 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EipMonitorData> eipMonitorData; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipMonitorDatas model) {
+                this.eipMonitorData = model.eipMonitorData;
+            } 
 
             /**
              * EipMonitorData.

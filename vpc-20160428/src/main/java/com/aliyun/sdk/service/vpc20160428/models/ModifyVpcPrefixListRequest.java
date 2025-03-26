@@ -96,7 +96,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -429,6 +429,14 @@ public class ModifyVpcPrefixListRequest extends Request {
             private String cidr; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddPrefixListEntry model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+            } 
+
             /**
              * <p>The CIDR block to be added to the prefix list.</p>
              * <blockquote>
@@ -505,6 +513,14 @@ public class ModifyVpcPrefixListRequest extends Request {
         public static final class Builder {
             private String cidr; 
             private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemovePrefixListEntry model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+            } 
 
             /**
              * <p>The CIDR block that you want to delete from the prefix list.</p>

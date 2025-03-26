@@ -36,6 +36,10 @@ public class DiagnoseVpnGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnoseId
      */
@@ -53,6 +57,14 @@ public class DiagnoseVpnGatewayResponseBody extends TeaModel {
     public static final class Builder {
         private String diagnoseId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DiagnoseVpnGatewayResponseBody model) {
+            this.diagnoseId = model.diagnoseId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The diagnostic ID.</p>

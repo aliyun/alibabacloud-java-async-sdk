@@ -40,6 +40,10 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return egressRules
      */
@@ -65,6 +69,15 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         private java.util.List<EgressRules> egressRules; 
         private java.util.List<IngressRules> ingressRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTrafficMirrorFilterRulesResponseBody model) {
+            this.egressRules = model.egressRules;
+            this.ingressRules = model.ingressRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of outbound rules.</p>
@@ -131,6 +144,13 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EgressRules model) {
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The ID of the outbound rule.</p>
              * 
@@ -180,6 +200,13 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IngressRules model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * <p>The ID of the inbound rule.</p>

@@ -64,6 +64,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -137,6 +141,21 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         private String state; 
         private String vpnInstanceId; 
         private Integer weight; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpnRouteEntryResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.nextHop = model.nextHop;
+            this.overlayMode = model.overlayMode;
+            this.requestId = model.requestId;
+            this.routeDest = model.routeDest;
+            this.state = model.state;
+            this.vpnInstanceId = model.vpnInstanceId;
+            this.weight = model.weight;
+        } 
 
         /**
          * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>

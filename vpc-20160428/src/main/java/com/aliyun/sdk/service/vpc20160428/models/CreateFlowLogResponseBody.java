@@ -44,6 +44,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowLogId
      */
@@ -77,6 +81,16 @@ public class CreateFlowLogResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFlowLogResponseBody model) {
+            this.flowLogId = model.flowLogId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the flow log.</p>

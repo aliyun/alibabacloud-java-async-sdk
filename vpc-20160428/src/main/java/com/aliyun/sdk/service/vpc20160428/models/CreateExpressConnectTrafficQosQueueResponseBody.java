@@ -40,6 +40,10 @@ public class CreateExpressConnectTrafficQosQueueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return qosId
      */
@@ -65,6 +69,15 @@ public class CreateExpressConnectTrafficQosQueueResponseBody extends TeaModel {
         private String qosId; 
         private String queueId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateExpressConnectTrafficQosQueueResponseBody model) {
+            this.qosId = model.qosId;
+            this.queueId = model.queueId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the QoS policy.</p>

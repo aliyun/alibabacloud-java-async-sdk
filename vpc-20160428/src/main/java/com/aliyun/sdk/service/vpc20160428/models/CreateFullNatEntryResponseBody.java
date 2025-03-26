@@ -36,6 +36,10 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fullNatEntryId
      */
@@ -53,6 +57,14 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
     public static final class Builder {
         private String fullNatEntryId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFullNatEntryResponseBody model) {
+            this.fullNatEntryId = model.fullNatEntryId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The FULLNAT entry ID.</p>

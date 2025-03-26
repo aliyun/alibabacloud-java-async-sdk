@@ -48,6 +48,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6Gateways
      */
@@ -89,6 +93,17 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpv6GatewaysResponseBody model) {
+            this.ipv6Gateways = model.ipv6Gateways;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the IPv6 gateway.</p>
@@ -192,6 +207,14 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -432,6 +462,24 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private Tags tags; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Gateway model) {
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.instanceChargeType = model.instanceChargeType;
+                this.ipv6GatewayId = model.ipv6GatewayId;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The status of the IPv6 gateway. Valid values:</p>
              * <ul>
@@ -609,6 +657,13 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6Gateway> ipv6Gateway; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Gateways model) {
+                this.ipv6Gateway = model.ipv6Gateway;
+            } 
 
             /**
              * Ipv6Gateway.

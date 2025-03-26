@@ -40,6 +40,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorInfoList
      */
@@ -65,6 +69,15 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         private ErrorInfoList errorInfoList; 
         private PhysicalConnectionList physicalConnectionList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHighReliablePhysicalConnectionResponseBody model) {
+            this.errorInfoList = model.errorInfoList;
+            this.physicalConnectionList = model.physicalConnectionList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>If the request fails the dry run, the following error codes and error messages may be returned:</p>
@@ -161,6 +174,15 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             private String errorMessage; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorInfoListErrorInfoList model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>Error codes.</p>
              * 
@@ -233,6 +255,13 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ErrorInfoListErrorInfoList> errorInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorInfoList model) {
+                this.errorInfoList = model.errorInfoList;
+            } 
+
             /**
              * errorInfoList.
              */
@@ -291,6 +320,14 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String regionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionListPhysicalConnectionList model) {
+                this.instanceId = model.instanceId;
+                this.regionNo = model.regionNo;
+            } 
 
             /**
              * <p>The ID of the Express Connect circuit.</p>
@@ -352,6 +389,13 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionList model) {
+                this.physicalConnectionList = model.physicalConnectionList;
+            } 
 
             /**
              * physicalConnectionList.

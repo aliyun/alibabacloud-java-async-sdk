@@ -72,6 +72,10 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -161,6 +165,23 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
         private String state; 
         private String vpnInstanceId; 
         private Integer weight; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpnPbrRouteEntryResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.nextHop = model.nextHop;
+            this.overlayMode = model.overlayMode;
+            this.priority = model.priority;
+            this.requestId = model.requestId;
+            this.routeDest = model.routeDest;
+            this.routeSource = model.routeSource;
+            this.state = model.state;
+            this.vpnInstanceId = model.vpnInstanceId;
+            this.weight = model.weight;
+        } 
 
         /**
          * <p>The time when the policy-based route was created.</p>

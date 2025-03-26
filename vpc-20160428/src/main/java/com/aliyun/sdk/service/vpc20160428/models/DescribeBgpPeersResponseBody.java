@@ -48,6 +48,10 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bgpPeers
      */
@@ -89,6 +93,17 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBgpPeersResponseBody model) {
+            this.bgpPeers = model.bgpPeers;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the BGP peer.</p>
@@ -432,6 +447,34 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             private String routerId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(BgpPeer model) {
+                this.advertisedRouteCount = model.advertisedRouteCount;
+                this.authKey = model.authKey;
+                this.bfdMultiHop = model.bfdMultiHop;
+                this.bgpGroupId = model.bgpGroupId;
+                this.bgpPeerId = model.bgpPeerId;
+                this.bgpStatus = model.bgpStatus;
+                this.description = model.description;
+                this.enableBfd = model.enableBfd;
+                this.gmtModified = model.gmtModified;
+                this.hold = model.hold;
+                this.ipVersion = model.ipVersion;
+                this.isFake = model.isFake;
+                this.keepalive = model.keepalive;
+                this.localAsn = model.localAsn;
+                this.name = model.name;
+                this.peerAsn = model.peerAsn;
+                this.peerIpAddress = model.peerIpAddress;
+                this.receivedRouteCount = model.receivedRouteCount;
+                this.regionId = model.regionId;
+                this.routeLimit = model.routeLimit;
+                this.routerId = model.routerId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The number of advertised routes.</p>
              * 
@@ -735,6 +778,13 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BgpPeer> bgpPeer; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgpPeers model) {
+                this.bgpPeer = model.bgpPeer;
+            } 
 
             /**
              * BgpPeer.

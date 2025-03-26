@@ -36,6 +36,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessAccessPoints
      */
@@ -53,6 +57,14 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<BusinessAccessPoints> businessAccessPoints; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBusinessAccessPointsResponseBody model) {
+            this.businessAccessPoints = model.businessAccessPoints;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of access points.</p>
@@ -182,6 +194,19 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             private Double longitude; 
             private String supportLineOperator; 
             private String supportPortTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(BusinessAccessPoints model) {
+                this.accessPointId = model.accessPointId;
+                this.accessPointName = model.accessPointName;
+                this.cloudBoxInstanceIds = model.cloudBoxInstanceIds;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.supportLineOperator = model.supportLineOperator;
+                this.supportPortTypes = model.supportPortTypes;
+            } 
 
             /**
              * <p>The ID of the access point.</p>

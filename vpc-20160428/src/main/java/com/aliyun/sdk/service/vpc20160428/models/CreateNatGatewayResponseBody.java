@@ -48,6 +48,10 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forwardTableIds
      */
@@ -89,6 +93,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         private String natGatewayId; 
         private String requestId; 
         private SnatTableIds snatTableIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNatGatewayResponseBody model) {
+            this.forwardTableIds = model.forwardTableIds;
+            this.fullNatTableIds = model.fullNatTableIds;
+            this.natGatewayId = model.natGatewayId;
+            this.requestId = model.requestId;
+            this.snatTableIds = model.snatTableIds;
+        } 
 
         /**
          * <p>A list of DNAT entries.</p>
@@ -174,6 +189,13 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> forwardTableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableIds model) {
+                this.forwardTableId = model.forwardTableId;
+            } 
+
             /**
              * ForwardTableId.
              */
@@ -221,6 +243,13 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> fullNatTableId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullNatTableIds model) {
+                this.fullNatTableId = model.fullNatTableId;
+            } 
+
             /**
              * FullNatTableId.
              */
@@ -267,6 +296,13 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> snatTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnatTableIds model) {
+                this.snatTableId = model.snatTableId;
+            } 
 
             /**
              * SnatTableId.

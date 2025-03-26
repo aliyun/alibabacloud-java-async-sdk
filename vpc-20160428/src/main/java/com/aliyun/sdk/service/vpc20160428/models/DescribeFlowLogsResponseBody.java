@@ -52,6 +52,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowLogs
      */
@@ -101,6 +105,18 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowLogsResponseBody model) {
+            this.flowLogs = model.flowLogs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the flow logs.</p>
@@ -219,6 +235,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N.</p>
              * 
@@ -280,6 +304,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -326,6 +357,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> trafficPathList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficPath model) {
+                this.trafficPathList = model.trafficPathList;
+            } 
 
             /**
              * TrafficPathList.
@@ -601,6 +639,32 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private Tags tags; 
             private TrafficPath trafficPath; 
             private String trafficType; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowLog model) {
+                this.aggregationInterval = model.aggregationInterval;
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.flowLogDeliverErrorMessage = model.flowLogDeliverErrorMessage;
+                this.flowLogDeliverStatus = model.flowLogDeliverStatus;
+                this.flowLogId = model.flowLogId;
+                this.flowLogName = model.flowLogName;
+                this.ipVersion = model.ipVersion;
+                this.logStoreName = model.logStoreName;
+                this.projectName = model.projectName;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.trafficPath = model.trafficPath;
+                this.trafficType = model.trafficType;
+            } 
 
             /**
              * <p>The sampling interval of the flow log. Unit: minutes.</p>
@@ -893,6 +957,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FlowLog> flowLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowLogs model) {
+                this.flowLog = model.flowLog;
+            } 
 
             /**
              * FlowLog.

@@ -36,6 +36,10 @@ public class AddIPv6TranslatorAclListEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntryId
      */
@@ -53,6 +57,14 @@ public class AddIPv6TranslatorAclListEntryResponseBody extends TeaModel {
     public static final class Builder {
         private String aclEntryId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddIPv6TranslatorAclListEntryResponseBody model) {
+            this.aclEntryId = model.aclEntryId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the ACL entry.</p>

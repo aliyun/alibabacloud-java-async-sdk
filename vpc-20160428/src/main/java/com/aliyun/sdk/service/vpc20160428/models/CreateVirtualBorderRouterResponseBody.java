@@ -36,6 +36,10 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vbrId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVirtualBorderRouterResponseBody model) {
+            this.requestId = model.requestId;
+            this.vbrId = model.vbrId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

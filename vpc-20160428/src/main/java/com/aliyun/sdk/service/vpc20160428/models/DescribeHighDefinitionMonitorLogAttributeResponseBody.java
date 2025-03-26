@@ -52,6 +52,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -101,6 +105,18 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         private String logStore; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHighDefinitionMonitorLogAttributeResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.logProject = model.logProject;
+            this.logStore = model.logStore;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>

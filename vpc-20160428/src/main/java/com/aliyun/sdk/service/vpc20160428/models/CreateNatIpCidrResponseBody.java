@@ -36,6 +36,10 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natIpCidrId
      */
@@ -53,6 +57,14 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
     public static final class Builder {
         private String natIpCidrId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNatIpCidrResponseBody model) {
+            this.natIpCidrId = model.natIpCidrId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the NAT CIDR block.</p>

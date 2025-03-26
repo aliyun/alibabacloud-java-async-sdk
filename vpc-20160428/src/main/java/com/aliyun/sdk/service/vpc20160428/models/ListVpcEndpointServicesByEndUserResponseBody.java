@@ -48,6 +48,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Services> services; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointServicesByEndUserResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.services = model.services;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -231,6 +246,17 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private String serviceId; 
             private String serviceName; 
             private Boolean supportPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.defaultPolicyDocument = model.defaultPolicyDocument;
+                this.serviceDomain = model.serviceDomain;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.supportPolicy = model.supportPolicy;
+            } 
 
             /**
              * <p>The default access policy.</p>

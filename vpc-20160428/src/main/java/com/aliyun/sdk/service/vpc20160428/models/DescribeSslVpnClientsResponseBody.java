@@ -56,6 +56,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientInfoList
      */
@@ -113,6 +117,19 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSslVpnClientsResponseBody model) {
+            this.clientInfoList = model.clientInfoList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>The list of clients.</p>
@@ -309,6 +326,20 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             private Long receiveBytes; 
             private Long sendBytes; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientInfoList model) {
+                this.commonName = model.commonName;
+                this.connectedTime = model.connectedTime;
+                this.ip = model.ip;
+                this.port = model.port;
+                this.privateIp = model.privateIp;
+                this.receiveBytes = model.receiveBytes;
+                this.sendBytes = model.sendBytes;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The SSL client certificate used by the client.</p>

@@ -40,6 +40,10 @@ public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
         private String orderId; 
         private String physicalConnectionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePhysicalConnectionSetupOrderResponseBody model) {
+            this.orderId = model.orderId;
+            this.physicalConnectionId = model.physicalConnectionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The order ID.</p>

@@ -40,6 +40,10 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6GatewayId
      */
@@ -65,6 +69,15 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         private String ipv6GatewayId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIpv6GatewayResponseBody model) {
+            this.ipv6GatewayId = model.ipv6GatewayId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The ID of the IPv6 gateway.</p>

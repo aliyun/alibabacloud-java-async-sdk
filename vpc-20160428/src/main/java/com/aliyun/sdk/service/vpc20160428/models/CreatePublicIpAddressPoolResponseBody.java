@@ -45,6 +45,10 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return publicIpAddressPoolId
      */
@@ -78,6 +82,16 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         private String pulbicIpAddressPoolId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePublicIpAddressPoolResponseBody model) {
+            this.publicIpAddressPoolId = model.publicIpAddressPoolId;
+            this.pulbicIpAddressPoolId = model.pulbicIpAddressPoolId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The ID of the IP address pool.</p>

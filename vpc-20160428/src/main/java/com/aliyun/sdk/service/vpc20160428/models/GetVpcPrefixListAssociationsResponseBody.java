@@ -48,6 +48,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         private java.util.List<PrefixListAssociation> prefixListAssociation; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpcPrefixListAssociationsResponseBody model) {
+            this.count = model.count;
+            this.nextToken = model.nextToken;
+            this.prefixListAssociation = model.prefixListAssociation;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries.</p>
@@ -267,6 +282,20 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
             private String resourceUid; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixListAssociation model) {
+                this.ownerId = model.ownerId;
+                this.prefixListId = model.prefixListId;
+                this.reason = model.reason;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.resourceUid = model.resourceUid;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>

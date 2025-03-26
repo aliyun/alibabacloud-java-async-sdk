@@ -36,6 +36,10 @@ public class ConvertBandwidthPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return convertInstanceId
      */
@@ -53,6 +57,14 @@ public class ConvertBandwidthPackageResponseBody extends TeaModel {
     public static final class Builder {
         private String convertInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConvertBandwidthPackageResponseBody model) {
+            this.convertInstanceId = model.convertInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the Internet Shared Bandwidth instance.</p>

@@ -56,6 +56,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntries
      */
@@ -113,6 +117,19 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIPv6TranslatorAclListAttributesResponseBody model) {
+            this.aclEntries = model.aclEntries;
+            this.aclId = model.aclId;
+            this.aclName = model.aclName;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ACLs.</p>
@@ -250,6 +267,15 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             private String aclEntryId; 
             private String aclEntryIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclEntry model) {
+                this.aclEntryComment = model.aclEntryComment;
+                this.aclEntryId = model.aclEntryId;
+                this.aclEntryIp = model.aclEntryIp;
+            } 
+
             /**
              * <p>The remarks of the ACL entry.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
 
         public static final class Builder {
             private java.util.List<AclEntry> aclEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.aclEntry = model.aclEntry;
+            } 
 
             /**
              * AclEntry.

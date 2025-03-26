@@ -48,6 +48,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customerGateways
      */
@@ -89,6 +93,17 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomerGatewaysResponseBody model) {
+            this.customerGateways = model.customerGateways;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about customer gateways.</p>
@@ -192,6 +207,14 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -396,6 +426,21 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerGateway model) {
+                this.asn = model.asn;
+                this.authKey = model.authKey;
+                this.createTime = model.createTime;
+                this.customerGatewayId = model.customerGatewayId;
+                this.description = model.description;
+                this.ipAddress = model.ipAddress;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
              * 
@@ -532,6 +577,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CustomerGateway> customerGateway; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomerGateways model) {
+                this.customerGateway = model.customerGateway;
+            } 
 
             /**
              * CustomerGateway.

@@ -36,6 +36,10 @@ public class CreateBgpPeerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bgpPeerId
      */
@@ -53,6 +57,14 @@ public class CreateBgpPeerResponseBody extends TeaModel {
     public static final class Builder {
         private String bgpPeerId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBgpPeerResponseBody model) {
+            this.bgpPeerId = model.bgpPeerId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the BGP peer.</p>

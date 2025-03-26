@@ -48,6 +48,10 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6TranslatorEntries
      */
@@ -89,6 +93,17 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIPv6TranslatorEntriesResponseBody model) {
+            this.ipv6TranslatorEntries = model.ipv6TranslatorEntries;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The IPv6 mapping entries that are queried.</p>
@@ -348,6 +363,27 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
             private String regionId; 
             private String transProtocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6TranslatorEntry model) {
+                this.aclId = model.aclId;
+                this.aclStatus = model.aclStatus;
+                this.aclType = model.aclType;
+                this.allocateIpv6Addr = model.allocateIpv6Addr;
+                this.allocateIpv6Port = model.allocateIpv6Port;
+                this.backendIpv4Addr = model.backendIpv4Addr;
+                this.backendIpv4Port = model.backendIpv4Port;
+                this.entryBandwidth = model.entryBandwidth;
+                this.entryDescription = model.entryDescription;
+                this.entryName = model.entryName;
+                this.entryStatus = model.entryStatus;
+                this.ipv6TranslatorEntryId = model.ipv6TranslatorEntryId;
+                this.ipv6TranslatorId = model.ipv6TranslatorId;
+                this.regionId = model.regionId;
+                this.transProtocol = model.transProtocol;
+            } 
+
             /**
              * <p>The ID of the associated ACL.</p>
              * 
@@ -555,6 +591,13 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6TranslatorEntry> ipv6TranslatorEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6TranslatorEntries model) {
+                this.ipv6TranslatorEntry = model.ipv6TranslatorEntry;
+            } 
 
             /**
              * Ipv6TranslatorEntry.

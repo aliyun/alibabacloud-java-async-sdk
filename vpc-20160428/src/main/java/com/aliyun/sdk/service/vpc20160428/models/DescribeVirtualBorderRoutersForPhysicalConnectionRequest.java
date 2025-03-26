@@ -72,7 +72,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -295,6 +295,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         public static final class Builder {
             private String key; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:</p>

@@ -48,6 +48,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedCount
      */
@@ -89,6 +93,17 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> routeEntryIds; 
         private Integer successCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRouteEntriesResponseBody model) {
+            this.failedCount = model.failedCount;
+            this.failedRouteEntries = model.failedRouteEntries;
+            this.requestId = model.requestId;
+            this.routeEntryIds = model.routeEntryIds;
+            this.successCount = model.successCount;
+        } 
 
         /**
          * <p>The number of custom route entries that failed to be added.</p>
@@ -212,6 +227,16 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
             private String failedCode; 
             private String failedMessage; 
             private String nextHop; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedRouteEntries model) {
+                this.dstCidrBlock = model.dstCidrBlock;
+                this.failedCode = model.failedCode;
+                this.failedMessage = model.failedMessage;
+                this.nextHop = model.nextHop;
+            } 
 
             /**
              * <p>The destination CIDR block of the custom route entry that failed to be added.</p>

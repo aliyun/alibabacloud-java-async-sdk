@@ -36,6 +36,10 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrBlock
      */
@@ -53,6 +57,14 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     public static final class Builder {
         private String cidrBlock; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddPublicIpAddressPoolCidrBlockResponseBody model) {
+            this.cidrBlock = model.cidrBlock;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The CIDR block.</p>

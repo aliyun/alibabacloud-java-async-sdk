@@ -66,7 +66,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

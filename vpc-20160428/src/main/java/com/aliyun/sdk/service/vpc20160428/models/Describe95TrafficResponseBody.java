@@ -36,6 +36,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class Describe95TrafficResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Traffic95Summary traffic95Summary; 
+
+        private Builder() {
+        } 
+
+        private Builder(Describe95TrafficResponseBody model) {
+            this.requestId = model.requestId;
+            this.traffic95Summary = model.traffic95Summary;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -147,6 +159,16 @@ public class Describe95TrafficResponseBody extends TeaModel {
             private String outBandwidth; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(Traffic95Detail model) {
+                this.billBandwidth = model.billBandwidth;
+                this.inBandwidth = model.inBandwidth;
+                this.outBandwidth = model.outBandwidth;
+                this.time = model.time;
+            } 
+
             /**
              * <p>The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.</p>
              * 
@@ -229,6 +251,13 @@ public class Describe95TrafficResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Traffic95Detail> traffic95Detail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Traffic95DetailList model) {
+                this.traffic95Detail = model.traffic95Detail;
+            } 
 
             /**
              * Traffic95Detail.
@@ -336,6 +365,18 @@ public class Describe95TrafficResponseBody extends TeaModel {
             private String internetChargeType; 
             private String minimumConsumeBandwidth; 
             private Traffic95DetailList traffic95DetailList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Traffic95Summary model) {
+                this.bandwidth = model.bandwidth;
+                this.fifthPeakBandwidth = model.fifthPeakBandwidth;
+                this.instanceId = model.instanceId;
+                this.internetChargeType = model.internetChargeType;
+                this.minimumConsumeBandwidth = model.minimumConsumeBandwidth;
+                this.traffic95DetailList = model.traffic95DetailList;
+            } 
 
             /**
              * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>

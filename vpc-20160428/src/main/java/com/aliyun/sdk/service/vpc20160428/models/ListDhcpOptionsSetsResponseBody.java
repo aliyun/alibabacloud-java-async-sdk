@@ -44,6 +44,10 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dhcpOptionsSets
      */
@@ -77,6 +81,16 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDhcpOptionsSetsResponseBody model) {
+            this.dhcpOptionsSets = model.dhcpOptionsSets;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of the DHCP options sets.</p>
@@ -197,6 +211,16 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             private String ipv6LeaseTime; 
             private String leaseTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DhcpOptions model) {
+                this.domainName = model.domainName;
+                this.domainNameServers = model.domainNameServers;
+                this.ipv6LeaseTime = model.ipv6LeaseTime;
+                this.leaseTime = model.leaseTime;
+            } 
+
             /**
              * <p>The suffix of the hostname.</p>
              * 
@@ -299,6 +323,14 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>
@@ -456,6 +488,21 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DhcpOptionsSets model) {
+                this.associateVpcCount = model.associateVpcCount;
+                this.dhcpOptions = model.dhcpOptions;
+                this.dhcpOptionsSetDescription = model.dhcpOptionsSetDescription;
+                this.dhcpOptionsSetId = model.dhcpOptionsSetId;
+                this.dhcpOptionsSetName = model.dhcpOptionsSetName;
+                this.ownerId = model.ownerId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The number of VPCs with which the DHCP options set is associated.</p>

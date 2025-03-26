@@ -48,6 +48,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private String requestId; 
         private SnatTableEntries snatTableEntries; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnatTableEntriesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snatTableEntries = model.snatTableEntries;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of the returned page.</p>
@@ -288,6 +303,22 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String sourceVSwitchId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnatTableEntry model) {
+                this.eipAffinity = model.eipAffinity;
+                this.natGatewayId = model.natGatewayId;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.snatEntryId = model.snatEntryId;
+                this.snatEntryName = model.snatEntryName;
+                this.snatIp = model.snatIp;
+                this.snatTableId = model.snatTableId;
+                this.sourceCIDR = model.sourceCIDR;
+                this.sourceVSwitchId = model.sourceVSwitchId;
+                this.status = model.status;
+            } 
+
             /**
              * EipAffinity.
              */
@@ -441,6 +472,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SnatTableEntry> snatTableEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnatTableEntries model) {
+                this.snatTableEntry = model.snatTableEntry;
+            } 
 
             /**
              * SnatTableEntry.

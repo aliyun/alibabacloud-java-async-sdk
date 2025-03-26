@@ -36,6 +36,10 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv6CidrBlock
      */
@@ -53,6 +57,14 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
     public static final class Builder {
         private String ipv6CidrBlock; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateVpcIpv6CidrResponseBody model) {
+            this.ipv6CidrBlock = model.ipv6CidrBlock;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IPv6 CIDR block that is reserved.</p>

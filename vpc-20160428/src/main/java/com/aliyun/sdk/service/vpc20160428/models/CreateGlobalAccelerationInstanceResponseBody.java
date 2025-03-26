@@ -40,6 +40,10 @@ public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalAccelerationInstanceId
      */
@@ -65,6 +69,15 @@ public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
         private String globalAccelerationInstanceId; 
         private String ipAddress; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGlobalAccelerationInstanceResponseBody model) {
+            this.globalAccelerationInstanceId = model.globalAccelerationInstanceId;
+            this.ipAddress = model.ipAddress;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the GA instance.</p>

@@ -44,6 +44,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<TrafficMirrorSessions> trafficMirrorSessions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrafficMirrorSessionsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficMirrorSessions = model.trafficMirrorSessions;
+        } 
 
         /**
          * <p>The token that is used for the next query. Valid values:</p>
@@ -172,6 +186,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -413,6 +435,28 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             private String trafficMirrorTargetId; 
             private String trafficMirrorTargetType; 
             private Integer virtualNetworkId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMirrorSessions model) {
+                this.creationTime = model.creationTime;
+                this.enabled = model.enabled;
+                this.packetLength = model.packetLength;
+                this.priority = model.priority;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.trafficMirrorFilterId = model.trafficMirrorFilterId;
+                this.trafficMirrorSessionBusinessStatus = model.trafficMirrorSessionBusinessStatus;
+                this.trafficMirrorSessionDescription = model.trafficMirrorSessionDescription;
+                this.trafficMirrorSessionId = model.trafficMirrorSessionId;
+                this.trafficMirrorSessionName = model.trafficMirrorSessionName;
+                this.trafficMirrorSessionStatus = model.trafficMirrorSessionStatus;
+                this.trafficMirrorSourceIds = model.trafficMirrorSourceIds;
+                this.trafficMirrorTargetId = model.trafficMirrorTargetId;
+                this.trafficMirrorTargetType = model.trafficMirrorTargetType;
+                this.virtualNetworkId = model.virtualNetworkId;
+            } 
 
             /**
              * <p>The time when the session is created.</p>

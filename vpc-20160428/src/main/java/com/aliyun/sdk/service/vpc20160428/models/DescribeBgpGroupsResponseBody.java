@@ -48,6 +48,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bgpGroups
      */
@@ -89,6 +93,17 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBgpGroupsResponseBody model) {
+            this.bgpGroups = model.bgpGroups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The detailed information about the BGP group.</p>
@@ -336,6 +351,26 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             private String routerId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(BgpGroup model) {
+                this.authKey = model.authKey;
+                this.bgpGroupId = model.bgpGroupId;
+                this.description = model.description;
+                this.hold = model.hold;
+                this.ipVersion = model.ipVersion;
+                this.isFake = model.isFake;
+                this.keepalive = model.keepalive;
+                this.localAsn = model.localAsn;
+                this.name = model.name;
+                this.peerAsn = model.peerAsn;
+                this.regionId = model.regionId;
+                this.routeLimit = model.routeLimit;
+                this.routerId = model.routerId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The key used by the BGP group.</p>
              * 
@@ -539,6 +574,13 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BgpGroup> bgpGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgpGroups model) {
+                this.bgpGroup = model.bgpGroup;
+            } 
 
             /**
              * BgpGroup.

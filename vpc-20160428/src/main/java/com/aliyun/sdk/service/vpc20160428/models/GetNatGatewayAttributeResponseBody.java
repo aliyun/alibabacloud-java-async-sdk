@@ -132,6 +132,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessMode
      */
@@ -341,6 +345,38 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         private SnatTable snatTable; 
         private String status; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNatGatewayAttributeResponseBody model) {
+            this.accessMode = model.accessMode;
+            this.billingConfig = model.billingConfig;
+            this.businessStatus = model.businessStatus;
+            this.creationTime = model.creationTime;
+            this.deletionProtectionInfo = model.deletionProtectionInfo;
+            this.description = model.description;
+            this.ecsMetricEnabled = model.ecsMetricEnabled;
+            this.enableSessionLog = model.enableSessionLog;
+            this.expiredTime = model.expiredTime;
+            this.forwardTable = model.forwardTable;
+            this.fullNatTable = model.fullNatTable;
+            this.ipList = model.ipList;
+            this.logDelivery = model.logDelivery;
+            this.name = model.name;
+            this.natGatewayId = model.natGatewayId;
+            this.natType = model.natType;
+            this.networkType = model.networkType;
+            this.privateInfo = model.privateInfo;
+            this.privateLinkEnabled = model.privateLinkEnabled;
+            this.privateLinkMode = model.privateLinkMode;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.snatTable = model.snatTable;
+            this.status = model.status;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * AccessMode.
@@ -675,6 +711,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             private String modeValue; 
             private String tunnelType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessMode model) {
+                this.modeValue = model.modeValue;
+                this.tunnelType = model.tunnelType;
+            } 
+
             /**
              * ModeValue.
              */
@@ -765,6 +809,16 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             private String instanceChargeType; 
             private String internetChargeType; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillingConfig model) {
+                this.autoPay = model.autoPay;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>Indicates whether automatic payment is enabled. If the <strong>InstanceChargeType</strong> parameter is set to <strong>PrePaid</strong>, one of the following values is returned:</p>
@@ -867,6 +921,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeletionProtectionInfo model) {
+                this.enabled = model.enabled;
+            } 
+
             /**
              * <p>Indicates whether deletion protection is enabled.</p>
              * <ul>
@@ -932,6 +993,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer forwardEntryCount; 
             private String forwardTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardTable model) {
+                this.forwardEntryCount = model.forwardEntryCount;
+                this.forwardTableId = model.forwardTableId;
+            } 
 
             /**
              * <p>The number of DNAT entries.</p>
@@ -1005,6 +1074,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Long fullNatEntryCount; 
             private String fullNatTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullNatTable model) {
+                this.fullNatEntryCount = model.fullNatEntryCount;
+                this.fullNatTableId = model.fullNatTableId;
+            } 
 
             /**
              * <p>The number of FULLNAT entries.</p>
@@ -1090,6 +1167,15 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             private String allocationId; 
             private String ipAddress; 
             private String usingStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpList model) {
+                this.allocationId = model.allocationId;
+                this.ipAddress = model.ipAddress;
+                this.usingStatus = model.usingStatus;
+            } 
 
             /**
              * <p>The ID of the EIP.</p>
@@ -1203,6 +1289,16 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             private String deliveryStatus; 
             private String logDeliveryType; 
             private String logDestination; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogDelivery model) {
+                this.deliverLogsErrorMessage = model.deliverLogsErrorMessage;
+                this.deliveryStatus = model.deliveryStatus;
+                this.logDeliveryType = model.logDeliveryType;
+                this.logDestination = model.logDestination;
+            } 
 
             /**
              * DeliverLogsErrorMessage.
@@ -1323,6 +1419,17 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivateInfo model) {
+                this.eniInstanceId = model.eniInstanceId;
+                this.izNo = model.izNo;
+                this.maxBandwidth = model.maxBandwidth;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * <p>The ID of the elastic network interface (ENI).</p>
              * 
@@ -1428,6 +1535,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer snatEntryCount; 
             private String snatTableId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnatTable model) {
+                this.snatEntryCount = model.snatEntryCount;
+                this.snatTableId = model.snatTableId;
+            } 
 
             /**
              * <p>The number of SNAT entries.</p>

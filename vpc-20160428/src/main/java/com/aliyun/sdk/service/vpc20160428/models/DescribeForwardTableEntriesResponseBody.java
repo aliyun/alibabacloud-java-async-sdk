@@ -48,6 +48,10 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forwardTableEntries
      */
@@ -89,6 +93,17 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeForwardTableEntriesResponseBody model) {
+            this.forwardTableEntries = model.forwardTableEntries;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of DNAT entries.</p>
@@ -288,6 +303,22 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String natGatewayId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableEntry model) {
+                this.externalIp = model.externalIp;
+                this.externalPort = model.externalPort;
+                this.forwardEntryId = model.forwardEntryId;
+                this.forwardEntryName = model.forwardEntryName;
+                this.forwardTableId = model.forwardTableId;
+                this.internalIp = model.internalIp;
+                this.internalPort = model.internalPort;
+                this.ipProtocol = model.ipProtocol;
+                this.natGatewayId = model.natGatewayId;
+                this.status = model.status;
+            } 
+
             /**
              * <ul>
              * <li>The EIPs that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</li>
@@ -459,6 +490,13 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ForwardTableEntry> forwardTableEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardTableEntries model) {
+                this.forwardTableEntry = model.forwardTableEntry;
+            } 
 
             /**
              * ForwardTableEntry.

@@ -36,6 +36,10 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queueList
      */
@@ -53,6 +57,14 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     public static final class Builder {
         private java.util.List<QueueList> queueList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectTrafficQosQueueResponseBody model) {
+            this.queueList = model.queueList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the QoS queues.</p>
@@ -290,6 +302,28 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
             private String srcIPv6Cidr; 
             private String srcPortRange; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.dstCidr = model.dstCidr;
+                this.dstIPv6Cidr = model.dstIPv6Cidr;
+                this.dstPortRange = model.dstPortRange;
+                this.matchDscp = model.matchDscp;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.qosId = model.qosId;
+                this.queueId = model.queueId;
+                this.remarkingDscp = model.remarkingDscp;
+                this.ruleDescription = model.ruleDescription;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.srcCidr = model.srcCidr;
+                this.srcIPv6Cidr = model.srcIPv6Cidr;
+                this.srcPortRange = model.srcPortRange;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The destination IPv4 CIDR block that matches the QoS rule traffic.</p>
@@ -644,6 +678,20 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
             private String queueType; 
             private java.util.List<RuleList> ruleList; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueueList model) {
+                this.bandwidthPercent = model.bandwidthPercent;
+                this.qosId = model.qosId;
+                this.queueDescription = model.queueDescription;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.queueType = model.queueType;
+                this.ruleList = model.ruleList;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The percentage of bandwidth allocated to a QoS queue.</p>

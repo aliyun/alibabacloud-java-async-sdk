@@ -48,6 +48,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         private java.util.List<PrefixListEntry> prefixListEntry; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpcPrefixListEntriesResponseBody model) {
+            this.count = model.count;
+            this.nextToken = model.nextToken;
+            this.prefixListEntry = model.prefixListEntry;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries.</p>
@@ -219,6 +234,16 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             private String description; 
             private String prefixListId; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixListEntry model) {
+                this.cidr = model.cidr;
+                this.description = model.description;
+                this.prefixListId = model.prefixListId;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The CIDR blocks specified in the prefix list.</p>

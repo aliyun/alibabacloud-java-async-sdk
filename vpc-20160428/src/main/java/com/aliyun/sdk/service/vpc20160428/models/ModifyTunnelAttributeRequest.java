@@ -76,7 +76,7 @@ public class ModifyTunnelAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -335,6 +335,15 @@ public class ModifyTunnelAttributeRequest extends Request {
             private String localBgpIp; 
             private String tunnelCidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelBgpConfig model) {
+                this.localAsn = model.localAsn;
+                this.localBgpIp = model.localBgpIp;
+                this.tunnelCidr = model.tunnelCidr;
+            } 
+
             /**
              * <p>The local autonomous system number (ASN). Valid values: <strong>1</strong> to <strong>4294967295</strong>.</p>
              * 
@@ -506,6 +515,21 @@ public class ModifyTunnelAttributeRequest extends Request {
             private String localId; 
             private String psk; 
             private String remoteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelIkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
 
             /**
              * <p>The authentication algorithm that is used in IKE Phase 1 negotiations.</p>
@@ -706,6 +730,16 @@ public class ModifyTunnelAttributeRequest extends Request {
             private Long ipsecLifetime; 
             private String ipsecPfs; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelIpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
+
             /**
              * <p>The authentication algorithm that is used in IPsec Phase 2 negotiations.</p>
              * <p>&lt;props=&quot;china&quot;&gt;</p>
@@ -874,6 +908,19 @@ public class ModifyTunnelAttributeRequest extends Request {
             private TunnelBgpConfig tunnelBgpConfig; 
             private TunnelIkeConfig tunnelIkeConfig; 
             private TunnelIpsecConfig tunnelIpsecConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelOptionsSpecification model) {
+                this.customerGatewayId = model.customerGatewayId;
+                this.enableDpd = model.enableDpd;
+                this.enableNatTraversal = model.enableNatTraversal;
+                this.remoteCaCertificate = model.remoteCaCertificate;
+                this.tunnelBgpConfig = model.tunnelBgpConfig;
+                this.tunnelIkeConfig = model.tunnelIkeConfig;
+                this.tunnelIpsecConfig = model.tunnelIpsecConfig;
+            } 
 
             /**
              * <p>The ID of the customer gateway associated with the tunnel.</p>

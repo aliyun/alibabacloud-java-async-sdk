@@ -36,6 +36,10 @@ public class CreateDefaultVSwitchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateDefaultVSwitchResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vSwitchId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDefaultVSwitchResponseBody model) {
+            this.requestId = model.requestId;
+            this.vSwitchId = model.vSwitchId;
+        } 
 
         /**
          * <p>The request ID.</p>

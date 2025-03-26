@@ -48,6 +48,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VpnConnections> vpnConnections; 
+
+        private Builder() {
+        } 
+
+        private Builder(DiagnoseVpnConnectionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpnConnections = model.vpnConnections;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -275,6 +290,21 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             private String sourceLog; 
             private String tunnelId; 
             private String vpnConnectionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnConnections model) {
+                this.failedReason = model.failedReason;
+                this.failedReasonCode = model.failedReasonCode;
+                this.failedTime = model.failedTime;
+                this.mismatchLocalParam = model.mismatchLocalParam;
+                this.mismatchRemoteParam = model.mismatchRemoteParam;
+                this.severity = model.severity;
+                this.sourceLog = model.sourceLog;
+                this.tunnelId = model.tunnelId;
+                this.vpnConnectionId = model.vpnConnectionId;
+            } 
 
             /**
              * <p>The cause of the error.</p>

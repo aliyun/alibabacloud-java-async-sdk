@@ -48,6 +48,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VSwitches vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVSwitchesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
          * <p>The number of the returned page.</p>
@@ -192,6 +207,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String routeTableId; 
             private String routeTableType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteTable model) {
+                this.routeTableId = model.routeTableId;
+                this.routeTableType = model.routeTableType;
+            } 
+
             /**
              * <p>The ID of the route table that is associated with the vSwitch.</p>
              * 
@@ -269,6 +292,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -329,6 +360,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -581,6 +619,30 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitch model) {
+                this.availableIpAddressCount = model.availableIpAddressCount;
+                this.cidrBlock = model.cidrBlock;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.enabledIpv6 = model.enabledIpv6;
+                this.ipv6CidrBlock = model.ipv6CidrBlock;
+                this.isDefault = model.isDefault;
+                this.networkAclId = model.networkAclId;
+                this.ownerId = model.ownerId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeTable = model.routeTable;
+                this.shareType = model.shareType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of available IP addresses in the vSwitch.</p>
              * 
@@ -828,6 +890,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VSwitch> vSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitch = model.vSwitch;
+            } 
 
             /**
              * VSwitch.

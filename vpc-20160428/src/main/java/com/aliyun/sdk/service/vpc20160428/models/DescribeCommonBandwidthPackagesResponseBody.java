@@ -48,6 +48,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commonBandwidthPackages
      */
@@ -89,6 +93,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommonBandwidthPackagesResponseBody model) {
+            this.commonBandwidthPackages = model.commonBandwidthPackages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the Internet Shared Bandwidth instance.</p>
@@ -204,6 +219,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String bandwidthPackageIpRelationStatus; 
             private String ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddresse model) {
+                this.allocationId = model.allocationId;
+                this.bandwidthPackageIpRelationStatus = model.bandwidthPackageIpRelationStatus;
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The ID of the EIP.</p>
              * 
@@ -280,6 +304,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PublicIpAddresse> publicIpAddresse; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddresses model) {
+                this.publicIpAddresse = model.publicIpAddresse;
+            } 
+
             /**
              * PublicIpAddresse.
              */
@@ -326,6 +357,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityProtectionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityProtectionTypes model) {
+                this.securityProtectionType = model.securityProtectionType;
+            } 
 
             /**
              * SecurityProtectionType.
@@ -385,6 +423,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key that is added to the Internet Shared Bandwidth instance.</p>
@@ -446,6 +492,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -793,6 +846,38 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonBandwidthPackage model) {
+                this.bandwidth = model.bandwidth;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.bizType = model.bizType;
+                this.businessStatus = model.businessStatus;
+                this.creationTime = model.creationTime;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.hasReservationData = model.hasReservationData;
+                this.ISP = model.ISP;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+                this.name = model.name;
+                this.publicIpAddresses = model.publicIpAddresses;
+                this.ratio = model.ratio;
+                this.regionId = model.regionId;
+                this.reservationActiveTime = model.reservationActiveTime;
+                this.reservationBandwidth = model.reservationBandwidth;
+                this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.reservationOrderType = model.reservationOrderType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityProtectionTypes = model.securityProtectionTypes;
+                this.serviceManaged = model.serviceManaged;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.zone = model.zone;
+            } 
 
             /**
              * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
@@ -1163,6 +1248,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CommonBandwidthPackage> commonBandwidthPackage; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonBandwidthPackages model) {
+                this.commonBandwidthPackage = model.commonBandwidthPackage;
+            } 
 
             /**
              * CommonBandwidthPackage.

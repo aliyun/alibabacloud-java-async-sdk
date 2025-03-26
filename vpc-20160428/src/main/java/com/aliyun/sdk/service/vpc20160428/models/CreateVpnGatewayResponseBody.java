@@ -44,6 +44,10 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -77,6 +81,16 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpnGatewayResponseBody model) {
+            this.name = model.name;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>The name of the VPN gateway.</p>

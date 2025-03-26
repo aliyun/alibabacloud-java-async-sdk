@@ -104,6 +104,10 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoPropagate
      */
@@ -257,6 +261,31 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         private String vSwitchId; 
         private String vpcId; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyVpnGatewayAttributeResponseBody model) {
+            this.autoPropagate = model.autoPropagate;
+            this.businessStatus = model.businessStatus;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.disasterRecoveryInternetIp = model.disasterRecoveryInternetIp;
+            this.disasterRecoveryVSwitchId = model.disasterRecoveryVSwitchId;
+            this.enableBgp = model.enableBgp;
+            this.endTime = model.endTime;
+            this.internetIp = model.internetIp;
+            this.intranetIp = model.intranetIp;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.spec = model.spec;
+            this.sslVpnInternetIp = model.sslVpnInternetIp;
+            this.status = model.status;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>

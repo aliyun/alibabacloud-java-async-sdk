@@ -36,6 +36,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return physicalConnectionLOAType
      */
@@ -53,6 +57,14 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
     public static final class Builder {
         private PhysicalConnectionLOAType physicalConnectionLOAType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhysicalConnectionLOAResponseBody model) {
+            this.physicalConnectionLOAType = model.physicalConnectionLOAType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The LOA information about the Express Connect circuit.</p>
@@ -159,6 +171,17 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String PMGender; 
             private String PMName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PMInfo model) {
+                this.PMCertificateNo = model.PMCertificateNo;
+                this.PMCertificateType = model.PMCertificateType;
+                this.PMContactInfo = model.PMContactInfo;
+                this.PMGender = model.PMGender;
+                this.PMName = model.PMName;
+            } 
+
             /**
              * <p>The identity document number of the construction worker.</p>
              * 
@@ -261,6 +284,13 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PMInfo> PMInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionLOATypePMInfo model) {
+                this.PMInfo = model.PMInfo;
+            } 
 
             /**
              * PMInfo.
@@ -452,6 +482,25 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private PhysicalConnectionLOATypePMInfo PMInfo; 
             private String si; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionLOAType model) {
+                this.companyLocalizedName = model.companyLocalizedName;
+                this.companyName = model.companyName;
+                this.constructionTime = model.constructionTime;
+                this.instanceId = model.instanceId;
+                this.lineCode = model.lineCode;
+                this.lineLabel = model.lineLabel;
+                this.lineSPContactInfo = model.lineSPContactInfo;
+                this.lineServiceProvider = model.lineServiceProvider;
+                this.lineType = model.lineType;
+                this.loaUrl = model.loaUrl;
+                this.PMInfo = model.PMInfo;
+                this.si = model.si;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the construction company.</p>

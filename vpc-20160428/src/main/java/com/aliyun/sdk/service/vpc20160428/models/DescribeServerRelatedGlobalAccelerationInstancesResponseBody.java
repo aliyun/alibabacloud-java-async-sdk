@@ -36,6 +36,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalAccelerationInstances
      */
@@ -53,6 +57,14 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
     public static final class Builder {
         private GlobalAccelerationInstances globalAccelerationInstances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServerRelatedGlobalAccelerationInstancesResponseBody model) {
+            this.globalAccelerationInstances = model.globalAccelerationInstances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of GA instances.</p>
@@ -147,6 +159,16 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             private String regionId; 
             private String serverIpAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalAccelerationInstance model) {
+                this.globalAccelerationInstanceId = model.globalAccelerationInstanceId;
+                this.ipAddress = model.ipAddress;
+                this.regionId = model.regionId;
+                this.serverIpAddress = model.serverIpAddress;
+            } 
+
             /**
              * <p>The ID of the GA instance.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
 
         public static final class Builder {
             private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalAccelerationInstances model) {
+                this.globalAccelerationInstance = model.globalAccelerationInstance;
+            } 
 
             /**
              * GlobalAccelerationInstance.

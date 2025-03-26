@@ -86,7 +86,7 @@ public class CreateBgpPeerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,8 +202,10 @@ public class CreateBgpPeerRequest extends Request {
 
         /**
          * <p>The BFD hop count. Valid values: <strong>1</strong> to <strong>255</strong>.</p>
-         * <p>This parameter is required only if you enable BFD.</p>
-         * <p>The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
+         * <p>This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
+         * <blockquote>
+         * <p>If you use BFD in a multi-cloud environment or a fiber-optic direct connection network without any bridge device, you need to change the default BFD hop count from <strong>255</strong> to <strong>1</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>

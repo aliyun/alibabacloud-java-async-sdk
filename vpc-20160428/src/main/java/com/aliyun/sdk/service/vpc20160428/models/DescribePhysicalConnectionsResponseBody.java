@@ -48,6 +48,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         private PhysicalConnectionSet physicalConnectionSet; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhysicalConnectionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.physicalConnectionSet = model.physicalConnectionSet;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>
@@ -192,6 +207,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
              * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -254,6 +277,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionTypeTags model) {
+                this.tags = model.tags;
+            } 
 
             /**
              * tags.
@@ -745,6 +775,50 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private Integer virtualPhysicalConnectionCount; 
             private String vlanId; 
             private String vpconnStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionType model) {
+                this.accessPointId = model.accessPointId;
+                this.accessPointType = model.accessPointType;
+                this.adDetailLocation = model.adDetailLocation;
+                this.adLocation = model.adLocation;
+                this.bandwidth = model.bandwidth;
+                this.businessStatus = model.businessStatus;
+                this.chargeType = model.chargeType;
+                this.circuitCode = model.circuitCode;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.enabledTime = model.enabledTime;
+                this.endTime = model.endTime;
+                this.expectSpec = model.expectSpec;
+                this.hasReservationData = model.hasReservationData;
+                this.lineOperator = model.lineOperator;
+                this.loaStatus = model.loaStatus;
+                this.name = model.name;
+                this.orderMode = model.orderMode;
+                this.parentPhysicalConnectionAliUid = model.parentPhysicalConnectionAliUid;
+                this.parentPhysicalConnectionId = model.parentPhysicalConnectionId;
+                this.peerLocation = model.peerLocation;
+                this.physicalConnectionId = model.physicalConnectionId;
+                this.portNumber = model.portNumber;
+                this.portType = model.portType;
+                this.productType = model.productType;
+                this.qosId = model.qosId;
+                this.redundantPhysicalConnectionId = model.redundantPhysicalConnectionId;
+                this.reservationActiveTime = model.reservationActiveTime;
+                this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.reservationOrderType = model.reservationOrderType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spec = model.spec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.virtualPhysicalConnectionCount = model.virtualPhysicalConnectionCount;
+                this.vlanId = model.vlanId;
+                this.vpconnStatus = model.vpconnStatus;
+            } 
 
             /**
              * <p>The ID of the Express Connect circuit.</p>
@@ -1269,6 +1343,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PhysicalConnectionType> physicalConnectionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhysicalConnectionSet model) {
+                this.physicalConnectionType = model.physicalConnectionType;
+            } 
 
             /**
              * PhysicalConnectionType.

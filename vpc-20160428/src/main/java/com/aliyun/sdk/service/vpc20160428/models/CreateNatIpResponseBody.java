@@ -40,6 +40,10 @@ public class CreateNatIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natIp
      */
@@ -65,6 +69,15 @@ public class CreateNatIpResponseBody extends TeaModel {
         private String natIp; 
         private String natIpId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNatIpResponseBody model) {
+            this.natIp = model.natIp;
+            this.natIpId = model.natIpId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The NAT IP address.</p>

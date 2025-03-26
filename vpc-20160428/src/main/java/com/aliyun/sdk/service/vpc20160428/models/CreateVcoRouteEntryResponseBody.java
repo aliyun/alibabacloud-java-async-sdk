@@ -64,6 +64,10 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -137,6 +141,21 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
         private String state; 
         private String vpnConnectionId; 
         private Integer weight; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVcoRouteEntryResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.nextHop = model.nextHop;
+            this.overlayMode = model.overlayMode;
+            this.requestId = model.requestId;
+            this.routeDest = model.routeDest;
+            this.state = model.state;
+            this.vpnConnectionId = model.vpnConnectionId;
+            this.weight = model.weight;
+        } 
 
         /**
          * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>

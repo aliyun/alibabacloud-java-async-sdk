@@ -108,6 +108,10 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cipher
      */
@@ -269,6 +273,32 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String sslVpnServerId; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySslVpnServerResponseBody model) {
+            this.cipher = model.cipher;
+            this.clientIpPool = model.clientIpPool;
+            this.compress = model.compress;
+            this.connections = model.connections;
+            this.createTime = model.createTime;
+            this.enableMultiFactorAuth = model.enableMultiFactorAuth;
+            this.iDaaSApplicationId = model.iDaaSApplicationId;
+            this.iDaaSInstanceId = model.iDaaSInstanceId;
+            this.iDaaSInstanceVersion = model.iDaaSInstanceVersion;
+            this.internetIp = model.internetIp;
+            this.localSubnet = model.localSubnet;
+            this.maxConnections = model.maxConnections;
+            this.name = model.name;
+            this.port = model.port;
+            this.proto = model.proto;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.sslVpnServerId = model.sslVpnServerId;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>The encryption algorithm.</p>

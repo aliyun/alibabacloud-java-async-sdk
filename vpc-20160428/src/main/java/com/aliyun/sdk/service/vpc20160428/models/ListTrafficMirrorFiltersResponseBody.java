@@ -52,6 +52,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<TrafficMirrorFilters> trafficMirrorFilters; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrafficMirrorFiltersResponseBody model) {
+            this.count = model.count;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficMirrorFilters = model.trafficMirrorFilters;
+        } 
 
         /**
          * <p>The number of entries returned.</p>
@@ -326,6 +342,23 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterId; 
             private String trafficMirrorFilterRuleId; 
             private String trafficMirrorFilterRuleStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(EgressRules model) {
+                this.action = model.action;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.destinationPortRange = model.destinationPortRange;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.sourceCidrBlock = model.sourceCidrBlock;
+                this.sourcePortRange = model.sourcePortRange;
+                this.trafficDirection = model.trafficDirection;
+                this.trafficMirrorFilterId = model.trafficMirrorFilterId;
+                this.trafficMirrorFilterRuleId = model.trafficMirrorFilterRuleId;
+                this.trafficMirrorFilterRuleStatus = model.trafficMirrorFilterRuleStatus;
+            } 
 
             /**
              * <p>The action of the outbound rule. Valid values:</p>
@@ -627,6 +660,23 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterRuleId; 
             private String trafficMirrorFilterRuleStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(IngressRules model) {
+                this.action = model.action;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.destinationPortRange = model.destinationPortRange;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+                this.sourceCidrBlock = model.sourceCidrBlock;
+                this.sourcePortRange = model.sourcePortRange;
+                this.trafficDirection = model.trafficDirection;
+                this.trafficMirrorFilterId = model.trafficMirrorFilterId;
+                this.trafficMirrorFilterRuleId = model.trafficMirrorFilterRuleId;
+                this.trafficMirrorFilterRuleStatus = model.trafficMirrorFilterRuleStatus;
+            } 
+
             /**
              * <p>The action of the inbound rule. Valid values:</p>
              * <ul>
@@ -819,6 +869,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -975,6 +1033,21 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterId; 
             private String trafficMirrorFilterName; 
             private String trafficMirrorFilterStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMirrorFilters model) {
+                this.creationTime = model.creationTime;
+                this.egressRules = model.egressRules;
+                this.ingressRules = model.ingressRules;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.trafficMirrorFilterDescription = model.trafficMirrorFilterDescription;
+                this.trafficMirrorFilterId = model.trafficMirrorFilterId;
+                this.trafficMirrorFilterName = model.trafficMirrorFilterName;
+                this.trafficMirrorFilterStatus = model.trafficMirrorFilterStatus;
+            } 
 
             /**
              * <p>The time when the filter is created.</p>

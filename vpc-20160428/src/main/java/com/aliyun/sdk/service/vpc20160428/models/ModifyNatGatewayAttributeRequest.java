@@ -91,7 +91,7 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -410,6 +410,14 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         public static final class Builder {
             private String logDeliveryType; 
             private String logDestination; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogDelivery model) {
+                this.logDeliveryType = model.logDeliveryType;
+                this.logDestination = model.logDestination;
+            } 
 
             /**
              * LogDeliveryType.

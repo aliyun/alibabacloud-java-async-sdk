@@ -52,6 +52,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creationTime
      */
@@ -101,6 +105,18 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIpsecServerResponseBody model) {
+            this.creationTime = model.creationTime;
+            this.ipsecServerId = model.ipsecServerId;
+            this.ipsecServerName = model.ipsecServerName;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>The time when the IPsec server was created.</p>

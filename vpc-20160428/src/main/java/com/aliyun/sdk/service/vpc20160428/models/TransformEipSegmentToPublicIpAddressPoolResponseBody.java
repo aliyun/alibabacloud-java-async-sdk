@@ -40,6 +40,10 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return publicIpAddressPoolId
      */
@@ -65,6 +69,15 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
         private String publicIpAddressPoolId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransformEipSegmentToPublicIpAddressPoolResponseBody model) {
+            this.publicIpAddressPoolId = model.publicIpAddressPoolId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The ID of the IP address pool.</p>

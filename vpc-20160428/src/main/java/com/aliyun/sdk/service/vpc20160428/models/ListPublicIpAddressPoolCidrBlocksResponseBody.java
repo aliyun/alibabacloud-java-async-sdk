@@ -44,6 +44,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         private java.util.List<PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPublicIpAddressPoolCidrBlocksResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.publicIpPoolCidrBlockList = model.publicIpPoolCidrBlockList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The token that is used for the next query. Valid values:</p>
@@ -220,6 +234,18 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             private String status; 
             private Integer totalIpNum; 
             private Integer usedIpNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpPoolCidrBlockList model) {
+                this.cidrBlock = model.cidrBlock;
+                this.creationTime = model.creationTime;
+                this.publicIpAddressPoolId = model.publicIpAddressPoolId;
+                this.status = model.status;
+                this.totalIpNum = model.totalIpNum;
+                this.usedIpNum = model.usedIpNum;
+            } 
 
             /**
              * <p>The ID of the IP address pool.</p>

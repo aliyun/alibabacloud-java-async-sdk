@@ -48,6 +48,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         private String requestId; 
         private RouterTableList routerTableList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouteTableListResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routerTableList = model.routerTableList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -180,6 +195,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> gatewayIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(GatewayIds model) {
+                this.gatewayIds = model.gatewayIds;
+            } 
+
             /**
              * GatewayIds.
              */
@@ -238,6 +260,14 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag that is added to the route table.</p>
@@ -300,6 +330,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -346,6 +383,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * VSwitchId.
@@ -573,6 +617,28 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private Tags tags; 
             private VSwitchIds vSwitchIds; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouterTableListType model) {
+                this.associateType = model.associateType;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.gatewayIds = model.gatewayIds;
+                this.ownerId = model.ownerId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routePropagationEnable = model.routePropagationEnable;
+                this.routeTableId = model.routeTableId;
+                this.routeTableName = model.routeTableName;
+                this.routeTableType = model.routeTableType;
+                this.routerId = model.routerId;
+                this.routerType = model.routerType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
@@ -804,6 +870,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouterTableListType> routerTableListType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouterTableList model) {
+                this.routerTableListType = model.routerTableListType;
+            } 
 
             /**
              * RouterTableListType.

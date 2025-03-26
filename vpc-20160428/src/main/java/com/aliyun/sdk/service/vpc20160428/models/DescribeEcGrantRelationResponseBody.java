@@ -52,6 +52,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEcGrantRelationResponseBody model) {
+            this.count = model.count;
+            this.ecGrantRelations = model.ecGrantRelations;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -322,6 +338,23 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             private String vbrInstanceId; 
             private Long vbrOwnerUid; 
             private String vbrRegionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcGrantRelations model) {
+                this.aliUid = model.aliUid;
+                this.gmtCreate = model.gmtCreate;
+                this.grantType = model.grantType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceRouterId = model.instanceRouterId;
+                this.regionNo = model.regionNo;
+                this.status = model.status;
+                this.vbrInstanceId = model.vbrInstanceId;
+                this.vbrOwnerUid = model.vbrOwnerUid;
+                this.vbrRegionNo = model.vbrRegionNo;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>

@@ -48,6 +48,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalAccelerationInstances
      */
@@ -89,6 +93,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalAccelerationInstancesResponseBody model) {
+            this.globalAccelerationInstances = model.globalAccelerationInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the GA instances.</p>
@@ -216,6 +231,16 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             private String serverIpAddress; 
             private String serverType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServer model) {
+                this.regionId = model.regionId;
+                this.serverId = model.serverId;
+                this.serverIpAddress = model.serverIpAddress;
+                this.serverType = model.serverType;
+            } 
+
             /**
              * <p>The region where the backend servers are deployed.</p>
              * 
@@ -303,6 +328,13 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BackendServer> backendServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendServers model) {
+                this.backendServer = model.backendServer;
+            } 
+
             /**
              * BackendServer.
              */
@@ -361,6 +393,14 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String allocationId; 
             private String ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddress model) {
+                this.allocationId = model.allocationId;
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * <p>The ID of the public IP address of the GA instance.</p>
@@ -422,6 +462,13 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PublicIpAddress> publicIpAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddresses model) {
+                this.publicIpAddress = model.publicIpAddress;
+            } 
 
             /**
              * PublicIpAddress.
@@ -650,6 +697,28 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             private String serviceLocation; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalAccelerationInstance model) {
+                this.accelerationLocation = model.accelerationLocation;
+                this.backendServers = model.backendServers;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthType = model.bandwidthType;
+                this.chargeType = model.chargeType;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.globalAccelerationInstanceId = model.globalAccelerationInstanceId;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+                this.name = model.name;
+                this.publicIpAddresses = model.publicIpAddresses;
+                this.regionId = model.regionId;
+                this.serviceLocation = model.serviceLocation;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The acceleration area of the GA instance.</p>
              * 
@@ -868,6 +937,13 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalAccelerationInstances model) {
+                this.globalAccelerationInstance = model.globalAccelerationInstance;
+            } 
 
             /**
              * GlobalAccelerationInstance.

@@ -48,6 +48,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         private String requestId; 
         private SslVpnClientCertKeys sslVpnClientCertKeys; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSslVpnClientCertsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sslVpnClientCertKeys = model.sslVpnClientCertKeys;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of the page to return.</p>
@@ -264,6 +279,20 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             private String sslVpnServerId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SslVpnClientCertKey model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sslVpnClientCertId = model.sslVpnClientCertId;
+                this.sslVpnServerId = model.sslVpnServerId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The timestamp generated when the SSL client certificate was created. Unit: milliseconds.</p>
              * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -398,6 +427,13 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SslVpnClientCertKey> sslVpnClientCertKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(SslVpnClientCertKeys model) {
+                this.sslVpnClientCertKey = model.sslVpnClientCertKey;
+            } 
 
             /**
              * SslVpnClientCertKey.

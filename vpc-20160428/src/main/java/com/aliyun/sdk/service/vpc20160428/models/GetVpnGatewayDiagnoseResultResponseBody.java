@@ -68,6 +68,10 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return beginTime
      */
@@ -149,6 +153,22 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         private String resourceType; 
         private Integer totalCount; 
         private String vpnGatewayId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVpnGatewayDiagnoseResultResponseBody model) {
+            this.beginTime = model.beginTime;
+            this.diagnoseId = model.diagnoseId;
+            this.diagnoseResult = model.diagnoseResult;
+            this.finishTime = model.finishTime;
+            this.finishedCount = model.finishedCount;
+            this.requestId = model.requestId;
+            this.resourceInstanceId = model.resourceInstanceId;
+            this.resourceType = model.resourceType;
+            this.totalCount = model.totalCount;
+            this.vpnGatewayId = model.vpnGatewayId;
+        } 
 
         /**
          * <p>The time when the diagnostic started.</p>
@@ -321,6 +341,15 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
             private String diagnoseName; 
             private String diagnoseResultDescription; 
             private String diagnoseResultLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiagnoseResult model) {
+                this.diagnoseName = model.diagnoseName;
+                this.diagnoseResultDescription = model.diagnoseResultDescription;
+                this.diagnoseResultLevel = model.diagnoseResultLevel;
+            } 
 
             /**
              * <p>The diagnostic item.</p>

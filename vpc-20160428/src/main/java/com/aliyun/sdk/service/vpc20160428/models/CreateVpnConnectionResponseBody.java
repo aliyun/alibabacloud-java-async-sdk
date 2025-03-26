@@ -44,6 +44,10 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -77,6 +81,16 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String vpnConnectionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpnConnectionResponseBody model) {
+            this.createTime = model.createTime;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.vpnConnectionId = model.vpnConnectionId;
+        } 
 
         /**
          * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>

@@ -40,6 +40,10 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private RouteEntrys routeEntrys; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouteEntryListResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.routeEntrys = model.routeEntrys;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
@@ -161,6 +174,15 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceType; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHopRelatedInfo model) {
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The ID of the instance that is associated with the next hop.</p>
@@ -299,6 +321,18 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             private String nextHopType; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(NextHop model) {
+                this.enabled = model.enabled;
+                this.nextHopId = model.nextHopId;
+                this.nextHopRegionId = model.nextHopRegionId;
+                this.nextHopRelatedInfo = model.nextHopRelatedInfo;
+                this.nextHopType = model.nextHopType;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>Indicates whether the route is available. Valid values:</p>
              * <ul>
@@ -427,6 +461,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NextHop> nextHop; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHops model) {
+                this.nextHop = model.nextHop;
+            } 
 
             /**
              * NextHop.
@@ -606,6 +647,24 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             private String serviceType; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntry model) {
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.gmtModified = model.gmtModified;
+                this.ipVersion = model.ipVersion;
+                this.nextHops = model.nextHops;
+                this.origin = model.origin;
+                this.routeEntryId = model.routeEntryId;
+                this.routeEntryName = model.routeEntryName;
+                this.routeTableId = model.routeTableId;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The description of the route.</p>
@@ -797,6 +856,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteEntry> routeEntry; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntrys model) {
+                this.routeEntry = model.routeEntry;
+            } 
 
             /**
              * RouteEntry.

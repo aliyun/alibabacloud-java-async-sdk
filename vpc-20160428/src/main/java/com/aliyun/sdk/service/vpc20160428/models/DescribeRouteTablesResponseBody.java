@@ -48,6 +48,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         private String requestId; 
         private RouteTables routeTables; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRouteTablesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.routeTables = model.routeTables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -216,6 +231,16 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String nextHopType; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(NextHop model) {
+                this.enabled = model.enabled;
+                this.nextHopId = model.nextHopId;
+                this.nextHopType = model.nextHopType;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>Indicates whether the route is available. Valid values:</p>
              * <ul>
@@ -312,6 +337,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NextHop> nextHop; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextHops model) {
+                this.nextHop = model.nextHop;
+            } 
 
             /**
              * NextHop.
@@ -467,6 +499,22 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String routeTableId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteEntry model) {
+                this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.instanceId = model.instanceId;
+                this.nextHopType = model.nextHopType;
+                this.nextHops = model.nextHops;
+                this.routeEntryId = model.routeEntryId;
+                this.routeEntryName = model.routeEntryName;
+                this.routeTableId = model.routeTableId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The description of the route. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
@@ -640,6 +688,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RouteEntry> routeEntry; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteEntrys model) {
+                this.routeEntry = model.routeEntry;
+            } 
+
             /**
              * RouteEntry.
              */
@@ -686,6 +741,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * VSwitchId.
@@ -818,6 +880,20 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String vRouterId; 
             private VSwitchIds vSwitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteTable model) {
+                this.creationTime = model.creationTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeEntrys = model.routeEntrys;
+                this.routeTableId = model.routeTableId;
+                this.routeTableType = model.routeTableType;
+                this.status = model.status;
+                this.vRouterId = model.vRouterId;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
+
             /**
              * <p>The time when the route table was created.</p>
              * <p>The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
@@ -947,6 +1023,13 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RouteTable> routeTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteTables model) {
+                this.routeTable = model.routeTable;
+            } 
 
             /**
              * RouteTable.

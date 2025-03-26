@@ -48,6 +48,10 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocationId
      */
@@ -89,6 +93,17 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateEipAddressResponseBody model) {
+            this.allocationId = model.allocationId;
+            this.eipAddress = model.eipAddress;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The EIP ID.</p>

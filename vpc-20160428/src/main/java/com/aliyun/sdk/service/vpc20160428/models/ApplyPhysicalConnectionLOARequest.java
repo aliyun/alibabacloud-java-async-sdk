@@ -105,7 +105,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -503,6 +503,17 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             private String PMContactInfo; 
             private String PMGender; 
             private String PMName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PMInfo model) {
+                this.PMCertificateNo = model.PMCertificateNo;
+                this.PMCertificateType = model.PMCertificateType;
+                this.PMContactInfo = model.PMContactInfo;
+                this.PMGender = model.PMGender;
+                this.PMName = model.PMName;
+            } 
 
             /**
              * <p>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</p>

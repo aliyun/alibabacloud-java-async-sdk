@@ -136,7 +136,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -761,6 +761,15 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String localBgpIp; 
             private String tunnelCidr; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelBgpConfig model) {
+                this.localAsn = model.localAsn;
+                this.localBgpIp = model.localBgpIp;
+                this.tunnelCidr = model.tunnelCidr;
+            } 
+
             /**
              * <p>The ASN of the tunnel on the Alibaba Cloud side. Valid values: <strong>1</strong> to <strong>4294967295</strong>. Default value: <strong>45104</strong>.</p>
              * <blockquote>
@@ -941,6 +950,21 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String localId; 
             private String psk; 
             private String remoteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelIkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
 
             /**
              * <p>The authentication algorithm that is used in Phase 1 negotiations.</p>
@@ -1132,6 +1156,16 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private Integer ipsecLifetime; 
             private String ipsecPfs; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelIpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
+
             /**
              * <p>The authentication algorithm that is used in Phase 2 negotiations.</p>
              * <p>Valid values: <strong>md5</strong>, <strong>sha1</strong>, <strong>sha256</strong>, <strong>sha384</strong>, and <strong>sha512</strong>.</p>
@@ -1313,6 +1347,21 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String tunnelId; 
             private TunnelIkeConfig tunnelIkeConfig; 
             private TunnelIpsecConfig tunnelIpsecConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelOptionsSpecification model) {
+                this.customerGatewayId = model.customerGatewayId;
+                this.enableDpd = model.enableDpd;
+                this.enableNatTraversal = model.enableNatTraversal;
+                this.remoteCaCertificate = model.remoteCaCertificate;
+                this.role = model.role;
+                this.tunnelBgpConfig = model.tunnelBgpConfig;
+                this.tunnelId = model.tunnelId;
+                this.tunnelIkeConfig = model.tunnelIkeConfig;
+                this.tunnelIpsecConfig = model.tunnelIpsecConfig;
+            } 
 
             /**
              * <p>The ID of the customer gateway associated with the tunnel.</p>

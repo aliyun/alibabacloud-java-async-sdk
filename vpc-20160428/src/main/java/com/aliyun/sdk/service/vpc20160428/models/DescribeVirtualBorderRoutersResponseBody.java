@@ -48,6 +48,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private VirtualBorderRouterSet virtualBorderRouterSet; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVirtualBorderRoutersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.virtualBorderRouterSet = model.virtualBorderRouterSet;
+        } 
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>
@@ -204,6 +219,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private Long cenOwnerId; 
             private String cenStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedCen model) {
+                this.cenId = model.cenId;
+                this.cenOwnerId = model.cenOwnerId;
+                this.cenStatus = model.cenStatus;
+            } 
+
             /**
              * <p>The CEN instance ID.</p>
              * 
@@ -282,6 +306,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AssociatedCen> associatedCen; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedCens model) {
+                this.associatedCen = model.associatedCen;
+            } 
 
             /**
              * AssociatedCen.
@@ -497,6 +528,27 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String status; 
             private String vlanId; 
             private String vlanInterfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedPhysicalConnection model) {
+                this.circuitCode = model.circuitCode;
+                this.enableIpv6 = model.enableIpv6;
+                this.localGatewayIp = model.localGatewayIp;
+                this.localIpv6GatewayIp = model.localIpv6GatewayIp;
+                this.peerGatewayIp = model.peerGatewayIp;
+                this.peerIpv6GatewayIp = model.peerIpv6GatewayIp;
+                this.peeringIpv6SubnetMask = model.peeringIpv6SubnetMask;
+                this.peeringSubnetMask = model.peeringSubnetMask;
+                this.physicalConnectionBusinessStatus = model.physicalConnectionBusinessStatus;
+                this.physicalConnectionId = model.physicalConnectionId;
+                this.physicalConnectionOwnerUid = model.physicalConnectionOwnerUid;
+                this.physicalConnectionStatus = model.physicalConnectionStatus;
+                this.status = model.status;
+                this.vlanId = model.vlanId;
+                this.vlanInterfaceId = model.vlanInterfaceId;
+            } 
 
             /**
              * <p>The circuit code of the Express Connect circuit, which is provided by the connectivity provider.</p>
@@ -732,6 +784,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedPhysicalConnections model) {
+                this.associatedPhysicalConnection = model.associatedPhysicalConnection;
+            } 
+
             /**
              * AssociatedPhysicalConnection.
              */
@@ -790,6 +849,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the resource.</p>
@@ -851,6 +918,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterTypeTags model) {
+                this.tags = model.tags;
+            } 
 
             /**
              * Tags.
@@ -1378,6 +1452,53 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String vbrId; 
             private Integer vlanId; 
             private String vlanInterfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterType model) {
+                this.accessPointId = model.accessPointId;
+                this.activationTime = model.activationTime;
+                this.associatedCens = model.associatedCens;
+                this.associatedPhysicalConnections = model.associatedPhysicalConnections;
+                this.bandwidth = model.bandwidth;
+                this.circuitCode = model.circuitCode;
+                this.cloudBoxInstanceId = model.cloudBoxInstanceId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.detectMultiplier = model.detectMultiplier;
+                this.eccId = model.eccId;
+                this.ecrAttatchStatus = model.ecrAttatchStatus;
+                this.ecrId = model.ecrId;
+                this.ecrOwnerId = model.ecrOwnerId;
+                this.enableIpv6 = model.enableIpv6;
+                this.localGatewayIp = model.localGatewayIp;
+                this.localIpv6GatewayIp = model.localIpv6GatewayIp;
+                this.minRxInterval = model.minRxInterval;
+                this.minTxInterval = model.minTxInterval;
+                this.name = model.name;
+                this.pConnVbrChargeType = model.pConnVbrChargeType;
+                this.pConnVbrExpireTime = model.pConnVbrExpireTime;
+                this.peerGatewayIp = model.peerGatewayIp;
+                this.peerIpv6GatewayIp = model.peerIpv6GatewayIp;
+                this.peeringIpv6SubnetMask = model.peeringIpv6SubnetMask;
+                this.peeringSubnetMask = model.peeringSubnetMask;
+                this.physicalConnectionBusinessStatus = model.physicalConnectionBusinessStatus;
+                this.physicalConnectionId = model.physicalConnectionId;
+                this.physicalConnectionOwnerUid = model.physicalConnectionOwnerUid;
+                this.physicalConnectionStatus = model.physicalConnectionStatus;
+                this.recoveryTime = model.recoveryTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routeTableId = model.routeTableId;
+                this.sitelinkEnable = model.sitelinkEnable;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.terminationTime = model.terminationTime;
+                this.type = model.type;
+                this.vbrId = model.vbrId;
+                this.vlanId = model.vlanId;
+                this.vlanInterfaceId = model.vlanInterfaceId;
+            } 
 
             /**
              * <p>The ID of the access point.</p>
@@ -1908,6 +2029,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VirtualBorderRouterType> virtualBorderRouterType; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterSet model) {
+                this.virtualBorderRouterType = model.virtualBorderRouterType;
+            } 
 
             /**
              * VirtualBorderRouterType.

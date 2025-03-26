@@ -40,6 +40,10 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -65,6 +69,15 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String sslVpnClientCertId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSslVpnClientCertResponseBody model) {
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.sslVpnClientCertId = model.sslVpnClientCertId;
+        } 
 
         /**
          * <p>The name of the SSL client certificate.</p>

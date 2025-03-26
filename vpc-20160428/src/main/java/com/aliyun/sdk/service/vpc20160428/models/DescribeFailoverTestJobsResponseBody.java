@@ -52,6 +52,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFailoverTestJobsResponseBody model) {
+            this.count = model.count;
+            this.failoverTestJobList = model.failoverTestJobList;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries on the current page.</p>
@@ -314,6 +330,22 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String stopTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailoverTestJobList model) {
+                this.description = model.description;
+                this.jobDuration = model.jobDuration;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.name = model.name;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.stopTime = model.stopTime;
+            } 
 
             /**
              * <p>The description of the failover test.</p>

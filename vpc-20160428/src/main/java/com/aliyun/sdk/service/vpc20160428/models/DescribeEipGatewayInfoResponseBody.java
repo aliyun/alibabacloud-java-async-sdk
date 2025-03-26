@@ -44,6 +44,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         private EipInfos eipInfos; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEipGatewayInfoResponseBody model) {
+            this.code = model.code;
+            this.eipInfos = model.eipInfos;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code of the operation.</p>
@@ -181,6 +195,15 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             private String ipGw; 
             private String ipMask; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipInfo model) {
+                this.ip = model.ip;
+                this.ipGw = model.ipGw;
+                this.ipMask = model.ipMask;
+            } 
+
             /**
              * <p>The IP address of the EIP.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EipInfo> eipInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipInfos model) {
+                this.eipInfo = model.eipInfo;
+            } 
 
             /**
              * EipInfo.

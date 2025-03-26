@@ -52,6 +52,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creationTime
      */
@@ -101,6 +105,18 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String serviceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVpcGatewayEndpointResponseBody model) {
+            this.creationTime = model.creationTime;
+            this.endpointId = model.endpointId;
+            this.endpointName = model.endpointName;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceName = model.serviceName;
+        } 
 
         /**
          * <p>The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>

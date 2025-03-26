@@ -48,6 +48,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListPrefixListsResponseBody extends TeaModel {
         private java.util.List<PrefixLists> prefixLists; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrefixListsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.prefixLists = model.prefixLists;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
@@ -195,6 +210,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -424,6 +447,27 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String shareType; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrefixLists model) {
+                this.cidrBlocks = model.cidrBlocks;
+                this.creationTime = model.creationTime;
+                this.ipVersion = model.ipVersion;
+                this.maxEntries = model.maxEntries;
+                this.ownerId = model.ownerId;
+                this.prefixListDescription = model.prefixListDescription;
+                this.prefixListId = model.prefixListId;
+                this.prefixListName = model.prefixListName;
+                this.prefixListStatus = model.prefixListStatus;
+                this.prefixListType = model.prefixListType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The CIDR block specified in the prefix list.</p>

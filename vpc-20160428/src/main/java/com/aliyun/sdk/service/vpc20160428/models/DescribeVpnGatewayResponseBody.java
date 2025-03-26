@@ -140,6 +140,10 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoPropagate
      */
@@ -365,6 +369,40 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         private String vpcId; 
         private String vpnGatewayId; 
         private String vpnType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVpnGatewayResponseBody model) {
+            this.autoPropagate = model.autoPropagate;
+            this.businessStatus = model.businessStatus;
+            this.chargeType = model.chargeType;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.disasterRecoveryInternetIp = model.disasterRecoveryInternetIp;
+            this.disasterRecoveryVSwitchId = model.disasterRecoveryVSwitchId;
+            this.enableBgp = model.enableBgp;
+            this.endTime = model.endTime;
+            this.eniInstanceIds = model.eniInstanceIds;
+            this.internetIp = model.internetIp;
+            this.ipsecVpn = model.ipsecVpn;
+            this.name = model.name;
+            this.networkType = model.networkType;
+            this.requestId = model.requestId;
+            this.reservationData = model.reservationData;
+            this.resourceGroupId = model.resourceGroupId;
+            this.spec = model.spec;
+            this.sslMaxConnections = model.sslMaxConnections;
+            this.sslVpn = model.sslVpn;
+            this.sslVpnInternetIp = model.sslVpnInternetIp;
+            this.status = model.status;
+            this.tag = model.tag;
+            this.tags = model.tags;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+            this.vpnGatewayId = model.vpnGatewayId;
+            this.vpnType = model.vpnType;
+        } 
 
         /**
          * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>
@@ -786,6 +824,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> eniInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EniInstanceIds model) {
+                this.eniInstanceId = model.eniInstanceId;
+            } 
+
             /**
              * EniInstanceId.
              */
@@ -904,6 +949,19 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             private String reservationSpec; 
             private String reservationSsl; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReservationData model) {
+                this.reservationEndTime = model.reservationEndTime;
+                this.reservationIpsec = model.reservationIpsec;
+                this.reservationMaxConnections = model.reservationMaxConnections;
+                this.reservationOrderType = model.reservationOrderType;
+                this.reservationSpec = model.reservationSpec;
+                this.reservationSsl = model.reservationSsl;
+                this.status = model.status;
+            } 
 
             /**
              * <p>If the order type is <strong>TEMP_UPGRADE</strong> (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
@@ -1051,6 +1109,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -1111,6 +1177,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</p>

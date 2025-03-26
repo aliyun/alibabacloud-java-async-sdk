@@ -36,6 +36,10 @@ public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canAllocate
      */
@@ -53,6 +57,14 @@ public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean canAllocate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckCanAllocateVpcPrivateIpAddressResponseBody model) {
+            this.canAllocate = model.canAllocate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the private IP address is available. Valid values:</p>

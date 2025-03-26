@@ -44,6 +44,10 @@ public class ListNatIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return natIps
      */
@@ -77,6 +81,16 @@ public class ListNatIpsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNatIpsResponseBody model) {
+            this.natIps = model.natIps;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of IP addresses of the NAT gateway.</p>
@@ -244,6 +258,20 @@ public class ListNatIpsResponseBody extends TeaModel {
             private String natIpId; 
             private String natIpName; 
             private String natIpStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(NatIps model) {
+                this.isDefault = model.isDefault;
+                this.natGatewayId = model.natGatewayId;
+                this.natIp = model.natIp;
+                this.natIpCidr = model.natIpCidr;
+                this.natIpDescription = model.natIpDescription;
+                this.natIpId = model.natIpId;
+                this.natIpName = model.natIpName;
+                this.natIpStatus = model.natIpStatus;
+            } 
 
             /**
              * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>

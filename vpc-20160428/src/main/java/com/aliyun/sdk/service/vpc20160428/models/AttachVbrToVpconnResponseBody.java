@@ -36,6 +36,10 @@ public class AttachVbrToVpconnResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AttachVbrToVpconnResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String virtualPhysicalConnection; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachVbrToVpconnResponseBody model) {
+            this.requestId = model.requestId;
+            this.virtualPhysicalConnection = model.virtualPhysicalConnection;
+        } 
 
         /**
          * <p>The request ID.</p>

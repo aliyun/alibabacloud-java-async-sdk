@@ -36,6 +36,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VpnConnectionConfig vpnConnectionConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(DownloadVpnConnectionConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.vpnConnectionConfig = model.vpnConnectionConfig;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -206,6 +218,21 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String localId; 
             private String psk; 
             private String remoteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
 
             /**
              * <p>The authentication algorithm in the IKE phase.</p>
@@ -384,6 +411,16 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String ipsecEncAlg; 
             private Long ipsecLifetime; 
             private String ipsecPfs; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
 
             /**
              * <p>The authentication algorithm in the IPsec phase.</p>
@@ -564,6 +601,21 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String psk; 
             private String remoteId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelConfigIkeConfig model) {
+                this.ikeAuthAlg = model.ikeAuthAlg;
+                this.ikeEncAlg = model.ikeEncAlg;
+                this.ikeLifetime = model.ikeLifetime;
+                this.ikeMode = model.ikeMode;
+                this.ikePfs = model.ikePfs;
+                this.ikeVersion = model.ikeVersion;
+                this.localId = model.localId;
+                this.psk = model.psk;
+                this.remoteId = model.remoteId;
+            } 
+
             /**
              * <p>The authentication algorithm in the IKE phase.</p>
              * 
@@ -742,6 +794,16 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private Long ipsecLifetime; 
             private String ipsecPfs; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelConfigIpsecConfig model) {
+                this.ipsecAuthAlg = model.ipsecAuthAlg;
+                this.ipsecEncAlg = model.ipsecEncAlg;
+                this.ipsecLifetime = model.ipsecLifetime;
+                this.ipsecPfs = model.ipsecPfs;
+            } 
+
             /**
              * <p>The authentication algorithm in the IPsec phase.</p>
              * 
@@ -873,6 +935,17 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String remote; 
             private String tunnelId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TunnelConfig model) {
+                this.ikeConfig = model.ikeConfig;
+                this.ipsecConfig = model.ipsecConfig;
+                this.local = model.local;
+                this.remote = model.remote;
+                this.tunnelId = model.tunnelId;
+            } 
+
             /**
              * <p>The configurations of Phase 1 negotiations.</p>
              */
@@ -960,6 +1033,13 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TunnelConfig> tunnelConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(TunnelsConfig model) {
+                this.tunnelConfig = model.tunnelConfig;
+            } 
 
             /**
              * TunnelConfig.
@@ -1079,6 +1159,19 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String remote; 
             private String remoteSubnet; 
             private TunnelsConfig tunnelsConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpnConnectionConfig model) {
+                this.ikeConfig = model.ikeConfig;
+                this.ipsecConfig = model.ipsecConfig;
+                this.local = model.local;
+                this.localSubnet = model.localSubnet;
+                this.remote = model.remote;
+                this.remoteSubnet = model.remoteSubnet;
+                this.tunnelsConfig = model.tunnelsConfig;
+            } 
 
             /**
              * <p>The configurations of Phase 1 negotiations.</p>

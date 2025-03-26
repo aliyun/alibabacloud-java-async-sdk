@@ -40,6 +40,10 @@ public class CreateHaVipResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return haVipId
      */
@@ -65,6 +69,15 @@ public class CreateHaVipResponseBody extends TeaModel {
         private String haVipId; 
         private String ipAddress; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHaVipResponseBody model) {
+            this.haVipId = model.haVipId;
+            this.ipAddress = model.ipAddress;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the HAVIP.</p>

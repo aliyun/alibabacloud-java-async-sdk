@@ -48,6 +48,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bgpNetworks
      */
@@ -89,6 +93,17 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBgpNetworksResponseBody model) {
+            this.bgpNetworks = model.bgpNetworks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The BGP network.</p>
@@ -216,6 +231,16 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BgpNetwork model) {
+                this.dstCidrBlock = model.dstCidrBlock;
+                this.routerId = model.routerId;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The CIDR block of the advertised BGP network.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BgpNetwork> bgpNetwork; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgpNetworks model) {
+                this.bgpNetwork = model.bgpNetwork;
+            } 
 
             /**
              * BgpNetwork.

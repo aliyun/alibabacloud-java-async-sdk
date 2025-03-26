@@ -72,6 +72,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -161,6 +165,23 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         private String status; 
         private java.util.List<Tags> tags; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIpv4GatewayAttributeResponseBody model) {
+            this.createTime = model.createTime;
+            this.enabled = model.enabled;
+            this.ipv4GatewayDescription = model.ipv4GatewayDescription;
+            this.ipv4GatewayId = model.ipv4GatewayId;
+            this.ipv4GatewayName = model.ipv4GatewayName;
+            this.ipv4GatewayRouteTableId = model.ipv4GatewayRouteTableId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The time when the IPv4 gateway was created.</p>
@@ -341,6 +362,14 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>

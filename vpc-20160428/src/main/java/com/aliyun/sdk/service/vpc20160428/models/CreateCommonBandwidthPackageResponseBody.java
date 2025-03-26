@@ -40,6 +40,10 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthPackageId
      */
@@ -65,6 +69,15 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         private String bandwidthPackageId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCommonBandwidthPackageResponseBody model) {
+            this.bandwidthPackageId = model.bandwidthPackageId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The ID of the Internet Shared Bandwidth instance.</p>
