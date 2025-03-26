@@ -136,6 +136,60 @@ public class RunDataAnalysisResponseBody extends TeaModel {
      *
      * <p>RunDataAnalysisResponseBody</p>
      */
+    public static class Chat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private Chat(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Chat create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Chat model) {
+                this.text = model.text;
+            } 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public Chat build() {
+                return new Chat(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunDataAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunDataAnalysisResponseBody</p>
+     */
     public static class SqlData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("column")
         private java.util.List<String> column;
@@ -428,6 +482,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attempts")
         private java.util.List<?> attempts;
 
+        @com.aliyun.core.annotation.NameInMap("chat")
+        private Chat chat;
+
         @com.aliyun.core.annotation.NameInMap("errorMessage")
         private String errorMessage;
 
@@ -466,6 +523,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.attempts = builder.attempts;
+            this.chat = builder.chat;
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
             this.evidence = builder.evidence;
@@ -493,6 +551,13 @@ public class RunDataAnalysisResponseBody extends TeaModel {
          */
         public java.util.List<?> getAttempts() {
             return this.attempts;
+        }
+
+        /**
+         * @return chat
+         */
+        public Chat getChat() {
+            return this.chat;
         }
 
         /**
@@ -581,6 +646,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<?> attempts; 
+            private Chat chat; 
             private String errorMessage; 
             private String event; 
             private String evidence; 
@@ -599,6 +665,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.attempts = model.attempts;
+                this.chat = model.chat;
                 this.errorMessage = model.errorMessage;
                 this.event = model.event;
                 this.evidence = model.evidence;
@@ -618,6 +685,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
              */
             public Builder attempts(java.util.List<?> attempts) {
                 this.attempts = attempts;
+                return this;
+            }
+
+            /**
+             * chat.
+             */
+            public Builder chat(Chat chat) {
+                this.chat = chat;
                 return this;
             }
 

@@ -73,7 +73,64 @@ public class RunSqlGenerationResponseBody extends TeaModel {
      *
      * <p>RunSqlGenerationResponseBody</p>
      */
+    public static class Chat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private Chat(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Chat create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Chat model) {
+                this.text = model.text;
+            } 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public Chat build() {
+                return new Chat(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSqlGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSqlGenerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("chat")
+        private Chat chat;
+
         @com.aliyun.core.annotation.NameInMap("errorMessage")
         private String errorMessage;
 
@@ -102,6 +159,7 @@ public class RunSqlGenerationResponseBody extends TeaModel {
         private String sqlError;
 
         private Data(Builder builder) {
+            this.chat = builder.chat;
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
             this.evidence = builder.evidence;
@@ -119,6 +177,13 @@ public class RunSqlGenerationResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return chat
+         */
+        public Chat getChat() {
+            return this.chat;
         }
 
         /**
@@ -185,6 +250,7 @@ public class RunSqlGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Chat chat; 
             private String errorMessage; 
             private String event; 
             private String evidence; 
@@ -199,6 +265,7 @@ public class RunSqlGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.chat = model.chat;
                 this.errorMessage = model.errorMessage;
                 this.event = model.event;
                 this.evidence = model.evidence;
@@ -209,6 +276,14 @@ public class RunSqlGenerationResponseBody extends TeaModel {
                 this.sql = model.sql;
                 this.sqlError = model.sqlError;
             } 
+
+            /**
+             * chat.
+             */
+            public Builder chat(Chat chat) {
+                this.chat = chat;
+                return this;
+            }
 
             /**
              * errorMessage.
