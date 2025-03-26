@@ -52,6 +52,10 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteAITeacherGrammarCheckResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -223,6 +239,16 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
             private String correction; 
             private String correctionStatus; 
             private String errorReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysis = model.analysis;
+                this.correction = model.correction;
+                this.correctionStatus = model.correctionStatus;
+                this.errorReason = model.errorReason;
+            } 
 
             /**
              * analysis.

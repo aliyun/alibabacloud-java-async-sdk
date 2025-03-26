@@ -49,7 +49,7 @@ public class OpenApiSingleResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -231,6 +231,13 @@ public class OpenApiSingleResponse extends Response {
 
         public static final class Builder {
             private String modelTrainStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.modelTrainStatus = model.modelTrainStatus;
+            } 
 
             /**
              * modelTrainStatus.

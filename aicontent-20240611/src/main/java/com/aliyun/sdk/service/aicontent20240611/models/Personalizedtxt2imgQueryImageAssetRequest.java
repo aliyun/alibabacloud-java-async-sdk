@@ -52,7 +52,7 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

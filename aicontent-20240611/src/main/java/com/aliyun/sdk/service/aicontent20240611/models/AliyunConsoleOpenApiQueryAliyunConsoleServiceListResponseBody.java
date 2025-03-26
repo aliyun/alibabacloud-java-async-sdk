@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List<Data> data;
+    private java.util.List<AliyunConsoleServiceInfoDTO> data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -52,10 +52,14 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List<Data> getData() {
+    public java.util.List<AliyunConsoleServiceInfoDTO> getData() {
         return this.data;
     }
 
@@ -95,17 +99,29 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
     }
 
     public static final class Builder {
-        private java.util.List<Data> data; 
+        private java.util.List<AliyunConsoleServiceInfoDTO> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * data.
          */
-        public Builder data(java.util.List<Data> data) {
+        public Builder data(java.util.List<AliyunConsoleServiceInfoDTO> data) {
             this.data = data;
             return this;
         }
@@ -156,111 +172,4 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
 
     } 
 
-    /**
-     * 
-     * {@link AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody} extends {@link TeaModel}
-     *
-     * <p>AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FreeConcurrencyCount")
-        private Integer freeConcurrencyCount;
-
-        @com.aliyun.core.annotation.NameInMap("FreeCount")
-        private Integer freeCount;
-
-        @com.aliyun.core.annotation.NameInMap("ServiceCode")
-        private String serviceCode;
-
-        @com.aliyun.core.annotation.NameInMap("ServiceName")
-        private String serviceName;
-
-        private Data(Builder builder) {
-            this.freeConcurrencyCount = builder.freeConcurrencyCount;
-            this.freeCount = builder.freeCount;
-            this.serviceCode = builder.serviceCode;
-            this.serviceName = builder.serviceName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return freeConcurrencyCount
-         */
-        public Integer getFreeConcurrencyCount() {
-            return this.freeConcurrencyCount;
-        }
-
-        /**
-         * @return freeCount
-         */
-        public Integer getFreeCount() {
-            return this.freeCount;
-        }
-
-        /**
-         * @return serviceCode
-         */
-        public String getServiceCode() {
-            return this.serviceCode;
-        }
-
-        /**
-         * @return serviceName
-         */
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
-        public static final class Builder {
-            private Integer freeConcurrencyCount; 
-            private Integer freeCount; 
-            private String serviceCode; 
-            private String serviceName; 
-
-            /**
-             * FreeConcurrencyCount.
-             */
-            public Builder freeConcurrencyCount(Integer freeConcurrencyCount) {
-                this.freeConcurrencyCount = freeConcurrencyCount;
-                return this;
-            }
-
-            /**
-             * FreeCount.
-             */
-            public Builder freeCount(Integer freeCount) {
-                this.freeCount = freeCount;
-                return this;
-            }
-
-            /**
-             * ServiceCode.
-             */
-            public Builder serviceCode(String serviceCode) {
-                this.serviceCode = serviceCode;
-                return this;
-            }
-
-            /**
-             * ServiceName.
-             */
-            public Builder serviceName(String serviceName) {
-                this.serviceName = serviceName;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

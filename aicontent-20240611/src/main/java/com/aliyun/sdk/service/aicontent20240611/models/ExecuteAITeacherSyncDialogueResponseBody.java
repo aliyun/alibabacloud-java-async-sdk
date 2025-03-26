@@ -52,6 +52,10 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteAITeacherSyncDialogueResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -223,6 +239,16 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
             private Boolean isFinish; 
             private Boolean isOnTopic; 
             private Integer questionIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.englishResult = model.englishResult;
+                this.isFinish = model.isFinish;
+                this.isOnTopic = model.isOnTopic;
+                this.questionIndex = model.questionIndex;
+            } 
 
             /**
              * englishResult.

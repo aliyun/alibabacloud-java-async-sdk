@@ -52,6 +52,10 @@ public class PersonalizedTextToImageAddInferenceJobResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class PersonalizedTextToImageAddInferenceJobResponseBody extends TeaModel
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PersonalizedTextToImageAddInferenceJobResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -259,6 +275,19 @@ public class PersonalizedTextToImageAddInferenceJobResponseBody extends TeaModel
             private String modelId; 
             private String promptId; 
             private java.util.List<String> resultImageUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.jobStatus = model.jobStatus;
+                this.jobTrainProgress = model.jobTrainProgress;
+                this.modelId = model.modelId;
+                this.promptId = model.promptId;
+                this.resultImageUrl = model.resultImageUrl;
+            } 
 
             /**
              * createTime.

@@ -52,6 +52,10 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AITeacherExpansionPracticeTaskGenerateResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -200,6 +216,14 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             private String assistant; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleSet model) {
+                this.assistant = model.assistant;
+                this.user = model.user;
+            } 
+
             /**
              * assistant.
              */
@@ -266,6 +290,14 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         public static final class Builder {
             private String assistant; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskContent model) {
+                this.assistant = model.assistant;
+                this.user = model.user;
+            } 
 
             /**
              * assistant.
@@ -369,6 +401,17 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
             private String startSentence; 
             private java.util.List<TaskContent> taskContent; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backgroundDescription = model.backgroundDescription;
+                this.roleSet = model.roleSet;
+                this.startSentence = model.startSentence;
+                this.taskContent = model.taskContent;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * backgroundDescription.

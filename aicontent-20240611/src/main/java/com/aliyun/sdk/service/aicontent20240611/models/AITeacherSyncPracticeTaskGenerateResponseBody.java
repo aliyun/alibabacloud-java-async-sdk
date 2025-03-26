@@ -52,6 +52,10 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AITeacherSyncPracticeTaskGenerateResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -200,6 +216,14 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
             private String assistant; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskContent model) {
+                this.assistant = model.assistant;
+                this.user = model.user;
+            } 
+
             /**
              * assistant.
              */
@@ -266,6 +290,14 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TaskContent> taskContent; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskContent = model.taskContent;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * taskContent.

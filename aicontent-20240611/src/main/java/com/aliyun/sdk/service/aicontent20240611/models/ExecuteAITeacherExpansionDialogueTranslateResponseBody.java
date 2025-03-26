@@ -52,6 +52,10 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteAITeacherExpansionDialogueTranslateResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -187,6 +203,13 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
 
         public static final class Builder {
             private String result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.result = model.result;
+            } 
 
             /**
              * result.

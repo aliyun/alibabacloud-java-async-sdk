@@ -43,6 +43,10 @@ public class Personalizedtxt2imgAddModelTrainJobCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageUrl
      */
@@ -68,6 +72,15 @@ public class Personalizedtxt2imgAddModelTrainJobCmd extends TeaModel {
         private java.util.List<String> imageUrl; 
         private String name; 
         private String objectType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Personalizedtxt2imgAddModelTrainJobCmd model) {
+            this.imageUrl = model.imageUrl;
+            this.name = model.name;
+            this.objectType = model.objectType;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -44,6 +44,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse> aliyunConsoleOpenApiQueryAliyunConsoleServiceList(AliyunConsoleOpenApiQueryAliyunConsoleServiceListRequest request);
 
     /**
+     * @param request the request parameters of CreateAccessWarrant  CreateAccessWarrantRequest
+     * @return CreateAccessWarrantResponse
+     */
+    CompletableFuture<CreateAccessWarrantResponse> createAccessWarrant(CreateAccessWarrantRequest request);
+
+    /**
+     * @param request the request parameters of CreateProject  CreateProjectRequest
+     * @return CreateProjectResponse
+     */
+    CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteAITeacherChineseCompositionTutoringWorkflowRun  ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest
+     * @return ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponse
+     */
+    CompletableFuture<ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponse> executeAITeacherChineseCompositionTutoringWorkflowRun(ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest request);
+
+    ResponseIterable<ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody> executeAITeacherChineseCompositionTutoringWorkflowRunWithResponseIterable(ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteAITeacherEnglishCompositionTutoringWorkflowRun  ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest
+     * @return ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponse
+     */
+    CompletableFuture<ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponse> executeAITeacherEnglishCompositionTutoringWorkflowRun(ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest request);
+
+    ResponseIterable<ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody> executeAITeacherEnglishCompositionTutoringWorkflowRunWithResponseIterable(ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteAITeacherEnglishParaphraseChatMessage  ExecuteAITeacherEnglishParaphraseChatMessageRequest
+     * @return ExecuteAITeacherEnglishParaphraseChatMessageResponse
+     */
+    CompletableFuture<ExecuteAITeacherEnglishParaphraseChatMessageResponse> executeAITeacherEnglishParaphraseChatMessage(ExecuteAITeacherEnglishParaphraseChatMessageRequest request);
+
+    ResponseIterable<ExecuteAITeacherEnglishParaphraseChatMessageResponseBody> executeAITeacherEnglishParaphraseChatMessageWithResponseIterable(ExecuteAITeacherEnglishParaphraseChatMessageRequest request);
+
+    /**
      * @param request the request parameters of ExecuteAITeacherExpansionDialogue  ExecuteAITeacherExpansionDialogueRequest
      * @return ExecuteAITeacherExpansionDialogueResponse
      */
@@ -80,6 +116,54 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteAITeacherSyncDialogueTranslateResponse> executeAITeacherSyncDialogueTranslate(ExecuteAITeacherSyncDialogueTranslateRequest request);
 
     /**
+     * @param request the request parameters of ExecuteTextbookAssistantDialogue  ExecuteTextbookAssistantDialogueRequest
+     * @return ExecuteTextbookAssistantDialogueResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantDialogueResponse> executeTextbookAssistantDialogue(ExecuteTextbookAssistantDialogueRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantDifficulty  ExecuteTextbookAssistantDifficultyRequest
+     * @return ExecuteTextbookAssistantDifficultyResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantDifficultyResponse> executeTextbookAssistantDifficulty(ExecuteTextbookAssistantDifficultyRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantGrammarCheck  ExecuteTextbookAssistantGrammarCheckRequest
+     * @return ExecuteTextbookAssistantGrammarCheckResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantGrammarCheckResponse> executeTextbookAssistantGrammarCheck(ExecuteTextbookAssistantGrammarCheckRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantRefineByContext  ExecuteTextbookAssistantRefineByContextRequest
+     * @return ExecuteTextbookAssistantRefineByContextResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantRefineByContextResponse> executeTextbookAssistantRefineByContext(ExecuteTextbookAssistantRefineByContextRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantRetryConversation  ExecuteTextbookAssistantRetryConversationRequest
+     * @return ExecuteTextbookAssistantRetryConversationResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantRetryConversationResponse> executeTextbookAssistantRetryConversation(ExecuteTextbookAssistantRetryConversationRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantStartConversation  ExecuteTextbookAssistantStartConversationRequest
+     * @return ExecuteTextbookAssistantStartConversationResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantStartConversationResponse> executeTextbookAssistantStartConversation(ExecuteTextbookAssistantStartConversationRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantSuggestion  ExecuteTextbookAssistantSuggestionRequest
+     * @return ExecuteTextbookAssistantSuggestionResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantSuggestionResponse> executeTextbookAssistantSuggestion(ExecuteTextbookAssistantSuggestionRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTextbookAssistantTranslate  ExecuteTextbookAssistantTranslateRequest
+     * @return ExecuteTextbookAssistantTranslateResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantTranslateResponse> executeTextbookAssistantTranslate(ExecuteTextbookAssistantTranslateRequest request);
+
+    /**
      * @param request the request parameters of GetAITeacherExpansionDialogueSuggestion  GetAITeacherExpansionDialogueSuggestionRequest
      * @return GetAITeacherExpansionDialogueSuggestionResponse
      */
@@ -90,6 +174,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAITeacherSyncDialogueSuggestionResponse
      */
     CompletableFuture<GetAITeacherSyncDialogueSuggestionResponse> getAITeacherSyncDialogueSuggestion(GetAITeacherSyncDialogueSuggestionRequest request);
+
+    /**
+     * @param request the request parameters of GetTextbookAssistantToken  GetTextbookAssistantTokenRequest
+     * @return GetTextbookAssistantTokenResponse
+     */
+    CompletableFuture<GetTextbookAssistantTokenResponse> getTextbookAssistantToken(GetTextbookAssistantTokenRequest request);
+
+    /**
+     * @param request the request parameters of ListTextbookAssistantArticles  ListTextbookAssistantArticlesRequest
+     * @return ListTextbookAssistantArticlesResponse
+     */
+    CompletableFuture<ListTextbookAssistantArticlesResponse> listTextbookAssistantArticles(ListTextbookAssistantArticlesRequest request);
+
+    /**
+     * @param request the request parameters of ListTextbookAssistantBookDirectories  ListTextbookAssistantBookDirectoriesRequest
+     * @return ListTextbookAssistantBookDirectoriesResponse
+     */
+    CompletableFuture<ListTextbookAssistantBookDirectoriesResponse> listTextbookAssistantBookDirectories(ListTextbookAssistantBookDirectoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListTextbookAssistantBooks  ListTextbookAssistantBooksRequest
+     * @return ListTextbookAssistantBooksResponse
+     */
+    CompletableFuture<ListTextbookAssistantBooksResponse> listTextbookAssistantBooks(ListTextbookAssistantBooksRequest request);
+
+    /**
+     * @param request the request parameters of ListTextbookAssistantGradeVolumes  ListTextbookAssistantGradeVolumesRequest
+     * @return ListTextbookAssistantGradeVolumesResponse
+     */
+    CompletableFuture<ListTextbookAssistantGradeVolumesResponse> listTextbookAssistantGradeVolumes(ListTextbookAssistantGradeVolumesRequest request);
 
     /**
      * @param request the request parameters of PersonalizedTextToImageAddInferenceJob  PersonalizedTextToImageAddInferenceJobRequest
@@ -144,5 +258,35 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return Personalizedtxt2imgQueryModelTrainStatusResponse
      */
     CompletableFuture<Personalizedtxt2imgQueryModelTrainStatusResponse> personalizedtxt2imgQueryModelTrainStatus(Personalizedtxt2imgQueryModelTrainStatusRequest request);
+
+    /**
+     * @param request the request parameters of QueryApplicationAccessId  QueryApplicationAccessIdRequest
+     * @return QueryApplicationAccessIdResponse
+     */
+    CompletableFuture<QueryApplicationAccessIdResponse> queryApplicationAccessId(QueryApplicationAccessIdRequest request);
+
+    /**
+     * @param request the request parameters of QueryProject  QueryProjectRequest
+     * @return QueryProjectResponse
+     */
+    CompletableFuture<QueryProjectResponse> queryProject(QueryProjectRequest request);
+
+    /**
+     * @param request the request parameters of QueryProjectList  QueryProjectListRequest
+     * @return QueryProjectListResponse
+     */
+    CompletableFuture<QueryProjectListResponse> queryProjectList(QueryProjectListRequest request);
+
+    /**
+     * @param request the request parameters of QueryPurchasedService  QueryPurchasedServiceRequest
+     * @return QueryPurchasedServiceResponse
+     */
+    CompletableFuture<QueryPurchasedServiceResponse> queryPurchasedService(QueryPurchasedServiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProject  UpdateProjectRequest
+     * @return UpdateProjectResponse
+     */
+    CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 
 }

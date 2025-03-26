@@ -46,6 +46,10 @@ public class Personalizedtxt2imgAddInferenceJobCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageNumber
      */
@@ -79,6 +83,16 @@ public class Personalizedtxt2imgAddInferenceJobCmd extends TeaModel {
         private String modelId; 
         private String prompt; 
         private Integer seed; 
+
+        private Builder() {
+        } 
+
+        private Builder(Personalizedtxt2imgAddInferenceJobCmd model) {
+            this.imageNumber = model.imageNumber;
+            this.modelId = model.modelId;
+            this.prompt = model.prompt;
+            this.seed = model.seed;
+        } 
 
         /**
          * imageNumber.

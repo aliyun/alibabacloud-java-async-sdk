@@ -29,7 +29,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListRequest extends Re
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

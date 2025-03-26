@@ -60,6 +60,10 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
         private String name; 
         private String objectType; 
         private String id; 
+
+        private Builder() {
+        } 
+
+        private Builder(Personalizedtxt2imgModelTrainJobInfoDTO model) {
+            this.createTime = model.createTime;
+            this.createUserId = model.createUserId;
+            this.imageUrl = model.imageUrl;
+            this.inferenceJobList = model.inferenceJobList;
+            this.jobStatus = model.jobStatus;
+            this.name = model.name;
+            this.objectType = model.objectType;
+            this.id = model.id;
+        } 
 
         /**
          * CreateTime.

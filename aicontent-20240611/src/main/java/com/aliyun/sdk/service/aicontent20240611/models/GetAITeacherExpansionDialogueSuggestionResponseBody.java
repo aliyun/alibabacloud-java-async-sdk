@@ -52,6 +52,10 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAITeacherExpansionDialogueSuggestionResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -199,6 +215,14 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         public static final class Builder {
             private String chineseResult; 
             private String englishResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chineseResult = model.chineseResult;
+                this.englishResult = model.englishResult;
+            } 
 
             /**
              * chineseResult.

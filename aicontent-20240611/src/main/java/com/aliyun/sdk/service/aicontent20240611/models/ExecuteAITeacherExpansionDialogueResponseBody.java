@@ -52,6 +52,10 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteAITeacherExpansionDialogueResponseBody model) {
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -247,6 +263,18 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
             private Boolean isOffTopicControl; 
             private Boolean isOnTopic; 
             private Integer questionIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chineseResult = model.chineseResult;
+                this.englishResult = model.englishResult;
+                this.isFinish = model.isFinish;
+                this.isOffTopicControl = model.isOffTopicControl;
+                this.isOnTopic = model.isOnTopic;
+                this.questionIndex = model.questionIndex;
+            } 
 
             /**
              * chineseResult.

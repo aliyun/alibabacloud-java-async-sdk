@@ -48,6 +48,10 @@ public class Personalizedtxt2imgInferenceJobInfoDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createUserId
      */
@@ -89,6 +93,17 @@ public class Personalizedtxt2imgInferenceJobInfoDTO extends TeaModel {
         private String jobStatus; 
         private String modelId; 
         private java.util.List<String> resultImageUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(Personalizedtxt2imgInferenceJobInfoDTO model) {
+            this.createUserId = model.createUserId;
+            this.id = model.id;
+            this.jobStatus = model.jobStatus;
+            this.modelId = model.modelId;
+            this.resultImageUrl = model.resultImageUrl;
+        } 
 
         /**
          * createUserId.

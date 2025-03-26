@@ -51,7 +51,7 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -219,6 +219,16 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             private Integer order; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogueTasks model) {
+                this.assistant = model.assistant;
+                this.assistantTranslate = model.assistantTranslate;
+                this.order = model.order;
+                this.user = model.user;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -349,6 +359,17 @@ public class ExecuteAITeacherSyncDialogueRequest extends Request {
             private Boolean isOnTopic; 
             private Integer order; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.content = model.content;
+                this.isOffTopicControl = model.isOffTopicControl;
+                this.isOnTopic = model.isOnTopic;
+                this.order = model.order;
+                this.role = model.role;
+            } 
 
             /**
              * <p>This parameter is required.</p>
