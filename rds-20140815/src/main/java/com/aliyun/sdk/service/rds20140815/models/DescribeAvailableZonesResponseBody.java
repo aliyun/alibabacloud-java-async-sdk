@@ -36,6 +36,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AvailableZones> availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableZonesResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The available zones in the region.</p>
@@ -110,6 +122,13 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedStorageTypes model) {
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The storage type of the instance.</p>
@@ -172,6 +191,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private java.util.List<SupportedStorageTypes> supportedStorageTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedCategorys model) {
+                this.category = model.category;
+                this.supportedStorageTypes = model.supportedStorageTypes;
+            } 
 
             /**
              * <p>The RDS edition of the instance.</p>
@@ -243,6 +270,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private java.util.List<SupportedCategorys> supportedCategorys; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngineVersions model) {
+                this.supportedCategorys = model.supportedCategorys;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The RDS editions that are available that are available for purchase.</p>
              */
@@ -312,6 +347,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String engine; 
             private java.util.List<SupportedEngineVersions> supportedEngineVersions; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedEngines model) {
+                this.engine = model.engine;
+                this.supportedEngineVersions = model.supportedEngineVersions;
+            } 
 
             /**
              * <p>The database engine of the instance.</p>
@@ -394,6 +437,15 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             private String regionId; 
             private java.util.List<SupportedEngines> supportedEngines; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.regionId = model.regionId;
+                this.supportedEngines = model.supportedEngines;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The region ID.</p>

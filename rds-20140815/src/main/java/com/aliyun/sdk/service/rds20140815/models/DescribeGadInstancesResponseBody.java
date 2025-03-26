@@ -36,6 +36,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gadInstances
      */
@@ -53,6 +57,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<GadInstances> gadInstances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGadInstancesResponseBody model) {
+            this.gadInstances = model.gadInstances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the global active database cluster.</p>
@@ -194,6 +206,20 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String role; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(GadInstanceMembers model) {
+                this.DBInstanceID = model.DBInstanceID;
+                this.dtsInstance = model.dtsInstance;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.role = model.role;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the node.</p>
@@ -407,6 +433,19 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String modificationTime; 
             private String service; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(GadInstances model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.gadInstanceMembers = model.gadInstanceMembers;
+                this.gadInstanceName = model.gadInstanceName;
+                this.modificationTime = model.modificationTime;
+                this.service = model.service;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the global active database cluster was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

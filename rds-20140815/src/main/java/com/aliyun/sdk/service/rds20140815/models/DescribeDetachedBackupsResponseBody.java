@@ -48,6 +48,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         private String pageRecordCount; 
         private String requestId; 
         private String totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDetachedBackupsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The queried backup sets.</p>
@@ -372,6 +387,29 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             private String metaStatus; 
             private String storeStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.consistentTime = model.consistentTime;
+                this.DBInstanceComment = model.DBInstanceComment;
+                this.DBInstanceId = model.DBInstanceId;
+                this.hostInstanceID = model.hostInstanceID;
+                this.isAvail = model.isAvail;
+                this.metaStatus = model.metaStatus;
+                this.storeStatus = model.storeStatus;
+            } 
+
             /**
              * <p>The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.</p>
              * 
@@ -631,6 +669,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.

@@ -48,6 +48,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpgradeMajorVersionPrecheckTaskResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The information about the upgrade check report.</p>
@@ -287,6 +302,22 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             private String sourceMajorVersion; 
             private String targetMajorVersion; 
             private Integer taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.checkTime = model.checkTime;
+                this.detail = model.detail;
+                this.effectiveTime = model.effectiveTime;
+                this.recommendDiskSize = model.recommendDiskSize;
+                this.recommendLeastMemSize = model.recommendLeastMemSize;
+                this.recommendMemSize = model.recommendMemSize;
+                this.result = model.result;
+                this.sourceMajorVersion = model.sourceMajorVersion;
+                this.targetMajorVersion = model.targetMajorVersion;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time at which the upgrade check was performed.</p>

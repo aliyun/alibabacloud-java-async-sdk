@@ -35,6 +35,10 @@ public class MigrateToOtherZoneRequest extends Request {
     private Long DBInstanceStorage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
+    private String DBInstanceStorageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
@@ -93,6 +97,7 @@ public class MigrateToOtherZoneRequest extends Request {
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
+        this.DBInstanceStorageType = builder.DBInstanceStorageType;
         this.effectiveTime = builder.effectiveTime;
         this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.isModifySpec = builder.isModifySpec;
@@ -116,7 +121,7 @@ public class MigrateToOtherZoneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -147,6 +152,13 @@ public class MigrateToOtherZoneRequest extends Request {
      */
     public Long getDBInstanceStorage() {
         return this.DBInstanceStorage;
+    }
+
+    /**
+     * @return DBInstanceStorageType
+     */
+    public String getDBInstanceStorageType() {
+        return this.DBInstanceStorageType;
     }
 
     /**
@@ -245,6 +257,7 @@ public class MigrateToOtherZoneRequest extends Request {
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Long DBInstanceStorage; 
+        private String DBInstanceStorageType; 
         private String effectiveTime; 
         private String ioAccelerationEnabled; 
         private String isModifySpec; 
@@ -269,6 +282,7 @@ public class MigrateToOtherZoneRequest extends Request {
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
+            this.DBInstanceStorageType = request.DBInstanceStorageType;
             this.effectiveTime = request.effectiveTime;
             this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.isModifySpec = request.isModifySpec;
@@ -339,6 +353,34 @@ public class MigrateToOtherZoneRequest extends Request {
         public Builder DBInstanceStorage(Long DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
             this.DBInstanceStorage = DBInstanceStorage;
+            return this;
+        }
+
+        /**
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
+         * <li><strong>general_essd</strong>: general Enterprise SSD (ESSD). This is the recommended storage type.</li>
+         * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</li>
+         * </ul>
+         * <p>The default value of this parameter is determined by the instance type specified by the <strong>DBInstanceClass</strong> parameter.</p>
+         * <ul>
+         * <li>If the instance type specifies the local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
+         * <li>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Serverless instances support only PL1 ESSDs and general ESSDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
+         */
+        public Builder DBInstanceStorageType(String DBInstanceStorageType) {
+            this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
+            this.DBInstanceStorageType = DBInstanceStorageType;
             return this;
         }
 

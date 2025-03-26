@@ -56,6 +56,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -113,6 +117,19 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String systemAdminAccountFirstActivationTime; 
         private String systemAdminAccountStatus; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.accounts = model.accounts;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.systemAdminAccountFirstActivationTime = model.systemAdminAccountFirstActivationTime;
+            this.systemAdminAccountStatus = model.systemAdminAccountStatus;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The information about the account.</p>
@@ -260,6 +277,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountPrivilegeDetail; 
             private String DBName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DatabasePrivilege model) {
+                this.accountPrivilege = model.accountPrivilege;
+                this.accountPrivilegeDetail = model.accountPrivilegeDetail;
+                this.DBName = model.DBName;
+            } 
+
             /**
              * <p>The type of the permissions. Valid values:</p>
              * <ul>
@@ -338,6 +364,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DatabasePrivilege> databasePrivilege; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatabasePrivileges model) {
+                this.databasePrivilege = model.databasePrivilege;
+            } 
 
             /**
              * DatabasePrivilege.
@@ -541,6 +574,26 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String privExceeded; 
             private String replication; 
             private String validUntil; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceAccount model) {
+                this.accountDescription = model.accountDescription;
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.accountType = model.accountType;
+                this.bypassRLS = model.bypassRLS;
+                this.checkPolicy = model.checkPolicy;
+                this.createDB = model.createDB;
+                this.createRole = model.createRole;
+                this.DBInstanceId = model.DBInstanceId;
+                this.databasePrivileges = model.databasePrivileges;
+                this.passwordExpireTime = model.passwordExpireTime;
+                this.privExceeded = model.privExceeded;
+                this.replication = model.replication;
+                this.validUntil = model.validUntil;
+            } 
 
             /**
              * <p>The description of the account.</p>
@@ -786,6 +839,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceAccount> DBInstanceAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.DBInstanceAccount = model.DBInstanceAccount;
+            } 
 
             /**
              * DBInstanceAccount.

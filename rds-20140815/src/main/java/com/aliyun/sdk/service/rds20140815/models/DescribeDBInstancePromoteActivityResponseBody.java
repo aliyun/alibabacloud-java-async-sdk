@@ -56,6 +56,10 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -113,6 +117,19 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         private String DBType; 
         private String isActivity; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancePromoteActivityResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.bid = model.bid;
+            this.DBInstanceId = model.DBInstanceId;
+            this.DBInstanceName = model.DBInstanceName;
+            this.DBType = model.DBType;
+            this.isActivity = model.isActivity;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>

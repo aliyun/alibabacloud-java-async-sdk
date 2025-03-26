@@ -72,7 +72,7 @@ public class ModifyPGHbaConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -377,6 +377,20 @@ public class ModifyPGHbaConfigRequest extends Request {
             private Integer priorityId; 
             private String type; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(HbaItem model) {
+                this.address = model.address;
+                this.database = model.database;
+                this.mask = model.mask;
+                this.method = model.method;
+                this.option = model.option;
+                this.priorityId = model.priorityId;
+                this.type = model.type;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The IP addresses from which the specified users can access the specified databases. If you set this parameter to 0.0.0.0/0, the specified users are allowed to access the specified databases from all IP addresses.</p>

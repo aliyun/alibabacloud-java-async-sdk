@@ -92,6 +92,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return archiveBackupSize
      */
@@ -221,6 +225,28 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         private Long paidBackupSize; 
         private String requestId; 
         private Long SQLSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceUsageResponseBody model) {
+            this.archiveBackupSize = model.archiveBackupSize;
+            this.backupDataSize = model.backupDataSize;
+            this.backupEcsSnapshotSize = model.backupEcsSnapshotSize;
+            this.backupLogSize = model.backupLogSize;
+            this.backupOssDataSize = model.backupOssDataSize;
+            this.backupOssLogSize = model.backupOssLogSize;
+            this.backupSize = model.backupSize;
+            this.coldBackupSize = model.coldBackupSize;
+            this.DBInstanceId = model.DBInstanceId;
+            this.dataSize = model.dataSize;
+            this.diskUsed = model.diskUsed;
+            this.engine = model.engine;
+            this.logSize = model.logSize;
+            this.paidBackupSize = model.paidBackupSize;
+            this.requestId = model.requestId;
+            this.SQLSize = model.SQLSize;
+        } 
 
         /**
          * <p>The storage that is occupied by archived backup files on the instance. Unit: bytes.</p>

@@ -1957,6 +1957,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstanceProxyConfigurationResponse> describeDBInstanceProxyConfiguration(DescribeDBInstanceProxyConfigurationRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">ApsaraDB RDS for MySQL native replication instances</a></p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeDBInstanceReplication  DescribeDBInstanceReplicationRequest
      * @return DescribeDBInstanceReplicationResponse
      */
@@ -2746,6 +2755,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCNodePoolResponse> describeRCNodePool(DescribeRCNodePoolRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCSecurityGroupList  DescribeRCSecurityGroupListRequest
+     * @return DescribeRCSecurityGroupListResponse
+     */
+    CompletableFuture<DescribeRCSecurityGroupListResponse> describeRCSecurityGroupList(DescribeRCSecurityGroupListRequest request);
+
+    /**
      * @param request the request parameters of DescribeRCSecurityGroupPermission  DescribeRCSecurityGroupPermissionRequest
      * @return DescribeRCSecurityGroupPermissionResponse
      */
@@ -3361,6 +3376,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MigrateDBInstanceResponse
      */
     CompletableFuture<MigrateDBInstanceResponse> migrateDBInstance(MigrateDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of MigrateDBNodes  MigrateDBNodesRequest
+     * @return MigrateDBNodesResponse
+     */
+    CompletableFuture<MigrateDBNodesResponse> migrateDBNodes(MigrateDBNodesRequest request);
 
     /**
      * <b>description</b> :
@@ -4337,6 +4358,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRCInstanceKeyPairResponse> modifyRCInstanceKeyPair(ModifyRCInstanceKeyPairRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>Custom for SQL Server</p>
+     * 
      * @param request the request parameters of ModifyRCInstanceNetworkSpec  ModifyRCInstanceNetworkSpecRequest
      * @return ModifyRCInstanceNetworkSpecResponse
      */
@@ -4568,6 +4593,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RebootRCInstanceResponse
      */
     CompletableFuture<RebootRCInstanceResponse> rebootRCInstance(RebootRCInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RebootRCInstances  RebootRCInstancesRequest
+     * @return RebootRCInstancesResponse
+     */
+    CompletableFuture<RebootRCInstancesResponse> rebootRCInstances(RebootRCInstancesRequest request);
 
     /**
      * <b>description</b> :
@@ -4960,6 +4991,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRCInstanceResponse> startRCInstance(StartRCInstanceRequest request);
 
     /**
+     * @param request the request parameters of StartRCInstances  StartRCInstancesRequest
+     * @return StartRCInstancesResponse
+     */
+    CompletableFuture<StartRCInstancesResponse> startRCInstances(StartRCInstancesRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -4983,6 +5020,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopRCInstanceResponse
      */
     CompletableFuture<StopRCInstanceResponse> stopRCInstance(StopRCInstanceRequest request);
+
+    /**
+     * @param request the request parameters of StopRCInstances  StopRCInstancesRequest
+     * @return StopRCInstancesResponse
+     */
+    CompletableFuture<StopRCInstancesResponse> stopRCInstances(StopRCInstancesRequest request);
 
     /**
      * <b>description</b> :
@@ -5053,6 +5096,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SwitchDBInstanceVpcResponse
      */
     CompletableFuture<SwitchDBInstanceVpcResponse> switchDBInstanceVpc(SwitchDBInstanceVpcRequest request);
+
+    /**
+     * @param request the request parameters of SwitchReplicationLink  SwitchReplicationLinkRequest
+     * @return SwitchReplicationLinkResponse
+     */
+    CompletableFuture<SwitchReplicationLinkResponse> switchReplicationLink(SwitchReplicationLinkRequest request);
 
     /**
      * @param request the request parameters of SyncRCKeyPair  SyncRCKeyPairRequest

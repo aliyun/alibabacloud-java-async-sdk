@@ -44,6 +44,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -77,6 +81,16 @@ public class DescribeSecretsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private java.util.List<Secrets> secrets; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecretsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.secrets = model.secrets;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -216,6 +230,18 @@ public class DescribeSecretsResponseBody extends TeaModel {
             private String secretArn; 
             private String secretName; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Secrets model) {
+                this.accountId = model.accountId;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.secretArn = model.secretArn;
+                this.secretName = model.secretName;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

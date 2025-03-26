@@ -36,6 +36,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return records
      */
@@ -53,6 +57,14 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserBackupFilesResponseBody model) {
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the full backup files.</p>
@@ -326,6 +338,31 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             private Integer retention; 
             private String status; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.backupId = model.backupId;
+                this.binlogInfo = model.binlogInfo;
+                this.comment = model.comment;
+                this.creationTime = model.creationTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.finishTime = model.finishTime;
+                this.modificationTime = model.modificationTime;
+                this.ossBucket = model.ossBucket;
+                this.ossFileMetaData = model.ossFileMetaData;
+                this.ossFileName = model.ossFileName;
+                this.ossFilePath = model.ossFilePath;
+                this.ossFileSize = model.ossFileSize;
+                this.ossUrl = model.ossUrl;
+                this.reason = model.reason;
+                this.restoreSize = model.restoreSize;
+                this.retention = model.retention;
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the full backup file.</p>

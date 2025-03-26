@@ -48,6 +48,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         private java.util.List<RCInstances> RCInstances; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCInstancesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.RCInstances = model.RCInstances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -216,6 +231,16 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * ResourceId.
              */
@@ -323,6 +348,16 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * ResourceId.
              */
@@ -396,8 +431,20 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
+        private String instanceTypeFamily;
+
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
+        private String publicIp;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
@@ -427,7 +474,11 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.hostName = builder.hostName;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
+            this.instanceType = builder.instanceType;
+            this.instanceTypeFamily = builder.instanceTypeFamily;
+            this.publicIp = builder.publicIp;
             this.regionId = builder.regionId;
+            this.securityGroupId = builder.securityGroupId;
             this.spotStrategy = builder.spotStrategy;
             this.status = builder.status;
             this.tagResources = builder.tagResources;
@@ -508,10 +559,38 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return instanceTypeFamily
+         */
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        /**
+         * @return publicIp
+         */
+        public String getPublicIp() {
+            return this.publicIp;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         /**
@@ -566,13 +645,43 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String hostName; 
             private String instanceChargeType; 
             private String instanceId; 
+            private String instanceType; 
+            private String instanceTypeFamily; 
+            private String publicIp; 
             private String regionId; 
+            private String securityGroupId; 
             private String spotStrategy; 
             private String status; 
             private java.util.List<TagResources> tagResources; 
             private java.util.List<Tags> tags; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RCInstances model) {
+                this.clusterName = model.clusterName;
+                this.createMode = model.createMode;
+                this.dbType = model.dbType;
+                this.description = model.description;
+                this.gmtCreated = model.gmtCreated;
+                this.hostIp = model.hostIp;
+                this.hostName = model.hostName;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.publicIp = model.publicIp;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.spotStrategy = model.spotStrategy;
+                this.status = model.status;
+                this.tagResources = model.tagResources;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The cluster name.</p>
@@ -668,6 +777,30 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * PublicIp.
+             */
+            public Builder publicIp(String publicIp) {
+                this.publicIp = publicIp;
+                return this;
+            }
+
+            /**
              * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
@@ -675,6 +808,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 

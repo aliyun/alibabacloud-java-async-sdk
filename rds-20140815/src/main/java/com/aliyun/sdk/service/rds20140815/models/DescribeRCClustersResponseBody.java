@@ -36,6 +36,10 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -53,6 +57,14 @@ public class DescribeRCClustersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Clusters> clusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the clusters.</p>
@@ -170,6 +182,18 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             private String profile; 
             private String status; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.createTime = model.createTime;
+                this.profile = model.profile;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * ClusterId.

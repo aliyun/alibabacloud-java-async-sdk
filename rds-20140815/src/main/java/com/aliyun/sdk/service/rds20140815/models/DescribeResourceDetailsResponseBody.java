@@ -84,6 +84,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupDataSize
      */
@@ -197,6 +201,26 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         private String securityIPList; 
         private String vSwitchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceDetailsResponseBody model) {
+            this.backupDataSize = model.backupDataSize;
+            this.backupLogSize = model.backupLogSize;
+            this.backupSize = model.backupSize;
+            this.dbInstanceStorage = model.dbInstanceStorage;
+            this.dbProxyInstanceName = model.dbProxyInstanceName;
+            this.diskUsed = model.diskUsed;
+            this.instanceStorageType = model.instanceStorageType;
+            this.rdsEcsSecurityGroupRel = model.rdsEcsSecurityGroupRel;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.securityIPList = model.securityIPList;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
@@ -394,6 +418,13 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String securityGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RdsEcsSecurityGroupRel model) {
+                this.securityGroupName = model.securityGroupName;
+            } 
 
             /**
              * <p>The name of the security group.</p>

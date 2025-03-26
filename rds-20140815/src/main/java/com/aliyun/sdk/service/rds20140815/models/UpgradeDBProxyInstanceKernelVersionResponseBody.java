@@ -40,6 +40,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -65,6 +69,15 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         private String DBInstanceName; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeDBProxyInstanceKernelVersionResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The ID of the database proxy of the instance.</p>

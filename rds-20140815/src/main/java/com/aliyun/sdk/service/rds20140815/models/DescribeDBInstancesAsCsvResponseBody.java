@@ -36,6 +36,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesAsCsvResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the fields in <strong>DBInstanceAttribute</strong>.</p>
@@ -110,6 +122,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> slaveRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlaveZones model) {
+                this.slaveRegion = model.slaveRegion;
+            } 
 
             /**
              * slaveRegion.
@@ -662,6 +681,55 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceAttribute model) {
+                this.accountMaxQuantity = model.accountMaxQuantity;
+                this.accountType = model.accountType;
+                this.availabilityValue = model.availabilityValue;
+                this.category = model.category;
+                this.connectionMode = model.connectionMode;
+                this.connectionString = model.connectionString;
+                this.creationTime = model.creationTime;
+                this.DBInstanceCPU = model.DBInstanceCPU;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceClassType = model.DBInstanceClassType;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceMemory = model.DBInstanceMemory;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceType = model.DBInstanceType;
+                this.DBMaxQuantity = model.DBMaxQuantity;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.exportKey = model.exportKey;
+                this.guardDBInstanceId = model.guardDBInstanceId;
+                this.incrementSourceDBInstanceId = model.incrementSourceDBInstanceId;
+                this.instanceNetworkType = model.instanceNetworkType;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainTime = model.maintainTime;
+                this.masterInstanceId = model.masterInstanceId;
+                this.maxConnections = model.maxConnections;
+                this.maxIOPS = model.maxIOPS;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.readDelayTime = model.readDelayTime;
+                this.regionId = model.regionId;
+                this.securityIPList = model.securityIPList;
+                this.slaveZones = model.slaveZones;
+                this.supportUpgradeAccountType = model.supportUpgradeAccountType;
+                this.tags = model.tags;
+                this.tempDBInstanceId = model.tempDBInstanceId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The maximum number of accounts.</p>
              * 
@@ -1184,6 +1252,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceAttribute = model.DBInstanceAttribute;
+            } 
 
             /**
              * DBInstanceAttribute.

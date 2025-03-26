@@ -36,6 +36,10 @@ public class CreateTempDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateTempDBInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String tempDBInstanceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTempDBInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.tempDBInstanceId = model.tempDBInstanceId;
+        } 
 
         /**
          * <p>The request ID.</p>

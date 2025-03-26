@@ -48,6 +48,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disks
      */
@@ -89,6 +93,17 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCDisksResponseBody model) {
+            this.disks = model.disks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the disks.</p>
@@ -467,6 +482,37 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             private String storageSetId; 
             private String type; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.deleteAutoSnapshot = model.deleteAutoSnapshot;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskChargeType = model.diskChargeType;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.expiredTime = model.expiredTime;
+                this.IOPS = model.IOPS;
+                this.imageId = model.imageId;
+                this.instanceId = model.instanceId;
+                this.performanceLevel = model.performanceLevel;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serialNumber = model.serialNumber;
+                this.size = model.size;
+                this.sourceSnapshotId = model.sourceSnapshotId;
+                this.status = model.status;
+                this.storageClusterId = model.storageClusterId;
+                this.storageSetId = model.storageSetId;
+                this.type = model.type;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The disk category. Valid values:</p>

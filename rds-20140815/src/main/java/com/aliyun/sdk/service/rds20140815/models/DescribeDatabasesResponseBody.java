@@ -36,6 +36,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -53,6 +57,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static final class Builder {
         private Databases databases; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatabasesResponseBody model) {
+            this.databases = model.databases;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the databases.</p>
@@ -135,6 +147,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String accountPrivilege; 
             private String accountPrivilegeDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountPrivilegeInfo model) {
+                this.account = model.account;
+                this.accountPrivilege = model.accountPrivilege;
+                this.accountPrivilegeDetail = model.accountPrivilegeDetail;
+            } 
+
             /**
              * <p>The account username.</p>
              * 
@@ -213,6 +234,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountPrivilegeInfo = model.accountPrivilegeInfo;
+            } 
+
             /**
              * AccountPrivilegeInfo.
              */
@@ -259,6 +287,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<java.util.Map<String, ?>> advancedDbProperty; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedInfo model) {
+                this.advancedDbProperty = model.advancedDbProperty;
+            } 
 
             /**
              * AdvancedDbProperty.
@@ -307,6 +342,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<java.util.Map<String, ?>> basicDbProperty; 
 
+            private Builder() {
+            } 
+
+            private Builder(BasicInfo model) {
+                this.basicDbProperty = model.basicDbProperty;
+            } 
+
             /**
              * BasicDbProperty.
              */
@@ -353,6 +395,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<java.util.Map<String, ?>> runtimeDbProperty; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeInfo model) {
+                this.runtimeDbProperty = model.runtimeDbProperty;
+            } 
 
             /**
              * RuntimeDbProperty.
@@ -592,6 +641,29 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private RuntimeInfo runtimeInfo; 
             private String tablespace; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.accounts = model.accounts;
+                this.advancedInfo = model.advancedInfo;
+                this.basicInfo = model.basicInfo;
+                this.characterSetName = model.characterSetName;
+                this.collate = model.collate;
+                this.connLimit = model.connLimit;
+                this.ctype = model.ctype;
+                this.DBDescription = model.DBDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBName = model.DBName;
+                this.DBStatus = model.DBStatus;
+                this.engine = model.engine;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.runtimeInfo = model.runtimeInfo;
+                this.tablespace = model.tablespace;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the account. Each account has specific permissions on the database.</p>
@@ -836,6 +908,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Database> database; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.database = model.database;
+            } 
 
             /**
              * Database.

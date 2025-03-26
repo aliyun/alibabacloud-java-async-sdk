@@ -71,7 +71,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -457,6 +457,27 @@ public class CreateGadInstanceMemberRequest extends Request {
             private String zoneID; 
             private String zoneIDSlave1; 
             private String zoneIDSlave2; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnitNode model) {
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceStorageType = model.DBInstanceStorageType;
+                this.dbInstanceClass = model.dbInstanceClass;
+                this.dtsConflict = model.dtsConflict;
+                this.dtsInstanceClass = model.dtsInstanceClass;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.regionID = model.regionID;
+                this.securityIPList = model.securityIPList;
+                this.vSwitchID = model.vSwitchID;
+                this.vpcID = model.vpcID;
+                this.zoneID = model.zoneID;
+                this.zoneIDSlave1 = model.zoneIDSlave1;
+                this.zoneIDSlave2 = model.zoneIDSlave2;
+            } 
 
             /**
              * <p>The name of the unit node that you want to create. The name must meet the following requirements:</p>

@@ -36,6 +36,10 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deletedBaksetIds
      */
@@ -53,6 +57,14 @@ public class DeleteBackupFileResponseBody extends TeaModel {
     public static final class Builder {
         private DeletedBaksetIds deletedBaksetIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteBackupFileResponseBody model) {
+            this.deletedBaksetIds = model.deletedBaksetIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the IDs of deleted backup sets.</p>
@@ -110,6 +122,13 @@ public class DeleteBackupFileResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Integer> deletedBaksetIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeletedBaksetIds model) {
+                this.deletedBaksetIds = model.deletedBaksetIds;
+            } 
 
             /**
              * <p>An array that consists of the IDs of deleted backup sets.</p>

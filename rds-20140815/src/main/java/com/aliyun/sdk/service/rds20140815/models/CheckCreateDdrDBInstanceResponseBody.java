@@ -36,6 +36,10 @@ public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isValid
      */
@@ -53,6 +57,14 @@ public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String isValid; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckCreateDdrDBInstanceResponseBody model) {
+            this.isValid = model.isValid;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the data of the source instance can be restored across regions. Valid values:</p>

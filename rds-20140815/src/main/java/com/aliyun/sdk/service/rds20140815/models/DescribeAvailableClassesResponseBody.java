@@ -36,6 +36,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceClasses
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DBInstanceClasses> DBInstanceClasses; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableClassesResponseBody model) {
+            this.DBInstanceClasses = model.DBInstanceClasses;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the instance types available for the instance.</p>
@@ -134,6 +146,15 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             private Integer maxValue; 
             private Integer minValue; 
             private Integer step; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceStorageRange model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.step = model.step;
+            } 
 
             /**
              * <p>The maximum storage capacity that is supported for the instance. Unit: GB.</p>
@@ -218,6 +239,14 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceClass; 
             private DBInstanceStorageRange DBInstanceStorageRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceClasses model) {
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceStorageRange = model.DBInstanceStorageRange;
+            } 
 
             /**
              * <p>The instance type of the instance.</p>

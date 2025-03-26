@@ -36,6 +36,10 @@ public class ReceiveDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return guardDBInstanceId
      */
@@ -53,6 +57,14 @@ public class ReceiveDBInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String guardDBInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReceiveDBInstanceResponseBody model) {
+            this.guardDBInstanceId = model.guardDBInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the disaster recovery instance after the switchover.</p>

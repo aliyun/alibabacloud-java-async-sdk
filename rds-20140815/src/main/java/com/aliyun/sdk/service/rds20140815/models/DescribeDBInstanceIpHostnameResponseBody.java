@@ -40,6 +40,10 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -65,6 +69,15 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String ipHostnameInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceIpHostnameResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.ipHostnameInfos = model.ipHostnameInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>

@@ -23,6 +23,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Cpu")
     private Integer cpu;
 
+    @com.aliyun.core.annotation.NameInMap("CreateMode")
+    private Integer createMode;
+
     @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
@@ -152,6 +155,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     private DescribeRCInstanceAttributeResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.cpu = builder.cpu;
+        this.createMode = builder.createMode;
         this.creationTime = builder.creationTime;
         this.creditSpecification = builder.creditSpecification;
         this.dataDisks = builder.dataDisks;
@@ -204,6 +208,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -216,6 +224,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public Integer getCpu() {
         return this.cpu;
+    }
+
+    /**
+     * @return createMode
+     */
+    public Integer getCreateMode() {
+        return this.createMode;
     }
 
     /**
@@ -515,6 +530,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String clusterId; 
         private Integer cpu; 
+        private Integer createMode; 
         private String creationTime; 
         private String creditSpecification; 
         private DataDisks dataDisks; 
@@ -558,6 +574,57 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private VpcAttributes vpcAttributes; 
         private String zoneId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCInstanceAttributeResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.cpu = model.cpu;
+            this.createMode = model.createMode;
+            this.creationTime = model.creationTime;
+            this.creditSpecification = model.creditSpecification;
+            this.dataDisks = model.dataDisks;
+            this.dbType = model.dbType;
+            this.dedicatedHostAttribute = model.dedicatedHostAttribute;
+            this.deploymentSetId = model.deploymentSetId;
+            this.description = model.description;
+            this.diskType = model.diskType;
+            this.ecsInstanceType = model.ecsInstanceType;
+            this.eipAddress = model.eipAddress;
+            this.enableJumboFrame = model.enableJumboFrame;
+            this.expiredTime = model.expiredTime;
+            this.hostName = model.hostName;
+            this.hostType = model.hostType;
+            this.imageId = model.imageId;
+            this.innerIpAddress = model.innerIpAddress;
+            this.instanceChargeType = model.instanceChargeType;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.instanceNetworkType = model.instanceNetworkType;
+            this.instanceType = model.instanceType;
+            this.internetChargeType = model.internetChargeType;
+            this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+            this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+            this.ioOptimized = model.ioOptimized;
+            this.keyPairName = model.keyPairName;
+            this.memory = model.memory;
+            this.operationLocks = model.operationLocks;
+            this.publicIpAddress = model.publicIpAddress;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.securityGroupIds = model.securityGroupIds;
+            this.serialNumber = model.serialNumber;
+            this.spotStrategy = model.spotStrategy;
+            this.status = model.status;
+            this.stoppedMode = model.stoppedMode;
+            this.systemDisk = model.systemDisk;
+            this.tags = model.tags;
+            this.vlanId = model.vlanId;
+            this.vpcAttributes = model.vpcAttributes;
+            this.zoneId = model.zoneId;
+        } 
+
         /**
          * <p>The ID of the cluster to which the instance belongs.</p>
          * <blockquote>
@@ -580,6 +647,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * CreateMode.
+         */
+        public Builder createMode(Integer createMode) {
+            this.createMode = createMode;
             return this;
         }
 
@@ -1127,6 +1202,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String performanceLevel; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The category of the data disk.</p>
              * 
@@ -1229,6 +1315,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataDisk> dataDisk; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.dataDisk = model.dataDisk;
+            } 
+
             /**
              * DataDisk.
              */
@@ -1287,6 +1380,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String dedicatedHostId; 
             private String dedicatedHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostAttribute model) {
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.dedicatedHostName = model.dedicatedHostName;
+            } 
 
             /**
              * <p>The ID of the dedicated host.</p>
@@ -1385,6 +1486,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String internetChargeType; 
             private String ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(EipAddress model) {
+                this.allocationId = model.allocationId;
+                this.bandwidth = model.bandwidth;
+                this.internetChargeType = model.internetChargeType;
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The EIP ID.</p>
              * 
@@ -1475,6 +1586,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(InnerIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The EIP.</p>
              * 
@@ -1524,6 +1642,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the instance is locked. Valid values:</p>
@@ -1582,6 +1707,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LockReason> lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the instance is locked. Valid values:</p>
              * <ul>
@@ -1639,6 +1771,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
              * <p>The EIP.</p>
              * 
@@ -1688,6 +1827,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> securityGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupIds model) {
+                this.securityGroupId = model.securityGroupId;
+            } 
 
             /**
              * SecurityGroupId.
@@ -1783,6 +1929,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String systemDiskCategory; 
             private String systemDiskPerformanceLevel; 
             private Long systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.encrypted = model.encrypted;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * <p>Indicates whether the data disk is released when the instance is released. Valid values:</p>
@@ -1913,6 +2070,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * ResourceId.
              */
@@ -1984,6 +2151,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -2030,6 +2204,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ipAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateIpAddress model) {
+                this.ipAddress = model.ipAddress;
+            } 
 
             /**
              * <p>The EIP.</p>
@@ -2116,6 +2297,16 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             private PrivateIpAddress privateIpAddress; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcAttributes model) {
+                this.natIpAddress = model.natIpAddress;
+                this.privateIpAddress = model.privateIpAddress;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The network address translation (NAT) IP address of the instance. The NAT IP address is used by instances in different VPCs for communication.</p>

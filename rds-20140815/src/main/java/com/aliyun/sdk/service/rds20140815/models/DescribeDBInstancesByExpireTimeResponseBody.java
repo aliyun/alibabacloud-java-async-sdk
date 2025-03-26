@@ -48,6 +48,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesByExpireTimeResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of the instances.</p>
@@ -241,6 +256,18 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             private String lockMode; 
             private String payType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceExpireTime model) {
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.expireTime = model.expireTime;
+                this.lockMode = model.lockMode;
+                this.payType = model.payType;
+            } 
+
             /**
              * <p>The description of the instance.</p>
              * 
@@ -360,6 +387,13 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceExpireTime> DBInstanceExpireTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceExpireTime = model.DBInstanceExpireTime;
+            } 
 
             /**
              * DBInstanceExpireTime.

@@ -36,6 +36,10 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceEndpointAddressResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -122,6 +134,14 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceEndpointId; 
             private String DBInstanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceEndpointId = model.DBInstanceEndpointId;
+                this.DBInstanceName = model.DBInstanceName;
+            } 
 
             /**
              * <p>The endpoint ID of the instance.</p>

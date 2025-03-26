@@ -31,7 +31,6 @@ public class CreateRCDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskCategory")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String diskCategory;
 
     @com.aliyun.core.annotation.Query
@@ -41,6 +40,10 @@ public class CreateRCDiskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
@@ -70,7 +73,6 @@ public class CreateRCDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateRCDiskRequest(Builder builder) {
@@ -81,6 +83,7 @@ public class CreateRCDiskRequest extends Request {
         this.diskCategory = builder.diskCategory;
         this.diskName = builder.diskName;
         this.instanceChargeType = builder.instanceChargeType;
+        this.instanceId = builder.instanceId;
         this.performanceLevel = builder.performanceLevel;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -98,7 +101,7 @@ public class CreateRCDiskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,6 +146,13 @@ public class CreateRCDiskRequest extends Request {
      */
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -201,6 +211,7 @@ public class CreateRCDiskRequest extends Request {
         private String diskCategory; 
         private String diskName; 
         private String instanceChargeType; 
+        private String instanceId; 
         private String performanceLevel; 
         private Integer period; 
         private String periodUnit; 
@@ -221,6 +232,7 @@ public class CreateRCDiskRequest extends Request {
             this.diskCategory = request.diskCategory;
             this.diskName = request.diskName;
             this.instanceChargeType = request.instanceChargeType;
+            this.instanceId = request.instanceId;
             this.performanceLevel = request.performanceLevel;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -292,7 +304,6 @@ public class CreateRCDiskRequest extends Request {
          * <li><strong>elastic_ephemeral_disk_standard</strong>: standard elastic ephemeral disk</li>
          * <li><strong>elastic_ephemeral_disk_premium</strong>: premium elastic ephemeral disk</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -325,6 +336,15 @@ public class CreateRCDiskRequest extends Request {
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
             this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -445,7 +465,6 @@ public class CreateRCDiskRequest extends Request {
 
         /**
          * <p>The zone ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>

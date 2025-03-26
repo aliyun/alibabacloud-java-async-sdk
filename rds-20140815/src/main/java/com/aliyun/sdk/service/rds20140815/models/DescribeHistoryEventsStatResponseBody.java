@@ -36,6 +36,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Items> items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryEventsStatResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The event.</p>
@@ -122,6 +134,14 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         public static final class Builder {
             private String eventCategory; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.eventCategory = model.eventCategory;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>

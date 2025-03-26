@@ -49,7 +49,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -164,7 +164,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         private String portRange;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
-        private String priority;
+        private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
@@ -221,7 +221,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
         /**
          * @return priority
          */
-        public String getPriority() {
+        public Integer getPriority() {
             return this.priority;
         }
 
@@ -244,9 +244,22 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             private String ipProtocol; 
             private String policy; 
             private String portRange; 
-            private String priority; 
+            private Integer priority; 
             private String sourceCidrIp; 
             private String sourcePortRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupPermissions model) {
+                this.destCidrIp = model.destCidrIp;
+                this.ipProtocol = model.ipProtocol;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
 
             /**
              * DestCidrIp.
@@ -283,7 +296,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends Request {
             /**
              * Priority.
              */
-            public Builder priority(String priority) {
+            public Builder priority(Integer priority) {
                 this.priority = priority;
                 return this;
             }

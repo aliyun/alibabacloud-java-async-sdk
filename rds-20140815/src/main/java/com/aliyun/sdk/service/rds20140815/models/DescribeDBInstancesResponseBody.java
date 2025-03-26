@@ -52,6 +52,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesResponseBody model) {
+            this.items = model.items;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The information about the instances.</p>
@@ -209,6 +225,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyDBInstanceId model) {
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
              * <p>The read-only instance ID.</p>
              * 
@@ -258,6 +281,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReadOnlyDBInstanceId> readOnlyDBInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyDBInstanceIds model) {
+                this.readOnlyDBInstanceId = model.readOnlyDBInstanceId;
+            } 
 
             /**
              * ReadOnlyDBInstanceId.
@@ -929,6 +959,65 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcName; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.bpeEnabled = model.bpeEnabled;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.coldDataEnabled = model.coldDataEnabled;
+                this.connectionMode = model.connectionMode;
+                this.connectionString = model.connectionString;
+                this.createTime = model.createTime;
+                this.DBInstanceCPU = model.DBInstanceCPU;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceMemory = model.DBInstanceMemory;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorageType = model.DBInstanceStorageType;
+                this.DBInstanceType = model.DBInstanceType;
+                this.dedicatedHostGroupId = model.dedicatedHostGroupId;
+                this.dedicatedHostGroupName = model.dedicatedHostGroupName;
+                this.dedicatedHostIdForLog = model.dedicatedHostIdForLog;
+                this.dedicatedHostIdForMaster = model.dedicatedHostIdForMaster;
+                this.dedicatedHostIdForSlave = model.dedicatedHostIdForSlave;
+                this.dedicatedHostNameForLog = model.dedicatedHostNameForLog;
+                this.dedicatedHostNameForMaster = model.dedicatedHostNameForMaster;
+                this.dedicatedHostNameForSlave = model.dedicatedHostNameForSlave;
+                this.dedicatedHostZoneIdForLog = model.dedicatedHostZoneIdForLog;
+                this.dedicatedHostZoneIdForMaster = model.dedicatedHostZoneIdForMaster;
+                this.dedicatedHostZoneIdForSlave = model.dedicatedHostZoneIdForSlave;
+                this.deletionProtection = model.deletionProtection;
+                this.destroyTime = model.destroyTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.generalGroupName = model.generalGroupName;
+                this.guardDBInstanceId = model.guardDBInstanceId;
+                this.instanceNetworkType = model.instanceNetworkType;
+                this.ioAccelerationEnabled = model.ioAccelerationEnabled;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.masterInstanceId = model.masterInstanceId;
+                this.mutriORsignle = model.mutriORsignle;
+                this.payType = model.payType;
+                this.readOnlyDBInstanceIds = model.readOnlyDBInstanceIds;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.switchWeight = model.switchWeight;
+                this.tempDBInstanceId = model.tempDBInstanceId;
+                this.tips = model.tips;
+                this.tipsLevel = model.tipsLevel;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>A deprecated parameter.</p>
@@ -1618,6 +1707,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstance = model.DBInstance;
+            } 
 
             /**
              * DBInstance.

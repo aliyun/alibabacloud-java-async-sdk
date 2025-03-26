@@ -56,6 +56,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -113,6 +117,19 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer totalRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCrossRegionBackupDBInstanceResponseBody model) {
+            this.items = model.items;
+            this.itemsNumbers = model.itemsNumbers;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalRecords = model.totalRecords;
+        } 
 
         /**
          * <p>The cross-region backup settings.</p>
@@ -383,6 +400,26 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             private Integer retentType; 
             private Integer retention; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.backupEnabled = model.backupEnabled;
+                this.backupEnabledTime = model.backupEnabledTime;
+                this.crossBackupRegion = model.crossBackupRegion;
+                this.crossBackupType = model.crossBackupType;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.lockMode = model.lockMode;
+                this.logBackupEnabled = model.logBackupEnabled;
+                this.logBackupEnabledTime = model.logBackupEnabledTime;
+                this.retentType = model.retentType;
+                this.retention = model.retention;
+            } 
+
             /**
              * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
              * <ul>
@@ -593,6 +630,13 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
 
             /**
              * Item.

@@ -96,6 +96,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBProxyAVZones
      */
@@ -233,6 +237,29 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private DbProxyEndpointItems dbProxyEndpointItems; 
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBProxyResponseBody model) {
+            this.DBProxyAVZones = model.DBProxyAVZones;
+            this.DBProxyConnectStringItems = model.DBProxyConnectStringItems;
+            this.DBProxyEngineType = model.DBProxyEngineType;
+            this.DBProxyInstanceCurrentMinorVersion = model.DBProxyInstanceCurrentMinorVersion;
+            this.DBProxyInstanceLatestMinorVersion = model.DBProxyInstanceLatestMinorVersion;
+            this.DBProxyInstanceName = model.DBProxyInstanceName;
+            this.DBProxyInstanceNum = model.DBProxyInstanceNum;
+            this.DBProxyInstanceSize = model.DBProxyInstanceSize;
+            this.DBProxyInstanceStatus = model.DBProxyInstanceStatus;
+            this.DBProxyInstanceType = model.DBProxyInstanceType;
+            this.DBProxyKindCode = model.DBProxyKindCode;
+            this.DBProxyNodes = model.DBProxyNodes;
+            this.DBProxyPersistentConnectionStatus = model.DBProxyPersistentConnectionStatus;
+            this.DBProxyServiceStatus = model.DBProxyServiceStatus;
+            this.dbProxyEndpointItems = model.dbProxyEndpointItems;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The list of zones that are available for the database proxy.</p>
@@ -472,6 +499,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> DBProxyAVZones; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBProxyAVZones model) {
+                this.DBProxyAVZones = model.DBProxyAVZones;
+            } 
+
             /**
              * <p>The list of zones that are available for the database proxy.</p>
              */
@@ -614,6 +648,21 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String DBProxyVpcId; 
             private String DBProxyVpcInstanceId; 
             private String DBProxyVswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBProxyConnectStringItemsDBProxyConnectStringItems model) {
+                this.DBProxyConnectString = model.DBProxyConnectString;
+                this.DBProxyConnectStringNetType = model.DBProxyConnectStringNetType;
+                this.DBProxyConnectStringNetWorkType = model.DBProxyConnectStringNetWorkType;
+                this.DBProxyConnectStringPort = model.DBProxyConnectStringPort;
+                this.DBProxyEndpointId = model.DBProxyEndpointId;
+                this.DBProxyEndpointName = model.DBProxyEndpointName;
+                this.DBProxyVpcId = model.DBProxyVpcId;
+                this.DBProxyVpcInstanceId = model.DBProxyVpcInstanceId;
+                this.DBProxyVswitchId = model.DBProxyVswitchId;
+            } 
 
             /**
              * <p>The database proxy endpoint.</p>
@@ -762,6 +811,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBProxyConnectStringItems model) {
+                this.DBProxyConnectStringItems = model.DBProxyConnectStringItems;
+            } 
+
             /**
              * <p>An array consisting of the information about the database proxy endpoint that is created for the instance.</p>
              */
@@ -832,6 +888,15 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String cpuCores; 
             private String nodeId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBProxyNodesDBProxyNodes model) {
+                this.cpuCores = model.cpuCores;
+                this.nodeId = model.nodeId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The number of cpu cores for the node.</p>
@@ -904,6 +969,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBProxyNodes model) {
+                this.DBProxyNodes = model.DBProxyNodes;
+            } 
 
             /**
              * <p>The proxy node list.</p>
@@ -987,6 +1059,16 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String dbProxyEndpointName; 
             private String dbProxyEndpointType; 
             private String dbProxyReadWriteMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbProxyEndpointItemsDbProxyEndpointItems model) {
+                this.dbProxyEndpointAliases = model.dbProxyEndpointAliases;
+                this.dbProxyEndpointName = model.dbProxyEndpointName;
+                this.dbProxyEndpointType = model.dbProxyEndpointType;
+                this.dbProxyReadWriteMode = model.dbProxyReadWriteMode;
+            } 
 
             /**
              * <p>The description of the database proxy endpoint.</p>
@@ -1078,6 +1160,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbProxyEndpointItems model) {
+                this.dbProxyEndpointItems = model.dbProxyEndpointItems;
+            } 
 
             /**
              * <p>The proxy terminals of the instance.</p>

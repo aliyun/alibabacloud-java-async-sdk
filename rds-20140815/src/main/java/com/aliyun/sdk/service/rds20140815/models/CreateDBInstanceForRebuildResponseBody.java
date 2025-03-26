@@ -48,6 +48,10 @@ public class CreateDBInstanceForRebuildResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -89,6 +93,17 @@ public class CreateDBInstanceForRebuildResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDBInstanceForRebuildResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The instance ID.</p>

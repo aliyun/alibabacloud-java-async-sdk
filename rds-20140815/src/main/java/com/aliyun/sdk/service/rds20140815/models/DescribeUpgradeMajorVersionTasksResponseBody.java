@@ -48,6 +48,10 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpgradeMajorVersionTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The tasks for major engine version upgrades.</p>
@@ -323,6 +338,25 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             private String targetMajorVersion; 
             private Integer taskId; 
             private String upgradeMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.collectStatMode = model.collectStatMode;
+                this.detail = model.detail;
+                this.endTime = model.endTime;
+                this.result = model.result;
+                this.sourceInsName = model.sourceInsName;
+                this.sourceMajorVersion = model.sourceMajorVersion;
+                this.startTime = model.startTime;
+                this.switchEndTime = model.switchEndTime;
+                this.switchTime = model.switchTime;
+                this.targetInsName = model.targetInsName;
+                this.targetMajorVersion = model.targetMajorVersion;
+                this.taskId = model.taskId;
+                this.upgradeMode = model.upgradeMode;
+            } 
 
             /**
              * <p>The time when the system collects the statistics.</p>

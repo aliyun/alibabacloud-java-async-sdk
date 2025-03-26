@@ -36,6 +36,10 @@ public class RestoreDdrTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -53,6 +57,14 @@ public class RestoreDdrTableResponseBody extends TeaModel {
     public static final class Builder {
         private String DBInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RestoreDdrTableResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>

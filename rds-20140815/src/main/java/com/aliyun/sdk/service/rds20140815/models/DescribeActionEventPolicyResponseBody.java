@@ -40,6 +40,10 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableEventLog
      */
@@ -65,6 +69,15 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         private String enableEventLog; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeActionEventPolicyResponseBody model) {
+            this.enableEventLog = model.enableEventLog;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the event history feature is enabled.</p>

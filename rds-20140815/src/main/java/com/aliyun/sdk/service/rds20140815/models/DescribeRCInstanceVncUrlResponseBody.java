@@ -36,6 +36,10 @@ public class DescribeRCInstanceVncUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loginUrl
      */
@@ -53,6 +57,14 @@ public class DescribeRCInstanceVncUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String loginUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCInstanceVncUrlResponseBody model) {
+            this.loginUrl = model.loginUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The VNC logon address.</p>

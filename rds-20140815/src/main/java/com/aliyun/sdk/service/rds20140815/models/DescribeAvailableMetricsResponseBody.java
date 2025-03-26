@@ -44,6 +44,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -77,6 +81,16 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableMetricsResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.items = model.items;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -252,6 +266,21 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             private String metricsKeyAlias; 
             private Integer sortRule; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.description = model.description;
+                this.dimension = model.dimension;
+                this.groupKey = model.groupKey;
+                this.groupKeyType = model.groupKeyType;
+                this.method = model.method;
+                this.metricsKey = model.metricsKey;
+                this.metricsKeyAlias = model.metricsKeyAlias;
+                this.sortRule = model.sortRule;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The description of the Enhanced Monitoring metric.</p>

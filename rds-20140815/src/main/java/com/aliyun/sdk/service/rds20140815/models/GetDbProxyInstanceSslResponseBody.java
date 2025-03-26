@@ -36,6 +36,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dbProxyCertListItems
      */
@@ -53,6 +57,14 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
     public static final class Builder {
         private DbProxyCertListItems dbProxyCertListItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDbProxyInstanceSslResponseBody model) {
+            this.dbProxyCertListItems = model.dbProxyCertListItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of SSL encryption settings.</p>
@@ -159,6 +171,17 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             private String endpointType; 
             private String sslExpiredTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DbProxyCertListItemsDbProxyCertListItems model) {
+                this.certCommonName = model.certCommonName;
+                this.dbInstanceName = model.dbInstanceName;
+                this.endpointName = model.endpointName;
+                this.endpointType = model.endpointType;
+                this.sslExpiredTime = model.sslExpiredTime;
+            } 
+
             /**
              * <p>The dedicated proxy endpoint for which SSL encryption is enabled.</p>
              * 
@@ -252,6 +275,13 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbProxyCertListItems model) {
+                this.dbProxyCertListItems = model.dbProxyCertListItems;
+            } 
 
             /**
              * <p>An array that consists of SSL encryption settings.</p>

@@ -36,6 +36,10 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String tcpConnectionType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHADiagnoseConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.tcpConnectionType = model.tcpConnectionType;
+        } 
 
         /**
          * <p>The request ID.</p>

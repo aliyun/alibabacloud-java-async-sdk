@@ -44,6 +44,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String requestId; 
         private Integer totalSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReplicationLinkLogsResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.items = model.items;
+            this.requestId = model.requestId;
+            this.totalSize = model.totalSize;
+        } 
 
         /**
          * <p>The ID of the instance.</p>
@@ -336,6 +350,28 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             private String taskStage; 
             private String taskStatus; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.detail = model.detail;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.replicationInfo = model.replicationInfo;
+                this.replicationState = model.replicationState;
+                this.replicatorAccount = model.replicatorAccount;
+                this.replicatorPassword = model.replicatorPassword;
+                this.sourceAddress = model.sourceAddress;
+                this.sourceCategory = model.sourceCategory;
+                this.sourcePort = model.sourcePort;
+                this.targetInstanceId = model.targetInstanceId;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskStage = model.taskStage;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The details of the task.</p>

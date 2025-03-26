@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCMetricListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
+    private String dimensions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -56,6 +60,7 @@ public class DescribeRCMetricListRequest extends Request {
 
     private DescribeRCMetricListRequest(Builder builder) {
         super(builder);
+        this.dimensions = builder.dimensions;
         this.endTime = builder.endTime;
         this.express = builder.express;
         this.instanceId = builder.instanceId;
@@ -75,9 +80,16 @@ public class DescribeRCMetricListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dimensions
+     */
+    public String getDimensions() {
+        return this.dimensions;
     }
 
     /**
@@ -144,6 +156,7 @@ public class DescribeRCMetricListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRCMetricListRequest, Builder> {
+        private String dimensions; 
         private String endTime; 
         private String express; 
         private String instanceId; 
@@ -160,6 +173,7 @@ public class DescribeRCMetricListRequest extends Request {
 
         private Builder(DescribeRCMetricListRequest request) {
             super(request);
+            this.dimensions = request.dimensions;
             this.endTime = request.endTime;
             this.express = request.express;
             this.instanceId = request.instanceId;
@@ -170,6 +184,15 @@ public class DescribeRCMetricListRequest extends Request {
             this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * Dimensions.
+         */
+        public Builder dimensions(String dimensions) {
+            this.putQueryParameter("Dimensions", dimensions);
+            this.dimensions = dimensions;
+            return this;
+        }
 
         /**
          * <p>The end of the time range to query. The end time must be later than the start time. Example: <code>2024-08-06 10:15:00</code>.</p>

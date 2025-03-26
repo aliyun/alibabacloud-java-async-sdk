@@ -48,6 +48,10 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connCheckErrorCode
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         private String connCheckResult; 
         private String dbInstanceName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceConnectivityResponseBody model) {
+            this.connCheckErrorCode = model.connCheckErrorCode;
+            this.connCheckErrorMessage = model.connCheckErrorMessage;
+            this.connCheckResult = model.connCheckResult;
+            this.dbInstanceName = model.dbInstanceName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The error code for connection diagnosis. Valid values:</p>

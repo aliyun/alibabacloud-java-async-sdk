@@ -60,6 +60,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -125,6 +129,20 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCrossRegionBackupsResponseBody model) {
+            this.endTime = model.endTime;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The end of the time range to query.</p>
@@ -249,6 +267,13 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> restoreRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(RestoreRegions model) {
+                this.restoreRegion = model.restoreRegion;
+            } 
 
             /**
              * RestoreRegion.
@@ -512,6 +537,31 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             private String engineVersion; 
             private Integer instanceId; 
             private RestoreRegions restoreRegions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.backupEndTime = model.backupEndTime;
+                this.backupMethod = model.backupMethod;
+                this.backupSetScale = model.backupSetScale;
+                this.backupSetStatus = model.backupSetStatus;
+                this.backupStartTime = model.backupStartTime;
+                this.backupType = model.backupType;
+                this.category = model.category;
+                this.consistentTime = model.consistentTime;
+                this.crossBackupDownloadLink = model.crossBackupDownloadLink;
+                this.crossBackupId = model.crossBackupId;
+                this.crossBackupRegion = model.crossBackupRegion;
+                this.crossBackupSetFile = model.crossBackupSetFile;
+                this.crossBackupSetLocation = model.crossBackupSetLocation;
+                this.crossBackupSetSize = model.crossBackupSetSize;
+                this.DBInstanceStorageType = model.DBInstanceStorageType;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.instanceId = model.instanceId;
+                this.restoreRegions = model.restoreRegions;
+            } 
 
             /**
              * <p>The time when the cross-region data backup file was generated.</p>
@@ -783,6 +833,13 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
 
             /**
              * Item.

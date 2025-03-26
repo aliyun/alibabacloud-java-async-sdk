@@ -36,6 +36,10 @@ public class DeleteUserBackupFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupId
      */
@@ -53,6 +57,14 @@ public class DeleteUserBackupFileResponseBody extends TeaModel {
     public static final class Builder {
         private String backupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteUserBackupFileResponseBody model) {
+            this.backupId = model.backupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the deleted full backup file.</p>

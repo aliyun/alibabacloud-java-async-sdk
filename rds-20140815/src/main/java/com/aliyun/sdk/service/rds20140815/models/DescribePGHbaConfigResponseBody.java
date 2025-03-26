@@ -56,6 +56,10 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -113,6 +117,19 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         private String modifyStatusReason; 
         private String requestId; 
         private RunningHbaItems runningHbaItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePGHbaConfigResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.defaultHbaItems = model.defaultHbaItems;
+            this.hbaModifyTime = model.hbaModifyTime;
+            this.lastModifyStatus = model.lastModifyStatus;
+            this.modifyStatusReason = model.modifyStatusReason;
+            this.requestId = model.requestId;
+            this.runningHbaItems = model.runningHbaItems;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -312,6 +329,20 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             private String type; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(HbaItem model) {
+                this.address = model.address;
+                this.database = model.database;
+                this.mask = model.mask;
+                this.method = model.method;
+                this.option = model.option;
+                this.priorityId = model.priorityId;
+                this.type = model.type;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.</p>
              * 
@@ -438,6 +469,13 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HbaItem> hbaItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultHbaItems model) {
+                this.hbaItem = model.hbaItem;
+            } 
 
             /**
              * HbaItem.
@@ -570,6 +608,20 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
             private String type; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningHbaItemsHbaItem model) {
+                this.address = model.address;
+                this.database = model.database;
+                this.mask = model.mask;
+                this.method = model.method;
+                this.option = model.option;
+                this.priorityId = model.priorityId;
+                this.type = model.type;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP address of the client.</p>
              * 
@@ -701,6 +753,13 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RunningHbaItemsHbaItem> hbaItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningHbaItems model) {
+                this.hbaItem = model.hbaItem;
+            } 
 
             /**
              * HbaItem.

@@ -48,6 +48,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         private String requestId; 
         private Integer successCount; 
         private String successEventId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyEventInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorEventId = model.errorEventId;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+            this.successEventId = model.successEventId;
+        } 
 
         /**
          * <p>The error code.</p>

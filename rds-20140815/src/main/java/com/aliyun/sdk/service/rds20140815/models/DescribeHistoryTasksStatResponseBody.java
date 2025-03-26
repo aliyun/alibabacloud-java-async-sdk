@@ -36,6 +36,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Items> items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryTasksStatResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried tasks.</p>
@@ -122,6 +134,14 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.status = model.status;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The status of the task. Valid values:</p>

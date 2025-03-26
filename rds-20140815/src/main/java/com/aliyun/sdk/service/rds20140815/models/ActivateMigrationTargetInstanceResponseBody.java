@@ -48,6 +48,10 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -89,6 +93,17 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         private String sourceIpAddress; 
         private Long sourcePort; 
         private Long taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ActivateMigrationTargetInstanceResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.sourceIpAddress = model.sourceIpAddress;
+            this.sourcePort = model.sourcePort;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The name of the destination instance.</p>

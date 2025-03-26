@@ -40,6 +40,10 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizationState
      */
@@ -65,6 +69,15 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         private Integer authorizationState; 
         private String requestId; 
         private String roleArn; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckCloudResourceAuthorizedResponseBody model) {
+            this.authorizationState = model.authorizationState;
+            this.requestId = model.requestId;
+            this.roleArn = model.roleArn;
+        } 
 
         /**
          * <p>The authorization status. Valid values:</p>

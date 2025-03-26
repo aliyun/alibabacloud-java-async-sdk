@@ -32,6 +32,10 @@ public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -41,6 +45,13 @@ public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long orderId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstancePayTypeResponseBody model) {
+            this.orderId = model.orderId;
+        } 
 
         /**
          * <p>The order ID.</p>

@@ -52,6 +52,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWhitelistTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned. Valid values:</p>
@@ -267,6 +283,17 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             private String templateName; 
             private Integer userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.id = model.id;
+                this.ips = model.ips;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The primary key of the data table.</p>
              * 
@@ -360,6 +387,13 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private Template template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.template = model.template;
+            } 
 
             /**
              * <p>The information about the IP whitelist template.</p>

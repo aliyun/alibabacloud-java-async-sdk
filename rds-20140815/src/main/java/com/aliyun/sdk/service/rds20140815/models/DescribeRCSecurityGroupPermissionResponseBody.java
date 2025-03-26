@@ -52,6 +52,10 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return innerAccessPolicy
      */
@@ -101,6 +105,18 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
         private String securityGroupId; 
         private java.util.List<SecurityGroupPermissions> securityGroupPermissions; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCSecurityGroupPermissionResponseBody model) {
+            this.innerAccessPolicy = model.innerAccessPolicy;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.securityGroupId = model.securityGroupId;
+            this.securityGroupPermissions = model.securityGroupPermissions;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * InnerAccessPolicy.
@@ -163,6 +179,9 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
      * <p>DescribeRCSecurityGroupPermissionResponseBody</p>
      */
     public static class SecurityGroupPermissions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("DestCidrIp")
         private String destCidrIp;
 
@@ -191,6 +210,7 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
         private String sourcePortRange;
 
         private SecurityGroupPermissions(Builder builder) {
+            this.createTime = builder.createTime;
             this.destCidrIp = builder.destCidrIp;
             this.direction = builder.direction;
             this.ipProtocol = builder.ipProtocol;
@@ -208,6 +228,13 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
 
         public static SecurityGroupPermissions create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -274,6 +301,7 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String createTime; 
             private String destCidrIp; 
             private String direction; 
             private String ipProtocol; 
@@ -283,6 +311,30 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
             private String securityGroupRuleId; 
             private String sourceCidrIp; 
             private String sourcePortRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupPermissions model) {
+                this.createTime = model.createTime;
+                this.destCidrIp = model.destCidrIp;
+                this.direction = model.direction;
+                this.ipProtocol = model.ipProtocol;
+                this.policy = model.policy;
+                this.portRange = model.portRange;
+                this.priority = model.priority;
+                this.securityGroupRuleId = model.securityGroupRuleId;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.sourcePortRange = model.sourcePortRange;
+            } 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
 
             /**
              * DestCidrIp.

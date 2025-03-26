@@ -48,6 +48,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLLogReportListResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>An array that consists of SQL log reports.</p>
@@ -204,6 +219,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private Long SQLExecuteTimes; 
             private String SQLText; 
 
+            private Builder() {
+            } 
+
+            private Builder(LatencyTopNItem model) {
+                this.avgLatency = model.avgLatency;
+                this.SQLExecuteTimes = model.SQLExecuteTimes;
+                this.SQLText = model.SQLText;
+            } 
+
             /**
              * <p>The average time that is required to execute the SQL statement. Unit: milliseconds.</p>
              * 
@@ -279,6 +303,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LatencyTopNItem> latencyTopNItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(LatencyTopNItems model) {
+                this.latencyTopNItem = model.latencyTopNItem;
+            } 
+
             /**
              * LatencyTopNItem.
              */
@@ -337,6 +368,14 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         public static final class Builder {
             private Long SQLExecuteTimes; 
             private String SQLText; 
+
+            private Builder() {
+            } 
+
+            private Builder(QPSTopNItem model) {
+                this.SQLExecuteTimes = model.SQLExecuteTimes;
+                this.SQLText = model.SQLText;
+            } 
 
             /**
              * <p>The number of times that the SQL statement is executed.</p>
@@ -401,6 +440,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<QPSTopNItem> QPSTopNItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(QPSTopNItems model) {
+                this.QPSTopNItem = model.QPSTopNItem;
+            } 
 
             /**
              * QPSTopNItem.
@@ -473,6 +519,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private QPSTopNItems QPSTopNItems; 
             private String reportTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.latencyTopNItems = model.latencyTopNItems;
+                this.QPSTopNItems = model.QPSTopNItems;
+                this.reportTime = model.reportTime;
+            } 
+
             /**
              * <p>An array that consists of SQL statements executed with the highest latency.</p>
              */
@@ -538,6 +593,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
 
             /**
              * Item.

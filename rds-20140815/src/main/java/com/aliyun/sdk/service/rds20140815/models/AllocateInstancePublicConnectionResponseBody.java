@@ -40,6 +40,10 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectionString
      */
@@ -65,6 +69,15 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         private String connectionString; 
         private String dbInstanceName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocateInstancePublicConnectionResponseBody model) {
+            this.connectionString = model.connectionString;
+            this.dbInstanceName = model.dbInstanceName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The endpoint that is used to connect to the database instance.</p>

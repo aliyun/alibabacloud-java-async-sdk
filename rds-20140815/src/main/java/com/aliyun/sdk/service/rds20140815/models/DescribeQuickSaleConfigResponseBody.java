@@ -40,6 +40,10 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commodity
      */
@@ -65,6 +69,15 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         private String commodity; 
         private java.util.Map<String, ?> items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQuickSaleConfigResponseBody model) {
+            this.commodity = model.commodity;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The product code. Valid values:</p>

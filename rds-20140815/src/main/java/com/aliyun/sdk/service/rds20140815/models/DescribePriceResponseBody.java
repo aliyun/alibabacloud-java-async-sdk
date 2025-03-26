@@ -60,6 +60,10 @@ public class DescribePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderParams
      */
@@ -125,6 +129,20 @@ public class DescribePriceResponseBody extends TeaModel {
         private Boolean showDiscount; 
         private Float tradeMaxRCUAmount; 
         private Float tradeMinRCUAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.orderParams = model.orderParams;
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.serverlessPrice = model.serverlessPrice;
+            this.showDiscount = model.showDiscount;
+            this.tradeMaxRCUAmount = model.tradeMaxRCUAmount;
+            this.tradeMinRCUAmount = model.tradeMinRCUAmount;
+        } 
 
         /**
          * <p>The order parameters.</p>
@@ -270,6 +288,15 @@ public class DescribePriceResponseBody extends TeaModel {
             private String errorCode; 
             private String success; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActivityInfo model) {
+                this.checkErrMsg = model.checkErrMsg;
+                this.errorCode = model.errorCode;
+                this.success = model.success;
+            } 
+
             /**
              * <p>The returned message.</p>
              * 
@@ -378,6 +405,16 @@ public class DescribePriceResponseBody extends TeaModel {
             private String isSelected; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.couponNo = model.couponNo;
+                this.description = model.description;
+                this.isSelected = model.isSelected;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The coupon ID.</p>
              * 
@@ -461,6 +498,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Coupon> coupon; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
+
             /**
              * Coupon.
              */
@@ -507,6 +551,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
@@ -662,6 +713,22 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradeMaxRCUAmount; 
             private Float tradeMinRCUAmount; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.activityInfo = model.activityInfo;
+                this.coupons = model.coupons;
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.orderLines = model.orderLines;
+                this.originalPrice = model.originalPrice;
+                this.ruleIds = model.ruleIds;
+                this.tradeMaxRCUAmount = model.tradeMaxRCUAmount;
+                this.tradeMinRCUAmount = model.tradeMinRCUAmount;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The information about the promotion.</p>
@@ -827,6 +894,15 @@ public class DescribePriceResponseBody extends TeaModel {
             private String name; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the promotion rule.</p>
              * 
@@ -898,6 +974,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
@@ -1053,6 +1136,22 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradeMaxRCUAmount; 
             private Float tradeMinRCUAmount; 
             private Float storageDiscountAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerlessPrice model) {
+                this.RCUDiscountMaxAmount = model.RCUDiscountMaxAmount;
+                this.RCUDiscountMinAmount = model.RCUDiscountMinAmount;
+                this.RCUOriginalMaxAmount = model.RCUOriginalMaxAmount;
+                this.RCUOriginalMinAmount = model.RCUOriginalMinAmount;
+                this.storageOriginalAmount = model.storageOriginalAmount;
+                this.totalOriginalMaxAmount = model.totalOriginalMaxAmount;
+                this.totalOriginalMinAmount = model.totalOriginalMinAmount;
+                this.tradeMaxRCUAmount = model.tradeMaxRCUAmount;
+                this.tradeMinRCUAmount = model.tradeMinRCUAmount;
+                this.storageDiscountAmount = model.storageDiscountAmount;
+            } 
 
             /**
              * <p>The discount amount of the maximum number of RCUs.</p>

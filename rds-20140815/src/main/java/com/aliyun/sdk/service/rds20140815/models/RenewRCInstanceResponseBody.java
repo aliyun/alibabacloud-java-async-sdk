@@ -44,6 +44,10 @@ public class RenewRCInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class RenewRCInstanceResponseBody extends TeaModel {
         private String orderId; 
         private String orderIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewRCInstanceResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.orderId = model.orderId;
+            this.orderIds = model.orderIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the RDS Custom instance.</p>

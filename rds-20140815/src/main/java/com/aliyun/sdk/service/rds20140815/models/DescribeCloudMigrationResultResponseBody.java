@@ -48,6 +48,10 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Integer totalSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudMigrationResultResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalSize = model.totalSize;
+        } 
 
         /**
          * <p>The details about the cloud migration task.</p>
@@ -359,6 +374,28 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
             private String targetInstanceName; 
             private Long taskId; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.detail = model.detail;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.migrateStage = model.migrateStage;
+                this.replicationInfo = model.replicationInfo;
+                this.replicationState = model.replicationState;
+                this.sourceAccount = model.sourceAccount;
+                this.sourceCategory = model.sourceCategory;
+                this.sourceIpAddress = model.sourceIpAddress;
+                this.sourcePassword = model.sourcePassword;
+                this.sourcePort = model.sourcePort;
+                this.switchTime = model.switchTime;
+                this.targetEip = model.targetEip;
+                this.targetInstanceName = model.targetInstanceName;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The details about the migration task.</p>

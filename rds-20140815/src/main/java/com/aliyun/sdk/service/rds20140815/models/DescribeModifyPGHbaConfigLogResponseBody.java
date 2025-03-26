@@ -44,6 +44,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         private HbaLogItems hbaLogItems; 
         private Integer logItemCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeModifyPGHbaConfigLogResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.hbaLogItems = model.hbaLogItems;
+            this.logItemCount = model.logItemCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -241,6 +255,20 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String type; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(HbaItem model) {
+                this.address = model.address;
+                this.database = model.database;
+                this.mask = model.mask;
+                this.method = model.method;
+                this.option = model.option;
+                this.priorityId = model.priorityId;
+                this.type = model.type;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP address.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HbaItem> hbaItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(AfterHbaItems model) {
+                this.hbaItem = model.hbaItem;
+            } 
 
             /**
              * HbaItem.
@@ -499,6 +534,20 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String type; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(BeforeHbaItemsHbaItem model) {
+                this.address = model.address;
+                this.database = model.database;
+                this.mask = model.mask;
+                this.method = model.method;
+                this.option = model.option;
+                this.priorityId = model.priorityId;
+                this.type = model.type;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP address.</p>
              * 
@@ -626,6 +675,13 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BeforeHbaItemsHbaItem> hbaItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(BeforeHbaItems model) {
+                this.hbaItem = model.hbaItem;
+            } 
+
             /**
              * HbaItem.
              */
@@ -721,6 +777,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String modifyTime; 
             private String statusReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(HbaLogItem model) {
+                this.afterHbaItems = model.afterHbaItems;
+                this.beforeHbaItems = model.beforeHbaItems;
+                this.modifyStatus = model.modifyStatus;
+                this.modifyTime = model.modifyTime;
+                this.statusReason = model.statusReason;
+            } 
+
             /**
              * <p>The configurations of the pg_hba.conf file after modification.</p>
              */
@@ -813,6 +880,13 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HbaLogItem> hbaLogItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(HbaLogItems model) {
+                this.hbaLogItem = model.hbaLogItem;
+            } 
 
             /**
              * HbaLogItem.

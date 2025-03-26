@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 30, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 30, minimum = 1)
     private Integer amount;
 
     @com.aliyun.core.annotation.Query
@@ -149,6 +149,10 @@ public class RunRCInstancesRequest extends Request {
     private String userData;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDataInBase64")
+    private Boolean userDataInBase64;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -191,6 +195,7 @@ public class RunRCInstancesRequest extends Request {
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
         this.userData = builder.userData;
+        this.userDataInBase64 = builder.userDataInBase64;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
     }
@@ -203,7 +208,7 @@ public class RunRCInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -433,6 +438,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return userDataInBase64
+     */
+    public Boolean getUserDataInBase64() {
+        return this.userDataInBase64;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -479,6 +491,7 @@ public class RunRCInstancesRequest extends Request {
         private SystemDisk systemDisk; 
         private java.util.List<Tag> tag; 
         private String userData; 
+        private Boolean userDataInBase64; 
         private String vSwitchId; 
         private String zoneId; 
 
@@ -520,6 +533,7 @@ public class RunRCInstancesRequest extends Request {
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
             this.userData = request.userData;
+            this.userDataInBase64 = request.userDataInBase64;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
@@ -527,7 +541,6 @@ public class RunRCInstancesRequest extends Request {
         /**
          * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
          * <p>Valid values: <strong>1</strong> to <strong>10</strong>. Default value: <strong>1</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -905,6 +918,15 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
+         * UserDataInBase64.
+         */
+        public Builder userDataInBase64(Boolean userDataInBase64) {
+            this.putQueryParameter("UserDataInBase64", userDataInBase64);
+            this.userDataInBase64 = userDataInBase64;
+            return this;
+        }
+
+        /**
          * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
          * <blockquote>
          * <p> If you specify the VSwitchId parameter, the zone specified by the ZoneId parameter must be the same as the zone in which the specified vSwitch resides. You can leave the ZoneId parameter empty. In this case, the system uses the zone in which the specified vSwitch resides.</p>
@@ -986,6 +1008,14 @@ public class RunRCInstancesRequest extends Request {
             private String clusterId; 
             private String nodePoolId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateAckEdgeParam model) {
+                this.clusterId = model.clusterId;
+                this.nodePoolId = model.nodePoolId;
+            } 
+
             /**
              * ClusterId.
              */
@@ -1022,6 +1052,9 @@ public class RunRCInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
@@ -1031,12 +1064,17 @@ public class RunRCInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
+        private String snapshotId;
+
         private DataDisk(Builder builder) {
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
+            this.device = builder.device;
             this.encrypted = builder.encrypted;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -1062,6 +1100,13 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
          * @return encrypted
          */
         public String getEncrypted() {
@@ -1082,12 +1127,34 @@ public class RunRCInstancesRequest extends Request {
             return this.size;
         }
 
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
             private String category; 
             private Boolean deleteWithInstance; 
+            private String device; 
             private String encrypted; 
             private String performanceLevel; 
             private Integer size; 
+            private String snapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.device = model.device;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
 
             /**
              * <p>The type of the data disk. Set the value to <strong>cloud_essd</strong>, which indicates Enterprise SSDs (ESSDs).</p>
@@ -1108,6 +1175,14 @@ public class RunRCInstancesRequest extends Request {
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
+                return this;
+            }
+
+            /**
+             * Device.
+             */
+            public Builder device(String device) {
+                this.device = device;
                 return this;
             }
 
@@ -1145,6 +1220,14 @@ public class RunRCInstancesRequest extends Request {
              */
             public Builder size(Integer size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 
@@ -1210,6 +1293,15 @@ public class RunRCInstancesRequest extends Request {
             private String category; 
             private String performanceLevel; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
@@ -1294,6 +1386,14 @@ public class RunRCInstancesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

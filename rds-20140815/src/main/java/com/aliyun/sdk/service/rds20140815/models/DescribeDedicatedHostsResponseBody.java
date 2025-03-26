@@ -40,6 +40,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedHostGroupId
      */
@@ -65,6 +69,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private String dedicatedHostGroupId; 
         private DedicatedHosts dedicatedHosts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedHostsResponseBody model) {
+            this.dedicatedHostGroupId = model.dedicatedHostGroupId;
+            this.dedicatedHosts = model.dedicatedHosts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The host group ID.</p>
@@ -458,6 +471,40 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostsDedicatedHosts model) {
+                this.accountName = model.accountName;
+                this.allocationStatus = model.allocationStatus;
+                this.bastionInstanceId = model.bastionInstanceId;
+                this.CPUAllocationRatio = model.CPUAllocationRatio;
+                this.cpuUsed = model.cpuUsed;
+                this.createdTime = model.createdTime;
+                this.dedicatedHostGroupId = model.dedicatedHostGroupId;
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.diskAllocationRatio = model.diskAllocationRatio;
+                this.endTime = model.endTime;
+                this.engine = model.engine;
+                this.hostCPU = model.hostCPU;
+                this.hostClass = model.hostClass;
+                this.hostMem = model.hostMem;
+                this.hostName = model.hostName;
+                this.hostStatus = model.hostStatus;
+                this.hostStorage = model.hostStorage;
+                this.hostType = model.hostType;
+                this.IPAddress = model.IPAddress;
+                this.imageCategory = model.imageCategory;
+                this.instanceNumber = model.instanceNumber;
+                this.memAllocationRatio = model.memAllocationRatio;
+                this.memoryUsed = model.memoryUsed;
+                this.openPermission = model.openPermission;
+                this.storageUsed = model.storageUsed;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The host account. You can call the <a href="https://help.aliyun.com/document_detail/196877.html">CreateDedicatedHostAccount</a> operation to create a host account.</p>
              * 
@@ -831,6 +878,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DedicatedHostsDedicatedHosts> dedicatedHosts; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHosts model) {
+                this.dedicatedHosts = model.dedicatedHosts;
+            } 
 
             /**
              * <p>The host information.</p>

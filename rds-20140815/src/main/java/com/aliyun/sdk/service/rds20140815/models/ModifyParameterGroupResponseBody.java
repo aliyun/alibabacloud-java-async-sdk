@@ -36,6 +36,10 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroupId
      */
@@ -53,6 +57,14 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String parameterGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyParameterGroupResponseBody model) {
+            this.parameterGroupId = model.parameterGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The parameter template ID.</p>

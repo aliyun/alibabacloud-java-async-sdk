@@ -36,6 +36,10 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return period
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
     public static final class Builder {
         private String period; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceMonitorResponseBody model) {
+            this.period = model.period;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The monitoring frequency. Unit: seconds.</p>

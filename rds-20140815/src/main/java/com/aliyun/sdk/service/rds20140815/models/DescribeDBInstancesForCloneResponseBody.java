@@ -48,6 +48,10 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesForCloneResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>An array that consists of the details about the instances.</p>
@@ -180,6 +195,13 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyDBInstanceId model) {
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
              * <p>The ID of the read-only instance.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReadOnlyDBInstanceId> readOnlyDBInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyDBInstanceIds model) {
+                this.readOnlyDBInstanceId = model.readOnlyDBInstanceId;
+            } 
 
             /**
              * ReadOnlyDBInstanceId.
@@ -636,6 +665,43 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             private String vpcCloudInstanceId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.category = model.category;
+                this.connectionMode = model.connectionMode;
+                this.createTime = model.createTime;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorageType = model.DBInstanceStorageType;
+                this.DBInstanceType = model.DBInstanceType;
+                this.destroyTime = model.destroyTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.guardDBInstanceId = model.guardDBInstanceId;
+                this.insId = model.insId;
+                this.instanceNetworkType = model.instanceNetworkType;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.masterInstanceId = model.masterInstanceId;
+                this.mutriORsignle = model.mutriORsignle;
+                this.payType = model.payType;
+                this.readOnlyDBInstanceIds = model.readOnlyDBInstanceIds;
+                this.regionId = model.regionId;
+                this.replicateId = model.replicateId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tempDBInstanceId = model.tempDBInstanceId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The RDS edition of the instance. Valid values:</p>
@@ -1066,6 +1132,13 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstance = model.DBInstance;
+            } 
 
             /**
              * DBInstance.

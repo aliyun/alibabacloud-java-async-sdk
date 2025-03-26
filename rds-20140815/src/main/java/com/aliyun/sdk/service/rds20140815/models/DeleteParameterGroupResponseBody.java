@@ -36,6 +36,10 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroupId
      */
@@ -53,6 +57,14 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String parameterGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteParameterGroupResponseBody model) {
+            this.parameterGroupId = model.parameterGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the parameter template.</p>

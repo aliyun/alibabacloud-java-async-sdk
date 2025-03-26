@@ -48,6 +48,10 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return available
      */
@@ -89,6 +93,17 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         private String DBInstanceTransType; 
         private Long localUpgradeDiskLimit; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EvaluateLocalExtendDiskResponseBody model) {
+            this.available = model.available;
+            this.DBInstanceId = model.DBInstanceId;
+            this.DBInstanceTransType = model.DBInstanceTransType;
+            this.localUpgradeDiskLimit = model.localUpgradeDiskLimit;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the instance is available. Valid values: true and false.</p>

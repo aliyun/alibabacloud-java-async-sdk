@@ -36,6 +36,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceIPArrayListResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the details about the IP address whitelists.</p>
@@ -147,6 +159,16 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPList; 
             private String securityIPType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceIPArray model) {
+                this.DBInstanceIPArrayAttribute = model.DBInstanceIPArrayAttribute;
+                this.DBInstanceIPArrayName = model.DBInstanceIPArrayName;
+                this.securityIPList = model.securityIPList;
+                this.securityIPType = model.securityIPType;
+            } 
+
             /**
              * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
              * <blockquote>
@@ -232,6 +254,13 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceIPArray> DBInstanceIPArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceIPArray = model.DBInstanceIPArray;
+            } 
 
             /**
              * DBInstanceIPArray.

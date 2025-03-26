@@ -60,6 +60,10 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compressType
      */
@@ -125,6 +129,20 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         private String localLogRetentionSpace; 
         private Integer logBackupLocalRetentionNumber; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyBackupPolicyResponseBody model) {
+            this.compressType = model.compressType;
+            this.DBInstanceID = model.DBInstanceID;
+            this.enableBackupLog = model.enableBackupLog;
+            this.highSpaceUsageProtection = model.highSpaceUsageProtection;
+            this.localLogRetentionHours = model.localLogRetentionHours;
+            this.localLogRetentionSpace = model.localLogRetentionSpace;
+            this.logBackupLocalRetentionNumber = model.logBackupLocalRetentionNumber;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The method that is used to compress backups. Valid values:</p>

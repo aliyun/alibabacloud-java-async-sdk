@@ -40,6 +40,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroups
      */
@@ -65,6 +69,15 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         private ParameterGroups parameterGroups; 
         private String requestId; 
         private Boolean signalForOptimizeParams; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupsResponseBody model) {
+            this.parameterGroups = model.parameterGroups;
+            this.requestId = model.requestId;
+            this.signalForOptimizeParams = model.signalForOptimizeParams;
+        } 
 
         /**
          * <p>The details of the parameter templates.</p>
@@ -249,6 +262,22 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             private Integer parameterGroupType; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroup model) {
+                this.createTime = model.createTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.forceRestart = model.forceRestart;
+                this.paramCounts = model.paramCounts;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupId = model.parameterGroupId;
+                this.parameterGroupName = model.parameterGroupName;
+                this.parameterGroupType = model.parameterGroupType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the parameter template was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -411,6 +440,13 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ParameterGroup> parameterGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroups model) {
+                this.parameterGroup = model.parameterGroup;
+            } 
 
             /**
              * ParameterGroup.

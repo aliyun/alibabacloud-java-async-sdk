@@ -36,6 +36,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMaskingRulesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -131,6 +143,15 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             private java.util.List<String> columns; 
             private java.util.List<String> databases; 
             private java.util.List<String> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleConfig model) {
+                this.columns = model.columns;
+                this.databases = model.databases;
+                this.tables = model.tables;
+            } 
 
             /**
              * Columns.
@@ -243,6 +264,17 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             private RuleConfig ruleConfig; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.defaultAlgo = model.defaultAlgo;
+                this.enabled = model.enabled;
+                this.maskingAlgo = model.maskingAlgo;
+                this.ruleConfig = model.ruleConfig;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * DefaultAlgo.
              */
@@ -321,6 +353,13 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.rules = model.rules;
+            } 
 
             /**
              * Rules.

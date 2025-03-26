@@ -40,6 +40,10 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceNetInfos
      */
@@ -65,6 +69,15 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         private DBInstanceNetInfos DBInstanceNetInfos; 
         private String instanceNetworkType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceNetInfoForChannelResponseBody model) {
+            this.DBInstanceNetInfos = model.DBInstanceNetInfos;
+            this.instanceNetworkType = model.instanceNetworkType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the instance connection.</p>
@@ -174,6 +187,16 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             private String DBInstanceType; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceWeight model) {
+                this.availability = model.availability;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceType = model.DBInstanceType;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The availability of the instance. Valid values:</p>
              * <ul>
@@ -265,6 +288,13 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBInstanceWeight> DBInstanceWeight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceWeights model) {
+                this.DBInstanceWeight = model.DBInstanceWeight;
+            } 
+
             /**
              * DBInstanceWeight.
              */
@@ -323,6 +353,14 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public static final class Builder {
             private String securityIPGroupName; 
             private String securityIPs; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIPGroup model) {
+                this.securityIPGroupName = model.securityIPGroupName;
+                this.securityIPs = model.securityIPs;
+            } 
 
             /**
              * <p>The name of the IP address whitelist.</p>
@@ -384,6 +422,13 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecurityIPGroup> securityIPGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIPGroups model) {
+                this.securityIPGroup = model.securityIPGroup;
+            } 
 
             /**
              * securityIPGroup.
@@ -587,6 +632,26 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String expiredTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceNetInfo model) {
+                this.availability = model.availability;
+                this.connectionString = model.connectionString;
+                this.connectionStringType = model.connectionStringType;
+                this.DBInstanceWeights = model.DBInstanceWeights;
+                this.distributionType = model.distributionType;
+                this.IPAddress = model.IPAddress;
+                this.IPType = model.IPType;
+                this.maxDelayTime = model.maxDelayTime;
+                this.port = model.port;
+                this.securityIPGroups = model.securityIPGroups;
+                this.upgradeable = model.upgradeable;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.expiredTime = model.expiredTime;
+            } 
 
             /**
              * <p>The availability of the instance. Valid values:</p>
@@ -794,6 +859,13 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceNetInfos model) {
+                this.DBInstanceNetInfo = model.DBInstanceNetInfo;
+            } 
 
             /**
              * DBInstanceNetInfo.

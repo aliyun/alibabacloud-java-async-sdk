@@ -52,6 +52,10 @@ public class DescribeADInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ADDNS
      */
@@ -101,6 +105,18 @@ public class DescribeADInfoResponseBody extends TeaModel {
         private String abnormalReason; 
         private String requestId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeADInfoResponseBody model) {
+            this.ADDNS = model.ADDNS;
+            this.ADServerIpAddress = model.ADServerIpAddress;
+            this.ADStatus = model.ADStatus;
+            this.abnormalReason = model.abnormalReason;
+            this.requestId = model.requestId;
+            this.userName = model.userName;
+        } 
 
         /**
          * <p>The DNS information about the AD domain.</p>

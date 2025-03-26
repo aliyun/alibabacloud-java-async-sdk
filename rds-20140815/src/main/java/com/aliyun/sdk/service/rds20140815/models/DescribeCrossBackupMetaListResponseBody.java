@@ -56,6 +56,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -113,6 +117,19 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalPageCount; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCrossBackupMetaListResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalPageCount = model.totalPageCount;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The instance to which the cross-region backup file belongs.</p>
@@ -250,6 +267,15 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             private String size; 
             private String tables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.database = model.database;
+                this.size = model.size;
+                this.tables = model.tables;
+            } 
+
             /**
              * <p>The name of the database.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Meta> meta; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.meta = model.meta;
+            } 
 
             /**
              * Meta.

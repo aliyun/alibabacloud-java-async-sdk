@@ -40,6 +40,10 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -65,6 +69,15 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         private String key; 
         private String requestId; 
         private Words words; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceKeywordsResponseBody model) {
+            this.key = model.key;
+            this.requestId = model.requestId;
+            this.words = model.words;
+        } 
 
         /**
          * <p>The type of reserved keyword returned.</p>
@@ -133,6 +146,13 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> word; 
+
+            private Builder() {
+            } 
+
+            private Builder(Words model) {
+                this.word = model.word;
+            } 
 
             /**
              * word.

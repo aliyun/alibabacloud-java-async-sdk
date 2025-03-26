@@ -36,6 +36,10 @@ public class QueryNotifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class QueryNotifyResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryNotifyResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -242,6 +254,24 @@ public class QueryNotifyResponseBody extends TeaModel {
             private String notifyElement; 
             private String templateName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyItemList model) {
+                this.aliUid = model.aliUid;
+                this.confirmFlag = model.confirmFlag;
+                this.confirmor = model.confirmor;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.idempotentCount = model.idempotentCount;
+                this.idempotentId = model.idempotentId;
+                this.level = model.level;
+                this.notifyElement = model.notifyElement;
+                this.templateName = model.templateName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -485,6 +515,16 @@ public class QueryNotifyResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalRecordCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.notifyItemList = model.notifyItemList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalRecordCount = model.totalRecordCount;
+            } 
 
             /**
              * <p>The details of notifications.</p>

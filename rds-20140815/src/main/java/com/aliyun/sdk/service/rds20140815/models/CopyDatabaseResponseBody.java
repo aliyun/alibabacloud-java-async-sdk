@@ -44,6 +44,10 @@ public class CopyDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBName
      */
@@ -77,6 +81,16 @@ public class CopyDatabaseResponseBody extends TeaModel {
         private String DBStatus; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CopyDatabaseResponseBody model) {
+            this.DBName = model.DBName;
+            this.DBStatus = model.DBStatus;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The name of the database.</p>

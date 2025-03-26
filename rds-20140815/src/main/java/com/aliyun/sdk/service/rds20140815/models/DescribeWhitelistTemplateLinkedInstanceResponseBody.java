@@ -52,6 +52,10 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWhitelistTemplateLinkedInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned. Valid values:</p>
@@ -230,6 +246,14 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         public static final class Builder {
             private java.util.List<String> insName; 
             private Integer templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.insName = model.insName;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The information about the instance.</p>

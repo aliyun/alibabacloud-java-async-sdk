@@ -44,6 +44,10 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         private Items items; 
         private String migrateTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOssDownloadsResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.items = model.items;
+            this.migrateTaskId = model.migrateTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -241,6 +255,20 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             private String isAvailable; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssDownload model) {
+                this.backupMode = model.backupMode;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.fileName = model.fileName;
+                this.fileSize = model.fileSize;
+                this.isAvailable = model.isAvailable;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The backup type. Valid values:</p>
              * <ul>
@@ -386,6 +414,13 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OssDownload> ossDownload; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.ossDownload = model.ossDownload;
+            } 
 
             /**
              * OssDownload.

@@ -36,6 +36,10 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGadInstanceMemberResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         public static final class Builder {
             private String createCount; 
             private String gadInstanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createCount = model.createCount;
+                this.gadInstanceName = model.gadInstanceName;
+            } 
 
             /**
              * <p>The number of unit nodes that are created by calling this operation.</p>

@@ -204,7 +204,7 @@ public class CreateRCNodePoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1059,6 +1059,17 @@ public class CreateRCNodePoolRequest extends Request {
             private String performanceLevel; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The type of the data disk. Set the value to <strong>cloud_essd</strong>, which indicates Enterprise SSDs (ESSDs).</p>
              * 
@@ -1187,6 +1198,15 @@ public class CreateRCNodePoolRequest extends Request {
             private String performanceLevel; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
              * 
@@ -1276,6 +1296,14 @@ public class CreateRCNodePoolRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: <strong>1 to 20</strong>. This parameter cannot be an empty string.</p>

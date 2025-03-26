@@ -48,6 +48,10 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activationState
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         private String licenseType; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceDetailResponseBody model) {
+            this.activationState = model.activationState;
+            this.DBInstanceId = model.DBInstanceId;
+            this.licenseType = model.licenseType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the instance is in the active state.</p>

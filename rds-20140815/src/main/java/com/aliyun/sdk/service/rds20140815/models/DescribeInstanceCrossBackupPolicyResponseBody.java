@@ -92,6 +92,10 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupEnabled
      */
@@ -221,6 +225,28 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
         private Integer retentType; 
         private Integer retention; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceCrossBackupPolicyResponseBody model) {
+            this.backupEnabled = model.backupEnabled;
+            this.backupEnabledTime = model.backupEnabledTime;
+            this.crossBackupRegion = model.crossBackupRegion;
+            this.crossBackupType = model.crossBackupType;
+            this.DBInstanceDescription = model.DBInstanceDescription;
+            this.DBInstanceId = model.DBInstanceId;
+            this.DBInstanceStatus = model.DBInstanceStatus;
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.lockMode = model.lockMode;
+            this.logBackupEnabled = model.logBackupEnabled;
+            this.logBackupEnabledTime = model.logBackupEnabledTime;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.retentType = model.retentType;
+            this.retention = model.retention;
+        } 
 
         /**
          * <p>The status of the cross-region backup feature on the instance. Valid values:</p>

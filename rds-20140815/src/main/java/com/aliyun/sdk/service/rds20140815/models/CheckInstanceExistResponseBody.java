@@ -36,6 +36,10 @@ public class CheckInstanceExistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isExistInstance
      */
@@ -53,6 +57,14 @@ public class CheckInstanceExistResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isExistInstance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckInstanceExistResponseBody model) {
+            this.isExistInstance = model.isExistInstance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the instance exists. Valid values:</p>

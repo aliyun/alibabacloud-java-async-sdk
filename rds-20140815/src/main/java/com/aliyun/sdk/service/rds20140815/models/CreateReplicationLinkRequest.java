@@ -56,6 +56,10 @@ public class CreateReplicationLinkRequest extends Request {
     private Long sourcePort;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetAddress")
+    private String targetAddress;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
@@ -74,6 +78,7 @@ public class CreateReplicationLinkRequest extends Request {
         this.sourceInstanceName = builder.sourceInstanceName;
         this.sourceInstanceRegionId = builder.sourceInstanceRegionId;
         this.sourcePort = builder.sourcePort;
+        this.targetAddress = builder.targetAddress;
         this.taskId = builder.taskId;
         this.taskName = builder.taskName;
     }
@@ -86,7 +91,7 @@ public class CreateReplicationLinkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,6 +160,13 @@ public class CreateReplicationLinkRequest extends Request {
     }
 
     /**
+     * @return targetAddress
+     */
+    public String getTargetAddress() {
+        return this.targetAddress;
+    }
+
+    /**
      * @return taskId
      */
     public Long getTaskId() {
@@ -178,6 +190,7 @@ public class CreateReplicationLinkRequest extends Request {
         private String sourceInstanceName; 
         private String sourceInstanceRegionId; 
         private Long sourcePort; 
+        private String targetAddress; 
         private Long taskId; 
         private String taskName; 
 
@@ -196,6 +209,7 @@ public class CreateReplicationLinkRequest extends Request {
             this.sourceInstanceName = request.sourceInstanceName;
             this.sourceInstanceRegionId = request.sourceInstanceRegionId;
             this.sourcePort = request.sourcePort;
+            this.targetAddress = request.targetAddress;
             this.taskId = request.taskId;
             this.taskName = request.taskName;
         } 
@@ -321,6 +335,15 @@ public class CreateReplicationLinkRequest extends Request {
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
             this.sourcePort = sourcePort;
+            return this;
+        }
+
+        /**
+         * TargetAddress.
+         */
+        public Builder targetAddress(String targetAddress) {
+            this.putQueryParameter("TargetAddress", targetAddress);
+            this.targetAddress = targetAddress;
             return this;
         }
 

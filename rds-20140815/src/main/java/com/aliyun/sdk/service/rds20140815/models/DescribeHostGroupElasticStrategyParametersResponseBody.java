@@ -52,6 +52,10 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuShar
      */
@@ -101,6 +105,18 @@ public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaM
         private Integer maxConnZoom; 
         private Integer memoryZoom; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHostGroupElasticStrategyParametersResponseBody model) {
+            this.cpuShar = model.cpuShar;
+            this.cpuZoom = model.cpuZoom;
+            this.iopsZoom = model.iopsZoom;
+            this.maxConnZoom = model.maxConnZoom;
+            this.memoryZoom = model.memoryZoom;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The CPU utilization of the instance. Unit: percentage.</p>

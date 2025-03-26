@@ -44,6 +44,10 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attacksProtectionConfiguration
      */
@@ -77,6 +81,16 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
         private String persistentConnectionsConfiguration; 
         private String requestId; 
         private String transparentSwitchConfiguration; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceProxyConfigurationResponseBody model) {
+            this.attacksProtectionConfiguration = model.attacksProtectionConfiguration;
+            this.persistentConnectionsConfiguration = model.persistentConnectionsConfiguration;
+            this.requestId = model.requestId;
+            this.transparentSwitchConfiguration = model.transparentSwitchConfiguration;
+        } 
 
         /**
          * <p>Indicates whether the mechanism that is used to mitigate brute-force attacks is enabled:</p>

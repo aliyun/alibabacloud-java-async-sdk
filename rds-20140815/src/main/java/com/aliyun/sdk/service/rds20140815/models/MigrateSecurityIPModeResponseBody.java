@@ -40,6 +40,10 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -65,6 +69,15 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String requestId; 
         private String securityIPMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(MigrateSecurityIPModeResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+            this.securityIPMode = model.securityIPMode;
+        } 
 
         /**
          * <p>The ID of the instance.</p>

@@ -36,6 +36,10 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterGroupId
      */
@@ -53,6 +57,14 @@ public class CreateParameterGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String parameterGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateParameterGroupResponseBody model) {
+            this.parameterGroupId = model.parameterGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the parameter template. You can call the <a href="https://help.aliyun.com/document_detail/144491.html">DescribeParameterGroups</a> operation to query the IDs of parameter templates.</p>

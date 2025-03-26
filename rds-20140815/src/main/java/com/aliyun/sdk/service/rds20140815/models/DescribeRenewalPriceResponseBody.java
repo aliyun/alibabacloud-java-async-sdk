@@ -40,6 +40,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -65,6 +69,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private PriceInfo priceInfo; 
         private String requestId; 
         private Rules rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRenewalPriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * <p>Details of price information.</p>
@@ -154,6 +167,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String checkErrMsg; 
             private String errorCode; 
             private String success; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivityInfo model) {
+                this.checkErrMsg = model.checkErrMsg;
+                this.errorCode = model.errorCode;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The returned message.</p>
@@ -263,6 +285,16 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String isSelected; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupon model) {
+                this.couponNo = model.couponNo;
+                this.description = model.description;
+                this.isSelected = model.isSelected;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The coupon ID.</p>
              * 
@@ -346,6 +378,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Coupon> coupon; 
 
+            private Builder() {
+            } 
+
+            private Builder(Coupons model) {
+                this.coupon = model.coupon;
+            } 
+
             /**
              * Coupon.
              */
@@ -392,6 +431,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * RuleId.
@@ -511,6 +557,19 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private RuleIds ruleIds; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.activityInfo = model.activityInfo;
+                this.coupons = model.coupons;
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.ruleIds = model.ruleIds;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The information about the promotion.</p>
@@ -643,6 +702,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String name; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the activity.</p>
              * 
@@ -714,6 +782,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.

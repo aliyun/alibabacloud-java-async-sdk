@@ -36,6 +36,10 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionId
      */
@@ -53,6 +57,14 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDBInstanceResponseBody model) {
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query region ID of the instance.</p>

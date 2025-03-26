@@ -48,6 +48,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collation
      */
@@ -89,6 +93,17 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
         private String timezone; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCollationTimeZoneResponseBody model) {
+            this.collation = model.collation;
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.timezone = model.timezone;
+        } 
 
         /**
          * <p>The character set collation of the instance.</p>

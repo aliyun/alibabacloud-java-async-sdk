@@ -48,6 +48,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancesByPerformanceResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details about the instance.</p>
@@ -240,6 +255,18 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             private String IOPSUsage; 
             private String sessionUsage; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstancePerformance model) {
+                this.CPUUsage = model.CPUUsage;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceId = model.DBInstanceId;
+                this.diskUsage = model.diskUsage;
+                this.IOPSUsage = model.IOPSUsage;
+                this.sessionUsage = model.sessionUsage;
+            } 
+
             /**
              * <p>The CPU utilization of the instance in percentage.</p>
              * 
@@ -344,6 +371,13 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstancePerformance> DBInstancePerformance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstancePerformance = model.DBInstancePerformance;
+            } 
 
             /**
              * DBInstancePerformance.

@@ -68,6 +68,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectionString
      */
@@ -149,6 +153,22 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean tagResult; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDBInstanceResponseBody model) {
+            this.connectionString = model.connectionString;
+            this.DBInstanceId = model.DBInstanceId;
+            this.dryRun = model.dryRun;
+            this.dryRunResult = model.dryRunResult;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.port = model.port;
+            this.requestId = model.requestId;
+            this.tagResult = model.tagResult;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The internal endpoint of the instance.</p>

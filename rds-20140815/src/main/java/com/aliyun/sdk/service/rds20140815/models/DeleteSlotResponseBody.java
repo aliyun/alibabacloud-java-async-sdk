@@ -36,6 +36,10 @@ public class DeleteSlotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteSlotResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String slotName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSlotResponseBody model) {
+            this.requestId = model.requestId;
+            this.slotName = model.slotName;
+        } 
 
         /**
          * <p>The ID of the request.</p>

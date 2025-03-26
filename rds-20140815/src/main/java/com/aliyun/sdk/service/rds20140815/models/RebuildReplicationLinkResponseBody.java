@@ -44,6 +44,10 @@ public class RebuildReplicationLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class RebuildReplicationLinkResponseBody extends TeaModel {
         private String requestId; 
         private Long taskId; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(RebuildReplicationLinkResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The instance ID.</p>

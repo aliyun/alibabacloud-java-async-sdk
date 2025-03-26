@@ -44,6 +44,10 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         private String readSQLReplicationTime; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceDelayedReplicationTimeResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.readSQLReplicationTime = model.readSQLReplicationTime;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The instance ID.</p>

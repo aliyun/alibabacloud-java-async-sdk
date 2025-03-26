@@ -17,8 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyRCInstanceChargeTypeResponseBody</p>
  */
 public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
+    private java.util.List<String> expiredTime;
+
     @com.aliyun.core.annotation.NameInMap("FeeOfInstances")
-    private FeeOfInstances feeOfInstances;
+    private java.util.List<FeeOfInstances> feeOfInstances;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
@@ -27,7 +36,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     private String requestId;
 
     private ModifyRCInstanceChargeTypeResponseBody(Builder builder) {
+        this.chargeType = builder.chargeType;
+        this.expiredTime = builder.expiredTime;
         this.feeOfInstances = builder.feeOfInstances;
+        this.instanceIds = builder.instanceIds;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -40,11 +52,36 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    /**
+     * @return expiredTime
+     */
+    public java.util.List<String> getExpiredTime() {
+        return this.expiredTime;
+    }
+
     /**
      * @return feeOfInstances
      */
-    public FeeOfInstances getFeeOfInstances() {
+    public java.util.List<FeeOfInstances> getFeeOfInstances() {
         return this.feeOfInstances;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -62,15 +99,54 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private FeeOfInstances feeOfInstances; 
+        private String chargeType; 
+        private java.util.List<String> expiredTime; 
+        private java.util.List<FeeOfInstances> feeOfInstances; 
+        private java.util.List<String> instanceIds; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyRCInstanceChargeTypeResponseBody model) {
+            this.chargeType = model.chargeType;
+            this.expiredTime = model.expiredTime;
+            this.feeOfInstances = model.feeOfInstances;
+            this.instanceIds = model.instanceIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ExpiredTime.
+         */
+        public Builder expiredTime(java.util.List<String> expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
 
         /**
          * FeeOfInstances.
          */
-        public Builder feeOfInstances(FeeOfInstances feeOfInstances) {
+        public Builder feeOfInstances(java.util.List<FeeOfInstances> feeOfInstances) {
             this.feeOfInstances = feeOfInstances;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            this.instanceIds = instanceIds;
             return this;
         }
 
@@ -102,7 +178,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
      *
      * <p>ModifyRCInstanceChargeTypeResponseBody</p>
      */
-    public static class FeeOfInstance extends TeaModel {
+    public static class FeeOfInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
@@ -112,7 +188,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        private FeeOfInstance(Builder builder) {
+        private FeeOfInstances(Builder builder) {
             this.currency = builder.currency;
             this.fee = builder.fee;
             this.instanceId = builder.instanceId;
@@ -122,7 +198,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static FeeOfInstance create() {
+        public static FeeOfInstances create() {
             return builder().build();
         }
 
@@ -152,6 +228,15 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             private String fee; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FeeOfInstances model) {
+                this.currency = model.currency;
+                this.fee = model.fee;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * Currency.
              */
@@ -173,53 +258,6 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
-                return this;
-            }
-
-            public FeeOfInstance build() {
-                return new FeeOfInstance(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ModifyRCInstanceChargeTypeResponseBody} extends {@link TeaModel}
-     *
-     * <p>ModifyRCInstanceChargeTypeResponseBody</p>
-     */
-    public static class FeeOfInstances extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FeeOfInstance")
-        private java.util.List<FeeOfInstance> feeOfInstance;
-
-        private FeeOfInstances(Builder builder) {
-            this.feeOfInstance = builder.feeOfInstance;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FeeOfInstances create() {
-            return builder().build();
-        }
-
-        /**
-         * @return feeOfInstance
-         */
-        public java.util.List<FeeOfInstance> getFeeOfInstance() {
-            return this.feeOfInstance;
-        }
-
-        public static final class Builder {
-            private java.util.List<FeeOfInstance> feeOfInstance; 
-
-            /**
-             * FeeOfInstance.
-             */
-            public Builder feeOfInstance(java.util.List<FeeOfInstance> feeOfInstance) {
-                this.feeOfInstance = feeOfInstance;
                 return this;
             }
 

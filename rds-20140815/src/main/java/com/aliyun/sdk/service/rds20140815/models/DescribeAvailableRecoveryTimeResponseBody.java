@@ -48,6 +48,10 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return crossBackupId
      */
@@ -89,6 +93,17 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         private String recoveryEndTime; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableRecoveryTimeResponseBody model) {
+            this.crossBackupId = model.crossBackupId;
+            this.recoveryBeginTime = model.recoveryBeginTime;
+            this.recoveryEndTime = model.recoveryEndTime;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the cross-region data backup file.</p>

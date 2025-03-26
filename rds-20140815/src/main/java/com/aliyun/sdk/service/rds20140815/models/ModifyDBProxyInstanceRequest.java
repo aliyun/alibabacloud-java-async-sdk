@@ -97,7 +97,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -463,6 +463,15 @@ public class ModifyDBProxyInstanceRequest extends Request {
             private String nodeCounts; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBProxyNodes model) {
+                this.cpuCores = model.cpuCores;
+                this.nodeCounts = model.nodeCounts;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of cpu cores for the node, valid values: <strong>1</strong> to <strong>16</strong>.</p>
              * <blockquote>
@@ -568,6 +577,15 @@ public class ModifyDBProxyInstanceRequest extends Request {
             private String destVSwitchId; 
             private String destVpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrateAZ model) {
+                this.dbProxyEndpointId = model.dbProxyEndpointId;
+                this.destVSwitchId = model.destVSwitchId;
+                this.destVpcId = model.destVpcId;
+            } 
+
             /**
              * <p>The proxy connection address ID. You can obtain it through the DescribeDBProxyEndpoint interface.</p>
              * <blockquote>
@@ -597,7 +615,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
             }
 
             /**
-             * destVpcId.
+             * <p>The target vpc id corresponding to the proxy instance migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2vcicu73rdylp****</p>
              */
             public Builder destVpcId(String destVpcId) {
                 this.destVpcId = destVpcId;

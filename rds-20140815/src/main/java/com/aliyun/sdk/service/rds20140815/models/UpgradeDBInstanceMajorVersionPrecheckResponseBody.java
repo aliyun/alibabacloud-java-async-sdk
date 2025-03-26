@@ -44,6 +44,10 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -77,6 +81,16 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         private String requestId; 
         private String targetMajorVersion; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeDBInstanceMajorVersionPrecheckResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.targetMajorVersion = model.targetMajorVersion;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The instance name.</p>

@@ -52,6 +52,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalFileSize; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBinlogFilesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalFileSize = model.totalFileSize;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of the log file.</p>
@@ -311,6 +327,22 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             private String logFileName; 
             private String remoteStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(BinLogFile model) {
+                this.checksum = model.checksum;
+                this.downloadLink = model.downloadLink;
+                this.fileSize = model.fileSize;
+                this.hostInstanceID = model.hostInstanceID;
+                this.intranetDownloadLink = model.intranetDownloadLink;
+                this.linkExpiredTime = model.linkExpiredTime;
+                this.logBeginTime = model.logBeginTime;
+                this.logEndTime = model.logEndTime;
+                this.logFileName = model.logFileName;
+                this.remoteStatus = model.remoteStatus;
+            } 
+
             /**
              * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
              * 
@@ -471,6 +503,13 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BinLogFile> binLogFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.binLogFile = model.binLogFile;
+            } 
 
             /**
              * BinLogFile.

@@ -44,6 +44,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         private String ipHostPairNum; 
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDTCSecurityIpHostsForSQLServerResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.ipHostPairNum = model.ipHostPairNum;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -169,6 +183,14 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
             private String securityIpHosts; 
             private String whitelistGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(WhiteListGroups model) {
+                this.securityIpHosts = model.securityIpHosts;
+                this.whitelistGroupName = model.whitelistGroupName;
+            } 
+
             /**
              * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: <code>IP address,Hostname</code>. Multiple values are separated with semicolons (;).</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<WhiteListGroups> whiteListGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.whiteListGroups = model.whiteListGroups;
+            } 
 
             /**
              * WhiteListGroups.

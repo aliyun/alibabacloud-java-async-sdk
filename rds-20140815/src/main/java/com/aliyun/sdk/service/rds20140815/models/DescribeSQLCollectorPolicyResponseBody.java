@@ -40,6 +40,10 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
         private String requestId; 
         private String SQLCollectorStatus; 
         private Integer storagePeriod; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLCollectorPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.SQLCollectorStatus = model.SQLCollectorStatus;
+            this.storagePeriod = model.storagePeriod;
+        } 
 
         /**
          * <p>The request ID.</p>

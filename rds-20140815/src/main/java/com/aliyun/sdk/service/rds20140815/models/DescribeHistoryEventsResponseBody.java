@@ -48,6 +48,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryEventsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The events.</p>
@@ -491,6 +506,39 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             private String sourceType; 
             private String startTime; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cmsProduct = model.cmsProduct;
+                this.dbType = model.dbType;
+                this.detailImpact = model.detailImpact;
+                this.detailReason = model.detailReason;
+                this.endTime = model.endTime;
+                this.eventCategory = model.eventCategory;
+                this.eventCode = model.eventCode;
+                this.eventDetail = model.eventDetail;
+                this.eventId = model.eventId;
+                this.eventImpact = model.eventImpact;
+                this.eventLevel = model.eventLevel;
+                this.eventReason = model.eventReason;
+                this.eventStatus = model.eventStatus;
+                this.eventType = model.eventType;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.handleStatus = model.handleStatus;
+                this.hasLifeCycle = model.hasLifeCycle;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isClosed = model.isClosed;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.sourceType = model.sourceType;
+                this.startTime = model.startTime;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The cloud service type of the application group. Valid values: <strong>web</strong> and native. The value web indicates a web application. The value <strong>native</strong> indicates a local application.</p>
@@ -920,6 +968,20 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             private String subject; 
             private String time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.data = model.data;
+                this.id = model.id;
+                this.region = model.region;
+                this.source = model.source;
+                this.specversion = model.specversion;
+                this.subject = model.subject;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The details of the data.</p>

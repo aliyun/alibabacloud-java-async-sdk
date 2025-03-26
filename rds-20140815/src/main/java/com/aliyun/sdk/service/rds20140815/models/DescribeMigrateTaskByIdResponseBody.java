@@ -68,6 +68,10 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupMode
      */
@@ -149,6 +153,22 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         private String migrateTaskId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMigrateTaskByIdResponseBody model) {
+            this.backupMode = model.backupMode;
+            this.createTime = model.createTime;
+            this.DBInstanceName = model.DBInstanceName;
+            this.DBName = model.DBName;
+            this.description = model.description;
+            this.endTime = model.endTime;
+            this.isDBReplaced = model.isDBReplaced;
+            this.migrateTaskId = model.migrateTaskId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The type of the migration task. Valid values:</p>

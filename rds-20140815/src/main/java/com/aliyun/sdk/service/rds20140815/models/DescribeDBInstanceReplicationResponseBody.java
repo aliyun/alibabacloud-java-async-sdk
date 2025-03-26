@@ -52,6 +52,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return externalReplication
      */
@@ -102,8 +106,20 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         private String replicationState; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceReplicationResponseBody model) {
+            this.externalReplication = model.externalReplication;
+            this.replicationDelay = model.replicationDelay;
+            this.replicationErrorMessage = model.replicationErrorMessage;
+            this.replicationSource = model.replicationSource;
+            this.replicationState = model.replicationState;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Indicates whether to enable the native replication mode. Valid values:</p>
+         * <p>Indicates whether the native replication mods is enabled. Valid values:</p>
          * <ul>
          * <li><strong>ON</strong></li>
          * <li><strong>OFF</strong></li>
@@ -152,6 +168,12 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
 
         /**
          * <p>The current replication status. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Connecting</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Error</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running

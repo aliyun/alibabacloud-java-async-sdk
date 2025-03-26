@@ -52,6 +52,10 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalFileSize; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogBackupFilesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalFileSize = model.totalFileSize;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of log files.</p>
@@ -263,6 +279,18 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             private String logBeginTime; 
             private String logEndTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(BinLogFile model) {
+                this.downloadLink = model.downloadLink;
+                this.fileSize = model.fileSize;
+                this.intranetDownloadLink = model.intranetDownloadLink;
+                this.linkExpiredTime = model.linkExpiredTime;
+                this.logBeginTime = model.logBeginTime;
+                this.logEndTime = model.logEndTime;
+            } 
+
             /**
              * <p>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BinLogFile> binLogFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.binLogFile = model.binLogFile;
+            } 
 
             /**
              * BinLogFile.

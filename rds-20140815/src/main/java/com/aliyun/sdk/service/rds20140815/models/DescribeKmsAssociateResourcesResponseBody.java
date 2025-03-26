@@ -40,6 +40,10 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associateDBInstances
      */
@@ -65,6 +69,15 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         private java.util.List<AssociateDBInstances> associateDBInstances; 
         private Boolean associateStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKmsAssociateResourcesResponseBody model) {
+            this.associateDBInstances = model.associateDBInstances;
+            this.associateStatus = model.associateStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the associated ApsaraDB RDS instances.</p>
@@ -173,6 +186,16 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             private String engine; 
             private String keyUsedBy; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociateDBInstances model) {
+                this.DBInstanceName = model.DBInstanceName;
+                this.engine = model.engine;
+                this.keyUsedBy = model.keyUsedBy;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The instance ID.</p>

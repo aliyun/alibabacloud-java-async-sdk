@@ -52,6 +52,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -101,6 +105,18 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCImageListResponseBody model) {
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the images.</p>
@@ -177,6 +193,102 @@ public class DescribeRCImageListResponseBody extends TeaModel {
      *
      * <p>DescribeRCImageListResponseBody</p>
      */
+    public static class DiskDeviceMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private String size;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private DiskDeviceMappings(Builder builder) {
+            this.device = builder.device;
+            this.size = builder.size;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return size
+         */
+        public String getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String device; 
+            private String size; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskDeviceMappings model) {
+                this.device = model.device;
+                this.size = model.size;
+                this.type = model.type;
+            } 
+
+            /**
+             * Device.
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(String size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DiskDeviceMappings build() {
+                return new DiskDeviceMappings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCImageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCImageListResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -186,6 +298,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
+        private java.util.List<DiskDeviceMappings> diskDeviceMappings;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -227,6 +342,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             this.architecture = builder.architecture;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.diskDeviceMappings = builder.diskDeviceMappings;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.imageVersion = builder.imageVersion;
@@ -268,6 +384,13 @@ public class DescribeRCImageListResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return diskDeviceMappings
+         */
+        public java.util.List<DiskDeviceMappings> getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         /**
@@ -358,6 +481,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             private String architecture; 
             private String creationTime; 
             private String description; 
+            private java.util.List<DiskDeviceMappings> diskDeviceMappings; 
             private String imageId; 
             private String imageName; 
             private String imageVersion; 
@@ -370,6 +494,28 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             private Long size; 
             private String status; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.architecture = model.architecture;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.diskDeviceMappings = model.diskDeviceMappings;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageVersion = model.imageVersion;
+                this.isPublic = model.isPublic;
+                this.isSupportRdsCustom = model.isSupportRdsCustom;
+                this.OSName = model.OSName;
+                this.OSNameEn = model.OSNameEn;
+                this.OSType = model.OSType;
+                this.platform = model.platform;
+                this.size = model.size;
+                this.status = model.status;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The image architecture. Valid values:</p>
@@ -405,6 +551,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DiskDeviceMappings.
+             */
+            public Builder diskDeviceMappings(java.util.List<DiskDeviceMappings> diskDeviceMappings) {
+                this.diskDeviceMappings = diskDeviceMappings;
                 return this;
             }
 

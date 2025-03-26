@@ -48,6 +48,10 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectionString
      */
@@ -89,6 +93,17 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         private String orderId; 
         private String port; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDdrInstanceResponseBody model) {
+            this.connectionString = model.connectionString;
+            this.DBInstanceId = model.DBInstanceId;
+            this.orderId = model.orderId;
+            this.port = model.port;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The endpoint that is used to connect to the destination instance.</p>

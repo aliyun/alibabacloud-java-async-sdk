@@ -135,7 +135,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -340,7 +340,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
         } 
 
         /**
-         * CausalConsistReadTimeout.
+         * <p>Consistency read timeout, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder causalConsistReadTimeout(String causalConsistReadTimeout) {
             this.putQueryParameter("CausalConsistReadTimeout", causalConsistReadTimeout);
@@ -645,7 +648,10 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeusejj******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

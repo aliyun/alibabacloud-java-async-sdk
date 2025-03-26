@@ -48,6 +48,10 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chargeType
      */
@@ -89,6 +93,17 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         private String expiredTime; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransformDBInstancePayTypeResponseBody model) {
+            this.chargeType = model.chargeType;
+            this.DBInstanceId = model.DBInstanceId;
+            this.expiredTime = model.expiredTime;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The payment type.</p>

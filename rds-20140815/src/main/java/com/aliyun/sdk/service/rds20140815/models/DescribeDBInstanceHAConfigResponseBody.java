@@ -48,6 +48,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         private HostInstanceInfos hostInstanceInfos; 
         private String requestId; 
         private String syncMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceHAConfigResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.HAMode = model.HAMode;
+            this.hostInstanceInfos = model.hostInstanceInfos;
+            this.requestId = model.requestId;
+            this.syncMode = model.syncMode;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -267,6 +282,19 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             private String syncStatus; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeInfo model) {
+                this.dataSyncTime = model.dataSyncTime;
+                this.logSyncTime = model.logSyncTime;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+                this.regionId = model.regionId;
+                this.syncStatus = model.syncStatus;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
@@ -392,6 +420,13 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NodeInfo> nodeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostInstanceInfos model) {
+                this.nodeInfo = model.nodeInfo;
+            } 
 
             /**
              * NodeInfo.

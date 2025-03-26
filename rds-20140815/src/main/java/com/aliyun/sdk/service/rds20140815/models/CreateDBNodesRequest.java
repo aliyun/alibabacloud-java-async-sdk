@@ -71,7 +71,7 @@ public class CreateDBNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -307,6 +307,15 @@ public class CreateDBNodesRequest extends Request {
             private String classCode; 
             private String vswitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNode model) {
+                this.classCode = model.classCode;
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The specification information of the node.</p>

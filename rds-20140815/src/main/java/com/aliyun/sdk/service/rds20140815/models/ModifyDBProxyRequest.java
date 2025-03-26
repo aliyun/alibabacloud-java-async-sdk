@@ -106,7 +106,7 @@ public class ModifyDBProxyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -522,6 +522,15 @@ public class ModifyDBProxyRequest extends Request {
             private String cpuCores; 
             private String nodeCounts; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBProxyNodes model) {
+                this.cpuCores = model.cpuCores;
+                this.nodeCounts = model.nodeCounts;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The number of CPU cores of the node. Valid values: <strong>1</strong> to <strong>16</strong>.</p>

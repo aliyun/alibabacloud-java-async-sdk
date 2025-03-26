@@ -44,6 +44,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceNetInfos
      */
@@ -77,6 +81,16 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String instanceNetworkType; 
         private String requestId; 
         private String securityIPMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceNetInfoResponseBody model) {
+            this.DBInstanceNetInfos = model.DBInstanceNetInfos;
+            this.instanceNetworkType = model.instanceNetworkType;
+            this.requestId = model.requestId;
+            this.securityIPMode = model.securityIPMode;
+        } 
 
         /**
          * <p>The information about the endpoints of the instance.</p>
@@ -213,6 +227,17 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String role; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceWeight model) {
+                this.availability = model.availability;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceType = model.DBInstanceType;
+                this.role = model.role;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The availability of the instance. Valid values:</p>
              * <ul>
@@ -315,6 +340,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBInstanceWeight> DBInstanceWeight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceWeights model) {
+                this.DBInstanceWeight = model.DBInstanceWeight;
+            } 
+
             /**
              * DBInstanceWeight.
              */
@@ -373,6 +405,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String securityIPGroupName; 
             private String securityIPs; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIPGroup model) {
+                this.securityIPGroupName = model.securityIPGroupName;
+                this.securityIPs = model.securityIPs;
+            } 
 
             /**
              * <p>The name of the IP address whitelist.</p>
@@ -434,6 +474,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SecurityIPGroup> securityIPGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIPGroups model) {
+                this.securityIPGroup = model.securityIPGroup;
+            } 
 
             /**
              * securityIPGroup.
@@ -649,6 +696,27 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String upgradeable; 
             private String VPCId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceNetInfo model) {
+                this.babelfishPort = model.babelfishPort;
+                this.connectionString = model.connectionString;
+                this.connectionStringType = model.connectionStringType;
+                this.DBInstanceWeights = model.DBInstanceWeights;
+                this.distributionType = model.distributionType;
+                this.expiredTime = model.expiredTime;
+                this.IPAddress = model.IPAddress;
+                this.IPType = model.IPType;
+                this.maxDelayTime = model.maxDelayTime;
+                this.PGBouncerPort = model.PGBouncerPort;
+                this.port = model.port;
+                this.securityIPGroups = model.securityIPGroups;
+                this.upgradeable = model.upgradeable;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
@@ -888,6 +956,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceNetInfos model) {
+                this.DBInstanceNetInfo = model.DBInstanceNetInfo;
+            } 
 
             /**
              * DBInstanceNetInfo.

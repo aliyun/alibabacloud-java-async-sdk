@@ -44,6 +44,10 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -77,6 +81,16 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         private String requestId; 
         private Long taskId; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCloudMigrationTaskResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The name of the instance.</p>

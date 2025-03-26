@@ -44,6 +44,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class CreateDBNodesResponseBody extends TeaModel {
         private String nodeIds; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDBNodesResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.nodeIds = model.nodeIds;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the instance.</p>

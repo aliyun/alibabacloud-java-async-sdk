@@ -60,6 +60,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -125,6 +129,20 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeModifyParameterLogResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -297,6 +315,17 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String parameterName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterChangeLog model) {
+                this.modifyTime = model.modifyTime;
+                this.newParameterValue = model.newParameterValue;
+                this.oldParameterValue = model.oldParameterValue;
+                this.parameterName = model.parameterName;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
@@ -394,6 +423,13 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ParameterChangeLog> parameterChangeLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.parameterChangeLog = model.parameterChangeLog;
+            } 
 
             /**
              * ParameterChangeLog.

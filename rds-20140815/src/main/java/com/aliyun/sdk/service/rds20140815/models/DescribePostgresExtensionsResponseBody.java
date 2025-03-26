@@ -44,6 +44,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return installedExtensions
      */
@@ -77,6 +81,16 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         private java.util.Map<String, ?> overview; 
         private String requestId; 
         private java.util.List<UninstalledExtensions> uninstalledExtensions; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePostgresExtensionsResponseBody model) {
+            this.installedExtensions = model.installedExtensions;
+            this.overview = model.overview;
+            this.requestId = model.requestId;
+            this.uninstalledExtensions = model.uninstalledExtensions;
+        } 
 
         /**
          * <p>The list of extensions that are installed on the specified database.</p>
@@ -249,6 +263,21 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String priority; 
             private String requires; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstalledExtensions model) {
+                this.category = model.category;
+                this.comment = model.comment;
+                this.defaultVersion = model.defaultVersion;
+                this.installedVersion = model.installedVersion;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.requires = model.requires;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The category of the extension.</p>
@@ -503,6 +532,21 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String priority; 
             private String requires; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(UninstalledExtensions model) {
+                this.category = model.category;
+                this.comment = model.comment;
+                this.defaultVersion = model.defaultVersion;
+                this.installedVersion = model.installedVersion;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.requires = model.requires;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The category of the extension.</p>

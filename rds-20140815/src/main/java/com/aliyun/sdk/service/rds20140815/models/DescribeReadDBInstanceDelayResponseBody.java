@@ -48,6 +48,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -89,6 +93,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         private Items items; 
         private String readDBInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeReadDBInstanceDelayResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.delayTime = model.delayTime;
+            this.items = model.items;
+            this.readDBInstanceId = model.readDBInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The primary instance ID.</p>
@@ -180,6 +195,13 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> readDBInstanceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadDBInstanceNames model) {
+                this.readDBInstanceName = model.readDBInstanceName;
+            } 
+
             /**
              * ReadDBInstanceName.
              */
@@ -226,6 +248,13 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> readDelayTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadDelayTimes model) {
+                this.readDelayTime = model.readDelayTime;
+            } 
 
             /**
              * ReadDelayTime.
@@ -358,6 +387,20 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private String writeLag; 
             private String writeLatency; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadonlyInstanceDelay model) {
+                this.flushLag = model.flushLag;
+                this.flushLatency = model.flushLatency;
+                this.readDBInstanceName = model.readDBInstanceName;
+                this.replayLag = model.replayLag;
+                this.replayLatency = model.replayLatency;
+                this.sendLatency = model.sendLatency;
+                this.writeLag = model.writeLag;
+                this.writeLatency = model.writeLatency;
+            } 
+
             /**
              * <p>The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.</p>
              * 
@@ -485,6 +528,13 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItemsReadonlyInstanceDelay model) {
+                this.readonlyInstanceDelay = model.readonlyInstanceDelay;
+            } 
+
             /**
              * ReadonlyInstanceDelay.
              */
@@ -568,6 +618,16 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private ReadDelayTimes readDelayTimes; 
             private ItemsReadonlyInstanceDelay readonlyInstanceDelay; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItemsItems model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.readDBInstanceNames = model.readDBInstanceNames;
+                this.readDelayTimes = model.readDelayTimes;
+                this.readonlyInstanceDelay = model.readonlyInstanceDelay;
+            } 
+
             /**
              * <p>The primary instance ID.</p>
              * 
@@ -644,6 +704,13 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ItemsItems> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.items = model.items;
+            } 
 
             /**
              * <p>The latency information.</p>

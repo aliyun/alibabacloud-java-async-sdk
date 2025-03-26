@@ -36,6 +36,10 @@ public class DescribeBackupDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databaseNames
      */
@@ -53,6 +57,14 @@ public class DescribeBackupDatabaseResponseBody extends TeaModel {
     public static final class Builder {
         private String databaseNames; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupDatabaseResponseBody model) {
+            this.databaseNames = model.databaseNames;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the database. Format: &quot;db1,db2&quot;.</p>

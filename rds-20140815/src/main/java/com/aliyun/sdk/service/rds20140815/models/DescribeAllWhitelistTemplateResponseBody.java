@@ -52,6 +52,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllWhitelistTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned. Valid values:</p>
@@ -267,6 +283,17 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private String templateName; 
             private Integer userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.id = model.id;
+                this.ips = model.ips;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The primary key of the data table.</p>
              * 
@@ -432,6 +459,19 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private java.util.List<Templates> templates; 
             private Integer totalPageNumbers; 
             private Integer totalRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currPageNumbers = model.currPageNumbers;
+                this.hasNext = model.hasNext;
+                this.hasPrev = model.hasPrev;
+                this.maxRecordsPerPage = model.maxRecordsPerPage;
+                this.templates = model.templates;
+                this.totalPageNumbers = model.totalPageNumbers;
+                this.totalRecords = model.totalRecords;
+            } 
 
             /**
              * <p>The page number.</p>

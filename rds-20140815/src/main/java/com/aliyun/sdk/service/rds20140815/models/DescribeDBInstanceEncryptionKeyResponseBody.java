@@ -68,6 +68,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creator
      */
@@ -149,6 +153,22 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         private String materialExpireTime; 
         private String origin; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceEncryptionKeyResponseBody model) {
+            this.creator = model.creator;
+            this.deleteDate = model.deleteDate;
+            this.description = model.description;
+            this.encryptionKey = model.encryptionKey;
+            this.encryptionKeyList = model.encryptionKeyList;
+            this.encryptionKeyStatus = model.encryptionKeyStatus;
+            this.keyUsage = model.keyUsage;
+            this.materialExpireTime = model.materialExpireTime;
+            this.origin = model.origin;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The user who created the key.</p>
@@ -418,6 +438,23 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
             private String materialExpireTime; 
             private String origin; 
             private String usedBy; 
+
+            private Builder() {
+            } 
+
+            private Builder(EncryptionKeyList model) {
+                this.aliasName = model.aliasName;
+                this.creator = model.creator;
+                this.deleteDate = model.deleteDate;
+                this.description = model.description;
+                this.encryptionKey = model.encryptionKey;
+                this.encryptionKeyStatus = model.encryptionKeyStatus;
+                this.keyType = model.keyType;
+                this.keyUsage = model.keyUsage;
+                this.materialExpireTime = model.materialExpireTime;
+                this.origin = model.origin;
+                this.usedBy = model.usedBy;
+            } 
 
             /**
              * <p>The alias of the key.</p>

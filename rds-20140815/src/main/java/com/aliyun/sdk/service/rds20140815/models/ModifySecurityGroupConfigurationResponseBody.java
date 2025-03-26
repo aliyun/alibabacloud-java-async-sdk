@@ -40,6 +40,10 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -65,6 +69,15 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         private String DBInstanceName; 
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySecurityGroupConfigurationResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -158,6 +171,15 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             private String regionId; 
             private String securityGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsSecurityGroupRelation model) {
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+            } 
+
             /**
              * <p>The network type of the ECS security group. Valid values:</p>
              * <ul>
@@ -233,6 +255,13 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.ecsSecurityGroupRelation = model.ecsSecurityGroupRelation;
+            } 
 
             /**
              * EcsSecurityGroupRelation.

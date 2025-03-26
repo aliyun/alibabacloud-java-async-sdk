@@ -40,6 +40,10 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -65,6 +69,15 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String requestId; 
         private String scope; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceMetricsResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+            this.scope = model.scope;
+        } 
 
         /**
          * <p>The instance ID.</p>

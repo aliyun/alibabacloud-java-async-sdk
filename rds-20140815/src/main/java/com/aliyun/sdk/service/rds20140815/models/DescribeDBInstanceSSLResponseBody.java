@@ -112,6 +112,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ACL
      */
@@ -281,6 +285,33 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String serverCert; 
         private String serverKey; 
         private String tlsVersion; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceSSLResponseBody model) {
+            this.ACL = model.ACL;
+            this.CAType = model.CAType;
+            this.clientCACert = model.clientCACert;
+            this.clientCACertExpireTime = model.clientCACertExpireTime;
+            this.clientCertRevocationList = model.clientCertRevocationList;
+            this.connectionString = model.connectionString;
+            this.forceEncryption = model.forceEncryption;
+            this.lastModifyStatus = model.lastModifyStatus;
+            this.modifyStatusReason = model.modifyStatusReason;
+            this.replicationACL = model.replicationACL;
+            this.requestId = model.requestId;
+            this.requireUpdate = model.requireUpdate;
+            this.requireUpdateItem = model.requireUpdateItem;
+            this.requireUpdateReason = model.requireUpdateReason;
+            this.SSLCreateTime = model.SSLCreateTime;
+            this.SSLEnabled = model.SSLEnabled;
+            this.SSLExpireTime = model.SSLExpireTime;
+            this.serverCAUrl = model.serverCAUrl;
+            this.serverCert = model.serverCert;
+            this.serverKey = model.serverKey;
+            this.tlsVersion = model.tlsVersion;
+        } 
 
         /**
          * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>

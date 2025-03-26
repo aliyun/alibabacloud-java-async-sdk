@@ -40,6 +40,10 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Responses> responses; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachRCInstancesResponseBody model) {
+            this.requestId = model.requestId;
+            this.responses = model.responses;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -157,6 +170,15 @@ public class AttachRCInstancesResponseBody extends TeaModel {
             private String code; 
             private String instanceId; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Responses model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The HTTP status code returned.</p>

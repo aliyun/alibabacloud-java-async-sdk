@@ -96,7 +96,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -436,6 +436,15 @@ public class CreateDBInstanceEndpointRequest extends Request {
             private String DBInstanceId; 
             private String nodeId; 
             private Long weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeItems model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.nodeId = model.nodeId;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>

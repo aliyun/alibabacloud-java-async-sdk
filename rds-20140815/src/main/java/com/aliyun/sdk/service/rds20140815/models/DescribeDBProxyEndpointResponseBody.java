@@ -104,6 +104,10 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return causalConsistReadTimeout
      */
@@ -258,8 +262,36 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         private String readOnlyInstanceWeight; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBProxyEndpointResponseBody model) {
+            this.causalConsistReadTimeout = model.causalConsistReadTimeout;
+            this.DBProxyConnectString = model.DBProxyConnectString;
+            this.DBProxyConnectStringNetType = model.DBProxyConnectStringNetType;
+            this.DBProxyConnectStringPort = model.DBProxyConnectStringPort;
+            this.DBProxyEndpointId = model.DBProxyEndpointId;
+            this.DBProxyEndpointMinSlaveCount = model.DBProxyEndpointMinSlaveCount;
+            this.DBProxyEngineType = model.DBProxyEngineType;
+            this.DBProxyFeatures = model.DBProxyFeatures;
+            this.DBProxyNodes = model.DBProxyNodes;
+            this.dbProxyEndpointAliases = model.dbProxyEndpointAliases;
+            this.dbProxyEndpointReadWriteMode = model.dbProxyEndpointReadWriteMode;
+            this.dbProxyEndpointVpcId = model.dbProxyEndpointVpcId;
+            this.dbProxyEndpointVswitchId = model.dbProxyEndpointVswitchId;
+            this.dbProxyEndpointZoneId = model.dbProxyEndpointZoneId;
+            this.endpointConnectItems = model.endpointConnectItems;
+            this.readOnlyInstanceDistributionType = model.readOnlyInstanceDistributionType;
+            this.readOnlyInstanceMaxDelayTime = model.readOnlyInstanceMaxDelayTime;
+            this.readOnlyInstanceWeight = model.readOnlyInstanceWeight;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CausalConsistReadTimeout.
+         * <p>The consistency read timeout period. Unit: milliseconds. Default value: <strong>10</strong> Unit: milliseconds. Valid values: <strong>0 to 60000</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder causalConsistReadTimeout(String causalConsistReadTimeout) {
             this.causalConsistReadTimeout = causalConsistReadTimeout;
@@ -343,6 +375,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          * <li><strong>ConnectionPersist</strong>: the status of the connection pooling feature. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</li>
          * <li><strong>ReadWriteSpliting</strong>: the status of the read/write splitting feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
          * <li><strong>AZProximityAccess</strong>: the status of the nearest access feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
+         * <li><strong>CausalConsistRead</strong>: the read consistency settings. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates eventual consistency. The value 1 indicates session consistency. The value 2 indicates global consistency.</li>
          * <li><strong>PinPreparedStmt</strong>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</li>
          * </ul>
          * <blockquote>
@@ -392,7 +425,10 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * DbProxyEndpointVpcId.
+         * <p>The virtual private cloud (VPC) ID of the proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-****</p>
          */
         public Builder dbProxyEndpointVpcId(String dbProxyEndpointVpcId) {
             this.dbProxyEndpointVpcId = dbProxyEndpointVpcId;
@@ -546,6 +582,15 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
             private String nodeId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBProxyNodesDBProxyNodes model) {
+                this.cpuCores = model.cpuCores;
+                this.nodeId = model.nodeId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of CPU cores of the node.</p>
              * 
@@ -618,6 +663,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBProxyNodes model) {
+                this.DBProxyNodes = model.DBProxyNodes;
+            } 
+
             /**
              * <p>The proxy nodes that are associated with the proxy terminal.</p>
              */
@@ -688,6 +740,15 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
             private String dbProxyEndpointConnectString; 
             private String dbProxyEndpointNetType; 
             private String dbProxyEndpointPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointConnectItemsEndpointConnectItems model) {
+                this.dbProxyEndpointConnectString = model.dbProxyEndpointConnectString;
+                this.dbProxyEndpointNetType = model.dbProxyEndpointNetType;
+                this.dbProxyEndpointPort = model.dbProxyEndpointPort;
+            } 
 
             /**
              * <p>The proxy endpoint queried.</p>
@@ -765,6 +826,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EndpointConnectItemsEndpointConnectItems> endpointConnectItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointConnectItems model) {
+                this.endpointConnectItems = model.endpointConnectItems;
+            } 
 
             /**
              * <p>An array that consists of the information about the proxy endpoint.</p>

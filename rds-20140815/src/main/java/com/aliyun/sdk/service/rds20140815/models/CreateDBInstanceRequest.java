@@ -337,7 +337,7 @@ public class CreateDBInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -2032,6 +2032,16 @@ public class CreateDBInstanceRequest extends Request {
             private Double minCapacity; 
             private Boolean switchForce; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfig model) {
+                this.autoPause = model.autoPause;
+                this.maxCapacity = model.maxCapacity;
+                this.minCapacity = model.minCapacity;
+                this.switchForce = model.switchForce;
+            } 
+
             /**
              * <p>Specifies whether to enable the automatic startup and stop feature for the serverless instance. Valid values:</p>
              * <ul>
@@ -2161,6 +2171,14 @@ public class CreateDBInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. You can use this parameter to add tags to the instance.</p>

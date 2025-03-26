@@ -48,6 +48,10 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLLogRecordsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details about each SQL audit log entry.</p>
@@ -264,6 +279,20 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             private String threadID; 
             private Long totalExecutionTimes; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLRecord model) {
+                this.accountName = model.accountName;
+                this.DBName = model.DBName;
+                this.executeTime = model.executeTime;
+                this.hostAddress = model.hostAddress;
+                this.returnRowCounts = model.returnRowCounts;
+                this.SQLText = model.SQLText;
+                this.threadID = model.threadID;
+                this.totalExecutionTimes = model.totalExecutionTimes;
+            } 
+
             /**
              * <p>The username of the account that is recorded in the SQL audit log entry.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SQLRecord> SQLRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQLRecord = model.SQLRecord;
+            } 
 
             /**
              * SQLRecord.

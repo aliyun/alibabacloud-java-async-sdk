@@ -64,6 +64,10 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -137,6 +141,21 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogsResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.endTime = model.endTime;
+            this.engine = model.engine;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The ID of the instance.</p>
@@ -824,6 +843,59 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
             private Long totalPhysicalReadCounts; 
             private Long totalRowsAffectedCounts; 
 
+            private Builder() {
+            } 
+
+            private Builder(SQLSlowLog model) {
+                this.avgExecutionTime = model.avgExecutionTime;
+                this.avgIOWriteCounts = model.avgIOWriteCounts;
+                this.avgLastRowsAffectedCounts = model.avgLastRowsAffectedCounts;
+                this.avgLogicalReadCounts = model.avgLogicalReadCounts;
+                this.avgPhysicalReadCounts = model.avgPhysicalReadCounts;
+                this.avgRowsAffectedCounts = model.avgRowsAffectedCounts;
+                this.createTime = model.createTime;
+                this.DBName = model.DBName;
+                this.maxExecutionTime = model.maxExecutionTime;
+                this.maxExecutionTimeMS = model.maxExecutionTimeMS;
+                this.maxIOWriteCounts = model.maxIOWriteCounts;
+                this.maxLastRowsAffectedCounts = model.maxLastRowsAffectedCounts;
+                this.maxLockTime = model.maxLockTime;
+                this.maxLockTimeMS = model.maxLockTimeMS;
+                this.maxLogicalReadCounts = model.maxLogicalReadCounts;
+                this.maxPhysicalReadCounts = model.maxPhysicalReadCounts;
+                this.maxRowsAffectedCounts = model.maxRowsAffectedCounts;
+                this.minIOWriteCounts = model.minIOWriteCounts;
+                this.minLastRowsAffectedCounts = model.minLastRowsAffectedCounts;
+                this.minLogicalReadCounts = model.minLogicalReadCounts;
+                this.minPhysicalReadCounts = model.minPhysicalReadCounts;
+                this.minRowsAffectedCounts = model.minRowsAffectedCounts;
+                this.mySQLTotalExecutionCounts = model.mySQLTotalExecutionCounts;
+                this.mySQLTotalExecutionTimes = model.mySQLTotalExecutionTimes;
+                this.parseMaxRowCount = model.parseMaxRowCount;
+                this.parseTotalRowCounts = model.parseTotalRowCounts;
+                this.reportTime = model.reportTime;
+                this.returnMaxRowCount = model.returnMaxRowCount;
+                this.returnTotalRowCounts = model.returnTotalRowCounts;
+                this.SQLHASH = model.SQLHASH;
+                this.SQLIdStr = model.SQLIdStr;
+                this.SQLServerAvgCpuTime = model.SQLServerAvgCpuTime;
+                this.SQLServerAvgExecutionTime = model.SQLServerAvgExecutionTime;
+                this.SQLServerMaxCpuTime = model.SQLServerMaxCpuTime;
+                this.SQLServerMinCpuTime = model.SQLServerMinCpuTime;
+                this.SQLServerMinExecutionTime = model.SQLServerMinExecutionTime;
+                this.SQLServerTotalCpuTime = model.SQLServerTotalCpuTime;
+                this.SQLServerTotalExecutionCounts = model.SQLServerTotalExecutionCounts;
+                this.SQLServerTotalExecutionTimes = model.SQLServerTotalExecutionTimes;
+                this.SQLText = model.SQLText;
+                this.slowLogId = model.slowLogId;
+                this.totalIOWriteCounts = model.totalIOWriteCounts;
+                this.totalLastRowsAffectedCounts = model.totalLastRowsAffectedCounts;
+                this.totalLockTimes = model.totalLockTimes;
+                this.totalLogicalReadCounts = model.totalLogicalReadCounts;
+                this.totalPhysicalReadCounts = model.totalPhysicalReadCounts;
+                this.totalRowsAffectedCounts = model.totalRowsAffectedCounts;
+            } 
+
             /**
              * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
              * <blockquote>
@@ -1451,6 +1523,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SQLSlowLog> SQLSlowLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.SQLSlowLog = model.SQLSlowLog;
+            } 
 
             /**
              * SQLSlowLog.

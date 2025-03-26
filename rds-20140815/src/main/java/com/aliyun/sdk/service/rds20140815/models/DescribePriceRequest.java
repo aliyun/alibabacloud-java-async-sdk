@@ -145,7 +145,7 @@ public class DescribePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -735,6 +735,14 @@ public class DescribePriceRequest extends Request {
             private String classCode; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNode model) {
+                this.classCode = model.classCode;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The instance type of the node.</p>
              * 
@@ -807,6 +815,14 @@ public class DescribePriceRequest extends Request {
         public static final class Builder {
             private Double maxCapacity; 
             private Double minCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfig model) {
+                this.maxCapacity = model.maxCapacity;
+                this.minCapacity = model.minCapacity;
+            } 
 
             /**
              * <p>The maximum number of RDS Capacity Units (RCUs).</p>

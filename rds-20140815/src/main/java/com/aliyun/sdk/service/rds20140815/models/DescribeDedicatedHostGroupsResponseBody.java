@@ -36,6 +36,10 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedHostGroups
      */
@@ -53,6 +57,14 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private DedicatedHostGroups dedicatedHostGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedHostGroupsResponseBody model) {
+            this.dedicatedHostGroups = model.dedicatedHostGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about dedicated clusters returned.</p>
@@ -110,6 +122,13 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> zoneIDList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneIDList model) {
+                this.zoneIDList = model.zoneIDList;
+            } 
 
             /**
              * ZoneIDList.
@@ -470,6 +489,39 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             private String VPCId; 
             private ZoneIDList zoneIDList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostGroupsDedicatedHostGroups model) {
+                this.allocationPolicy = model.allocationPolicy;
+                this.bastionInstanceId = model.bastionInstanceId;
+                this.cpuAllocateRation = model.cpuAllocateRation;
+                this.cpuAllocatedAmount = model.cpuAllocatedAmount;
+                this.cpuAllocationRatio = model.cpuAllocationRatio;
+                this.createTime = model.createTime;
+                this.dedicatedHostCountGroupByHostType = model.dedicatedHostCountGroupByHostType;
+                this.dedicatedHostGroupDesc = model.dedicatedHostGroupDesc;
+                this.dedicatedHostGroupId = model.dedicatedHostGroupId;
+                this.diskAllocateRation = model.diskAllocateRation;
+                this.diskAllocatedAmount = model.diskAllocatedAmount;
+                this.diskAllocationRatio = model.diskAllocationRatio;
+                this.diskUsedAmount = model.diskUsedAmount;
+                this.diskUtility = model.diskUtility;
+                this.engine = model.engine;
+                this.hostNumber = model.hostNumber;
+                this.hostReplacePolicy = model.hostReplacePolicy;
+                this.instanceNumber = model.instanceNumber;
+                this.memAllocateRation = model.memAllocateRation;
+                this.memAllocatedAmount = model.memAllocatedAmount;
+                this.memAllocationRatio = model.memAllocationRatio;
+                this.memUsedAmount = model.memUsedAmount;
+                this.memUtility = model.memUtility;
+                this.openPermission = model.openPermission;
+                this.text = model.text;
+                this.VPCId = model.VPCId;
+                this.zoneIDList = model.zoneIDList;
+            } 
+
             /**
              * <p>The policy based on which the system allocates resources in the dedicated cluster. Valid values:</p>
              * <ul>
@@ -819,6 +871,13 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedHostGroups model) {
+                this.dedicatedHostGroups = model.dedicatedHostGroups;
+            } 
 
             /**
              * <p>The information about dedicated clusters returned.</p>

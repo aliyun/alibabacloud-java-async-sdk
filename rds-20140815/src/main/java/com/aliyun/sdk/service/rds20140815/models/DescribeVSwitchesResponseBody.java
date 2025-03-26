@@ -48,6 +48,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VSwitchs> vSwitchs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVSwitchesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vSwitchs = model.vSwitchs;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -264,6 +279,20 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vSwitchName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchs model) {
+                this.availableIpAddressCount = model.availableIpAddressCount;
+                this.cidrBlock = model.cidrBlock;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.izNo = model.izNo;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+            } 
 
             /**
              * <p>The number of available IP addresses in the vSwitch.</p>

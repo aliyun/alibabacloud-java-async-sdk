@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The available regions and zones.</p>
@@ -159,6 +171,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneId; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RDSRegion model) {
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
+
             /**
              * <p>The region name. The return value of this parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:</p>
              * <ul>
@@ -260,6 +283,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RDSRegion> RDSRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.RDSRegion = model.RDSRegion;
+            } 
 
             /**
              * RDSRegion.

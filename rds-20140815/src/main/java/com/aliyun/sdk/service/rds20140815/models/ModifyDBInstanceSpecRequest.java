@@ -191,7 +191,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1065,6 +1065,16 @@ public class ModifyDBInstanceSpecRequest extends Request {
             private Double maxCapacity; 
             private Double minCapacity; 
             private Boolean switchForce; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfiguration model) {
+                this.autoPause = model.autoPause;
+                this.maxCapacity = model.maxCapacity;
+                this.minCapacity = model.minCapacity;
+                this.switchForce = model.switchForce;
+            } 
 
             /**
              * <p>Specifies whether to enable the automatic start and stop feature for the serverless instance. Valid values:</p>

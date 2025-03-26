@@ -44,6 +44,10 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIdSets
      */
@@ -77,6 +81,16 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         private String nodePoolId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRCNodePoolResponseBody model) {
+            this.instanceIdSets = model.instanceIdSets;
+            this.nodePoolId = model.nodePoolId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance IDs.</p>

@@ -40,6 +40,10 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return migrationId
      */
@@ -65,6 +69,15 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
         private Integer migrationId; 
         private String requestId; 
         private Integer taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MigrateDBInstanceResponseBody model) {
+            this.migrationId = model.migrationId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.</p>

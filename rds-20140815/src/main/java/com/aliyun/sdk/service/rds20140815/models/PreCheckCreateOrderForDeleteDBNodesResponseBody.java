@@ -40,6 +40,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failures
      */
@@ -65,6 +69,15 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         private Failures failures; 
         private Boolean preCheckResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PreCheckCreateOrderForDeleteDBNodesResponseBody model) {
+            this.failures = model.failures;
+            this.preCheckResult = model.preCheckResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the failed order.</p>
@@ -146,6 +159,14 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailuresFailures model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The response code. Valid values:</p>
              * <ul>
@@ -213,6 +234,13 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FailuresFailures> failures; 
+
+            private Builder() {
+            } 
+
+            private Builder(Failures model) {
+                this.failures = model.failures;
+            } 
 
             /**
              * <p>The information about the failed order.</p>

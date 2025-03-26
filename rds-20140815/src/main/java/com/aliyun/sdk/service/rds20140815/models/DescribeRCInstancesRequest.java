@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIp")
+    private String hostIp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private String instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -28,6 +36,10 @@ public class DescribeRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIp")
+    private String publicIp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -43,9 +55,12 @@ public class DescribeRCInstancesRequest extends Request {
 
     private DescribeRCInstancesRequest(Builder builder) {
         super(builder);
+        this.hostIp = builder.hostIp;
         this.instanceId = builder.instanceId;
+        this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.publicIp = builder.publicIp;
         this.regionId = builder.regionId;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
@@ -59,9 +74,16 @@ public class DescribeRCInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return hostIp
+     */
+    public String getHostIp() {
+        return this.hostIp;
     }
 
     /**
@@ -69,6 +91,13 @@ public class DescribeRCInstancesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -83,6 +112,13 @@ public class DescribeRCInstancesRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return publicIp
+     */
+    public String getPublicIp() {
+        return this.publicIp;
     }
 
     /**
@@ -107,9 +143,12 @@ public class DescribeRCInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRCInstancesRequest, Builder> {
+        private String hostIp; 
         private String instanceId; 
+        private String instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String publicIp; 
         private String regionId; 
         private String tag; 
         private String vpcId; 
@@ -120,13 +159,25 @@ public class DescribeRCInstancesRequest extends Request {
 
         private Builder(DescribeRCInstancesRequest request) {
             super(request);
+            this.hostIp = request.hostIp;
             this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.publicIp = request.publicIp;
             this.regionId = request.regionId;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * HostIp.
+         */
+        public Builder hostIp(String hostIp) {
+            this.putQueryParameter("HostIp", hostIp);
+            this.hostIp = hostIp;
+            return this;
+        }
 
         /**
          * <p>The instance ID.</p>
@@ -137,6 +188,15 @@ public class DescribeRCInstancesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(String instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 
@@ -165,6 +225,15 @@ public class DescribeRCInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PublicIp.
+         */
+        public Builder publicIp(String publicIp) {
+            this.putQueryParameter("PublicIp", publicIp);
+            this.publicIp = publicIp;
             return this;
         }
 

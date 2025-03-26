@@ -52,6 +52,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -101,6 +105,18 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalEcsSnapshotSize; 
         private String totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalEcsSnapshotSize = model.totalEcsSnapshotSize;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The returned backup sets.</p>
@@ -227,6 +243,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String downloadLink; 
             private String intranetDownloadLink; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackupDownloadLinkByDB model) {
+                this.dataBase = model.dataBase;
+                this.downloadLink = model.downloadLink;
+                this.intranetDownloadLink = model.intranetDownloadLink;
+            } 
+
             /**
              * <p>The name of the database.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BackupDownloadLinkByDB> backupDownloadLinkByDB; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupBackupDownloadLinkByDB model) {
+                this.backupDownloadLinkByDB = model.backupDownloadLinkByDB;
+            } 
 
             /**
              * BackupDownloadLinkByDB.
@@ -621,6 +653,36 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String metaStatus; 
             private String storageClass; 
             private String storeStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupDownloadLinkByDB = model.backupDownloadLinkByDB;
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupInitiator = model.backupInitiator;
+                this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.checksum = model.checksum;
+                this.consistentTime = model.consistentTime;
+                this.copyOnlyBackup = model.copyOnlyBackup;
+                this.DBInstanceId = model.DBInstanceId;
+                this.encryption = model.encryption;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.hostInstanceID = model.hostInstanceID;
+                this.isAvail = model.isAvail;
+                this.metaStatus = model.metaStatus;
+                this.storageClass = model.storageClass;
+                this.storeStatus = model.storeStatus;
+            } 
 
             /**
              * <p>An array consisting of URLs from which you can download backup sets of individual databases.</p>
@@ -980,6 +1042,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.

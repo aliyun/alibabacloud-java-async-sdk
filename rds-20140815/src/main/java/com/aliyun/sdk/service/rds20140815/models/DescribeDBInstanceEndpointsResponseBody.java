@@ -36,6 +36,10 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceEndpointsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -171,6 +183,18 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddressItem model) {
+                this.connectionString = model.connectionString;
+                this.ipAddress = model.ipAddress;
+                this.ipType = model.ipType;
+                this.port = model.port;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The endpoints of the instance.</p>
              * 
@@ -280,6 +304,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AddressItem> addressItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddressItems model) {
+                this.addressItem = model.addressItem;
+            } 
+
             /**
              * AddressItem.
              */
@@ -350,6 +381,15 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String DBInstanceId; 
             private String nodeId; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeItem model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.nodeId = model.nodeId;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The instance ID.</p>
@@ -423,6 +463,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NodeItem> nodeItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeItems model) {
+                this.nodeItem = model.nodeItem;
+            } 
 
             /**
              * NodeItem.
@@ -519,6 +566,17 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private String endpointType; 
             private NodeItems nodeItems; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceEndpoint model) {
+                this.addressItems = model.addressItems;
+                this.endpointDescription = model.endpointDescription;
+                this.endpointId = model.endpointId;
+                this.endpointType = model.endpointType;
+                this.nodeItems = model.nodeItems;
+            } 
+
             /**
              * <p>The information about the endpoint.</p>
              */
@@ -611,6 +669,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBInstanceEndpoint> DBInstanceEndpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceEndpoints model) {
+                this.DBInstanceEndpoint = model.DBInstanceEndpoint;
+            } 
+
             /**
              * DBInstanceEndpoint.
              */
@@ -681,6 +746,15 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             private DBInstanceEndpoints DBInstanceEndpoints; 
             private String DBInstanceName; 
             private String ipVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.DBInstanceEndpoints = model.DBInstanceEndpoints;
+                this.DBInstanceName = model.DBInstanceName;
+                this.ipVersion = model.ipVersion;
+            } 
 
             /**
              * <p>The information of the endpoints of the instance.</p>

@@ -76,6 +76,10 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -173,6 +177,24 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         private String memoryClass; 
         private String referencePrice; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClassDetailsResponseBody model) {
+            this.category = model.category;
+            this.classCode = model.classCode;
+            this.classGroup = model.classGroup;
+            this.cpu = model.cpu;
+            this.DBInstanceStorageType = model.DBInstanceStorageType;
+            this.instructionSetArch = model.instructionSetArch;
+            this.maxConnections = model.maxConnections;
+            this.maxIOMBPS = model.maxIOMBPS;
+            this.maxIOPS = model.maxIOPS;
+            this.memoryClass = model.memoryClass;
+            this.referencePrice = model.referencePrice;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The RDS edition of the instance. Valid values:</p>

@@ -40,6 +40,10 @@ public class RunRCInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIdSets
      */
@@ -65,6 +69,15 @@ public class RunRCInstancesResponseBody extends TeaModel {
         private InstanceIdSets instanceIdSets; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunRCInstancesResponseBody model) {
+            this.instanceIdSets = model.instanceIdSets;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance IDs (InstanceIdSet).</p>
@@ -133,6 +146,13 @@ public class RunRCInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceIdSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIdSets model) {
+                this.instanceIdSet = model.instanceIdSet;
+            } 
 
             /**
              * InstanceIdSet.

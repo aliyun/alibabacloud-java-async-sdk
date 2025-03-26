@@ -44,6 +44,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         private String recoveryBeginTime; 
         private String recoveryEndTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLocalAvailableRecoveryTimeResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.recoveryBeginTime = model.recoveryBeginTime;
+            this.recoveryEndTime = model.recoveryEndTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>

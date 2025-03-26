@@ -44,6 +44,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDBInstanceTopologyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An internal parameter. You can ignore this parameter.</p>
@@ -192,6 +206,16 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String DBInstanceName; 
             private String netType; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Connections model) {
+                this.connectionString = model.connectionString;
+                this.DBInstanceName = model.DBInstanceName;
+                this.netType = model.netType;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The endpoint that is used to connect to the database instance.</p>
@@ -340,6 +364,18 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String role; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.DBInstanceName = model.DBInstanceName;
+                this.dedicatedHostGroupId = model.dedicatedHostGroupId;
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.nodeId = model.nodeId;
+                this.role = model.role;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ID of the instance.</p>
              * 
@@ -481,6 +517,15 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private java.util.List<Connections> connections; 
             private String DBInstanceName; 
             private java.util.List<Nodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.connections = model.connections;
+                this.DBInstanceName = model.DBInstanceName;
+                this.nodes = model.nodes;
+            } 
 
             /**
              * <p>The network connection information of the instance.</p>

@@ -40,6 +40,10 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return migrationId
      */
@@ -65,6 +69,15 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
         private Integer migrationId; 
         private String requestId; 
         private Integer taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RebuildDBInstanceResponseBody model) {
+            this.migrationId = model.migrationId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.</p>

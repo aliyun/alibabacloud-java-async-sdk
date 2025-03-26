@@ -44,6 +44,10 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         private String DTCSetResult; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDTCSecurityIpHostsForSQLServerResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.DTCSetResult = model.DTCSetResult;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The instance ID.</p>

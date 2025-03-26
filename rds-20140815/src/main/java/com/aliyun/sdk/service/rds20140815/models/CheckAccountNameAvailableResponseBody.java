@@ -36,6 +36,10 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CheckAccountNameAvailableResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String resourceGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckAccountNameAvailableResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+        } 
 
         /**
          * <p>The request ID.</p>

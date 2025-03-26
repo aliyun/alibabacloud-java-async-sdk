@@ -40,6 +40,10 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodes
      */
@@ -65,6 +69,15 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         private java.util.List<Nodes> nodes; 
         private Page page; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCClusterNodesResponseBody model) {
+            this.nodes = model.nodes;
+            this.page = model.page;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the nodes.</p>
@@ -262,6 +275,24 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             private String nodeStatus; 
             private String runtimeVersion; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.creationTime = model.creationTime;
+                this.dockerVersion = model.dockerVersion;
+                this.imageId = model.imageId;
+                this.instanceId = model.instanceId;
+                this.instanceRole = model.instanceRole;
+                this.ipAddresses = model.ipAddresses;
+                this.isAliyunNode = model.isAliyunNode;
+                this.nodeName = model.nodeName;
+                this.nodePoolId = model.nodePoolId;
+                this.nodeStatus = model.nodeStatus;
+                this.runtimeVersion = model.runtimeVersion;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The time when the node was created.</p>
@@ -475,6 +506,15 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

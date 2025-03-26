@@ -36,6 +36,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return modifyOrder
      */
@@ -53,6 +57,14 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ModifyOrder> modifyOrder; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCurrentModifyOrderResponseBody model) {
+            this.modifyOrder = model.modifyOrder;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The specification change order.</p>
@@ -206,6 +218,21 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
             private String status; 
             private String storage; 
             private String targetDBInstanceClass; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyOrder model) {
+                this.classGroup = model.classGroup;
+                this.cpu = model.cpu;
+                this.dbInstanceId = model.dbInstanceId;
+                this.effectiveTime = model.effectiveTime;
+                this.mark = model.mark;
+                this.memoryClass = model.memoryClass;
+                this.status = model.status;
+                this.storage = model.storage;
+                this.targetDBInstanceClass = model.targetDBInstanceClass;
+            } 
 
             /**
              * <p>The instance family of the instance.</p>

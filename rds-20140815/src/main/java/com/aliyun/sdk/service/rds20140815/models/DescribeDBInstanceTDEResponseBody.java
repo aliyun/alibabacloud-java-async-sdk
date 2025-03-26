@@ -48,6 +48,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         private String requestId; 
         private String TDEMode; 
         private String TDEStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceTDEResponseBody model) {
+            this.databases = model.databases;
+            this.encryptionKey = model.encryptionKey;
+            this.requestId = model.requestId;
+            this.TDEMode = model.TDEMode;
+            this.TDEStatus = model.TDEStatus;
+        } 
 
         /**
          * <p>The TDE status at the database level.</p>
@@ -204,6 +219,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             private String DBName; 
             private String TDEStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.DBName = model.DBName;
+                this.TDEStatus = model.TDEStatus;
+            } 
+
             /**
              * <p>The name of the database.</p>
              * 
@@ -268,6 +291,13 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Database> database; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.database = model.database;
+            } 
 
             /**
              * Database.

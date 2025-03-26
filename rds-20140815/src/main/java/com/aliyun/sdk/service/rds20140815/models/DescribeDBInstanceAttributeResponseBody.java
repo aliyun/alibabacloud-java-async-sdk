@@ -36,6 +36,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceAttributeResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of instances.</p>
@@ -122,6 +134,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String babelfishEnabled; 
             private String migrationMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(BabelfishConfig model) {
+                this.babelfishEnabled = model.babelfishEnabled;
+                this.migrationMode = model.migrationMode;
+            } 
 
             /**
              * <p>Indicates whether Babelfish is enabled.</p>
@@ -290,6 +310,21 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String nodeZoneId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBClusterNode model) {
+                this.classCode = model.classCode;
+                this.classType = model.classType;
+                this.cpu = model.cpu;
+                this.memory = model.memory;
+                this.nodeId = model.nodeId;
+                this.nodeRegionId = model.nodeRegionId;
+                this.nodeRole = model.nodeRole;
+                this.nodeZoneId = model.nodeZoneId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The node specification.</p>
              * 
@@ -443,6 +478,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DBClusterNode> DBClusterNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBClusterNodes model) {
+                this.DBClusterNode = model.DBClusterNode;
+            } 
+
             /**
              * DBClusterNode.
              */
@@ -489,6 +531,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> DBInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceIds model) {
+                this.DBInstanceId = model.DBInstanceId;
+            } 
 
             /**
              * DBInstanceId.
@@ -560,6 +609,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String accountSecurityPolicy; 
             private DBInstanceIds DBInstanceIds; 
             private String recoveryModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extra model) {
+                this.accountSecurityPolicy = model.accountSecurityPolicy;
+                this.DBInstanceIds = model.DBInstanceIds;
+                this.recoveryModel = model.recoveryModel;
+            } 
 
             /**
              * <p>The group policy of the instance account.</p>
@@ -634,6 +692,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyDBInstanceId model) {
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
              * <p>The read-only instance ID.</p>
              * 
@@ -683,6 +748,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReadOnlyDBInstanceId> readOnlyDBInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadOnlyDBInstanceIds model) {
+                this.readOnlyDBInstanceId = model.readOnlyDBInstanceId;
+            } 
 
             /**
              * ReadOnlyDBInstanceId.
@@ -766,6 +838,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Double scaleMax; 
             private Double scaleMin; 
             private Boolean switchForce; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfig model) {
+                this.autoPause = model.autoPause;
+                this.scaleMax = model.scaleMax;
+                this.scaleMin = model.scaleMin;
+                this.switchForce = model.switchForce;
+            } 
 
             /**
              * <p>Indicates whether the automatic start and stop feature is enabled for the serverless instance. Valid values:</p>
@@ -864,6 +946,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlaveZone model) {
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The zone ID.</p>
              * 
@@ -913,6 +1002,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SlaveZone> slaveZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlaveZones model) {
+                this.slaveZone = model.slaveZone;
+            } 
 
             /**
              * SlaveZone.
@@ -1944,6 +2040,95 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
             private String kindCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceAttribute model) {
+                this.accountMaxQuantity = model.accountMaxQuantity;
+                this.advancedFeatures = model.advancedFeatures;
+                this.autoUpgradeMinorVersion = model.autoUpgradeMinorVersion;
+                this.availabilityValue = model.availabilityValue;
+                this.babelfishConfig = model.babelfishConfig;
+                this.bpeEnabled = model.bpeEnabled;
+                this.burstingEnabled = model.burstingEnabled;
+                this.canTempUpgrade = model.canTempUpgrade;
+                this.category = model.category;
+                this.coldDataEnabled = model.coldDataEnabled;
+                this.collation = model.collation;
+                this.compressionMode = model.compressionMode;
+                this.compressionRatio = model.compressionRatio;
+                this.connectionMode = model.connectionMode;
+                this.connectionString = model.connectionString;
+                this.consoleVersion = model.consoleVersion;
+                this.creationTime = model.creationTime;
+                this.currentKernelVersion = model.currentKernelVersion;
+                this.DBClusterNodes = model.DBClusterNodes;
+                this.DBInstanceCPU = model.DBInstanceCPU;
+                this.DBInstanceClass = model.DBInstanceClass;
+                this.DBInstanceClassType = model.DBInstanceClassType;
+                this.DBInstanceDescription = model.DBInstanceDescription;
+                this.DBInstanceDiskUsed = model.DBInstanceDiskUsed;
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceMemory = model.DBInstanceMemory;
+                this.DBInstanceNetType = model.DBInstanceNetType;
+                this.DBInstanceStatus = model.DBInstanceStatus;
+                this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceStorageType = model.DBInstanceStorageType;
+                this.DBInstanceType = model.DBInstanceType;
+                this.DBMaxQuantity = model.DBMaxQuantity;
+                this.dedicatedHostGroupId = model.dedicatedHostGroupId;
+                this.deletionProtection = model.deletionProtection;
+                this.disasterRecoveryInfo = model.disasterRecoveryInfo;
+                this.disasterRecoveryInstances = model.disasterRecoveryInstances;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.extra = model.extra;
+                this.generalGroupName = model.generalGroupName;
+                this.guardDBInstanceId = model.guardDBInstanceId;
+                this.IPType = model.IPType;
+                this.incrementSourceDBInstanceId = model.incrementSourceDBInstanceId;
+                this.instanceNetworkType = model.instanceNetworkType;
+                this.instructionSetArch = model.instructionSetArch;
+                this.ioAccelerationEnabled = model.ioAccelerationEnabled;
+                this.latestKernelVersion = model.latestKernelVersion;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainTime = model.maintainTime;
+                this.masterInstanceId = model.masterInstanceId;
+                this.masterZone = model.masterZone;
+                this.maxConnections = model.maxConnections;
+                this.maxIOMBPS = model.maxIOMBPS;
+                this.maxIOPS = model.maxIOPS;
+                this.multipleTempUpgrade = model.multipleTempUpgrade;
+                this.optimizedWritesInfo = model.optimizedWritesInfo;
+                this.PGBouncerEnabled = model.PGBouncerEnabled;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.proxyType = model.proxyType;
+                this.readOnlyDBInstanceIds = model.readOnlyDBInstanceIds;
+                this.readonlyInstanceSQLDelayedTime = model.readonlyInstanceSQLDelayedTime;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityIPList = model.securityIPList;
+                this.securityIPMode = model.securityIPMode;
+                this.serverlessConfig = model.serverlessConfig;
+                this.slaveZones = model.slaveZones;
+                this.superPermissionMode = model.superPermissionMode;
+                this.supportCompression = model.supportCompression;
+                this.tempDBInstanceId = model.tempDBInstanceId;
+                this.tempUpgradeTimeEnd = model.tempUpgradeTimeEnd;
+                this.tempUpgradeTimeStart = model.tempUpgradeTimeStart;
+                this.timeZone = model.timeZone;
+                this.tips = model.tips;
+                this.tipsLevel = model.tipsLevel;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+                this.kindCode = model.kindCode;
+            } 
 
             /**
              * <p>The maximum number of accounts that can be created on the instance.</p>
@@ -3006,6 +3191,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceAttribute = model.DBInstanceAttribute;
+            } 
 
             /**
              * DBInstanceAttribute.

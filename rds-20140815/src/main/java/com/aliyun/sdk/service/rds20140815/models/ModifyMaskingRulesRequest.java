@@ -86,7 +86,7 @@ public class ModifyMaskingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -362,6 +362,15 @@ public class ModifyMaskingRulesRequest extends Request {
             private java.util.List<String> columns; 
             private java.util.List<String> databases; 
             private java.util.List<String> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleConfig model) {
+                this.columns = model.columns;
+                this.databases = model.databases;
+                this.tables = model.tables;
+            } 
 
             /**
              * Columns.

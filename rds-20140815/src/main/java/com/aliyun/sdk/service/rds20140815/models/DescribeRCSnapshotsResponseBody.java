@@ -48,6 +48,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCSnapshotsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -371,6 +386,29 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             private String sourceStorageType; 
             private String status; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.available = model.available;
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.encrypted = model.encrypted;
+                this.instantAccess = model.instantAccess;
+                this.progress = model.progress;
+                this.regionId = model.regionId;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.snapshotType = model.snapshotType;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceDiskSize = model.sourceDiskSize;
+                this.sourceDiskType = model.sourceDiskType;
+                this.sourceStorageType = model.sourceStorageType;
+                this.status = model.status;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>Indicates whether the snapshot can be shared and used to create or roll back a cloud disk. Valid values:</p>

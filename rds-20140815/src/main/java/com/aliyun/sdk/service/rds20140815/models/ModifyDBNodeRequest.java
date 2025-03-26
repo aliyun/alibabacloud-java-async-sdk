@@ -95,7 +95,7 @@ public class ModifyDBNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -450,6 +450,14 @@ public class ModifyDBNodeRequest extends Request {
         public static final class Builder {
             private String classCode; 
             private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNode model) {
+                this.classCode = model.classCode;
+                this.nodeId = model.nodeId;
+            } 
 
             /**
              * <p>The specification information about the node.</p>

@@ -36,6 +36,10 @@ public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return analyticDBCount
      */
@@ -53,6 +57,14 @@ public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel 
     public static final class Builder {
         private Integer analyticDBCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAnalyticdbByPrimaryDBInstanceResponseBody model) {
+            this.analyticDBCount = model.analyticDBCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of associated analytic instances.</p>

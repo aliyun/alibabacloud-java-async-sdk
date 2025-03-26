@@ -40,6 +40,10 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectionString
      */
@@ -65,6 +69,15 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
         private String connectionString; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBInstanceNetworkTypeResponseBody model) {
+            this.connectionString = model.connectionString;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The endpoint that is used to connect to the instance.</p>

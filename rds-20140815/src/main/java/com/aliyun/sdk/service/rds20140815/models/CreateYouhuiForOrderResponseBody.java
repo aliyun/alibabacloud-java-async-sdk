@@ -40,6 +40,10 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String youhuiId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateYouhuiForOrderResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.youhuiId = model.youhuiId;
+        } 
 
         /**
          * <p>The response parameters.</p>

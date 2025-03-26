@@ -36,6 +36,10 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CalculateDBInstanceWeightResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of information about the system-assigned read weight.</p>
@@ -147,6 +159,16 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             private String readonlyInstanceSQLDelayedTime; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceWeight model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceType = model.DBInstanceType;
+                this.readonlyInstanceSQLDelayedTime = model.readonlyInstanceSQLDelayedTime;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The instance ID</p>
              * 
@@ -233,6 +255,13 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceWeight> DBInstanceWeight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceWeight = model.DBInstanceWeight;
+            } 
 
             /**
              * DBInstanceWeight.

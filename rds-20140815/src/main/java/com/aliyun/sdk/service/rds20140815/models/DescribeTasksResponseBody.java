@@ -48,6 +48,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of the task execution.</p>
@@ -348,6 +363,27 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskErrorMessage; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskProgressInfo model) {
+                this.beginTime = model.beginTime;
+                this.currentStepName = model.currentStepName;
+                this.DBName = model.DBName;
+                this.expectedFinishTime = model.expectedFinishTime;
+                this.finishTime = model.finishTime;
+                this.progress = model.progress;
+                this.progressInfo = model.progressInfo;
+                this.remain = model.remain;
+                this.status = model.status;
+                this.stepProgressInfo = model.stepProgressInfo;
+                this.stepsInfo = model.stepsInfo;
+                this.taskAction = model.taskAction;
+                this.taskErrorCode = model.taskErrorCode;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC .</p>
              * 
@@ -566,6 +602,13 @@ public class DescribeTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskProgressInfo> taskProgressInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.taskProgressInfo = model.taskProgressInfo;
+            } 
 
             /**
              * TaskProgressInfo.

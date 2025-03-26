@@ -40,6 +40,10 @@ public class ListClassesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class ListClassesResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClassesResponseBody model) {
+            this.items = model.items;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of instance specifications.</p>
@@ -265,6 +278,24 @@ public class ListClassesResponseBody extends TeaModel {
             private String referencePrice; 
             private String category; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.classCode = model.classCode;
+                this.classGroup = model.classGroup;
+                this.cpu = model.cpu;
+                this.encryptedMemory = model.encryptedMemory;
+                this.instructionSetArch = model.instructionSetArch;
+                this.maxConnections = model.maxConnections;
+                this.maxIOMBPS = model.maxIOMBPS;
+                this.maxIOPS = model.maxIOPS;
+                this.memoryClass = model.memoryClass;
+                this.referencePrice = model.referencePrice;
+                this.category = model.category;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The code of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>

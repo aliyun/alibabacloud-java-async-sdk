@@ -52,6 +52,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configParameters
      */
@@ -101,6 +105,18 @@ public class DescribeParametersResponseBody extends TeaModel {
         private ParamGroupInfo paramGroupInfo; 
         private String requestId; 
         private RunningParameters runningParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersResponseBody model) {
+            this.configParameters = model.configParameters;
+            this.engine = model.engine;
+            this.engineVersion = model.engineVersion;
+            this.paramGroupInfo = model.paramGroupInfo;
+            this.requestId = model.requestId;
+            this.runningParameters = model.runningParameters;
+        } 
 
         /**
          * <p>The list of parameters that are being synchronized.</p>
@@ -224,6 +240,15 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterName; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceParameter model) {
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The description of the parameter.</p>
              * 
@@ -295,6 +320,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceParameter> DBInstanceParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigParameters model) {
+                this.DBInstanceParameter = model.DBInstanceParameter;
+            } 
 
             /**
              * DBInstanceParameter.
@@ -378,6 +410,16 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterGroupDesc; 
             private String parameterGroupName; 
             private String parameterGroupType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamGroupInfo model) {
+                this.paramGroupId = model.paramGroupId;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupName = model.parameterGroupName;
+                this.parameterGroupType = model.parameterGroupType;
+            } 
 
             /**
              * <p>The ID of the parameter template.</p>
@@ -510,6 +552,17 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
             private String parameterValueRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningParametersDBInstanceParameter model) {
+                this.parameterDefaultValue = model.parameterDefaultValue;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+                this.parameterValueRange = model.parameterValueRange;
+            } 
+
             /**
              * <p>The default value of the parameter.</p>
              * 
@@ -603,6 +656,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunningParameters model) {
+                this.DBInstanceParameter = model.DBInstanceParameter;
+            } 
 
             /**
              * DBInstanceParameter.

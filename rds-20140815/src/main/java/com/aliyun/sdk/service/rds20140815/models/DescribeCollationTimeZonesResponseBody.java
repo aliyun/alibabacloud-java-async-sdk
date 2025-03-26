@@ -36,6 +36,10 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collationTimeZones
      */
@@ -53,6 +57,14 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
     public static final class Builder {
         private CollationTimeZones collationTimeZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCollationTimeZonesResponseBody model) {
+            this.collationTimeZones = model.collationTimeZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of the character set collations and time zones that are available.</p>
@@ -135,6 +147,15 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             private String standardTimeOffset; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(CollationTimeZone model) {
+                this.description = model.description;
+                this.standardTimeOffset = model.standardTimeOffset;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CollationTimeZone> collationTimeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(CollationTimeZones model) {
+                this.collationTimeZone = model.collationTimeZone;
+            } 
 
             /**
              * CollationTimeZone.

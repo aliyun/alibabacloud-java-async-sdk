@@ -32,6 +32,10 @@ public class ModifyRCInstanceNetworkSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class ModifyRCInstanceNetworkSpecResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyRCInstanceNetworkSpecResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F347CA3-D6AB-5045-9026-24578801F781</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -191,7 +191,7 @@ public class CloneDBInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1046,6 +1046,16 @@ public class CloneDBInstanceRequest extends Request {
             private Double maxCapacity; 
             private Double minCapacity; 
             private Boolean switchForce; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerlessConfig model) {
+                this.autoPause = model.autoPause;
+                this.maxCapacity = model.maxCapacity;
+                this.minCapacity = model.minCapacity;
+                this.switchForce = model.switchForce;
+            } 
 
             /**
              * <p>Specifies whether to enable the automatic start and stop feature for the serverless ApsaraDB RDS for MySQL instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:</p>

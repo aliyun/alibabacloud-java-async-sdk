@@ -36,6 +36,10 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
     public static final class Builder {
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableCrossRegionResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of destination regions for cross-region backups.</p>
@@ -110,6 +122,13 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

@@ -36,6 +36,10 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SyncRCKeyPairResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the result.</p>
@@ -110,6 +122,13 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isSyncInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.isSyncInfo = model.isSyncInfo;
+            } 
 
             /**
              * <p>Indicates whether the synchronization succeeded. Valid values:</p>

@@ -48,6 +48,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventItems
      */
@@ -89,6 +93,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventsResponseBody model) {
+            this.eventItems = model.eventItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The events.</p>
@@ -312,6 +327,24 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(EventItemsEventItems model) {
+                this.callerUid = model.callerUid;
+                this.eventId = model.eventId;
+                this.eventName = model.eventName;
+                this.eventPayload = model.eventPayload;
+                this.eventReason = model.eventReason;
+                this.eventRecordTime = model.eventRecordTime;
+                this.eventTime = model.eventTime;
+                this.eventType = model.eventType;
+                this.eventUserType = model.eventUserType;
+                this.regionId = model.regionId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The ID of the user who executed the event.</p>
              * 
@@ -482,6 +515,13 @@ public class DescribeEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EventItemsEventItems> eventItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventItems model) {
+                this.eventItems = model.eventItems;
+            } 
 
             /**
              * <p>The events.</p>

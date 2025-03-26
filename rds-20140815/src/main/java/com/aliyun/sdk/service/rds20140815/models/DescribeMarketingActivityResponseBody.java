@@ -49,6 +49,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -90,6 +94,17 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMarketingActivityResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.bid = model.bid;
+            this.items = model.items;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
@@ -496,6 +511,39 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             private Long upgradeMemory; 
             private String upgradeReferencePrice; 
             private String upgradeStorageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.category = model.category;
+                this.chargeType = model.chargeType;
+                this.classCode = model.classCode;
+                this.classGroup = model.classGroup;
+                this.cpu = model.cpu;
+                this.diskSize = model.diskSize;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.maxConnections = model.maxConnections;
+                this.maxIombps = model.maxIombps;
+                this.maxIops = model.maxIops;
+                this.memory = model.memory;
+                this.storageType = model.storageType;
+                this.upgradeCategory = model.upgradeCategory;
+                this.upgradeClassCode = model.upgradeClassCode;
+                this.upgradeClassGroup = model.upgradeClassGroup;
+                this.upgradeCpu = model.upgradeCpu;
+                this.upgradeDescContent = model.upgradeDescContent;
+                this.upgradeDiskSize = model.upgradeDiskSize;
+                this.upgradeMaxConnections = model.upgradeMaxConnections;
+                this.upgradeMaxIombps = model.upgradeMaxIombps;
+                this.upgradeMaxIops = model.upgradeMaxIops;
+                this.upgradeMemory = model.upgradeMemory;
+                this.upgradeReferencePrice = model.upgradeReferencePrice;
+                this.upgradeStorageType = model.upgradeStorageType;
+            } 
 
             /**
              * <p>The RDS edition of the instance. Valid values:</p>

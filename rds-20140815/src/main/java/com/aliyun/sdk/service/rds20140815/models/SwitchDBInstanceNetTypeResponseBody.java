@@ -40,6 +40,10 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newConnectionString
      */
@@ -65,6 +69,15 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         private String newConnectionString; 
         private String oldConnectionString; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SwitchDBInstanceNetTypeResponseBody model) {
+            this.newConnectionString = model.newConnectionString;
+            this.oldConnectionString = model.oldConnectionString;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The endpoint that is used to connect to the instance after the switch of endpoints.</p>

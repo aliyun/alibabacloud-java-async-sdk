@@ -36,6 +36,10 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountMaskingPrivilegeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -132,6 +144,15 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             private String privilege; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserPrivilege model) {
+                this.expireTime = model.expireTime;
+                this.privilege = model.privilege;
+                this.userName = model.userName;
+            } 
+
             /**
              * ExpireTime.
              */
@@ -194,6 +215,13 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserPrivilege> userPrivilege; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.userPrivilege = model.userPrivilege;
+            } 
 
             /**
              * UserPrivilege.

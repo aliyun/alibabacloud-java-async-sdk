@@ -48,6 +48,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceByTagsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details about the instance.</p>
@@ -192,6 +207,14 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -253,6 +276,13 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -312,6 +342,14 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             private String DBInstanceId; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceTag model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The instance ID.</p>
              * 
@@ -369,6 +407,13 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstanceTag> DBInstanceTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceTag = model.DBInstanceTag;
+            } 
 
             /**
              * DBInstanceTag.

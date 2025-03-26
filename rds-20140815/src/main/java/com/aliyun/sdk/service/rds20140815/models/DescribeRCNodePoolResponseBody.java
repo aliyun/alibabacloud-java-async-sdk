@@ -36,6 +36,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodePoolList
      */
@@ -53,6 +57,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<NodePoolList> nodePoolList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCNodePoolResponseBody model) {
+            this.nodePoolList = model.nodePoolList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The node pool information.</p>
@@ -158,6 +170,17 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private String encrypted; 
             private String performanceLevel; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The type of the data disk. Set the value to <strong>cloud_essd</strong>, which indicates Enterprise SSDs (ESSDs).</p>
@@ -287,6 +310,15 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private String performanceLevel; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
             /**
              * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
              * 
@@ -376,6 +408,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag keys.</p>
@@ -785,6 +825,42 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private java.util.List<Tag> tag; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePoolList model) {
+                this.autoPay = model.autoPay;
+                this.autoRenew = model.autoRenew;
+                this.clusterId = model.clusterId;
+                this.createMode = model.createMode;
+                this.dataDisk = model.dataDisk;
+                this.deploymentSetId = model.deploymentSetId;
+                this.description = model.description;
+                this.hostName = model.hostName;
+                this.imageId = model.imageId;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.ioOptimized = model.ioOptimized;
+                this.keyPairName = model.keyPairName;
+                this.nodePoolId = model.nodePoolId;
+                this.nodePoolName = model.nodePoolName;
+                this.password = model.password;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityEnhancementStrategy = model.securityEnhancementStrategy;
+                this.securityGroupId = model.securityGroupId;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDisk = model.systemDisk;
+                this.tag = model.tag;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Indicates whether to enable automatic payment. Valid values:</p>

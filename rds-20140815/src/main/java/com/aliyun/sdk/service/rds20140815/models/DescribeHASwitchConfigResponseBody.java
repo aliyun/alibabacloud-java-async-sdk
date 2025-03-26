@@ -40,6 +40,10 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return HAConfig
      */
@@ -65,6 +69,15 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         private String HAConfig; 
         private String manualHATime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHASwitchConfigResponseBody model) {
+            this.HAConfig = model.HAConfig;
+            this.manualHATime = model.manualHATime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the automatic primary/secondary switchover feature. Valid values:</p>

@@ -52,6 +52,10 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyWhitelistTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned. Valid values:</p>
@@ -218,6 +234,13 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.status = model.status;
+            } 
 
             /**
              * <p>The status code returned. Valid values:</p>

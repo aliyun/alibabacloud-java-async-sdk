@@ -36,6 +36,10 @@ public class UpdateUserBackupFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupId
      */
@@ -53,6 +57,14 @@ public class UpdateUserBackupFileResponseBody extends TeaModel {
     public static final class Builder {
         private String backupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserBackupFileResponseBody model) {
+            this.backupId = model.backupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the backup file.</p>

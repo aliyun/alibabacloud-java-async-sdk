@@ -40,6 +40,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return paramGroup
      */
@@ -65,6 +69,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         private ParamGroup paramGroup; 
         private RelatedCustinsInfo relatedCustinsInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParameterGroupResponseBody model) {
+            this.paramGroup = model.paramGroup;
+            this.relatedCustinsInfo = model.relatedCustinsInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the parameter template.</p>
@@ -146,6 +159,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String paramName; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterDetail model) {
+                this.paramName = model.paramName;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
              * <p>The name of the parameter.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ParameterDetail> parameterDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamDetail model) {
+                this.parameterDetail = model.parameterDetail;
+            } 
 
             /**
              * ParameterDetail.
@@ -374,6 +402,23 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private Integer parameterGroupType; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterGroup model) {
+                this.createTime = model.createTime;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.forceRestart = model.forceRestart;
+                this.paramCounts = model.paramCounts;
+                this.paramDetail = model.paramDetail;
+                this.parameterGroupDesc = model.parameterGroupDesc;
+                this.parameterGroupId = model.parameterGroupId;
+                this.parameterGroupName = model.parameterGroupName;
+                this.parameterGroupType = model.parameterGroupType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the parameter template was created.</p>
              * 
@@ -540,6 +585,13 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ParameterGroup> parameterGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamGroup model) {
+                this.parameterGroup = model.parameterGroup;
+            } 
+
             /**
              * ParameterGroup.
              */
@@ -598,6 +650,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String appliedTime; 
             private String DBInstanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedCustinsInfoRelatedCustinsInfo model) {
+                this.appliedTime = model.appliedTime;
+                this.DBInstanceName = model.DBInstanceName;
+            } 
 
             /**
              * <p>The time when the parameter template was applied.</p>
@@ -659,6 +719,13 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedCustinsInfo model) {
+                this.relatedCustinsInfo = model.relatedCustinsInfo;
+            } 
 
             /**
              * <p>The information about the instance to which the parameter template is applied.</p>

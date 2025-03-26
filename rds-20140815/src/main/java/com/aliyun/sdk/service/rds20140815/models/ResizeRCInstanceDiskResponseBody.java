@@ -36,6 +36,10 @@ public class ResizeRCInstanceDiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class ResizeRCInstanceDiskResponseBody extends TeaModel {
     public static final class Builder {
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResizeRCInstanceDiskResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The order ID.</p>

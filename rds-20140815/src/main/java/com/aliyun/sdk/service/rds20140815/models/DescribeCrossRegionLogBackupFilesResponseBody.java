@@ -64,6 +64,10 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -137,6 +141,21 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCrossRegionLogBackupFilesResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.endTime = model.endTime;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -381,6 +400,22 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             private String logEndTime; 
             private String logFileName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Item model) {
+                this.crossBackupRegion = model.crossBackupRegion;
+                this.crossDownloadLink = model.crossDownloadLink;
+                this.crossIntranetDownloadLink = model.crossIntranetDownloadLink;
+                this.crossLogBackupId = model.crossLogBackupId;
+                this.crossLogBackupSize = model.crossLogBackupSize;
+                this.instanceId = model.instanceId;
+                this.linkExpiredTime = model.linkExpiredTime;
+                this.logBeginTime = model.logBeginTime;
+                this.logEndTime = model.logEndTime;
+                this.logFileName = model.logFileName;
+            } 
+
             /**
              * <p>The ID of the destination region within which the cross-region backup file is stored.</p>
              * 
@@ -529,6 +564,13 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Item> item; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.item = model.item;
+            } 
 
             /**
              * Item.

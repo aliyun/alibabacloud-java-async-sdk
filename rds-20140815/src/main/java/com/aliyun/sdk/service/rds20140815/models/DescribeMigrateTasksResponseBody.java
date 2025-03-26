@@ -52,6 +52,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -101,6 +105,18 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMigrateTasksResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -287,6 +303,20 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             private String migrateTaskId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrateTask model) {
+                this.backupMode = model.backupMode;
+                this.createTime = model.createTime;
+                this.DBName = model.DBName;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.isDBReplaced = model.isDBReplaced;
+                this.migrateTaskId = model.migrateTaskId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The migration task type. Valid values:</p>
              * <ul>
@@ -424,6 +454,13 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MigrateTask> migrateTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.migrateTask = model.migrateTask;
+            } 
 
             /**
              * MigrateTask.

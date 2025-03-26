@@ -144,6 +144,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return archiveBackupKeepCount
      */
@@ -377,6 +381,41 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Integer supportReleasedKeep; 
         private Integer supportVolumeShadowCopy; 
         private Long supportsHighFrequencyBackup; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.archiveBackupKeepCount = model.archiveBackupKeepCount;
+            this.archiveBackupKeepPolicy = model.archiveBackupKeepPolicy;
+            this.archiveBackupRetentionPeriod = model.archiveBackupRetentionPeriod;
+            this.backupInterval = model.backupInterval;
+            this.backupLog = model.backupLog;
+            this.backupMethod = model.backupMethod;
+            this.backupPriority = model.backupPriority;
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.category = model.category;
+            this.compressType = model.compressType;
+            this.enableBackupLog = model.enableBackupLog;
+            this.enableIncrementDataBackup = model.enableIncrementDataBackup;
+            this.enablePitrProtection = model.enablePitrProtection;
+            this.highSpaceUsageProtection = model.highSpaceUsageProtection;
+            this.localLogRetentionHours = model.localLogRetentionHours;
+            this.localLogRetentionSpace = model.localLogRetentionSpace;
+            this.logBackupFrequency = model.logBackupFrequency;
+            this.logBackupLocalRetentionNumber = model.logBackupLocalRetentionNumber;
+            this.logBackupRetentionPeriod = model.logBackupRetentionPeriod;
+            this.pitrRetentionPeriod = model.pitrRetentionPeriod;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.preferredNextBackupTime = model.preferredNextBackupTime;
+            this.releasedKeepPolicy = model.releasedKeepPolicy;
+            this.requestId = model.requestId;
+            this.supportModifyBackupPriority = model.supportModifyBackupPriority;
+            this.supportReleasedKeep = model.supportReleasedKeep;
+            this.supportVolumeShadowCopy = model.supportVolumeShadowCopy;
+            this.supportsHighFrequencyBackup = model.supportsHighFrequencyBackup;
+        } 
 
         /**
          * <p>The number of archived backup files that are retained.</p>

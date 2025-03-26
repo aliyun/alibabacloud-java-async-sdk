@@ -52,6 +52,10 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deploymentSets
      */
@@ -101,6 +105,18 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCDeploymentSetsResponseBody model) {
+            this.deploymentSets = model.deploymentSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the deployment set.</p>
@@ -227,6 +243,15 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             private Integer usedAmount; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Capacity model) {
+                this.availableAmount = model.availableAmount;
+                this.usedAmount = model.usedAmount;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The number of RDS Custom instances that reside in the zone and can be added to the deployment set.</p>
              * 
@@ -299,6 +324,13 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Capacity> capacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Capacities model) {
+                this.capacity = model.capacity;
+            } 
+
             /**
              * Capacity.
              */
@@ -345,6 +377,13 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
@@ -429,6 +468,16 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * ResourceId.
              */
@@ -499,6 +548,13 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -691,6 +747,25 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             private String strategy; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeploymentSet model) {
+                this.capacities = model.capacities;
+                this.createTime = model.createTime;
+                this.deploymentSetDescription = model.deploymentSetDescription;
+                this.deploymentSetId = model.deploymentSetId;
+                this.deploymentSetName = model.deploymentSetName;
+                this.deploymentStrategy = model.deploymentStrategy;
+                this.domain = model.domain;
+                this.granularity = model.granularity;
+                this.groupCount = model.groupCount;
+                this.instanceAmount = model.instanceAmount;
+                this.instanceIds = model.instanceIds;
+                this.strategy = model.strategy;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The details of the capacities of the deployment set. This parameter is valid only when the deployment set contains existing RDS Custom instances. The value contains the details of the capacities of the deployment set in different zones.</p>
              */
@@ -866,6 +941,13 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeploymentSet> deploymentSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentSets model) {
+                this.deploymentSet = model.deploymentSet;
+            } 
 
             /**
              * DeploymentSet.

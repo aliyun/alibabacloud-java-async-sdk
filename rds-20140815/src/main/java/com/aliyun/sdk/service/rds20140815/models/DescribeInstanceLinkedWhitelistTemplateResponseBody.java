@@ -52,6 +52,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceLinkedWhitelistTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code returned. Valid values:</p>
@@ -267,6 +283,17 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             private String templateName; 
             private Integer userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.id = model.id;
+                this.ips = model.ips;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The primary key of the data table.</p>
              * 
@@ -372,6 +399,14 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public static final class Builder {
             private String insName; 
             private java.util.List<Templates> templates; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.insName = model.insName;
+                this.templates = model.templates;
+            } 
 
             /**
              * <p>The instance name.</p>

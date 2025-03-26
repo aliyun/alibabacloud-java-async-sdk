@@ -40,6 +40,10 @@ public class DescribeRCClusterConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -65,6 +69,15 @@ public class DescribeRCClusterConfigResponseBody extends TeaModel {
         private String config; 
         private String expiration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCClusterConfigResponseBody model) {
+            this.config = model.config;
+            this.expiration = model.expiration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The kubeconfig file of the cluster.</p>

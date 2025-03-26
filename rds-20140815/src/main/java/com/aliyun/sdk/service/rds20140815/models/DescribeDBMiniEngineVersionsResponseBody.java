@@ -52,6 +52,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -101,6 +105,18 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         private Integer pageNumbers; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBMiniEngineVersionsResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.maxRecordsPerPage = model.maxRecordsPerPage;
+            this.minorVersionItems = model.minorVersionItems;
+            this.pageNumbers = model.pageNumbers;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -334,6 +350,24 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             private String releaseType; 
             private String statusDesc; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(MinorVersionItems model) {
+                this.communityMinorVersion = model.communityMinorVersion;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expireDate = model.expireDate;
+                this.expireStatus = model.expireStatus;
+                this.isHotfixVersion = model.isHotfixVersion;
+                this.minorVersion = model.minorVersion;
+                this.nodeType = model.nodeType;
+                this.releaseNote = model.releaseNote;
+                this.releaseType = model.releaseType;
+                this.statusDesc = model.statusDesc;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes for AliPG</a>.</p>

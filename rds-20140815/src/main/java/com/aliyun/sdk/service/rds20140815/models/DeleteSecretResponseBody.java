@@ -44,6 +44,10 @@ public class DeleteSecretResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class DeleteSecretResponseBody extends TeaModel {
         private String secretArn; 
         private String secretName; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteSecretResponseBody model) {
+            this.requestId = model.requestId;
+            this.secretArn = model.secretArn;
+            this.secretName = model.secretName;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request.</p>

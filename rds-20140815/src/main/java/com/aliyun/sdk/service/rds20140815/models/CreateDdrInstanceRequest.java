@@ -201,7 +201,7 @@ public class CreateDdrInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -529,7 +529,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * BackupSetRegion.
+         * <p>The region where the backup set is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder backupSetRegion(String backupSetRegion) {
             this.putQueryParameter("BackupSetRegion", backupSetRegion);

@@ -36,6 +36,10 @@ public class DescribeSlotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSlotsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Slots> slots; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlotsResponseBody model) {
+            this.requestId = model.requestId;
+            this.slots = model.slots;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,6 +206,20 @@ public class DescribeSlotsResponseBody extends TeaModel {
             private String subReplayLag; 
             private String temporary; 
             private String walDelay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Slots model) {
+                this.database = model.database;
+                this.plugin = model.plugin;
+                this.slotName = model.slotName;
+                this.slotStatus = model.slotStatus;
+                this.slotType = model.slotType;
+                this.subReplayLag = model.subReplayLag;
+                this.temporary = model.temporary;
+                this.walDelay = model.walDelay;
+            } 
 
             /**
              * <p>The name of the database in which the replication slot resides.</p>

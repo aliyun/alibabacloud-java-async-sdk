@@ -52,6 +52,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -101,6 +105,18 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         private PerformanceKeys performanceKeys; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBProxyPerformanceResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.DBProxyEngineType = model.DBProxyEngineType;
+            this.endTime = model.endTime;
+            this.performanceKeys = model.performanceKeys;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -215,6 +231,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private String date; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceValue model) {
+                this.date = model.date;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceValue> performanceValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.performanceValue = model.performanceValue;
+            } 
 
             /**
              * PerformanceValue.
@@ -359,6 +390,16 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private String valueFormat; 
             private Values values; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKey model) {
+                this.key = model.key;
+                this.service = model.service;
+                this.valueFormat = model.valueFormat;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The performance parameter.</p>
              * 
@@ -438,6 +479,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PerformanceKey> performanceKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKeys model) {
+                this.performanceKey = model.performanceKey;
+            } 
 
             /**
              * PerformanceKey.

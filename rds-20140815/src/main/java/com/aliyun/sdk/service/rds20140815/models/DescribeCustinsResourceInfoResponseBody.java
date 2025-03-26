@@ -36,6 +36,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustinsResourceInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -374,6 +386,35 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             private String originMaxConn; 
             private String originMaxIops; 
             private String originMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cpuAdjustDeadline = model.cpuAdjustDeadline;
+                this.cpuAdjustableMaxRatio = model.cpuAdjustableMaxRatio;
+                this.cpuAdjustableMaxValue = model.cpuAdjustableMaxValue;
+                this.cpuIncreaseRatio = model.cpuIncreaseRatio;
+                this.cpuIncreaseRatioValue = model.cpuIncreaseRatioValue;
+                this.DBInstanceId = model.DBInstanceId;
+                this.iopsAdjustableMaxValue = model.iopsAdjustableMaxValue;
+                this.maxConnAdjustDeadline = model.maxConnAdjustDeadline;
+                this.maxConnAdjustableMaxValue = model.maxConnAdjustableMaxValue;
+                this.maxConnIncreaseRatio = model.maxConnIncreaseRatio;
+                this.maxConnIncreaseRatioValue = model.maxConnIncreaseRatioValue;
+                this.maxIopsAdjustDeadline = model.maxIopsAdjustDeadline;
+                this.maxIopsIncreaseRatio = model.maxIopsIncreaseRatio;
+                this.maxIopsIncreaseRatioValue = model.maxIopsIncreaseRatioValue;
+                this.memAdjustableMaxRatio = model.memAdjustableMaxRatio;
+                this.memAdjustableMaxValue = model.memAdjustableMaxValue;
+                this.memoryAdjustDeadline = model.memoryAdjustDeadline;
+                this.memoryIncreaseRatio = model.memoryIncreaseRatio;
+                this.memoryIncreaseRatioValue = model.memoryIncreaseRatioValue;
+                this.originCpu = model.originCpu;
+                this.originMaxConn = model.originMaxConn;
+                this.originMaxIops = model.originMaxIops;
+                this.originMemory = model.originMemory;
+            } 
 
             /**
              * <p>The deadline for the CPU adjustment.</p>

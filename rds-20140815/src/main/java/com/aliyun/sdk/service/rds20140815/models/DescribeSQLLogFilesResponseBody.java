@@ -48,6 +48,10 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLLogFilesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>An array that consists of the returned audit log files.</p>
@@ -240,6 +255,18 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             private String logStartTime; 
             private String logStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogFile model) {
+                this.fileID = model.fileID;
+                this.logDownloadURL = model.logDownloadURL;
+                this.logEndTime = model.logEndTime;
+                this.logSize = model.logSize;
+                this.logStartTime = model.logStartTime;
+                this.logStatus = model.logStatus;
+            } 
+
             /**
              * <p>The file name.</p>
              * 
@@ -349,6 +376,13 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LogFile> logFile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.logFile = model.logFile;
+            } 
 
             /**
              * LogFile.

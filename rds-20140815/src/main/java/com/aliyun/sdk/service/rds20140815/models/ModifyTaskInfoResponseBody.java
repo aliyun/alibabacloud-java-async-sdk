@@ -44,6 +44,10 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -77,6 +81,16 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         private String errorTaskId; 
         private String requestId; 
         private String successCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyTaskInfoResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorTaskId = model.errorTaskId;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+        } 
 
         /**
          * <p>The error code.</p>

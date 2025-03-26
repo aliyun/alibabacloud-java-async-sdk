@@ -56,6 +56,10 @@ public class DescribeRCMetricListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeRCMetricListResponseBody extends TeaModel {
         private String period; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRCMetricListResponseBody model) {
+            this.code = model.code;
+            this.datapoints = model.datapoints;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.period = model.period;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>

@@ -44,6 +44,10 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceName
      */
@@ -77,6 +81,16 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         private String requestId; 
         private String targetMinorVersion; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeDBInstanceKernelVersionResponseBody model) {
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.targetMinorVersion = model.targetMinorVersion;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The ID of the instance.</p>

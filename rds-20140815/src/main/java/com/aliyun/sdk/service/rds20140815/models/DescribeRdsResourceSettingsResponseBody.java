@@ -36,6 +36,10 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return rdsInstanceResourceSettings
      */
@@ -53,6 +57,14 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
     public static final class Builder {
         private RdsInstanceResourceSettings rdsInstanceResourceSettings; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRdsResourceSettingsResponseBody model) {
+            this.rdsInstanceResourceSettings = model.rdsInstanceResourceSettings;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RdsInstanceResourceSettings.
@@ -204,6 +216,21 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             private String resourceNiche; 
             private String startDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(RdsInstanceResourceSetting model) {
+                this.endDate = model.endDate;
+                this.isTop = model.isTop;
+                this.noticeBarContent = model.noticeBarContent;
+                this.poppedUpButtonText = model.poppedUpButtonText;
+                this.poppedUpButtonType = model.poppedUpButtonType;
+                this.poppedUpButtonUrl = model.poppedUpButtonUrl;
+                this.poppedUpContent = model.poppedUpContent;
+                this.resourceNiche = model.resourceNiche;
+                this.startDate = model.startDate;
+            } 
+
             /**
              * EndDate.
              */
@@ -314,6 +341,13 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting; 
+
+            private Builder() {
+            } 
+
+            private Builder(RdsInstanceResourceSettings model) {
+                this.rdsInstanceResourceSetting = model.rdsInstanceResourceSetting;
+            } 
 
             /**
              * RdsInstanceResourceSetting.

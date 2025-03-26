@@ -48,6 +48,10 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescibeImportsFromDatabaseResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The migration tasks.</p>
@@ -228,6 +243,17 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             private Integer importId; 
             private String incrementalImportingTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImportResultFromDB model) {
+                this.importDataStatus = model.importDataStatus;
+                this.importDataStatusDescription = model.importDataStatusDescription;
+                this.importDataType = model.importDataType;
+                this.importId = model.importId;
+                this.incrementalImportingTime = model.incrementalImportingTime;
+            } 
+
             /**
              * <p>The status of the migration task. Valid values:</p>
              * <ul>
@@ -337,6 +363,13 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ImportResultFromDB> importResultFromDB; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.importResultFromDB = model.importResultFromDB;
+            } 
 
             /**
              * ImportResultFromDB.
