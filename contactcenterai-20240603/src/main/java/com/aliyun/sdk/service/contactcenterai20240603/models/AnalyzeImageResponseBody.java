@@ -56,6 +56,10 @@ public class AnalyzeImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return finishReason
      */
@@ -113,6 +117,19 @@ public class AnalyzeImageResponseBody extends TeaModel {
         private Boolean success; 
         private String text; 
         private String totalTokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(AnalyzeImageResponseBody model) {
+            this.finishReason = model.finishReason;
+            this.inputTokens = model.inputTokens;
+            this.outputTokens = model.outputTokens;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.text = model.text;
+            this.totalTokens = model.totalTokens;
+        } 
 
         /**
          * finishReason.

@@ -27,7 +27,6 @@ public class CreateVocabRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Body
@@ -63,7 +62,7 @@ public class CreateVocabRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -151,7 +150,7 @@ public class CreateVocabRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -241,6 +240,14 @@ public class CreateVocabRequest extends Request {
         public static final class Builder {
             private Integer weight; 
             private String word; 
+
+            private Builder() {
+            } 
+
+            private Builder(WordWeightList model) {
+                this.weight = model.weight;
+                this.word = model.word;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -40,6 +40,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetTaskResultResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -187,6 +200,18 @@ public class GetTaskResultResponseBody extends TeaModel {
             private String role; 
             private Integer speechRate; 
             private String words; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsrResult model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.role = model.role;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
 
             /**
              * begin.
@@ -334,6 +359,18 @@ public class GetTaskResultResponseBody extends TeaModel {
             private String taskId; 
             private String taskStatus; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asrResult = model.asrResult;
+                this.extra = model.extra;
+                this.taskErrorMessage = model.taskErrorMessage;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.text = model.text;
+            } 
 
             /**
              * asrResult.

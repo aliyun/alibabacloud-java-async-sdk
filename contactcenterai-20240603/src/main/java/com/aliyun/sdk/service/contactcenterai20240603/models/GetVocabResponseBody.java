@@ -40,6 +40,10 @@ public class GetVocabResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetVocabResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVocabResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -139,6 +152,14 @@ public class GetVocabResponseBody extends TeaModel {
         public static final class Builder {
             private Integer weight; 
             private String word; 
+
+            private Builder() {
+            } 
+
+            private Builder(WordWeightList model) {
+                this.weight = model.weight;
+                this.word = model.word;
+            } 
 
             /**
              * weight.
@@ -242,6 +263,17 @@ public class GetVocabResponseBody extends TeaModel {
             private String name; 
             private String vocabularyId; 
             private java.util.List<WordWeightList> wordWeightList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.audioModelCode = model.audioModelCode;
+                this.description = model.description;
+                this.name = model.name;
+                this.vocabularyId = model.vocabularyId;
+                this.wordWeightList = model.wordWeightList;
+            } 
 
             /**
              * audioModelCode.

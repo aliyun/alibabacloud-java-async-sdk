@@ -78,7 +78,7 @@ public class RunCompletionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -326,6 +326,15 @@ public class RunCompletionRequest extends Request {
             private String role; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sentences model) {
+                this.chatId = model.chatId;
+                this.role = model.role;
+                this.text = model.text;
+            } 
+
             /**
              * ChatId.
              */
@@ -404,6 +413,14 @@ public class RunCompletionRequest extends Request {
             private java.util.List<Sentences> sentences; 
             private String sessionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dialogue model) {
+                this.sentences = model.sentences;
+                this.sessionId = model.sessionId;
+            } 
+
             /**
              * Sentences.
              */
@@ -471,6 +488,14 @@ public class RunCompletionRequest extends Request {
         public static final class Builder {
             private String desc; 
             private String enumValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnumValues model) {
+                this.desc = model.desc;
+                this.enumValue = model.enumValue;
+            } 
 
             /**
              * Desc.
@@ -564,6 +589,16 @@ public class RunCompletionRequest extends Request {
             private java.util.List<EnumValues> enumValues; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.code = model.code;
+                this.desc = model.desc;
+                this.enumValues = model.enumValues;
+                this.name = model.name;
+            } 
+
             /**
              * Code.
              */
@@ -648,6 +683,14 @@ public class RunCompletionRequest extends Request {
             private String content; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(InspectionContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
+
             /**
              * Content.
              */
@@ -726,6 +769,15 @@ public class RunCompletionRequest extends Request {
             private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceInspection model) {
+                this.inspectionContents = model.inspectionContents;
+                this.inspectionIntroduction = model.inspectionIntroduction;
+                this.sceneIntroduction = model.sceneIntroduction;
+            } 
 
             /**
              * InspectionContents.

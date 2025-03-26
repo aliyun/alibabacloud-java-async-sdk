@@ -40,6 +40,10 @@ public class CreateVocabResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class CreateVocabResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVocabResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * data.
@@ -127,6 +140,13 @@ public class CreateVocabResponseBody extends TeaModel {
 
         public static final class Builder {
             private String vocabularyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.vocabularyId = model.vocabularyId;
+            } 
 
             /**
              * vocabularyId.

@@ -52,6 +52,10 @@ public class RunCompletionMessageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return finishReason
      */
@@ -101,6 +105,18 @@ public class RunCompletionMessageResponseBody extends TeaModel {
         private String inputTokens; 
         private String outputTokens; 
         private String totalTokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunCompletionMessageResponseBody model) {
+            this.finishReason = model.finishReason;
+            this.requestId = model.requestId;
+            this.text = model.text;
+            this.inputTokens = model.inputTokens;
+            this.outputTokens = model.outputTokens;
+            this.totalTokens = model.totalTokens;
+        } 
 
         /**
          * FinishReason.

@@ -61,7 +61,7 @@ public class UpdateVocabRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -242,6 +242,14 @@ public class UpdateVocabRequest extends Request {
         public static final class Builder {
             private Integer weight; 
             private String word; 
+
+            private Builder() {
+            } 
+
+            private Builder(WordWeightList model) {
+                this.weight = model.weight;
+                this.word = model.word;
+            } 
 
             /**
              * <p>This parameter is required.</p>

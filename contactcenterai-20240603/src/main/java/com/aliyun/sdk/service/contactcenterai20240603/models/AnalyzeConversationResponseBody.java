@@ -64,6 +64,10 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -137,6 +141,21 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         private Boolean success; 
         private String text; 
         private String totalTokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(AnalyzeConversationResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorInfo = model.errorInfo;
+            this.finishReason = model.finishReason;
+            this.inputTokens = model.inputTokens;
+            this.outputTokens = model.outputTokens;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.text = model.text;
+            this.totalTokens = model.totalTokens;
+        } 
 
         /**
          * errorCode.

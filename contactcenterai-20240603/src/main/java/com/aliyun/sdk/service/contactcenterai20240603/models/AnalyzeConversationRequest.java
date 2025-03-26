@@ -113,7 +113,7 @@ public class AnalyzeConversationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -476,6 +476,14 @@ public class AnalyzeConversationRequest extends Request {
             private String tagDesc; 
             private String tagName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CategoryTags model) {
+                this.tagDesc = model.tagDesc;
+                this.tagName = model.tagName;
+            } 
+
             /**
              * tagDesc.
              */
@@ -544,6 +552,14 @@ public class AnalyzeConversationRequest extends Request {
         public static final class Builder {
             private String role; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sentences model) {
+                this.role = model.role;
+                this.text = model.text;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -615,6 +631,14 @@ public class AnalyzeConversationRequest extends Request {
         public static final class Builder {
             private java.util.List<Sentences> sentences; 
             private String sessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dialogue model) {
+                this.sentences = model.sentences;
+                this.sessionId = model.sessionId;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -697,6 +721,15 @@ public class AnalyzeConversationRequest extends Request {
             private String role; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExamplesSentences model) {
+                this.chatId = model.chatId;
+                this.role = model.role;
+                this.text = model.text;
+            } 
+
             /**
              * chatId.
              */
@@ -774,6 +807,14 @@ public class AnalyzeConversationRequest extends Request {
             private String output; 
             private java.util.List<ExamplesSentences> sentences; 
 
+            private Builder() {
+            } 
+
+            private Builder(Examples model) {
+                this.output = model.output;
+                this.sentences = model.sentences;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -842,6 +883,14 @@ public class AnalyzeConversationRequest extends Request {
         public static final class Builder {
             private String desc; 
             private String enumValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnumValues model) {
+                this.desc = model.desc;
+                this.enumValue = model.enumValue;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -936,6 +985,16 @@ public class AnalyzeConversationRequest extends Request {
             private java.util.List<EnumValues> enumValues; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.code = model.code;
+                this.desc = model.desc;
+                this.enumValues = model.enumValues;
+                this.name = model.name;
+            } 
+
             /**
              * code.
              */
@@ -1021,6 +1080,14 @@ public class AnalyzeConversationRequest extends Request {
             private String content; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(InspectionContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -1103,6 +1170,15 @@ public class AnalyzeConversationRequest extends Request {
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceInspection model) {
+                this.inspectionContents = model.inspectionContents;
+                this.inspectionIntroduction = model.inspectionIntroduction;
+                this.sceneIntroduction = model.sceneIntroduction;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -1177,6 +1253,14 @@ public class AnalyzeConversationRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProfiles model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>This parameter is required.</p>
