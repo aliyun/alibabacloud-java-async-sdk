@@ -87,7 +87,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -395,6 +395,14 @@ public class ScaleWithAdjustmentRequest extends Request {
             private Boolean disableLifecycleHook; 
             private java.util.List<String> ignoredLifecycleHookIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(LifecycleHookContext model) {
+                this.disableLifecycleHook = model.disableLifecycleHook;
+                this.ignoredLifecycleHookIds = model.ignoredLifecycleHookIds;
+            } 
+
             /**
              * <p>Specifies whether to disable the Lifecycle Hook feature. Valid values:</p>
              * <ul>
@@ -468,6 +476,14 @@ public class ScaleWithAdjustmentRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
@@ -590,6 +606,18 @@ public class ScaleWithAdjustmentRequest extends Request {
             private Float memory; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerOverrides model) {
+                this.args = model.args;
+                this.commands = model.commands;
+                this.cpu = model.cpu;
+                this.environmentVars = model.environmentVars;
+                this.memory = model.memory;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</p>
              */
@@ -709,6 +737,15 @@ public class ScaleWithAdjustmentRequest extends Request {
             private java.util.List<ContainerOverrides> containerOverrides; 
             private Float cpu; 
             private Float memory; 
+
+            private Builder() {
+            } 
+
+            private Builder(Overrides model) {
+                this.containerOverrides = model.containerOverrides;
+                this.cpu = model.cpu;
+                this.memory = model.memory;
+            } 
 
             /**
              * <p>The list of parameters that you want to use to override specific configurations for containers.</p>

@@ -40,6 +40,10 @@ public class CreateScalingRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateScalingRuleResponseBody extends TeaModel {
         private String requestId; 
         private String scalingRuleAri; 
         private String scalingRuleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScalingRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.scalingRuleAri = model.scalingRuleAri;
+            this.scalingRuleId = model.scalingRuleId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

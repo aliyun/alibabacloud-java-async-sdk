@@ -182,6 +182,10 @@ public class ModifyScalingConfigurationRequest extends Request {
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePoolOptions")
+    private ResourcePoolOptions resourcePoolOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String scalingConfigurationId;
@@ -293,6 +297,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         this.ramRoleName = builder.ramRoleName;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourcePoolOptions = builder.resourcePoolOptions;
         this.scalingConfigurationId = builder.scalingConfigurationId;
         this.scalingConfigurationName = builder.scalingConfigurationName;
         this.schedulerOptions = builder.schedulerOptions;
@@ -320,7 +325,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -613,6 +618,13 @@ public class ModifyScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return resourcePoolOptions
+     */
+    public ResourcePoolOptions getResourcePoolOptions() {
+        return this.resourcePoolOptions;
+    }
+
+    /**
      * @return scalingConfigurationId
      */
     public String getScalingConfigurationId() {
@@ -773,6 +785,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String ramRoleName; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
+        private ResourcePoolOptions resourcePoolOptions; 
         private String scalingConfigurationId; 
         private String scalingConfigurationName; 
         private java.util.Map<String, ?> schedulerOptions; 
@@ -838,6 +851,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             this.ramRoleName = request.ramRoleName;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourcePoolOptions = request.resourcePoolOptions;
             this.scalingConfigurationId = request.scalingConfigurationId;
             this.scalingConfigurationName = request.scalingConfigurationName;
             this.schedulerOptions = request.schedulerOptions;
@@ -1399,6 +1413,15 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
+         * ResourcePoolOptions.
+         */
+        public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
+            this.putQueryParameter("ResourcePoolOptions", resourcePoolOptions);
+            this.resourcePoolOptions = resourcePoolOptions;
+            return this;
+        }
+
+        /**
          * <p>The ID of the scaling configuration that you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
@@ -1656,6 +1679,13 @@ public class ModifyScalingConfigurationRequest extends Request {
         public static final class Builder {
             private Boolean loginAsNonRoot; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.loginAsNonRoot = model.loginAsNonRoot;
+            } 
+
             /**
              * <p>Specifies whether to use ecs-user to log on to an ECS instance created from the scaling configuration. For information about logon usernames, see <a href="https://help.aliyun.com/document_detail/388447.html">Manage the logon username of an instance</a>. Valid values:</p>
              * <p>true</p>
@@ -1719,6 +1749,14 @@ public class ModifyScalingConfigurationRequest extends Request {
         public static final class Builder {
             private String id; 
             private String matchCriteria; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.matchCriteria = model.matchCriteria;
+            } 
 
             /**
              * <p>The ID of the private pool. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
@@ -1905,6 +1943,23 @@ public class ModifyScalingConfigurationRequest extends Request {
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.description = model.description;
+                this.diskName = model.diskName;
+                this.encryptAlgorithm = model.encryptAlgorithm;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The ID of the automatic snapshot policy that you want to apply to the system disk.</p>
@@ -2133,6 +2188,14 @@ public class ModifyScalingConfigurationRequest extends Request {
             private String instanceType; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomPriorities model) {
+                this.instanceType = model.instanceType;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * <p>The ECS instance type.</p>
              * <blockquote>
@@ -2355,6 +2418,26 @@ public class ModifyScalingConfigurationRequest extends Request {
             private Long provisionedIops; 
             private Integer size; 
             private String snapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.categories = model.categories;
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
 
             /**
              * <p>The ID of the automatic snapshot policy that you want to apply to the data disk.</p>
@@ -2868,6 +2951,35 @@ public class ModifyScalingConfigurationRequest extends Request {
             private Float minimumMemorySize; 
             private java.util.List<String> physicalProcessorModels; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstancePatternInfos model) {
+                this.architectures = model.architectures;
+                this.burstablePerformance = model.burstablePerformance;
+                this.cores = model.cores;
+                this.cpuArchitectures = model.cpuArchitectures;
+                this.excludedInstanceTypes = model.excludedInstanceTypes;
+                this.gpuSpecs = model.gpuSpecs;
+                this.instanceCategories = model.instanceCategories;
+                this.instanceFamilyLevel = model.instanceFamilyLevel;
+                this.instanceTypeFamilies = model.instanceTypeFamilies;
+                this.maxPrice = model.maxPrice;
+                this.maximumCpuCoreCount = model.maximumCpuCoreCount;
+                this.maximumGpuAmount = model.maximumGpuAmount;
+                this.maximumMemorySize = model.maximumMemorySize;
+                this.memory = model.memory;
+                this.minimumBaselineCredit = model.minimumBaselineCredit;
+                this.minimumCpuCoreCount = model.minimumCpuCoreCount;
+                this.minimumEniIpv6AddressQuantity = model.minimumEniIpv6AddressQuantity;
+                this.minimumEniPrivateIpAddressQuantity = model.minimumEniPrivateIpAddressQuantity;
+                this.minimumEniQuantity = model.minimumEniQuantity;
+                this.minimumGpuAmount = model.minimumGpuAmount;
+                this.minimumInitialCredit = model.minimumInitialCredit;
+                this.minimumMemorySize = model.minimumMemorySize;
+                this.physicalProcessorModels = model.physicalProcessorModels;
+            } 
+
             /**
              * <p>The architecture types of the instance types. Valid values:</p>
              * <ul>
@@ -3209,6 +3321,14 @@ public class ModifyScalingConfigurationRequest extends Request {
             private String instanceType; 
             private Integer weightedCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeOverrides model) {
+                this.instanceType = model.instanceType;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
+
             /**
              * <p>The instance type. If you want to specify the capacity of instance types in the scaling configuration, specify InstanceType and WeightedCapacity at the same time.</p>
              * <p>You can use InstanceType to specify multiple instance types and WeightedCapacity to specify the weights of the instance types.</p>
@@ -3324,6 +3444,16 @@ public class ModifyScalingConfigurationRequest extends Request {
             private String networkInterfaceTrafficMode; 
             private java.util.List<String> securityGroupIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaces model) {
+                this.instanceType = model.instanceType;
+                this.ipv6AddressCount = model.ipv6AddressCount;
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.securityGroupIds = model.securityGroupIds;
+            } 
+
             /**
              * <p>The ENI type. If you specify this parameter, you must use NetworkInterfaces to specify a primary ENI. In addition, you cannot specify SecurityGroupId or SecurityGroupIds. Valid values:</p>
              * <ul>
@@ -3393,6 +3523,81 @@ public class ModifyScalingConfigurationRequest extends Request {
      *
      * <p>ModifyScalingConfigurationRequest</p>
      */
+    public static class ResourcePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
+        private java.util.List<String> privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private String strategy;
+
+        private ResourcePoolOptions(Builder builder) {
+            this.privatePoolIds = builder.privatePoolIds;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privatePoolIds
+         */
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> privatePoolIds; 
+            private String strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolOptions model) {
+                this.privatePoolIds = model.privatePoolIds;
+                this.strategy = model.strategy;
+            } 
+
+            /**
+             * PrivatePoolIds.
+             */
+            public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
+                this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public ResourcePoolOptions build() {
+                return new ResourcePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyScalingConfigurationRequest</p>
+     */
     public static class SecurityOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfidentialComputingMode")
         private String confidentialComputingMode;
@@ -3418,6 +3623,13 @@ public class ModifyScalingConfigurationRequest extends Request {
 
         public static final class Builder {
             private String confidentialComputingMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.confidentialComputingMode = model.confidentialComputingMode;
+            } 
 
             /**
              * <p>The confidential computing mode. Valid values:</p>
@@ -3484,6 +3696,14 @@ public class ModifyScalingConfigurationRequest extends Request {
         public static final class Builder {
             private String instanceType; 
             private Float priceLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotPriceLimits model) {
+                this.instanceType = model.instanceType;
+                this.priceLimit = model.priceLimit;
+            } 
 
             /**
              * <p>The instance type of the preemptible instance. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</p>

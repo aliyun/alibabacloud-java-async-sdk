@@ -40,6 +40,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detail
      */
@@ -65,6 +69,15 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         private String detail; 
         private String requestId; 
         private String scalingActivityId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingActivityDetailResponseBody model) {
+            this.detail = model.detail;
+            this.requestId = model.requestId;
+            this.scalingActivityId = model.scalingActivityId;
+        } 
 
         /**
          * <p>The details of the scaling activity. The result of a scaling activity is either successful or failed. If the scaling activity is rejected, no scaling activity details are returned.</p>

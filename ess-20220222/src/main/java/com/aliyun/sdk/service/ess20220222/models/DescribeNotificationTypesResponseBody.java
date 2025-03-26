@@ -36,6 +36,10 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return notificationTypes
      */
@@ -53,6 +57,14 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> notificationTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNotificationTypesResponseBody model) {
+            this.notificationTypes = model.notificationTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The types of the notifications.</p>

@@ -40,6 +40,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return output
      */
@@ -65,6 +69,15 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String output; 
         private String requestId; 
         private ScalingGroup scalingGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingGroupDetailResponseBody model) {
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.scalingGroup = model.scalingGroup;
+        } 
 
         /**
          * <p>The output details of the scaling group of the Elastic Container Instance type. Currently, the output is displayed in a Kubernetes Deployment YAML file.</p>
@@ -181,6 +194,15 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer port; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlbServerGroups model) {
+                this.albServerGroupId = model.albServerGroupId;
+                this.port = model.port;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The ID of the Application Load Balancer (ALB) server group.</p>
              * 
@@ -277,6 +299,15 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Float spotPriceLimit; 
             private Integer weightedCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateOverrides model) {
+                this.instanceType = model.instanceType;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
+
             /**
              * <p>The instance type. The instance type that is specified by using this parameter overwrites the instance type of the launch template.</p>
              * 
@@ -363,6 +394,14 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String loadBalancerId; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerConfigs model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The ID of the CLB instance.</p>
@@ -460,6 +499,16 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private String serverGroupId; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.port = model.port;
+                this.serverGroupId = model.serverGroupId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The port number used by an ECS instance as a backend server in the server group.</p>
@@ -572,6 +621,15 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.propagate = model.propagate;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>Indicates whether the tags of the scaling group can be propagated to instances. Valid values:</p>
              * <ul>
@@ -673,6 +731,15 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private String vServerGroupId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(VServerGroupAttributes model) {
+                this.port = model.port;
+                this.vServerGroupId = model.vServerGroupId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The port number of a backend vServer.</p>
              * 
@@ -756,6 +823,14 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String loadBalancerId; 
             private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServerGroups model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.vServerGroupAttributes = model.vServerGroupAttributes;
+            } 
 
             /**
              * <p>The ID of the Classic Load Balancer (CLB, formerly known as Server Load Balancer or SLB) instance to which the backend vServer group belongs.</p>
@@ -1510,6 +1585,71 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private String vSwitchId; 
             private java.util.List<String> vSwitchIds; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingGroup model) {
+                this.activeCapacity = model.activeCapacity;
+                this.activeScalingConfigurationId = model.activeScalingConfigurationId;
+                this.albServerGroups = model.albServerGroups;
+                this.allocationStrategy = model.allocationStrategy;
+                this.azBalance = model.azBalance;
+                this.compensateWithOnDemand = model.compensateWithOnDemand;
+                this.creationTime = model.creationTime;
+                this.currentHostName = model.currentHostName;
+                this.customPolicyARN = model.customPolicyARN;
+                this.DBInstanceIds = model.DBInstanceIds;
+                this.defaultCooldown = model.defaultCooldown;
+                this.desiredCapacity = model.desiredCapacity;
+                this.enableDesiredCapacity = model.enableDesiredCapacity;
+                this.groupDeletionProtection = model.groupDeletionProtection;
+                this.groupType = model.groupType;
+                this.healthCheckType = model.healthCheckType;
+                this.healthCheckTypes = model.healthCheckTypes;
+                this.initCapacity = model.initCapacity;
+                this.isElasticStrengthInAlarm = model.isElasticStrengthInAlarm;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateOverrides = model.launchTemplateOverrides;
+                this.launchTemplateVersion = model.launchTemplateVersion;
+                this.lifecycleState = model.lifecycleState;
+                this.loadBalancerConfigs = model.loadBalancerConfigs;
+                this.loadBalancerIds = model.loadBalancerIds;
+                this.maxInstanceLifetime = model.maxInstanceLifetime;
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.modificationTime = model.modificationTime;
+                this.monitorGroupId = model.monitorGroupId;
+                this.multiAZPolicy = model.multiAZPolicy;
+                this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+                this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+                this.pendingCapacity = model.pendingCapacity;
+                this.pendingWaitCapacity = model.pendingWaitCapacity;
+                this.protectedCapacity = model.protectedCapacity;
+                this.regionId = model.regionId;
+                this.removalPolicies = model.removalPolicies;
+                this.removingCapacity = model.removingCapacity;
+                this.removingWaitCapacity = model.removingWaitCapacity;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scalingGroupId = model.scalingGroupId;
+                this.scalingGroupName = model.scalingGroupName;
+                this.scalingPolicy = model.scalingPolicy;
+                this.serverGroups = model.serverGroups;
+                this.spotAllocationStrategy = model.spotAllocationStrategy;
+                this.spotInstancePools = model.spotInstancePools;
+                this.spotInstanceRemedy = model.spotInstanceRemedy;
+                this.standbyCapacity = model.standbyCapacity;
+                this.stoppedCapacity = model.stoppedCapacity;
+                this.suspendedProcesses = model.suspendedProcesses;
+                this.systemSuspended = model.systemSuspended;
+                this.tags = model.tags;
+                this.totalCapacity = model.totalCapacity;
+                this.totalInstanceCount = model.totalInstanceCount;
+                this.vServerGroups = model.vServerGroups;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The number of ECS instances that are in the In Service state in the scaling group.</p>

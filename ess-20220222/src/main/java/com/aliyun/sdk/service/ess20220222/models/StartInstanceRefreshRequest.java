@@ -76,7 +76,7 @@ public class StartInstanceRefreshRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -343,6 +343,14 @@ public class StartInstanceRefreshRequest extends Request {
         public static final class Builder {
             private String imageId; 
             private String scalingConfigurationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesiredConfiguration model) {
+                this.imageId = model.imageId;
+                this.scalingConfigurationId = model.scalingConfigurationId;
+            } 
 
             /**
              * <p>The image ID.</p>

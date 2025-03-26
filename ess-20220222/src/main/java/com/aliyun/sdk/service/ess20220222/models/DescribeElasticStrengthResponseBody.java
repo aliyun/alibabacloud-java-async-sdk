@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticStrengthResponseBody</p>
  */
 public class DescribeElasticStrengthResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ElasticStrength")
+    private String elasticStrength;
+
     @com.aliyun.core.annotation.NameInMap("ElasticStrengthModels")
     private java.util.List<ElasticStrengthModels> elasticStrengthModels;
 
@@ -30,6 +33,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     private Double totalStrength;
 
     private DescribeElasticStrengthResponseBody(Builder builder) {
+        this.elasticStrength = builder.elasticStrength;
         this.elasticStrengthModels = builder.elasticStrengthModels;
         this.requestId = builder.requestId;
         this.resourcePools = builder.resourcePools;
@@ -42,6 +46,17 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static DescribeElasticStrengthResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return elasticStrength
+     */
+    public String getElasticStrength() {
+        return this.elasticStrength;
     }
 
     /**
@@ -73,10 +88,30 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String elasticStrength; 
         private java.util.List<ElasticStrengthModels> elasticStrengthModels; 
         private String requestId; 
         private java.util.List<ResourcePools> resourcePools; 
         private Double totalStrength; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticStrengthResponseBody model) {
+            this.elasticStrength = model.elasticStrength;
+            this.elasticStrengthModels = model.elasticStrengthModels;
+            this.requestId = model.requestId;
+            this.resourcePools = model.resourcePools;
+            this.totalStrength = model.totalStrength;
+        } 
+
+        /**
+         * ElasticStrength.
+         */
+        public Builder elasticStrength(String elasticStrength) {
+            this.elasticStrength = elasticStrength;
+            return this;
+        }
 
         /**
          * <p>The scaling strength models.</p>
@@ -191,6 +226,16 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private Integer healthScore; 
             private Integer hotScore; 
             private Integer supplyScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(InventoryHealth model) {
+                this.adequacyScore = model.adequacyScore;
+                this.healthScore = model.healthScore;
+                this.hotScore = model.hotScore;
+                this.supplyScore = model.supplyScore;
+            } 
 
             /**
              * <p>The adequacy score.</p>
@@ -368,6 +413,20 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private java.util.List<String> vSwitchIds; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticStrengthModelsResourcePools model) {
+                this.code = model.code;
+                this.instanceType = model.instanceType;
+                this.inventoryHealth = model.inventoryHealth;
+                this.msg = model.msg;
+                this.status = model.status;
+                this.strength = model.strength;
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The error code returned when the scaling strength is the weakest.</p>
              * 
@@ -531,6 +590,16 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private String scalingGroupId; 
             private Double totalStrength; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticStrengthModels model) {
+                this.elasticStrength = model.elasticStrength;
+                this.resourcePools = model.resourcePools;
+                this.scalingGroupId = model.scalingGroupId;
+                this.totalStrength = model.totalStrength;
+            } 
+
             /**
              * <p>The scaling strength level of the scaling group. Valid values:</p>
              * <ul>
@@ -592,6 +661,144 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
      *
      * <p>DescribeElasticStrengthResponseBody</p>
      */
+    public static class ResourcePoolsInventoryHealth extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdequacyScore")
+        private Integer adequacyScore;
+
+        @com.aliyun.core.annotation.NameInMap("HealthScore")
+        private Integer healthScore;
+
+        @com.aliyun.core.annotation.NameInMap("HotScore")
+        private Integer hotScore;
+
+        @com.aliyun.core.annotation.NameInMap("SupplyScore")
+        private Integer supplyScore;
+
+        private ResourcePoolsInventoryHealth(Builder builder) {
+            this.adequacyScore = builder.adequacyScore;
+            this.healthScore = builder.healthScore;
+            this.hotScore = builder.hotScore;
+            this.supplyScore = builder.supplyScore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolsInventoryHealth create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adequacyScore
+         */
+        public Integer getAdequacyScore() {
+            return this.adequacyScore;
+        }
+
+        /**
+         * @return healthScore
+         */
+        public Integer getHealthScore() {
+            return this.healthScore;
+        }
+
+        /**
+         * @return hotScore
+         */
+        public Integer getHotScore() {
+            return this.hotScore;
+        }
+
+        /**
+         * @return supplyScore
+         */
+        public Integer getSupplyScore() {
+            return this.supplyScore;
+        }
+
+        public static final class Builder {
+            private Integer adequacyScore; 
+            private Integer healthScore; 
+            private Integer hotScore; 
+            private Integer supplyScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolsInventoryHealth model) {
+                this.adequacyScore = model.adequacyScore;
+                this.healthScore = model.healthScore;
+                this.hotScore = model.hotScore;
+                this.supplyScore = model.supplyScore;
+            } 
+
+            /**
+             * <p>The adequacy score.</p>
+             * <p>Valid values: 0 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder adequacyScore(Integer adequacyScore) {
+                this.adequacyScore = adequacyScore;
+                return this;
+            }
+
+            /**
+             * <p>The score of the inventory health.</p>
+             * <ul>
+             * <li>A score between 5 and 6 indicates a sufficient inventory.</li>
+             * <li>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</li>
+             * <li>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</li>
+             * </ul>
+             * <p>Calculation formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder healthScore(Integer healthScore) {
+                this.healthScore = healthScore;
+                return this;
+            }
+
+            /**
+             * <p>The popularity score.</p>
+             * <p>Valid values: 0 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder hotScore(Integer hotScore) {
+                this.hotScore = hotScore;
+                return this;
+            }
+
+            /**
+             * <p>The score of the replenishment capability.</p>
+             * <p>Valid values: 0 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder supplyScore(Integer supplyScore) {
+                this.supplyScore = supplyScore;
+                return this;
+            }
+
+            public ResourcePoolsInventoryHealth build() {
+                return new ResourcePoolsInventoryHealth(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeElasticStrengthResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticStrengthResponseBody</p>
+     */
     public static class ResourcePools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -599,8 +806,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("InventoryHealth")
+        private ResourcePoolsInventoryHealth inventoryHealth;
+
         @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("Strength")
         private Double strength;
@@ -614,7 +827,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         private ResourcePools(Builder builder) {
             this.code = builder.code;
             this.instanceType = builder.instanceType;
+            this.inventoryHealth = builder.inventoryHealth;
             this.msg = builder.msg;
+            this.status = builder.status;
             this.strength = builder.strength;
             this.vSwitchIds = builder.vSwitchIds;
             this.zoneId = builder.zoneId;
@@ -643,10 +858,24 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
+         * @return inventoryHealth
+         */
+        public ResourcePoolsInventoryHealth getInventoryHealth() {
+            return this.inventoryHealth;
+        }
+
+        /**
          * @return msg
          */
         public String getMsg() {
             return this.msg;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -673,10 +902,26 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String instanceType; 
+            private ResourcePoolsInventoryHealth inventoryHealth; 
             private String msg; 
+            private String status; 
             private Double strength; 
             private java.util.List<String> vSwitchIds; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePools model) {
+                this.code = model.code;
+                this.instanceType = model.instanceType;
+                this.inventoryHealth = model.inventoryHealth;
+                this.msg = model.msg;
+                this.status = model.status;
+                this.strength = model.strength;
+                this.vSwitchIds = model.vSwitchIds;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The error code returned when the scaling strength is the weakest.</p>
@@ -701,6 +946,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The inventory health.</p>
+             */
+            public Builder inventoryHealth(ResourcePoolsInventoryHealth inventoryHealth) {
+                this.inventoryHealth = inventoryHealth;
+                return this;
+            }
+
+            /**
              * <p>The error message returned when the scaling strength is the weakest.</p>
              * 
              * <strong>example:</strong>
@@ -708,6 +961,21 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
              */
             public Builder msg(String msg) {
                 this.msg = msg;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the resource pool is available. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

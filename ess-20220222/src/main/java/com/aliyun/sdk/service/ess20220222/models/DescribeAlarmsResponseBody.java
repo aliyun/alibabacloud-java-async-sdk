@@ -48,6 +48,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmList
      */
@@ -89,6 +93,17 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlarmsResponseBody model) {
+            this.alarmList = model.alarmList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The event-triggered tasks.</p>
@@ -191,6 +206,14 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         public static final class Builder {
             private String dimensionKey; 
             private String dimensionValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
 
             /**
              * <p>The dimension key of the metric. Valid values:</p>
@@ -324,6 +347,17 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private Integer period; 
             private String statistics; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Expressions model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value and the threshold.</p>
@@ -482,6 +516,14 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private String dimensionKey; 
             private String dimensionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(HybridMetricsDimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
+
             /**
              * <p>The key of the metric dimension.</p>
              * 
@@ -590,6 +632,17 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private String id; 
             private String metricName; 
             private String statistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(HybridMetrics model) {
+                this.dimensions = model.dimensions;
+                this.expression = model.expression;
+                this.id = model.id;
+                this.metricName = model.metricName;
+                this.statistic = model.statistic;
+            } 
 
             /**
              * <p>The metric dimensions. This parameter is used to specify the monitored resources.</p>
@@ -927,6 +980,33 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private String state; 
             private String statistics; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmList model) {
+                this.alarmActions = model.alarmActions;
+                this.alarmTaskId = model.alarmTaskId;
+                this.comparisonOperator = model.comparisonOperator;
+                this.description = model.description;
+                this.dimensions = model.dimensions;
+                this.effective = model.effective;
+                this.enable = model.enable;
+                this.evaluationCount = model.evaluationCount;
+                this.expressions = model.expressions;
+                this.expressionsLogicOperator = model.expressionsLogicOperator;
+                this.hybridMetrics = model.hybridMetrics;
+                this.hybridMonitorNamespace = model.hybridMonitorNamespace;
+                this.metricName = model.metricName;
+                this.metricType = model.metricType;
+                this.name = model.name;
+                this.period = model.period;
+                this.promQL = model.promQL;
+                this.scalingGroupId = model.scalingGroupId;
+                this.state = model.state;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The unique identifiers of the scaling rules that are associated with the event-triggered task.</p>

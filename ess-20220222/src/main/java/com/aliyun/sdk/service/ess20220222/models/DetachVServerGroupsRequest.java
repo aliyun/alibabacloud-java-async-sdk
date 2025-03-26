@@ -67,7 +67,7 @@ public class DetachVServerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -280,6 +280,14 @@ public class DetachVServerGroupsRequest extends Request {
             private Integer port; 
             private String vServerGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VServerGroupAttributes model) {
+                this.port = model.port;
+                this.vServerGroupId = model.vServerGroupId;
+            } 
+
             /**
              * <p>The port number that Auto Scaling employs to incorporate instances into the vServer group. Valid values: 1 to 65535.</p>
              * 
@@ -352,6 +360,14 @@ public class DetachVServerGroupsRequest extends Request {
         public static final class Builder {
             private String loadBalancerId; 
             private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServerGroups model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.vServerGroupAttributes = model.vServerGroupAttributes;
+            } 
 
             /**
              * <p>The ID of the load balancer to which the vServer group belongs.</p>

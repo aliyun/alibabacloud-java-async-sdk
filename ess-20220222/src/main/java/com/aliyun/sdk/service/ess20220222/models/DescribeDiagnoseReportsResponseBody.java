@@ -48,6 +48,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         private java.util.List<Reports> reports; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnoseReportsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.reports = model.reports;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -215,6 +230,16 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             private String errorCode; 
             private String resourceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.diagnoseType = model.diagnoseType;
+                this.errorCode = model.errorCode;
+                this.resourceId = model.resourceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of the diagnostic item. Valid values:</p>
@@ -409,6 +434,20 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             private String reportId; 
             private String scalingGroupId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reports model) {
+                this.creationTime = model.creationTime;
+                this.details = model.details;
+                this.diagnoseStatus = model.diagnoseStatus;
+                this.processStatus = model.processStatus;
+                this.regionId = model.regionId;
+                this.reportId = model.reportId;
+                this.scalingGroupId = model.scalingGroupId;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The time when the diagnostic report was created.</p>

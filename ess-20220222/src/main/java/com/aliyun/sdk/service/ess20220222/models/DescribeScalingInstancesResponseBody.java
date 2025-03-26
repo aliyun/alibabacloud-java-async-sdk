@@ -52,6 +52,10 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         private java.util.List<ScalingInstances> scalingInstances; 
         private Integer totalCount; 
         private Integer totalSpotCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingInstancesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scalingInstances = model.scalingInstances;
+            this.totalCount = model.totalCount;
+            this.totalSpotCount = model.totalSpotCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -418,6 +434,31 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             private String warmupState; 
             private Integer weightedCapacity; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingInstances model) {
+                this.createdTime = model.createdTime;
+                this.creationTime = model.creationTime;
+                this.creationType = model.creationType;
+                this.entrusted = model.entrusted;
+                this.healthStatus = model.healthStatus;
+                this.instanceId = model.instanceId;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateVersion = model.launchTemplateVersion;
+                this.lifecycleState = model.lifecycleState;
+                this.loadBalancerWeight = model.loadBalancerWeight;
+                this.privateIpAddress = model.privateIpAddress;
+                this.scalingActivityId = model.scalingActivityId;
+                this.scalingConfigurationId = model.scalingConfigurationId;
+                this.scalingGroupId = model.scalingGroupId;
+                this.scalingInstanceId = model.scalingInstanceId;
+                this.spotStrategy = model.spotStrategy;
+                this.warmupState = model.warmupState;
+                this.weightedCapacity = model.weightedCapacity;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The time when the ECS instances were added to the scaling group. The value is accurate to the second.</p>

@@ -285,7 +285,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1452,6 +1452,16 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String instanceName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AcrRegistryInfos model) {
+                this.domains = model.domains;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The domain names of the Container Registry Enterprise Edition instances. By default, all domain names are displayed. Separate multiple domain names with commas (,).</p>
              */
@@ -1532,6 +1542,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<String> commands; 
 
+            private Builder() {
+            } 
+
+            private Builder(Exec model) {
+                this.commands = model.commands;
+            } 
+
             /**
              * Commands.
              */
@@ -1603,6 +1620,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private Integer port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
              * Path.
              */
@@ -1665,6 +1691,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
 
         public static final class Builder {
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(TcpSocket model) {
+                this.port = model.port;
+            } 
 
             /**
              * Port.
@@ -1800,6 +1833,20 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private TcpSocket tcpSocket; 
             private Integer timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(LivenessProbe model) {
+                this.exec = model.exec;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
              * Exec.
              */
@@ -1903,6 +1950,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<String> commands; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeExec model) {
+                this.commands = model.commands;
+            } 
+
             /**
              * Commands.
              */
@@ -1974,6 +2028,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private Integer port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeHttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
              * Path.
              */
@@ -2036,6 +2099,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
 
         public static final class Builder {
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeTcpSocket model) {
+                this.port = model.port;
+            } 
 
             /**
              * Port.
@@ -2171,6 +2241,20 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private ReadinessProbeTcpSocket tcpSocket; 
             private Integer timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbe model) {
+                this.exec = model.exec;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
              * Exec.
              */
@@ -2274,6 +2358,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<String> add; 
 
+            private Builder() {
+            } 
+
+            private Builder(Capability model) {
+                this.add = model.add;
+            } 
+
             /**
              * Add.
              */
@@ -2345,6 +2436,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private Capability capability; 
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
 
             /**
              * Capability.
@@ -2433,6 +2533,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.fieldRefFieldPath = model.fieldRefFieldPath;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is unavailable for use.</p>
@@ -2518,6 +2627,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -2631,6 +2748,17 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String name; 
             private Boolean readOnly; 
             private String subPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(VolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
 
             /**
              * <p>The directory to which the container mounts the volume.</p>
@@ -3115,6 +3243,44 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private java.util.List<VolumeMounts> volumeMounts; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.livenessProbe = model.livenessProbe;
+                this.readinessProbe = model.readinessProbe;
+                this.securityContext = model.securityContext;
+                this.args = model.args;
+                this.commands = model.commands;
+                this.cpu = model.cpu;
+                this.environmentVars = model.environmentVars;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.lifecyclePostStartHandlerExecs = model.lifecyclePostStartHandlerExecs;
+                this.lifecyclePostStartHandlerHttpGetHost = model.lifecyclePostStartHandlerHttpGetHost;
+                this.lifecyclePostStartHandlerHttpGetPath = model.lifecyclePostStartHandlerHttpGetPath;
+                this.lifecyclePostStartHandlerHttpGetPort = model.lifecyclePostStartHandlerHttpGetPort;
+                this.lifecyclePostStartHandlerHttpGetScheme = model.lifecyclePostStartHandlerHttpGetScheme;
+                this.lifecyclePostStartHandlerTcpSocketHost = model.lifecyclePostStartHandlerTcpSocketHost;
+                this.lifecyclePostStartHandlerTcpSocketPort = model.lifecyclePostStartHandlerTcpSocketPort;
+                this.lifecyclePreStopHandlerExecs = model.lifecyclePreStopHandlerExecs;
+                this.lifecyclePreStopHandlerHttpGetHost = model.lifecyclePreStopHandlerHttpGetHost;
+                this.lifecyclePreStopHandlerHttpGetPath = model.lifecyclePreStopHandlerHttpGetPath;
+                this.lifecyclePreStopHandlerHttpGetPort = model.lifecyclePreStopHandlerHttpGetPort;
+                this.lifecyclePreStopHandlerHttpGetScheme = model.lifecyclePreStopHandlerHttpGetScheme;
+                this.lifecyclePreStopHandlerTcpSocketHost = model.lifecyclePreStopHandlerTcpSocketHost;
+                this.lifecyclePreStopHandlerTcpSocketPort = model.lifecyclePreStopHandlerTcpSocketPort;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.ports = model.ports;
+                this.stdin = model.stdin;
+                this.stdinOnce = model.stdinOnce;
+                this.tty = model.tty;
+                this.volumeMounts = model.volumeMounts;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
              * LivenessProbe.
              */
@@ -3509,6 +3675,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsConfigOptions model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The variable name of the option.</p>
              * 
@@ -3581,6 +3755,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<String> hostnames; 
             private String ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAliases model) {
+                this.hostnames = model.hostnames;
+                this.ip = model.ip;
+            } 
 
             /**
              * <p>The hostnames of the containers that you want to add.</p>
@@ -3664,6 +3846,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String server; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageRegistryCredentials model) {
+                this.password = model.password;
+                this.server = model.server;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The password of the image repository.</p>
              * 
@@ -3736,6 +3927,13 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<String> adds; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityContextCapability model) {
+                this.adds = model.adds;
+            } 
+
             /**
              * Adds.
              */
@@ -3807,6 +4005,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private SecurityContextCapability capability; 
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersSecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
 
             /**
              * Capability.
@@ -3895,6 +4102,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainerEnvironmentVars model) {
+                this.fieldRefFieldPath = model.fieldRefFieldPath;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is unavailable for use.</p>
@@ -3980,6 +4196,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainerPorts model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -4093,6 +4317,17 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String name; 
             private Boolean readOnly; 
             private String subPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainerVolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
 
             /**
              * <p>The directory to which the init container mounts the volume. The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
@@ -4339,6 +4574,25 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String name; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainers model) {
+                this.securityContext = model.securityContext;
+                this.args = model.args;
+                this.commands = model.commands;
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.initContainerEnvironmentVars = model.initContainerEnvironmentVars;
+                this.initContainerPorts = model.initContainerPorts;
+                this.initContainerVolumeMounts = model.initContainerVolumeMounts;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
              * SecurityContext.
              */
@@ -4515,6 +4769,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityContextSysctls model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The variable name of the security context in which the container group runs.</p>
              * 
@@ -4587,6 +4849,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the elastic container instance.</p>
@@ -4675,6 +4945,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private Integer diskSize; 
             private String fsType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiskVolume model) {
+                this.diskId = model.diskId;
+                this.diskSize = model.diskSize;
+                this.fsType = model.fsType;
+            } 
+
             /**
              * DiskId.
              */
@@ -4749,6 +5028,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private String medium; 
             private String sizeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(EmptyDirVolume model) {
+                this.medium = model.medium;
+                this.sizeLimit = model.sizeLimit;
+            } 
 
             /**
              * Medium.
@@ -4829,6 +5116,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String fsType; 
             private String options; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlexVolume model) {
+                this.driver = model.driver;
+                this.fsType = model.fsType;
+                this.options = model.options;
+            } 
+
             /**
              * Driver.
              */
@@ -4903,6 +5199,14 @@ public class CreateEciScalingConfigurationRequest extends Request {
         public static final class Builder {
             private String path; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostPathVolume model) {
+                this.path = model.path;
+                this.type = model.type;
+            } 
 
             /**
              * Path.
@@ -4982,6 +5286,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String path; 
             private Boolean readOnly; 
             private String server; 
+
+            private Builder() {
+            } 
+
+            private Builder(NFSVolume model) {
+                this.path = model.path;
+                this.readOnly = model.readOnly;
+                this.server = model.server;
+            } 
 
             /**
              * Path.
@@ -5076,6 +5389,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String content; 
             private Integer mode; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigFileVolumeConfigFileToPaths model) {
+                this.content = model.content;
+                this.mode = model.mode;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The content of the configuration file (32 KB).</p>
@@ -5249,6 +5571,21 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private Integer configFileVolumeDefaultMode; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.diskVolume = model.diskVolume;
+                this.emptyDirVolume = model.emptyDirVolume;
+                this.flexVolume = model.flexVolume;
+                this.hostPathVolume = model.hostPathVolume;
+                this.NFSVolume = model.NFSVolume;
+                this.configFileVolumeConfigFileToPaths = model.configFileVolumeConfigFileToPaths;
+                this.configFileVolumeDefaultMode = model.configFileVolumeDefaultMode;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * DiskVolume.

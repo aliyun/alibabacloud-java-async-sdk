@@ -44,6 +44,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListTagValuesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagValuesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.values = model.values;
+        } 
 
         /**
          * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>

@@ -90,7 +90,7 @@ public class EnableScalingGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -402,6 +402,14 @@ public class EnableScalingGroupRequest extends Request {
         public static final class Builder {
             private String instanceType; 
             private Integer weightedCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateOverrides model) {
+                this.instanceType = model.instanceType;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
 
             /**
              * <p>The instance type. If you want to scale instances based on instance type weights in the scaling group, you must specify <code>LaunchTemplateOverrides.WeightedCapacity</code> after you specify this parameter.</p>

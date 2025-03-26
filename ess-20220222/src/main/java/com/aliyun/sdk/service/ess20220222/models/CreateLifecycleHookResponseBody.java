@@ -36,6 +36,10 @@ public class CreateLifecycleHookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lifecycleHookId
      */
@@ -53,6 +57,14 @@ public class CreateLifecycleHookResponseBody extends TeaModel {
     public static final class Builder {
         private String lifecycleHookId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLifecycleHookResponseBody model) {
+            this.lifecycleHookId = model.lifecycleHookId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the lifecycle hook.</p>

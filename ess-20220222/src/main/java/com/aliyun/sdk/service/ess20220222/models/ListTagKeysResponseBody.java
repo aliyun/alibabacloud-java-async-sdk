@@ -44,6 +44,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keys
      */
@@ -77,6 +81,16 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String nextToken; 
         private Integer pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagKeysResponseBody model) {
+            this.keys = model.keys;
+            this.nextToken = model.nextToken;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the tag keys.</p>

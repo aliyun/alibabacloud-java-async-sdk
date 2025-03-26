@@ -63,7 +63,7 @@ public class TagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -258,6 +258,15 @@ public class TagResourcesRequest extends Request {
             private String key; 
             private Boolean propagate; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.propagate = model.propagate;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

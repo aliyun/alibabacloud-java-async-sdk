@@ -67,7 +67,7 @@ public class AttachServerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -307,6 +307,16 @@ public class AttachServerGroupsRequest extends Request {
             private String serverGroupId; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.port = model.port;
+                this.serverGroupId = model.serverGroupId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</p>

@@ -48,6 +48,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScalingActivities> scalingActivities; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingActivitiesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scalingActivities = model.scalingActivities;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -216,6 +231,16 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private java.util.List<String> failedInstanceIds; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorMessages model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.failedInstanceIds = model.failedInstanceIds;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The error code that is returned when the scaling activity failed.</p>
              * 
@@ -307,6 +332,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean disableLifecycleHook; 
             private java.util.List<String> ignoredLifecycleHookIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(LifecycleHookContext model) {
+                this.disableLifecycleHook = model.disableLifecycleHook;
+                this.ignoredLifecycleHookIds = model.ignoredLifecycleHookIds;
+            } 
 
             /**
              * <p>Indicates whether all lifecycle hooks are disabled when the scaling activity is triggered. Valid values:</p>
@@ -717,6 +750,42 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String totalCapacity; 
             private String triggerSourceId; 
             private String triggerSourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingActivities model) {
+                this.activityMetadata = model.activityMetadata;
+                this.attachedCapacity = model.attachedCapacity;
+                this.autoCreatedCapacity = model.autoCreatedCapacity;
+                this.cause = model.cause;
+                this.createdCapacity = model.createdCapacity;
+                this.createdInstances = model.createdInstances;
+                this.description = model.description;
+                this.destroyedCapacity = model.destroyedCapacity;
+                this.destroyedInstances = model.destroyedInstances;
+                this.detail = model.detail;
+                this.endTime = model.endTime;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.errorMessages = model.errorMessages;
+                this.instanceRefreshTaskId = model.instanceRefreshTaskId;
+                this.lifecycleHookContext = model.lifecycleHookContext;
+                this.progress = model.progress;
+                this.scalingActivityId = model.scalingActivityId;
+                this.scalingGroupId = model.scalingGroupId;
+                this.scalingInstanceNumber = model.scalingInstanceNumber;
+                this.startTime = model.startTime;
+                this.startedCapacity = model.startedCapacity;
+                this.startedInstances = model.startedInstances;
+                this.statusCode = model.statusCode;
+                this.statusMessage = model.statusMessage;
+                this.stoppedCapacity = model.stoppedCapacity;
+                this.stoppedInstances = model.stoppedInstances;
+                this.totalCapacity = model.totalCapacity;
+                this.triggerSourceId = model.triggerSourceId;
+                this.triggerSourceType = model.triggerSourceType;
+            } 
 
             /**
              * <p>The metadata of the scaling activity.</p>

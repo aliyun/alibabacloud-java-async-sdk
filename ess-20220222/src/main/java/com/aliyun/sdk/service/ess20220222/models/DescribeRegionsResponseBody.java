@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Regions> regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The collection of region information.</p>
@@ -158,6 +170,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionEndpoint; 
             private String regionId; 
             private Boolean vpcUnavailable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.classicUnavailable = model.classicUnavailable;
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+                this.vpcUnavailable = model.vpcUnavailable;
+            } 
 
             /**
              * <p>Indicates whether the current region supports scaling groups that reside in the classic network. Valid values:</p>

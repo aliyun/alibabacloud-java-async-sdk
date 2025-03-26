@@ -67,7 +67,7 @@ public class AttachAlbServerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -295,6 +295,15 @@ public class AttachAlbServerGroupsRequest extends Request {
             private String albServerGroupId; 
             private Integer port; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlbServerGroups model) {
+                this.albServerGroupId = model.albServerGroupId;
+                this.port = model.port;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The ID of the ALB server group.</p>

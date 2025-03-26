@@ -126,7 +126,7 @@ public class ModifyAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -653,6 +653,14 @@ public class ModifyAlarmRequest extends Request {
             private String dimensionKey; 
             private String dimensionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
+
             /**
              * <p>The key of the dimension. The valid values vary based on the metric type.</p>
              * <ul>
@@ -797,6 +805,17 @@ public class ModifyAlarmRequest extends Request {
             private Integer period; 
             private String statistics; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Expressions model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The operator that is used to compare the metric value and the threshold. Valid values:</p>

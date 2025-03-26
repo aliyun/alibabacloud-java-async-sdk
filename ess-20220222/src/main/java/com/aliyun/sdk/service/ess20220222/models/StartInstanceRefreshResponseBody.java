@@ -36,6 +36,10 @@ public class StartInstanceRefreshResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceRefreshTaskId
      */
@@ -53,6 +57,14 @@ public class StartInstanceRefreshResponseBody extends TeaModel {
     public static final class Builder {
         private String instanceRefreshTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartInstanceRefreshResponseBody model) {
+            this.instanceRefreshTaskId = model.instanceRefreshTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the instance refresh task.</p>

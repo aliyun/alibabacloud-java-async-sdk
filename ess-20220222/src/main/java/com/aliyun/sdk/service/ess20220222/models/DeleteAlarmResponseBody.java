@@ -36,6 +36,10 @@ public class DeleteAlarmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmTaskId
      */
@@ -53,6 +57,14 @@ public class DeleteAlarmResponseBody extends TeaModel {
     public static final class Builder {
         private String alarmTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAlarmResponseBody model) {
+            this.alarmTaskId = model.alarmTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the event-triggered task.</p>

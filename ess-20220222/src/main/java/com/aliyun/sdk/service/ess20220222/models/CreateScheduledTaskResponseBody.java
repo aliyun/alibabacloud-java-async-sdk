@@ -36,6 +36,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String scheduledTaskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScheduledTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.scheduledTaskId = model.scheduledTaskId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

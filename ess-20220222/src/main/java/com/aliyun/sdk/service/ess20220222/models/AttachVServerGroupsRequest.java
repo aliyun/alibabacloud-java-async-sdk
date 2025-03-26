@@ -67,7 +67,7 @@ public class AttachVServerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -292,6 +292,15 @@ public class AttachVServerGroupsRequest extends Request {
             private String vServerGroupId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(VServerGroupAttributes model) {
+                this.port = model.port;
+                this.vServerGroupId = model.vServerGroupId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The port number over which Auto Scaling adds ECS instances or elastic container instances to the new vServer group. Valid values: 1 to 65535.</p>
              * 
@@ -376,6 +385,14 @@ public class AttachVServerGroupsRequest extends Request {
         public static final class Builder {
             private String loadBalancerId; 
             private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServerGroups model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.vServerGroupAttributes = model.vServerGroupAttributes;
+            } 
 
             /**
              * <p>The ID of the CLB instance to which the new vServer group belongs.</p>

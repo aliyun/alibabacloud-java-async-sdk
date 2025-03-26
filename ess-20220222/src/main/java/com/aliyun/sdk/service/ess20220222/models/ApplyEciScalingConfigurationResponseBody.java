@@ -36,6 +36,10 @@ public class ApplyEciScalingConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ApplyEciScalingConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String scalingConfigurationId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyEciScalingConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+            this.scalingConfigurationId = model.scalingConfigurationId;
+        } 
 
         /**
          * <p>The request ID.</p>

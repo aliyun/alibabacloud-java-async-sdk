@@ -160,7 +160,7 @@ public class ModifyScalingRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -494,7 +494,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The Hybrid Cloud Monitoring metrics.</p>
+         * <p>The Hybrid Cloud Monitoring metrics. For more information, see <a href="https://help.aliyun.com/document_detail/2852162.html">Create a custom target tracking scaling rule</a>.</p>
          */
         public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
             this.putQueryParameter("HybridMetrics", hybridMetrics);
@@ -801,6 +801,14 @@ public class ModifyScalingRuleRequest extends Request {
             private String dimensionKey; 
             private String dimensionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmDimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
+
             /**
              * <p>The dimension key of the metric.</p>
              * 
@@ -873,6 +881,14 @@ public class ModifyScalingRuleRequest extends Request {
         public static final class Builder {
             private String dimensionKey; 
             private String dimensionValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
 
             /**
              * <p>The key of the metric dimension.</p>
@@ -982,6 +998,17 @@ public class ModifyScalingRuleRequest extends Request {
             private String id; 
             private String metricName; 
             private String statistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(HybridMetrics model) {
+                this.dimensions = model.dimensions;
+                this.expression = model.expression;
+                this.id = model.id;
+                this.metricName = model.metricName;
+                this.statistic = model.statistic;
+            } 
 
             /**
              * <p>The metric dimensions. You can use this parameter to specify the monitored resources.</p>
@@ -1103,6 +1130,15 @@ public class ModifyScalingRuleRequest extends Request {
             private Float metricIntervalLowerBound; 
             private Float metricIntervalUpperBound; 
             private Integer scalingAdjustment; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepAdjustments model) {
+                this.metricIntervalLowerBound = model.metricIntervalLowerBound;
+                this.metricIntervalUpperBound = model.metricIntervalUpperBound;
+                this.scalingAdjustment = model.scalingAdjustment;
+            } 
 
             /**
              * <p>The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</p>

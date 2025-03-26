@@ -48,6 +48,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lifecycleActions
      */
@@ -89,6 +93,17 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLifecycleActionsResponseBody model) {
+            this.lifecycleActions = model.lifecycleActions;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The actions of the lifecycle hook.</p>
@@ -227,6 +242,17 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             private String lifecycleActionStatus; 
             private String lifecycleActionToken; 
             private String lifecycleHookId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LifecycleActions model) {
+                this.instanceIds = model.instanceIds;
+                this.lifecycleActionResult = model.lifecycleActionResult;
+                this.lifecycleActionStatus = model.lifecycleActionStatus;
+                this.lifecycleActionToken = model.lifecycleActionToken;
+                this.lifecycleHookId = model.lifecycleHookId;
+            } 
 
             /**
              * <p>The IDs of the ECS instances on which the lifecycle hook takes effect</p>

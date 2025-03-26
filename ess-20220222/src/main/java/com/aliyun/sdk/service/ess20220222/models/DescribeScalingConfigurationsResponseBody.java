@@ -48,6 +48,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScalingConfigurations> scalingConfigurations; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingConfigurationsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scalingConfigurations = model.scalingConfigurations;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -191,6 +206,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceType; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomPriorities model) {
+                this.instanceType = model.instanceType;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The ECS instance type.</p>
@@ -408,6 +431,26 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Long provisionedIops; 
             private Integer size; 
             private String snapshotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.categories = model.categories;
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.device = model.device;
+                this.diskName = model.diskName;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
 
             /**
              * <p>The ID of the automatic snapshot policy that is applied to the data disk.</p>
@@ -903,6 +946,35 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Float minimumMemorySize; 
             private java.util.List<String> physicalProcessorModels; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstancePatternInfos model) {
+                this.architectures = model.architectures;
+                this.burstablePerformance = model.burstablePerformance;
+                this.cores = model.cores;
+                this.cpuArchitectures = model.cpuArchitectures;
+                this.excludedInstanceTypes = model.excludedInstanceTypes;
+                this.gpuSpecs = model.gpuSpecs;
+                this.instanceCategories = model.instanceCategories;
+                this.instanceFamilyLevel = model.instanceFamilyLevel;
+                this.instanceTypeFamilies = model.instanceTypeFamilies;
+                this.maxPrice = model.maxPrice;
+                this.maximumCpuCoreCount = model.maximumCpuCoreCount;
+                this.maximumGpuAmount = model.maximumGpuAmount;
+                this.maximumMemorySize = model.maximumMemorySize;
+                this.memory = model.memory;
+                this.minimumBaselineCredit = model.minimumBaselineCredit;
+                this.minimumCpuCoreCount = model.minimumCpuCoreCount;
+                this.minimumEniIpv6AddressQuantity = model.minimumEniIpv6AddressQuantity;
+                this.minimumEniPrivateIpAddressQuantity = model.minimumEniPrivateIpAddressQuantity;
+                this.minimumEniQuantity = model.minimumEniQuantity;
+                this.minimumGpuAmount = model.minimumGpuAmount;
+                this.minimumInitialCredit = model.minimumInitialCredit;
+                this.minimumMemorySize = model.minimumMemorySize;
+                this.physicalProcessorModels = model.physicalProcessorModels;
+            } 
+
             /**
              * <p>The architectures of instance types. Valid values:</p>
              * <ul>
@@ -1260,6 +1332,16 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String networkInterfaceTrafficMode; 
             private java.util.List<String> securityGroupIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkInterfaces model) {
+                this.instanceType = model.instanceType;
+                this.ipv6AddressCount = model.ipv6AddressCount;
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.securityGroupIds = model.securityGroupIds;
+            } 
+
             /**
              * <p>The ENI type. Valid values:</p>
              * <ul>
@@ -1322,6 +1404,81 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
      *
      * <p>DescribeScalingConfigurationsResponseBody</p>
      */
+    public static class ResourcePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
+        private java.util.List<String> privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private String strategy;
+
+        private ResourcePoolOptions(Builder builder) {
+            this.privatePoolIds = builder.privatePoolIds;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privatePoolIds
+         */
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> privatePoolIds; 
+            private String strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolOptions model) {
+                this.privatePoolIds = model.privatePoolIds;
+                this.strategy = model.strategy;
+            } 
+
+            /**
+             * PrivatePoolIds.
+             */
+            public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
+                this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * Strategy.
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public ResourcePoolOptions build() {
+                return new ResourcePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeScalingConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingConfigurationsResponseBody</p>
+     */
     public static class SchedulerOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManagedPrivateSpaceId")
         private String managedPrivateSpaceId;
@@ -1347,6 +1504,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String managedPrivateSpaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchedulerOptions model) {
+                this.managedPrivateSpaceId = model.managedPrivateSpaceId;
+            } 
 
             /**
              * <blockquote>
@@ -1399,6 +1563,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String confidentialComputingMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.confidentialComputingMode = model.confidentialComputingMode;
+            } 
 
             /**
              * ConfidentialComputingMode.
@@ -1458,6 +1629,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceType; 
             private Float priceLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotPriceLimits model) {
+                this.instanceType = model.instanceType;
+                this.priceLimit = model.priceLimit;
+            } 
 
             /**
              * <p>The instance type of the preemptible instances.</p>
@@ -1531,6 +1710,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the ECS instance. You can specify up to 20 tags for each ECS instance.</p>
@@ -1693,6 +1880,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourcePoolOptions")
+        private ResourcePoolOptions resourcePoolOptions;
+
         @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
         private String scalingConfigurationId;
 
@@ -1828,6 +2018,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.privatePoolOptions_matchCriteria = builder.privatePoolOptions_matchCriteria;
             this.ramRoleName = builder.ramRoleName;
             this.resourceGroupId = builder.resourceGroupId;
+            this.resourcePoolOptions = builder.resourcePoolOptions;
             this.scalingConfigurationId = builder.scalingConfigurationId;
             this.scalingConfigurationName = builder.scalingConfigurationName;
             this.scalingGroupId = builder.scalingGroupId;
@@ -2157,6 +2348,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourcePoolOptions
+         */
+        public ResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
+        }
+
+        /**
          * @return scalingConfigurationId
          */
         public String getScalingConfigurationId() {
@@ -2415,6 +2613,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String privatePoolOptions_matchCriteria; 
             private String ramRoleName; 
             private String resourceGroupId; 
+            private ResourcePoolOptions resourcePoolOptions; 
             private String scalingConfigurationId; 
             private String scalingConfigurationName; 
             private String scalingGroupId; 
@@ -2446,6 +2645,85 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String userData; 
             private java.util.List<Integer> weightedCapacities; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingConfigurations model) {
+                this.affinity = model.affinity;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.creditSpecification = model.creditSpecification;
+                this.customPriorities = model.customPriorities;
+                this.dataDisks = model.dataDisks;
+                this.dedicatedHostClusterId = model.dedicatedHostClusterId;
+                this.dedicatedHostId = model.dedicatedHostId;
+                this.deletionProtection = model.deletionProtection;
+                this.deploymentSetId = model.deploymentSetId;
+                this.hostName = model.hostName;
+                this.hpcClusterId = model.hpcClusterId;
+                this.httpEndpoint = model.httpEndpoint;
+                this.httpTokens = model.httpTokens;
+                this.imageFamily = model.imageFamily;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOptionsLoginAsNonRoot = model.imageOptionsLoginAsNonRoot;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceGeneration = model.instanceGeneration;
+                this.instanceName = model.instanceName;
+                this.instancePatternInfos = model.instancePatternInfos;
+                this.instanceType = model.instanceType;
+                this.instanceTypes = model.instanceTypes;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandwidthIn = model.internetMaxBandwidthIn;
+                this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
+                this.ioOptimized = model.ioOptimized;
+                this.ipv6AddressCount = model.ipv6AddressCount;
+                this.keyPairName = model.keyPairName;
+                this.lifecycleState = model.lifecycleState;
+                this.loadBalancerWeight = model.loadBalancerWeight;
+                this.memory = model.memory;
+                this.networkInterfaces = model.networkInterfaces;
+                this.passwordInherit = model.passwordInherit;
+                this.passwordSetted = model.passwordSetted;
+                this.privatePoolOptions_id = model.privatePoolOptions_id;
+                this.privatePoolOptions_matchCriteria = model.privatePoolOptions_matchCriteria;
+                this.ramRoleName = model.ramRoleName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourcePoolOptions = model.resourcePoolOptions;
+                this.scalingConfigurationId = model.scalingConfigurationId;
+                this.scalingConfigurationName = model.scalingConfigurationName;
+                this.scalingGroupId = model.scalingGroupId;
+                this.schedulerOptions = model.schedulerOptions;
+                this.securityEnhancementStrategy = model.securityEnhancementStrategy;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.securityOptions = model.securityOptions;
+                this.spotDuration = model.spotDuration;
+                this.spotInterruptionBehavior = model.spotInterruptionBehavior;
+                this.spotPriceLimits = model.spotPriceLimits;
+                this.spotStrategy = model.spotStrategy;
+                this.storageSetId = model.storageSetId;
+                this.storageSetPartitionNumber = model.storageSetPartitionNumber;
+                this.systemDiskAutoSnapshotPolicyId = model.systemDiskAutoSnapshotPolicyId;
+                this.systemDiskBurstingEnabled = model.systemDiskBurstingEnabled;
+                this.systemDiskCategories = model.systemDiskCategories;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskDescription = model.systemDiskDescription;
+                this.systemDiskEncryptAlgorithm = model.systemDiskEncryptAlgorithm;
+                this.systemDiskEncrypted = model.systemDiskEncrypted;
+                this.systemDiskKMSKeyId = model.systemDiskKMSKeyId;
+                this.systemDiskName = model.systemDiskName;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskProvisionedIops = model.systemDiskProvisionedIops;
+                this.systemDiskSize = model.systemDiskSize;
+                this.tags = model.tags;
+                this.tenancy = model.tenancy;
+                this.userData = model.userData;
+                this.weightedCapacities = model.weightedCapacities;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Indicates whether the ECS instance on a dedicated host is associated with the dedicated host. Valid values:</p>
@@ -2938,6 +3216,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ResourcePoolOptions.
+             */
+            public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
+                this.resourcePoolOptions = resourcePoolOptions;
                 return this;
             }
 

@@ -40,6 +40,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activityType
      */
@@ -65,6 +69,15 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         private String activityType; 
         private String requestId; 
         private String scalingActivityId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScaleWithAdjustmentResponseBody model) {
+            this.activityType = model.activityType;
+            this.requestId = model.requestId;
+            this.scalingActivityId = model.scalingActivityId;
+        } 
 
         /**
          * <p>The type of the scaling activity.</p>

@@ -36,6 +36,10 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return details
      */
@@ -53,6 +57,14 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Details> details; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingGroupDiagnoseDetailsResponseBody model) {
+            this.details = model.details;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Details.
@@ -146,6 +158,16 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
             private String errorCode; 
             private String resourceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.diagnoseType = model.diagnoseType;
+                this.errorCode = model.errorCode;
+                this.resourceId = model.resourceId;
+                this.status = model.status;
+            } 
 
             /**
              * DiagnoseType.

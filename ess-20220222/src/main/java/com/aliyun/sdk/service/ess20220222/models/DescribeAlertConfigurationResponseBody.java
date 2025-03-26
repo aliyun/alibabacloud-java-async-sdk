@@ -36,6 +36,10 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> scaleStatuses; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+            this.scaleStatuses = model.scaleStatuses;
+        } 
 
         /**
          * <p>The request ID.</p>

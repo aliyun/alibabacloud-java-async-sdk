@@ -36,6 +36,10 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return notificationConfigurationModels
      */
@@ -53,6 +57,14 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<NotificationConfigurationModels> notificationConfigurationModels; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNotificationConfigurationsResponseBody model) {
+            this.notificationConfigurationModels = model.notificationConfigurationModels;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The notification settings.</p>
@@ -146,6 +158,16 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             private java.util.List<String> notificationTypes; 
             private String scalingGroupId; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationConfigurationModels model) {
+                this.notificationArn = model.notificationArn;
+                this.notificationTypes = model.notificationTypes;
+                this.scalingGroupId = model.scalingGroupId;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</p>

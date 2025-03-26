@@ -40,6 +40,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return output
      */
@@ -65,6 +69,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String output; 
         private String requestId; 
         private ScalingConfiguration scalingConfiguration; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEciScalingConfigurationDetailResponseBody model) {
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.scalingConfiguration = model.scalingConfiguration;
+        } 
 
         /**
          * <p>The YAML output of the scaling configuration.</p>
@@ -193,6 +206,16 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String instanceName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AcrRegistryInfos model) {
+                this.domains = model.domains;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Multiple domain names are separated by commas (,).</p>
              */
@@ -297,6 +320,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.fieldRefFieldPath = model.fieldRefFieldPath;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is not available for use.</p>
@@ -382,6 +414,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -495,6 +535,17 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String name; 
             private Boolean readOnly; 
             private String subPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(VolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
 
             /**
              * <p>The directory in which the container mounts the volume.</p>
@@ -1212,6 +1263,64 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private java.util.List<VolumeMounts> volumeMounts; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.args = model.args;
+                this.commands = model.commands;
+                this.cpu = model.cpu;
+                this.environmentVars = model.environmentVars;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.lifecyclePostStartHandlerExecs = model.lifecyclePostStartHandlerExecs;
+                this.lifecyclePostStartHandlerHttpGetHost = model.lifecyclePostStartHandlerHttpGetHost;
+                this.lifecyclePostStartHandlerHttpGetPath = model.lifecyclePostStartHandlerHttpGetPath;
+                this.lifecyclePostStartHandlerHttpGetPort = model.lifecyclePostStartHandlerHttpGetPort;
+                this.lifecyclePostStartHandlerHttpGetScheme = model.lifecyclePostStartHandlerHttpGetScheme;
+                this.lifecyclePostStartHandlerTcpSocketHost = model.lifecyclePostStartHandlerTcpSocketHost;
+                this.lifecyclePostStartHandlerTcpSocketPort = model.lifecyclePostStartHandlerTcpSocketPort;
+                this.lifecyclePreStopHandlerExecs = model.lifecyclePreStopHandlerExecs;
+                this.lifecyclePreStopHandlerHttpGetHost = model.lifecyclePreStopHandlerHttpGetHost;
+                this.lifecyclePreStopHandlerHttpGetPath = model.lifecyclePreStopHandlerHttpGetPath;
+                this.lifecyclePreStopHandlerHttpGetPort = model.lifecyclePreStopHandlerHttpGetPort;
+                this.lifecyclePreStopHandlerHttpGetScheme = model.lifecyclePreStopHandlerHttpGetScheme;
+                this.lifecyclePreStopHandlerTcpSocketHost = model.lifecyclePreStopHandlerTcpSocketHost;
+                this.lifecyclePreStopHandlerTcpSocketPort = model.lifecyclePreStopHandlerTcpSocketPort;
+                this.livenessProbeExecCommands = model.livenessProbeExecCommands;
+                this.livenessProbeFailureThreshold = model.livenessProbeFailureThreshold;
+                this.livenessProbeHttpGetPath = model.livenessProbeHttpGetPath;
+                this.livenessProbeHttpGetPort = model.livenessProbeHttpGetPort;
+                this.livenessProbeHttpGetScheme = model.livenessProbeHttpGetScheme;
+                this.livenessProbeInitialDelaySeconds = model.livenessProbeInitialDelaySeconds;
+                this.livenessProbePeriodSeconds = model.livenessProbePeriodSeconds;
+                this.livenessProbeSuccessThreshold = model.livenessProbeSuccessThreshold;
+                this.livenessProbeTcpSocketPort = model.livenessProbeTcpSocketPort;
+                this.livenessProbeTimeoutSeconds = model.livenessProbeTimeoutSeconds;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.ports = model.ports;
+                this.readinessProbeExecCommands = model.readinessProbeExecCommands;
+                this.readinessProbeFailureThreshold = model.readinessProbeFailureThreshold;
+                this.readinessProbeHttpGetPath = model.readinessProbeHttpGetPath;
+                this.readinessProbeHttpGetPort = model.readinessProbeHttpGetPort;
+                this.readinessProbeHttpGetScheme = model.readinessProbeHttpGetScheme;
+                this.readinessProbeInitialDelaySeconds = model.readinessProbeInitialDelaySeconds;
+                this.readinessProbePeriodSeconds = model.readinessProbePeriodSeconds;
+                this.readinessProbeSuccessThreshold = model.readinessProbeSuccessThreshold;
+                this.readinessProbeTcpSocketPort = model.readinessProbeTcpSocketPort;
+                this.readinessProbeTimeoutSeconds = model.readinessProbeTimeoutSeconds;
+                this.securityContextCapabilityAdds = model.securityContextCapabilityAdds;
+                this.securityContextReadOnlyRootFilesystem = model.securityContextReadOnlyRootFilesystem;
+                this.securityContextRunAsUser = model.securityContextRunAsUser;
+                this.stdin = model.stdin;
+                this.stdinOnce = model.stdinOnce;
+                this.tty = model.tty;
+                this.volumeMounts = model.volumeMounts;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
              * <p>The arguments that are passed to the container startup commands.</p>
              */
@@ -1822,6 +1931,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsConfigOptions model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The variable name of the option.</p>
              * 
@@ -1894,6 +2011,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         public static final class Builder {
             private java.util.List<String> hostnames; 
             private String ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAliases model) {
+                this.hostnames = model.hostnames;
+                this.ip = model.ip;
+            } 
 
             /**
              * <p>The added hostnames.</p>
@@ -1976,6 +2101,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String password; 
             private String server; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageRegistryCredentials model) {
+                this.password = model.password;
+                this.server = model.server;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The password of the image repository.</p>
@@ -2073,6 +2207,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainerEnvironmentVars model) {
+                this.fieldRefFieldPath = model.fieldRefFieldPath;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <blockquote>
              * <p> This parameter is not available for use.</p>
@@ -2158,6 +2301,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainerPorts model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -2271,6 +2422,17 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String name; 
             private Boolean readOnly; 
             private String subPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainerVolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
 
             /**
              * <p>The directory to which the init container mounts the volume.</p>
@@ -2544,6 +2706,27 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String securityContextRunAsUser; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainers model) {
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.initContainerArgs = model.initContainerArgs;
+                this.initContainerCommands = model.initContainerCommands;
+                this.initContainerEnvironmentVars = model.initContainerEnvironmentVars;
+                this.initContainerPorts = model.initContainerPorts;
+                this.initContainerVolumeMounts = model.initContainerVolumeMounts;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.securityContextCapabilityAdds = model.securityContextCapabilityAdds;
+                this.securityContextReadOnlyRootFilesystem = model.securityContextReadOnlyRootFilesystem;
+                this.securityContextRunAsUser = model.securityContextRunAsUser;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
              * <p>The number of vCPUs that are allocated to the init container.</p>
              * 
@@ -2739,6 +2922,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityContextSysCtls model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The system name of the security context in which the elastic container instance runs.</p>
              * 
@@ -2811,6 +3002,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -2896,6 +3095,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String content; 
             private Integer mode; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigFileVolumeConfigFileToPaths model) {
+                this.content = model.content;
+                this.mode = model.mode;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The content of the configuration file.</p>
@@ -3160,6 +3368,29 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String NFSVolumeServer; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.configFileVolumeConfigFileToPaths = model.configFileVolumeConfigFileToPaths;
+                this.configFileVolumeDefaultMode = model.configFileVolumeDefaultMode;
+                this.diskVolumeDiskId = model.diskVolumeDiskId;
+                this.diskVolumeDiskSize = model.diskVolumeDiskSize;
+                this.diskVolumeFsType = model.diskVolumeFsType;
+                this.emptyDirVolumeMedium = model.emptyDirVolumeMedium;
+                this.emptyDirVolumeSizeLimit = model.emptyDirVolumeSizeLimit;
+                this.flexVolumeDriver = model.flexVolumeDriver;
+                this.flexVolumeFsType = model.flexVolumeFsType;
+                this.flexVolumeOptions = model.flexVolumeOptions;
+                this.hostPathVolumePath = model.hostPathVolumePath;
+                this.hostPathVolumeType = model.hostPathVolumeType;
+                this.NFSVolumePath = model.NFSVolumePath;
+                this.NFSVolumeReadOnly = model.NFSVolumeReadOnly;
+                this.NFSVolumeServer = model.NFSVolumeServer;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The paths to the configuration files.</p>
@@ -4038,6 +4269,67 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
             private java.util.List<Volumes> volumes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingConfiguration model) {
+                this.acrRegistryInfos = model.acrRegistryInfos;
+                this.activeDeadlineSeconds = model.activeDeadlineSeconds;
+                this.autoCreateEip = model.autoCreateEip;
+                this.autoMatchImageCache = model.autoMatchImageCache;
+                this.computeCategory = model.computeCategory;
+                this.containerGroupName = model.containerGroupName;
+                this.containers = model.containers;
+                this.costOptimization = model.costOptimization;
+                this.cpu = model.cpu;
+                this.cpuOptionsCore = model.cpuOptionsCore;
+                this.cpuOptionsThreadsPerCore = model.cpuOptionsThreadsPerCore;
+                this.creationTime = model.creationTime;
+                this.dataCacheBucket = model.dataCacheBucket;
+                this.dataCacheBurstingEnabled = model.dataCacheBurstingEnabled;
+                this.dataCachePL = model.dataCachePL;
+                this.dataCacheProvisionedIops = model.dataCacheProvisionedIops;
+                this.description = model.description;
+                this.dnsConfigNameServers = model.dnsConfigNameServers;
+                this.dnsConfigOptions = model.dnsConfigOptions;
+                this.dnsConfigSearches = model.dnsConfigSearches;
+                this.dnsPolicy = model.dnsPolicy;
+                this.egressBandwidth = model.egressBandwidth;
+                this.eipBandwidth = model.eipBandwidth;
+                this.eipCommonBandwidthPackage = model.eipCommonBandwidthPackage;
+                this.eipISP = model.eipISP;
+                this.eipPublicIpAddressPoolId = model.eipPublicIpAddressPoolId;
+                this.ephemeralStorage = model.ephemeralStorage;
+                this.hostAliases = model.hostAliases;
+                this.hostName = model.hostName;
+                this.imageRegistryCredentials = model.imageRegistryCredentials;
+                this.imageSnapshotId = model.imageSnapshotId;
+                this.ingressBandwidth = model.ingressBandwidth;
+                this.initContainers = model.initContainers;
+                this.instanceFamilyLevel = model.instanceFamilyLevel;
+                this.instanceTypes = model.instanceTypes;
+                this.ipv6AddressCount = model.ipv6AddressCount;
+                this.lifecycleState = model.lifecycleState;
+                this.loadBalancerWeight = model.loadBalancerWeight;
+                this.memory = model.memory;
+                this.ntpServers = model.ntpServers;
+                this.ramRoleName = model.ramRoleName;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.restartPolicy = model.restartPolicy;
+                this.scalingConfigurationId = model.scalingConfigurationId;
+                this.scalingConfigurationName = model.scalingConfigurationName;
+                this.scalingGroupId = model.scalingGroupId;
+                this.securityContextSysCtls = model.securityContextSysCtls;
+                this.securityGroupId = model.securityGroupId;
+                this.slsEnable = model.slsEnable;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.tags = model.tags;
+                this.terminationGracePeriodSeconds = model.terminationGracePeriodSeconds;
+                this.volumes = model.volumes;
+            } 
 
             /**
              * <p>The information about the Container Registry Enterprise Edition instance.</p>

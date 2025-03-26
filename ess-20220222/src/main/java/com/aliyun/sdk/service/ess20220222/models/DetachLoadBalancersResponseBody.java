@@ -36,6 +36,10 @@ public class DetachLoadBalancersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DetachLoadBalancersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String scalingActivityId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetachLoadBalancersResponseBody model) {
+            this.requestId = model.requestId;
+            this.scalingActivityId = model.scalingActivityId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

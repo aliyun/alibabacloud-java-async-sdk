@@ -70,7 +70,7 @@ public class AttachLoadBalancersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -307,6 +307,14 @@ public class AttachLoadBalancersRequest extends Request {
         public static final class Builder {
             private String loadBalancerId; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerConfigs model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The ID of the CLB instance.</p>

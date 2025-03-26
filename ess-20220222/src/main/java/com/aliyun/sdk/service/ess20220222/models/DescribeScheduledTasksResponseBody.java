@@ -48,6 +48,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScheduledTasks> scheduledTasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScheduledTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scheduledTasks = model.scheduledTasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -335,6 +350,26 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             private String scheduledTaskId; 
             private String scheduledTaskName; 
             private Boolean taskEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduledTasks model) {
+                this.description = model.description;
+                this.desiredCapacity = model.desiredCapacity;
+                this.launchExpirationTime = model.launchExpirationTime;
+                this.launchTime = model.launchTime;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.recurrenceEndTime = model.recurrenceEndTime;
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValue = model.recurrenceValue;
+                this.scalingGroupId = model.scalingGroupId;
+                this.scheduledAction = model.scheduledAction;
+                this.scheduledTaskId = model.scheduledTaskId;
+                this.scheduledTaskName = model.scheduledTaskName;
+                this.taskEnabled = model.taskEnabled;
+            } 
 
             /**
              * <p>The description of the scheduled task.</p>

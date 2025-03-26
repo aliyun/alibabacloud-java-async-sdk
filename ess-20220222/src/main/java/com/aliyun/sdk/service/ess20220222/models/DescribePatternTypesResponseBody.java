@@ -36,6 +36,10 @@ public class DescribePatternTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return patternTypes
      */
@@ -53,6 +57,14 @@ public class DescribePatternTypesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PatternTypes> patternTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePatternTypesResponseBody model) {
+            this.patternTypes = model.patternTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance types that meet the specified requirements.</p>
@@ -158,6 +170,17 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             private String instanceType; 
             private String instanceTypeFamily; 
             private Float memory; 
+
+            private Builder() {
+            } 
+
+            private Builder(PatternTypes model) {
+                this.cores = model.cores;
+                this.instanceFamilyLevel = model.instanceFamilyLevel;
+                this.instanceType = model.instanceType;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.memory = model.memory;
+            } 
 
             /**
              * <p>The number of vCPUs that are assigned to the instance type.</p>

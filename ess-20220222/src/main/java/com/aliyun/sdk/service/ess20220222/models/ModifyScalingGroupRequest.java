@@ -201,7 +201,7 @@ public class ModifyScalingGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1085,8 +1085,19 @@ public class ModifyScalingGroupRequest extends Request {
             private String priceComparisonMode; 
             private Boolean spotAutoReplaceOnDemand; 
 
+            private Builder() {
+            } 
+
+            private Builder(CapacityOptions model) {
+                this.compensateWithOnDemand = model.compensateWithOnDemand;
+                this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+                this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+                this.priceComparisonMode = model.priceComparisonMode;
+                this.spotAutoReplaceOnDemand = model.spotAutoReplaceOnDemand;
+            } 
+
             /**
-             * <p>Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as cost-related issues and insufficient resources. This parameter takes effect only if you set <code>MultiAZPolicy</code> in the <code>CreateScalingGroup</code> operation to <code>COST_OPTIMIZED</code>. Valid values:</p>
+             * <p>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect only if you set <code>MultiAZPolicy</code> in the <code>CreateScalingGroup</code> operation to <code>COST_OPTIMIZED</code>. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -1101,7 +1112,7 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of pay-as-you-go instances that must be contained in the scaling group. When the actual number of pay-as-you-go instances in the scaling group drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+             * <p>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
              * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 0.</p>
              * 
              * <strong>example:</strong>
@@ -1113,7 +1124,7 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <code>OnDemandBaseCapacity</code> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100</p>
+             * <p>The percentage of additional pay-as-you-go instances beyond the minimum required by <code>OnDemandBaseCapacity</code> in the scaling group. Valid values: 0 to 100</p>
              * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 100.</p>
              * 
              * <strong>example:</strong>
@@ -1125,7 +1136,18 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * PriceComparisonMode.
+             * <p>The price comparison mode. Valid values:</p>
+             * <ul>
+             * <li><p>PricePerUnit: compares prices based on capacity.</p>
+             * <p>The capacity of instances in a scaling group is determined by the weights of the instance types used. If no weight is specified, the default weight is 1, which specifies that each instance in the scaling group has a capacity of 1.</p>
+             * </li>
+             * <li><p>PricePerVCpu: compares prices based on the price per vCPU.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: PricePerUnit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PricePerUnit</p>
              */
             public Builder priceComparisonMode(String priceComparisonMode) {
                 this.priceComparisonMode = priceComparisonMode;
@@ -1133,7 +1155,7 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to replace pay-as-you-go ECS instances with preemptible ECS instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible ECS instances to replace the surplus pay-as-you-go ECS instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go ECS instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
+             * <p>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this case, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -1210,6 +1232,15 @@ public class ModifyScalingGroupRequest extends Request {
             private String instanceType; 
             private Float spotPriceLimit; 
             private Integer weightedCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateOverrides model) {
+                this.instanceType = model.instanceType;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
 
             /**
              * <p>The instance type. The instance type that you specify by using the InstanceType parameter overwrites the instance type that is specified in the launch template.</p>

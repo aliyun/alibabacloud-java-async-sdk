@@ -67,7 +67,7 @@ public class DetachServerGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -294,6 +294,15 @@ public class DetachServerGroupsRequest extends Request {
             private Integer port; 
             private String serverGroupId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.port = model.port;
+                this.serverGroupId = model.serverGroupId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The port used by ECS instances or elastic container instances as backend servers of the server group.</p>

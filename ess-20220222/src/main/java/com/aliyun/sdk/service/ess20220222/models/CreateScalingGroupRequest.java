@@ -267,7 +267,7 @@ public class CreateScalingGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1424,6 +1424,15 @@ public class CreateScalingGroupRequest extends Request {
             private Integer port; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlbServerGroups model) {
+                this.albServerGroupId = model.albServerGroupId;
+                this.port = model.port;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The ID of the ALB server group.</p>
              * <p>You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
@@ -1545,6 +1554,17 @@ public class CreateScalingGroupRequest extends Request {
             private String priceComparisonMode; 
             private Boolean spotAutoReplaceOnDemand; 
 
+            private Builder() {
+            } 
+
+            private Builder(CapacityOptions model) {
+                this.compensateWithOnDemand = model.compensateWithOnDemand;
+                this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+                this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+                this.priceComparisonMode = model.priceComparisonMode;
+                this.spotAutoReplaceOnDemand = model.spotAutoReplaceOnDemand;
+            } 
+
             /**
              * <p>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set <code>MultiAZPolicy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
              * <ul>
@@ -1586,7 +1606,15 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * PriceComparisonMode.
+             * <p>The cost comparison method. Valid values:</p>
+             * <ul>
+             * <li>PricePerUnit: compares costs based on unit price divided by instance capacities (weights). The capacity of an instance in a scaling group is determined by the weight of the instance type used. If no weight is set, the capacity defaults to 1.</li>
+             * <li>PricePerVCpu: compares costs based on unit price divided by the number of vCPUs.</li>
+             * </ul>
+             * <p>Default value: PricePerUnit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PricePerUnit</p>
              */
             public Builder priceComparisonMode(String priceComparisonMode) {
                 this.priceComparisonMode = priceComparisonMode;
@@ -1671,6 +1699,15 @@ public class CreateScalingGroupRequest extends Request {
             private String attachMode; 
             private String DBInstanceId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstances model) {
+                this.attachMode = model.attachMode;
+                this.DBInstanceId = model.DBInstanceId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The mode in which you want to attach the database to the scaling group. Valid values:</p>
@@ -1777,6 +1814,15 @@ public class CreateScalingGroupRequest extends Request {
             private String instanceType; 
             private Float spotPriceLimit; 
             private Integer weightedCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateOverrides model) {
+                this.instanceType = model.instanceType;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.weightedCapacity = model.weightedCapacity;
+            } 
 
             /**
              * <p>The instance type that you want to use to override the instance type that is specified in the launch template.</p>
@@ -1931,6 +1977,18 @@ public class CreateScalingGroupRequest extends Request {
             private String notificationArn; 
             private String notificationMetadata; 
 
+            private Builder() {
+            } 
+
+            private Builder(LifecycleHooks model) {
+                this.defaultResult = model.defaultResult;
+                this.heartbeatTimeout = model.heartbeatTimeout;
+                this.lifecycleHookName = model.lifecycleHookName;
+                this.lifecycleTransition = model.lifecycleTransition;
+                this.notificationArn = model.notificationArn;
+                this.notificationMetadata = model.notificationMetadata;
+            } 
+
             /**
              * <p>The action that Auto Scaling performs when the lifecycle hook times out. Valid values:</p>
              * <ul>
@@ -2072,6 +2130,14 @@ public class CreateScalingGroupRequest extends Request {
             private String loadBalancerId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerConfigs model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The ID of the CLB instance.</p>
              * 
@@ -2168,6 +2234,16 @@ public class CreateScalingGroupRequest extends Request {
             private String serverGroupId; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.port = model.port;
+                this.serverGroupId = model.serverGroupId;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The port number used by each ECS instance as backend server in the vServer group. Valid values: 1 to 65535.</p>
@@ -2281,8 +2357,17 @@ public class CreateScalingGroupRequest extends Request {
             private Boolean propagate; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.propagate = model.propagate;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The tag key.</p>
+             * <p>The tag key that you want to add to the scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>Department</p>
@@ -2293,10 +2378,10 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
+             * <p>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</p>
              * <ul>
-             * <li>true: propagates the tag to new instances.</li>
-             * <li>false: does not propagate the tag to any instance.</li>
+             * <li>true: propagates the tag to only instances that are newly created.</li>
+             * <li>false: does not propagate the tag to any instances.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -2309,7 +2394,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The tag value that you want to add to the scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>Finance</p>
@@ -2381,6 +2466,15 @@ public class CreateScalingGroupRequest extends Request {
             private Integer port; 
             private String vServerGroupId; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServerGroupAttributes model) {
+                this.port = model.port;
+                this.vServerGroupId = model.vServerGroupId;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The port number used by each ECS instance as a backend server in the vServer group. Valid values: 1 to 65535.</p>
@@ -2466,6 +2560,14 @@ public class CreateScalingGroupRequest extends Request {
         public static final class Builder {
             private String loadBalancerId; 
             private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
+
+            private Builder() {
+            } 
+
+            private Builder(VServerGroups model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.vServerGroupAttributes = model.vServerGroupAttributes;
+            } 
 
             /**
              * <p>The ID of the CLB instance to which the backend vServer group belongs.</p>

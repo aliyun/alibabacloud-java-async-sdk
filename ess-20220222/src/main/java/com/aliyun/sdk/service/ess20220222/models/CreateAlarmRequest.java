@@ -126,7 +126,7 @@ public class CreateAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -662,6 +662,14 @@ public class CreateAlarmRequest extends Request {
             private String dimensionKey; 
             private String dimensionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
+
             /**
              * <p>The dimension key of the metric. The valid values vary based on the metric type.</p>
              * <ul>
@@ -806,6 +814,17 @@ public class CreateAlarmRequest extends Request {
             private Integer period; 
             private String statistics; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Expressions model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The operator that you want to use to compare the metric value and the threshold in the multi-metric alert rule. Valid values:</p>

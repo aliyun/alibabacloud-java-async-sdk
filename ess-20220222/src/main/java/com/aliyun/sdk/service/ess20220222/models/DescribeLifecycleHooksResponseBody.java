@@ -48,6 +48,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lifecycleHooks
      */
@@ -89,6 +93,17 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLifecycleHooksResponseBody model) {
+            this.lifecycleHooks = model.lifecycleHooks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the lifecycle hooks.</p>
@@ -275,6 +290,21 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             private String notificationArn; 
             private String notificationMetadata; 
             private String scalingGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LifecycleHooks model) {
+                this.defaultResult = model.defaultResult;
+                this.heartbeatTimeout = model.heartbeatTimeout;
+                this.lifecycleHookId = model.lifecycleHookId;
+                this.lifecycleHookName = model.lifecycleHookName;
+                this.lifecycleHookStatus = model.lifecycleHookStatus;
+                this.lifecycleTransition = model.lifecycleTransition;
+                this.notificationArn = model.notificationArn;
+                this.notificationMetadata = model.notificationMetadata;
+                this.scalingGroupId = model.scalingGroupId;
+            } 
 
             /**
              * <p>The next action that is performed after the lifecycle hook times out.</p>

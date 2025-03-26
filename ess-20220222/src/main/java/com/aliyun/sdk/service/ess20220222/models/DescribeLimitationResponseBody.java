@@ -88,6 +88,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxNumberOfAlbServerGroup
      */
@@ -209,6 +213,27 @@ public class DescribeLimitationResponseBody extends TeaModel {
         private Integer maxNumberOfScheduledTasks; 
         private Integer maxNumberOfVServerGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLimitationResponseBody model) {
+            this.maxNumberOfAlbServerGroup = model.maxNumberOfAlbServerGroup;
+            this.maxNumberOfDBInstances = model.maxNumberOfDBInstances;
+            this.maxNumberOfLifecycleHooks = model.maxNumberOfLifecycleHooks;
+            this.maxNumberOfLoadBalancers = model.maxNumberOfLoadBalancers;
+            this.maxNumberOfMaxSize = model.maxNumberOfMaxSize;
+            this.maxNumberOfMinSize = model.maxNumberOfMinSize;
+            this.maxNumberOfNlbServerGroup = model.maxNumberOfNlbServerGroup;
+            this.maxNumberOfNotificationConfigurations = model.maxNumberOfNotificationConfigurations;
+            this.maxNumberOfScalingConfigurations = model.maxNumberOfScalingConfigurations;
+            this.maxNumberOfScalingGroups = model.maxNumberOfScalingGroups;
+            this.maxNumberOfScalingInstances = model.maxNumberOfScalingInstances;
+            this.maxNumberOfScalingRules = model.maxNumberOfScalingRules;
+            this.maxNumberOfScheduledTasks = model.maxNumberOfScheduledTasks;
+            this.maxNumberOfVServerGroups = model.maxNumberOfVServerGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of Application Load Balancer (ALB) server groups that can be attached to a scaling group.</p>

@@ -36,6 +36,10 @@ public class CreateDiagnoseReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reportId
      */
@@ -53,6 +57,14 @@ public class CreateDiagnoseReportResponseBody extends TeaModel {
     public static final class Builder {
         private String reportId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDiagnoseReportResponseBody model) {
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique ID of the diagnostic report.</p>

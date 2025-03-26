@@ -48,6 +48,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceRefreshTasks
      */
@@ -89,6 +93,17 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceRefreshesResponseBody model) {
+            this.instanceRefreshTasks = model.instanceRefreshTasks;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instance refresh tasks.</p>
@@ -191,6 +206,14 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public static final class Builder {
             private String imageId; 
             private String scalingConfigurationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesiredConfiguration model) {
+                this.imageId = model.imageId;
+                this.scalingConfigurationId = model.scalingConfigurationId;
+            } 
 
             /**
              * <p>The ID of the image file that provides the image resource for Auto Scaling to create instances.</p>
@@ -396,6 +419,25 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private Integer totalNeedUpdateCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRefreshTasks model) {
+                this.desiredConfiguration = model.desiredConfiguration;
+                this.detail = model.detail;
+                this.endTime = model.endTime;
+                this.finishedUpdateCapacity = model.finishedUpdateCapacity;
+                this.instanceRefreshTaskId = model.instanceRefreshTaskId;
+                this.maxHealthyPercentage = model.maxHealthyPercentage;
+                this.minHealthyPercentage = model.minHealthyPercentage;
+                this.regionId = model.regionId;
+                this.scalingGroupId = model.scalingGroupId;
+                this.skipMatching = model.skipMatching;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.totalNeedUpdateCapacity = model.totalNeedUpdateCapacity;
+            } 
 
             /**
              * <p>The desired configurations of the instance refresh task.</p>

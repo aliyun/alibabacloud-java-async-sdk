@@ -36,6 +36,10 @@ public class CreateScalingGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateScalingGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String scalingGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScalingGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.scalingGroupId = model.scalingGroupId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

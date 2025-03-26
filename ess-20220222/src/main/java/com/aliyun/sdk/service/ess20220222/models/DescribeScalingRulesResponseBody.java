@@ -48,6 +48,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScalingRules> scalingRules; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScalingRulesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.scalingRules = model.scalingRules;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -192,6 +207,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String dimensionKey; 
             private String dimensionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmDimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
+
             /**
              * <p>The dimension key of the metric.</p>
              * 
@@ -264,6 +287,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String dimensionKey; 
             private String dimensionValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
 
             /**
              * <p>The key of the dimension that is associated with the metric. Valid values:</p>
@@ -425,6 +456,21 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String metricType; 
             private String statistics; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alarms model) {
+                this.alarmTaskId = model.alarmTaskId;
+                this.alarmTaskName = model.alarmTaskName;
+                this.comparisonOperator = model.comparisonOperator;
+                this.dimensions = model.dimensions;
+                this.evaluationCount = model.evaluationCount;
+                this.metricName = model.metricName;
+                this.metricType = model.metricType;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The ID of the event-triggered task that is associated with the scaling rule.</p>
@@ -590,6 +636,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String dimensionKey; 
             private String dimensionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(HybridMetricsDimensions model) {
+                this.dimensionKey = model.dimensionKey;
+                this.dimensionValue = model.dimensionValue;
+            } 
+
             /**
              * <p>The key of the metric dimension.</p>
              * 
@@ -698,6 +752,17 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String id; 
             private String metricName; 
             private String statistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(HybridMetrics model) {
+                this.dimensions = model.dimensions;
+                this.expression = model.expression;
+                this.id = model.id;
+                this.metricName = model.metricName;
+                this.statistic = model.statistic;
+            } 
 
             /**
              * <p>The metric dimensions. This parameter is used to specify the monitored resources.</p>
@@ -819,6 +884,15 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private Float metricIntervalLowerBound; 
             private Float metricIntervalUpperBound; 
             private Integer scalingAdjustment; 
+
+            private Builder() {
+            } 
+
+            private Builder(StepAdjustments model) {
+                this.metricIntervalLowerBound = model.metricIntervalLowerBound;
+                this.metricIntervalUpperBound = model.metricIntervalUpperBound;
+                this.scalingAdjustment = model.scalingAdjustment;
+            } 
 
             /**
              * <p>The lower limit of a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
@@ -1216,6 +1290,40 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private java.util.List<StepAdjustments> stepAdjustments; 
             private Float targetValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScalingRules model) {
+                this.adjustmentType = model.adjustmentType;
+                this.adjustmentValue = model.adjustmentValue;
+                this.alarmDimensions = model.alarmDimensions;
+                this.alarms = model.alarms;
+                this.cooldown = model.cooldown;
+                this.disableScaleIn = model.disableScaleIn;
+                this.estimatedInstanceWarmup = model.estimatedInstanceWarmup;
+                this.hybridMetrics = model.hybridMetrics;
+                this.hybridMonitorNamespace = model.hybridMonitorNamespace;
+                this.initialMaxSize = model.initialMaxSize;
+                this.maxSize = model.maxSize;
+                this.metricName = model.metricName;
+                this.metricType = model.metricType;
+                this.minAdjustmentMagnitude = model.minAdjustmentMagnitude;
+                this.minSize = model.minSize;
+                this.predictiveScalingMode = model.predictiveScalingMode;
+                this.predictiveTaskBufferTime = model.predictiveTaskBufferTime;
+                this.predictiveValueBehavior = model.predictiveValueBehavior;
+                this.predictiveValueBuffer = model.predictiveValueBuffer;
+                this.scaleInEvaluationCount = model.scaleInEvaluationCount;
+                this.scaleOutEvaluationCount = model.scaleOutEvaluationCount;
+                this.scalingGroupId = model.scalingGroupId;
+                this.scalingRuleAri = model.scalingRuleAri;
+                this.scalingRuleId = model.scalingRuleId;
+                this.scalingRuleName = model.scalingRuleName;
+                this.scalingRuleType = model.scalingRuleType;
+                this.stepAdjustments = model.stepAdjustments;
+                this.targetValue = model.targetValue;
+            } 
+
             /**
              * <p>The adjustment method of the scaling rule. Valid values:</p>
              * <ul>
@@ -1297,7 +1405,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Hybrid Cloud Monitoring metrics.</p>
+             * <p>The Hybrid Cloud Monitoring metrics. For more information, see <a href="https://help.aliyun.com/document_detail/2852162.html">Create a custom target tracking scaling rule</a>.</p>
              */
             public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
                 this.hybridMetrics = hybridMetrics;
