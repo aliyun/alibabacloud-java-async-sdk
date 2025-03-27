@@ -48,6 +48,10 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateChain
      */
@@ -89,6 +93,17 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         private String requestId; 
         private String serialNumber; 
         private String x509Certificate; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServerCertificateWithCsrResponseBody model) {
+            this.certificateChain = model.certificateChain;
+            this.identifier = model.identifier;
+            this.requestId = model.requestId;
+            this.serialNumber = model.serialNumber;
+            this.x509Certificate = model.x509Certificate;
+        } 
 
         /**
          * <p>The certificate chain of the server certificate.</p>

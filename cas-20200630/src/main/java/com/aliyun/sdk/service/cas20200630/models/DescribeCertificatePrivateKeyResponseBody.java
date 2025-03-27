@@ -36,6 +36,10 @@ public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return encryptedData
      */
@@ -53,6 +57,14 @@ public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String encryptedData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCertificatePrivateKeyResponseBody model) {
+            this.encryptedData = model.encryptedData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the encrypted private key.</p>

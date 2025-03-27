@@ -44,6 +44,10 @@ public class CreateSubCACertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificate
      */
@@ -77,6 +81,16 @@ public class CreateSubCACertificateResponseBody extends TeaModel {
         private String certificateChain; 
         private String identifier; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSubCACertificateResponseBody model) {
+            this.certificate = model.certificate;
+            this.certificateChain = model.certificateChain;
+            this.identifier = model.identifier;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The CA certificate in the PEM format.</p>

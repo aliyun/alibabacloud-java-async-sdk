@@ -48,6 +48,10 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificate
      */
@@ -89,6 +93,17 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         private String identifier; 
         private String requestId; 
         private String serialNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCustomCertificateResponseBody model) {
+            this.certificate = model.certificate;
+            this.certificateChain = model.certificateChain;
+            this.identifier = model.identifier;
+            this.requestId = model.requestId;
+            this.serialNumber = model.serialNumber;
+        } 
 
         /**
          * <p>The content of the certificate. This parameter is returned only if Immediately is set to 1 or 2.</p>

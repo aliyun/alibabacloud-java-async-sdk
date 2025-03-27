@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClientCertificateWithCsrResponseBody</p>
  */
 public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CertKmcRep1")
+    private String certKmcRep1;
+
+    @com.aliyun.core.annotation.NameInMap("CertSignBufKmc")
+    private String certSignBufKmc;
+
     @com.aliyun.core.annotation.NameInMap("CertificateChain")
     private String certificateChain;
 
@@ -33,6 +39,8 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
     private String x509Certificate;
 
     private CreateClientCertificateWithCsrResponseBody(Builder builder) {
+        this.certKmcRep1 = builder.certKmcRep1;
+        this.certSignBufKmc = builder.certSignBufKmc;
         this.certificateChain = builder.certificateChain;
         this.identifier = builder.identifier;
         this.requestId = builder.requestId;
@@ -46,6 +54,24 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
 
     public static CreateClientCertificateWithCsrResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return certKmcRep1
+     */
+    public String getCertKmcRep1() {
+        return this.certKmcRep1;
+    }
+
+    /**
+     * @return certSignBufKmc
+     */
+    public String getCertSignBufKmc() {
+        return this.certSignBufKmc;
     }
 
     /**
@@ -84,11 +110,42 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String certKmcRep1; 
+        private String certSignBufKmc; 
         private String certificateChain; 
         private String identifier; 
         private String requestId; 
         private String serialNumber; 
         private String x509Certificate; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateClientCertificateWithCsrResponseBody model) {
+            this.certKmcRep1 = model.certKmcRep1;
+            this.certSignBufKmc = model.certSignBufKmc;
+            this.certificateChain = model.certificateChain;
+            this.identifier = model.identifier;
+            this.requestId = model.requestId;
+            this.serialNumber = model.serialNumber;
+            this.x509Certificate = model.x509Certificate;
+        } 
+
+        /**
+         * CertKmcRep1.
+         */
+        public Builder certKmcRep1(String certKmcRep1) {
+            this.certKmcRep1 = certKmcRep1;
+            return this;
+        }
+
+        /**
+         * CertSignBufKmc.
+         */
+        public Builder certSignBufKmc(String certSignBufKmc) {
+            this.certSignBufKmc = certSignBufKmc;
+            return this;
+        }
 
         /**
          * <p>The certificate chain of the client certificate.</p>

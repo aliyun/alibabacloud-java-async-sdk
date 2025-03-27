@@ -52,6 +52,10 @@ public class ListClientCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateList
      */
@@ -101,6 +105,18 @@ public class ListClientCertificateResponseBody extends TeaModel {
         private String requestId; 
         private Integer showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClientCertificateResponseBody model) {
+            this.certificateList = model.certificateList;
+            this.currentPage = model.currentPage;
+            this.pageCount = model.pageCount;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details about all client certificates and server certificates.</p>
@@ -454,6 +470,34 @@ public class ListClientCertificateResponseBody extends TeaModel {
             private String status; 
             private String subjectDN; 
             private String x509Certificate; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateList model) {
+                this.afterDate = model.afterDate;
+                this.algorithm = model.algorithm;
+                this.beforeDate = model.beforeDate;
+                this.certificateType = model.certificateType;
+                this.commonName = model.commonName;
+                this.countryCode = model.countryCode;
+                this.days = model.days;
+                this.identifier = model.identifier;
+                this.keySize = model.keySize;
+                this.locality = model.locality;
+                this.md5 = model.md5;
+                this.organization = model.organization;
+                this.organizationUnit = model.organizationUnit;
+                this.parentIdentifier = model.parentIdentifier;
+                this.sans = model.sans;
+                this.serialNumber = model.serialNumber;
+                this.sha2 = model.sha2;
+                this.signAlgorithm = model.signAlgorithm;
+                this.state = model.state;
+                this.status = model.status;
+                this.subjectDN = model.subjectDN;
+                this.x509Certificate = model.x509Certificate;
+            } 
 
             /**
              * <p>The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>

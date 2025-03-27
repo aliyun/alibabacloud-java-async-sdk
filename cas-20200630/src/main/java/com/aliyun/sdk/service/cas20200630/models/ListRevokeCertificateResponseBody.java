@@ -52,6 +52,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateList
      */
@@ -101,6 +105,18 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         private String requestId; 
         private Integer showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRevokeCertificateResponseBody model) {
+            this.certificateList = model.certificateList;
+            this.currentPage = model.currentPage;
+            this.pageCount = model.pageCount;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the details about the revoked client certificates or server certificates.</p>
@@ -442,6 +458,33 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             private String state; 
             private String status; 
             private String subjectDN; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateList model) {
+                this.afterDate = model.afterDate;
+                this.algorithm = model.algorithm;
+                this.beforeDate = model.beforeDate;
+                this.certificateType = model.certificateType;
+                this.commonName = model.commonName;
+                this.countryCode = model.countryCode;
+                this.identifier = model.identifier;
+                this.keySize = model.keySize;
+                this.locality = model.locality;
+                this.md5 = model.md5;
+                this.organization = model.organization;
+                this.organizationUnit = model.organizationUnit;
+                this.parentIdentifier = model.parentIdentifier;
+                this.revokeDate = model.revokeDate;
+                this.sans = model.sans;
+                this.serialNumber = model.serialNumber;
+                this.sha2 = model.sha2;
+                this.signAlgorithm = model.signAlgorithm;
+                this.state = model.state;
+                this.status = model.status;
+                this.subjectDN = model.subjectDN;
+            } 
 
             /**
              * <p>The expiration date of the certificate. The date is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-12-31T00:00Z</code> indicates December 31, 2021.</p>

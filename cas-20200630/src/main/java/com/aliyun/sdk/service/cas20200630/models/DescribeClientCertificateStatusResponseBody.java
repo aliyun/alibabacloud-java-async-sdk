@@ -36,6 +36,10 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateStatus
      */
@@ -53,6 +57,14 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CertificateStatus> certificateStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClientCertificateStatusResponseBody model) {
+            this.certificateStatus = model.certificateStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the status information about the certificates.</p>
@@ -134,6 +146,15 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
             private Long revokeTime; 
             private String serialNumber; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateStatus model) {
+                this.revokeTime = model.revokeTime;
+                this.serialNumber = model.serialNumber;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The date on which the certificate was revoked.</p>

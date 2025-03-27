@@ -62,7 +62,7 @@ public class CreateCustomCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -358,6 +358,20 @@ public class CreateCustomCertificateRequest extends Request {
             private Boolean keyEncipherment; 
             private Boolean nonRepudiation; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyUsage model) {
+                this.contentCommitment = model.contentCommitment;
+                this.dataEncipherment = model.dataEncipherment;
+                this.decipherOnly = model.decipherOnly;
+                this.digitalSignature = model.digitalSignature;
+                this.encipherOnly = model.encipherOnly;
+                this.keyAgreement = model.keyAgreement;
+                this.keyEncipherment = model.keyEncipherment;
+                this.nonRepudiation = model.nonRepudiation;
+            } 
+
             /**
              * <p>The original name of the parameter is NonRepudiation.</p>
              * 
@@ -498,6 +512,14 @@ public class CreateCustomCertificateRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubjectAlternativeNames model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The type of the alias. Valid values:</p>
              * <ul>
@@ -609,6 +631,16 @@ public class CreateCustomCertificateRequest extends Request {
             private KeyUsage keyUsage; 
             private java.util.List<SubjectAlternativeNames> subjectAlternativeNames; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extensions model) {
+                this.criticals = model.criticals;
+                this.extendedKeyUsages = model.extendedKeyUsages;
+                this.keyUsage = model.keyUsage;
+                this.subjectAlternativeNames = model.subjectAlternativeNames;
+            } 
+
             /**
              * <p>If it is a necessary parameter, the critical list contains the parameter name.</p>
              */
@@ -691,6 +723,14 @@ public class CreateCustomCertificateRequest extends Request {
         public static final class Builder {
             private String objectIdentifier; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomAttributes model) {
+                this.objectIdentifier = model.objectIdentifier;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Custom attribute type as:</p>
@@ -840,6 +880,19 @@ public class CreateCustomCertificateRequest extends Request {
             private String organizationUnit; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Subject model) {
+                this.commonName = model.commonName;
+                this.country = model.country;
+                this.customAttributes = model.customAttributes;
+                this.locality = model.locality;
+                this.organization = model.organization;
+                this.organizationUnit = model.organizationUnit;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The common name of the certificate user.</p>
              * 
@@ -976,6 +1029,15 @@ public class CreateCustomCertificateRequest extends Request {
             private Extensions extensions; 
             private String serialNumber; 
             private Subject subject; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiPassthrough model) {
+                this.extensions = model.extensions;
+                this.serialNumber = model.serialNumber;
+                this.subject = model.subject;
+            } 
 
             /**
              * <p>The extensions of the certificate.</p>

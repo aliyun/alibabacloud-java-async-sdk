@@ -36,6 +36,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceStatusList
      */
@@ -53,6 +57,14 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceStatusList> instanceStatusList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCAInstanceStatusResponseBody model) {
+            this.instanceStatusList = model.instanceStatusList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status information of the private CA instance.</p>
@@ -206,6 +218,21 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private Long useExpireTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatusList model) {
+                this.afterTime = model.afterTime;
+                this.beforeTime = model.beforeTime;
+                this.certIssuedCount = model.certIssuedCount;
+                this.certTotalCount = model.certTotalCount;
+                this.identifier = model.identifier;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+                this.type = model.type;
+                this.useExpireTime = model.useExpireTime;
+            } 
 
             /**
              * <p>The expiration date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
