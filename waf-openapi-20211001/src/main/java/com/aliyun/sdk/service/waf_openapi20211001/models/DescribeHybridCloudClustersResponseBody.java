@@ -36,6 +36,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterInfos
      */
@@ -53,6 +57,14 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ClusterInfos> clusterInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudClustersResponseBody model) {
+            this.clusterInfos = model.clusterInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the clusters.</p>
@@ -266,6 +278,26 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             private String ruleConfig; 
             private String ruleStatus; 
             private String ruleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfos model) {
+                this.accessMode = model.accessMode;
+                this.accessRegion = model.accessRegion;
+                this.clusterName = model.clusterName;
+                this.clusterResourceId = model.clusterResourceId;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+                this.id = model.id;
+                this.protectionServerCount = model.protectionServerCount;
+                this.proxyStatus = model.proxyStatus;
+                this.proxyType = model.proxyType;
+                this.remark = model.remark;
+                this.ruleConfig = model.ruleConfig;
+                this.ruleStatus = model.ruleStatus;
+                this.ruleType = model.ruleType;
+            } 
 
             /**
              * <p>The network access mode. Valid values:</p>

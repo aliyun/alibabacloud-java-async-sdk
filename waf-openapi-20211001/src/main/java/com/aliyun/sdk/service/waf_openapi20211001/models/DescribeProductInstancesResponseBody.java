@@ -40,6 +40,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return productInstances
      */
@@ -65,6 +69,15 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         private java.util.List<ProductInstances> productInstances; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProductInstancesResponseBody model) {
+            this.productInstances = model.productInstances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the instances.</p>
@@ -145,6 +158,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String certificateId; 
             private String certificateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+                this.certificateName = model.certificateName;
+            } 
 
             /**
              * <p>The ID of the certificate.</p>
@@ -230,6 +251,15 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private java.util.List<Certificates> certificates; 
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePorts model) {
+                this.certificates = model.certificates;
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The information about the certificates.</p>
@@ -401,6 +431,21 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private java.util.List<ResourcePorts> resourcePorts; 
             private String resourceProduct; 
             private String resourceRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductInstances model) {
+                this.ownerUserId = model.ownerUserId;
+                this.resourceInstanceId = model.resourceInstanceId;
+                this.resourceInstanceIp = model.resourceInstanceIp;
+                this.resourceInstanceName = model.resourceInstanceName;
+                this.resourceIp = model.resourceIp;
+                this.resourceName = model.resourceName;
+                this.resourcePorts = model.resourcePorts;
+                this.resourceProduct = model.resourceProduct;
+                this.resourceRegionId = model.resourceRegionId;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>

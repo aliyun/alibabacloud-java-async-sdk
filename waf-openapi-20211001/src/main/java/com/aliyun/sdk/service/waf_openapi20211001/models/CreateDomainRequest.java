@@ -74,7 +74,7 @@ public class CreateDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -497,6 +497,29 @@ public class CreateDomainRequest extends Request {
             private Integer xffHeaderMode; 
             private java.util.List<String> xffHeaders; 
 
+            private Builder() {
+            } 
+
+            private Builder(Listen model) {
+                this.certId = model.certId;
+                this.cipherSuite = model.cipherSuite;
+                this.customCiphers = model.customCiphers;
+                this.enableTLSv3 = model.enableTLSv3;
+                this.exclusiveIp = model.exclusiveIp;
+                this.focusHttps = model.focusHttps;
+                this.http2Enabled = model.http2Enabled;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+                this.iPv6Enabled = model.iPv6Enabled;
+                this.protectionResource = model.protectionResource;
+                this.sM2AccessOnly = model.sM2AccessOnly;
+                this.sM2CertId = model.sM2CertId;
+                this.sM2Enabled = model.sM2Enabled;
+                this.TLSVersion = model.TLSVersion;
+                this.xffHeaderMode = model.xffHeaderMode;
+                this.xffHeaders = model.xffHeaders;
+            } 
+
             /**
              * <p>The ID of the certificate that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>.</p>
              * 
@@ -766,6 +789,14 @@ public class CreateDomainRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the custom header field.</p>
              * 
@@ -1024,6 +1055,29 @@ public class CreateDomainRequest extends Request {
             private String sniHost; 
             private Integer writeTimeout; 
             private Boolean xffProto; 
+
+            private Builder() {
+            } 
+
+            private Builder(Redirect model) {
+                this.backends = model.backends;
+                this.backupBackends = model.backupBackends;
+                this.cnameEnabled = model.cnameEnabled;
+                this.connectTimeout = model.connectTimeout;
+                this.focusHttpBackend = model.focusHttpBackend;
+                this.keepalive = model.keepalive;
+                this.keepaliveRequests = model.keepaliveRequests;
+                this.keepaliveTimeout = model.keepaliveTimeout;
+                this.loadbalance = model.loadbalance;
+                this.readTimeout = model.readTimeout;
+                this.requestHeaders = model.requestHeaders;
+                this.retry = model.retry;
+                this.routingRules = model.routingRules;
+                this.sniEnabled = model.sniEnabled;
+                this.sniHost = model.sniHost;
+                this.writeTimeout = model.writeTimeout;
+                this.xffProto = model.xffProto;
+            } 
 
             /**
              * <p>The IP addresses or domain names of the origin server.</p>
@@ -1306,6 +1360,14 @@ public class CreateDomainRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>

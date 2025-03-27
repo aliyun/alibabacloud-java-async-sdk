@@ -36,6 +36,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         private String requestId; 
         private Resource resource; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+        } 
+
         /**
          * <p>The request ID.</p>
          * 
@@ -66,7 +78,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the protected object.</p>
+         * <p>The protected object.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -123,8 +135,19 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>Specifies the key for a custom response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header-Key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -132,7 +155,10 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Specifies the value for a custom response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header-Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -370,6 +396,29 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private java.util.List<ResponseHeaders> responseHeaders; 
             private Integer xffStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.acwCookieStatus = model.acwCookieStatus;
+                this.acwSecureStatus = model.acwSecureStatus;
+                this.acwV3SecureStatus = model.acwV3SecureStatus;
+                this.customHeaders = model.customHeaders;
+                this.description = model.description;
+                this.detail = model.detail;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ownerUserId = model.ownerUserId;
+                this.pattern = model.pattern;
+                this.product = model.product;
+                this.resource = model.resource;
+                this.resourceGroup = model.resourceGroup;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.resourceOrigin = model.resourceOrigin;
+                this.responseHeaders = model.responseHeaders;
+                this.xffStatus = model.xffStatus;
+            } 
+
             /**
              * <p>The status of the tracking cookie.</p>
              * <ul>
@@ -555,7 +604,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseHeaders.
+             * <p>The response header.</p>
              */
             public Builder responseHeaders(java.util.List<ResponseHeaders> responseHeaders) {
                 this.responseHeaders = responseHeaders;

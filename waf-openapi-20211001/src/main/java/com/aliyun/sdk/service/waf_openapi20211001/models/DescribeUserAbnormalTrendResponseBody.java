@@ -36,6 +36,10 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Trend> trend; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserAbnormalTrendResponseBody model) {
+            this.requestId = model.requestId;
+            this.trend = model.trend;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             private Long abnormalMedium; 
             private Long timeStamp; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trend model) {
+                this.abnormalHigh = model.abnormalHigh;
+                this.abnormalLow = model.abnormalLow;
+                this.abnormalMedium = model.abnormalMedium;
+                this.timeStamp = model.timeStamp;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The number of high risks.</p>

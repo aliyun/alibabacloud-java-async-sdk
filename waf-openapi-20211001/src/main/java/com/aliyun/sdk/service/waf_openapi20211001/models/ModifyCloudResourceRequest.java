@@ -57,7 +57,7 @@ public class ModifyCloudResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -134,7 +134,7 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the listeners.</p>
+         * <p>The listener configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listen(Listen listen) {
@@ -145,7 +145,7 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the forwarding rule.</p>
+         * <p>The forwarding configurations.</p>
          */
         public Builder redirect(Redirect redirect) {
             String redirectShrink = shrink(redirect, "Redirect", "json");
@@ -234,8 +234,16 @@ public class ModifyCloudResourceRequest extends Request {
             private String appliedType; 
             private String certificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.appliedType = model.appliedType;
+                this.certificateId = model.certificateId;
+            } 
+
             /**
-             * <p>The type of the HTTPS certificate. Valid values:</p>
+             * <p>The type of the certificate. Valid values:</p>
              * <ul>
              * <li><strong>default</strong>: default certificate.</li>
              * <li><strong>extension</strong>: additional certificate.</li>
@@ -411,8 +419,24 @@ public class ModifyCloudResourceRequest extends Request {
             private String resourceProduct; 
             private String TLSVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Listen model) {
+                this.certificates = model.certificates;
+                this.cipherSuite = model.cipherSuite;
+                this.customCiphers = model.customCiphers;
+                this.enableTLSv3 = model.enableTLSv3;
+                this.http2Enabled = model.http2Enabled;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.resourceInstanceId = model.resourceInstanceId;
+                this.resourceProduct = model.resourceProduct;
+                this.TLSVersion = model.TLSVersion;
+            } 
+
             /**
-             * <p>An array of certificates.</p>
+             * <p>The certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -423,7 +447,7 @@ public class ModifyCloudResourceRequest extends Request {
              * <p>The type of the cipher suites that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: all cipher suites.</li>
-             * <li><strong>2</strong>: strong cipher suites. You can set the parameter to this value only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
+             * <li><strong>2</strong>: strong cipher suites. This value is available only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
              * <li><strong>99</strong>: custom cipher suites.</li>
              * </ul>
              * 
@@ -436,7 +460,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>An array of custom cipher suites.</p>
+             * <p>The custom cipher suites that you want to add.</p>
              */
             public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
@@ -474,7 +498,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The port of the resource that you want to add to WAF.</p>
+             * <p>The port of the cloud service instance that is added to WAF.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -486,7 +510,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
              * <li><strong>http</strong></li>
              * <li><strong>https</strong></li>
@@ -502,7 +526,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The ID of the cloud service instance that is added to WAF.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -514,11 +538,12 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The cloud service. Valid values:</p>
+             * <p>The type of the cloud service. Valid values:</p>
              * <ul>
              * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
              * <li><strong>clb7</strong>: Layer 7 CLB.</li>
              * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+             * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -531,7 +556,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The Transport Layer Security (TLS) version. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <p>The Transport Layer Security (TLS) version that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
              * <ul>
              * <li><strong>tlsv1</strong></li>
              * <li><strong>tlsv1.1</strong></li>
@@ -596,6 +621,14 @@ public class ModifyCloudResourceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the custom header field.</p>
@@ -758,11 +791,26 @@ public class ModifyCloudResourceRequest extends Request {
             private java.util.List<String> xffHeaders; 
             private Boolean xffProto; 
 
+            private Builder() {
+            } 
+
+            private Builder(Redirect model) {
+                this.keepalive = model.keepalive;
+                this.keepaliveRequests = model.keepaliveRequests;
+                this.keepaliveTimeout = model.keepaliveTimeout;
+                this.readTimeout = model.readTimeout;
+                this.requestHeaders = model.requestHeaders;
+                this.writeTimeout = model.writeTimeout;
+                this.xffHeaderMode = model.xffHeaderMode;
+                this.xffHeaders = model.xffHeaders;
+                this.xffProto = model.xffProto;
+            } 
+
             /**
              * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
              * <ul>
              * <li><strong>true</strong> (default)</li>
-             * <li><strong>false:</strong></li>
+             * <li><strong>false</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -774,9 +822,9 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The number of requests that reuse persistent connections. Valid values: 60 to 1000.</p>
+             * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
              * <blockquote>
-             * <p> This parameter specifies the number of requests that can reuse persistent connections after you enable the persistent connection feature.</p>
+             * <p> This parameter specifies the number of persistent connections that can be reused after you enable the persistent connection feature.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -788,9 +836,9 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
+             * <p>The timeout period of idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
              * <blockquote>
-             * <p> If no new requests are initiated over the idle persistent connection within the specified timeout period, the connection is closed.</p>
+             * <p> This parameter specifies the period of time after which an idle persistent connection is closed.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -802,7 +850,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -813,7 +861,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
+             * <p>The custom header fields, which are key-value pairs. The fields are used to mark requests that pass through WAF.</p>
              */
             public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -821,7 +869,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -832,7 +880,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The method that WAF uses to obtain the originating IP address of a client. Valid values:</p>
+             * <p>The method that is used to obtain the originating IP address of a client. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
              * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</li>
@@ -848,7 +896,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The custom header field that is used to obtain the originating IP address of a client. Specify the value in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
+             * <p>The custom header fields that are used to obtain the originating IP address of a client. Specify the value in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
              * <blockquote>
              * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
              * </blockquote>
@@ -859,7 +907,7 @@ public class ModifyCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+             * <p>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</p>
              * <ul>
              * <li><strong>true</strong> (default)</li>
              * <li><strong>false</strong></li>

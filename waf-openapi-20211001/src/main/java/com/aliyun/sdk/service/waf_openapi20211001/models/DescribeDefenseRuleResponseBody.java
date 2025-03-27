@@ -36,6 +36,10 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Rule rule; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,6 +206,20 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer status; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.config = model.config;
+                this.defenseOrigin = model.defenseOrigin;
+                this.defenseScene = model.defenseScene;
+                this.gmtModified = model.gmtModified;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The details of the protection rule. The value is a JSON string that contains multiple parameters. For more information, see the &quot;<strong>Protection rule parameters</strong>&quot; section of the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>

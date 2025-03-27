@@ -40,6 +40,10 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return http
      */
@@ -65,6 +69,15 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         private java.util.List<Integer> http; 
         private java.util.List<Integer> https; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudResourceAccessedPortsResponseBody model) {
+            this.http = model.http;
+            this.https = model.https;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP ports.</p>

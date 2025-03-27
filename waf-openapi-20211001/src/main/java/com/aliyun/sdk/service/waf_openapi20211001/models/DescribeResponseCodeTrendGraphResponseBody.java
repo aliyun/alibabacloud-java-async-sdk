@@ -36,6 +36,10 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResponseCodes> responseCodes; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResponseCodeTrendGraphResponseBody model) {
+            this.requestId = model.requestId;
+            this.responseCodes = model.responseCodes;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -170,6 +182,18 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             private Long code499Pv; 
             private Long code5xxPv; 
             private Long index; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseCodes model) {
+                this.code302Pv = model.code302Pv;
+                this.code405Pv = model.code405Pv;
+                this.code444Pv = model.code444Pv;
+                this.code499Pv = model.code499Pv;
+                this.code5xxPv = model.code5xxPv;
+                this.index = model.index;
+            } 
 
             /**
              * <p>The number of 302 error codes that are returned.</p>

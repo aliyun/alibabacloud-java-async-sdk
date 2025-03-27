@@ -36,6 +36,10 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projects
      */
@@ -53,6 +57,14 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> projects; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecSlsProjectsResponseBody model) {
+            this.projects = model.projects;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The names of the projects in Simple Log Service.</p>

@@ -36,6 +36,10 @@ public class DescribeUserAssetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assets
      */
@@ -53,6 +57,14 @@ public class DescribeUserAssetResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Assets> assets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserAssetResponseBody model) {
+            this.assets = model.assets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The API statistics.</p>
@@ -122,6 +134,14 @@ public class DescribeUserAssetResponseBody extends TeaModel {
         public static final class Builder {
             private Long assetNum; 
             private Long timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assets model) {
+                this.assetNum = model.assetNum;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * <p>The number of APIs returned.</p>

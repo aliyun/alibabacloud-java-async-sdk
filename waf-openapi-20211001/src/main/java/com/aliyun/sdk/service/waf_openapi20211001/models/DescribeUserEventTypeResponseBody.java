@@ -36,6 +36,10 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return event
      */
@@ -53,6 +57,14 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Event> event; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserEventTypeResponseBody model) {
+            this.event = model.event;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The types and statistics of security events.</p>
@@ -146,6 +158,16 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
             private Long eventCount; 
             private String eventParentType; 
             private String eventType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Event model) {
+                this.eventCode = model.eventCode;
+                this.eventCount = model.eventCount;
+                this.eventParentType = model.eventParentType;
+                this.eventType = model.eventType;
+            } 
 
             /**
              * <p>The code of the security event.</p>

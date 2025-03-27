@@ -36,6 +36,10 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveDetectionResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The compliance check results.</p>
@@ -134,6 +146,15 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             private Long infoCount; 
             private Long outboundCount; 
             private Long sensitiveCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.infoCount = model.infoCount;
+                this.outboundCount = model.outboundCount;
+                this.sensitiveCode = model.sensitiveCode;
+            } 
 
             /**
              * <p>The number of personal information records.</p>
@@ -231,6 +252,15 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             private Long outboundCount; 
             private Long sensitiveCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Max model) {
+                this.infoCount = model.infoCount;
+                this.outboundCount = model.outboundCount;
+                this.sensitiveCode = model.sensitiveCode;
+            } 
+
             /**
              * <p>The number of sensitive personal information records that are of the most frequent sensitive data type.</p>
              * 
@@ -327,6 +357,15 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private Max max; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.detectionResult = model.detectionResult;
+                this.list = model.list;
+                this.max = model.max;
+            } 
+
             /**
              * <p>The compliance check results. Valid values:</p>
              * <ul>
@@ -396,6 +435,13 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Result> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.result = model.result;
+            } 
 
             /**
              * <p>The compliance checks.</p>

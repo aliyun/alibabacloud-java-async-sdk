@@ -55,7 +55,7 @@ public class DescribePunishedDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,7 +141,14 @@ public class DescribePunishedDomainsRequest extends Request {
         }
 
         /**
-         * PunishType.
+         * <p>The type of punishment. Valid values:</p>
+         * <ul>
+         * <li><strong>beian</strong> (default): the filing center.</li>
+         * <li><strong>punishCenter</strong>: the punishment center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>beian</p>
          */
         public Builder punishType(String punishType) {
             this.putQueryParameter("PunishType", punishType);

@@ -36,6 +36,10 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterRule
      */
@@ -53,6 +57,14 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterRule clusterRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudClusterRuleResponseBody model) {
+            this.clusterRule = model.clusterRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the rule.</p>
@@ -134,6 +146,15 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
             private String ruleConfig; 
             private String ruleStatus; 
             private String ruleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterRule model) {
+                this.ruleConfig = model.ruleConfig;
+                this.ruleStatus = model.ruleStatus;
+                this.ruleType = model.ruleType;
+            } 
 
             /**
              * <p>The configuration of the rule.</p>

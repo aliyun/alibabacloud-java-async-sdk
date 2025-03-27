@@ -36,6 +36,10 @@ public class DescribePunishedDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return punishedDomains
      */
@@ -53,6 +57,14 @@ public class DescribePunishedDomainsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> punishedDomains; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePunishedDomainsResponseBody model) {
+            this.punishedDomains = model.punishedDomains;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain names that are penalized for failing to obtain an ICP filing.</p>

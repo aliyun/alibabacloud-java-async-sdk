@@ -40,6 +40,10 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveOutboundTrendResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information records involved in cross-border data transfer.</p>
@@ -169,6 +182,16 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
             private Long infoOutboundCount; 
             private Long sensitiveOutboundCount; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.infoCount = model.infoCount;
+                this.infoOutboundCount = model.infoOutboundCount;
+                this.sensitiveOutboundCount = model.sensitiveOutboundCount;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The total number of personal information records.</p>

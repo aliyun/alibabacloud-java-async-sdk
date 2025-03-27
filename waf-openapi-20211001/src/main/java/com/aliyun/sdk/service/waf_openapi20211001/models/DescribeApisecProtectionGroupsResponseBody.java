@@ -40,6 +40,10 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecProtectionGroupsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The protected object groups.</p>
@@ -169,6 +182,16 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
             private Long reportStatus; 
             private String resourceGroup; 
             private Long traceStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apisecStatus = model.apisecStatus;
+                this.reportStatus = model.reportStatus;
+                this.resourceGroup = model.resourceGroup;
+                this.traceStatus = model.traceStatus;
+            } 
 
             /**
              * <p>The switch of the API security module.</p>

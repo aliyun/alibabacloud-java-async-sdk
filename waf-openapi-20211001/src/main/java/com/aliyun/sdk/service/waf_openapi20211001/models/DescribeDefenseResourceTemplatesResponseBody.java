@@ -36,6 +36,10 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Templates> templates; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseResourceTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -206,6 +218,21 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             private String templateOrigin; 
             private Integer templateStatus; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.defenseScene = model.defenseScene;
+                this.defenseSubScene = model.defenseSubScene;
+                this.description = model.description;
+                this.gmtModified = model.gmtModified;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateOrigin = model.templateOrigin;
+                this.templateStatus = model.templateStatus;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The scenario in which the protection template is used.</p>

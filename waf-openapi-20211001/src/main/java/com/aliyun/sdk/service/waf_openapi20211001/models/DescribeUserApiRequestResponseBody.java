@@ -36,6 +36,10 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Requests> requests; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserApiRequestResponseBody model) {
+            this.requestId = model.requestId;
+            this.requests = model.requests;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Requests model) {
+                this.count = model.count;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The number of entries returned.</p>

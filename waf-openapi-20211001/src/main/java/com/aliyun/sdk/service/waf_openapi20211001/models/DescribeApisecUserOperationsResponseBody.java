@@ -36,6 +36,10 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecUserOperationsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The operation records.</p>
@@ -182,6 +194,19 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             private String toStatus; 
             private String type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fromStatus = model.fromStatus;
+                this.note = model.note;
+                this.objectId = model.objectId;
+                this.time = model.time;
+                this.toStatus = model.toStatus;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The state before the operation.</p>

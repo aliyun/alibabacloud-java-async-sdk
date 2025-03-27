@@ -44,6 +44,10 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logRegionId
      */
@@ -77,6 +81,16 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         private String logStatus; 
         private String requestId; 
         private Long statusUpdateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserWafLogStatusResponseBody model) {
+            this.logRegionId = model.logRegionId;
+            this.logStatus = model.logStatus;
+            this.requestId = model.requestId;
+            this.statusUpdateTime = model.statusUpdateTime;
+        } 
 
         /**
          * <p>The ID of the region where WAF logs are stored. Valid values:</p>

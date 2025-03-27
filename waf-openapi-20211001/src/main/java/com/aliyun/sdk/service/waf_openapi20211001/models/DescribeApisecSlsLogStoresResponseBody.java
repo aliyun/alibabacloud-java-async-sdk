@@ -36,6 +36,10 @@ public class DescribeApisecSlsLogStoresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logStores
      */
@@ -53,6 +57,14 @@ public class DescribeApisecSlsLogStoresResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> logStores; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecSlsLogStoresResponseBody model) {
+            this.logStores = model.logStores;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The names of the Logstores in Simple Log Service.</p>

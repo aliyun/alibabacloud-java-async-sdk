@@ -36,6 +36,10 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserInfo userInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.userInfo = model.userInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
         public static final class Builder {
             private String httpPorts; 
             private String httpsPorts; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+            } 
 
             /**
              * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>

@@ -40,6 +40,10 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecRulesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The policies.</p>
@@ -181,6 +194,17 @@ public class DescribeApisecRulesResponseBody extends TeaModel {
             private Long status; 
             private String type; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+                this.rule = model.rule;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the policy.</p>

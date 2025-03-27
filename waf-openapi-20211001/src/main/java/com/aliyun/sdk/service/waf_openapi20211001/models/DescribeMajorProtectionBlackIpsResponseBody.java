@@ -40,6 +40,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipList
      */
@@ -65,6 +69,15 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         private java.util.List<IpList> ipList; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMajorProtectionBlackIpsResponseBody model) {
+            this.ipList = model.ipList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array of IP addresses in the IP address blacklist.</p>
@@ -193,6 +206,18 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             private String ip; 
             private Long ruleId; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpList model) {
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.gmtModified = model.gmtModified;
+                this.ip = model.ip;
+                this.ruleId = model.ruleId;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The description of the IP address in the blacklist.</p>

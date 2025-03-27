@@ -82,7 +82,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -305,7 +305,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * ResponseHeaders.
+         * <p>The response header.</p>
          */
         public Builder responseHeaders(java.util.List<ResponseHeaders> responseHeaders) {
             this.putQueryParameter("ResponseHeaders", responseHeaders);
@@ -383,8 +383,19 @@ public class ModifyDefenseResourceXffRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>Specifies the key for a custom response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header-Key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,7 +403,10 @@ public class ModifyDefenseResourceXffRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Specifies the value for a custom response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header-Value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -36,6 +36,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -53,6 +57,14 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Group group; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseResourceGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the protected object group.</p>
@@ -158,6 +170,17 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             private Long gmtModified; 
             private String groupName; 
             private String resourceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupName = model.groupName;
+                this.resourceList = model.resourceList;
+            } 
 
             /**
              * <p>The description of the protected object group.</p>

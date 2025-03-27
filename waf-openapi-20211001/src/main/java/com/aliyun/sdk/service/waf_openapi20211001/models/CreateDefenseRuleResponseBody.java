@@ -36,6 +36,10 @@ public class CreateDefenseRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateDefenseRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String ruleIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDefenseRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleIds = model.ruleIds;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -1544,6 +1544,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeNetworkFlowTimeSeriesMetric  DescribeNetworkFlowTimeSeriesMetricRequest
+     * @return DescribeNetworkFlowTimeSeriesMetricResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNetworkFlowTimeSeriesMetricResponse> describeNetworkFlowTimeSeriesMetric(DescribeNetworkFlowTimeSeriesMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNetworkFlowTimeSeriesMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNetworkFlowTimeSeriesMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNetworkFlowTimeSeriesMetricResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeNetworkFlowTopNMetric  DescribeNetworkFlowTopNMetricRequest
+     * @return DescribeNetworkFlowTopNMetricResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNetworkFlowTopNMetricResponse> describeNetworkFlowTopNMetric(DescribeNetworkFlowTopNMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNetworkFlowTopNMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNetworkFlowTopNMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNetworkFlowTopNMetricResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePauseProtectionStatus  DescribePauseProtectionStatusRequest
      * @return DescribePauseProtectionStatusResponse
      */
@@ -1844,6 +1880,84 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRuleHitsTopUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSecurityEventLogs  DescribeSecurityEventLogsRequest
+     * @return DescribeSecurityEventLogsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSecurityEventLogsResponse> describeSecurityEventLogs(DescribeSecurityEventLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSecurityEventLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSecurityEventLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSecurityEventLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSecurityEventTimeSeriesMetric  DescribeSecurityEventTimeSeriesMetricRequest
+     * @return DescribeSecurityEventTimeSeriesMetricResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSecurityEventTimeSeriesMetricResponse> describeSecurityEventTimeSeriesMetric(DescribeSecurityEventTimeSeriesMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSecurityEventTimeSeriesMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSecurityEventTimeSeriesMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSecurityEventTimeSeriesMetricResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSecurityEventTopNMetric  DescribeSecurityEventTopNMetricRequest
+     * @return DescribeSecurityEventTopNMetricResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSecurityEventTopNMetricResponse> describeSecurityEventTopNMetric(DescribeSecurityEventTopNMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSecurityEventTopNMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSecurityEventTopNMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSecurityEventTopNMetricResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

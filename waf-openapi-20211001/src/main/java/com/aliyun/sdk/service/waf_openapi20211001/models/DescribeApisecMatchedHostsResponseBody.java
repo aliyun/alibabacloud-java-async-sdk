@@ -40,6 +40,10 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecMatchedHostsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names.</p>
@@ -145,6 +158,14 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String matchedHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.matchedHost = model.matchedHost;
+            } 
 
             /**
              * <p>The number of APIs related to the domain name.</p>

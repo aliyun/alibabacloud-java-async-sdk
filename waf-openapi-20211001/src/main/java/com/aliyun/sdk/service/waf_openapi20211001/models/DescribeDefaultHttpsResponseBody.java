@@ -36,6 +36,10 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultHttps
      */
@@ -53,6 +57,14 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
     public static final class Builder {
         private DefaultHttps defaultHttps; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefaultHttpsResponseBody model) {
+            this.defaultHttps = model.defaultHttps;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The default SSL and TLS settings.</p>
@@ -158,6 +170,17 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
             private String customCiphers; 
             private Boolean enableTLSv3; 
             private String TLSVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultHttps model) {
+                this.certId = model.certId;
+                this.cipherSuite = model.cipherSuite;
+                this.customCiphers = model.customCiphers;
+                this.enableTLSv3 = model.enableTLSv3;
+                this.TLSVersion = model.TLSVersion;
+            } 
 
             /**
              * <p>The certificate ID.</p>

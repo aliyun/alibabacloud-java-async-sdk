@@ -40,6 +40,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cloudResources
      */
@@ -65,6 +69,15 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         private java.util.List<CloudResources> cloudResources; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudResourcesResponseBody model) {
+            this.cloudResources = model.cloudResources;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cloud service resources that are added to WAF.</p>
@@ -291,6 +304,26 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             private String resourceRegionId; 
             private String resourceRouteName; 
             private String resourceService; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudResources model) {
+                this.httpPortCount = model.httpPortCount;
+                this.httpsPortCount = model.httpsPortCount;
+                this.ownerUserId = model.ownerUserId;
+                this.resourceDomain = model.resourceDomain;
+                this.resourceFunction = model.resourceFunction;
+                this.resourceInstance = model.resourceInstance;
+                this.resourceInstanceId = model.resourceInstanceId;
+                this.resourceInstanceIp = model.resourceInstanceIp;
+                this.resourceInstanceName = model.resourceInstanceName;
+                this.resourceName = model.resourceName;
+                this.resourceProduct = model.resourceProduct;
+                this.resourceRegionId = model.resourceRegionId;
+                this.resourceRouteName = model.resourceRouteName;
+                this.resourceService = model.resourceService;
+            } 
 
             /**
              * <p>The number of the HTTP ports that are added to WAF.</p>

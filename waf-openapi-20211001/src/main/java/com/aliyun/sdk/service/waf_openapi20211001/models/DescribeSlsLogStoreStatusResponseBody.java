@@ -36,6 +36,10 @@ public class DescribeSlsLogStoreStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return existStatus
      */
@@ -53,6 +57,14 @@ public class DescribeSlsLogStoreStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean existStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlsLogStoreStatusResponseBody model) {
+            this.existStatus = model.existStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether a Logstore is created for WAF. Valid values:</p>

@@ -40,6 +40,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -65,6 +69,15 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         private java.util.List<Groups> groups; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudGroupsResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The node groups.</p>
@@ -253,6 +266,23 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             private String ports; 
             private Integer regionCodeValue; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.backSourceMark = model.backSourceMark;
+                this.continentsValue = model.continentsValue;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.loadBalanceIp = model.loadBalanceIp;
+                this.locationId = model.locationId;
+                this.operatorValue = model.operatorValue;
+                this.ports = model.ports;
+                this.regionCodeValue = model.regionCodeValue;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>The back-to-origin mark of the protected cluster. The value is in the {ISP name}-{Continent name}-{City name}-{Back-to-origin identifier} format. The back-to-origin identifier is optional.</p>

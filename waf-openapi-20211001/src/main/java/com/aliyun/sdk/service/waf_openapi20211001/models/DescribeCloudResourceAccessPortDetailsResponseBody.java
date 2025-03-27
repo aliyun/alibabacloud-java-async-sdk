@@ -40,6 +40,10 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessPortDetails
      */
@@ -65,6 +69,15 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         private java.util.List<AccessPortDetails> accessPortDetails; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudResourceAccessPortDetailsResponseBody model) {
+            this.accessPortDetails = model.accessPortDetails;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the ports of cloud services that are added to WAF.</p>
@@ -158,6 +171,15 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             private String certificateId; 
             private String certificateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.appliedType = model.appliedType;
+                this.certificateId = model.certificateId;
+                this.certificateName = model.certificateName;
+            } 
+
             /**
              * <p>The type of the HTTPS certificate. Valid values:</p>
              * <ul>
@@ -245,6 +267,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the custom header field.</p>
@@ -522,6 +552,31 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             private Integer xffHeaderMode; 
             private java.util.List<String> xffHeaders; 
             private Boolean xffProto; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessPortDetails model) {
+                this.certificates = model.certificates;
+                this.cipherSuite = model.cipherSuite;
+                this.customCiphers = model.customCiphers;
+                this.enableTLSv3 = model.enableTLSv3;
+                this.http2Enabled = model.http2Enabled;
+                this.keepalive = model.keepalive;
+                this.keepaliveRequests = model.keepaliveRequests;
+                this.keepaliveTimeout = model.keepaliveTimeout;
+                this.logHeaders = model.logHeaders;
+                this.ownerUserId = model.ownerUserId;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.readTimeout = model.readTimeout;
+                this.status = model.status;
+                this.TLSVersion = model.TLSVersion;
+                this.writeTimeout = model.writeTimeout;
+                this.xffHeaderMode = model.xffHeaderMode;
+                this.xffHeaders = model.xffHeaders;
+                this.xffProto = model.xffProto;
+            } 
 
             /**
              * <p>The certificates that are associated with the ports of cloud services.</p>

@@ -36,6 +36,10 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVisitUasResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Uas> uas; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVisitUasResponseBody model) {
+            this.requestId = model.requestId;
+            this.uas = model.uas;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String ua; 
+
+            private Builder() {
+            } 
+
+            private Builder(Uas model) {
+                this.count = model.count;
+                this.ua = model.ua;
+            } 
 
             /**
              * <p>The number of requests that use the user agent.</p>

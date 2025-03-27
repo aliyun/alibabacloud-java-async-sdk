@@ -36,6 +36,10 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logRegions
      */
@@ -53,6 +57,14 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> logRegions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserSlsLogRegionsResponseBody model) {
+            this.logRegions = model.logRegions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The region IDs.</p>

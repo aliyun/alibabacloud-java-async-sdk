@@ -36,6 +36,10 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dDoSStatus
      */
@@ -53,6 +57,14 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DDoSStatus> dDoSStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSStatusResponseBody model) {
+            this.dDoSStatus = model.dDoSStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether DDoS attacks occur on specific domain names.</p>
@@ -122,6 +134,14 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String eventType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DDoSStatus model) {
+                this.eventType = model.eventType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of events that are triggered by DDoS attacks. Valid values:</p>

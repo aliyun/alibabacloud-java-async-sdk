@@ -36,6 +36,10 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTemplateResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>The ID of the request.</p>

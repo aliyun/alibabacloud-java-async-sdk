@@ -36,6 +36,10 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certDetail
      */
@@ -53,6 +57,14 @@ public class DescribeCertDetailResponseBody extends TeaModel {
     public static final class Builder {
         private CertDetail certDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCertDetailResponseBody model) {
+            this.certDetail = model.certDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the certificate.</p>
@@ -182,6 +194,19 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             private String commonName; 
             private String domain; 
             private java.util.List<String> sans; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertDetail model) {
+                this.afterDate = model.afterDate;
+                this.beforeDate = model.beforeDate;
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.commonName = model.commonName;
+                this.domain = model.domain;
+                this.sans = model.sans;
+            } 
 
             /**
              * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

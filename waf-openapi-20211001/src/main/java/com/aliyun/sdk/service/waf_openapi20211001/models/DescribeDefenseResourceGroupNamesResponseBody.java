@@ -40,6 +40,10 @@ public class DescribeDefenseResourceGroupNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupNames
      */
@@ -65,6 +69,15 @@ public class DescribeDefenseResourceGroupNamesResponseBody extends TeaModel {
         private java.util.List<String> groupNames; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseResourceGroupNamesResponseBody model) {
+            this.groupNames = model.groupNames;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The names of the protected object groups.</p>

@@ -40,6 +40,10 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certs
      */
@@ -65,6 +69,15 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
         private java.util.List<Certs> certs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceInstanceCertsResponseBody model) {
+            this.certs = model.certs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The certificates.</p>
@@ -205,6 +218,19 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             private String commonName; 
             private String domain; 
             private Boolean isChainCompleted; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certs model) {
+                this.afterDate = model.afterDate;
+                this.beforeDate = model.beforeDate;
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.commonName = model.commonName;
+                this.domain = model.domain;
+                this.isChainCompleted = model.isChainCompleted;
+            } 
 
             /**
              * <p>The time when the certificate expires.</p>

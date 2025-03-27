@@ -36,6 +36,10 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Long data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHybridCloudGroupResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the node group.</p>

@@ -36,6 +36,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountInfos
      */
@@ -53,6 +57,14 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AccountInfos> accountInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMemberAccountsResponseBody model) {
+            this.accountInfos = model.accountInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the member.</p>
@@ -158,6 +170,17 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             private String accountStatus; 
             private String description; 
             private Long gmtCreate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountInfos model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+            } 
 
             /**
              * <p>The ID of the member.</p>

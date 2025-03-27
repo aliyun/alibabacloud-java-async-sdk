@@ -40,6 +40,10 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<RuleGroups> ruleGroups; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleGroups = model.ruleGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -193,6 +206,18 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             private Long ruleGroupId; 
             private String ruleGroupName; 
             private Integer ruleTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleGroups model) {
+                this.gmtModified = model.gmtModified;
+                this.isSubscribe = model.isSubscribe;
+                this.parentRuleGroupId = model.parentRuleGroupId;
+                this.ruleGroupId = model.ruleGroupId;
+                this.ruleGroupName = model.ruleGroupName;
+                this.ruleTotalCount = model.ruleTotalCount;
+            } 
 
             /**
              * <p>The most recent time when the rule group was modified.</p>

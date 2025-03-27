@@ -36,6 +36,10 @@ public class DescribeDomainDNSRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DNSStatus
      */
@@ -53,6 +57,14 @@ public class DescribeDomainDNSRecordResponseBody extends TeaModel {
     public static final class Builder {
         private String DNSStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainDNSRecordResponseBody model) {
+            this.DNSStatus = model.DNSStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the DNS settings. Valid values:</p>

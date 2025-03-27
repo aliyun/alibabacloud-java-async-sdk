@@ -40,6 +40,10 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecAbnormalDomainStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -181,6 +194,17 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
             private Long high; 
             private Long low; 
             private Long medium; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiCount = model.apiCount;
+                this.domain = model.domain;
+                this.high = model.high;
+                this.low = model.low;
+                this.medium = model.medium;
+            } 
 
             /**
              * <p>The number of APIs.</p>

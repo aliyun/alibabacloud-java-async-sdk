@@ -36,6 +36,10 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleHitsTopUrl> ruleHitsTopUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowTopUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleHitsTopUrl = model.ruleHitsTopUrl;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleHitsTopUrl model) {
+                this.count = model.count;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The total number of requests that are initiated by using the URL.</p>

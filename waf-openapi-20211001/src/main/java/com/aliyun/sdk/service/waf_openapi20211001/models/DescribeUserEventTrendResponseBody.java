@@ -36,6 +36,10 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Trend> trend; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserEventTrendResponseBody model) {
+            this.requestId = model.requestId;
+            this.trend = model.trend;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
             private Long eventMedium; 
             private Long timeStamp; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trend model) {
+                this.eventHigh = model.eventHigh;
+                this.eventLow = model.eventLow;
+                this.eventMedium = model.eventMedium;
+                this.timeStamp = model.timeStamp;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The number of high-risk events.</p>

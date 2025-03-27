@@ -40,6 +40,10 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveRequestsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The tracing results of the data.</p>
@@ -145,6 +158,14 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private Long count; 
+
+            private Builder() {
+            } 
+
+            private Builder(InfoCount model) {
+                this.code = model.code;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The type of the sensitive data.</p>
@@ -302,6 +323,21 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
             private java.util.List<InfoCount> infoCount; 
             private String matchedHost; 
             private java.util.List<String> sensitiveList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.abnormalCount = model.abnormalCount;
+                this.apiFormat = model.apiFormat;
+                this.apiId = model.apiId;
+                this.clientIP = model.clientIP;
+                this.detectionResult = model.detectionResult;
+                this.eventCount = model.eventCount;
+                this.infoCount = model.infoCount;
+                this.matchedHost = model.matchedHost;
+                this.sensitiveList = model.sensitiveList;
+            } 
 
             /**
              * <p>The number of risks in the previous 30 days.</p>

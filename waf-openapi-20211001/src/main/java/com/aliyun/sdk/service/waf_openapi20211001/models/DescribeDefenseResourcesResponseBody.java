@@ -40,6 +40,10 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Resources> resources; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,8 +159,19 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>Specifies the key for a custom response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header-Key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -155,7 +179,10 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Specifies the value for a custom response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header-Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -393,6 +420,29 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private java.util.List<ResponseHeaders> responseHeaders; 
             private Integer xffStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.acwCookieStatus = model.acwCookieStatus;
+                this.acwSecureStatus = model.acwSecureStatus;
+                this.acwV3SecureStatus = model.acwV3SecureStatus;
+                this.customHeaders = model.customHeaders;
+                this.description = model.description;
+                this.detail = model.detail;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ownerUserId = model.ownerUserId;
+                this.pattern = model.pattern;
+                this.product = model.product;
+                this.resource = model.resource;
+                this.resourceGroup = model.resourceGroup;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.resourceOrigin = model.resourceOrigin;
+                this.responseHeaders = model.responseHeaders;
+                this.xffStatus = model.xffStatus;
+            } 
+
             /**
              * <p>The status of the tracking cookie.</p>
              * <ul>
@@ -565,7 +615,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseHeaders.
+             * <p>The response header.</p>
              */
             public Builder responseHeaders(java.util.List<ResponseHeaders> responseHeaders) {
                 this.responseHeaders = responseHeaders;

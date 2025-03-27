@@ -40,6 +40,10 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiExports
      */
@@ -65,6 +69,15 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         private java.util.List<ApiExports> apiExports; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApiExportsResponseBody model) {
+            this.apiExports = model.apiExports;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The returned data export tasks.</p>
@@ -198,6 +211,18 @@ public class DescribeApiExportsResponseBody extends TeaModel {
             private String format; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiExports model) {
+                this.createTime = model.createTime;
+                this.fileName = model.fileName;
+                this.fileUrl = model.fileUrl;
+                this.format = model.format;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the data export task was created. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>

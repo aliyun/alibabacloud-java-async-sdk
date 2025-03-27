@@ -36,6 +36,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecStatisticsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The check results.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -290,6 +302,28 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             private String todayMedium; 
             private String todayTotal; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actioned = model.actioned;
+                this.api = model.api;
+                this.confirmed = model.confirmed;
+                this.domain = model.domain;
+                this.fixed = model.fixed;
+                this.high = model.high;
+                this.ignore = model.ignore;
+                this.low = model.low;
+                this.medium = model.medium;
+                this.toBeConfirmed = model.toBeConfirmed;
+                this.toBeFixed = model.toBeFixed;
+                this.todayHigh = model.todayHigh;
+                this.todayLow = model.todayLow;
+                this.todayMedium = model.todayMedium;
+                this.todayTotal = model.todayTotal;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The number of handled events.</p>

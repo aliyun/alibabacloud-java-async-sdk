@@ -40,6 +40,10 @@ public class DescribeDefenseResourceNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeDefenseResourceNamesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> resources; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseResourceNamesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -36,6 +36,10 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleHitsTopClientIpResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleHitsTopClientIp = model.ruleHitsTopClientIp;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         public static final class Builder {
             private String clientIp; 
             private Long count; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleHitsTopClientIp model) {
+                this.clientIp = model.clientIp;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The IP address of the service client.</p>

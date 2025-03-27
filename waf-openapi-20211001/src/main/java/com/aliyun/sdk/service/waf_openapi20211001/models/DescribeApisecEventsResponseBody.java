@@ -40,6 +40,10 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecEventsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The security events.</p>
@@ -410,6 +423,36 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             private Long startTs; 
             private String userStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allCnt = model.allCnt;
+                this.apiFormat = model.apiFormat;
+                this.apiId = model.apiId;
+                this.apiTag = model.apiTag;
+                this.attackClient = model.attackClient;
+                this.attackCntInfo = model.attackCntInfo;
+                this.attackIp = model.attackIp;
+                this.attackIpInfo = model.attackIpInfo;
+                this.attackIps = model.attackIps;
+                this.endTs = model.endTs;
+                this.eventId = model.eventId;
+                this.eventInfo = model.eventInfo;
+                this.eventLevel = model.eventLevel;
+                this.eventTag = model.eventTag;
+                this.follow = model.follow;
+                this.matchedHost = model.matchedHost;
+                this.note = model.note;
+                this.origin = model.origin;
+                this.remoteCountry = model.remoteCountry;
+                this.remoteRegion = model.remoteRegion;
+                this.requestData = model.requestData;
+                this.responseData = model.responseData;
+                this.startTs = model.startTs;
+                this.userStatus = model.userStatus;
+            } 
+
             /**
              * <p>The number of attacks.</p>
              * <blockquote>
@@ -449,7 +492,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             /**
              * <p>The business purpose of the API.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purpose of the API.</p>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

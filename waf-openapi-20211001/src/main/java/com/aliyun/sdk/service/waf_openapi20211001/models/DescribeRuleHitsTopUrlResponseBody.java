@@ -36,6 +36,10 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleHitsTopUrl> ruleHitsTopUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleHitsTopUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleHitsTopUrl = model.ruleHitsTopUrl;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleHitsTopUrl model) {
+                this.count = model.count;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The number of requests that match protection rules.</p>

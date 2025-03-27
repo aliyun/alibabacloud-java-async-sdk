@@ -36,6 +36,10 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecSuggestionsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The protection suggestions.</p>
@@ -158,6 +170,17 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
             private String suggestId; 
             private String suggestRule; 
             private String suggestType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiFormat = model.apiFormat;
+                this.matchedHost = model.matchedHost;
+                this.suggestId = model.suggestId;
+                this.suggestRule = model.suggestRule;
+                this.suggestType = model.suggestType;
+            } 
 
             /**
              * <p>The API.</p>

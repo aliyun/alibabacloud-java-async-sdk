@@ -36,6 +36,10 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleHitsTopResource> ruleHitsTopResource; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowTopResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleHitsTopResource = model.ruleHitsTopResource;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleHitsTopResource model) {
+                this.count = model.count;
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The total number of requests received by the protected object in a specified time range.</p>

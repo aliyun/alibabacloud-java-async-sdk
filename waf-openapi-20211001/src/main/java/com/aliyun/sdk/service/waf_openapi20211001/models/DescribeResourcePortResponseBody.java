@@ -36,6 +36,10 @@ public class DescribeResourcePortResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeResourcePortResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> resourcePorts; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourcePortResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourcePorts = model.resourcePorts;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -36,6 +36,10 @@ public class DescribeCnameCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cnameCount
      */
@@ -53,6 +57,14 @@ public class DescribeCnameCountResponseBody extends TeaModel {
     public static final class Builder {
         private CnameCount cnameCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCnameCountResponseBody model) {
+            this.cnameCount = model.cnameCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</p>
@@ -134,6 +146,15 @@ public class DescribeCnameCountResponseBody extends TeaModel {
             private Long cname; 
             private Long hybridCloudCname; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(CnameCount model) {
+                this.cname = model.cname;
+                this.hybridCloudCname = model.hybridCloudCname;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The number of domain names that are added to WAF in CNAME record mode.</p>

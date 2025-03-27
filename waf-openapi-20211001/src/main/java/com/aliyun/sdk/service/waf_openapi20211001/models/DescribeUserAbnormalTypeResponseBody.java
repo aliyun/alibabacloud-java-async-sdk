@@ -36,6 +36,10 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return abnormal
      */
@@ -53,6 +57,14 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Abnormal> abnormal; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserAbnormalTypeResponseBody model) {
+            this.abnormal = model.abnormal;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The types and statistics of risks.</p>
@@ -146,6 +158,16 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
             private Long abnormalCount; 
             private String abnormalParentType; 
             private String abnormalType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Abnormal model) {
+                this.abnormalCode = model.abnormalCode;
+                this.abnormalCount = model.abnormalCount;
+                this.abnormalParentType = model.abnormalParentType;
+                this.abnormalType = model.abnormalType;
+            } 
 
             /**
              * <p>The code of the risk.</p>

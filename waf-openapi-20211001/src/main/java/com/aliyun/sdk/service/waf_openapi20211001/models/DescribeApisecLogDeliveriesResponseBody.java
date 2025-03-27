@@ -36,6 +36,10 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliveryConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DeliveryConfigs> deliveryConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecLogDeliveriesResponseBody model) {
+            this.deliveryConfigs = model.deliveryConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configurations of API security log subscription.</p>
@@ -158,6 +170,17 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             private String logStoreName; 
             private String projectName; 
             private Boolean status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliveryConfigs model) {
+                this.assertKey = model.assertKey;
+                this.logRegionId = model.logRegionId;
+                this.logStoreName = model.logStoreName;
+                this.projectName = model.projectName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of the log subscription. Valid values:</p>

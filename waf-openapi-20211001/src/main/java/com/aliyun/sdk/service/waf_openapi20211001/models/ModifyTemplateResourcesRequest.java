@@ -71,7 +71,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,7 +159,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The protected object groups that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
+         * <p>The protected object groups that you want to associate with the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
          */
         public Builder bindResourceGroups(java.util.List<String> bindResourceGroups) {
             this.putQueryParameter("BindResourceGroups", bindResourceGroups);
@@ -168,7 +168,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected objects that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
+         * <p>The protected objects that you want to associate with the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
          */
         public Builder bindResources(java.util.List<String> bindResources) {
             this.putQueryParameter("BindResources", bindResources);
@@ -193,10 +193,10 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region ID of the WAF instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected object groups that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
+         * <p>The protected object groups that you want to disassociate from the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
          */
         public Builder unbindResourceGroups(java.util.List<String> unbindResourceGroups) {
             this.putQueryParameter("UnbindResourceGroups", unbindResourceGroups);
@@ -243,7 +243,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected objects that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
+         * <p>The protected objects that you want to disassociate from the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
          */
         public Builder unbindResources(java.util.List<String> unbindResources) {
             this.putQueryParameter("UnbindResources", unbindResources);

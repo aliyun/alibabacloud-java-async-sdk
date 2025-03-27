@@ -515,6 +515,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMemberAccountsResponse> describeMemberAccounts(DescribeMemberAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeNetworkFlowTimeSeriesMetric  DescribeNetworkFlowTimeSeriesMetricRequest
+     * @return DescribeNetworkFlowTimeSeriesMetricResponse
+     */
+    CompletableFuture<DescribeNetworkFlowTimeSeriesMetricResponse> describeNetworkFlowTimeSeriesMetric(DescribeNetworkFlowTimeSeriesMetricRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNetworkFlowTopNMetric  DescribeNetworkFlowTopNMetricRequest
+     * @return DescribeNetworkFlowTopNMetricResponse
+     */
+    CompletableFuture<DescribeNetworkFlowTopNMetricResponse> describeNetworkFlowTopNMetric(DescribeNetworkFlowTopNMetricRequest request);
+
+    /**
      * @param request the request parameters of DescribePauseProtectionStatus  DescribePauseProtectionStatusRequest
      * @return DescribePauseProtectionStatusResponse
      */
@@ -615,6 +627,48 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRuleHitsTopUrlResponse
      */
     CompletableFuture<DescribeRuleHitsTopUrlResponse> describeRuleHitsTopUrl(DescribeRuleHitsTopUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSecurityEventLogs  DescribeSecurityEventLogsRequest
+     * @return DescribeSecurityEventLogsResponse
+     */
+    CompletableFuture<DescribeSecurityEventLogsResponse> describeSecurityEventLogs(DescribeSecurityEventLogsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSecurityEventTimeSeriesMetric  DescribeSecurityEventTimeSeriesMetricRequest
+     * @return DescribeSecurityEventTimeSeriesMetricResponse
+     */
+    CompletableFuture<DescribeSecurityEventTimeSeriesMetricResponse> describeSecurityEventTimeSeriesMetric(DescribeSecurityEventTimeSeriesMetricRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSecurityEventTopNMetric  DescribeSecurityEventTopNMetricRequest
+     * @return DescribeSecurityEventTopNMetricResponse
+     */
+    CompletableFuture<DescribeSecurityEventTopNMetricResponse> describeSecurityEventTopNMetric(DescribeSecurityEventTopNMetricRequest request);
 
     /**
      * @param request the request parameters of DescribeSensitiveApiStatistic  DescribeSensitiveApiStatisticRequest

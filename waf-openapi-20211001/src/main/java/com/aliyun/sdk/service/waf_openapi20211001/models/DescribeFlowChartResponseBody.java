@@ -36,6 +36,10 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowChart
      */
@@ -53,6 +57,14 @@ public class DescribeFlowChartResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FlowChart> flowChart; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowChartResponseBody model) {
+            this.flowChart = model.flowChart;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The traffic statistics.</p>
@@ -386,6 +398,36 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             private Long robotCount; 
             private Long wafBlockSum; 
             private String wafReportSum; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowChart model) {
+                this.aclCustomBlockSum = model.aclCustomBlockSum;
+                this.aclCustomReportsSum = model.aclCustomReportsSum;
+                this.antiScanBlockSum = model.antiScanBlockSum;
+                this.antibotBlockSum = model.antibotBlockSum;
+                this.antibotReportSum = model.antibotReportSum;
+                this.antiscanReportsSum = model.antiscanReportsSum;
+                this.blacklistBlockSum = model.blacklistBlockSum;
+                this.blacklistReportsSum = model.blacklistReportsSum;
+                this.ccCustomBlockSum = model.ccCustomBlockSum;
+                this.ccCustomReportsSum = model.ccCustomReportsSum;
+                this.ccSystemBlocksSum = model.ccSystemBlocksSum;
+                this.ccSystemReportsSum = model.ccSystemReportsSum;
+                this.count = model.count;
+                this.inBytes = model.inBytes;
+                this.index = model.index;
+                this.maxPv = model.maxPv;
+                this.outBytes = model.outBytes;
+                this.ratelimitBlockSum = model.ratelimitBlockSum;
+                this.ratelimitReportSum = model.ratelimitReportSum;
+                this.regionBlockBlocksSum = model.regionBlockBlocksSum;
+                this.regionBlockReportsSum = model.regionBlockReportsSum;
+                this.robotCount = model.robotCount;
+                this.wafBlockSum = model.wafBlockSum;
+                this.wafReportSum = model.wafReportSum;
+            } 
 
             /**
              * <p>The number of requests that are blocked by custom access control list (ACL) rules.</p>

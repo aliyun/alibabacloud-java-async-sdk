@@ -64,6 +64,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certDetail
      */
@@ -137,6 +141,21 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private String resourceManagerResourceGroupId; 
         private SM2CertDetail sM2CertDetail; 
         private Long status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainDetailResponseBody model) {
+            this.certDetail = model.certDetail;
+            this.cname = model.cname;
+            this.domain = model.domain;
+            this.listen = model.listen;
+            this.redirect = model.redirect;
+            this.requestId = model.requestId;
+            this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+            this.sM2CertDetail = model.sM2CertDetail;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The details of the SSL certificate.</p>
@@ -329,6 +348,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> sans; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertDetail model) {
+                this.commonName = model.commonName;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.sans = model.sans;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The domain name of your website.</p>
@@ -624,6 +655,29 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long xffHeaderMode; 
             private java.util.List<String> xffHeaders; 
 
+            private Builder() {
+            } 
+
+            private Builder(Listen model) {
+                this.certId = model.certId;
+                this.cipherSuite = model.cipherSuite;
+                this.customCiphers = model.customCiphers;
+                this.enableTLSv3 = model.enableTLSv3;
+                this.exclusiveIp = model.exclusiveIp;
+                this.focusHttps = model.focusHttps;
+                this.http2Enabled = model.http2Enabled;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+                this.iPv6Enabled = model.iPv6Enabled;
+                this.protectionResource = model.protectionResource;
+                this.sM2AccessOnly = model.sM2AccessOnly;
+                this.sM2CertId = model.sM2CertId;
+                this.sM2Enabled = model.sM2Enabled;
+                this.TLSVersion = model.TLSVersion;
+                this.xffHeaderMode = model.xffHeaderMode;
+                this.xffHeaders = model.xffHeaders;
+            } 
+
             /**
              * <p>The ID of the certificate.</p>
              * 
@@ -885,6 +939,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String backend; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backends model) {
+                this.backend = model.backend;
+            } 
+
             /**
              * <p>The IP address or domain name of the origin server.</p>
              * 
@@ -934,6 +995,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backend; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupBackends model) {
+                this.backend = model.backend;
+            } 
 
             /**
              * <p>The back-to-origin IP address or domain name.</p>
@@ -999,6 +1067,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The custom header field.</p>
@@ -1228,6 +1304,27 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String sniHost; 
             private Integer writeTimeout; 
             private Boolean xffProto; 
+
+            private Builder() {
+            } 
+
+            private Builder(Redirect model) {
+                this.backends = model.backends;
+                this.backupBackends = model.backupBackends;
+                this.connectTimeout = model.connectTimeout;
+                this.focusHttpBackend = model.focusHttpBackend;
+                this.keepalive = model.keepalive;
+                this.keepaliveRequests = model.keepaliveRequests;
+                this.keepaliveTimeout = model.keepaliveTimeout;
+                this.loadbalance = model.loadbalance;
+                this.readTimeout = model.readTimeout;
+                this.requestHeaders = model.requestHeaders;
+                this.retry = model.retry;
+                this.sniEnabled = model.sniEnabled;
+                this.sniHost = model.sniHost;
+                this.writeTimeout = model.writeTimeout;
+                this.xffProto = model.xffProto;
+            } 
 
             /**
              * <p>An array of addresses of origin servers.</p>
@@ -1514,6 +1611,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> sans; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SM2CertDetail model) {
+                this.commonName = model.commonName;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.name = model.name;
+                this.sans = model.sans;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The domain name of your website.</p>

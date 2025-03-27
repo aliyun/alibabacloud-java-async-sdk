@@ -40,6 +40,10 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The statistics of the sensitive data.</p>
@@ -181,6 +194,17 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
             private Long count; 
             private String matchedHost; 
             private String sensitiveCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiFormat = model.apiFormat;
+                this.clientIP = model.clientIP;
+                this.count = model.count;
+                this.matchedHost = model.matchedHost;
+                this.sensitiveCode = model.sensitiveCode;
+            } 
 
             /**
              * <p>The API.</p>

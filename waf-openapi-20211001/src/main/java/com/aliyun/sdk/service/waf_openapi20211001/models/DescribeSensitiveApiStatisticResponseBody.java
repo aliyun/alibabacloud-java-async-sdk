@@ -40,6 +40,10 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveApiStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The statistics.</p>
@@ -181,6 +194,17 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             private Long infoCount; 
             private java.util.List<String> sensitiveCode; 
             private Long sensitiveCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.apiFormat = model.apiFormat;
+                this.apiId = model.apiId;
+                this.infoCount = model.infoCount;
+                this.sensitiveCode = model.sensitiveCode;
+                this.sensitiveCount = model.sensitiveCount;
+            } 
 
             /**
              * <p>The API.</p>
@@ -308,6 +332,16 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private String matchedHost; 
             private Long sensitiveOutboundCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.infoOutboundCount = model.infoOutboundCount;
+                this.list = model.list;
+                this.matchedHost = model.matchedHost;
+                this.sensitiveOutboundCount = model.sensitiveOutboundCount;
+            } 
 
             /**
              * <p>The number of personal information records involved in cross-border data transfer by domain name.</p>

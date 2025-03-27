@@ -36,6 +36,10 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Regions> regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudServerRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the regions.</p>
@@ -122,6 +134,14 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the region.</p>

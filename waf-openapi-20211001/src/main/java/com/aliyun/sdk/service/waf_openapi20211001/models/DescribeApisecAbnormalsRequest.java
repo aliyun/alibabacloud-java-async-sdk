@@ -126,7 +126,7 @@ public class DescribeApisecAbnormalsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -453,8 +453,9 @@ public class DescribeApisecAbnormalsRequest extends Request {
         /**
          * <p>The name of the sorting field. Valid values:</p>
          * <ul>
-         * <li><strong>firstTime (default)</strong>: first detection time</li>
-         * <li><strong>abnormalLevel</strong>: risk level</li>
+         * <li><strong>discoverTime</strong> (default): indicates the time when a risk was first detected.</li>
+         * <li><strong>abnormalLevel</strong>: indicates the level of a risk.</li>
+         * <li><strong>latestDiscoverTime</strong>: indicates the time when a risk was last detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -523,7 +524,7 @@ public class DescribeApisecAbnormalsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid value:</p>
+         * <p>The region ID of the WAF instance. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
          * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>

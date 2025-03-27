@@ -36,6 +36,10 @@ public class DescribeFreeUserEventCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return event
      */
@@ -53,6 +57,14 @@ public class DescribeFreeUserEventCountResponseBody extends TeaModel {
     public static final class Builder {
         private Event event; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFreeUserEventCountResponseBody model) {
+            this.event = model.event;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the security events that are detected by using the basic detection feature.</p>
@@ -146,6 +158,16 @@ public class DescribeFreeUserEventCountResponseBody extends TeaModel {
             private Long eventLow; 
             private Long eventMedium; 
             private Long eventTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(Event model) {
+                this.eventHigh = model.eventHigh;
+                this.eventLow = model.eventLow;
+                this.eventMedium = model.eventMedium;
+                this.eventTotal = model.eventTotal;
+            } 
 
             /**
              * <p>The number of high-risk events.</p>

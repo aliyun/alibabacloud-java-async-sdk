@@ -40,6 +40,10 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveOutboundStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The data types of personal information involved in cross-border data transfer.</p>
@@ -193,6 +206,18 @@ public class DescribeSensitiveOutboundStatisticResponseBody extends TeaModel {
             private Long sensitiveCode; 
             private String sensitiveLevel; 
             private String sensitiveType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detectionResult = model.detectionResult;
+                this.infoCount = model.infoCount;
+                this.outboundCount = model.outboundCount;
+                this.sensitiveCode = model.sensitiveCode;
+                this.sensitiveLevel = model.sensitiveLevel;
+                this.sensitiveType = model.sensitiveType;
+            } 
 
             /**
              * <p>The evaluation result. Valid values:</p>

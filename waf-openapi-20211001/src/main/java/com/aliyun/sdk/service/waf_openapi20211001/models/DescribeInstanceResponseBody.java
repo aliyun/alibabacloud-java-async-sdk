@@ -68,6 +68,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return details
      */
@@ -149,6 +153,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Long startTime; 
         private Integer status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.details = model.details;
+            this.edition = model.edition;
+            this.endTime = model.endTime;
+            this.inDebt = model.inDebt;
+            this.instanceId = model.instanceId;
+            this.payType = model.payType;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The details of the WAF instance.</p>
@@ -911,6 +931,63 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String whitelistRuleCondition; 
             private Long whitelistRuleInTemplateMaxCount; 
             private Long whitelistTemplateMaxCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.aclRuleMaxIpCount = model.aclRuleMaxIpCount;
+                this.antiScan = model.antiScan;
+                this.antiScanTemplateMaxCount = model.antiScanTemplateMaxCount;
+                this.backendMaxCount = model.backendMaxCount;
+                this.baseWafGroup = model.baseWafGroup;
+                this.baseWafGroupRuleInTemplateMaxCount = model.baseWafGroupRuleInTemplateMaxCount;
+                this.baseWafGroupRuleTemplateMaxCount = model.baseWafGroupRuleTemplateMaxCount;
+                this.bot = model.bot;
+                this.botApp = model.botApp;
+                this.botTemplateMaxCount = model.botTemplateMaxCount;
+                this.botWeb = model.botWeb;
+                this.cnameResourceMaxCount = model.cnameResourceMaxCount;
+                this.customResponse = model.customResponse;
+                this.customResponseRuleInTemplateMaxCount = model.customResponseRuleInTemplateMaxCount;
+                this.customResponseTemplateMaxCount = model.customResponseTemplateMaxCount;
+                this.customRule = model.customRule;
+                this.customRuleAction = model.customRuleAction;
+                this.customRuleCondition = model.customRuleCondition;
+                this.customRuleInTemplateMaxCount = model.customRuleInTemplateMaxCount;
+                this.customRuleRatelimitor = model.customRuleRatelimitor;
+                this.customRuleTemplateMaxCount = model.customRuleTemplateMaxCount;
+                this.defenseGroupMaxCount = model.defenseGroupMaxCount;
+                this.defenseObjectInGroupMaxCount = model.defenseObjectInGroupMaxCount;
+                this.defenseObjectInTemplateMaxCount = model.defenseObjectInTemplateMaxCount;
+                this.defenseObjectMaxCount = model.defenseObjectMaxCount;
+                this.dlp = model.dlp;
+                this.dlpRuleInTemplateMaxCount = model.dlpRuleInTemplateMaxCount;
+                this.dlpTemplateMaxCount = model.dlpTemplateMaxCount;
+                this.exclusiveIp = model.exclusiveIp;
+                this.gslb = model.gslb;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+                this.ipBlacklist = model.ipBlacklist;
+                this.ipBlacklistIpInRuleMaxCount = model.ipBlacklistIpInRuleMaxCount;
+                this.ipBlacklistRuleInTemplateMaxCount = model.ipBlacklistRuleInTemplateMaxCount;
+                this.ipBlacklistTemplateMaxCount = model.ipBlacklistTemplateMaxCount;
+                this.ipv6 = model.ipv6;
+                this.logService = model.logService;
+                this.majorProtection = model.majorProtection;
+                this.majorProtectionTemplateMaxCount = model.majorProtectionTemplateMaxCount;
+                this.tamperproof = model.tamperproof;
+                this.tamperproofRuleInTemplateMaxCount = model.tamperproofRuleInTemplateMaxCount;
+                this.tamperproofTemplateMaxCount = model.tamperproofTemplateMaxCount;
+                this.vastIpBlacklistInFileMaxCount = model.vastIpBlacklistInFileMaxCount;
+                this.vastIpBlacklistInOperationMaxCount = model.vastIpBlacklistInOperationMaxCount;
+                this.vastIpBlacklistMaxCount = model.vastIpBlacklistMaxCount;
+                this.whitelist = model.whitelist;
+                this.whitelistLogical = model.whitelistLogical;
+                this.whitelistRuleCondition = model.whitelistRuleCondition;
+                this.whitelistRuleInTemplateMaxCount = model.whitelistRuleInTemplateMaxCount;
+                this.whitelistTemplateMaxCount = model.whitelistTemplateMaxCount;
+            } 
 
             /**
              * <p>The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see <a href="https://help.aliyun.com/document_detail/374354.html">Match conditions</a>.</p>

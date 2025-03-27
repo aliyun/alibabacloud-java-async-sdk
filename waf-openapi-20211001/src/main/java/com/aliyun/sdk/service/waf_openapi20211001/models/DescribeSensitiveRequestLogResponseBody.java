@@ -40,6 +40,10 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveRequestLogResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The access logs.</p>
@@ -230,6 +243,21 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
             private String sensitiveList; 
             private String traceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiFormat = model.apiFormat;
+                this.apiId = model.apiId;
+                this.clientIP = model.clientIP;
+                this.count = model.count;
+                this.matchedHost = model.matchedHost;
+                this.remoteCountryId = model.remoteCountryId;
+                this.requestTime = model.requestTime;
+                this.sensitiveList = model.sensitiveList;
+                this.traceId = model.traceId;
+            } 
+
             /**
              * <p>The API.</p>
              * 
@@ -308,9 +336,9 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive data. The value of this parameter is a JSON string that contains multiple parameters. The Key of JSON is the sensitive information type identifier (including default and custom types), and the Value is the sensitive information data list.</p>
+             * <p>The details of sensitive data. The value is a string that consists of a JSON struct. The JSON struct contains key-value pairs. In a key-value pair, a key indicates the identifier of a sensitive data type, including built-in and custom types, and a value indicates specific sensitive data.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

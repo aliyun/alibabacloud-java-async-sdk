@@ -36,6 +36,10 @@ public class CreatePostpaidInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -53,6 +57,14 @@ public class CreatePostpaidInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePostpaidInstanceResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the WAF instance.</p>

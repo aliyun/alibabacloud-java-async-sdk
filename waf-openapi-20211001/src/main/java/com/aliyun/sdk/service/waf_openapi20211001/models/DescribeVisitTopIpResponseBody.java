@@ -36,6 +36,10 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TopIp> topIp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVisitTopIpResponseBody model) {
+            this.requestId = model.requestId;
+            this.topIp = model.topIp;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             private Long count; 
             private String ip; 
             private String isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopIp model) {
+                this.area = model.area;
+                this.count = model.count;
+                this.ip = model.ip;
+                this.isp = model.isp;
+            } 
 
             /**
              * <p>The ordinal number of the area to which the IP address belongs.</p>

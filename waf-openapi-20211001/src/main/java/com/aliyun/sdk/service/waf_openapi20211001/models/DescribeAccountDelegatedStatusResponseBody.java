@@ -44,6 +44,10 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -77,6 +81,16 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         private String accountName; 
         private Boolean delegatedStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountDelegatedStatusResponseBody model) {
+            this.accountId = model.accountId;
+            this.accountName = model.accountName;
+            this.delegatedStatus = model.delegatedStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>

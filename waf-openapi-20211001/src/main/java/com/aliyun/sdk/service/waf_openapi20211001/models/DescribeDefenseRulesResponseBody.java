@@ -40,6 +40,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,6 +70,15 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         private java.util.List<Rules> rules; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -78,7 +91,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of protection rules.</p>
+         * <p>The protection rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -218,6 +231,20 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             private Integer status; 
             private Long templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.config = model.config;
+                this.defenseOrigin = model.defenseOrigin;
+                this.defenseScene = model.defenseScene;
+                this.gmtModified = model.gmtModified;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * <p>The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the &quot;<strong>Rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
              * 
@@ -245,7 +272,22 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenario in which the protection rule is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+             * <p>The protection module for which the protection rule is created. Valid values:</p>
+             * <ul>
+             * <li><strong>waf_group</strong>: the basic protection rule module.</li>
+             * <li><strong>waf_base_compliance</strong>: the protocol compliance feature of the basic protection rule module.</li>
+             * <li><strong>waf_base_sema</strong>: the semantic analysis feature of the basic protection rule module.</li>
+             * <li><strong>cc</strong>: the HTTP flood protection module.</li>
+             * <li><strong>antiscan_dirscan</strong>: the directory traversal blocking feature of the scan protection module.</li>
+             * <li><strong>antiscan_highfreq</strong>: the high-frequency scanning blocking feature of the scan protection module.</li>
+             * <li><strong>antiscan_scantools</strong>: the scanner blocking feature of the scan protection module.</li>
+             * <li><strong>ip_blacklist</strong>: the IP address blacklist module.</li>
+             * <li><strong>custom_acl</strong>: the custom rule module.</li>
+             * <li><strong>region_block</strong>: the region blacklist module.</li>
+             * <li><strong>tamperproof</strong>: the website tamper-proofing module.</li>
+             * <li><strong>dlp</strong>: the data leakage prevention module.</li>
+             * <li><strong>custom_response_block</strong>: the custom response module.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>waf_group</p>

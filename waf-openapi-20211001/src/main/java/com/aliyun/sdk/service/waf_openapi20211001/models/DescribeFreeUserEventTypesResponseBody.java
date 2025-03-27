@@ -36,6 +36,10 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFreeUserEventTypesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The types of security events on which basic detection is performed.</p>
@@ -122,6 +134,14 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
         public static final class Builder {
             private String eventNum; 
             private String eventType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventNum = model.eventNum;
+                this.eventType = model.eventType;
+            } 
 
             /**
              * <p>The number of security events.</p>

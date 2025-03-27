@@ -36,6 +36,10 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pauseStatus
      */
@@ -53,6 +57,14 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pauseStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePauseProtectionStatusResponseBody model) {
+            this.pauseStatus = model.pauseStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether WAF protection is paused.</p>

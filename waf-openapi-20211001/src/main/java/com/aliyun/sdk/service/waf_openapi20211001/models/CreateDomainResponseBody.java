@@ -36,6 +36,10 @@ public class CreateDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainInfo
      */
@@ -53,6 +57,14 @@ public class CreateDomainResponseBody extends TeaModel {
     public static final class Builder {
         private DomainInfo domainInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDomainResponseBody model) {
+            this.domainInfo = model.domainInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the domain name that is added.</p>
@@ -134,6 +146,15 @@ public class CreateDomainResponseBody extends TeaModel {
             private String cname; 
             private String domain; 
             private String domainId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainInfo model) {
+                this.cname = model.cname;
+                this.domain = model.domain;
+                this.domainId = model.domainId;
+            } 
 
             /**
              * <p>The CNAME that is assigned by WAF to the domain name.</p>

@@ -40,6 +40,10 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
         private String requestId; 
         private Long totalCount; 
         private java.util.List<UnassignedMachines> unassignedMachines; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudUnassignedMachinesResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.unassignedMachines = model.unassignedMachines;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -205,6 +218,19 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
             private String mac; 
             private Long memory; 
             private String mid; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnassignedMachines model) {
+                this.cpu = model.cpu;
+                this.customName = model.customName;
+                this.hostName = model.hostName;
+                this.ip = model.ip;
+                this.mac = model.mac;
+                this.memory = model.memory;
+                this.mid = model.mid;
+            } 
 
             /**
              * <p>The number of CPU cores.</p>

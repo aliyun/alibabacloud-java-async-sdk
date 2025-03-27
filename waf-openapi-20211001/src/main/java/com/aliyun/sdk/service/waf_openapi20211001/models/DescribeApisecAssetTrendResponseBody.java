@@ -36,6 +36,10 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecAssetTrendResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -146,6 +158,16 @@ public class DescribeApisecAssetTrendResponseBody extends TeaModel {
             private Long assetCount; 
             private Long assetOffline; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.assetActive = model.assetActive;
+                this.assetCount = model.assetCount;
+                this.assetOffline = model.assetOffline;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The number of active assets.</p>

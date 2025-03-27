@@ -40,6 +40,10 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -65,6 +69,15 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         private java.util.List<Domains> domains; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridCloudResourcesResponseBody model) {
+            this.domains = model.domains;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names.</p>
@@ -289,6 +302,26 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private String TLSVersion; 
             private Integer xffHeaderMode; 
             private java.util.List<String> xffHeaders; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listen model) {
+                this.certId = model.certId;
+                this.cipherSuite = model.cipherSuite;
+                this.customCiphers = model.customCiphers;
+                this.enableTLSv3 = model.enableTLSv3;
+                this.exclusiveIp = model.exclusiveIp;
+                this.focusHttps = model.focusHttps;
+                this.http2Enabled = model.http2Enabled;
+                this.httpPorts = model.httpPorts;
+                this.httpsPorts = model.httpsPorts;
+                this.iPv6Enabled = model.iPv6Enabled;
+                this.protectionResource = model.protectionResource;
+                this.TLSVersion = model.TLSVersion;
+                this.xffHeaderMode = model.xffHeaderMode;
+                this.xffHeaders = model.xffHeaders;
+            } 
 
             /**
              * <p>The ID of the certificate.</p>
@@ -528,6 +561,14 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestHeaders model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the custom header field.</p>
              * 
@@ -756,6 +797,27 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private Boolean sniEnabled; 
             private String sniHost; 
             private Long writeTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Redirect model) {
+                this.backends = model.backends;
+                this.cnameEnabled = model.cnameEnabled;
+                this.connectTimeout = model.connectTimeout;
+                this.focusHttpBackend = model.focusHttpBackend;
+                this.keepalive = model.keepalive;
+                this.keepaliveRequests = model.keepaliveRequests;
+                this.keepaliveTimeout = model.keepaliveTimeout;
+                this.loadbalance = model.loadbalance;
+                this.readTimeout = model.readTimeout;
+                this.requestHeaders = model.requestHeaders;
+                this.retry = model.retry;
+                this.routingRules = model.routingRules;
+                this.sniEnabled = model.sniEnabled;
+                this.sniHost = model.sniHost;
+                this.writeTimeout = model.writeTimeout;
+            } 
 
             /**
              * <p>The IP addresses or domain names of the origin server.</p>
@@ -1085,6 +1147,20 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private String resourceManagerResourceGroupId; 
             private Integer status; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.cname = model.cname;
+                this.domain = model.domain;
+                this.id = model.id;
+                this.listen = model.listen;
+                this.redirect = model.redirect;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.status = model.status;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The CNAME assigned by WAF.</p>

@@ -52,6 +52,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logStoreName
      */
@@ -101,6 +105,18 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         private String requestId; 
         private Integer ttl; 
         private Long used; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlsLogStoreResponseBody model) {
+            this.logStoreName = model.logStoreName;
+            this.projectName = model.projectName;
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+            this.ttl = model.ttl;
+            this.used = model.used;
+        } 
 
         /**
          * <p>The name of the Logstore.</p>

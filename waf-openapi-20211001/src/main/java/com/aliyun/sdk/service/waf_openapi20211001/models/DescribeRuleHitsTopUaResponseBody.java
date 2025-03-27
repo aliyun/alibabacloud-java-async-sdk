@@ -36,6 +36,10 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleHitsTopUa> ruleHitsTopUa; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRuleHitsTopUaResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleHitsTopUa = model.ruleHitsTopUa;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String ua; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleHitsTopUa model) {
+                this.count = model.count;
+                this.ua = model.ua;
+            } 
 
             /**
              * <p>The number of attacks that are initiated from the IP address.</p>

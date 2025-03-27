@@ -40,6 +40,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -65,6 +69,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private java.util.List<Domains> domains; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names that are added to WAF in CNAME record mode.</p>
@@ -134,6 +147,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String backend; 
 
+            private Builder() {
+            } 
+
+            private Builder(Http model) {
+                this.backend = model.backend;
+            } 
+
             /**
              * <p>The HTTP address of the origin server.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backend; 
+
+            private Builder() {
+            } 
+
+            private Builder(Https model) {
+                this.backend = model.backend;
+            } 
 
             /**
              * <p>The HTTPS address of the origin server.</p>
@@ -245,6 +272,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Http> http; 
             private java.util.List<Https> https; 
+
+            private Builder() {
+            } 
+
+            private Builder(Backeds model) {
+                this.http = model.http;
+                this.https = model.https;
+            } 
 
             /**
              * <p>The HTTP addresses of the origin server.</p>
@@ -312,6 +347,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> http; 
             private java.util.List<Long> https; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenPorts model) {
+                this.http = model.http;
+                this.https = model.https;
+            } 
 
             /**
              * <p>The HTTP listener ports.</p>
@@ -427,6 +470,18 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private ListenPorts listenPorts; 
             private String resourceManagerResourceGroupId; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.backeds = model.backeds;
+                this.cname = model.cname;
+                this.domain = model.domain;
+                this.listenPorts = model.listenPorts;
+                this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The back-to-origin settings.</p>

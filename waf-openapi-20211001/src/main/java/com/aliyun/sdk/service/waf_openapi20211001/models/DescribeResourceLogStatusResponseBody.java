@@ -36,6 +36,10 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceLogStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String resource; 
             private Boolean status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.resource = model.resource;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The protected object.</p>

@@ -40,6 +40,10 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecAbnormalsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The risks.</p>
@@ -362,6 +375,32 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             private String origin; 
             private String userStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.abnormalEventNumber = model.abnormalEventNumber;
+                this.abnormalId = model.abnormalId;
+                this.abnormalInfo = model.abnormalInfo;
+                this.abnormalLevel = model.abnormalLevel;
+                this.abnormalTag = model.abnormalTag;
+                this.abnromalStatus = model.abnromalStatus;
+                this.apiFormat = model.apiFormat;
+                this.apiId = model.apiId;
+                this.apiTag = model.apiTag;
+                this.discoverTime = model.discoverTime;
+                this.examples = model.examples;
+                this.firstTime = model.firstTime;
+                this.follow = model.follow;
+                this.ignoreTime = model.ignoreTime;
+                this.lastestTime = model.lastestTime;
+                this.latestDiscoverTime = model.latestDiscoverTime;
+                this.matchedHost = model.matchedHost;
+                this.note = model.note;
+                this.origin = model.origin;
+                this.userStatus = model.userStatus;
+            } 
+
             /**
              * <p>The number of risk-related security events.</p>
              * 
@@ -479,7 +518,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the risk was detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684252800</p>
@@ -498,7 +537,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The time at which the API was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1701138088</p>
@@ -535,7 +574,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the risk was last active. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684252800</p>
@@ -546,7 +585,10 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestDiscoverTime.
+             * <p>The time at which the risk was last detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684252800</p>
              */
             public Builder latestDiscoverTime(Long latestDiscoverTime) {
                 this.latestDiscoverTime = latestDiscoverTime;

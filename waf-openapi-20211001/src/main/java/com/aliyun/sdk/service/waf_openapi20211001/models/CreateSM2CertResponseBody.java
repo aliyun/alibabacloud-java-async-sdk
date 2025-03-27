@@ -36,6 +36,10 @@ public class CreateSM2CertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certIdentifier
      */
@@ -53,6 +57,14 @@ public class CreateSM2CertResponseBody extends TeaModel {
     public static final class Builder {
         private String certIdentifier; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSM2CertResponseBody model) {
+            this.certIdentifier = model.certIdentifier;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the certificate.</p>

@@ -36,6 +36,10 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResourceCount> resourceCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTemplateResourceCountResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceCount = model.resourceCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
             private Integer groupCount; 
             private Integer singleCount; 
             private Long templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceCount model) {
+                this.groupCount = model.groupCount;
+                this.singleCount = model.singleCount;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The number of protected object groups.</p>

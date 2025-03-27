@@ -36,6 +36,10 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> resourceRegionIds; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceRegionIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceRegionIds = model.resourceRegionIds;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region IDs.</p>
+         * <p>The region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode.</p>
          */
         public Builder resourceRegionIds(java.util.List<String> resourceRegionIds) {
             this.resourceRegionIds = resourceRegionIds;

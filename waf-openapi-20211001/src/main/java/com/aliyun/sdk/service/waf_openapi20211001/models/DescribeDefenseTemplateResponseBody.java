@@ -36,6 +36,10 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Template template; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefenseTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -206,6 +218,21 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             private String templateOrigin; 
             private Integer templateStatus; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.defenseScene = model.defenseScene;
+                this.defenseSubScene = model.defenseSubScene;
+                this.description = model.description;
+                this.gmtModified = model.gmtModified;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateOrigin = model.templateOrigin;
+                this.templateStatus = model.templateStatus;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The scenario in which the template is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>

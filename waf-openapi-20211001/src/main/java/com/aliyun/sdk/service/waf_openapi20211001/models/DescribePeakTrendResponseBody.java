@@ -36,6 +36,10 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowChart
      */
@@ -53,6 +57,14 @@ public class DescribePeakTrendResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FlowChart> flowChart; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePeakTrendResponseBody model) {
+            this.flowChart = model.flowChart;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array of the QPS statistics of the WAF instance.</p>
@@ -170,6 +182,18 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             private Long count; 
             private Long index; 
             private Long wafSum; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowChart model) {
+                this.aclSum = model.aclSum;
+                this.antiScanSum = model.antiScanSum;
+                this.ccSum = model.ccSum;
+                this.count = model.count;
+                this.index = model.index;
+                this.wafSum = model.wafSum;
+            } 
 
             /**
              * <p>The number of requests that are monitored or blocked by the custom rule (access control) module.</p>

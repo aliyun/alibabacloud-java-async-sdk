@@ -36,6 +36,10 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSensitiveOutboundDistributionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The traffic distribution of personal information records involved in cross-border data transfer.</p>
@@ -134,6 +146,15 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
             private String country; 
             private Long infoOutboundCount; 
             private Long sensitiveOutboundCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.country = model.country;
+                this.infoOutboundCount = model.infoOutboundCount;
+                this.sensitiveOutboundCount = model.sensitiveOutboundCount;
+            } 
 
             /**
              * <p>The country to which the data is transferred.</p>

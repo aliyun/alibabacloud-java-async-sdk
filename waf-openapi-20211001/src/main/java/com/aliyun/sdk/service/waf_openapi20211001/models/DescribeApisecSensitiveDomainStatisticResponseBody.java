@@ -40,6 +40,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApisecSensitiveDomainStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -181,6 +194,17 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             private String sensitiveCode; 
             private String sensitiveLevel; 
             private String sensitiveName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiCount = model.apiCount;
+                this.domainCount = model.domainCount;
+                this.sensitiveCode = model.sensitiveCode;
+                this.sensitiveLevel = model.sensitiveLevel;
+                this.sensitiveName = model.sensitiveName;
+            } 
 
             /**
              * <p>The number of APIs that are involved.</p>

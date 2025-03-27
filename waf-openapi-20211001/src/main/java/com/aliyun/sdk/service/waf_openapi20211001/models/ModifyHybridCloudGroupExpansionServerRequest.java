@@ -63,7 +63,7 @@ public class ModifyHybridCloudGroupExpansionServerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -188,9 +188,9 @@ public class ModifyHybridCloudGroupExpansionServerRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid value:</p>
+         * <p>The region ID of the WAF instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
          * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
          * </ul>
          * 

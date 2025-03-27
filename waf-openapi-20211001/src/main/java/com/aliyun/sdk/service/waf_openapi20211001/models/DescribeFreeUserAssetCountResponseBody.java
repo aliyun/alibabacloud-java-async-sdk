@@ -36,6 +36,10 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asset
      */
@@ -53,6 +57,14 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
     public static final class Builder {
         private Asset asset; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFreeUserAssetCountResponseBody model) {
+            this.asset = model.asset;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The asset statistics provided by basic detection.</p>
@@ -134,6 +146,15 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
             private Long assetActive; 
             private Long assetCount; 
             private Long assetOffline; 
+
+            private Builder() {
+            } 
+
+            private Builder(Asset model) {
+                this.assetActive = model.assetActive;
+                this.assetCount = model.assetCount;
+                this.assetOffline = model.assetOffline;
+            } 
 
             /**
              * <p>The number of active APIs.</p>

@@ -36,6 +36,10 @@ public class ModifyCloudResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cloudResource
      */
@@ -53,6 +57,14 @@ public class ModifyCloudResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String cloudResource; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCloudResourceResponseBody model) {
+            this.cloudResource = model.cloudResource;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the resource that is added to WAF.</p>
