@@ -48,6 +48,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCommissionDetailFileListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>code</p>
@@ -198,6 +213,15 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             private String fileType; 
             private String fileUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.commissionPolicyName = model.commissionPolicyName;
+                this.fileType = model.fileType;
+                this.fileUrl = model.fileUrl;
+            } 
+
             /**
              * CommissionPolicyName.
              */
@@ -284,6 +308,15 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             private String billMonth; 
             private java.util.List<FileList> fileList; 
             private String partnerUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.billMonth = model.billMonth;
+                this.fileList = model.fileList;
+                this.partnerUid = model.partnerUid;
+            } 
 
             /**
              * BillMonth.

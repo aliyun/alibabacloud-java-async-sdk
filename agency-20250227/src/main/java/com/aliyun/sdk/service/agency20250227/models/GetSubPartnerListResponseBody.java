@@ -17,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSubPartnerListResponseBody</p>
  */
 public class GetSubPartnerListResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
-
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -33,6 +30,9 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SubPartnerList")
+    private java.util.List<SubPartnerList> subPartnerList;
+
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
@@ -40,11 +40,11 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     private Integer total;
 
     private GetSubPartnerListResponseBody(Builder builder) {
-        this.data = builder.data;
         this.message = builder.message;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.subPartnerList = builder.subPartnerList;
         this.success = builder.success;
         this.total = builder.total;
     }
@@ -57,11 +57,8 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -93,6 +90,13 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     }
 
     /**
+     * @return subPartnerList
+     */
+    public java.util.List<SubPartnerList> getSubPartnerList() {
+        return this.subPartnerList;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -107,21 +111,26 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Data data; 
         private String message; 
         private String pageNo; 
         private String pageSize; 
         private String requestId; 
+        private java.util.List<SubPartnerList> subPartnerList; 
         private Boolean success; 
         private Integer total; 
 
-        /**
-         * Data.
-         */
-        public Builder data(Data data) {
-            this.data = data;
-            return this;
-        }
+        private Builder() {
+        } 
+
+        private Builder(GetSubPartnerListResponseBody model) {
+            this.message = model.message;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.subPartnerList = model.subPartnerList;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Message.
@@ -159,6 +168,14 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
+         * SubPartnerList.
+         */
+        public Builder subPartnerList(java.util.List<SubPartnerList> subPartnerList) {
+            this.subPartnerList = subPartnerList;
+            return this;
+        }
+
+        /**
          * Success.
          */
         public Builder success(Boolean success) {
@@ -186,7 +203,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
      *
      * <p>GetSubPartnerListResponseBody</p>
      */
-    public static class Data extends TeaModel {
+    public static class SubPartnerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
@@ -223,7 +240,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        private Data(Builder builder) {
+        private SubPartnerList(Builder builder) {
             this.address = builder.address;
             this.agreementStatus = builder.agreementStatus;
             this.agreementStatusDesc = builder.agreementStatusDesc;
@@ -242,7 +259,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Data create() {
+        public static SubPartnerList create() {
             return builder().build();
         }
 
@@ -344,6 +361,24 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             private String pid; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubPartnerList model) {
+                this.address = model.address;
+                this.agreementStatus = model.agreementStatus;
+                this.agreementStatusDesc = model.agreementStatusDesc;
+                this.city = model.city;
+                this.companyName = model.companyName;
+                this.contact = model.contact;
+                this.district = model.district;
+                this.joinTime = model.joinTime;
+                this.masterAccount = model.masterAccount;
+                this.masterUid = model.masterUid;
+                this.pid = model.pid;
+                this.province = model.province;
+            } 
+
             /**
              * Address.
              */
@@ -440,8 +475,8 @@ public class GetSubPartnerListResponseBody extends TeaModel {
                 return this;
             }
 
-            public Data build() {
-                return new Data(this);
+            public SubPartnerList build() {
+                return new SubPartnerList(this);
             } 
 
         } 

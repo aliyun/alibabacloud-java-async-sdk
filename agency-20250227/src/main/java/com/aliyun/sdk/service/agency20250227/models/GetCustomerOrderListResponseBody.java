@@ -68,6 +68,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -149,6 +153,22 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomerOrderListResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -471,6 +491,30 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             private String productName; 
             private Long projectId; 
             private java.util.List<String> ramAccountForCustomerManagers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.amountDiscount = model.amountDiscount;
+                this.amountDue = model.amountDue;
+                this.createdAt = model.createdAt;
+                this.customerAccount = model.customerAccount;
+                this.customerClassification = model.customerClassification;
+                this.customerUid = model.customerUid;
+                this.deductedAmountByCoupons = model.deductedAmountByCoupons;
+                this.discountedPrice = model.discountedPrice;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.orderType = model.orderType;
+                this.paidAt = model.paidAt;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.projectId = model.projectId;
+                this.ramAccountForCustomerManagers = model.ramAccountForCustomerManagers;
+            } 
 
             /**
              * AmountDiscount.

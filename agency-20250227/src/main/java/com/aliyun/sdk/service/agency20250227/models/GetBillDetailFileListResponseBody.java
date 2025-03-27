@@ -52,6 +52,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         private String msg; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBillDetailFileListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -226,6 +242,16 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             private String fileName; 
             private String fileUrl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.billMonth = model.billMonth;
+                this.fileName = model.fileName;
+                this.fileUrl = model.fileUrl;
+                this.type = model.type;
+            } 
 
             /**
              * BillMonth.

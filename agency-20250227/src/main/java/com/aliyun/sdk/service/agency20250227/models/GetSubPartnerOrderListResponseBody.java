@@ -60,6 +60,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSubPartnerOrderListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -410,6 +428,28 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             private Long projectId; 
             private String subPartnerName; 
             private Long subPartnerUid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.amountDiscount = model.amountDiscount;
+                this.amountDue = model.amountDue;
+                this.createdAt = model.createdAt;
+                this.deductedAmountByCoupons = model.deductedAmountByCoupons;
+                this.discountedPrice = model.discountedPrice;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.orderType = model.orderType;
+                this.paidAt = model.paidAt;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.projectId = model.projectId;
+                this.subPartnerName = model.subPartnerName;
+                this.subPartnerUid = model.subPartnerUid;
+            } 
 
             /**
              * AmountDiscount.

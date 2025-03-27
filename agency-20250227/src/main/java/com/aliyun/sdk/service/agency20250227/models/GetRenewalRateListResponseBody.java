@@ -48,6 +48,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRenewalRateListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -470,6 +485,38 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             private Double specialSubPartnerRenewedAmount; 
             private Double subPartnerAdjustedRenewalAmountDue; 
             private Double subPartnerOtherBillAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customerAdjustedRenewalAmountDue = model.customerAdjustedRenewalAmountDue;
+                this.customerOtherBillAmount = model.customerOtherBillAmount;
+                this.finalCustomerRenewalAmountDue = model.finalCustomerRenewalAmountDue;
+                this.finalCustomerRenewalRate = model.finalCustomerRenewalRate;
+                this.finalCustomerRenewedAmount = model.finalCustomerRenewedAmount;
+                this.finalOtherBillAmount = model.finalOtherBillAmount;
+                this.finalRenewalAmountDue = model.finalRenewalAmountDue;
+                this.finalRenewalRate = model.finalRenewalRate;
+                this.finalRenewedAmount = model.finalRenewedAmount;
+                this.finalSubPartnerRenewalAmountDue = model.finalSubPartnerRenewalAmountDue;
+                this.finalSubPartnerRenewalRate = model.finalSubPartnerRenewalRate;
+                this.finalSubPartnerRenewedAmount = model.finalSubPartnerRenewedAmount;
+                this.fiscalYearAndQuarter = model.fiscalYearAndQuarter;
+                this.masterPid = model.masterPid;
+                this.masterPidName = model.masterPidName;
+                this.specialCustomerRenewRatio = model.specialCustomerRenewRatio;
+                this.specialCustomerRenewalAmountDue = model.specialCustomerRenewalAmountDue;
+                this.specialCustomerRenewedAmount = model.specialCustomerRenewedAmount;
+                this.specialFinalRenewRatio = model.specialFinalRenewRatio;
+                this.specialFinalRenewalAmountDue = model.specialFinalRenewalAmountDue;
+                this.specialFinalRenewedAmount = model.specialFinalRenewedAmount;
+                this.specialSubPartnerRenewRatio = model.specialSubPartnerRenewRatio;
+                this.specialSubPartnerRenewalAmountDue = model.specialSubPartnerRenewalAmountDue;
+                this.specialSubPartnerRenewedAmount = model.specialSubPartnerRenewedAmount;
+                this.subPartnerAdjustedRenewalAmountDue = model.subPartnerAdjustedRenewalAmountDue;
+                this.subPartnerOtherBillAmount = model.subPartnerOtherBillAmount;
+            } 
 
             /**
              * CustomerAdjustedRenewalAmountDue.
