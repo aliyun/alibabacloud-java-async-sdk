@@ -48,6 +48,10 @@ public class ListBindInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindInfoModels
      */
@@ -89,6 +93,17 @@ public class ListBindInfoResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBindInfoResponseBody model) {
+            this.bindInfoModels = model.bindInfoModels;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * BindInfoModels.
@@ -263,6 +278,21 @@ public class ListBindInfoResponseBody extends TeaModel {
             private String regionId; 
             private String userId; 
             private String wyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindInfoModels model) {
+                this.accountType = model.accountType;
+                this.appId = model.appId;
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceId = model.appInstanceId;
+                this.appVersion = model.appVersion;
+                this.productType = model.productType;
+                this.regionId = model.regionId;
+                this.userId = model.userId;
+                this.wyId = model.wyId;
+            } 
 
             /**
              * AccountType.

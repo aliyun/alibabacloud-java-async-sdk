@@ -87,7 +87,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -395,6 +395,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private String domain; 
             private String policy; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainRules model) {
+                this.domain = model.domain;
+                this.policy = model.policy;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -461,6 +469,13 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         public static final class Builder {
             private java.util.List<DomainRules> domainRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.domainRules = model.domainRules;
+            } 
+
             /**
              * <p>The domain name rules.</p>
              */
@@ -519,6 +534,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         public static final class Builder {
             private Integer nodeCapacity; 
             private String nodePoolId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePool model) {
+                this.nodeCapacity = model.nodeCapacity;
+                this.nodePoolId = model.nodePoolId;
+            } 
 
             /**
              * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
@@ -599,6 +622,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         public static final class Builder {
             private Boolean resetAfterUnbind; 
             private Boolean skipUserAuthCheck; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicy model) {
+                this.resetAfterUnbind = model.resetAfterUnbind;
+                this.skipUserAuthCheck = model.skipUserAuthCheck;
+            } 
 
             /**
              * <p>Specifies whether to reset after unbinding from a delivery group.</p>
@@ -683,6 +714,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private String fileSystemId; 
             private Boolean userProfileSwitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserProfile model) {
+                this.fileSystemId = model.fileSystemId;
+                this.userProfileSwitch = model.userProfileSwitch;
+            } 
+
             /**
              * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
              * 
@@ -760,6 +799,14 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         public static final class Builder {
             private String fileSystemId; 
             private Boolean profileFollowSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProfileFollow model) {
+                this.fileSystemId = model.fileSystemId;
+                this.profileFollowSwitch = model.profileFollowSwitch;
+            } 
 
             /**
              * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
@@ -842,6 +889,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private java.util.List<String> storageTypeList; 
             private UserProfile userProfile; 
             private UserProfileFollow userProfileFollow; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoragePolicy model) {
+                this.storageTypeList = model.storageTypeList;
+                this.userProfile = model.userProfile;
+                this.userProfileFollow = model.userProfileFollow;
+            } 
 
             /**
              * <p>The storage types.</p>

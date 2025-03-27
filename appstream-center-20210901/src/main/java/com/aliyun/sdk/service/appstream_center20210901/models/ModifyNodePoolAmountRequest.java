@@ -47,7 +47,7 @@ public class ModifyNodePoolAmountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,6 +90,7 @@ public class ModifyNodePoolAmountRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the delivery group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ModifyNodePoolAmountRequest extends Request {
         }
 
         /**
+         * <p>The parameters related to the configuration change of the node pool.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodePool(NodePool nodePool) {
@@ -112,6 +114,11 @@ public class ModifyNodePoolAmountRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +194,17 @@ public class ModifyNodePoolAmountRequest extends Request {
             private String prePaidNodeAmountModifyMode; 
             private java.util.List<String> prePaidNodeAmountModifyNodeIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodePool model) {
+                this.nodeAmount = model.nodeAmount;
+                this.prePaidNodeAmountModifyMode = model.prePaidNodeAmountModifyMode;
+                this.prePaidNodeAmountModifyNodeIds = model.prePaidNodeAmountModifyNodeIds;
+            } 
+
             /**
+             * <p>The total number of subscription nodes after the change.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -199,7 +216,14 @@ public class ModifyNodePoolAmountRequest extends Request {
             }
 
             /**
-             * PrePaidNodeAmountModifyMode.
+             * <p>The change mode of subscription nodes.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>EXPAND_FROM_POST_PAID_EXPLICIT: changes from specified pay-as-you-go nodes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPAND_FROM_POST_PAID_EXPLICIT</p>
              */
             public Builder prePaidNodeAmountModifyMode(String prePaidNodeAmountModifyMode) {
                 this.prePaidNodeAmountModifyMode = prePaidNodeAmountModifyMode;
@@ -207,7 +231,7 @@ public class ModifyNodePoolAmountRequest extends Request {
             }
 
             /**
-             * PrePaidNodeAmountModifyNodeIds.
+             * <p>The nodes for which you want to change the billing method.</p>
              */
             public Builder prePaidNodeAmountModifyNodeIds(java.util.List<String> prePaidNodeAmountModifyNodeIds) {
                 this.prePaidNodeAmountModifyNodeIds = prePaidNodeAmountModifyNodeIds;

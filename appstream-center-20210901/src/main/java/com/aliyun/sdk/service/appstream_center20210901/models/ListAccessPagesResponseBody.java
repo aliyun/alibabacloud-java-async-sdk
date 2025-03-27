@@ -60,6 +60,10 @@ public class ListAccessPagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListAccessPagesResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccessPagesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -371,6 +389,25 @@ public class ListAccessPagesResponseBody extends TeaModel {
             private String projectName; 
             private String unit; 
             private String urlExpireTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessMode = model.accessMode;
+                this.accessPageId = model.accessPageId;
+                this.accessPageName = model.accessPageName;
+                this.accessPageState = model.accessPageState;
+                this.accessUrl = model.accessUrl;
+                this.contentId = model.contentId;
+                this.contentName = model.contentName;
+                this.effectTime = model.effectTime;
+                this.gmtCreate = model.gmtCreate;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.unit = model.unit;
+                this.urlExpireTime = model.urlExpireTime;
+            } 
 
             /**
              * AccessMode.

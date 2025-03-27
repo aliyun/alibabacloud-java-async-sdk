@@ -52,6 +52,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         private String releaseNote; 
         private String requestId; 
         private String taskStartTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOtaTaskByTaskIdResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.otaVersion = model.otaVersion;
+            this.releaseNote = model.releaseNote;
+            this.requestId = model.requestId;
+            this.taskStartTime = model.taskStartTime;
+        } 
 
         /**
          * <p>The error code.</p>

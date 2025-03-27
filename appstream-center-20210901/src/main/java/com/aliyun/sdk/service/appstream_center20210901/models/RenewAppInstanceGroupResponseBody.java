@@ -44,6 +44,10 @@ public class RenewAppInstanceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class RenewAppInstanceGroupResponseBody extends TeaModel {
         private String message; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewAppInstanceGroupResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The error code.</p>

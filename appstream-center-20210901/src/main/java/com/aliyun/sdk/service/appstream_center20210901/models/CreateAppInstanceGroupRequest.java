@@ -35,6 +35,10 @@ public class CreateAppInstanceGroupRequest extends Request {
     private String appPolicyId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuthMode")
+    private String authMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -135,6 +139,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.appPackageType = builder.appPackageType;
         this.appPolicyId = builder.appPolicyId;
+        this.authMode = builder.authMode;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bizRegionId = builder.bizRegionId;
@@ -167,7 +172,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -198,6 +203,13 @@ public class CreateAppInstanceGroupRequest extends Request {
      */
     public String getAppPolicyId() {
         return this.appPolicyId;
+    }
+
+    /**
+     * @return authMode
+     */
+    public String getAuthMode() {
+        return this.authMode;
     }
 
     /**
@@ -359,6 +371,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private String appInstanceGroupName; 
         private String appPackageType; 
         private String appPolicyId; 
+        private String authMode; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bizRegionId; 
@@ -392,6 +405,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.appPackageType = request.appPackageType;
             this.appPolicyId = request.appPolicyId;
+            this.authMode = request.authMode;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bizRegionId = request.bizRegionId;
@@ -452,6 +466,15 @@ public class CreateAppInstanceGroupRequest extends Request {
         public Builder appPolicyId(String appPolicyId) {
             this.putBodyParameter("AppPolicyId", appPolicyId);
             this.appPolicyId = appPolicyId;
+            return this;
+        }
+
+        /**
+         * AuthMode.
+         */
+        public Builder authMode(String authMode) {
+            this.putBodyParameter("AuthMode", authMode);
+            this.authMode = authMode;
             return this;
         }
 
@@ -730,6 +753,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String domain; 
             private String policy; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainRules model) {
+                this.domain = model.domain;
+                this.policy = model.policy;
+            } 
+
             /**
              * Domain.
              */
@@ -796,6 +827,14 @@ public class CreateAppInstanceGroupRequest extends Request {
         public static final class Builder {
             private String destination; 
             private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Routes model) {
+                this.destination = model.destination;
+                this.mode = model.mode;
+            } 
 
             /**
              * Destination.
@@ -912,6 +951,18 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String strategyType; 
             private java.util.List<String> vSwitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.domainRules = model.domainRules;
+                this.ipExpireMinutes = model.ipExpireMinutes;
+                this.officeSiteId = model.officeSiteId;
+                this.routes = model.routes;
+                this.strategyType = model.strategyType;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
+
             /**
              * DomainRules.
              */
@@ -1023,6 +1074,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimerPeriods model) {
+                this.amount = model.amount;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * Amount.
              */
@@ -1109,6 +1169,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String recurrenceType; 
             private java.util.List<Integer> recurrenceValues; 
             private java.util.List<TimerPeriods> timerPeriods; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceSchedules model) {
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValues = model.recurrenceValues;
+                this.timerPeriods = model.timerPeriods;
+            } 
 
             /**
              * RecurrenceType.
@@ -1317,6 +1386,25 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String strategyType; 
             private Boolean warmUp; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodePool model) {
+                this.maxIdleAppInstanceAmount = model.maxIdleAppInstanceAmount;
+                this.maxScalingAmount = model.maxScalingAmount;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeCapacity = model.nodeCapacity;
+                this.nodeInstanceType = model.nodeInstanceType;
+                this.recurrenceSchedules = model.recurrenceSchedules;
+                this.scalingDownAfterIdleMinutes = model.scalingDownAfterIdleMinutes;
+                this.scalingStep = model.scalingStep;
+                this.scalingUsageThreshold = model.scalingUsageThreshold;
+                this.strategyDisableDate = model.strategyDisableDate;
+                this.strategyEnableDate = model.strategyEnableDate;
+                this.strategyType = model.strategyType;
+                this.warmUp = model.warmUp;
+            } 
+
             /**
              * MaxIdleAppInstanceAmount.
              */
@@ -1441,6 +1529,9 @@ public class CreateAppInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PerSessionPerApp")
         private Boolean perSessionPerApp;
 
+        @com.aliyun.core.annotation.NameInMap("PersistentAppInstanceScheduleMode")
+        private String persistentAppInstanceScheduleMode;
+
         @com.aliyun.core.annotation.NameInMap("SessionPreOpen")
         private String sessionPreOpen;
 
@@ -1453,6 +1544,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private RuntimePolicy(Builder builder) {
             this.debugMode = builder.debugMode;
             this.perSessionPerApp = builder.perSessionPerApp;
+            this.persistentAppInstanceScheduleMode = builder.persistentAppInstanceScheduleMode;
             this.sessionPreOpen = builder.sessionPreOpen;
             this.sessionType = builder.sessionType;
             this.sessionUserGenerationMode = builder.sessionUserGenerationMode;
@@ -1481,6 +1573,13 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return persistentAppInstanceScheduleMode
+         */
+        public String getPersistentAppInstanceScheduleMode() {
+            return this.persistentAppInstanceScheduleMode;
+        }
+
+        /**
          * @return sessionPreOpen
          */
         public String getSessionPreOpen() {
@@ -1504,9 +1603,22 @@ public class CreateAppInstanceGroupRequest extends Request {
         public static final class Builder {
             private String debugMode; 
             private Boolean perSessionPerApp; 
+            private String persistentAppInstanceScheduleMode; 
             private String sessionPreOpen; 
             private String sessionType; 
             private String sessionUserGenerationMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimePolicy model) {
+                this.debugMode = model.debugMode;
+                this.perSessionPerApp = model.perSessionPerApp;
+                this.persistentAppInstanceScheduleMode = model.persistentAppInstanceScheduleMode;
+                this.sessionPreOpen = model.sessionPreOpen;
+                this.sessionType = model.sessionType;
+                this.sessionUserGenerationMode = model.sessionUserGenerationMode;
+            } 
 
             /**
              * DebugMode.
@@ -1521,6 +1633,14 @@ public class CreateAppInstanceGroupRequest extends Request {
              */
             public Builder perSessionPerApp(Boolean perSessionPerApp) {
                 this.perSessionPerApp = perSessionPerApp;
+                return this;
+            }
+
+            /**
+             * PersistentAppInstanceScheduleMode.
+             */
+            public Builder persistentAppInstanceScheduleMode(String persistentAppInstanceScheduleMode) {
+                this.persistentAppInstanceScheduleMode = persistentAppInstanceScheduleMode;
                 return this;
             }
 
@@ -1602,6 +1722,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             private Boolean resetAfterUnbind; 
             private Boolean skipUserAuthCheck; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicy model) {
+                this.resetAfterUnbind = model.resetAfterUnbind;
+                this.skipUserAuthCheck = model.skipUserAuthCheck;
+            } 
+
             /**
              * ResetAfterUnbind.
              */
@@ -1681,6 +1809,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String remoteStorageType; 
             private Boolean userProfileSwitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserProfile model) {
+                this.remoteStoragePath = model.remoteStoragePath;
+                this.remoteStorageType = model.remoteStorageType;
+                this.userProfileSwitch = model.userProfileSwitch;
+            } 
+
             /**
              * RemoteStoragePath.
              */
@@ -1756,6 +1893,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             private java.util.List<String> storageTypeList; 
             private UserProfile userProfile; 
 
+            private Builder() {
+            } 
+
+            private Builder(StoragePolicy model) {
+                this.storageTypeList = model.storageTypeList;
+                this.userProfile = model.userProfile;
+            } 
+
             /**
              * StorageTypeList.
              */
@@ -1811,6 +1956,13 @@ public class CreateAppInstanceGroupRequest extends Request {
         public static final class Builder {
             private String customConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserDefinePolicy model) {
+                this.customConfig = model.customConfig;
+            } 
+
             /**
              * CustomConfig.
              */
@@ -1857,6 +2009,13 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         public static final class Builder {
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.type = model.type;
+            } 
 
             /**
              * Type.
@@ -1964,6 +2123,18 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String streamingMode; 
             private Boolean terminalResolutionAdaptive; 
             private Boolean webrtc; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoPolicy model) {
+                this.frameRate = model.frameRate;
+                this.sessionResolutionHeight = model.sessionResolutionHeight;
+                this.sessionResolutionWidth = model.sessionResolutionWidth;
+                this.streamingMode = model.streamingMode;
+                this.terminalResolutionAdaptive = model.terminalResolutionAdaptive;
+                this.webrtc = model.webrtc;
+            } 
 
             /**
              * FrameRate.

@@ -23,6 +23,10 @@ public class AuthorizeInstanceGroupRequest extends Request {
     private String appInstanceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AuthorizeUserIds")
     private java.util.List<String> authorizeUserIds;
 
@@ -42,6 +46,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
     private AuthorizeInstanceGroupRequest(Builder builder) {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.authorizeUserIds = builder.authorizeUserIds;
         this.productType = builder.productType;
         this.unAuthorizeUserIds = builder.unAuthorizeUserIds;
@@ -56,7 +61,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,6 +71,13 @@ public class AuthorizeInstanceGroupRequest extends Request {
      */
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     /**
@@ -98,6 +110,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<AuthorizeInstanceGroupRequest, Builder> {
         private String appInstanceGroupId; 
+        private String appInstancePersistentId; 
         private java.util.List<String> authorizeUserIds; 
         private String productType; 
         private java.util.List<String> unAuthorizeUserIds; 
@@ -110,6 +123,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         private Builder(AuthorizeInstanceGroupRequest request) {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
+            this.appInstancePersistentId = request.appInstancePersistentId;
             this.authorizeUserIds = request.authorizeUserIds;
             this.productType = request.productType;
             this.unAuthorizeUserIds = request.unAuthorizeUserIds;
@@ -125,6 +139,15 @@ public class AuthorizeInstanceGroupRequest extends Request {
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
             this.appInstanceGroupId = appInstanceGroupId;
+            return this;
+        }
+
+        /**
+         * AppInstancePersistentId.
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
+            this.appInstancePersistentId = appInstancePersistentId;
             return this;
         }
 
@@ -218,6 +241,14 @@ public class AuthorizeInstanceGroupRequest extends Request {
         public static final class Builder {
             private String adDomain; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserMeta model) {
+                this.adDomain = model.adDomain;
+                this.type = model.type;
+            } 
 
             /**
              * AdDomain.

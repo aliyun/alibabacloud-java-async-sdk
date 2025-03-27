@@ -54,7 +54,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -226,6 +226,15 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimerPeriods model) {
+                this.amount = model.amount;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>资源数量。</p>
              * 
@@ -321,6 +330,15 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private String recurrenceType; 
             private java.util.List<Integer> recurrenceValues; 
             private java.util.List<TimerPeriods> timerPeriods; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceSchedules model) {
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValues = model.recurrenceValues;
+                this.timerPeriods = model.timerPeriods;
+            } 
 
             /**
              * <p>策略执行周期的类型。必须同时指定<code>RecurrenceType</code>和<code>RecurrenceValues</code>。</p>
@@ -514,6 +532,23 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private String strategyEnableDate; 
             private String strategyType; 
             private Boolean warmUp; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodePoolStrategy model) {
+                this.maxIdleAppInstanceAmount = model.maxIdleAppInstanceAmount;
+                this.maxScalingAmount = model.maxScalingAmount;
+                this.nodeAmount = model.nodeAmount;
+                this.recurrenceSchedules = model.recurrenceSchedules;
+                this.scalingDownAfterIdleMinutes = model.scalingDownAfterIdleMinutes;
+                this.scalingStep = model.scalingStep;
+                this.scalingUsageThreshold = model.scalingUsageThreshold;
+                this.strategyDisableDate = model.strategyDisableDate;
+                this.strategyEnableDate = model.strategyEnableDate;
+                this.strategyType = model.strategyType;
+                this.warmUp = model.warmUp;
+            } 
 
             /**
              * MaxIdleAppInstanceAmount.

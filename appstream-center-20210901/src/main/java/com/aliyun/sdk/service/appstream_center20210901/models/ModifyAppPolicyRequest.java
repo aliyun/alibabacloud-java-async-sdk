@@ -46,7 +46,7 @@ public class ModifyAppPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -232,6 +232,19 @@ public class ModifyAppPolicyRequest extends Request {
             private Boolean terminalResolutionAdaptive; 
             private String visualQualityStrategy; 
             private Boolean webrtc; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoPolicy model) {
+                this.frameRate = model.frameRate;
+                this.sessionResolutionHeight = model.sessionResolutionHeight;
+                this.sessionResolutionWidth = model.sessionResolutionWidth;
+                this.streamingMode = model.streamingMode;
+                this.terminalResolutionAdaptive = model.terminalResolutionAdaptive;
+                this.visualQualityStrategy = model.visualQualityStrategy;
+                this.webrtc = model.webrtc;
+            } 
 
             /**
              * FrameRate.

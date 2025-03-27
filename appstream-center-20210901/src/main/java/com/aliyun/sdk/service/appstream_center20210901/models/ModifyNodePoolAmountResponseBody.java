@@ -36,6 +36,10 @@ public class ModifyNodePoolAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class ModifyNodePoolAmountResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyNodePoolAmountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class ModifyNodePoolAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -108,8 +123,18 @@ public class ModifyNodePoolAmountResponseBody extends TeaModel {
         public static final class Builder {
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderId = model.orderId;
+            } 
+
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23429322113****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

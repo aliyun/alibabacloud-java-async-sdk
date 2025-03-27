@@ -48,6 +48,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListOtaTaskResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TaskList> taskList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOtaTaskResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.taskList = model.taskList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -215,6 +230,16 @@ public class ListOtaTaskResponseBody extends TeaModel {
             private String taskDisplayStatus; 
             private String taskId; 
             private String taskStartTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.otaVersion = model.otaVersion;
+                this.taskDisplayStatus = model.taskDisplayStatus;
+                this.taskId = model.taskId;
+                this.taskStartTime = model.taskStartTime;
+            } 
 
             /**
              * <p>The OTA version.</p>

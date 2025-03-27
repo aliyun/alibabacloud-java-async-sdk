@@ -44,6 +44,10 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ResourceTags> resourceTags; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagCloudResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceTags = model.resourceTags;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Indicates whether the next query is required.</p>
@@ -181,6 +195,15 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
             private String scope; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.scope = model.scope;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -281,6 +304,15 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The resource ID.</p>

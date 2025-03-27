@@ -36,6 +36,10 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AskSessionPackagePriceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -144,6 +156,16 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * Currency.
              */
@@ -214,6 +236,13 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Price price; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.price = model.price;
+            } 
 
             /**
              * Price.

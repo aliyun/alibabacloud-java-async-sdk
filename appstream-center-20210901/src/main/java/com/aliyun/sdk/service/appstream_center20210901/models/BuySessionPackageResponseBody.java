@@ -48,6 +48,10 @@ public class BuySessionPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class BuySessionPackageResponseBody extends TeaModel {
         private String requestId; 
         private Long sessionPackageId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BuySessionPackageResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.sessionPackageId = model.sessionPackageId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

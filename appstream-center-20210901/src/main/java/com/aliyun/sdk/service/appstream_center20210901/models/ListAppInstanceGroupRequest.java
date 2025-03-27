@@ -87,7 +87,7 @@ public class ListAppInstanceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,7 +202,10 @@ public class ListAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * AppCenterImageId.
+         * <p>The image ID of the app. You can obtain the ID from the Images page in the App Streaming console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-8z4nztpaqvay4****</p>
          */
         public Builder appCenterImageId(String appCenterImageId) {
             this.putQueryParameter("AppCenterImageId", appCenterImageId);
@@ -211,7 +214,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -220,7 +226,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupName.
+         * <p>The name of the delivery groups to query. Fuzzy match is used for queries. For example, if you set this parameter to <code>Office App</code>, all delivery groups whose names contain <code>Office App</code> are queried, such as <code>My Office Apps</code> and <code>Office App A</code>.</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -267,7 +273,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -288,6 +297,11 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +314,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -312,7 +326,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the delivery groups.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);

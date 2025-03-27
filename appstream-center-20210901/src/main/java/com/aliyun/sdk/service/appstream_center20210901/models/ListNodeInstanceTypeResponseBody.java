@@ -48,6 +48,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeInstanceTypeModels
      */
@@ -89,6 +93,17 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodeInstanceTypeResponseBody model) {
+            this.nodeInstanceTypeModels = model.nodeInstanceTypeModels;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The resource types.</p>
@@ -263,6 +278,20 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             private String nodeInstanceType; 
             private String nodeInstanceTypeFamily; 
             private String nodeTypeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeInstanceTypeModels model) {
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.gpuMemory = model.gpuMemory;
+                this.maxCapacity = model.maxCapacity;
+                this.memory = model.memory;
+                this.nodeInstanceType = model.nodeInstanceType;
+                this.nodeInstanceTypeFamily = model.nodeInstanceTypeFamily;
+                this.nodeTypeName = model.nodeTypeName;
+            } 
 
             /**
              * <p>The number of vCPUs.</p>

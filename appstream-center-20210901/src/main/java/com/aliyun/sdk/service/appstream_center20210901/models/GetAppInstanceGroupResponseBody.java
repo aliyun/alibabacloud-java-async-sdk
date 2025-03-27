@@ -36,6 +36,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appInstanceGroupModels
      */
@@ -53,6 +57,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private AppInstanceGroupModels appInstanceGroupModels; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppInstanceGroupResponseBody model) {
+            this.appInstanceGroupModels = model.appInstanceGroupModels;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>AppInstanceGroupModels</p>
@@ -155,6 +167,17 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String appName; 
             private String appVersion; 
             private String appVersionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apps model) {
+                this.appIcon = model.appIcon;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appVersion = model.appVersion;
+                this.appVersionName = model.appVersionName;
+            } 
 
             /**
              * AppIcon.
@@ -259,6 +282,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimerPeriods model) {
+                this.amount = model.amount;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * Amount.
              */
@@ -345,6 +377,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String recurrenceType; 
             private java.util.List<Integer> recurrenceValues; 
             private java.util.List<TimerPeriods> timerPeriods; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecurrenceSchedules model) {
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValues = model.recurrenceValues;
+                this.timerPeriods = model.timerPeriods;
+            } 
 
             /**
              * RecurrenceType.
@@ -625,6 +666,31 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String strategyType; 
             private Boolean warmUp; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodePool model) {
+                this.amount = model.amount;
+                this.maxIdleAppInstanceAmount = model.maxIdleAppInstanceAmount;
+                this.maxScalingAmount = model.maxScalingAmount;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeCapacity = model.nodeCapacity;
+                this.nodeInstanceType = model.nodeInstanceType;
+                this.nodePoolId = model.nodePoolId;
+                this.nodeTypeName = model.nodeTypeName;
+                this.nodeUsed = model.nodeUsed;
+                this.recurrenceSchedules = model.recurrenceSchedules;
+                this.scalingDownAfterIdleMinutes = model.scalingDownAfterIdleMinutes;
+                this.scalingNodeAmount = model.scalingNodeAmount;
+                this.scalingNodeUsed = model.scalingNodeUsed;
+                this.scalingStep = model.scalingStep;
+                this.scalingUsageThreshold = model.scalingUsageThreshold;
+                this.strategyDisableDate = model.strategyDisableDate;
+                this.strategyEnableDate = model.strategyEnableDate;
+                this.strategyType = model.strategyType;
+                this.warmUp = model.warmUp;
+            } 
+
             /**
              * Amount.
              */
@@ -839,6 +905,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String newOtaVersion; 
             private String otaVersion; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OtaInfo model) {
+                this.newOtaVersion = model.newOtaVersion;
+                this.otaVersion = model.otaVersion;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * NewOtaVersion.
@@ -1286,6 +1361,45 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppInstanceGroupModels model) {
+                this.amount = model.amount;
+                this.appCenterImageId = model.appCenterImageId;
+                this.appCenterImageName = model.appCenterImageName;
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceGroupName = model.appInstanceGroupName;
+                this.appInstanceType = model.appInstanceType;
+                this.appInstanceTypeName = model.appInstanceTypeName;
+                this.appPolicyId = model.appPolicyId;
+                this.apps = model.apps;
+                this.chargeResourceMode = model.chargeResourceMode;
+                this.chargeType = model.chargeType;
+                this.expiredTime = model.expiredTime;
+                this.gmtCreate = model.gmtCreate;
+                this.maxAmount = model.maxAmount;
+                this.minAmount = model.minAmount;
+                this.nodePool = model.nodePool;
+                this.officeSiteId = model.officeSiteId;
+                this.osType = model.osType;
+                this.otaInfo = model.otaInfo;
+                this.productType = model.productType;
+                this.regionId = model.regionId;
+                this.reserveAmountRatio = model.reserveAmountRatio;
+                this.reserveMaxAmount = model.reserveMaxAmount;
+                this.reserveMinAmount = model.reserveMinAmount;
+                this.resourceStatus = model.resourceStatus;
+                this.scalingDownAfterIdleMinutes = model.scalingDownAfterIdleMinutes;
+                this.scalingStep = model.scalingStep;
+                this.scalingUsageThreshold = model.scalingUsageThreshold;
+                this.sessionTimeout = model.sessionTimeout;
+                this.sessionType = model.sessionType;
+                this.skipUserAuthCheck = model.skipUserAuthCheck;
+                this.specId = model.specId;
+                this.status = model.status;
+            } 
 
             /**
              * Amount.

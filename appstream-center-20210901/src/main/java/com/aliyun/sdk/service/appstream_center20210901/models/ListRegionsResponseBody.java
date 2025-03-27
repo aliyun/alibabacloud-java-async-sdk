@@ -36,6 +36,10 @@ public class ListRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionModels
      */
@@ -53,6 +57,14 @@ public class ListRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<RegionModels> regionModels; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRegionsResponseBody model) {
+            this.regionModels = model.regionModels;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The region IDs.</p>
@@ -110,6 +122,13 @@ public class ListRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionModels model) {
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The region ID.</p>

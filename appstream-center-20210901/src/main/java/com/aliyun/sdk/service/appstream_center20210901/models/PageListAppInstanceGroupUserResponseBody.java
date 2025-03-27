@@ -36,6 +36,10 @@ public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageListAppInstanceGroupUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The request ID.</p>

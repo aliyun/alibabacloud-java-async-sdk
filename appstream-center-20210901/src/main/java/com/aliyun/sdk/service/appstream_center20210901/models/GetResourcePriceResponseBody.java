@@ -48,6 +48,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetResourcePriceResponseBody extends TeaModel {
         private java.util.List<PriceList> priceList; 
         private PriceModel priceModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourcePriceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.priceList = model.priceList;
+            this.priceModel = model.priceModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -226,6 +241,17 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String promotionId; 
             private String promotionName; 
             private Boolean selected; 
+
+            private Builder() {
+            } 
+
+            private Builder(Promotions model) {
+                this.optionCode = model.optionCode;
+                this.promotionDesc = model.promotionDesc;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+                this.selected = model.selected;
+            } 
 
             /**
              * <p>The coupon code.</p>
@@ -368,6 +394,17 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private java.util.List<Promotions> promotions; 
             private String tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.promotions = model.promotions;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The currency type.</p>
              * 
@@ -471,6 +508,14 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the price calculation rule.</p>
              */
@@ -552,6 +597,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private Price price; 
             private String priceType; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceList model) {
+                this.price = model.price;
+                this.priceType = model.priceType;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The price details.</p>
@@ -671,6 +725,17 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String promotionId; 
             private String promotionName; 
             private Boolean selected; 
+
+            private Builder() {
+            } 
+
+            private Builder(PricePromotions model) {
+                this.optionCode = model.optionCode;
+                this.promotionDesc = model.promotionDesc;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+                this.selected = model.selected;
+            } 
 
             /**
              * <p>The coupon code.</p>
@@ -813,6 +878,17 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private java.util.List<PricePromotions> promotions; 
             private String tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceModelPrice model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.promotions = model.promotions;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The currency type.</p>
              * 
@@ -916,6 +992,14 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceModelRules model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the price calculation rule.</p>
              */
@@ -985,6 +1069,14 @@ public class GetResourcePriceResponseBody extends TeaModel {
         public static final class Builder {
             private PriceModelPrice price; 
             private java.util.List<PriceModelRules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceModel model) {
+                this.price = model.price;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The price details.</p>

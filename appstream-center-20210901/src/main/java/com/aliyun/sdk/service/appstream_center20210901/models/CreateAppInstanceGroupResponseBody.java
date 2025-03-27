@@ -36,6 +36,10 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appInstanceGroupModel
      */
@@ -53,6 +57,14 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private AppInstanceGroupModel appInstanceGroupModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAppInstanceGroupResponseBody model) {
+            this.appInstanceGroupModel = model.appInstanceGroupModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AppInstanceGroupModel.
@@ -131,6 +143,15 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
             private String appInstanceGroupId; 
             private String nodePoolId; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppInstanceGroupModel model) {
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.nodePoolId = model.nodePoolId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * AppInstanceGroupId.

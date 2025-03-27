@@ -36,6 +36,10 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedResources
      */
@@ -53,6 +57,14 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FailedResources> failedResources; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UntagCloudResourcesResponseBody model) {
+            this.failedResources = model.failedResources;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cloud resources whose tags failed to be removed and the corresponding tags.</p>
@@ -122,6 +134,14 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String scope; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.scope = model.scope;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -236,6 +256,17 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedResources model) {
+                this.code = model.code;
+                this.message = model.message;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The error code.</p>

@@ -36,6 +36,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceRenewPriceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The price object.</p>
@@ -158,6 +170,17 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private String promotionId; 
             private String promotionName; 
             private Boolean selected; 
+
+            private Builder() {
+            } 
+
+            private Builder(Promotions model) {
+                this.optionCode = model.optionCode;
+                this.promotionDesc = model.promotionDesc;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+                this.selected = model.selected;
+            } 
 
             /**
              * <p>The coupon code.</p>
@@ -300,6 +323,17 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private java.util.List<Promotions> promotions; 
             private String tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.promotions = model.promotions;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The currency type.</p>
              * 
@@ -403,6 +437,14 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the price calculation rule.</p>
              */
@@ -472,6 +514,14 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public static final class Builder {
             private Price price; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.price = model.price;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The price details.</p>

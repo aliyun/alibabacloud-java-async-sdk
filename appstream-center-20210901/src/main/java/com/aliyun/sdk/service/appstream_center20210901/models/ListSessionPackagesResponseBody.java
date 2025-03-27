@@ -48,6 +48,10 @@ public class ListSessionPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListSessionPackagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSessionPackagesResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Data.
@@ -251,6 +266,20 @@ public class ListSessionPackagesResponseBody extends TeaModel {
             private String startTime; 
             private Long totalTime; 
             private Long usedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceObject model) {
+                this.expiredTime = model.expiredTime;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.startTime = model.startTime;
+                this.totalTime = model.totalTime;
+                this.usedTime = model.usedTime;
+            } 
 
             /**
              * ExpiredTime.
@@ -558,6 +587,30 @@ public class ListSessionPackagesResponseBody extends TeaModel {
             private Long sessionUsageRate; 
             private Integer state; 
             private Long userIdentification; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.availableHours = model.availableHours;
+                this.chargeType = model.chargeType;
+                this.deleteStatus = model.deleteStatus;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.instanceObject = model.instanceObject;
+                this.maxHours = model.maxHours;
+                this.maxSessions = model.maxSessions;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.region = model.region;
+                this.sessionPackageId = model.sessionPackageId;
+                this.sessionPackageName = model.sessionPackageName;
+                this.sessionPackageTypeId = model.sessionPackageTypeId;
+                this.sessionSpec = model.sessionSpec;
+                this.sessionUsageRate = model.sessionUsageRate;
+                this.state = model.state;
+                this.userIdentification = model.userIdentification;
+            } 
 
             /**
              * AvailableHours.

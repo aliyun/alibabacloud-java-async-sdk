@@ -56,6 +56,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -113,6 +117,19 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         private String authCode; 
         private String requestId; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDebugAppInstanceResponseBody model) {
+            this.appId = model.appId;
+            this.appInstanceGroupId = model.appInstanceGroupId;
+            this.appInstanceId = model.appInstanceId;
+            this.appVersion = model.appVersion;
+            this.authCode = model.authCode;
+            this.requestId = model.requestId;
+            this.userId = model.userId;
+        } 
 
         /**
          * <p>The application ID.</p>

@@ -68,6 +68,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appInstanceGroupId
      */
@@ -149,6 +153,22 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String taskStatus; 
         private Long tenantId; 
         private String ticket; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConnectionTicketResponseBody model) {
+            this.appInstanceGroupId = model.appInstanceGroupId;
+            this.appInstanceId = model.appInstanceId;
+            this.appInstancePersistentId = model.appInstancePersistentId;
+            this.bizRegionId = model.bizRegionId;
+            this.osType = model.osType;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskStatus = model.taskStatus;
+            this.tenantId = model.tenantId;
+            this.ticket = model.ticket;
+        } 
 
         /**
          * <p>The ID of the delivery group.</p>

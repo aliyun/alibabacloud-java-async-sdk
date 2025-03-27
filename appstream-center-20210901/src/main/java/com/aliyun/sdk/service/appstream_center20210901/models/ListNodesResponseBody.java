@@ -48,6 +48,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -90,8 +94,22 @@ public class ListNodesResponseBody extends TeaModel {
         private String requestId; 
         private Integer toPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.count = model.count;
+            this.nodeModels = model.nodeModels;
+            this.perPageSize = model.perPageSize;
+            this.requestId = model.requestId;
+            this.toPage = model.toPage;
+        } 
+
         /**
-         * Count.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -99,7 +117,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * NodeModels.
+         * <p>The resource nodes.</p>
          */
         public Builder nodeModels(java.util.List<NodeModels> nodeModels) {
             this.nodeModels = nodeModels;
@@ -107,7 +125,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PerPageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder perPageSize(Integer perPageSize) {
             this.perPageSize = perPageSize;
@@ -115,7 +136,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +147,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * ToPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder toPage(Integer toPage) {
             this.toPage = toPage;
@@ -180,8 +207,27 @@ public class ListNodesResponseBody extends TeaModel {
             private String chargeType; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeModels model) {
+                this.chargeType = model.chargeType;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
-             * ChargeType.
+             * <p>The billing method of the resource node.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</p>
+             * </blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go</li>
+             * <li>Prepaid: subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -189,7 +235,13 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the resource node.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp13********</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

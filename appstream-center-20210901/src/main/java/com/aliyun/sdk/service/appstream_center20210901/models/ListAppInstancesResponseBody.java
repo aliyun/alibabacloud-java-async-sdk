@@ -48,6 +48,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appInstanceModels
      */
@@ -89,6 +93,17 @@ public class ListAppInstancesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppInstancesResponseBody model) {
+            this.appInstanceModels = model.appInstanceModels;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The app instances.</p>
@@ -191,6 +206,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String endUserId; 
             private Long usageDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindInfo model) {
+                this.endUserId = model.endUserId;
+                this.usageDuration = model.usageDuration;
+            } 
 
             /**
              * <p>The ID of the end user that is bound to the application instance.</p>
@@ -372,6 +395,23 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private String nodeId; 
             private String sessionStatus; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppInstanceModels model) {
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceId = model.appInstanceId;
+                this.bindInfo = model.bindInfo;
+                this.chargeType = model.chargeType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.mainEthPublicIp = model.mainEthPublicIp;
+                this.networkInterfaceIp = model.networkInterfaceIp;
+                this.nodeId = model.nodeId;
+                this.sessionStatus = model.sessionStatus;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the delivery group.</p>
