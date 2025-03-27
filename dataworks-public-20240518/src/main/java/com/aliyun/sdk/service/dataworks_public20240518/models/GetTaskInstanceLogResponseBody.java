@@ -36,6 +36,10 @@ public class GetTaskInstanceLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTaskInstanceLogResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String taskInstanceLog; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskInstanceLogResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskInstanceLog = model.taskInstanceLog;
+        } 
 
         /**
          * <p>The request ID.</p>

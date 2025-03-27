@@ -23,7 +23,6 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizDate")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long bizDate;
 
     @com.aliyun.core.annotation.Body
@@ -69,7 +68,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,7 +157,6 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
 
         /**
          * <p>The data timestamp.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -274,6 +272,13 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -323,6 +328,13 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
 
         public static final class Builder {
             private String upstreamOutput; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.upstreamOutput = model.upstreamOutput;
+            } 
 
             /**
              * <p>The identifier of the output of the ancestor task.</p>
@@ -386,6 +398,14 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the variable.</p>
              * 
@@ -447,6 +467,13 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         public static final class Builder {
             private java.util.List<Variables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The variables.</p>
              */
@@ -493,6 +520,13 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskOutputs model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The identifier of the output.</p>
@@ -567,6 +601,15 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsVariables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -658,6 +701,14 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private java.util.List<TaskOutputs> taskOutputs; 
             private java.util.List<OutputsVariables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.taskOutputs = model.taskOutputs;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The task outputs.</p>
              */
@@ -737,6 +788,15 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -822,6 +882,14 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         public static final class Builder {
             private String content; 
             private String parameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.content = model.content;
+                this.parameters = model.parameters;
+            } 
 
             /**
              * <p>The script content.</p>
@@ -1008,6 +1076,23 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private Script script; 
             private Integer timeout; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.clientUniqueCode = model.clientUniqueCode;
+                this.dataSource = model.dataSource;
+                this.dependencies = model.dependencies;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.owner = model.owner;
+                this.runtimeResource = model.runtimeResource;
+                this.script = model.script;
+                this.timeout = model.timeout;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The unique code of the client. This code uniquely identifies a task.</p>

@@ -48,6 +48,10 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         private Long id; 
         private String status; 
         private Task task; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataQualityEvaluationTaskInstance model) {
+            this.createTime = model.createTime;
+            this.finishTime = model.finishTime;
+            this.id = model.id;
+            this.status = model.status;
+            this.task = model.task;
+        } 
 
         /**
          * CreateTime.
@@ -180,6 +195,14 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
             private String condition; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hooks model) {
+                this.condition = model.condition;
+                this.type = model.type;
+            } 
+
             /**
              * Condition.
              */
@@ -234,6 +257,13 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channels; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+            } 
 
             /**
              * Channels.
@@ -305,6 +335,15 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
             private String extension; 
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.extension = model.extension;
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * Extension.
@@ -381,6 +420,14 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notifications model) {
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
+
             /**
              * NotificationChannels.
              */
@@ -447,6 +494,14 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public static final class Builder {
             private String condition; 
             private java.util.List<Notifications> notifications; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskNotifications model) {
+                this.condition = model.condition;
+                this.notifications = model.notifications;
+            } 
 
             /**
              * Condition.
@@ -539,6 +594,16 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
             private String tableGuid; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
+
             /**
              * DatabaseType.
              */
@@ -621,6 +686,14 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> taskIds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.taskIds = model.taskIds;
+                this.type = model.type;
+            } 
 
             /**
              * TaskIds.
@@ -784,6 +857,22 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
             private Target target; 
             private Long tenantId; 
             private Trigger trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.dataSourceId = model.dataSourceId;
+                this.hooks = model.hooks;
+                this.id = model.id;
+                this.name = model.name;
+                this.notifications = model.notifications;
+                this.projectId = model.projectId;
+                this.runtimeConf = model.runtimeConf;
+                this.target = model.target;
+                this.tenantId = model.tenantId;
+                this.trigger = model.trigger;
+            } 
 
             /**
              * DataSourceId.

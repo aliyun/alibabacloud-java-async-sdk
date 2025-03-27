@@ -36,6 +36,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListProjectsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -122,6 +134,14 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliyunResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -303,6 +323,23 @@ public class ListProjectsResponseBody extends TeaModel {
             private String owner; 
             private Boolean paiTaskEnabled; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.aliyunResourceGroupId = model.aliyunResourceGroupId;
+                this.aliyunResourceTags = model.aliyunResourceTags;
+                this.description = model.description;
+                this.devEnvironmentEnabled = model.devEnvironmentEnabled;
+                this.devRoleDisabled = model.devRoleDisabled;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.paiTaskEnabled = model.paiTaskEnabled;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs.</p>
@@ -519,6 +556,16 @@ public class ListProjectsResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Projects> projects; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.projects = model.projects;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

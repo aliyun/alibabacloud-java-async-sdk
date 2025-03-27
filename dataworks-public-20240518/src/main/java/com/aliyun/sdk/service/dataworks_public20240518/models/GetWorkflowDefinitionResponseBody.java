@@ -36,6 +36,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WorkflowDefinition workflowDefinition; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkflowDefinitionResponseBody model) {
+            this.requestId = model.requestId;
+            this.workflowDefinition = model.workflowDefinition;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -194,6 +206,20 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             private Long projectId; 
             private String spec; 
             private Long workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowDefinition model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.spec = model.spec;
+                this.workflowId = model.workflowId;
+            } 
 
             /**
              * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>

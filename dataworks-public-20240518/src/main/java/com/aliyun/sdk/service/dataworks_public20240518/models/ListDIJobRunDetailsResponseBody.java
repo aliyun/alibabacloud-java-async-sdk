@@ -36,6 +36,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDIJobRunDetailsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -302,6 +314,29 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             private String sourceTableName; 
             private String structureMigrationErrorMessage; 
             private String structureMigrationStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobRunInfos model) {
+                this.destinationDatabaseName = model.destinationDatabaseName;
+                this.destinationDatasourceName = model.destinationDatasourceName;
+                this.destinationSchemaName = model.destinationSchemaName;
+                this.destinationTableName = model.destinationTableName;
+                this.fullMigrationErrorMessage = model.fullMigrationErrorMessage;
+                this.fullMigrationStatus = model.fullMigrationStatus;
+                this.offlineErrorRecords = model.offlineErrorRecords;
+                this.offlineTotalBytes = model.offlineTotalBytes;
+                this.offlineTotalRecords = model.offlineTotalRecords;
+                this.realtimeMigrationErrorMessage = model.realtimeMigrationErrorMessage;
+                this.realtimeMigrationStatus = model.realtimeMigrationStatus;
+                this.sourceDatabaseName = model.sourceDatabaseName;
+                this.sourceDatasourceName = model.sourceDatasourceName;
+                this.sourceSchemaName = model.sourceSchemaName;
+                this.sourceTableName = model.sourceTableName;
+                this.structureMigrationErrorMessage = model.structureMigrationErrorMessage;
+                this.structureMigrationStatus = model.structureMigrationStatus;
+            } 
 
             /**
              * <p>The name of the database in the destination.</p>
@@ -564,6 +599,16 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.jobRunInfos = model.jobRunInfos;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The running information about the synchronization task.</p>

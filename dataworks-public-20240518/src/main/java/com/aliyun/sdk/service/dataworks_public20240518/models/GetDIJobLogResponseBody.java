@@ -36,6 +36,10 @@ public class GetDIJobLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return log
      */
@@ -53,6 +57,14 @@ public class GetDIJobLogResponseBody extends TeaModel {
     public static final class Builder {
         private String log; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDIJobLogResponseBody model) {
+            this.log = model.log;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The log.</p>

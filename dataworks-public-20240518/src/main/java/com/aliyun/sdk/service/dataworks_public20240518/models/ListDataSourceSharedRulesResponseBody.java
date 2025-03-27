@@ -36,6 +36,10 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSourceSharedRules
      */
@@ -53,6 +57,14 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DataSourceSharedRules> dataSourceSharedRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceSharedRulesResponseBody model) {
+            this.dataSourceSharedRules = model.dataSourceSharedRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The sharing rules of the data source.</p>
@@ -206,6 +218,21 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
             private String sharedUser; 
             private Long sourceProjectId; 
             private Long targetProjectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourceSharedRules model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSourceId = model.dataSourceId;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.sharedDataSourceName = model.sharedDataSourceName;
+                this.sharedUser = model.sharedUser;
+                this.sourceProjectId = model.sourceProjectId;
+                this.targetProjectId = model.targetProjectId;
+            } 
 
             /**
              * <p>The time when the rule was created. This value is a UNIX timestamp.</p>

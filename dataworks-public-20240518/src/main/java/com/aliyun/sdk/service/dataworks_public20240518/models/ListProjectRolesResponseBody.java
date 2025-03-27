@@ -36,6 +36,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectRolesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -146,6 +158,16 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private String name; 
             private Long projectId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectRoles model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The code of the role in the DataWorks workspace.</p>
@@ -265,6 +287,16 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private String pageSize; 
             private java.util.List<ProjectRoles> projectRoles; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.projectRoles = model.projectRoles;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

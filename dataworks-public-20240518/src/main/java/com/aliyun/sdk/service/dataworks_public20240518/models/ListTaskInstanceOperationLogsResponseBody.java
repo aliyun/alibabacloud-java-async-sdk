@@ -36,6 +36,10 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskInstanceOperationLogsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -158,6 +170,17 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             private Long operationSeq; 
             private Long taskInstanceId; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLogs model) {
+                this.createTime = model.createTime;
+                this.operationContent = model.operationContent;
+                this.operationSeq = model.operationSeq;
+                this.taskInstanceId = model.taskInstanceId;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The time when the operation log was generated.</p>
@@ -288,6 +311,16 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.operationLogs = model.operationLogs;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The operation logs.</p>

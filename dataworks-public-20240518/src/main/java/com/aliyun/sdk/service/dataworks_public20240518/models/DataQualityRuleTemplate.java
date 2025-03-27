@@ -60,6 +60,10 @@ public class DataQualityRuleTemplate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkingConfig
      */
@@ -125,6 +129,20 @@ public class DataQualityRuleTemplate extends TeaModel {
         private SamplingConfig samplingConfig; 
         private Long tenantId; 
         private String visibleScope; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataQualityRuleTemplate model) {
+            this.checkingConfig = model.checkingConfig;
+            this.code = model.code;
+            this.directoryPath = model.directoryPath;
+            this.name = model.name;
+            this.projectId = model.projectId;
+            this.samplingConfig = model.samplingConfig;
+            this.tenantId = model.tenantId;
+            this.visibleScope = model.visibleScope;
+        } 
 
         /**
          * CheckingConfig.
@@ -240,6 +258,14 @@ public class DataQualityRuleTemplate extends TeaModel {
             private String referencedSamplesFilter; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.type = model.type;
+            } 
+
             /**
              * ReferencedSamplesFilter.
              */
@@ -318,6 +344,15 @@ public class DataQualityRuleTemplate extends TeaModel {
             private String metric; 
             private String metricParameters; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * Metric.

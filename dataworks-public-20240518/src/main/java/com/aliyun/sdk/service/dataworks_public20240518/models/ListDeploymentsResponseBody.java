@@ -36,6 +36,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeploymentsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -194,6 +206,20 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String status; 
             private Integer step; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stages model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.detail = model.detail;
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+                this.step = model.step;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The code of the stage.</p>
@@ -420,6 +446,20 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private java.util.List<Stages> stages; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Deployments model) {
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.id = model.id;
+                this.message = model.message;
+                this.modifyTime = model.modifyTime;
+                this.projectId = model.projectId;
+                this.stages = model.stages;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the process was created. This value is a UNIX timestamp.</p>
              * 
@@ -588,6 +628,16 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.deployments = model.deployments;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The processes.</p>

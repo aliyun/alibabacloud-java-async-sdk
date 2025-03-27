@@ -41,6 +41,10 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DIAlarmRuleId
      */
@@ -66,6 +70,15 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         private String DIAlarmRuleId; 
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDIAlarmRuleResponseBody model) {
+            this.DIAlarmRuleId = model.DIAlarmRuleId;
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>This parameter is deprecated and is replaced by the Id parameter.</p>

@@ -36,6 +36,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WorkflowInstance workflowInstance; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkflowInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.workflowInstance = model.workflowInstance;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -267,6 +279,26 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private String type; 
             private Long workflowId; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkflowInstance model) {
+                this.bizDate = model.bizDate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.envType = model.envType;
+                this.finishedTime = model.finishedTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.startedTime = model.startedTime;
+                this.status = model.status;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
+
             /**
              * <p>The data timestamp.</p>
              * 
@@ -303,8 +335,8 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             /**
              * <p>The environment of the workspace. Valid values:</p>
              * <ul>
-             * <li>Prod: production environment</li>
-             * <li>Dev: development environment</li>
+             * <li>Prod</li>
+             * <li>Dev</li>
              * </ul>
              * 
              * <strong>example:</strong>

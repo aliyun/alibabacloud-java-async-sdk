@@ -36,6 +36,10 @@ public class GetProjectMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectMember
      */
@@ -53,6 +57,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
     public static final class Builder {
         private ProjectMember projectMember; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectMemberResponseBody model) {
+            this.projectMember = model.projectMember;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the member in the workspace.</p>
@@ -134,6 +146,15 @@ public class GetProjectMemberResponseBody extends TeaModel {
             private String code; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The code of the role. Valid values:</p>
@@ -258,6 +279,16 @@ public class GetProjectMemberResponseBody extends TeaModel {
             private java.util.List<Roles> roles; 
             private String status; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectMember model) {
+                this.projectId = model.projectId;
+                this.roles = model.roles;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The DataWorks workspace ID.</p>

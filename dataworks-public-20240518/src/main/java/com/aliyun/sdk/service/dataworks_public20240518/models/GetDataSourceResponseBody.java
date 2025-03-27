@@ -36,6 +36,10 @@ public class GetDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSource
      */
@@ -53,6 +57,14 @@ public class GetDataSourceResponseBody extends TeaModel {
     public static final class Builder {
         private DataSource dataSource; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataSourceResponseBody model) {
+            this.dataSource = model.dataSource;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the data source.</p>
@@ -242,6 +254,24 @@ public class GetDataSourceResponseBody extends TeaModel {
             private Long projectId; 
             private String qualifiedName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.connectionProperties = model.connectionProperties;
+                this.connectionPropertiesMode = model.connectionPropertiesMode;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.description = model.description;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.qualifiedName = model.qualifiedName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>

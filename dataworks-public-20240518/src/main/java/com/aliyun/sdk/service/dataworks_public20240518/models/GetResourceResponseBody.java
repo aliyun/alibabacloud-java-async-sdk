@@ -36,6 +36,10 @@ public class GetResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Resource resource; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +194,19 @@ public class GetResourceResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The time when the file resource was created. This value is a UNIX timestamp.</p>

@@ -36,6 +36,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataAssetTagsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -218,6 +230,22 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             private String modifyUser; 
             private String valueType; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataAssetTags model) {
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.description = model.description;
+                this.key = model.key;
+                this.managers = model.managers;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.valueType = model.valueType;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The type of the tag.</p>
@@ -402,6 +430,16 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.dataAssetTags = model.dataAssetTags;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The tags.</p>

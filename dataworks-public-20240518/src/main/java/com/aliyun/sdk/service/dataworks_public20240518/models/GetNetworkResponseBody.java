@@ -40,6 +40,10 @@ public class GetNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return network
      */
@@ -65,6 +69,15 @@ public class GetNetworkResponseBody extends TeaModel {
         private Network network; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNetworkResponseBody model) {
+            this.network = model.network;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The information about the network resource.</p>
@@ -217,6 +230,20 @@ public class GetNetworkResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.id = model.id;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The time when the network resource was created. The value is a 64-bit timestamp.</p>

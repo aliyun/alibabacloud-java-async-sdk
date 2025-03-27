@@ -36,6 +36,10 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataQualityRule
      */
@@ -53,6 +57,14 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
     public static final class Builder {
         private DataQualityRule dataQualityRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataQualityRuleResponseBody model) {
+            this.dataQualityRule = model.dataQualityRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the rule.</p>
@@ -134,6 +146,15 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The threshold expression.</p>
@@ -240,6 +261,15 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Expected model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The threshold expression.</p>
              * 
@@ -344,6 +374,15 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Warned model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The threshold expression.</p>
@@ -450,6 +489,15 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private Expected expected; 
             private Warned warned; 
 
+            private Builder() {
+            } 
+
+            private Builder(Thresholds model) {
+                this.critical = model.critical;
+                this.expected = model.expected;
+                this.warned = model.warned;
+            } 
+
             /**
              * <p>The threshold settings for critical alerts.</p>
              */
@@ -536,6 +584,15 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String referencedSamplesFilter; 
             private Thresholds thresholds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.thresholds = model.thresholds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
@@ -625,6 +682,14 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String errorDataFilter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorHandlers model) {
+                this.errorDataFilter = model.errorDataFilter;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The SQL statement that is used to filter failed tasks. If you define the rule by using custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
@@ -725,6 +790,16 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String metricParameters; 
             private String samplingFilter; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.samplingFilter = model.samplingFilter;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * <p>The metrics used for sampling. Valid values:</p>
@@ -862,6 +937,16 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String partitionSpec; 
             private String tableGuid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The dataset of the table type. The database type to which the table belongs.</p>
@@ -1077,6 +1162,23 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String severity; 
             private Target target; 
             private String templateCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityRule model) {
+                this.checkingConfig = model.checkingConfig;
+                this.description = model.description;
+                this.enabled = model.enabled;
+                this.errorHandlers = model.errorHandlers;
+                this.id = model.id;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.samplingConfig = model.samplingConfig;
+                this.severity = model.severity;
+                this.target = model.target;
+                this.templateCode = model.templateCode;
+            } 
 
             /**
              * <p>The check settings for sample data.</p>

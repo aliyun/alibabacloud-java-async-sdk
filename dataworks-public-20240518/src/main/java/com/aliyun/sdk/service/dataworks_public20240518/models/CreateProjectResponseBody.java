@@ -41,6 +41,10 @@ public class CreateProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -66,6 +70,15 @@ public class CreateProjectResponseBody extends TeaModel {
         private Long id; 
         private Long projectId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProjectResponseBody model) {
+            this.id = model.id;
+            this.projectId = model.projectId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The workspace ID.</p>

@@ -36,6 +36,10 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncJob
      */
@@ -53,6 +57,14 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
     public static final class Builder {
         private AsyncJob asyncJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportWorkflowDefinitionResponseBody model) {
+            this.asyncJob = model.asyncJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status information of the asynchronous task.</p>
@@ -194,6 +206,20 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
             private String response; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsyncJob model) {
+                this.completed = model.completed;
+                this.createTime = model.createTime;
+                this.error = model.error;
+                this.id = model.id;
+                this.progress = model.progress;
+                this.response = model.response;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether the asynchronous task is complete.</p>

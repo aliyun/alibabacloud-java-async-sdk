@@ -36,6 +36,10 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCreateWorkflowInstancesResultResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             private String failureMessage; 
             private String status; 
             private java.util.List<Long> workflowInstanceIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.failureMessage = model.failureMessage;
+                this.status = model.status;
+                this.workflowInstanceIds = model.workflowInstanceIds;
+            } 
 
             /**
              * <p>The error message. This parameter is returned only if the creation fails.</p>

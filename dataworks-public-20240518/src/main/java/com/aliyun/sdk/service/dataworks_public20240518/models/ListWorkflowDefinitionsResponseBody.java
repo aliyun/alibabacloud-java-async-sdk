@@ -36,6 +36,10 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkflowDefinitionsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -110,6 +122,13 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Runtime model) {
+                this.command = model.command;
+            } 
 
             /**
              * <p>The command.</p>
@@ -184,6 +203,15 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private Long id; 
             private String path; 
             private Runtime runtime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.id = model.id;
+                this.path = model.path;
+                this.runtime = model.runtime;
+            } 
 
             /**
              * <p>The script ID.</p>
@@ -350,6 +378,21 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private Long projectId; 
             private Script script; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowDefinitions model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.script = model.script;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
@@ -527,6 +570,16 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
             private java.util.List<WorkflowDefinitions> workflowDefinitions; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.workflowDefinitions = model.workflowDefinitions;
+            } 
 
             /**
              * <p>The page number.</p>

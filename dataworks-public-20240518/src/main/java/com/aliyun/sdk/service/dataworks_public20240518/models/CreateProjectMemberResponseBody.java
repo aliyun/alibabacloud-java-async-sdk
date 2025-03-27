@@ -32,6 +32,10 @@ public class CreateProjectMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class CreateProjectMemberResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProjectMemberResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>

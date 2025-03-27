@@ -88,7 +88,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -300,7 +300,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The strength of the rule.</p>
+         * <p>The strength of the rule. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>
@@ -389,6 +389,15 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The threshold expression.</p>
@@ -502,6 +511,15 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Expected model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The threshold expression.</p>
              * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
@@ -613,6 +631,15 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Warned model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The threshold expression.</p>
@@ -726,6 +753,15 @@ public class UpdateDataQualityRuleRequest extends Request {
             private Expected expected; 
             private Warned warned; 
 
+            private Builder() {
+            } 
+
+            private Builder(Thresholds model) {
+                this.critical = model.critical;
+                this.expected = model.expected;
+                this.warned = model.warned;
+            } 
+
             /**
              * <p>The threshold settings for critical alerts.</p>
              */
@@ -812,6 +848,15 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String referencedSamplesFilter; 
             private Thresholds thresholds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.thresholds = model.thresholds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
@@ -901,6 +946,14 @@ public class UpdateDataQualityRuleRequest extends Request {
         public static final class Builder {
             private String errorDataFilter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorHandlers model) {
+                this.errorDataFilter = model.errorDataFilter;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
@@ -1002,6 +1055,16 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String metricParameters; 
             private String samplingFilter; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.samplingFilter = model.samplingFilter;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * <p>The metrics used for sampling. You can leave this parameter empty if you use a rule template. Valid values:</p>

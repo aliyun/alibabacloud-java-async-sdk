@@ -36,6 +36,10 @@ public class GetTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Task task; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.task = model.task;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -110,6 +122,13 @@ public class GetTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -184,6 +203,15 @@ public class GetTaskResponseBody extends TeaModel {
             private String type; 
             private String upstreamOutput; 
             private String upstreamTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.type = model.type;
+                this.upstreamOutput = model.upstreamOutput;
+                this.upstreamTaskId = model.upstreamTaskId;
+            } 
 
             /**
              * <p>The dependency type. Valid values:</p>
@@ -287,6 +315,15 @@ public class GetTaskResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the variable.</p>
              * 
@@ -365,6 +402,13 @@ public class GetTaskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Variables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The variables.</p>
              */
@@ -411,6 +455,13 @@ public class GetTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskOutputs model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The identifier of the output.</p>
@@ -485,6 +536,15 @@ public class GetTaskResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsVariables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -576,6 +636,14 @@ public class GetTaskResponseBody extends TeaModel {
             private java.util.List<TaskOutputs> taskOutputs; 
             private java.util.List<OutputsVariables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.taskOutputs = model.taskOutputs;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The task outputs.</p>
              */
@@ -654,6 +722,15 @@ public class GetTaskResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -739,6 +816,14 @@ public class GetTaskResponseBody extends TeaModel {
             private String content; 
             private String parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.content = model.content;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * <p>The script content.</p>
              * 
@@ -799,6 +884,13 @@ public class GetTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubTasksDataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -873,6 +965,15 @@ public class GetTaskResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubTasksRuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of CUs configured for task running.</p>
@@ -993,6 +1094,17 @@ public class GetTaskResponseBody extends TeaModel {
             private String recurrence; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -1350,6 +1462,34 @@ public class GetTaskResponseBody extends TeaModel {
             private String type; 
             private Long workflowId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubTasks model) {
+                this.baselineId = model.baselineId;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectEnv = model.projectEnv;
+                this.projectId = model.projectId;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -1647,6 +1787,14 @@ public class GetTaskResponseBody extends TeaModel {
             private java.util.List<SubTasks> subTasks; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskSubTasks model) {
+                this.subTasks = model.subTasks;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The subtasks.</p>
              */
@@ -1721,6 +1869,14 @@ public class GetTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1830,6 +1986,17 @@ public class GetTaskResponseBody extends TeaModel {
             private String recurrence; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskTrigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -2270,6 +2437,41 @@ public class GetTaskResponseBody extends TeaModel {
             private TaskTrigger trigger; 
             private String type; 
             private Long workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.baselineId = model.baselineId;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.dependencies = model.dependencies;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.inputs = model.inputs;
+                this.instanceMode = model.instanceMode;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectEnv = model.projectEnv;
+                this.projectId = model.projectId;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.script = model.script;
+                this.subTasks = model.subTasks;
+                this.tags = model.tags;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
 
             /**
              * <p>The baseline ID.</p>

@@ -36,6 +36,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListNodesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -123,6 +135,14 @@ public class ListNodesResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -184,6 +204,13 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String data; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeOutputs model) {
+                this.data = model.data;
+            } 
+
             /**
              * <p>The node output.</p>
              * 
@@ -234,6 +261,13 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String guid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.guid = model.guid;
+            } 
+
             /**
              * <p>The table ID.</p>
              * 
@@ -283,6 +317,13 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The output of the node.</p>
@@ -405,6 +446,19 @@ public class ListNodesResponseBody extends TeaModel {
             private String scope; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.artifactType = model.artifactType;
+                this.id = model.id;
+                this.name = model.name;
+                this.node = model.node;
+                this.scope = model.scope;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The artifact type.</p>
@@ -556,6 +610,15 @@ public class ListNodesResponseBody extends TeaModel {
             private java.util.List<Tables> tables; 
             private java.util.List<Variables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.nodeOutputs = model.nodeOutputs;
+                this.tables = model.tables;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The node outputs.</p>
              */
@@ -619,6 +682,13 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String data; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputsNodeOutputs model) {
+                this.data = model.data;
+            } 
+
             /**
              * <p>The node output.</p>
              * 
@@ -669,6 +739,13 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String guid; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputsTables model) {
+                this.guid = model.guid;
+            } 
+
             /**
              * <p>The table ID.</p>
              * 
@@ -718,6 +795,13 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(VariablesNode model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The output of the node.</p>
@@ -840,6 +924,19 @@ public class ListNodesResponseBody extends TeaModel {
             private String scope; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsVariables model) {
+                this.artifactType = model.artifactType;
+                this.id = model.id;
+                this.name = model.name;
+                this.node = model.node;
+                this.scope = model.scope;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The artifact type.</p>
@@ -991,6 +1088,15 @@ public class ListNodesResponseBody extends TeaModel {
             private java.util.List<OutputsTables> tables; 
             private java.util.List<OutputsVariables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.nodeOutputs = model.nodeOutputs;
+                this.tables = model.tables;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The node outputs.</p>
              */
@@ -1054,6 +1160,13 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String resourceGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.resourceGroupId = model.resourceGroupId;
+            } 
+
             /**
              * <p>The resource group ID.</p>
              * 
@@ -1103,6 +1216,13 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Runtime model) {
+                this.command = model.command;
+            } 
 
             /**
              * <p>The command used to distinguish node types.</p>
@@ -1177,6 +1297,15 @@ public class ListNodesResponseBody extends TeaModel {
             private Long id; 
             private String path; 
             private Runtime runtime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.id = model.id;
+                this.path = model.path;
+                this.runtime = model.runtime;
+            } 
 
             /**
              * <p>The script ID.</p>
@@ -1295,6 +1424,17 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer rerunTimes; 
             private Integer timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.instanceMode = model.instanceMode;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.timeout = model.timeout;
+            } 
+
             /**
              * <p>The instance generation mode. Valid values:</p>
              * <ul>
@@ -1409,6 +1549,14 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1530,6 +1678,18 @@ public class ListNodesResponseBody extends TeaModel {
             private String startTime; 
             private String timezone; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.startTime = model.startTime;
+                this.timezone = model.timezone;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression for scheduling.</p>
@@ -1834,6 +1994,29 @@ public class ListNodesResponseBody extends TeaModel {
             private Long taskId; 
             private Trigger trigger; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.createTime = model.createTime;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.id = model.id;
+                this.inputs = model.inputs;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.recurrence = model.recurrence;
+                this.runtimeResource = model.runtimeResource;
+                this.script = model.script;
+                this.strategy = model.strategy;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+                this.trigger = model.trigger;
+            } 
+
             /**
              * <p>The time when the node was created. This value is a UNIX timestamp.</p>
              * 
@@ -2077,6 +2260,16 @@ public class ListNodesResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.nodes = model.nodes;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The nodes.</p>

@@ -57,7 +57,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -229,6 +229,14 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         public static final class Builder {
             private Double cu; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The task runs to configure CU consumption. If Serverless resource groups are used, you must specify this parameter.</p>

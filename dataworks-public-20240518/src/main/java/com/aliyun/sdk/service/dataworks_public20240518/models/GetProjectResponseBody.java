@@ -36,6 +36,10 @@ public class GetProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return project
      */
@@ -53,6 +57,14 @@ public class GetProjectResponseBody extends TeaModel {
     public static final class Builder {
         private Project project; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectResponseBody model) {
+            this.project = model.project;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the workspace.</p>
@@ -122,6 +134,14 @@ public class GetProjectResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliyunResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -303,6 +323,23 @@ public class GetProjectResponseBody extends TeaModel {
             private String owner; 
             private Boolean paiTaskEnabled; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.aliyunResourceGroupId = model.aliyunResourceGroupId;
+                this.aliyunResourceTags = model.aliyunResourceTags;
+                this.description = model.description;
+                this.devEnvironmentEnabled = model.devEnvironmentEnabled;
+                this.devRoleDisabled = model.devRoleDisabled;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.paiTaskEnabled = model.paiTaskEnabled;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs.</p>

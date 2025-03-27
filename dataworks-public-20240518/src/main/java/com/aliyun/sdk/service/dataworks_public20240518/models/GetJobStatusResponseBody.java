@@ -36,6 +36,10 @@ public class GetJobStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobStatus
      */
@@ -53,6 +57,14 @@ public class GetJobStatusResponseBody extends TeaModel {
     public static final class Builder {
         private JobStatus jobStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobStatusResponseBody model) {
+            this.jobStatus = model.jobStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The real-time status information of the asynchronous task.</p>
@@ -170,6 +182,18 @@ public class GetJobStatusResponseBody extends TeaModel {
             private String jobId; 
             private String jobType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobStatus model) {
+                this.completed = model.completed;
+                this.createTime = model.createTime;
+                this.error = model.error;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether the asynchronous task is complete. Valid values: True False</p>

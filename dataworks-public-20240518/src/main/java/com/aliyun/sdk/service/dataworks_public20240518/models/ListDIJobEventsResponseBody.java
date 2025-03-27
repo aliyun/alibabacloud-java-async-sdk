@@ -36,6 +36,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDIJobEventsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDIJobEventsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -254,6 +266,25 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             private String srcTable; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DIJobEvent model) {
+                this.action = model.action;
+                this.channels = model.channels;
+                this.createTime = model.createTime;
+                this.detail = model.detail;
+                this.dstSql = model.dstSql;
+                this.dstTable = model.dstTable;
+                this.failoverMessage = model.failoverMessage;
+                this.id = model.id;
+                this.severity = model.severity;
+                this.srcSql = model.srcSql;
+                this.srcTable = model.srcTable;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The processing result of the DDL event. Valid values: Critical, Ignore, Normal, and Warning.</p>
@@ -481,6 +512,16 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.DIJobEvent = model.DIJobEvent;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The events returned. The value of this parameter is an array.</p>

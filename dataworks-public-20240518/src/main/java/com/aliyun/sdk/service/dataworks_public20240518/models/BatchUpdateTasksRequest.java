@@ -44,7 +44,7 @@ public class BatchUpdateTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,6 +156,13 @@ public class BatchUpdateTasksRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -229,6 +236,15 @@ public class BatchUpdateTasksRequest extends Request {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -314,6 +330,14 @@ public class BatchUpdateTasksRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -424,6 +448,17 @@ public class BatchUpdateTasksRequest extends Request {
             private String recurrence; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -672,6 +707,25 @@ public class BatchUpdateTasksRequest extends Request {
             private java.util.List<Tags> tags; 
             private Integer timeout; 
             private Trigger trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.tags = model.tags;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+            } 
 
             /**
              * <p>The information about the associated data source.</p>

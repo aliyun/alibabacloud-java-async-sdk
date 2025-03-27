@@ -36,6 +36,10 @@ public class CreateDataQualityEvaluationTaskInstanceResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class CreateDataQualityEvaluationTaskInstanceResponseBody extends TeaMode
     public static final class Builder {
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataQualityEvaluationTaskInstanceResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the data quality monitoring instance.</p>

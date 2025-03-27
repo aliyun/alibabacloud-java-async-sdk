@@ -36,6 +36,10 @@ public class BatchUpdateTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchUpdateTasksResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.Map<String, SuccessInfoValue> successInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchUpdateTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.successInfo = model.successInfo;
+        } 
 
         /**
          * <p>The request ID.</p>

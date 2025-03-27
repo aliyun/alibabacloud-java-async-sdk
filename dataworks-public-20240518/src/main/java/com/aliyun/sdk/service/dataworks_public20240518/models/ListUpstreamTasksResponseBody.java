@@ -36,6 +36,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUpstreamTasksResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -110,6 +122,13 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -184,6 +203,15 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -316,6 +344,18 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String startTime; 
             private String timezone; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.timezone = model.timezone;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -710,6 +750,36 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String type; 
             private Long workflowId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.baselineId = model.baselineId;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.instanceMode = model.instanceMode;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectEnv = model.projectEnv;
+                this.projectId = model.projectId;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.stepType = model.stepType;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -790,8 +860,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The instance generation mode. Valid values:</p>
-             * <p>T+1</p>
-             * <p>Immediately</p>
+             * <ul>
+             * <li>T+1</li>
+             * <li>Immediately</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>T+1</p>
@@ -932,8 +1004,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The scheduling dependency type. Valid values:</p>
-             * <p>Normal: same-cycle scheduling dependency</p>
-             * <p>CrossCycle: cross-cycle scheduling dependency</p>
+             * <ul>
+             * <li>Normal: same-cycle scheduling dependency</li>
+             * <li>CrossCycle: cross-cycle scheduling dependency</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -1023,6 +1097,13 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskDataSource model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -1096,6 +1177,15 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskRuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -1228,6 +1318,18 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String startTime; 
             private String timezone; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskTrigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.timezone = model.timezone;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -1595,6 +1697,34 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String type; 
             private Long workflowId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.baselineId = model.baselineId;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.instanceMode = model.instanceMode;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -1892,6 +2022,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String dependencyType; 
             private Task task; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpstreamTasks model) {
+                this.dependencyType = model.dependencyType;
+                this.task = model.task;
+            } 
+
             /**
              * <p>The scheduling dependency type. Valid values:</p>
              * <ul>
@@ -2001,6 +2139,17 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private java.util.List<Tasks> tasks; 
             private Integer totalCount; 
             private java.util.List<UpstreamTasks> upstreamTasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.tasks = model.tasks;
+                this.totalCount = model.totalCount;
+                this.upstreamTasks = model.upstreamTasks;
+            } 
 
             /**
              * <p>The page number.</p>

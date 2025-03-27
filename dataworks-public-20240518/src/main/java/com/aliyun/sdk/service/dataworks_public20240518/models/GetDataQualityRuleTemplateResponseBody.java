@@ -36,6 +36,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataQualityRuleTemplate
      */
@@ -53,6 +57,14 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private DataQualityRuleTemplate dataQualityRuleTemplate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataQualityRuleTemplateResponseBody model) {
+            this.dataQualityRuleTemplate = model.dataQualityRuleTemplate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the template.</p>
@@ -122,6 +134,14 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String referencedSamplesFilter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
@@ -215,6 +235,15 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             private String metric; 
             private String metricParameters; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * <p>The metrics used for sampling. Valid values:</p>
@@ -377,6 +406,19 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             private Long projectId; 
             private SamplingConfig samplingConfig; 
             private String visibleScope; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityRuleTemplate model) {
+                this.checkingConfig = model.checkingConfig;
+                this.code = model.code;
+                this.directoryPath = model.directoryPath;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.samplingConfig = model.samplingConfig;
+                this.visibleScope = model.visibleScope;
+            } 
 
             /**
              * <p>The check settings for sample data.</p>

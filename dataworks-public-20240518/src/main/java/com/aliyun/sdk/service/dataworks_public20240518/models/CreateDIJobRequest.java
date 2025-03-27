@@ -45,6 +45,10 @@ public class CreateDIJobRequest extends Request {
     private JobSettings jobSettings;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    private String jobType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MigrationType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String migrationType;
@@ -89,6 +93,7 @@ public class CreateDIJobRequest extends Request {
         this.destinationDataSourceType = builder.destinationDataSourceType;
         this.jobName = builder.jobName;
         this.jobSettings = builder.jobSettings;
+        this.jobType = builder.jobType;
         this.migrationType = builder.migrationType;
         this.name = builder.name;
         this.projectId = builder.projectId;
@@ -107,7 +112,7 @@ public class CreateDIJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,6 +157,13 @@ public class CreateDIJobRequest extends Request {
      */
     public JobSettings getJobSettings() {
         return this.jobSettings;
+    }
+
+    /**
+     * @return jobType
+     */
+    public String getJobType() {
+        return this.jobType;
     }
 
     /**
@@ -217,6 +229,7 @@ public class CreateDIJobRequest extends Request {
         private String destinationDataSourceType; 
         private String jobName; 
         private JobSettings jobSettings; 
+        private String jobType; 
         private String migrationType; 
         private String name; 
         private Long projectId; 
@@ -238,6 +251,7 @@ public class CreateDIJobRequest extends Request {
             this.destinationDataSourceType = request.destinationDataSourceType;
             this.jobName = request.jobName;
             this.jobSettings = request.jobSettings;
+            this.jobType = request.jobType;
             this.migrationType = request.migrationType;
             this.name = request.name;
             this.projectId = request.projectId;
@@ -312,6 +326,15 @@ public class CreateDIJobRequest extends Request {
             String jobSettingsShrink = shrink(jobSettings, "JobSettings", "json");
             this.putQueryParameter("JobSettings", jobSettingsShrink);
             this.jobSettings = jobSettings;
+            return this;
+        }
+
+        /**
+         * JobType.
+         */
+        public Builder jobType(String jobType) {
+            this.putQueryParameter("JobType", jobType);
+            this.jobType = jobType;
             return this;
         }
 
@@ -461,6 +484,13 @@ public class CreateDIJobRequest extends Request {
         public static final class Builder {
             private String dataSourceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationDataSourceSettings model) {
+                this.dataSourceName = model.dataSourceName;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -522,6 +552,14 @@ public class CreateDIJobRequest extends Request {
         public static final class Builder {
             private String destinationDataType; 
             private String sourceDataType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnDataTypeSettings model) {
+                this.destinationDataType = model.destinationDataType;
+                this.sourceDataType = model.sourceDataType;
+            } 
 
             /**
              * <p>The data type of the destination field. Valid values: bigint, boolean, string, text, datetime, timestamp, decimal, and binary. Different types of data sources support different data types.</p>
@@ -595,6 +633,14 @@ public class CreateDIJobRequest extends Request {
         public static final class Builder {
             private String cycleMigrationType; 
             private String scheduleParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(CycleScheduleSettings model) {
+                this.cycleMigrationType = model.cycleMigrationType;
+                this.scheduleParameters = model.scheduleParameters;
+            } 
 
             /**
              * <p>The synchronization type that requires periodic scheduling. Valid values:</p>
@@ -672,6 +718,14 @@ public class CreateDIJobRequest extends Request {
         public static final class Builder {
             private String action; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DdlHandlingSettings model) {
+                this.action = model.action;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The processing policy. Valid values:</p>
@@ -760,6 +814,14 @@ public class CreateDIJobRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuntimeSettings model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the configuration item. Valid values:</p>
              * <ul>
@@ -769,8 +831,8 @@ public class CreateDIJobRequest extends Request {
              * <li>runtime.offline.concurrent: specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
              * <li>runtime.enable.auto.create.schema: specifies whether schemas are automatically created in the destination of a synchronization task.</li>
              * <li>runtime.realtime.concurrent: specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
-             * <li>runtime.realtime.failover.minute.dataxcdc: The maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</li>
-             * <li>runtime.realtime.failover.times.dataxcdc: The maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</li>
+             * <li>runtime.realtime.failover.minute.dataxcdc: specifies the maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</li>
+             * <li>runtime.realtime.failover.times.dataxcdc: specifies the maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -879,25 +941,36 @@ public class CreateDIJobRequest extends Request {
             private java.util.List<DdlHandlingSettings> ddlHandlingSettings; 
             private java.util.List<RuntimeSettings> runtimeSettings; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobSettings model) {
+                this.channelSettings = model.channelSettings;
+                this.columnDataTypeSettings = model.columnDataTypeSettings;
+                this.cycleScheduleSettings = model.cycleScheduleSettings;
+                this.ddlHandlingSettings = model.ddlHandlingSettings;
+                this.runtimeSettings = model.runtimeSettings;
+            } 
+
             /**
              * <p>The channel control settings for the synchronization task. You can configure special channel control settings for the following synchronization links: data synchronization between Hologres data sources and data synchronization from Hologres to Kafka.</p>
              * <ol>
-             * <li>Data synchronization from Hologres to Kafka</li>
+             * <li>Holo2Kafka</li>
              * </ol>
              * <ul>
              * <li>Example: {&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</li>
              * <li>kafkaClientProperties: the parameters related to a Kafka producer, which are used when you write data to a Kafka data source.</li>
              * <li>keyColumns: the names of Kafka columns to which you want to write data.</li>
-             * <li>writeMode: the writing format. Valid values: json and canal.</li>
+             * <li>writeMode: the writing format of the Kafka data source. Valid values: json and canal.</li>
              * </ul>
              * <ol start="2">
-             * <li>Data synchronization between Hologres data sources</li>
+             * <li>Holo2Holo</li>
              * </ol>
              * <ul>
              * <li>Example: {&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</li>
              * <li>conflictMode: the policy used to handle a conflict that occurs during data writing to Hologres. Valid values: replace and ignore.</li>
              * <li>writeMode: the mode in which you want to write data to Hologres. Valid values: replay and insert.</li>
-             * <li>dynamicColumnAction: the method used to write data to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</li>
+             * <li>dynamicColumnAction: the mode in which you want to write data to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -997,6 +1070,14 @@ public class CreateDIJobRequest extends Request {
             private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfflineResourceSettings model) {
+                this.requestedCu = model.requestedCu;
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
+
             /**
              * <p>The number of compute units (CUs) in the resource group for Data Integration that are used for batch synchronization.</p>
              * 
@@ -1070,6 +1151,14 @@ public class CreateDIJobRequest extends Request {
             private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealtimeResourceSettings model) {
+                this.requestedCu = model.requestedCu;
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
+
             /**
              * <p>The number of CUs in the resource group for Data Integration that are used for real-time synchronization.</p>
              * 
@@ -1142,6 +1231,14 @@ public class CreateDIJobRequest extends Request {
         public static final class Builder {
             private Double requestedCu; 
             private String resourceGroupIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleResourceSettings model) {
+                this.requestedCu = model.requestedCu;
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
 
             /**
              * <p>The number of CUs in the resource group for scheduling that are used for batch synchronization.</p>
@@ -1228,6 +1325,15 @@ public class CreateDIJobRequest extends Request {
             private RealtimeResourceSettings realtimeResourceSettings; 
             private ScheduleResourceSettings scheduleResourceSettings; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSettings model) {
+                this.offlineResourceSettings = model.offlineResourceSettings;
+                this.realtimeResourceSettings = model.realtimeResourceSettings;
+                this.scheduleResourceSettings = model.scheduleResourceSettings;
+            } 
+
             /**
              * <p>The resource used for batch synchronization.</p>
              */
@@ -1303,6 +1409,14 @@ public class CreateDIJobRequest extends Request {
             private String encoding; 
             private String timezone; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceProperties model) {
+                this.encoding = model.encoding;
+                this.timezone = model.timezone;
+            } 
+
             /**
              * <p>The encoding format of the database.</p>
              * 
@@ -1375,6 +1489,14 @@ public class CreateDIJobRequest extends Request {
         public static final class Builder {
             private String dataSourceName; 
             private DataSourceProperties dataSourceProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDataSourceSettings model) {
+                this.dataSourceName = model.dataSourceName;
+                this.dataSourceProperties = model.dataSourceProperties;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -1469,6 +1591,16 @@ public class CreateDIJobRequest extends Request {
             private String expression; 
             private String expressionType; 
             private String objectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceObjectSelectionRules model) {
+                this.action = model.action;
+                this.expression = model.expression;
+                this.expressionType = model.expressionType;
+                this.objectType = model.objectType;
+            } 
 
             /**
              * <p>The operation that is performed to select objects. Valid values: Include and Exclude.</p>
@@ -1582,6 +1714,15 @@ public class CreateDIJobRequest extends Request {
             private String ruleName; 
             private String ruleTargetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableMappingsTransformationRules model) {
+                this.ruleActionType = model.ruleActionType;
+                this.ruleName = model.ruleName;
+                this.ruleTargetType = model.ruleTargetType;
+            } 
+
             /**
              * <p>The action type. Valid values:</p>
              * <ul>
@@ -1681,6 +1822,14 @@ public class CreateDIJobRequest extends Request {
             private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules; 
             private java.util.List<TableMappingsTransformationRules> transformationRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableMappings model) {
+                this.sourceObjectSelectionRules = model.sourceObjectSelectionRules;
+                this.transformationRules = model.transformationRules;
+            } 
+
             /**
              * <p>The list of rules used to select synchronization objects in the source.</p>
              */
@@ -1771,6 +1920,16 @@ public class CreateDIJobRequest extends Request {
             private String ruleExpression; 
             private String ruleName; 
             private String ruleTargetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransformationRules model) {
+                this.ruleActionType = model.ruleActionType;
+                this.ruleExpression = model.ruleExpression;
+                this.ruleName = model.ruleName;
+                this.ruleTargetType = model.ruleTargetType;
+            } 
 
             /**
              * <p>The action type. Valid values:</p>

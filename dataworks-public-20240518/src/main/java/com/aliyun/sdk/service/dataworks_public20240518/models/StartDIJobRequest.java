@@ -55,7 +55,7 @@ public class StartDIJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,6 +223,14 @@ public class StartDIJobRequest extends Request {
             private Long interval; 
             private Long upperLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailoverSettings model) {
+                this.interval = model.interval;
+                this.upperLimit = model.upperLimit;
+            } 
+
             /**
              * <p>The failover interval. Unit: minutes.</p>
              * 
@@ -296,6 +304,14 @@ public class StartDIJobRequest extends Request {
         public static final class Builder {
             private FailoverSettings failoverSettings; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealtimeStartSettings model) {
+                this.failoverSettings = model.failoverSettings;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The failover settings.</p>

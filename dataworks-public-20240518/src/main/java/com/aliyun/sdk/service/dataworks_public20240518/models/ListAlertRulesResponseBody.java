@@ -36,6 +36,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlertRulesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -123,6 +135,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Integer cycleId; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(CycleAndTime model) {
+                this.cycleId = model.cycleId;
+                this.time = model.time;
+            } 
+
             /**
              * <p>The ID of the scheduling cycle of the instance. Valid values: [1,288].</p>
              * 
@@ -184,6 +204,13 @@ public class ListAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CycleAndTime> cycleAndTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CycleUnfinished model) {
+                this.cycleAndTime = model.cycleAndTime;
+            } 
+
             /**
              * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
              */
@@ -243,6 +270,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Boolean autoRerunAlertEnabled; 
             private java.util.List<Long> streamTaskIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.autoRerunAlertEnabled = model.autoRerunAlertEnabled;
+                this.streamTaskIds = model.streamTaskIds;
+            } 
+
             /**
              * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
              * 
@@ -301,6 +336,13 @@ public class ListAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceErrorCount model) {
+                this.count = model.count;
+            } 
+
             /**
              * <p>The maximum number of instances on which an error occurs. Valid values: [1,10000].</p>
              * 
@@ -350,6 +392,13 @@ public class ListAlertRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer percentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceErrorPercentage model) {
+                this.percentage = model.percentage;
+            } 
 
             /**
              * <p>The maximum percentage of instances on which an error occurs in the workspace to the total number of instances. Valid values: [1-100].</p>
@@ -412,6 +461,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer percentage; 
             private String trend; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTransferFluctuate model) {
+                this.percentage = model.percentage;
+                this.trend = model.trend;
+            } 
 
             /**
              * <p>The maximum percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: [1-100].</p>
@@ -479,6 +536,13 @@ public class ListAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer timeoutInMinutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Timeout model) {
+                this.timeoutInMinutes = model.timeoutInMinutes;
+            } 
+
             /**
              * <p>The timeout period. Unit: minutes.</p>
              * 
@@ -528,6 +592,13 @@ public class ListAlertRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String unFinishedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnFinished model) {
+                this.unFinishedTime = model.unFinishedTime;
+            } 
 
             /**
              * <p>The latest completion time of the instance. The period is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
@@ -651,6 +722,19 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Timeout timeout; 
             private UnFinished unFinished; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extension model) {
+                this.cycleUnfinished = model.cycleUnfinished;
+                this.error = model.error;
+                this.instanceErrorCount = model.instanceErrorCount;
+                this.instanceErrorPercentage = model.instanceErrorPercentage;
+                this.instanceTransferFluctuate = model.instanceTransferFluctuate;
+                this.timeout = model.timeout;
+                this.unFinished = model.unFinished;
+            } 
+
             /**
              * <p>The configuration for an alert of the CycleUnfinished type.</p>
              */
@@ -770,6 +854,15 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private java.util.List<Long> ids; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.allowTasks = model.allowTasks;
+                this.ids = model.ids;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The nodes that are not to be monitored.</p>
              */
@@ -865,6 +958,15 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Extension extension; 
             private Target target; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerCondition model) {
+                this.extension = model.extension;
+                this.target = model.target;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The extended information about the rule. This parameter is required for specific types of alerts.</p>
@@ -995,6 +1097,17 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private String owner; 
             private TriggerCondition triggerCondition; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertRules model) {
+                this.enabled = model.enabled;
+                this.id = model.id;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.triggerCondition = model.triggerCondition;
+            } 
+
             /**
              * <p>Indicates whether the rule is enabled.</p>
              * 
@@ -1121,6 +1234,16 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.alertRules = model.alertRules;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The rules.</p>

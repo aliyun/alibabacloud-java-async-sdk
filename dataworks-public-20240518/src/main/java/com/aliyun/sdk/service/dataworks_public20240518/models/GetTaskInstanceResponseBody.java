@@ -36,6 +36,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskInstance taskInstance; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskInstance = model.taskInstance;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -110,6 +122,13 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -184,6 +203,15 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -263,6 +291,13 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Variables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The variables.</p>
              */
@@ -309,6 +344,13 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskOutputs model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The output identifier.</p>
@@ -383,6 +425,15 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsVariables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -474,6 +525,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private java.util.List<TaskOutputs> taskOutputs; 
             private java.util.List<OutputsVariables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.taskOutputs = model.taskOutputs;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The task outputs.</p>
              */
@@ -540,6 +599,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String gateway; 
             private String processId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Runtime model) {
+                this.gateway = model.gateway;
+                this.processId = model.processId;
+            } 
 
             /**
              * <p>The host for running.</p>
@@ -626,6 +693,15 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String image; 
             private String resourceGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
+
             /**
              * <p>The default number of CUs configured for task running.</p>
              * 
@@ -710,6 +786,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String content; 
             private String parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.content = model.content;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * <p>The script content.</p>
              * 
@@ -782,6 +866,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1263,6 +1355,48 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private Long workflowInstanceId; 
             private String workflowInstanceType; 
             private String workflowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInstance model) {
+                this.baselineId = model.baselineId;
+                this.bizdate = model.bizdate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.finishedTime = model.finishedTime;
+                this.id = model.id;
+                this.inputs = model.inputs;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.outputs = model.outputs;
+                this.owner = model.owner;
+                this.periodNumber = model.periodNumber;
+                this.priority = model.priority;
+                this.projectEnv = model.projectEnv;
+                this.projectId = model.projectId;
+                this.rerunMode = model.rerunMode;
+                this.runNumber = model.runNumber;
+                this.runtime = model.runtime;
+                this.runtimeResource = model.runtimeResource;
+                this.script = model.script;
+                this.startedTime = model.startedTime;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+                this.timeout = model.timeout;
+                this.triggerRecurrence = model.triggerRecurrence;
+                this.triggerTime = model.triggerTime;
+                this.triggerType = model.triggerType;
+                this.workflowId = model.workflowId;
+                this.workflowInstanceId = model.workflowInstanceId;
+                this.workflowInstanceType = model.workflowInstanceType;
+                this.workflowName = model.workflowName;
+            } 
 
             /**
              * <p>The baseline ID.</p>

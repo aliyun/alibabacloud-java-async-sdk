@@ -36,6 +36,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUpstreamTaskInstancesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -110,6 +122,13 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -172,6 +191,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String gateway; 
             private String processId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Runtime model) {
+                this.gateway = model.gateway;
+                this.processId = model.processId;
+            } 
 
             /**
              * <p>The host for running.</p>
@@ -257,6 +284,15 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -727,6 +763,46 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private String workflowInstanceType; 
             private String workflowName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInstances model) {
+                this.baselineId = model.baselineId;
+                this.bizdate = model.bizdate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.finishedTime = model.finishedTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.owner = model.owner;
+                this.periodNumber = model.periodNumber;
+                this.priority = model.priority;
+                this.projectEnv = model.projectEnv;
+                this.projectId = model.projectId;
+                this.rerunMode = model.rerunMode;
+                this.runNumber = model.runNumber;
+                this.runtime = model.runtime;
+                this.runtimeResource = model.runtimeResource;
+                this.startedTime = model.startedTime;
+                this.status = model.status;
+                this.stepType = model.stepType;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+                this.timeout = model.timeout;
+                this.triggerRecurrence = model.triggerRecurrence;
+                this.triggerTime = model.triggerTime;
+                this.triggerType = model.triggerType;
+                this.workflowId = model.workflowId;
+                this.workflowInstanceId = model.workflowInstanceId;
+                this.workflowInstanceType = model.workflowInstanceType;
+                this.workflowName = model.workflowName;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -793,8 +869,8 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             /**
              * <p>The environment of the workspace. Valid values:</p>
              * <ul>
-             * <li>Prod: production environment</li>
-             * <li>Dev: development environment</li>
+             * <li>Prod</li>
+             * <li>Dev</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1181,6 +1257,13 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInstanceDataSource model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -1242,6 +1325,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String gateway; 
             private String processId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInstanceRuntime model) {
+                this.gateway = model.gateway;
+                this.processId = model.processId;
+            } 
 
             /**
              * <p>The host for running.</p>
@@ -1327,6 +1418,15 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInstanceRuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -1772,6 +1872,44 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private String workflowInstanceType; 
             private String workflowName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInstance model) {
+                this.baselineId = model.baselineId;
+                this.bizdate = model.bizdate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.finishedTime = model.finishedTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.owner = model.owner;
+                this.periodNumber = model.periodNumber;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.rerunMode = model.rerunMode;
+                this.runNumber = model.runNumber;
+                this.runtime = model.runtime;
+                this.runtimeResource = model.runtimeResource;
+                this.startedTime = model.startedTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+                this.timeout = model.timeout;
+                this.triggerRecurrence = model.triggerRecurrence;
+                this.triggerTime = model.triggerTime;
+                this.triggerType = model.triggerType;
+                this.workflowId = model.workflowId;
+                this.workflowInstanceId = model.workflowInstanceId;
+                this.workflowInstanceType = model.workflowInstanceType;
+                this.workflowName = model.workflowName;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -2198,6 +2336,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private String dependencyType; 
             private TaskInstance taskInstance; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpstreamTaskInstances model) {
+                this.dependencyType = model.dependencyType;
+                this.taskInstance = model.taskInstance;
+            } 
+
             /**
              * <p>The scheduling dependency type. Valid values:</p>
              * <ul>
@@ -2307,6 +2453,17 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private java.util.List<TaskInstances> taskInstances; 
             private Integer totalCount; 
             private java.util.List<UpstreamTaskInstances> upstreamTaskInstances; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.taskInstances = model.taskInstances;
+                this.totalCount = model.totalCount;
+                this.upstreamTaskInstances = model.upstreamTaskInstances;
+            } 
 
             /**
              * <p>The page number.</p>

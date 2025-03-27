@@ -72,6 +72,10 @@ public class DataQualityEvaluationTask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSourceId
      */
@@ -161,6 +165,23 @@ public class DataQualityEvaluationTask extends TeaModel {
         private Target target; 
         private Long tenantId; 
         private Trigger trigger; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataQualityEvaluationTask model) {
+            this.dataSourceId = model.dataSourceId;
+            this.description = model.description;
+            this.hooks = model.hooks;
+            this.id = model.id;
+            this.name = model.name;
+            this.notifications = model.notifications;
+            this.projectId = model.projectId;
+            this.runtimeConf = model.runtimeConf;
+            this.target = model.target;
+            this.tenantId = model.tenantId;
+            this.trigger = model.trigger;
+        } 
 
         /**
          * DataSourceId.
@@ -300,6 +321,14 @@ public class DataQualityEvaluationTask extends TeaModel {
             private String condition; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hooks model) {
+                this.condition = model.condition;
+                this.type = model.type;
+            } 
+
             /**
              * Condition.
              */
@@ -354,6 +383,13 @@ public class DataQualityEvaluationTask extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channels; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+            } 
 
             /**
              * Channels.
@@ -425,6 +461,15 @@ public class DataQualityEvaluationTask extends TeaModel {
             private String extension; 
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.extension = model.extension;
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * Extension.
@@ -501,6 +546,14 @@ public class DataQualityEvaluationTask extends TeaModel {
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotificationsNotifications model) {
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
+
             /**
              * NotificationChannels.
              */
@@ -567,6 +620,14 @@ public class DataQualityEvaluationTask extends TeaModel {
         public static final class Builder {
             private String condition; 
             private java.util.List<NotificationsNotifications> notifications; 
+
+            private Builder() {
+            } 
+
+            private Builder(Notifications model) {
+                this.condition = model.condition;
+                this.notifications = model.notifications;
+            } 
 
             /**
              * Condition.
@@ -659,6 +720,16 @@ public class DataQualityEvaluationTask extends TeaModel {
             private String tableGuid; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
+
             /**
              * DatabaseType.
              */
@@ -741,6 +812,14 @@ public class DataQualityEvaluationTask extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> taskIds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.taskIds = model.taskIds;
+                this.type = model.type;
+            } 
 
             /**
              * TaskIds.

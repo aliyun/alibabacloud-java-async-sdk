@@ -66,7 +66,7 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -278,6 +278,14 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
             private String referencedSamplesFilter; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
              * 
@@ -371,6 +379,15 @@ public class CreateDataQualityRuleTemplateRequest extends Request {
             private String metric; 
             private String metricParameters; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * <p>The metrics used for sampling. Valid values:</p>

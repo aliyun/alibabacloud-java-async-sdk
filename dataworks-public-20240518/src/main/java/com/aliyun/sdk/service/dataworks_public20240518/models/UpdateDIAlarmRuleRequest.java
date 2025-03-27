@@ -80,7 +80,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -356,6 +356,14 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private java.util.List<String> channels; 
             private String severity; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+                this.severity = model.severity;
+            } 
+
             /**
              * <p>The alert notification method. Valid values:</p>
              * <ul>
@@ -435,6 +443,14 @@ public class UpdateDIAlarmRuleRequest extends Request {
         public static final class Builder {
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
@@ -535,8 +551,18 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotificationSettings model) {
+                this.inhibitionInterval = model.inhibitionInterval;
+                this.muteInterval = model.muteInterval;
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
+
             /**
-             * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+             * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -661,8 +687,19 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private String severity; 
             private Long threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(TriggerConditions model) {
+                this.ddlReportTags = model.ddlReportTags;
+                this.ddlTypes = model.ddlTypes;
+                this.duration = model.duration;
+                this.severity = model.severity;
+                this.threshold = model.threshold;
+            } 
+
             /**
-             * <p>The types of DDL operations for which the alert rule takes effect.</p>
+             * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
              */
             public Builder ddlReportTags(java.util.List<String> ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;

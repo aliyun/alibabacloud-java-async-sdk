@@ -40,6 +40,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -65,6 +69,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private PagingInfo pagingInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceGroupsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -146,6 +159,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AliyunResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Tag Key</p>
              * 
@@ -218,6 +239,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer amount; 
             private String standard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.amount = model.amount;
+                this.standard = model.standard;
+            } 
 
             /**
              * <p>Quantity</p>
@@ -435,6 +464,26 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String resourceGroupType; 
             private Spec spec; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroupList model) {
+                this.aliyunResourceGroupId = model.aliyunResourceGroupId;
+                this.aliyunResourceTags = model.aliyunResourceTags;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.defaultVpcId = model.defaultVpcId;
+                this.defaultVswicthId = model.defaultVswicthId;
+                this.id = model.id;
+                this.name = model.name;
+                this.orderInstanceId = model.orderInstanceId;
+                this.paymentType = model.paymentType;
+                this.remark = model.remark;
+                this.resourceGroupType = model.resourceGroupType;
+                this.spec = model.spec;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Alibaba Cloud Resource Group ID</p>
@@ -678,6 +727,16 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<ResourceGroupList> resourceGroupList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.resourceGroupList = model.resourceGroupList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

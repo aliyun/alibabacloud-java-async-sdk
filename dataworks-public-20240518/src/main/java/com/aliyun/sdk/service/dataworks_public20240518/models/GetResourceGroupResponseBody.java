@@ -40,6 +40,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private ResourceGroup resourceGroup; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroup = model.resourceGroup;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
@@ -146,6 +159,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AliyunResourceTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -218,6 +239,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Integer amount; 
             private String standard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spec model) {
+                this.amount = model.amount;
+                this.standard = model.standard;
+            } 
 
             /**
              * <p>The number of resources in the resource group.</p>
@@ -435,6 +464,26 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String resourceGroupType; 
             private Spec spec; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroup model) {
+                this.aliyunResourceGroupId = model.aliyunResourceGroupId;
+                this.aliyunResourceTags = model.aliyunResourceTags;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.defaultVpcId = model.defaultVpcId;
+                this.defaultVswitchId = model.defaultVswitchId;
+                this.id = model.id;
+                this.name = model.name;
+                this.orderInstanceId = model.orderInstanceId;
+                this.paymentType = model.paymentType;
+                this.remark = model.remark;
+                this.resourceGroupType = model.resourceGroupType;
+                this.spec = model.spec;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud resource group.</p>

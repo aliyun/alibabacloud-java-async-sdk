@@ -40,6 +40,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private ResourceGroupOrder resourceGroupOrder; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroupOrder = model.resourceGroupOrder;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -157,6 +170,15 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String id; 
             private Long orderId; 
             private String orderInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroupOrder model) {
+                this.id = model.id;
+                this.orderId = model.orderId;
+                this.orderInstanceId = model.orderInstanceId;
+            } 
 
             /**
              * <p>The ID of the serverless resource group.</p>

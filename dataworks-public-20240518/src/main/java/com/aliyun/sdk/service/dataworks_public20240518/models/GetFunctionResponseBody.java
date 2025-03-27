@@ -36,6 +36,10 @@ public class GetFunctionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return function
      */
@@ -53,6 +57,14 @@ public class GetFunctionResponseBody extends TeaModel {
     public static final class Builder {
         private Function function; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFunctionResponseBody model) {
+            this.function = model.function;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the UDF.</p>
@@ -182,6 +194,19 @@ public class GetFunctionResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(Function model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The time when the UDF was created. This value is a UNIX timestamp.</p>

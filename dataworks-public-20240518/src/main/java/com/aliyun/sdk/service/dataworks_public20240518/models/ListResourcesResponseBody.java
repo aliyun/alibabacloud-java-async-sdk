@@ -36,6 +36,10 @@ public class ListResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourcesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -123,6 +135,14 @@ public class ListResourcesResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -183,6 +203,13 @@ public class ListResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Runtime model) {
+                this.command = model.command;
+            } 
 
             /**
              * <p>The command used to distinguish file resource types.</p>
@@ -257,6 +284,15 @@ public class ListResourcesResponseBody extends TeaModel {
             private Long id; 
             private String path; 
             private Runtime runtime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.id = model.id;
+                this.path = model.path;
+                this.runtime = model.runtime;
+            } 
 
             /**
              * <p>The script ID.</p>
@@ -470,6 +506,25 @@ public class ListResourcesResponseBody extends TeaModel {
             private String targetPath; 
             private String targetType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.createTime = model.createTime;
+                this.dataSource = model.dataSource;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.script = model.script;
+                this.sourcePath = model.sourcePath;
+                this.sourceType = model.sourceType;
+                this.targetPath = model.targetPath;
+                this.targetType = model.targetType;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the file resource was created. This value is a UNIX timestamp.</p>
@@ -700,6 +755,16 @@ public class ListResourcesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Resources> resources; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.resources = model.resources;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

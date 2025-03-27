@@ -36,6 +36,10 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataQualityRuleTemplatesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Quality Rule template pagination query results</p>
@@ -122,6 +134,14 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String referencedSamplesFilter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Some types of thresholds need to query some reference samples, and then summarize the values of the reference samples to obtain the threshold for comparison. Here, an expression is used to represent the query method of the reference samples.</p>
@@ -215,6 +235,15 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
             private String metric; 
             private String metricParameters; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * <p>The name of the sampled metric.</p>
@@ -378,6 +407,19 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
             private SamplingConfig samplingConfig; 
             private String visibleScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataQualityRuleTemplates model) {
+                this.checkingConfig = model.checkingConfig;
+                this.code = model.code;
+                this.directoryPath = model.directoryPath;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.samplingConfig = model.samplingConfig;
+                this.visibleScope = model.visibleScope;
+            } 
+
             /**
              * <p>Sample verification settings</p>
              */
@@ -527,6 +569,16 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.dataQualityRuleTemplates = model.dataQualityRuleTemplates;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Rule template list</p>

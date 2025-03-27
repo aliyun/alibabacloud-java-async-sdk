@@ -36,6 +36,10 @@ public class GetProjectRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectRole
      */
@@ -53,6 +57,14 @@ public class GetProjectRoleResponseBody extends TeaModel {
     public static final class Builder {
         private ProjectRole projectRole; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectRoleResponseBody model) {
+            this.projectRole = model.projectRole;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The role in the DataWorks workspace.</p>
@@ -146,6 +158,16 @@ public class GetProjectRoleResponseBody extends TeaModel {
             private String name; 
             private Long projectId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectRole model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The code of the role in the DataWorks workspace.</p>

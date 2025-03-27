@@ -36,6 +36,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataQualityEvaluationTaskInstance
      */
@@ -53,6 +57,14 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private DataQualityEvaluationTaskInstance dataQualityEvaluationTaskInstance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataQualityEvaluationTaskInstanceResponseBody model) {
+            this.dataQualityEvaluationTaskInstance = model.dataQualityEvaluationTaskInstance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the monitor instance.</p>
@@ -123,11 +135,19 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private String condition; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hooks model) {
+                this.condition = model.condition;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>Hook trigger condition. When this condition is met, hook action is triggered. Currently, only two conditional expressions are supported:</p>
+             * <p>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</p>
              * <ul>
-             * <li>Specify only one set of rule severity types AND rule verification status, such as <code>${severity} = = &quot;High&quot; AND ${status} = = &quot;Critical&quot;</code>, which indicates that in the executed rule, if the rule verification result of severity High is Critical, the condition is met.</li>
-             * <li>Specify multiple sets of rule severity types AND rule verification status, such as <code>(${severity} = = &quot;High&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Error&quot;)</code>, if the rule verification result of severity High is Critical, the rule verification result of severity Normal is Critical, or the rule verification result of severity Normal is Error, the enumeration that satisfies the condition expression severity is consistent with the enumeration DataQualityRule in severity, and the enumeration of status is consistent with the status in DataQualityResult.</li>
+             * <li>Specify only one group of rule strength type and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
+             * <li>Specify multiple groups of rule strength types and rule check status, such as <code>(${severity} == &quot;High&quot;AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -190,6 +210,13 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channels; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+            } 
 
             /**
              * <p>The notification method.</p>
@@ -261,6 +288,15 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private String extension; 
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.extension = model.extension;
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>Additional parameter settings for sending alerts in json format. The supported keys are as follows:</p>
@@ -346,6 +382,14 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notifications model) {
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
+
             /**
              * <p>The notification method.</p>
              */
@@ -413,11 +457,19 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private String condition; 
             private java.util.List<Notifications> notifications; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskNotifications model) {
+                this.condition = model.condition;
+                this.notifications = model.notifications;
+            } 
+
             /**
-             * <p>The notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two conditional expressions are supported:</p>
+             * <p>The notification trigger condition. When this condition is met, the alert notification is triggered. Only two conditional expressions are supported:</p>
              * <ul>
-             * <li>Specify only one set of rule severity types AND rule verification status, such as <code>${severity} = = &quot;High&quot; AND ${status} = = &quot;Critical&quot;</code>, which indicates that in the executed rule, if the rule verification result of severity High is Critical, the condition is met.</li>
-             * <li>Specify multiple sets of rule severity types AND rule verification status, such as <code>(${severity} = = &quot;High&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Error&quot;)</code>, if the rule verification result of severity High is Critical, the rule verification result of severity Normal is Critical, or the rule verification result of severity Normal is Error, the enumeration that satisfies the condition expression severity is consistent with the enumeration DataQualityRule in severity, and the enumeration of status is consistent with the status in DataQualityResult.</li>
+             * <li>Specify only one group of rule strength type and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
+             * <li>Specify multiple groups of rule strength types and rule check status, such as <code>(${severity} == &quot;High&quot;AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -510,6 +562,16 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private String partitionSpec; 
             private String tableGuid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The type of the database to which the table belongs.</p>
@@ -609,6 +671,14 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private java.util.List<Long> taskIds; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.taskIds = model.taskIds;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The Id list of the scheduled task, which is valid when the Type is ByScheduledTaskInstance.</p>
              */
@@ -618,10 +688,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality Monitoring trigger type:</p>
+             * <p>The trigger type of the monitor. Valid values:</p>
              * <ul>
-             * <li>ByManual: manually triggered. Default value</li>
-             * <li>ByScheduledTaskInstance: triggered by associated scheduling tasks</li>
+             * <li>ByManual (default): The monitor is manually triggered.</li>
+             * <li>ByScheduledTaskInstance: The monitor is triggered by the associated scheduling tasks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -767,6 +837,21 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private Target target; 
             private Trigger trigger; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.description = model.description;
+                this.hooks = model.hooks;
+                this.id = model.id;
+                this.name = model.name;
+                this.notifications = model.notifications;
+                this.projectId = model.projectId;
+                this.runtimeConf = model.runtimeConf;
+                this.target = model.target;
+                this.trigger = model.trigger;
+            } 
+
             /**
              * <p>The description of the monitor.</p>
              * 
@@ -779,7 +864,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Callback settings.</p>
+             * <p>The hook.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -847,7 +932,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>For more information, see DataQualityTarget monitoring objects for the sample data quality verification task. For more information, see DataQualityTarget.</p>
+             * <p>The monitored object of the monitor.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -855,7 +940,7 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger configuration of the data quality verification task.</p>
+             * <p>The trigger configuration of the monitor.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -984,6 +1069,20 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
             private String status; 
             private Task task; 
             private String triggerContext; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityEvaluationTaskInstance model) {
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.parameters = model.parameters;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.task = model.task;
+                this.triggerContext = model.triggerContext;
+            } 
 
             /**
              * <p>The creation time.</p>

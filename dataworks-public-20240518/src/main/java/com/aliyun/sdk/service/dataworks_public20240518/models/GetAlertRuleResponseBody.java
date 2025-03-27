@@ -36,6 +36,10 @@ public class GetAlertRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertRule
      */
@@ -53,6 +57,14 @@ public class GetAlertRuleResponseBody extends TeaModel {
     public static final class Builder {
         private AlertRule alertRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAlertRuleResponseBody model) {
+            this.alertRule = model.alertRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the rule.</p>
@@ -134,6 +146,15 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private String extension; 
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Receivers model) {
+                this.extension = model.extension;
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>The additional configuration of the alert recipient. If the ReceiverType parameter is set to DingdingUrl, you can set this parameter to {&quot;atAll&quot;:true} to remind all members in a DingTalk group.</p>
@@ -274,6 +295,18 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private String silenceEndTime; 
             private String silenceStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notification model) {
+                this.channels = model.channels;
+                this.intervalInMinutes = model.intervalInMinutes;
+                this.maximum = model.maximum;
+                this.receivers = model.receivers;
+                this.silenceEndTime = model.silenceEndTime;
+                this.silenceStartTime = model.silenceStartTime;
+            } 
+
             /**
              * <p>The alert notification channels.</p>
              */
@@ -385,6 +418,14 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private Integer cycleId; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(CycleAndTime model) {
+                this.cycleId = model.cycleId;
+                this.time = model.time;
+            } 
+
             /**
              * <p>The ID of the scheduling cycle of the instance. Valid values: [1,288].</p>
              * 
@@ -446,6 +487,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CycleAndTime> cycleAndTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CycleUnfinished model) {
+                this.cycleAndTime = model.cycleAndTime;
+            } 
+
             /**
              * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
              */
@@ -505,6 +553,14 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private Boolean autoRerunAlertEnabled; 
             private java.util.List<Long> streamTaskIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.autoRerunAlertEnabled = model.autoRerunAlertEnabled;
+                this.streamTaskIds = model.streamTaskIds;
+            } 
+
             /**
              * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
              * 
@@ -563,6 +619,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceErrorCount model) {
+                this.count = model.count;
+            } 
+
             /**
              * <p>The maximum number of instances on which an error occurs. Valid values: [1,10000].</p>
              * 
@@ -612,6 +675,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer percentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceErrorPercentage model) {
+                this.percentage = model.percentage;
+            } 
 
             /**
              * <p>The maximum percentage of instances on which an error occurs in the workspace to the total number of instances. Valid values: [1-100].</p>
@@ -674,6 +744,14 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Integer percentage; 
             private String trend; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTransferFluctuate model) {
+                this.percentage = model.percentage;
+                this.trend = model.trend;
+            } 
 
             /**
              * <p>The maximum percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: [1-100].</p>
@@ -741,6 +819,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Integer timeoutInMinutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Timeout model) {
+                this.timeoutInMinutes = model.timeoutInMinutes;
+            } 
+
             /**
              * <p>The timeout period. Unit: minutes. Valid values: [1, 21600].</p>
              * 
@@ -790,6 +875,13 @@ public class GetAlertRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String unFinishedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnFinished model) {
+                this.unFinishedTime = model.unFinishedTime;
+            } 
 
             /**
              * <p>The latest completion time of the instance. The period is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
@@ -913,6 +1005,19 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private Timeout timeout; 
             private UnFinished unFinished; 
 
+            private Builder() {
+            } 
+
+            private Builder(Extension model) {
+                this.cycleUnfinished = model.cycleUnfinished;
+                this.error = model.error;
+                this.instanceErrorCount = model.instanceErrorCount;
+                this.instanceErrorPercentage = model.instanceErrorPercentage;
+                this.instanceTransferFluctuate = model.instanceTransferFluctuate;
+                this.timeout = model.timeout;
+                this.unFinished = model.unFinished;
+            } 
+
             /**
              * <p>The configuration for an alert of the CycleUnfinished type.</p>
              */
@@ -1032,6 +1137,15 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private java.util.List<Long> ids; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.allowTasks = model.allowTasks;
+                this.ids = model.ids;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The nodes that are not to be monitored.</p>
              */
@@ -1127,6 +1241,15 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private Extension extension; 
             private Target target; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerCondition model) {
+                this.extension = model.extension;
+                this.target = model.target;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The extended information about the rule. This parameter is required for specific types of alerts.</p>
@@ -1268,6 +1391,18 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private Notification notification; 
             private String owner; 
             private TriggerCondition triggerCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertRule model) {
+                this.enabled = model.enabled;
+                this.id = model.id;
+                this.name = model.name;
+                this.notification = model.notification;
+                this.owner = model.owner;
+                this.triggerCondition = model.triggerCondition;
+            } 
 
             /**
              * <p>Indicates whether the rule is enabled.</p>

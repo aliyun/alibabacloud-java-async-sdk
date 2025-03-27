@@ -36,6 +36,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourcesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -207,6 +219,21 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String modifyUser; 
             private String qualifiedName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.connectionProperties = model.connectionProperties;
+                this.connectionPropertiesMode = model.connectionPropertiesMode;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.description = model.description;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.qualifiedName = model.qualifiedName;
+            } 
+
             /**
              * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
              * <ul>
@@ -232,7 +259,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values: InstanceMode, UrlMode, and CdhMode. The value InstanceMode indicates the instance mode. The value UrlMode indicates the connection string mode. The value CdhMode indicates the CDH cluster mode.</p>
+             * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+             * <ul>
+             * <li>InstanceMode: instance mode</li>
+             * <li>UrlMode: connection string mode</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>UrlMode</p>
@@ -382,6 +413,15 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.dataSource = model.dataSource;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The data sources. Each element is the information of a single data source with a unique data source ID.</p>
              */
@@ -486,6 +526,16 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.dataSources = model.dataSources;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data source groups. Each element in the array indicates a data source group. Each data source group contains data sources in the development environment (if any) and the production environment.</p>

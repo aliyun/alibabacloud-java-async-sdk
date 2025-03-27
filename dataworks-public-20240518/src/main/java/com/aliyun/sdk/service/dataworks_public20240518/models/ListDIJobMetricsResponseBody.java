@@ -36,6 +36,10 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDIJobMetricsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -122,6 +134,14 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         public static final class Builder {
             private Long time; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SeriesList model) {
+                this.time = model.time;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The point in time at which data is sampled based on the metric.</p>
@@ -196,6 +216,14 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             private String name; 
             private java.util.List<SeriesList> seriesList; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobMetrics model) {
+                this.name = model.name;
+                this.seriesList = model.seriesList;
+            } 
+
             /**
              * <p>The name of the metric.</p>
              * 
@@ -253,6 +281,13 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<JobMetrics> jobMetrics; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.jobMetrics = model.jobMetrics;
+            } 
 
             /**
              * <p>The metrics returned.</p>

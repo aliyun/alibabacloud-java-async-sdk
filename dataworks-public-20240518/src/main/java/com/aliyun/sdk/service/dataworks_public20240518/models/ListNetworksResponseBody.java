@@ -40,6 +40,10 @@ public class ListNetworksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -65,6 +69,15 @@ public class ListNetworksResponseBody extends TeaModel {
         private PagingInfo pagingInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNetworksResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -217,6 +230,20 @@ public class ListNetworksResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkList model) {
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.id = model.id;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The time when the network resource was created. The value is a 64-bit timestamp.</p>
@@ -380,6 +407,16 @@ public class ListNetworksResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.networkList = model.networkList;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The network resources of the serverless resource group.</p>

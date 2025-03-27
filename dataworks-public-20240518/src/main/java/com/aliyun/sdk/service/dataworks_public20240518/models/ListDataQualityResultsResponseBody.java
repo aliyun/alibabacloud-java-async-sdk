@@ -36,6 +36,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataQualityResultsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -134,6 +146,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String checkedValue; 
             private String referencedValue; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.checkedValue = model.checkedValue;
+                this.referencedValue = model.referencedValue;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The value that is used for comparison with the threshold.</p>
@@ -236,6 +257,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The threshold expression.</p>
@@ -349,6 +379,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Expected model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The threshold expression.</p>
              * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
@@ -460,6 +499,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Warned model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The threshold expression.</p>
@@ -573,6 +621,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private Expected expected; 
             private Warned warned; 
 
+            private Builder() {
+            } 
+
+            private Builder(Thresholds model) {
+                this.critical = model.critical;
+                this.expected = model.expected;
+                this.warned = model.warned;
+            } 
+
             /**
              * <p>The threshold settings for critical alerts.</p>
              */
@@ -659,6 +716,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String referencedSamplesFilter; 
             private Thresholds thresholds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.thresholds = model.thresholds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
@@ -748,6 +814,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public static final class Builder {
             private String errorDataFilter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorHandlers model) {
+                this.errorDataFilter = model.errorDataFilter;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
@@ -848,6 +922,16 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String metricParameters; 
             private String samplingFilter; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.samplingFilter = model.samplingFilter;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * <p>The metrics used for sampling. Valid values:</p>
@@ -972,6 +1056,15 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String databaseType; 
             private String tableGuid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The type of the database to which the table belongs. Valid values:</p>
@@ -1176,6 +1269,23 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String severity; 
             private Target target; 
             private String templateCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.checkingConfig = model.checkingConfig;
+                this.description = model.description;
+                this.enabled = model.enabled;
+                this.errorHandlers = model.errorHandlers;
+                this.id = model.id;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.samplingConfig = model.samplingConfig;
+                this.severity = model.severity;
+                this.target = model.target;
+                this.templateCode = model.templateCode;
+            } 
 
             /**
              * <p>The check settings for sample data.</p>
@@ -1401,6 +1511,19 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String status; 
             private Long taskInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataQualityResults model) {
+                this.createTime = model.createTime;
+                this.details = model.details;
+                this.id = model.id;
+                this.rule = model.rule;
+                this.sample = model.sample;
+                this.status = model.status;
+                this.taskInstanceId = model.taskInstanceId;
+            } 
+
             /**
              * <p>The time when the data quality check result was generated.</p>
              * 
@@ -1561,6 +1684,16 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.dataQualityResults = model.dataQualityResults;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data quality check results.</p>

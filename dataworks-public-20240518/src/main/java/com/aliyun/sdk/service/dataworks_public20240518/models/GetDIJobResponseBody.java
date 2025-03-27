@@ -36,6 +36,10 @@ public class GetDIJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class GetDIJobResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDIJobResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -110,6 +122,13 @@ public class GetDIJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dataSourceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DestinationDataSourceSettings model) {
+                this.dataSourceName = model.dataSourceName;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -172,6 +191,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String destinationDataType; 
             private String sourceDataType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnDataTypeSettings model) {
+                this.destinationDataType = model.destinationDataType;
+                this.sourceDataType = model.sourceDataType;
+            } 
 
             /**
              * <p>The data type of the destination field. Valid values: bigint, boolean, string, text, datetime, timestamp, decimal, and binary. Different types of data sources support different data types.</p>
@@ -245,6 +272,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String cycleMigrationType; 
             private String scheduleParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(CycleScheduleSettings model) {
+                this.cycleMigrationType = model.cycleMigrationType;
+                this.scheduleParameters = model.scheduleParameters;
+            } 
 
             /**
              * <p>The synchronization type that requires periodic scheduling. Valid values:</p>
@@ -322,6 +357,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String action; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DdlHandlingSettings model) {
+                this.action = model.action;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The processing policy for a specific type of DDL message. Valid values:</p>
@@ -407,6 +450,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeSettings model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the configuration item. Valid values:</p>
@@ -526,6 +577,17 @@ public class GetDIJobResponseBody extends TeaModel {
             private CycleScheduleSettings cycleScheduleSettings; 
             private java.util.List<DdlHandlingSettings> ddlHandlingSettings; 
             private java.util.List<RuntimeSettings> runtimeSettings; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobSettings model) {
+                this.channelSettings = model.channelSettings;
+                this.columnDataTypeSettings = model.columnDataTypeSettings;
+                this.cycleScheduleSettings = model.cycleScheduleSettings;
+                this.ddlHandlingSettings = model.ddlHandlingSettings;
+                this.runtimeSettings = model.runtimeSettings;
+            } 
 
             /**
              * <p>The channel control settings for the synchronization task. You can configure special channel control settings for the following synchronization links: data synchronization between Hologres data sources and data synchronization from Hologres to Kafka.</p>
@@ -648,6 +710,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfflineResourceSettings model) {
+                this.requestedCu = model.requestedCu;
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
+
             /**
              * <p>The number of compute units (CUs) in the resource group for scheduling that are used for batch synchronization.</p>
              * 
@@ -721,6 +791,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealtimeResourceSettings model) {
+                this.requestedCu = model.requestedCu;
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
+
             /**
              * <p>The number of CUs in the resource group for Data Integration that are used for real-time synchronization.</p>
              * 
@@ -793,6 +871,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private Double requestedCu; 
             private String resourceGroupIdentifier; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleResourceSettings model) {
+                this.requestedCu = model.requestedCu;
+                this.resourceGroupIdentifier = model.resourceGroupIdentifier;
+            } 
 
             /**
              * <p>The number of CUs in the resource group for Data Integration that are used for scheduling.</p>
@@ -879,6 +965,15 @@ public class GetDIJobResponseBody extends TeaModel {
             private RealtimeResourceSettings realtimeResourceSettings; 
             private ScheduleResourceSettings scheduleResourceSettings; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSettings model) {
+                this.offlineResourceSettings = model.offlineResourceSettings;
+                this.realtimeResourceSettings = model.realtimeResourceSettings;
+                this.scheduleResourceSettings = model.scheduleResourceSettings;
+            } 
+
             /**
              * <p>The resource used for batch synchronization.</p>
              */
@@ -954,6 +1049,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private String encoding; 
             private String timezone; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceProperties model) {
+                this.encoding = model.encoding;
+                this.timezone = model.timezone;
+            } 
+
             /**
              * <p>The encoding format of the database.</p>
              * 
@@ -1026,6 +1129,14 @@ public class GetDIJobResponseBody extends TeaModel {
         public static final class Builder {
             private String dataSourceName; 
             private DataSourceProperties dataSourceProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDataSourceSettings model) {
+                this.dataSourceName = model.dataSourceName;
+                this.dataSourceProperties = model.dataSourceProperties;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -1120,6 +1231,16 @@ public class GetDIJobResponseBody extends TeaModel {
             private String expression; 
             private String expressionType; 
             private String objectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceObjectSelectionRules model) {
+                this.action = model.action;
+                this.expression = model.expression;
+                this.expressionType = model.expressionType;
+                this.objectType = model.objectType;
+            } 
 
             /**
              * <p>The operation that is performed to select objects. Valid values: Include and Exclude.</p>
@@ -1233,6 +1354,15 @@ public class GetDIJobResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleTargetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TransformationRules model) {
+                this.ruleActionType = model.ruleActionType;
+                this.ruleName = model.ruleName;
+                this.ruleTargetType = model.ruleTargetType;
+            } 
+
             /**
              * <p>The action type. Valid values:</p>
              * <ul>
@@ -1328,6 +1458,14 @@ public class GetDIJobResponseBody extends TeaModel {
             private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules; 
             private java.util.List<TransformationRules> transformationRules; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableMappings model) {
+                this.sourceObjectSelectionRules = model.sourceObjectSelectionRules;
+                this.transformationRules = model.transformationRules;
+            } 
+
             /**
              * <p>The list of rules used to select synchronization objects in the source.</p>
              */
@@ -1418,6 +1556,16 @@ public class GetDIJobResponseBody extends TeaModel {
             private String ruleExpression; 
             private String ruleName; 
             private String ruleTargetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfoTransformationRules model) {
+                this.ruleActionType = model.ruleActionType;
+                this.ruleExpression = model.ruleExpression;
+                this.ruleName = model.ruleName;
+                this.ruleTargetType = model.ruleTargetType;
+            } 
 
             /**
              * <p>The action type. Valid values:</p>
@@ -1573,6 +1721,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
+        @com.aliyun.core.annotation.NameInMap("JobType")
+        private String jobType;
+
         @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
@@ -1603,6 +1754,7 @@ public class GetDIJobResponseBody extends TeaModel {
             this.jobName = builder.jobName;
             this.jobSettings = builder.jobSettings;
             this.jobStatus = builder.jobStatus;
+            this.jobType = builder.jobType;
             this.migrationType = builder.migrationType;
             this.projectId = builder.projectId;
             this.resourceSettings = builder.resourceSettings;
@@ -1677,6 +1829,13 @@ public class GetDIJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobType
+         */
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        /**
          * @return migrationType
          */
         public String getMigrationType() {
@@ -1734,6 +1893,7 @@ public class GetDIJobResponseBody extends TeaModel {
             private String jobName; 
             private JobSettings jobSettings; 
             private String jobStatus; 
+            private String jobType; 
             private String migrationType; 
             private Long projectId; 
             private ResourceSettings resourceSettings; 
@@ -1741,6 +1901,28 @@ public class GetDIJobResponseBody extends TeaModel {
             private String sourceDataSourceType; 
             private java.util.List<TableMappings> tableMappings; 
             private java.util.List<PagingInfoTransformationRules> transformationRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.DIJobId = model.DIJobId;
+                this.description = model.description;
+                this.destinationDataSourceSettings = model.destinationDataSourceSettings;
+                this.destinationDataSourceType = model.destinationDataSourceType;
+                this.id = model.id;
+                this.jobName = model.jobName;
+                this.jobSettings = model.jobSettings;
+                this.jobStatus = model.jobStatus;
+                this.jobType = model.jobType;
+                this.migrationType = model.migrationType;
+                this.projectId = model.projectId;
+                this.resourceSettings = model.resourceSettings;
+                this.sourceDataSourceSettings = model.sourceDataSourceSettings;
+                this.sourceDataSourceType = model.sourceDataSourceType;
+                this.tableMappings = model.tableMappings;
+                this.transformationRules = model.transformationRules;
+            } 
 
             /**
              * <p>This parameter is deprecated. Use the Id parameter instead.</p>
@@ -1773,7 +1955,7 @@ public class GetDIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</p>
+             * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, Hive.</p>
              * 
              * <strong>example:</strong>
              * <p>Hologres</p>
@@ -1825,6 +2007,14 @@ public class GetDIJobResponseBody extends TeaModel {
             }
 
             /**
+             * JobType.
+             */
+            public Builder jobType(String jobType) {
+                this.jobType = jobType;
+                return this;
+            }
+
+            /**
              * <p>The synchronization type. Valid values:</p>
              * <ul>
              * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
@@ -1871,7 +2061,7 @@ public class GetDIJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse.</p>
+             * <p>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, ClickHouse.</p>
              * 
              * <strong>example:</strong>
              * <p>Mysql</p>

@@ -40,6 +40,10 @@ public class GetRouteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetRouteResponseBody extends TeaModel {
         private String requestId; 
         private Route route; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRouteResponseBody model) {
+            this.requestId = model.requestId;
+            this.route = model.route;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -193,6 +206,18 @@ public class GetRouteResponseBody extends TeaModel {
             private Long networkId; 
             private String resourceGroupId; 
             private String resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Route model) {
+                this.createTime = model.createTime;
+                this.destinationCidr = model.destinationCidr;
+                this.id = model.id;
+                this.networkId = model.networkId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * <p>The time when the route was created. The value is a 64-bit timestamp.</p>

@@ -36,6 +36,10 @@ public class ListDIJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDIJobsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDIJobsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -196,6 +208,20 @@ public class ListDIJobsResponseBody extends TeaModel {
             private Long projectId; 
             private String sourceDataSourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DIJobs model) {
+                this.DIJobId = model.DIJobId;
+                this.destinationDataSourceType = model.destinationDataSourceType;
+                this.id = model.id;
+                this.jobName = model.jobName;
+                this.jobStatus = model.jobStatus;
+                this.migrationType = model.migrationType;
+                this.projectId = model.projectId;
+                this.sourceDataSourceType = model.sourceDataSourceType;
+            } 
+
             /**
              * <p>This parameter is deprecated. Use the Id parameter instead.</p>
              * 
@@ -208,7 +234,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive. If you do not configure this parameter, the API operation returns synchronization tasks that use all type of destinations.</p>
+             * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, DataHub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</p>
              * 
              * <strong>example:</strong>
              * <p>Hologres</p>
@@ -373,6 +399,16 @@ public class ListDIJobsResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.DIJobs = model.DIJobs;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The synchronization tasks returned.</p>

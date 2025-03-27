@@ -36,6 +36,10 @@ public class ListFunctionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListFunctionsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFunctionsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -123,6 +135,14 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -184,6 +204,13 @@ public class ListFunctionsResponseBody extends TeaModel {
         public static final class Builder {
             private String resourceGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.resourceGroupId = model.resourceGroupId;
+            } 
+
             /**
              * <p>The ID of the resource group used when you run the UDF.</p>
              * 
@@ -233,6 +260,13 @@ public class ListFunctionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Runtime model) {
+                this.command = model.command;
+            } 
 
             /**
              * <p>The command.</p>
@@ -307,6 +341,15 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Long id; 
             private String path; 
             private Runtime runtime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.id = model.id;
+                this.path = model.path;
+                this.runtime = model.runtime;
+            } 
 
             /**
              * <p>The script ID.</p>
@@ -628,6 +671,34 @@ public class ListFunctionsResponseBody extends TeaModel {
             private RuntimeResource runtimeResource; 
             private Script script; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Functions model) {
+                this.armResource = model.armResource;
+                this.className = model.className;
+                this.commandDescription = model.commandDescription;
+                this.createTime = model.createTime;
+                this.dataSource = model.dataSource;
+                this.databaseName = model.databaseName;
+                this.description = model.description;
+                this.embeddedCode = model.embeddedCode;
+                this.embeddedCodeType = model.embeddedCodeType;
+                this.embeddedResourceType = model.embeddedResourceType;
+                this.exampleDescription = model.exampleDescription;
+                this.fileResource = model.fileResource;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.parameterDescription = model.parameterDescription;
+                this.projectId = model.projectId;
+                this.returnValueDescription = model.returnValueDescription;
+                this.runtimeResource = model.runtimeResource;
+                this.script = model.script;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The file resources in an Advanced RISC Machines (ARM) cluster.</p>
@@ -960,6 +1031,16 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.functions = model.functions;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The UDFs.</p>

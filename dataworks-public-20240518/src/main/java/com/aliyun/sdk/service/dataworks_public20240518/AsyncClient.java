@@ -271,6 +271,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAlertRuleResponse> deleteAlertRule(DeleteAlertRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of DeleteCertificate  DeleteCertificateRequest
+     * @return DeleteCertificateResponse
+     */
+    CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request);
+
+    /**
      * @param request the request parameters of DeleteDIAlarmRule  DeleteDIAlarmRuleRequest
      * @return DeleteDIAlarmRuleResponse
      */
@@ -499,6 +511,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAlertRuleResponse
      */
     CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetCertificate  GetCertificateRequest
+     * @return GetCertificateResponse
+     */
+    CompletableFuture<GetCertificateResponse> getCertificate(GetCertificateRequest request);
 
     /**
      * <b>description</b> :
@@ -732,6 +750,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAlertRulesResponse
      */
     CompletableFuture<ListAlertRulesResponse> listAlertRules(ListAlertRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListCertificates  ListCertificatesRequest
+     * @return ListCertificatesResponse
+     */
+    CompletableFuture<ListCertificatesResponse> listCertificates(ListCertificatesRequest request);
 
     /**
      * @param request the request parameters of ListDIAlarmRules  ListDIAlarmRulesRequest
@@ -1187,6 +1211,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagDataAssetsResponse
      */
     CompletableFuture<TagDataAssetsResponse> tagDataAssets(TagDataAssetsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</li>
+     * </ol>
+     * 
+     * @param request the request parameters of TestDataSourceConnectivity  TestDataSourceConnectivityRequest
+     * @return TestDataSourceConnectivityResponse
+     */
+    CompletableFuture<TestDataSourceConnectivityResponse> testDataSourceConnectivity(TestDataSourceConnectivityRequest request);
 
     /**
      * <b>description</b> :

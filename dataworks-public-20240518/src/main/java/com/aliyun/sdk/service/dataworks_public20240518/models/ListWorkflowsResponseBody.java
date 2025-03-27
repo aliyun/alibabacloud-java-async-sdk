@@ -36,6 +36,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListWorkflowsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkflowsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -158,6 +170,17 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private String recurrence; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -406,6 +429,25 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private Long projectId; 
             private Trigger trigger; 
 
+            private Builder() {
+            } 
+
+            private Builder(Workflows model) {
+                this.clientUniqueCode = model.clientUniqueCode;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.parameters = model.parameters;
+                this.projectId = model.projectId;
+                this.trigger = model.trigger;
+            } 
+
             /**
              * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
              * 
@@ -624,6 +666,16 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
             private java.util.List<Workflows> workflows; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.workflows = model.workflows;
+            } 
 
             /**
              * <p>The page number.</p>

@@ -41,6 +41,10 @@ public class CreateDIJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DIJobId
      */
@@ -66,6 +70,15 @@ public class CreateDIJobResponseBody extends TeaModel {
         private Long DIJobId; 
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDIJobResponseBody model) {
+            this.DIJobId = model.DIJobId;
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>This parameter is deprecated and is replaced by the Id parameter.</p>

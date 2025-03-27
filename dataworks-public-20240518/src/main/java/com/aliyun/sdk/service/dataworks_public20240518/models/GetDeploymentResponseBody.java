@@ -36,6 +36,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pipeline
      */
@@ -53,6 +57,14 @@ public class GetDeploymentResponseBody extends TeaModel {
     public static final class Builder {
         private Pipeline pipeline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeploymentResponseBody model) {
+            this.pipeline = model.pipeline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the process.</p>
@@ -194,6 +206,20 @@ public class GetDeploymentResponseBody extends TeaModel {
             private String status; 
             private Integer step; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stages model) {
+                this.code = model.code;
+                this.description = model.description;
+                this.detail = model.detail;
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+                this.step = model.step;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The code of the stage.</p>
@@ -419,6 +445,20 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Long projectId; 
             private java.util.List<Stages> stages; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pipeline model) {
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.id = model.id;
+                this.message = model.message;
+                this.modifyTime = model.modifyTime;
+                this.projectId = model.projectId;
+                this.stages = model.stages;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the process was created. This value is a UNIX timestamp.</p>

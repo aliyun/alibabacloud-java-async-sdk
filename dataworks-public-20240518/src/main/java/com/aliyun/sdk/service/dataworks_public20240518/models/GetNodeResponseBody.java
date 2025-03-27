@@ -36,6 +36,10 @@ public class GetNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return node
      */
@@ -53,6 +57,14 @@ public class GetNodeResponseBody extends TeaModel {
     public static final class Builder {
         private Node node; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeResponseBody model) {
+            this.node = model.node;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the node.</p>
@@ -194,6 +206,20 @@ public class GetNodeResponseBody extends TeaModel {
             private Long projectId; 
             private String spec; 
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.spec = model.spec;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time when the node was created. This value is a UNIX timestamp.</p>

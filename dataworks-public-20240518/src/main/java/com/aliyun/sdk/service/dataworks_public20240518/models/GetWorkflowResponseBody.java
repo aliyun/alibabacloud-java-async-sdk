@@ -36,6 +36,10 @@ public class GetWorkflowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetWorkflowResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Workflow workflow; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWorkflowResponseBody model) {
+            this.requestId = model.requestId;
+            this.workflow = model.workflow;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -135,6 +147,15 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String upstreamOutput; 
             private Long upstreamTaskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.type = model.type;
+                this.upstreamOutput = model.upstreamOutput;
+                this.upstreamTaskId = model.upstreamTaskId;
+            } 
+
             /**
              * <p>The scheduling dependency type. Valid values:</p>
              * <ul>
@@ -213,6 +234,13 @@ public class GetWorkflowResponseBody extends TeaModel {
         public static final class Builder {
             private String output; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskOutputs model) {
+                this.output = model.output;
+            } 
+
             /**
              * <p>The identifier of the output.</p>
              * 
@@ -262,6 +290,13 @@ public class GetWorkflowResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskOutputs> taskOutputs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.taskOutputs = model.taskOutputs;
+            } 
 
             /**
              * <p>The task outputs.</p>
@@ -321,6 +356,14 @@ public class GetWorkflowResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -382,6 +425,13 @@ public class GetWorkflowResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -456,6 +506,15 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -780,6 +839,34 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String triggerRecurrence; 
             private String type; 
             private Long workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.baselineId = model.baselineId;
+                this.clientUniqueCode = model.clientUniqueCode;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.timeout = model.timeout;
+                this.triggerRecurrence = model.triggerRecurrence;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
 
             /**
              * <p>The baseline ID.</p>
@@ -1118,6 +1205,17 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String startTime; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
              * 
@@ -1412,6 +1510,29 @@ public class GetWorkflowResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private java.util.List<Tasks> tasks; 
             private Trigger trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workflow model) {
+                this.clientUniqueCode = model.clientUniqueCode;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dependencies = model.dependencies;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.owner = model.owner;
+                this.parameters = model.parameters;
+                this.projectId = model.projectId;
+                this.tags = model.tags;
+                this.tasks = model.tasks;
+                this.trigger = model.trigger;
+            } 
 
             /**
              * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>

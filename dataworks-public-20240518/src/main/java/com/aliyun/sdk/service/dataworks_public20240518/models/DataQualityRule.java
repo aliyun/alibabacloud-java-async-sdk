@@ -76,6 +76,10 @@ public class DataQualityRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkingConfig
      */
@@ -173,6 +177,24 @@ public class DataQualityRule extends TeaModel {
         private Target target; 
         private String templateCode; 
         private Long tenantId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataQualityRule model) {
+            this.checkingConfig = model.checkingConfig;
+            this.description = model.description;
+            this.enabled = model.enabled;
+            this.errorHandlers = model.errorHandlers;
+            this.id = model.id;
+            this.name = model.name;
+            this.projectId = model.projectId;
+            this.samplingConfig = model.samplingConfig;
+            this.severity = model.severity;
+            this.target = model.target;
+            this.templateCode = model.templateCode;
+            this.tenantId = model.tenantId;
+        } 
 
         /**
          * CheckingConfig.
@@ -332,6 +354,15 @@ public class DataQualityRule extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Critical model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * Expression.
              */
@@ -418,6 +449,15 @@ public class DataQualityRule extends TeaModel {
             private String expression; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Expected model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * Expression.
@@ -506,6 +546,15 @@ public class DataQualityRule extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Warned model) {
+                this.expression = model.expression;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * Expression.
              */
@@ -592,6 +641,15 @@ public class DataQualityRule extends TeaModel {
             private Critical critical; 
             private Expected expected; 
             private Warned warned; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thresholds model) {
+                this.critical = model.critical;
+                this.expected = model.expected;
+                this.warned = model.warned;
+            } 
 
             /**
              * Critical.
@@ -680,6 +738,15 @@ public class DataQualityRule extends TeaModel {
             private Thresholds thresholds; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckingConfig model) {
+                this.referencedSamplesFilter = model.referencedSamplesFilter;
+                this.thresholds = model.thresholds;
+                this.type = model.type;
+            } 
+
             /**
              * ReferencedSamplesFilter.
              */
@@ -754,6 +821,14 @@ public class DataQualityRule extends TeaModel {
         public static final class Builder {
             private String errorDataFilter; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorHandlers model) {
+                this.errorDataFilter = model.errorDataFilter;
+                this.type = model.type;
+            } 
 
             /**
              * ErrorDataFilter.
@@ -845,6 +920,16 @@ public class DataQualityRule extends TeaModel {
             private String metricParameters; 
             private String samplingFilter; 
             private String settingConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.metric = model.metric;
+                this.metricParameters = model.metricParameters;
+                this.samplingFilter = model.samplingFilter;
+                this.settingConfig = model.settingConfig;
+            } 
 
             /**
              * Metric.
@@ -952,6 +1037,16 @@ public class DataQualityRule extends TeaModel {
             private String partitionSpec; 
             private String tableGuid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
 
             /**
              * DatabaseType.

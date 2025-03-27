@@ -135,7 +135,7 @@ public class UpdateTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -609,6 +609,13 @@ public class UpdateTaskRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -683,6 +690,15 @@ public class UpdateTaskRequest extends Request {
             private String type; 
             private String upstreamOutput; 
             private Long upstreamTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.type = model.type;
+                this.upstreamOutput = model.upstreamOutput;
+                this.upstreamTaskId = model.upstreamTaskId;
+            } 
 
             /**
              * <p>The dependency type. Valid values:</p>
@@ -788,6 +804,15 @@ public class UpdateTaskRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the variable.</p>
              * 
@@ -867,6 +892,13 @@ public class UpdateTaskRequest extends Request {
         public static final class Builder {
             private java.util.List<Variables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The variables.</p>
              */
@@ -913,6 +945,13 @@ public class UpdateTaskRequest extends Request {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskOutputs model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The identifier of the output.</p>
@@ -988,6 +1027,15 @@ public class UpdateTaskRequest extends Request {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsVariables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -1080,6 +1128,14 @@ public class UpdateTaskRequest extends Request {
             private java.util.List<TaskOutputs> taskOutputs; 
             private java.util.List<OutputsVariables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.taskOutputs = model.taskOutputs;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The task outputs.</p>
              */
@@ -1159,6 +1215,15 @@ public class UpdateTaskRequest extends Request {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -1245,6 +1310,14 @@ public class UpdateTaskRequest extends Request {
             private String content; 
             private String parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.content = model.content;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * <p>The script content.</p>
              * 
@@ -1318,6 +1391,14 @@ public class UpdateTaskRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1429,6 +1510,17 @@ public class UpdateTaskRequest extends Request {
             private String recurrence; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>

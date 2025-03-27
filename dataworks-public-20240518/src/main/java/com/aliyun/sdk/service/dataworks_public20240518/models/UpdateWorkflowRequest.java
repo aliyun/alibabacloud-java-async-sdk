@@ -98,7 +98,7 @@ public class UpdateWorkflowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -445,6 +445,15 @@ public class UpdateWorkflowRequest extends Request {
             private String upstreamOutput; 
             private Long upstreamTaskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.type = model.type;
+                this.upstreamOutput = model.upstreamOutput;
+                this.upstreamTaskId = model.upstreamTaskId;
+            } 
+
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
@@ -524,6 +533,13 @@ public class UpdateWorkflowRequest extends Request {
         public static final class Builder {
             private String output; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskOutputs model) {
+                this.output = model.output;
+            } 
+
             /**
              * <p>The identifier of the output.</p>
              * 
@@ -573,6 +589,13 @@ public class UpdateWorkflowRequest extends Request {
 
         public static final class Builder {
             private java.util.List<TaskOutputs> taskOutputs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.taskOutputs = model.taskOutputs;
+            } 
 
             /**
              * <p>The task outputs.</p>
@@ -633,6 +656,14 @@ public class UpdateWorkflowRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -695,6 +726,13 @@ public class UpdateWorkflowRequest extends Request {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -770,6 +808,15 @@ public class UpdateWorkflowRequest extends Request {
             private String type; 
             private String upstreamOutput; 
             private Long upstreamTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TasksDependencies model) {
+                this.type = model.type;
+                this.upstreamOutput = model.upstreamOutput;
+                this.upstreamTaskId = model.upstreamTaskId;
+            } 
 
             /**
              * <p>The dependency type. Valid values:</p>
@@ -875,6 +922,15 @@ public class UpdateWorkflowRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the variable.</p>
              * 
@@ -954,6 +1010,13 @@ public class UpdateWorkflowRequest extends Request {
         public static final class Builder {
             private java.util.List<Variables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inputs model) {
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The variables.</p>
              */
@@ -1000,6 +1063,13 @@ public class UpdateWorkflowRequest extends Request {
 
         public static final class Builder {
             private String output; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsTaskOutputs model) {
+                this.output = model.output;
+            } 
 
             /**
              * <p>The identifier of the output.</p>
@@ -1075,6 +1145,15 @@ public class UpdateWorkflowRequest extends Request {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputsVariables model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -1167,6 +1246,14 @@ public class UpdateWorkflowRequest extends Request {
             private java.util.List<OutputsTaskOutputs> taskOutputs; 
             private java.util.List<OutputsVariables> variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(TasksOutputs model) {
+                this.taskOutputs = model.taskOutputs;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The task outputs.</p>
              */
@@ -1246,6 +1333,15 @@ public class UpdateWorkflowRequest extends Request {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -1332,6 +1428,14 @@ public class UpdateWorkflowRequest extends Request {
             private String content; 
             private String parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Script model) {
+                this.content = model.content;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * <p>The script content.</p>
              * 
@@ -1405,6 +1509,14 @@ public class UpdateWorkflowRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TasksTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1481,6 +1593,14 @@ public class UpdateWorkflowRequest extends Request {
             private String recurrence; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TasksTrigger model) {
+                this.recurrence = model.recurrence;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
              * <ul>
@@ -1501,8 +1621,8 @@ public class UpdateWorkflowRequest extends Request {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: periodic scheduling</li>
-             * <li>Manual: manual scheduling</li>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1786,6 +1906,32 @@ public class UpdateWorkflowRequest extends Request {
             private Integer timeout; 
             private TasksTrigger trigger; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.baseLineId = model.baseLineId;
+                this.clientUniqueCode = model.clientUniqueCode;
+                this.dataSource = model.dataSource;
+                this.dependencies = model.dependencies;
+                this.description = model.description;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.inputs = model.inputs;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.owner = model.owner;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.script = model.script;
+                this.tags = model.tags;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The baseline ID.</p>
@@ -2074,6 +2220,16 @@ public class UpdateWorkflowRequest extends Request {
             private String endTime; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>

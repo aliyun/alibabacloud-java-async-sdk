@@ -36,6 +36,10 @@ public class SuccessInfoValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return success
      */
@@ -53,6 +57,14 @@ public class SuccessInfoValue extends TeaModel {
     public static final class Builder {
         private Boolean success; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(SuccessInfoValue model) {
+            this.success = model.success;
+            this.message = model.message;
+        } 
 
         /**
          * <p>Indicates whether the request was successful.</p>

@@ -36,6 +36,10 @@ public class ListTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListTasksResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -110,6 +122,13 @@ public class ListTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the data source.</p>
@@ -184,6 +203,15 @@ public class ListTasksResponseBody extends TeaModel {
             private String cu; 
             private String image; 
             private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuntimeResource model) {
+                this.cu = model.cu;
+                this.image = model.image;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
 
             /**
              * <p>The default number of compute units (CUs) configured for task running.</p>
@@ -304,6 +332,17 @@ public class ListTasksResponseBody extends TeaModel {
             private String recurrence; 
             private String startTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.cron = model.cron;
+                this.endTime = model.endTime;
+                this.recurrence = model.recurrence;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -674,6 +713,35 @@ public class ListTasksResponseBody extends TeaModel {
             private String type; 
             private Long workflowId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.baselineId = model.baselineId;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataSource = model.dataSource;
+                this.description = model.description;
+                this.id = model.id;
+                this.instanceMode = model.instanceMode;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectEnv = model.projectEnv;
+                this.projectId = model.projectId;
+                this.rerunInterval = model.rerunInterval;
+                this.rerunMode = model.rerunMode;
+                this.rerunTimes = model.rerunTimes;
+                this.runtimeResource = model.runtimeResource;
+                this.scriptParameters = model.scriptParameters;
+                this.timeout = model.timeout;
+                this.trigger = model.trigger;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
+
             /**
              * <p>The baseline ID.</p>
              * 
@@ -1007,6 +1075,16 @@ public class ListTasksResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Tasks> tasks; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.tasks = model.tasks;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

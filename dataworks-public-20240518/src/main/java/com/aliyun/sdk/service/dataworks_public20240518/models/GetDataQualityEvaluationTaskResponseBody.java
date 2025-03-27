@@ -36,6 +36,10 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataQualityEvaluationTask
      */
@@ -53,6 +57,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
     public static final class Builder {
         private DataQualityEvaluationTask dataQualityEvaluationTask; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataQualityEvaluationTaskResponseBody model) {
+            this.dataQualityEvaluationTask = model.dataQualityEvaluationTask;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the monitor.</p>
@@ -123,6 +135,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String condition; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hooks model) {
+                this.condition = model.condition;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Hook trigger condition. When this condition is met, hook action is triggered. Currently, only two conditional expressions are supported:</p>
              * <ul>
@@ -190,6 +210,13 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channels; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+            } 
 
             /**
              * <p>The alert notification methods.</p>
@@ -261,6 +288,15 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String extension; 
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.extension = model.extension;
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>The extended information.</p>
@@ -354,6 +390,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notifications model) {
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
+
             /**
              * <p>The alert notification methods.</p>
              */
@@ -420,6 +464,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String condition; 
             private java.util.List<Notifications> notifications; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityEvaluationTaskNotifications model) {
+                this.condition = model.condition;
+                this.notifications = model.notifications;
+            } 
 
             /**
              * <p>The notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two conditional expressions are supported:</p>
@@ -518,6 +570,16 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String partitionSpec; 
             private String tableGuid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The type of the database to which the table belongs. Valid values:</p>
@@ -625,6 +687,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> taskIds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.taskIds = model.taskIds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IDs of scheduling tasks. This parameter is valid only if you set Type to ByScheduledTaskInstance.</p>
@@ -797,6 +867,22 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String runtimeConf; 
             private Target target; 
             private Trigger trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityEvaluationTask model) {
+                this.dataSourceId = model.dataSourceId;
+                this.description = model.description;
+                this.hooks = model.hooks;
+                this.id = model.id;
+                this.name = model.name;
+                this.notifications = model.notifications;
+                this.projectId = model.projectId;
+                this.runtimeConf = model.runtimeConf;
+                this.target = model.target;
+                this.trigger = model.trigger;
+            } 
 
             /**
              * <p>The ID of the data source used for the monitor.</p>

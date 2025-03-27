@@ -40,6 +40,10 @@ public class ListRoutesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -65,6 +69,15 @@ public class ListRoutesResponseBody extends TeaModel {
         private PagingInfo pagingInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRoutesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -193,6 +206,18 @@ public class ListRoutesResponseBody extends TeaModel {
             private Long networkId; 
             private String resourceGroupId; 
             private String resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RouteList model) {
+                this.createTime = model.createTime;
+                this.destinationCidr = model.destinationCidr;
+                this.id = model.id;
+                this.networkId = model.networkId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * <p>The creation time, which is a 64-bit timestamp.</p>
@@ -334,6 +359,16 @@ public class ListRoutesResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<RouteList> routeList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.routeList = model.routeList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

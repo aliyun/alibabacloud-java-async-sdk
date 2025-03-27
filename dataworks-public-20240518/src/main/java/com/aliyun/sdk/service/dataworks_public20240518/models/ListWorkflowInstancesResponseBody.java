@@ -36,6 +36,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkflowInstancesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -266,6 +278,26 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private Long workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowInstances model) {
+                this.bizDate = model.bizDate;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.envType = model.envType;
+                this.finishedTime = model.finishedTime;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.modifyUser = model.modifyUser;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.startedTime = model.startedTime;
+                this.status = model.status;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
 
             /**
              * <p>业务日期。</p>
@@ -516,6 +548,16 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
             private java.util.List<WorkflowInstances> workflowInstances; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.workflowInstances = model.workflowInstances;
+            } 
 
             /**
              * <p>The page number.</p>

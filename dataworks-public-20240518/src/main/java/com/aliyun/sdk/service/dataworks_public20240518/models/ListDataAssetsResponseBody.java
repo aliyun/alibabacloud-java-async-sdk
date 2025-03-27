@@ -36,6 +36,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDataAssetsResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataAssetsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -170,6 +182,18 @@ public class ListDataAssetsResponseBody extends TeaModel {
             private String key; 
             private String tagSource; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataAssetTagMappings model) {
+                this.autoTraceEnabled = model.autoTraceEnabled;
+                this.creator = model.creator;
+                this.dataAssetId = model.dataAssetId;
+                this.key = model.key;
+                this.tagSource = model.tagSource;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Indicates whether the lineage-based automatic backtrack feature is enabled for the mapping.</p>
@@ -340,6 +364,18 @@ public class ListDataAssetsResponseBody extends TeaModel {
             private Long projectId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataAssets model) {
+                this.dataAssetTagMappings = model.dataAssetTagMappings;
+                this.envType = model.envType;
+                this.id = model.id;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The mappings between data assets and tags.</p>
              */
@@ -485,6 +521,16 @@ public class ListDataAssetsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.dataAssets = model.dataAssets;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data assets.</p>

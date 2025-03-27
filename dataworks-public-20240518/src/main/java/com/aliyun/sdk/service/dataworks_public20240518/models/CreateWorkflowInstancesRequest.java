@@ -93,7 +93,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -250,7 +250,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>Runtime configuration.</p>
+         * <p>The runtime configuration.</p>
          */
         public Builder defaultRunProperties(DefaultRunProperties defaultRunProperties) {
             String defaultRunPropertiesShrink = shrink(defaultRunProperties, "DefaultRunProperties", "json");
@@ -260,10 +260,10 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The project environment.</p>
+         * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod (production)</li>
-         * <li>Dev</li>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,10 +327,10 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the workflow instance.</p>
+         * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>SupplementData: Retroactive data</li>
-         * <li>ManualWorkflow: manual workflow</li>
+         * <li>SupplementData</li>
+         * <li>ManualWorkflow</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -422,12 +422,20 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String noticeType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Alert model) {
+                this.noticeType = model.noticeType;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>The notification method.</p>
+             * <p>The alert notification method. Valid values:</p>
              * <ul>
-             * <li>Sms: Sms only</li>
-             * <li>Mail: Mail only</li>
-             * <li>SmsMail: SMS and email.</li>
+             * <li>Sms</li>
+             * <li>Mail</li>
+             * <li>SmsMail</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -439,11 +447,11 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The alert policy.</p>
+             * <p>The alerting policy. Valid values:</p>
              * <ul>
-             * <li>Success: successful alert</li>
-             * <li>Failure: failed alarm</li>
-             * <li>SuccessFailure: alerts for both success and failure</li>
+             * <li>SUCCESS: An alert is reported when data backfill succeeds.</li>
+             * <li>FAILURE: An alert is reported when data backfill fails.</li>
+             * <li>SuccessFailure: An alert is reported regardless of whether data backfill succeeds or fails.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,8 +513,16 @@ public class CreateWorkflowInstancesRequest extends Request {
             private Boolean blocked; 
             private Boolean enabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(Analysis model) {
+                this.blocked = model.blocked;
+                this.enabled = model.enabled;
+            } 
+
             /**
-             * <p>Whether to block the operation if the analysis fails.</p>
+             * <p>Specifies whether to block the running of the instance if the analysis fails.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -517,7 +533,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable analysis.</p>
+             * <p>Specifies whether to enable the analysis feature.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -602,8 +618,18 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String startTime; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunPolicy model) {
+                this.endTime = model.endTime;
+                this.immediately = model.immediately;
+                this.startTime = model.startTime;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>The end runtime. This field is required if the policy is set.</p>
+             * <p>The time when the instance finishes running. This parameter is required if you specify the RunPolicy parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>23:59:59</p>
@@ -614,7 +640,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The default value is false.</p>
+             * <p>Specifies whether the instance can be run immediately during the time period in the future. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -625,7 +651,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The start time. This field is required if the policy is set.</p>
+             * <p>The time when the instance starts to run. This parameter is required if you specify the RunPolicy parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00:00</p>
@@ -636,10 +662,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The type of the time period. This field is required if the policy is set.</p>
+             * <p>The type of the time period during which the data is backfilled. This parameter is required if you specify the RunPolicy parameter. Valid values:</p>
              * <ul>
-             * <li>Daily: every day</li>
-             * <li>Weekend: Weekends only</li>
+             * <li>Daily</li>
+             * <li>Weekend</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -821,8 +847,26 @@ public class CreateWorkflowInstancesRequest extends Request {
             private RunPolicy runPolicy; 
             private String runtimeResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefaultRunProperties model) {
+                this.alert = model.alert;
+                this.analysis = model.analysis;
+                this.excludeProjectIds = model.excludeProjectIds;
+                this.excludeTaskIds = model.excludeTaskIds;
+                this.includeProjectIds = model.includeProjectIds;
+                this.includeTaskIds = model.includeTaskIds;
+                this.mode = model.mode;
+                this.order = model.order;
+                this.parallelism = model.parallelism;
+                this.rootTaskIds = model.rootTaskIds;
+                this.runPolicy = model.runPolicy;
+                this.runtimeResource = model.runtimeResource;
+            } 
+
             /**
-             * <p>Alarm configuration.</p>
+             * <p>The alert settings.</p>
              */
             public Builder alert(Alert alert) {
                 this.alert = alert;
@@ -830,7 +874,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Analyze the configuration.</p>
+             * <p>The analysis of the configurations.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -838,7 +882,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The list of project IDs that do not need to be run.</p>
+             * <p>The IDs of the projects that do not need to be run.</p>
              */
             public Builder excludeProjectIds(java.util.List<Long> excludeProjectIds) {
                 this.excludeProjectIds = excludeProjectIds;
@@ -846,7 +890,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The list of task IDs that you do not want to run.</p>
+             * <p>The IDs of the tasks that do not need to be run.</p>
              */
             public Builder excludeTaskIds(java.util.List<Long> excludeTaskIds) {
                 this.excludeTaskIds = excludeTaskIds;
@@ -854,7 +898,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The list of project IDs to be run.</p>
+             * <p>The IDs of the projects that need to be run.</p>
              */
             public Builder includeProjectIds(java.util.List<Long> includeProjectIds) {
                 this.includeProjectIds = includeProjectIds;
@@ -862,7 +906,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The list of task IDs to be run.</p>
+             * <p>The IDs of the tasks that need to be run.</p>
              */
             public Builder includeTaskIds(java.util.List<Long> includeTaskIds) {
                 this.includeTaskIds = includeTaskIds;
@@ -870,12 +914,12 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The data replenishment mode. The default value is ManualSelection.</p>
+             * <p>The data backfill mode. Default value: ManualSelection. Valid values:</p>
              * <ul>
-             * <li>General: In normal mode, only one &quot;roottaskkids&quot; can be filled in, and &quot;IncludeTaskIds&quot; is optional. If not, the content in &quot;roottaskkids&quot; will be included by default.</li>
-             * <li>ManualSelection: manually select, &quot;roottaskkids&quot; can be filled in multiple, &quot;IncludeTaskIds&quot; optional, if not, the content in &quot;roottaskkids&quot; will be included by default.</li>
-             * <li>Chain: the link, &quot;roottaskkids&quot; is empty, and &quot;IncludeTaskIds&quot; is filled with two IDs, which are the start and end tasks respectively.</li>
-             * <li>AllDownstream: all downstream, &quot;roottaskkids&quot; can only be filled in one</li>
+             * <li>General: You can specify only one root task ID. The <code>IncludeTaskIds</code> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <code>RootTaskIds</code> parameter are included by default.``</li>
+             * <li>ManualSelection: You can specify multiple root tasks IDs. The <code>IncludeTaskIds</code> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <code>RootTaskIds</code> parameter are included by default.``</li>
+             * <li>Chain: The value of the <code>RootTaskIds</code> parameter is left empty. You must set the <code>IncludeTaskIds</code> parameter to the start task ID and the end task ID.</li>
+             * <li>AllDownstream: You can specify only one root task ID.``</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -887,10 +931,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The running sequence. Default value: Asc.</p>
+             * <p>The running order. Default value: Asc. Valid values:</p>
              * <ul>
-             * <li>Asc: ascending order by business date.</li>
-             * <li>Desc: descending order by business date.</li>
+             * <li>Asc: The tasks are sorted by data timestamp in ascending order.</li>
+             * <li>Desc: The tasks are sorted by data timestamp in descending order.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -902,7 +946,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The number of rows that the task has. Values from 2 to 10 are parallelism and 1 is serial.</p>
+             * <p>The number of tasks that can be run in parallel. If you specify the value to 2 to 10, the value indicates the number of tasks that can be run in parallel. If you specify the value to 1, the tasks are run one by one.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -913,7 +957,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The ID list of the root task.</p>
+             * <p>The root task IDs.</p>
              */
             public Builder rootTaskIds(java.util.List<Long> rootTaskIds) {
                 this.rootTaskIds = rootTaskIds;
@@ -921,7 +965,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Run the policy. If this field is empty, the task configuration is followed.</p>
+             * <p>The data backfill policy. If you leave this parameter empty, the runtime configuration is used.</p>
              */
             public Builder runPolicy(RunPolicy runPolicy) {
                 this.runPolicy = runPolicy;
@@ -929,7 +973,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the custom scheduling Resource Group. If this field is empty, the task configuration is followed.</p>
+             * <p>The identifier of the custom resource group for scheduling. If you leave this parameter empty, the runtime configuration is used.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -991,6 +1035,14 @@ public class CreateWorkflowInstancesRequest extends Request {
         public static final class Builder {
             private String endBizDate; 
             private String startBizDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizDates model) {
+                this.endBizDate = model.endBizDate;
+                this.startBizDate = model.startBizDate;
+            } 
 
             /**
              * <p>The end date of the business.</p>
@@ -1079,6 +1131,15 @@ public class CreateWorkflowInstancesRequest extends Request {
             private java.util.List<BizDates> bizDates; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Periods model) {
+                this.bizDates = model.bizDates;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The list of business dates. You can specify a multi-segment business date (up to 7 segments).</p>

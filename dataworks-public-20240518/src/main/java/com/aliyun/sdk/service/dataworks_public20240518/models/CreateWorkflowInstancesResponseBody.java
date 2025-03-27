@@ -36,6 +36,10 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationId
      */
@@ -53,6 +57,14 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private String operationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWorkflowInstancesResponseBody model) {
+            this.operationId = model.operationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the operation. You can use this field to query the results of the creation operation through the GetCreateWorkflowInstancesResult interface.</p>

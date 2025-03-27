@@ -36,6 +36,10 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataQualityEvaluationTasksResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -123,6 +135,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             private String condition; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hooks model) {
+                this.condition = model.condition;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The trigger configuration of the callback event.</p>
              * 
@@ -186,6 +206,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channels; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+            } 
 
             /**
              * <p>The alert notification methods.</p>
@@ -257,6 +284,15 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             private String extension; 
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.extension = model.extension;
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</p>
@@ -346,6 +382,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notifications model) {
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
+
             /**
              * <p>The alert notification methods.</p>
              */
@@ -412,6 +456,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String condition; 
             private java.util.List<Notifications> notifications; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityEvaluationTasksNotifications model) {
+                this.condition = model.condition;
+                this.notifications = model.notifications;
+            } 
 
             /**
              * <p>The trigger condition of the alert notification.</p>
@@ -506,6 +558,16 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             private String partitionSpec; 
             private String tableGuid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.databaseType = model.databaseType;
+                this.partitionSpec = model.partitionSpec;
+                this.tableGuid = model.tableGuid;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The type of the database to which the table belongs. Valid values:</p>
@@ -613,6 +675,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> taskIds; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Trigger model) {
+                this.taskIds = model.taskIds;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The IDs of the auto triggered nodes of which the instances are successfully run. This parameter takes effect only if the Type parameter is set to ByScheduledTaskInstance.</p>
@@ -770,6 +840,21 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             private String runtimeConf; 
             private Target target; 
             private Trigger trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityEvaluationTasks model) {
+                this.description = model.description;
+                this.hooks = model.hooks;
+                this.id = model.id;
+                this.name = model.name;
+                this.notifications = model.notifications;
+                this.projectId = model.projectId;
+                this.runtimeConf = model.runtimeConf;
+                this.target = model.target;
+                this.trigger = model.trigger;
+            } 
 
             /**
              * <p>The description of the data quality monitoring task. The description can be up to 65,535 characters in length.</p>
@@ -932,6 +1017,16 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.dataQualityEvaluationTasks = model.dataQualityEvaluationTasks;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The data quality monitoring tasks.</p>

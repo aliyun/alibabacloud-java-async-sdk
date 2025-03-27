@@ -36,6 +36,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectMembersResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -135,6 +147,15 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The code of the role.</p>
              * 
@@ -160,8 +181,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
             /**
              * <p>The type of the role. Valid values:</p>
              * <ul>
-             * <li>UserCustom: custom role</li>
-             * <li>System: built-in role</li>
+             * <li>UserCustom: user-defined role</li>
+             * <li>System: system role</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -246,6 +267,16 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private java.util.List<Roles> roles; 
             private String status; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectMembers model) {
+                this.projectId = model.projectId;
+                this.roles = model.roles;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the DataWorks workspace.</p>
@@ -366,6 +397,16 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<ProjectMembers> projectMembers; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.projectMembers = model.projectMembers;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

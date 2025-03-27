@@ -65,7 +65,7 @@ public class GetDIJobLogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,10 +201,10 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>Node type. Currently, it is only applicable in the view resource group 2.0 task:</p>
+         * <p>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</p>
          * <ul>
-         * <li>MASTER: obtains logs of JobManager.</li>
-         * <li>WORKER: obtains logs of TaskManager.</li>
+         * <li><strong>MASTER</strong>: the master node, which is used to query the logs of JobManagers.</li>
+         * <li><strong>WORKER</strong>: the worker node, which is used to query the logs of TaskManagers.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -36,6 +36,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pagingInfo
      */
@@ -53,6 +57,14 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
     public static final class Builder {
         private PagingInfo pagingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDIAlarmRulesResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -122,6 +134,14 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> channels; 
             private String severity; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationChannels model) {
+                this.channels = model.channels;
+                this.severity = model.severity;
+            } 
 
             /**
              * <p>The alert notification methods.</p>
@@ -196,6 +216,14 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String receiverType; 
             private java.util.List<String> receiverValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationReceivers model) {
+                this.receiverType = model.receiverType;
+                this.receiverValues = model.receiverValues;
+            } 
 
             /**
              * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
@@ -295,6 +323,16 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long muteInterval; 
             private java.util.List<NotificationChannels> notificationChannels; 
             private java.util.List<NotificationReceivers> notificationReceivers; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationSettings model) {
+                this.inhibitionInterval = model.inhibitionInterval;
+                this.muteInterval = model.muteInterval;
+                this.notificationChannels = model.notificationChannels;
+                this.notificationReceivers = model.notificationReceivers;
+            } 
 
             /**
              * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
@@ -421,6 +459,17 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long duration; 
             private String severity; 
             private Long threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerConditions model) {
+                this.ddlReportTags = model.ddlReportTags;
+                this.ddlTypes = model.ddlTypes;
+                this.duration = model.duration;
+                this.severity = model.severity;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
@@ -616,6 +665,21 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private NotificationSettings notificationSettings; 
             private java.util.List<TriggerConditions> triggerConditions; 
 
+            private Builder() {
+            } 
+
+            private Builder(DIJobAlarmRules model) {
+                this.DIAlarmRuleId = model.DIAlarmRuleId;
+                this.DIJobId = model.DIJobId;
+                this.description = model.description;
+                this.enabled = model.enabled;
+                this.id = model.id;
+                this.metricType = model.metricType;
+                this.name = model.name;
+                this.notificationSettings = model.notificationSettings;
+                this.triggerConditions = model.triggerConditions;
+            } 
+
             /**
              * <p>This parameter is deprecated. Use the Id parameter instead.</p>
              * 
@@ -790,6 +854,16 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.DIJobAlarmRules = model.DIJobAlarmRules;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The alert rules.</p>

@@ -55,7 +55,7 @@ public class ListUpstreamTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,8 +162,7 @@ public class ListUpstreamTasksRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace.</p>
-         * <p>Valid values:</p>
+         * <p>The environment of the workspace. Valid values:</p>
          * <ul>
          * <li>Prod: production environment</li>
          * <li>Dev: development environment</li>

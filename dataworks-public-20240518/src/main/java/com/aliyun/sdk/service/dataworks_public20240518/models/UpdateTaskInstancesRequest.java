@@ -44,7 +44,7 @@ public class UpdateTaskInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,6 +156,13 @@ public class UpdateTaskInstancesRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.name = model.name;
+            } 
+
             /**
              * <p>The name of the data source.</p>
              * 
@@ -242,6 +249,16 @@ public class UpdateTaskInstancesRequest extends Request {
             private Long id; 
             private Integer priority; 
             private String runtimeResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInstances model) {
+                this.dataSource = model.dataSource;
+                this.id = model.id;
+                this.priority = model.priority;
+                this.runtimeResource = model.runtimeResource;
+            } 
 
             /**
              * <p>The information about the associated data source.</p>
