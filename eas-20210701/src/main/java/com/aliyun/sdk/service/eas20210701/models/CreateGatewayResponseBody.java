@@ -44,6 +44,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -77,6 +81,16 @@ public class CreateGatewayResponseBody extends TeaModel {
         private String gatewayId; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGatewayResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.gatewayId = model.gatewayId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The region ID of the private gateway.</p>

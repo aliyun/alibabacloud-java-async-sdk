@@ -48,6 +48,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logStore
      */
@@ -89,6 +93,17 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         private String projectName; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceLogResponseBody model) {
+            this.logStore = model.logStore;
+            this.message = model.message;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The Logstore of Log Service.</p>

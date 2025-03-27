@@ -40,6 +40,10 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
         private String resourceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateResourceInstanceResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+        } 
 
         /**
          * <p>The instance ID.</p>

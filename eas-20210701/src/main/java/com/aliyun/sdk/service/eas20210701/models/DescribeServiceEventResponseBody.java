@@ -48,6 +48,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
@@ -89,6 +93,17 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private Long totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceEventResponseBody model) {
+            this.events = model.events;
+            this.pageNum = model.pageNum;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * <p>The events.</p>
@@ -215,6 +230,16 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             private String reason; 
             private String time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.message = model.message;
+                this.reason = model.reason;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The returned message. The message is formatted and returned in the JSON format.</p>

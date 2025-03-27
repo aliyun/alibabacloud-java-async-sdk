@@ -56,6 +56,10 @@ public class CreateServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return internetEndpoint
      */
@@ -113,6 +117,19 @@ public class CreateServiceResponseBody extends TeaModel {
         private String serviceId; 
         private String serviceName; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceResponseBody model) {
+            this.internetEndpoint = model.internetEndpoint;
+            this.intranetEndpoint = model.intranetEndpoint;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The public endpoint of the created service.</p>

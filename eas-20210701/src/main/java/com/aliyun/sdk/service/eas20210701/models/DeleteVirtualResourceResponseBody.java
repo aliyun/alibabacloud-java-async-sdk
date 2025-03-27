@@ -36,6 +36,10 @@ public class DeleteVirtualResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -53,6 +57,14 @@ public class DeleteVirtualResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteVirtualResourceResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the operation result.</p>

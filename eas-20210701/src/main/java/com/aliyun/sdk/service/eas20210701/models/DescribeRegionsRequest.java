@@ -12,12 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListTenantAddonsRequest} extends {@link RequestModel}
+ * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
- * <p>ListTenantAddonsRequest</p>
+ * <p>DescribeRegionsRequest</p>
  */
-public class ListTenantAddonsRequest extends Request {
-    private ListTenantAddonsRequest(Builder builder) {
+public class DescribeRegionsRequest extends Request {
+    private DescribeRegionsRequest(Builder builder) {
         super(builder);
     }
 
@@ -25,7 +25,7 @@ public class ListTenantAddonsRequest extends Request {
         return new Builder();
     }
 
-    public static ListTenantAddonsRequest create() {
+    public static DescribeRegionsRequest create() {
         return builder().build();
     }
 
@@ -34,19 +34,19 @@ public class ListTenantAddonsRequest extends Request {
         return new Builder(this);
     }
 
-    public static final class Builder extends Request.Builder<ListTenantAddonsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTenantAddonsRequest request) {
+        private Builder(DescribeRegionsRequest request) {
             super(request);
         } 
 
         @Override
-        public ListTenantAddonsRequest build() {
-            return new ListTenantAddonsRequest(this);
+        public DescribeRegionsRequest build() {
+            return new DescribeRegionsRequest(this);
         } 
 
     } 

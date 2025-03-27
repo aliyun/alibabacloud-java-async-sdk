@@ -49,7 +49,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,14 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends Request {
         public static final class Builder {
             private String region; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeerVpcs model) {
+                this.region = model.region;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The region where the VPC peer resides.</p>

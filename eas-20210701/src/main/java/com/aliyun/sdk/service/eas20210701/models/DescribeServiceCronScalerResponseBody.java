@@ -44,6 +44,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return excludeDates
      */
@@ -77,6 +81,16 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScaleJobs> scaleJobs; 
         private String serviceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceCronScalerResponseBody model) {
+            this.excludeDates = model.excludeDates;
+            this.requestId = model.requestId;
+            this.scaleJobs = model.scaleJobs;
+            this.serviceName = model.serviceName;
+        } 
 
         /**
          * <p>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</p>
@@ -225,6 +239,19 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             private String schedule; 
             private String state; 
             private Integer targetSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleJobs model) {
+                this.createTime = model.createTime;
+                this.lastProbeTime = model.lastProbeTime;
+                this.message = model.message;
+                this.name = model.name;
+                this.schedule = model.schedule;
+                this.state = model.state;
+                this.targetSize = model.targetSize;
+            } 
 
             /**
              * <p>The time when the most recent CronHPA job was created. The time is displayed in UTC.</p>

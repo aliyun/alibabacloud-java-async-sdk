@@ -48,6 +48,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -89,6 +93,17 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private Long totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceLogResponseBody model) {
+            this.logs = model.logs;
+            this.pageNum = model.pageNum;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * <p>The returned logs.</p>

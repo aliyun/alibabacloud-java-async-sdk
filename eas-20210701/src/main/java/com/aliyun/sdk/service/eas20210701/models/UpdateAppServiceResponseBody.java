@@ -36,6 +36,10 @@ public class UpdateAppServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -54,11 +58,19 @@ public class UpdateAppServiceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateAppServiceResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Succee</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;

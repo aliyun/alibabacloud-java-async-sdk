@@ -124,6 +124,10 @@ public class ResourceInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arch
      */
@@ -317,6 +321,36 @@ public class ResourceInstance extends TeaModel {
         private String region; 
         private String resourceId; 
         private String zone; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceInstance model) {
+            this.arch = model.arch;
+            this.autoRenewal = model.autoRenewal;
+            this.chargeType = model.chargeType;
+            this.createTime = model.createTime;
+            this.expiredTime = model.expiredTime;
+            this.instanceCpuCount = model.instanceCpuCount;
+            this.instanceGpuCount = model.instanceGpuCount;
+            this.instanceGpuMemory = model.instanceGpuMemory;
+            this.instanceId = model.instanceId;
+            this.instanceIp = model.instanceIp;
+            this.instanceMemory = model.instanceMemory;
+            this.instanceName = model.instanceName;
+            this.instanceStatus = model.instanceStatus;
+            this.instanceSystemDiskSize = model.instanceSystemDiskSize;
+            this.instanceTenantIp = model.instanceTenantIp;
+            this.instanceType = model.instanceType;
+            this.instanceUsedCpu = model.instanceUsedCpu;
+            this.instanceUsedGpu = model.instanceUsedGpu;
+            this.instanceUsedGpuMemory = model.instanceUsedGpuMemory;
+            this.instanceUsedMemory = model.instanceUsedMemory;
+            this.labels = model.labels;
+            this.region = model.region;
+            this.resourceId = model.resourceId;
+            this.zone = model.zone;
+        } 
 
         /**
          * Arch.
@@ -559,6 +593,14 @@ public class ResourceInstance extends TeaModel {
         public static final class Builder {
             private String labelKey; 
             private String labelValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.labelKey = model.labelKey;
+                this.labelValue = model.labelValue;
+            } 
 
             /**
              * LabelKey.

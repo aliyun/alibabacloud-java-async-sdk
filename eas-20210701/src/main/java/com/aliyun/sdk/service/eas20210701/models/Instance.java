@@ -133,6 +133,10 @@ public class Instance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentAmount
      */
@@ -342,6 +346,38 @@ public class Instance extends TeaModel {
         private String tenantInstanceIP; 
         private Integer totalProcesses; 
         private String zone; 
+
+        private Builder() {
+        } 
+
+        private Builder(Instance model) {
+            this.currentAmount = model.currentAmount;
+            this.externalIP = model.externalIP;
+            this.externalInstancePort = model.externalInstancePort;
+            this.hostIP = model.hostIP;
+            this.hostName = model.hostName;
+            this.innerIP = model.innerIP;
+            this.instanceName = model.instanceName;
+            this.instancePort = model.instancePort;
+            this.instanceType = model.instanceType;
+            this.isSpot = model.isSpot;
+            this.isolated = model.isolated;
+            this.lastState = model.lastState;
+            this.namespace = model.namespace;
+            this.originalAmount = model.originalAmount;
+            this.readyProcesses = model.readyProcesses;
+            this.reason = model.reason;
+            this.resourceType = model.resourceType;
+            this.restartCount = model.restartCount;
+            this.role = model.role;
+            this.startAt = model.startAt;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.tenantHostIP = model.tenantHostIP;
+            this.tenantInstanceIP = model.tenantInstanceIP;
+            this.totalProcesses = model.totalProcesses;
+            this.zone = model.zone;
+        } 
 
         /**
          * CurrentAmount.

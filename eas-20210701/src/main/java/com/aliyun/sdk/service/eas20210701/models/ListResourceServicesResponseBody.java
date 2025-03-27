@@ -48,6 +48,10 @@ public class ListResourceServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListResourceServicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Service> services; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceServicesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.services = model.services;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>

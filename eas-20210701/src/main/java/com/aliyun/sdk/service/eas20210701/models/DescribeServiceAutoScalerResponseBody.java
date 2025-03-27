@@ -56,6 +56,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return behavior
      */
@@ -113,6 +117,19 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScaleStrategies> scaleStrategies; 
         private String serviceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceAutoScalerResponseBody model) {
+            this.behavior = model.behavior;
+            this.currentMetrics = model.currentMetrics;
+            this.maxReplica = model.maxReplica;
+            this.minReplica = model.minReplica;
+            this.requestId = model.requestId;
+            this.scaleStrategies = model.scaleStrategies;
+            this.serviceName = model.serviceName;
+        } 
 
         /**
          * <p>The additional information about the Autoscaler policy, such as the interval of triggering Autoscaler.</p>
@@ -253,6 +270,15 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             private String service; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentMetrics model) {
+                this.metricName = model.metricName;
+                this.service = model.service;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The metric name. Valid values:</p>
              * <ul>
@@ -352,6 +378,15 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             private String metricName; 
             private String service; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleStrategies model) {
+                this.metricName = model.metricName;
+                this.service = model.service;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The metric name. Valid values:</p>

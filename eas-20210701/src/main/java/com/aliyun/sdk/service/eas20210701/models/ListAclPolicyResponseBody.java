@@ -44,6 +44,10 @@ public class ListAclPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayId
      */
@@ -77,6 +81,16 @@ public class ListAclPolicyResponseBody extends TeaModel {
         private java.util.List<InternetAclPolicyList> internetAclPolicyList; 
         private java.util.List<IntranetVpcAclPolicyList> intranetVpcAclPolicyList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAclPolicyResponseBody model) {
+            this.gatewayId = model.gatewayId;
+            this.internetAclPolicyList = model.internetAclPolicyList;
+            this.intranetVpcAclPolicyList = model.intranetVpcAclPolicyList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The private gateway ID.</p>
@@ -166,6 +180,14 @@ public class ListAclPolicyResponseBody extends TeaModel {
             private String comment; 
             private String entry; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclPolicyList model) {
+                this.comment = model.comment;
+                this.entry = model.entry;
+            } 
+
             /**
              * <p>The comment on the IP CIDR block in the VPC that can access the private gateway over the Internet.</p>
              * 
@@ -227,6 +249,13 @@ public class ListAclPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AclPolicyList> aclPolicyList; 
 
+            private Builder() {
+            } 
+
+            private Builder(InternetAclPolicyList model) {
+                this.aclPolicyList = model.aclPolicyList;
+            } 
+
             /**
              * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway over the Internet.</p>
              */
@@ -285,6 +314,14 @@ public class ListAclPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String comment; 
             private String entry; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntranetVpcAclPolicyListAclPolicyList model) {
+                this.comment = model.comment;
+                this.entry = model.entry;
+            } 
 
             /**
              * <p>The comment on the IP CIDR block in the VPC that can access the private gateway over the internal network.</p>
@@ -358,6 +395,14 @@ public class ListAclPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<IntranetVpcAclPolicyListAclPolicyList> aclPolicyList; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntranetVpcAclPolicyList model) {
+                this.aclPolicyList = model.aclPolicyList;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway over the internal network.</p>

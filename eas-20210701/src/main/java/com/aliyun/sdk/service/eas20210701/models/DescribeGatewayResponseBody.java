@@ -88,6 +88,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -209,6 +213,27 @@ public class DescribeGatewayResponseBody extends TeaModel {
         private Boolean SSLRedirectionEnabled; 
         private String status; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGatewayResponseBody model) {
+            this.createTime = model.createTime;
+            this.externalClusterId = model.externalClusterId;
+            this.gatewayId = model.gatewayId;
+            this.gatewayName = model.gatewayName;
+            this.instanceType = model.instanceType;
+            this.internetDomain = model.internetDomain;
+            this.internetEnabled = model.internetEnabled;
+            this.internetStatus = model.internetStatus;
+            this.intranetDomain = model.intranetDomain;
+            this.isDefault = model.isDefault;
+            this.replicas = model.replicas;
+            this.requestId = model.requestId;
+            this.SSLRedirectionEnabled = model.SSLRedirectionEnabled;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The time when the private gateway was created. The time is displayed in UTC.</p>

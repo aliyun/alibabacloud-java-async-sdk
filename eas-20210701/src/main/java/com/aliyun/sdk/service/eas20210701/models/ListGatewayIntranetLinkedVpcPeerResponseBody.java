@@ -40,6 +40,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayId
      */
@@ -65,6 +69,15 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         private String gatewayId; 
         private java.util.List<PeerVpcList> peerVpcList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayIntranetLinkedVpcPeerResponseBody model) {
+            this.gatewayId = model.gatewayId;
+            this.peerVpcList = model.peerVpcList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the private gateway.</p>
@@ -146,6 +159,14 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             private String region; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeerVpcs model) {
+                this.region = model.region;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The region where the VPC peer resides.</p>
              * 
@@ -218,6 +239,14 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PeerVpcs> peerVpcs; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PeerVpcList model) {
+                this.peerVpcs = model.peerVpcs;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The ID of the VPC peers.</p>

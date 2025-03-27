@@ -35,7 +35,7 @@ public class DescribeMachineSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DescribeMachineSpecRequest extends Request {
         } 
 
         /**
-         * InstanceTypes.
+         * <p>This parameter is deprecated.</p>
          */
         public Builder instanceTypes(java.util.List<String> instanceTypes) {
             String instanceTypesShrink = shrink(instanceTypes, "InstanceTypes", "simple");

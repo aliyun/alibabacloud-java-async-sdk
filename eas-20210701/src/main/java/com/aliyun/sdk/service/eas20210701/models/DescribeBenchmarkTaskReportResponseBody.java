@@ -40,6 +40,10 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
         private Object data; 
         private String reportUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBenchmarkTaskReportResponseBody model) {
+            this.data = model.data;
+            this.reportUrl = model.reportUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>If the value of ReportType is set to RAW, the details about the stress testing report are returned.</p>

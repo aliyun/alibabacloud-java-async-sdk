@@ -52,6 +52,10 @@ public class CreateResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -101,6 +105,18 @@ public class CreateResourceResponseBody extends TeaModel {
         private String requestId; 
         private String resourceId; 
         private String resourceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateResourceResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.instanceIds = model.instanceIds;
+            this.ownerUid = model.ownerUid;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.resourceName = model.resourceName;
+        } 
 
         /**
          * <p>The ID of the cluster to which the resource group belongs.</p>

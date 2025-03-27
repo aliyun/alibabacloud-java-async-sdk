@@ -40,6 +40,10 @@ public class CreateVirtualResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class CreateVirtualResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String virtualResourceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVirtualResourceResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.virtualResourceId = model.virtualResourceId;
+        } 
 
         /**
          * <p>The returned message.</p>

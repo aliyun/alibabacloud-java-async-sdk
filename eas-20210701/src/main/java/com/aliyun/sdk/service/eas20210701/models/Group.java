@@ -64,6 +64,10 @@ public class Group extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -137,6 +141,21 @@ public class Group extends TeaModel {
         private String queueService; 
         private String trafficMode; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Group model) {
+            this.accessToken = model.accessToken;
+            this.clusterId = model.clusterId;
+            this.createTime = model.createTime;
+            this.internetEndpoint = model.internetEndpoint;
+            this.intranetEndpoint = model.intranetEndpoint;
+            this.name = model.name;
+            this.queueService = model.queueService;
+            this.trafficMode = model.trafficMode;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * AccessToken.

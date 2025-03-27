@@ -40,6 +40,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayId
      */
@@ -65,6 +69,15 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String gatewayId; 
         private java.util.List<IntranetLinkedVpcList> intranetLinkedVpcList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayIntranetLinkedVpcResponseBody model) {
+            this.gatewayId = model.gatewayId;
+            this.intranetLinkedVpcList = model.intranetLinkedVpcList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The private gateway ID.</p>
@@ -109,6 +122,9 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
      * <p>ListGatewayIntranetLinkedVpcResponseBody</p>
      */
     public static class IntranetLinkedVpcList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthoritativeDnsEnabled")
+        private Boolean authoritativeDnsEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
@@ -125,6 +141,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String vpcId;
 
         private IntranetLinkedVpcList(Builder builder) {
+            this.authoritativeDnsEnabled = builder.authoritativeDnsEnabled;
             this.ip = builder.ip;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
@@ -138,6 +155,13 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
 
         public static IntranetLinkedVpcList create() {
             return builder().build();
+        }
+
+        /**
+         * @return authoritativeDnsEnabled
+         */
+        public Boolean getAuthoritativeDnsEnabled() {
+            return this.authoritativeDnsEnabled;
         }
 
         /**
@@ -176,11 +200,32 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean authoritativeDnsEnabled; 
             private String ip; 
             private String securityGroupId; 
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntranetLinkedVpcList model) {
+                this.authoritativeDnsEnabled = model.authoritativeDnsEnabled;
+                this.ip = model.ip;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * AuthoritativeDnsEnabled.
+             */
+            public Builder authoritativeDnsEnabled(Boolean authoritativeDnsEnabled) {
+                this.authoritativeDnsEnabled = authoritativeDnsEnabled;
+                return this;
+            }
 
             /**
              * <p>The IP address.</p>

@@ -47,6 +47,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExtraData")
     private String extraData;
 
+    @com.aliyun.core.annotation.NameInMap("Gateway")
+    private String gateway;
+
     @com.aliyun.core.annotation.NameInMap("Gpu")
     private Integer gpu;
 
@@ -79,6 +82,9 @@ public class Service extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("PendingInstance")
     private Integer pendingInstance;
+
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
+    private String quotaId;
 
     @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
@@ -160,6 +166,7 @@ public class Service extends TeaModel {
         this.createTime = builder.createTime;
         this.currentVersion = builder.currentVersion;
         this.extraData = builder.extraData;
+        this.gateway = builder.gateway;
         this.gpu = builder.gpu;
         this.image = builder.image;
         this.internetEndpoint = builder.internetEndpoint;
@@ -171,6 +178,7 @@ public class Service extends TeaModel {
         this.namespace = builder.namespace;
         this.parentUid = builder.parentUid;
         this.pendingInstance = builder.pendingInstance;
+        this.quotaId = builder.quotaId;
         this.reason = builder.reason;
         this.region = builder.region;
         this.requestId = builder.requestId;
@@ -202,6 +210,10 @@ public class Service extends TeaModel {
 
     public static Service create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -272,6 +284,13 @@ public class Service extends TeaModel {
      */
     public String getExtraData() {
         return this.extraData;
+    }
+
+    /**
+     * @return gateway
+     */
+    public String getGateway() {
+        return this.gateway;
     }
 
     /**
@@ -349,6 +368,13 @@ public class Service extends TeaModel {
      */
     public Integer getPendingInstance() {
         return this.pendingInstance;
+    }
+
+    /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     /**
@@ -523,6 +549,7 @@ public class Service extends TeaModel {
         private String createTime; 
         private Integer currentVersion; 
         private String extraData; 
+        private String gateway; 
         private Integer gpu; 
         private String image; 
         private String internetEndpoint; 
@@ -534,6 +561,7 @@ public class Service extends TeaModel {
         private String namespace; 
         private String parentUid; 
         private Integer pendingInstance; 
+        private String quotaId; 
         private String reason; 
         private String region; 
         private String requestId; 
@@ -557,6 +585,58 @@ public class Service extends TeaModel {
         private String updateTime; 
         private Integer weight; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Service model) {
+            this.accessToken = model.accessToken;
+            this.appConfig = model.appConfig;
+            this.appSpecName = model.appSpecName;
+            this.appType = model.appType;
+            this.appVersion = model.appVersion;
+            this.callerUid = model.callerUid;
+            this.cpu = model.cpu;
+            this.createTime = model.createTime;
+            this.currentVersion = model.currentVersion;
+            this.extraData = model.extraData;
+            this.gateway = model.gateway;
+            this.gpu = model.gpu;
+            this.image = model.image;
+            this.internetEndpoint = model.internetEndpoint;
+            this.intranetEndpoint = model.intranetEndpoint;
+            this.labels = model.labels;
+            this.latestVersion = model.latestVersion;
+            this.memory = model.memory;
+            this.message = model.message;
+            this.namespace = model.namespace;
+            this.parentUid = model.parentUid;
+            this.pendingInstance = model.pendingInstance;
+            this.quotaId = model.quotaId;
+            this.reason = model.reason;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.resourceAlias = model.resourceAlias;
+            this.role = model.role;
+            this.roleAttrs = model.roleAttrs;
+            this.runningInstance = model.runningInstance;
+            this.safetyLock = model.safetyLock;
+            this.secondaryInternetEndpoint = model.secondaryInternetEndpoint;
+            this.secondaryIntranetEndpoint = model.secondaryIntranetEndpoint;
+            this.serviceConfig = model.serviceConfig;
+            this.serviceGroup = model.serviceGroup;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.serviceUid = model.serviceUid;
+            this.source = model.source;
+            this.status = model.status;
+            this.totalInstance = model.totalInstance;
+            this.trafficState = model.trafficState;
+            this.updateTime = model.updateTime;
+            this.weight = model.weight;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * AccessToken.
@@ -635,6 +715,14 @@ public class Service extends TeaModel {
          */
         public Builder extraData(String extraData) {
             this.extraData = extraData;
+            return this;
+        }
+
+        /**
+         * Gateway.
+         */
+        public Builder gateway(String gateway) {
+            this.gateway = gateway;
             return this;
         }
 
@@ -723,6 +811,14 @@ public class Service extends TeaModel {
          */
         public Builder pendingInstance(Integer pendingInstance) {
             this.pendingInstance = pendingInstance;
+            return this;
+        }
+
+        /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.quotaId = quotaId;
             return this;
         }
 
@@ -959,6 +1055,14 @@ public class Service extends TeaModel {
         public static final class Builder {
             private String labelKey; 
             private String labelValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.labelKey = model.labelKey;
+                this.labelValue = model.labelValue;
+            } 
 
             /**
              * LabelKey.

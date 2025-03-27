@@ -48,6 +48,10 @@ public class ListGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gateways
      */
@@ -89,6 +93,17 @@ public class ListGatewayResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayResponseBody model) {
+            this.gateways = model.gateways;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The private gateways.</p>
@@ -323,6 +338,25 @@ public class ListGatewayResponseBody extends TeaModel {
             private Boolean SSLRedirectionEnabled; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Gateways model) {
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.gatewayId = model.gatewayId;
+                this.gatewayName = model.gatewayName;
+                this.instanceType = model.instanceType;
+                this.internetDomain = model.internetDomain;
+                this.internetEnabled = model.internetEnabled;
+                this.intranetDomain = model.intranetDomain;
+                this.isDefault = model.isDefault;
+                this.replicas = model.replicas;
+                this.SSLRedirectionEnabled = model.SSLRedirectionEnabled;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The billing method. Valid values:</p>

@@ -64,7 +64,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -255,6 +255,14 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer scaleDownGracePeriodSeconds; 
             private Integer scaleUpActivationReplicas; 
 
+            private Builder() {
+            } 
+
+            private Builder(OnZero model) {
+                this.scaleDownGracePeriodSeconds = model.scaleDownGracePeriodSeconds;
+                this.scaleUpActivationReplicas = model.scaleUpActivationReplicas;
+            } 
+
             /**
              * <p>The time window that is required before the number of instances is reduced to 0. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window. Default value: 600.</p>
              * 
@@ -316,6 +324,13 @@ public class CreateServiceAutoScalerRequest extends Request {
         public static final class Builder {
             private Integer stabilizationWindowSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScaleDown model) {
+                this.stabilizationWindowSeconds = model.stabilizationWindowSeconds;
+            } 
+
             /**
              * <p>The time window that is required before the scale-in operation is performed. The scale-in operation can be performed only if the specified metric drops below the specified threshold in the specified time window. Default value: 300.</p>
              * 
@@ -365,6 +380,13 @@ public class CreateServiceAutoScalerRequest extends Request {
 
         public static final class Builder {
             private Integer stabilizationWindowSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleUp model) {
+                this.stabilizationWindowSeconds = model.stabilizationWindowSeconds;
+            } 
 
             /**
              * <p>The time window that is required before the scale-out operation is performed. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window. Default value: 0.</p>
@@ -439,6 +461,15 @@ public class CreateServiceAutoScalerRequest extends Request {
             private OnZero onZero; 
             private ScaleDown scaleDown; 
             private ScaleUp scaleUp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Behavior model) {
+                this.onZero = model.onZero;
+                this.scaleDown = model.scaleDown;
+                this.scaleUp = model.scaleUp;
+            } 
 
             /**
              * <p>The operation that reduces the number of instances to 0.</p>
@@ -528,6 +559,15 @@ public class CreateServiceAutoScalerRequest extends Request {
             private String metricName; 
             private String service; 
             private Float threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleStrategies model) {
+                this.metricName = model.metricName;
+                this.service = model.service;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>The name of the metric for triggering auto scaling. Valid values:</p>

@@ -52,6 +52,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auxVSwitchList
      */
@@ -101,6 +105,18 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         private String securityGroupId; 
         private String vSwitchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceDLinkResponseBody model) {
+            this.auxVSwitchList = model.auxVSwitchList;
+            this.destinationCIDRs = model.destinationCIDRs;
+            this.requestId = model.requestId;
+            this.securityGroupId = model.securityGroupId;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * <p>The IDs of the secondary vSwitches that are directly connected.</p>

@@ -44,6 +44,10 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -77,6 +81,16 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         private Endpoints endpoints; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceEndpointsResponseBody model) {
+            this.accessToken = model.accessToken;
+            this.endpoints = model.endpoints;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The service token.</p>
@@ -216,6 +230,18 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
             private java.util.List<String> intranetEndpoints; 
             private String pathType; 
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.backendId = model.backendId;
+                this.endpointType = model.endpointType;
+                this.internetEndpoints = model.internetEndpoints;
+                this.intranetEndpoints = model.intranetEndpoints;
+                this.pathType = model.pathType;
+                this.port = model.port;
+            } 
 
             /**
              * <p>The backend access ID, which varies based on the value of the EndpointType parameter.</p>

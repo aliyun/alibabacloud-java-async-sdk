@@ -40,6 +40,10 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customDomains
      */
@@ -65,6 +69,15 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         private java.util.List<CustomDomains> customDomains; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayDomainsResponseBody model) {
+            this.customDomains = model.customDomains;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of custom domain names.</p>
@@ -157,6 +170,15 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             private String certificateId; 
             private String domain; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomDomains model) {
+                this.certificateId = model.certificateId;
+                this.domain = model.domain;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a> console.</p>

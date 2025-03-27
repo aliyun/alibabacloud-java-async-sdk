@@ -36,6 +36,10 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SpotDiscounts> spotDiscounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSpotDiscountHistoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.spotDiscounts = model.spotDiscounts;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             private String spotDiscount; 
             private String timestamp; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotDiscounts model) {
+                this.instanceType = model.instanceType;
+                this.spotDiscount = model.spotDiscount;
+                this.timestamp = model.timestamp;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The type of the ECS instance.</p>

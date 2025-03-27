@@ -51,7 +51,7 @@ public class UpdateResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,6 +224,16 @@ public class UpdateResourceRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeTolerations model) {
+                this.effect = model.effect;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The effect.
              * Valid values:</p>
@@ -329,6 +339,14 @@ public class UpdateResourceRequest extends Request {
         public static final class Builder {
             private java.util.Map<String, String> nodeMatchLabels; 
             private java.util.List<NodeTolerations> nodeTolerations; 
+
+            private Builder() {
+            } 
+
+            private Builder(SelfManagedResourceOptions model) {
+                this.nodeMatchLabels = model.nodeMatchLabels;
+                this.nodeTolerations = model.nodeTolerations;
+            } 
 
             /**
              * <p>Tag tag key-value pairs for nodes.</p>

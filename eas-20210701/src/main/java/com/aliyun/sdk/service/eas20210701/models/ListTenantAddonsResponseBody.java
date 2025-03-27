@@ -36,6 +36,10 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addons
      */
@@ -53,6 +57,14 @@ public class ListTenantAddonsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Addons> addons; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTenantAddonsResponseBody model) {
+            this.addons = model.addons;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the plug-in.</p>
@@ -122,6 +134,14 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, String> attributes; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The attributes of the plug-in.</p>

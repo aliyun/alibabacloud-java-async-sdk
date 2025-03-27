@@ -52,7 +52,7 @@ public class CreateAclPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,6 +203,14 @@ public class CreateAclPolicyRequest extends Request {
         public static final class Builder {
             private String comment; 
             private String entry; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclPolicyList model) {
+                this.comment = model.comment;
+                this.entry = model.entry;
+            } 
 
             /**
              * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>

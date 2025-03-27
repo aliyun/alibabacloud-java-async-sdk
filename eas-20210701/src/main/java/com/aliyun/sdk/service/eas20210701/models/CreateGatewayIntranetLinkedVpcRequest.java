@@ -28,6 +28,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
     private String gatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAuthoritativeDns")
+    private Boolean enableAuthoritativeDns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -39,6 +43,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.gatewayId = builder.gatewayId;
+        this.enableAuthoritativeDns = builder.enableAuthoritativeDns;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -51,7 +56,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,6 +76,13 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
     }
 
     /**
+     * @return enableAuthoritativeDns
+     */
+    public Boolean getEnableAuthoritativeDns() {
+        return this.enableAuthoritativeDns;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -87,6 +99,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
     public static final class Builder extends Request.Builder<CreateGatewayIntranetLinkedVpcRequest, Builder> {
         private String clusterId; 
         private String gatewayId; 
+        private Boolean enableAuthoritativeDns; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -98,6 +111,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.gatewayId = request.gatewayId;
+            this.enableAuthoritativeDns = request.enableAuthoritativeDns;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
@@ -125,6 +139,15 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
             this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * EnableAuthoritativeDns.
+         */
+        public Builder enableAuthoritativeDns(Boolean enableAuthoritativeDns) {
+            this.putQueryParameter("EnableAuthoritativeDns", enableAuthoritativeDns);
+            this.enableAuthoritativeDns = enableAuthoritativeDns;
             return this;
         }
 

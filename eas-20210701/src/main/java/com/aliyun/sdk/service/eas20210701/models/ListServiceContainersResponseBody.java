@@ -40,6 +40,10 @@ public class ListServiceContainersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containers
      */
@@ -65,6 +69,15 @@ public class ListServiceContainersResponseBody extends TeaModel {
         private java.util.List<ContainerInfo> containers; 
         private String requestId; 
         private String serviceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceContainersResponseBody model) {
+            this.containers = model.containers;
+            this.requestId = model.requestId;
+            this.serviceName = model.serviceName;
+        } 
 
         /**
          * <p>The containers of the service.</p>

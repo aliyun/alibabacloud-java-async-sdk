@@ -36,6 +36,10 @@ public class ListGatewayIntranetSupportedZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListGatewayIntranetSupportedZoneResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<String> zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGatewayIntranetSupportedZoneResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The request ID.</p>

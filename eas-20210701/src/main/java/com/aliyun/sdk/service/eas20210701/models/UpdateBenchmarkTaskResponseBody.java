@@ -36,6 +36,10 @@ public class UpdateBenchmarkTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -53,6 +57,14 @@ public class UpdateBenchmarkTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateBenchmarkTaskResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned message.</p>

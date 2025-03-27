@@ -48,6 +48,10 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VirtualResources> virtualResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVirtualResourceResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.virtualResources = model.virtualResources;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -227,6 +242,17 @@ public class ListVirtualResourceResponseBody extends TeaModel {
             private String updateTime; 
             private String virtualResourceId; 
             private String virtualResourceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualResources model) {
+                this.createTime = model.createTime;
+                this.serviceCount = model.serviceCount;
+                this.updateTime = model.updateTime;
+                this.virtualResourceId = model.virtualResourceId;
+                this.virtualResourceName = model.virtualResourceName;
+            } 
 
             /**
              * <p>The time when the virtual resource group was created.</p>

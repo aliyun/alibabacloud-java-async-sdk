@@ -36,6 +36,10 @@ public class DescribeServiceSignedUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeServiceSignedUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String signedUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceSignedUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.signedUrl = model.signedUrl;
+        } 
 
         /**
          * <p>Id of the request</p>

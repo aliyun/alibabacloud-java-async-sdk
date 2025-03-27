@@ -60,6 +60,10 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         private String updateTime; 
         private String virtualResourceId; 
         private String virtualResourceName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVirtualResourceResponseBody model) {
+            this.createTime = model.createTime;
+            this.disableSpotProtectionPeriod = model.disableSpotProtectionPeriod;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.serviceCount = model.serviceCount;
+            this.updateTime = model.updateTime;
+            this.virtualResourceId = model.virtualResourceId;
+            this.virtualResourceName = model.virtualResourceName;
+        } 
 
         /**
          * <p>The time when the virtual resource group was created.</p>
@@ -308,6 +326,18 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
             private String region; 
             private String resourceId; 
             private Float spotPriceLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.instanceType = model.instanceType;
+                this.priority = model.priority;
+                this.quotaId = model.quotaId;
+                this.region = model.region;
+                this.resourceId = model.resourceId;
+                this.spotPriceLimit = model.spotPriceLimit;
+            } 
 
             /**
              * <p>The instance type of the public resource group.</p>

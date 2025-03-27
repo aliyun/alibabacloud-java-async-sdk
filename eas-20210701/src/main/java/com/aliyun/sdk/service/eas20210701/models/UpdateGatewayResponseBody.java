@@ -40,6 +40,10 @@ public class UpdateGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayId
      */
@@ -65,6 +69,15 @@ public class UpdateGatewayResponseBody extends TeaModel {
         private String gatewayId; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateGatewayResponseBody model) {
+            this.gatewayId = model.gatewayId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the gateway.</p>

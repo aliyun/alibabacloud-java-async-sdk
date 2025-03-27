@@ -36,6 +36,10 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnosis
      */
@@ -53,6 +57,14 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
     public static final class Builder {
         private Diagnosis diagnosis; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceInstanceDiagnosisResponseBody model) {
+            this.diagnosis = model.diagnosis;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The diagnostics information.</p>
@@ -134,6 +146,15 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             private java.util.List<String> advices; 
             private java.util.List<String> causes; 
             private String error; 
+
+            private Builder() {
+            } 
+
+            private Builder(Diagnosis model) {
+                this.advices = model.advices;
+                this.causes = model.causes;
+                this.error = model.error;
+            } 
 
             /**
              * <p>The solutions to the errors.</p>

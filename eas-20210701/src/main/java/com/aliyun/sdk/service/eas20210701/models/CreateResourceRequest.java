@@ -75,7 +75,7 @@ public class CreateResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -372,6 +372,16 @@ public class CreateResourceRequest extends Request {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeTolerations model) {
+                this.effect = model.effect;
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The result.</p>
              * <p>Valid values:</p>
@@ -501,6 +511,16 @@ public class CreateResourceRequest extends Request {
             private java.util.Map<String, String> nodeMatchLabels; 
             private java.util.List<NodeTolerations> nodeTolerations; 
             private String roleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SelfManagedResourceOptions model) {
+                this.externalClusterId = model.externalClusterId;
+                this.nodeMatchLabels = model.nodeMatchLabels;
+                this.nodeTolerations = model.nodeTolerations;
+                this.roleName = model.roleName;
+            } 
 
             /**
              * <p>The ID of the self-managed cluster.</p>

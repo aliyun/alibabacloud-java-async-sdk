@@ -44,6 +44,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ratio
      */
@@ -77,6 +81,16 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         private String requestId; 
         private String serviceName; 
         private String target; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceMirrorResponseBody model) {
+            this.ratio = model.ratio;
+            this.requestId = model.requestId;
+            this.serviceName = model.serviceName;
+            this.target = model.target;
+        } 
 
         /**
          * <p>The percentage of traffic that you want to mirror. Valid values: 0 to 100.</p>

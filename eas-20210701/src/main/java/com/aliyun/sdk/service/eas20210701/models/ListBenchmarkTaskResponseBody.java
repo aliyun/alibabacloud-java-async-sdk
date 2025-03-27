@@ -48,6 +48,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBenchmarkTaskResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -275,6 +290,21 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.availableAgent = model.availableAgent;
+                this.createTime = model.createTime;
+                this.message = model.message;
+                this.region = model.region;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The number of instances that are available for stress testing.</p>

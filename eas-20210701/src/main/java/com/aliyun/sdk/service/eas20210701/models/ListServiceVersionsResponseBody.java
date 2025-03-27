@@ -48,6 +48,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<Versions> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceVersionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.versions = model.versions;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -239,6 +254,18 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             private String message; 
             private String serviceConfig; 
             private String serviceRunnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.buildTime = model.buildTime;
+                this.imageAvailable = model.imageAvailable;
+                this.imageId = model.imageId;
+                this.message = model.message;
+                this.serviceConfig = model.serviceConfig;
+                this.serviceRunnable = model.serviceRunnable;
+            } 
 
             /**
              * <p>The time when the service version was created. The time is displayed in UTC.</p>

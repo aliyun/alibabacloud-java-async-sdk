@@ -40,6 +40,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceMetas
      */
@@ -66,8 +70,17 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Types> types; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMachineSpecResponseBody model) {
+            this.instanceMetas = model.instanceMetas;
+            this.requestId = model.requestId;
+            this.types = model.types;
+        } 
+
         /**
-         * InstanceMetas.
+         * <p>The instance types when the resources are specified.</p>
          */
         public Builder instanceMetas(java.util.List<InstanceMetas> instanceMetas) {
             this.instanceMetas = instanceMetas;
@@ -75,7 +88,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +99,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Types.
+         * <p>The values that can be supported when the number of CPUs and memory size are specified for deployment.</p>
          */
         public Builder types(java.util.List<Types> types) {
             this.types = types;
@@ -248,8 +264,28 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             private String stockStatus; 
             private String vendor; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceMetas model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUAmount = model.GPUAmount;
+                this.GPUMemory = model.GPUMemory;
+                this.instanceType = model.instanceType;
+                this.isAvailable = model.isAvailable;
+                this.memory = model.memory;
+                this.nonProtectSpotDiscount = model.nonProtectSpotDiscount;
+                this.spotDiscount = model.spotDiscount;
+                this.stockStatus = model.stockStatus;
+                this.vendor = model.vendor;
+            } 
+
             /**
-             * CPU.
+             * <p>The number of CPU cores in the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -257,7 +293,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * GPU.
+             * <p>The GPU type in the instance type. If the instance type is not a GPU-based instance type, this parameter does not exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GU30</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -265,7 +304,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * GPUAmount.
+             * <p>The number of GPUs in the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPUAmount(Integer GPUAmount) {
                 this.GPUAmount = GPUAmount;
@@ -273,7 +315,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * GPUMemory.
+             * <p>The GPU memory in the instance type. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder GPUMemory(Float GPUMemory) {
                 this.GPUMemory = GPUMemory;
@@ -281,7 +326,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ml.gu7i.c32m188.1-gu30</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -289,7 +337,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvailable.
+             * <p>Indicates whether the instance type is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -297,7 +348,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size in the instance type. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -305,7 +359,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * NonProtectSpotDiscount.
+             * <p>The minimum discount that can be accepted when the preemptible instance type does not include a usage duration. 0.1 indicates one fold. If this parameter is not returned, the bidding feature is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder nonProtectSpotDiscount(Float nonProtectSpotDiscount) {
                 this.nonProtectSpotDiscount = nonProtectSpotDiscount;
@@ -313,7 +370,10 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * SpotDiscount.
+             * <p>The minimum discount that can be accepted when the preemptible instance type has the 1-hour protection duration. 0.1 indicates one fold. If this parameter is not returned, the bidding feature is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder spotDiscount(Float spotDiscount) {
                 this.spotDiscount = spotDiscount;
@@ -321,7 +381,16 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * StockStatus.
+             * <p>The inventory status of the instance type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>WithStock</li>
+             * <li>ClosedWithStock</li>
+             * <li>NoStock</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WithStock</p>
              */
             public Builder stockStatus(String stockStatus) {
                 this.stockStatus = stockStatus;
@@ -329,7 +398,16 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>The source of the instance type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ECS</li>
+             * <li>BareMetal</li>
+             * <li>Lingjun</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -387,8 +465,19 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             private Integer CPU; 
             private java.util.List<Integer> memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(Types model) {
+                this.CPU = model.CPU;
+                this.memory = model.memory;
+            } 
+
             /**
-             * CPU.
+             * <p>Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -396,7 +485,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The optional values for memory when CPU is set to a specific value as above.</p>
              */
             public Builder memory(java.util.List<Integer> memory) {
                 this.memory = memory;

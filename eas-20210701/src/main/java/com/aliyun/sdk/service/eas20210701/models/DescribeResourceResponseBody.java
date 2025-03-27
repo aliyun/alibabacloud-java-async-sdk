@@ -108,6 +108,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -269,6 +273,32 @@ public class DescribeResourceResponseBody extends TeaModel {
         private String resourceType; 
         private String status; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.cpuCount = model.cpuCount;
+            this.cpuUsed = model.cpuUsed;
+            this.createTime = model.createTime;
+            this.extraData = model.extraData;
+            this.gpuCount = model.gpuCount;
+            this.gpuUsed = model.gpuUsed;
+            this.instanceCount = model.instanceCount;
+            this.memory = model.memory;
+            this.memoryUsed = model.memoryUsed;
+            this.message = model.message;
+            this.ownerUid = model.ownerUid;
+            this.postPaidInstanceCount = model.postPaidInstanceCount;
+            this.prePaidInstanceCount = model.prePaidInstanceCount;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.resourceName = model.resourceName;
+            this.resourceType = model.resourceType;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The ID of the cluster to which the resource group belongs.</p>

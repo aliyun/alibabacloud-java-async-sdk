@@ -40,6 +40,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayId
      */
@@ -65,6 +69,15 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         private String gatewayId; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteGatewayIntranetLinkedVpcPeerResponseBody model) {
+            this.gatewayId = model.gatewayId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the private gateway.</p>

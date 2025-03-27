@@ -47,7 +47,7 @@ public class DetachGatewayDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -178,6 +178,14 @@ public class DetachGatewayDomainRequest extends Request {
         public static final class Builder {
             private String domain; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomDomain model) {
+                this.domain = model.domain;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The custom domain name.</p>

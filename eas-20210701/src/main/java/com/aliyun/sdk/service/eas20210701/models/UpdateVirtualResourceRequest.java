@@ -56,7 +56,7 @@ public class UpdateVirtualResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -276,6 +276,18 @@ public class UpdateVirtualResourceRequest extends Request {
             private String region; 
             private String resourceId; 
             private Float spotPriceLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.instanceType = model.instanceType;
+                this.priority = model.priority;
+                this.quotaId = model.quotaId;
+                this.region = model.region;
+                this.resourceId = model.resourceId;
+                this.spotPriceLimit = model.spotPriceLimit;
+            } 
 
             /**
              * <p>The instance type of the public resource group.</p>

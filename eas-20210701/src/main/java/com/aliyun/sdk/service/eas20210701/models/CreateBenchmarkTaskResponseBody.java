@@ -44,6 +44,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -77,6 +81,16 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         private String region; 
         private String requestId; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBenchmarkTaskResponseBody model) {
+            this.message = model.message;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The returned message.</p>

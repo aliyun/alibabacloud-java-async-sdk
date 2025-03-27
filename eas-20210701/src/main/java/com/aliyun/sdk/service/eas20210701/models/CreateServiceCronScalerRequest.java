@@ -52,7 +52,7 @@ public class CreateServiceCronScalerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,6 +212,15 @@ public class CreateServiceCronScalerRequest extends Request {
             private String name; 
             private String schedule; 
             private Integer targetSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleJobs model) {
+                this.name = model.name;
+                this.schedule = model.schedule;
+                this.targetSize = model.targetSize;
+            } 
 
             /**
              * <p>The name of the CronHPA job.</p>

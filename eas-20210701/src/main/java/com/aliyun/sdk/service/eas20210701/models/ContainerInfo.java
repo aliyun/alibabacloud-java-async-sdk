@@ -72,6 +72,10 @@ public class ContainerInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentReaon
      */
@@ -161,6 +165,23 @@ public class ContainerInfo extends TeaModel {
         private Integer port; 
         private Boolean ready; 
         private Integer restartCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContainerInfo model) {
+            this.currentReaon = model.currentReaon;
+            this.currentStatus = model.currentStatus;
+            this.currentTimestamp = model.currentTimestamp;
+            this.image = model.image;
+            this.lastReason = model.lastReason;
+            this.lastStatus = model.lastStatus;
+            this.lastTimestamp = model.lastTimestamp;
+            this.name = model.name;
+            this.port = model.port;
+            this.ready = model.ready;
+            this.restartCount = model.restartCount;
+        } 
 
         /**
          * CurrentReaon.

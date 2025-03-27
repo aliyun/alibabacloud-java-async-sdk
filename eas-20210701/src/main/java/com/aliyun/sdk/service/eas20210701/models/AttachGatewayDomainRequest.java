@@ -47,7 +47,7 @@ public class AttachGatewayDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,6 +190,15 @@ public class AttachGatewayDomainRequest extends Request {
             private String certificateId; 
             private String domain; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomDomain model) {
+                this.certificateId = model.certificateId;
+                this.domain = model.domain;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a> console.</p>

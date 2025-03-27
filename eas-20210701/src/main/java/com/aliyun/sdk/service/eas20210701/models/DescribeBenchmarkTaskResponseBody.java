@@ -80,6 +80,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableAgent
      */
@@ -185,6 +189,25 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private String taskId; 
         private String taskName; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBenchmarkTaskResponseBody model) {
+            this.availableAgent = model.availableAgent;
+            this.callerUid = model.callerUid;
+            this.desiredAgent = model.desiredAgent;
+            this.endpoint = model.endpoint;
+            this.message = model.message;
+            this.parentUid = model.parentUid;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.serviceName = model.serviceName;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+            this.token = model.token;
+        } 
 
         /**
          * <p>The number of instances that you can test.</p>

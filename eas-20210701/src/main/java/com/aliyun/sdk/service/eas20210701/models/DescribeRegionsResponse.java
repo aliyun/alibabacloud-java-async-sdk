@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteResourceResponse} extends {@link TeaModel}
+ * {@link DescribeRegionsResponse} extends {@link TeaModel}
  *
- * <p>DeleteResourceResponse</p>
+ * <p>DescribeRegionsResponse</p>
  */
-public class DeleteResourceResponse extends Response {
+public class DescribeRegionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DeleteResourceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteResourceResponseBody body;
+    private DescribeRegionsResponseBody body;
 
-    private DeleteResourceResponse(BuilderImpl builder) {
+    private DescribeRegionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteResourceResponse create() {
+    public static DescribeRegionsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DeleteResourceResponse extends Response {
     /**
      * @return body
      */
-    public DeleteResourceResponseBody getBody() {
+    public DescribeRegionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeRegionsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteResourceResponseBody body);
+        Builder body(DescribeRegionsResponseBody body);
 
         @Override
-        DeleteResourceResponse build();
+        DescribeRegionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteResourceResponse, Builder>
+            extends Response.BuilderImpl<DescribeRegionsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteResourceResponseBody body; 
+        private DescribeRegionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteResourceResponse response) {
+        private BuilderImpl(DescribeRegionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteResourceResponseBody body) {
+        public Builder body(DescribeRegionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteResourceResponse build() {
-            return new DeleteResourceResponse(this);
+        public DescribeRegionsResponse build() {
+            return new DescribeRegionsResponse(this);
         } 
 
     } 

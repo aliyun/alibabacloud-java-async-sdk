@@ -76,6 +76,10 @@ public class ResourceInstanceWorker extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuLimit
      */
@@ -173,6 +177,24 @@ public class ResourceInstanceWorker extends TeaModel {
         private String serviceName; 
         private String startTime; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceInstanceWorker model) {
+            this.cpuLimit = model.cpuLimit;
+            this.cpuRequest = model.cpuRequest;
+            this.gpuLimit = model.gpuLimit;
+            this.gpuRequest = model.gpuRequest;
+            this.memoryLimit = model.memoryLimit;
+            this.memoryRquest = model.memoryRquest;
+            this.name = model.name;
+            this.ready = model.ready;
+            this.restartCount = model.restartCount;
+            this.serviceName = model.serviceName;
+            this.startTime = model.startTime;
+            this.status = model.status;
+        } 
 
         /**
          * CpuLimit.

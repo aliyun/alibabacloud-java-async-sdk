@@ -58,6 +58,10 @@ public class ListServicesRequest extends Request {
     private String resourceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
@@ -97,6 +101,7 @@ public class ListServicesRequest extends Request {
         this.parentServiceUid = builder.parentServiceUid;
         this.quotaId = builder.quotaId;
         this.resourceName = builder.resourceName;
+        this.resourceType = builder.resourceType;
         this.role = builder.role;
         this.serviceName = builder.serviceName;
         this.serviceStatus = builder.serviceStatus;
@@ -114,7 +119,7 @@ public class ListServicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,6 +195,13 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return role
      */
     public String getRole() {
@@ -249,6 +261,7 @@ public class ListServicesRequest extends Request {
         private String parentServiceUid; 
         private String quotaId; 
         private String resourceName; 
+        private String resourceType; 
         private String role; 
         private String serviceName; 
         private String serviceStatus; 
@@ -273,6 +286,7 @@ public class ListServicesRequest extends Request {
             this.parentServiceUid = request.parentServiceUid;
             this.quotaId = request.quotaId;
             this.resourceName = request.resourceName;
+            this.resourceType = request.resourceType;
             this.role = request.role;
             this.serviceName = request.serviceName;
             this.serviceStatus = request.serviceStatus;
@@ -401,6 +415,15 @@ public class ListServicesRequest extends Request {
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
             this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

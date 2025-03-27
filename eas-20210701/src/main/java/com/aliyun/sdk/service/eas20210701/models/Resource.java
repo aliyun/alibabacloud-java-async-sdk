@@ -88,6 +88,10 @@ public class Resource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -209,6 +213,27 @@ public class Resource extends TeaModel {
         private String status; 
         private String updateTime; 
         private String vendor; 
+
+        private Builder() {
+        } 
+
+        private Builder(Resource model) {
+            this.clusterId = model.clusterId;
+            this.cpuCount = model.cpuCount;
+            this.createTime = model.createTime;
+            this.extraData = model.extraData;
+            this.gpuCount = model.gpuCount;
+            this.instanceCount = model.instanceCount;
+            this.message = model.message;
+            this.postPaidInstanceCount = model.postPaidInstanceCount;
+            this.prePaidInstanceCount = model.prePaidInstanceCount;
+            this.resourceId = model.resourceId;
+            this.resourceName = model.resourceName;
+            this.resourceType = model.resourceType;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+            this.vendor = model.vendor;
+        } 
 
         /**
          * ClusterId.
