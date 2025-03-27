@@ -48,6 +48,10 @@ public class QueryIndividuationTextTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class QueryIndividuationTextTaskResponseBody extends TeaModel {
         private Integer status; 
         private java.util.List<TextList> textList; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryIndividuationTextTaskResponseBody model) {
+            this.createTime = model.createTime;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.textList = model.textList;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * createTime.
@@ -194,6 +209,15 @@ public class QueryIndividuationTextTaskResponseBody extends TeaModel {
             private Integer status; 
             private String textId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextList model) {
+                this.status = model.status;
+                this.textId = model.textId;
+                this.userId = model.userId;
+            } 
 
             /**
              * status.

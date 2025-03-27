@@ -91,6 +91,10 @@ public class TextTaskCreateCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentId
      */
@@ -212,6 +216,27 @@ public class TextTaskCreateCmd extends TeaModel {
         private String textModeType; 
         private String theme; 
         private java.util.List<String> themes; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextTaskCreateCmd model) {
+            this.agentId = model.agentId;
+            this.contentRequirement = model.contentRequirement;
+            this.idempotentId = model.idempotentId;
+            this.industry = model.industry;
+            this.introduction = model.introduction;
+            this.number = model.number;
+            this.point = model.point;
+            this.referenceTag = model.referenceTag;
+            this.relatedRagIds = model.relatedRagIds;
+            this.streamApi = model.streamApi;
+            this.style = model.style;
+            this.target = model.target;
+            this.textModeType = model.textModeType;
+            this.theme = model.theme;
+            this.themes = model.themes;
+        } 
 
         /**
          * agentId.

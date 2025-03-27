@@ -36,6 +36,10 @@ public class GetTextTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableIndustry
      */
@@ -53,6 +57,14 @@ public class GetTextTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private AvailableIndustry availableIndustry; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTextTemplateResponseBody model) {
+            this.availableIndustry = model.availableIndustry;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * availableIndustry.
@@ -144,6 +156,16 @@ public class GetTextTemplateResponseBody extends TeaModel {
             private String name; 
             private String templateKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextStyles model) {
+                this.desc = model.desc;
+                this.disabled = model.disabled;
+                this.name = model.name;
+                this.templateKey = model.templateKey;
+            } 
+
             /**
              * desc.
              */
@@ -227,6 +249,14 @@ public class GetTextTemplateResponseBody extends TeaModel {
             private String name; 
             private java.util.List<TextStyles> textStyles; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextModeTypes model) {
+                this.name = model.name;
+                this.textStyles = model.textStyles;
+            } 
+
             /**
              * name.
              */
@@ -293,6 +323,14 @@ public class GetTextTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private java.util.List<TextModeTypes> textModeTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableIndustry model) {
+                this.name = model.name;
+                this.textModeTypes = model.textModeTypes;
+            } 
 
             /**
              * name.

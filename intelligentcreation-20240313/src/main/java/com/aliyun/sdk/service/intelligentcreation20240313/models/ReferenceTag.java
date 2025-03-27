@@ -36,6 +36,10 @@ public class ReferenceTag extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return referenceContent
      */
@@ -53,6 +57,14 @@ public class ReferenceTag extends TeaModel {
     public static final class Builder {
         private String referenceContent; 
         private String referenceTitle; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReferenceTag model) {
+            this.referenceContent = model.referenceContent;
+            this.referenceTitle = model.referenceTitle;
+        } 
 
         /**
          * referenceContent.

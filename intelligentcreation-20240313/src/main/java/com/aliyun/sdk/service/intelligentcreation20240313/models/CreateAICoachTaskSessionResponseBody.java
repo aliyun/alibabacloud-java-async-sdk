@@ -56,6 +56,10 @@ public class CreateAICoachTaskSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelToken
      */
@@ -113,6 +117,19 @@ public class CreateAICoachTaskSessionResponseBody extends TeaModel {
         private Long sessionStatus; 
         private String token; 
         private String webSocketUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAICoachTaskSessionResponseBody model) {
+            this.channelToken = model.channelToken;
+            this.requestId = model.requestId;
+            this.scriptInfo = model.scriptInfo;
+            this.sessionId = model.sessionId;
+            this.sessionStatus = model.sessionStatus;
+            this.token = model.token;
+            this.webSocketUrl = model.webSocketUrl;
+        } 
 
         /**
          * <p>rtctoken</p>
@@ -381,6 +398,27 @@ public class CreateAICoachTaskSessionResponseBody extends TeaModel {
             private String sparringTipTitle; 
             private Boolean studentThinkTimeFlag; 
             private Long studentThinkTimeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptInfo model) {
+                this.agentIconUrl = model.agentIconUrl;
+                this.characterName = model.characterName;
+                this.dialogueTextFlag = model.dialogueTextFlag;
+                this.dialogueTipFlag = model.dialogueTipFlag;
+                this.initiator = model.initiator;
+                this.inputTypeList = model.inputTypeList;
+                this.maxDuration = model.maxDuration;
+                this.scriptDesc = model.scriptDesc;
+                this.scriptName = model.scriptName;
+                this.scriptRecordId = model.scriptRecordId;
+                this.scriptType = model.scriptType;
+                this.sparringTipContent = model.sparringTipContent;
+                this.sparringTipTitle = model.sparringTipTitle;
+                this.studentThinkTimeFlag = model.studentThinkTimeFlag;
+                this.studentThinkTimeLimit = model.studentThinkTimeLimit;
+            } 
 
             /**
              * agentIconUrl.

@@ -41,6 +41,10 @@ public class KnowledgeBaseListResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return knowledgeBases
      */
@@ -66,6 +70,15 @@ public class KnowledgeBaseListResult extends TeaModel {
         private java.util.List<KnowledgeBaseInfo> knowledgeBases; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(KnowledgeBaseListResult model) {
+            this.knowledgeBases = model.knowledgeBases;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * knowledgeBases.

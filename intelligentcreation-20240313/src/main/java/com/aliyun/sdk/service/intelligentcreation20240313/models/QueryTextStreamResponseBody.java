@@ -44,6 +44,10 @@ public class QueryTextStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -77,6 +81,16 @@ public class QueryTextStreamResponseBody extends TeaModel {
         private Integer index; 
         private String message; 
         private Integer type; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTextStreamResponseBody model) {
+            this.end = model.end;
+            this.index = model.index;
+            this.message = model.message;
+            this.type = model.type;
+        } 
 
         /**
          * end.

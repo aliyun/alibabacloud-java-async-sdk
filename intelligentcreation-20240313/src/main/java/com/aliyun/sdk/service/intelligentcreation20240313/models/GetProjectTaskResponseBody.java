@@ -52,6 +52,10 @@ public class GetProjectTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMsg
      */
@@ -101,6 +105,18 @@ public class GetProjectTaskResponseBody extends TeaModel {
         private String videoDownloadUrl; 
         private Integer videoDuration; 
         private String videoUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectTaskResponseBody model) {
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.videoDownloadUrl = model.videoDownloadUrl;
+            this.videoDuration = model.videoDuration;
+            this.videoUrl = model.videoUrl;
+        } 
 
         /**
          * errorMsg.

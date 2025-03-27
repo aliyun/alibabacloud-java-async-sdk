@@ -36,6 +36,10 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryResourceInfoList
      */
@@ -53,6 +57,14 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<QueryResourceInfoList> queryResourceInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAvatarResourceResponseBody model) {
+            this.queryResourceInfoList = model.queryResourceInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * queryResourceInfoList.
@@ -131,6 +143,15 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
             private String resourceId; 
             private String type; 
             private String validPeriodTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryResourceInfoList model) {
+                this.resourceId = model.resourceId;
+                this.type = model.type;
+                this.validPeriodTime = model.validPeriodTime;
+            } 
 
             /**
              * resourceId.

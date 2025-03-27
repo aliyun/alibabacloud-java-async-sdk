@@ -36,6 +36,10 @@ public class SelectResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SelectResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResourceInfoList> resourceInfoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(SelectResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceInfoList = model.resourceInfoList;
+        } 
 
         /**
          * requestId.
@@ -155,6 +167,17 @@ public class SelectResourceResponseBody extends TeaModel {
             private Integer remainCount; 
             private Integer resourceType; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceInfoList model) {
+                this.expireTime = model.expireTime;
+                this.lastExpire = model.lastExpire;
+                this.remainCount = model.remainCount;
+                this.resourceType = model.resourceType;
+                this.unit = model.unit;
+            } 
 
             /**
              * expireTime.

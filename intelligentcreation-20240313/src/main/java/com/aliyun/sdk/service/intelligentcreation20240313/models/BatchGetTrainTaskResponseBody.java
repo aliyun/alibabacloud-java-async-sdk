@@ -36,6 +36,10 @@ public class BatchGetTrainTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchGetTrainTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VoiceList> voiceList; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetTrainTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.voiceList = model.voiceList;
+        } 
 
         /**
          * requestId.
@@ -131,6 +143,15 @@ public class BatchGetTrainTaskResponseBody extends TeaModel {
             private Long voiceId; 
             private String voiceLanguage; 
             private String voiceUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceMaterial model) {
+                this.voiceId = model.voiceId;
+                this.voiceLanguage = model.voiceLanguage;
+                this.voiceUrl = model.voiceUrl;
+            } 
 
             /**
              * voiceId.
@@ -338,6 +359,25 @@ public class BatchGetTrainTaskResponseBody extends TeaModel {
             private String trainStatus; 
             private String useScene; 
             private VoiceMaterial voiceMaterial; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceList model) {
+                this.aliyunSubId = model.aliyunSubId;
+                this.auditFailMessage = model.auditFailMessage;
+                this.auditStatus = model.auditStatus;
+                this.createTime = model.createTime;
+                this.gender = model.gender;
+                this.name = model.name;
+                this.resSpecType = model.resSpecType;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.trainFailMessage = model.trainFailMessage;
+                this.trainStatus = model.trainStatus;
+                this.useScene = model.useScene;
+                this.voiceMaterial = model.voiceMaterial;
+            } 
 
             /**
              * aliyunSubId.

@@ -56,6 +56,10 @@ public class InteractTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return end
      */
@@ -113,6 +117,19 @@ public class InteractTextResponseBody extends TeaModel {
         private java.util.List<String> relatedVideos; 
         private String sessionId; 
         private Integer type; 
+
+        private Builder() {
+        } 
+
+        private Builder(InteractTextResponseBody model) {
+            this.end = model.end;
+            this.index = model.index;
+            this.message = model.message;
+            this.relatedImages = model.relatedImages;
+            this.relatedVideos = model.relatedVideos;
+            this.sessionId = model.sessionId;
+            this.type = model.type;
+        } 
 
         /**
          * end.

@@ -36,6 +36,10 @@ public class BatchQueryIndividuationTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchQueryIndividuationTextResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TextList> textList; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchQueryIndividuationTextResponseBody model) {
+            this.requestId = model.requestId;
+            this.textList = model.textList;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -218,6 +230,22 @@ public class BatchQueryIndividuationTextResponseBody extends TeaModel {
             private String textId; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextList model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.errorMsg = model.errorMsg;
+                this.itemId = model.itemId;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.textId = model.textId;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * content.

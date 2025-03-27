@@ -60,6 +60,10 @@ public class IllustrationTaskCreateCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backgroundType
      */
@@ -125,6 +129,20 @@ public class IllustrationTaskCreateCmd extends TeaModel {
         private Integer nums; 
         private java.util.List<String> ossPaths; 
         private String stickerText; 
+
+        private Builder() {
+        } 
+
+        private Builder(IllustrationTaskCreateCmd model) {
+            this.backgroundType = model.backgroundType;
+            this.dstHeight = model.dstHeight;
+            this.dstWidth = model.dstWidth;
+            this.idempotentId = model.idempotentId;
+            this.imageUrls = model.imageUrls;
+            this.nums = model.nums;
+            this.ossPaths = model.ossPaths;
+            this.stickerText = model.stickerText;
+        } 
 
         /**
          * backgroundType.

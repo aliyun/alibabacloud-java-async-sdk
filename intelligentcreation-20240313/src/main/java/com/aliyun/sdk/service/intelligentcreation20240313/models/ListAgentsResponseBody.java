@@ -44,6 +44,10 @@ public class ListAgentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -77,6 +81,16 @@ public class ListAgentsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentsResponseBody model) {
+            this.list = model.list;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * list.
@@ -279,6 +293,24 @@ public class ListAgentsResponseBody extends TeaModel {
             private Integer status; 
             private String textStyle; 
             private String viewer; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.agentScene = model.agentScene;
+                this.charactersDescription = model.charactersDescription;
+                this.enableInteraction = model.enableInteraction;
+                this.industry = model.industry;
+                this.onlineSearch = model.onlineSearch;
+                this.owner = model.owner;
+                this.referenceUrl = model.referenceUrl;
+                this.status = model.status;
+                this.textStyle = model.textStyle;
+                this.viewer = model.viewer;
+            } 
 
             /**
              * agentId.

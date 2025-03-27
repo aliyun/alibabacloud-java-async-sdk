@@ -36,6 +36,10 @@ public class CountTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CountTextResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<CountTextCmdList> countTextCmdList; 
+
+        private Builder() {
+        } 
+
+        private Builder(CountTextResponseBody model) {
+            this.requestId = model.requestId;
+            this.countTextCmdList = model.countTextCmdList;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class CountTextResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String theme; 
+
+            private Builder() {
+            } 
+
+            private Builder(CountTextCmdList model) {
+                this.count = model.count;
+                this.theme = model.theme;
+            } 
 
             /**
              * count.

@@ -36,6 +36,10 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TaskList> taskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetVideoClipTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskList = model.taskList;
+        } 
 
         /**
          * requestId.
@@ -191,6 +203,20 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
             private String videoDownloadUrl; 
             private String videoName; 
             private String videoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoList model) {
+                this.beginTime = model.beginTime;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.errorMsg = model.errorMsg;
+                this.title = model.title;
+                this.videoDownloadUrl = model.videoDownloadUrl;
+                this.videoName = model.videoName;
+                this.videoUrl = model.videoUrl;
+            } 
 
             /**
              * beginTime.
@@ -342,6 +368,17 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
             private Double totalDuration; 
             private Long totalToken; 
             private java.util.List<VideoList> videoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.totalDuration = model.totalDuration;
+                this.totalToken = model.totalToken;
+                this.videoList = model.videoList;
+            } 
 
             /**
              * status.

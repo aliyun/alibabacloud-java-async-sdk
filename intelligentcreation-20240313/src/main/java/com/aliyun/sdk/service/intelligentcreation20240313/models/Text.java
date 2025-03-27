@@ -110,6 +110,10 @@ public class Text extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentId
      */
@@ -263,6 +267,31 @@ public class Text extends TeaModel {
         private String title; 
         private String userNameCreate; 
         private String userNameModified; 
+
+        private Builder() {
+        } 
+
+        private Builder(Text model) {
+            this.agentId = model.agentId;
+            this.agentName = model.agentName;
+            this.desc = model.desc;
+            this.errMsg = model.errMsg;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.illustrationTaskIdList = model.illustrationTaskIdList;
+            this.publishStatus = model.publishStatus;
+            this.textContent = model.textContent;
+            this.textId = model.textId;
+            this.textIllustrationTag = model.textIllustrationTag;
+            this.textModeType = model.textModeType;
+            this.textStatus = model.textStatus;
+            this.textStyleType = model.textStyleType;
+            this.textTaskId = model.textTaskId;
+            this.textThemes = model.textThemes;
+            this.title = model.title;
+            this.userNameCreate = model.userNameCreate;
+            this.userNameModified = model.userNameModified;
+        } 
 
         /**
          * agentId.

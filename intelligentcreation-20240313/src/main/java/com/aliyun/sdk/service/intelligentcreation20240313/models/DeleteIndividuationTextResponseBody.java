@@ -40,6 +40,10 @@ public class DeleteIndividuationTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desc
      */
@@ -65,6 +69,15 @@ public class DeleteIndividuationTextResponseBody extends TeaModel {
         private String desc; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteIndividuationTextResponseBody model) {
+            this.desc = model.desc;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * desc.

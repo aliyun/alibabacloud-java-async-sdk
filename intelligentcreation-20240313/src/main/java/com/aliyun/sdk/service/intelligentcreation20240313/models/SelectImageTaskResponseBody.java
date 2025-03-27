@@ -72,6 +72,10 @@ public class SelectImageTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMessage
      */
@@ -161,6 +165,23 @@ public class SelectImageTaskResponseBody extends TeaModel {
         private String subtaskProcessing; 
         private String success; 
         private String total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SelectImageTaskResponseBody model) {
+            this.errorMessage = model.errorMessage;
+            this.failed = model.failed;
+            this.generationSource = model.generationSource;
+            this.gmtCreate = model.gmtCreate;
+            this.imageInfos = model.imageInfos;
+            this.requestId = model.requestId;
+            this.scene = model.scene;
+            this.status = model.status;
+            this.subtaskProcessing = model.subtaskProcessing;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorMessage.
@@ -326,6 +347,16 @@ public class SelectImageTaskResponseBody extends TeaModel {
             private String gmtCreate; 
             private String imageH; 
             private String imageW; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageInfos model) {
+                this.customImageUrl = model.customImageUrl;
+                this.gmtCreate = model.gmtCreate;
+                this.imageH = model.imageH;
+                this.imageW = model.imageW;
+            } 
 
             /**
              * customImageUrl.

@@ -43,6 +43,10 @@ public class AddDocumentInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return documentType
      */
@@ -68,6 +72,15 @@ public class AddDocumentInfo extends TeaModel {
         private String documentType; 
         private String name; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDocumentInfo model) {
+            this.documentType = model.documentType;
+            this.name = model.name;
+            this.url = model.url;
+        } 
 
         /**
          * <p>This parameter is required.</p>

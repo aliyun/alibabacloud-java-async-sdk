@@ -52,6 +52,10 @@ public class IllustrationTask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreate
      */
@@ -101,6 +105,18 @@ public class IllustrationTask extends TeaModel {
         private Long illustrationTaskId; 
         private String taskStatus; 
         private Long textId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IllustrationTask model) {
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.illustrationIds = model.illustrationIds;
+            this.illustrationTaskId = model.illustrationTaskId;
+            this.taskStatus = model.taskStatus;
+            this.textId = model.textId;
+        } 
 
         /**
          * gmtCreate.

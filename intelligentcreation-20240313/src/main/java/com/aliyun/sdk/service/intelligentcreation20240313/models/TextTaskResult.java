@@ -32,6 +32,10 @@ public class TextTaskResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return textTask
      */
@@ -41,6 +45,13 @@ public class TextTaskResult extends TeaModel {
 
     public static final class Builder {
         private TextTask textTask; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextTaskResult model) {
+            this.textTask = model.textTask;
+        } 
 
         /**
          * textTask.

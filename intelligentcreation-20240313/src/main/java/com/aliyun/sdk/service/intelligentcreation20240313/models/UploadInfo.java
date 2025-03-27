@@ -57,6 +57,10 @@ public class UploadInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessId
      */
@@ -106,6 +110,18 @@ public class UploadInfo extends TeaModel {
         private String policy; 
         private String policySignature; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadInfo model) {
+            this.accessId = model.accessId;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.policySignature = model.policySignature;
+            this.url = model.url;
+        } 
 
         /**
          * <p>This parameter is required.</p>

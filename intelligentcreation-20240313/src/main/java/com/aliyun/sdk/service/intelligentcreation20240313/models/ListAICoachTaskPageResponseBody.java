@@ -36,6 +36,10 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TaskList> taskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAICoachTaskPageResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskList = model.taskList;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -146,6 +158,16 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
             private String status; 
             private String studentId; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.finishTime = model.finishTime;
+                this.status = model.status;
+                this.studentId = model.studentId;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * finishTime.

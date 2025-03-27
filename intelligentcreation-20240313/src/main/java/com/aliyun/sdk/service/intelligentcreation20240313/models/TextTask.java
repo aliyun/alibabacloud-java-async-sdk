@@ -107,6 +107,10 @@ public class TextTask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentId
      */
@@ -260,6 +264,31 @@ public class TextTask extends TeaModel {
         private java.util.List<Text> texts; 
         private String theme; 
         private String themeDesc; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextTask model) {
+            this.agentId = model.agentId;
+            this.agentName = model.agentName;
+            this.contentRequirement = model.contentRequirement;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.introduction = model.introduction;
+            this.nums = model.nums;
+            this.point = model.point;
+            this.referenceTag = model.referenceTag;
+            this.relatedRagIds = model.relatedRagIds;
+            this.style = model.style;
+            this.target = model.target;
+            this.textIds = model.textIds;
+            this.textModeType = model.textModeType;
+            this.textTaskId = model.textTaskId;
+            this.textTaskStatus = model.textTaskStatus;
+            this.texts = model.texts;
+            this.theme = model.theme;
+            this.themeDesc = model.themeDesc;
+        } 
 
         /**
          * agentId.

@@ -40,6 +40,10 @@ public class QuerySessionInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryResourceInfoList
      */
@@ -65,6 +69,15 @@ public class QuerySessionInfoResponseBody extends TeaModel {
         private java.util.List<QueryResourceInfoList> queryResourceInfoList; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySessionInfoResponseBody model) {
+            this.queryResourceInfoList = model.queryResourceInfoList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * queryResourceInfoList.
@@ -139,6 +152,14 @@ public class QuerySessionInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String sessionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryResourceInfoList model) {
+                this.sessionId = model.sessionId;
+                this.status = model.status;
+            } 
 
             /**
              * sessionId.

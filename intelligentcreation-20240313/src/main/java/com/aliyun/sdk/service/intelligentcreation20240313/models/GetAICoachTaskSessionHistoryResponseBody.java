@@ -68,6 +68,10 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conversationList
      */
@@ -149,6 +153,22 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         private String status; 
         private Integer total; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAICoachTaskSessionHistoryResponseBody model) {
+            this.conversationList = model.conversationList;
+            this.duration = model.duration;
+            this.endTime = model.endTime;
+            this.pauseDuration = model.pauseDuration;
+            this.requestId = model.requestId;
+            this.scriptName = model.scriptName;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.total = model.total;
+            this.uid = model.uid;
+        } 
 
         /**
          * conversationList.
@@ -327,6 +347,18 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
             private String message; 
             private String recordId; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConversationList model) {
+                this.audioUrl = model.audioUrl;
+                this.evaluationFeedback = model.evaluationFeedback;
+                this.evaluationResult = model.evaluationResult;
+                this.message = model.message;
+                this.recordId = model.recordId;
+                this.role = model.role;
+            } 
 
             /**
              * audioUrl.

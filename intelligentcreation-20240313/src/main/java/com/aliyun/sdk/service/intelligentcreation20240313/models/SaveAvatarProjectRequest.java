@@ -84,7 +84,7 @@ public class SaveAvatarProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -360,6 +360,15 @@ public class SaveAvatarProjectRequest extends Request {
             private String id; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Material model) {
+                this.format = model.format;
+                this.id = model.id;
+                this.url = model.url;
+            } 
+
             /**
              * format.
              */
@@ -482,6 +491,18 @@ public class SaveAvatarProjectRequest extends Request {
             private Integer positionY; 
             private String type; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layers model) {
+                this.height = model.height;
+                this.material = model.material;
+                this.positionX = model.positionX;
+                this.positionY = model.positionY;
+                this.type = model.type;
+                this.width = model.width;
+            } 
 
             /**
              * height.
@@ -606,6 +627,16 @@ public class SaveAvatarProjectRequest extends Request {
             private String voiceTemplateId; 
             private String volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoScript model) {
+                this.speedRate = model.speedRate;
+                this.voiceLanguage = model.voiceLanguage;
+                this.voiceTemplateId = model.voiceTemplateId;
+                this.volume = model.volume;
+            } 
+
             /**
              * speedRate.
              */
@@ -688,6 +719,14 @@ public class SaveAvatarProjectRequest extends Request {
         public static final class Builder {
             private java.util.List<Layers> layers; 
             private VideoScript videoScript; 
+
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.layers = model.layers;
+                this.videoScript = model.videoScript;
+            } 
 
             /**
              * layers.

@@ -36,6 +36,10 @@ public class CreateIndividuationProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectId
      */
@@ -53,6 +57,14 @@ public class CreateIndividuationProjectResponseBody extends TeaModel {
     public static final class Builder {
         private String projectId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIndividuationProjectResponseBody model) {
+            this.projectId = model.projectId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * projectId.

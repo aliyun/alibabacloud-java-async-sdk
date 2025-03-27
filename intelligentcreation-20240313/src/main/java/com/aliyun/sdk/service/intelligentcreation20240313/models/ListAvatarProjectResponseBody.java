@@ -36,6 +36,10 @@ public class ListAvatarProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queryAvatarProjectResultList
      */
@@ -53,6 +57,14 @@ public class ListAvatarProjectResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<QueryAvatarProjectResultList> queryAvatarProjectResultList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvatarProjectResponseBody model) {
+            this.queryAvatarProjectResultList = model.queryAvatarProjectResultList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * queryAvatarProjectResultList.
@@ -155,6 +167,17 @@ public class ListAvatarProjectResponseBody extends TeaModel {
             private String projectId; 
             private String projectName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryAvatarProjectResultList model) {
+                this.agentId = model.agentId;
+                this.errorMsg = model.errorMsg;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.status = model.status;
+            } 
 
             /**
              * agentId.

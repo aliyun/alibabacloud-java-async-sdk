@@ -37,6 +37,10 @@ public class BatchAddDocumentResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addDocumentResults
      */
@@ -54,6 +58,14 @@ public class BatchAddDocumentResult extends TeaModel {
     public static final class Builder {
         private java.util.List<AddDocumentResult> addDocumentResults; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchAddDocumentResult model) {
+            this.addDocumentResults = model.addDocumentResults;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

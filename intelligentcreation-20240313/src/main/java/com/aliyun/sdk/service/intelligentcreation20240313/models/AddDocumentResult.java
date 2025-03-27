@@ -44,6 +44,10 @@ public class AddDocumentResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return docName
      */
@@ -77,6 +81,16 @@ public class AddDocumentResult extends TeaModel {
         private DocumentInfo documentInfo; 
         private String errorMessage; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDocumentResult model) {
+            this.docName = model.docName;
+            this.documentInfo = model.documentInfo;
+            this.errorMessage = model.errorMessage;
+            this.success = model.success;
+        } 
 
         /**
          * docName.

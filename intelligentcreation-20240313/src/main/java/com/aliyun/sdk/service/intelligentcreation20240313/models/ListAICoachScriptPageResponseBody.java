@@ -52,6 +52,10 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -101,6 +105,18 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAICoachScriptPageResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.list = model.list;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+        } 
 
         /**
          * errorCode.
@@ -215,6 +231,15 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private Integer duration; 
             private Boolean fullCoverageAutoEnd; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompleteStrategy model) {
+                this.clickCompleteAutoEnd = model.clickCompleteAutoEnd;
+                this.duration = model.duration;
+                this.fullCoverageAutoEnd = model.fullCoverageAutoEnd;
+            } 
+
             /**
              * clickCompleteAutoEnd.
              */
@@ -290,6 +315,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private String message; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(SampleDialogueList model) {
+                this.message = model.message;
+                this.role = model.role;
+            } 
+
             /**
              * message.
              */
@@ -356,6 +389,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
             private Integer passScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScoreConfig model) {
+                this.enabled = model.enabled;
+                this.passScore = model.passScore;
+            } 
 
             /**
              * enabled.
@@ -483,6 +524,19 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private Boolean pointDeductionRuleEnabled; 
             private Integer standard; 
             private Boolean standardEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Weights model) {
+                this.assessmentPoint = model.assessmentPoint;
+                this.expressiveness = model.expressiveness;
+                this.expressivenessEnabled = model.expressivenessEnabled;
+                this.pointDeductionRule = model.pointDeductionRule;
+                this.pointDeductionRuleEnabled = model.pointDeductionRuleEnabled;
+                this.standard = model.standard;
+                this.standardEnabled = model.standardEnabled;
+            } 
 
             /**
              * assessmentPoint.
@@ -854,6 +908,36 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private Boolean studentThinkTimeFlag; 
             private Integer type; 
             private Weights weights; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.appendQuestionFlag = model.appendQuestionFlag;
+                this.assessmentScope = model.assessmentScope;
+                this.completeStrategy = model.completeStrategy;
+                this.coverUrl = model.coverUrl;
+                this.dialogueTextFlag = model.dialogueTextFlag;
+                this.dialogueTipFlag = model.dialogueTipFlag;
+                this.evaluateReportFlag = model.evaluateReportFlag;
+                this.expressiveness = model.expressiveness;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.initiator = model.initiator;
+                this.interactionType = model.interactionType;
+                this.introduce = model.introduce;
+                this.name = model.name;
+                this.orderAckFlag = model.orderAckFlag;
+                this.sampleDialogueList = model.sampleDialogueList;
+                this.scoreConfig = model.scoreConfig;
+                this.scriptRecordId = model.scriptRecordId;
+                this.sparringTipContent = model.sparringTipContent;
+                this.sparringTipTitle = model.sparringTipTitle;
+                this.status = model.status;
+                this.studentThinkTimeFlag = model.studentThinkTimeFlag;
+                this.type = model.type;
+                this.weights = model.weights;
+            } 
 
             /**
              * appendQuestionFlag.

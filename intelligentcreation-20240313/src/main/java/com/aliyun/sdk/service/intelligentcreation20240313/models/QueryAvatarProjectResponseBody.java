@@ -60,6 +60,10 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentId
      */
@@ -125,6 +129,20 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         private String resSpecType; 
         private String scaleType; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAvatarProjectResponseBody model) {
+            this.agentId = model.agentId;
+            this.errorMsg = model.errorMsg;
+            this.frames = model.frames;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.resSpecType = model.resSpecType;
+            this.scaleType = model.scaleType;
+            this.status = model.status;
+        } 
 
         /**
          * agentId.
@@ -252,6 +270,15 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             private String id; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Material model) {
+                this.format = model.format;
+                this.id = model.id;
+                this.url = model.url;
+            } 
+
             /**
              * format.
              */
@@ -375,6 +402,18 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             private String type; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Layers model) {
+                this.height = model.height;
+                this.material = model.material;
+                this.positionX = model.positionX;
+                this.positionY = model.positionY;
+                this.type = model.type;
+                this.width = model.width;
+            } 
+
             /**
              * height.
              */
@@ -474,6 +513,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             private String speedRate; 
             private String voiceTemplateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoScript model) {
+                this.speedRate = model.speedRate;
+                this.voiceTemplateId = model.voiceTemplateId;
+            } 
+
             /**
              * speedRate.
              */
@@ -540,6 +587,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Layers> layers; 
             private VideoScript videoScript; 
+
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.layers = model.layers;
+                this.videoScript = model.videoScript;
+            } 
 
             /**
              * layers.

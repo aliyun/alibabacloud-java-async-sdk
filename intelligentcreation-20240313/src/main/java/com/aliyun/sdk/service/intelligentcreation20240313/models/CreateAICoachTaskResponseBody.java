@@ -48,6 +48,10 @@ public class CreateAICoachTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateAICoachTaskResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAICoachTaskResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * errorCode.

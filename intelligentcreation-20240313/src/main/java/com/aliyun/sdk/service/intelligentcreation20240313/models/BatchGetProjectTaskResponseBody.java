@@ -36,6 +36,10 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResultList> resultList; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetProjectTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultList = model.resultList;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -170,6 +182,18 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
             private String videoDownloadUrl; 
             private Integer videoDuration; 
             private String videoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.errorMsg = model.errorMsg;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.videoDownloadUrl = model.videoDownloadUrl;
+                this.videoDuration = model.videoDuration;
+                this.videoUrl = model.videoUrl;
+            } 
 
             /**
              * errorMsg.

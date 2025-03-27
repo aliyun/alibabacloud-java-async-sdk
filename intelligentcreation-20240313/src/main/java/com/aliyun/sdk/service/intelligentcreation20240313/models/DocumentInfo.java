@@ -44,6 +44,10 @@ public class DocumentInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return documentType
      */
@@ -77,6 +81,16 @@ public class DocumentInfo extends TeaModel {
         private String id; 
         private String name; 
         private String processStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DocumentInfo model) {
+            this.documentType = model.documentType;
+            this.id = model.id;
+            this.name = model.name;
+            this.processStatus = model.processStatus;
+        } 
 
         /**
          * documentType.

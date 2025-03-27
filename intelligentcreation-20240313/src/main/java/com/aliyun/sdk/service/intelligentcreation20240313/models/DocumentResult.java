@@ -36,6 +36,10 @@ public class DocumentResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return documentInfo
      */
@@ -53,6 +57,14 @@ public class DocumentResult extends TeaModel {
     public static final class Builder {
         private DocumentInfo documentInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DocumentResult model) {
+            this.documentInfo = model.documentInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * documentInfo.

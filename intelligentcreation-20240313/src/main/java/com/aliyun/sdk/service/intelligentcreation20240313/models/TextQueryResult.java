@@ -40,6 +40,10 @@ public class TextQueryResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class TextQueryResult extends TeaModel {
         private String requestId; 
         private java.util.List<Text> texts; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextQueryResult model) {
+            this.requestId = model.requestId;
+            this.texts = model.texts;
+            this.total = model.total;
+        } 
 
         /**
          * requestId.

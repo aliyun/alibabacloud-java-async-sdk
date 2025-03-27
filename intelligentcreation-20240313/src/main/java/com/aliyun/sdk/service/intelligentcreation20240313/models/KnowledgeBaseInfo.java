@@ -48,6 +48,10 @@ public class KnowledgeBaseInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -89,6 +93,17 @@ public class KnowledgeBaseInfo extends TeaModel {
         private String industry; 
         private String knowledgeBaseType; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(KnowledgeBaseInfo model) {
+            this.description = model.description;
+            this.id = model.id;
+            this.industry = model.industry;
+            this.knowledgeBaseType = model.knowledgeBaseType;
+            this.name = model.name;
+        } 
 
         /**
          * description.

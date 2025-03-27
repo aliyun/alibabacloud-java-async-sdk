@@ -37,6 +37,10 @@ public class GetOssUploadTokenResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class GetOssUploadTokenResult extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UploadInfo uploadInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssUploadTokenResult model) {
+            this.requestId = model.requestId;
+            this.uploadInfo = model.uploadInfo;
+        } 
 
         /**
          * requestId.

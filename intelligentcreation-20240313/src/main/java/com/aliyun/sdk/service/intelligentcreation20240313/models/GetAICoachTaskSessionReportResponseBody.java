@@ -68,6 +68,10 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return duration
      */
@@ -149,6 +153,22 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
         private String startTime; 
         private String status; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAICoachTaskSessionReportResponseBody model) {
+            this.duration = model.duration;
+            this.endTime = model.endTime;
+            this.evaluationRating = model.evaluationRating;
+            this.evaluationResult = model.evaluationResult;
+            this.feedback = model.feedback;
+            this.requestId = model.requestId;
+            this.scriptName = model.scriptName;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.uid = model.uid;
+        } 
 
         /**
          * duration.

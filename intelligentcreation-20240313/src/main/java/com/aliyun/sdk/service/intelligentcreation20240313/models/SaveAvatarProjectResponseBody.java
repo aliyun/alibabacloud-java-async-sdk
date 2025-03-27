@@ -60,6 +60,10 @@ public class SaveAvatarProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentId
      */
@@ -125,6 +129,20 @@ public class SaveAvatarProjectResponseBody extends TeaModel {
         private String projectName; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveAvatarProjectResponseBody model) {
+            this.agentId = model.agentId;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.errorMsg = model.errorMsg;
+            this.projectId = model.projectId;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * agentId.

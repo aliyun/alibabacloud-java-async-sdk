@@ -49,7 +49,7 @@ public class SubmitProjectTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,6 +235,18 @@ public class SubmitProjectTaskRequest extends Request {
             private String url; 
             private Integer volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(Material model) {
+                this.anchorStyleLevel = model.anchorStyleLevel;
+                this.format = model.format;
+                this.id = model.id;
+                this.speed = model.speed;
+                this.url = model.url;
+                this.volume = model.volume;
+            } 
+
             /**
              * anchorStyleLevel.
              */
@@ -393,6 +405,19 @@ public class SubmitProjectTaskRequest extends Request {
             private Integer positionY; 
             private String type; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layers model) {
+                this.height = model.height;
+                this.index = model.index;
+                this.material = model.material;
+                this.positionX = model.positionX;
+                this.positionY = model.positionY;
+                this.type = model.type;
+                this.width = model.width;
+            } 
 
             /**
              * height.
@@ -596,6 +621,22 @@ public class SubmitProjectTaskRequest extends Request {
             private Integer positionY; 
             private Integer textHeight; 
             private Integer textWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subtitle model) {
+                this.alignment = model.alignment;
+                this.backgroundColor = model.backgroundColor;
+                this.font = model.font;
+                this.fontColor = model.fontColor;
+                this.fontSize = model.fontSize;
+                this.maxCharLength = model.maxCharLength;
+                this.positionX = model.positionX;
+                this.positionY = model.positionY;
+                this.textHeight = model.textHeight;
+                this.textWidth = model.textWidth;
+            } 
 
             /**
              * alignment.
@@ -824,6 +865,22 @@ public class SubmitProjectTaskRequest extends Request {
             private Long voiceTemplateId; 
             private Integer volume; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoScript model) {
+                this.audioUrl = model.audioUrl;
+                this.emotion = model.emotion;
+                this.pitchRate = model.pitchRate;
+                this.speechOpen = model.speechOpen;
+                this.speedRate = model.speedRate;
+                this.textContent = model.textContent;
+                this.type = model.type;
+                this.voiceLanguage = model.voiceLanguage;
+                this.voiceTemplateId = model.voiceTemplateId;
+                this.volume = model.volume;
+            } 
+
             /**
              * audioUrl.
              */
@@ -978,6 +1035,16 @@ public class SubmitProjectTaskRequest extends Request {
             private java.util.List<Layers> layers; 
             private Subtitle subtitle; 
             private VideoScript videoScript; 
+
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.index = model.index;
+                this.layers = model.layers;
+                this.subtitle = model.subtitle;
+                this.videoScript = model.videoScript;
+            } 
 
             /**
              * index.

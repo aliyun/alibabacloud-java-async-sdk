@@ -144,6 +144,10 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assessmentScope
      */
@@ -377,6 +381,41 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Integer studentThinkTimeLimit; 
         private Integer type; 
         private Weights weights; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAICoachScriptResponseBody model) {
+            this.assessmentScope = model.assessmentScope;
+            this.completeStrategy = model.completeStrategy;
+            this.coverUrl = model.coverUrl;
+            this.dialogueInputTextLimit = model.dialogueInputTextLimit;
+            this.dialogueTextFlag = model.dialogueTextFlag;
+            this.dialogueTipFlag = model.dialogueTipFlag;
+            this.dialogueVoiceLimit = model.dialogueVoiceLimit;
+            this.evaluateReportFlag = model.evaluateReportFlag;
+            this.expressiveness = model.expressiveness;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.initiator = model.initiator;
+            this.interactionInputTypes = model.interactionInputTypes;
+            this.interactionType = model.interactionType;
+            this.introduce = model.introduce;
+            this.name = model.name;
+            this.orderAckFlag = model.orderAckFlag;
+            this.pointDeductionRuleList = model.pointDeductionRuleList;
+            this.points = model.points;
+            this.requestId = model.requestId;
+            this.sampleDialogueList = model.sampleDialogueList;
+            this.scriptRecordId = model.scriptRecordId;
+            this.sparringTipContent = model.sparringTipContent;
+            this.sparringTipTitle = model.sparringTipTitle;
+            this.status = model.status;
+            this.studentThinkTimeFlag = model.studentThinkTimeFlag;
+            this.studentThinkTimeLimit = model.studentThinkTimeLimit;
+            this.type = model.type;
+            this.weights = model.weights;
+        } 
 
         /**
          * assessmentScope.
@@ -708,6 +747,18 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private Boolean durationFlag; 
             private Boolean fullCoverageAutoEnd; 
 
+            private Builder() {
+            } 
+
+            private Builder(CompleteStrategy model) {
+                this.abnormalQuitSessionExpired = model.abnormalQuitSessionExpired;
+                this.abnormalQuitSessionExpiredFlag = model.abnormalQuitSessionExpiredFlag;
+                this.clickCompleteAutoEnd = model.clickCompleteAutoEnd;
+                this.duration = model.duration;
+                this.durationFlag = model.durationFlag;
+                this.fullCoverageAutoEnd = model.fullCoverageAutoEnd;
+            } 
+
             /**
              * abnormalQuitSessionExpired.
              */
@@ -831,6 +882,16 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private String ruleValue; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(PointDeductionRuleList model) {
+                this.description = model.description;
+                this.punishmentTypes = model.punishmentTypes;
+                this.ruleValue = model.ruleValue;
+                this.weight = model.weight;
+            } 
+
             /**
              * description.
              */
@@ -865,6 +926,273 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
             public PointDeductionRuleList build() {
                 return new PointDeductionRuleList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class KeywordValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("weight")
+        private Integer weight;
+
+        private KeywordValues(Builder builder) {
+            this.name = builder.name;
+            this.weight = builder.weight;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KeywordValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeywordValues model) {
+                this.name = model.name;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            public KeywordValues build() {
+                return new KeywordValues(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class ScoringRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private ScoringRules(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScoringRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScoringRules model) {
+                this.name = model.name;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ScoringRules build() {
+                return new ScoringRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class AnswerValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("answerName")
+        private String answerName;
+
+        @com.aliyun.core.annotation.NameInMap("answerWeight")
+        private Integer answerWeight;
+
+        @com.aliyun.core.annotation.NameInMap("keywordValues")
+        private java.util.List<KeywordValues> keywordValues;
+
+        @com.aliyun.core.annotation.NameInMap("keywordWeight")
+        private Integer keywordWeight;
+
+        @com.aliyun.core.annotation.NameInMap("scoringRules")
+        private java.util.List<ScoringRules> scoringRules;
+
+        private AnswerValues(Builder builder) {
+            this.answerName = builder.answerName;
+            this.answerWeight = builder.answerWeight;
+            this.keywordValues = builder.keywordValues;
+            this.keywordWeight = builder.keywordWeight;
+            this.scoringRules = builder.scoringRules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AnswerValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return answerName
+         */
+        public String getAnswerName() {
+            return this.answerName;
+        }
+
+        /**
+         * @return answerWeight
+         */
+        public Integer getAnswerWeight() {
+            return this.answerWeight;
+        }
+
+        /**
+         * @return keywordValues
+         */
+        public java.util.List<KeywordValues> getKeywordValues() {
+            return this.keywordValues;
+        }
+
+        /**
+         * @return keywordWeight
+         */
+        public Integer getKeywordWeight() {
+            return this.keywordWeight;
+        }
+
+        /**
+         * @return scoringRules
+         */
+        public java.util.List<ScoringRules> getScoringRules() {
+            return this.scoringRules;
+        }
+
+        public static final class Builder {
+            private String answerName; 
+            private Integer answerWeight; 
+            private java.util.List<KeywordValues> keywordValues; 
+            private Integer keywordWeight; 
+            private java.util.List<ScoringRules> scoringRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnswerValues model) {
+                this.answerName = model.answerName;
+                this.answerWeight = model.answerWeight;
+                this.keywordValues = model.keywordValues;
+                this.keywordWeight = model.keywordWeight;
+                this.scoringRules = model.scoringRules;
+            } 
+
+            /**
+             * answerName.
+             */
+            public Builder answerName(String answerName) {
+                this.answerName = answerName;
+                return this;
+            }
+
+            /**
+             * answerWeight.
+             */
+            public Builder answerWeight(Integer answerWeight) {
+                this.answerWeight = answerWeight;
+                return this;
+            }
+
+            /**
+             * keywordValues.
+             */
+            public Builder keywordValues(java.util.List<KeywordValues> keywordValues) {
+                this.keywordValues = keywordValues;
+                return this;
+            }
+
+            /**
+             * keywordWeight.
+             */
+            public Builder keywordWeight(Integer keywordWeight) {
+                this.keywordWeight = keywordWeight;
+                return this;
+            }
+
+            /**
+             * scoringRules.
+             */
+            public Builder scoringRules(java.util.List<ScoringRules> scoringRules) {
+                this.scoringRules = scoringRules;
+                return this;
+            }
+
+            public AnswerValues build() {
+                return new AnswerValues(this);
             } 
 
         } 
@@ -914,6 +1242,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * name.
              */
@@ -944,6 +1280,12 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      * <p>GetAICoachScriptResponseBody</p>
      */
     public static class AnswerList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("answerValues")
+        private java.util.List<AnswerValues> answerValues;
+
+        @com.aliyun.core.annotation.NameInMap("enabledKeyword")
+        private Boolean enabledKeyword;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -963,6 +1305,8 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Integer weight;
 
         private AnswerList(Builder builder) {
+            this.answerValues = builder.answerValues;
+            this.enabledKeyword = builder.enabledKeyword;
             this.name = builder.name;
             this.nameList = builder.nameList;
             this.operators = builder.operators;
@@ -977,6 +1321,20 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
         public static AnswerList create() {
             return builder().build();
+        }
+
+        /**
+         * @return answerValues
+         */
+        public java.util.List<AnswerValues> getAnswerValues() {
+            return this.answerValues;
+        }
+
+        /**
+         * @return enabledKeyword
+         */
+        public Boolean getEnabledKeyword() {
+            return this.enabledKeyword;
         }
 
         /**
@@ -1022,12 +1380,44 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AnswerValues> answerValues; 
+            private Boolean enabledKeyword; 
             private String name; 
             private java.util.List<String> nameList; 
             private String operators; 
             private java.util.List<Parameters> parameters; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnswerList model) {
+                this.answerValues = model.answerValues;
+                this.enabledKeyword = model.enabledKeyword;
+                this.name = model.name;
+                this.nameList = model.nameList;
+                this.operators = model.operators;
+                this.parameters = model.parameters;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * answerValues.
+             */
+            public Builder answerValues(java.util.List<AnswerValues> answerValues) {
+                this.answerValues = answerValues;
+                return this;
+            }
+
+            /**
+             * enabledKeyword.
+             */
+            public Builder enabledKeyword(Boolean enabledKeyword) {
+                this.enabledKeyword = enabledKeyword;
+                return this;
+            }
 
             /**
              * name.
@@ -1188,6 +1578,19 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private Integer sortNo; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Points model) {
+                this.answerList = model.answerList;
+                this.knowledgeList = model.knowledgeList;
+                this.name = model.name;
+                this.pointId = model.pointId;
+                this.questionDescription = model.questionDescription;
+                this.sortNo = model.sortNo;
+                this.weight = model.weight;
+            } 
+
             /**
              * answerList.
              */
@@ -1294,6 +1697,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         public static final class Builder {
             private String message; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(SampleDialogueList model) {
+                this.message = model.message;
+                this.role = model.role;
+            } 
 
             /**
              * message.
@@ -1445,6 +1856,21 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private Boolean pointDeductionRuleEnabled; 
             private Integer standard; 
             private Boolean standardEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Weights model) {
+                this.abilityEvaluation = model.abilityEvaluation;
+                this.abilityEvaluationEnabled = model.abilityEvaluationEnabled;
+                this.assessmentPoint = model.assessmentPoint;
+                this.expressiveness = model.expressiveness;
+                this.expressivenessEnabled = model.expressivenessEnabled;
+                this.pointDeductionRule = model.pointDeductionRule;
+                this.pointDeductionRuleEnabled = model.pointDeductionRuleEnabled;
+                this.standard = model.standard;
+                this.standardEnabled = model.standardEnabled;
+            } 
 
             /**
              * abilityEvaluation.

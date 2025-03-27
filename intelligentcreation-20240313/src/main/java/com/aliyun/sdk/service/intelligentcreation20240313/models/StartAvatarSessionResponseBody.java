@@ -48,6 +48,10 @@ public class StartAvatarSessionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channelToken
      */
@@ -89,6 +93,17 @@ public class StartAvatarSessionResponseBody extends TeaModel {
         private String sessionId; 
         private String token; 
         private String webSocketUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartAvatarSessionResponseBody model) {
+            this.channelToken = model.channelToken;
+            this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
+            this.token = model.token;
+            this.webSocketUrl = model.webSocketUrl;
+        } 
 
         /**
          * channelToken.

@@ -36,6 +36,10 @@ public class IllustrationTaskResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return illustrationTask
      */
@@ -53,6 +57,14 @@ public class IllustrationTaskResult extends TeaModel {
     public static final class Builder {
         private IllustrationTask illustrationTask; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IllustrationTaskResult model) {
+            this.illustrationTask = model.illustrationTask;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * illustrationTask.

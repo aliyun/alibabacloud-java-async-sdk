@@ -37,6 +37,10 @@ public class TextThemeListResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class TextThemeListResult extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TextTheme> textThemeList; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextThemeListResult model) {
+            this.requestId = model.requestId;
+            this.textThemeList = model.textThemeList;
+        } 
 
         /**
          * requestId.

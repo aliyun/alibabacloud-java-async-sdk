@@ -36,6 +36,10 @@ public class TextTheme extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desc
      */
@@ -53,6 +57,14 @@ public class TextTheme extends TeaModel {
     public static final class Builder {
         private String desc; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextTheme model) {
+            this.desc = model.desc;
+            this.name = model.name;
+        } 
 
         /**
          * desc.
