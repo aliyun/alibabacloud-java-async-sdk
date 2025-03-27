@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDdosCreditRequest} extends {@link RequestModel}
  *
  * <p>DescribeDdosCreditRequest</p>
@@ -29,7 +35,7 @@ public class DescribeDdosCreditRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,10 +60,14 @@ public class DescribeDdosCreditRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);

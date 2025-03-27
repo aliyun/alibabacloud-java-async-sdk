@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceIpAddressRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceIpAddressRequest</p>
@@ -66,7 +72,7 @@ public class DescribeInstanceIpAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,10 @@ public class DescribeInstanceIpAddressRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -163,10 +172,14 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The region ID of the asset.
-         * <p>
+         * <p>The region ID of the asset.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -175,11 +188,14 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The DDoS mitigation status of the asset. Valid values:
-         * <p>
+         * <p>The DDoS mitigation status of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</li>
+         * <li><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</li>
+         * </ul>
          * 
-         * *   **defense**: queries assets for which traffic scrubbing is performed.
-         * *   **blackhole**: queries assets for which blackhole filtering is triggered.
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder ddosStatus(String ddosStatus) {
             this.putQueryParameter("DdosStatus", ddosStatus);
@@ -188,7 +204,10 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the asset is added.
+         * <p>The ID of the instance to which the asset is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cb6x80tfgocid****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,7 +216,10 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The IP address of the asset.
+         * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder instanceIp(String instanceIp) {
             this.putQueryParameter("InstanceIp", instanceIp);
@@ -206,7 +228,10 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The name of the asset.
+         * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>launch-advisor-2021****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -215,12 +240,20 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The type of the asset. Valid values:
-         * <p>
+         * <p>The type of the asset that is assigned a public IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: ECS instances.</li>
+         * <li><strong>slb</strong>: SLB instances.</li>
+         * <li><strong>eip</strong>: EIPs.</li>
+         * <li><strong>ipv6</strong>: IPv6 gateways.</li>
+         * <li><strong>swas</strong>: simple application servers.</li>
+         * <li><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</li>
+         * <li><strong>ga_basic</strong>: Global Accelerator (GA) instances.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ecs**: ECS instance
-         * *   **slb**: SLB instance
-         * *   **eip**: EIP
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -229,7 +262,10 @@ public class DescribeInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

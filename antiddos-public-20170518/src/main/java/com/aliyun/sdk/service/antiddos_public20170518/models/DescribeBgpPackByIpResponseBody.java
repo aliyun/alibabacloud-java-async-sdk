@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBgpPackByIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBgpPackByIpResponseBody</p>
@@ -36,6 +42,10 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
 
     public static DescribeBgpPackByIpResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,11 +82,22 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBgpPackByIpResponseBody model) {
+            this.code = model.code;
+            this.ddosbgpInfo = model.ddosbgpInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code of the request.
-         * <p>
+         * <p>The HTTP status code of the request.</p>
+         * <p>For more information about status codes, see <a href="https://help.aliyun.com/document_detail/118841.html">Common parameters</a>.</p>
          * 
-         * For more information about status codes, see [Common parameters](~~118841~~).
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -84,7 +105,7 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the instance that is associated with the asset.
+         * <p>The configurations of the instance that is associated with the asset.</p>
          */
         public Builder ddosbgpInfo(DdosbgpInfo ddosbgpInfo) {
             this.ddosbgpInfo = ddosbgpInfo;
@@ -92,7 +113,10 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E46A08E4-A1CD-5BE9-B580-C4D6E9BC5484</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,11 +124,14 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,6 +144,12 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBgpPackByIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBgpPackByIpResponseBody</p>
+     */
     public static class DdosbgpInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaseThreshold")
         private Integer baseThreshold;
@@ -191,8 +224,22 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
             private Long expireTime; 
             private String ip; 
 
+            private Builder() {
+            } 
+
+            private Builder(DdosbgpInfo model) {
+                this.baseThreshold = model.baseThreshold;
+                this.ddosbgpInstanceId = model.ddosbgpInstanceId;
+                this.elasticThreshold = model.elasticThreshold;
+                this.expireTime = model.expireTime;
+                this.ip = model.ip;
+            } 
+
             /**
-             * The basic protection threshold of the instance. Unit: Gbit/s.
+             * <p>The basic protection threshold of the instance. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder baseThreshold(Integer baseThreshold) {
                 this.baseThreshold = baseThreshold;
@@ -200,7 +247,10 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-n6w1r7nz****</p>
              */
             public Builder ddosbgpInstanceId(String ddosbgpInstanceId) {
                 this.ddosbgpInstanceId = ddosbgpInstanceId;
@@ -208,7 +258,10 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable protection threshold of the instance. Unit: Gbit/s.
+             * <p>The burstable protection threshold of the instance. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder elasticThreshold(Integer elasticThreshold) {
                 this.elasticThreshold = elasticThreshold;
@@ -216,7 +269,10 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640448000000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -224,7 +280,10 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the asset.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>118.31.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;

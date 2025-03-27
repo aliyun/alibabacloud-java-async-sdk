@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIpDefenseThresholdRequest} extends {@link RequestModel}
  *
  * <p>ModifyIpDefenseThresholdRequest</p>
@@ -62,7 +68,7 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,13 +147,16 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         } 
 
         /**
-         * Specifies the traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset.
-         * <p>
+         * <p>The traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset. When you modify Bps, Pps is required. Otherwise, Bps does not take effect.</p>
+         * <p>You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:</p>
+         * <ul>
+         * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
+         * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
+         * <li>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
+         * </ul>
          * 
-         * You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:
-         * 
-         * *   For more information about how to query the Internet traffic of an ECS instance, see [Query monitoring information of an instance](~~25482~~).
-         * *   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](~~85982~~).
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bps(Integer bps) {
             this.putQueryParameter("Bps", bps);
@@ -156,10 +165,14 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         }
 
         /**
-         * The region ID of the asset.
-         * <p>
+         * <p>The region ID of the asset.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -168,10 +181,14 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         }
 
         /**
-         * The ID of the asset.
-         * <p>
+         * <p>The ID of the asset.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstance](~~354191~~) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>i-uf6idy3c57psf7vu****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -180,12 +197,20 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         }
 
         /**
-         * The type of the asset. Valid values:
-         * <p>
+         * <p>The type of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>slb</strong>: a Server Load Balancer (SLB) instance.</li>
+         * <li><strong>eip</strong>: an elastic IP address (EIP).</li>
+         * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
+         * <li><strong>swas</strong>: a simple application server.</li>
+         * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
+         * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ecs**: ECS instance
-         * *   **slb**: SLB instance
-         * *   **eip**: EIP
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -194,7 +219,11 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         }
 
         /**
-         * The IP address of the asset.
+         * <p>The IP address of the asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -203,11 +232,14 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: automatically adjusts the scrubbing threshold. You do not need to configure the <strong>Bps</strong> and <strong>Pps</strong> parameters.</li>
+         * <li><strong>false</strong>: The scrubbing threshold is not automatically adjusted. You must configure the <strong>Bps</strong> and <strong>Pps</strong> parameters. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: automatically adjusts the scrubbing threshold. You do not need to configure the **Bps** and **Pps** parameters.
-         * *   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isAuto(Boolean isAuto) {
             this.putQueryParameter("IsAuto", isAuto);
@@ -216,13 +248,16 @@ public class ModifyIpDefenseThresholdRequest extends Request {
         }
 
         /**
-         * Specifies the packet scrubbing threshold. Unit: packets per second (pps).
-         * <p>
+         * <p>The packet scrubbing threshold. Unit: packets per second (PPS). When you modify Pps, Bps is required. Otherwise, Pps does not take effect.</p>
+         * <p>The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:</p>
+         * <ul>
+         * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
+         * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
+         * <li>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
+         * </ul>
          * 
-         * The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:
-         * 
-         * *   For more information about how to query the number of packets of an ECS instance, see [Query monitoring information of an instance](~~25482~~).
-         * *   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](~~85982~~).
+         * <strong>example:</strong>
+         * <p>70000</p>
          */
         public Builder pps(Integer pps) {
             this.putQueryParameter("Pps", pps);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpDdosThresholdResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpDdosThresholdResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
         private String requestId; 
         private Threshold threshold; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpDdosThresholdResponseBody model) {
+            this.requestId = model.requestId;
+            this.threshold = model.threshold;
+        } 
+
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>025F1688-680B-551A-9A8E-1A0D796315CF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the threshold.
+         * <p>An array that consists of the details of the threshold.</p>
          */
         public Builder threshold(Threshold threshold) {
             this.threshold = threshold;
@@ -70,6 +91,12 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpDdosThresholdResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpDdosThresholdResponseBody</p>
+     */
     public static class Threshold extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bps")
         private Integer bps;
@@ -192,11 +219,27 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             private Integer maxPps; 
             private Integer pps; 
 
+            private Builder() {
+            } 
+
+            private Builder(Threshold model) {
+                this.bps = model.bps;
+                this.ddosType = model.ddosType;
+                this.elasticBps = model.elasticBps;
+                this.instanceId = model.instanceId;
+                this.internetIp = model.internetIp;
+                this.isAuto = model.isAuto;
+                this.maxBps = model.maxBps;
+                this.maxPps = model.maxPps;
+                this.pps = model.pps;
+            } 
+
             /**
-             * If the value of the **DdosType** parameter is **defense**, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.
-             * <p>
+             * <p>If the value of the <strong>DdosType</strong> parameter is <strong>defense</strong>, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.</p>
+             * <p>If the value of the <strong>DdosType</strong> parameter is <strong>blackhole</strong>, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.</p>
              * 
-             * If the value of the **DdosType** parameter is **blackhole**, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.
+             * <strong>example:</strong>
+             * <p>7500</p>
              */
             public Builder bps(Integer bps) {
                 this.bps = bps;
@@ -204,11 +247,14 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the threshold. Valid values:
-             * <p>
+             * <p>The type of the threshold. Valid values:</p>
+             * <ul>
+             * <li><strong>defense</strong>: traffic scrubbing threshold</li>
+             * <li><strong>blackhole</strong>: DDoS mitigation threshold</li>
+             * </ul>
              * 
-             * *   **defense**: traffic scrubbing threshold
-             * *   **blackhole**: DDoS mitigation threshold
+             * <strong>example:</strong>
+             * <p>defense</p>
              */
             public Builder ddosType(String ddosType) {
                 this.ddosType = ddosType;
@@ -216,10 +262,13 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.
-             * <p>
+             * <p>The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when the value of the <strong>DdosType</strong> parameter is <strong>blackhole</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.
+             * <strong>example:</strong>
+             * <p>12310</p>
              */
             public Builder elasticBps(Integer elasticBps) {
                 this.elasticBps = elasticBps;
@@ -227,7 +276,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1i88rqjza51s****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -235,7 +287,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the asset.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -243,11 +298,14 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the threshold is automatically adjusted. Valid values:
-             * <p>
+             * <p>Indicates whether the threshold is automatically adjusted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</li>
+             * <li><strong>false</strong>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</li>
+             * </ul>
              * 
-             * *   **true**: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.
-             * *   **false**: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isAuto(Boolean isAuto) {
                 this.isAuto = isAuto;
@@ -255,7 +313,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum traffic scrubbing threshold. Unit: Mbit/s.
+             * <p>The maximum traffic scrubbing threshold. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7500</p>
              */
             public Builder maxBps(Integer maxBps) {
                 this.maxBps = maxBps;
@@ -263,7 +324,10 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum packet scrubbing threshold. Unit: pps.
+             * <p>The maximum packet scrubbing threshold. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000000</p>
              */
             public Builder maxPps(Integer maxPps) {
                 this.maxPps = maxPps;
@@ -271,10 +335,13 @@ public class DescribeIpDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * The packet scrubbing threshold. Unit: packets per second (pps).
-             * <p>
+             * <p>The packet scrubbing threshold. Unit: packets per second (pps).</p>
+             * <blockquote>
+             * <p>This parameter is returned only when the value of the <strong>DdosType</strong> parameter is <strong>defense</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when the value of the **DdosType** parameter is **defense**.
+             * <strong>example:</strong>
+             * <p>5000000</p>
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpLocationServiceRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpLocationServiceRequest</p>
@@ -29,7 +35,7 @@ public class DescribeIpLocationServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,11 @@ public class DescribeIpLocationServiceRequest extends Request {
         } 
 
         /**
-         * The IP address of the asset to query.
+         * <p>The IP address of the asset to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.199.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpLocationServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpLocationServiceResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -48,8 +58,16 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
         private Instance instance; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpLocationServiceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the asset.
+         * <p>The details of the asset.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -57,7 +75,10 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C728D7E9-9A39-52E0-966B-5C33118BDBB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpLocationServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpLocationServiceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -144,8 +171,22 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             private String internetIp; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.internetIp = model.internetIp;
+                this.region = model.region;
+            } 
+
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1cb6x80tfgocid****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -153,7 +194,10 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>launch-advisor-2021****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -161,12 +205,19 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong>: an ECS instance.</li>
+             * <li><strong>slb</strong>: an SLB instance.</li>
+             * <li><strong>eip</strong>: an EIP.</li>
+             * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
+             * <li><strong>swas</strong>: a simple application server.</li>
+             * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
+             * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+             * </ul>
              * 
-             * *   ecs: ECS instance
-             * *   slb: SLB instance
-             * *   EIP: EIP
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -174,7 +225,10 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the asset.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.199.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -182,7 +236,10 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the public IP address of the asset belongs.
+             * <p>The region to which the public IP address of the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

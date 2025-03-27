@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDdosCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeDdosCountRequest</p>
@@ -35,7 +41,7 @@ public class DescribeDdosCountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,10 +75,14 @@ public class DescribeDdosCountRequest extends Request {
         } 
 
         /**
-         * The region ID of the asset to query.
-         * <p>
+         * <p>The region ID of the asset to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -81,12 +91,20 @@ public class DescribeDdosCountRequest extends Request {
         }
 
         /**
-         * The type of the asset to query. Valid values:
-         * <p>
+         * <p>The type of the asset to query. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instances.</li>
+         * <li><strong>slb</strong>: Server Load Balancer (SLB) instances.</li>
+         * <li><strong>eip</strong>: elastic IP addresses (EIPs).</li>
+         * <li><strong>ipv6</strong>: IPv6 gateways.</li>
+         * <li><strong>swas</strong>: simple application servers.</li>
+         * <li><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</li>
+         * <li><strong>ga_basic</strong>: Global Accelerator (GA) instances.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ecs**: ECS instance
-         * *   **slb**: SLB instance
-         * *   **eip**: EIP
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

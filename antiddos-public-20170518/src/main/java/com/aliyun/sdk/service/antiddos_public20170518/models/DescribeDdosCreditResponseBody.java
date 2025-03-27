@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDdosCreditResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDdosCreditResponseBody</p>
@@ -34,6 +40,10 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ddosCredit
      */
@@ -60,8 +70,17 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDdosCreditResponseBody model) {
+            this.ddosCredit = model.ddosCredit;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The details of the security credit score of the current Alibaba Cloud account in the specified region.
+         * <p>The details of the security credit score of the current Alibaba Cloud account in the specified region.</p>
          */
         public Builder ddosCredit(DdosCredit ddosCredit) {
             this.ddosCredit = ddosCredit;
@@ -69,7 +88,10 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1F7BD73-8E9D-58D9-8658-CFC97112C641</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +99,14 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +119,12 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDdosCreditResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDdosCreditResponseBody</p>
+     */
     public static class DdosCredit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackholeTime")
         private Integer blackholeTime;
@@ -144,8 +175,20 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
             private Integer score; 
             private String scoreLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(DdosCredit model) {
+                this.blackholeTime = model.blackholeTime;
+                this.score = model.score;
+                this.scoreLevel = model.scoreLevel;
+            } 
+
             /**
-             * The time period after which blackhole filtering is automatically deactivated in the specified region. Unit: minutes.
+             * <p>The time period after which blackhole filtering is automatically deactivated in the specified region. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder blackholeTime(Integer blackholeTime) {
                 this.blackholeTime = blackholeTime;
@@ -153,7 +196,10 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
             }
 
             /**
-             * The security credit score. The full score is **1000**.
+             * <p>The security credit score. The full score is <strong>1000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -161,15 +207,18 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
             }
 
             /**
-             * The security credit level. Valid values:
-             * <p>
+             * <p>The security credit level. Valid values:</p>
+             * <ul>
+             * <li><strong>A</strong>: outstanding</li>
+             * <li><strong>B</strong>: excellent</li>
+             * <li><strong>C</strong>: good</li>
+             * <li><strong>D</strong>: average</li>
+             * <li><strong>E</strong>: poor</li>
+             * <li><strong>F</strong>: poorer</li>
+             * </ul>
              * 
-             * *   **A**: outstanding
-             * *   **B**: excellent
-             * *   **C**: good
-             * *   **D**: average
-             * *   **E**: poor
-             * *   **F**: poorer
+             * <strong>example:</strong>
+             * <p>D</p>
              */
             public Builder scoreLevel(String scoreLevel) {
                 this.scoreLevel = scoreLevel;

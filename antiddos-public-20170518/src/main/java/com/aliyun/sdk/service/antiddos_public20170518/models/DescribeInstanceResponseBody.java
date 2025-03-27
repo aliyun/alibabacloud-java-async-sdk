@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
@@ -34,6 +40,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceList
      */
@@ -60,8 +70,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.instanceList = model.instanceList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * An array that consists of the details of the asset.
+         * <p>The details of the assets.</p>
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -69,7 +88,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C728D7E9-9A39-52E0-966B-5C33118BDBB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +99,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the assets.
+         * <p>The total number of the assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -90,6 +115,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackholeThreshold")
         private Integer blackholeThreshold;
@@ -236,8 +267,28 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String ipVersion; 
             private Boolean isBgppack; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.blackholeThreshold = model.blackholeThreshold;
+                this.defenseBpsThreshold = model.defenseBpsThreshold;
+                this.defensePpsThreshold = model.defensePpsThreshold;
+                this.elasticThreshold = model.elasticThreshold;
+                this.instanceId = model.instanceId;
+                this.instanceIp = model.instanceIp;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceType = model.instanceType;
+                this.ipVersion = model.ipVersion;
+                this.isBgppack = model.isBgppack;
+            } 
+
             /**
-             * The basic protection threshold for the asset. Unit: Mbit/s.
+             * <p>The basic protection threshold for the asset. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5200</p>
              */
             public Builder blackholeThreshold(Integer blackholeThreshold) {
                 this.blackholeThreshold = blackholeThreshold;
@@ -245,7 +296,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic scrubbing threshold for the asset. Unit: Mbit/s.
+             * <p>The traffic scrubbing threshold for the asset. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder defenseBpsThreshold(Integer defenseBpsThreshold) {
                 this.defenseBpsThreshold = defenseBpsThreshold;
@@ -253,7 +307,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The packet scrubbing threshold for the asset. Unit: packets per second (pps).
+             * <p>The packet scrubbing threshold for the asset. Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70000</p>
              */
             public Builder defensePpsThreshold(Integer defensePpsThreshold) {
                 this.defensePpsThreshold = defensePpsThreshold;
@@ -261,7 +318,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable protection threshold for the asset. Unit: Mbit/s.
+             * <p>The burstable protection threshold for the asset. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12310</p>
              */
             public Builder elasticThreshold(Integer elasticThreshold) {
                 this.elasticThreshold = elasticThreshold;
@@ -269,7 +329,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1cb6x80tfgocid****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -277,7 +340,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the asset.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.199.XX.XX</p>
              */
             public Builder instanceIp(String instanceIp) {
                 this.instanceIp = instanceIp;
@@ -285,7 +351,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>launch-advisor-2021****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -293,12 +362,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The DDoS mitigation status of the asset. Valid values:
-             * <p>
+             * <p>The DDoS mitigation status of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>mitigating</strong>: indicates that traffic scrubbing is triggered for the asset.</li>
+             * <li><strong>blackholed</strong>: indicates that blackhole filtering is triggered for the asset.</li>
+             * <li><strong>normal</strong>: indicates that the instance is normal.</li>
+             * </ul>
              * 
-             * *   **mitigating**: indicates that traffic scrubbing is triggered for the asset.
-             * *   **blackholed**: indicates that blackhole filtering is triggered for the asset.
-             * *   **normal**: indicates that the instance is normal.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -306,12 +378,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset.</p>
              * 
-             * *   **ecs**: ECS instance
-             * *   **slb**: SLB instance
-             * *   **eip**: EIP
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -319,11 +389,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP protocol that is supported by the asset. Valid values:
-             * <p>
+             * <p>The IP protocol that is supported by the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>v4</strong>: IPv4</li>
+             * <li><strong>v6</strong>: IPv6</li>
+             * </ul>
              * 
-             * *   **v4**: IPv4
-             * *   **v6**: IPv6
+             * <strong>example:</strong>
+             * <p>v4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -331,11 +404,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asset is associated with an Anti-DDoS Origin Basic instance. Valid values:
-             * <p>
+             * <p>Indicates whether the asset is associated with an Anti-DDoS Origin Basic instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isBgppack(Boolean isBgppack) {
                 this.isBgppack = isBgppack;
@@ -349,9 +425,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        private java.util.List<Instance> instance;
 
         private InstanceList(Builder builder) {
             this.instance = builder.instance;
@@ -368,17 +450,24 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

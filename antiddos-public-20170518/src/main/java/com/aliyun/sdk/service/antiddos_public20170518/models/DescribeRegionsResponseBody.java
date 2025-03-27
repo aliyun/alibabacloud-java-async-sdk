@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -48,8 +58,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private Regions regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * An array consisting of regions in which Anti-DDoS Origin Basic is available.
+         * <p>An array consisting of regions in which Anti-DDoS Origin Basic is available.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -57,7 +75,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5093C7EE-8E27-5FC9-9B88-40626BA540C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Region extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionEnName")
         private String regionEnName;
@@ -132,8 +159,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionNo; 
             private String regionNoAlias; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.regionEnName = model.regionEnName;
+                this.regionName = model.regionName;
+                this.regionNo = model.regionNo;
+                this.regionNoAlias = model.regionNoAlias;
+            } 
+
             /**
-             * The English name of the region.
+             * <p>The English name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>East China 1</p>
              */
             public Builder regionEnName(String regionEnName) {
                 this.regionEnName = regionEnName;
@@ -141,7 +181,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the region.
+             * <p>The Chinese name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -149,7 +192,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-dg-a01</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -157,7 +203,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNoAlias(String regionNoAlias) {
                 this.regionNoAlias = regionNoAlias;
@@ -171,9 +220,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
-        private java.util.List < Region> region;
+        private java.util.List<Region> region;
 
         private Regions(Builder builder) {
             this.region = builder.region;
@@ -190,17 +245,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return region
          */
-        public java.util.List < Region> getRegion() {
+        public java.util.List<Region> getRegion() {
             return this.region;
         }
 
         public static final class Builder {
-            private java.util.List < Region> region; 
+            private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.
              */
-            public Builder region(java.util.List < Region> region) {
+            public Builder region(java.util.List<Region> region) {
                 this.region = region;
                 return this;
             }
