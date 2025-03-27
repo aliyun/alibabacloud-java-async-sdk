@@ -146,6 +146,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteTextbookAssistantRetryConversationResponse> executeTextbookAssistantRetryConversation(ExecuteTextbookAssistantRetryConversationRequest request);
 
     /**
+     * @param request the request parameters of ExecuteTextbookAssistantSseDialogue  ExecuteTextbookAssistantSseDialogueRequest
+     * @return ExecuteTextbookAssistantSseDialogueResponse
+     */
+    CompletableFuture<ExecuteTextbookAssistantSseDialogueResponse> executeTextbookAssistantSseDialogue(ExecuteTextbookAssistantSseDialogueRequest request);
+
+    ResponseIterable<ExecuteTextbookAssistantSseDialogueResponseBody> executeTextbookAssistantSseDialogueWithResponseIterable(ExecuteTextbookAssistantSseDialogueRequest request);
+
+    /**
      * @param request the request parameters of ExecuteTextbookAssistantStartConversation  ExecuteTextbookAssistantStartConversationRequest
      * @return ExecuteTextbookAssistantStartConversationResponse
      */
@@ -182,6 +190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTextbookAssistantTokenResponse> getTextbookAssistantToken(GetTextbookAssistantTokenRequest request);
 
     /**
+     * @param request the request parameters of ListTextbookAssistantArticleDetails  ListTextbookAssistantArticleDetailsRequest
+     * @return ListTextbookAssistantArticleDetailsResponse
+     */
+    CompletableFuture<ListTextbookAssistantArticleDetailsResponse> listTextbookAssistantArticleDetails(ListTextbookAssistantArticleDetailsRequest request);
+
+    /**
      * @param request the request parameters of ListTextbookAssistantArticles  ListTextbookAssistantArticlesRequest
      * @return ListTextbookAssistantArticlesResponse
      */
@@ -204,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTextbookAssistantGradeVolumesResponse
      */
     CompletableFuture<ListTextbookAssistantGradeVolumesResponse> listTextbookAssistantGradeVolumes(ListTextbookAssistantGradeVolumesRequest request);
+
+    /**
+     * @param request the request parameters of ListTextbookAssistantSceneDetails  ListTextbookAssistantSceneDetailsRequest
+     * @return ListTextbookAssistantSceneDetailsResponse
+     */
+    CompletableFuture<ListTextbookAssistantSceneDetailsResponse> listTextbookAssistantSceneDetails(ListTextbookAssistantSceneDetailsRequest request);
 
     /**
      * @param request the request parameters of PersonalizedTextToImageAddInferenceJob  PersonalizedTextToImageAddInferenceJobRequest
