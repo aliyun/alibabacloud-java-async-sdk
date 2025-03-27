@@ -122,6 +122,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
      * <p>DescribeDefenseRulesResponseBody</p>
      */
     public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionExternal")
+        private String actionExternal;
+
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
@@ -130,6 +133,18 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DetailRuleIds")
+        private String detailRuleIds;
+
+        @com.aliyun.core.annotation.NameInMap("ExternalInfo")
+        private String externalInfo;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
+        private Long gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
@@ -140,6 +155,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -147,12 +165,18 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         private Long templateId;
 
         private Rules(Builder builder) {
+            this.actionExternal = builder.actionExternal;
             this.config = builder.config;
             this.defenseOrigin = builder.defenseOrigin;
             this.defenseScene = builder.defenseScene;
+            this.description = builder.description;
+            this.detailRuleIds = builder.detailRuleIds;
+            this.externalInfo = builder.externalInfo;
+            this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
+            this.ruleType = builder.ruleType;
             this.status = builder.status;
             this.templateId = builder.templateId;
         }
@@ -163,6 +187,13 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
 
         public static Rules create() {
             return builder().build();
+        }
+
+        /**
+         * @return actionExternal
+         */
+        public String getActionExternal() {
+            return this.actionExternal;
         }
 
         /**
@@ -187,6 +218,34 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return detailRuleIds
+         */
+        public String getDetailRuleIds() {
+            return this.detailRuleIds;
+        }
+
+        /**
+         * @return externalInfo
+         */
+        public String getExternalInfo() {
+            return this.externalInfo;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
          * @return gmtModified
          */
         public Long getGmtModified() {
@@ -208,6 +267,13 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -222,12 +288,18 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String actionExternal; 
             private String config; 
             private String defenseOrigin; 
             private String defenseScene; 
+            private String description; 
+            private String detailRuleIds; 
+            private String externalInfo; 
+            private Long gmtCreate; 
             private Long gmtModified; 
             private Long ruleId; 
             private String ruleName; 
+            private String ruleType; 
             private Integer status; 
             private Long templateId; 
 
@@ -235,15 +307,29 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             } 
 
             private Builder(Rules model) {
+                this.actionExternal = model.actionExternal;
                 this.config = model.config;
                 this.defenseOrigin = model.defenseOrigin;
                 this.defenseScene = model.defenseScene;
+                this.description = model.description;
+                this.detailRuleIds = model.detailRuleIds;
+                this.externalInfo = model.externalInfo;
+                this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
                 this.status = model.status;
                 this.templateId = model.templateId;
             } 
+
+            /**
+             * ActionExternal.
+             */
+            public Builder actionExternal(String actionExternal) {
+                this.actionExternal = actionExternal;
+                return this;
+            }
 
             /**
              * <p>The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the &quot;<strong>Rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
@@ -298,6 +384,38 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * DetailRuleIds.
+             */
+            public Builder detailRuleIds(String detailRuleIds) {
+                this.detailRuleIds = detailRuleIds;
+                return this;
+            }
+
+            /**
+             * ExternalInfo.
+             */
+            public Builder externalInfo(String externalInfo) {
+                this.externalInfo = externalInfo;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(Long gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
              * <p>The most recent time when the protection rule was modified.</p>
              * 
              * <strong>example:</strong>
@@ -327,6 +445,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
                 return this;
             }
 
