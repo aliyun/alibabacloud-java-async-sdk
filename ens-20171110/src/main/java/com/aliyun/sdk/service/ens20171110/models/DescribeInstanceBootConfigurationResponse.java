@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDeviceInternetPortResponse} extends {@link TeaModel}
+ * {@link DescribeInstanceBootConfigurationResponse} extends {@link TeaModel}
  *
- * <p>GetDeviceInternetPortResponse</p>
+ * <p>DescribeInstanceBootConfigurationResponse</p>
  */
-public class GetDeviceInternetPortResponse extends Response {
+public class DescribeInstanceBootConfigurationResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetDeviceInternetPortResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetDeviceInternetPortResponseBody body;
+    private DescribeInstanceBootConfigurationResponseBody body;
 
-    private GetDeviceInternetPortResponse(BuilderImpl builder) {
+    private DescribeInstanceBootConfigurationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetDeviceInternetPortResponse create() {
+    public static DescribeInstanceBootConfigurationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetDeviceInternetPortResponse extends Response {
     /**
      * @return body
      */
-    public GetDeviceInternetPortResponseBody getBody() {
+    public DescribeInstanceBootConfigurationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetDeviceInternetPortResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeInstanceBootConfigurationResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetDeviceInternetPortResponseBody body);
+        Builder body(DescribeInstanceBootConfigurationResponseBody body);
 
         @Override
-        GetDeviceInternetPortResponse build();
+        DescribeInstanceBootConfigurationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetDeviceInternetPortResponse, Builder>
+            extends Response.BuilderImpl<DescribeInstanceBootConfigurationResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetDeviceInternetPortResponseBody body; 
+        private DescribeInstanceBootConfigurationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetDeviceInternetPortResponse response) {
+        private BuilderImpl(DescribeInstanceBootConfigurationResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetDeviceInternetPortResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetDeviceInternetPortResponseBody body) {
+        public Builder body(DescribeInstanceBootConfigurationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetDeviceInternetPortResponse build() {
-            return new GetDeviceInternetPortResponse(this);
+        public DescribeInstanceBootConfigurationResponse build() {
+            return new DescribeInstanceBootConfigurationResponse(this);
         } 
 
     } 

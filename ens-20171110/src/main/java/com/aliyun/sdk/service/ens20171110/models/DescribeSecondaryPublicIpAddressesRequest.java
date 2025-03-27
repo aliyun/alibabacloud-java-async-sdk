@@ -22,6 +22,10 @@ public class DescribeSecondaryPublicIpAddressesRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
@@ -45,6 +49,7 @@ public class DescribeSecondaryPublicIpAddressesRequest extends Request {
     private DescribeSecondaryPublicIpAddressesRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.isp = builder.isp;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -70,6 +75,13 @@ public class DescribeSecondaryPublicIpAddressesRequest extends Request {
      */
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     /**
@@ -109,6 +121,7 @@ public class DescribeSecondaryPublicIpAddressesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSecondaryPublicIpAddressesRequest, Builder> {
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private String isp; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -122,6 +135,7 @@ public class DescribeSecondaryPublicIpAddressesRequest extends Request {
         private Builder(DescribeSecondaryPublicIpAddressesRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.isp = request.isp;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -138,6 +152,15 @@ public class DescribeSecondaryPublicIpAddressesRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * EnsRegionIds.
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
             return this;
         }
 

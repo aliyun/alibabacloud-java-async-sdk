@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AddDeviceInternetPortResponse} extends {@link TeaModel}
+ * {@link ImportImageResponse} extends {@link TeaModel}
  *
- * <p>AddDeviceInternetPortResponse</p>
+ * <p>ImportImageResponse</p>
  */
-public class AddDeviceInternetPortResponse extends Response {
+public class ImportImageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class AddDeviceInternetPortResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AddDeviceInternetPortResponseBody body;
+    private ImportImageResponseBody body;
 
-    private AddDeviceInternetPortResponse(BuilderImpl builder) {
+    private ImportImageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AddDeviceInternetPortResponse create() {
+    public static ImportImageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class AddDeviceInternetPortResponse extends Response {
     /**
      * @return body
      */
-    public AddDeviceInternetPortResponseBody getBody() {
+    public ImportImageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AddDeviceInternetPortResponse, Builder> {
+    public interface Builder extends Response.Builder<ImportImageResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AddDeviceInternetPortResponseBody body);
+        Builder body(ImportImageResponseBody body);
 
         @Override
-        AddDeviceInternetPortResponse build();
+        ImportImageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AddDeviceInternetPortResponse, Builder>
+            extends Response.BuilderImpl<ImportImageResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private AddDeviceInternetPortResponseBody body; 
+        private ImportImageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AddDeviceInternetPortResponse response) {
+        private BuilderImpl(ImportImageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class AddDeviceInternetPortResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AddDeviceInternetPortResponseBody body) {
+        public Builder body(ImportImageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AddDeviceInternetPortResponse build() {
-            return new AddDeviceInternetPortResponse(this);
+        public ImportImageResponse build() {
+            return new ImportImageResponse(this);
         } 
 
     } 

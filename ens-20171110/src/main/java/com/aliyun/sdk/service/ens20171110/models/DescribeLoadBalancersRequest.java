@@ -35,7 +35,7 @@ public class DescribeLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
-    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String loadBalancerName;
 
     @com.aliyun.core.annotation.Query

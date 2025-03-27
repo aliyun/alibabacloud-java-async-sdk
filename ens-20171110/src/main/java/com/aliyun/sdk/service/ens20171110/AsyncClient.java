@@ -38,12 +38,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddBackendServersResponse> addBackendServers(AddBackendServersRequest request);
 
     /**
-     * @param request the request parameters of AddDeviceInternetPort  AddDeviceInternetPortRequest
-     * @return AddDeviceInternetPortResponse
-     */
-    CompletableFuture<AddDeviceInternetPortResponse> addDeviceInternetPort(AddDeviceInternetPortRequest request);
-
-    /**
      * <b>description</b> :
      * <h1><a href="#"></a>Usage notes</h1>
      * <ul>
@@ -474,12 +468,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBucketLifecycleResponse
      */
     CompletableFuture<DeleteBucketLifecycleResponse> deleteBucketLifecycle(DeleteBucketLifecycleRequest request);
-
-    /**
-     * @param request the request parameters of DeleteDeviceInternetPort  DeleteDeviceInternetPortRequest
-     * @return DeleteDeviceInternetPortResponse
-     */
-    CompletableFuture<DeleteDeviceInternetPortResponse> deleteDeviceInternetPort(DeleteDeviceInternetPortRequest request);
 
     /**
      * <b>description</b> :
@@ -999,6 +987,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceBandwidthDetailResponse> describeInstanceBandwidthDetail(DescribeInstanceBandwidthDetailRequest request);
 
     /**
+     * @param request the request parameters of DescribeInstanceBootConfiguration  DescribeInstanceBootConfigurationRequest
+     * @return DescribeInstanceBootConfigurationResponse
+     */
+    CompletableFuture<DescribeInstanceBootConfigurationResponse> describeInstanceBootConfiguration(DescribeInstanceBootConfigurationRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstanceMonitorData  DescribeInstanceMonitorDataRequest
      * @return DescribeInstanceMonitorDataResponse
      */
@@ -1429,12 +1423,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBucketLifecycleResponse> getBucketLifecycle(GetBucketLifecycleRequest request);
 
     /**
-     * @param request the request parameters of GetDeviceInternetPort  GetDeviceInternetPortRequest
-     * @return GetDeviceInternetPortResponse
-     */
-    CompletableFuture<GetDeviceInternetPortResponse> getDeviceInternetPort(GetDeviceInternetPortRequest request);
-
-    /**
      * @param request the request parameters of GetOssStorageAndAccByBuckets  GetOssStorageAndAccByBucketsRequest
      * @return GetOssStorageAndAccByBucketsResponse
      */
@@ -1448,6 +1436,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetOssUsageDataResponse
      */
     CompletableFuture<GetOssUsageDataResponse> getOssUsageData(GetOssUsageDataRequest request);
+
+    /**
+     * @param request the request parameters of ImportImage  ImportImageRequest
+     * @return ImportImageResponse
+     */
+    CompletableFuture<ImportImageResponse> importImage(ImportImageRequest request);
 
     /**
      * <b>description</b> :
@@ -1881,12 +1875,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAICInstanceResponse> resetAICInstance(ResetAICInstanceRequest request);
 
     /**
-     * @param request the request parameters of ResetDeviceInstance  ResetDeviceInstanceRequest
-     * @return ResetDeviceInstanceResponse
-     */
-    CompletableFuture<ResetDeviceInstanceResponse> resetDeviceInstance(ResetDeviceInstanceRequest request);
-
-    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
@@ -1906,12 +1894,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResizeDiskResponse
      */
     CompletableFuture<ResizeDiskResponse> resizeDisk(ResizeDiskRequest request);
-
-    /**
-     * @param request the request parameters of RestartDeviceInstance  RestartDeviceInstanceRequest
-     * @return RestartDeviceInstanceResponse
-     */
-    CompletableFuture<RestartDeviceInstanceResponse> restartDeviceInstance(RestartDeviceInstanceRequest request);
 
     /**
      * <b>description</b> :

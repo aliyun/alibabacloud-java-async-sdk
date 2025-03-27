@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RestartDeviceInstanceResponseBody} extends {@link TeaModel}
+ * {@link ImportImageResponseBody} extends {@link TeaModel}
  *
- * <p>RestartDeviceInstanceResponseBody</p>
+ * <p>ImportImageResponseBody</p>
  */
-public class RestartDeviceInstanceResponseBody extends TeaModel {
+public class ImportImageResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RestartDeviceInstanceResponseBody(Builder builder) {
+    private ImportImageResponseBody(Builder builder) {
+        this.imageId = builder.imageId;
         this.requestId = builder.requestId;
     }
 
@@ -28,12 +32,19 @@ public class RestartDeviceInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RestartDeviceInstanceResponseBody create() {
+    public static ImportImageResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
     }
 
     /**
@@ -44,28 +55,38 @@ public class RestartDeviceInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String imageId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(RestartDeviceInstanceResponseBody model) {
+        private Builder(ImportImageResponseBody model) {
+            this.imageId = model.imageId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>388AA3AE-CE49-5FF4-8CF5-A03D2BBA1C9A</p>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RestartDeviceInstanceResponseBody build() {
-            return new RestartDeviceInstanceResponseBody(this);
+        public ImportImageResponseBody build() {
+            return new ImportImageResponseBody(this);
         } 
 
     } 

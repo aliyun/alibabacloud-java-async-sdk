@@ -38,6 +38,10 @@ public class CreateImageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TargetOSSRegionId")
     private String targetOSSRegionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithDataDisks")
+    private Boolean withDataDisks;
+
     private CreateImageRequest(Builder builder) {
         super(builder);
         this.deleteAfterImageUpload = builder.deleteAfterImageUpload;
@@ -45,6 +49,7 @@ public class CreateImageRequest extends Request {
         this.instanceId = builder.instanceId;
         this.snapshotId = builder.snapshotId;
         this.targetOSSRegionId = builder.targetOSSRegionId;
+        this.withDataDisks = builder.withDataDisks;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class CreateImageRequest extends Request {
         return this.targetOSSRegionId;
     }
 
+    /**
+     * @return withDataDisks
+     */
+    public Boolean getWithDataDisks() {
+        return this.withDataDisks;
+    }
+
     public static final class Builder extends Request.Builder<CreateImageRequest, Builder> {
         private String deleteAfterImageUpload; 
         private String imageName; 
         private String instanceId; 
         private String snapshotId; 
         private String targetOSSRegionId; 
+        private Boolean withDataDisks; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class CreateImageRequest extends Request {
             this.instanceId = request.instanceId;
             this.snapshotId = request.snapshotId;
             this.targetOSSRegionId = request.targetOSSRegionId;
+            this.withDataDisks = request.withDataDisks;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class CreateImageRequest extends Request {
         public Builder targetOSSRegionId(String targetOSSRegionId) {
             this.putQueryParameter("TargetOSSRegionId", targetOSSRegionId);
             this.targetOSSRegionId = targetOSSRegionId;
+            return this;
+        }
+
+        /**
+         * WithDataDisks.
+         */
+        public Builder withDataDisks(Boolean withDataDisks) {
+            this.putQueryParameter("WithDataDisks", withDataDisks);
+            this.withDataDisks = withDataDisks;
             return this;
         }
 

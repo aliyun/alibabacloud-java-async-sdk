@@ -42,6 +42,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -62,6 +66,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         this.eipAddress = builder.eipAddress;
         this.eipName = builder.eipName;
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.standby = builder.standby;
@@ -123,6 +128,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
     }
 
     /**
+     * @return ensRegionIds
+     */
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -150,6 +162,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         private String eipAddress; 
         private String eipName; 
         private String ensRegionId; 
+        private java.util.List<String> ensRegionIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String standby; 
@@ -166,6 +179,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
             this.eipAddress = request.eipAddress;
             this.eipName = request.eipName;
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.standby = request.standby;
@@ -244,6 +258,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * EnsRegionIds.
+         */
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
             return this;
         }
 
