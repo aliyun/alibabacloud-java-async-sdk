@@ -38,6 +38,10 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
     private String outputConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    private String templateConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
@@ -48,6 +52,7 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         this.editingConfig = builder.editingConfig;
         this.inputConfig = builder.inputConfig;
         this.outputConfig = builder.outputConfig;
+        this.templateConfig = builder.templateConfig;
         this.userData = builder.userData;
     }
 
@@ -100,6 +105,13 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
     }
 
     /**
+     * @return templateConfig
+     */
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -112,6 +124,7 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         private String editingConfig; 
         private String inputConfig; 
         private String outputConfig; 
+        private String templateConfig; 
         private String userData; 
 
         private Builder() {
@@ -125,6 +138,7 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
             this.editingConfig = request.editingConfig;
             this.inputConfig = request.inputConfig;
             this.outputConfig = request.outputConfig;
+            this.templateConfig = request.templateConfig;
             this.userData = request.userData;
         } 
 
@@ -196,6 +210,15 @@ public class SubmitBatchMediaProducingJobRequest extends Request {
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
             this.outputConfig = outputConfig;
+            return this;
+        }
+
+        /**
+         * TemplateConfig.
+         */
+        public Builder templateConfig(String templateConfig) {
+            this.putQueryParameter("TemplateConfig", templateConfig);
+            this.templateConfig = templateConfig;
             return this;
         }
 
