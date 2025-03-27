@@ -260,10 +260,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of CreateMediaLiveChannel  CreateMediaLiveChannelRequest
@@ -273,10 +270,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of CreateMediaLiveInput  CreateMediaLiveInputRequest
@@ -286,10 +280,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of CreateMediaLiveInputSecurityGroup  CreateMediaLiveInputSecurityGroupRequest
@@ -577,13 +568,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can only delete a channel that is not running.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p> You can only delete a channel that is not running.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of DeleteMediaLiveChannel  DeleteMediaLiveChannelRequest
@@ -593,13 +579,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can delete an input only when it is not associated with a MediaLive channel.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of DeleteMediaLiveInput  DeleteMediaLiveInputRequest
@@ -609,13 +590,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can only delete a security group not associated with an input.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can only delete a security group not associated with an input.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of DeleteMediaLiveInputSecurityGroup  DeleteMediaLiveInputSecurityGroupRequest
@@ -1065,10 +1041,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of GetMediaLiveChannel  GetMediaLiveChannelRequest
@@ -1078,10 +1051,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of GetMediaLiveInput  GetMediaLiveInputRequest
@@ -1091,10 +1061,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of GetMediaLiveInputSecurityGroup  GetMediaLiveInputSecurityGroupRequest
@@ -1489,10 +1456,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of ListMediaLiveChannels  ListMediaLiveChannelsRequest
@@ -1502,10 +1466,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of ListMediaLiveInputSecurityGroups  ListMediaLiveInputSecurityGroupsRequest
@@ -1515,10 +1476,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of ListMediaLiveInputs  ListMediaLiveInputsRequest
@@ -1960,13 +1918,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of StartMediaLiveChannel  StartMediaLiveChannelRequest
@@ -2013,13 +1966,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li></li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of StopMediaLiveChannel  StopMediaLiveChannelRequest
@@ -2506,13 +2453,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify a MediaLive channel only when it is not running.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify a MediaLive channel only when it is not running.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of UpdateMediaLiveChannel  UpdateMediaLiveChannelRequest
@@ -2522,13 +2464,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify an input only when it is not associated with a MediaLive channel.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify an input only when it is not associated with a MediaLive channel.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of UpdateMediaLiveInput  UpdateMediaLiveInputRequest
@@ -2538,13 +2475,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify a security group only when it is not associated with a MediaLive input.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * @param request the request parameters of UpdateMediaLiveInputSecurityGroup  UpdateMediaLiveInputSecurityGroupRequest
