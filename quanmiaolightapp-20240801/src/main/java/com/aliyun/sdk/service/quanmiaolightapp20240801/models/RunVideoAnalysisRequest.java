@@ -27,6 +27,10 @@ public class RunVideoAnalysisRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("excludeGenerateOptions")
+    private java.util.List<String> excludeGenerateOptions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("faceIdentitySimilarityMinScore")
     private Float faceIdentitySimilarityMinScore;
 
@@ -102,6 +106,7 @@ public class RunVideoAnalysisRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.excludeGenerateOptions = builder.excludeGenerateOptions;
         this.faceIdentitySimilarityMinScore = builder.faceIdentitySimilarityMinScore;
         this.frameSampleMethod = builder.frameSampleMethod;
         this.generateOptions = builder.generateOptions;
@@ -147,6 +152,13 @@ public class RunVideoAnalysisRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return excludeGenerateOptions
+     */
+    public java.util.List<String> getExcludeGenerateOptions() {
+        return this.excludeGenerateOptions;
     }
 
     /**
@@ -278,6 +290,7 @@ public class RunVideoAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<RunVideoAnalysisRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private java.util.List<String> excludeGenerateOptions; 
         private Float faceIdentitySimilarityMinScore; 
         private FrameSampleMethod frameSampleMethod; 
         private java.util.List<String> generateOptions; 
@@ -305,6 +318,7 @@ public class RunVideoAnalysisRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.excludeGenerateOptions = request.excludeGenerateOptions;
             this.faceIdentitySimilarityMinScore = request.faceIdentitySimilarityMinScore;
             this.frameSampleMethod = request.frameSampleMethod;
             this.generateOptions = request.generateOptions;
@@ -343,6 +357,16 @@ public class RunVideoAnalysisRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * excludeGenerateOptions.
+         */
+        public Builder excludeGenerateOptions(java.util.List<String> excludeGenerateOptions) {
+            String excludeGenerateOptionsShrink = shrink(excludeGenerateOptions, "excludeGenerateOptions", "json");
+            this.putBodyParameter("excludeGenerateOptions", excludeGenerateOptionsShrink);
+            this.excludeGenerateOptions = excludeGenerateOptions;
             return this;
         }
 

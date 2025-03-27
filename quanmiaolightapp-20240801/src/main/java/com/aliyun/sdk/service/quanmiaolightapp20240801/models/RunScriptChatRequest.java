@@ -28,7 +28,7 @@ public class RunScriptChatRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("prompt")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 5000)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 9000)
     private String prompt;
 
     @com.aliyun.core.annotation.Body
