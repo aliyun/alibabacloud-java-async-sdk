@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHotelSceneBookItemRequest} extends {@link RequestModel}
  *
  * <p>UpdateHotelSceneBookItemRequest</p>
  */
 public class UpdateHotelSceneBookItemRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Query
-    @NameInMap("UpdateHotelSceneBookReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateHotelSceneBookReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UpdateHotelSceneBookReq updateHotelSceneBookReq;
 
     private UpdateHotelSceneBookItemRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class UpdateHotelSceneBookItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class UpdateHotelSceneBookItemRequest extends Request {
         } 
 
         /**
-         * hotelID
+         * <p>hotelID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -79,7 +88,8 @@ public class UpdateHotelSceneBookItemRequest extends Request {
         }
 
         /**
-         * updateHotelSceneBookReq
+         * <p>updateHotelSceneBookReq</p>
+         * <p>This parameter is required.</p>
          */
         public Builder updateHotelSceneBookReq(UpdateHotelSceneBookReq updateHotelSceneBookReq) {
             String updateHotelSceneBookReqShrink = shrink(updateHotelSceneBookReq, "UpdateHotelSceneBookReq", "json");
@@ -95,19 +105,25 @@ public class UpdateHotelSceneBookItemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateHotelSceneBookItemRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelSceneBookItemRequest</p>
+     */
     public static class UpdateHotelSceneBookReq extends TeaModel {
-        @NameInMap("Icon")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Icon")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String icon;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Price")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Price")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long price;
 
         private UpdateHotelSceneBookReq(Builder builder) {
@@ -159,8 +175,22 @@ public class UpdateHotelSceneBookItemRequest extends Request {
             private String name; 
             private Long price; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateHotelSceneBookReq model) {
+                this.icon = model.icon;
+                this.id = model.id;
+                this.name = model.name;
+                this.price = model.price;
+            } 
+
             /**
-             * icon
+             * <p>icon</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ailabs.alibabausercontent.com/platform/28d7a91e3c05db3855725fc39e0387e7/welcome_audios/aa918294b6ca3aa115c51135bf9b80cb/l9f996sq.png">https://ailabs.alibabausercontent.com/platform/28d7a91e3c05db3855725fc39e0387e7/welcome_audios/aa918294b6ca3aa115c51135bf9b80cb/l9f996sq.png</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -184,7 +214,10 @@ public class UpdateHotelSceneBookItemRequest extends Request {
             }
 
             /**
-             * Price.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250</p>
              */
             public Builder price(Long price) {
                 this.price = price;

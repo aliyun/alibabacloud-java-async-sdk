@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeviceControlRequest} extends {@link RequestModel}
  *
  * <p>DeviceControlRequest</p>
  */
 public class DeviceControlRequest extends Request {
-    @Query
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private Payload payload;
 
-    @Query
-    @NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
     private DeviceControlRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class DeviceControlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,28 +99,34 @@ public class DeviceControlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeviceControlRequest} extends {@link TeaModel}
+     *
+     * <p>DeviceControlRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("Cmd")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Cmd")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cmd;
 
-        @NameInMap("DeviceNumber")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceNumber")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceNumber;
 
-        @NameInMap("ExtendInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
         private String extendInfo;
 
-        @NameInMap("Location")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Location")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String location;
 
-        @NameInMap("Properties")
-        private java.util.Map < String, String > properties;
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private java.util.Map<String, String> properties;
 
         private Payload(Builder builder) {
             this.category = builder.category;
@@ -172,7 +183,7 @@ public class DeviceControlRequest extends Request {
         /**
          * @return properties
          */
-        public java.util.Map < String, String > getProperties() {
+        public java.util.Map<String, String> getProperties() {
             return this.properties;
         }
 
@@ -182,10 +193,25 @@ public class DeviceControlRequest extends Request {
             private String deviceNumber; 
             private String extendInfo; 
             private String location; 
-            private java.util.Map < String, String > properties; 
+            private java.util.Map<String, String> properties; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.category = model.category;
+                this.cmd = model.cmd;
+                this.deviceNumber = model.deviceNumber;
+                this.extendInfo = model.extendInfo;
+                this.location = model.location;
+                this.properties = model.properties;
+            } 
 
             /**
-             * Category.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aircondition</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -193,7 +219,10 @@ public class DeviceControlRequest extends Request {
             }
 
             /**
-             * Cmd.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -201,7 +230,10 @@ public class DeviceControlRequest extends Request {
             }
 
             /**
-             * DeviceNumber.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>air_condition</p>
              */
             public Builder deviceNumber(String deviceNumber) {
                 this.deviceNumber = deviceNumber;
@@ -217,7 +249,10 @@ public class DeviceControlRequest extends Request {
             }
 
             /**
-             * Location.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>room</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -227,7 +262,7 @@ public class DeviceControlRequest extends Request {
             /**
              * Properties.
              */
-            public Builder properties(java.util.Map < String, String > properties) {
+            public Builder properties(java.util.Map<String, String> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -239,24 +274,30 @@ public class DeviceControlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeviceControlRequest} extends {@link TeaModel}
+     *
+     * <p>DeviceControlRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -317,8 +358,22 @@ public class DeviceControlRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -326,7 +381,10 @@ public class DeviceControlRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTEL</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -334,7 +392,10 @@ public class DeviceControlRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOFF****my7Iw=</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +403,10 @@ public class DeviceControlRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

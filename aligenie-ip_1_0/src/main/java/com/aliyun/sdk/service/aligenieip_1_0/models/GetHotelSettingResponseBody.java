@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelSettingResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelSettingResponseBody</p>
  */
 public class GetHotelSettingResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private GetHotelSettingResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetHotelSettingResponseBody extends TeaModel {
 
     public static GetHotelSettingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class GetHotelSettingResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotelSettingResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -111,11 +130,17 @@ public class GetHotelSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelSettingResponseBody</p>
+     */
     public static class HotelScreenSaver extends TeaModel {
-        @NameInMap("ScreenSaverPicUrl")
+        @com.aliyun.core.annotation.NameInMap("ScreenSaverPicUrl")
         private String screenSaverPicUrl;
 
-        @NameInMap("ScreenSaverStyle")
+        @com.aliyun.core.annotation.NameInMap("ScreenSaverStyle")
         private String screenSaverStyle;
 
         private HotelScreenSaver(Builder builder) {
@@ -149,6 +174,14 @@ public class GetHotelSettingResponseBody extends TeaModel {
             private String screenSaverPicUrl; 
             private String screenSaverStyle; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelScreenSaver model) {
+                this.screenSaverPicUrl = model.screenSaverPicUrl;
+                this.screenSaverStyle = model.screenSaverStyle;
+            } 
+
             /**
              * ScreenSaverPicUrl.
              */
@@ -172,23 +205,29 @@ public class GetHotelSettingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHotelSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelSettingResponseBody</p>
+     */
     public static class NightMode extends TeaModel {
-        @NameInMap("DefaultBright")
+        @com.aliyun.core.annotation.NameInMap("DefaultBright")
         private String defaultBright;
 
-        @NameInMap("DefaultVolume")
+        @com.aliyun.core.annotation.NameInMap("DefaultVolume")
         private String defaultVolume;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("StandbyAction")
+        @com.aliyun.core.annotation.NameInMap("StandbyAction")
         private String standbyAction;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private NightMode(Builder builder) {
@@ -258,8 +297,20 @@ public class GetHotelSettingResponseBody extends TeaModel {
             private String standbyAction; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(NightMode model) {
+                this.defaultBright = model.defaultBright;
+                this.defaultVolume = model.defaultVolume;
+                this.enable = model.enable;
+                this.end = model.end;
+                this.standbyAction = model.standbyAction;
+                this.start = model.start;
+            } 
+
             /**
-             * 夜间模式下的默认亮度
+             * <p>夜间模式下的默认亮度</p>
              */
             public Builder defaultBright(String defaultBright) {
                 this.defaultBright = defaultBright;
@@ -267,7 +318,7 @@ public class GetHotelSettingResponseBody extends TeaModel {
             }
 
             /**
-             * 夜间模式下的默认音量
+             * <p>夜间模式下的默认音量</p>
              */
             public Builder defaultVolume(String defaultVolume) {
                 this.defaultVolume = defaultVolume;
@@ -313,29 +364,35 @@ public class GetHotelSettingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHotelSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelSettingResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("DeleteToken")
+        @com.aliyun.core.annotation.NameInMap("DeleteToken")
         private Long deleteToken;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("HotelDeviceModeList")
-        private java.util.List < String > hotelDeviceModeList;
+        @com.aliyun.core.annotation.NameInMap("HotelDeviceModeList")
+        private java.util.List<String> hotelDeviceModeList;
 
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
-        @NameInMap("HotelScreenSaver")
+        @com.aliyun.core.annotation.NameInMap("HotelScreenSaver")
         private HotelScreenSaver hotelScreenSaver;
 
-        @NameInMap("NightMode")
+        @com.aliyun.core.annotation.NameInMap("NightMode")
         private NightMode nightMode;
 
-        @NameInMap("SettingType")
+        @com.aliyun.core.annotation.NameInMap("SettingType")
         private String settingType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Result(Builder builder) {
@@ -374,7 +431,7 @@ public class GetHotelSettingResponseBody extends TeaModel {
         /**
          * @return hotelDeviceModeList
          */
-        public java.util.List < String > getHotelDeviceModeList() {
+        public java.util.List<String> getHotelDeviceModeList() {
             return this.hotelDeviceModeList;
         }
 
@@ -416,12 +473,26 @@ public class GetHotelSettingResponseBody extends TeaModel {
         public static final class Builder {
             private Long deleteToken; 
             private String extInfo; 
-            private java.util.List < String > hotelDeviceModeList; 
+            private java.util.List<String> hotelDeviceModeList; 
             private String hotelId; 
             private HotelScreenSaver hotelScreenSaver; 
             private NightMode nightMode; 
             private String settingType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.deleteToken = model.deleteToken;
+                this.extInfo = model.extInfo;
+                this.hotelDeviceModeList = model.hotelDeviceModeList;
+                this.hotelId = model.hotelId;
+                this.hotelScreenSaver = model.hotelScreenSaver;
+                this.nightMode = model.nightMode;
+                this.settingType = model.settingType;
+                this.value = model.value;
+            } 
 
             /**
              * DeleteToken.
@@ -442,7 +513,7 @@ public class GetHotelSettingResponseBody extends TeaModel {
             /**
              * HotelDeviceModeList.
              */
-            public Builder hotelDeviceModeList(java.util.List < String > hotelDeviceModeList) {
+            public Builder hotelDeviceModeList(java.util.List<String> hotelDeviceModeList) {
                 this.hotelDeviceModeList = hotelDeviceModeList;
                 return this;
             }

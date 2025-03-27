@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChildAccountAuthRequest} extends {@link RequestModel}
  *
  * <p>ChildAccountAuthRequest</p>
  */
 public class ChildAccountAuthRequest extends Request {
-    @Body
-    @NameInMap("Account")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Body
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appKey;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("TbOpenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbOpenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbOpenId;
 
     private ChildAccountAuthRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class ChildAccountAuthRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,10 @@ public class ChildAccountAuthRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lee</p>
          */
         public Builder account(String account) {
             this.putBodyParameter("Account", account);
@@ -109,7 +117,10 @@ public class ChildAccountAuthRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30471753</p>
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -118,7 +129,10 @@ public class ChildAccountAuthRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7***83</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -127,7 +141,10 @@ public class ChildAccountAuthRequest extends Request {
         }
 
         /**
-         * TbOpenId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAEV***E3d3Z2ETwh</p>
          */
         public Builder tbOpenId(String tbOpenId) {
             this.putBodyParameter("TbOpenId", tbOpenId);

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelSceneItemsRequest} extends {@link RequestModel}
  *
  * <p>ListHotelSceneItemsRequest</p>
  */
 public class ListHotelSceneItemsRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Query
-    @NameInMap("ListHotelSceneReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListHotelSceneReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ListHotelSceneReq listHotelSceneReq;
 
     private ListHotelSceneItemsRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ListHotelSceneItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class ListHotelSceneItemsRequest extends Request {
         } 
 
         /**
-         * hotelID
+         * <p>hotelID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -79,7 +88,8 @@ public class ListHotelSceneItemsRequest extends Request {
         }
 
         /**
-         * ListHotelSceneReq
+         * <p>ListHotelSceneReq</p>
+         * <p>This parameter is required.</p>
          */
         public Builder listHotelSceneReq(ListHotelSceneReq listHotelSceneReq) {
             String listHotelSceneReqShrink = shrink(listHotelSceneReq, "ListHotelSceneReq", "json");
@@ -95,11 +105,17 @@ public class ListHotelSceneItemsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelSceneItemsRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemsRequest</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
         private Page(Builder builder) {
@@ -133,6 +149,14 @@ public class ListHotelSceneItemsRequest extends Request {
             private Integer pageNumber; 
             private Integer pageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
+
             /**
              * PageNumber.
              */
@@ -156,22 +180,28 @@ public class ListHotelSceneItemsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneItemsRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemsRequest</p>
+     */
     public static class ListHotelSceneReq extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private String keywords;
 
-        @NameInMap("Page")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Page")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Page page;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private ListHotelSceneReq(Builder builder) {
@@ -232,6 +262,17 @@ public class ListHotelSceneItemsRequest extends Request {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListHotelSceneReq model) {
+                this.category = model.category;
+                this.keywords = model.keywords;
+                this.page = model.page;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * Category.
              */
@@ -249,7 +290,7 @@ public class ListHotelSceneItemsRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>This parameter is required.</p>
              */
             public Builder page(Page page) {
                 this.page = page;
@@ -265,7 +306,10 @@ public class ListHotelSceneItemsRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GOODS</p>
              */
             public Builder type(String type) {
                 this.type = type;

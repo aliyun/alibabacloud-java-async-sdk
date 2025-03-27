@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelSceneItemDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelSceneItemDetailResponseBody</p>
  */
 public class GetHotelSceneItemDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetHotelSceneItemDetailResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
 
     public static GetHotelSceneItemDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotelSceneItemDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -111,35 +130,41 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelSceneItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelSceneItemDetailResponseBody</p>
+     */
     public static class DialogueList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DialogueId")
+        @com.aliyun.core.annotation.NameInMap("DialogueId")
         private String dialogueId;
 
-        @NameInMap("NoAnswer")
+        @com.aliyun.core.annotation.NameInMap("NoAnswer")
         private String noAnswer;
 
-        @NameInMap("NoAnswerTemplate")
+        @com.aliyun.core.annotation.NameInMap("NoAnswerTemplate")
         private String noAnswerTemplate;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private Integer process;
 
-        @NameInMap("Question")
+        @com.aliyun.core.annotation.NameInMap("Question")
         private String question;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("YesAnswer")
+        @com.aliyun.core.annotation.NameInMap("YesAnswer")
         private String yesAnswer;
 
-        @NameInMap("YesAnswerTemplate")
+        @com.aliyun.core.annotation.NameInMap("YesAnswerTemplate")
         private String yesAnswerTemplate;
 
         private DialogueList(Builder builder) {
@@ -245,6 +270,22 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
             private String yesAnswer; 
             private String yesAnswerTemplate; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogueList model) {
+                this.createTime = model.createTime;
+                this.dialogueId = model.dialogueId;
+                this.noAnswer = model.noAnswer;
+                this.noAnswerTemplate = model.noAnswerTemplate;
+                this.process = model.process;
+                this.question = model.question;
+                this.serviceId = model.serviceId;
+                this.updateTime = model.updateTime;
+                this.yesAnswer = model.yesAnswer;
+                this.yesAnswerTemplate = model.yesAnswerTemplate;
+            } 
+
             /**
              * CreateTime.
              */
@@ -332,32 +373,38 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHotelSceneItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelSceneItemDetailResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DialogueList")
-        private java.util.List < DialogueList> dialogueList;
+        @com.aliyun.core.annotation.NameInMap("DialogueList")
+        private java.util.List<DialogueList> dialogueList;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Long price;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Result(Builder builder) {
@@ -390,7 +437,7 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
         /**
          * @return dialogueList
          */
-        public java.util.List < DialogueList> getDialogueList() {
+        public java.util.List<DialogueList> getDialogueList() {
             return this.dialogueList;
         }
 
@@ -445,7 +492,7 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
-            private java.util.List < DialogueList> dialogueList; 
+            private java.util.List<DialogueList> dialogueList; 
             private String icon; 
             private Long id; 
             private String name; 
@@ -453,6 +500,21 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.category = model.category;
+                this.dialogueList = model.dialogueList;
+                this.icon = model.icon;
+                this.id = model.id;
+                this.name = model.name;
+                this.price = model.price;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * Category.
@@ -465,7 +527,7 @@ public class GetHotelSceneItemDetailResponseBody extends TeaModel {
             /**
              * DialogueList.
              */
-            public Builder dialogueList(java.util.List < DialogueList> dialogueList) {
+            public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
                 this.dialogueList = dialogueList;
                 return this;
             }

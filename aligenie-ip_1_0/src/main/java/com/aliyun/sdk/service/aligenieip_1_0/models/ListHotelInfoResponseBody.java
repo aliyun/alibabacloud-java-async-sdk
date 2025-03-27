@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelInfoResponseBody</p>
  */
 public class ListHotelInfoResponseBody extends TeaModel {
-    @NameInMap("Extentions")
-    private java.util.Map < String, ? > extentions;
+    @com.aliyun.core.annotation.NameInMap("Extentions")
+    private java.util.Map<String, ?> extentions;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private ListHotelInfoResponseBody(Builder builder) {
@@ -43,10 +48,14 @@ public class ListHotelInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extentions
      */
-    public java.util.Map < String, ? > getExtentions() {
+    public java.util.Map<String, ?> getExtentions() {
         return this.extentions;
     }
 
@@ -67,7 +76,7 @@ public class ListHotelInfoResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -79,16 +88,27 @@ public class ListHotelInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > extentions; 
+        private java.util.Map<String, ?> extentions; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotelInfoResponseBody model) {
+            this.extentions = model.extentions;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Extentions.
          */
-        public Builder extentions(java.util.Map < String, ? > extentions) {
+        public Builder extentions(java.util.Map<String, ?> extentions) {
             this.extentions = extentions;
             return this;
         }
@@ -112,7 +132,7 @@ public class ListHotelInfoResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,8 +151,14 @@ public class ListHotelInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelInfoResponseBody</p>
+     */
     public static class AuthAccount extends TeaModel {
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private AuthAccount(Builder builder) {
@@ -157,6 +183,13 @@ public class ListHotelInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthAccount model) {
+                this.userName = model.userName;
+            } 
+
             /**
              * UserName.
              */
@@ -172,17 +205,23 @@ public class ListHotelInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AuthAccount")
-        private java.util.List < AuthAccount> authAccount;
+        @com.aliyun.core.annotation.NameInMap("AuthAccount")
+        private java.util.List<AuthAccount> authAccount;
 
-        @NameInMap("HotelAddress")
+        @com.aliyun.core.annotation.NameInMap("HotelAddress")
         private String hotelAddress;
 
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
-        @NameInMap("HotelName")
+        @com.aliyun.core.annotation.NameInMap("HotelName")
         private String hotelName;
 
         private Result(Builder builder) {
@@ -203,7 +242,7 @@ public class ListHotelInfoResponseBody extends TeaModel {
         /**
          * @return authAccount
          */
-        public java.util.List < AuthAccount> getAuthAccount() {
+        public java.util.List<AuthAccount> getAuthAccount() {
             return this.authAccount;
         }
 
@@ -229,15 +268,25 @@ public class ListHotelInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthAccount> authAccount; 
+            private java.util.List<AuthAccount> authAccount; 
             private String hotelAddress; 
             private String hotelId; 
             private String hotelName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.authAccount = model.authAccount;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+            } 
+
             /**
              * AuthAccount.
              */
-            public Builder authAccount(java.util.List < AuthAccount> authAccount) {
+            public Builder authAccount(java.util.List<AuthAccount> authAccount) {
                 this.authAccount = authAccount;
                 return this;
             }

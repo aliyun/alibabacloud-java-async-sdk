@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBasicInfoQARequest} extends {@link RequestModel}
  *
  * <p>UpdateBasicInfoQARequest</p>
  */
 public class UpdateBasicInfoQARequest extends Request {
-    @Body
-    @NameInMap("CheckInTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckInTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkInTime;
 
-    @Body
-    @NameInMap("CheckOutTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckOutTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkOutTime;
 
-    @Body
-    @NameInMap("HotelAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelAddress;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("HotelIntroduction")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelIntroduction")
     private String hotelIntroduction;
 
-    @Body
-    @NameInMap("HotelMember")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelMember")
     private String hotelMember;
 
-    @Body
-    @NameInMap("HotelService")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelService")
     private String hotelService;
 
-    @Body
-    @NameInMap("ParkingExpenses")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParkingExpenses")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parkingExpenses;
 
-    @Body
-    @NameInMap("ParkingPosition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParkingPosition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parkingPosition;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Body
-    @NameInMap("WifiName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WifiName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wifiName;
 
-    @Body
-    @NameInMap("WifiPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WifiPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wifiPassword;
 
     private UpdateBasicInfoQARequest(Builder builder) {
@@ -93,7 +98,7 @@ public class UpdateBasicInfoQARequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,7 +222,10 @@ public class UpdateBasicInfoQARequest extends Request {
         } 
 
         /**
-         * CheckInTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11:11</p>
          */
         public Builder checkInTime(String checkInTime) {
             this.putBodyParameter("CheckInTime", checkInTime);
@@ -226,7 +234,10 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * CheckOutTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11:11</p>
          */
         public Builder checkOutTime(String checkOutTime) {
             this.putBodyParameter("CheckOutTime", checkOutTime);
@@ -235,7 +246,7 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * HotelAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder hotelAddress(String hotelAddress) {
             this.putBodyParameter("HotelAddress", hotelAddress);
@@ -244,7 +255,10 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -280,7 +294,7 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * ParkingExpenses.
+         * <p>This parameter is required.</p>
          */
         public Builder parkingExpenses(String parkingExpenses) {
             this.putBodyParameter("ParkingExpenses", parkingExpenses);
@@ -289,7 +303,7 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * ParkingPosition.
+         * <p>This parameter is required.</p>
          */
         public Builder parkingPosition(String parkingPosition) {
             this.putBodyParameter("ParkingPosition", parkingPosition);
@@ -298,7 +312,10 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -307,7 +324,7 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * WifiName.
+         * <p>This parameter is required.</p>
          */
         public Builder wifiName(String wifiName) {
             this.putBodyParameter("WifiName", wifiName);
@@ -316,7 +333,7 @@ public class UpdateBasicInfoQARequest extends Request {
         }
 
         /**
-         * WifiPassword.
+         * <p>This parameter is required.</p>
          */
         public Builder wifiPassword(String wifiPassword) {
             this.putBodyParameter("WifiPassword", wifiPassword);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHotelAlarmRequest} extends {@link RequestModel}
  *
  * <p>UpdateHotelAlarmRequest</p>
  */
 public class UpdateHotelAlarmRequest extends Request {
-    @Body
-    @NameInMap("Alarms")
-    @Validation(required = true)
-    private java.util.List < Alarms> alarms;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Alarms")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Alarms> alarms;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("ScheduleInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleInfo")
     private ScheduleInfo scheduleInfo;
 
     private UpdateHotelAlarmRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class UpdateHotelAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +54,7 @@ public class UpdateHotelAlarmRequest extends Request {
     /**
      * @return alarms
      */
-    public java.util.List < Alarms> getAlarms() {
+    public java.util.List<Alarms> getAlarms() {
         return this.alarms;
     }
 
@@ -68,7 +73,7 @@ public class UpdateHotelAlarmRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateHotelAlarmRequest, Builder> {
-        private java.util.List < Alarms> alarms; 
+        private java.util.List<Alarms> alarms; 
         private String hotelId; 
         private ScheduleInfo scheduleInfo; 
 
@@ -84,9 +89,9 @@ public class UpdateHotelAlarmRequest extends Request {
         } 
 
         /**
-         * Alarms.
+         * <p>This parameter is required.</p>
          */
-        public Builder alarms(java.util.List < Alarms> alarms) {
+        public Builder alarms(java.util.List<Alarms> alarms) {
             String alarmsShrink = shrink(alarms, "Alarms", "json");
             this.putBodyParameter("Alarms", alarmsShrink);
             this.alarms = alarms;
@@ -94,7 +99,10 @@ public class UpdateHotelAlarmRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7a381a668bc485980bed3876a75e013</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -119,20 +127,26 @@ public class UpdateHotelAlarmRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateHotelAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelAlarmRequest</p>
+     */
     public static class Alarms extends TeaModel {
-        @NameInMap("AlarmId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AlarmId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long alarmId;
 
-        @NameInMap("DeviceOpenId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceOpenId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceOpenId;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("UserOpenId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserOpenId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userOpenId;
 
         private Alarms(Builder builder) {
@@ -184,8 +198,21 @@ public class UpdateHotelAlarmRequest extends Request {
             private String roomNo; 
             private String userOpenId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Alarms model) {
+                this.alarmId = model.alarmId;
+                this.deviceOpenId = model.deviceOpenId;
+                this.roomNo = model.roomNo;
+                this.userOpenId = model.userOpenId;
+            } 
+
             /**
-             * AlarmId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder alarmId(Long alarmId) {
                 this.alarmId = alarmId;
@@ -193,7 +220,10 @@ public class UpdateHotelAlarmRequest extends Request {
             }
 
             /**
-             * DeviceOpenId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pvk***VTA==</p>
              */
             public Builder deviceOpenId(String deviceOpenId) {
                 this.deviceOpenId = deviceOpenId;
@@ -209,7 +239,10 @@ public class UpdateHotelAlarmRequest extends Request {
             }
 
             /**
-             * UserOpenId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mgw/***dHQd</p>
              */
             public Builder userOpenId(String userOpenId) {
                 this.userOpenId = userOpenId;
@@ -223,20 +256,26 @@ public class UpdateHotelAlarmRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateHotelAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelAlarmRequest</p>
+     */
     public static class Once extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private Integer day;
 
-        @NameInMap("Hour")
+        @com.aliyun.core.annotation.NameInMap("Hour")
         private Integer hour;
 
-        @NameInMap("Minute")
+        @com.aliyun.core.annotation.NameInMap("Minute")
         private Integer minute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private Integer month;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private Integer year;
 
         private Once(Builder builder) {
@@ -297,6 +336,17 @@ public class UpdateHotelAlarmRequest extends Request {
             private Integer month; 
             private Integer year; 
 
+            private Builder() {
+            } 
+
+            private Builder(Once model) {
+                this.day = model.day;
+                this.hour = model.hour;
+                this.minute = model.minute;
+                this.month = model.month;
+                this.year = model.year;
+            } 
+
             /**
              * Day.
              */
@@ -344,14 +394,20 @@ public class UpdateHotelAlarmRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateHotelAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelAlarmRequest</p>
+     */
     public static class Weekly extends TeaModel {
-        @NameInMap("DaysOfWeek")
-        private java.util.List < Integer > daysOfWeek;
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
+        private java.util.List<Integer> daysOfWeek;
 
-        @NameInMap("Hour")
+        @com.aliyun.core.annotation.NameInMap("Hour")
         private Integer hour;
 
-        @NameInMap("Minute")
+        @com.aliyun.core.annotation.NameInMap("Minute")
         private Integer minute;
 
         private Weekly(Builder builder) {
@@ -371,7 +427,7 @@ public class UpdateHotelAlarmRequest extends Request {
         /**
          * @return daysOfWeek
          */
-        public java.util.List < Integer > getDaysOfWeek() {
+        public java.util.List<Integer> getDaysOfWeek() {
             return this.daysOfWeek;
         }
 
@@ -390,14 +446,23 @@ public class UpdateHotelAlarmRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > daysOfWeek; 
+            private java.util.List<Integer> daysOfWeek; 
             private Integer hour; 
             private Integer minute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Weekly model) {
+                this.daysOfWeek = model.daysOfWeek;
+                this.hour = model.hour;
+                this.minute = model.minute;
+            } 
 
             /**
              * DaysOfWeek.
              */
-            public Builder daysOfWeek(java.util.List < Integer > daysOfWeek) {
+            public Builder daysOfWeek(java.util.List<Integer> daysOfWeek) {
                 this.daysOfWeek = daysOfWeek;
                 return this;
             }
@@ -425,14 +490,20 @@ public class UpdateHotelAlarmRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateHotelAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelAlarmRequest</p>
+     */
     public static class ScheduleInfo extends TeaModel {
-        @NameInMap("Once")
+        @com.aliyun.core.annotation.NameInMap("Once")
         private Once once;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weekly")
+        @com.aliyun.core.annotation.NameInMap("Weekly")
         private Weekly weekly;
 
         private ScheduleInfo(Builder builder) {
@@ -475,6 +546,15 @@ public class UpdateHotelAlarmRequest extends Request {
             private String type; 
             private Weekly weekly; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleInfo model) {
+                this.once = model.once;
+                this.type = model.type;
+                this.weekly = model.weekly;
+            } 
+
             /**
              * Once.
              */
@@ -484,7 +564,10 @@ public class UpdateHotelAlarmRequest extends Request {
             }
 
             /**
-             * ONCE, WEEKLY
+             * <p>ONCE, WEEKLY</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONCE</p>
              */
             public Builder type(String type) {
                 this.type = type;

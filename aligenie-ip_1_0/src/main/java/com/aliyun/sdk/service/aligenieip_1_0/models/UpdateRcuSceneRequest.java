@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRcuSceneRequest} extends {@link RequestModel}
  *
  * <p>UpdateRcuSceneRequest</p>
  */
 public class UpdateRcuSceneRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Body
-    @NameInMap("SceneRelationExtDTO")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneRelationExtDTO")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SceneRelationExtDTO sceneRelationExtDTO;
 
     private UpdateRcuSceneRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class UpdateRcuSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class UpdateRcuSceneRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520a0c0***5eb</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -94,7 +102,10 @@ public class UpdateRcuSceneRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yoga</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -103,7 +114,7 @@ public class UpdateRcuSceneRequest extends Request {
         }
 
         /**
-         * SceneRelationExtDTO.
+         * <p>This parameter is required.</p>
          */
         public Builder sceneRelationExtDTO(SceneRelationExtDTO sceneRelationExtDTO) {
             String sceneRelationExtDTOShrink = shrink(sceneRelationExtDTO, "SceneRelationExtDTO", "json");
@@ -119,17 +130,23 @@ public class UpdateRcuSceneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRcuSceneRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRcuSceneRequest</p>
+     */
     public static class SceneRelationExtDTO extends TeaModel {
-        @NameInMap("CorpusList")
-        private java.util.List < String > corpusList;
+        @com.aliyun.core.annotation.NameInMap("CorpusList")
+        private java.util.List<String> corpusList;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SceneRelationExtDTO(Builder builder) {
@@ -150,7 +167,7 @@ public class UpdateRcuSceneRequest extends Request {
         /**
          * @return corpusList
          */
-        public java.util.List < String > getCorpusList() {
+        public java.util.List<String> getCorpusList() {
             return this.corpusList;
         }
 
@@ -176,15 +193,25 @@ public class UpdateRcuSceneRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > corpusList; 
+            private java.util.List<String> corpusList; 
             private String description; 
             private String icon; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneRelationExtDTO model) {
+                this.corpusList = model.corpusList;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+            } 
+
             /**
              * CorpusList.
              */
-            public Builder corpusList(java.util.List < String > corpusList) {
+            public Builder corpusList(java.util.List<String> corpusList) {
                 this.corpusList = corpusList;
                 return this;
             }

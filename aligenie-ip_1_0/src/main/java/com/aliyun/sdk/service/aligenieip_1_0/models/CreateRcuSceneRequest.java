@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRcuSceneRequest} extends {@link RequestModel}
  *
  * <p>CreateRcuSceneRequest</p>
  */
 public class CreateRcuSceneRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Body
-    @NameInMap("SceneRelationExtDTO")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneRelationExtDTO")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SceneRelationExtDTO sceneRelationExtDTO;
 
     private CreateRcuSceneRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class CreateRcuSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class CreateRcuSceneRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520a0c0***5eb</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -94,7 +102,10 @@ public class CreateRcuSceneRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yoga</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -103,7 +114,7 @@ public class CreateRcuSceneRequest extends Request {
         }
 
         /**
-         * SceneRelationExtDTO.
+         * <p>This parameter is required.</p>
          */
         public Builder sceneRelationExtDTO(SceneRelationExtDTO sceneRelationExtDTO) {
             String sceneRelationExtDTOShrink = shrink(sceneRelationExtDTO, "SceneRelationExtDTO", "json");
@@ -119,21 +130,27 @@ public class CreateRcuSceneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRcuSceneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRcuSceneRequest</p>
+     */
     public static class SceneRelationExtDTO extends TeaModel {
-        @NameInMap("CorpusList")
-        @Validation(required = true)
-        private java.util.List < String > corpusList;
+        @com.aliyun.core.annotation.NameInMap("CorpusList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> corpusList;
 
-        @NameInMap("Description")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String description;
 
-        @NameInMap("Icon")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Icon")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String icon;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private SceneRelationExtDTO(Builder builder) {
@@ -154,7 +171,7 @@ public class CreateRcuSceneRequest extends Request {
         /**
          * @return corpusList
          */
-        public java.util.List < String > getCorpusList() {
+        public java.util.List<String> getCorpusList() {
             return this.corpusList;
         }
 
@@ -180,21 +197,31 @@ public class CreateRcuSceneRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > corpusList; 
+            private java.util.List<String> corpusList; 
             private String description; 
             private String icon; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneRelationExtDTO model) {
+                this.corpusList = model.corpusList;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+            } 
+
             /**
-             * CorpusList.
+             * <p>This parameter is required.</p>
              */
-            public Builder corpusList(java.util.List < String > corpusList) {
+            public Builder corpusList(java.util.List<String> corpusList) {
                 this.corpusList = corpusList;
                 return this;
             }
 
             /**
-             * Description.
+             * <p>This parameter is required.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +229,10 @@ public class CreateRcuSceneRequest extends Request {
             }
 
             /**
-             * Icon.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingmoshi/shuimian.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/changjingmoshi/shuimian.png</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -210,7 +240,7 @@ public class CreateRcuSceneRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;

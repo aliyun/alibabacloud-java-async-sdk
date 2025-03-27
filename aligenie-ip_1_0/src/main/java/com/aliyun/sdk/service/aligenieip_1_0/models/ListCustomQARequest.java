@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomQARequest} extends {@link RequestModel}
  *
  * <p>ListCustomQARequest</p>
  */
 public class ListCustomQARequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Page page;
 
     private ListCustomQARequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ListCustomQARequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,10 @@ public class ListCustomQARequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520a0c0***5eb</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -102,7 +110,7 @@ public class ListCustomQARequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -118,13 +126,19 @@ public class ListCustomQARequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomQARequest} extends {@link TeaModel}
+     *
+     * <p>ListCustomQARequest</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pageSize;
 
         private Page(Builder builder) {
@@ -158,8 +172,19 @@ public class ListCustomQARequest extends Request {
             private Integer pageNumber; 
             private Integer pageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
+
             /**
-             * PageNumber.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -167,7 +192,10 @@ public class ListCustomQARequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

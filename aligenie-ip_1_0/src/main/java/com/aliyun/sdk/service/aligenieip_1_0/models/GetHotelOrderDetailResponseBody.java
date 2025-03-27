@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelOrderDetailResponseBody</p>
  */
 public class GetHotelOrderDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
     private GetHotelOrderDetailResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class GetHotelOrderDetailResponseBody extends TeaModel {
 
     public static GetHotelOrderDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class GetHotelOrderDetailResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -71,7 +80,17 @@ public class GetHotelOrderDetailResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotelOrderDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -100,7 +119,7 @@ public class GetHotelOrderDetailResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -111,20 +130,26 @@ public class GetHotelOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelOrderDetailResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("ApplyAmt")
+        @com.aliyun.core.annotation.NameInMap("ApplyAmt")
         private Long applyAmt;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("ItemUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemUrl")
         private String itemUrl;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
         private Result(Builder builder) {
@@ -184,6 +209,17 @@ public class GetHotelOrderDetailResponseBody extends TeaModel {
             private String itemUrl; 
             private String name; 
             private Long quantity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.applyAmt = model.applyAmt;
+                this.gmtCreate = model.gmtCreate;
+                this.itemUrl = model.itemUrl;
+                this.name = model.name;
+                this.quantity = model.quantity;
+            } 
 
             /**
              * ApplyAmt.

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncDeviceStatusWithAkResponseBody} extends {@link TeaModel}
  *
  * <p>SyncDeviceStatusWithAkResponseBody</p>
  */
 public class SyncDeviceStatusWithAkResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private SyncDeviceStatusWithAkResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class SyncDeviceStatusWithAkResponseBody extends TeaModel {
 
     public static SyncDeviceStatusWithAkResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class SyncDeviceStatusWithAkResponseBody extends TeaModel {
         private Boolean result; 
         private Integer statusCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SyncDeviceStatusWithAkResponseBody model) {
+            this.message = model.message;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Message.

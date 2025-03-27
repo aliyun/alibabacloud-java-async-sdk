@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceStatusRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceStatusRequest</p>
  */
 public class QueryDeviceStatusRequest extends Request {
-    @Query
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private Payload payload;
 
-    @Query
-    @NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
     private QueryDeviceStatusRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class QueryDeviceStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,14 +99,20 @@ public class QueryDeviceStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceStatusRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceStatusRequest</p>
+     */
     public static class LocationDevices extends TeaModel {
-        @NameInMap("DeviceNumber")
+        @com.aliyun.core.annotation.NameInMap("DeviceNumber")
         private String deviceNumber;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private LocationDevices(Builder builder) {
@@ -144,6 +155,15 @@ public class QueryDeviceStatusRequest extends Request {
             private String deviceType; 
             private String location; 
 
+            private Builder() {
+            } 
+
+            private Builder(LocationDevices model) {
+                this.deviceNumber = model.deviceNumber;
+                this.deviceType = model.deviceType;
+                this.location = model.location;
+            } 
+
             /**
              * DeviceNumber.
              */
@@ -175,12 +195,18 @@ public class QueryDeviceStatusRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceStatusRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceStatusRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("LocationDevices")
-        private java.util.List < LocationDevices> locationDevices;
+        @com.aliyun.core.annotation.NameInMap("LocationDevices")
+        private java.util.List<LocationDevices> locationDevices;
 
-        @NameInMap("Properties")
-        private java.util.Map < String, String > properties;
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private java.util.Map<String, String> properties;
 
         private Payload(Builder builder) {
             this.locationDevices = builder.locationDevices;
@@ -198,25 +224,33 @@ public class QueryDeviceStatusRequest extends Request {
         /**
          * @return locationDevices
          */
-        public java.util.List < LocationDevices> getLocationDevices() {
+        public java.util.List<LocationDevices> getLocationDevices() {
             return this.locationDevices;
         }
 
         /**
          * @return properties
          */
-        public java.util.Map < String, String > getProperties() {
+        public java.util.Map<String, String> getProperties() {
             return this.properties;
         }
 
         public static final class Builder {
-            private java.util.List < LocationDevices> locationDevices; 
-            private java.util.Map < String, String > properties; 
+            private java.util.List<LocationDevices> locationDevices; 
+            private java.util.Map<String, String> properties; 
+
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.locationDevices = model.locationDevices;
+                this.properties = model.properties;
+            } 
 
             /**
              * LocationDevices.
              */
-            public Builder locationDevices(java.util.List < LocationDevices> locationDevices) {
+            public Builder locationDevices(java.util.List<LocationDevices> locationDevices) {
                 this.locationDevices = locationDevices;
                 return this;
             }
@@ -224,7 +258,7 @@ public class QueryDeviceStatusRequest extends Request {
             /**
              * Properties.
              */
-            public Builder properties(java.util.Map < String, String > properties) {
+            public Builder properties(java.util.Map<String, String> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -236,24 +270,30 @@ public class QueryDeviceStatusRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDeviceStatusRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceStatusRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -314,8 +354,22 @@ public class QueryDeviceStatusRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -323,7 +377,10 @@ public class QueryDeviceStatusRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTEL</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -331,7 +388,10 @@ public class QueryDeviceStatusRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rV/XSgPuxZjx/hN3iw8U+e8ou***lk1r43LWcVW6fvY1Rr4sEPFodpnA==</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -339,7 +399,10 @@ public class QueryDeviceStatusRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

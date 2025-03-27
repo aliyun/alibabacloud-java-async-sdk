@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCartoonResponseBody} extends {@link TeaModel}
  *
  * <p>GetCartoonResponseBody</p>
  */
 public class GetCartoonResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private GetCartoonResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetCartoonResponseBody extends TeaModel {
 
     public static GetCartoonResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class GetCartoonResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCartoonResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -111,11 +130,17 @@ public class GetCartoonResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCartoonResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCartoonResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("StartVideoMd5")
+        @com.aliyun.core.annotation.NameInMap("StartVideoMd5")
         private String startVideoMd5;
 
-        @NameInMap("StartVideoUrl")
+        @com.aliyun.core.annotation.NameInMap("StartVideoUrl")
         private String startVideoUrl;
 
         private Result(Builder builder) {
@@ -148,6 +173,14 @@ public class GetCartoonResponseBody extends TeaModel {
         public static final class Builder {
             private String startVideoMd5; 
             private String startVideoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.startVideoMd5 = model.startVideoMd5;
+                this.startVideoUrl = model.startVideoUrl;
+            } 
 
             /**
              * StartVideoMd5.

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelRoomDeviceRequest} extends {@link RequestModel}
  *
  * <p>GetHotelRoomDeviceRequest</p>
  */
 public class GetHotelRoomDeviceRequest extends Request {
-    @Query
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Query
-    @NameInMap("RoomNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roomNo;
 
     private GetHotelRoomDeviceRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetHotelRoomDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class GetHotelRoomDeviceRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putQueryParameter("HotelId", hotelId);
@@ -79,7 +87,10 @@ public class GetHotelRoomDeviceRequest extends Request {
         }
 
         /**
-         * RoomNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1211</p>
          */
         public Builder roomNo(String roomNo) {
             this.putQueryParameter("RoomNo", roomNo);

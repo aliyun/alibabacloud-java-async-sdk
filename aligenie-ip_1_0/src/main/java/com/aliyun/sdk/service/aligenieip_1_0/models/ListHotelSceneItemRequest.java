@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelSceneItemRequest} extends {@link RequestModel}
  *
  * <p>ListHotelSceneItemRequest</p>
  */
 public class ListHotelSceneItemRequest extends Request {
-    @Query
-    @NameInMap("Payload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Payload payload;
 
-    @Query
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private ListHotelSceneItemRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ListHotelSceneItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class ListHotelSceneItemRequest extends Request {
         } 
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(Payload payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -80,7 +85,7 @@ public class ListHotelSceneItemRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -96,9 +101,15 @@ public class ListHotelSceneItemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelSceneItemRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Payload(Builder builder) {
@@ -123,8 +134,18 @@ public class ListHotelSceneItemRequest extends Request {
         public static final class Builder {
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.type = model.type;
+            } 
+
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GOODS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,24 +159,30 @@ public class ListHotelSceneItemRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneItemRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -216,8 +243,22 @@ public class ListHotelSceneItemRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1248494721591392955</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -225,7 +266,10 @@ public class ListHotelSceneItemRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROJECT_ID</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -233,7 +277,10 @@ public class ListHotelSceneItemRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mFU6VtVU+pgA8lx6rYMo7SPl11t+8b+8ALrn10MIPEdpK/HI9wELAEppYhPI1cYRDa4og8AMjAEBZKbLUwFjFA==</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -241,7 +288,10 @@ public class ListHotelSceneItemRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

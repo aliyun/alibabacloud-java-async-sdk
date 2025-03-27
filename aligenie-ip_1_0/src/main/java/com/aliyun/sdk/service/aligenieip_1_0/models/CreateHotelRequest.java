@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHotelRequest} extends {@link RequestModel}
  *
  * <p>CreateHotelRequest</p>
  */
 public class CreateHotelRequest extends Request {
-    @Body
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appKey;
 
-    @Body
-    @NameInMap("EstOpenTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EstOpenTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String estOpenTime;
 
-    @Body
-    @NameInMap("HotelAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelAddress;
 
-    @Body
-    @NameInMap("HotelEmail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelEmail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelEmail;
 
-    @Body
-    @NameInMap("HotelName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelName;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Body
-    @NameInMap("RelatedPk")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RelatedPk")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relatedPk;
 
-    @Body
-    @NameInMap("RelatedPks")
-    private java.util.List < String > relatedPks;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RelatedPks")
+    private java.util.List<String> relatedPks;
 
-    @Body
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Body
-    @NameInMap("RoomNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer roomNum;
 
-    @Body
-    @NameInMap("TbOpenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbOpenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbOpenId;
 
     private CreateHotelRequest(Builder builder) {
@@ -88,7 +93,7 @@ public class CreateHotelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +150,7 @@ public class CreateHotelRequest extends Request {
     /**
      * @return relatedPks
      */
-    public java.util.List < String > getRelatedPks() {
+    public java.util.List<String> getRelatedPks() {
         return this.relatedPks;
     }
 
@@ -178,7 +183,7 @@ public class CreateHotelRequest extends Request {
         private String hotelName; 
         private String phoneNumber; 
         private String relatedPk; 
-        private java.util.List < String > relatedPks; 
+        private java.util.List<String> relatedPks; 
         private String remark; 
         private Integer roomNum; 
         private String tbOpenId; 
@@ -203,7 +208,10 @@ public class CreateHotelRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333566791</p>
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -212,7 +220,10 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * EstOpenTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-1 00:00:00</p>
          */
         public Builder estOpenTime(String estOpenTime) {
             this.putBodyParameter("EstOpenTime", estOpenTime);
@@ -221,7 +232,7 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * HotelAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder hotelAddress(String hotelAddress) {
             this.putBodyParameter("HotelAddress", hotelAddress);
@@ -230,7 +241,10 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * HotelEmail.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@hotel.com">test@hotel.com</a></p>
          */
         public Builder hotelEmail(String hotelEmail) {
             this.putBodyParameter("HotelEmail", hotelEmail);
@@ -239,7 +253,7 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * HotelName.
+         * <p>This parameter is required.</p>
          */
         public Builder hotelName(String hotelName) {
             this.putBodyParameter("HotelName", hotelName);
@@ -248,7 +262,10 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13xxxxxxxx</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -257,7 +274,10 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * RelatedPk.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jTO****Rw</p>
          */
         public Builder relatedPk(String relatedPk) {
             this.putBodyParameter("RelatedPk", relatedPk);
@@ -266,9 +286,9 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * 酒店关联产品列表
+         * <p>酒店关联产品列表</p>
          */
-        public Builder relatedPks(java.util.List < String > relatedPks) {
+        public Builder relatedPks(java.util.List<String> relatedPks) {
             String relatedPksShrink = shrink(relatedPks, "RelatedPks", "json");
             this.putBodyParameter("RelatedPks", relatedPksShrink);
             this.relatedPks = relatedPks;
@@ -285,7 +305,10 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * RoomNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder roomNum(Integer roomNum) {
             this.putBodyParameter("RoomNum", roomNum);
@@ -294,7 +317,10 @@ public class CreateHotelRequest extends Request {
         }
 
         /**
-         * TbOpenId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAEV***E3d3Z2ETwh</p>
          */
         public Builder tbOpenId(String tbOpenId) {
             this.putBodyParameter("TbOpenId", tbOpenId);

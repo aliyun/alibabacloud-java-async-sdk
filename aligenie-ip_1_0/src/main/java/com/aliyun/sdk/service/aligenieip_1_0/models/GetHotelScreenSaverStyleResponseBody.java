@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelScreenSaverStyleResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelScreenSaverStyleResponseBody</p>
  */
 public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private GetHotelScreenSaverStyleResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
 
     public static GetHotelScreenSaverStyleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -56,7 +65,7 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -70,8 +79,18 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotelScreenSaverStyleResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -92,7 +111,7 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -111,17 +130,23 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelScreenSaverStyleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelScreenSaverStyleResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CnName")
+        @com.aliyun.core.annotation.NameInMap("CnName")
         private String cnName;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("PicUrl")
+        @com.aliyun.core.annotation.NameInMap("PicUrl")
         private String picUrl;
 
         private Result(Builder builder) {
@@ -172,6 +197,16 @@ public class GetHotelScreenSaverStyleResponseBody extends TeaModel {
             private String code; 
             private String enName; 
             private String picUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cnName = model.cnName;
+                this.code = model.code;
+                this.enName = model.enName;
+                this.picUrl = model.picUrl;
+            } 
 
             /**
              * CnName.

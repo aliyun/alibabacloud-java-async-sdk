@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelQrBindResponseBody} extends {@link TeaModel}
  *
  * <p>HotelQrBindResponseBody</p>
  */
 public class HotelQrBindResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private HotelQrBindResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class HotelQrBindResponseBody extends TeaModel {
 
     public static HotelQrBindResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class HotelQrBindResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelQrBindResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -111,20 +130,26 @@ public class HotelQrBindResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelQrBindResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelQrBindResponseBody</p>
+     */
     public static class OpenDeviceInfo extends TeaModel {
-        @NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
         private String encodeKey;
 
-        @NameInMap("EncodeType")
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
         private String encodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdType")
+        @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private OpenDeviceInfo(Builder builder) {
@@ -185,6 +210,17 @@ public class HotelQrBindResponseBody extends TeaModel {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenDeviceInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
              * EncodeKey.
              */
@@ -232,20 +268,26 @@ public class HotelQrBindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelQrBindResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelQrBindResponseBody</p>
+     */
     public static class OpenUserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
         private String encodeKey;
 
-        @NameInMap("EncodeType")
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
         private String encodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdType")
+        @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private OpenUserInfo(Builder builder) {
@@ -306,6 +348,17 @@ public class HotelQrBindResponseBody extends TeaModel {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenUserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
              * EncodeKey.
              */
@@ -353,11 +406,17 @@ public class HotelQrBindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelQrBindResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelQrBindResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("OpenDeviceInfo")
+        @com.aliyun.core.annotation.NameInMap("OpenDeviceInfo")
         private OpenDeviceInfo openDeviceInfo;
 
-        @NameInMap("OpenUserInfo")
+        @com.aliyun.core.annotation.NameInMap("OpenUserInfo")
         private OpenUserInfo openUserInfo;
 
         private Result(Builder builder) {
@@ -390,6 +449,14 @@ public class HotelQrBindResponseBody extends TeaModel {
         public static final class Builder {
             private OpenDeviceInfo openDeviceInfo; 
             private OpenUserInfo openUserInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.openDeviceInfo = model.openDeviceInfo;
+                this.openUserInfo = model.openUserInfo;
+            } 
 
             /**
              * OpenDeviceInfo.

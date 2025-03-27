@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInfraredRemoteControllersRequest} extends {@link RequestModel}
  *
  * <p>ListInfraredRemoteControllersRequest</p>
  */
 public class ListInfraredRemoteControllersRequest extends Request {
-    @Body
-    @NameInMap("Brand")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Brand")
     private String brand;
 
-    @Body
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Body
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("Province")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Province")
     private String province;
 
-    @Body
-    @NameInMap("ServiceProvider")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceProvider")
     private String serviceProvider;
 
     private ListInfraredRemoteControllersRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class ListInfraredRemoteControllersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -135,7 +140,7 @@ public class ListInfraredRemoteControllersRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>This parameter is required.</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -153,7 +158,10 @@ public class ListInfraredRemoteControllersRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelsRequest} extends {@link RequestModel}
  *
  * <p>ListHotelsRequest</p>
  */
 public class ListHotelsRequest extends Request {
-    @Query
-    @NameInMap("HotelRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotelRequest")
     private HotelRequest hotelRequest;
 
-    @Query
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Page page;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private ListHotelsRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ListHotelsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,7 +99,7 @@ public class ListHotelsRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -104,7 +109,10 @@ public class ListHotelsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -119,8 +127,14 @@ public class ListHotelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelsRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelsRequest</p>
+     */
     public static class HotelRequest extends TeaModel {
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
         private HotelRequest(Builder builder) {
@@ -145,6 +159,13 @@ public class ListHotelsRequest extends Request {
         public static final class Builder {
             private String hotelId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelRequest model) {
+                this.hotelId = model.hotelId;
+            } 
+
             /**
              * HotelId.
              */
@@ -160,13 +181,19 @@ public class ListHotelsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelsRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelsRequest</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pageSize;
 
         private Page(Builder builder) {
@@ -200,8 +227,19 @@ public class ListHotelsRequest extends Request {
             private Integer pageNumber; 
             private Integer pageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
+
             /**
-             * PageNumber.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -209,7 +247,10 @@ public class ListHotelsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

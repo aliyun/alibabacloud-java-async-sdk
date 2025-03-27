@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHotelAlarmResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHotelAlarmResponseBody</p>
  */
 public class CreateHotelAlarmResponseBody extends TeaModel {
-    @NameInMap("Extentions")
-    private java.util.Map < String, ? > extentions;
+    @com.aliyun.core.annotation.NameInMap("Extentions")
+    private java.util.Map<String, ?> extentions;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private CreateHotelAlarmResponseBody(Builder builder) {
@@ -43,10 +48,14 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extentions
      */
-    public java.util.Map < String, ? > getExtentions() {
+    public java.util.Map<String, ?> getExtentions() {
         return this.extentions;
     }
 
@@ -67,7 +76,7 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -79,16 +88,27 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > extentions; 
+        private java.util.Map<String, ?> extentions; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHotelAlarmResponseBody model) {
+            this.extentions = model.extentions;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Extentions.
          */
-        public Builder extentions(java.util.Map < String, ? > extentions) {
+        public Builder extentions(java.util.Map<String, ?> extentions) {
             this.extentions = extentions;
             return this;
         }
@@ -112,7 +132,7 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,20 +151,26 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHotelAlarmResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHotelAlarmResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AlarmId")
+        @com.aliyun.core.annotation.NameInMap("AlarmId")
         private Long alarmId;
 
-        @NameInMap("DeviceOpenId")
+        @com.aliyun.core.annotation.NameInMap("DeviceOpenId")
         private String deviceOpenId;
 
-        @NameInMap("FailMsg")
+        @com.aliyun.core.annotation.NameInMap("FailMsg")
         private String failMsg;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("UserOpenId")
+        @com.aliyun.core.annotation.NameInMap("UserOpenId")
         private String userOpenId;
 
         private Result(Builder builder) {
@@ -204,6 +230,17 @@ public class CreateHotelAlarmResponseBody extends TeaModel {
             private String failMsg; 
             private String roomNo; 
             private String userOpenId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.alarmId = model.alarmId;
+                this.deviceOpenId = model.deviceOpenId;
+                this.failMsg = model.failMsg;
+                this.roomNo = model.roomNo;
+                this.userOpenId = model.userOpenId;
+            } 
 
             /**
              * AlarmId.

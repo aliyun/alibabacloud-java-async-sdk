@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInfraredDeviceBrandsRequest} extends {@link RequestModel}
  *
  * <p>ListInfraredDeviceBrandsRequest</p>
  */
 public class ListInfraredDeviceBrandsRequest extends Request {
-    @Body
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Body
-    @NameInMap("ServiceProvider")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceProvider")
     private String serviceProvider;
 
     private ListInfraredDeviceBrandsRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class ListInfraredDeviceBrandsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class ListInfraredDeviceBrandsRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>This parameter is required.</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);

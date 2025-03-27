@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySceneListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySceneListResponseBody</p>
  */
 public class QuerySceneListResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
-    private java.util.List < Results> results;
+    @com.aliyun.core.annotation.NameInMap("Results")
+    private java.util.List<Results> results;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private QuerySceneListResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QuerySceneListResponseBody extends TeaModel {
 
     public static QuerySceneListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -56,7 +65,7 @@ public class QuerySceneListResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
@@ -70,8 +79,18 @@ public class QuerySceneListResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySceneListResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -92,7 +111,7 @@ public class QuerySceneListResponseBody extends TeaModel {
         /**
          * Results.
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -111,14 +130,20 @@ public class QuerySceneListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySceneListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySceneListResponseBody</p>
+     */
     public static class TemplateInfoDTOList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private TemplateInfoDTOList(Builder builder) {
@@ -161,6 +186,15 @@ public class QuerySceneListResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplateInfoDTOList model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Description.
              */
@@ -192,29 +226,35 @@ public class QuerySceneListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySceneListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySceneListResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SceneSource")
+        @com.aliyun.core.annotation.NameInMap("SceneSource")
         private String sceneSource;
 
-        @NameInMap("SceneState")
+        @com.aliyun.core.annotation.NameInMap("SceneState")
         private Integer sceneState;
 
-        @NameInMap("SceneType")
+        @com.aliyun.core.annotation.NameInMap("SceneType")
         private String sceneType;
 
-        @NameInMap("TemplateInfoDTOList")
-        private java.util.List < TemplateInfoDTOList> templateInfoDTOList;
+        @com.aliyun.core.annotation.NameInMap("TemplateInfoDTOList")
+        private java.util.List<TemplateInfoDTOList> templateInfoDTOList;
 
-        @NameInMap("UnavailableReason")
+        @com.aliyun.core.annotation.NameInMap("UnavailableReason")
         private String unavailableReason;
 
         private Results(Builder builder) {
@@ -281,7 +321,7 @@ public class QuerySceneListResponseBody extends TeaModel {
         /**
          * @return templateInfoDTOList
          */
-        public java.util.List < TemplateInfoDTOList> getTemplateInfoDTOList() {
+        public java.util.List<TemplateInfoDTOList> getTemplateInfoDTOList() {
             return this.templateInfoDTOList;
         }
 
@@ -299,8 +339,22 @@ public class QuerySceneListResponseBody extends TeaModel {
             private String sceneSource; 
             private Integer sceneState; 
             private String sceneType; 
-            private java.util.List < TemplateInfoDTOList> templateInfoDTOList; 
+            private java.util.List<TemplateInfoDTOList> templateInfoDTOList; 
             private String unavailableReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.icon = model.icon;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.sceneSource = model.sceneSource;
+                this.sceneState = model.sceneState;
+                this.sceneType = model.sceneType;
+                this.templateInfoDTOList = model.templateInfoDTOList;
+                this.unavailableReason = model.unavailableReason;
+            } 
 
             /**
              * Icon.
@@ -353,7 +407,7 @@ public class QuerySceneListResponseBody extends TeaModel {
             /**
              * TemplateInfoDTOList.
              */
-            public Builder templateInfoDTOList(java.util.List < TemplateInfoDTOList> templateInfoDTOList) {
+            public Builder templateInfoDTOList(java.util.List<TemplateInfoDTOList> templateInfoDTOList) {
                 this.templateInfoDTOList = templateInfoDTOList;
                 return this;
             }

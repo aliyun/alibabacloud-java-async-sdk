@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelControlDeviceRequest} extends {@link RequestModel}
  *
  * <p>ListHotelControlDeviceRequest</p>
  */
 public class ListHotelControlDeviceRequest extends Request {
-    @Query
-    @NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
     private ListHotelControlDeviceRequest(Builder builder) {
@@ -29,7 +34,7 @@ public class ListHotelControlDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,24 +75,30 @@ public class ListHotelControlDeviceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelControlDeviceRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelControlDeviceRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -148,8 +159,19 @@ public class ListHotelControlDeviceRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -157,7 +179,7 @@ public class ListHotelControlDeviceRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -165,7 +187,7 @@ public class ListHotelControlDeviceRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -173,7 +195,7 @@ public class ListHotelControlDeviceRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

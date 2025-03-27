@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelAlarmResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelAlarmResponseBody</p>
  */
 public class ListHotelAlarmResponseBody extends TeaModel {
-    @NameInMap("Extentions")
-    private java.util.Map < String, ? > extentions;
+    @com.aliyun.core.annotation.NameInMap("Extentions")
+    private java.util.Map<String, ?> extentions;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private ListHotelAlarmResponseBody(Builder builder) {
@@ -43,10 +48,14 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extentions
      */
-    public java.util.Map < String, ? > getExtentions() {
+    public java.util.Map<String, ?> getExtentions() {
         return this.extentions;
     }
 
@@ -67,7 +76,7 @@ public class ListHotelAlarmResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -79,16 +88,27 @@ public class ListHotelAlarmResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > extentions; 
+        private java.util.Map<String, ?> extentions; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotelAlarmResponseBody model) {
+            this.extentions = model.extentions;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Extentions.
          */
-        public Builder extentions(java.util.Map < String, ? > extentions) {
+        public Builder extentions(java.util.Map<String, ?> extentions) {
             this.extentions = extentions;
             return this;
         }
@@ -112,7 +132,7 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,20 +151,26 @@ public class ListHotelAlarmResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelAlarmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelAlarmResponseBody</p>
+     */
     public static class Once extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private Integer day;
 
-        @NameInMap("Hour")
+        @com.aliyun.core.annotation.NameInMap("Hour")
         private Integer hour;
 
-        @NameInMap("Minute")
+        @com.aliyun.core.annotation.NameInMap("Minute")
         private Integer minute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private Integer month;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private Integer year;
 
         private Once(Builder builder) {
@@ -205,6 +231,17 @@ public class ListHotelAlarmResponseBody extends TeaModel {
             private Integer month; 
             private Integer year; 
 
+            private Builder() {
+            } 
+
+            private Builder(Once model) {
+                this.day = model.day;
+                this.hour = model.hour;
+                this.minute = model.minute;
+                this.month = model.month;
+                this.year = model.year;
+            } 
+
             /**
              * Day.
              */
@@ -252,14 +289,20 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelAlarmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelAlarmResponseBody</p>
+     */
     public static class Weekly extends TeaModel {
-        @NameInMap("DaysOfWeek")
-        private java.util.List < Integer > daysOfWeek;
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
+        private java.util.List<Integer> daysOfWeek;
 
-        @NameInMap("Hour")
+        @com.aliyun.core.annotation.NameInMap("Hour")
         private Integer hour;
 
-        @NameInMap("Minute")
+        @com.aliyun.core.annotation.NameInMap("Minute")
         private Integer minute;
 
         private Weekly(Builder builder) {
@@ -279,7 +322,7 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         /**
          * @return daysOfWeek
          */
-        public java.util.List < Integer > getDaysOfWeek() {
+        public java.util.List<Integer> getDaysOfWeek() {
             return this.daysOfWeek;
         }
 
@@ -298,14 +341,23 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > daysOfWeek; 
+            private java.util.List<Integer> daysOfWeek; 
             private Integer hour; 
             private Integer minute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Weekly model) {
+                this.daysOfWeek = model.daysOfWeek;
+                this.hour = model.hour;
+                this.minute = model.minute;
+            } 
 
             /**
              * DaysOfWeek.
              */
-            public Builder daysOfWeek(java.util.List < Integer > daysOfWeek) {
+            public Builder daysOfWeek(java.util.List<Integer> daysOfWeek) {
                 this.daysOfWeek = daysOfWeek;
                 return this;
             }
@@ -333,14 +385,20 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelAlarmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelAlarmResponseBody</p>
+     */
     public static class ScheduleInfo extends TeaModel {
-        @NameInMap("Once")
+        @com.aliyun.core.annotation.NameInMap("Once")
         private Once once;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weekly")
+        @com.aliyun.core.annotation.NameInMap("Weekly")
         private Weekly weekly;
 
         private ScheduleInfo(Builder builder) {
@@ -383,6 +441,15 @@ public class ListHotelAlarmResponseBody extends TeaModel {
             private String type; 
             private Weekly weekly; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleInfo model) {
+                this.once = model.once;
+                this.type = model.type;
+                this.weekly = model.weekly;
+            } 
+
             /**
              * Once.
              */
@@ -392,7 +459,10 @@ public class ListHotelAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * ONCE, WEEKLY
+             * <p>ONCE, WEEKLY</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONCE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -414,17 +484,23 @@ public class ListHotelAlarmResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelAlarmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelAlarmResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AlarmId")
+        @com.aliyun.core.annotation.NameInMap("AlarmId")
         private Long alarmId;
 
-        @NameInMap("DeviceOpenId")
+        @com.aliyun.core.annotation.NameInMap("DeviceOpenId")
         private String deviceOpenId;
 
-        @NameInMap("ScheduleInfo")
+        @com.aliyun.core.annotation.NameInMap("ScheduleInfo")
         private ScheduleInfo scheduleInfo;
 
-        @NameInMap("UserOpenId")
+        @com.aliyun.core.annotation.NameInMap("UserOpenId")
         private String userOpenId;
 
         private Result(Builder builder) {
@@ -475,6 +551,16 @@ public class ListHotelAlarmResponseBody extends TeaModel {
             private String deviceOpenId; 
             private ScheduleInfo scheduleInfo; 
             private String userOpenId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.alarmId = model.alarmId;
+                this.deviceOpenId = model.deviceOpenId;
+                this.scheduleInfo = model.scheduleInfo;
+                this.userOpenId = model.userOpenId;
+            } 
 
             /**
              * AlarmId.

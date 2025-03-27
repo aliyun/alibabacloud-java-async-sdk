@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportHotelConfigRequest} extends {@link RequestModel}
  *
  * <p>ImportHotelConfigRequest</p>
  */
 public class ImportHotelConfigRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("ImportHotelConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImportHotelConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ImportHotelConfig importHotelConfig;
 
     private ImportHotelConfigRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ImportHotelConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class ImportHotelConfigRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7***83</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -79,7 +87,7 @@ public class ImportHotelConfigRequest extends Request {
         }
 
         /**
-         * ImportHotelConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder importHotelConfig(ImportHotelConfig importHotelConfig) {
             String importHotelConfigShrink = shrink(importHotelConfig, "ImportHotelConfig", "json");
@@ -95,23 +103,29 @@ public class ImportHotelConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportHotelConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ImportHotelConfigRequest</p>
+     */
     public static class RcuCustomScenes extends TeaModel {
-        @NameInMap("CorpusList")
-        @Validation(required = true)
-        private java.util.List < String > corpusList;
+        @com.aliyun.core.annotation.NameInMap("CorpusList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> corpusList;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("SceneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SceneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sceneId;
 
         private RcuCustomScenes(Builder builder) {
@@ -133,7 +147,7 @@ public class ImportHotelConfigRequest extends Request {
         /**
          * @return corpusList
          */
-        public java.util.List < String > getCorpusList() {
+        public java.util.List<String> getCorpusList() {
             return this.corpusList;
         }
 
@@ -166,16 +180,27 @@ public class ImportHotelConfigRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > corpusList; 
+            private java.util.List<String> corpusList; 
             private String description; 
             private String icon; 
             private String name; 
             private String sceneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RcuCustomScenes model) {
+                this.corpusList = model.corpusList;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+                this.sceneId = model.sceneId;
+            } 
+
             /**
-             * CorpusList.
+             * <p>This parameter is required.</p>
              */
-            public Builder corpusList(java.util.List < String > corpusList) {
+            public Builder corpusList(java.util.List<String> corpusList) {
                 this.corpusList = corpusList;
                 return this;
             }
@@ -197,7 +222,7 @@ public class ImportHotelConfigRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,7 +230,7 @@ public class ImportHotelConfigRequest extends Request {
             }
 
             /**
-             * SceneId.
+             * <p>This parameter is required.</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -219,9 +244,15 @@ public class ImportHotelConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportHotelConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ImportHotelConfigRequest</p>
+     */
     public static class ImportHotelConfig extends TeaModel {
-        @NameInMap("RcuCustomScenes")
-        private java.util.List < RcuCustomScenes> rcuCustomScenes;
+        @com.aliyun.core.annotation.NameInMap("RcuCustomScenes")
+        private java.util.List<RcuCustomScenes> rcuCustomScenes;
 
         private ImportHotelConfig(Builder builder) {
             this.rcuCustomScenes = builder.rcuCustomScenes;
@@ -238,17 +269,24 @@ public class ImportHotelConfigRequest extends Request {
         /**
          * @return rcuCustomScenes
          */
-        public java.util.List < RcuCustomScenes> getRcuCustomScenes() {
+        public java.util.List<RcuCustomScenes> getRcuCustomScenes() {
             return this.rcuCustomScenes;
         }
 
         public static final class Builder {
-            private java.util.List < RcuCustomScenes> rcuCustomScenes; 
+            private java.util.List<RcuCustomScenes> rcuCustomScenes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImportHotelConfig model) {
+                this.rcuCustomScenes = model.rcuCustomScenes;
+            } 
 
             /**
              * RcuCustomScenes.
              */
-            public Builder rcuCustomScenes(java.util.List < RcuCustomScenes> rcuCustomScenes) {
+            public Builder rcuCustomScenes(java.util.List<RcuCustomScenes> rcuCustomScenes) {
                 this.rcuCustomScenes = rcuCustomScenes;
                 return this;
             }

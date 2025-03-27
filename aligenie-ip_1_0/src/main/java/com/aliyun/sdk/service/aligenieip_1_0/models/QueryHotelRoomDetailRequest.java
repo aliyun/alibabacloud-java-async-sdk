@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHotelRoomDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryHotelRoomDetailRequest</p>
  */
 public class QueryHotelRoomDetailRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
     private String hotelId;
 
-    @Body
-    @NameInMap("Mac")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mac")
     private String mac;
 
-    @Body
-    @NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
     private String roomNo;
 
-    @Body
-    @NameInMap("Sn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
-    @Body
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private QueryHotelRoomDetailRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class QueryHotelRoomDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,10 +142,12 @@ public class QueryHotelRoomDetailRequest extends Request {
         }
 
         /**
-         * 设备sn信息
-         * <p>
-         * 注：若在mac uuid sn全都输入的情况下 按照输入正确的内容查询 若全输入都是正确的 则 按照 uuid > mac > sn 优先级查询
-         * 传入mac uuid sn其中一个 则酒店id和房间号可不传
+         * <p>设备sn信息
+         * 注：若在mac uuid sn全都输入的情况下 按照输入正确的内容查询 若全输入都是正确的 则 按照 uuid &gt; mac &gt; sn 优先级查询
+         * 传入mac uuid sn其中一个 则酒店id和房间号可不传</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280**28</p>
          */
         public Builder sn(String sn) {
             this.putBodyParameter("Sn", sn);

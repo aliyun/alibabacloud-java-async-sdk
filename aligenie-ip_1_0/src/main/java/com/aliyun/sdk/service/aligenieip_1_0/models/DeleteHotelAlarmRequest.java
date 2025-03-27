@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHotelAlarmRequest} extends {@link RequestModel}
  *
  * <p>DeleteHotelAlarmRequest</p>
  */
 public class DeleteHotelAlarmRequest extends Request {
-    @Body
-    @NameInMap("Alarms")
-    @Validation(required = true)
-    private java.util.List < Alarms> alarms;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Alarms")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Alarms> alarms;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
     private DeleteHotelAlarmRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class DeleteHotelAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,7 +49,7 @@ public class DeleteHotelAlarmRequest extends Request {
     /**
      * @return alarms
      */
-    public java.util.List < Alarms> getAlarms() {
+    public java.util.List<Alarms> getAlarms() {
         return this.alarms;
     }
 
@@ -56,7 +61,7 @@ public class DeleteHotelAlarmRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteHotelAlarmRequest, Builder> {
-        private java.util.List < Alarms> alarms; 
+        private java.util.List<Alarms> alarms; 
         private String hotelId; 
 
         private Builder() {
@@ -70,9 +75,9 @@ public class DeleteHotelAlarmRequest extends Request {
         } 
 
         /**
-         * Alarms.
+         * <p>This parameter is required.</p>
          */
-        public Builder alarms(java.util.List < Alarms> alarms) {
+        public Builder alarms(java.util.List<Alarms> alarms) {
             String alarmsShrink = shrink(alarms, "Alarms", "json");
             this.putBodyParameter("Alarms", alarmsShrink);
             this.alarms = alarms;
@@ -80,7 +85,10 @@ public class DeleteHotelAlarmRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7***83</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -95,20 +103,26 @@ public class DeleteHotelAlarmRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteHotelAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteHotelAlarmRequest</p>
+     */
     public static class Alarms extends TeaModel {
-        @NameInMap("AlarmId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AlarmId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long alarmId;
 
-        @NameInMap("DeviceOpenId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceOpenId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceOpenId;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("UserOpenId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserOpenId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userOpenId;
 
         private Alarms(Builder builder) {
@@ -160,8 +174,21 @@ public class DeleteHotelAlarmRequest extends Request {
             private String roomNo; 
             private String userOpenId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Alarms model) {
+                this.alarmId = model.alarmId;
+                this.deviceOpenId = model.deviceOpenId;
+                this.roomNo = model.roomNo;
+                this.userOpenId = model.userOpenId;
+            } 
+
             /**
-             * AlarmId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5029</p>
              */
             public Builder alarmId(Long alarmId) {
                 this.alarmId = alarmId;
@@ -169,7 +196,10 @@ public class DeleteHotelAlarmRequest extends Request {
             }
 
             /**
-             * DeviceOpenId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PvkB***TA==</p>
              */
             public Builder deviceOpenId(String deviceOpenId) {
                 this.deviceOpenId = deviceOpenId;
@@ -185,7 +215,10 @@ public class DeleteHotelAlarmRequest extends Request {
             }
 
             /**
-             * UserOpenId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mgw/k***HQd</p>
              */
             public Builder userOpenId(String userOpenId) {
                 this.userOpenId = userOpenId;

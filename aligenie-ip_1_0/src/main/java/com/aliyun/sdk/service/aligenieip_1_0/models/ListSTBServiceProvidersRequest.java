@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSTBServiceProvidersRequest} extends {@link RequestModel}
  *
  * <p>ListSTBServiceProvidersRequest</p>
  */
 public class ListSTBServiceProvidersRequest extends Request {
-    @Body
-    @NameInMap("City")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("City")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String city;
 
-    @Body
-    @NameInMap("Province")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Province")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String province;
 
     private ListSTBServiceProvidersRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ListSTBServiceProvidersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class ListSTBServiceProvidersRequest extends Request {
         } 
 
         /**
-         * City.
+         * <p>This parameter is required.</p>
          */
         public Builder city(String city) {
             this.putBodyParameter("City", city);
@@ -79,7 +84,7 @@ public class ListSTBServiceProvidersRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>This parameter is required.</p>
          */
         public Builder province(String province) {
             this.putBodyParameter("Province", province);

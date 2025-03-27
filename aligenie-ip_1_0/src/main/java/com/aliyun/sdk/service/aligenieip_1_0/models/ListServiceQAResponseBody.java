@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceQAResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceQAResponseBody</p>
  */
 public class ListServiceQAResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private ListServiceQAResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListServiceQAResponseBody extends TeaModel {
 
     public static ListServiceQAResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListServiceQAResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,8 +91,19 @@ public class ListServiceQAResponseBody extends TeaModel {
         private String message; 
         private Page page; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceQAResponseBody model) {
+            this.message = model.message;
+            this.page = model.page;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -112,7 +132,7 @@ public class ListServiceQAResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,14 +151,20 @@ public class ListServiceQAResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceQAResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceQAResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Page(Builder builder) {
@@ -181,6 +207,15 @@ public class ListServiceQAResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
              * PageNumber.
              */
@@ -212,23 +247,29 @@ public class ListServiceQAResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceQAResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceQAResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("Answer")
+        @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Question")
+        @com.aliyun.core.annotation.NameInMap("Question")
         private String question;
 
-        @NameInMap("ServiceQAId")
+        @com.aliyun.core.annotation.NameInMap("ServiceQAId")
         private Long serviceQAId;
 
-        @NameInMap("Templates")
+        @com.aliyun.core.annotation.NameInMap("Templates")
         private String templates;
 
         private Result(Builder builder) {
@@ -297,6 +338,18 @@ public class ListServiceQAResponseBody extends TeaModel {
             private String question; 
             private Long serviceQAId; 
             private String templates; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.answer = model.answer;
+                this.gmtModified = model.gmtModified;
+                this.question = model.question;
+                this.serviceQAId = model.serviceQAId;
+                this.templates = model.templates;
+            } 
 
             /**
              * Active.

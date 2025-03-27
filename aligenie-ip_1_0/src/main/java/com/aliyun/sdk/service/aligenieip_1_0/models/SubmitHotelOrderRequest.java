@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitHotelOrderRequest} extends {@link RequestModel}
  *
  * <p>SubmitHotelOrderRequest</p>
  */
 public class SubmitHotelOrderRequest extends Request {
-    @Query
-    @NameInMap("Payload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Payload payload;
 
-    @Query
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private SubmitHotelOrderRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class SubmitHotelOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class SubmitHotelOrderRequest extends Request {
         } 
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(Payload payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -80,7 +85,7 @@ public class SubmitHotelOrderRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -96,18 +101,28 @@ public class SubmitHotelOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitHotelOrderRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotelOrderRequest</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("ItemId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ItemId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long itemId;
 
-        @NameInMap("Quantity")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Quantity")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long quantity;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
 
         private ItemList(Builder builder) {
             this.itemId = builder.itemId;
             this.quantity = builder.quantity;
+            this.remark = builder.remark;
         }
 
         public static Builder builder() {
@@ -132,12 +147,32 @@ public class SubmitHotelOrderRequest extends Request {
             return this.quantity;
         }
 
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
         public static final class Builder {
             private Long itemId; 
             private Long quantity; 
+            private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItemList model) {
+                this.itemId = model.itemId;
+                this.quantity = model.quantity;
+                this.remark = model.remark;
+            } 
 
             /**
-             * ItemId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>152860</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -145,10 +180,21 @@ public class SubmitHotelOrderRequest extends Request {
             }
 
             /**
-             * Quantity.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder quantity(Long quantity) {
                 this.quantity = quantity;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
@@ -159,13 +205,19 @@ public class SubmitHotelOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitHotelOrderRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotelOrderRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("ItemList")
-        @Validation(required = true)
-        private java.util.List < ItemList> itemList;
+        @com.aliyun.core.annotation.NameInMap("ItemList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<ItemList> itemList;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Payload(Builder builder) {
@@ -184,7 +236,7 @@ public class SubmitHotelOrderRequest extends Request {
         /**
          * @return itemList
          */
-        public java.util.List < ItemList> getItemList() {
+        public java.util.List<ItemList> getItemList() {
             return this.itemList;
         }
 
@@ -196,19 +248,30 @@ public class SubmitHotelOrderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ItemList> itemList; 
+            private java.util.List<ItemList> itemList; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.itemList = model.itemList;
+                this.type = model.type;
+            } 
+
             /**
-             * ItemList.
+             * <p>This parameter is required.</p>
              */
-            public Builder itemList(java.util.List < ItemList> itemList) {
+            public Builder itemList(java.util.List<ItemList> itemList) {
                 this.itemList = itemList;
                 return this;
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GOODS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -222,24 +285,30 @@ public class SubmitHotelOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitHotelOrderRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotelOrderRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -300,8 +369,22 @@ public class SubmitHotelOrderRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1248494721591392955</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -309,7 +392,10 @@ public class SubmitHotelOrderRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROJECT_ID</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -317,7 +403,10 @@ public class SubmitHotelOrderRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mFU6VtVU+pgA8lx6rYMo7SPl11t+8b+8ALrn10MIPEdpK/HI9wELAEppYhPI1cYRDa4og8AMjAEBZKbLUwFjFA==</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -325,7 +414,10 @@ public class SubmitHotelOrderRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

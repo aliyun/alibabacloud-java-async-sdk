@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomQARequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomQARequest</p>
  */
 public class UpdateCustomQARequest extends Request {
-    @Body
-    @NameInMap("Answers")
-    private java.util.List < String > answers;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Answers")
+    private java.util.List<String> answers;
 
-    @Body
-    @NameInMap("CustomQAId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomQAId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customQAId;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("KeyWords")
-    private java.util.List < String > keyWords;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyWords")
+    private java.util.List<String> keyWords;
 
-    @Body
-    @NameInMap("MajorQuestion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MajorQuestion")
     private String majorQuestion;
 
-    @Body
-    @NameInMap("SupplementaryQuestions")
-    private java.util.List < String > supplementaryQuestions;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SupplementaryQuestions")
+    private java.util.List<String> supplementaryQuestions;
 
     private UpdateCustomQARequest(Builder builder) {
         super(builder);
@@ -56,7 +61,7 @@ public class UpdateCustomQARequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,7 +69,7 @@ public class UpdateCustomQARequest extends Request {
     /**
      * @return answers
      */
-    public java.util.List < String > getAnswers() {
+    public java.util.List<String> getAnswers() {
         return this.answers;
     }
 
@@ -85,7 +90,7 @@ public class UpdateCustomQARequest extends Request {
     /**
      * @return keyWords
      */
-    public java.util.List < String > getKeyWords() {
+    public java.util.List<String> getKeyWords() {
         return this.keyWords;
     }
 
@@ -99,17 +104,17 @@ public class UpdateCustomQARequest extends Request {
     /**
      * @return supplementaryQuestions
      */
-    public java.util.List < String > getSupplementaryQuestions() {
+    public java.util.List<String> getSupplementaryQuestions() {
         return this.supplementaryQuestions;
     }
 
     public static final class Builder extends Request.Builder<UpdateCustomQARequest, Builder> {
-        private java.util.List < String > answers; 
+        private java.util.List<String> answers; 
         private String customQAId; 
         private String hotelId; 
-        private java.util.List < String > keyWords; 
+        private java.util.List<String> keyWords; 
         private String majorQuestion; 
-        private java.util.List < String > supplementaryQuestions; 
+        private java.util.List<String> supplementaryQuestions; 
 
         private Builder() {
             super();
@@ -128,7 +133,7 @@ public class UpdateCustomQARequest extends Request {
         /**
          * Answers.
          */
-        public Builder answers(java.util.List < String > answers) {
+        public Builder answers(java.util.List<String> answers) {
             String answersShrink = shrink(answers, "Answers", "json");
             this.putBodyParameter("Answers", answersShrink);
             this.answers = answers;
@@ -136,7 +141,10 @@ public class UpdateCustomQARequest extends Request {
         }
 
         /**
-         * CustomQAId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customQAId(String customQAId) {
             this.putBodyParameter("CustomQAId", customQAId);
@@ -145,7 +153,10 @@ public class UpdateCustomQARequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -156,7 +167,7 @@ public class UpdateCustomQARequest extends Request {
         /**
          * KeyWords.
          */
-        public Builder keyWords(java.util.List < String > keyWords) {
+        public Builder keyWords(java.util.List<String> keyWords) {
             String keyWordsShrink = shrink(keyWords, "KeyWords", "json");
             this.putBodyParameter("KeyWords", keyWordsShrink);
             this.keyWords = keyWords;
@@ -175,7 +186,7 @@ public class UpdateCustomQARequest extends Request {
         /**
          * SupplementaryQuestions.
          */
-        public Builder supplementaryQuestions(java.util.List < String > supplementaryQuestions) {
+        public Builder supplementaryQuestions(java.util.List<String> supplementaryQuestions) {
             String supplementaryQuestionsShrink = shrink(supplementaryQuestions, "SupplementaryQuestions", "json");
             this.putBodyParameter("SupplementaryQuestions", supplementaryQuestionsShrink);
             this.supplementaryQuestions = supplementaryQuestions;

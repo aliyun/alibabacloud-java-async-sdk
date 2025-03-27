@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelOrderResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelOrderResponseBody</p>
  */
 public class ListHotelOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
     private ListHotelOrderResponseBody(Builder builder) {
         this.code = builder.code;
@@ -41,6 +46,10 @@ public class ListHotelOrderResponseBody extends TeaModel {
 
     public static ListHotelOrderResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class ListHotelOrderResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -83,7 +92,18 @@ public class ListHotelOrderResponseBody extends TeaModel {
         private String message; 
         private Page page; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotelOrderResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.page = model.page;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -120,7 +140,7 @@ public class ListHotelOrderResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,20 +151,26 @@ public class ListHotelOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelOrderResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Page(Builder builder) {
@@ -205,6 +231,17 @@ public class ListHotelOrderResponseBody extends TeaModel {
             private Integer total; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.hasNext = model.hasNext;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * HasNext.
              */
@@ -252,41 +289,95 @@ public class ListHotelOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelOrderResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("ApplyAmt")
+        @com.aliyun.core.annotation.NameInMap("Amt")
+        private Long amt;
+
+        @com.aliyun.core.annotation.NameInMap("ApplyAmt")
         private Long applyAmt;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("DeliveryMethod")
+        private String deliveryMethod;
+
+        @com.aliyun.core.annotation.NameInMap("DeliveryRoomName")
+        private String deliveryRoomName;
+
+        @com.aliyun.core.annotation.NameInMap("DeliveryTime")
+        private Long deliveryTime;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("OrderNo")
+        @com.aliyun.core.annotation.NameInMap("Icon")
+        private String icon;
+
+        @com.aliyun.core.annotation.NameInMap("ItemId")
+        private Long itemId;
+
+        @com.aliyun.core.annotation.NameInMap("ItemType")
+        private String itemType;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("OrderNo")
         private String orderNo;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("OrderStatus")
+        private String orderStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PaymentMethod")
+        private String paymentMethod;
+
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("SumAmt")
+        private Long sumAmt;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("TypeIconUrl")
+        @com.aliyun.core.annotation.NameInMap("TypeIconUrl")
         private String typeIconUrl;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private Result(Builder builder) {
+            this.amt = builder.amt;
             this.applyAmt = builder.applyAmt;
+            this.deliveryMethod = builder.deliveryMethod;
+            this.deliveryRoomName = builder.deliveryRoomName;
+            this.deliveryTime = builder.deliveryTime;
             this.gmtCreate = builder.gmtCreate;
+            this.icon = builder.icon;
+            this.itemId = builder.itemId;
+            this.itemType = builder.itemType;
+            this.name = builder.name;
             this.orderNo = builder.orderNo;
+            this.orderStatus = builder.orderStatus;
+            this.paymentMethod = builder.paymentMethod;
             this.quantity = builder.quantity;
             this.roomNo = builder.roomNo;
+            this.startTime = builder.startTime;
             this.status = builder.status;
+            this.sumAmt = builder.sumAmt;
             this.type = builder.type;
             this.typeIconUrl = builder.typeIconUrl;
             this.typeName = builder.typeName;
@@ -301,10 +392,38 @@ public class ListHotelOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return amt
+         */
+        public Long getAmt() {
+            return this.amt;
+        }
+
+        /**
          * @return applyAmt
          */
         public Long getApplyAmt() {
             return this.applyAmt;
+        }
+
+        /**
+         * @return deliveryMethod
+         */
+        public String getDeliveryMethod() {
+            return this.deliveryMethod;
+        }
+
+        /**
+         * @return deliveryRoomName
+         */
+        public String getDeliveryRoomName() {
+            return this.deliveryRoomName;
+        }
+
+        /**
+         * @return deliveryTime
+         */
+        public Long getDeliveryTime() {
+            return this.deliveryTime;
         }
 
         /**
@@ -315,10 +434,52 @@ public class ListHotelOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return icon
+         */
+        public String getIcon() {
+            return this.icon;
+        }
+
+        /**
+         * @return itemId
+         */
+        public Long getItemId() {
+            return this.itemId;
+        }
+
+        /**
+         * @return itemType
+         */
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return orderNo
          */
         public String getOrderNo() {
             return this.orderNo;
+        }
+
+        /**
+         * @return orderStatus
+         */
+        public String getOrderStatus() {
+            return this.orderStatus;
+        }
+
+        /**
+         * @return paymentMethod
+         */
+        public String getPaymentMethod() {
+            return this.paymentMethod;
         }
 
         /**
@@ -336,10 +497,24 @@ public class ListHotelOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return sumAmt
+         */
+        public Long getSumAmt() {
+            return this.sumAmt;
         }
 
         /**
@@ -364,21 +539,92 @@ public class ListHotelOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long amt; 
             private Long applyAmt; 
+            private String deliveryMethod; 
+            private String deliveryRoomName; 
+            private Long deliveryTime; 
             private Long gmtCreate; 
+            private String icon; 
+            private Long itemId; 
+            private String itemType; 
+            private String name; 
             private String orderNo; 
+            private String orderStatus; 
+            private String paymentMethod; 
             private Long quantity; 
             private String roomNo; 
+            private Long startTime; 
             private String status; 
+            private Long sumAmt; 
             private String type; 
             private String typeIconUrl; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.amt = model.amt;
+                this.applyAmt = model.applyAmt;
+                this.deliveryMethod = model.deliveryMethod;
+                this.deliveryRoomName = model.deliveryRoomName;
+                this.deliveryTime = model.deliveryTime;
+                this.gmtCreate = model.gmtCreate;
+                this.icon = model.icon;
+                this.itemId = model.itemId;
+                this.itemType = model.itemType;
+                this.name = model.name;
+                this.orderNo = model.orderNo;
+                this.orderStatus = model.orderStatus;
+                this.paymentMethod = model.paymentMethod;
+                this.quantity = model.quantity;
+                this.roomNo = model.roomNo;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.sumAmt = model.sumAmt;
+                this.type = model.type;
+                this.typeIconUrl = model.typeIconUrl;
+                this.typeName = model.typeName;
+            } 
+
+            /**
+             * Amt.
+             */
+            public Builder amt(Long amt) {
+                this.amt = amt;
+                return this;
+            }
 
             /**
              * ApplyAmt.
              */
             public Builder applyAmt(Long applyAmt) {
                 this.applyAmt = applyAmt;
+                return this;
+            }
+
+            /**
+             * DeliveryMethod.
+             */
+            public Builder deliveryMethod(String deliveryMethod) {
+                this.deliveryMethod = deliveryMethod;
+                return this;
+            }
+
+            /**
+             * DeliveryRoomName.
+             */
+            public Builder deliveryRoomName(String deliveryRoomName) {
+                this.deliveryRoomName = deliveryRoomName;
+                return this;
+            }
+
+            /**
+             * DeliveryTime.
+             */
+            public Builder deliveryTime(Long deliveryTime) {
+                this.deliveryTime = deliveryTime;
                 return this;
             }
 
@@ -391,10 +637,58 @@ public class ListHotelOrderResponseBody extends TeaModel {
             }
 
             /**
+             * Icon.
+             */
+            public Builder icon(String icon) {
+                this.icon = icon;
+                return this;
+            }
+
+            /**
+             * ItemId.
+             */
+            public Builder itemId(Long itemId) {
+                this.itemId = itemId;
+                return this;
+            }
+
+            /**
+             * ItemType.
+             */
+            public Builder itemType(String itemType) {
+                this.itemType = itemType;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
              * OrderNo.
              */
             public Builder orderNo(String orderNo) {
                 this.orderNo = orderNo;
+                return this;
+            }
+
+            /**
+             * OrderStatus.
+             */
+            public Builder orderStatus(String orderStatus) {
+                this.orderStatus = orderStatus;
+                return this;
+            }
+
+            /**
+             * PaymentMethod.
+             */
+            public Builder paymentMethod(String paymentMethod) {
+                this.paymentMethod = paymentMethod;
                 return this;
             }
 
@@ -415,10 +709,26 @@ public class ListHotelOrderResponseBody extends TeaModel {
             }
 
             /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SumAmt.
+             */
+            public Builder sumAmt(Long sumAmt) {
+                this.sumAmt = sumAmt;
                 return this;
             }
 

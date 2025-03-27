@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveChildAccountAuthRequest} extends {@link RequestModel}
  *
  * <p>RemoveChildAccountAuthRequest</p>
  */
 public class RemoveChildAccountAuthRequest extends Request {
-    @Body
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appKey;
 
-    @Body
-    @NameInMap("ChildAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChildAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childAccountName;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("TbOpenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbOpenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbOpenId;
 
     private RemoveChildAccountAuthRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class RemoveChildAccountAuthRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,10 @@ public class RemoveChildAccountAuthRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30**53</p>
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -109,7 +117,10 @@ public class RemoveChildAccountAuthRequest extends Request {
         }
 
         /**
-         * ChildAccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tbxxxx</p>
          */
         public Builder childAccountName(String childAccountName) {
             this.putBodyParameter("ChildAccountName", childAccountName);
@@ -118,7 +129,10 @@ public class RemoveChildAccountAuthRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -127,7 +141,10 @@ public class RemoveChildAccountAuthRequest extends Request {
         }
 
         /**
-         * TbOpenId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAEV***E3d3Z2ETwh</p>
          */
         public Builder tbOpenId(String tbOpenId) {
             this.putBodyParameter("TbOpenId", tbOpenId);

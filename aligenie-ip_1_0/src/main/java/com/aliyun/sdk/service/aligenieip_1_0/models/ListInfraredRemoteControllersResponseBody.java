@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInfraredRemoteControllersResponseBody} extends {@link TeaModel}
  *
  * <p>ListInfraredRemoteControllersResponseBody</p>
  */
 public class ListInfraredRemoteControllersResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private ListInfraredRemoteControllersResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListInfraredRemoteControllersResponseBody extends TeaModel {
 
     public static ListInfraredRemoteControllersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -56,7 +65,7 @@ public class ListInfraredRemoteControllersResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -70,8 +79,18 @@ public class ListInfraredRemoteControllersResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInfraredRemoteControllersResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -92,7 +111,7 @@ public class ListInfraredRemoteControllersResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -111,14 +130,20 @@ public class ListInfraredRemoteControllersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInfraredRemoteControllersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInfraredRemoteControllersResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Result(Builder builder) {
@@ -160,6 +185,15 @@ public class ListInfraredRemoteControllersResponseBody extends TeaModel {
             private Integer index; 
             private Long rid; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.index = model.index;
+                this.rid = model.rid;
+                this.version = model.version;
+            } 
 
             /**
              * Index.

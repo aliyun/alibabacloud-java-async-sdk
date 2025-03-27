@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddOrUpdateScreenSaverRequest} extends {@link RequestModel}
  *
  * <p>AddOrUpdateScreenSaverRequest</p>
  */
 public class AddOrUpdateScreenSaverRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("HotelScreenSaver")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelScreenSaver")
+    @com.aliyun.core.annotation.Validation(required = true)
     private HotelScreenSaver hotelScreenSaver;
 
     private AddOrUpdateScreenSaverRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AddOrUpdateScreenSaverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class AddOrUpdateScreenSaverRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7a3***013</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -79,7 +87,7 @@ public class AddOrUpdateScreenSaverRequest extends Request {
         }
 
         /**
-         * HotelScreenSaver.
+         * <p>This parameter is required.</p>
          */
         public Builder hotelScreenSaver(HotelScreenSaver hotelScreenSaver) {
             String hotelScreenSaverShrink = shrink(hotelScreenSaver, "HotelScreenSaver", "json");
@@ -95,11 +103,17 @@ public class AddOrUpdateScreenSaverRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddOrUpdateScreenSaverRequest} extends {@link TeaModel}
+     *
+     * <p>AddOrUpdateScreenSaverRequest</p>
+     */
     public static class HotelScreenSaver extends TeaModel {
-        @NameInMap("ScreenSaverPicUrl")
+        @com.aliyun.core.annotation.NameInMap("ScreenSaverPicUrl")
         private String screenSaverPicUrl;
 
-        @NameInMap("ScreenSaverStyle")
+        @com.aliyun.core.annotation.NameInMap("ScreenSaverStyle")
         private String screenSaverStyle;
 
         private HotelScreenSaver(Builder builder) {
@@ -132,6 +146,14 @@ public class AddOrUpdateScreenSaverRequest extends Request {
         public static final class Builder {
             private String screenSaverPicUrl; 
             private String screenSaverStyle; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelScreenSaver model) {
+                this.screenSaverPicUrl = model.screenSaverPicUrl;
+                this.screenSaverStyle = model.screenSaverStyle;
+            } 
 
             /**
              * ScreenSaverPicUrl.

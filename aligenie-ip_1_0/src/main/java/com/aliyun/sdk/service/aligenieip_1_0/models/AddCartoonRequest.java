@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCartoonRequest} extends {@link RequestModel}
  *
  * <p>AddCartoonRequest</p>
  */
 public class AddCartoonRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("StartVideoMd5")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartVideoMd5")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startVideoMd5;
 
-    @Body
-    @NameInMap("StartVideoUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartVideoUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startVideoUrl;
 
     private AddCartoonRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class AddCartoonRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class AddCartoonRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520a0***eb</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -94,7 +102,10 @@ public class AddCartoonRequest extends Request {
         }
 
         /**
-         * StartVideoMd5.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40c804***697</p>
          */
         public Builder startVideoMd5(String startVideoMd5) {
             this.putBodyParameter("StartVideoMd5", startVideoMd5);
@@ -103,7 +114,10 @@ public class AddCartoonRequest extends Request {
         }
 
         /**
-         * StartVideoUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***.mp4</p>
          */
         public Builder startVideoUrl(String startVideoUrl) {
             this.putBodyParameter("StartVideoUrl", startVideoUrl);

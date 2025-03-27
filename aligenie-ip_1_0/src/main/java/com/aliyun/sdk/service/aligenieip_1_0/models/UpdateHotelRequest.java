@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHotelRequest} extends {@link RequestModel}
  *
  * <p>UpdateHotelRequest</p>
  */
 public class UpdateHotelRequest extends Request {
-    @Body
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appKey;
 
-    @Body
-    @NameInMap("EstOpenTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EstOpenTime")
     private String estOpenTime;
 
-    @Body
-    @NameInMap("HotelAddress")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelAddress")
     private String hotelAddress;
 
-    @Body
-    @NameInMap("HotelEmail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelEmail")
     private String hotelEmail;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("HotelName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelName")
     private String hotelName;
 
-    @Body
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
-    @Body
-    @NameInMap("RelatedPks")
-    private java.util.List < String > relatedPks;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RelatedPks")
+    private java.util.List<String> relatedPks;
 
-    @Body
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Body
-    @NameInMap("RoomNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNum")
     private Integer roomNum;
 
-    @Body
-    @NameInMap("TbOpenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbOpenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbOpenId;
 
     private UpdateHotelRequest(Builder builder) {
@@ -82,7 +87,7 @@ public class UpdateHotelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,7 @@ public class UpdateHotelRequest extends Request {
     /**
      * @return relatedPks
      */
-    public java.util.List < String > getRelatedPks() {
+    public java.util.List<String> getRelatedPks() {
         return this.relatedPks;
     }
 
@@ -172,7 +177,7 @@ public class UpdateHotelRequest extends Request {
         private String hotelId; 
         private String hotelName; 
         private String phoneNumber; 
-        private java.util.List < String > relatedPks; 
+        private java.util.List<String> relatedPks; 
         private String remark; 
         private Integer roomNum; 
         private String tbOpenId; 
@@ -197,7 +202,10 @@ public class UpdateHotelRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31342884</p>
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -233,7 +241,10 @@ public class UpdateHotelRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -262,7 +273,7 @@ public class UpdateHotelRequest extends Request {
         /**
          * RelatedPks.
          */
-        public Builder relatedPks(java.util.List < String > relatedPks) {
+        public Builder relatedPks(java.util.List<String> relatedPks) {
             String relatedPksShrink = shrink(relatedPks, "RelatedPks", "json");
             this.putBodyParameter("RelatedPks", relatedPksShrink);
             this.relatedPks = relatedPks;
@@ -288,7 +299,10 @@ public class UpdateHotelRequest extends Request {
         }
 
         /**
-         * TbOpenId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAEVK***UE3d3Z2ETwh</p>
          */
         public Builder tbOpenId(String tbOpenId) {
             this.putBodyParameter("TbOpenId", tbOpenId);

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportRoomControlDevicesRequest} extends {@link RequestModel}
  *
  * <p>ImportRoomControlDevicesRequest</p>
  */
 public class ImportRoomControlDevicesRequest extends Request {
-    @Body
-    @NameInMap("EnableInfraredDeviceImport")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableInfraredDeviceImport")
     private String enableInfraredDeviceImport;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("LocationDevices")
-    @Validation(required = true)
-    private java.util.List < LocationDevices> locationDevices;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocationDevices")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<LocationDevices> locationDevices;
 
-    @Body
-    @NameInMap("RoomNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roomNo;
 
     private ImportRoomControlDevicesRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class ImportRoomControlDevicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class ImportRoomControlDevicesRequest extends Request {
     /**
      * @return locationDevices
      */
-    public java.util.List < LocationDevices> getLocationDevices() {
+    public java.util.List<LocationDevices> getLocationDevices() {
         return this.locationDevices;
     }
 
@@ -83,7 +88,7 @@ public class ImportRoomControlDevicesRequest extends Request {
     public static final class Builder extends Request.Builder<ImportRoomControlDevicesRequest, Builder> {
         private String enableInfraredDeviceImport; 
         private String hotelId; 
-        private java.util.List < LocationDevices> locationDevices; 
+        private java.util.List<LocationDevices> locationDevices; 
         private String roomNo; 
 
         private Builder() {
@@ -108,7 +113,10 @@ public class ImportRoomControlDevicesRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vdgrefds</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -117,9 +125,9 @@ public class ImportRoomControlDevicesRequest extends Request {
         }
 
         /**
-         * LocationDevices.
+         * <p>This parameter is required.</p>
          */
-        public Builder locationDevices(java.util.List < LocationDevices> locationDevices) {
+        public Builder locationDevices(java.util.List<LocationDevices> locationDevices) {
             String locationDevicesShrink = shrink(locationDevices, "LocationDevices", "json");
             this.putBodyParameter("LocationDevices", locationDevicesShrink);
             this.locationDevices = locationDevices;
@@ -127,7 +135,10 @@ public class ImportRoomControlDevicesRequest extends Request {
         }
 
         /**
-         * RoomNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1211</p>
          */
         public Builder roomNo(String roomNo) {
             this.putBodyParameter("RoomNo", roomNo);
@@ -142,20 +153,26 @@ public class ImportRoomControlDevicesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportRoomControlDevicesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomControlDevicesRequest</p>
+     */
     public static class SwitchList extends TeaModel {
-        @NameInMap("AliasList")
-        private java.util.List < String > aliasList;
+        @com.aliyun.core.annotation.NameInMap("AliasList")
+        private java.util.List<String> aliasList;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeviceIndex")
+        @com.aliyun.core.annotation.NameInMap("DeviceIndex")
         private Integer deviceIndex;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private SwitchList(Builder builder) {
@@ -177,7 +194,7 @@ public class ImportRoomControlDevicesRequest extends Request {
         /**
          * @return aliasList
          */
-        public java.util.List < String > getAliasList() {
+        public java.util.List<String> getAliasList() {
             return this.aliasList;
         }
 
@@ -210,16 +227,27 @@ public class ImportRoomControlDevicesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > aliasList; 
+            private java.util.List<String> aliasList; 
             private String category; 
             private Integer deviceIndex; 
             private String deviceName; 
             private String location; 
 
+            private Builder() {
+            } 
+
+            private Builder(SwitchList model) {
+                this.aliasList = model.aliasList;
+                this.category = model.category;
+                this.deviceIndex = model.deviceIndex;
+                this.deviceName = model.deviceName;
+                this.location = model.location;
+            } 
+
             /**
              * AliasList.
              */
-            public Builder aliasList(java.util.List < String > aliasList) {
+            public Builder aliasList(java.util.List<String> aliasList) {
                 this.aliasList = aliasList;
                 return this;
             }
@@ -263,9 +291,15 @@ public class ImportRoomControlDevicesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomControlDevicesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomControlDevicesRequest</p>
+     */
     public static class MultiKeySwitchExt extends TeaModel {
-        @NameInMap("SwitchList")
-        private java.util.List < SwitchList> switchList;
+        @com.aliyun.core.annotation.NameInMap("SwitchList")
+        private java.util.List<SwitchList> switchList;
 
         private MultiKeySwitchExt(Builder builder) {
             this.switchList = builder.switchList;
@@ -282,17 +316,24 @@ public class ImportRoomControlDevicesRequest extends Request {
         /**
          * @return switchList
          */
-        public java.util.List < SwitchList> getSwitchList() {
+        public java.util.List<SwitchList> getSwitchList() {
             return this.switchList;
         }
 
         public static final class Builder {
-            private java.util.List < SwitchList> switchList; 
+            private java.util.List<SwitchList> switchList; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiKeySwitchExt model) {
+                this.switchList = model.switchList;
+            } 
 
             /**
              * SwitchList.
              */
-            public Builder switchList(java.util.List < SwitchList> switchList) {
+            public Builder switchList(java.util.List<SwitchList> switchList) {
                 this.switchList = switchList;
                 return this;
             }
@@ -304,52 +345,58 @@ public class ImportRoomControlDevicesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomControlDevicesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomControlDevicesRequest</p>
+     */
     public static class Devices extends TeaModel {
-        @NameInMap("AliasList")
-        private java.util.List < String > aliasList;
+        @com.aliyun.core.annotation.NameInMap("AliasList")
+        private java.util.List<String> aliasList;
 
-        @NameInMap("Brand")
+        @com.aliyun.core.annotation.NameInMap("Brand")
         private String brand;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("ConnectType")
+        @com.aliyun.core.annotation.NameInMap("ConnectType")
         private String connectType;
 
-        @NameInMap("DeviceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceName;
 
-        @NameInMap("Dn")
+        @com.aliyun.core.annotation.NameInMap("Dn")
         private String dn;
 
-        @NameInMap("InfraredId")
+        @com.aliyun.core.annotation.NameInMap("InfraredId")
         private String infraredId;
 
-        @NameInMap("InfraredIndex")
+        @com.aliyun.core.annotation.NameInMap("InfraredIndex")
         private String infraredIndex;
 
-        @NameInMap("InfraredVersion")
+        @com.aliyun.core.annotation.NameInMap("InfraredVersion")
         private String infraredVersion;
 
-        @NameInMap("MultiKeySwitchExt")
+        @com.aliyun.core.annotation.NameInMap("MultiKeySwitchExt")
         private MultiKeySwitchExt multiKeySwitchExt;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Pk")
+        @com.aliyun.core.annotation.NameInMap("Pk")
         private String pk;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("ServiceProvider")
+        @com.aliyun.core.annotation.NameInMap("ServiceProvider")
         private String serviceProvider;
 
         private Devices(Builder builder) {
@@ -381,7 +428,7 @@ public class ImportRoomControlDevicesRequest extends Request {
         /**
          * @return aliasList
          */
-        public java.util.List < String > getAliasList() {
+        public java.util.List<String> getAliasList() {
             return this.aliasList;
         }
 
@@ -484,7 +531,7 @@ public class ImportRoomControlDevicesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > aliasList; 
+            private java.util.List<String> aliasList; 
             private String brand; 
             private String city; 
             private String connectType; 
@@ -500,10 +547,31 @@ public class ImportRoomControlDevicesRequest extends Request {
             private String province; 
             private String serviceProvider; 
 
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.aliasList = model.aliasList;
+                this.brand = model.brand;
+                this.city = model.city;
+                this.connectType = model.connectType;
+                this.deviceName = model.deviceName;
+                this.dn = model.dn;
+                this.infraredId = model.infraredId;
+                this.infraredIndex = model.infraredIndex;
+                this.infraredVersion = model.infraredVersion;
+                this.multiKeySwitchExt = model.multiKeySwitchExt;
+                this.name = model.name;
+                this.number = model.number;
+                this.pk = model.pk;
+                this.province = model.province;
+                this.serviceProvider = model.serviceProvider;
+            } 
+
             /**
              * AliasList.
              */
-            public Builder aliasList(java.util.List < String > aliasList) {
+            public Builder aliasList(java.util.List<String> aliasList) {
                 this.aliasList = aliasList;
                 return this;
             }
@@ -533,7 +601,7 @@ public class ImportRoomControlDevicesRequest extends Request {
             }
 
             /**
-             * DeviceName.
+             * <p>This parameter is required.</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -581,7 +649,10 @@ public class ImportRoomControlDevicesRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -627,15 +698,21 @@ public class ImportRoomControlDevicesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomControlDevicesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomControlDevicesRequest</p>
+     */
     public static class LocationDevices extends TeaModel {
-        @NameInMap("Devices")
-        private java.util.List < Devices> devices;
+        @com.aliyun.core.annotation.NameInMap("Devices")
+        private java.util.List<Devices> devices;
 
-        @NameInMap("Location")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Location")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String location;
 
-        @NameInMap("LocationName")
+        @com.aliyun.core.annotation.NameInMap("LocationName")
         private String locationName;
 
         private LocationDevices(Builder builder) {
@@ -655,7 +732,7 @@ public class ImportRoomControlDevicesRequest extends Request {
         /**
          * @return devices
          */
-        public java.util.List < Devices> getDevices() {
+        public java.util.List<Devices> getDevices() {
             return this.devices;
         }
 
@@ -674,20 +751,32 @@ public class ImportRoomControlDevicesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Devices> devices; 
+            private java.util.List<Devices> devices; 
             private String location; 
             private String locationName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LocationDevices model) {
+                this.devices = model.devices;
+                this.location = model.location;
+                this.locationName = model.locationName;
+            } 
 
             /**
              * Devices.
              */
-            public Builder devices(java.util.List < Devices> devices) {
+            public Builder devices(java.util.List<Devices> devices) {
                 this.devices = devices;
                 return this;
             }
 
             /**
-             * Location.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>room</p>
              */
             public Builder location(String location) {
                 this.location = location;

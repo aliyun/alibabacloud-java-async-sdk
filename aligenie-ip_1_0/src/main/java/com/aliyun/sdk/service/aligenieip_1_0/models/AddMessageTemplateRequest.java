@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMessageTemplateRequest} extends {@link RequestModel}
  *
  * <p>AddMessageTemplateRequest</p>
  */
 public class AddMessageTemplateRequest extends Request {
-    @Body
-    @NameInMap("TemplateDetail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateDetail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateDetail;
 
-    @Body
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
     private AddMessageTemplateRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AddMessageTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,10 @@ public class AddMessageTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateDetail.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是${hotel}的一个测试模板</p>
          */
         public Builder templateDetail(String templateDetail) {
             this.putBodyParameter("TemplateDetail", templateDetail);
@@ -79,7 +87,10 @@ public class AddMessageTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试模板</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);

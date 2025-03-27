@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelSceneBookItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelSceneBookItemsResponseBody</p>
  */
 public class ListHotelSceneBookItemsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListHotelSceneBookItemsResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
 
     public static ListHotelSceneBookItemsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotelSceneBookItemsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -111,20 +130,26 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelSceneBookItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneBookItemsResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Page(Builder builder) {
@@ -185,6 +210,17 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
             private Integer total; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.hasNext = model.hasNext;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * HasNext.
              */
@@ -232,26 +268,32 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneBookItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneBookItemsResponseBody</p>
+     */
     public static class SceneItemList extends TeaModel {
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Long price;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private SceneItemList(Builder builder) {
@@ -330,6 +372,19 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
             private String type; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneItemList model) {
+                this.icon = model.icon;
+                this.id = model.id;
+                this.name = model.name;
+                this.price = model.price;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * Icon.
              */
@@ -393,12 +448,18 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneBookItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneBookItemsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Page page;
 
-        @NameInMap("SceneItemList")
-        private java.util.List < SceneItemList> sceneItemList;
+        @com.aliyun.core.annotation.NameInMap("SceneItemList")
+        private java.util.List<SceneItemList> sceneItemList;
 
         private Result(Builder builder) {
             this.page = builder.page;
@@ -423,13 +484,21 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
         /**
          * @return sceneItemList
          */
-        public java.util.List < SceneItemList> getSceneItemList() {
+        public java.util.List<SceneItemList> getSceneItemList() {
             return this.sceneItemList;
         }
 
         public static final class Builder {
             private Page page; 
-            private java.util.List < SceneItemList> sceneItemList; 
+            private java.util.List<SceneItemList> sceneItemList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.page = model.page;
+                this.sceneItemList = model.sceneItemList;
+            } 
 
             /**
              * Page.
@@ -442,7 +511,7 @@ public class ListHotelSceneBookItemsResponseBody extends TeaModel {
             /**
              * SceneItemList.
              */
-            public Builder sceneItemList(java.util.List < SceneItemList> sceneItemList) {
+            public Builder sceneItemList(java.util.List<SceneItemList> sceneItemList) {
                 this.sceneItemList = sceneItemList;
                 return this;
             }

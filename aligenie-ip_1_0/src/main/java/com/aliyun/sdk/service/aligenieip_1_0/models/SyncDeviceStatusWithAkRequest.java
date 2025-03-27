@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncDeviceStatusWithAkRequest} extends {@link RequestModel}
  *
  * <p>SyncDeviceStatusWithAkRequest</p>
  */
 public class SyncDeviceStatusWithAkRequest extends Request {
-    @Body
-    @NameInMap("CategoryCnName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryCnName")
     private String categoryCnName;
 
-    @Body
-    @NameInMap("CategoryEnName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryEnName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String categoryEnName;
 
-    @Body
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("Location")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String location;
 
-    @Body
-    @NameInMap("LocationCnName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocationCnName")
     private String locationCnName;
 
-    @Body
-    @NameInMap("Number")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Number")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String number;
 
-    @Body
-    @NameInMap("RoomNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roomNo;
 
-    @Body
-    @NameInMap("Switch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Switch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer _switch;
 
-    @Body
-    @NameInMap("fanSpeed")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fanSpeed")
     private String fanSpeed;
 
-    @Body
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
-    @Body
-    @NameInMap("roomTemperature")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("roomTemperature")
     private String roomTemperature;
 
-    @Body
-    @NameInMap("temperature")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("temperature")
     private String temperature;
 
-    @Body
-    @NameInMap("value")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("value")
     private Integer value;
 
     private SyncDeviceStatusWithAkRequest(Builder builder) {
@@ -100,7 +105,7 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -251,7 +256,10 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         }
 
         /**
-         * CategoryEnName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>light</p>
          */
         public Builder categoryEnName(String categoryEnName) {
             this.putBodyParameter("CategoryEnName", categoryEnName);
@@ -269,7 +277,10 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -278,7 +289,10 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         }
 
         /**
-         * Location.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>room</p>
          */
         public Builder location(String location) {
             this.putBodyParameter("Location", location);
@@ -296,7 +310,10 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         }
 
         /**
-         * Number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bedLight</p>
          */
         public Builder number(String number) {
             this.putBodyParameter("Number", number);
@@ -305,7 +322,10 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         }
 
         /**
-         * RoomNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1211</p>
          */
         public Builder roomNo(String roomNo) {
             this.putBodyParameter("RoomNo", roomNo);
@@ -314,7 +334,10 @@ public class SyncDeviceStatusWithAkRequest extends Request {
         }
 
         /**
-         * Switch.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder _switch(Integer _switch) {
             this.putBodyParameter("Switch", _switch);

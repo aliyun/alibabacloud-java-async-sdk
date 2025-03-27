@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ControlRoomDeviceRequest} extends {@link RequestModel}
  *
  * <p>ControlRoomDeviceRequest</p>
  */
 public class ControlRoomDeviceRequest extends Request {
-    @Body
-    @NameInMap("Cmd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cmd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cmd;
 
-    @Body
-    @NameInMap("DeviceIndex")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceIndex")
     private Integer deviceIndex;
 
-    @Body
-    @NameInMap("DeviceNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceNumber;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("Properties")
-    @Validation(required = true)
-    private java.util.Map < String, String > properties;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Properties")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, String> properties;
 
-    @Body
-    @NameInMap("RoomNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roomNo;
 
     private ControlRoomDeviceRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class ControlRoomDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,7 +100,7 @@ public class ControlRoomDeviceRequest extends Request {
     /**
      * @return properties
      */
-    public java.util.Map < String, String > getProperties() {
+    public java.util.Map<String, String> getProperties() {
         return this.properties;
     }
 
@@ -111,7 +116,7 @@ public class ControlRoomDeviceRequest extends Request {
         private Integer deviceIndex; 
         private String deviceNumber; 
         private String hotelId; 
-        private java.util.Map < String, String > properties; 
+        private java.util.Map<String, String> properties; 
         private String roomNo; 
 
         private Builder() {
@@ -129,7 +134,11 @@ public class ControlRoomDeviceRequest extends Request {
         } 
 
         /**
-         * Cmd.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thing.attribute.set
+         * thing.attribute.adjust</p>
          */
         public Builder cmd(String cmd) {
             this.putBodyParameter("Cmd", cmd);
@@ -147,7 +156,10 @@ public class ControlRoomDeviceRequest extends Request {
         }
 
         /**
-         * DeviceNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFRARED49122575595</p>
          */
         public Builder deviceNumber(String deviceNumber) {
             this.putBodyParameter("DeviceNumber", deviceNumber);
@@ -156,7 +168,10 @@ public class ControlRoomDeviceRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7***83</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -165,9 +180,9 @@ public class ControlRoomDeviceRequest extends Request {
         }
 
         /**
-         * Properties.
+         * <p>This parameter is required.</p>
          */
-        public Builder properties(java.util.Map < String, String > properties) {
+        public Builder properties(java.util.Map<String, String> properties) {
             String propertiesShrink = shrink(properties, "Properties", "json");
             this.putBodyParameter("Properties", propertiesShrink);
             this.properties = properties;
@@ -175,7 +190,10 @@ public class ControlRoomDeviceRequest extends Request {
         }
 
         /**
-         * RoomNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1211</p>
          */
         public Builder roomNo(String roomNo) {
             this.putBodyParameter("RoomNo", roomNo);

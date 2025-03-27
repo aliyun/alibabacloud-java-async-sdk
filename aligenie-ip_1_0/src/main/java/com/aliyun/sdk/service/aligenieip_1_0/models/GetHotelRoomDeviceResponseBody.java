@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelRoomDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelRoomDeviceResponseBody</p>
  */
 public class GetHotelRoomDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
     private GetHotelRoomDeviceResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
 
     public static GetHotelRoomDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -71,7 +80,17 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotelRoomDeviceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -100,7 +119,7 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -111,23 +130,29 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelRoomDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelRoomDeviceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("FirmwareVersion")
+        @com.aliyun.core.annotation.NameInMap("FirmwareVersion")
         private String firmwareVersion;
 
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("OnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("OnlineStatus")
         private Integer onlineStatus;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
         private Result(Builder builder) {
@@ -196,6 +221,18 @@ public class GetHotelRoomDeviceResponseBody extends TeaModel {
             private Integer onlineStatus; 
             private String roomNo; 
             private String sn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.firmwareVersion = model.firmwareVersion;
+                this.hotelId = model.hotelId;
+                this.mac = model.mac;
+                this.onlineStatus = model.onlineStatus;
+                this.roomNo = model.roomNo;
+                this.sn = model.sn;
+            } 
 
             /**
              * FirmwareVersion.

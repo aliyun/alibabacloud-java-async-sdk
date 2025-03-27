@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddOrUpdateHotelSettingRequest} extends {@link RequestModel}
  *
  * <p>AddOrUpdateHotelSettingRequest</p>
  */
 public class AddOrUpdateHotelSettingRequest extends Request {
-    @Body
-    @NameInMap("HotelDeviceModeList")
-    private java.util.List < String > hotelDeviceModeList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelDeviceModeList")
+    private java.util.List<String> hotelDeviceModeList;
 
-    @Body
-    @NameInMap("HotelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
     private String hotelId;
 
-    @Body
-    @NameInMap("HotelScreenSaver")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelScreenSaver")
     private HotelScreenSaver hotelScreenSaver;
 
-    @Body
-    @NameInMap("NightMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NightMode")
     private NightMode nightMode;
 
-    @Body
-    @NameInMap("SettingType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SettingType")
     private String settingType;
 
-    @Body
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private AddOrUpdateHotelSettingRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class AddOrUpdateHotelSettingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,7 +67,7 @@ public class AddOrUpdateHotelSettingRequest extends Request {
     /**
      * @return hotelDeviceModeList
      */
-    public java.util.List < String > getHotelDeviceModeList() {
+    public java.util.List<String> getHotelDeviceModeList() {
         return this.hotelDeviceModeList;
     }
 
@@ -102,7 +107,7 @@ public class AddOrUpdateHotelSettingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddOrUpdateHotelSettingRequest, Builder> {
-        private java.util.List < String > hotelDeviceModeList; 
+        private java.util.List<String> hotelDeviceModeList; 
         private String hotelId; 
         private HotelScreenSaver hotelScreenSaver; 
         private NightMode nightMode; 
@@ -126,7 +131,7 @@ public class AddOrUpdateHotelSettingRequest extends Request {
         /**
          * HotelDeviceModeList.
          */
-        public Builder hotelDeviceModeList(java.util.List < String > hotelDeviceModeList) {
+        public Builder hotelDeviceModeList(java.util.List<String> hotelDeviceModeList) {
             String hotelDeviceModeListShrink = shrink(hotelDeviceModeList, "HotelDeviceModeList", "json");
             this.putBodyParameter("HotelDeviceModeList", hotelDeviceModeListShrink);
             this.hotelDeviceModeList = hotelDeviceModeList;
@@ -187,11 +192,17 @@ public class AddOrUpdateHotelSettingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddOrUpdateHotelSettingRequest} extends {@link TeaModel}
+     *
+     * <p>AddOrUpdateHotelSettingRequest</p>
+     */
     public static class HotelScreenSaver extends TeaModel {
-        @NameInMap("ScreenSaverPicUrl")
+        @com.aliyun.core.annotation.NameInMap("ScreenSaverPicUrl")
         private String screenSaverPicUrl;
 
-        @NameInMap("ScreenSaverStyle")
+        @com.aliyun.core.annotation.NameInMap("ScreenSaverStyle")
         private String screenSaverStyle;
 
         private HotelScreenSaver(Builder builder) {
@@ -225,6 +236,14 @@ public class AddOrUpdateHotelSettingRequest extends Request {
             private String screenSaverPicUrl; 
             private String screenSaverStyle; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelScreenSaver model) {
+                this.screenSaverPicUrl = model.screenSaverPicUrl;
+                this.screenSaverStyle = model.screenSaverStyle;
+            } 
+
             /**
              * ScreenSaverPicUrl.
              */
@@ -248,23 +267,29 @@ public class AddOrUpdateHotelSettingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddOrUpdateHotelSettingRequest} extends {@link TeaModel}
+     *
+     * <p>AddOrUpdateHotelSettingRequest</p>
+     */
     public static class NightMode extends TeaModel {
-        @NameInMap("DefaultBright")
+        @com.aliyun.core.annotation.NameInMap("DefaultBright")
         private String defaultBright;
 
-        @NameInMap("DefaultVolume")
+        @com.aliyun.core.annotation.NameInMap("DefaultVolume")
         private String defaultVolume;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("StandbyAction")
+        @com.aliyun.core.annotation.NameInMap("StandbyAction")
         private String standbyAction;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private NightMode(Builder builder) {
@@ -333,6 +358,18 @@ public class AddOrUpdateHotelSettingRequest extends Request {
             private String end; 
             private String standbyAction; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(NightMode model) {
+                this.defaultBright = model.defaultBright;
+                this.defaultVolume = model.defaultVolume;
+                this.enable = model.enable;
+                this.end = model.end;
+                this.standbyAction = model.standbyAction;
+                this.start = model.start;
+            } 
 
             /**
              * DefaultBright.

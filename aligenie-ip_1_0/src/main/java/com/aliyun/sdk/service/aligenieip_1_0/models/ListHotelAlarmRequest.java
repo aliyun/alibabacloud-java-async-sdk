@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelAlarmRequest} extends {@link RequestModel}
  *
  * <p>ListHotelAlarmRequest</p>
  */
 public class ListHotelAlarmRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
     private String hotelId;
 
-    @Body
-    @NameInMap("Rooms")
-    private java.util.List < String > rooms;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rooms")
+    private java.util.List<String> rooms;
 
     private ListHotelAlarmRequest(Builder builder) {
         super(builder);
@@ -34,7 +39,7 @@ public class ListHotelAlarmRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,13 +54,13 @@ public class ListHotelAlarmRequest extends Request {
     /**
      * @return rooms
      */
-    public java.util.List < String > getRooms() {
+    public java.util.List<String> getRooms() {
         return this.rooms;
     }
 
     public static final class Builder extends Request.Builder<ListHotelAlarmRequest, Builder> {
         private String hotelId; 
-        private java.util.List < String > rooms; 
+        private java.util.List<String> rooms; 
 
         private Builder() {
             super();
@@ -79,7 +84,7 @@ public class ListHotelAlarmRequest extends Request {
         /**
          * Rooms.
          */
-        public Builder rooms(java.util.List < String > rooms) {
+        public Builder rooms(java.util.List<String> rooms) {
             String roomsShrink = shrink(rooms, "Rooms", "json");
             this.putBodyParameter("Rooms", roomsShrink);
             this.rooms = rooms;

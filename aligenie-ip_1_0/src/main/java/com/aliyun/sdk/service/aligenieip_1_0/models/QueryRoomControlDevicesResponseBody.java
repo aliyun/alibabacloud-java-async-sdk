@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRoomControlDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRoomControlDevicesResponseBody</p>
  */
 public class QueryRoomControlDevicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
     private QueryRoomControlDevicesResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
 
     public static QueryRoomControlDevicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -71,7 +80,17 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRoomControlDevicesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -100,7 +119,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -111,26 +130,32 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRoomControlDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRoomControlDevicesResponseBody</p>
+     */
     public static class SwitchList extends TeaModel {
-        @NameInMap("AliasList")
-        private java.util.List < String > aliasList;
+        @com.aliyun.core.annotation.NameInMap("AliasList")
+        private java.util.List<String> aliasList;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeviceIndex")
+        @com.aliyun.core.annotation.NameInMap("DeviceIndex")
         private Integer deviceIndex;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceStatus")
+        @com.aliyun.core.annotation.NameInMap("DeviceStatus")
         private String deviceStatus;
 
-        @NameInMap("ElementCode")
+        @com.aliyun.core.annotation.NameInMap("ElementCode")
         private String elementCode;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private SwitchList(Builder builder) {
@@ -154,7 +179,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         /**
          * @return aliasList
          */
-        public java.util.List < String > getAliasList() {
+        public java.util.List<String> getAliasList() {
             return this.aliasList;
         }
 
@@ -201,7 +226,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > aliasList; 
+            private java.util.List<String> aliasList; 
             private String category; 
             private Integer deviceIndex; 
             private String deviceName; 
@@ -209,10 +234,23 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
             private String elementCode; 
             private String location; 
 
+            private Builder() {
+            } 
+
+            private Builder(SwitchList model) {
+                this.aliasList = model.aliasList;
+                this.category = model.category;
+                this.deviceIndex = model.deviceIndex;
+                this.deviceName = model.deviceName;
+                this.deviceStatus = model.deviceStatus;
+                this.elementCode = model.elementCode;
+                this.location = model.location;
+            } 
+
             /**
              * AliasList.
              */
-            public Builder aliasList(java.util.List < String > aliasList) {
+            public Builder aliasList(java.util.List<String> aliasList) {
                 this.aliasList = aliasList;
                 return this;
             }
@@ -272,9 +310,15 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRoomControlDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRoomControlDevicesResponseBody</p>
+     */
     public static class MultiKeySwitchExt extends TeaModel {
-        @NameInMap("SwitchList")
-        private java.util.List < SwitchList> switchList;
+        @com.aliyun.core.annotation.NameInMap("SwitchList")
+        private java.util.List<SwitchList> switchList;
 
         private MultiKeySwitchExt(Builder builder) {
             this.switchList = builder.switchList;
@@ -291,17 +335,24 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         /**
          * @return switchList
          */
-        public java.util.List < SwitchList> getSwitchList() {
+        public java.util.List<SwitchList> getSwitchList() {
             return this.switchList;
         }
 
         public static final class Builder {
-            private java.util.List < SwitchList> switchList; 
+            private java.util.List<SwitchList> switchList; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiKeySwitchExt model) {
+                this.switchList = model.switchList;
+            } 
 
             /**
              * SwitchList.
              */
-            public Builder switchList(java.util.List < SwitchList> switchList) {
+            public Builder switchList(java.util.List<SwitchList> switchList) {
                 this.switchList = switchList;
                 return this;
             }
@@ -313,32 +364,38 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRoomControlDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRoomControlDevicesResponseBody</p>
+     */
     public static class Devices extends TeaModel {
-        @NameInMap("AliasList")
-        private java.util.List < String > aliasList;
+        @com.aliyun.core.annotation.NameInMap("AliasList")
+        private java.util.List<String> aliasList;
 
-        @NameInMap("ConnectType")
+        @com.aliyun.core.annotation.NameInMap("ConnectType")
         private String connectType;
 
-        @NameInMap("DN")
+        @com.aliyun.core.annotation.NameInMap("DN")
         private String dn;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceStatus")
+        @com.aliyun.core.annotation.NameInMap("DeviceStatus")
         private String deviceStatus;
 
-        @NameInMap("MultiKeySwitchExt")
+        @com.aliyun.core.annotation.NameInMap("MultiKeySwitchExt")
         private MultiKeySwitchExt multiKeySwitchExt;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PK")
+        @com.aliyun.core.annotation.NameInMap("PK")
         private String pk;
 
         private Devices(Builder builder) {
@@ -364,7 +421,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         /**
          * @return aliasList
          */
-        public java.util.List < String > getAliasList() {
+        public java.util.List<String> getAliasList() {
             return this.aliasList;
         }
 
@@ -425,7 +482,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > aliasList; 
+            private java.util.List<String> aliasList; 
             private String connectType; 
             private String dn; 
             private String deviceName; 
@@ -435,10 +492,25 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
             private String number; 
             private String pk; 
 
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.aliasList = model.aliasList;
+                this.connectType = model.connectType;
+                this.dn = model.dn;
+                this.deviceName = model.deviceName;
+                this.deviceStatus = model.deviceStatus;
+                this.multiKeySwitchExt = model.multiKeySwitchExt;
+                this.name = model.name;
+                this.number = model.number;
+                this.pk = model.pk;
+            } 
+
             /**
              * AliasList.
              */
-            public Builder aliasList(java.util.List < String > aliasList) {
+            public Builder aliasList(java.util.List<String> aliasList) {
                 this.aliasList = aliasList;
                 return this;
             }
@@ -514,14 +586,20 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRoomControlDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRoomControlDevicesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Devices")
-        private java.util.List < Devices> devices;
+        @com.aliyun.core.annotation.NameInMap("Devices")
+        private java.util.List<Devices> devices;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("LocationName")
+        @com.aliyun.core.annotation.NameInMap("LocationName")
         private String locationName;
 
         private Result(Builder builder) {
@@ -541,7 +619,7 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         /**
          * @return devices
          */
-        public java.util.List < Devices> getDevices() {
+        public java.util.List<Devices> getDevices() {
             return this.devices;
         }
 
@@ -560,14 +638,23 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Devices> devices; 
+            private java.util.List<Devices> devices; 
             private String location; 
             private String locationName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.devices = model.devices;
+                this.location = model.location;
+                this.locationName = model.locationName;
+            } 
 
             /**
              * Devices.
              */
-            public Builder devices(java.util.List < Devices> devices) {
+            public Builder devices(java.util.List<Devices> devices) {
                 this.devices = devices;
                 return this;
             }

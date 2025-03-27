@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSceneCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListSceneCategoryResponseBody</p>
  */
 public class ListSceneCategoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < String > result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<String> result;
 
     private ListSceneCategoryResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class ListSceneCategoryResponseBody extends TeaModel {
 
     public static ListSceneCategoryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class ListSceneCategoryResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < String > getResult() {
+    public java.util.List<String> getResult() {
         return this.result;
     }
 
@@ -71,7 +80,17 @@ public class ListSceneCategoryResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < String > result; 
+        private java.util.List<String> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSceneCategoryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -90,7 +109,10 @@ public class ListSceneCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0EC7*726E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +122,7 @@ public class ListSceneCategoryResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < String > result) {
+        public Builder result(java.util.List<String> result) {
             this.result = result;
             return this;
         }

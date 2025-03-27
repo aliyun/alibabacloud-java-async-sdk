@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageGetHotelRoomDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>PageGetHotelRoomDevicesResponseBody</p>
  */
 public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
-    @NameInMap("Extentions")
-    private java.util.Map < String, ? > extentions;
+    @com.aliyun.core.annotation.NameInMap("Extentions")
+    private java.util.Map<String, ?> extentions;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private PageGetHotelRoomDevicesResponseBody(Builder builder) {
@@ -47,10 +52,14 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extentions
      */
-    public java.util.Map < String, ? > getExtentions() {
+    public java.util.Map<String, ?> getExtentions() {
         return this.extentions;
     }
 
@@ -78,7 +87,7 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -90,17 +99,29 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > extentions; 
+        private java.util.Map<String, ?> extentions; 
         private String message; 
         private Page page; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageGetHotelRoomDevicesResponseBody model) {
+            this.extentions = model.extentions;
+            this.message = model.message;
+            this.page = model.page;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Extentions.
          */
-        public Builder extentions(java.util.Map < String, ? > extentions) {
+        public Builder extentions(java.util.Map<String, ?> extentions) {
             this.extentions = extentions;
             return this;
         }
@@ -132,7 +153,7 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -151,26 +172,32 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageGetHotelRoomDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageGetHotelRoomDevicesResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Integer end;
 
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Integer start;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Page(Builder builder) {
@@ -249,6 +276,19 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
             private Integer total; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.end = model.end;
+                this.hasNext = model.hasNext;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.start = model.start;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * End.
              */
@@ -312,23 +352,29 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageGetHotelRoomDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageGetHotelRoomDevicesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("FirmwareVersion")
+        @com.aliyun.core.annotation.NameInMap("FirmwareVersion")
         private String firmwareVersion;
 
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("OnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("OnlineStatus")
         private Integer onlineStatus;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
         private Result(Builder builder) {
@@ -397,6 +443,18 @@ public class PageGetHotelRoomDevicesResponseBody extends TeaModel {
             private Integer onlineStatus; 
             private String roomNo; 
             private String sn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.firmwareVersion = model.firmwareVersion;
+                this.hotelId = model.hotelId;
+                this.mac = model.mac;
+                this.onlineStatus = model.onlineStatus;
+                this.roomNo = model.roomNo;
+                this.sn = model.sn;
+            } 
 
             /**
              * FirmwareVersion.

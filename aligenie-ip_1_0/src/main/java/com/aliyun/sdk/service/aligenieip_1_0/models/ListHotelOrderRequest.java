@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelOrderRequest} extends {@link RequestModel}
  *
  * <p>ListHotelOrderRequest</p>
  */
 public class ListHotelOrderRequest extends Request {
-    @Query
-    @NameInMap("Payload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Payload payload;
 
-    @Query
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private ListHotelOrderRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ListHotelOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class ListHotelOrderRequest extends Request {
         } 
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(Payload payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -80,7 +85,7 @@ public class ListHotelOrderRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -96,13 +101,19 @@ public class ListHotelOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelOrderRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelOrderRequest</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long pageNumber;
 
-        @NameInMap("PageSize")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long pageSize;
 
         private Page(Builder builder) {
@@ -136,8 +147,19 @@ public class ListHotelOrderRequest extends Request {
             private Long pageNumber; 
             private Long pageSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
+
             /**
-             * PageNumber.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -145,7 +167,10 @@ public class ListHotelOrderRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -159,9 +184,15 @@ public class ListHotelOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelOrderRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelOrderRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("Page")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Page")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Page page;
 
         private Payload(Builder builder) {
@@ -186,8 +217,15 @@ public class ListHotelOrderRequest extends Request {
         public static final class Builder {
             private Page page; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.page = model.page;
+            } 
+
             /**
-             * Page.
+             * <p>This parameter is required.</p>
              */
             public Builder page(Page page) {
                 this.page = page;
@@ -201,24 +239,30 @@ public class ListHotelOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelOrderRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelOrderRequest</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeKey;
 
-        @NameInMap("EncodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String encodeType;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("IdType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IdType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -279,8 +323,22 @@ public class ListHotelOrderRequest extends Request {
             private String idType; 
             private String organizationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
+
             /**
-             * EncodeKey.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1248494721591392955</p>
              */
             public Builder encodeKey(String encodeKey) {
                 this.encodeKey = encodeKey;
@@ -288,7 +346,10 @@ public class ListHotelOrderRequest extends Request {
             }
 
             /**
-             * EncodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROJECT_ID</p>
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -296,7 +357,10 @@ public class ListHotelOrderRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mFU6VtVU+pgA8lx6rYMo7SPl11t+8b+8ALrn10MIPEdpK/HI9wELAEppYhPI1cYRDa4og8AMjAEBZKbLUwFjFA==</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -304,7 +368,10 @@ public class ListHotelOrderRequest extends Request {
             }
 
             /**
-             * IdType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN_ID</p>
              */
             public Builder idType(String idType) {
                 this.idType = idType;

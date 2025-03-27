@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBasicInfoQAResponseBody} extends {@link TeaModel}
  *
  * <p>GetBasicInfoQAResponseBody</p>
  */
 public class GetBasicInfoQAResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private GetBasicInfoQAResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetBasicInfoQAResponseBody extends TeaModel {
 
     public static GetBasicInfoQAResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class GetBasicInfoQAResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBasicInfoQAResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -111,38 +130,44 @@ public class GetBasicInfoQAResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBasicInfoQAResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBasicInfoQAResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CheckInTime")
+        @com.aliyun.core.annotation.NameInMap("CheckInTime")
         private String checkInTime;
 
-        @NameInMap("CheckOutTime")
+        @com.aliyun.core.annotation.NameInMap("CheckOutTime")
         private String checkOutTime;
 
-        @NameInMap("HotelAddress")
+        @com.aliyun.core.annotation.NameInMap("HotelAddress")
         private String hotelAddress;
 
-        @NameInMap("HotelIntroduction")
+        @com.aliyun.core.annotation.NameInMap("HotelIntroduction")
         private String hotelIntroduction;
 
-        @NameInMap("HotelMember")
+        @com.aliyun.core.annotation.NameInMap("HotelMember")
         private String hotelMember;
 
-        @NameInMap("HotelService")
+        @com.aliyun.core.annotation.NameInMap("HotelService")
         private String hotelService;
 
-        @NameInMap("ParkingExpenses")
+        @com.aliyun.core.annotation.NameInMap("ParkingExpenses")
         private String parkingExpenses;
 
-        @NameInMap("ParkingPosition")
+        @com.aliyun.core.annotation.NameInMap("ParkingPosition")
         private String parkingPosition;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("WifiName")
+        @com.aliyun.core.annotation.NameInMap("WifiName")
         private String wifiName;
 
-        @NameInMap("WifiPassword")
+        @com.aliyun.core.annotation.NameInMap("WifiPassword")
         private String wifiPassword;
 
         private Result(Builder builder) {
@@ -256,6 +281,23 @@ public class GetBasicInfoQAResponseBody extends TeaModel {
             private String phoneNumber; 
             private String wifiName; 
             private String wifiPassword; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.checkInTime = model.checkInTime;
+                this.checkOutTime = model.checkOutTime;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelIntroduction = model.hotelIntroduction;
+                this.hotelMember = model.hotelMember;
+                this.hotelService = model.hotelService;
+                this.parkingExpenses = model.parkingExpenses;
+                this.parkingPosition = model.parkingPosition;
+                this.phoneNumber = model.phoneNumber;
+                this.wifiName = model.wifiName;
+                this.wifiPassword = model.wifiPassword;
+            } 
 
             /**
              * CheckInTime.

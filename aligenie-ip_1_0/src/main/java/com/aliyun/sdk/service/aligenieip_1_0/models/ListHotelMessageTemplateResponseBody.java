@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelMessageTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelMessageTemplateResponseBody</p>
  */
 public class ListHotelMessageTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
     private ListHotelMessageTemplateResponseBody(Builder builder) {
         this.code = builder.code;
@@ -37,6 +42,10 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
 
     public static ListHotelMessageTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -71,7 +80,17 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotelMessageTemplateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -100,7 +119,7 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -111,20 +130,26 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelMessageTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelMessageTemplateResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AuditMark")
+        @com.aliyun.core.annotation.NameInMap("AuditMark")
         private String auditMark;
 
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
-        @NameInMap("TemplateDetail")
+        @com.aliyun.core.annotation.NameInMap("TemplateDetail")
         private String templateDetail;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private Result(Builder builder) {
@@ -184,6 +209,17 @@ public class ListHotelMessageTemplateResponseBody extends TeaModel {
             private String templateDetail; 
             private Long templateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.auditMark = model.auditMark;
+                this.auditStatus = model.auditStatus;
+                this.templateDetail = model.templateDetail;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * AuditMark.

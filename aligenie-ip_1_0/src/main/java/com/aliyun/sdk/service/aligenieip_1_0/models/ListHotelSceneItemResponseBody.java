@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelSceneItemResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelSceneItemResponseBody</p>
  */
 public class ListHotelSceneItemResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListHotelSceneItemResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
 
     public static ListHotelSceneItemResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         private Page page; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHotelSceneItemResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.page = model.page;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelSceneItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Page(Builder builder) {
@@ -205,6 +231,17 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
             private Integer total; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.hasNext = model.hasNext;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * HasNext.
              */
@@ -252,29 +289,35 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemResponseBody</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Long price;
 
-        @NameInMap("ResidueLimit")
+        @com.aliyun.core.annotation.NameInMap("ResidueLimit")
         private Long residueLimit;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ItemList(Builder builder) {
@@ -362,6 +405,20 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItemList model) {
+                this.category = model.category;
+                this.icon = model.icon;
+                this.id = model.id;
+                this.name = model.name;
+                this.price = model.price;
+                this.residueLimit = model.residueLimit;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * Category.
              */
@@ -433,11 +490,17 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemResponseBody</p>
+     */
     public static class SecondCategoryList extends TeaModel {
-        @NameInMap("ItemList")
-        private java.util.List < ItemList> itemList;
+        @com.aliyun.core.annotation.NameInMap("ItemList")
+        private java.util.List<ItemList> itemList;
 
-        @NameInMap("SecondCategoryName")
+        @com.aliyun.core.annotation.NameInMap("SecondCategoryName")
         private String secondCategoryName;
 
         private SecondCategoryList(Builder builder) {
@@ -456,7 +519,7 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         /**
          * @return itemList
          */
-        public java.util.List < ItemList> getItemList() {
+        public java.util.List<ItemList> getItemList() {
             return this.itemList;
         }
 
@@ -468,13 +531,21 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ItemList> itemList; 
+            private java.util.List<ItemList> itemList; 
             private String secondCategoryName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecondCategoryList model) {
+                this.itemList = model.itemList;
+                this.secondCategoryName = model.secondCategoryName;
+            } 
 
             /**
              * ItemList.
              */
-            public Builder itemList(java.util.List < ItemList> itemList) {
+            public Builder itemList(java.util.List<ItemList> itemList) {
                 this.itemList = itemList;
                 return this;
             }
@@ -494,9 +565,15 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelSceneItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelSceneItemResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("SecondCategoryList")
-        private java.util.List < SecondCategoryList> secondCategoryList;
+        @com.aliyun.core.annotation.NameInMap("SecondCategoryList")
+        private java.util.List<SecondCategoryList> secondCategoryList;
 
         private Result(Builder builder) {
             this.secondCategoryList = builder.secondCategoryList;
@@ -513,17 +590,24 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         /**
          * @return secondCategoryList
          */
-        public java.util.List < SecondCategoryList> getSecondCategoryList() {
+        public java.util.List<SecondCategoryList> getSecondCategoryList() {
             return this.secondCategoryList;
         }
 
         public static final class Builder {
-            private java.util.List < SecondCategoryList> secondCategoryList; 
+            private java.util.List<SecondCategoryList> secondCategoryList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.secondCategoryList = model.secondCategoryList;
+            } 
 
             /**
              * SecondCategoryList.
              */
-            public Builder secondCategoryList(java.util.List < SecondCategoryList> secondCategoryList) {
+            public Builder secondCategoryList(java.util.List<SecondCategoryList> secondCategoryList) {
                 this.secondCategoryList = secondCategoryList;
                 return this;
             }

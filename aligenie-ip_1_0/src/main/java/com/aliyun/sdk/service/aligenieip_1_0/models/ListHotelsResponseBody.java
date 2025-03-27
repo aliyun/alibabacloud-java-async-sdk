@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotelsResponseBody</p>
  */
 public class ListHotelsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListHotelsResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListHotelsResponseBody extends TeaModel {
 
     public static ListHotelsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,6 +82,16 @@ public class ListHotelsResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListHotelsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
          * Code.
          */
@@ -90,7 +109,7 @@ public class ListHotelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,35 +130,41 @@ public class ListHotelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelsResponseBody</p>
+     */
     public static class HotelInfoList extends TeaModel {
-        @NameInMap("AccountNames")
-        private java.util.List < String > accountNames;
+        @com.aliyun.core.annotation.NameInMap("AccountNames")
+        private java.util.List<String> accountNames;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("HotelAddress")
+        @com.aliyun.core.annotation.NameInMap("HotelAddress")
         private String hotelAddress;
 
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
-        @NameInMap("HotelName")
+        @com.aliyun.core.annotation.NameInMap("HotelName")
         private String hotelName;
 
-        @NameInMap("IndustryType")
+        @com.aliyun.core.annotation.NameInMap("IndustryType")
         private String industryType;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("RelatedProductName")
+        @com.aliyun.core.annotation.NameInMap("RelatedProductName")
         private String relatedProductName;
 
-        @NameInMap("RoomNum")
+        @com.aliyun.core.annotation.NameInMap("RoomNum")
         private Integer roomNum;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private HotelInfoList(Builder builder) {
@@ -166,7 +191,7 @@ public class ListHotelsResponseBody extends TeaModel {
         /**
          * @return accountNames
          */
-        public java.util.List < String > getAccountNames() {
+        public java.util.List<String> getAccountNames() {
             return this.accountNames;
         }
 
@@ -234,7 +259,7 @@ public class ListHotelsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > accountNames; 
+            private java.util.List<String> accountNames; 
             private Long createTime; 
             private String hotelAddress; 
             private String hotelId; 
@@ -245,10 +270,26 @@ public class ListHotelsResponseBody extends TeaModel {
             private Integer roomNum; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelInfoList model) {
+                this.accountNames = model.accountNames;
+                this.createTime = model.createTime;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+                this.industryType = model.industryType;
+                this.phoneNumber = model.phoneNumber;
+                this.relatedProductName = model.relatedProductName;
+                this.roomNum = model.roomNum;
+                this.status = model.status;
+            } 
+
             /**
              * AccountNames.
              */
-            public Builder accountNames(java.util.List < String > accountNames) {
+            public Builder accountNames(java.util.List<String> accountNames) {
                 this.accountNames = accountNames;
                 return this;
             }
@@ -332,20 +373,26 @@ public class ListHotelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelsResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
         private Page(Builder builder) {
@@ -406,6 +453,17 @@ public class ListHotelsResponseBody extends TeaModel {
             private Integer total; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.hasNext = model.hasNext;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * HasNext.
              */
@@ -453,11 +511,17 @@ public class ListHotelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotelsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("HotelInfoList")
-        private java.util.List < HotelInfoList> hotelInfoList;
+        @com.aliyun.core.annotation.NameInMap("HotelInfoList")
+        private java.util.List<HotelInfoList> hotelInfoList;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Page page;
 
         private Result(Builder builder) {
@@ -476,7 +540,7 @@ public class ListHotelsResponseBody extends TeaModel {
         /**
          * @return hotelInfoList
          */
-        public java.util.List < HotelInfoList> getHotelInfoList() {
+        public java.util.List<HotelInfoList> getHotelInfoList() {
             return this.hotelInfoList;
         }
 
@@ -488,13 +552,21 @@ public class ListHotelsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HotelInfoList> hotelInfoList; 
+            private java.util.List<HotelInfoList> hotelInfoList; 
             private Page page; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.hotelInfoList = model.hotelInfoList;
+                this.page = model.page;
+            } 
 
             /**
              * HotelInfoList.
              */
-            public Builder hotelInfoList(java.util.List < HotelInfoList> hotelInfoList) {
+            public Builder hotelInfoList(java.util.List<HotelInfoList> hotelInfoList) {
                 this.hotelInfoList = hotelInfoList;
                 return this;
             }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySceneListRequest} extends {@link RequestModel}
  *
  * <p>QuerySceneListRequest</p>
  */
 public class QuerySceneListRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("SceneStates")
-    private java.util.List < Integer > sceneStates;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneStates")
+    private java.util.List<Integer> sceneStates;
 
-    @Body
-    @NameInMap("SceneTypes")
-    private java.util.List < String > sceneTypes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneTypes")
+    private java.util.List<String> sceneTypes;
 
-    @Body
-    @NameInMap("TemplateInfoIds")
-    private java.util.List < String > templateInfoIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateInfoIds")
+    private java.util.List<String> templateInfoIds;
 
     private QuerySceneListRequest(Builder builder) {
         super(builder);
@@ -45,7 +50,7 @@ public class QuerySceneListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,29 +65,29 @@ public class QuerySceneListRequest extends Request {
     /**
      * @return sceneStates
      */
-    public java.util.List < Integer > getSceneStates() {
+    public java.util.List<Integer> getSceneStates() {
         return this.sceneStates;
     }
 
     /**
      * @return sceneTypes
      */
-    public java.util.List < String > getSceneTypes() {
+    public java.util.List<String> getSceneTypes() {
         return this.sceneTypes;
     }
 
     /**
      * @return templateInfoIds
      */
-    public java.util.List < String > getTemplateInfoIds() {
+    public java.util.List<String> getTemplateInfoIds() {
         return this.templateInfoIds;
     }
 
     public static final class Builder extends Request.Builder<QuerySceneListRequest, Builder> {
         private String hotelId; 
-        private java.util.List < Integer > sceneStates; 
-        private java.util.List < String > sceneTypes; 
-        private java.util.List < String > templateInfoIds; 
+        private java.util.List<Integer> sceneStates; 
+        private java.util.List<String> sceneTypes; 
+        private java.util.List<String> templateInfoIds; 
 
         private Builder() {
             super();
@@ -97,7 +102,10 @@ public class QuerySceneListRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af7***536</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -108,7 +116,7 @@ public class QuerySceneListRequest extends Request {
         /**
          * SceneStates.
          */
-        public Builder sceneStates(java.util.List < Integer > sceneStates) {
+        public Builder sceneStates(java.util.List<Integer> sceneStates) {
             String sceneStatesShrink = shrink(sceneStates, "SceneStates", "json");
             this.putBodyParameter("SceneStates", sceneStatesShrink);
             this.sceneStates = sceneStates;
@@ -118,7 +126,7 @@ public class QuerySceneListRequest extends Request {
         /**
          * SceneTypes.
          */
-        public Builder sceneTypes(java.util.List < String > sceneTypes) {
+        public Builder sceneTypes(java.util.List<String> sceneTypes) {
             String sceneTypesShrink = shrink(sceneTypes, "SceneTypes", "json");
             this.putBodyParameter("SceneTypes", sceneTypesShrink);
             this.sceneTypes = sceneTypes;
@@ -128,7 +136,7 @@ public class QuerySceneListRequest extends Request {
         /**
          * TemplateInfoIds.
          */
-        public Builder templateInfoIds(java.util.List < String > templateInfoIds) {
+        public Builder templateInfoIds(java.util.List<String> templateInfoIds) {
             String templateInfoIdsShrink = shrink(templateInfoIds, "TemplateInfoIds", "json");
             this.putBodyParameter("TemplateInfoIds", templateInfoIdsShrink);
             this.templateInfoIds = templateInfoIds;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomQARequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomQARequest</p>
  */
 public class DeleteCustomQARequest extends Request {
-    @Body
-    @NameInMap("CustomQAIds")
-    private java.util.List < String > customQAIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomQAIds")
+    private java.util.List<String> customQAIds;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
     private DeleteCustomQARequest(Builder builder) {
@@ -35,7 +40,7 @@ public class DeleteCustomQARequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +48,7 @@ public class DeleteCustomQARequest extends Request {
     /**
      * @return customQAIds
      */
-    public java.util.List < String > getCustomQAIds() {
+    public java.util.List<String> getCustomQAIds() {
         return this.customQAIds;
     }
 
@@ -55,7 +60,7 @@ public class DeleteCustomQARequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCustomQARequest, Builder> {
-        private java.util.List < String > customQAIds; 
+        private java.util.List<String> customQAIds; 
         private String hotelId; 
 
         private Builder() {
@@ -71,7 +76,7 @@ public class DeleteCustomQARequest extends Request {
         /**
          * CustomQAIds.
          */
-        public Builder customQAIds(java.util.List < String > customQAIds) {
+        public Builder customQAIds(java.util.List<String> customQAIds) {
             String customQAIdsShrink = shrink(customQAIds, "CustomQAIds", "json");
             this.putBodyParameter("CustomQAIds", customQAIdsShrink);
             this.customQAIds = customQAIds;
@@ -79,7 +84,10 @@ public class DeleteCustomQARequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7a3***013</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);

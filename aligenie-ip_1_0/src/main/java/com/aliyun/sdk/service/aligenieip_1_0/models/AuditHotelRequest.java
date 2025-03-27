@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuditHotelRequest} extends {@link RequestModel}
  *
  * <p>AuditHotelRequest</p>
  */
 public class AuditHotelRequest extends Request {
-    @Query
-    @NameInMap("AuditHotelReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditHotelReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private AuditHotelReq auditHotelReq;
 
     private AuditHotelRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class AuditHotelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class AuditHotelRequest extends Request {
         } 
 
         /**
-         * AuditHotelReq.
+         * <p>This parameter is required.</p>
          */
         public Builder auditHotelReq(AuditHotelReq auditHotelReq) {
             String auditHotelReqShrink = shrink(auditHotelReq, "AuditHotelReq", "json");
@@ -71,16 +76,22 @@ public class AuditHotelRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AuditHotelRequest} extends {@link TeaModel}
+     *
+     * <p>AuditHotelRequest</p>
+     */
     public static class AuditHotelReq extends TeaModel {
-        @NameInMap("AuditOpinion")
+        @com.aliyun.core.annotation.NameInMap("AuditOpinion")
         private String auditOpinion;
 
-        @NameInMap("HotelId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HotelId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String hotelId;
 
-        @NameInMap("Status")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Status")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer status;
 
         private AuditHotelReq(Builder builder) {
@@ -123,6 +134,15 @@ public class AuditHotelRequest extends Request {
             private String hotelId; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuditHotelReq model) {
+                this.auditOpinion = model.auditOpinion;
+                this.hotelId = model.hotelId;
+                this.status = model.status;
+            } 
+
             /**
              * AuditOpinion.
              */
@@ -132,7 +152,10 @@ public class AuditHotelRequest extends Request {
             }
 
             /**
-             * HotelId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
              */
             public Builder hotelId(String hotelId) {
                 this.hotelId = hotelId;
@@ -140,7 +163,10 @@ public class AuditHotelRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTicketsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTicketsResponseBody</p>
  */
 public class ListTicketsResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private ListTicketsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListTicketsResponseBody extends TeaModel {
 
     public static ListTicketsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListTicketsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,8 +91,19 @@ public class ListTicketsResponseBody extends TeaModel {
         private String message; 
         private Page page; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTicketsResponseBody model) {
+            this.message = model.message;
+            this.page = model.page;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -112,7 +132,7 @@ public class ListTicketsResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,14 +151,20 @@ public class ListTicketsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketsResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Page(Builder builder) {
@@ -181,6 +207,15 @@ public class ListTicketsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
              * PageNumber.
              */
@@ -212,11 +247,17 @@ public class ListTicketsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketsResponseBody</p>
+     */
     public static class Dialogs extends TeaModel {
-        @NameInMap("Answer")
+        @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
 
-        @NameInMap("Question")
+        @com.aliyun.core.annotation.NameInMap("Question")
         private String question;
 
         private Dialogs(Builder builder) {
@@ -250,6 +291,14 @@ public class ListTicketsResponseBody extends TeaModel {
             private String answer; 
             private String question; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dialogs model) {
+                this.answer = model.answer;
+                this.question = model.question;
+            } 
+
             /**
              * Answer.
              */
@@ -273,65 +322,71 @@ public class ListTicketsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private Boolean action;
 
-        @NameInMap("AssignedHandler")
+        @com.aliyun.core.annotation.NameInMap("AssignedHandler")
         private String assignedHandler;
 
-        @NameInMap("ChargesRemark")
+        @com.aliyun.core.annotation.NameInMap("ChargesRemark")
         private String chargesRemark;
 
-        @NameInMap("CompleteRemark")
+        @com.aliyun.core.annotation.NameInMap("CompleteRemark")
         private String completeRemark;
 
-        @NameInMap("Dialogs")
-        private java.util.List < Dialogs> dialogs;
+        @com.aliyun.core.annotation.NameInMap("Dialogs")
+        private java.util.List<Dialogs> dialogs;
 
-        @NameInMap("GmtCalled")
+        @com.aliyun.core.annotation.NameInMap("GmtCalled")
         private String gmtCalled;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtDelayed")
+        @com.aliyun.core.annotation.NameInMap("GmtDelayed")
         private String gmtDelayed;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupKey")
+        @com.aliyun.core.annotation.NameInMap("GroupKey")
         private String groupKey;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsAcceptedCharges")
+        @com.aliyun.core.annotation.NameInMap("IsAcceptedCharges")
         private Boolean isAcceptedCharges;
 
-        @NameInMap("IsDelayed")
+        @com.aliyun.core.annotation.NameInMap("IsDelayed")
         private Boolean isDelayed;
 
-        @NameInMap("IsNeedCallback")
+        @com.aliyun.core.annotation.NameInMap("IsNeedCallback")
         private Boolean isNeedCallback;
 
-        @NameInMap("IsNeedCharges")
+        @com.aliyun.core.annotation.NameInMap("IsNeedCharges")
         private Boolean isNeedCharges;
 
-        @NameInMap("Operations")
-        private java.util.List < java.util.Map<String, ?>> operations;
+        @com.aliyun.core.annotation.NameInMap("Operations")
+        private java.util.List<java.util.Map<String, ?>> operations;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {
@@ -396,7 +451,7 @@ public class ListTicketsResponseBody extends TeaModel {
         /**
          * @return dialogs
          */
-        public java.util.List < Dialogs> getDialogs() {
+        public java.util.List<Dialogs> getDialogs() {
             return this.dialogs;
         }
 
@@ -473,7 +528,7 @@ public class ListTicketsResponseBody extends TeaModel {
         /**
          * @return operations
          */
-        public java.util.List < java.util.Map<String, ?>> getOperations() {
+        public java.util.List<java.util.Map<String, ?>> getOperations() {
             return this.operations;
         }
 
@@ -510,7 +565,7 @@ public class ListTicketsResponseBody extends TeaModel {
             private String assignedHandler; 
             private String chargesRemark; 
             private String completeRemark; 
-            private java.util.List < Dialogs> dialogs; 
+            private java.util.List<Dialogs> dialogs; 
             private String gmtCalled; 
             private String gmtCreate; 
             private String gmtDelayed; 
@@ -521,11 +576,37 @@ public class ListTicketsResponseBody extends TeaModel {
             private Boolean isDelayed; 
             private Boolean isNeedCallback; 
             private Boolean isNeedCharges; 
-            private java.util.List < java.util.Map<String, ?>> operations; 
+            private java.util.List<java.util.Map<String, ?>> operations; 
             private String remark; 
             private String roomNo; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.action = model.action;
+                this.assignedHandler = model.assignedHandler;
+                this.chargesRemark = model.chargesRemark;
+                this.completeRemark = model.completeRemark;
+                this.dialogs = model.dialogs;
+                this.gmtCalled = model.gmtCalled;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtDelayed = model.gmtDelayed;
+                this.gmtModified = model.gmtModified;
+                this.groupKey = model.groupKey;
+                this.id = model.id;
+                this.isAcceptedCharges = model.isAcceptedCharges;
+                this.isDelayed = model.isDelayed;
+                this.isNeedCallback = model.isNeedCallback;
+                this.isNeedCharges = model.isNeedCharges;
+                this.operations = model.operations;
+                this.remark = model.remark;
+                this.roomNo = model.roomNo;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * Action.
@@ -562,7 +643,7 @@ public class ListTicketsResponseBody extends TeaModel {
             /**
              * Dialogs.
              */
-            public Builder dialogs(java.util.List < Dialogs> dialogs) {
+            public Builder dialogs(java.util.List<Dialogs> dialogs) {
                 this.dialogs = dialogs;
                 return this;
             }
@@ -650,7 +731,7 @@ public class ListTicketsResponseBody extends TeaModel {
             /**
              * Operations.
              */
-            public Builder operations(java.util.List < java.util.Map<String, ?>> operations) {
+            public Builder operations(java.util.List<java.util.Map<String, ?>> operations) {
                 this.operations = operations;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHotelSceneItemRequest} extends {@link RequestModel}
  *
  * <p>UpdateHotelSceneItemRequest</p>
  */
 public class UpdateHotelSceneItemRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Query
-    @NameInMap("UpdateHotelSceneOperateReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateHotelSceneOperateReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UpdateHotelSceneOperateReq updateHotelSceneOperateReq;
 
-    @Query
-    @NameInMap("UpdateHotelSceneReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateHotelSceneReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UpdateHotelSceneReq updateHotelSceneReq;
 
     private UpdateHotelSceneItemRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class UpdateHotelSceneItemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class UpdateHotelSceneItemRequest extends Request {
         } 
 
         /**
-         * hotelID
+         * <p>hotelID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d84ea8ed9e422fbad52715c8fc56f1</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -94,7 +103,8 @@ public class UpdateHotelSceneItemRequest extends Request {
         }
 
         /**
-         * updateHotelSceneReq
+         * <p>updateHotelSceneReq</p>
+         * <p>This parameter is required.</p>
          */
         public Builder updateHotelSceneOperateReq(UpdateHotelSceneOperateReq updateHotelSceneOperateReq) {
             String updateHotelSceneOperateReqShrink = shrink(updateHotelSceneOperateReq, "UpdateHotelSceneOperateReq", "json");
@@ -104,7 +114,8 @@ public class UpdateHotelSceneItemRequest extends Request {
         }
 
         /**
-         * UpdateHotelSceneReq
+         * <p>UpdateHotelSceneReq</p>
+         * <p>This parameter is required.</p>
          */
         public Builder updateHotelSceneReq(UpdateHotelSceneReq updateHotelSceneReq) {
             String updateHotelSceneReqShrink = shrink(updateHotelSceneReq, "UpdateHotelSceneReq", "json");
@@ -120,13 +131,19 @@ public class UpdateHotelSceneItemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateHotelSceneItemRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelSceneItemRequest</p>
+     */
     public static class UpdateHotelSceneOperateReq extends TeaModel {
-        @NameInMap("IsUseTemplateAnswer")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IsUseTemplateAnswer")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean isUseTemplateAnswer;
 
-        @NameInMap("OperateType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OperateType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String operateType;
 
         private UpdateHotelSceneOperateReq(Builder builder) {
@@ -160,8 +177,19 @@ public class UpdateHotelSceneItemRequest extends Request {
             private Boolean isUseTemplateAnswer; 
             private String operateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateHotelSceneOperateReq model) {
+                this.isUseTemplateAnswer = model.isUseTemplateAnswer;
+                this.operateType = model.operateType;
+            } 
+
             /**
-             * IsUseTemplateAnswer.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isUseTemplateAnswer(Boolean isUseTemplateAnswer) {
                 this.isUseTemplateAnswer = isUseTemplateAnswer;
@@ -169,7 +197,10 @@ public class UpdateHotelSceneItemRequest extends Request {
             }
 
             /**
-             * OperateType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -183,29 +214,35 @@ public class UpdateHotelSceneItemRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateHotelSceneItemRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelSceneItemRequest</p>
+     */
     public static class DialogueList extends TeaModel {
-        @NameInMap("DialogueId")
+        @com.aliyun.core.annotation.NameInMap("DialogueId")
         private String dialogueId;
 
-        @NameInMap("NoAnswer")
+        @com.aliyun.core.annotation.NameInMap("NoAnswer")
         private String noAnswer;
 
-        @NameInMap("NoAnswerTemplate")
+        @com.aliyun.core.annotation.NameInMap("NoAnswerTemplate")
         private String noAnswerTemplate;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private Integer process;
 
-        @NameInMap("Question")
+        @com.aliyun.core.annotation.NameInMap("Question")
         private String question;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("YesAnswer")
+        @com.aliyun.core.annotation.NameInMap("YesAnswer")
         private String yesAnswer;
 
-        @NameInMap("YesAnswerTemplate")
+        @com.aliyun.core.annotation.NameInMap("YesAnswerTemplate")
         private String yesAnswerTemplate;
 
         private DialogueList(Builder builder) {
@@ -293,6 +330,20 @@ public class UpdateHotelSceneItemRequest extends Request {
             private String yesAnswer; 
             private String yesAnswerTemplate; 
 
+            private Builder() {
+            } 
+
+            private Builder(DialogueList model) {
+                this.dialogueId = model.dialogueId;
+                this.noAnswer = model.noAnswer;
+                this.noAnswerTemplate = model.noAnswerTemplate;
+                this.process = model.process;
+                this.question = model.question;
+                this.serviceId = model.serviceId;
+                this.yesAnswer = model.yesAnswer;
+                this.yesAnswerTemplate = model.yesAnswerTemplate;
+            } 
+
             /**
              * DialogueId.
              */
@@ -334,7 +385,10 @@ public class UpdateHotelSceneItemRequest extends Request {
             }
 
             /**
-             * itemId
+             * <p>itemId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10337</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -364,45 +418,51 @@ public class UpdateHotelSceneItemRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateHotelSceneItemRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHotelSceneItemRequest</p>
+     */
     public static class UpdateHotelSceneReq extends TeaModel {
-        @NameInMap("BeyondLimitReply")
+        @com.aliyun.core.annotation.NameInMap("BeyondLimitReply")
         private String beyondLimitReply;
 
-        @NameInMap("DeliveryMethod")
+        @com.aliyun.core.annotation.NameInMap("DeliveryMethod")
         private String deliveryMethod;
 
-        @NameInMap("DialogueList")
-        @Validation(required = true)
-        private java.util.List < DialogueList> dialogueList;
+        @com.aliyun.core.annotation.NameInMap("DialogueList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<DialogueList> dialogueList;
 
-        @NameInMap("Icon")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Icon")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String icon;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LimitNumber")
+        @com.aliyun.core.annotation.NameInMap("LimitNumber")
         private Long limitNumber;
 
-        @NameInMap("LimitSwitch")
+        @com.aliyun.core.annotation.NameInMap("LimitSwitch")
         private Integer limitSwitch;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PaymentMethod")
+        @com.aliyun.core.annotation.NameInMap("PaymentMethod")
         private String paymentMethod;
 
-        @NameInMap("Price")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Price")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long price;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("Status")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Status")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String status;
 
         private UpdateHotelSceneReq(Builder builder) {
@@ -445,7 +505,7 @@ public class UpdateHotelSceneItemRequest extends Request {
         /**
          * @return dialogueList
          */
-        public java.util.List < DialogueList> getDialogueList() {
+        public java.util.List<DialogueList> getDialogueList() {
             return this.dialogueList;
         }
 
@@ -515,7 +575,7 @@ public class UpdateHotelSceneItemRequest extends Request {
         public static final class Builder {
             private String beyondLimitReply; 
             private String deliveryMethod; 
-            private java.util.List < DialogueList> dialogueList; 
+            private java.util.List<DialogueList> dialogueList; 
             private String icon; 
             private Long id; 
             private Long limitNumber; 
@@ -525,6 +585,24 @@ public class UpdateHotelSceneItemRequest extends Request {
             private Long price; 
             private String robotName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateHotelSceneReq model) {
+                this.beyondLimitReply = model.beyondLimitReply;
+                this.deliveryMethod = model.deliveryMethod;
+                this.dialogueList = model.dialogueList;
+                this.icon = model.icon;
+                this.id = model.id;
+                this.limitNumber = model.limitNumber;
+                this.limitSwitch = model.limitSwitch;
+                this.name = model.name;
+                this.paymentMethod = model.paymentMethod;
+                this.price = model.price;
+                this.robotName = model.robotName;
+                this.status = model.status;
+            } 
 
             /**
              * BeyondLimitReply.
@@ -543,15 +621,19 @@ public class UpdateHotelSceneItemRequest extends Request {
             }
 
             /**
-             * DialogueList.
+             * <p>This parameter is required.</p>
              */
-            public Builder dialogueList(java.util.List < DialogueList> dialogueList) {
+            public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
                 this.dialogueList = dialogueList;
                 return this;
             }
 
             /**
-             * icon
+             * <p>icon</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png">https://ailabsaicloudservice.alicdn.com/hotel/icon/jiudianmianban_fuwushangpintu/wupin/keyongpinlei/mianqian.png</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -559,7 +641,10 @@ public class UpdateHotelSceneItemRequest extends Request {
             }
 
             /**
-             * itemID
+             * <p>itemID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10337</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -599,7 +684,10 @@ public class UpdateHotelSceneItemRequest extends Request {
             }
 
             /**
-             * Price.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder price(Long price) {
                 this.price = price;
@@ -615,7 +703,10 @@ public class UpdateHotelSceneItemRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>已添加</p>
              */
             public Builder status(String status) {
                 this.status = status;

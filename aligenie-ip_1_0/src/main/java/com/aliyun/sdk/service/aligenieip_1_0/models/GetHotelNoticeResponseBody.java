@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelNoticeResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelNoticeResponseBody</p>
  */
 public class GetHotelNoticeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
     private GetHotelNoticeResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetHotelNoticeResponseBody extends TeaModel {
 
     public static GetHotelNoticeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,6 +82,16 @@ public class GetHotelNoticeResponseBody extends TeaModel {
         private String requestId; 
         private String result; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetHotelNoticeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
          * Code.
          */
@@ -90,7 +109,10 @@ public class GetHotelNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

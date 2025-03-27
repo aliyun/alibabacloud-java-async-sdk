@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHotelAlarmResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteHotelAlarmResponseBody</p>
  */
 public class DeleteHotelAlarmResponseBody extends TeaModel {
-    @NameInMap("Extentions")
-    private java.util.Map < String, ? > extentions;
+    @com.aliyun.core.annotation.NameInMap("Extentions")
+    private java.util.Map<String, ?> extentions;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Integer result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private DeleteHotelAlarmResponseBody(Builder builder) {
@@ -43,10 +48,14 @@ public class DeleteHotelAlarmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extentions
      */
-    public java.util.Map < String, ? > getExtentions() {
+    public java.util.Map<String, ?> getExtentions() {
         return this.extentions;
     }
 
@@ -79,16 +88,27 @@ public class DeleteHotelAlarmResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > extentions; 
+        private java.util.Map<String, ?> extentions; 
         private String message; 
         private String requestId; 
         private Integer result; 
         private Integer statusCode; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteHotelAlarmResponseBody model) {
+            this.extentions = model.extentions;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
+
         /**
          * Extentions.
          */
-        public Builder extentions(java.util.Map < String, ? > extentions) {
+        public Builder extentions(java.util.Map<String, ?> extentions) {
             this.extentions = extentions;
             return this;
         }

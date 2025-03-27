@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelNoticeV2Request} extends {@link RequestModel}
  *
  * <p>GetHotelNoticeV2Request</p>
  */
 public class GetHotelNoticeV2Request extends Request {
-    @Query
-    @NameInMap("UserInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserInfo userInfo;
 
     private GetHotelNoticeV2Request(Builder builder) {
@@ -30,7 +35,7 @@ public class GetHotelNoticeV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class GetHotelNoticeV2Request extends Request {
         } 
 
         /**
-         * UserInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -71,20 +76,26 @@ public class GetHotelNoticeV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelNoticeV2Request} extends {@link TeaModel}
+     *
+     * <p>GetHotelNoticeV2Request</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("EncodeKey")
+        @com.aliyun.core.annotation.NameInMap("EncodeKey")
         private String encodeKey;
 
-        @NameInMap("EncodeType")
+        @com.aliyun.core.annotation.NameInMap("EncodeType")
         private String encodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdType")
+        @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private UserInfo(Builder builder) {
@@ -144,6 +155,17 @@ public class GetHotelNoticeV2Request extends Request {
             private String id; 
             private String idType; 
             private String organizationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.encodeKey = model.encodeKey;
+                this.encodeType = model.encodeType;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.organizationId = model.organizationId;
+            } 
 
             /**
              * EncodeKey.

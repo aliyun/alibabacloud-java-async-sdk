@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertHotelSceneBookItemResponseBody} extends {@link TeaModel}
  *
  * <p>InsertHotelSceneBookItemResponseBody</p>
  */
 public class InsertHotelSceneBookItemResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private InsertHotelSceneBookItemResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class InsertHotelSceneBookItemResponseBody extends TeaModel {
 
     public static InsertHotelSceneBookItemResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,6 +82,16 @@ public class InsertHotelSceneBookItemResponseBody extends TeaModel {
         private String requestId; 
         private Boolean result; 
 
+        private Builder() {
+        } 
+
+        private Builder(InsertHotelSceneBookItemResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
          * Code.
          */
@@ -90,7 +109,10 @@ public class InsertHotelSceneBookItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36FB***80C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

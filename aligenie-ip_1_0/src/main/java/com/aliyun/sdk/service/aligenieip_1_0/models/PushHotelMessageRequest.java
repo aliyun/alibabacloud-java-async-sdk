@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushHotelMessageRequest} extends {@link RequestModel}
  *
  * <p>PushHotelMessageRequest</p>
  */
 public class PushHotelMessageRequest extends Request {
-    @Query
-    @NameInMap("PushHotelMessageReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushHotelMessageReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PushHotelMessageReq pushHotelMessageReq;
 
     private PushHotelMessageRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class PushHotelMessageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,8 @@ public class PushHotelMessageRequest extends Request {
         } 
 
         /**
-         * pushHotelMessageReq
+         * <p>pushHotelMessageReq</p>
+         * <p>This parameter is required.</p>
          */
         public Builder pushHotelMessageReq(PushHotelMessageReq pushHotelMessageReq) {
             String pushHotelMessageReqShrink = shrink(pushHotelMessageReq, "PushHotelMessageReq", "json");
@@ -71,20 +77,26 @@ public class PushHotelMessageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PushHotelMessageRequest} extends {@link TeaModel}
+     *
+     * <p>PushHotelMessageRequest</p>
+     */
     public static class PushHotelMessageReq extends TeaModel {
-        @NameInMap("HotelId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HotelId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String hotelId;
 
-        @NameInMap("ParamMap")
-        private java.util.Map < String, String > paramMap;
+        @com.aliyun.core.annotation.NameInMap("ParamMap")
+        private java.util.Map<String, String> paramMap;
 
-        @NameInMap("RoomNo")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roomNo;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long templateId;
 
         private PushHotelMessageReq(Builder builder) {
@@ -112,7 +124,7 @@ public class PushHotelMessageRequest extends Request {
         /**
          * @return paramMap
          */
-        public java.util.Map < String, String > getParamMap() {
+        public java.util.Map<String, String> getParamMap() {
             return this.paramMap;
         }
 
@@ -132,12 +144,25 @@ public class PushHotelMessageRequest extends Request {
 
         public static final class Builder {
             private String hotelId; 
-            private java.util.Map < String, String > paramMap; 
+            private java.util.Map<String, String> paramMap; 
             private String roomNo; 
             private Long templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PushHotelMessageReq model) {
+                this.hotelId = model.hotelId;
+                this.paramMap = model.paramMap;
+                this.roomNo = model.roomNo;
+                this.templateId = model.templateId;
+            } 
+
             /**
-             * HotelId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e6dd44fd16084db8a60d69fd625d9f0f</p>
              */
             public Builder hotelId(String hotelId) {
                 this.hotelId = hotelId;
@@ -147,13 +172,16 @@ public class PushHotelMessageRequest extends Request {
             /**
              * ParamMap.
              */
-            public Builder paramMap(java.util.Map < String, String > paramMap) {
+            public Builder paramMap(java.util.Map<String, String> paramMap) {
                 this.paramMap = paramMap;
                 return this;
             }
 
             /**
-             * RoomNo.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102</p>
              */
             public Builder roomNo(String roomNo) {
                 this.roomNo = roomNo;
@@ -161,7 +189,10 @@ public class PushHotelMessageRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

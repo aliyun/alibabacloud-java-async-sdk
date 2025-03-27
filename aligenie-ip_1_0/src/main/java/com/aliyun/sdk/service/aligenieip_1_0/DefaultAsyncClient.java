@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddCartoon  AddCartoonRequest
+     * @return AddCartoonResponse
+     */
     @Override
     public CompletableFuture<AddCartoonResponse> addCartoon(AddCartoonRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCustomQA  AddCustomQARequest
+     * @return AddCustomQAResponse
+     */
     @Override
     public CompletableFuture<AddCustomQAResponse> addCustomQA(AddCustomQARequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCustomQAV2  AddCustomQAV2Request
+     * @return AddCustomQAV2Response
+     */
     @Override
     public CompletableFuture<AddCustomQAV2Response> addCustomQAV2(AddCustomQAV2Request request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddMessageTemplate  AddMessageTemplateRequest
+     * @return AddMessageTemplateResponse
+     */
     @Override
     public CompletableFuture<AddMessageTemplateResponse> addMessageTemplate(AddMessageTemplateRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddOrUpdateDisPlayModes  AddOrUpdateDisPlayModesRequest
+     * @return AddOrUpdateDisPlayModesResponse
+     */
     @Override
     public CompletableFuture<AddOrUpdateDisPlayModesResponse> addOrUpdateDisPlayModes(AddOrUpdateDisPlayModesRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddOrUpdateHotelSetting  AddOrUpdateHotelSettingRequest
+     * @return AddOrUpdateHotelSettingResponse
+     */
     @Override
     public CompletableFuture<AddOrUpdateHotelSettingResponse> addOrUpdateHotelSetting(AddOrUpdateHotelSettingRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddOrUpdateScreenSaver  AddOrUpdateScreenSaverRequest
+     * @return AddOrUpdateScreenSaverResponse
+     */
     @Override
     public CompletableFuture<AddOrUpdateScreenSaverResponse> addOrUpdateScreenSaver(AddOrUpdateScreenSaverRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddOrUpdateWelcomeText  AddOrUpdateWelcomeTextRequest
+     * @return AddOrUpdateWelcomeTextResponse
+     */
     @Override
     public CompletableFuture<AddOrUpdateWelcomeTextResponse> addOrUpdateWelcomeText(AddOrUpdateWelcomeTextRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuditHotel  AuditHotelRequest
+     * @return AuditHotelResponse
+     */
     @Override
     public CompletableFuture<AuditHotelResponse> auditHotel(AuditHotelRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchAddHotelRoom  BatchAddHotelRoomRequest
+     * @return BatchAddHotelRoomResponse
+     */
     @Override
     public CompletableFuture<BatchAddHotelRoomResponse> batchAddHotelRoom(BatchAddHotelRoomRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchDeleteHotelRoom  BatchDeleteHotelRoomRequest
+     * @return BatchDeleteHotelRoomResponse
+     */
     @Override
     public CompletableFuture<BatchDeleteHotelRoomResponse> batchDeleteHotelRoom(BatchDeleteHotelRoomRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckoutWithAK  CheckoutWithAKRequest
+     * @return CheckoutWithAKResponse
+     */
     @Override
     public CompletableFuture<CheckoutWithAKResponse> checkoutWithAK(CheckoutWithAKRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChildAccountAuth  ChildAccountAuthRequest
+     * @return ChildAccountAuthResponse
+     */
     @Override
     public CompletableFuture<ChildAccountAuthResponse> childAccountAuth(ChildAccountAuthRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ControlRoomDevice  ControlRoomDeviceRequest
+     * @return ControlRoomDeviceResponse
+     */
     @Override
     public CompletableFuture<ControlRoomDeviceResponse> controlRoomDevice(ControlRoomDeviceRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHotel  CreateHotelRequest
+     * @return CreateHotelResponse
+     */
     @Override
     public CompletableFuture<CreateHotelResponse> createHotel(CreateHotelRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHotelAlarm  CreateHotelAlarmRequest
+     * @return CreateHotelAlarmResponse
+     */
     @Override
     public CompletableFuture<CreateHotelAlarmResponse> createHotelAlarm(CreateHotelAlarmRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRcuScene  CreateRcuSceneRequest
+     * @return CreateRcuSceneResponse
+     */
     @Override
     public CompletableFuture<CreateRcuSceneResponse> createRcuScene(CreateRcuSceneRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCartoon  DeleteCartoonRequest
+     * @return DeleteCartoonResponse
+     */
     @Override
     public CompletableFuture<DeleteCartoonResponse> deleteCartoon(DeleteCartoonRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomQA  DeleteCustomQARequest
+     * @return DeleteCustomQAResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomQAResponse> deleteCustomQA(DeleteCustomQARequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHotelAlarm  DeleteHotelAlarmRequest
+     * @return DeleteHotelAlarmResponse
+     */
     @Override
     public CompletableFuture<DeleteHotelAlarmResponse> deleteHotelAlarm(DeleteHotelAlarmRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHotelSceneBookItem  DeleteHotelSceneBookItemRequest
+     * @return DeleteHotelSceneBookItemResponse
+     */
     @Override
     public CompletableFuture<DeleteHotelSceneBookItemResponse> deleteHotelSceneBookItem(DeleteHotelSceneBookItemRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHotelSetting  DeleteHotelSettingRequest
+     * @return DeleteHotelSettingResponse
+     */
     @Override
     public CompletableFuture<DeleteHotelSettingResponse> deleteHotelSetting(DeleteHotelSettingRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMessageTemplate  DeleteMessageTemplateRequest
+     * @return DeleteMessageTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteMessageTemplateResponse> deleteMessageTemplate(DeleteMessageTemplateRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRcuScene  DeleteRcuSceneRequest
+     * @return DeleteRcuSceneResponse
+     */
     @Override
     public CompletableFuture<DeleteRcuSceneResponse> deleteRcuScene(DeleteRcuSceneRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeviceControl  DeviceControlRequest
+     * @return DeviceControlResponse
+     */
     @Override
     public CompletableFuture<DeviceControlResponse> deviceControl(DeviceControlRequest request) {
         try {
@@ -389,6 +489,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteScene  ExecuteSceneRequest
+     * @return ExecuteSceneResponse
+     */
+    @Override
+    public CompletableFuture<ExecuteSceneResponse> executeScene(ExecuteSceneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecuteScene").setMethod(HttpMethod.POST).setPathRegex("/v1.0/ip/executeScene").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecuteSceneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecuteSceneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBasicInfoQA  GetBasicInfoQARequest
+     * @return GetBasicInfoQAResponse
+     */
     @Override
     public CompletableFuture<GetBasicInfoQAResponse> getBasicInfoQA(GetBasicInfoQARequest request) {
         try {
@@ -403,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCartoon  GetCartoonRequest
+     * @return GetCartoonResponse
+     */
     @Override
     public CompletableFuture<GetCartoonResponse> getCartoon(GetCartoonRequest request) {
         try {
@@ -417,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelContactByGenieDevice  GetHotelContactByGenieDeviceRequest
+     * @return GetHotelContactByGenieDeviceResponse
+     */
     @Override
     public CompletableFuture<GetHotelContactByGenieDeviceResponse> getHotelContactByGenieDevice(GetHotelContactByGenieDeviceRequest request) {
         try {
@@ -431,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelContactByNumber  GetHotelContactByNumberRequest
+     * @return GetHotelContactByNumberResponse
+     */
     @Override
     public CompletableFuture<GetHotelContactByNumberResponse> getHotelContactByNumber(GetHotelContactByNumberRequest request) {
         try {
@@ -445,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelContacts  GetHotelContactsRequest
+     * @return GetHotelContactsResponse
+     */
     @Override
     public CompletableFuture<GetHotelContactsResponse> getHotelContacts(GetHotelContactsRequest request) {
         try {
@@ -459,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelHomeBackImageAndModes  GetHotelHomeBackImageAndModesRequest
+     * @return GetHotelHomeBackImageAndModesResponse
+     */
     @Override
     public CompletableFuture<GetHotelHomeBackImageAndModesResponse> getHotelHomeBackImageAndModes(GetHotelHomeBackImageAndModesRequest request) {
         try {
@@ -473,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelNotice  GetHotelNoticeRequest
+     * @return GetHotelNoticeResponse
+     */
     @Override
     public CompletableFuture<GetHotelNoticeResponse> getHotelNotice(GetHotelNoticeRequest request) {
         try {
@@ -487,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelNoticeV2  GetHotelNoticeV2Request
+     * @return GetHotelNoticeV2Response
+     */
     @Override
     public CompletableFuture<GetHotelNoticeV2Response> getHotelNoticeV2(GetHotelNoticeV2Request request) {
         try {
@@ -501,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelOrderDetail  GetHotelOrderDetailRequest
+     * @return GetHotelOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetHotelOrderDetailResponse> getHotelOrderDetail(GetHotelOrderDetailRequest request) {
         try {
@@ -515,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelRoomDevice  GetHotelRoomDeviceRequest
+     * @return GetHotelRoomDeviceResponse
+     */
     @Override
     public CompletableFuture<GetHotelRoomDeviceResponse> getHotelRoomDevice(GetHotelRoomDeviceRequest request) {
         try {
@@ -529,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelSampleUtterances  GetHotelSampleUtterancesRequest
+     * @return GetHotelSampleUtterancesResponse
+     */
     @Override
     public CompletableFuture<GetHotelSampleUtterancesResponse> getHotelSampleUtterances(GetHotelSampleUtterancesRequest request) {
         try {
@@ -543,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelSceneItemDetail  GetHotelSceneItemDetailRequest
+     * @return GetHotelSceneItemDetailResponse
+     */
     @Override
     public CompletableFuture<GetHotelSceneItemDetailResponse> getHotelSceneItemDetail(GetHotelSceneItemDetailRequest request) {
         try {
@@ -557,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelScreenSaver  GetHotelScreenSaverRequest
+     * @return GetHotelScreenSaverResponse
+     */
     @Override
     public CompletableFuture<GetHotelScreenSaverResponse> getHotelScreenSaver(GetHotelScreenSaverRequest request) {
         try {
@@ -571,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelScreenSaverStyle  GetHotelScreenSaverStyleRequest
+     * @return GetHotelScreenSaverStyleResponse
+     */
     @Override
     public CompletableFuture<GetHotelScreenSaverStyleResponse> getHotelScreenSaverStyle(GetHotelScreenSaverStyleRequest request) {
         try {
@@ -585,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotelSetting  GetHotelSettingRequest
+     * @return GetHotelSettingResponse
+     */
     @Override
     public CompletableFuture<GetHotelSettingResponse> getHotelSetting(GetHotelSettingRequest request) {
         try {
@@ -599,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRelationProductList  GetRelationProductListRequest
+     * @return GetRelationProductListResponse
+     */
     @Override
     public CompletableFuture<GetRelationProductListResponse> getRelationProductList(GetRelationProductListRequest request) {
         try {
@@ -613,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUnionId  GetUnionIdRequest
+     * @return GetUnionIdResponse
+     */
     @Override
     public CompletableFuture<GetUnionIdResponse> getUnionId(GetUnionIdRequest request) {
         try {
@@ -627,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWelcomeTextAndMusic  GetWelcomeTextAndMusicRequest
+     * @return GetWelcomeTextAndMusicResponse
+     */
     @Override
     public CompletableFuture<GetWelcomeTextAndMusicResponse> getWelcomeTextAndMusic(GetWelcomeTextAndMusicRequest request) {
         try {
@@ -641,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelQrBind  HotelQrBindRequest
+     * @return HotelQrBindResponse
+     */
     @Override
     public CompletableFuture<HotelQrBindResponse> hotelQrBind(HotelQrBindRequest request) {
         try {
@@ -655,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportHotelConfig  ImportHotelConfigRequest
+     * @return ImportHotelConfigResponse
+     */
     @Override
     public CompletableFuture<ImportHotelConfigResponse> importHotelConfig(ImportHotelConfigRequest request) {
         try {
@@ -669,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportRoomControlDevices  ImportRoomControlDevicesRequest
+     * @return ImportRoomControlDevicesResponse
+     */
     @Override
     public CompletableFuture<ImportRoomControlDevicesResponse> importRoomControlDevices(ImportRoomControlDevicesRequest request) {
         try {
@@ -683,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportRoomGenieScenes  ImportRoomGenieScenesRequest
+     * @return ImportRoomGenieScenesResponse
+     */
     @Override
     public CompletableFuture<ImportRoomGenieScenesResponse> importRoomGenieScenes(ImportRoomGenieScenesRequest request) {
         try {
@@ -697,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertHotelSceneBookItem  InsertHotelSceneBookItemRequest
+     * @return InsertHotelSceneBookItemResponse
+     */
     @Override
     public CompletableFuture<InsertHotelSceneBookItemResponse> insertHotelSceneBookItem(InsertHotelSceneBookItemRequest request) {
         try {
@@ -711,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvokeRobotPush  InvokeRobotPushRequest
+     * @return InvokeRobotPushResponse
+     */
     @Override
     public CompletableFuture<InvokeRobotPushResponse> invokeRobotPush(InvokeRobotPushRequest request) {
         try {
@@ -725,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAllProvinces  ListAllProvincesRequest
+     * @return ListAllProvincesResponse
+     */
     @Override
     public CompletableFuture<ListAllProvincesResponse> listAllProvinces(ListAllProvincesRequest request) {
         try {
@@ -739,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCitiesByProvince  ListCitiesByProvinceRequest
+     * @return ListCitiesByProvinceResponse
+     */
     @Override
     public CompletableFuture<ListCitiesByProvinceResponse> listCitiesByProvince(ListCitiesByProvinceRequest request) {
         try {
@@ -753,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomQA  ListCustomQARequest
+     * @return ListCustomQAResponse
+     */
     @Override
     public CompletableFuture<ListCustomQAResponse> listCustomQA(ListCustomQARequest request) {
         try {
@@ -767,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDialogueTemplate  ListDialogueTemplateRequest
+     * @return ListDialogueTemplateResponse
+     */
     @Override
     public CompletableFuture<ListDialogueTemplateResponse> listDialogueTemplate(ListDialogueTemplateRequest request) {
         try {
@@ -781,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelAlarm  ListHotelAlarmRequest
+     * @return ListHotelAlarmResponse
+     */
     @Override
     public CompletableFuture<ListHotelAlarmResponse> listHotelAlarm(ListHotelAlarmRequest request) {
         try {
@@ -795,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelControlDevice  ListHotelControlDeviceRequest
+     * @return ListHotelControlDeviceResponse
+     */
     @Override
     public CompletableFuture<ListHotelControlDeviceResponse> listHotelControlDevice(ListHotelControlDeviceRequest request) {
         try {
@@ -809,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelInfo  ListHotelInfoRequest
+     * @return ListHotelInfoResponse
+     */
     @Override
     public CompletableFuture<ListHotelInfoResponse> listHotelInfo(ListHotelInfoRequest request) {
         try {
@@ -823,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelMessageTemplate  ListHotelMessageTemplateRequest
+     * @return ListHotelMessageTemplateResponse
+     */
     @Override
     public CompletableFuture<ListHotelMessageTemplateResponse> listHotelMessageTemplate(ListHotelMessageTemplateRequest request) {
         try {
@@ -837,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelOrder  ListHotelOrderRequest
+     * @return ListHotelOrderResponse
+     */
     @Override
     public CompletableFuture<ListHotelOrderResponse> listHotelOrder(ListHotelOrderRequest request) {
         try {
@@ -851,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelRooms  ListHotelRoomsRequest
+     * @return ListHotelRoomsResponse
+     */
     @Override
     public CompletableFuture<ListHotelRoomsResponse> listHotelRooms(ListHotelRoomsRequest request) {
         try {
@@ -865,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelSceneBookItems  ListHotelSceneBookItemsRequest
+     * @return ListHotelSceneBookItemsResponse
+     */
     @Override
     public CompletableFuture<ListHotelSceneBookItemsResponse> listHotelSceneBookItems(ListHotelSceneBookItemsRequest request) {
         try {
@@ -879,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelSceneItem  ListHotelSceneItemRequest
+     * @return ListHotelSceneItemResponse
+     */
     @Override
     public CompletableFuture<ListHotelSceneItemResponse> listHotelSceneItem(ListHotelSceneItemRequest request) {
         try {
@@ -893,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelSceneItems  ListHotelSceneItemsRequest
+     * @return ListHotelSceneItemsResponse
+     */
     @Override
     public CompletableFuture<ListHotelSceneItemsResponse> listHotelSceneItems(ListHotelSceneItemsRequest request) {
         try {
@@ -907,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotelServiceCategory  ListHotelServiceCategoryRequest
+     * @return ListHotelServiceCategoryResponse
+     */
     @Override
     public CompletableFuture<ListHotelServiceCategoryResponse> listHotelServiceCategory(ListHotelServiceCategoryRequest request) {
         try {
@@ -921,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHotels  ListHotelsRequest
+     * @return ListHotelsResponse
+     */
     @Override
     public CompletableFuture<ListHotelsResponse> listHotels(ListHotelsRequest request) {
         try {
@@ -935,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInfraredDeviceBrands  ListInfraredDeviceBrandsRequest
+     * @return ListInfraredDeviceBrandsResponse
+     */
     @Override
     public CompletableFuture<ListInfraredDeviceBrandsResponse> listInfraredDeviceBrands(ListInfraredDeviceBrandsRequest request) {
         try {
@@ -949,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInfraredRemoteControllers  ListInfraredRemoteControllersRequest
+     * @return ListInfraredRemoteControllersResponse
+     */
     @Override
     public CompletableFuture<ListInfraredRemoteControllersResponse> listInfraredRemoteControllers(ListInfraredRemoteControllersRequest request) {
         try {
@@ -963,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSTBServiceProviders  ListSTBServiceProvidersRequest
+     * @return ListSTBServiceProvidersResponse
+     */
     @Override
     public CompletableFuture<ListSTBServiceProvidersResponse> listSTBServiceProviders(ListSTBServiceProvidersRequest request) {
         try {
@@ -977,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSceneCategory  ListSceneCategoryRequest
+     * @return ListSceneCategoryResponse
+     */
     @Override
     public CompletableFuture<ListSceneCategoryResponse> listSceneCategory(ListSceneCategoryRequest request) {
         try {
@@ -991,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceQA  ListServiceQARequest
+     * @return ListServiceQAResponse
+     */
     @Override
     public CompletableFuture<ListServiceQAResponse> listServiceQA(ListServiceQARequest request) {
         try {
@@ -1005,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTickets  ListTicketsRequest
+     * @return ListTicketsResponse
+     */
     @Override
     public CompletableFuture<ListTicketsResponse> listTickets(ListTicketsRequest request) {
         try {
@@ -1019,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PageGetHotelRoomDevices  PageGetHotelRoomDevicesRequest
+     * @return PageGetHotelRoomDevicesResponse
+     */
     @Override
     public CompletableFuture<PageGetHotelRoomDevicesResponse> pageGetHotelRoomDevices(PageGetHotelRoomDevicesRequest request) {
         try {
@@ -1033,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PmsEventReport  PmsEventReportRequest
+     * @return PmsEventReportResponse
+     */
     @Override
     public CompletableFuture<PmsEventReportResponse> pmsEventReport(PmsEventReportRequest request) {
         try {
@@ -1047,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushHotelMessage  PushHotelMessageRequest
+     * @return PushHotelMessageResponse
+     */
     @Override
     public CompletableFuture<PushHotelMessageResponse> pushHotelMessage(PushHotelMessageRequest request) {
         try {
@@ -1061,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushVoiceBoxCommands  PushVoiceBoxCommandsRequest
+     * @return PushVoiceBoxCommandsResponse
+     */
     @Override
     public CompletableFuture<PushVoiceBoxCommandsResponse> pushVoiceBoxCommands(PushVoiceBoxCommandsRequest request) {
         try {
@@ -1075,6 +1389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushWelcome  PushWelcomeRequest
+     * @return PushWelcomeResponse
+     */
     @Override
     public CompletableFuture<PushWelcomeResponse> pushWelcome(PushWelcomeRequest request) {
         try {
@@ -1089,6 +1407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushWelcomeTextAndMusic  PushWelcomeTextAndMusicRequest
+     * @return PushWelcomeTextAndMusicResponse
+     */
     @Override
     public CompletableFuture<PushWelcomeTextAndMusicResponse> pushWelcomeTextAndMusic(PushWelcomeTextAndMusicRequest request) {
         try {
@@ -1103,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceStatus  QueryDeviceStatusRequest
+     * @return QueryDeviceStatusResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceStatusResponse> queryDeviceStatus(QueryDeviceStatusRequest request) {
         try {
@@ -1117,6 +1443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryHotelRoomDetail  QueryHotelRoomDetailRequest
+     * @return QueryHotelRoomDetailResponse
+     */
     @Override
     public CompletableFuture<QueryHotelRoomDetailResponse> queryHotelRoomDetail(QueryHotelRoomDetailRequest request) {
         try {
@@ -1131,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRoomControlDevices  QueryRoomControlDevicesRequest
+     * @return QueryRoomControlDevicesResponse
+     */
     @Override
     public CompletableFuture<QueryRoomControlDevicesResponse> queryRoomControlDevices(QueryRoomControlDevicesRequest request) {
         try {
@@ -1145,6 +1479,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRoomControlDevicesAndStatus  QueryRoomControlDevicesAndStatusRequest
+     * @return QueryRoomControlDevicesAndStatusResponse
+     */
+    @Override
+    public CompletableFuture<QueryRoomControlDevicesAndStatusResponse> queryRoomControlDevicesAndStatus(QueryRoomControlDevicesAndStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRoomControlDevicesAndStatus").setMethod(HttpMethod.POST).setPathRegex("/v1.0/ip/queryRoomControlDevicesAndStatus").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRoomControlDevicesAndStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRoomControlDevicesAndStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRoomStatus  QueryRoomStatusRequest
+     * @return QueryRoomStatusResponse
+     */
+    @Override
+    public CompletableFuture<QueryRoomStatusResponse> queryRoomStatus(QueryRoomStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRoomStatus").setMethod(HttpMethod.POST).setPathRegex("/v1.0/ip/queryRoomStatus").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRoomStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRoomStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QuerySceneList  QuerySceneListRequest
+     * @return QuerySceneListResponse
+     */
     @Override
     public CompletableFuture<QuerySceneListResponse> querySceneList(QuerySceneListRequest request) {
         try {
@@ -1159,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveChildAccountAuth  RemoveChildAccountAuthRequest
+     * @return RemoveChildAccountAuthResponse
+     */
     @Override
     public CompletableFuture<RemoveChildAccountAuthResponse> removeChildAccountAuth(RemoveChildAccountAuthRequest request) {
         try {
@@ -1173,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveHotel  RemoveHotelRequest
+     * @return RemoveHotelResponse
+     */
     @Override
     public CompletableFuture<RemoveHotelResponse> removeHotel(RemoveHotelRequest request) {
         try {
@@ -1187,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetWelcomeTextAndMusic  ResetWelcomeTextAndMusicRequest
+     * @return ResetWelcomeTextAndMusicResponse
+     */
     @Override
     public CompletableFuture<ResetWelcomeTextAndMusicResponse> resetWelcomeTextAndMusic(ResetWelcomeTextAndMusicRequest request) {
         try {
@@ -1201,6 +1587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RoomCheckOut  RoomCheckOutRequest
+     * @return RoomCheckOutResponse
+     */
     @Override
     public CompletableFuture<RoomCheckOutResponse> roomCheckOut(RoomCheckOutRequest request) {
         try {
@@ -1215,6 +1605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitHotelOrder  SubmitHotelOrderRequest
+     * @return SubmitHotelOrderResponse
+     */
     @Override
     public CompletableFuture<SubmitHotelOrderResponse> submitHotelOrder(SubmitHotelOrderRequest request) {
         try {
@@ -1229,6 +1623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncDeviceStatusWithAk  SyncDeviceStatusWithAkRequest
+     * @return SyncDeviceStatusWithAkResponse
+     */
     @Override
     public CompletableFuture<SyncDeviceStatusWithAkResponse> syncDeviceStatusWithAk(SyncDeviceStatusWithAkRequest request) {
         try {
@@ -1243,6 +1641,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateBasicInfoQA  UpdateBasicInfoQARequest
+     * @return UpdateBasicInfoQAResponse
+     */
     @Override
     public CompletableFuture<UpdateBasicInfoQAResponse> updateBasicInfoQA(UpdateBasicInfoQARequest request) {
         try {
@@ -1257,6 +1659,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomQA  UpdateCustomQARequest
+     * @return UpdateCustomQAResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomQAResponse> updateCustomQA(UpdateCustomQARequest request) {
         try {
@@ -1271,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHotel  UpdateHotelRequest
+     * @return UpdateHotelResponse
+     */
     @Override
     public CompletableFuture<UpdateHotelResponse> updateHotel(UpdateHotelRequest request) {
         try {
@@ -1285,6 +1695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHotelAlarm  UpdateHotelAlarmRequest
+     * @return UpdateHotelAlarmResponse
+     */
     @Override
     public CompletableFuture<UpdateHotelAlarmResponse> updateHotelAlarm(UpdateHotelAlarmRequest request) {
         try {
@@ -1299,6 +1713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHotelSceneBookItem  UpdateHotelSceneBookItemRequest
+     * @return UpdateHotelSceneBookItemResponse
+     */
     @Override
     public CompletableFuture<UpdateHotelSceneBookItemResponse> updateHotelSceneBookItem(UpdateHotelSceneBookItemRequest request) {
         try {
@@ -1313,6 +1731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHotelSceneItem  UpdateHotelSceneItemRequest
+     * @return UpdateHotelSceneItemResponse
+     */
     @Override
     public CompletableFuture<UpdateHotelSceneItemResponse> updateHotelSceneItem(UpdateHotelSceneItemRequest request) {
         try {
@@ -1327,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMessageTemplate  UpdateMessageTemplateRequest
+     * @return UpdateMessageTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateMessageTemplateResponse> updateMessageTemplate(UpdateMessageTemplateRequest request) {
         try {
@@ -1341,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRcuScene  UpdateRcuSceneRequest
+     * @return UpdateRcuSceneResponse
+     */
     @Override
     public CompletableFuture<UpdateRcuSceneResponse> updateRcuScene(UpdateRcuSceneRequest request) {
         try {
@@ -1355,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateServiceQA  UpdateServiceQARequest
+     * @return UpdateServiceQAResponse
+     */
     @Override
     public CompletableFuture<UpdateServiceQAResponse> updateServiceQA(UpdateServiceQARequest request) {
         try {
@@ -1369,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTicket  UpdateTicketRequest
+     * @return UpdateTicketResponse
+     */
     @Override
     public CompletableFuture<UpdateTicketResponse> updateTicket(UpdateTicketRequest request) {
         try {

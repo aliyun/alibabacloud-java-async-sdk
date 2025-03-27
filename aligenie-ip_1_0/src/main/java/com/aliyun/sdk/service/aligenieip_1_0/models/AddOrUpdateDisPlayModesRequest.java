@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddOrUpdateDisPlayModesRequest} extends {@link RequestModel}
  *
  * <p>AddOrUpdateDisPlayModesRequest</p>
  */
 public class AddOrUpdateDisPlayModesRequest extends Request {
-    @Body
-    @NameInMap("HotelDeviceModeList")
-    @Validation(required = true)
-    private java.util.List < String > hotelDeviceModeList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelDeviceModeList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> hotelDeviceModeList;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
     private AddOrUpdateDisPlayModesRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AddOrUpdateDisPlayModesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -44,7 +49,7 @@ public class AddOrUpdateDisPlayModesRequest extends Request {
     /**
      * @return hotelDeviceModeList
      */
-    public java.util.List < String > getHotelDeviceModeList() {
+    public java.util.List<String> getHotelDeviceModeList() {
         return this.hotelDeviceModeList;
     }
 
@@ -56,7 +61,7 @@ public class AddOrUpdateDisPlayModesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddOrUpdateDisPlayModesRequest, Builder> {
-        private java.util.List < String > hotelDeviceModeList; 
+        private java.util.List<String> hotelDeviceModeList; 
         private String hotelId; 
 
         private Builder() {
@@ -70,9 +75,9 @@ public class AddOrUpdateDisPlayModesRequest extends Request {
         } 
 
         /**
-         * HotelDeviceModeList.
+         * <p>This parameter is required.</p>
          */
-        public Builder hotelDeviceModeList(java.util.List < String > hotelDeviceModeList) {
+        public Builder hotelDeviceModeList(java.util.List<String> hotelDeviceModeList) {
             String hotelDeviceModeListShrink = shrink(hotelDeviceModeList, "HotelDeviceModeList", "json");
             this.putBodyParameter("HotelDeviceModeList", hotelDeviceModeListShrink);
             this.hotelDeviceModeList = hotelDeviceModeList;
@@ -80,7 +85,10 @@ public class AddOrUpdateDisPlayModesRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7***83</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);

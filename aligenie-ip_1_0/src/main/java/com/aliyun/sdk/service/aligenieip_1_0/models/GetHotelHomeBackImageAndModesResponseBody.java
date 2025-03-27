@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotelHomeBackImageAndModesResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotelHomeBackImageAndModesResponseBody</p>
  */
 public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetHotelHomeBackImageAndModesResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
 
     public static GetHotelHomeBackImageAndModesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotelHomeBackImageAndModesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -111,14 +130,20 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotelHomeBackImageAndModesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelHomeBackImageAndModesResponseBody</p>
+     */
     public static class ModeList extends TeaModel {
-        @NameInMap("CnName")
+        @com.aliyun.core.annotation.NameInMap("CnName")
         private String cnName;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
         private ModeList(Builder builder) {
@@ -161,6 +186,15 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
             private String code; 
             private String icon; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModeList model) {
+                this.cnName = model.cnName;
+                this.code = model.code;
+                this.icon = model.icon;
+            } 
+
             /**
              * CnName.
              */
@@ -192,15 +226,21 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHotelHomeBackImageAndModesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotelHomeBackImageAndModesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("BackgroundImage")
+        @com.aliyun.core.annotation.NameInMap("BackgroundImage")
         private String backgroundImage;
 
-        @NameInMap("HotelName")
+        @com.aliyun.core.annotation.NameInMap("HotelName")
         private String hotelName;
 
-        @NameInMap("ModeList")
-        private java.util.List < ModeList> modeList;
+        @com.aliyun.core.annotation.NameInMap("ModeList")
+        private java.util.List<ModeList> modeList;
 
         private Result(Builder builder) {
             this.backgroundImage = builder.backgroundImage;
@@ -233,14 +273,23 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
         /**
          * @return modeList
          */
-        public java.util.List < ModeList> getModeList() {
+        public java.util.List<ModeList> getModeList() {
             return this.modeList;
         }
 
         public static final class Builder {
             private String backgroundImage; 
             private String hotelName; 
-            private java.util.List < ModeList> modeList; 
+            private java.util.List<ModeList> modeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.backgroundImage = model.backgroundImage;
+                this.hotelName = model.hotelName;
+                this.modeList = model.modeList;
+            } 
 
             /**
              * BackgroundImage.
@@ -261,7 +310,7 @@ public class GetHotelHomeBackImageAndModesResponseBody extends TeaModel {
             /**
              * ModeList.
              */
-            public Builder modeList(java.util.List < ModeList> modeList) {
+            public Builder modeList(java.util.List<ModeList> modeList) {
                 this.modeList = modeList;
                 return this;
             }

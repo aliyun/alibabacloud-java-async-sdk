@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportRoomGenieScenesRequest} extends {@link RequestModel}
  *
  * <p>ImportRoomGenieScenesRequest</p>
  */
 public class ImportRoomGenieScenesRequest extends Request {
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("RoomNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roomNo;
 
-    @Body
-    @NameInMap("SceneList")
-    private java.util.List < SceneList> sceneList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneList")
+    private java.util.List<SceneList> sceneList;
 
     private ImportRoomGenieScenesRequest(Builder builder) {
         super(builder);
@@ -41,7 +46,7 @@ public class ImportRoomGenieScenesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class ImportRoomGenieScenesRequest extends Request {
     /**
      * @return sceneList
      */
-    public java.util.List < SceneList> getSceneList() {
+    public java.util.List<SceneList> getSceneList() {
         return this.sceneList;
     }
 
     public static final class Builder extends Request.Builder<ImportRoomGenieScenesRequest, Builder> {
         private String hotelId; 
         private String roomNo; 
-        private java.util.List < SceneList> sceneList; 
+        private java.util.List<SceneList> sceneList; 
 
         private Builder() {
             super();
@@ -84,7 +89,10 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7a3***013</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -93,7 +101,10 @@ public class ImportRoomGenieScenesRequest extends Request {
         }
 
         /**
-         * RoomNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1211</p>
          */
         public Builder roomNo(String roomNo) {
             this.putBodyParameter("RoomNo", roomNo);
@@ -104,7 +115,7 @@ public class ImportRoomGenieScenesRequest extends Request {
         /**
          * SceneList.
          */
-        public Builder sceneList(java.util.List < SceneList> sceneList) {
+        public Builder sceneList(java.util.List<SceneList> sceneList) {
             String sceneListShrink = shrink(sceneList, "SceneList", "json");
             this.putBodyParameter("SceneList", sceneListShrink);
             this.sceneList = sceneList;
@@ -118,13 +129,19 @@ public class ImportRoomGenieScenesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class AttributeValues extends TeaModel {
-        @NameInMap("AttributeName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttributeName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attributeName;
 
-        @NameInMap("AttributeValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttributeValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attributeValue;
 
         private AttributeValues(Builder builder) {
@@ -158,8 +175,19 @@ public class ImportRoomGenieScenesRequest extends Request {
             private String attributeName; 
             private String attributeValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeValues model) {
+                this.attributeName = model.attributeName;
+                this.attributeValue = model.attributeValue;
+            } 
+
             /**
-             * AttributeName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>powerstate</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -167,7 +195,10 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * AttributeValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;
@@ -181,19 +212,25 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class Device extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("DeviceIndex")
+        @com.aliyun.core.annotation.NameInMap("DeviceIndex")
         private Integer deviceIndex;
 
-        @NameInMap("DeviceNumber")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceNumber")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceNumber;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Device(Builder builder) {
@@ -245,8 +282,21 @@ public class ImportRoomGenieScenesRequest extends Request {
             private String deviceNumber; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Device model) {
+                this.category = model.category;
+                this.deviceIndex = model.deviceIndex;
+                this.deviceNumber = model.deviceNumber;
+                this.type = model.type;
+            } 
+
             /**
-             * Category.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -262,7 +312,10 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * DeviceNumber.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3c5d2ab8f9ec</p>
              */
             public Builder deviceNumber(String deviceNumber) {
                 this.deviceNumber = deviceNumber;
@@ -284,17 +337,23 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class Actions extends TeaModel {
-        @NameInMap("AttributeValues")
-        private java.util.List < AttributeValues> attributeValues;
+        @com.aliyun.core.annotation.NameInMap("AttributeValues")
+        private java.util.List<AttributeValues> attributeValues;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private Device device;
 
-        @NameInMap("Reply")
+        @com.aliyun.core.annotation.NameInMap("Reply")
         private String reply;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Actions(Builder builder) {
@@ -315,7 +374,7 @@ public class ImportRoomGenieScenesRequest extends Request {
         /**
          * @return attributeValues
          */
-        public java.util.List < AttributeValues> getAttributeValues() {
+        public java.util.List<AttributeValues> getAttributeValues() {
             return this.attributeValues;
         }
 
@@ -341,15 +400,25 @@ public class ImportRoomGenieScenesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < AttributeValues> attributeValues; 
+            private java.util.List<AttributeValues> attributeValues; 
             private Device device; 
             private String reply; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.attributeValues = model.attributeValues;
+                this.device = model.device;
+                this.reply = model.reply;
+                this.type = model.type;
+            } 
+
             /**
              * AttributeValues.
              */
-            public Builder attributeValues(java.util.List < AttributeValues> attributeValues) {
+            public Builder attributeValues(java.util.List<AttributeValues> attributeValues) {
                 this.attributeValues = attributeValues;
                 return this;
             }
@@ -385,13 +454,19 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class TriggersAttributeValues extends TeaModel {
-        @NameInMap("AttributeName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttributeName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attributeName;
 
-        @NameInMap("AttributeValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttributeValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attributeValue;
 
         private TriggersAttributeValues(Builder builder) {
@@ -425,8 +500,16 @@ public class ImportRoomGenieScenesRequest extends Request {
             private String attributeName; 
             private String attributeValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TriggersAttributeValues model) {
+                this.attributeName = model.attributeName;
+                this.attributeValue = model.attributeValue;
+            } 
+
             /**
-             * AttributeName.
+             * <p>This parameter is required.</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -434,7 +517,7 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * AttributeValue.
+             * <p>This parameter is required.</p>
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;
@@ -448,16 +531,22 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class TriggersDevice extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("DeviceIndex")
+        @com.aliyun.core.annotation.NameInMap("DeviceIndex")
         private String deviceIndex;
 
-        @NameInMap("DeviceNumber")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeviceNumber")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deviceNumber;
 
         private TriggersDevice(Builder builder) {
@@ -500,8 +589,17 @@ public class ImportRoomGenieScenesRequest extends Request {
             private String deviceIndex; 
             private String deviceNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(TriggersDevice model) {
+                this.category = model.category;
+                this.deviceIndex = model.deviceIndex;
+                this.deviceNumber = model.deviceNumber;
+            } 
+
             /**
-             * Category.
+             * <p>This parameter is required.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -517,7 +615,7 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * DeviceNumber.
+             * <p>This parameter is required.</p>
              */
             public Builder deviceNumber(String deviceNumber) {
                 this.deviceNumber = deviceNumber;
@@ -531,18 +629,24 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class Triggers extends TeaModel {
-        @NameInMap("AttributeValues")
-        private java.util.List < TriggersAttributeValues> attributeValues;
+        @com.aliyun.core.annotation.NameInMap("AttributeValues")
+        private java.util.List<TriggersAttributeValues> attributeValues;
 
-        @NameInMap("CorpusList")
-        private java.util.List < String > corpusList;
+        @com.aliyun.core.annotation.NameInMap("CorpusList")
+        private java.util.List<String> corpusList;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private TriggersDevice device;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer type;
 
         private Triggers(Builder builder) {
@@ -563,14 +667,14 @@ public class ImportRoomGenieScenesRequest extends Request {
         /**
          * @return attributeValues
          */
-        public java.util.List < TriggersAttributeValues> getAttributeValues() {
+        public java.util.List<TriggersAttributeValues> getAttributeValues() {
             return this.attributeValues;
         }
 
         /**
          * @return corpusList
          */
-        public java.util.List < String > getCorpusList() {
+        public java.util.List<String> getCorpusList() {
             return this.corpusList;
         }
 
@@ -589,15 +693,25 @@ public class ImportRoomGenieScenesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < TriggersAttributeValues> attributeValues; 
-            private java.util.List < String > corpusList; 
+            private java.util.List<TriggersAttributeValues> attributeValues; 
+            private java.util.List<String> corpusList; 
             private TriggersDevice device; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Triggers model) {
+                this.attributeValues = model.attributeValues;
+                this.corpusList = model.corpusList;
+                this.device = model.device;
+                this.type = model.type;
+            } 
 
             /**
              * AttributeValues.
              */
-            public Builder attributeValues(java.util.List < TriggersAttributeValues> attributeValues) {
+            public Builder attributeValues(java.util.List<TriggersAttributeValues> attributeValues) {
                 this.attributeValues = attributeValues;
                 return this;
             }
@@ -605,7 +719,7 @@ public class ImportRoomGenieScenesRequest extends Request {
             /**
              * CorpusList.
              */
-            public Builder corpusList(java.util.List < String > corpusList) {
+            public Builder corpusList(java.util.List<String> corpusList) {
                 this.corpusList = corpusList;
                 return this;
             }
@@ -619,7 +733,10 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -633,32 +750,38 @@ public class ImportRoomGenieScenesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportRoomGenieScenesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportRoomGenieScenesRequest</p>
+     */
     public static class SceneList extends TeaModel {
-        @NameInMap("Actions")
-        @Validation(required = true)
-        private java.util.List < Actions> actions;
+        @com.aliyun.core.annotation.NameInMap("Actions")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Actions> actions;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Display")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Display")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean display;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("SceneName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SceneName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sceneName;
 
-        @NameInMap("TriggerLogical")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TriggerLogical")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer triggerLogical;
 
-        @NameInMap("Triggers")
-        @Validation(required = true)
-        private java.util.List < Triggers> triggers;
+        @com.aliyun.core.annotation.NameInMap("Triggers")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Triggers> triggers;
 
         private SceneList(Builder builder) {
             this.actions = builder.actions;
@@ -681,7 +804,7 @@ public class ImportRoomGenieScenesRequest extends Request {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -723,23 +846,36 @@ public class ImportRoomGenieScenesRequest extends Request {
         /**
          * @return triggers
          */
-        public java.util.List < Triggers> getTriggers() {
+        public java.util.List<Triggers> getTriggers() {
             return this.triggers;
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private String description; 
             private Boolean display; 
             private String icon; 
             private String sceneName; 
             private Integer triggerLogical; 
-            private java.util.List < Triggers> triggers; 
+            private java.util.List<Triggers> triggers; 
+
+            private Builder() {
+            } 
+
+            private Builder(SceneList model) {
+                this.actions = model.actions;
+                this.description = model.description;
+                this.display = model.display;
+                this.icon = model.icon;
+                this.sceneName = model.sceneName;
+                this.triggerLogical = model.triggerLogical;
+                this.triggers = model.triggers;
+            } 
 
             /**
-             * Actions.
+             * <p>This parameter is required.</p>
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -753,7 +889,10 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder display(Boolean display) {
                 this.display = display;
@@ -769,7 +908,7 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * SceneName.
+             * <p>This parameter is required.</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -777,7 +916,10 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * TriggerLogical.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder triggerLogical(Integer triggerLogical) {
                 this.triggerLogical = triggerLogical;
@@ -785,9 +927,9 @@ public class ImportRoomGenieScenesRequest extends Request {
             }
 
             /**
-             * Triggers.
+             * <p>This parameter is required.</p>
              */
-            public Builder triggers(java.util.List < Triggers> triggers) {
+            public Builder triggers(java.util.List<Triggers> triggers) {
                 this.triggers = triggers;
                 return this;
             }

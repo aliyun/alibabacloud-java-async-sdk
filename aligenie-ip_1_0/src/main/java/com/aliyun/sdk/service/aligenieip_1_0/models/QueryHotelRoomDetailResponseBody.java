@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryHotelRoomDetailResponseBody</p>
  */
 public class QueryHotelRoomDetailResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private QueryHotelRoomDetailResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
 
     public static QueryHotelRoomDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryHotelRoomDetailResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -111,11 +130,17 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class AuthAccounts extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AuthTime")
+        @com.aliyun.core.annotation.NameInMap("AuthTime")
         private String authTime;
 
         private AuthAccounts(Builder builder) {
@@ -149,6 +174,14 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             private String accountName; 
             private String authTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthAccounts model) {
+                this.accountName = model.accountName;
+                this.authTime = model.authTime;
+            } 
+
             /**
              * AccountName.
              */
@@ -172,26 +205,32 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class DeviceInfos extends TeaModel {
-        @NameInMap("ActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ActiveTime")
         private String activeTime;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("FirmwareVersion")
+        @com.aliyun.core.annotation.NameInMap("FirmwareVersion")
         private String firmwareVersion;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("OnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("OnlineStatus")
         private Integer onlineStatus;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private DeviceInfos(Builder builder) {
@@ -270,6 +309,19 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             private String sn; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfos model) {
+                this.activeTime = model.activeTime;
+                this.deviceName = model.deviceName;
+                this.firmwareVersion = model.firmwareVersion;
+                this.mac = model.mac;
+                this.onlineStatus = model.onlineStatus;
+                this.sn = model.sn;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * ActiveTime.
              */
@@ -333,11 +385,17 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class OtherService extends TeaModel {
-        @NameInMap("OpenCall")
+        @com.aliyun.core.annotation.NameInMap("OpenCall")
         private Boolean openCall;
 
-        @NameInMap("UnhandleTickets")
+        @com.aliyun.core.annotation.NameInMap("UnhandleTickets")
         private Integer unhandleTickets;
 
         private OtherService(Builder builder) {
@@ -371,6 +429,14 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             private Boolean openCall; 
             private Integer unhandleTickets; 
 
+            private Builder() {
+            } 
+
+            private Builder(OtherService model) {
+                this.openCall = model.openCall;
+                this.unhandleTickets = model.unhandleTickets;
+            } 
+
             /**
              * OpenCall.
              */
@@ -394,38 +460,44 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class RoomControlInfoDeviceInfos extends TeaModel {
-        @NameInMap("CategoryEnName")
+        @com.aliyun.core.annotation.NameInMap("CategoryEnName")
         private String categoryEnName;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("DeviceConnectType")
+        @com.aliyun.core.annotation.NameInMap("DeviceConnectType")
         private String deviceConnectType;
 
-        @NameInMap("DeviceCount")
+        @com.aliyun.core.annotation.NameInMap("DeviceCount")
         private Integer deviceCount;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("LocationEnName")
+        @com.aliyun.core.annotation.NameInMap("LocationEnName")
         private String locationEnName;
 
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private Long locationId;
 
-        @NameInMap("LocationName")
+        @com.aliyun.core.annotation.NameInMap("LocationName")
         private String locationName;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private RoomControlInfoDeviceInfos(Builder builder) {
@@ -540,6 +612,23 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             private String locationName; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomControlInfoDeviceInfos model) {
+                this.categoryEnName = model.categoryEnName;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
+                this.deviceConnectType = model.deviceConnectType;
+                this.deviceCount = model.deviceCount;
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.locationEnName = model.locationEnName;
+                this.locationId = model.locationId;
+                this.locationName = model.locationName;
+                this.productKey = model.productKey;
+            } 
+
             /**
              * CategoryEnName.
              */
@@ -635,23 +724,29 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class RoomControlInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DeviceInfos")
-        private java.util.List < RoomControlInfoDeviceInfos> deviceInfos;
+        @com.aliyun.core.annotation.NameInMap("DeviceInfos")
+        private java.util.List<RoomControlInfoDeviceInfos> deviceInfos;
 
-        @NameInMap("RcuUrl")
+        @com.aliyun.core.annotation.NameInMap("RcuUrl")
         private String rcuUrl;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private RoomControlInfo(Builder builder) {
@@ -688,7 +783,7 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         /**
          * @return deviceInfos
          */
-        public java.util.List < RoomControlInfoDeviceInfos> getDeviceInfos() {
+        public java.util.List<RoomControlInfoDeviceInfos> getDeviceInfos() {
             return this.deviceInfos;
         }
 
@@ -716,10 +811,22 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long appId; 
             private String appName; 
-            private java.util.List < RoomControlInfoDeviceInfos> deviceInfos; 
+            private java.util.List<RoomControlInfoDeviceInfos> deviceInfos; 
             private String rcuUrl; 
             private Long templateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomControlInfo model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.deviceInfos = model.deviceInfos;
+                this.rcuUrl = model.rcuUrl;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * AppId.
@@ -740,7 +847,7 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             /**
              * DeviceInfos.
              */
-            public Builder deviceInfos(java.util.List < RoomControlInfoDeviceInfos> deviceInfos) {
+            public Builder deviceInfos(java.util.List<RoomControlInfoDeviceInfos> deviceInfos) {
                 this.deviceInfos = deviceInfos;
                 return this;
             }
@@ -776,17 +883,23 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class RoomServiceInfo extends TeaModel {
-        @NameInMap("BookServiceCnt")
+        @com.aliyun.core.annotation.NameInMap("BookServiceCnt")
         private Integer bookServiceCnt;
 
-        @NameInMap("GoodsServiceCnt")
+        @com.aliyun.core.annotation.NameInMap("GoodsServiceCnt")
         private Integer goodsServiceCnt;
 
-        @NameInMap("RepairServiceCnt")
+        @com.aliyun.core.annotation.NameInMap("RepairServiceCnt")
         private Integer repairServiceCnt;
 
-        @NameInMap("RoomServiceCnt")
+        @com.aliyun.core.annotation.NameInMap("RoomServiceCnt")
         private Integer roomServiceCnt;
 
         private RoomServiceInfo(Builder builder) {
@@ -838,6 +951,16 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             private Integer repairServiceCnt; 
             private Integer roomServiceCnt; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomServiceInfo model) {
+                this.bookServiceCnt = model.bookServiceCnt;
+                this.goodsServiceCnt = model.goodsServiceCnt;
+                this.repairServiceCnt = model.repairServiceCnt;
+                this.roomServiceCnt = model.roomServiceCnt;
+            } 
+
             /**
              * BookServiceCnt.
              */
@@ -877,35 +1000,41 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotelRoomDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotelRoomDetailResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AuthAccounts")
-        private java.util.List < AuthAccounts> authAccounts;
+        @com.aliyun.core.annotation.NameInMap("AuthAccounts")
+        private java.util.List<AuthAccounts> authAccounts;
 
-        @NameInMap("ConnectType")
+        @com.aliyun.core.annotation.NameInMap("ConnectType")
         private String connectType;
 
-        @NameInMap("CreatorAccountName")
+        @com.aliyun.core.annotation.NameInMap("CreatorAccountName")
         private String creatorAccountName;
 
-        @NameInMap("DeviceInfos")
-        private java.util.List < DeviceInfos> deviceInfos;
+        @com.aliyun.core.annotation.NameInMap("DeviceInfos")
+        private java.util.List<DeviceInfos> deviceInfos;
 
-        @NameInMap("HotelId")
+        @com.aliyun.core.annotation.NameInMap("HotelId")
         private String hotelId;
 
-        @NameInMap("HotelName")
+        @com.aliyun.core.annotation.NameInMap("HotelName")
         private String hotelName;
 
-        @NameInMap("OtherService")
+        @com.aliyun.core.annotation.NameInMap("OtherService")
         private OtherService otherService;
 
-        @NameInMap("RoomControlInfo")
+        @com.aliyun.core.annotation.NameInMap("RoomControlInfo")
         private RoomControlInfo roomControlInfo;
 
-        @NameInMap("RoomNo")
+        @com.aliyun.core.annotation.NameInMap("RoomNo")
         private String roomNo;
 
-        @NameInMap("RoomServiceInfo")
+        @com.aliyun.core.annotation.NameInMap("RoomServiceInfo")
         private RoomServiceInfo roomServiceInfo;
 
         private Result(Builder builder) {
@@ -932,7 +1061,7 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         /**
          * @return authAccounts
          */
-        public java.util.List < AuthAccounts> getAuthAccounts() {
+        public java.util.List<AuthAccounts> getAuthAccounts() {
             return this.authAccounts;
         }
 
@@ -953,7 +1082,7 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         /**
          * @return deviceInfos
          */
-        public java.util.List < DeviceInfos> getDeviceInfos() {
+        public java.util.List<DeviceInfos> getDeviceInfos() {
             return this.deviceInfos;
         }
 
@@ -1000,10 +1129,10 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthAccounts> authAccounts; 
+            private java.util.List<AuthAccounts> authAccounts; 
             private String connectType; 
             private String creatorAccountName; 
-            private java.util.List < DeviceInfos> deviceInfos; 
+            private java.util.List<DeviceInfos> deviceInfos; 
             private String hotelId; 
             private String hotelName; 
             private OtherService otherService; 
@@ -1011,10 +1140,26 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             private String roomNo; 
             private RoomServiceInfo roomServiceInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.authAccounts = model.authAccounts;
+                this.connectType = model.connectType;
+                this.creatorAccountName = model.creatorAccountName;
+                this.deviceInfos = model.deviceInfos;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+                this.otherService = model.otherService;
+                this.roomControlInfo = model.roomControlInfo;
+                this.roomNo = model.roomNo;
+                this.roomServiceInfo = model.roomServiceInfo;
+            } 
+
             /**
              * AuthAccounts.
              */
-            public Builder authAccounts(java.util.List < AuthAccounts> authAccounts) {
+            public Builder authAccounts(java.util.List<AuthAccounts> authAccounts) {
                 this.authAccounts = authAccounts;
                 return this;
             }
@@ -1038,7 +1183,7 @@ public class QueryHotelRoomDetailResponseBody extends TeaModel {
             /**
              * DeviceInfos.
              */
-            public Builder deviceInfos(java.util.List < DeviceInfos> deviceInfos) {
+            public Builder deviceInfos(java.util.List<DeviceInfos> deviceInfos) {
                 this.deviceInfos = deviceInfos;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushVoiceBoxCommandsRequest} extends {@link RequestModel}
  *
  * <p>PushVoiceBoxCommandsRequest</p>
  */
 public class PushVoiceBoxCommandsRequest extends Request {
-    @Body
-    @NameInMap("Commands")
-    @Validation(required = true)
-    private java.util.List < Commands> commands;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Commands")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Commands> commands;
 
-    @Body
-    @NameInMap("HotelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Body
-    @NameInMap("RoomNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roomNo;
 
     private PushVoiceBoxCommandsRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class PushVoiceBoxCommandsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,7 +55,7 @@ public class PushVoiceBoxCommandsRequest extends Request {
     /**
      * @return commands
      */
-    public java.util.List < Commands> getCommands() {
+    public java.util.List<Commands> getCommands() {
         return this.commands;
     }
 
@@ -69,7 +74,7 @@ public class PushVoiceBoxCommandsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PushVoiceBoxCommandsRequest, Builder> {
-        private java.util.List < Commands> commands; 
+        private java.util.List<Commands> commands; 
         private String hotelId; 
         private String roomNo; 
 
@@ -85,9 +90,9 @@ public class PushVoiceBoxCommandsRequest extends Request {
         } 
 
         /**
-         * Commands.
+         * <p>This parameter is required.</p>
          */
-        public Builder commands(java.util.List < Commands> commands) {
+        public Builder commands(java.util.List<Commands> commands) {
             String commandsShrink = shrink(commands, "Commands", "json");
             this.putBodyParameter("Commands", commandsShrink);
             this.commands = commands;
@@ -95,7 +100,7 @@ public class PushVoiceBoxCommandsRequest extends Request {
         }
 
         /**
-         * HotelId.
+         * <p>This parameter is required.</p>
          */
         public Builder hotelId(String hotelId) {
             this.putBodyParameter("HotelId", hotelId);
@@ -104,7 +109,7 @@ public class PushVoiceBoxCommandsRequest extends Request {
         }
 
         /**
-         * RoomNo.
+         * <p>This parameter is required.</p>
          */
         public Builder roomNo(String roomNo) {
             this.putBodyParameter("RoomNo", roomNo);
@@ -119,16 +124,22 @@ public class PushVoiceBoxCommandsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PushVoiceBoxCommandsRequest} extends {@link TeaModel}
+     *
+     * <p>PushVoiceBoxCommandsRequest</p>
+     */
     public static class Commands extends TeaModel {
-        @NameInMap("CommandDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CommandDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String commandDomain;
 
-        @NameInMap("CommandName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CommandName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String commandName;
 
-        @NameInMap("Payload")
+        @com.aliyun.core.annotation.NameInMap("Payload")
         private String payload;
 
         private Commands(Builder builder) {
@@ -171,8 +182,17 @@ public class PushVoiceBoxCommandsRequest extends Request {
             private String commandName; 
             private String payload; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.commandDomain = model.commandDomain;
+                this.commandName = model.commandName;
+                this.payload = model.payload;
+            } 
+
             /**
-             * CommandDomain.
+             * <p>This parameter is required.</p>
              */
             public Builder commandDomain(String commandDomain) {
                 this.commandDomain = commandDomain;
@@ -180,7 +200,7 @@ public class PushVoiceBoxCommandsRequest extends Request {
             }
 
             /**
-             * CommandName.
+             * <p>This parameter is required.</p>
              */
             public Builder commandName(String commandName) {
                 this.commandName = commandName;

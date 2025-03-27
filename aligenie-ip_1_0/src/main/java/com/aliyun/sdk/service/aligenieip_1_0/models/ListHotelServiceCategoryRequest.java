@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotelServiceCategoryRequest} extends {@link RequestModel}
  *
  * <p>ListHotelServiceCategoryRequest</p>
  */
 public class ListHotelServiceCategoryRequest extends Request {
-    @Query
-    @NameInMap("Payload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Payload payload;
 
     private ListHotelServiceCategoryRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class ListHotelServiceCategoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class ListHotelServiceCategoryRequest extends Request {
         } 
 
         /**
-         * Payload.
+         * <p>This parameter is required.</p>
          */
         public Builder payload(Payload payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -71,9 +76,15 @@ public class ListHotelServiceCategoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotelServiceCategoryRequest} extends {@link TeaModel}
+     *
+     * <p>ListHotelServiceCategoryRequest</p>
+     */
     public static class Payload extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Payload(Builder builder) {
@@ -98,8 +109,18 @@ public class ListHotelServiceCategoryRequest extends Request {
         public static final class Builder {
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Payload model) {
+                this.type = model.type;
+            } 
+
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTEL_SERVICE</p>
              */
             public Builder type(String type) {
                 this.type = type;

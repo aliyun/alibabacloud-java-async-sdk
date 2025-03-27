@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aligenieip_1_0.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllProvincesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAllProvincesResponseBody</p>
  */
 public class ListAllProvincesResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < String > result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<String> result;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private Integer statusCode;
 
     private ListAllProvincesResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListAllProvincesResponseBody extends TeaModel {
 
     public static ListAllProvincesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -56,7 +65,7 @@ public class ListAllProvincesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < String > getResult() {
+    public java.util.List<String> getResult() {
         return this.result;
     }
 
@@ -70,8 +79,18 @@ public class ListAllProvincesResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
-        private java.util.List < String > result; 
+        private java.util.List<String> result; 
         private Integer statusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAllProvincesResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.statusCode = model.statusCode;
+        } 
 
         /**
          * Message.
@@ -92,7 +111,7 @@ public class ListAllProvincesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < String > result) {
+        public Builder result(java.util.List<String> result) {
             this.result = result;
             return this;
         }
