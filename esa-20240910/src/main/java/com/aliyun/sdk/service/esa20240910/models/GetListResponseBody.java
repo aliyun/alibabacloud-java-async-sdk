@@ -58,6 +58,10 @@ public class GetListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -115,6 +119,19 @@ public class GetListResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetListResponseBody model) {
+            this.description = model.description;
+            this.id = model.id;
+            this.items = model.items;
+            this.kind = model.kind;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The description of the custom list.</p>

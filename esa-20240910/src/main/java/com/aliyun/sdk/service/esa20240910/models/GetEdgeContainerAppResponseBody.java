@@ -36,6 +36,10 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return app
      */
@@ -53,6 +57,14 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
     public static final class Builder {
         private App app; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerAppResponseBody model) {
+            this.app = model.app;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The basic information about the application.</p>
@@ -218,6 +230,22 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             private Integer timeout; 
             private String type; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.failTimes = model.failTimes;
+                this.host = model.host;
+                this.httpCode = model.httpCode;
+                this.interval = model.interval;
+                this.method = model.method;
+                this.port = model.port;
+                this.succTimes = model.succTimes;
+                this.timeout = model.timeout;
+                this.type = model.type;
+                this.uri = model.uri;
+            } 
 
             /**
              * <p>The number of consecutive failed health checks required for an application to be considered as unhealthy.</p>
@@ -515,6 +543,25 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             private Integer targetPort; 
             private String updateTime; 
             private Integer versionCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(App model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.gatewayType = model.gatewayType;
+                this.healthCheck = model.healthCheck;
+                this.name = model.name;
+                this.quicCid = model.quicCid;
+                this.remarks = model.remarks;
+                this.servicePort = model.servicePort;
+                this.status = model.status;
+                this.targetPort = model.targetPort;
+                this.updateTime = model.updateTime;
+                this.versionCount = model.versionCount;
+            } 
 
             /**
              * <p>The application ID.</p>

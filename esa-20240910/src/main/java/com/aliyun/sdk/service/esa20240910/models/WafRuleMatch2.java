@@ -56,6 +56,10 @@ public class WafRuleMatch2 extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return convertToLower
      */
@@ -113,6 +117,19 @@ public class WafRuleMatch2 extends TeaModel {
         private String matchType; 
         private Object matchValue; 
         private Boolean negate; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafRuleMatch2 model) {
+            this.convertToLower = model.convertToLower;
+            this.criteria = model.criteria;
+            this.logic = model.logic;
+            this.matchOperator = model.matchOperator;
+            this.matchType = model.matchType;
+            this.matchValue = model.matchValue;
+            this.negate = model.negate;
+        } 
 
         /**
          * ConvertToLower.
@@ -255,6 +272,17 @@ public class WafRuleMatch2 extends TeaModel {
             private String matchType; 
             private Object matchValue; 
             private Boolean negate; 
+
+            private Builder() {
+            } 
+
+            private Builder(CriteriaCriteria model) {
+                this.convertToLower = model.convertToLower;
+                this.matchOperator = model.matchOperator;
+                this.matchType = model.matchType;
+                this.matchValue = model.matchValue;
+                this.negate = model.negate;
+            } 
 
             /**
              * ConvertToLower.
@@ -406,6 +434,19 @@ public class WafRuleMatch2 extends TeaModel {
             private String matchType; 
             private Object matchValue; 
             private Boolean negate; 
+
+            private Builder() {
+            } 
+
+            private Builder(WafRuleMatch2CriteriaCriteria model) {
+                this.convertToLower = model.convertToLower;
+                this.criteria = model.criteria;
+                this.logic = model.logic;
+                this.matchOperator = model.matchOperator;
+                this.matchType = model.matchType;
+                this.matchValue = model.matchValue;
+                this.negate = model.negate;
+            } 
 
             /**
              * ConvertToLower.
@@ -573,6 +614,19 @@ public class WafRuleMatch2 extends TeaModel {
             private String matchType; 
             private Object matchValue; 
             private Boolean negate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Criteria model) {
+                this.convertToLower = model.convertToLower;
+                this.criteria = model.criteria;
+                this.logic = model.logic;
+                this.matchOperator = model.matchOperator;
+                this.matchType = model.matchType;
+                this.matchValue = model.matchValue;
+                this.negate = model.negate;
+            } 
 
             /**
              * ConvertToLower.

@@ -56,6 +56,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -113,6 +117,19 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         private String requestId; 
         private Long siteId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSL7QpsListResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.dataModule = model.dataModule;
+            this.endTime = model.endTime;
+            this.recordId = model.recordId;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time granularity of the queried data, in seconds.</p>
@@ -263,6 +280,16 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             private Long normal; 
             private String timeStamp; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.attack = model.attack;
+                this.normal = model.normal;
+                this.timeStamp = model.timeStamp;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Attack QPS.</p>

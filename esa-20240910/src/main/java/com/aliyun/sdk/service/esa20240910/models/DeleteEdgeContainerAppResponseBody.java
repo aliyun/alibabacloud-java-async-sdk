@@ -36,6 +36,10 @@ public class DeleteEdgeContainerAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteEdgeContainerAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteEdgeContainerAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -60,6 +60,10 @@ public class WafBatchRuleShared extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -125,6 +129,20 @@ public class WafBatchRuleShared extends TeaModel {
         private String mode; 
         private String name; 
         private String target; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafBatchRuleShared model) {
+            this.action = model.action;
+            this.actions = model.actions;
+            this.crossSiteId = model.crossSiteId;
+            this.expression = model.expression;
+            this.match = model.match;
+            this.mode = model.mode;
+            this.name = model.name;
+            this.target = model.target;
+        } 
 
         /**
          * Action.
@@ -240,6 +258,14 @@ public class WafBatchRuleShared extends TeaModel {
             private Integer code; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Response model) {
+                this.code = model.code;
+                this.id = model.id;
+            } 
+
             /**
              * Code.
              */
@@ -294,6 +320,13 @@ public class WafBatchRuleShared extends TeaModel {
 
         public static final class Builder {
             private Response response; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.response = model.response;
+            } 
 
             /**
              * Response.

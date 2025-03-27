@@ -64,6 +64,10 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return capacity
      */
@@ -137,6 +141,21 @@ public class GetKvNamespaceResponseBody extends TeaModel {
         private String namespaceId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetKvNamespaceResponseBody model) {
+            this.capacity = model.capacity;
+            this.capacityString = model.capacityString;
+            this.capacityUsed = model.capacityUsed;
+            this.capacityUsedString = model.capacityUsedString;
+            this.description = model.description;
+            this.namespace = model.namespace;
+            this.namespaceId = model.namespaceId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The available capacity of the namespace. Unit: bytes.</p>

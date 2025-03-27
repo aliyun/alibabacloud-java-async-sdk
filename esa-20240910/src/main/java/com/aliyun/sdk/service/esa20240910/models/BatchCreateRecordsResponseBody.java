@@ -36,6 +36,10 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recordResultList
      */
@@ -53,6 +57,14 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private RecordResultList recordResultList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchCreateRecordsResponseBody model) {
+            this.recordResultList = model.recordResultList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The records that have been created and failed to be created.</p>
@@ -266,6 +278,26 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private Integer usage; 
             private String value; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.certificate = model.certificate;
+                this.fingerprint = model.fingerprint;
+                this.flag = model.flag;
+                this.keyTag = model.keyTag;
+                this.matchingType = model.matchingType;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.selector = model.selector;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.usage = model.usage;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Applicable to CERT and SSHFP records.</p>
@@ -565,6 +597,21 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private String recordType; 
             private String sourceType; 
             private Integer ttl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Failed model) {
+                this.bizName = model.bizName;
+                this.data = model.data;
+                this.description = model.description;
+                this.proxied = model.proxied;
+                this.recordId = model.recordId;
+                this.recordName = model.recordName;
+                this.recordType = model.recordType;
+                this.sourceType = model.sourceType;
+                this.ttl = model.ttl;
+            } 
 
             /**
              * <p>The business scenario of the record for acceleration. Valid values:</p>
@@ -873,6 +920,26 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private String value; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuccessData model) {
+                this.algorithm = model.algorithm;
+                this.certificate = model.certificate;
+                this.fingerprint = model.fingerprint;
+                this.flag = model.flag;
+                this.keyTag = model.keyTag;
+                this.matchingType = model.matchingType;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.selector = model.selector;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.usage = model.usage;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Applicable to CERT and SSHFP records.</p>
              * 
@@ -1172,6 +1239,21 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private String sourceType; 
             private Integer ttl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Success model) {
+                this.bizName = model.bizName;
+                this.data = model.data;
+                this.description = model.description;
+                this.proxied = model.proxied;
+                this.recordId = model.recordId;
+                this.recordName = model.recordName;
+                this.recordType = model.recordType;
+                this.sourceType = model.sourceType;
+                this.ttl = model.ttl;
+            } 
+
             /**
              * <p>The business scenario of the record for acceleration. Valid values:</p>
              * <ul>
@@ -1349,6 +1431,15 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             private java.util.List<Failed> failed; 
             private java.util.List<Success> success; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordResultList model) {
+                this.failed = model.failed;
+                this.success = model.success;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The records that failed to be created.</p>

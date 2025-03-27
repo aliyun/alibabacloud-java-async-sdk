@@ -36,6 +36,10 @@ public class DeleteCustomScenePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyId
      */
@@ -53,6 +57,14 @@ public class DeleteCustomScenePolicyResponseBody extends TeaModel {
     public static final class Builder {
         private Long policyId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteCustomScenePolicyResponseBody model) {
+            this.policyId = model.policyId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The policy ID.</p>

@@ -76,7 +76,7 @@ public class UpdateRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -391,6 +391,17 @@ public class UpdateRecordRequest extends Request {
             private String secretKey; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The access key of the account to which the origin server belongs. This parameter is required when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</p>
              * 
@@ -650,6 +661,26 @@ public class UpdateRecordRequest extends Request {
             private Integer usage; 
             private String value; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.certificate = model.certificate;
+                this.fingerprint = model.fingerprint;
+                this.flag = model.flag;
+                this.keyTag = model.keyTag;
+                this.matchingType = model.matchingType;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.selector = model.selector;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.usage = model.usage;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The encryption algorithm used for the record, specified within the range from 0 to 255. This parameter is required when you add CERT or SSHFP records.</p>

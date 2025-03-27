@@ -36,6 +36,10 @@ public class SetCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -54,8 +58,19 @@ public class SetCertificateResponseBody extends TeaModel {
         private String id; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SetCertificateResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Id.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaffe176ae44e2ad16d3e309b9e506</p>
          */
         public Builder id(String id) {
             this.id = id;

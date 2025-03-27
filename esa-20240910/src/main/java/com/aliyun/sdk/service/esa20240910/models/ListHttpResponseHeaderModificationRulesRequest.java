@@ -65,7 +65,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,7 +144,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -156,12 +156,12 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         }
 
         /**
-         * <p>The configuration type to query. Valid values:</p>
+         * <p>Configuration type, which can be used to query global or rule configurations. Possible values:</p>
          * <ul>
-         * <li>global: global configurations.</li>
-         * <li>rule: queries rule configurations.</li>
+         * <li>global: Query global configuration.</li>
+         * <li>rule: Query rule configuration.</li>
          * </ul>
-         * <p>If this parameter is left empty, all configuration types are returned.</p>
+         * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>rule</p>
@@ -173,7 +173,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned on each page. Default value: 500. Valid values: 1 to 500.</p>
+         * <p>Page size, default is 500. The value range is any integer from 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +197,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -209,7 +209,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListHttpResponseHeaderModificationRulesRequest extends Request {
         }
 
         /**
-         * <p>The version number of the website configurations.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, with the default being version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

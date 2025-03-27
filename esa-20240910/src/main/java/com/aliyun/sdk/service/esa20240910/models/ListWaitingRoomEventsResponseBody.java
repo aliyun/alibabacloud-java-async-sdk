@@ -36,6 +36,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<WaitingRoomEvents> waitingRoomEvents; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWaitingRoomEventsResponseBody model) {
+            this.requestId = model.requestId;
+            this.waitingRoomEvents = model.waitingRoomEvents;
+        } 
 
         /**
          * <p>The request ID, which is used to trace a call.</p>
@@ -338,6 +350,32 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             private Long waitingRoomEventId; 
             private String waitingRoomId; 
             private String waitingRoomType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WaitingRoomEvents model) {
+                this.customPageHtml = model.customPageHtml;
+                this.description = model.description;
+                this.disableSessionRenewalEnable = model.disableSessionRenewalEnable;
+                this.enable = model.enable;
+                this.endTime = model.endTime;
+                this.jsonResponseEnable = model.jsonResponseEnable;
+                this.language = model.language;
+                this.name = model.name;
+                this.newUsersPerMinute = model.newUsersPerMinute;
+                this.preQueueEnable = model.preQueueEnable;
+                this.preQueueStartTime = model.preQueueStartTime;
+                this.queuingMethod = model.queuingMethod;
+                this.queuingStatusCode = model.queuingStatusCode;
+                this.randomPreQueueEnable = model.randomPreQueueEnable;
+                this.sessionDuration = model.sessionDuration;
+                this.startTime = model.startTime;
+                this.totalActiveUsers = model.totalActiveUsers;
+                this.waitingRoomEventId = model.waitingRoomEventId;
+                this.waitingRoomId = model.waitingRoomId;
+                this.waitingRoomType = model.waitingRoomType;
+            } 
 
             /**
              * <p>The content of the custom waiting room page. This parameter is returned when the waiting room type is set to custom. The content is URL-encoded.</p>

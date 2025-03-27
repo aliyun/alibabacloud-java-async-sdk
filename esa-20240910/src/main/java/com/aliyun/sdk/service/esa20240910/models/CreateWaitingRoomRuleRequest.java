@@ -59,7 +59,7 @@ public class CreateWaitingRoomRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,7 +120,11 @@ public class CreateWaitingRoomRuleRequest extends Request {
         } 
 
         /**
-         * <p>The rule content, which is a policy or conditional expression.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,10 +137,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +154,7 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +167,7 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +180,7 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the waiting room to be bypassed.</p>
+         * <p>The ID of the waiting room to bypass.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

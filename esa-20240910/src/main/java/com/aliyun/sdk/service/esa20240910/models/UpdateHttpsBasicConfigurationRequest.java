@@ -59,6 +59,10 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -91,6 +95,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.tls10 = builder.tls10;
         this.tls11 = builder.tls11;
@@ -106,7 +111,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,6 +187,13 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -227,6 +239,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private String tls10; 
         private String tls11; 
@@ -249,6 +262,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.tls10 = request.tls10;
             this.tls11 = request.tls11;
@@ -363,7 +377,11 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -375,7 +393,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Value range:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -391,7 +409,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -399,6 +417,15 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 

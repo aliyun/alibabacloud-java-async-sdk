@@ -32,6 +32,10 @@ public class UpdateWaitingRoomRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class UpdateWaitingRoomRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateWaitingRoomRuleResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The request ID, which is used to trace a call.</p>
+         * <p>Request ID, used for tracking the progress of request processing.</p>
          * 
          * <strong>example:</strong>
          * <p>9bfe9d95-7bf6-469d-a628-ed7bc9f25073</p>

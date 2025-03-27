@@ -51,7 +51,7 @@ public class CreateOriginPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,11 +241,22 @@ public class CreateOriginPoolRequest extends Request {
             private String secretKey; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The access key required for private authentication.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI5tGLgmPe1wFwpX86****</p>
+             * <p>yourAccessKeyID</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -284,7 +295,7 @@ public class CreateOriginPoolRequest extends Request {
              * <p>The secret key required for private authentication.</p>
              * 
              * <strong>example:</strong>
-             * <p>bd8tjba5lXxxxxiRXFIBvoCIfJI****</p>
+             * <p>yourAccessKeySecret</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -412,6 +423,19 @@ public class CreateOriginPoolRequest extends Request {
             private String name; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Origins model) {
+                this.address = model.address;
+                this.authConf = model.authConf;
+                this.enabled = model.enabled;
+                this.header = model.header;
+                this.name = model.name;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The address of the origin, e.g., <a href="http://www.example.com">www.example.com</a>.</p>

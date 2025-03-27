@@ -36,6 +36,10 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Version version; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerAppVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -206,6 +218,21 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String repoNamespace; 
             private String tag; 
             private String tagUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ACRImageInfo model) {
+                this.domain = model.domain;
+                this.instanceId = model.instanceId;
+                this.isEnterpriseRegistry = model.isEnterpriseRegistry;
+                this.regionId = model.regionId;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.tag = model.tag;
+                this.tagUrl = model.tagUrl;
+            } 
 
             /**
              * <p>The domain name of the Container Registry image.</p>
@@ -464,6 +491,23 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String scheme; 
             private Integer successThreshold; 
             private Integer timeoutSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProbeContent model) {
+                this.command = model.command;
+                this.failureThreshold = model.failureThreshold;
+                this.host = model.host;
+                this.httpHeaders = model.httpHeaders;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.path = model.path;
+                this.periodSeconds = model.periodSeconds;
+                this.port = model.port;
+                this.scheme = model.scheme;
+                this.successThreshold = model.successThreshold;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
 
             /**
              * <p>The probe command.</p>
@@ -769,6 +813,25 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String spec; 
             private String storage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.ACRImageInfo = model.ACRImageInfo;
+                this.args = model.args;
+                this.command = model.command;
+                this.envVariables = model.envVariables;
+                this.image = model.image;
+                this.isACRImage = model.isACRImage;
+                this.name = model.name;
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+                this.probeContent = model.probeContent;
+                this.probeType = model.probeType;
+                this.spec = model.spec;
+                this.storage = model.storage;
+            } 
+
             /**
              * <p>The information about the Container Registry image.</p>
              */
@@ -1049,6 +1112,22 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Version model) {
+                this.appId = model.appId;
+                this.containers = model.containers;
+                this.createTime = model.createTime;
+                this.lastPublishTime = model.lastPublishTime;
+                this.name = model.name;
+                this.publishTime = model.publishTime;
+                this.remarks = model.remarks;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The application ID.</p>

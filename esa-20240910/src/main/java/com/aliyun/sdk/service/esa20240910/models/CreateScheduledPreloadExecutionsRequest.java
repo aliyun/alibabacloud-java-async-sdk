@@ -40,7 +40,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,6 +172,16 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
             private Integer interval; 
             private Integer sliceLen; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Executions model) {
+                this.endTime = model.endTime;
+                this.interval = model.interval;
+                this.sliceLen = model.sliceLen;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end time of the prefetch plans.</p>

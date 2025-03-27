@@ -41,7 +41,7 @@ public class BatchPutKvRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,6 +174,16 @@ public class BatchPutKvRequest extends Request {
             private Long expirationTtl; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(KvList model) {
+                this.expiration = model.expiration;
+                this.expirationTtl = model.expirationTtl;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The time when the key-value pair expires, which cannot be earlier than the current time. The value is a timestamp in seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>

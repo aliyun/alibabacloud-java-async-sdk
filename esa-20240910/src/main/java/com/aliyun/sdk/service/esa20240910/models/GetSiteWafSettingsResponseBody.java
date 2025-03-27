@@ -36,6 +36,10 @@ public class GetSiteWafSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class GetSiteWafSettingsResponseBody extends TeaModel {
         private String requestId; 
         private WafSiteSettings settings; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSiteWafSettingsResponseBody model) {
+            this.requestId = model.requestId;
+            this.settings = model.settings;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -66,7 +78,7 @@ public class GetSiteWafSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The WAF configurations of the website.</p>
+         * <p>Details of site WAF configuration.</p>
          */
         public Builder settings(WafSiteSettings settings) {
             this.settings = settings;

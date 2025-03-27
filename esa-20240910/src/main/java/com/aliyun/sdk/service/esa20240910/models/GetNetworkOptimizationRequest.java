@@ -41,7 +41,7 @@ public class GetNetworkOptimizationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,7 @@ public class GetNetworkOptimizationRequest extends Request {
         } 
 
         /**
-         * <p>ConfigId of the configuration, which can be obtained by calling the ListNetworkOptimizations.</p>
+         * <p>Configuration ConfigId, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869051.html">ListNetworkOptimizations</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

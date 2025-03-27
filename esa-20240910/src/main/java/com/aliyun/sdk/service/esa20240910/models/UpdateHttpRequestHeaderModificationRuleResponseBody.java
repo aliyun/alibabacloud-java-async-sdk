@@ -32,6 +32,10 @@ public class UpdateHttpRequestHeaderModificationRuleResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class UpdateHttpRequestHeaderModificationRuleResponseBody extends TeaMode
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateHttpRequestHeaderModificationRuleResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Request ID.</p>

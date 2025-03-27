@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetClientCertificateHostnamesResponseBody</p>
  */
 public class SetClientCertificateHostnamesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Hostnames")
+    private java.util.List<String> hostnames;
+
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
@@ -30,6 +33,7 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     private String siteName;
 
     private SetClientCertificateHostnamesResponseBody(Builder builder) {
+        this.hostnames = builder.hostnames;
         this.id = builder.id;
         this.requestId = builder.requestId;
         this.siteId = builder.siteId;
@@ -42,6 +46,17 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
 
     public static SetClientCertificateHostnamesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return hostnames
+     */
+    public java.util.List<String> getHostnames() {
+        return this.hostnames;
     }
 
     /**
@@ -73,10 +88,30 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> hostnames; 
         private String id; 
         private String requestId; 
         private Long siteId; 
         private String siteName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetClientCertificateHostnamesResponseBody model) {
+            this.hostnames = model.hostnames;
+            this.id = model.id;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+            this.siteName = model.siteName;
+        } 
+
+        /**
+         * Hostnames.
+         */
+        public Builder hostnames(java.util.List<String> hostnames) {
+            this.hostnames = hostnames;
+            return this;
+        }
 
         /**
          * <p>The ID of the client CA certificate.</p>

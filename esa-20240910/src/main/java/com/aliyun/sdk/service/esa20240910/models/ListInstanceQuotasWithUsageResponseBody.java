@@ -44,6 +44,10 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -77,6 +81,16 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         private java.util.List<Quotas> quotas; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceQuotasWithUsageResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.quotas = model.quotas;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The plan ID.<a href="~~2850189~~"></a></p>
@@ -186,6 +200,15 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             private String siteName; 
             private String siteUsage; 
 
+            private Builder() {
+            } 
+
+            private Builder(SiteUsage model) {
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.siteUsage = model.siteUsage;
+            } 
+
             /**
              * <p>The website ID.</p>
              * 
@@ -293,6 +316,16 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             private String quotaValue; 
             private java.util.List<SiteUsage> siteUsage; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quotas model) {
+                this.quotaName = model.quotaName;
+                this.quotaValue = model.quotaValue;
+                this.siteUsage = model.siteUsage;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The quota name.</p>

@@ -90,6 +90,10 @@ public class CreateCacheRuleRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServeStale")
     private String serveStale;
 
@@ -138,6 +142,7 @@ public class CreateCacheRuleRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.serveStale = builder.serveStale;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
@@ -155,7 +160,7 @@ public class CreateCacheRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -287,6 +292,13 @@ public class CreateCacheRuleRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return serveStale
      */
     public String getServeStale() {
@@ -354,6 +366,7 @@ public class CreateCacheRuleRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private String serveStale; 
         private Long siteId; 
         private Integer siteVersion; 
@@ -386,6 +399,7 @@ public class CreateCacheRuleRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.serveStale = request.serveStale;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
@@ -425,7 +439,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Browser cache expiration time in seconds.</p>
+         * <p>Browser cache expiration time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -453,10 +467,10 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Cache deception protection. Used to defend against web cache deception attacks, only the cache content that passes the validation will be cached. Value range:</p>
+         * <p>Cache deception defense. Used to defend against web cache deception attacks; only the verified cache content will be cached. Value range:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -527,7 +541,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Edge cache expiration time in seconds.</p>
+         * <p>Edge cache expiration time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -539,7 +553,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Status code cache expiration time in seconds.</p>
+         * <p>Status code cache expiration time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -605,7 +619,11 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -617,7 +635,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -633,7 +651,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -645,10 +663,19 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files when the origin server is unavailable. Value range:</p>
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
+            return this;
+        }
+
+        /**
+         * <p>Serve stale cache. When enabled, the node can still use the expired cached files to respond to user requests even if the origin server is unavailable. Value range:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -702,7 +729,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>When generating the cache key, add the client device type. Possible values:</p>
+         * <p>When generating the cache key, include the client device type. Possible values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -718,7 +745,7 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>When generating the cache key, add the client&quot;s geographic location. Possible values:</p>
+         * <p>Include the client&quot;s geographical location when generating the cache key. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -734,7 +761,11 @@ public class CreateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>When generating cache keys, include the client&quot;s language type. The value can be: - on: enabled. - off: disabled.</p>
+         * <p>Include the client&quot;s language type when generating the cache key. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>

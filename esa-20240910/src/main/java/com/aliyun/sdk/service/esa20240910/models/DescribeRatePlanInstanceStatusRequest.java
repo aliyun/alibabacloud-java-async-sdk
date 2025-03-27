@@ -34,7 +34,7 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,7 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID, obtained from the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> API.</p>
+         * <p>The instance ID, which can be obtained by calling the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>xcdn-91fknmb80f0g***</p>

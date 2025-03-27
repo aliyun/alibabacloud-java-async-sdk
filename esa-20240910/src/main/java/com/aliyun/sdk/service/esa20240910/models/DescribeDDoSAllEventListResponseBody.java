@@ -52,6 +52,10 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataList
      */
@@ -101,6 +105,18 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
         private String requestId; 
         private Long siteId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSAllEventListResponseBody model) {
+            this.dataList = model.dataList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The DDoS attack events.</p>
@@ -334,6 +350,24 @@ public class DescribeDDoSAllEventListResponseBody extends TeaModel {
             private String startTime; 
             private String target; 
             private String targetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.bps = model.bps;
+                this.coverage = model.coverage;
+                this.cps = model.cps;
+                this.endTime = model.endTime;
+                this.eventId = model.eventId;
+                this.eventResult = model.eventResult;
+                this.eventType = model.eventType;
+                this.pps = model.pps;
+                this.qps = model.qps;
+                this.startTime = model.startTime;
+                this.target = model.target;
+                this.targetId = model.targetId;
+            } 
 
             /**
              * <p>The peak of volumetric attacks. Unit: bit/s.</p>

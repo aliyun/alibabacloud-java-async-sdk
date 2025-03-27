@@ -20,11 +20,15 @@ public class GetIPv6ResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Enable")
     private String enable;
 
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetIPv6ResponseBody(Builder builder) {
         this.enable = builder.enable;
+        this.region = builder.region;
         this.requestId = builder.requestId;
     }
 
@@ -36,11 +40,22 @@ public class GetIPv6ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
     public String getEnable() {
         return this.enable;
+    }
+
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
     }
 
     /**
@@ -52,13 +67,23 @@ public class GetIPv6ResponseBody extends TeaModel {
 
     public static final class Builder {
         private String enable; 
+        private String region; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIPv6ResponseBody model) {
+            this.enable = model.enable;
+            this.region = model.region;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>IPv6 switch. Values:</p>
+         * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable. </li>
-         * <li><strong>off</strong>: Disable.</li>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,7 +95,15 @@ public class GetIPv6ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * Region.
+         */
+        public Builder region(String region) {
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>

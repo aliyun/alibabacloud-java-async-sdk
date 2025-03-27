@@ -36,6 +36,10 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
         private String requestId; 
         private Long waitingRoomRuleId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateWaitingRoomRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.waitingRoomRuleId = model.waitingRoomRuleId;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -66,7 +78,10 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
         }
 
         /**
-         * WaitingRoomRuleId.
+         * <p>Waiting room bypass rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>420072638347264</p>
          */
         public Builder waitingRoomRuleId(Long waitingRoomRuleId) {
             this.waitingRoomRuleId = waitingRoomRuleId;

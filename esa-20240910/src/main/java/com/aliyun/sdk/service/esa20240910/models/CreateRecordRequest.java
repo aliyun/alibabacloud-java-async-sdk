@@ -88,7 +88,7 @@ public class CreateRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -260,8 +260,8 @@ public class CreateRecordRequest extends Request {
         /**
          * <p>The origin host policy. This policy takes effect when the record type is CNAME. You can set the policy in two modes:</p>
          * <ul>
-         * <li><strong>follow_hostname</strong>: Follow the host record.</li>
-         * <li><strong>follow_origin_domain</strong>: match the origin&quot;s domain name.</li>
+         * <li>follow_hostname: Follow the host record.</li>
+         * <li>follow_origin_domain: match the origin&quot;s domain name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,6 +446,17 @@ public class CreateRecordRequest extends Request {
             private String region; 
             private String secretKey; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The access key of the account to which the origin server belongs. This parameter is required when the SourceType is OSS, and AuthType is private_cross_account, or when the SourceType is S3 and AuthType is private.</p>
@@ -707,6 +718,26 @@ public class CreateRecordRequest extends Request {
             private Integer usage; 
             private String value; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.certificate = model.certificate;
+                this.fingerprint = model.fingerprint;
+                this.flag = model.flag;
+                this.keyTag = model.keyTag;
+                this.matchingType = model.matchingType;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.selector = model.selector;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.usage = model.usage;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The encryption algorithm used for the record, specified within the range from 0 to 255. This parameter is required when you add CERT or SSHFP records.</p>

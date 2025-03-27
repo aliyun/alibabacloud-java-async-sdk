@@ -64,6 +64,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuUsageSecondsQuotaRateAvg
      */
@@ -137,6 +141,21 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         private Double podReadyRateAvg; 
         private java.util.List<Points> points; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEdgeContainerAppStatsResponseBody model) {
+            this.cpuUsageSecondsQuotaRateAvg = model.cpuUsageSecondsQuotaRateAvg;
+            this.cpuUsageSecondsTotalAvg = model.cpuUsageSecondsTotalAvg;
+            this.fsReadsBytesAvgAvg = model.fsReadsBytesAvgAvg;
+            this.fsWritesBytesAvgAvg = model.fsWritesBytesAvgAvg;
+            this.memoryRssAvg = model.memoryRssAvg;
+            this.memoryRssQuotaRateAvg = model.memoryRssQuotaRateAvg;
+            this.podReadyRateAvg = model.podReadyRateAvg;
+            this.points = model.points;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CpuUsageSecondsQuotaRateAvg.
@@ -334,6 +353,20 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             private Double containerMemoryRssQuotaRate; 
             private Double podReadyRate; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(Points model) {
+                this.containerCpuUsageSecondsQuotaRate = model.containerCpuUsageSecondsQuotaRate;
+                this.containerCpuUsageSecondsTotal = model.containerCpuUsageSecondsTotal;
+                this.containerFsReadsBytesAvg = model.containerFsReadsBytesAvg;
+                this.containerFsWritesBytesAvg = model.containerFsWritesBytesAvg;
+                this.containerMemoryRss = model.containerMemoryRss;
+                this.containerMemoryRssQuotaRate = model.containerMemoryRssQuotaRate;
+                this.podReadyRate = model.podReadyRate;
+                this.time = model.time;
+            } 
 
             /**
              * ContainerCpuUsageSecondsQuotaRate.

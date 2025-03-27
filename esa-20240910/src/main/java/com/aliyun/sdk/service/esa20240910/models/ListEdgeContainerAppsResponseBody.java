@@ -48,6 +48,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apps
      */
@@ -89,6 +93,17 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEdgeContainerAppsResponseBody model) {
+            this.apps = model.apps;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried applications.</p>
@@ -287,6 +302,22 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             private Integer timeout; 
             private String type; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.failTimes = model.failTimes;
+                this.host = model.host;
+                this.httpCode = model.httpCode;
+                this.interval = model.interval;
+                this.method = model.method;
+                this.port = model.port;
+                this.succTimes = model.succTimes;
+                this.timeout = model.timeout;
+                this.type = model.type;
+                this.uri = model.uri;
+            } 
 
             /**
              * <p>The number of consecutive failed health checks for an application to be considered unhealthy.</p>
@@ -596,6 +627,26 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             private Integer targetPort; 
             private String updateTime; 
             private Integer versionCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Apps model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.gatewayType = model.gatewayType;
+                this.healthCheck = model.healthCheck;
+                this.name = model.name;
+                this.percentage = model.percentage;
+                this.quicCid = model.quicCid;
+                this.remarks = model.remarks;
+                this.servicePort = model.servicePort;
+                this.status = model.status;
+                this.targetPort = model.targetPort;
+                this.updateTime = model.updateTime;
+                this.versionCount = model.versionCount;
+            } 
 
             /**
              * <p>The application ID.</p>

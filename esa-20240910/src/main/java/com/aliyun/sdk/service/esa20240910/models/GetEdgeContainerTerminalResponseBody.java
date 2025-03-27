@@ -56,6 +56,10 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cluster
      */
@@ -113,6 +117,19 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         private String requestId; 
         private String sessionId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerTerminalResponseBody model) {
+            this.cluster = model.cluster;
+            this.container = model.container;
+            this.namespace = model.namespace;
+            this.pod = model.pod;
+            this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
+            this.token = model.token;
+        } 
 
         /**
          * <p>The cluster name.</p>

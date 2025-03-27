@@ -41,7 +41,7 @@ public class BatchCreateRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,17 @@ public class BatchCreateRecordsRequest extends Request {
             private String region; 
             private String secretKey; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
 
             /**
              * AccessKey.
@@ -419,6 +430,26 @@ public class BatchCreateRecordsRequest extends Request {
             private Integer usage; 
             private String value; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.certificate = model.certificate;
+                this.fingerprint = model.fingerprint;
+                this.flag = model.flag;
+                this.keyTag = model.keyTag;
+                this.matchingType = model.matchingType;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.selector = model.selector;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.usage = model.usage;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Applicable to CERT and SSHFP records.</p>
@@ -701,6 +732,20 @@ public class BatchCreateRecordsRequest extends Request {
             private String sourceType; 
             private Integer ttl; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordList model) {
+                this.authConf = model.authConf;
+                this.bizName = model.bizName;
+                this.data = model.data;
+                this.proxied = model.proxied;
+                this.recordName = model.recordName;
+                this.sourceType = model.sourceType;
+                this.ttl = model.ttl;
+                this.type = model.type;
+            } 
 
             /**
              * AuthConf.

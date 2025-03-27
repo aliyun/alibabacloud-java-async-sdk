@@ -48,6 +48,10 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return managedRulesGroups
      */
@@ -90,8 +94,19 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListManagedRulesGroupsResponseBody model) {
+            this.managedRulesGroups = model.managedRulesGroups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The information about the managed rule groups.</p>
+         * <p>List of managed rule group information.</p>
          */
         public Builder managedRulesGroups(java.util.List<ManagedRulesGroups> managedRulesGroups) {
             this.managedRulesGroups = managedRulesGroups;
@@ -99,7 +114,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number returned.</p>
+         * <p>Current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -110,7 +125,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -121,7 +136,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -132,7 +147,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of managed rule groups returned.</p>
+         * <p>Total number of records after filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -192,8 +207,16 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
             private String name; 
             private Long ruleCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManagedRulesGroups model) {
+                this.name = model.name;
+                this.ruleCount = model.ruleCount;
+            } 
+
             /**
-             * <p>The name of the managed rule group.</p>
+             * <p>Name of the managed rule group.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -204,7 +227,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rules in the managed rule group.</p>
+             * <p>Number of rules within the managed rule group.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>

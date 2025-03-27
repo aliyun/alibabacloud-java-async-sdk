@@ -44,6 +44,10 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aiMode
      */
@@ -77,6 +81,16 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         private String aiTemplate; 
         private String requestId; 
         private Long siteId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHttpDDoSAttackIntelligentProtectionResponseBody model) {
+            this.aiMode = model.aiMode;
+            this.aiTemplate = model.aiTemplate;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+        } 
 
         /**
          * <p>The mode of smart HTTP DDoS protection. Valid values:</p>

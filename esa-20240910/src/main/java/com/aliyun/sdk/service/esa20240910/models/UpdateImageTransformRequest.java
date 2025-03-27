@@ -39,6 +39,10 @@ public class UpdateImageTransformRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -50,6 +54,7 @@ public class UpdateImageTransformRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
     }
 
@@ -61,7 +66,7 @@ public class UpdateImageTransformRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,6 +107,13 @@ public class UpdateImageTransformRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -114,6 +126,7 @@ public class UpdateImageTransformRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
 
         private Builder() {
@@ -127,11 +140,12 @@ public class UpdateImageTransformRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
         } 
 
         /**
-         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> API.</p>
+         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,8 +160,8 @@ public class UpdateImageTransformRequest extends Request {
         /**
          * <p>Indicates whether to enable image transformation. Possible values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +174,11 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule content, which specifies the strategy or condition expression to be implemented.</p>
+         * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>To match all incoming requests: Set the value to true.</li>
+         * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
@@ -172,10 +190,10 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +206,7 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -200,7 +218,16 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
+            return this;
+        }
+
+        /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -52,6 +52,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quota
      */
@@ -101,6 +105,18 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         private Long siteCount; 
         private java.util.List<SiteUsage> siteUsage; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCertificateQuotaResponseBody model) {
+            this.quota = model.quota;
+            this.quotaUsage = model.quotaUsage;
+            this.requestId = model.requestId;
+            this.siteCount = model.siteCount;
+            this.siteUsage = model.siteUsage;
+            this.type = model.type;
+        } 
 
         /**
          * <p>Free certificate quota.</p>
@@ -226,6 +242,15 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             private String siteId; 
             private String siteName; 
             private Long siteUsage; 
+
+            private Builder() {
+            } 
+
+            private Builder(SiteUsage model) {
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.siteUsage = model.siteUsage;
+            } 
 
             /**
              * <p>Site ID.</p>

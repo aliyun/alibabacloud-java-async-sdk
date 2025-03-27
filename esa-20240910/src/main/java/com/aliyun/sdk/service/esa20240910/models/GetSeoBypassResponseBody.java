@@ -36,6 +36,10 @@ public class GetSeoBypassResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -53,6 +57,14 @@ public class GetSeoBypassResponseBody extends TeaModel {
     public static final class Builder {
         private String enable; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSeoBypassResponseBody model) {
+            this.enable = model.enable;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the feature. Valid values:</p>

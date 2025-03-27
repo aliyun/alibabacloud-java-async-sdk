@@ -64,6 +64,10 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containersReady
      */
@@ -137,6 +141,21 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         private String requestId; 
         private String scheduled; 
         private java.util.List<String> VIPs; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerStagingDeployStatusResponseBody model) {
+            this.containersReady = model.containersReady;
+            this.creationTimestamp = model.creationTimestamp;
+            this.initialized = model.initialized;
+            this.phase = model.phase;
+            this.podRestartState = model.podRestartState;
+            this.ready = model.ready;
+            this.requestId = model.requestId;
+            this.scheduled = model.scheduled;
+            this.VIPs = model.VIPs;
+        } 
 
         /**
          * <p>Indicates whether the container is ready.</p>
@@ -301,6 +320,14 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String lastTerminatedReason; 
             private Integer restartCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodRestartState model) {
+                this.lastTerminatedReason = model.lastTerminatedReason;
+                this.restartCount = model.restartCount;
+            } 
 
             /**
              * <p>The reason for the last restart.</p>

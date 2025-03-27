@@ -65,7 +65,7 @@ public class ListOriginRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,7 +161,7 @@ public class ListOriginRulesRequest extends Request {
          * <li>global: Query global configuration.</li>
          * <li>rule: Query rule configuration.</li>
          * </ul>
-         * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
+         * <p>This parameter is optional; if not provided, it does not distinguish between global and rule configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -197,7 +197,7 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * <p>Rule name, which can be used to find the rule with the specified name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -222,7 +222,7 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * <p>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</p>
+         * <p>Version number of the site. For sites with version management enabled, this parameter can specify the version of the site for which the configuration is effective, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

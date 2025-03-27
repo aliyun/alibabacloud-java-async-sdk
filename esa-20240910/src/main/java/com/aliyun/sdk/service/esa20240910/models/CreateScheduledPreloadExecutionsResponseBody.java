@@ -52,6 +52,10 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedExecutions
      */
@@ -101,6 +105,18 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         private Integer successCount; 
         private java.util.List<SuccessExecutions> successExecutions; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScheduledPreloadExecutionsResponseBody model) {
+            this.failedExecutions = model.failedExecutions;
+            this.failedMessages = model.failedMessages;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+            this.successExecutions = model.successExecutions;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about prefetch plans that failed to be created.</p>
@@ -280,6 +296,20 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             private Integer sliceLen; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedExecutions model) {
+                this.aliUid = model.aliUid;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.interval = model.interval;
+                this.jobId = model.jobId;
+                this.sliceLen = model.sliceLen;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -498,6 +528,20 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
             private Integer sliceLen; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SuccessExecutions model) {
+                this.aliUid = model.aliUid;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.interval = model.interval;
+                this.jobId = model.jobId;
+                this.sliceLen = model.sliceLen;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

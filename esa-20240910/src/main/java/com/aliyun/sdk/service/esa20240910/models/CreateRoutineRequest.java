@@ -28,7 +28,6 @@ public class CreateRoutineRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SpecName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String specName;
 
     private CreateRoutineRequest(Builder builder) {
@@ -46,7 +45,7 @@ public class CreateRoutineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +114,6 @@ public class CreateRoutineRequest extends Request {
 
         /**
          * <p>The specification of the routine.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>5ms</p>

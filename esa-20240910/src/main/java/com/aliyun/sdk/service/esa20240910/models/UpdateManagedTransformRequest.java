@@ -50,7 +50,7 @@ public class UpdateManagedTransformRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,10 +102,10 @@ public class UpdateManagedTransformRequest extends Request {
         } 
 
         /**
-         * <p>Add visitor geolocation header. Value range:</p>
+         * <p>Specifies whether to include the header that indicates the geographical location of a client in an origin request. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on</li>
+         * <li>off</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,10 +118,10 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</p>
+         * <p>Specifies whether to include the &quot;ali-real-client-ip&quot; header that indicates the client&quot;s real IP address in an origin request. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on</li>
+         * <li>off</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration will take effect, defaulting to version 0.</p>
+         * <p>The version number of the website. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

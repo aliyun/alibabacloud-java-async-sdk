@@ -29,6 +29,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Objects")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objects;
 
     @com.aliyun.core.annotation.Query
@@ -64,7 +65,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +163,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
 
         /**
          * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>

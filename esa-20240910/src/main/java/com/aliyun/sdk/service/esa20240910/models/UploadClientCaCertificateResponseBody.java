@@ -72,6 +72,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commonName
      */
@@ -161,6 +165,23 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         private String signatureAlgorithm; 
         private String status; 
         private String validityDays; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadClientCaCertificateResponseBody model) {
+            this.commonName = model.commonName;
+            this.fingerprintSha256 = model.fingerprintSha256;
+            this.id = model.id;
+            this.issuer = model.issuer;
+            this.notAfter = model.notAfter;
+            this.notBefore = model.notBefore;
+            this.requestId = model.requestId;
+            this.serialNumber = model.serialNumber;
+            this.signatureAlgorithm = model.signatureAlgorithm;
+            this.status = model.status;
+            this.validityDays = model.validityDays;
+        } 
 
         /**
          * <p>The Common Name of the certificate.</p>

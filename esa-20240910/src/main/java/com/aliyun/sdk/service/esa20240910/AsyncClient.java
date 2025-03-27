@@ -48,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchCreateRecordsResponse> batchCreateRecords(BatchCreateRecordsRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateWafRules  BatchCreateWafRulesRequest
+     * @return BatchCreateWafRulesResponse
+     */
+    CompletableFuture<BatchCreateWafRulesResponse> batchCreateWafRules(BatchCreateWafRulesRequest request);
+
+    /**
      * @param request the request parameters of BatchDeleteKv  BatchDeleteKvRequest
      * @return BatchDeleteKvResponse
      */
@@ -64,6 +70,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchPutKvResponse
      */
     CompletableFuture<BatchPutKvResponse> batchPutKv(BatchPutKvRequest request);
+
+    /**
+     * @param request the request parameters of BatchUpdateWafRules  BatchUpdateWafRulesRequest
+     * @return BatchUpdateWafRulesResponse
+     */
+    CompletableFuture<BatchUpdateWafRulesResponse> batchUpdateWafRules(BatchUpdateWafRulesRequest request);
 
     /**
      * @param request the request parameters of BlockObject  BlockObjectRequest
@@ -334,6 +346,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserDeliveryTaskResponse> createUserDeliveryTask(CreateUserDeliveryTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateWafRule  CreateWafRuleRequest
+     * @return CreateWafRuleResponse
+     */
+    CompletableFuture<CreateWafRuleResponse> createWafRule(CreateWafRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateWafRuleset  CreateWafRulesetRequest
+     * @return CreateWafRulesetResponse
+     */
+    CompletableFuture<CreateWafRulesetResponse> createWafRuleset(CreateWafRulesetRequest request);
+
+    /**
      * @param request the request parameters of CreateWaitingRoom  CreateWaitingRoomRequest
      * @return CreateWaitingRoomResponse
      */
@@ -353,7 +377,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Can only be disabled when there is only version 0 and the default environment.</p>
+     * <p>You can disable version management only when the default environment and version 0 exist.</p>
      * 
      * @param request the request parameters of DeactivateVersionManagement  DeactivateVersionManagementRequest
      * @return DeactivateVersionManagementResponse
@@ -478,6 +502,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNetworkOptimizationResponse> deleteNetworkOptimization(DeleteNetworkOptimizationRequest request);
 
     /**
+     * @param request the request parameters of DeleteOriginCaCertificate  DeleteOriginCaCertificateRequest
+     * @return DeleteOriginCaCertificateResponse
+     */
+    CompletableFuture<DeleteOriginCaCertificateResponse> deleteOriginCaCertificate(DeleteOriginCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOriginClientCertificate  DeleteOriginClientCertificateRequest
+     * @return DeleteOriginClientCertificateResponse
+     */
+    CompletableFuture<DeleteOriginClientCertificateResponse> deleteOriginClientCertificate(DeleteOriginClientCertificateRequest request);
+
+    /**
      * @param request the request parameters of DeleteOriginPool  DeleteOriginPoolRequest
      * @return DeleteOriginPoolResponse
      */
@@ -568,6 +604,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSiteDeliveryTaskResponse> deleteSiteDeliveryTask(DeleteSiteDeliveryTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteSiteOriginClientCertificate  DeleteSiteOriginClientCertificateRequest
+     * @return DeleteSiteOriginClientCertificateResponse
+     */
+    CompletableFuture<DeleteSiteOriginClientCertificateResponse> deleteSiteOriginClientCertificate(DeleteSiteOriginClientCertificateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>*****&gt; </p>
      * <ul>
@@ -580,6 +622,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteUserDeliveryTaskResponse
      */
     CompletableFuture<DeleteUserDeliveryTaskResponse> deleteUserDeliveryTask(DeleteUserDeliveryTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWafRule  DeleteWafRuleRequest
+     * @return DeleteWafRuleResponse
+     */
+    CompletableFuture<DeleteWafRuleResponse> deleteWafRule(DeleteWafRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWafRuleset  DeleteWafRulesetRequest
+     * @return DeleteWafRulesetResponse
+     */
+    CompletableFuture<DeleteWafRulesetResponse> deleteWafRuleset(DeleteWafRulesetRequest request);
 
     /**
      * @param request the request parameters of DeleteWaitingRoom  DeleteWaitingRoomRequest
@@ -661,7 +715,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can only query the status of a package instance after purchasing and creating it.</p>
+     * <p>You can query the status of an instance after you purchase a plan for the instance.</p>
      * 
      * @param request the request parameters of DescribeRatePlanInstanceStatus  DescribeRatePlanInstanceStatusRequest
      * @return DescribeRatePlanInstanceStatusResponse
@@ -771,6 +825,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEdgeContainerAppLogRiverResponse> getEdgeContainerAppLogRiver(GetEdgeContainerAppLogRiverRequest request);
 
     /**
+     * @param request the request parameters of GetEdgeContainerAppResourceReserve  GetEdgeContainerAppResourceReserveRequest
+     * @return GetEdgeContainerAppResourceReserveResponse
+     */
+    CompletableFuture<GetEdgeContainerAppResourceReserveResponse> getEdgeContainerAppResourceReserve(GetEdgeContainerAppResourceReserveRequest request);
+
+    /**
      * @param request the request parameters of GetEdgeContainerAppStatus  GetEdgeContainerAppStatusRequest
      * @return GetEdgeContainerAppStatusResponse
      */
@@ -868,7 +928,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence policy, routing policy, etc.</p>
+     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence strategy, routing policy, etc.</p>
      * 
      * @param request the request parameters of GetLoadBalancer  GetLoadBalancerRequest
      * @return GetLoadBalancerResponse
@@ -886,6 +946,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNetworkOptimizationResponse
      */
     CompletableFuture<GetNetworkOptimizationResponse> getNetworkOptimization(GetNetworkOptimizationRequest request);
+
+    /**
+     * @param request the request parameters of GetOriginCaCertificate  GetOriginCaCertificateRequest
+     * @return GetOriginCaCertificateResponse
+     */
+    CompletableFuture<GetOriginCaCertificateResponse> getOriginCaCertificate(GetOriginCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of GetOriginClientCertificate  GetOriginClientCertificateRequest
+     * @return GetOriginClientCertificateResponse
+     */
+    CompletableFuture<GetOriginClientCertificateResponse> getOriginClientCertificate(GetOriginClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of GetOriginClientCertificateHostnames  GetOriginClientCertificateHostnamesRequest
+     * @return GetOriginClientCertificateHostnamesResponse
+     */
+    CompletableFuture<GetOriginClientCertificateHostnamesResponse> getOriginClientCertificateHostnames(GetOriginClientCertificateHostnamesRequest request);
 
     /**
      * @param request the request parameters of GetOriginPool  GetOriginPoolRequest
@@ -1038,6 +1116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSiteNameExclusiveResponse> getSiteNameExclusive(GetSiteNameExclusiveRequest request);
 
     /**
+     * @param request the request parameters of GetSiteOriginClientCertificate  GetSiteOriginClientCertificateRequest
+     * @return GetSiteOriginClientCertificateResponse
+     */
+    CompletableFuture<GetSiteOriginClientCertificateResponse> getSiteOriginClientCertificate(GetSiteOriginClientCertificateRequest request);
+
+    /**
      * @param request the request parameters of GetSitePause  GetSitePauseRequest
      * @return GetSitePauseResponse
      */
@@ -1100,6 +1184,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWafQuotaResponse
      */
     CompletableFuture<GetWafQuotaResponse> getWafQuota(GetWafQuotaRequest request);
+
+    /**
+     * @param request the request parameters of GetWafRule  GetWafRuleRequest
+     * @return GetWafRuleResponse
+     */
+    CompletableFuture<GetWafRuleResponse> getWafRule(GetWafRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetWafRuleset  GetWafRulesetRequest
+     * @return GetWafRulesetResponse
+     */
+    CompletableFuture<GetWafRulesetResponse> getWafRuleset(GetWafRulesetRequest request);
 
     /**
      * @param request the request parameters of ListCacheReserveInstances  ListCacheReserveInstancesRequest
@@ -1281,6 +1377,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNetworkOptimizationsResponse> listNetworkOptimizations(ListNetworkOptimizationsRequest request);
 
     /**
+     * @param request the request parameters of ListOriginCaCertificates  ListOriginCaCertificatesRequest
+     * @return ListOriginCaCertificatesResponse
+     */
+    CompletableFuture<ListOriginCaCertificatesResponse> listOriginCaCertificates(ListOriginCaCertificatesRequest request);
+
+    /**
+     * @param request the request parameters of ListOriginClientCertificates  ListOriginClientCertificatesRequest
+     * @return ListOriginClientCertificatesResponse
+     */
+    CompletableFuture<ListOriginClientCertificatesResponse> listOriginClientCertificates(ListOriginClientCertificatesRequest request);
+
+    /**
      * @param request the request parameters of ListOriginPools  ListOriginPoolsRequest
      * @return ListOriginPoolsResponse
      */
@@ -1395,6 +1503,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWafPhasesResponse> listWafPhases(ListWafPhasesRequest request);
 
     /**
+     * @param request the request parameters of ListWafRules  ListWafRulesRequest
+     * @return ListWafRulesResponse
+     */
+    CompletableFuture<ListWafRulesResponse> listWafRules(ListWafRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListWafRulesets  ListWafRulesetsRequest
+     * @return ListWafRulesetsResponse
+     */
+    CompletableFuture<ListWafRulesetsResponse> listWafRulesets(ListWafRulesetsRequest request);
+
+    /**
      * @param request the request parameters of ListWafTemplateRules  ListWafTemplateRulesRequest
      * @return ListWafTemplateRulesResponse
      */
@@ -1417,7 +1537,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the waiting room bypass rules that are associated with a website.</p>
+     * <p>This API allows users to query the list of waiting room bypass rules associated with a specific site.</p>
      * 
      * @param request the request parameters of ListWaitingRoomRules  ListWaitingRoomRulesRequest
      * @return ListWaitingRoomRulesResponse
@@ -1450,6 +1570,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PublishRoutineCodeVersionResponse
      */
     CompletableFuture<PublishRoutineCodeVersionResponse> publishRoutineCodeVersion(PublishRoutineCodeVersionRequest request);
+
+    /**
+     * @param request the request parameters of PurchaseCacheReserve  PurchaseCacheReserveRequest
+     * @return PurchaseCacheReserveResponse
+     */
+    CompletableFuture<PurchaseCacheReserveResponse> purchaseCacheReserve(PurchaseCacheReserveRequest request);
 
     /**
      * <b>description</b> :
@@ -1524,6 +1650,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetHttpDDoSAttackProtectionResponse> setHttpDDoSAttackProtection(SetHttpDDoSAttackProtectionRequest request);
 
     /**
+     * @param request the request parameters of SetOriginClientCertificateHostnames  SetOriginClientCertificateHostnamesRequest
+     * @return SetOriginClientCertificateHostnamesResponse
+     */
+    CompletableFuture<SetOriginClientCertificateHostnamesResponse> setOriginClientCertificateHostnames(SetOriginClientCertificateHostnamesRequest request);
+
+    /**
      * @param request the request parameters of StartScheduledPreloadExecution  StartScheduledPreloadExecutionRequest
      * @return StartScheduledPreloadExecutionResponse
      */
@@ -1540,6 +1672,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCacheReserveSpec  UpdateCacheReserveSpecRequest
+     * @return UpdateCacheReserveSpecResponse
+     */
+    CompletableFuture<UpdateCacheReserveSpecResponse> updateCacheReserveSpec(UpdateCacheReserveSpecRequest request);
 
     /**
      * @param request the request parameters of UpdateCacheRule  UpdateCacheRuleRequest
@@ -1582,6 +1720,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEdgeContainerAppLogRiverResponse
      */
     CompletableFuture<UpdateEdgeContainerAppLogRiverResponse> updateEdgeContainerAppLogRiver(UpdateEdgeContainerAppLogRiverRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEdgeContainerAppResourceReserve  UpdateEdgeContainerAppResourceReserveRequest
+     * @return UpdateEdgeContainerAppResourceReserveResponse
+     */
+    CompletableFuture<UpdateEdgeContainerAppResourceReserveResponse> updateEdgeContainerAppResourceReserve(UpdateEdgeContainerAppResourceReserveRequest request);
 
     /**
      * @param request the request parameters of UpdateHttpRequestHeaderModificationRule  UpdateHttpRequestHeaderModificationRuleRequest
@@ -1627,7 +1771,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence policies, and various advanced settings related to traffic routing. &gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence strategy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
      * 
      * @param request the request parameters of UpdateLoadBalancer  UpdateLoadBalancerRequest
      * @return UpdateLoadBalancerResponse
@@ -1801,6 +1945,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateUserDeliveryTaskStatusResponse> updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of UpdateWafRule  UpdateWafRuleRequest
+     * @return UpdateWafRuleResponse
+     */
+    CompletableFuture<UpdateWafRuleResponse> updateWafRule(UpdateWafRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWafRuleset  UpdateWafRulesetRequest
+     * @return UpdateWafRulesetResponse
+     */
+    CompletableFuture<UpdateWafRulesetResponse> updateWafRuleset(UpdateWafRulesetRequest request);
+
+    /**
      * @param request the request parameters of UpdateWaitingRoom  UpdateWaitingRoomRequest
      * @return UpdateWaitingRoomResponse
      */
@@ -1814,7 +1970,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to modify the configurations of a waiting room bypass rule for your website, including the rule name, status, and rule content.</p>
+     * <p>This interface allows you to modify the rule settings of a specific waiting room in a site, including the rule name, enable status, and rule content, etc.</p>
      * 
      * @param request the request parameters of UpdateWaitingRoomRule  UpdateWaitingRoomRuleRequest
      * @return UpdateWaitingRoomRuleResponse
@@ -1826,6 +1982,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadClientCaCertificateResponse
      */
     CompletableFuture<UploadClientCaCertificateResponse> uploadClientCaCertificate(UploadClientCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of UploadOriginCaCertificate  UploadOriginCaCertificateRequest
+     * @return UploadOriginCaCertificateResponse
+     */
+    CompletableFuture<UploadOriginCaCertificateResponse> uploadOriginCaCertificate(UploadOriginCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of UploadOriginClientCertificate  UploadOriginClientCertificateRequest
+     * @return UploadOriginClientCertificateResponse
+     */
+    CompletableFuture<UploadOriginClientCertificateResponse> uploadOriginClientCertificate(UploadOriginClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of UploadSiteOriginClientCertificate  UploadSiteOriginClientCertificateRequest
+     * @return UploadSiteOriginClientCertificateResponse
+     */
+    CompletableFuture<UploadSiteOriginClientCertificateResponse> uploadSiteOriginClientCertificate(UploadSiteOriginClientCertificateRequest request);
 
     /**
      * <b>description</b> :

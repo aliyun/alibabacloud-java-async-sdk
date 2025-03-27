@@ -32,6 +32,10 @@ public class DeleteCompressionRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class DeleteCompressionRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteCompressionRuleResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>

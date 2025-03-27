@@ -44,6 +44,10 @@ public class WafTimer extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return periods
      */
@@ -77,6 +81,16 @@ public class WafTimer extends TeaModel {
         private String scopes; 
         private java.util.List<WeeklyPeriods> weeklyPeriods; 
         private Integer zone; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafTimer model) {
+            this.periods = model.periods;
+            this.scopes = model.scopes;
+            this.weeklyPeriods = model.weeklyPeriods;
+            this.zone = model.zone;
+        } 
 
         /**
          * Periods.
@@ -160,6 +174,14 @@ public class WafTimer extends TeaModel {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(Periods model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * End.
              */
@@ -227,6 +249,14 @@ public class WafTimer extends TeaModel {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyPeriods model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * End.
              */
@@ -293,6 +323,14 @@ public class WafTimer extends TeaModel {
         public static final class Builder {
             private java.util.List<DailyPeriods> dailyPeriods; 
             private String days; 
+
+            private Builder() {
+            } 
+
+            private Builder(WeeklyPeriods model) {
+                this.dailyPeriods = model.dailyPeriods;
+                this.days = model.days;
+            } 
 
             /**
              * DailyPeriods.

@@ -50,6 +50,9 @@ public class GetOriginRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Range")
     private String range;
 
+    @com.aliyun.core.annotation.NameInMap("RangeChunkSize")
+    private String rangeChunkSize;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -80,6 +83,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         this.originSni = builder.originSni;
         this.originVerify = builder.originVerify;
         this.range = builder.range;
+        this.rangeChunkSize = builder.rangeChunkSize;
         this.requestId = builder.requestId;
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
@@ -94,6 +98,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
 
     public static GetOriginRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -174,6 +182,13 @@ public class GetOriginRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return rangeChunkSize
+     */
+    public String getRangeChunkSize() {
+        return this.rangeChunkSize;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -227,12 +242,37 @@ public class GetOriginRuleResponseBody extends TeaModel {
         private String originSni; 
         private String originVerify; 
         private String range; 
+        private String rangeChunkSize; 
         private String requestId; 
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
         private Integer sequence; 
         private Integer siteVersion; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOriginRuleResponseBody model) {
+            this.configId = model.configId;
+            this.configType = model.configType;
+            this.dnsRecord = model.dnsRecord;
+            this.originHost = model.originHost;
+            this.originHttpPort = model.originHttpPort;
+            this.originHttpsPort = model.originHttpsPort;
+            this.originMtls = model.originMtls;
+            this.originScheme = model.originScheme;
+            this.originSni = model.originSni;
+            this.originVerify = model.originVerify;
+            this.range = model.range;
+            this.rangeChunkSize = model.rangeChunkSize;
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+            this.ruleEnable = model.ruleEnable;
+            this.ruleName = model.ruleName;
+            this.sequence = model.sequence;
+            this.siteVersion = model.siteVersion;
+        } 
 
         /**
          * <p>Configuration ID.</p>
@@ -283,7 +323,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Source site port accessed when using the HTTP protocol for origin.</p>
+         * <p>Port of the origin server accessed when using the HTTP protocol for origin.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -294,7 +334,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Source site port accessed when using the HTTPS protocol for origin.</p>
+         * <p>Port of the origin server accessed when using the HTTPS protocol for origin.</p>
          * 
          * <strong>example:</strong>
          * <p>4433</p>
@@ -305,7 +345,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginMtls.
+         * <p>mTLS switch. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originMtls(String originMtls) {
             this.originMtls = originMtls;
@@ -317,7 +364,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
          * <ul>
          * <li>http: Use HTTP protocol for origin.</li>
          * <li>https: Use HTTPS protocol for origin.</li>
-         * <li>follow: Follow client protocol for origin.</li>
+         * <li>follow: Follow the client&quot;s protocol for origin.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,7 +387,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginVerify.
+         * <p>Origin certificate verification switch. Value range: </p>
+         * <ul>
+         * <li>on: Enable. </li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originVerify(String originVerify) {
             this.originVerify = originVerify;
@@ -348,7 +402,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Use range chunking method for origin download. Value range:</p>
+         * <p>Use the range chunk method for origin file download. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -364,6 +418,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
+         * RangeChunkSize.
+         */
+        public Builder rangeChunkSize(String rangeChunkSize) {
+            this.rangeChunkSize = rangeChunkSize;
+            return this;
+        }
+
+        /**
          * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
@@ -375,7 +437,11 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -386,7 +452,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule switch. Value range:</p>
+         * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -401,7 +467,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -412,7 +478,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule execution sequence.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -423,7 +489,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site version number.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

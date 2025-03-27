@@ -36,6 +36,10 @@ public class VerifySiteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passed
      */
@@ -53,6 +57,14 @@ public class VerifySiteResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean passed; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifySiteResponseBody model) {
+            this.passed = model.passed;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the verification passed. Valid values:</p>

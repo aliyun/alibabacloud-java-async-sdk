@@ -36,6 +36,10 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<WaitingRoomRules> waitingRoomRules; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListWaitingRoomRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.waitingRoomRules = model.waitingRoomRules;
+        } 
+
         /**
-         * <p>The request ID, which is used to trace a call.</p>
+         * <p>Request ID, used for tracking the call status.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
@@ -66,7 +78,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The waiting room bypass rules.</p>
+         * <p>List of waiting room bypass rules.</p>
          */
         public Builder waitingRoomRules(java.util.List<WaitingRoomRules> waitingRoomRules) {
             this.waitingRoomRules = waitingRoomRules;
@@ -147,8 +159,22 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             private String ruleName; 
             private Long waitingRoomRuleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(WaitingRoomRules model) {
+                this.rule = model.rule;
+                this.ruleEnable = model.ruleEnable;
+                this.ruleName = model.ruleName;
+                this.waitingRoomRuleId = model.waitingRoomRuleId;
+            } 
+
             /**
-             * <p>The rule content, which is a policy or conditional expression.</p>
+             * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding global configuration. There are two usage scenarios:</p>
+             * <ul>
+             * <li>Match all incoming requests: set the value to true</li>
+             * <li>Match specific requests: set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
@@ -159,10 +185,10 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <p>Rule switch. This parameter does not need to be set when adding global configuration. Value range:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -174,7 +200,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>Rule name. This parameter does not need to be set when adding global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -185,7 +211,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>Rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>37286782688****</p>

@@ -44,6 +44,10 @@ public class GetCacheTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return caseInsensitive
      */
@@ -77,6 +81,16 @@ public class GetCacheTagResponseBody extends TeaModel {
         private String requestId; 
         private Integer siteVersion; 
         private String tagName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCacheTagResponseBody model) {
+            this.caseInsensitive = model.caseInsensitive;
+            this.requestId = model.requestId;
+            this.siteVersion = model.siteVersion;
+            this.tagName = model.tagName;
+        } 
 
         /**
          * <p>Whether to ignore case. Possible values:</p>

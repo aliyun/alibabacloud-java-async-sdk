@@ -47,6 +47,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -64,6 +68,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.uri = builder.uri;
     }
@@ -76,7 +81,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,6 +136,13 @@ public class UpdateRewriteUrlRuleRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -152,6 +164,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private String uri; 
 
@@ -168,6 +181,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.uri = request.uri;
         } 
@@ -186,7 +200,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Query string after rewriting.</p>
+         * <p>The query string after rewriting.</p>
          * 
          * <strong>example:</strong>
          * <p>example=123</p>
@@ -201,6 +215,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
          * <p>Query string rewrite type. Value range:</p>
          * <ul>
          * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,6 +231,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
          * <p>URI rewrite type. Value range:</p>
          * <ul>
          * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +244,11 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -240,7 +260,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Value range:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -256,7 +276,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>example=123</p>
@@ -264,6 +284,15 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 
@@ -281,7 +310,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Target URI after rewriting.</p>
+         * <p>The target URI after rewriting.</p>
          * 
          * <strong>example:</strong>
          * <p>/image/example.jpg</p>

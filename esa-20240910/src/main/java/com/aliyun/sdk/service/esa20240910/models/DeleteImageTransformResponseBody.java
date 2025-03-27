@@ -32,6 +32,10 @@ public class DeleteImageTransformResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class DeleteImageTransformResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteImageTransformResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>

@@ -44,7 +44,7 @@ public class ListWafTemplateRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,7 @@ public class ListWafTemplateRulesRequest extends Request {
         } 
 
         /**
-         * <p>The WAF rule category, which is used to filter template rules of a specific category.</p>
+         * <p>WAF operation phase, used to filter template rules for a specific phase.</p>
          * 
          * <strong>example:</strong>
          * <p>http_anti_scan</p>
@@ -99,7 +99,7 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * <p>The query parameter, which is used to filter template rules based on criteria such as the rule type.</p>
+         * <p>Query parameters, used to filter template rules based on conditions such as rule type.</p>
          * 
          * <strong>example:</strong>
          * <p>http_anti_scan</p>
@@ -112,7 +112,7 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * <p>站点ID，可通过调用<a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>接口获取。</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,8 +162,15 @@ public class ListWafTemplateRulesRequest extends Request {
         public static final class Builder {
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryArgs model) {
+                this.type = model.type;
+            } 
+
             /**
-             * <p>The rule type.</p>
+             * <p>Rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>http_directory_traversal</p>

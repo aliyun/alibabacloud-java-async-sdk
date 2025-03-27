@@ -52,6 +52,10 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return originPools
      */
@@ -101,6 +105,18 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOriginPoolsResponseBody model) {
+            this.originPools = model.originPools;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * <p>List of origin pools.</p>
@@ -251,11 +267,22 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             private String secretKey; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The AccessKey required for private authentication.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI5tMfEib****ahybCpZqp</p>
+             * <p>yourAccessKeyID</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -294,7 +321,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
              * <p>The SecretKey required for private authentication.</p>
              * 
              * <strong>example:</strong>
-             * <p>VIxuvJSA2****fgYoZ3nkp208dy5w7</p>
+             * <p>yourAccessKeySecret</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -434,6 +461,20 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Origins model) {
+                this.address = model.address;
+                this.authConf = model.authConf;
+                this.enabled = model.enabled;
+                this.header = model.header;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>Origin address, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
@@ -584,6 +625,14 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsRecords model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>Record ID.</p>
              * 
@@ -657,6 +706,14 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(IPARecords model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>Record ID.</p>
              * 
@@ -729,6 +786,14 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>ID of the load balancer.</p>
@@ -814,6 +879,15 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             private java.util.List<DnsRecords> dnsRecords; 
             private java.util.List<IPARecords> IPARecords; 
             private java.util.List<LoadBalancers> loadBalancers; 
+
+            private Builder() {
+            } 
+
+            private Builder(References model) {
+                this.dnsRecords = model.dnsRecords;
+                this.IPARecords = model.IPARecords;
+                this.loadBalancers = model.loadBalancers;
+            } 
 
             /**
              * <p>使用此源地址池为源站的七层记录列表。</p>
@@ -961,6 +1035,20 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             private Integer referenceLBCount; 
             private References references; 
             private Long siteId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginPools model) {
+                this.enabled = model.enabled;
+                this.id = model.id;
+                this.name = model.name;
+                this.origins = model.origins;
+                this.recordName = model.recordName;
+                this.referenceLBCount = model.referenceLBCount;
+                this.references = model.references;
+                this.siteId = model.siteId;
+            } 
 
             /**
              * <p>Whether the origin pool is enabled:</p>

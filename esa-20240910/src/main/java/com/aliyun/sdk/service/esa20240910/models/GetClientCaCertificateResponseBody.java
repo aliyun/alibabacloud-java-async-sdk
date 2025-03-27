@@ -52,6 +52,10 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificate
      */
@@ -101,6 +105,18 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         private Long siteId; 
         private String siteName; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClientCaCertificateResponseBody model) {
+            this.certificate = model.certificate;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.siteId = model.siteId;
+            this.siteName = model.siteName;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The certificate content.</p>
@@ -184,6 +200,9 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("FingerprintSha256")
+        private String fingerprintSha256;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -205,6 +224,9 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SAN")
         private String SAN;
 
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
+        private String serialNumber;
+
         @com.aliyun.core.annotation.NameInMap("SignatureAlgorithm")
         private String signatureAlgorithm;
 
@@ -220,6 +242,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.commonName = builder.commonName;
             this.createTime = builder.createTime;
+            this.fingerprintSha256 = builder.fingerprintSha256;
             this.id = builder.id;
             this.issuer = builder.issuer;
             this.name = builder.name;
@@ -227,6 +250,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
             this.notBefore = builder.notBefore;
             this.pubkeyAlgorithm = builder.pubkeyAlgorithm;
             this.SAN = builder.SAN;
+            this.serialNumber = builder.serialNumber;
             this.signatureAlgorithm = builder.signatureAlgorithm;
             this.status = builder.status;
             this.type = builder.type;
@@ -253,6 +277,13 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return fingerprintSha256
+         */
+        public String getFingerprintSha256() {
+            return this.fingerprintSha256;
         }
 
         /**
@@ -305,6 +336,13 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return serialNumber
+         */
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        /**
          * @return signatureAlgorithm
          */
         public String getSignatureAlgorithm() {
@@ -335,6 +373,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public static final class Builder {
             private String commonName; 
             private String createTime; 
+            private String fingerprintSha256; 
             private String id; 
             private String issuer; 
             private String name; 
@@ -342,10 +381,32 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
             private String notBefore; 
             private String pubkeyAlgorithm; 
             private String SAN; 
+            private String serialNumber; 
             private String signatureAlgorithm; 
             private String status; 
             private String type; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.commonName = model.commonName;
+                this.createTime = model.createTime;
+                this.fingerprintSha256 = model.fingerprintSha256;
+                this.id = model.id;
+                this.issuer = model.issuer;
+                this.name = model.name;
+                this.notAfter = model.notAfter;
+                this.notBefore = model.notBefore;
+                this.pubkeyAlgorithm = model.pubkeyAlgorithm;
+                this.SAN = model.SAN;
+                this.serialNumber = model.serialNumber;
+                this.signatureAlgorithm = model.signatureAlgorithm;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The Common Name of the certificate.</p>
@@ -366,6 +427,14 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * FingerprintSha256.
+             */
+            public Builder fingerprintSha256(String fingerprintSha256) {
+                this.fingerprintSha256 = fingerprintSha256;
                 return this;
             }
 
@@ -443,6 +512,14 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
              */
             public Builder SAN(String SAN) {
                 this.SAN = SAN;
+                return this;
+            }
+
+            /**
+             * SerialNumber.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
                 return this;
             }
 

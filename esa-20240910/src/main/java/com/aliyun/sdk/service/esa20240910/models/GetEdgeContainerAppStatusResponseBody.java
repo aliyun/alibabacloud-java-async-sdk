@@ -36,6 +36,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appStatus
      */
@@ -53,6 +57,14 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
     public static final class Builder {
         private AppStatus appStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerAppStatusResponseBody model) {
+            this.appStatus = model.appStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the application.</p>
@@ -110,6 +122,13 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.
@@ -325,6 +344,27 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             private Regions regions; 
             private String rollbackTime; 
             private String unDeployTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppStatus model) {
+                this.baseLineVersion = model.baseLineVersion;
+                this.deployStatus = model.deployStatus;
+                this.deployTime = model.deployTime;
+                this.deployedVersion = model.deployedVersion;
+                this.expectPercentage = model.expectPercentage;
+                this.fullRelease = model.fullRelease;
+                this.publishEnv = model.publishEnv;
+                this.publishPercentage = model.publishPercentage;
+                this.publishStatus = model.publishStatus;
+                this.publishTime = model.publishTime;
+                this.publishType = model.publishType;
+                this.publishingVersion = model.publishingVersion;
+                this.regions = model.regions;
+                this.rollbackTime = model.rollbackTime;
+                this.unDeployTime = model.unDeployTime;
+            } 
 
             /**
              * <p>The base version of the application.</p>

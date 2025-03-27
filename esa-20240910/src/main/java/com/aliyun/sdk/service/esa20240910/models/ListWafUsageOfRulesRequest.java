@@ -39,7 +39,7 @@ public class ListWafUsageOfRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,10 +73,10 @@ public class ListWafUsageOfRulesRequest extends Request {
         } 
 
         /**
-         * <p>The WAF rule category.</p>
+         * <p>Name of the WAF operation phase.</p>
          * 
          * <strong>example:</strong>
-         * <p>http_anti_scan</p>
+         * <p>http_custom</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -85,10 +85,10 @@ public class ListWafUsageOfRulesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * 
          * <strong>example:</strong>
-         * <p>ListWafUsageOfRules</p>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

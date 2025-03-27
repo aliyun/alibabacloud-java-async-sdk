@@ -100,6 +100,10 @@ public class WafRuleConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -245,6 +249,30 @@ public class WafRuleConfig extends TeaModel {
         private WafTimer timer; 
         private String type; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafRuleConfig model) {
+            this.action = model.action;
+            this.actions = model.actions;
+            this.appPackage = model.appPackage;
+            this.appSdk = model.appSdk;
+            this.expression = model.expression;
+            this.id = model.id;
+            this.managedGroupId = model.managedGroupId;
+            this.managedList = model.managedList;
+            this.managedRulesets = model.managedRulesets;
+            this.name = model.name;
+            this.notes = model.notes;
+            this.rateLimit = model.rateLimit;
+            this.securityLevel = model.securityLevel;
+            this.sigchl = model.sigchl;
+            this.status = model.status;
+            this.timer = model.timer;
+            this.type = model.type;
+            this.value = model.value;
+        } 
 
         /**
          * Action.
@@ -476,6 +504,17 @@ public class WafRuleConfig extends TeaModel {
             private String skip; 
             private java.util.List<String> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Bypass model) {
+                this.customRules = model.customRules;
+                this.regularRules = model.regularRules;
+                this.regularTypes = model.regularTypes;
+                this.skip = model.skip;
+                this.tags = model.tags;
+            } 
+
             /**
              * CustomRules.
              */
@@ -567,6 +606,14 @@ public class WafRuleConfig extends TeaModel {
             private Integer code; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Response model) {
+                this.code = model.code;
+                this.id = model.id;
+            } 
+
             /**
              * Code.
              */
@@ -633,6 +680,14 @@ public class WafRuleConfig extends TeaModel {
         public static final class Builder {
             private Bypass bypass; 
             private Response response; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.bypass = model.bypass;
+                this.response = model.response;
+            } 
 
             /**
              * Bypass.
@@ -701,6 +756,14 @@ public class WafRuleConfig extends TeaModel {
             private String name; 
             private String sign; 
 
+            private Builder() {
+            } 
+
+            private Builder(PackageSigns model) {
+                this.name = model.name;
+                this.sign = model.sign;
+            } 
+
             /**
              * Name.
              */
@@ -755,6 +818,13 @@ public class WafRuleConfig extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PackageSigns> packageSigns; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppPackage model) {
+                this.packageSigns = model.packageSigns;
+            } 
 
             /**
              * PackageSigns.
@@ -814,6 +884,14 @@ public class WafRuleConfig extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomSign model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -893,6 +971,15 @@ public class WafRuleConfig extends TeaModel {
             private CustomSign customSign; 
             private String customSignStatus; 
             private java.util.List<String> featureAbnormal; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppSdk model) {
+                this.customSign = model.customSign;
+                this.customSignStatus = model.customSignStatus;
+                this.featureAbnormal = model.featureAbnormal;
+            } 
 
             /**
              * CustomSign.
@@ -980,6 +1067,15 @@ public class WafRuleConfig extends TeaModel {
             private String action; 
             private Long id; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManagedRules model) {
+                this.action = model.action;
+                this.id = model.id;
+                this.status = model.status;
+            } 
 
             /**
              * Action.
@@ -1104,6 +1200,18 @@ public class WafRuleConfig extends TeaModel {
             private Integer numberTotal; 
             private Integer protectionLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManagedRulesets model) {
+                this.action = model.action;
+                this.attackType = model.attackType;
+                this.managedRules = model.managedRules;
+                this.numberEnabled = model.numberEnabled;
+                this.numberTotal = model.numberTotal;
+                this.protectionLevel = model.protectionLevel;
+            } 
+
             /**
              * Action.
              */
@@ -1215,6 +1323,15 @@ public class WafRuleConfig extends TeaModel {
             private Integer count; 
             private Integer ratio; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseStatus model) {
+                this.code = model.code;
+                this.count = model.count;
+                this.ratio = model.ratio;
+            } 
+
             /**
              * Code.
              */
@@ -1325,6 +1442,17 @@ public class WafRuleConfig extends TeaModel {
             private Integer request; 
             private ResponseStatus responseStatus; 
             private String traffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Threshold model) {
+                this.distinctManagedRules = model.distinctManagedRules;
+                this.managedRulesBlocked = model.managedRulesBlocked;
+                this.request = model.request;
+                this.responseStatus = model.responseStatus;
+                this.traffic = model.traffic;
+            } 
 
             /**
              * DistinctManagedRules.
@@ -1453,6 +1581,17 @@ public class WafRuleConfig extends TeaModel {
             private Integer TTL; 
             private Threshold threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(RateLimit model) {
+                this.characteristics = model.characteristics;
+                this.interval = model.interval;
+                this.onHit = model.onHit;
+                this.TTL = model.TTL;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * Characteristics.
              */
@@ -1531,6 +1670,13 @@ public class WafRuleConfig extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityLevel model) {
+                this.value = model.value;
+            } 
 
             /**
              * Value.

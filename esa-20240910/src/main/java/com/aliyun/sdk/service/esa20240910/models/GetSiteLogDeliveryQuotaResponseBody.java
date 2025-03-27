@@ -44,6 +44,10 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessType
      */
@@ -77,6 +81,16 @@ public class GetSiteLogDeliveryQuotaResponseBody extends TeaModel {
         private Long freeQuota; 
         private String requestId; 
         private Long siteId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSiteLogDeliveryQuotaResponseBody model) {
+            this.businessType = model.businessType;
+            this.freeQuota = model.freeQuota;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+        } 
 
         /**
          * <p>The log category. Valid values:</p>

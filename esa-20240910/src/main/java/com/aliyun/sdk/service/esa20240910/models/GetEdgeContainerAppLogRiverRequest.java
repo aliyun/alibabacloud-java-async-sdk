@@ -34,7 +34,7 @@ public class GetEdgeContainerAppLogRiverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,10 @@ public class GetEdgeContainerAppLogRiverRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-880688675****88</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

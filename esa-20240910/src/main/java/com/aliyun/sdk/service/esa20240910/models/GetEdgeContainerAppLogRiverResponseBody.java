@@ -40,6 +40,10 @@ public class GetEdgeContainerAppLogRiverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return path
      */
@@ -66,8 +70,20 @@ public class GetEdgeContainerAppLogRiverResponseBody extends TeaModel {
         private String requestId; 
         private Boolean stdout; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerAppLogRiverResponseBody model) {
+            this.path = model.path;
+            this.requestId = model.requestId;
+            this.stdout = model.stdout;
+        } 
+
         /**
-         * Path.
+         * <p>The log path of the container. It must be an absolute path that starts with a forward slash (/). You can use asterisks (*) and question marks (?) as wildcards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/hello.log</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -75,7 +91,10 @@ public class GetEdgeContainerAppLogRiverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +102,7 @@ public class GetEdgeContainerAppLogRiverResponseBody extends TeaModel {
         }
 
         /**
-         * Stdout.
+         * <p>Indicates whether the standard output of the container is collected.</p>
          */
         public Builder stdout(Boolean stdout) {
             this.stdout = stdout;

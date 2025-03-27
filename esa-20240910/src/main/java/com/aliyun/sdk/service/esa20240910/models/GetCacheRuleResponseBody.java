@@ -140,6 +140,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalCacheablePorts
      */
@@ -366,6 +370,40 @@ public class GetCacheRuleResponseBody extends TeaModel {
         private String userGeo; 
         private String userLanguage; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetCacheRuleResponseBody model) {
+            this.additionalCacheablePorts = model.additionalCacheablePorts;
+            this.browserCacheMode = model.browserCacheMode;
+            this.browserCacheTtl = model.browserCacheTtl;
+            this.bypassCache = model.bypassCache;
+            this.cacheDeceptionArmor = model.cacheDeceptionArmor;
+            this.cacheReserveEligibility = model.cacheReserveEligibility;
+            this.checkPresenceCookie = model.checkPresenceCookie;
+            this.checkPresenceHeader = model.checkPresenceHeader;
+            this.configId = model.configId;
+            this.configType = model.configType;
+            this.edgeCacheMode = model.edgeCacheMode;
+            this.edgeCacheTtl = model.edgeCacheTtl;
+            this.edgeStatusCodeCacheTtl = model.edgeStatusCodeCacheTtl;
+            this.includeCookie = model.includeCookie;
+            this.includeHeader = model.includeHeader;
+            this.queryString = model.queryString;
+            this.queryStringMode = model.queryStringMode;
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+            this.ruleEnable = model.ruleEnable;
+            this.ruleName = model.ruleName;
+            this.sequence = model.sequence;
+            this.serveStale = model.serveStale;
+            this.siteVersion = model.siteVersion;
+            this.sortQueryStringForCache = model.sortQueryStringForCache;
+            this.userDeviceType = model.userDeviceType;
+            this.userGeo = model.userGeo;
+            this.userLanguage = model.userLanguage;
+        } 
+
         /**
          * <p>Enable caching on the specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096.</p>
          * 
@@ -450,7 +488,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
+         * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (cookie names are case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>cookiename</p>
@@ -461,7 +499,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>When generating the cache key, check if the header exists. If it does, add the header name (case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
+         * <p>When generating the cache key, check if the header exists. If it does, add the header name (header names are case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>headername</p>
@@ -500,7 +538,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         /**
          * <p>Edge cache mode. Value range:</p>
          * <ul>
-         * <li>follow_origin: Follow origin cache policy (if exists), otherwise use default cache policy.</li>
+         * <li>follow_origin: Follow origin cache policy (if exists), otherwise use the default cache policy.</li>
          * <li>no_cache: Do not cache.</li>
          * <li>override_origin: Override origin cache policy.</li>
          * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
@@ -559,7 +597,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Query strings to be retained or deleted. Supports multiple values, separated by spaces.</p>
+         * <p>The query strings to be retained or deleted, supporting multiple values separated by spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -598,7 +636,11 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -609,10 +651,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule switch. Value range:</p>
+         * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Value range:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -624,7 +666,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -635,7 +677,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule execution sequence.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -661,7 +703,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site version number.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -674,8 +716,8 @@ public class GetCacheRuleResponseBody extends TeaModel {
         /**
          * <p>Query string sorting. Value range:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

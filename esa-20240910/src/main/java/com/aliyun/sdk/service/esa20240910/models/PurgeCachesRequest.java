@@ -56,7 +56,7 @@ public class PurgeCachesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -243,6 +243,14 @@ public class PurgeCachesRequest extends Request {
             private java.util.Map<String, String> headers; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(CacheKeys model) {
+                this.headers = model.headers;
+                this.url = model.url;
+            } 
+
             /**
              * <p>When refreshing, specify the header information corresponding to the cache key. When the custom cache key feature switch is enabled, the cache key will be generated based on the specified header for refreshing.</p>
              * <p><strong>UserGeo: Country/Region</strong></p>
@@ -386,6 +394,19 @@ public class PurgeCachesRequest extends Request {
             private java.util.List<String> hostnames; 
             private java.util.List<String> ignoreParams; 
             private Boolean purgeAll; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.cacheKeys = model.cacheKeys;
+                this.cacheTags = model.cacheTags;
+                this.directories = model.directories;
+                this.files = model.files;
+                this.hostnames = model.hostnames;
+                this.ignoreParams = model.ignoreParams;
+                this.purgeAll = model.purgeAll;
+            } 
 
             /**
              * <p>List of cachekeys to be refreshed, required when the type is cachekey.</p>

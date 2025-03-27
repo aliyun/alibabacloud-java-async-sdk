@@ -64,6 +64,10 @@ public class GetKvAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return capacity
      */
@@ -137,6 +141,21 @@ public class GetKvAccountResponseBody extends TeaModel {
         private Integer namespaceUsed; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetKvAccountResponseBody model) {
+            this.capacity = model.capacity;
+            this.capacityString = model.capacityString;
+            this.capacityUsed = model.capacityUsed;
+            this.capacityUsedString = model.capacityUsedString;
+            this.namespaceList = model.namespaceList;
+            this.namespaceQuota = model.namespaceQuota;
+            this.namespaceUsed = model.namespaceUsed;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The available capacity of all namespaces in the account. Unit: bytes.</p>
@@ -359,6 +378,20 @@ public class GetKvAccountResponseBody extends TeaModel {
             private String namespace; 
             private String namespaceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(NamespaceList model) {
+                this.capacity = model.capacity;
+                this.capacityString = model.capacityString;
+                this.capacityUsed = model.capacityUsed;
+                this.capacityUsedString = model.capacityUsedString;
+                this.description = model.description;
+                this.namespace = model.namespace;
+                this.namespaceId = model.namespaceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The available capacity of the namespace. Unit: bytes.</p>

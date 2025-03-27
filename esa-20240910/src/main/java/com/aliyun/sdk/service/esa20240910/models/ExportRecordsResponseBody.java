@@ -36,6 +36,10 @@ public class ExportRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class ExportRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private String content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportRecordsResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The exported DNS records.</p>

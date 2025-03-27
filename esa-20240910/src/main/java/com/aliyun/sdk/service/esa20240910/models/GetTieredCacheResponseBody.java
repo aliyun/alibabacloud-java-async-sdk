@@ -36,6 +36,10 @@ public class GetTieredCacheResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cacheArchitectureMode
      */
@@ -53,6 +57,14 @@ public class GetTieredCacheResponseBody extends TeaModel {
     public static final class Builder {
         private String cacheArchitectureMode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTieredCacheResponseBody model) {
+            this.cacheArchitectureMode = model.cacheArchitectureMode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Multi-level cache architecture mode. Possible values:</p>

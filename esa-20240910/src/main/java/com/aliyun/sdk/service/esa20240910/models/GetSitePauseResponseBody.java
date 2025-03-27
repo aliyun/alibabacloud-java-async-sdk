@@ -36,6 +36,10 @@ public class GetSitePauseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return paused
      */
@@ -54,11 +58,19 @@ public class GetSitePauseResponseBody extends TeaModel {
         private Boolean paused; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSitePauseResponseBody model) {
+            this.paused = model.paused;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Indicates whether acceleration has been paused. Possible values:</p>
+         * <p>Indicates whether ESA is paused on the website. Valid values:</p>
          * <ul>
-         * <li>true: The site&quot;s acceleration is paused.</li>
-         * <li>false: The site is accelerating normally.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,7 +82,7 @@ public class GetSitePauseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>

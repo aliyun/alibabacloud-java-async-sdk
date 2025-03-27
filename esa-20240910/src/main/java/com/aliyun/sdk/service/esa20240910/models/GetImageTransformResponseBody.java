@@ -64,6 +64,10 @@ public class GetImageTransformResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -138,8 +142,23 @@ public class GetImageTransformResponseBody extends TeaModel {
         private Integer sequence; 
         private Integer siteVersion; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetImageTransformResponseBody model) {
+            this.configId = model.configId;
+            this.configType = model.configType;
+            this.enable = model.enable;
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+            this.ruleEnable = model.ruleEnable;
+            this.ruleName = model.ruleName;
+            this.sequence = model.sequence;
+            this.siteVersion = model.siteVersion;
+        } 
+
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>352816096987136</p>
@@ -150,10 +169,10 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration type. Valid values:</p>
+         * <p>Configuration type. Possible values:</p>
          * <ul>
-         * <li>global: global configuration.</li>
-         * <li>rule: rule configuration.</li>
+         * <li>global: Global configuration;</li>
+         * <li>rule: Rule-based configuration;</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,10 +184,10 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the image transformations feature is enabled. Valid values:</p>
+         * <p>Whether to enable image transformation. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +199,7 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
@@ -191,7 +210,11 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule content, which is a policy or conditional expression.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
@@ -202,10 +225,10 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +240,7 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter does not need to be set when adding global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -228,7 +251,7 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -239,7 +262,7 @@ public class GetImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the website.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the site, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

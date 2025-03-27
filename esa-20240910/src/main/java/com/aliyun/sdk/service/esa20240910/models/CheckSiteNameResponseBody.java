@@ -48,6 +48,10 @@ public class CheckSiteNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -89,6 +93,17 @@ public class CheckSiteNameResponseBody extends TeaModel {
         private String messeage; 
         private Boolean passed; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckSiteNameResponseBody model) {
+            this.description = model.description;
+            this.isSubSite = model.isSubSite;
+            this.messeage = model.messeage;
+            this.passed = model.passed;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The description of the verification result. Valid values:</p>

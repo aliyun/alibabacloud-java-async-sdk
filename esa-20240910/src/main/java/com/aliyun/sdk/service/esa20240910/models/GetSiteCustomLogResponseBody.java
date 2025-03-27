@@ -48,6 +48,10 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -89,6 +93,17 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         private LogCustomField logCustomField; 
         private String requestId; 
         private Long siteId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSiteCustomLogResponseBody model) {
+            this.configId = model.configId;
+            this.isExist = model.isExist;
+            this.logCustomField = model.logCustomField;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+        } 
 
         /**
          * <p>The ID of the custom log field configuration.</p>
@@ -203,6 +218,15 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
             private java.util.List<String> cookies; 
             private java.util.List<String> requestHeaders; 
             private java.util.List<String> responseHeaders; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogCustomField model) {
+                this.cookies = model.cookies;
+                this.requestHeaders = model.requestHeaders;
+                this.responseHeaders = model.responseHeaders;
+            } 
 
             /**
              * <p>The cookie fields.</p>

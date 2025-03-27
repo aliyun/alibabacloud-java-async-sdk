@@ -125,7 +125,7 @@ public class CreateWaitingRoomRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -604,6 +604,15 @@ public class CreateWaitingRoomRequest extends Request {
             private String domain; 
             private String path; 
             private String subdomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostNameAndPath model) {
+                this.domain = model.domain;
+                this.path = model.path;
+                this.subdomain = model.subdomain;
+            } 
 
             /**
              * <p>The domain name.</p>

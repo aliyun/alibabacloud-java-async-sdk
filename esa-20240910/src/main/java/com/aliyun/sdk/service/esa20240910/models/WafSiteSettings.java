@@ -48,6 +48,10 @@ public class WafSiteSettings extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addBotProtectionHeaders
      */
@@ -89,6 +93,17 @@ public class WafSiteSettings extends TeaModel {
         private BotManagement botManagement; 
         private ClientIpIdentifier clientIpIdentifier; 
         private SecurityLevel securityLevel; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafSiteSettings model) {
+            this.addBotProtectionHeaders = model.addBotProtectionHeaders;
+            this.addSecurityHeaders = model.addSecurityHeaders;
+            this.botManagement = model.botManagement;
+            this.clientIpIdentifier = model.clientIpIdentifier;
+            this.securityLevel = model.securityLevel;
+        } 
 
         /**
          * AddBotProtectionHeaders.
@@ -168,6 +183,13 @@ public class WafSiteSettings extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddBotProtectionHeaders model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * Enable.
              */
@@ -214,6 +236,13 @@ public class WafSiteSettings extends TeaModel {
 
         public static final class Builder {
             private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddSecurityHeaders model) {
+                this.enable = model.enable;
+            } 
 
             /**
              * Enable.
@@ -274,6 +303,14 @@ public class WafSiteSettings extends TeaModel {
             private String action; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefiniteBots model) {
+                this.action = model.action;
+                this.id = model.id;
+            } 
+
             /**
              * Action.
              */
@@ -329,6 +366,13 @@ public class WafSiteSettings extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(EffectOnStatic model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * Enable.
              */
@@ -375,6 +419,13 @@ public class WafSiteSettings extends TeaModel {
 
         public static final class Builder {
             private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(JSDetection model) {
+                this.enable = model.enable;
+            } 
 
             /**
              * Enable.
@@ -434,6 +485,14 @@ public class WafSiteSettings extends TeaModel {
         public static final class Builder {
             private String action; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(LikelyBots model) {
+                this.action = model.action;
+                this.id = model.id;
+            } 
 
             /**
              * Action.
@@ -501,6 +560,14 @@ public class WafSiteSettings extends TeaModel {
         public static final class Builder {
             private String action; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(VerifiedBots model) {
+                this.action = model.action;
+                this.id = model.id;
+            } 
 
             /**
              * Action.
@@ -605,6 +672,17 @@ public class WafSiteSettings extends TeaModel {
             private LikelyBots likelyBots; 
             private VerifiedBots verifiedBots; 
 
+            private Builder() {
+            } 
+
+            private Builder(BotManagement model) {
+                this.definiteBots = model.definiteBots;
+                this.effectOnStatic = model.effectOnStatic;
+                this.JSDetection = model.JSDetection;
+                this.likelyBots = model.likelyBots;
+                this.verifiedBots = model.verifiedBots;
+            } 
+
             /**
              * DefiniteBots.
              */
@@ -696,6 +774,14 @@ public class WafSiteSettings extends TeaModel {
             private java.util.List<String> headers; 
             private String mode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientIpIdentifier model) {
+                this.headers = model.headers;
+                this.mode = model.mode;
+            } 
+
             /**
              * Headers.
              */
@@ -750,6 +836,13 @@ public class WafSiteSettings extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityLevel model) {
+                this.value = model.value;
+            } 
 
             /**
              * Value.

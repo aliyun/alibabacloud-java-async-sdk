@@ -48,6 +48,10 @@ public class WafQuotaInteger extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return equal
      */
@@ -89,6 +93,17 @@ public class WafQuotaInteger extends TeaModel {
         private Integer greaterThanOrEqual; 
         private Integer lessThan; 
         private Integer lessThanOrEqual; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafQuotaInteger model) {
+            this.equal = model.equal;
+            this.greaterThan = model.greaterThan;
+            this.greaterThanOrEqual = model.greaterThanOrEqual;
+            this.lessThan = model.lessThan;
+            this.lessThanOrEqual = model.lessThanOrEqual;
+        } 
 
         /**
          * Equal.

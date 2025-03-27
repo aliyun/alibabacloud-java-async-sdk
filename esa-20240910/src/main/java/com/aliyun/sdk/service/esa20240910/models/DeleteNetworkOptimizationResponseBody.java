@@ -32,6 +32,10 @@ public class DeleteNetworkOptimizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class DeleteNetworkOptimizationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteNetworkOptimizationResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Request ID.</p>

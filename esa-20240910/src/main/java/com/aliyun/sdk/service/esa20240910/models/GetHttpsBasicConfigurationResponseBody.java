@@ -96,6 +96,10 @@ public class GetHttpsBasicConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ciphersuite
      */
@@ -233,6 +237,29 @@ public class GetHttpsBasicConfigurationResponseBody extends TeaModel {
         private String tls11; 
         private String tls12; 
         private String tls13; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHttpsBasicConfigurationResponseBody model) {
+            this.ciphersuite = model.ciphersuite;
+            this.ciphersuiteGroup = model.ciphersuiteGroup;
+            this.configId = model.configId;
+            this.configType = model.configType;
+            this.http2 = model.http2;
+            this.http3 = model.http3;
+            this.https = model.https;
+            this.ocspStapling = model.ocspStapling;
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+            this.ruleEnable = model.ruleEnable;
+            this.ruleName = model.ruleName;
+            this.sequence = model.sequence;
+            this.tls10 = model.tls10;
+            this.tls11 = model.tls11;
+            this.tls12 = model.tls12;
+            this.tls13 = model.tls13;
+        } 
 
         /**
          * <p>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</p>

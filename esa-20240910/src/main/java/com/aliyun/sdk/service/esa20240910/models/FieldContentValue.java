@@ -36,6 +36,10 @@ public class FieldContentValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return sortOrder
      */
@@ -53,6 +57,14 @@ public class FieldContentValue extends TeaModel {
     public static final class Builder {
         private Long sortOrder; 
         private java.util.List<FieldList> fieldList; 
+
+        private Builder() {
+        } 
+
+        private Builder(FieldContentValue model) {
+            this.sortOrder = model.sortOrder;
+            this.fieldList = model.fieldList;
+        } 
 
         /**
          * <p>The sequence number of the fields.</p>
@@ -182,6 +194,19 @@ public class FieldContentValue extends TeaModel {
             private String dataType; 
             private Long sortOrder; 
             private Boolean isDefault; 
+
+            private Builder() {
+            } 
+
+            private Builder(FieldList model) {
+                this.fieldName = model.fieldName;
+                this.description = model.description;
+                this.descriptionCn = model.descriptionCn;
+                this.category = model.category;
+                this.dataType = model.dataType;
+                this.sortOrder = model.sortOrder;
+                this.isDefault = model.isDefault;
+            } 
 
             /**
              * <p>The field name.</p>

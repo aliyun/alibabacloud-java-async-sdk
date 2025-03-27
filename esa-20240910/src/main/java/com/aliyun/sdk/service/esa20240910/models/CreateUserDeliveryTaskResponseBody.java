@@ -44,6 +44,10 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCenter
      */
@@ -77,6 +81,16 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUserDeliveryTaskResponseBody model) {
+            this.dataCenter = model.dataCenter;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The data center. Valid values:</p>

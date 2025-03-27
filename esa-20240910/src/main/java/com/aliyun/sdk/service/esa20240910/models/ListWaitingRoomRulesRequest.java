@@ -51,7 +51,7 @@ public class ListWaitingRoomRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,7 @@ public class ListWaitingRoomRulesRequest extends Request {
         } 
 
         /**
-         * <p>Optional. The rule name, which can be used to query a specific bypass rule.</p>
+         * <p>Rule name, optional, used for querying by the name of the waiting room bypass rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -115,7 +115,7 @@ public class ListWaitingRoomRulesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ListWaitingRoomRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the waiting room to be bypassed, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWatingRooms</a> operation.</p>
+         * <p>The ID of the waiting room to bypass, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class ListWaitingRoomRulesRequest extends Request {
         }
 
         /**
-         * <p>Optional. The rule ID, which can be used to query a specific rule.</p>
+         * <p>The ID of the waiting room bypass rule to update, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> interface.</p>
          * 
          * <strong>example:</strong>
          * <p>37286782688****</p>

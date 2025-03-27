@@ -53,7 +53,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -307,6 +307,21 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             private String repoNamespace; 
             private String tag; 
             private String tagUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ACRImageInfo model) {
+                this.domain = model.domain;
+                this.instanceId = model.instanceId;
+                this.isEnterpriseRegistry = model.isEnterpriseRegistry;
+                this.regionId = model.regionId;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.tag = model.tag;
+                this.tagUrl = model.tagUrl;
+            } 
 
             /**
              * <p>The domain name of the Container Registry image.</p>
@@ -562,6 +577,23 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             private String scheme; 
             private Integer successThreshold; 
             private Integer timeoutSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProbeContent model) {
+                this.command = model.command;
+                this.failureThreshold = model.failureThreshold;
+                this.host = model.host;
+                this.httpHeaders = model.httpHeaders;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.path = model.path;
+                this.periodSeconds = model.periodSeconds;
+                this.port = model.port;
+                this.scheme = model.scheme;
+                this.successThreshold = model.successThreshold;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
 
             /**
              * <p>The command of the exec type probe.</p>
@@ -873,6 +905,25 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             private String probeType; 
             private String spec; 
             private String storage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.ACRImageInfo = model.ACRImageInfo;
+                this.args = model.args;
+                this.command = model.command;
+                this.envVariables = model.envVariables;
+                this.image = model.image;
+                this.isACRImage = model.isACRImage;
+                this.name = model.name;
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+                this.probeContent = model.probeContent;
+                this.probeType = model.probeType;
+                this.spec = model.spec;
+                this.storage = model.storage;
+            } 
 
             /**
              * <p>The information about the Container Registry image.</p>

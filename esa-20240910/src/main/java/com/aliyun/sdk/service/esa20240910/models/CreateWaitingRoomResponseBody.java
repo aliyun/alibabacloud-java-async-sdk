@@ -36,6 +36,10 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String waitingRoomId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWaitingRoomResponseBody model) {
+            this.requestId = model.requestId;
+            this.waitingRoomId = model.waitingRoomId;
+        } 
 
         /**
          * <p>The request ID.</p>

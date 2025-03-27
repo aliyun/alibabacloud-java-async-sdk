@@ -52,6 +52,10 @@ public class ListListsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lists
      */
@@ -101,6 +105,18 @@ public class ListListsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Long usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListListsResponseBody model) {
+            this.lists = model.lists;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.usage = model.usage;
+        } 
 
         /**
          * <p>The array that contains list information, including list data after paging.</p>
@@ -263,6 +279,18 @@ public class ListListsResponseBody extends TeaModel {
             private Long length; 
             private String name; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lists model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.kind = model.kind;
+                this.length = model.length;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The list description.</p>

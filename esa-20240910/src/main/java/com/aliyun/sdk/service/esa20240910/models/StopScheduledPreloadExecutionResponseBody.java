@@ -64,6 +64,10 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -137,6 +141,21 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
         private Integer sliceLen; 
         private String startTime; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopScheduledPreloadExecutionResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.endTime = model.endTime;
+            this.id = model.id;
+            this.interval = model.interval;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.sliceLen = model.sliceLen;
+            this.startTime = model.startTime;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>

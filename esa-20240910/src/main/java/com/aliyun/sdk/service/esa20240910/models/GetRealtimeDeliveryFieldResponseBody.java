@@ -36,6 +36,10 @@ public class GetRealtimeDeliveryFieldResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fieldContent
      */
@@ -53,6 +57,14 @@ public class GetRealtimeDeliveryFieldResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, FieldContentValue> fieldContent; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRealtimeDeliveryFieldResponseBody model) {
+            this.fieldContent = model.fieldContent;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The fields returned.</p>

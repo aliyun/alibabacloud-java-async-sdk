@@ -36,6 +36,10 @@ public class CommitRoutineStagingCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codeVersion
      */
@@ -53,6 +57,14 @@ public class CommitRoutineStagingCodeResponseBody extends TeaModel {
     public static final class Builder {
         private String codeVersion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommitRoutineStagingCodeResponseBody model) {
+            this.codeVersion = model.codeVersion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The version number of the newly generated code.</p>

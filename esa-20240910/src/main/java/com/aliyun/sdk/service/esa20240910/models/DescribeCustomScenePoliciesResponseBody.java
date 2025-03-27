@@ -52,6 +52,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataModule
      */
@@ -101,6 +105,18 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         private Integer quota; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomScenePoliciesResponseBody model) {
+            this.dataModule = model.dataModule;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The scenario-specific policies.</p>
@@ -274,6 +290,19 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String template; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.endTime = model.endTime;
+                this.name = model.name;
+                this.objects = model.objects;
+                this.policyId = model.policyId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.template = model.template;
+            } 
 
             /**
              * <p>The time when the policy expires.</p>

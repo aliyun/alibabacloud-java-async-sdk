@@ -36,6 +36,10 @@ public class GetWafFilterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filter
      */
@@ -53,6 +57,14 @@ public class GetWafFilterResponseBody extends TeaModel {
     public static final class Builder {
         private Filter filter; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWafFilterResponseBody model) {
+            this.filter = model.filter;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned match conditions.</p>
@@ -146,6 +158,16 @@ public class GetWafFilterResponseBody extends TeaModel {
             private WafQuotaInteger length; 
             private String pattern; 
             private WafQuotaInteger range; 
+
+            private Builder() {
+            } 
+
+            private Builder(Validator model) {
+                this.errMsg = model.errMsg;
+                this.length = model.length;
+                this.pattern = model.pattern;
+                this.range = model.range;
+            } 
 
             /**
              * <p>The error message when the validation fails.</p>
@@ -332,6 +354,22 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String type; 
             private Validator validator; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logics model) {
+                this.attributes = model.attributes;
+                this.enable = model.enable;
+                this.kind = model.kind;
+                this.minPlan = model.minPlan;
+                this.negative = model.negative;
+                this.operator = model.operator;
+                this.symbol = model.symbol;
+                this.tip = model.tip;
+                this.type = model.type;
+                this.validator = model.validator;
+            } 
+
             /**
              * <p>A custom attribute. For example, this parameter can specify whether the value is case-sensitive.</p>
              * 
@@ -493,6 +531,14 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String label; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The label of the data.</p>
              * 
@@ -565,6 +611,14 @@ public class GetWafFilterResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private String kind; 
+
+            private Builder() {
+            } 
+
+            private Builder(Selector model) {
+                this.data = model.data;
+                this.kind = model.kind;
+            } 
 
             /**
              * <p>The data. This parameter is available only when the value of the Kind parameter is data.</p>
@@ -707,6 +761,20 @@ public class GetWafFilterResponseBody extends TeaModel {
             private Selector selector; 
             private Boolean sub; 
             private String subTip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.enable = model.enable;
+                this.key = model.key;
+                this.label = model.label;
+                this.logics = model.logics;
+                this.minPlan = model.minPlan;
+                this.selector = model.selector;
+                this.sub = model.sub;
+                this.subTip = model.subTip;
+            } 
 
             /**
              * Enable.
@@ -858,6 +926,16 @@ public class GetWafFilterResponseBody extends TeaModel {
             private String phase; 
             private String target; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.fields = model.fields;
+                this.phase = model.phase;
+                this.target = model.target;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The matched objects and related properties.</p>

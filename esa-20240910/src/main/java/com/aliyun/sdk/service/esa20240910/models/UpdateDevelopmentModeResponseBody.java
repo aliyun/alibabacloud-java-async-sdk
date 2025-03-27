@@ -32,6 +32,10 @@ public class UpdateDevelopmentModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class UpdateDevelopmentModeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateDevelopmentModeResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>

@@ -48,6 +48,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserDeliveryTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number returned.</p>
@@ -227,6 +242,17 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             private String deliveryType; 
             private String status; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.businessType = model.businessType;
+                this.dataCenter = model.dataCenter;
+                this.deliveryType = model.deliveryType;
+                this.status = model.status;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The log category.</p>

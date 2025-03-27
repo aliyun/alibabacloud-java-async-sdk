@@ -36,6 +36,10 @@ public class CreatePageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class CreatePageResponseBody extends TeaModel {
     public static final class Builder {
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePageResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>

@@ -40,6 +40,10 @@ public class ListScheduledPreloadExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executions
      */
@@ -65,6 +69,15 @@ public class ListScheduledPreloadExecutionsResponseBody extends TeaModel {
         private java.util.List<Executions> executions; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScheduledPreloadExecutionsResponseBody model) {
+            this.executions = model.executions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about prefetch plans returned.</p>
@@ -217,6 +230,20 @@ public class ListScheduledPreloadExecutionsResponseBody extends TeaModel {
             private Integer sliceLen; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Executions model) {
+                this.aliUid = model.aliUid;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.interval = model.interval;
+                this.jobId = model.jobId;
+                this.sliceLen = model.sliceLen;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

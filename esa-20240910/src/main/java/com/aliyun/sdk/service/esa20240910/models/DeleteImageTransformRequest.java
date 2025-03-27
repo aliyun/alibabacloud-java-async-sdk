@@ -41,7 +41,7 @@ public class DeleteImageTransformRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +75,7 @@ public class DeleteImageTransformRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID, which can be obtained by calling the <a href="~~ListImageTransforms~~">ListImageTransforms</a> operation.</p>
+         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteImageTransformRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

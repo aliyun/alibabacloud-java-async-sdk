@@ -106,7 +106,7 @@ public class UpdateLoadBalancerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -257,7 +257,7 @@ public class UpdateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * <p>Configuration for cross-pool origin fallback.</p>
+         * <p>Configuration for failover across pools.</p>
          */
         public Builder adaptiveRouting(AdaptiveRouting adaptiveRouting) {
             String adaptiveRoutingShrink = shrink(adaptiveRouting, "AdaptiveRouting", "json");
@@ -277,7 +277,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Detailed description of the load balancer, which is useful for management and identification.</p>
+         * <p>Detailed description of the load balancer, for easier management and identification.</p>
          * 
          * <strong>example:</strong>
          * <p>负载均衡器描述</p>
@@ -317,7 +317,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface.</p>
+         * <p>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Address pools corresponding to the primary region.</p>
+         * <p>Address pool corresponding to the primary region.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -380,11 +380,11 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Session persistence, with values:</p>
+         * <p>Session persistence, with possible values:</p>
          * <ul>
          * <li>off: Not enabled.</li>
          * <li>ip: Session persistence by IP.</li>
-         * <li>cookie: Not enabled for session persistence.</li>
+         * <li>cookie: Session persistence by cookie.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,7 +422,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Address pools corresponding to the secondary region. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</p>
+         * <p>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the keys can be concatenated with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -434,7 +434,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>TTL value, the time-to-live for DNS records. The default is 30, and the range is 10-600.</p>
+         * <p>TTL value, the time-to-live for DNS records, with a default of 30 and a range of 10-600.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -484,8 +484,15 @@ public class UpdateLoadBalancerRequest extends Request {
         public static final class Builder {
             private Boolean failoverAcrossPools; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdaptiveRouting model) {
+                this.failoverAcrossPools = model.failoverAcrossPools;
+            } 
+
             /**
-             * <p>Whether to perform cross-pool origin fallback.</p>
+             * <p>Whether to failover across pools.</p>
              * <ul>
              * <li>true: Yes.</li>
              * <li>false: No.</li>
@@ -658,6 +665,23 @@ public class UpdateLoadBalancerRequest extends Request {
             private Integer timeout; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Monitor model) {
+                this.consecutiveDown = model.consecutiveDown;
+                this.consecutiveUp = model.consecutiveUp;
+                this.expectedCodes = model.expectedCodes;
+                this.followRedirects = model.followRedirects;
+                this.header = model.header;
+                this.interval = model.interval;
+                this.method = model.method;
+                this.path = model.path;
+                this.port = model.port;
+                this.timeout = model.timeout;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Number of consecutive failed probes required to consider the target unhealthy, such as 5.</p>
              * 
@@ -681,7 +705,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Expected status codes, such as 200,202, which are successful HTTP responses.</p>
+             * <p>Expected status codes, such as 200,202, which indicate successful HTTP responses.</p>
              * 
              * <strong>example:</strong>
              * <p>200,202</p>
@@ -723,7 +747,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Monitor interval, such as 60 seconds, which is the check frequency.</p>
+             * <p>Monitor interval, such as 60 seconds, which is the frequency of checks.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -767,7 +791,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Application health check timeout, in seconds. The range is 1-10.</p>
+             * <p>Application health check timeout, in seconds, with a range of 1-10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -778,7 +802,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Monitor protocol type, such as HTTP, used for health checks. When the value is &quot;off&quot;, it indicates that no check will be performed.</p>
+             * <p>Monitor protocol type, such as HTTP, used for health checks. When set to &quot;off&quot;, no check is performed.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -839,8 +863,16 @@ public class UpdateLoadBalancerRequest extends Request {
             private Integer defaultWeight; 
             private java.util.Map<String, Integer> poolWeights; 
 
+            private Builder() {
+            } 
+
+            private Builder(RandomSteering model) {
+                this.defaultWeight = model.defaultWeight;
+                this.poolWeights = model.poolWeights;
+            } 
+
             /**
-             * <p>The default round-robin weight, used for all pools that do not have a specific weight set. The value range is an integer between 0 and 100.</p>
+             * <p>The default round-robin weight, used for all pools that do not have a specific weight set. Value range: integers between 0-100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -932,6 +964,16 @@ public class UpdateLoadBalancerRequest extends Request {
             private String location; 
             private String messageBody; 
             private Integer statusCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(FixedResponse model) {
+                this.contentType = model.contentType;
+                this.location = model.location;
+                this.messageBody = model.messageBody;
+                this.statusCode = model.statusCode;
+            } 
 
             /**
              * <p>Content-Type field in the HTTP Header.</p>
@@ -1088,6 +1130,19 @@ public class UpdateLoadBalancerRequest extends Request {
             private Integer sequence; 
             private Boolean terminates; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.fixedResponse = model.fixedResponse;
+                this.overrides = model.overrides;
+                this.rule = model.rule;
+                this.ruleEnable = model.ruleEnable;
+                this.ruleName = model.ruleName;
+                this.sequence = model.sequence;
+                this.terminates = model.terminates;
+            } 
+
             /**
              * <p>Execute a specified response after matching the rule.</p>
              */
@@ -1149,7 +1204,11 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Matching condition, such as a rule based on the request URI.</p>
+             * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding global configurations. There are two usage scenarios:</p>
+             * <ul>
+             * <li>Match all incoming requests: Set the value to true</li>
+             * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>http.request.method eq &quot;GET&quot;</p>
@@ -1160,10 +1219,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Rule switch.</p>
+             * <p>Rule switch. This parameter does not need to be set when adding global configurations. Value range:</p>
              * <ul>
-             * <li>on: Enable the rule.</li>
-             * <li>off: Disable the rule.</li>
+             * <li>on: Enable.</li>
+             * <li>off: Disable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1175,7 +1234,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Rule name.</p>
+             * <p>Rule name. This parameter does not need to be set when adding global configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_1</p>
@@ -1186,7 +1245,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The execution order of the rule. It can be left blank, in which case the rules will be executed in the list order. If specified, it must be a positive integer.</p>
+             * <p>The execution order of the rule. It can be left empty, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1200,7 +1259,7 @@ public class UpdateLoadBalancerRequest extends Request {
              * <p>Whether to terminate the execution of subsequent rules.</p>
              * <ul>
              * <li>true: Yes.</li>
-             * <li>false: No.</li>
+             * <li>false: No, default value.</li>
              * </ul>
              * 
              * <strong>example:</strong>

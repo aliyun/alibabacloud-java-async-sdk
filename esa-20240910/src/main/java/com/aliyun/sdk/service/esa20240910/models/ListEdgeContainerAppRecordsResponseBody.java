@@ -48,6 +48,10 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
         private java.util.List<Records> records; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEdgeContainerAppRecordsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -275,6 +290,21 @@ public class ListEdgeContainerAppRecordsResponseBody extends TeaModel {
             private Integer schemdId; 
             private Long siteId; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.appId = model.appId;
+                this.cname = model.cname;
+                this.configId = model.configId;
+                this.createTime = model.createTime;
+                this.recordId = model.recordId;
+                this.recordName = model.recordName;
+                this.schemdId = model.schemdId;
+                this.siteId = model.siteId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The application ID.</p>

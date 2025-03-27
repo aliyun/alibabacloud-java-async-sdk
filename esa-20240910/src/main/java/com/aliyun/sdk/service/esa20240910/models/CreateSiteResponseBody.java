@@ -44,6 +44,10 @@ public class CreateSiteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nameServerList
      */
@@ -77,6 +81,16 @@ public class CreateSiteResponseBody extends TeaModel {
         private String requestId; 
         private Long siteId; 
         private String verifyCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSiteResponseBody model) {
+            this.nameServerList = model.nameServerList;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+            this.verifyCode = model.verifyCode;
+        } 
 
         /**
          * <p>The nameservers assigned by ESA. The values are separated by commas (,). This parameter is returned if you set AccessType to NS. In this case, you must change the nameservers of your domain to the assigned ones. Then, you can verify the domain ownership and activate your website.</p>

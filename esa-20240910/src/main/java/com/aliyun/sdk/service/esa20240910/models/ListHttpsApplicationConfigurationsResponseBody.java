@@ -52,6 +52,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -102,8 +106,20 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         private Integer totalCount; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListHttpsApplicationConfigurationsResponseBody model) {
+            this.configs = model.configs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * <p>Response body configuration.</p>
+         * <p>Response body configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +127,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>Current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +138,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -144,7 +160,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>Total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -155,7 +171,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages.</p>
+         * <p>Total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -395,11 +411,34 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             private Integer sequence; 
             private Integer siteVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.altSvc = model.altSvc;
+                this.altSvcClear = model.altSvcClear;
+                this.altSvcMa = model.altSvcMa;
+                this.altSvcPersist = model.altSvcPersist;
+                this.configId = model.configId;
+                this.configType = model.configType;
+                this.hsts = model.hsts;
+                this.hstsIncludeSubdomains = model.hstsIncludeSubdomains;
+                this.hstsMaxAge = model.hstsMaxAge;
+                this.hstsPreload = model.hstsPreload;
+                this.httpsForce = model.httpsForce;
+                this.httpsForceCode = model.httpsForceCode;
+                this.rule = model.rule;
+                this.ruleEnable = model.ruleEnable;
+                this.ruleName = model.ruleName;
+                this.sequence = model.sequence;
+                this.siteVersion = model.siteVersion;
+            } 
+
             /**
-             * <p>Alt-Svc feature switch, default is disabled. Values:</p>
+             * <p>Alt-Svc feature switch, default is off. Value range: </p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled. </li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -411,7 +450,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</p>
+             * <p>Whether the Alt-Svc header includes the clear parameter, default is off. Values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -426,7 +465,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective duration of Alt-Svc, in seconds. The default is 86400 seconds.</p>
+             * <p>The validity period of Alt-Svc in seconds, default is 86400 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -437,7 +476,11 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the Alt-Svc header contains the persist parameter, default is off. Values: - on: enabled. - off: disabled.</p>
+             * <p>Whether the Alt-Svc header includes the persist parameter, default is off. Values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -459,10 +502,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+             * <p>Configuration type, which can be used to query global or rule-based configurations. Possible values:</p>
              * <ul>
              * <li>global: Query global configuration.</li>
-             * <li>rule: Query rule configuration.</li>
+             * <li>rule: Query rule-based configuration.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -474,7 +517,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HSTS is enabled. The default is off. Possible values:</p>
+             * <p>Whether HSTS is enabled, default is off. Value range:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -489,10 +532,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to include subdomains in HSTS. The default is off. Possible values:</p>
+             * <p>Whether to include subdomains in HSTS, default is off. Value range:</p>
              * <ul>
-             * <li>on: Include subdomains.</li>
-             * <li>off: Do not include subdomains.</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,7 +547,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of HSTS, in seconds.</p>
+             * <p>The expiration time of HSTS in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -515,7 +558,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HSTS preloading is enabled. The default is off. Possible values:</p>
+             * <p>Whether HSTS preloading is enabled, default is off. Value range:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -530,7 +573,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable forced HTTPS, default is disabled. Values:</p>
+             * <p>Whether to enable forced HTTPS, default is disabled. Possible values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -545,7 +588,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Forced HTTPS redirect status code, value range:</p>
+             * <p>Forced HTTPS redirect status code. Possible values:</p>
              * <ul>
              * <li>301</li>
              * <li>302</li>
@@ -562,7 +605,11 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule content.</p>
+             * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+             * <ul>
+             * <li>Match all incoming requests: Set the value to true.</li>
+             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -573,7 +620,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule switch. Values:</p>
+             * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -588,7 +635,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule name.</p>
+             * <p>Rule name. This parameter is not required when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -599,7 +646,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule execution sequence.</p>
+             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -610,7 +657,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site version number.</p>
+             * <p>Site configuration version number. For sites with version management enabled, this parameter can specify the site version for which the configuration is effective, default is version 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -36,6 +36,10 @@ public class GetRoutineStagingEnvIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return IPV4
      */
@@ -53,6 +57,14 @@ public class GetRoutineStagingEnvIpResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> IPV4; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRoutineStagingEnvIpResponseBody model) {
+            this.IPV4 = model.IPV4;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IPv4 addresses.</p>

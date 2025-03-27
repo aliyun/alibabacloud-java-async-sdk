@@ -48,6 +48,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -89,6 +93,17 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDDoSBpsListResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.dataModule = model.dataModule;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The interval between each piece of data, in seconds.</p>
@@ -253,6 +268,19 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             private String timeStamp; 
             private Long totalBps; 
             private Long totalPps; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.attackBps = model.attackBps;
+                this.attackPps = model.attackPps;
+                this.normalBps = model.normalBps;
+                this.normalPps = model.normalPps;
+                this.timeStamp = model.timeStamp;
+                this.totalBps = model.totalBps;
+                this.totalPps = model.totalPps;
+            } 
 
             /**
              * <p>Attack bandwidth, in bps.</p>

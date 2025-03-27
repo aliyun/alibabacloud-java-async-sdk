@@ -80,7 +80,7 @@ public class PurchaseRatePlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,7 +195,7 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * <p>Automatic payment.</p>
+         * <p>Specifies whether to enable auto payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,10 +223,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * <p>Billing type</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PREPAY: Prepaid.</li>
-         * <li>POSTPAY: Postpaid.</li>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,11 +239,11 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * <p>Acceleration area:</p>
+         * <p>The service location. Valid values:</p>
          * <ul>
-         * <li>domestic: Mainland China only.</li>
-         * <li>global: Worldwide.</li>
-         * <li>overseas: Global (excluding Mainland China).</li>
+         * <li>domestic: the Chinese mainland.</li>
+         * <li>global: global.</li>
+         * <li>overseas: outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,10 +304,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * <p>Site access type:</p>
+         * <p>The DNS setup option for the website. Valid values:</p>
          * <ul>
-         * <li>NS: NS access.</li>
-         * <li>CNAME: CNAME access.</li>
+         * <li>NS</li>
+         * <li>CNAME</li>
          * </ul>
          * 
          * <strong>example:</strong>

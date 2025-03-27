@@ -40,6 +40,10 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quota
      */
@@ -65,6 +69,15 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         private String quota; 
         private String requestId; 
         private String usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPurgeQuotaResponseBody model) {
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+            this.usage = model.usage;
+        } 
 
         /**
          * <p>The total quota.</p>

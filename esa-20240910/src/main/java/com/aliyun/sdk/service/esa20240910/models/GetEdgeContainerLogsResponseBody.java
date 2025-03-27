@@ -36,6 +36,10 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEdgeContainerLogsResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The logs.</p>

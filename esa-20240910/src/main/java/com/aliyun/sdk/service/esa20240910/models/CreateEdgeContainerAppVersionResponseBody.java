@@ -36,6 +36,10 @@ public class CreateEdgeContainerAppVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateEdgeContainerAppVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String versionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEdgeContainerAppVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.versionId = model.versionId;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -52,6 +52,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceInfo
      */
@@ -101,6 +105,18 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserRatePlanInstancesResponseBody model) {
+            this.instanceInfo = model.instanceInfo;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * <p>The queried plans.</p>
@@ -226,6 +242,15 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             private Long siteId; 
             private String siteName; 
             private String siteStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sites model) {
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.siteStatus = model.siteStatus;
+            } 
 
             /**
              * <p>The website ID.</p>
@@ -592,6 +617,37 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             private String staticRequest; 
             private String status; 
             private String subscribeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceInfo model) {
+                this.billingMode = model.billingMode;
+                this.botInstanceLevel = model.botInstanceLevel;
+                this.botRequest = model.botRequest;
+                this.coverages = model.coverages;
+                this.createTime = model.createTime;
+                this.crossborderTraffic = model.crossborderTraffic;
+                this.ddosBurstableDomesticProtection = model.ddosBurstableDomesticProtection;
+                this.ddosBurstableOverseasProtection = model.ddosBurstableOverseasProtection;
+                this.ddosInstanceLevel = model.ddosInstanceLevel;
+                this.duration = model.duration;
+                this.edgeRoutineRquest = model.edgeRoutineRquest;
+                this.edgeWafRequest = model.edgeWafRequest;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.layer4Traffic = model.layer4Traffic;
+                this.layer4TrafficIntl = model.layer4TrafficIntl;
+                this.planName = model.planName;
+                this.planTraffic = model.planTraffic;
+                this.planType = model.planType;
+                this.siteQuota = model.siteQuota;
+                this.sites = model.sites;
+                this.smartRoutingRequest = model.smartRoutingRequest;
+                this.staticRequest = model.staticRequest;
+                this.status = model.status;
+                this.subscribeType = model.subscribeType;
+            } 
 
             /**
              * <p>The billing method. Valid values:</p>

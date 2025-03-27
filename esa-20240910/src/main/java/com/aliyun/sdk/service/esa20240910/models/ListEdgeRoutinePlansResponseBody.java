@@ -52,6 +52,10 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEdgeRoutinePlansResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.planInfo = model.planInfo;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -262,6 +278,18 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
             private String erRoutineRouteSiteCountQuota; 
             private String paymentMethod; 
             private String planName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlanInfo model) {
+                this.billingMode = model.billingMode;
+                this.erRoutineCodeVersionQuota = model.erRoutineCodeVersionQuota;
+                this.erRoutineQuota = model.erRoutineQuota;
+                this.erRoutineRouteSiteCountQuota = model.erRoutineRouteSiteCountQuota;
+                this.paymentMethod = model.paymentMethod;
+                this.planName = model.planName;
+            } 
 
             /**
              * <p>The billing method. Valid values:</p>

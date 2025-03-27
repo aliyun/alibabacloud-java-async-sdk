@@ -44,7 +44,7 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,10 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2852396.html">ListEdgeContainerApps</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-88068867578379****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -96,7 +99,10 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The log path of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/hello.log</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -105,7 +111,10 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         }
 
         /**
-         * Stdout.
+         * <p>Specifies whether to collect the standard output of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stdout(Boolean stdout) {
             this.putQueryParameter("Stdout", stdout);

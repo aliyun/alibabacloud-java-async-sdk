@@ -36,6 +36,10 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fields
      */
@@ -54,8 +58,16 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         private java.util.List<Fields> fields; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchGetExpressionFieldsResponseBody model) {
+            this.fields = model.fields;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The fields that match the regular expressions.</p>
+         * <p>List of match fields.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
@@ -63,7 +75,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -123,8 +135,16 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
             private java.util.List<String> fields; 
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.fields = model.fields;
+                this.id = model.id;
+            } 
+
             /**
-             * <p>The fields that match the regular expression.</p>
+             * <p>List of match fields for a single expression.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -132,7 +152,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the regular expression, which corresponds to the expression ID in the request parameter.</p>
+             * <p>ID of the expression, corresponding to the ID in the input parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

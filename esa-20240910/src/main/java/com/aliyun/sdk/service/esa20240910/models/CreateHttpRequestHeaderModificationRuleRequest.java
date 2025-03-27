@@ -35,6 +35,10 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -49,6 +53,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
     }
@@ -61,7 +66,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,6 +100,13 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -113,6 +125,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private Integer siteVersion; 
 
@@ -126,6 +139,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
@@ -142,7 +156,11 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>To match all incoming requests: Set the value to true</li>
+         * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -154,7 +172,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -170,7 +188,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -178,6 +196,15 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 
@@ -195,7 +222,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Version number of the site configuration. For sites with version management enabled, this parameter specifies the version to apply the configuration to, defaulting to version 0.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -271,6 +298,15 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
             private String operation; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestHeaderModification model) {
+                this.name = model.name;
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Request header name.</p>
              * <p>This parameter is required.</p>
@@ -287,7 +323,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
              * <p>Operation type. Possible values:</p>
              * <ul>
              * <li>add: Add.</li>
-             * <li>del: Delete.</li>
+             * <li>del: Delete</li>
              * <li>modify: Modify.</li>
              * </ul>
              * <p>This parameter is required.</p>

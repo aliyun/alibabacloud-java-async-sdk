@@ -40,6 +40,10 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -65,6 +69,15 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         private java.util.List<Jobs> jobs; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScheduledPreloadJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of the prefetch tasks.</p>
@@ -121,6 +134,9 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
+        @com.aliyun.core.annotation.NameInMap("ExecutionCount")
+        private Integer executionCount;
+
         @com.aliyun.core.annotation.NameInMap("FailedFileOss")
         private String failedFileOss;
 
@@ -156,6 +172,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.domains = builder.domains;
             this.errorInfo = builder.errorInfo;
+            this.executionCount = builder.executionCount;
             this.failedFileOss = builder.failedFileOss;
             this.fileId = builder.fileId;
             this.id = builder.id;
@@ -202,6 +219,13 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
          */
         public String getErrorInfo() {
             return this.errorInfo;
+        }
+
+        /**
+         * @return executionCount
+         */
+        public Integer getExecutionCount() {
+            return this.executionCount;
         }
 
         /**
@@ -279,6 +303,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
             private String createdAt; 
             private String domains; 
             private String errorInfo; 
+            private Integer executionCount; 
             private String failedFileOss; 
             private String fileId; 
             private String id; 
@@ -289,6 +314,27 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
             private String taskType; 
             private Integer urlCount; 
             private Integer urlSubmitted; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.aliUid = model.aliUid;
+                this.createdAt = model.createdAt;
+                this.domains = model.domains;
+                this.errorInfo = model.errorInfo;
+                this.executionCount = model.executionCount;
+                this.failedFileOss = model.failedFileOss;
+                this.fileId = model.fileId;
+                this.id = model.id;
+                this.insertWay = model.insertWay;
+                this.name = model.name;
+                this.siteId = model.siteId;
+                this.taskSubmitted = model.taskSubmitted;
+                this.taskType = model.taskType;
+                this.urlCount = model.urlCount;
+                this.urlSubmitted = model.urlSubmitted;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -331,6 +377,14 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
+                return this;
+            }
+
+            /**
+             * ExecutionCount.
+             */
+            public Builder executionCount(Integer executionCount) {
+                this.executionCount = executionCount;
                 return this;
             }
 

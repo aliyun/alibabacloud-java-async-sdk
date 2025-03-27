@@ -70,6 +70,10 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -93,6 +97,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
     }
@@ -105,7 +110,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,6 +207,13 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -229,6 +241,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private Integer siteVersion; 
 
@@ -251,12 +264,13 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
 
         /**
-         * <p>Alt-Svc feature switch. Default is disabled. Possible values:</p>
+         * <p>Alt-Svc feature switch, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -272,7 +286,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether the Alt-Svc header includes the clear parameter. Default is disabled. Possible values:</p>
+         * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -288,7 +302,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Validity period of Alt-Svc in seconds. The default is 86400 seconds.</p>
+         * <p>Alt-Svc validity period in seconds, default is 86400 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -300,7 +314,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether the Alt-Svc header includes the persist parameter. Default is disabled. Possible values:</p>
+         * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -316,7 +330,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HSTS. Default is disabled. Possible values:</p>
+         * <p>Whether to enable HSTS, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -332,7 +346,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to include subdomains in HSTS. Default is disabled. Possible values:</p>
+         * <p>Whether to include subdomains in HSTS, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -360,7 +374,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HSTS preloading. Default is disabled. Possible values:</p>
+         * <p>Whether to enable HSTS preload, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -376,7 +390,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable forced HTTPS. Default is disabled. Possible values:</p>
+         * <p>Whether to enable forced HTTPS, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -392,7 +406,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Status code for forced HTTPS redirection. Possible values:</p>
+         * <p>Forced HTTPS redirect status code. Possible values:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -410,7 +424,11 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -422,7 +440,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -438,7 +456,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -446,6 +464,15 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 
@@ -463,7 +490,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site for which the configuration will take effect. The default is version 0.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

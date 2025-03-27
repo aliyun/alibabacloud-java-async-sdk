@@ -36,6 +36,10 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Sites> sites; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListWafUsageOfRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.sites = model.sites;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -66,7 +78,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The usage details of WAF rules of the website.</p>
+         * <p>List of site usage.</p>
          */
         public Builder sites(java.util.List<Sites> sites) {
             this.sites = sites;
@@ -135,8 +147,17 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
             private String name; 
             private Long usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sites model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.usage = model.usage;
+            } 
+
             /**
-             * <p>The website ID.</p>
+             * <p>Site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -147,7 +168,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>Site name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -158,7 +179,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of WAF rules or WAF rulesets.</p>
+             * <p>Usage of WAF rules/WAF rule sets.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

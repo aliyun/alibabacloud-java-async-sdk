@@ -39,7 +39,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>Page number, used to specify the page number for pagination queries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Page size, used to specify the number of items per page for pagination queries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

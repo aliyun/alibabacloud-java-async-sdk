@@ -36,6 +36,10 @@ public class CreateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class CreateListResponseBody extends TeaModel {
     public static final class Builder {
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateListResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>

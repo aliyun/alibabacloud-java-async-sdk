@@ -32,6 +32,10 @@ public class HttpDeliveryQueryParamValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return staticValue
      */
@@ -41,6 +45,13 @@ public class HttpDeliveryQueryParamValue extends TeaModel {
 
     public static final class Builder {
         private String staticValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(HttpDeliveryQueryParamValue model) {
+            this.staticValue = model.staticValue;
+        } 
 
         /**
          * <p>The static variable.</p>

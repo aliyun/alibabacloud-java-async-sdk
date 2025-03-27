@@ -48,6 +48,10 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePurgeTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -251,6 +266,19 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.process = model.process;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The purged content.</p>

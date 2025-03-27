@@ -48,6 +48,10 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
         private java.util.List<Records> records; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEdgeRoutineRecordsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The total number of pages returned.</p>
@@ -239,6 +254,18 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
             private Long siteId; 
             private String siteName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.createTime = model.createTime;
+                this.recordCname = model.recordCname;
+                this.recordName = model.recordName;
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

@@ -43,6 +43,10 @@ public class UpdateNetworkOptimizationRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -67,6 +71,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.smartRouting = builder.smartRouting;
         this.uploadMaxFilesize = builder.uploadMaxFilesize;
@@ -81,7 +86,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,6 +134,13 @@ public class UpdateNetworkOptimizationRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -163,6 +175,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private String smartRouting; 
         private String uploadMaxFilesize; 
@@ -180,6 +193,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.smartRouting = request.smartRouting;
             this.uploadMaxFilesize = request.uploadMaxFilesize;
@@ -200,7 +214,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable GRPC, default is disabled. Value range:</p>
+         * <p>Whether to enable GRPC, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enable</li>
          * <li>off: Disable</li>
@@ -216,7 +230,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTP2 origin, default is disabled. Value range:</p>
+         * <p>Whether to enable HTTP2 origin, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enable</li>
          * <li>off: Disable</li>
@@ -232,7 +246,11 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -244,10 +262,10 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li>on: Enable</li>
-         * <li>off: Disable</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +278,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -272,7 +290,16 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
+            return this;
+        }
+
+        /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +312,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable smart routing service, default is disabled. Value range:</p>
+         * <p>Whether to enable the smart routing service, default is disabled. Possible values:</p>
          * <ul>
          * <li>on: Enable</li>
          * <li>off: Disable</li>
@@ -301,7 +328,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Maximum upload file size, in MB, value range: 100～500.</p>
+         * <p>Maximum upload file size, in MB, with a range of 100 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -313,7 +340,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable Websocket, default is enabled. Value range:</p>
+         * <p>Whether to enable Websocket, default is enabled. Possible values:</p>
          * <ul>
          * <li>on: Enable</li>
          * <li>off: Disable</li>

@@ -35,6 +35,10 @@ public class CreateRedirectRuleRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -64,6 +68,7 @@ public class CreateRedirectRuleRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
         this.statusCode = builder.statusCode;
@@ -79,7 +84,7 @@ public class CreateRedirectRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,6 +115,13 @@ public class CreateRedirectRuleRequest extends Request {
      */
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     /**
@@ -152,6 +164,7 @@ public class CreateRedirectRuleRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private Integer siteVersion; 
         private String statusCode; 
@@ -168,6 +181,7 @@ public class CreateRedirectRuleRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
             this.statusCode = request.statusCode;
@@ -176,10 +190,10 @@ public class CreateRedirectRuleRequest extends Request {
         } 
 
         /**
-         * <p>Whether to preserve the query string. Allowed values:</p>
+         * <p>Preserve query string. Value range:</p>
          * <ul>
-         * <li>on: Preserve.</li>
-         * <li>off: Do not preserve.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -193,7 +207,11 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The content of the rule.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>To match all incoming requests: Set the value to true</li>
+         * <li>To match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -205,7 +223,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The switch for the rule. Allowed values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -221,7 +239,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -233,7 +251,16 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
+            return this;
+        }
+
+        /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +273,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0. vvvv</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site for which the configuration will take effect. The default is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -258,7 +285,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code used by the node when responding to the client with the redirect address. Allowed values:</p>
+         * <p>Response status code used by the node to respond to the client with the redirect address. Value range:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -278,7 +305,7 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The target URL after redirection.</p>
+         * <p>Target URL after redirection.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,9 +318,10 @@ public class CreateRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of redirection. Allowed values:</p>
+         * <p>Redirect type. Value range:</p>
          * <ul>
          * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

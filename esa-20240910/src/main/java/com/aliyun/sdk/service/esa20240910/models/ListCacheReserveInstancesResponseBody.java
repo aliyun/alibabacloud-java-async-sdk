@@ -52,6 +52,10 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceInfo
      */
@@ -102,8 +106,20 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCacheReserveInstancesResponseBody model) {
+            this.instanceInfo = model.instanceInfo;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * <p>List of cache reserve instances.</p>
+         * <p>The cache reserve instances.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -287,6 +303,20 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceInfo model) {
+                this.cacheReserveCapacity = model.cacheReserveCapacity;
+                this.cacheReserveRegion = model.cacheReserveRegion;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.duration = model.duration;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Cache reserve capacity. Unit: GB.</p>
              * 
@@ -362,12 +392,12 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance status. Values:</p>
+             * <p>The status of the cache reserve instance. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: Normal service status.</li>
-             * <li><strong>offline</strong>: Expired but not overdue, in an unavailable state.</li>
-             * <li><strong>disable</strong>: Released status.</li>
-             * <li><strong>overdue</strong>: Overdue and suspended status.</li>
+             * <li><strong>online</strong>: The instance is in service.</li>
+             * <li><strong>offline</strong>: The instance has expired within an allowable period. In this state, it is unavailable.</li>
+             * <li><strong>disable</strong>: The instance has been released.</li>
+             * <li><strong>overdue</strong>: The instance has been stopped due to overdue payments.</li>
              * </ul>
              * 
              * <strong>example:</strong>

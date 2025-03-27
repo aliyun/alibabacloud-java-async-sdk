@@ -36,6 +36,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return originStatus
      */
@@ -53,6 +57,14 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<OriginStatus> originStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLoadBalancerOriginStatusResponseBody model) {
+            this.originStatus = model.originStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of origin statuses under the load balancer.</p>
@@ -170,6 +182,18 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             private String poolType; 
             private String reason; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginStatus model) {
+                this.loadBalancerId = model.loadBalancerId;
+                this.originId = model.originId;
+                this.poolId = model.poolId;
+                this.poolType = model.poolType;
+                this.reason = model.reason;
+                this.status = model.status;
+            } 
 
             /**
              * <p>ID of the load balancer.</p>

@@ -36,6 +36,10 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Specs> specs; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRoutineOptionalSpecsResponseBody model) {
+            this.requestId = model.requestId;
+            this.specs = model.specs;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isAvailable; 
             private String specName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Specs model) {
+                this.isAvailable = model.isAvailable;
+                this.specName = model.specName;
+            } 
 
             /**
              * <p>Indicates whether the specification is available. Valid values:</p>

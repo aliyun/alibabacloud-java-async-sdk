@@ -32,6 +32,10 @@ public class DeactivateVersionManagementResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class DeactivateVersionManagementResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeactivateVersionManagementResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>

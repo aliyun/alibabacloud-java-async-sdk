@@ -34,6 +34,10 @@ public class CreateImageTransformRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -48,6 +52,7 @@ public class CreateImageTransformRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
     }
@@ -60,7 +65,7 @@ public class CreateImageTransformRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,6 +99,13 @@ public class CreateImageTransformRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -112,6 +124,7 @@ public class CreateImageTransformRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private Integer siteVersion; 
 
@@ -125,6 +138,7 @@ public class CreateImageTransformRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
@@ -146,7 +160,11 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule content, specifically the strategy or condition expression being implemented.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>To match all incoming requests: Set the value to true</li>
+         * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
@@ -158,10 +176,10 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +192,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -182,6 +200,15 @@ public class CreateImageTransformRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 

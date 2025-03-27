@@ -36,6 +36,10 @@ public class GetSiteCurrentNSResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return NSList
      */
@@ -53,6 +57,14 @@ public class GetSiteCurrentNSResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> NSList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSiteCurrentNSResponseBody model) {
+            this.NSList = model.NSList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The nameservers of the website.</p>

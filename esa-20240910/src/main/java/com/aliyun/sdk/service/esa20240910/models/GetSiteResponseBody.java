@@ -36,6 +36,10 @@ public class GetSiteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSiteResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SiteModel siteModel; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSiteResponseBody model) {
+            this.requestId = model.requestId;
+            this.siteModel = model.siteModel;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -314,6 +326,30 @@ public class GetSiteResponseBody extends TeaModel {
             private java.util.Map<String, String> vanityNSList; 
             private String verifyCode; 
             private Boolean versionManagement; 
+
+            private Builder() {
+            } 
+
+            private Builder(SiteModel model) {
+                this.accessType = model.accessType;
+                this.cnameZone = model.cnameZone;
+                this.coverage = model.coverage;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.nameServerList = model.nameServerList;
+                this.offlineReason = model.offlineReason;
+                this.planName = model.planName;
+                this.planSpecName = model.planSpecName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+                this.vanityNSList = model.vanityNSList;
+                this.verifyCode = model.verifyCode;
+                this.versionManagement = model.versionManagement;
+            } 
 
             /**
              * <p>The DNS setup option for the website. Valid values:</p>

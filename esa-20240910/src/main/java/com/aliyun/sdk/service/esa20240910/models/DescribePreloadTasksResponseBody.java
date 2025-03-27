@@ -48,6 +48,10 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePreloadTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -239,6 +254,18 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             private String process; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.process = model.process;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The prefetched content.</p>

@@ -76,6 +76,10 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessType
      */
@@ -173,6 +177,24 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
         private String siteName; 
         private String status; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSiteDeliveryTaskResponseBody model) {
+            this.businessType = model.businessType;
+            this.dataCenter = model.dataCenter;
+            this.deliveryType = model.deliveryType;
+            this.discardRate = model.discardRate;
+            this.fieldList = model.fieldList;
+            this.filterRules = model.filterRules;
+            this.requestId = model.requestId;
+            this.sinkConfig = model.sinkConfig;
+            this.siteId = model.siteId;
+            this.siteName = model.siteName;
+            this.status = model.status;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The log category. Valid values:</p>

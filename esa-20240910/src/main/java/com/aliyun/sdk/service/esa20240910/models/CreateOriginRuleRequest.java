@@ -54,6 +54,10 @@ public class CreateOriginRuleRequest extends Request {
     private String range;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RangeChunkSize")
+    private String rangeChunkSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rule")
     private String rule;
 
@@ -64,6 +68,10 @@ public class CreateOriginRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
@@ -85,9 +93,11 @@ public class CreateOriginRuleRequest extends Request {
         this.originSni = builder.originSni;
         this.originVerify = builder.originVerify;
         this.range = builder.range;
+        this.rangeChunkSize = builder.rangeChunkSize;
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
     }
@@ -100,7 +110,7 @@ public class CreateOriginRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +179,13 @@ public class CreateOriginRuleRequest extends Request {
     }
 
     /**
+     * @return rangeChunkSize
+     */
+    public String getRangeChunkSize() {
+        return this.rangeChunkSize;
+    }
+
+    /**
      * @return rule
      */
     public String getRule() {
@@ -187,6 +204,13 @@ public class CreateOriginRuleRequest extends Request {
      */
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     /**
@@ -213,9 +237,11 @@ public class CreateOriginRuleRequest extends Request {
         private String originSni; 
         private String originVerify; 
         private String range; 
+        private String rangeChunkSize; 
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private Integer siteVersion; 
 
@@ -234,9 +260,11 @@ public class CreateOriginRuleRequest extends Request {
             this.originSni = request.originSni;
             this.originVerify = request.originVerify;
             this.range = request.range;
+            this.rangeChunkSize = request.rangeChunkSize;
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
@@ -290,7 +318,14 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginMtls.
+         * <p>mTLS switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originMtls(String originMtls) {
             this.putQueryParameter("OriginMtls", originMtls);
@@ -316,7 +351,7 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>The SNI carried in the origin request.</p>
+         * <p>SNI carried in the origin request.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -328,7 +363,14 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginVerify.
+         * <p>Origin certificate verification switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originVerify(String originVerify) {
             this.putQueryParameter("OriginVerify", originVerify);
@@ -337,7 +379,7 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Use range chunking for downloading files from the origin. Possible values:</p>
+         * <p>Use range chunking for origin downloads. Possible values:</p>
          * <ul>
          * <li>on: Enable</li>
          * <li>off: Disable</li>
@@ -354,7 +396,20 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * RangeChunkSize.
+         */
+        public Builder rangeChunkSize(String rangeChunkSize) {
+            this.putQueryParameter("RangeChunkSize", rangeChunkSize);
+            this.rangeChunkSize = rangeChunkSize;
+            return this;
+        }
+
+        /**
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configurations. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -366,7 +421,7 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding global configurations. Possible values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -382,7 +437,7 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding global configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -390,6 +445,15 @@ public class CreateOriginRuleRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 

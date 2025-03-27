@@ -60,7 +60,7 @@ public class ListHttpsBasicConfigurationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -147,7 +147,7 @@ public class ListHttpsBasicConfigurationsRequest extends Request {
          * <li>global: Query global configuration.</li>
          * <li>rule: Query rule configuration.</li>
          * </ul>
-         * <p>This parameter is optional; if not provided, it will not distinguish between global and rule configurations.</p>
+         * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>

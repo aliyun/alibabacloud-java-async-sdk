@@ -36,6 +36,10 @@ public class ListRoutineCanaryAreasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canaryAreas
      */
@@ -53,6 +57,14 @@ public class ListRoutineCanaryAreasResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> canaryAreas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRoutineCanaryAreasResponseBody model) {
+            this.canaryAreas = model.canaryAreas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The regions for canary release.</p>

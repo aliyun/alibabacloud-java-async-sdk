@@ -44,6 +44,10 @@ public class ListCiphersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ciphersGroup
      */
@@ -77,6 +81,16 @@ public class ListCiphersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> result; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCiphersResponseBody model) {
+            this.ciphersGroup = model.ciphersGroup;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Name of the cipher suite group.</p>

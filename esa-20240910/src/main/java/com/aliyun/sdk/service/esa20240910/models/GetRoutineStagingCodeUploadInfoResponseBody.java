@@ -40,6 +40,10 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codeVersion
      */
@@ -65,6 +69,15 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
         private String codeVersion; 
         private java.util.Map<String, ?> ossPostConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRoutineStagingCodeUploadInfoResponseBody model) {
+            this.codeVersion = model.codeVersion;
+            this.ossPostConfig = model.ossPostConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The code version.</p>

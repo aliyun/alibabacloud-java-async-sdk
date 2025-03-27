@@ -48,6 +48,10 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -89,6 +93,17 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
         private String namespaceId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateKvNamespaceResponseBody model) {
+            this.description = model.description;
+            this.namespace = model.namespace;
+            this.namespaceId = model.namespaceId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The description of the namespace.</p>

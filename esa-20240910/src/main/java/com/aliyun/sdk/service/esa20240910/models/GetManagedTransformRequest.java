@@ -40,7 +40,7 @@ public class GetManagedTransformRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class GetManagedTransformRequest extends Request {
         } 
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The version number of the website. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

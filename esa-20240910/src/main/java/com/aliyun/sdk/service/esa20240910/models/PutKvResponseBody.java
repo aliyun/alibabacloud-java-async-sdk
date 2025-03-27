@@ -40,6 +40,10 @@ public class PutKvResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return length
      */
@@ -65,6 +69,15 @@ public class PutKvResponseBody extends TeaModel {
         private String length; 
         private String requestId; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(PutKvResponseBody model) {
+            this.length = model.length;
+            this.requestId = model.requestId;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The length of the value in the key-value pair.</p>

@@ -40,6 +40,10 @@ public class UpdateUserDeliveryTaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class UpdateUserDeliveryTaskStatusResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserDeliveryTaskStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The request ID.</p>

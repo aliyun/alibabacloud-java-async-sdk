@@ -54,6 +54,10 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -85,6 +89,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
         this.tls10 = builder.tls10;
         this.tls11 = builder.tls11;
@@ -100,7 +105,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +174,13 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -213,6 +225,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
         private String tls10; 
         private String tls11; 
@@ -234,6 +247,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
             this.tls10 = request.tls10;
             this.tls11 = request.tls11;
@@ -254,7 +268,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Cipher suite group. Default is all cipher suites. Possible values:</p>
+         * <p>Cipher suite group. Default uses all cipher suites. Value range:</p>
          * <ul>
          * <li>all: All cipher suites.</li>
          * <li>strict: Strong cipher suites.</li>
@@ -271,7 +285,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTP2. Default is enabled. Possible values:</p>
+         * <p>Whether to enable HTTP2. Default is enabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -287,7 +301,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTP3. Default is enabled. Possible values:</p>
+         * <p>Whether to enable HTTP3. Default is enabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -303,7 +317,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTPS. Default is enabled. Possible values:</p>
+         * <p>Whether to enable HTTPS. Default is enabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -319,7 +333,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable OCSP. Default is disabled. Possible values:</p>
+         * <p>Whether to enable OCSP. Default is disabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -335,7 +349,11 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -347,7 +365,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -363,7 +381,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -371,6 +389,15 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 
@@ -388,7 +415,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.0. Default is disabled. Possible values:</p>
+         * <p>Whether to enable TLS1.0. Default is disabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -404,7 +431,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.1. Default is enabled. Possible values:</p>
+         * <p>Whether to enable TLS1.1. Default is enabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -420,7 +447,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.2. Default is enabled. Possible values:</p>
+         * <p>Whether to enable TLS1.2. Default is enabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -436,7 +463,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.3. Default is enabled. Possible values:</p>
+         * <p>Whether to enable TLS1.3. Default is enabled. Value range:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>

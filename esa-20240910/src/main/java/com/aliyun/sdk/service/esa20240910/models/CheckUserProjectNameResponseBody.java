@@ -44,6 +44,10 @@ public class CheckUserProjectNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return check
      */
@@ -77,6 +81,16 @@ public class CheckUserProjectNameResponseBody extends TeaModel {
         private String description; 
         private String projectName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckUserProjectNameResponseBody model) {
+            this.check = model.check;
+            this.description = model.description;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the name is valid. Valid values:</p>

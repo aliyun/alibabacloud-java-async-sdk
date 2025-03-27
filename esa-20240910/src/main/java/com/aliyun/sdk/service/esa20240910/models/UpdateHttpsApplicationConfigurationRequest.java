@@ -75,6 +75,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -95,6 +99,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
     }
 
@@ -106,7 +111,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -210,6 +215,13 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -231,6 +243,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
 
         private Builder() {
@@ -253,14 +266,15 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
         } 
 
         /**
-         * <p>Feature switch, default is disabled. Values:</p>
+         * <p>Feature switch, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,10 +287,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</p>
+         * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,7 +303,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Alt-Svc validity period in seconds, default is 86400 seconds.</p>
+         * <p>Alt-Svc validity period, in seconds, default is 86400 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -301,10 +315,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Values:</p>
+         * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,10 +344,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HSTS, default is disabled. Values:</p>
+         * <p>Whether to enable HSTS, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,10 +360,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to include subdomains in HSTS, default is disabled. Values:</p>
+         * <p>Whether to include subdomains in HSTS, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -362,7 +376,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>HSTS expiration time in seconds.</p>
+         * <p>HSTS expiration time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -374,10 +388,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HSTS preload, default is disabled. Values:</p>
+         * <p>Whether to enable HSTS preload, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,10 +404,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable forced HTTPS, default is disabled. Values:</p>
+         * <p>Whether to enable forced HTTPS, default is disabled. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,7 +420,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Forced HTTPS redirect status code. Values:</p>
+         * <p>Forced HTTPS redirect status code, value range:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -424,7 +438,11 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -436,10 +454,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -452,7 +470,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -460,6 +478,15 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
             return this;
         }
 

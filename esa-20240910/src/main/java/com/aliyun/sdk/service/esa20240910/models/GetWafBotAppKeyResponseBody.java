@@ -36,6 +36,10 @@ public class GetWafBotAppKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appKey
      */
@@ -53,6 +57,14 @@ public class GetWafBotAppKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String appKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWafBotAppKeyResponseBody model) {
+            this.appKey = model.appKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Application key.</p>

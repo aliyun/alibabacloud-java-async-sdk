@@ -65,7 +65,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,9 +159,9 @@ public class ListNetworkOptimizationsRequest extends Request {
          * <p>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</p>
          * <ul>
          * <li>global: Query global configuration.</li>
-         * <li>rule: Query rule configuration.</li>
+         * <li>rule: Query rule-based configuration.</li>
          * </ul>
-         * <p>This parameter is optional. If not provided, it will not distinguish between global and rule configurations.</p>
+         * <p>This parameter is optional; if not provided, it does not distinguish between global and rule-based configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>

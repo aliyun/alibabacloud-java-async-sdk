@@ -64,6 +64,10 @@ public class GetPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -129,6 +133,20 @@ public class GetPageResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPageResponseBody model) {
+            this.content = model.content;
+            this.contentType = model.contentType;
+            this.description = model.description;
+            this.id = model.id;
+            this.kind = model.kind;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>

@@ -36,6 +36,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -54,8 +58,16 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private Long id; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateLoadBalancerResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Load Balancer ID.</p>
+         * <p>Load balancer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>99867648760****</p>

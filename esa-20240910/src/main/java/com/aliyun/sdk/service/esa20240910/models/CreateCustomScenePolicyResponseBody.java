@@ -56,6 +56,10 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -113,6 +117,19 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private String template; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCustomScenePolicyResponseBody model) {
+            this.endTime = model.endTime;
+            this.name = model.name;
+            this.objects = model.objects;
+            this.policyId = model.policyId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The time when the policy expires.</p>

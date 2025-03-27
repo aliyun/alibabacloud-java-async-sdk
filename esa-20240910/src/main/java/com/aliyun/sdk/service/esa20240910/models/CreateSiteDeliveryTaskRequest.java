@@ -95,7 +95,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -439,6 +439,15 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String privateKey; 
             private String urlPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(StandardAuthParam model) {
+                this.expiredTime = model.expiredTime;
+                this.privateKey = model.privateKey;
+                this.urlPath = model.urlPath;
+            } 
+
             /**
              * <p>The validity period of the signature.</p>
              * <blockquote>
@@ -645,6 +654,24 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private Boolean standardAuthOn; 
             private StandardAuthParam standardAuthParam; 
             private Long transformTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpDelivery model) {
+                this.compress = model.compress;
+                this.destUrl = model.destUrl;
+                this.headerParam = model.headerParam;
+                this.logBodyPrefix = model.logBodyPrefix;
+                this.logBodySuffix = model.logBodySuffix;
+                this.maxBatchMB = model.maxBatchMB;
+                this.maxBatchSize = model.maxBatchSize;
+                this.maxRetry = model.maxRetry;
+                this.queryParam = model.queryParam;
+                this.standardAuthOn = model.standardAuthOn;
+                this.standardAuthParam = model.standardAuthParam;
+                this.transformTimeout = model.transformTimeout;
+            } 
 
             /**
              * <p>The compression method. By default, data is not compressed.</p>
@@ -892,6 +919,20 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private Boolean userAuth; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(KafkaDelivery model) {
+                this.balancer = model.balancer;
+                this.brokers = model.brokers;
+                this.compress = model.compress;
+                this.machanismType = model.machanismType;
+                this.password = model.password;
+                this.topic = model.topic;
+                this.userAuth = model.userAuth;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The load balancing method.</p>
              * 
@@ -1051,6 +1092,16 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String bucketName; 
             private String prefixPath; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssDelivery model) {
+                this.aliuid = model.aliuid;
+                this.bucketName = model.bucketName;
+                this.prefixPath = model.prefixPath;
+                this.region = model.region;
+            } 
 
             /**
              * <p>The ID of your Alibaba Cloud account.</p>
@@ -1231,6 +1282,21 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private Boolean serverSideEncryption; 
             private String vertifyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(S3Delivery model) {
+                this.accessKey = model.accessKey;
+                this.bucketPath = model.bucketPath;
+                this.endpoint = model.endpoint;
+                this.prefixPath = model.prefixPath;
+                this.region = model.region;
+                this.s3Cmpt = model.s3Cmpt;
+                this.secretKey = model.secretKey;
+                this.serverSideEncryption = model.serverSideEncryption;
+                this.vertifyType = model.vertifyType;
+            } 
+
             /**
              * <p>The access key ID of your Amazon S3 account.</p>
              * 
@@ -1386,6 +1452,15 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String SLSLogStore; 
             private String SLSProject; 
             private String SLSRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlsDelivery model) {
+                this.SLSLogStore = model.SLSLogStore;
+                this.SLSProject = model.SLSProject;
+                this.SLSRegion = model.SLSRegion;
+            } 
 
             /**
              * <p>The name of the Logstore.</p>

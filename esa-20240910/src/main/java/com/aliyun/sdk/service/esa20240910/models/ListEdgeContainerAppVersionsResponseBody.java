@@ -48,6 +48,10 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<Versions> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEdgeContainerAppVersionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.versions = model.versions;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -299,6 +314,23 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
             private String scheme; 
             private Integer successThreshold; 
             private Integer timeoutSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProbeContent model) {
+                this.command = model.command;
+                this.failureThreshold = model.failureThreshold;
+                this.host = model.host;
+                this.httpHeaders = model.httpHeaders;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.path = model.path;
+                this.periodSeconds = model.periodSeconds;
+                this.port = model.port;
+                this.scheme = model.scheme;
+                this.successThreshold = model.successThreshold;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
 
             /**
              * <p>The probe command.</p>
@@ -568,6 +600,22 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
             private String probeType; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.args = model.args;
+                this.command = model.command;
+                this.envVariables = model.envVariables;
+                this.image = model.image;
+                this.name = model.name;
+                this.postStart = model.postStart;
+                this.preStop = model.preStop;
+                this.probeContent = model.probeContent;
+                this.probeType = model.probeType;
+                this.spec = model.spec;
+            } 
+
             /**
              * <p>The arguments that are passed to the container startup command.</p>
              * 
@@ -822,6 +870,22 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.appId = model.appId;
+                this.containers = model.containers;
+                this.createTime = model.createTime;
+                this.lastPublishTime = model.lastPublishTime;
+                this.name = model.name;
+                this.publishTime = model.publishTime;
+                this.remarks = model.remarks;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The application ID.</p>

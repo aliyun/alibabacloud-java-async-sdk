@@ -44,6 +44,10 @@ public class DeleteClientCaCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -77,6 +81,16 @@ public class DeleteClientCaCertificateResponseBody extends TeaModel {
         private String requestId; 
         private Long siteId; 
         private String siteName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteClientCaCertificateResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+            this.siteName = model.siteName;
+        } 
 
         /**
          * <p>The certificate ID.</p>

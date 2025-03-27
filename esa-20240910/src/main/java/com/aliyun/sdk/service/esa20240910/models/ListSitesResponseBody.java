@@ -48,6 +48,10 @@ public class ListSitesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListSitesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Sites> sites; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSitesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.sites = model.sites;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Page number of the returned data.</p>
@@ -371,6 +386,29 @@ public class ListSitesResponseBody extends TeaModel {
             private String updateTime; 
             private String verifyCode; 
             private String visitTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sites model) {
+                this.accessType = model.accessType;
+                this.cnameZone = model.cnameZone;
+                this.coverage = model.coverage;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.nameServerList = model.nameServerList;
+                this.offlineReason = model.offlineReason;
+                this.planName = model.planName;
+                this.planSpecName = model.planSpecName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+                this.verifyCode = model.verifyCode;
+                this.visitTime = model.visitTime;
+            } 
 
             /**
              * <p>Site access type. Values:</p>

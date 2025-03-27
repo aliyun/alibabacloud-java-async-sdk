@@ -52,6 +52,10 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLoadBalancerRegionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * <p>Page number</p>
@@ -227,6 +243,15 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             private String subRegionCode; 
             private String subRegionEnName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubRegions model) {
+                this.subRegionCnName = model.subRegionCnName;
+                this.subRegionCode = model.subRegionCode;
+                this.subRegionEnName = model.subRegionEnName;
+            } 
+
             /**
              * <p>Secondary region Chinese full name</p>
              * 
@@ -334,6 +359,16 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             private String regionCode; 
             private String regionEnName; 
             private java.util.List<SubRegions> subRegions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionCnName = model.regionCnName;
+                this.regionCode = model.regionCode;
+                this.regionEnName = model.regionEnName;
+                this.subRegions = model.subRegions;
+            } 
 
             /**
              * <p>Primary region Chinese full name</p>

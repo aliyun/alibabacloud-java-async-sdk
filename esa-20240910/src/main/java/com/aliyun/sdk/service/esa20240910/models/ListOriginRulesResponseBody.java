@@ -52,6 +52,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -102,6 +106,18 @@ public class ListOriginRulesResponseBody extends TeaModel {
         private Integer totalCount; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOriginRulesResponseBody model) {
+            this.configs = model.configs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
          * <p>Response body configuration.</p>
          */
@@ -111,7 +127,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>Current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +138,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of each page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -144,7 +160,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>Total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -211,6 +227,9 @@ public class ListOriginRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Range")
         private String range;
 
+        @com.aliyun.core.annotation.NameInMap("RangeChunkSize")
+        private String rangeChunkSize;
+
         @com.aliyun.core.annotation.NameInMap("Rule")
         private String rule;
 
@@ -238,6 +257,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             this.originSni = builder.originSni;
             this.originVerify = builder.originVerify;
             this.range = builder.range;
+            this.rangeChunkSize = builder.rangeChunkSize;
             this.rule = builder.rule;
             this.ruleEnable = builder.ruleEnable;
             this.ruleName = builder.ruleName;
@@ -331,6 +351,13 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return rangeChunkSize
+         */
+        public String getRangeChunkSize() {
+            return this.rangeChunkSize;
+        }
+
+        /**
          * @return rule
          */
         public String getRule() {
@@ -377,11 +404,35 @@ public class ListOriginRulesResponseBody extends TeaModel {
             private String originSni; 
             private String originVerify; 
             private String range; 
+            private String rangeChunkSize; 
             private String rule; 
             private String ruleEnable; 
             private String ruleName; 
             private Integer sequence; 
             private Integer siteVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.configId = model.configId;
+                this.configType = model.configType;
+                this.dnsRecord = model.dnsRecord;
+                this.originHost = model.originHost;
+                this.originHttpPort = model.originHttpPort;
+                this.originHttpsPort = model.originHttpsPort;
+                this.originMtls = model.originMtls;
+                this.originScheme = model.originScheme;
+                this.originSni = model.originSni;
+                this.originVerify = model.originVerify;
+                this.range = model.range;
+                this.rangeChunkSize = model.rangeChunkSize;
+                this.rule = model.rule;
+                this.ruleEnable = model.ruleEnable;
+                this.ruleName = model.ruleName;
+                this.sequence = model.sequence;
+                this.siteVersion = model.siteVersion;
+            } 
 
             /**
              * <p>Configuration ID.</p>
@@ -432,7 +483,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin server port accessed when using the HTTP protocol.</p>
+             * <p>The port of the origin server to access when using the HTTP protocol for origin requests.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -443,7 +494,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin server port to access when using the HTTPS protocol for back-to-origin requests.</p>
+             * <p>The port of the origin server to access when using the HTTPS protocol for origin requests.</p>
              * 
              * <strong>example:</strong>
              * <p>4433</p>
@@ -454,7 +505,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginMtls.
+             * <p>mTLS switch. Value range:</p>
+             * <ul>
+             * <li>on: Enable.</li>
+             * <li>off: Disable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder originMtls(String originMtls) {
                 this.originMtls = originMtls;
@@ -464,9 +522,9 @@ public class ListOriginRulesResponseBody extends TeaModel {
             /**
              * <p>Protocol used for the origin request. Value range:</p>
              * <ul>
-             * <li>http: Use HTTP protocol for origin requests.</li>
-             * <li>https: Use HTTPS protocol for origin requests.</li>
-             * <li>follow: Follow the client&quot;s protocol for origin requests.</li>
+             * <li>http: Use HTTP protocol for origin.</li>
+             * <li>https: Use HTTPS protocol for origin.</li>
+             * <li>follow: Follow the client&quot;s protocol for origin.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -478,7 +536,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SNI carried in the origin request.</p>
+             * <p>SNI carried in the back-to-origin request.</p>
              * 
              * <strong>example:</strong>
              * <p>origin.example.com</p>
@@ -489,7 +547,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginVerify.
+             * <p>Origin certificate verification switch. Value range:</p>
+             * <ul>
+             * <li>on: Enable.</li>
+             * <li>off: Disable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder originVerify(String originVerify) {
                 this.originVerify = originVerify;
@@ -497,11 +562,11 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Use range slicing to download files from the origin. The value range is:</p>
+             * <p>Use range slicing to download files from the origin. Value range:</p>
              * <ul>
-             * <li>on: enabled</li>
-             * <li>off: disabled</li>
-             * <li>force: forced</li>
+             * <li>on: Enable</li>
+             * <li>off: Disable</li>
+             * <li>force: Force</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,7 +578,19 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule content.</p>
+             * RangeChunkSize.
+             */
+            public Builder rangeChunkSize(String rangeChunkSize) {
+                this.rangeChunkSize = rangeChunkSize;
+                return this;
+            }
+
+            /**
+             * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+             * <ul>
+             * <li>Match all incoming requests: Set the value to true</li>
+             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -524,10 +601,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule switch. Value range:</p>
+             * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
              * <ul>
-             * <li>on: Enabled</li>
-             * <li>off: Disabled</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -539,7 +616,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule name.</p>
+             * <p>Rule name. This parameter is not required when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -550,7 +627,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule execution sequence.</p>
+             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -561,7 +638,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site version number.</p>
+             * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version of the site for which the configuration is effective, defaulting to version 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

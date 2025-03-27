@@ -40,6 +40,10 @@ public class DescribeHttpDDoSAttackProtectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return globalMode
      */
@@ -65,6 +69,15 @@ public class DescribeHttpDDoSAttackProtectionResponseBody extends TeaModel {
         private String globalMode; 
         private String requestId; 
         private Long siteId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHttpDDoSAttackProtectionResponseBody model) {
+            this.globalMode = model.globalMode;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+        } 
 
         /**
          * <p>The level of HTTP DDoS attack protection. Valid values:</p>

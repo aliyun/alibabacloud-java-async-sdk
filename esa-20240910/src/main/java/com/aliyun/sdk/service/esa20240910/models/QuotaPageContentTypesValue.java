@@ -36,6 +36,10 @@ public class QuotaPageContentTypesValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -53,6 +57,14 @@ public class QuotaPageContentTypesValue extends TeaModel {
     public static final class Builder {
         private Boolean enable; 
         private WafQuotaInteger contentLength; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuotaPageContentTypesValue model) {
+            this.enable = model.enable;
+            this.contentLength = model.contentLength;
+        } 
 
         /**
          * <p>The switch for the Content-Type type in custom response pages.</p>

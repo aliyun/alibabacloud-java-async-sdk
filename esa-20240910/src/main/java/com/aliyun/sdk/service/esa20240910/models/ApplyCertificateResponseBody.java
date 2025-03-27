@@ -44,6 +44,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class ApplyCertificateResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private String siteName; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyCertificateResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.siteName = model.siteName;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Request ID.</p>
@@ -180,6 +194,15 @@ public class ApplyCertificateResponseBody extends TeaModel {
             private String domain; 
             private String id; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.domain = model.domain;
+                this.id = model.id;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Certificate domain.</p>

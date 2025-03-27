@@ -64,6 +64,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -137,6 +141,21 @@ public class GetOriginPoolResponseBody extends TeaModel {
         private References references; 
         private String requestId; 
         private Long siteId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOriginPoolResponseBody model) {
+            this.enabled = model.enabled;
+            this.id = model.id;
+            this.name = model.name;
+            this.origins = model.origins;
+            this.recordName = model.recordName;
+            this.referenceLBCount = model.referenceLBCount;
+            this.references = model.references;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+        } 
 
         /**
          * <p>Whether the origin pool is enabled:</p>
@@ -321,11 +340,22 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private String secretKey; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The AccessKey required when AuthType is set to private_cross_account or private.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI5tSpj224hDfLmXEx****</p>
+             * <p>yourAccessKeyID</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -364,7 +394,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
              * <p>The SecretKey required when AuthType is set to private_cross_account or private.</p>
              * 
              * <strong>example:</strong>
-             * <p>tzXL8ub4GtjkjZOJhS****</p>
+             * <p>yourAccessKeySecret</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -504,6 +534,20 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Origins model) {
+                this.address = model.address;
+                this.authConf = model.authConf;
+                this.enabled = model.enabled;
+                this.header = model.header;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The address of the origin, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
@@ -654,6 +698,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsRecords model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>Record ID.</p>
              * 
@@ -727,6 +779,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(IPARecords model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>记录ID。</p>
              * 
@@ -799,6 +859,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>ID of the load balancer.</p>
@@ -884,6 +952,15 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private java.util.List<DnsRecords> dnsRecords; 
             private java.util.List<IPARecords> IPARecords; 
             private java.util.List<LoadBalancers> loadBalancers; 
+
+            private Builder() {
+            } 
+
+            private Builder(References model) {
+                this.dnsRecords = model.dnsRecords;
+                this.IPARecords = model.IPARecords;
+                this.loadBalancers = model.loadBalancers;
+            } 
 
             /**
              * <p>List of layer 7 records using this origin pool as the origin.</p>

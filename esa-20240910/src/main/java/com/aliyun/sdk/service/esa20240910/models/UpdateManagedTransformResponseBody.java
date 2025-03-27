@@ -32,6 +32,10 @@ public class UpdateManagedTransformResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class UpdateManagedTransformResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateManagedTransformResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>

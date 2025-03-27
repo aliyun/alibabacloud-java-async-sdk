@@ -40,6 +40,10 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return path
      */
@@ -66,8 +70,20 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
         private String requestId; 
         private Boolean stdout; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateEdgeContainerAppLogRiverResponseBody model) {
+            this.path = model.path;
+            this.requestId = model.requestId;
+            this.stdout = model.stdout;
+        } 
+
         /**
-         * Path.
+         * <p>The log path of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/hello.log</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -75,7 +91,10 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42DE97FA-45D2-5615-9A31-55D9EC0D7563</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +102,10 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
         }
 
         /**
-         * Stdout.
+         * <p>Indicates whether the standard output of the container is collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stdout(Boolean stdout) {
             this.stdout = stdout;

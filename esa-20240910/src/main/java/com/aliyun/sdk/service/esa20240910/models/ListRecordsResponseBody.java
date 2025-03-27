@@ -48,6 +48,10 @@ public class ListRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListRecordsResponseBody extends TeaModel {
         private java.util.List<Records> records; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecordsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number returned.</p>
@@ -227,6 +242,17 @@ public class ListRecordsResponseBody extends TeaModel {
             private String region; 
             private String secretKey; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConf model) {
+                this.accessKey = model.accessKey;
+                this.authType = model.authType;
+                this.region = model.region;
+                this.secretKey = model.secretKey;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_cross_account, or when the SourceType is S3 and AuthType is private.</p>
@@ -488,6 +514,26 @@ public class ListRecordsResponseBody extends TeaModel {
             private Integer usage; 
             private String value; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.certificate = model.certificate;
+                this.fingerprint = model.fingerprint;
+                this.flag = model.flag;
+                this.keyTag = model.keyTag;
+                this.matchingType = model.matchingType;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.selector = model.selector;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.usage = model.usage;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The encryption algorithm used for the record. Valid values: 0 to 255. Exclusive to CERT and SSHFP records.</p>
@@ -871,6 +917,28 @@ public class ListRecordsResponseBody extends TeaModel {
             private String siteName; 
             private Long ttl; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.authConf = model.authConf;
+                this.bizName = model.bizName;
+                this.comment = model.comment;
+                this.createTime = model.createTime;
+                this.data = model.data;
+                this.hostPolicy = model.hostPolicy;
+                this.proxied = model.proxied;
+                this.recordCname = model.recordCname;
+                this.recordId = model.recordId;
+                this.recordName = model.recordName;
+                this.recordSourceType = model.recordSourceType;
+                this.recordType = model.recordType;
+                this.siteId = model.siteId;
+                this.siteName = model.siteName;
+                this.ttl = model.ttl;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The origin authentication information of the CNAME record.</p>

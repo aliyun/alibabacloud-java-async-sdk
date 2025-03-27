@@ -59,6 +59,10 @@ public class UpdateOriginRuleRequest extends Request {
     private String range;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RangeChunkSize")
+    private String rangeChunkSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rule")
     private String rule;
 
@@ -69,6 +73,10 @@ public class UpdateOriginRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
+    private Integer sequence;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
@@ -87,9 +95,11 @@ public class UpdateOriginRuleRequest extends Request {
         this.originSni = builder.originSni;
         this.originVerify = builder.originVerify;
         this.range = builder.range;
+        this.rangeChunkSize = builder.rangeChunkSize;
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
+        this.sequence = builder.sequence;
         this.siteId = builder.siteId;
     }
 
@@ -101,7 +111,7 @@ public class UpdateOriginRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,6 +187,13 @@ public class UpdateOriginRuleRequest extends Request {
     }
 
     /**
+     * @return rangeChunkSize
+     */
+    public String getRangeChunkSize() {
+        return this.rangeChunkSize;
+    }
+
+    /**
      * @return rule
      */
     public String getRule() {
@@ -198,6 +215,13 @@ public class UpdateOriginRuleRequest extends Request {
     }
 
     /**
+     * @return sequence
+     */
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -215,9 +239,11 @@ public class UpdateOriginRuleRequest extends Request {
         private String originSni; 
         private String originVerify; 
         private String range; 
+        private String rangeChunkSize; 
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
+        private Integer sequence; 
         private Long siteId; 
 
         private Builder() {
@@ -236,9 +262,11 @@ public class UpdateOriginRuleRequest extends Request {
             this.originSni = request.originSni;
             this.originVerify = request.originVerify;
             this.range = request.range;
+            this.rangeChunkSize = request.rangeChunkSize;
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
+            this.sequence = request.sequence;
             this.siteId = request.siteId;
         } 
 
@@ -280,7 +308,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>The port of the origin server when using HTTP protocol for origin requests.</p>
+         * <p>Port of the origin server when using HTTP protocol for origin pull.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -292,7 +320,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>The port of the origin server when using HTTPS protocol for origin requests.</p>
+         * <p>Port of the origin server when using HTTPS protocol for origin pull.</p>
          * 
          * <strong>example:</strong>
          * <p>4433</p>
@@ -304,7 +332,14 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginMtls.
+         * <p>mTLS switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originMtls(String originMtls) {
             this.putQueryParameter("OriginMtls", originMtls);
@@ -313,11 +348,11 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Protocol used for the origin request. Possible values:</p>
+         * <p>Protocol used for the origin request. Valid values:</p>
          * <ul>
-         * <li>http: Use HTTP protocol for origin requests.</li>
-         * <li>https: Use HTTPS protocol for origin requests.</li>
-         * <li>follow: Follow the client&quot;s protocol for origin requests.</li>
+         * <li>http: Use HTTP protocol for origin pull.</li>
+         * <li>https: Use HTTPS protocol for origin pull.</li>
+         * <li>follow: Follow the client&quot;s protocol for origin pull.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +365,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>The SNI carried in the origin request.</p>
+         * <p>SNI carried in the origin request.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -342,7 +377,14 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginVerify.
+         * <p>Origin certificate verification switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originVerify(String originVerify) {
             this.putQueryParameter("OriginVerify", originVerify);
@@ -351,7 +393,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Use range chunked transfer to download files from the origin. Possible values:</p>
+         * <p>Use range chunking for origin pull file download. Valid values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -368,7 +410,20 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content.</p>
+         * RangeChunkSize.
+         */
+        public Builder rangeChunkSize(String rangeChunkSize) {
+            this.putQueryParameter("RangeChunkSize", rangeChunkSize);
+            this.rangeChunkSize = rangeChunkSize;
+            return this;
+        }
+
+        /**
+         * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -380,7 +435,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -396,7 +451,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -408,7 +463,16 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * Sequence.
+         */
+        public Builder sequence(Integer sequence) {
+            this.putQueryParameter("Sequence", sequence);
+            this.sequence = sequence;
+            return this;
+        }
+
+        /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

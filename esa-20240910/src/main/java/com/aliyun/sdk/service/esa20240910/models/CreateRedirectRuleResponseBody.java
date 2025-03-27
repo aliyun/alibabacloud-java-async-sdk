@@ -36,6 +36,10 @@ public class CreateRedirectRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -54,6 +58,14 @@ public class CreateRedirectRuleResponseBody extends TeaModel {
         private Long configId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateRedirectRuleResponseBody model) {
+            this.configId = model.configId;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>Configuration ID.</p>
          * 
@@ -66,7 +78,7 @@ public class CreateRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1FCB0DA6-9B6D-509D-B91C-B9B9F0780D0E</p>

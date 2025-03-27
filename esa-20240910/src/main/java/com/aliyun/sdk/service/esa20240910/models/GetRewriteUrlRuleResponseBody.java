@@ -76,6 +76,10 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -174,8 +178,26 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         private Integer siteVersion; 
         private String uri; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRewriteUrlRuleResponseBody model) {
+            this.configId = model.configId;
+            this.configType = model.configType;
+            this.queryString = model.queryString;
+            this.requestId = model.requestId;
+            this.rewriteQueryStringType = model.rewriteQueryStringType;
+            this.rewriteUriType = model.rewriteUriType;
+            this.rule = model.rule;
+            this.ruleEnable = model.ruleEnable;
+            this.ruleName = model.ruleName;
+            this.sequence = model.sequence;
+            this.siteVersion = model.siteVersion;
+            this.uri = model.uri;
+        } 
+
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -186,10 +208,10 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration type. Valid values:</p>
+         * <p>Configuration type. Possible values:</p>
          * <ul>
-         * <li>global: global configuration.</li>
-         * <li>rule: rule configuration.</li>
+         * <li>global: Global configuration;</li>
+         * <li>rule: Rule-based configuration;</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +223,7 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The desired query string to which you want to rewrite the query string in the original request.</p>
+         * <p>The rewritten query string.</p>
          * 
          * <strong>example:</strong>
          * <p>example=123</p>
@@ -212,7 +234,7 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -223,9 +245,10 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query string rewrite method. Valid value:</p>
+         * <p>Query string rewrite type. Possible values:</p>
          * <ul>
-         * <li>static</li>
+         * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,9 +260,10 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The path rewrite method. Valid value:</p>
+         * <p>URI rewrite type. Possible values:</p>
          * <ul>
-         * <li>static</li>
+         * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +275,11 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -262,10 +290,10 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +305,7 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -288,7 +316,7 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority for execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -299,7 +327,7 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the website configurations.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -310,7 +338,7 @@ public class GetRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The desired URI to which you want to rewrite the path in the original request.</p>
+         * <p>The target URI after rewriting.</p>
          * 
          * <strong>example:</strong>
          * <p>/image/example.jpg</p>

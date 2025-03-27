@@ -36,6 +36,10 @@ public class ListUploadTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListUploadTasksResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUploadTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class ListUploadTasksResponseBody extends TeaModel {
             private String type; 
             private String uploadId; 
             private String uploadTaskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.errorCode = model.errorCode;
+                this.status = model.status;
+                this.type = model.type;
+                this.uploadId = model.uploadId;
+                this.uploadTaskName = model.uploadTaskName;
+            } 
 
             /**
              * <p>The time when the task was created.</p>

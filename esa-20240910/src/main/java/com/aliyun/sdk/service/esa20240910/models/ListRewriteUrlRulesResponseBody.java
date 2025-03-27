@@ -52,6 +52,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -102,8 +106,20 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         private Integer totalCount; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRewriteUrlRulesResponseBody model) {
+            this.configs = model.configs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * <p>The URL rewrite configuration list.</p>
+         * <p>List of rewrite URL configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +127,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +138,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The size of the page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -133,7 +149,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
@@ -144,7 +160,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -155,7 +171,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>Total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -323,8 +339,25 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             private Integer siteVersion; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.configId = model.configId;
+                this.configType = model.configType;
+                this.queryString = model.queryString;
+                this.rewriteQueryStringType = model.rewriteQueryStringType;
+                this.rewriteUriType = model.rewriteUriType;
+                this.rule = model.rule;
+                this.ruleEnable = model.ruleEnable;
+                this.ruleName = model.ruleName;
+                this.sequence = model.sequence;
+                this.siteVersion = model.siteVersion;
+                this.uri = model.uri;
+            } 
+
             /**
-             * <p>The configuration ID.</p>
+             * <p>Configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>39538644977****</p>
@@ -335,10 +368,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the configuration. Valid values:</p>
+             * <p>Configuration type. Value range:</p>
              * <ul>
-             * <li>global: global configuration.</li>
-             * <li>rule: rule configuration.</li>
+             * <li>global: Global configuration;</li>
+             * <li>rule: Rule configuration;</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -350,7 +383,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The desired query string to which you want to rewrite the query string in the original request.</p>
+             * <p>The rewritten query string.</p>
              * 
              * <strong>example:</strong>
              * <p>example=123</p>
@@ -361,9 +394,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query string rewrite method. Valid values:</p>
+             * <p>Query string rewrite type. Value range:</p>
              * <ul>
-             * <li>static</li>
+             * <li>static: Static mode.</li>
+             * <li>dynamic: Dynamic mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -375,9 +409,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path rewrite method. Valid values:</p>
+             * <p>URI rewrite type. Value range:</p>
              * <ul>
-             * <li>static</li>
+             * <li>static: Static mode.</li>
+             * <li>dynamic: Dynamic mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -389,7 +424,11 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule content.</p>
+             * <p>Rule content, using conditional expressions to match user requests. Not required when adding a global configuration. There are two usage scenarios:</p>
+             * <ul>
+             * <li>Match all incoming requests: Set the value to true</li>
+             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -400,10 +439,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <p>Rule switch. Not required when adding a global configuration. Value range:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -415,7 +454,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>Rule name. Not required when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -426,7 +465,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order in which the rule is executed.</p>
+             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -437,7 +476,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the website configurations.</p>
+             * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -448,7 +487,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The desired URI to which you want to rewrite the path in the original request.</p>
+             * <p>Target URI after rewriting.</p>
              * 
              * <strong>example:</strong>
              * <p>/image.example.com/index.html</p>

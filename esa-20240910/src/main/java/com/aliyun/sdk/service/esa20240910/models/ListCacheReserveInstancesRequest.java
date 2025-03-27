@@ -59,7 +59,7 @@ public class ListCacheReserveInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,10 +165,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Sorting method. Values:</p>
+         * <p>The criterion by which you want to sort the queried instances. Valid values:</p>
          * <ul>
-         * <li><strong>ExpireTime</strong>: Expiration time.</li>
-         * <li><strong>CreateTime</strong>: Purchase time.</li>
+         * <li><strong>ExpireTime</strong></li>
+         * <li><strong>CreateTime</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,10 +181,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Sorting order. Supported values:</p>
+         * <p>The order by which you want to sort the queried instances. Valid values:</p>
          * <ul>
-         * <li><strong>asc</strong>: Ascending.</li>
-         * <li><strong>desc</strong>: Descending.</li>
+         * <li><strong>asc</strong></li>
+         * <li><strong>desc</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,12 +197,12 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Cache reserve instance status. Supported values:</p>
+         * <p>The status of the cache reserve instance. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: Normal service status.</li>
-         * <li><strong>offline</strong>: Expired but not overdue, in an unavailable state.</li>
-         * <li><strong>disable</strong>: Released status.</li>
-         * <li><strong>overdue</strong>: Overdue and suspended status.</li>
+         * <li><strong>online</strong>: The instance is in service.</li>
+         * <li><strong>offline</strong>: The instance has expired within an allowable period. In this state, it is unavailable.</li>
+         * <li><strong>disable</strong>: The instance has been released.</li>
+         * <li><strong>overdue</strong>: The instance has been stopped due to overdue payments.</li>
          * </ul>
          * 
          * <strong>example:</strong>

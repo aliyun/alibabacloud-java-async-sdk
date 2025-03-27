@@ -23,6 +23,10 @@ public class UpdateIPv6Request extends Request {
     private String enable;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -30,6 +34,7 @@ public class UpdateIPv6Request extends Request {
     private UpdateIPv6Request(Builder builder) {
         super(builder);
         this.enable = builder.enable;
+        this.region = builder.region;
         this.siteId = builder.siteId;
     }
 
@@ -41,7 +46,7 @@ public class UpdateIPv6Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,6 +59,13 @@ public class UpdateIPv6Request extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -62,6 +74,7 @@ public class UpdateIPv6Request extends Request {
 
     public static final class Builder extends Request.Builder<UpdateIPv6Request, Builder> {
         private String enable; 
+        private String region; 
         private Long siteId; 
 
         private Builder() {
@@ -71,14 +84,15 @@ public class UpdateIPv6Request extends Request {
         private Builder(UpdateIPv6Request request) {
             super(request);
             this.enable = request.enable;
+            this.region = request.region;
             this.siteId = request.siteId;
         } 
 
         /**
-         * <p>Switch. Values:</p>
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable.</li>
-         * <li><strong>off</strong>: Disable.</li>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -92,7 +106,16 @@ public class UpdateIPv6Request extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

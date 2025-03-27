@@ -72,6 +72,10 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessType
      */
@@ -161,6 +165,23 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
         private Object sinkConfig; 
         private String status; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserDeliveryTaskResponseBody model) {
+            this.businessType = model.businessType;
+            this.dataCenter = model.dataCenter;
+            this.deliveryType = model.deliveryType;
+            this.details = model.details;
+            this.discardRate = model.discardRate;
+            this.fieldList = model.fieldList;
+            this.filterRules = model.filterRules;
+            this.requestId = model.requestId;
+            this.sinkConfig = model.sinkConfig;
+            this.status = model.status;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * <p>The log category. Valid values:</p>

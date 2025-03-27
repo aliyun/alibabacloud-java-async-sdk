@@ -52,6 +52,10 @@ public class ListPagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class ListPagesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Long usage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPagesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.pages = model.pages;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.usage = model.usage;
+        } 
 
         /**
          * <p>The page number returned.</p>
@@ -277,6 +293,19 @@ public class ListPagesResponseBody extends TeaModel {
             private String kind; 
             private String name; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pages model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.description = model.description;
+                this.id = model.id;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>

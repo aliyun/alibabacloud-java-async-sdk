@@ -40,6 +40,10 @@ public class CheckAssumeSlrRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMsg
      */
@@ -65,6 +69,15 @@ public class CheckAssumeSlrRoleResponseBody extends TeaModel {
         private String errorMsg; 
         private String isExist; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckAssumeSlrRoleResponseBody model) {
+            this.errorMsg = model.errorMsg;
+            this.isExist = model.isExist;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ErrorMsg.

@@ -56,6 +56,10 @@ public class WafRuleMatch extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return convertToLower
      */
@@ -113,6 +117,19 @@ public class WafRuleMatch extends TeaModel {
         private String matchType; 
         private Object matchValue; 
         private Boolean negate; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafRuleMatch model) {
+            this.convertToLower = model.convertToLower;
+            this.criteria = model.criteria;
+            this.logic = model.logic;
+            this.matchOperator = model.matchOperator;
+            this.matchType = model.matchType;
+            this.matchValue = model.matchValue;
+            this.negate = model.negate;
+        } 
 
         /**
          * ConvertToLower.

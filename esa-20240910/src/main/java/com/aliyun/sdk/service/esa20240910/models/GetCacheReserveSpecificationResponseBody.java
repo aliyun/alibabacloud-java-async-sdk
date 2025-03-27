@@ -40,6 +40,10 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cacheReserveCapacity
      */
@@ -65,6 +69,15 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
         private java.util.List<String> cacheReserveCapacity; 
         private java.util.List<String> cacheReserveRegion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCacheReserveSpecificationResponseBody model) {
+            this.cacheReserveCapacity = model.cacheReserveCapacity;
+            this.cacheReserveRegion = model.cacheReserveRegion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of cache retention capacity specifications.</p>

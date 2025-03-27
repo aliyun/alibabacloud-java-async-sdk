@@ -40,6 +40,10 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
         private String instanceId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateRatePlanSpecResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * InstanceId.

@@ -76,6 +76,10 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -174,8 +178,26 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         private String targetUrl; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRedirectRuleResponseBody model) {
+            this.configId = model.configId;
+            this.configType = model.configType;
+            this.requestId = model.requestId;
+            this.reserveQueryString = model.reserveQueryString;
+            this.rule = model.rule;
+            this.ruleEnable = model.ruleEnable;
+            this.ruleName = model.ruleName;
+            this.sequence = model.sequence;
+            this.siteVersion = model.siteVersion;
+            this.statusCode = model.statusCode;
+            this.targetUrl = model.targetUrl;
+            this.type = model.type;
+        } 
+
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -186,10 +208,10 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>Configuration type. Possible values:</p>
          * <ul>
-         * <li>global: global configuration.</li>
-         * <li>rule: rule configuration.</li>
+         * <li>global: Global configuration.</li>
+         * <li>rule: Rule-based configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +223,7 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -212,10 +234,10 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the feature of retaining the query string is enabled. Valid values:</p>
+         * <p>Preserve query string. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +249,11 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -238,10 +264,10 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +279,7 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -264,7 +290,7 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,7 +301,7 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the website configurations.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the site, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -286,7 +312,7 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code that you want to use to indicate URL redirection. Valid values:</p>
+         * <p>Response status code used by the node to respond to the client with the redirect address. Possible values:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -304,7 +330,7 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The destination URL to which requests are redirected.</p>
+         * <p>Target URL after redirection.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
@@ -315,9 +341,10 @@ public class GetRedirectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The redirect type. Valid value:</p>
+         * <p>Redirect type. Possible values:</p>
          * <ul>
-         * <li>static</li>
+         * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>

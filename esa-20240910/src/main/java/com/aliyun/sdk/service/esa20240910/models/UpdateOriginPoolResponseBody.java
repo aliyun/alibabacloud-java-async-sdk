@@ -36,6 +36,10 @@ public class UpdateOriginPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class UpdateOriginPoolResponseBody extends TeaModel {
     public static final class Builder {
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateOriginPoolResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Source address pool ID.</p>

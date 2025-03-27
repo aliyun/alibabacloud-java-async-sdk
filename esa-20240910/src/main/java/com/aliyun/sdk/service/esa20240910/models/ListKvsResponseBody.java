@@ -48,6 +48,10 @@ public class ListKvsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keys
      */
@@ -89,6 +93,17 @@ public class ListKvsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListKvsResponseBody model) {
+            this.keys = model.keys;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The key-value pairs.</p>
@@ -191,6 +206,14 @@ public class ListKvsResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The key name.</p>

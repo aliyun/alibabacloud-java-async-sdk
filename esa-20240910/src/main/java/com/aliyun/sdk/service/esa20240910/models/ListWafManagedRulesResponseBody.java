@@ -48,6 +48,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,19 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         private java.util.List<Rules> rules; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListWafManagedRulesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The page number.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +117,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -113,7 +128,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -124,7 +139,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The managed rules.</p>
+         * <p>List of managed rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -132,7 +147,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of filtered rules.</p>
+         * <p>Total number of rules after filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -228,8 +243,19 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             private Integer protectionLevel; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.action = model.action;
+                this.id = model.id;
+                this.name = model.name;
+                this.protectionLevel = model.protectionLevel;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>The action that WAF performs on requests that match the managed rule.</p>
+             * <p>Protection action of the managed rule.</p>
              * 
              * <strong>example:</strong>
              * <p>deny</p>
@@ -240,7 +266,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the managed rule.</p>
+             * <p>ID of the managed rule.</p>
              * 
              * <strong>example:</strong>
              * <p>100001</p>
@@ -251,7 +277,10 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the managed rule.</p>
+             * <p>Name of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL注入</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +288,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protection level of the managed rule.</p>
+             * <p>Protection level of the managed rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -270,7 +299,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the protection rule.</p>
+             * <p>Protection status of the managed rule.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

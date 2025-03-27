@@ -88,6 +88,10 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -209,6 +213,27 @@ public class CreateScheduledPreloadJobResponseBody extends TeaModel {
         private String taskType; 
         private Integer urlCount; 
         private Integer urlSubmitted; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScheduledPreloadJobResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.createdAt = model.createdAt;
+            this.domains = model.domains;
+            this.errorInfo = model.errorInfo;
+            this.failedFileOss = model.failedFileOss;
+            this.fileId = model.fileId;
+            this.id = model.id;
+            this.insertWay = model.insertWay;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.siteId = model.siteId;
+            this.taskSubmitted = model.taskSubmitted;
+            this.taskType = model.taskType;
+            this.urlCount = model.urlCount;
+            this.urlSubmitted = model.urlSubmitted;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>

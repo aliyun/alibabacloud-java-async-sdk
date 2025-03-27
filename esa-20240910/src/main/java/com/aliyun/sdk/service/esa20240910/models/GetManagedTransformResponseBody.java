@@ -44,6 +44,10 @@ public class GetManagedTransformResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addClientGeolocationHeader
      */
@@ -78,11 +82,21 @@ public class GetManagedTransformResponseBody extends TeaModel {
         private String requestId; 
         private Integer siteVersion; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetManagedTransformResponseBody model) {
+            this.addClientGeolocationHeader = model.addClientGeolocationHeader;
+            this.addRealClientIpHeader = model.addRealClientIpHeader;
+            this.requestId = model.requestId;
+            this.siteVersion = model.siteVersion;
+        } 
+
         /**
-         * <p>Indicates whether to include the header that indicates the geographical location of a client in an origin request. Valid values:</p>
+         * <p>Add visitor geolocation header. Value range:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,10 +108,10 @@ public class GetManagedTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether to include the &quot;ali-real-client-ip&quot; header that contains the client&quot;s real IP address in an origin request. Valid values:</p>
+         * <p>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +123,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -120,7 +134,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the website.</p>
+         * <p>The version number of the site. For sites with version management enabled, this parameter can be used to specify the site version for which the configuration takes effect, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

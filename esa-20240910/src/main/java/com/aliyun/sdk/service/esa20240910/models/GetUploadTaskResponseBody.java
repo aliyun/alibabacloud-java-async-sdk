@@ -40,6 +40,10 @@ public class GetUploadTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -65,6 +69,15 @@ public class GetUploadTaskResponseBody extends TeaModel {
         private String description; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUploadTaskResponseBody model) {
+            this.description = model.description;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The error message returned when the file upload task failed.</p>

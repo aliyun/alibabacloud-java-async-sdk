@@ -36,6 +36,10 @@ public class GetWafQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return quota
      */
@@ -53,6 +57,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
     public static final class Builder {
         private Quota quota; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWafQuotaResponseBody model) {
+            this.quota = model.quota;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returned quota information.</p>
@@ -159,6 +171,17 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private WafQuotaInteger numberItemsTotal; 
             private WafQuotaInteger numberTotal; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.enable = model.enable;
+                this.items = model.items;
+                this.numberItemsPerList = model.numberItemsPerList;
+                this.numberItemsTotal = model.numberItemsTotal;
+                this.numberTotal = model.numberTotal;
+            } 
+
             /**
              * <p>Indicates whether the custom list is enabled.</p>
              */
@@ -250,6 +273,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private Boolean enable; 
             private WafQuotaInteger numberTotal; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManagedRulesGroup model) {
+                this.enable = model.enable;
+                this.numberTotal = model.numberTotal;
+            } 
+
             /**
              * <p>Indicates whether the WAF managed rules group is enabled.</p>
              */
@@ -329,6 +360,15 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private Boolean enable; 
             private WafQuotaInteger numberTotal; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.contentTypes = model.contentTypes;
+                this.enable = model.enable;
+                this.numberTotal = model.numberTotal;
+            } 
+
             /**
              * <p>An object containing quota information for each Content-Type in custom response pages.</p>
              */
@@ -403,6 +443,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
             private WafQuotaInteger numberTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScenePolicy model) {
+                this.enable = model.enable;
+                this.numberTotal = model.numberTotal;
+            } 
 
             /**
              * <p>Indicates whether the scene protection feature is enabled.</p>
@@ -494,6 +542,16 @@ public class GetWafQuotaResponseBody extends TeaModel {
             private ManagedRulesGroup managedRulesGroup; 
             private Page page; 
             private ScenePolicy scenePolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.list = model.list;
+                this.managedRulesGroup = model.managedRulesGroup;
+                this.page = model.page;
+                this.scenePolicy = model.scenePolicy;
+            } 
 
             /**
              * <p>Quota information related to custom lists.</p>

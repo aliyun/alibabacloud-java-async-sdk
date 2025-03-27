@@ -44,7 +44,7 @@ public class ListListsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,6 +245,20 @@ public class ListListsRequest extends Request {
             private String nameItemLike; 
             private String nameLike; 
             private String orderBy; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryArgs model) {
+                this.desc = model.desc;
+                this.descriptionLike = model.descriptionLike;
+                this.idLike = model.idLike;
+                this.itemLike = model.itemLike;
+                this.kind = model.kind;
+                this.nameItemLike = model.nameItemLike;
+                this.nameLike = model.nameLike;
+                this.orderBy = model.orderBy;
+            } 
 
             /**
              * <p>Specifies whether to sort the returned data in descending order.</p>

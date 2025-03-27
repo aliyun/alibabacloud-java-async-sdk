@@ -32,6 +32,10 @@ public class WafQuotaString extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regexp
      */
@@ -41,6 +45,13 @@ public class WafQuotaString extends TeaModel {
 
     public static final class Builder {
         private String regexp; 
+
+        private Builder() {
+        } 
+
+        private Builder(WafQuotaString model) {
+            this.regexp = model.regexp;
+        } 
 
         /**
          * Regexp.

@@ -52,6 +52,10 @@ public class GetCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificate
      */
@@ -102,6 +106,18 @@ public class GetCertificateResponseBody extends TeaModel {
         private String siteName; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetCertificateResponseBody model) {
+            this.certificate = model.certificate;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.siteId = model.siteId;
+            this.siteName = model.siteName;
+            this.status = model.status;
+        } 
+
         /**
          * <p>Certificate content.</p>
          * 
@@ -125,7 +141,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Certificate information.</p>
+         * <p>The certificate information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -251,8 +267,19 @@ public class GetCertificateResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DCV model) {
+                this.id = model.id;
+                this.key = model.key;
+                this.status = model.status;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>DCV ID.</p>
+             * <p>The DCV ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bababf7cdd1546a2ad04c0def1f4c980</p>
@@ -263,7 +290,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DCV name. For the DNS type, it is the TXT record name; for the HTTP type, it is the URL.</p>
+             * <p>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></p>
@@ -274,7 +301,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Verification status.</p>
+             * <p>The verification status.</p>
              * 
              * <strong>example:</strong>
              * <p>pending</p>
@@ -285,7 +312,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DCV type. Possible values: DNS; HTTP.</p>
+             * <p>The DCV type. Valid values: DNS and HTTP.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -296,7 +323,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DCV content.</p>
+             * <p>The DCV content.</p>
              * 
              * <strong>example:</strong>
              * <p>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</p>
@@ -585,8 +612,35 @@ public class GetCertificateResponseBody extends TeaModel {
             private String type; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.applyCode = model.applyCode;
+                this.applyMessage = model.applyMessage;
+                this.casId = model.casId;
+                this.commonName = model.commonName;
+                this.createTime = model.createTime;
+                this.DCV = model.DCV;
+                this.fingerprintSha256 = model.fingerprintSha256;
+                this.id = model.id;
+                this.issuer = model.issuer;
+                this.issuerCN = model.issuerCN;
+                this.name = model.name;
+                this.notAfter = model.notAfter;
+                this.notBefore = model.notBefore;
+                this.pubAlg = model.pubAlg;
+                this.region = model.region;
+                this.SAN = model.SAN;
+                this.serialNumber = model.serialNumber;
+                this.sigAlg = model.sigAlg;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>Certificate application error code.</p>
+             * <p>The error code returned for certificate application.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -597,7 +651,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate application error message.</p>
+             * <p>The error message returned for certificate application.</p>
              * 
              * <strong>example:</strong>
              * <p>canceled</p>
@@ -641,7 +695,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DCV information.</p>
+             * <p>The Domain Control Validation (DCV) information.</p>
              */
             public Builder DCV(java.util.List<DCV> DCV) {
                 this.DCV = DCV;

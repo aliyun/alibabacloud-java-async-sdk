@@ -36,6 +36,10 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Rules> rules; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListWafTemplateRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -66,7 +78,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned template rules.</p>
+         * <p>The list of returned template rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -159,8 +171,19 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.config = model.config;
+                this.name = model.name;
+                this.phase = model.phase;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>The configuration of the rule.</p>
+             * <p>Rule configuration.</p>
              */
             public Builder config(WafRuleConfig config) {
                 this.config = config;
@@ -168,7 +191,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>Rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP Directory Traversal Rule [Template]</p>
@@ -179,7 +202,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WAF rule category.</p>
+             * <p>WAF operation phase.</p>
              * 
              * <strong>example:</strong>
              * <p>http_anti_scan</p>
@@ -190,7 +213,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule is enabled.</p>
+             * <p>Rule status.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -201,7 +224,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule type.</p>
+             * <p>Rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>http_directory_traversal</p>

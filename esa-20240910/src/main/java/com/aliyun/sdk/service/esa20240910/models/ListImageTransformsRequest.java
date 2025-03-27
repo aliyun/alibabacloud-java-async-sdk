@@ -65,7 +65,7 @@ public class ListImageTransformsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,7 +144,7 @@ public class ListImageTransformsRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID, which can be obtained by calling the ListImageTransforms operation.<a href="~~2869056~~"></a></p>
+         * <p>Configuration ID. Can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
          * 
          * <strong>example:</strong>
          * <p>352816096987136</p>
@@ -156,12 +156,12 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>The configuration type to query. Valid values:</p>
+         * <p>Configuration type, which can be used to query global or rule configurations. Possible values:</p>
          * <ul>
-         * <li>global: global configurations.</li>
-         * <li>rule: rule configurations.</li>
+         * <li>global: Query global configuration;</li>
+         * <li>rule: Query rule configuration;</li>
          * </ul>
-         * <p>This parameter takes effect only when parameter functionName is specified. If this parameter is left empty, all configuration types are returned.</p>
+         * <p>This parameter is optional. If not provided, it will not distinguish between global and rule configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -173,7 +173,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>Page number. The default value is 1 if not provided.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * <p>Number of items per page. The maximum value is 500, and the default value is 500 if not provided.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +197,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter takes effect only when parameter functionName is specified.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -209,7 +209,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>Site ID. Can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>The version number of the website. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * <p>Site version number. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

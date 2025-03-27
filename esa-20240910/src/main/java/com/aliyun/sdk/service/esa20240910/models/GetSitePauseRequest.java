@@ -35,7 +35,7 @@ public class GetSitePauseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class GetSitePauseRequest extends Request {
         } 
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

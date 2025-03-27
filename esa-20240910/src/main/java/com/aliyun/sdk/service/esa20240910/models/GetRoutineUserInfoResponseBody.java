@@ -40,6 +40,10 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Routines> routines; 
         private java.util.List<String> subdomains; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRoutineUserInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.routines = model.routines;
+            this.subdomains = model.subdomains;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -154,6 +167,15 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private String routineName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Routines model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.routineName = model.routineName;
+            } 
 
             /**
              * <p>The time when the routine was created.</p>
