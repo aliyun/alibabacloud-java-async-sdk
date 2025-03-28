@@ -56,6 +56,10 @@ public class GetLicenseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class GetLicenseResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLicenseResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -279,6 +296,19 @@ public class GetLicenseResponseBody extends TeaModel {
             private String licenseCode; 
             private String orderId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivateRecord model) {
+                this.activateTime = model.activateTime;
+                this.buyTime = model.buyTime;
+                this.duration = model.duration;
+                this.expireTime = model.expireTime;
+                this.licenseCode = model.licenseCode;
+                this.orderId = model.orderId;
+                this.status = model.status;
+            } 
 
             /**
              * ActivateTime.
@@ -626,6 +656,34 @@ public class GetLicenseResponseBody extends TeaModel {
             private String proposal; 
             private String status; 
             private String unActivateAllDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activateRecord = model.activateRecord;
+                this.activateTime = model.activateTime;
+                this.adaptiveMachine = model.adaptiveMachine;
+                this.allDuration = model.allDuration;
+                this.applicableSpecs = model.applicableSpecs;
+                this.buyTime = model.buyTime;
+                this.cpuLimit = model.cpuLimit;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.effectTime = model.effectTime;
+                this.expireTime = model.expireTime;
+                this.fingerprint = model.fingerprint;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.licenseCode = model.licenseCode;
+                this.licenseSpecCode = model.licenseSpecCode;
+                this.licenseSpecName = model.licenseSpecName;
+                this.licenseSpecType = model.licenseSpecType;
+                this.memoryLimit = model.memoryLimit;
+                this.proposal = model.proposal;
+                this.status = model.status;
+                this.unActivateAllDuration = model.unActivateAllDuration;
+            } 
 
             /**
              * ActivateRecord.

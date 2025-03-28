@@ -79,7 +79,7 @@ public class CreateEssOptJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -329,6 +329,14 @@ public class CreateEssOptJobRequest extends Request {
             private String dataTime; 
             private String price; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElecPrice model) {
+                this.dataTime = model.dataTime;
+                this.price = model.price;
+            } 
+
             /**
              * DataTime.
              */
@@ -395,6 +403,14 @@ public class CreateEssOptJobRequest extends Request {
         public static final class Builder {
             private String dataTime; 
             private String price; 
+
+            private Builder() {
+            } 
+
+            private Builder(GenPrice model) {
+                this.dataTime = model.dataTime;
+                this.price = model.price;
+            } 
 
             /**
              * DataTime.
@@ -474,6 +490,15 @@ public class CreateEssOptJobRequest extends Request {
             private Double altitude; 
             private Double latitude; 
             private Double longitude; 
+
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.altitude = model.altitude;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+            } 
 
             /**
              * Altitude.
@@ -573,6 +598,16 @@ public class CreateEssOptJobRequest extends Request {
             private String systemId; 
             private java.util.Map<String, ?> systemParams; 
             private String systemType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemData model) {
+                this.historyData = model.historyData;
+                this.systemId = model.systemId;
+                this.systemParams = model.systemParams;
+                this.systemType = model.systemType;
+            } 
 
             /**
              * HistoryData.

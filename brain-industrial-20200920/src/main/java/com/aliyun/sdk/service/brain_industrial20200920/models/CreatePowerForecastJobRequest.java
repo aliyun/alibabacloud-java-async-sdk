@@ -74,7 +74,7 @@ public class CreatePowerForecastJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -304,6 +304,14 @@ public class CreatePowerForecastJobRequest extends Request {
             private String runTime; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryData model) {
+                this.runTime = model.runTime;
+                this.value = model.value;
+            } 
+
             /**
              * RunTime.
              */
@@ -382,6 +390,15 @@ public class CreatePowerForecastJobRequest extends Request {
             private Double altitude; 
             private Double latitude; 
             private Double longitude; 
+
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.altitude = model.altitude;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+            } 
 
             /**
              * Altitude.

@@ -60,6 +60,10 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAivppResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -350,6 +368,23 @@ public class ListAivppResourcesResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detail = model.detail;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.leftQuantity = model.leftQuantity;
+                this.orderId = model.orderId;
+                this.quantity = model.quantity;
+                this.specification = model.specification;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * Detail.

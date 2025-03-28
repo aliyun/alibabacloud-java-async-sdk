@@ -69,7 +69,7 @@ public class CreateLoadForecastJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -279,6 +279,14 @@ public class CreateLoadForecastJobRequest extends Request {
         public static final class Builder {
             private String runTime; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HistoryData model) {
+                this.runTime = model.runTime;
+                this.value = model.value;
+            } 
 
             /**
              * RunTime.

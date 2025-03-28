@@ -12,35 +12,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenApiInvokeRequest} extends {@link RequestModel}
+ * {@link AicsOpenApiInvokeRequest} extends {@link RequestModel}
  *
- * <p>OpenApiInvokeRequest</p>
+ * <p>AicsOpenApiInvokeRequest</p>
  */
-public class OpenApiInvokeRequest extends Request {
+public class AicsOpenApiInvokeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Param")
-    private String param;
+    private java.util.Map<String, ?> param;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
-    private OpenApiInvokeRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
+    private AicsOpenApiInvokeRequest(Builder builder) {
         super(builder);
         this.nodeId = builder.nodeId;
         this.param = builder.param;
         this.serviceId = builder.serviceId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static OpenApiInvokeRequest create() {
+    public static AicsOpenApiInvokeRequest create() {
         return builder().build();
     }
 
@@ -59,7 +65,7 @@ public class OpenApiInvokeRequest extends Request {
     /**
      * @return param
      */
-    public String getParam() {
+    public java.util.Map<String, ?> getParam() {
         return this.param;
     }
 
@@ -70,20 +76,29 @@ public class OpenApiInvokeRequest extends Request {
         return this.serviceId;
     }
 
-    public static final class Builder extends Request.Builder<OpenApiInvokeRequest, Builder> {
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    public static final class Builder extends Request.Builder<AicsOpenApiInvokeRequest, Builder> {
         private String nodeId; 
-        private String param; 
+        private java.util.Map<String, ?> param; 
         private String serviceId; 
+        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(OpenApiInvokeRequest request) {
+        private Builder(AicsOpenApiInvokeRequest request) {
             super(request);
             this.nodeId = request.nodeId;
             this.param = request.param;
             this.serviceId = request.serviceId;
+            this.type = request.type;
         } 
 
         /**
@@ -98,14 +113,18 @@ public class OpenApiInvokeRequest extends Request {
         /**
          * Param.
          */
-        public Builder param(String param) {
-            this.putBodyParameter("Param", param);
+        public Builder param(java.util.Map<String, ?> param) {
+            String paramShrink = shrink(param, "Param", "json");
+            this.putBodyParameter("Param", paramShrink);
             this.param = param;
             return this;
         }
 
         /**
-         * ServiceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae5f9884c9914ed7af72b07e6c1616f9</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -113,9 +132,18 @@ public class OpenApiInvokeRequest extends Request {
             return this;
         }
 
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
+            return this;
+        }
+
         @Override
-        public OpenApiInvokeRequest build() {
-            return new OpenApiInvokeRequest(this);
+        public AicsOpenApiInvokeRequest build() {
+            return new AicsOpenApiInvokeRequest(this);
         } 
 
     } 

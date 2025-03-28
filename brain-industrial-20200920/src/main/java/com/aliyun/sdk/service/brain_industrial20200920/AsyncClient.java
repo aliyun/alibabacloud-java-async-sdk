@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActivateLicenseResponse> activateLicense(ActivateLicenseRequest request);
 
     /**
+     * @param request the request parameters of AicsOpenApiInvoke  AicsOpenApiInvokeRequest
+     * @return AicsOpenApiInvokeResponse
+     */
+    CompletableFuture<AicsOpenApiInvokeResponse> aicsOpenApiInvoke(AicsOpenApiInvokeRequest request);
+
+    /**
      * @param request the request parameters of CreateEssOptJob  CreateEssOptJobRequest
      * @return CreateEssOptJobResponse
      */

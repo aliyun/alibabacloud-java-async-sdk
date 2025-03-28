@@ -56,6 +56,10 @@ public class ListUserResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class ListUserResourcesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserResourcesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -294,6 +311,20 @@ public class ListUserResourcesResponseBody extends TeaModel {
             private String startDate; 
             private String status; 
             private String statusMsg; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.endDate = model.endDate;
+                this.instanceId = model.instanceId;
+                this.region = model.region;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.statusMsg = model.statusMsg;
+            } 
 
             /**
              * chargeType.

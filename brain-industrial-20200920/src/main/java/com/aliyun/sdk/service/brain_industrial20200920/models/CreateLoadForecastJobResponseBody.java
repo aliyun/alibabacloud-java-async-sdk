@@ -48,6 +48,10 @@ public class CreateLoadForecastJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateLoadForecastJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLoadForecastJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -194,6 +209,15 @@ public class CreateLoadForecastJobResponseBody extends TeaModel {
             private Object debugInfo; 
             private String jobType; 
             private Object result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Response model) {
+                this.debugInfo = model.debugInfo;
+                this.jobType = model.jobType;
+                this.result = model.result;
+            } 
 
             /**
              * DebugInfo.
@@ -329,6 +353,19 @@ public class CreateLoadForecastJobResponseBody extends TeaModel {
             private Integer progress; 
             private Response response; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completed = model.completed;
+                this.createTime = model.createTime;
+                this.error = model.error;
+                this.jobId = model.jobId;
+                this.progress = model.progress;
+                this.response = model.response;
+                this.status = model.status;
+            } 
 
             /**
              * Completed.

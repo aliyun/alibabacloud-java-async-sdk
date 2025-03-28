@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenApiInvokeResponseBody} extends {@link TeaModel}
+ * {@link AicsOpenApiInvokeResponseBody} extends {@link TeaModel}
  *
- * <p>OpenApiInvokeResponseBody</p>
+ * <p>AicsOpenApiInvokeResponseBody</p>
  */
-public class OpenApiInvokeResponseBody extends TeaModel {
+public class AicsOpenApiInvokeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,7 +32,7 @@ public class OpenApiInvokeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    private OpenApiInvokeResponseBody(Builder builder) {
+    private AicsOpenApiInvokeResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class OpenApiInvokeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static OpenApiInvokeResponseBody create() {
+    public static AicsOpenApiInvokeResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class OpenApiInvokeResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class OpenApiInvokeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String data; 
+        private Object data; 
         private String message; 
         private String requestId; 
         private String success; 
@@ -97,7 +97,7 @@ public class OpenApiInvokeResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(OpenApiInvokeResponseBody model) {
+        private Builder(AicsOpenApiInvokeResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -116,7 +116,7 @@ public class OpenApiInvokeResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
@@ -148,8 +148,8 @@ public class OpenApiInvokeResponseBody extends TeaModel {
             return this;
         }
 
-        public OpenApiInvokeResponseBody build() {
-            return new OpenApiInvokeResponseBody(this);
+        public AicsOpenApiInvokeResponseBody build() {
+            return new AicsOpenApiInvokeResponseBody(this);
         } 
 
     } 

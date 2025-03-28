@@ -76,6 +76,10 @@ public class ListLicensesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class ListLicensesResponseBody extends TeaModel {
         private Long totalCount; 
         private String totalPage; 
         private String totalPageCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLicensesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.licenseList = model.licenseList;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+            this.totalPageCount = model.totalPageCount;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -499,6 +521,29 @@ public class ListLicensesResponseBody extends TeaModel {
             private Integer memoryLimit; 
             private String status; 
             private String unActivateAllDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(LicenseList model) {
+                this.activateTime = model.activateTime;
+                this.adaptiveMachine = model.adaptiveMachine;
+                this.allDuration = model.allDuration;
+                this.buyTime = model.buyTime;
+                this.cpuLimit = model.cpuLimit;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.effectTime = model.effectTime;
+                this.expireTime = model.expireTime;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.licenseSpecCode = model.licenseSpecCode;
+                this.licenseSpecName = model.licenseSpecName;
+                this.licenseSpecType = model.licenseSpecType;
+                this.memoryLimit = model.memoryLimit;
+                this.status = model.status;
+                this.unActivateAllDuration = model.unActivateAllDuration;
+            } 
 
             /**
              * ActivateTime.

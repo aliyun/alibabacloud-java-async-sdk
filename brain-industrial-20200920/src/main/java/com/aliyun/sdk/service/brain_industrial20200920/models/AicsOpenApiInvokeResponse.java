@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateLoadForecastJobResponse} extends {@link TeaModel}
+ * {@link AicsOpenApiInvokeResponse} extends {@link TeaModel}
  *
- * <p>CreateLoadForecastJobResponse</p>
+ * <p>AicsOpenApiInvokeResponse</p>
  */
-public class CreateLoadForecastJobResponse extends Response {
+public class AicsOpenApiInvokeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateLoadForecastJobResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateLoadForecastJobResponseBody body;
+    private AicsOpenApiInvokeResponseBody body;
 
-    private CreateLoadForecastJobResponse(BuilderImpl builder) {
+    private AicsOpenApiInvokeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateLoadForecastJobResponse create() {
+    public static AicsOpenApiInvokeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateLoadForecastJobResponse extends Response {
     /**
      * @return body
      */
-    public CreateLoadForecastJobResponseBody getBody() {
+    public AicsOpenApiInvokeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateLoadForecastJobResponse, Builder> {
+    public interface Builder extends Response.Builder<AicsOpenApiInvokeResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateLoadForecastJobResponseBody body);
+        Builder body(AicsOpenApiInvokeResponseBody body);
 
         @Override
-        CreateLoadForecastJobResponse build();
+        AicsOpenApiInvokeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateLoadForecastJobResponse, Builder>
+            extends Response.BuilderImpl<AicsOpenApiInvokeResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateLoadForecastJobResponseBody body; 
+        private AicsOpenApiInvokeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateLoadForecastJobResponse response) {
+        private BuilderImpl(AicsOpenApiInvokeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateLoadForecastJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateLoadForecastJobResponseBody body) {
+        public Builder body(AicsOpenApiInvokeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateLoadForecastJobResponse build() {
-            return new CreateLoadForecastJobResponse(this);
+        public AicsOpenApiInvokeResponse build() {
+            return new AicsOpenApiInvokeResponse(this);
         } 
 
     } 
