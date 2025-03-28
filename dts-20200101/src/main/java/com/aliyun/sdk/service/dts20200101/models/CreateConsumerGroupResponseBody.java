@@ -48,6 +48,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return consumerGroupID
      */
@@ -89,6 +93,17 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         private String errMessage; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateConsumerGroupResponseBody model) {
+            this.consumerGroupID = model.consumerGroupID;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the consumer group.</p>

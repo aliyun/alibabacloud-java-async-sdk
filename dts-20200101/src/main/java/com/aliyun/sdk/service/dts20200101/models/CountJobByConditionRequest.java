@@ -81,7 +81,7 @@ public class CountJobByConditionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -266,7 +266,10 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID, global parameter that does not need to be passed in by the current API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource group ID, global parameter that does not need to be passed in by the current API.</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

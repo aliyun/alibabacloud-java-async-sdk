@@ -52,6 +52,10 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return destinationConnectionStatus
      */
@@ -101,6 +105,18 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         private String requestId; 
         private java.util.Map<String, ?> sourceConnectionStatus; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConnectionStatusResponseBody model) {
+            this.destinationConnectionStatus = model.destinationConnectionStatus;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.sourceConnectionStatus = model.sourceConnectionStatus;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The connectivity of DTS servers to the destination database.</p>

@@ -52,6 +52,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -101,6 +105,18 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SubscriptionMetaList> subscriptionMetaList; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubscriptionMetaResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.subscriptionMetaList = model.subscriptionMetaList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -250,6 +266,17 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             private String dProxyUrl; 
             private String sid; 
             private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionMetaList model) {
+                this.checkpoint = model.checkpoint;
+                this.DBList = model.DBList;
+                this.dProxyUrl = model.dProxyUrl;
+                this.sid = model.sid;
+                this.topic = model.topic;
+            } 
 
             /**
              * <p>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</p>

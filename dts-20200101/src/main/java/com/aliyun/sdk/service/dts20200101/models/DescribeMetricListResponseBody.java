@@ -76,6 +76,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -173,6 +177,24 @@ public class DescribeMetricListResponseBody extends TeaModel {
         private Long period; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricListResponseBody model) {
+            this.code = model.code;
+            this.dataPoints = model.dataPoints;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.metricName = model.metricName;
+            this.metricType = model.metricType;
+            this.param = model.param;
+            this.period = model.period;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned by the backend service. The number is incremented.</p>
@@ -368,6 +390,14 @@ public class DescribeMetricListResponseBody extends TeaModel {
         public static final class Builder {
             private Float statistics; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataPoints model) {
+                this.statistics = model.statistics;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The statistical value.</p>

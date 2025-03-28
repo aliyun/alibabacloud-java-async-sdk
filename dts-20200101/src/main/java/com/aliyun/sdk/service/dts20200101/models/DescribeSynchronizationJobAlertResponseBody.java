@@ -76,6 +76,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return delayAlertPhone
      */
@@ -173,6 +177,24 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         private String synchronizationDirection; 
         private String synchronizationJobId; 
         private String synchronizationJobName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSynchronizationJobAlertResponseBody model) {
+            this.delayAlertPhone = model.delayAlertPhone;
+            this.delayAlertStatus = model.delayAlertStatus;
+            this.delayOverSeconds = model.delayOverSeconds;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.errorAlertPhone = model.errorAlertPhone;
+            this.errorAlertStatus = model.errorAlertStatus;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchronizationDirection = model.synchronizationDirection;
+            this.synchronizationJobId = model.synchronizationJobId;
+            this.synchronizationJobName = model.synchronizationJobName;
+        } 
 
         /**
          * <p>The mobile phone numbers that receive latency-related alerts.</p>

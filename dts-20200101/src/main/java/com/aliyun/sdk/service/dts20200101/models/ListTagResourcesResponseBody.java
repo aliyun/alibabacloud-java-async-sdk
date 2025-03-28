@@ -52,6 +52,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -101,6 +105,18 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TagResources tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>
@@ -242,6 +258,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The ID of the DTS instance.</p>
              * 
@@ -324,6 +350,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TagResource> tagResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.tagResource = model.tagResource;
+            } 
 
             /**
              * TagResource.

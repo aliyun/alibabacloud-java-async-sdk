@@ -52,6 +52,10 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         private java.util.List<ProgressSummaryDetails> progressSummaryDetails; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SummaryJobDetailResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobId = model.jobId;
+            this.progressSummaryDetails = model.progressSummaryDetails;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code.</p>
@@ -233,6 +249,15 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             private String key; 
             private Integer state; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProgressSummaryDetails model) {
+                this.key = model.key;
+                this.state = model.state;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The type of migrated or synchronized object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>

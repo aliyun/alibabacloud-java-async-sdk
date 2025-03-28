@@ -96,6 +96,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -233,6 +237,29 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer taskRunning; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterUsedUtilizationResponseBody model) {
+            this.code = model.code;
+            this.cpuTotal = model.cpuTotal;
+            this.dedicatedClusterId = model.dedicatedClusterId;
+            this.diskTotal = model.diskTotal;
+            this.diskUsed = model.diskUsed;
+            this.duTotal = model.duTotal;
+            this.duUsed = model.duUsed;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.memoryTotal = model.memoryTotal;
+            this.memoryUsed = model.memoryUsed;
+            this.memoryUsedPercentage = model.memoryUsedPercentage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskRunning = model.taskRunning;
+        } 
 
         /**
          * <p>The error code returned by the backend service. The number is incremented.</p>

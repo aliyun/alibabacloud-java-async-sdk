@@ -56,6 +56,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInitializationDetails
      */
@@ -113,6 +117,19 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<StructureInitializationDetails> structureInitializationDetails; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInitializationStatusResponseBody model) {
+            this.dataInitializationDetails = model.dataInitializationDetails;
+            this.dataSynchronizationDetails = model.dataSynchronizationDetails;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.structureInitializationDetails = model.structureInitializationDetails;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details of initial full data synchronization.</p>
@@ -307,6 +324,20 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String totalRowNum; 
             private String usedTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataInitializationDetails model) {
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.finishRowNum = model.finishRowNum;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+                this.tableName = model.tableName;
+                this.totalRowNum = model.totalRowNum;
+                this.usedTime = model.usedTime;
+            } 
+
             /**
              * <p>The name of the database to which the object in the destination instance belongs.</p>
              * 
@@ -494,6 +525,17 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String status; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSynchronizationDetails model) {
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The name of the database to which the object in the destination instance belongs.</p>
              * 
@@ -665,6 +707,19 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String objectType; 
             private String sourceOwnerDBName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Constraints model) {
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.objectDefinition = model.objectDefinition;
+                this.objectName = model.objectName;
+                this.objectType = model.objectType;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the database to which the object in the destination instance belongs.</p>
@@ -871,6 +926,20 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String objectType; 
             private String sourceOwnerDBName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationDetails model) {
+                this.constraints = model.constraints;
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.objectDefinition = model.objectDefinition;
+                this.objectName = model.objectName;
+                this.objectType = model.objectType;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The constraints of the synchronization object, such as indexes and foreign keys.</p>

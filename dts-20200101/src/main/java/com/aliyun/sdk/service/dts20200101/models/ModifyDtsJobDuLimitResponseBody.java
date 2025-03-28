@@ -56,6 +56,10 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         private Long httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDtsJobDuLimitResponseBody model) {
+            this.code = model.code;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned by the backend service. The number is incremented.</p>

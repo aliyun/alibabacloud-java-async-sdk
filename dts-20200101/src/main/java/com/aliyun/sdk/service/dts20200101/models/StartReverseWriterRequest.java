@@ -50,7 +50,7 @@ public class StartReverseWriterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +139,10 @@ public class StartReverseWriterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

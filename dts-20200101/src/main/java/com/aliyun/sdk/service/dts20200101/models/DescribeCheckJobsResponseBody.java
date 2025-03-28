@@ -72,6 +72,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkJobs
      */
@@ -161,6 +165,23 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckJobsResponseBody model) {
+            this.checkJobs = model.checkJobs;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Item information check.</p>
@@ -497,6 +518,28 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckJobs model) {
+                this.chargeType = model.chargeType;
+                this.checkPoint = model.checkPoint;
+                this.checkType = model.checkType;
+                this.diffCount = model.diffCount;
+                this.diffSum = model.diffSum;
+                this.dtsInstanceID = model.dtsInstanceID;
+                this.dtsJobId = model.dtsJobId;
+                this.finishCount = model.finishCount;
+                this.groupId = model.groupId;
+                this.instanceClass = model.instanceClass;
+                this.jobName = model.jobName;
+                this.jobStepId = model.jobStepId;
+                this.parentJobType = model.parentJobType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>Billing type, return values: - <strong>POSTPAY</strong>: Pay-as-you-go (postpaid). - <strong>PREPAY</strong>: Subscription (prepaid).</p>

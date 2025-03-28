@@ -80,7 +80,7 @@ public class CreateSubscriptionInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -356,6 +356,13 @@ public class CreateSubscriptionInstanceRequest extends Request {
 
         public static final class Builder {
             private String instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * <p>The type of the source instance. Valid values: <strong>MySQL</strong>, <strong>PolarDB</strong>, <strong>DRDS</strong>, and <strong>Oracle</strong>.</p>

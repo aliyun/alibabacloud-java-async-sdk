@@ -48,6 +48,10 @@ public class StopDedicatedClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -89,6 +93,17 @@ public class StopDedicatedClusterResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopDedicatedClusterResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

@@ -92,7 +92,7 @@ public class ConfigureMigrationJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -520,6 +520,22 @@ public class ConfigureMigrationJobRequest extends Request {
             private String region; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationEndpoint model) {
+                this.dataBaseName = model.dataBaseName;
+                this.engineName = model.engineName;
+                this.ip = model.ip;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.oracleSID = model.oracleSID;
+                this.password = model.password;
+                this.port = model.port;
+                this.region = model.region;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The region ID of the destination database.</p>
              * <blockquote>
@@ -730,6 +746,15 @@ public class ConfigureMigrationJobRequest extends Request {
             private Boolean dataIntialization; 
             private Boolean dataSynchronization; 
             private Boolean structureIntialization; 
+
+            private Builder() {
+            } 
+
+            private Builder(MigrationMode model) {
+                this.dataIntialization = model.dataIntialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureIntialization = model.structureIntialization;
+            } 
 
             /**
              * <p>The database account of the destination database.</p>
@@ -947,6 +972,24 @@ public class ConfigureMigrationJobRequest extends Request {
             private String region; 
             private String role; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.ip = model.ip;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.oracleSID = model.oracleSID;
+                this.ownerID = model.ownerID;
+                this.password = model.password;
+                this.port = model.port;
+                this.region = model.region;
+                this.role = model.role;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The endpoint of the source database.</p>

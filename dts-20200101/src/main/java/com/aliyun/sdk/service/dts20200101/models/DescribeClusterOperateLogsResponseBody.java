@@ -72,6 +72,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -161,6 +165,23 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterOperateLogsResponseBody model) {
+            this.code = model.code;
+            this.dataPoints = model.dataPoints;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The error code returned by the backend service. The number is incremented.</p>
@@ -401,6 +422,20 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             private String operationName; 
             private String operationUser; 
             private Integer success; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataPoints model) {
+                this.content = model.content;
+                this.id = model.id;
+                this.logDatetime = model.logDatetime;
+                this.newValue = model.newValue;
+                this.oldValue = model.oldValue;
+                this.operationName = model.operationName;
+                this.operationUser = model.operationUser;
+                this.success = model.success;
+            } 
 
             /**
              * <p>Other description of the operation.</p>

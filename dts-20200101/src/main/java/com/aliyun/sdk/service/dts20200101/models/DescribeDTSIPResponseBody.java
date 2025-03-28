@@ -52,6 +52,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicCode
      */
@@ -101,6 +105,18 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         private String errMessage; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDTSIPResponseBody model) {
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The internal error code. This parameter will be removed in the future.</p>

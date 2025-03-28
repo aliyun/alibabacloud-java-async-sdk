@@ -72,6 +72,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -161,6 +165,23 @@ public class SkipPreCheckResponseBody extends TeaModel {
         private String skipItems; 
         private String skipNames; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SkipPreCheckResponseBody model) {
+            this.code = model.code;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.migrationJobId = model.migrationJobId;
+            this.requestId = model.requestId;
+            this.scheduleJobId = model.scheduleJobId;
+            this.skipItems = model.skipItems;
+            this.skipNames = model.skipNames;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code. This parameter will be removed in the future.</p>

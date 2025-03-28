@@ -52,6 +52,10 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -101,6 +105,18 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEndpointSwitchStatusResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>

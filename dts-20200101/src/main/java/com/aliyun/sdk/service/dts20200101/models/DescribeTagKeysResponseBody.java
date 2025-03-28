@@ -52,6 +52,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -101,6 +105,18 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> tagKeys; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagKeysResponseBody model) {
+            this.category = model.category;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tagKeys = model.tagKeys;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The type of the tag.</p>

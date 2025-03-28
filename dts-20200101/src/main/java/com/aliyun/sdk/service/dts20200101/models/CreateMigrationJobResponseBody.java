@@ -48,6 +48,10 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -89,6 +93,17 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         private String migrationJobId; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMigrationJobResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.migrationJobId = model.migrationJobId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>

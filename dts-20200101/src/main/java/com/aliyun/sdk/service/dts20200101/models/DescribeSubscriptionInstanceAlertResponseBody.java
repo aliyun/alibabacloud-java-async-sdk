@@ -72,6 +72,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return delayAlertPhone
      */
@@ -161,6 +165,23 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         private String subscriptionInstanceID; 
         private String subscriptionInstanceName; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubscriptionInstanceAlertResponseBody model) {
+            this.delayAlertPhone = model.delayAlertPhone;
+            this.delayAlertStatus = model.delayAlertStatus;
+            this.delayOverSeconds = model.delayOverSeconds;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.errorAlertPhone = model.errorAlertPhone;
+            this.errorAlertStatus = model.errorAlertStatus;
+            this.requestId = model.requestId;
+            this.subscriptionInstanceID = model.subscriptionInstanceID;
+            this.subscriptionInstanceName = model.subscriptionInstanceName;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The mobile phone numbers that receive latency-related alerts.</p>

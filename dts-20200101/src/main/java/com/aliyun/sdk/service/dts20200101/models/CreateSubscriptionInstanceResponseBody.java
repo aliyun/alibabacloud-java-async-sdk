@@ -48,6 +48,10 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -89,6 +93,17 @@ public class CreateSubscriptionInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String subscriptionInstanceId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSubscriptionInstanceResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.subscriptionInstanceId = model.subscriptionInstanceId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>

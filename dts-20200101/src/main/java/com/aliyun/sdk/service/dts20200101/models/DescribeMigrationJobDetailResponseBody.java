@@ -68,6 +68,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInitializationDetailList
      */
@@ -149,6 +153,22 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         private StructureInitializationDetailList structureInitializationDetailList; 
         private String success; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMigrationJobDetailResponseBody model) {
+            this.dataInitializationDetailList = model.dataInitializationDetailList;
+            this.dataSynchronizationDetailList = model.dataSynchronizationDetailList;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.structureInitializationDetailList = model.structureInitializationDetailList;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The maximum number of data migration instances that can be displayed on one page.</p>
@@ -391,6 +411,20 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String tableName; 
             private String totalRowNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataInitializationDetail model) {
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.finishRowNum = model.finishRowNum;
+                this.migrationTime = model.migrationTime;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+                this.tableName = model.tableName;
+                this.totalRowNum = model.totalRowNum;
+            } 
+
             /**
              * <p>The status of full data migration. Valid values:</p>
              * <ul>
@@ -524,6 +558,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataInitializationDetail> dataInitializationDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataInitializationDetailList model) {
+                this.dataInitializationDetail = model.dataInitializationDetail;
+            } 
+
             /**
              * DataInitializationDetail.
              */
@@ -618,6 +659,17 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String sourceOwnerDBName; 
             private String status; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSynchronizationDetail model) {
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>The status of incremental data migration. Valid values:</p>
@@ -718,6 +770,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataSynchronizationDetail> dataSynchronizationDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSynchronizationDetailList model) {
+                this.dataSynchronizationDetail = model.dataSynchronizationDetail;
+            } 
 
             /**
              * DataSynchronizationDetail.
@@ -837,6 +896,19 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String objectType; 
             private String sourceOwnerDBName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationDetail model) {
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.objectDefinition = model.objectDefinition;
+                this.objectName = model.objectName;
+                this.objectType = model.objectType;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The status of constraint creation. Valid values:</p>
@@ -962,6 +1034,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StructureInitializationDetail> structureInitializationDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConstraintList model) {
+                this.structureInitializationDetail = model.structureInitializationDetail;
+            } 
 
             /**
              * StructureInitializationDetail.
@@ -1094,6 +1173,20 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String sourceOwnerDBName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationDetailListStructureInitializationDetail model) {
+                this.constraintList = model.constraintList;
+                this.destinationOwnerDBName = model.destinationOwnerDBName;
+                this.errorMessage = model.errorMessage;
+                this.objectDefinition = model.objectDefinition;
+                this.objectName = model.objectName;
+                this.objectType = model.objectType;
+                this.sourceOwnerDBName = model.sourceOwnerDBName;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The schema of the migration object.</p>
              */
@@ -1223,6 +1316,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationDetailList model) {
+                this.structureInitializationDetail = model.structureInitializationDetail;
+            } 
 
             /**
              * StructureInitializationDetail.

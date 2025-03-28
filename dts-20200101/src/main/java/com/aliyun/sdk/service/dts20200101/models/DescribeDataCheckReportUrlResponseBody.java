@@ -52,6 +52,10 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicMessage
      */
@@ -101,6 +105,18 @@ public class DescribeDataCheckReportUrlResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataCheckReportUrlResponseBody model) {
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The URL for downloading the verification report.</p>

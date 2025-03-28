@@ -68,6 +68,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return destIpList
      */
@@ -149,6 +153,22 @@ public class WhiteIpListResponseBody extends TeaModel {
         private String requestId; 
         private String srcIpList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(WhiteIpListResponseBody model) {
+            this.destIpList = model.destIpList;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.ipList = model.ipList;
+            this.requestId = model.requestId;
+            this.srcIpList = model.srcIpList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Target end adaptation to VPCNAT IP whitelist</p>

@@ -56,6 +56,10 @@ public class StopDtsJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicCode
      */
@@ -113,6 +117,19 @@ public class StopDtsJobsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopDtsJobsResponseBody model) {
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The dynamic error code. This parameter will be removed in the future.</p>

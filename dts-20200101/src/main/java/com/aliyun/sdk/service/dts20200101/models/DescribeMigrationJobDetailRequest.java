@@ -76,7 +76,7 @@ public class DescribeMigrationJobDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -346,6 +346,15 @@ public class DescribeMigrationJobDetailRequest extends Request {
             private Boolean dataInitialization; 
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
+
+            private Builder() {
+            } 
+
+            private Builder(MigrationMode model) {
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
 
             /**
              * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>

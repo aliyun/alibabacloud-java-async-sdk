@@ -56,6 +56,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dtsInstanceId
      */
@@ -113,6 +117,19 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateReverseDtsJobResponseBody model) {
+            this.dtsInstanceId = model.dtsInstanceId;
+            this.dtsJobId = model.dtsJobId;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the instance corresponding to the generated reverse task.</p>

@@ -64,6 +64,10 @@ public class DescribeChannelAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicCode
      */
@@ -137,6 +141,21 @@ public class DescribeChannelAccountResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String username; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChannelAccountResponseBody model) {
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.password = model.password;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.username = model.username;
+        } 
 
         /**
          * DynamicCode.

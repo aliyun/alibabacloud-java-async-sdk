@@ -64,6 +64,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return consumerChannels
      */
@@ -137,6 +141,21 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConsumerChannelResponseBody model) {
+            this.consumerChannels = model.consumerChannels;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of the consumer groups.</p>
@@ -331,6 +350,18 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             private String consumptionCheckpoint; 
             private Long messageDelay; 
             private Long unconsumedData; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerChannels model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.consumerGroupName = model.consumerGroupName;
+                this.consumerGroupUserName = model.consumerGroupUserName;
+                this.consumptionCheckpoint = model.consumptionCheckpoint;
+                this.messageDelay = model.messageDelay;
+                this.unconsumedData = model.unconsumedData;
+            } 
 
             /**
              * <p>The ID of the consumer group.</p>

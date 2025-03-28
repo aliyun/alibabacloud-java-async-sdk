@@ -44,6 +44,10 @@ public class ModifyConsumerGroupPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -77,6 +81,16 @@ public class ModifyConsumerGroupPasswordResponseBody extends TeaModel {
         private String errMessage; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyConsumerGroupPasswordResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The current password of the consumer group.</p>

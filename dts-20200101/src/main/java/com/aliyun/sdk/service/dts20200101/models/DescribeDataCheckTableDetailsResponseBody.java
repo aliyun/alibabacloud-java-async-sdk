@@ -80,6 +80,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diffTableCount
      */
@@ -186,6 +190,25 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         private java.util.List<TableDetails> tableDetails; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataCheckTableDetailsResponseBody model) {
+            this.diffTableCount = model.diffTableCount;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.failedTableCount = model.failedTableCount;
+            this.finishedCount = model.finishedCount;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tableDetails = model.tableDetails;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The number of tables that contain inconsistent data.</p>
          * 
@@ -245,7 +268,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * FailedTableCount.
+         * <p>The total number of data rows that were failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failedTableCount(Long failedTableCount) {
             this.failedTableCount = failedTableCount;
@@ -483,6 +509,23 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             private String targetDbName; 
             private String targetTbName; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableDetails model) {
+                this.bootTime = model.bootTime;
+                this.diffCount = model.diffCount;
+                this.errorCode = model.errorCode;
+                this.finishCount = model.finishCount;
+                this.id = model.id;
+                this.sourceDbName = model.sourceDbName;
+                this.sourceTbName = model.sourceTbName;
+                this.status = model.status;
+                this.targetDbName = model.targetDbName;
+                this.targetTbName = model.targetTbName;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when data verification was performed.</p>

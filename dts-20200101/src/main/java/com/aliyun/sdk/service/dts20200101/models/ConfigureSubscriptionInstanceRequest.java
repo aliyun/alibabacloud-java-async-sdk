@@ -86,7 +86,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -477,6 +477,22 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             private String role; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.databaseName = model.databaseName;
+                this.ip = model.ip;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.oracleSID = model.oracleSID;
+                this.ownerID = model.ownerID;
+                this.password = model.password;
+                this.port = model.port;
+                this.role = model.role;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The name of the source database.</p>
              * 
@@ -673,6 +689,14 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             private Boolean DDL; 
             private Boolean DML; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionDataType model) {
+                this.DDL = model.DDL;
+                this.DML = model.DML;
+            } 
+
             /**
              * <p>Specifies whether to track DDL statements. Default value: true. Valid values:</p>
              * <ul>
@@ -755,6 +779,14 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         public static final class Builder {
             private String VPCId; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionInstance model) {
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The ID of the VPC in which the change tracking instance is deployed.</p>

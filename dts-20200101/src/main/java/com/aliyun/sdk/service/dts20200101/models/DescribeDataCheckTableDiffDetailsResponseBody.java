@@ -72,6 +72,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dbName
      */
@@ -161,6 +165,23 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String tbName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataCheckTableDiffDetailsResponseBody model) {
+            this.dbName = model.dbName;
+            this.diffCount = model.diffCount;
+            this.diffDetails = model.diffDetails;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tbName = model.tbName;
+        } 
 
         /**
          * <p>The name of the source database to which the table that contains inconsistent data belongs.</p>
@@ -344,6 +365,15 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
             private String diff; 
             private String gmtCreated; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiffDetails model) {
+                this.diff = model.diff;
+                this.gmtCreated = model.gmtCreated;
+                this.id = model.id;
+            } 
 
             /**
              * <p>The details of the inconsistent data, whose value is a JSON string. The JSON string contains the following parameters:</p>

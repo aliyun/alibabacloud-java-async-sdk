@@ -85,6 +85,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfigureSynchronizationJobReplicatorCompareResponse> configureSynchronizationJobReplicatorCompare(ConfigureSynchronizationJobReplicatorCompareRequest request);
 
     /**
+     * @param request the request parameters of ConvertInstanceResourceGroup  ConvertInstanceResourceGroupRequest
+     * @return ConvertInstanceResourceGroupResponse
+     */
+    CompletableFuture<ConvertInstanceResourceGroupResponse> convertInstanceResourceGroup(ConvertInstanceResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of CountJobByCondition  CountJobByConditionRequest
      * @return CountJobByConditionResponse
      */
@@ -331,6 +337,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEtlJobLogsResponse> describeEtlJobLogs(DescribeEtlJobLogsRequest request);
 
     /**
+     * @param request the request parameters of DescribeFullProcessList  DescribeFullProcessListRequest
+     * @return DescribeFullProcessListResponse
+     */
+    CompletableFuture<DescribeFullProcessListResponse> describeFullProcessList(DescribeFullProcessListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGadInstances  DescribeGadInstancesRequest
+     * @return DescribeGadInstancesResponse
+     */
+    CompletableFuture<DescribeGadInstancesResponse> describeGadInstances(DescribeGadInstancesRequest request);
+
+    /**
      * @param request the request parameters of DescribeInitializationStatus  DescribeInitializationStatusRequest
      * @return DescribeInitializationStatusResponse
      */
@@ -371,6 +389,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeMigrationJobsResponse
      */
     CompletableFuture<DescribeMigrationJobsResponse> describeMigrationJobs(DescribeMigrationJobsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePreCheckCreateGadOrderResult  DescribePreCheckCreateGadOrderResultRequest
+     * @return DescribePreCheckCreateGadOrderResultResponse
+     */
+    CompletableFuture<DescribePreCheckCreateGadOrderResultResponse> describePreCheckCreateGadOrderResult(DescribePreCheckCreateGadOrderResultRequest request);
 
     /**
      * @param request the request parameters of DescribePreCheckStatus  DescribePreCheckStatusRequest
@@ -461,6 +485,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeTagValuesResponse
      */
     CompletableFuture<DescribeTagValuesResponse> describeTagValues(DescribeTagValuesRequest request);
+
+    /**
+     * @param request the request parameters of DetachGadInstanceDbMember  DetachGadInstanceDbMemberRequest
+     * @return DetachGadInstanceDbMemberResponse
+     */
+    CompletableFuture<DetachGadInstanceDbMemberResponse> detachGadInstanceDbMember(DetachGadInstanceDbMemberRequest request);
 
     /**
      * <b>description</b> :
@@ -575,6 +605,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDynamicConfigResponse> modifyDynamicConfig(ModifyDynamicConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyGadInstanceName  ModifyGadInstanceNameRequest
+     * @return ModifyGadInstanceNameResponse
+     */
+    CompletableFuture<ModifyGadInstanceNameResponse> modifyGadInstanceName(ModifyGadInstanceNameRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
@@ -596,6 +632,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySynchronizationObjectResponse
      */
     CompletableFuture<ModifySynchronizationObjectResponse> modifySynchronizationObject(ModifySynchronizationObjectRequest request);
+
+    /**
+     * @param request the request parameters of PreCheckCreateGadOrder  PreCheckCreateGadOrderRequest
+     * @return PreCheckCreateGadOrderResponse
+     */
+    CompletableFuture<PreCheckCreateGadOrderResponse> preCheckCreateGadOrder(PreCheckCreateGadOrderRequest request);
 
     /**
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
@@ -636,6 +678,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ShieldPrecheckResponse
      */
     CompletableFuture<ShieldPrecheckResponse> shieldPrecheck(ShieldPrecheckRequest request);
+
+    /**
+     * @param request the request parameters of SkipFullJobTable  SkipFullJobTableRequest
+     * @return SkipFullJobTableResponse
+     */
+    CompletableFuture<SkipFullJobTableResponse> skipFullJobTable(SkipFullJobTableRequest request);
 
     /**
      * @param request the request parameters of SkipPreCheck  SkipPreCheckRequest

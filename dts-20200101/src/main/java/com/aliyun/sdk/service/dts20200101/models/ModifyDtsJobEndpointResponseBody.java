@@ -48,6 +48,10 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -89,6 +93,17 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDtsJobEndpointResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Error code returned when the call fails.</p>

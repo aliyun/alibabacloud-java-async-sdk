@@ -52,6 +52,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -101,6 +105,18 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDtsInstanceResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.instanceId = model.instanceId;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned if the request failed.</p>

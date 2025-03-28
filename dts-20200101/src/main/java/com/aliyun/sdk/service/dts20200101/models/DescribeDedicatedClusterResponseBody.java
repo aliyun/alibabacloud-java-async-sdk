@@ -132,6 +132,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuUtilization
      */
@@ -341,6 +345,38 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         private Long usedDiskGBSize; 
         private Long usedDu; 
         private Long usedMemGBSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedClusterResponseBody model) {
+            this.cpuUtilization = model.cpuUtilization;
+            this.dedicatedClusterId = model.dedicatedClusterId;
+            this.dedicatedClusterName = model.dedicatedClusterName;
+            this.diskUtilization = model.diskUtilization;
+            this.dtsInstanceID = model.dtsInstanceID;
+            this.du = model.du;
+            this.duUtilization = model.duUtilization;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.gmtCreated = model.gmtCreated;
+            this.gmtFinished = model.gmtFinished;
+            this.httpStatusCode = model.httpStatusCode;
+            this.memUtilization = model.memUtilization;
+            this.nodeCount = model.nodeCount;
+            this.oversoldDu = model.oversoldDu;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.state = model.state;
+            this.success = model.success;
+            this.totalCpuCore = model.totalCpuCore;
+            this.totalDiskGBSize = model.totalDiskGBSize;
+            this.totalMemGBSize = model.totalMemGBSize;
+            this.usedCpuCore = model.usedCpuCore;
+            this.usedDiskGBSize = model.usedDiskGBSize;
+            this.usedDu = model.usedDu;
+            this.usedMemGBSize = model.usedMemGBSize;
+        } 
 
         /**
          * <p>The CPU utilization. Unit: percentage.</p>

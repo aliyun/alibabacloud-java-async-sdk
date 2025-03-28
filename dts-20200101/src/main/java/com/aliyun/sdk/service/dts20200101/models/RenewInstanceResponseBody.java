@@ -72,6 +72,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chargeType
      */
@@ -161,6 +165,23 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewInstanceResponseBody model) {
+            this.chargeType = model.chargeType;
+            this.code = model.code;
+            this.dtsJobId = model.dtsJobId;
+            this.dynamicMessage = model.dynamicMessage;
+            this.endTime = model.endTime;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The billing method of the DTS instance. Only <strong>PREPAY</strong> may be returned, which indicates the subscription billing method.</p>

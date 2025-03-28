@@ -44,6 +44,10 @@ public class ConfigureMigrationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -77,6 +81,16 @@ public class ConfigureMigrationJobResponseBody extends TeaModel {
         private String errMessage; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfigureMigrationJobResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>

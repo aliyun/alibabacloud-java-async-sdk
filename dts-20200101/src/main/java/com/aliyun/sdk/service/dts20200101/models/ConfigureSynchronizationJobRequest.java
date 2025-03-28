@@ -108,7 +108,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -568,6 +568,19 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private String port; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationEndpoint model) {
+                this.dataBaseName = model.dataBaseName;
+                this.ip = model.ip;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.password = model.password;
+                this.port = model.port;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The name of the database to which the synchronization object in the destination instance belongs.</p>
              * 
@@ -768,6 +781,17 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private Boolean modifyTimeMinute; 
             private Boolean modifyTimeMonth; 
             private Boolean modifyTimeYear; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartitionKey model) {
+                this.modifyTimeDay = model.modifyTimeDay;
+                this.modifyTimeHour = model.modifyTimeHour;
+                this.modifyTimeMinute = model.modifyTimeMinute;
+                this.modifyTimeMonth = model.modifyTimeMonth;
+                this.modifyTimeYear = model.modifyTimeYear;
+            } 
 
             /**
              * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
@@ -973,6 +997,21 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private String port; 
             private String role; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.databaseName = model.databaseName;
+                this.ip = model.ip;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.ownerID = model.ownerID;
+                this.password = model.password;
+                this.port = model.port;
+                this.role = model.role;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The name of the database to which the synchronization object in the source instance belongs.</p>

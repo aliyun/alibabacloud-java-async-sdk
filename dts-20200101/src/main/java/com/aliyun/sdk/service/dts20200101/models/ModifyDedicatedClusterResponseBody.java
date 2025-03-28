@@ -52,6 +52,10 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedClusterId
      */
@@ -101,6 +105,18 @@ public class ModifyDedicatedClusterResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDedicatedClusterResponseBody model) {
+            this.dedicatedClusterId = model.dedicatedClusterId;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>

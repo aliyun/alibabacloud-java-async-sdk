@@ -76,6 +76,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuAlarmThreshold
      */
@@ -174,8 +178,29 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedClusterMonitorRuleResponseBody model) {
+            this.cpuAlarmThreshold = model.cpuAlarmThreshold;
+            this.dedicatedClusterId = model.dedicatedClusterId;
+            this.diskAlarmThreshold = model.diskAlarmThreshold;
+            this.duAlarmThreshold = model.duAlarmThreshold;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.memAlarmThreshold = model.memAlarmThreshold;
+            this.noticeSwitch = model.noticeSwitch;
+            this.phones = model.phones;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * CpuAlarmThreshold.
+         * <p>The alert threshold for CPU utilization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder cpuAlarmThreshold(String cpuAlarmThreshold) {
             this.cpuAlarmThreshold = cpuAlarmThreshold;
@@ -183,7 +208,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DedicatedClusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsClustervcwn1oeyu5fx4yf</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.dedicatedClusterId = dedicatedClusterId;
@@ -191,7 +219,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DiskAlarmThreshold.
+         * <p>The alert threshold for disk usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder diskAlarmThreshold(String diskAlarmThreshold) {
             this.diskAlarmThreshold = diskAlarmThreshold;
@@ -199,7 +230,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DuAlarmThreshold.
+         * <p>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46</p>
          */
         public Builder duAlarmThreshold(String duAlarmThreshold) {
             this.duAlarmThreshold = duAlarmThreshold;
@@ -207,7 +241,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -215,7 +252,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -223,7 +263,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -231,7 +274,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * MemAlarmThreshold.
+         * <p>The alert threshold for memory usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder memAlarmThreshold(String memAlarmThreshold) {
             this.memAlarmThreshold = memAlarmThreshold;
@@ -239,7 +285,14 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * NoticeSwitch.
+         * <p>Indicates whether the alert feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The alert feature is enabled.</li>
+         * <li><strong>0</strong>: The alert feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noticeSwitch(String noticeSwitch) {
             this.noticeSwitch = noticeSwitch;
@@ -247,7 +300,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Phones.
+         * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186****7653</p>
          */
         public Builder phones(String phones) {
             this.phones = phones;
@@ -255,7 +311,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -263,7 +322,10 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

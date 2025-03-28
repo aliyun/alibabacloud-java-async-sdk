@@ -64,6 +64,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedClusterStatusList
      */
@@ -137,6 +141,21 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDedicatedClusterResponseBody model) {
+            this.dedicatedClusterStatusList = model.dedicatedClusterStatusList;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The statuses of all clusters.</p>
@@ -500,6 +519,32 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             private Long usedDu; 
             private Long usedMemGBSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedClusterStatus model) {
+                this.cpuUtilization = model.cpuUtilization;
+                this.dedicatedClusterId = model.dedicatedClusterId;
+                this.dedicatedClusterName = model.dedicatedClusterName;
+                this.diskUtilization = model.diskUtilization;
+                this.dtsInstanceID = model.dtsInstanceID;
+                this.du = model.du;
+                this.duUtilization = model.duUtilization;
+                this.gmtCreated = model.gmtCreated;
+                this.memUtilization = model.memUtilization;
+                this.nodeCount = model.nodeCount;
+                this.oversoldDu = model.oversoldDu;
+                this.regionId = model.regionId;
+                this.state = model.state;
+                this.totalCpuCore = model.totalCpuCore;
+                this.totalDiskGBSize = model.totalDiskGBSize;
+                this.totalMemGBSize = model.totalMemGBSize;
+                this.usedCpuCore = model.usedCpuCore;
+                this.usedDiskGBSize = model.usedDiskGBSize;
+                this.usedDu = model.usedDu;
+                this.usedMemGBSize = model.usedMemGBSize;
+            } 
+
             /**
              * <p>The CPU utilization, in percentage.</p>
              * 
@@ -768,6 +813,13 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DedicatedClusterStatus> dedicatedClusterStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedClusterStatusList model) {
+                this.dedicatedClusterStatus = model.dedicatedClusterStatus;
+            } 
 
             /**
              * DedicatedClusterStatus.

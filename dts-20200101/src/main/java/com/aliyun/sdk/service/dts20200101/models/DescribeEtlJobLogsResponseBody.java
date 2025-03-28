@@ -60,6 +60,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicCode
      */
@@ -125,6 +129,20 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEtlJobLogsResponseBody model) {
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.etlRunningLogs = model.etlRunningLogs;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The dynamic error code.</p>
@@ -308,6 +326,18 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             private String logDatetime; 
             private String status; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EtlRunningLogs model) {
+                this.content = model.content;
+                this.contentKey = model.contentKey;
+                this.etlId = model.etlId;
+                this.logDatetime = model.logDatetime;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The state of the ETL task.</p>

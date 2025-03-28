@@ -68,6 +68,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInitializationStatus
      */
@@ -149,6 +153,22 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         private String status; 
         private StructureInitializationStatus structureInitializationStatus; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSynchronizationObjectModifyStatusResponseBody model) {
+            this.dataInitializationStatus = model.dataInitializationStatus;
+            this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.errorMessage = model.errorMessage;
+            this.precheckStatus = model.precheckStatus;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.structureInitializationStatus = model.structureInitializationStatus;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status of full data synchronization.</p>
@@ -333,6 +353,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if full data synchronization failed.</p>
              * 
@@ -457,6 +487,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String errorMessage; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSynchronizationStatus model) {
+                this.delay = model.delay;
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The synchronization latency, in seconds.</p>
@@ -583,6 +623,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String itemName; 
             private String repairMethod; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.checkStatus = model.checkStatus;
+                this.errorMessage = model.errorMessage;
+                this.itemName = model.itemName;
+                this.repairMethod = model.repairMethod;
+            } 
+
             /**
              * <p>The precheck result. Valid values:</p>
              * <ul>
@@ -700,6 +750,15 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String percent; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrecheckStatus model) {
+                this.detail = model.detail;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The result of each precheck item.</p>
              */
@@ -804,6 +863,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if schema synchronization failed.</p>

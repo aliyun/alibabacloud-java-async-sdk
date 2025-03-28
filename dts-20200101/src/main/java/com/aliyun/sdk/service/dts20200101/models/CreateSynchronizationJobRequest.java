@@ -114,7 +114,7 @@ public class CreateSynchronizationJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -530,6 +530,13 @@ public class CreateSynchronizationJobRequest extends Request {
         public static final class Builder {
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationEndpoint model) {
+                this.instanceType = model.instanceType;
+            } 
+
             /**
              * <p>The instance type of the destination database. Valid values:</p>
              * <ul>
@@ -591,6 +598,13 @@ public class CreateSynchronizationJobRequest extends Request {
 
         public static final class Builder {
             private String instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * <p>The instance type of the source database. Valid values:</p>

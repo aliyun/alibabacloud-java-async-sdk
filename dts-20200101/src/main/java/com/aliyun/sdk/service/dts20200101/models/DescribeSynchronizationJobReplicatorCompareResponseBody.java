@@ -48,6 +48,10 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -89,6 +93,17 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         private String requestId; 
         private String success; 
         private Boolean synchronizationReplicatorCompareEnable; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSynchronizationJobReplicatorCompareResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchronizationReplicatorCompareEnable = model.synchronizationReplicatorCompareEnable;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>

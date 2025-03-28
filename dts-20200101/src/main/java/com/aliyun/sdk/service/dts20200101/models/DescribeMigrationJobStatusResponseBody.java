@@ -100,6 +100,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInitializationStatus
      */
@@ -245,6 +249,30 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         private StructureInitializationStatus structureInitializationStatus; 
         private String success; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMigrationJobStatusResponseBody model) {
+            this.dataInitializationStatus = model.dataInitializationStatus;
+            this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+            this.destinationEndpoint = model.destinationEndpoint;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.migrationJobClass = model.migrationJobClass;
+            this.migrationJobId = model.migrationJobId;
+            this.migrationJobName = model.migrationJobName;
+            this.migrationJobStatus = model.migrationJobStatus;
+            this.migrationMode = model.migrationMode;
+            this.migrationObject = model.migrationObject;
+            this.payType = model.payType;
+            this.precheckStatus = model.precheckStatus;
+            this.requestId = model.requestId;
+            this.sourceEndpoint = model.sourceEndpoint;
+            this.structureInitializationStatus = model.structureInitializationStatus;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The status of full data migration.</p>
@@ -503,6 +531,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if full data migration failed.</p>
              * 
@@ -639,6 +677,17 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String errorMessage; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSynchronizationStatus model) {
+                this.checkpoint = model.checkpoint;
+                this.delay = model.delay;
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The UNIX timestamp generated when the latest incremental data is migrated. Unit: seconds.</p>
@@ -825,6 +874,20 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String userName; 
             private String oracleSID; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationEndpoint model) {
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.ip = model.ip;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.port = model.port;
+                this.userName = model.userName;
+                this.oracleSID = model.oracleSID;
+            } 
+
             /**
              * <p>The name of the database to which the migration object in the destination instance belongs.</p>
              * 
@@ -979,6 +1042,15 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrationMode model) {
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
+
             /**
              * <p>Indicates whether full data migration is performed. Valid values:</p>
              * <ul>
@@ -1099,6 +1171,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String itemName; 
             private String repairMethod; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckItem model) {
+                this.checkStatus = model.checkStatus;
+                this.errorMessage = model.errorMessage;
+                this.itemName = model.itemName;
+                this.repairMethod = model.repairMethod;
+            } 
+
             /**
              * <p>The precheck result. Valid values:</p>
              * <ul>
@@ -1192,6 +1274,13 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CheckItem> checkItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.checkItem = model.checkItem;
+            } 
+
             /**
              * CheckItem.
              */
@@ -1262,6 +1351,15 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private Detail detail; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrecheckStatus model) {
+                this.detail = model.detail;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The result of each precheck item.</p>
@@ -1422,6 +1520,20 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String port; 
             private String userName; 
             private String oracleSID; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.ip = model.ip;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.port = model.port;
+                this.userName = model.userName;
+                this.oracleSID = model.oracleSID;
+            } 
 
             /**
              * <p>The name of the database to which the migration object in the source instance belongs.</p>
@@ -1596,6 +1708,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if schema migration failed.</p>

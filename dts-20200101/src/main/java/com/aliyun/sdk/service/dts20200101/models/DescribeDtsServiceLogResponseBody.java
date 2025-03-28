@@ -72,6 +72,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicCode
      */
@@ -161,6 +165,23 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         private java.util.List<ServiceLogContexts> serviceLogContexts; 
         private Boolean success; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDtsServiceLogResponseBody model) {
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.serviceLogContexts = model.serviceLogContexts;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The dynamic error code. This parameter will be removed soon.</p>
@@ -341,6 +362,15 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             private String context; 
             private String state; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceLogContexts model) {
+                this.context = model.context;
+                this.state = model.state;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The log content.</p>

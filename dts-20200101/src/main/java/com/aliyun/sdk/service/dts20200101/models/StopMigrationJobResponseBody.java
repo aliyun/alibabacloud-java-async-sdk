@@ -44,6 +44,10 @@ public class StopMigrationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -77,6 +81,16 @@ public class StopMigrationJobResponseBody extends TeaModel {
         private String errMessage; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopMigrationJobResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query all data migration instances.</p>

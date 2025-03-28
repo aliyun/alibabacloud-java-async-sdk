@@ -56,6 +56,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adminAccount
      */
@@ -113,6 +117,19 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InitDtsRdsInstanceResponseBody model) {
+            this.adminAccount = model.adminAccount;
+            this.adminPassword = model.adminPassword;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The built-in account that is used by DTS to connect to the node.</p>

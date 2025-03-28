@@ -72,6 +72,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return delayAlertPhone
      */
@@ -161,6 +165,23 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         private String migrationJobName; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMigrationJobAlertResponseBody model) {
+            this.delayAlertPhone = model.delayAlertPhone;
+            this.delayAlertStatus = model.delayAlertStatus;
+            this.delayOverSeconds = model.delayOverSeconds;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.errorAlertPhone = model.errorAlertPhone;
+            this.errorAlertStatus = model.errorAlertStatus;
+            this.migrationJobId = model.migrationJobId;
+            this.migrationJobName = model.migrationJobName;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Phone number of the contact for delay alarm.</p>

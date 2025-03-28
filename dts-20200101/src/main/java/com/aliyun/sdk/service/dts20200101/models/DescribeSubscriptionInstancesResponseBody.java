@@ -60,6 +60,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -125,6 +129,20 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         private SubscriptionInstances subscriptionInstances; 
         private String success; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubscriptionInstancesResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.subscriptionInstances = model.subscriptionInstances;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>
@@ -261,6 +279,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String instanceID; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
              * <p>The ID of the source instance.</p>
              * 
@@ -336,6 +362,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean DDL; 
             private Boolean DML; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionDataType model) {
+                this.DDL = model.DDL;
+                this.DML = model.DML;
+            } 
 
             /**
              * <p>Indicates whether data definition language (DDL) operations are tracked. Valid values:</p>
@@ -430,6 +464,15 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String publicHost; 
             private String VPCHost; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionHost model) {
+                this.privateHost = model.privateHost;
+                this.publicHost = model.publicHost;
+                this.VPCHost = model.VPCHost;
+            } 
+
             /**
              * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
              * 
@@ -502,6 +545,13 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> table; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableList model) {
+                this.table = model.table;
+            } 
+
             /**
              * Table.
              */
@@ -572,6 +622,15 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String databaseName; 
             private TableList tableList; 
             private String wholeDatabase; 
+
+            private Builder() {
+            } 
+
+            private Builder(SynchronousObject model) {
+                this.databaseName = model.databaseName;
+                this.tableList = model.tableList;
+                this.wholeDatabase = model.wholeDatabase;
+            } 
 
             /**
              * <p>The name of the database to which the object belongs.</p>
@@ -646,6 +705,13 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SynchronousObject> synchronousObject; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionObject model) {
+                this.synchronousObject = model.synchronousObject;
+            } 
+
             /**
              * SynchronousObject.
              */
@@ -704,6 +770,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -765,6 +839,13 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -1005,6 +1086,29 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private SubscriptionObject subscriptionObject; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionInstance model) {
+                this.beginTimestamp = model.beginTimestamp;
+                this.consumptionCheckpoint = model.consumptionCheckpoint;
+                this.consumptionClient = model.consumptionClient;
+                this.endTimestamp = model.endTimestamp;
+                this.errorMessage = model.errorMessage;
+                this.instanceCreateTime = model.instanceCreateTime;
+                this.jobCreateTime = model.jobCreateTime;
+                this.payType = model.payType;
+                this.sourceEndpoint = model.sourceEndpoint;
+                this.status = model.status;
+                this.subscribeTopic = model.subscribeTopic;
+                this.subscriptionDataType = model.subscriptionDataType;
+                this.subscriptionHost = model.subscriptionHost;
+                this.subscriptionInstanceID = model.subscriptionInstanceID;
+                this.subscriptionInstanceName = model.subscriptionInstanceName;
+                this.subscriptionObject = model.subscriptionObject;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The start of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
              * 
@@ -1230,6 +1334,13 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubscriptionInstance> subscriptionInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionInstances model) {
+                this.subscriptionInstance = model.subscriptionInstance;
+            } 
 
             /**
              * SubscriptionInstance.

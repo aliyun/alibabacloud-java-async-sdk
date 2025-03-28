@@ -36,6 +36,10 @@ public class DescribeDtsJobConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameters
      */
@@ -53,6 +57,14 @@ public class DescribeDtsJobConfigResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Parameters> parameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDtsJobConfigResponseBody model) {
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Parameters.
@@ -215,6 +227,22 @@ public class DescribeDtsJobConfigResponseBody extends TeaModel {
             private String recommendValue; 
             private String runningValue; 
             private Integer valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.checkingCode = model.checkingCode;
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.forceRestart = model.forceRestart;
+                this.modifiable = model.modifiable;
+                this.module = model.module;
+                this.name = model.name;
+                this.recommendValue = model.recommendValue;
+                this.runningValue = model.runningValue;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * CheckingCode.

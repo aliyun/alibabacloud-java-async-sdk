@@ -68,6 +68,10 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -149,6 +153,22 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<String> topics; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeJobMonitorRuleResponseBody model) {
+            this.code = model.code;
+            this.dtsJobId = model.dtsJobId;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.monitorRules = model.monitorRules;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topics = model.topics;
+        } 
 
         /**
          * <p>The error code. This parameter will be removed in the future.</p>
@@ -394,6 +414,21 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             private String state; 
             private Integer times; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorRules model) {
+                this.delayRuleTime = model.delayRuleTime;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.noticeValue = model.noticeValue;
+                this.period = model.period;
+                this.phone = model.phone;
+                this.state = model.state;
+                this.times = model.times;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The threshold that triggers the alert.</p>

@@ -70,7 +70,7 @@ public class DescribeMigrationJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -301,6 +301,14 @@ public class DescribeMigrationJobsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>

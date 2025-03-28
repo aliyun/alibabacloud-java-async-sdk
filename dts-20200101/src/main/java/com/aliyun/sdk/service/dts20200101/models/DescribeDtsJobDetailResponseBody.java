@@ -256,6 +256,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appName
      */
@@ -713,6 +717,69 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private Boolean success; 
         private String synchronizationDirection; 
         private String taskType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDtsJobDetailResponseBody model) {
+            this.appName = model.appName;
+            this.beginTimestamp = model.beginTimestamp;
+            this.binlog = model.binlog;
+            this.binlogSite = model.binlogSite;
+            this.binlogTime = model.binlogTime;
+            this.bootTime = model.bootTime;
+            this.checkpoint = model.checkpoint;
+            this.code = model.code;
+            this.consumptionCheckpoint = model.consumptionCheckpoint;
+            this.consumptionClient = model.consumptionClient;
+            this.createTime = model.createTime;
+            this.dataDeliveryChannelInfo = model.dataDeliveryChannelInfo;
+            this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+            this.databaseCount = model.databaseCount;
+            this.dbObject = model.dbObject;
+            this.dedicatedClusterId = model.dedicatedClusterId;
+            this.delay = model.delay;
+            this.demoJob = model.demoJob;
+            this.destNetType = model.destNetType;
+            this.destinationEndpoint = model.destinationEndpoint;
+            this.dtsBisLabel = model.dtsBisLabel;
+            this.dtsInstanceID = model.dtsInstanceID;
+            this.dtsJobClass = model.dtsJobClass;
+            this.dtsJobDirection = model.dtsJobDirection;
+            this.dtsJobId = model.dtsJobId;
+            this.dtsJobName = model.dtsJobName;
+            this.dynamicMessage = model.dynamicMessage;
+            this.endTimestamp = model.endTimestamp;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.errorMessage = model.errorMessage;
+            this.etlCalculator = model.etlCalculator;
+            this.expireTime = model.expireTime;
+            this.finishTime = model.finishTime;
+            this.groupId = model.groupId;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobType = model.jobType;
+            this.lastUpdateTime = model.lastUpdateTime;
+            this.maxDu = model.maxDu;
+            this.migrationMode = model.migrationMode;
+            this.minDu = model.minDu;
+            this.payType = model.payType;
+            this.requestId = model.requestId;
+            this.reserved = model.reserved;
+            this.resourceGroupDisplayName = model.resourceGroupDisplayName;
+            this.resourceGroupId = model.resourceGroupId;
+            this.retryState = model.retryState;
+            this.sourceEndpoint = model.sourceEndpoint;
+            this.status = model.status;
+            this.subDistributedJob = model.subDistributedJob;
+            this.subSyncJob = model.subSyncJob;
+            this.subscribeTopic = model.subscribeTopic;
+            this.subscriptionDataType = model.subscriptionDataType;
+            this.subscriptionHost = model.subscriptionHost;
+            this.success = model.success;
+            this.synchronizationDirection = model.synchronizationDirection;
+            this.taskType = model.taskType;
+        } 
 
         /**
          * <p>Indicates whether the new change tracking feature is used.</p>
@@ -1487,6 +1554,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String topic; 
             private String vpcDproxyUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDeliveryChannelInfo model) {
+                this.partitionNum = model.partitionNum;
+                this.publicDproxyUrl = model.publicDproxyUrl;
+                this.region = model.region;
+                this.topic = model.topic;
+                this.vpcDproxyUrl = model.vpcDproxyUrl;
+            } 
+
             /**
              * <p>The number of partitions of the destination topic.</p>
              * 
@@ -1628,6 +1706,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSynchronizationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if incremental data migration or synchronization failed.</p>
@@ -1856,6 +1945,23 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationEndpoint model) {
+                this.canModifyPassword = model.canModifyPassword;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>Indicates whether the password can be modified. Valid values:</p>
              * <ul>
@@ -2065,6 +2171,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
 
+            private Builder() {
+            } 
+
+            private Builder(MigrationMode model) {
+                this.dataExtractTransformLoad = model.dataExtractTransformLoad;
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
+
             /**
              * <p>Indicates whether data transformation is performed. Valid values:</p>
              * <ul>
@@ -2247,6 +2363,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String retryTarget; 
             private Integer retryTime; 
             private Boolean retrying; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetryState model) {
+                this.errMessage = model.errMessage;
+                this.jobId = model.jobId;
+                this.maxRetryTime = model.maxRetryTime;
+                this.module = model.module;
+                this.retryCount = model.retryCount;
+                this.retryTarget = model.retryTarget;
+                this.retryTime = model.retryTime;
+                this.retrying = model.retrying;
+            } 
 
             /**
              * <p>The error message returned if these retries failed.</p>
@@ -2528,6 +2658,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.canModifyPassword = model.canModifyPassword;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
              * 
@@ -2771,6 +2920,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataEtlStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if the task failed.</p>
              * 
@@ -2924,6 +3084,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
              * 
@@ -3075,6 +3246,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobDataSynchronizationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if the task failed.</p>
@@ -3315,6 +3497,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobDestinationEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the destination instance belongs.</p>
              * 
@@ -3531,6 +3731,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobMigrationMode model) {
+                this.dataExtractTransformLoad = model.dataExtractTransformLoad;
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
+
             /**
              * <p>Indicates whether data transformation is performed. Valid values:</p>
              * <ul>
@@ -3642,6 +3852,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String flow; 
             private String rps; 
 
+            private Builder() {
+            } 
+
+            private Builder(Performance model) {
+                this.flow = model.flow;
+                this.rps = model.rps;
+            } 
+
             /**
              * <p>The size of data that is migrated or synchronized per second. Unit: Mbit/s.</p>
              * 
@@ -3750,6 +3968,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String checkResult; 
             private String failedReason; 
             private String repairMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.checkItem = model.checkItem;
+                this.checkItemDescription = model.checkItemDescription;
+                this.checkResult = model.checkResult;
+                this.failedReason = model.failedReason;
+                this.repairMethod = model.repairMethod;
+            } 
 
             /**
              * <p>The name of the precheck item.</p>
@@ -3890,6 +4119,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String errorMessage; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrecheckStatus model) {
+                this.detail = model.detail;
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The result of each precheck item.</p>
@@ -4060,6 +4299,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String retryTarget; 
             private Integer retryTime; 
             private Boolean retrying; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobRetryState model) {
+                this.errMsg = model.errMsg;
+                this.jobId = model.jobId;
+                this.maxRetryTime = model.maxRetryTime;
+                this.module = model.module;
+                this.retryCount = model.retryCount;
+                this.retryTarget = model.retryTarget;
+                this.retryTime = model.retryTime;
+                this.retrying = model.retrying;
+            } 
 
             /**
              * <p>The error message returned.</p>
@@ -4245,6 +4498,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobDataEtlStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if the task failed.</p>
              * 
@@ -4398,6 +4662,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobDataInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
              * 
@@ -4549,6 +4824,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobDataSynchronizationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if the task failed.</p>
@@ -4789,6 +5075,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobDestinationEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the destination instance belongs.</p>
              * 
@@ -5005,6 +5309,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobMigrationMode model) {
+                this.dataExtractTransformLoad = model.dataExtractTransformLoad;
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
+
             /**
              * <p>Indicates whether data transformation is performed. Valid values:</p>
              * <ul>
@@ -5116,6 +5430,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String flow; 
             private String rps; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobPerformance model) {
+                this.flow = model.flow;
+                this.rps = model.rps;
+            } 
+
             /**
              * <p>The size of data that is migrated or synchronized per second. Unit: Mbit/s.</p>
              * 
@@ -5224,6 +5546,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String checkResult; 
             private String failedReason; 
             private String repairMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrecheckStatusDetail model) {
+                this.checkItem = model.checkItem;
+                this.checkItemDescription = model.checkItemDescription;
+                this.checkResult = model.checkResult;
+                this.failedReason = model.failedReason;
+                this.repairMethod = model.repairMethod;
+            } 
 
             /**
              * <p>The name of the precheck item.</p>
@@ -5364,6 +5697,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String errorMessage; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobPrecheckStatus model) {
+                this.detail = model.detail;
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The result of each precheck item.</p>
@@ -5534,6 +5877,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String retryTarget; 
             private Integer retryTime; 
             private Boolean retrying; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobRetryState model) {
+                this.errMsg = model.errMsg;
+                this.jobId = model.jobId;
+                this.maxRetryTime = model.maxRetryTime;
+                this.module = model.module;
+                this.retryCount = model.retryCount;
+                this.retryTarget = model.retryTarget;
+                this.retryTime = model.retryTime;
+                this.retrying = model.retrying;
+            } 
 
             /**
              * <p>The error message returned.</p>
@@ -5803,6 +6160,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobSourceEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
              * 
@@ -6031,6 +6406,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(StructureInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Error message indicating task failure.</p>
              * 
@@ -6147,6 +6533,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean ddl; 
             private Boolean dml; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobSubscriptionDataType model) {
+                this.ddl = model.ddl;
+                this.dml = model.dml;
+            } 
+
             /**
              * <p>Indicates whether DDL statements are tracked. Valid values:</p>
              * <ul>
@@ -6239,6 +6633,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String privateHost; 
             private String publicHost; 
             private String vpcHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobSubscriptionHost model) {
+                this.privateHost = model.privateHost;
+                this.publicHost = model.publicHost;
+                this.vpcHost = model.vpcHost;
+            } 
 
             /**
              * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
@@ -6455,6 +6858,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagCategory; 
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.aliUid = model.aliUid;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.scope = model.scope;
+                this.srcRegion = model.srcRegion;
+                this.tagCategory = model.tagCategory;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID.</p>
@@ -7192,6 +7614,58 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private java.util.List<TagList> tagList; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJob model) {
+                this.appName = model.appName;
+                this.beginTimestamp = model.beginTimestamp;
+                this.checkpoint = model.checkpoint;
+                this.consumptionCheckpoint = model.consumptionCheckpoint;
+                this.consumptionClient = model.consumptionClient;
+                this.createTime = model.createTime;
+                this.dataEtlStatus = model.dataEtlStatus;
+                this.dataInitializationStatus = model.dataInitializationStatus;
+                this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+                this.databaseCount = model.databaseCount;
+                this.dbObject = model.dbObject;
+                this.delay = model.delay;
+                this.destNetType = model.destNetType;
+                this.destinationEndpoint = model.destinationEndpoint;
+                this.dtsInstanceID = model.dtsInstanceID;
+                this.dtsJobClass = model.dtsJobClass;
+                this.dtsJobDirection = model.dtsJobDirection;
+                this.dtsJobId = model.dtsJobId;
+                this.dtsJobName = model.dtsJobName;
+                this.endTimestamp = model.endTimestamp;
+                this.errorMessage = model.errorMessage;
+                this.etlCalculator = model.etlCalculator;
+                this.expireTime = model.expireTime;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.isDemoJob = model.isDemoJob;
+                this.jobType = model.jobType;
+                this.maxDu = model.maxDu;
+                this.migrationMode = model.migrationMode;
+                this.minDu = model.minDu;
+                this.originType = model.originType;
+                this.payType = model.payType;
+                this.performance = model.performance;
+                this.precheckStatus = model.precheckStatus;
+                this.reserved = model.reserved;
+                this.retryState = model.retryState;
+                this.reverseJob = model.reverseJob;
+                this.sourceEndpoint = model.sourceEndpoint;
+                this.status = model.status;
+                this.structureInitializationStatus = model.structureInitializationStatus;
+                this.subscribeTopic = model.subscribeTopic;
+                this.subscriptionDataType = model.subscriptionDataType;
+                this.subscriptionHost = model.subscriptionHost;
+                this.synchronizationDirection = model.synchronizationDirection;
+                this.tagList = model.tagList;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>Indicates whether the new change tracking feature is used.</p>
              * <blockquote>
@@ -7899,6 +8373,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobSourceEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
              * 
@@ -8127,6 +8619,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobStructureInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Error message.</p>
              * 
@@ -8243,6 +8746,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean ddl; 
             private Boolean dml; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobSubscriptionDataType model) {
+                this.ddl = model.ddl;
+                this.dml = model.dml;
+            } 
+
             /**
              * <p>Indicates whether DDL statements are tracked. Valid values:</p>
              * <ul>
@@ -8335,6 +8846,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String privateHost; 
             private String publicHost; 
             private String vpcHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobSubscriptionHost model) {
+                this.privateHost = model.privateHost;
+                this.publicHost = model.publicHost;
+                this.vpcHost = model.vpcHost;
+            } 
 
             /**
              * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
@@ -8551,6 +9071,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagCategory; 
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobTagList model) {
+                this.aliUid = model.aliUid;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.scope = model.scope;
+                this.srcRegion = model.srcRegion;
+                this.tagCategory = model.tagCategory;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID.</p>
@@ -9300,6 +9839,59 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private java.util.List<SubDistributedJobTagList> tagList; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJob model) {
+                this.appName = model.appName;
+                this.beginTimestamp = model.beginTimestamp;
+                this.checkpoint = model.checkpoint;
+                this.consumptionCheckpoint = model.consumptionCheckpoint;
+                this.consumptionClient = model.consumptionClient;
+                this.createTime = model.createTime;
+                this.dataEtlStatus = model.dataEtlStatus;
+                this.dataInitializationStatus = model.dataInitializationStatus;
+                this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+                this.databaseCount = model.databaseCount;
+                this.dbObject = model.dbObject;
+                this.delay = model.delay;
+                this.destNetType = model.destNetType;
+                this.destinationEndpoint = model.destinationEndpoint;
+                this.dtsInstanceID = model.dtsInstanceID;
+                this.dtsJobClass = model.dtsJobClass;
+                this.dtsJobDirection = model.dtsJobDirection;
+                this.dtsJobId = model.dtsJobId;
+                this.dtsJobName = model.dtsJobName;
+                this.endTimestamp = model.endTimestamp;
+                this.errorMessage = model.errorMessage;
+                this.etlCalculator = model.etlCalculator;
+                this.expireTime = model.expireTime;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.isDemoJob = model.isDemoJob;
+                this.jobType = model.jobType;
+                this.maxDu = model.maxDu;
+                this.migrationMode = model.migrationMode;
+                this.minDu = model.minDu;
+                this.originType = model.originType;
+                this.payType = model.payType;
+                this.performance = model.performance;
+                this.precheckStatus = model.precheckStatus;
+                this.reserved = model.reserved;
+                this.retryState = model.retryState;
+                this.reverseJob = model.reverseJob;
+                this.sourceEndpoint = model.sourceEndpoint;
+                this.status = model.status;
+                this.structureInitializationStatus = model.structureInitializationStatus;
+                this.subSyncJob = model.subSyncJob;
+                this.subscribeTopic = model.subscribeTopic;
+                this.subscriptionDataType = model.subscriptionDataType;
+                this.subscriptionHost = model.subscriptionHost;
+                this.synchronizationDirection = model.synchronizationDirection;
+                this.tagList = model.tagList;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>Indicates whether the new change tracking feature is used.</p>
              * <blockquote>
@@ -9928,6 +10520,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobDataEtlStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if the task failed.</p>
              * 
@@ -10081,6 +10684,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobDataInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
              * 
@@ -10232,6 +10846,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobDataSynchronizationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if the task failed.</p>
@@ -10472,6 +11097,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobDestinationEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the destination instance belongs.</p>
              * 
@@ -10688,6 +11331,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobMigrationMode model) {
+                this.dataExtractTransformLoad = model.dataExtractTransformLoad;
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
+
             /**
              * <p>Indicates whether data transformation is performed. Valid values:</p>
              * <ul>
@@ -10799,6 +11452,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String flow; 
             private String rps; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobPerformance model) {
+                this.flow = model.flow;
+                this.rps = model.rps;
+            } 
+
             /**
              * <p>The size of data that is migrated or synchronized per second. Unit: Mbit/s.</p>
              * 
@@ -10907,6 +11568,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String checkResult; 
             private String failedReason; 
             private String repairMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobPrecheckStatusDetail model) {
+                this.checkItem = model.checkItem;
+                this.checkItemDescription = model.checkItemDescription;
+                this.checkResult = model.checkResult;
+                this.failedReason = model.failedReason;
+                this.repairMethod = model.repairMethod;
+            } 
 
             /**
              * <p>The name of the precheck item.</p>
@@ -11047,6 +11719,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String errorMessage; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobPrecheckStatus model) {
+                this.detail = model.detail;
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The result of each precheck item.</p>
@@ -11217,6 +11899,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String retryTarget; 
             private Integer retryTime; 
             private Boolean retrying; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobRetryState model) {
+                this.errMsg = model.errMsg;
+                this.jobId = model.jobId;
+                this.maxRetryTime = model.maxRetryTime;
+                this.module = model.module;
+                this.retryCount = model.retryCount;
+                this.retryTarget = model.retryTarget;
+                this.retryTime = model.retryTime;
+                this.retrying = model.retrying;
+            } 
 
             /**
              * <p>The error message returned.</p>
@@ -11402,6 +12098,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobDataEtlStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if the task failed.</p>
              * 
@@ -11555,6 +12262,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobDataInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
              * 
@@ -11706,6 +12424,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String percent; 
             private String progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobDataSynchronizationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error message returned if the task failed.</p>
@@ -11946,6 +12675,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobDestinationEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the destination instance belongs.</p>
              * 
@@ -12162,6 +12909,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean structureInitialization; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobMigrationMode model) {
+                this.dataExtractTransformLoad = model.dataExtractTransformLoad;
+                this.dataInitialization = model.dataInitialization;
+                this.dataSynchronization = model.dataSynchronization;
+                this.structureInitialization = model.structureInitialization;
+            } 
+
             /**
              * <p>Indicates whether data transformation is performed. Valid values:</p>
              * <ul>
@@ -12273,6 +13030,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String flow; 
             private String rps; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobPerformance model) {
+                this.flow = model.flow;
+                this.rps = model.rps;
+            } 
+
             /**
              * <p>The size of data that is migrated or synchronized per second. Unit: Mbit/s.</p>
              * 
@@ -12381,6 +13146,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String checkResult; 
             private String failedReason; 
             private String repairMethod; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobPrecheckStatusDetail model) {
+                this.checkItem = model.checkItem;
+                this.checkItemDescription = model.checkItemDescription;
+                this.checkResult = model.checkResult;
+                this.failedReason = model.failedReason;
+                this.repairMethod = model.repairMethod;
+            } 
 
             /**
              * <p>The name of the precheck item.</p>
@@ -12521,6 +13297,16 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String errorMessage; 
             private String percent; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobPrecheckStatus model) {
+                this.detail = model.detail;
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The result of each precheck item.</p>
@@ -12691,6 +13477,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String retryTarget; 
             private Integer retryTime; 
             private Boolean retrying; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobRetryState model) {
+                this.errMsg = model.errMsg;
+                this.jobId = model.jobId;
+                this.maxRetryTime = model.maxRetryTime;
+                this.module = model.module;
+                this.retryCount = model.retryCount;
+                this.retryTarget = model.retryTarget;
+                this.retryTime = model.retryTime;
+                this.retrying = model.retrying;
+            } 
 
             /**
              * <p>The error message returned.</p>
@@ -12960,6 +13760,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobSourceEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
              * 
@@ -13188,6 +14006,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobStructureInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Error message indicating task failure.</p>
              * 
@@ -13304,6 +14133,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean ddl; 
             private Boolean dml; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobSubscriptionDataType model) {
+                this.ddl = model.ddl;
+                this.dml = model.dml;
+            } 
+
             /**
              * <p>Indicates whether DDL statements are tracked. Valid values:</p>
              * <ul>
@@ -13396,6 +14233,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String privateHost; 
             private String publicHost; 
             private String vpcHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJobSubscriptionHost model) {
+                this.privateHost = model.privateHost;
+                this.publicHost = model.publicHost;
+                this.vpcHost = model.vpcHost;
+            } 
 
             /**
              * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
@@ -13612,6 +14458,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagCategory; 
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReverseJobTagList model) {
+                this.aliUid = model.aliUid;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.scope = model.scope;
+                this.srcRegion = model.srcRegion;
+                this.tagCategory = model.tagCategory;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID.</p>
@@ -14325,6 +15190,56 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private java.util.List<ReverseJobTagList> tagList; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobReverseJob model) {
+                this.appName = model.appName;
+                this.beginTimestamp = model.beginTimestamp;
+                this.checkpoint = model.checkpoint;
+                this.consumptionCheckpoint = model.consumptionCheckpoint;
+                this.consumptionClient = model.consumptionClient;
+                this.createTime = model.createTime;
+                this.dataEtlStatus = model.dataEtlStatus;
+                this.dataInitializationStatus = model.dataInitializationStatus;
+                this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+                this.databaseCount = model.databaseCount;
+                this.dbObject = model.dbObject;
+                this.delay = model.delay;
+                this.destNetType = model.destNetType;
+                this.destinationEndpoint = model.destinationEndpoint;
+                this.dtsInstanceID = model.dtsInstanceID;
+                this.dtsJobClass = model.dtsJobClass;
+                this.dtsJobDirection = model.dtsJobDirection;
+                this.dtsJobId = model.dtsJobId;
+                this.dtsJobName = model.dtsJobName;
+                this.endTimestamp = model.endTimestamp;
+                this.errorMessage = model.errorMessage;
+                this.etlCalculator = model.etlCalculator;
+                this.expireTime = model.expireTime;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.isDemoJob = model.isDemoJob;
+                this.jobType = model.jobType;
+                this.migrationMode = model.migrationMode;
+                this.originType = model.originType;
+                this.payType = model.payType;
+                this.performance = model.performance;
+                this.precheckStatus = model.precheckStatus;
+                this.reserved = model.reserved;
+                this.retryState = model.retryState;
+                this.reverseJob = model.reverseJob;
+                this.sourceEndpoint = model.sourceEndpoint;
+                this.status = model.status;
+                this.structureInitializationStatus = model.structureInitializationStatus;
+                this.subscribeTopic = model.subscribeTopic;
+                this.subscriptionDataType = model.subscriptionDataType;
+                this.subscriptionHost = model.subscriptionHost;
+                this.synchronizationDirection = model.synchronizationDirection;
+                this.tagList = model.tagList;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>Indicates whether the new change tracking feature is used.</p>
              * <blockquote>
@@ -15004,6 +15919,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String sslSolutionEnum; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobSourceEndpoint model) {
+                this.aliyunUid = model.aliyunUid;
+                this.databaseName = model.databaseName;
+                this.engineName = model.engineName;
+                this.instanceID = model.instanceID;
+                this.instanceType = model.instanceType;
+                this.ip = model.ip;
+                this.oracleSID = model.oracleSID;
+                this.port = model.port;
+                this.region = model.region;
+                this.roleName = model.roleName;
+                this.sslSolutionEnum = model.sslSolutionEnum;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
              * 
@@ -15232,6 +16165,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String progress; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobStructureInitializationStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.needUpgrade = model.needUpgrade;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
             /**
              * <p>Error message indicating task failure.</p>
              * 
@@ -15348,6 +16292,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean ddl; 
             private Boolean dml; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobSubscriptionDataType model) {
+                this.ddl = model.ddl;
+                this.dml = model.dml;
+            } 
+
             /**
              * <p>Indicates whether DDL statements are tracked. Valid values:</p>
              * <ul>
@@ -15440,6 +16392,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String privateHost; 
             private String publicHost; 
             private String vpcHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobSubscriptionHost model) {
+                this.privateHost = model.privateHost;
+                this.publicHost = model.publicHost;
+                this.vpcHost = model.vpcHost;
+            } 
 
             /**
              * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
@@ -15656,6 +16617,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagCategory; 
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJobTagList model) {
+                this.aliUid = model.aliUid;
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.scope = model.scope;
+                this.srcRegion = model.srcRegion;
+                this.tagCategory = model.tagCategory;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID.</p>
@@ -16405,6 +17385,59 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private java.util.List<SubSyncJobTagList> tagList; 
             private String taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubSyncJob model) {
+                this.appName = model.appName;
+                this.beginTimestamp = model.beginTimestamp;
+                this.checkpoint = model.checkpoint;
+                this.consumptionCheckpoint = model.consumptionCheckpoint;
+                this.consumptionClient = model.consumptionClient;
+                this.createTime = model.createTime;
+                this.dataEtlStatus = model.dataEtlStatus;
+                this.dataInitializationStatus = model.dataInitializationStatus;
+                this.dataSynchronizationStatus = model.dataSynchronizationStatus;
+                this.databaseCount = model.databaseCount;
+                this.dbObject = model.dbObject;
+                this.delay = model.delay;
+                this.destNetType = model.destNetType;
+                this.destinationEndpoint = model.destinationEndpoint;
+                this.dtsInstanceID = model.dtsInstanceID;
+                this.dtsJobClass = model.dtsJobClass;
+                this.dtsJobDirection = model.dtsJobDirection;
+                this.dtsJobId = model.dtsJobId;
+                this.dtsJobName = model.dtsJobName;
+                this.endTimestamp = model.endTimestamp;
+                this.errorMessage = model.errorMessage;
+                this.etlCalculator = model.etlCalculator;
+                this.expireTime = model.expireTime;
+                this.finishTime = model.finishTime;
+                this.groupId = model.groupId;
+                this.isDemoJob = model.isDemoJob;
+                this.jobType = model.jobType;
+                this.maxDu = model.maxDu;
+                this.migrationMode = model.migrationMode;
+                this.minDu = model.minDu;
+                this.originType = model.originType;
+                this.payType = model.payType;
+                this.performance = model.performance;
+                this.precheckStatus = model.precheckStatus;
+                this.reserved = model.reserved;
+                this.retryState = model.retryState;
+                this.reverseJob = model.reverseJob;
+                this.sourceEndpoint = model.sourceEndpoint;
+                this.status = model.status;
+                this.structureInitializationStatus = model.structureInitializationStatus;
+                this.subSyncJob = model.subSyncJob;
+                this.subscribeTopic = model.subscribeTopic;
+                this.subscriptionDataType = model.subscriptionDataType;
+                this.subscriptionHost = model.subscriptionHost;
+                this.synchronizationDirection = model.synchronizationDirection;
+                this.tagList = model.tagList;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * <p>Indicates whether the new change tracking feature is used.</p>
              * <blockquote>
@@ -16997,6 +18030,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean ddl; 
             private Boolean dml; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionDataType model) {
+                this.ddl = model.ddl;
+                this.dml = model.dml;
+            } 
+
             /**
              * <p>Indicates whether DDL statements are tracked. Valid values:</p>
              * <ul>
@@ -17089,6 +18130,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String privateHost; 
             private String publicHost; 
             private String vpcHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubscriptionHost model) {
+                this.privateHost = model.privateHost;
+                this.publicHost = model.publicHost;
+                this.vpcHost = model.vpcHost;
+            } 
 
             /**
              * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>

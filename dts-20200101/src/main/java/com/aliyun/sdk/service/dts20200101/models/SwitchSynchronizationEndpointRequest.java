@@ -70,7 +70,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -341,6 +341,17 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             private String port; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoint model) {
+                this.ip = model.ip;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.port = model.port;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The IP address of the database.</p>
              * <blockquote>
@@ -468,6 +479,14 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         public static final class Builder {
             private String ownerID; 
             private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceEndpoint model) {
+                this.ownerID = model.ownerID;
+                this.role = model.role;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.</p>

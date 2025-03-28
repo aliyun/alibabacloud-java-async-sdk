@@ -49,7 +49,7 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         } 
 
         /**
-         * DedicatedClusterId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsClustervcwn1oeyu5fx4yf</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
@@ -119,7 +122,10 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +134,10 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

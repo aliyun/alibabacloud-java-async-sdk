@@ -59,7 +59,7 @@ public class StopDedicatedClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,7 +192,10 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource group ID. This parameter is a global parameter and not required.</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

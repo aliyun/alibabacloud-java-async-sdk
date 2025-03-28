@@ -52,6 +52,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return consumerGroupID
      */
@@ -101,6 +105,18 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         private String httpStatusCode; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateConsumerChannelResponseBody model) {
+            this.consumerGroupID = model.consumerGroupID;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.</p>

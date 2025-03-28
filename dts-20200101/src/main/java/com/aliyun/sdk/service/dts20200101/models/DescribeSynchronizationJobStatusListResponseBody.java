@@ -60,6 +60,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -125,6 +129,20 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         private String success; 
         private java.util.List<SynchronizationJobListStatusList> synchronizationJobListStatusList; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSynchronizationJobStatusListResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchronizationJobListStatusList = model.synchronizationJobListStatusList;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>
@@ -273,6 +291,15 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             private String status; 
             private String synchronizationDirection; 
 
+            private Builder() {
+            } 
+
+            private Builder(SynchronizationDirectionInfoList model) {
+                this.checkpoint = model.checkpoint;
+                this.status = model.status;
+                this.synchronizationDirection = model.synchronizationDirection;
+            } 
+
             /**
              * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
              * <blockquote>
@@ -375,6 +402,14 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SynchronizationDirectionInfoList> synchronizationDirectionInfoList; 
             private String synchronizationJobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SynchronizationJobListStatusList model) {
+                this.synchronizationDirectionInfoList = model.synchronizationDirectionInfoList;
+                this.synchronizationJobId = model.synchronizationJobId;
+            } 
 
             /**
              * <p>The details of data synchronization tasks in each direction.</p>

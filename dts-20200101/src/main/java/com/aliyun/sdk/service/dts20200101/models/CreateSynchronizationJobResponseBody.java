@@ -48,6 +48,10 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -89,6 +93,17 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String synchronizationJobId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSynchronizationJobResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.synchronizationJobId = model.synchronizationJobId;
+        } 
 
         /**
          * <p>The error code returned if the call failed.</p>

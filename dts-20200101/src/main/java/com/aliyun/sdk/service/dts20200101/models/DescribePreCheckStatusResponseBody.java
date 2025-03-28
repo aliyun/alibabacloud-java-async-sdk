@@ -100,6 +100,10 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return analysisJobProgress
      */
@@ -245,6 +249,30 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
         private Long totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePreCheckStatusResponseBody model) {
+            this.analysisJobProgress = model.analysisJobProgress;
+            this.code = model.code;
+            this.errorAnalysisItem = model.errorAnalysisItem;
+            this.errorItem = model.errorItem;
+            this.fullNetCheckJobStatus = model.fullNetCheckJobStatus;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jobId = model.jobId;
+            this.jobName = model.jobName;
+            this.jobProgress = model.jobProgress;
+            this.networkDiagnosisResult = model.networkDiagnosisResult;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.state = model.state;
+            this.subDistributedJobStatus = model.subDistributedJobStatus;
+            this.success = model.success;
+            this.total = model.total;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Display list of evaluation tasks</p>
@@ -517,6 +545,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String errMsg; 
             private String errType; 
             private String logLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.errData = model.errData;
+                this.errMsg = model.errMsg;
+                this.errType = model.errType;
+                this.logLevel = model.logLevel;
+            } 
 
             /**
              * <p>Error message</p>
@@ -889,6 +927,37 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String targetNames; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(AnalysisJobProgress model) {
+                this.bootTime = model.bootTime;
+                this.canSkip = model.canSkip;
+                this.current = model.current;
+                this.ddlSql = model.ddlSql;
+                this.delaySeconds = model.delaySeconds;
+                this.destSchema = model.destSchema;
+                this.diffRow = model.diffRow;
+                this.errDetail = model.errDetail;
+                this.errMsg = model.errMsg;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.ignoreFlag = model.ignoreFlag;
+                this.item = model.item;
+                this.jobId = model.jobId;
+                this.logs = model.logs;
+                this.names = model.names;
+                this.orderNum = model.orderNum;
+                this.parentObj = model.parentObj;
+                this.repairMethod = model.repairMethod;
+                this.skip = model.skip;
+                this.sourceSchema = model.sourceSchema;
+                this.state = model.state;
+                this.sub = model.sub;
+                this.targetNames = model.targetNames;
+                this.total = model.total;
+            } 
+
             /**
              * <p>The specific project start time, formatted as <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
              * 
@@ -1238,6 +1307,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String errMsg; 
             private String errType; 
             private String logLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobProgressLogs model) {
+                this.errData = model.errData;
+                this.errMsg = model.errMsg;
+                this.errType = model.errType;
+                this.logLevel = model.logLevel;
+            } 
 
             /**
              * <p>Error record.</p>
@@ -1609,6 +1688,37 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String sub; 
             private String targetNames; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullNetCheckJobStatusJobProgress model) {
+                this.bootTime = model.bootTime;
+                this.canSkip = model.canSkip;
+                this.current = model.current;
+                this.ddlSql = model.ddlSql;
+                this.delaySeconds = model.delaySeconds;
+                this.destSchema = model.destSchema;
+                this.diffRow = model.diffRow;
+                this.errDetail = model.errDetail;
+                this.errMsg = model.errMsg;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.ignoreFlag = model.ignoreFlag;
+                this.item = model.item;
+                this.jobId = model.jobId;
+                this.logs = model.logs;
+                this.names = model.names;
+                this.orderNum = model.orderNum;
+                this.parentObj = model.parentObj;
+                this.repairMethod = model.repairMethod;
+                this.skip = model.skip;
+                this.sourceSchema = model.sourceSchema;
+                this.state = model.state;
+                this.sub = model.sub;
+                this.targetNames = model.targetNames;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The specific project start time, formatted as <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
@@ -2080,6 +2190,26 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String state; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(FullNetCheckJobStatus model) {
+                this.code = model.code;
+                this.destRegion = model.destRegion;
+                this.destRegionCidr = model.destRegionCidr;
+                this.destinationEndpointType = model.destinationEndpointType;
+                this.errorItem = model.errorItem;
+                this.hostRegion = model.hostRegion;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.jobProgress = model.jobProgress;
+                this.sourceEndpointType = model.sourceEndpointType;
+                this.srcRegion = model.srcRegion;
+                this.srcRegionCidr = model.srcRegionCidr;
+                this.state = model.state;
+                this.total = model.total;
+            } 
+
             /**
              * <p>Task code, <strong>01</strong> represents pre-check.</p>
              * 
@@ -2305,6 +2435,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String errMsg; 
             private String errType; 
             private String logLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribePreCheckStatusResponseBodyJobProgressLogs model) {
+                this.errData = model.errData;
+                this.errMsg = model.errMsg;
+                this.errType = model.errType;
+                this.logLevel = model.logLevel;
+            } 
 
             /**
              * <p>The error message.</p>
@@ -2676,6 +2816,37 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String sub; 
             private String targetNames; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobProgress model) {
+                this.bootTime = model.bootTime;
+                this.canSkip = model.canSkip;
+                this.current = model.current;
+                this.ddlSql = model.ddlSql;
+                this.delaySeconds = model.delaySeconds;
+                this.destSchema = model.destSchema;
+                this.diffRow = model.diffRow;
+                this.errDetail = model.errDetail;
+                this.errMsg = model.errMsg;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.ignoreFlag = model.ignoreFlag;
+                this.item = model.item;
+                this.jobId = model.jobId;
+                this.logs = model.logs;
+                this.names = model.names;
+                this.orderNum = model.orderNum;
+                this.parentObj = model.parentObj;
+                this.repairMethod = model.repairMethod;
+                this.skip = model.skip;
+                this.sourceSchema = model.sourceSchema;
+                this.state = model.state;
+                this.sub = model.sub;
+                this.targetNames = model.targetNames;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The time when the subtask was started. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
@@ -3058,6 +3229,17 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String internationalDocUrl; 
             private String result; 
 
+            private Builder() {
+            } 
+
+            private Builder(Diagnosis model) {
+                this.cnDocUrl = model.cnDocUrl;
+                this.code = model.code;
+                this.endpointType = model.endpointType;
+                this.internationalDocUrl = model.internationalDocUrl;
+                this.result = model.result;
+            } 
+
             /**
              * <p>Document address for China region.</p>
              * 
@@ -3164,6 +3346,14 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private java.util.List<Diagnosis> diagnosis; 
             private String modelVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkDiagnosisResult model) {
+                this.diagnosis = model.diagnosis;
+                this.modelVersion = model.modelVersion;
+            } 
+
             /**
              * <p>Network diagnostic report</p>
              */
@@ -3257,6 +3447,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String errMsg; 
             private String errType; 
             private String logLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobStatusJobProgressLogs model) {
+                this.errData = model.errData;
+                this.errMsg = model.errMsg;
+                this.errType = model.errType;
+                this.logLevel = model.logLevel;
+            } 
 
             /**
              * <p>The record of errors.</p>
@@ -3628,6 +3828,37 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private String sub; 
             private String targetNames; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobStatusJobProgress model) {
+                this.bootTime = model.bootTime;
+                this.canSkip = model.canSkip;
+                this.current = model.current;
+                this.ddlSql = model.ddlSql;
+                this.delaySeconds = model.delaySeconds;
+                this.destSchema = model.destSchema;
+                this.diffRow = model.diffRow;
+                this.errDetail = model.errDetail;
+                this.errMsg = model.errMsg;
+                this.finishTime = model.finishTime;
+                this.id = model.id;
+                this.ignoreFlag = model.ignoreFlag;
+                this.item = model.item;
+                this.jobId = model.jobId;
+                this.logs = model.logs;
+                this.names = model.names;
+                this.orderNum = model.orderNum;
+                this.parentObj = model.parentObj;
+                this.repairMethod = model.repairMethod;
+                this.skip = model.skip;
+                this.sourceSchema = model.sourceSchema;
+                this.state = model.state;
+                this.sub = model.sub;
+                this.targetNames = model.targetNames;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The time when the subtask was started. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
@@ -4035,6 +4266,19 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
             private java.util.List<SubDistributedJobStatusJobProgress> jobProgress; 
             private String state; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDistributedJobStatus model) {
+                this.code = model.code;
+                this.errorItem = model.errorItem;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.jobProgress = model.jobProgress;
+                this.state = model.state;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The task code that indicates the type of the subtask. Valid values:</p>

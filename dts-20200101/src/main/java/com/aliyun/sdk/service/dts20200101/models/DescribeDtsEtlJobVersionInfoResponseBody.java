@@ -72,6 +72,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dtsEtlJobVersionInfos
      */
@@ -161,6 +165,23 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDtsEtlJobVersionInfoResponseBody model) {
+            this.dtsEtlJobVersionInfos = model.dtsEtlJobVersionInfos;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The details of ETL tasks.</p>
@@ -425,6 +446,22 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             private String safeCheckpoint; 
             private String status; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DtsEtlJobVersionInfos model) {
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.dtsInstanceId = model.dtsInstanceId;
+                this.dtsJobId = model.dtsJobId;
+                this.dtsJobName = model.dtsJobName;
+                this.modifyTime = model.modifyTime;
+                this.safeCheckpoint = model.safeCheckpoint;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

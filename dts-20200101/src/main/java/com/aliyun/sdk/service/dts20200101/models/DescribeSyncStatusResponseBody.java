@@ -64,6 +64,10 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicCode
      */
@@ -137,6 +141,21 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<SyncStatusList> syncStatusList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSyncStatusResponseBody model) {
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.syncStatusList = model.syncStatusList;
+        } 
 
         /**
          * DynamicCode.
@@ -307,6 +326,18 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
             private String jobId; 
             private String rate; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SyncStatusList model) {
+                this.checkpoint = model.checkpoint;
+                this.code = model.code;
+                this.delay = model.delay;
+                this.jobId = model.jobId;
+                this.rate = model.rate;
+                this.status = model.status;
+            } 
 
             /**
              * Checkpoint.
