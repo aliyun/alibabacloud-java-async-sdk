@@ -1,29 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProjectStatus} extends {@link TeaModel}
  *
  * <p>ProjectStatus</p>
  */
 public class ProjectStatus extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("latestReleaseDetail")
-    private ReleaseDetail latestReleaseDetail;
-
-    @com.aliyun.core.annotation.NameInMap("observedGeneration")
-    private Long observedGeneration;
-
-    @com.aliyun.core.annotation.NameInMap("observedTime")
-    private String observedTime;
+    @com.aliyun.core.annotation.NameInMap("services")
+    private java.util.List<ServiceMeta> services;
 
     private ProjectStatus(Builder builder) {
-        this.latestReleaseDetail = builder.latestReleaseDetail;
-        this.observedGeneration = builder.observedGeneration;
-        this.observedTime = builder.observedTime;
+        this.services = builder.services;
     }
 
     public static Builder builder() {
@@ -34,53 +32,32 @@ public class ProjectStatus extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return latestReleaseDetail
-     */
-    public ReleaseDetail getLatestReleaseDetail() {
-        return this.latestReleaseDetail;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
-     * @return observedGeneration
+     * @return services
      */
-    public Long getObservedGeneration() {
-        return this.observedGeneration;
-    }
-
-    /**
-     * @return observedTime
-     */
-    public String getObservedTime() {
-        return this.observedTime;
+    public java.util.List<ServiceMeta> getServices() {
+        return this.services;
     }
 
     public static final class Builder {
-        private ReleaseDetail latestReleaseDetail; 
-        private Long observedGeneration; 
-        private String observedTime; 
+        private java.util.List<ServiceMeta> services; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProjectStatus model) {
+            this.services = model.services;
+        } 
 
         /**
-         * latestReleaseDetail.
+         * services.
          */
-        public Builder latestReleaseDetail(ReleaseDetail latestReleaseDetail) {
-            this.latestReleaseDetail = latestReleaseDetail;
-            return this;
-        }
-
-        /**
-         * observedGeneration.
-         */
-        public Builder observedGeneration(Long observedGeneration) {
-            this.observedGeneration = observedGeneration;
-            return this;
-        }
-
-        /**
-         * observedTime.
-         */
-        public Builder observedTime(String observedTime) {
-            this.observedTime = observedTime;
+        public Builder services(java.util.List<ServiceMeta> services) {
+            this.services = services;
             return this;
         }
 

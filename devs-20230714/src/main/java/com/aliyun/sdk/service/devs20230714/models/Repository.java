@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Repository} extends {@link TeaModel}
  *
  * <p>Repository</p>
@@ -17,21 +23,15 @@ public class Repository extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("generation")
-    private Integer generation;
-
     @com.aliyun.core.annotation.NameInMap("kind")
     private String kind;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, String > labels;
+    private java.util.Map<String, String> labels;
 
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 40, minLength = 1)
     private String name;
-
-    @com.aliyun.core.annotation.NameInMap("resourceVersion")
-    private Integer resourceVersion;
 
     @com.aliyun.core.annotation.NameInMap("spec")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -43,11 +43,9 @@ public class Repository extends TeaModel {
     private Repository(Builder builder) {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
-        this.generation = builder.generation;
         this.kind = builder.kind;
         this.labels = builder.labels;
         this.name = builder.name;
-        this.resourceVersion = builder.resourceVersion;
         this.spec = builder.spec;
         this.uid = builder.uid;
     }
@@ -58,6 +56,10 @@ public class Repository extends TeaModel {
 
     public static Repository create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -75,13 +77,6 @@ public class Repository extends TeaModel {
     }
 
     /**
-     * @return generation
-     */
-    public Integer getGeneration() {
-        return this.generation;
-    }
-
-    /**
      * @return kind
      */
     public String getKind() {
@@ -91,7 +86,7 @@ public class Repository extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.Map < String, String > getLabels() {
+    public java.util.Map<String, String> getLabels() {
         return this.labels;
     }
 
@@ -100,13 +95,6 @@ public class Repository extends TeaModel {
      */
     public String getName() {
         return this.name;
-    }
-
-    /**
-     * @return resourceVersion
-     */
-    public Integer getResourceVersion() {
-        return this.resourceVersion;
     }
 
     /**
@@ -126,13 +114,24 @@ public class Repository extends TeaModel {
     public static final class Builder {
         private String createdTime; 
         private String description; 
-        private Integer generation; 
         private String kind; 
-        private java.util.Map < String, String > labels; 
+        private java.util.Map<String, String> labels; 
         private String name; 
-        private Integer resourceVersion; 
         private RepositorySpec spec; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(Repository model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.kind = model.kind;
+            this.labels = model.labels;
+            this.name = model.name;
+            this.spec = model.spec;
+            this.uid = model.uid;
+        } 
 
         /**
          * createdTime.
@@ -151,14 +150,6 @@ public class Repository extends TeaModel {
         }
 
         /**
-         * generation.
-         */
-        public Builder generation(Integer generation) {
-            this.generation = generation;
-            return this;
-        }
-
-        /**
          * kind.
          */
         public Builder kind(String kind) {
@@ -169,13 +160,16 @@ public class Repository extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, String > labels) {
+        public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
             return this;
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-repository</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -183,15 +177,7 @@ public class Repository extends TeaModel {
         }
 
         /**
-         * resourceVersion.
-         */
-        public Builder resourceVersion(Integer resourceVersion) {
-            this.resourceVersion = resourceVersion;
-            return this;
-        }
-
-        /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(RepositorySpec spec) {
             this.spec = spec;

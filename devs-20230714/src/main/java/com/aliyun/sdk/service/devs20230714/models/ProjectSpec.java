@@ -1,29 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProjectSpec} extends {@link TeaModel}
  *
  * <p>ProjectSpec</p>
  */
 public class ProjectSpec extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("roleArn")
-    private String roleArn;
-
-    @com.aliyun.core.annotation.NameInMap("templateConfig")
-    private TemplateConfig templateConfig;
-
-    @com.aliyun.core.annotation.NameInMap("token")
-    private String token;
-
     private ProjectSpec(Builder builder) {
-        this.roleArn = builder.roleArn;
-        this.templateConfig = builder.templateConfig;
-        this.token = builder.token;
     }
 
     public static Builder builder() {
@@ -34,55 +28,17 @@ public class ProjectSpec extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return roleArn
-     */
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * @return templateConfig
-     */
-    public TemplateConfig getTemplateConfig() {
-        return this.templateConfig;
-    }
-
-    /**
-     * @return token
-     */
-    public String getToken() {
-        return this.token;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     public static final class Builder {
-        private String roleArn; 
-        private TemplateConfig templateConfig; 
-        private String token; 
 
-        /**
-         * roleArn.
-         */
-        public Builder roleArn(String roleArn) {
-            this.roleArn = roleArn;
-            return this;
-        }
+        private Builder() {
+        } 
 
-        /**
-         * templateConfig.
-         */
-        public Builder templateConfig(TemplateConfig templateConfig) {
-            this.templateConfig = templateConfig;
-            return this;
-        }
-
-        /**
-         * token.
-         */
-        public Builder token(String token) {
-            this.token = token;
-            return this;
-        }
+        private Builder(ProjectSpec model) {
+        } 
 
         public ProjectSpec build() {
             return new ProjectSpec(this);

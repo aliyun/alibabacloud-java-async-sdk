@@ -1,25 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EventFilterConfig} extends {@link TeaModel}
  *
  * <p>EventFilterConfig</p>
  */
 public class EventFilterConfig extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("pullRequest")
-    private PullRequestFilter pullRequest;
-
-    @com.aliyun.core.annotation.NameInMap("push")
-    private PushFilter push;
+    @com.aliyun.core.annotation.NameInMap("branch")
+    private BranchFilter branch;
 
     private EventFilterConfig(Builder builder) {
-        this.pullRequest = builder.pullRequest;
-        this.push = builder.push;
+        this.branch = builder.branch;
     }
 
     public static Builder builder() {
@@ -30,37 +32,32 @@ public class EventFilterConfig extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return pullRequest
-     */
-    public PullRequestFilter getPullRequest() {
-        return this.pullRequest;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
-     * @return push
+     * @return branch
      */
-    public PushFilter getPush() {
-        return this.push;
+    public BranchFilter getBranch() {
+        return this.branch;
     }
 
     public static final class Builder {
-        private PullRequestFilter pullRequest; 
-        private PushFilter push; 
+        private BranchFilter branch; 
+
+        private Builder() {
+        } 
+
+        private Builder(EventFilterConfig model) {
+            this.branch = model.branch;
+        } 
 
         /**
-         * pullRequest.
+         * branch.
          */
-        public Builder pullRequest(PullRequestFilter pullRequest) {
-            this.pullRequest = pullRequest;
-            return this;
-        }
-
-        /**
-         * push.
-         */
-        public Builder push(PushFilter push) {
-            this.push = push;
+        public Builder branch(BranchFilter branch) {
+            this.branch = branch;
             return this;
         }
 

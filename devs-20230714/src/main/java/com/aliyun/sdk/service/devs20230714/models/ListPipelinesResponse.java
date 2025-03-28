@@ -1,24 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelinesResponse} extends {@link TeaModel}
  *
  * <p>ListPipelinesResponse</p>
  */
 public class ListPipelinesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < Pipeline > body;
+    private java.util.List<Pipeline> body;
 
     private ListPipelinesResponse(BuilderImpl builder) {
         super(builder);
@@ -31,7 +37,7 @@ public class ListPipelinesResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -39,7 +45,7 @@ public class ListPipelinesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,17 +59,17 @@ public class ListPipelinesResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < Pipeline > getBody() {
+    public java.util.List<Pipeline> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<ListPipelinesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < Pipeline > body);
+        Builder body(java.util.List<Pipeline> body);
 
         @Override
         ListPipelinesResponse build();
@@ -73,9 +79,9 @@ public class ListPipelinesResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<ListPipelinesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < Pipeline > body; 
+        private java.util.List<Pipeline> body; 
 
         private BuilderImpl() {
             super();
@@ -92,7 +98,7 @@ public class ListPipelinesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,7 +116,7 @@ public class ListPipelinesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < Pipeline > body) {
+        public Builder body(java.util.List<Pipeline> body) {
             this.body = body;
             return this;
         }

@@ -1,21 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnvironmentStatus} extends {@link TeaModel}
  *
  * <p>EnvironmentStatus</p>
  */
 public class EnvironmentStatus extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("infraStackStatus")
-    private InfraStackStatus infraStackStatus;
-
-    @com.aliyun.core.annotation.NameInMap("latestReleaseDetail")
-    private ReleaseDetail latestReleaseDetail;
+    @com.aliyun.core.annotation.NameInMap("latestEnvironmentDeploymentName")
+    private String latestEnvironmentDeploymentName;
 
     @com.aliyun.core.annotation.NameInMap("observedGeneration")
     private Long observedGeneration;
@@ -23,11 +26,18 @@ public class EnvironmentStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("observedTime")
     private String observedTime;
 
+    @com.aliyun.core.annotation.NameInMap("servicesInstances")
+    private java.util.Map<String, ServiceInstance> servicesInstances;
+
+    @com.aliyun.core.annotation.NameInMap("servicesWithPendingChanges")
+    private java.util.List<String> servicesWithPendingChanges;
+
     private EnvironmentStatus(Builder builder) {
-        this.infraStackStatus = builder.infraStackStatus;
-        this.latestReleaseDetail = builder.latestReleaseDetail;
+        this.latestEnvironmentDeploymentName = builder.latestEnvironmentDeploymentName;
         this.observedGeneration = builder.observedGeneration;
         this.observedTime = builder.observedTime;
+        this.servicesInstances = builder.servicesInstances;
+        this.servicesWithPendingChanges = builder.servicesWithPendingChanges;
     }
 
     public static Builder builder() {
@@ -38,18 +48,15 @@ public class EnvironmentStatus extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return infraStackStatus
-     */
-    public InfraStackStatus getInfraStackStatus() {
-        return this.infraStackStatus;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
-     * @return latestReleaseDetail
+     * @return latestEnvironmentDeploymentName
      */
-    public ReleaseDetail getLatestReleaseDetail() {
-        return this.latestReleaseDetail;
+    public String getLatestEnvironmentDeploymentName() {
+        return this.latestEnvironmentDeploymentName;
     }
 
     /**
@@ -66,25 +73,43 @@ public class EnvironmentStatus extends TeaModel {
         return this.observedTime;
     }
 
+    /**
+     * @return servicesInstances
+     */
+    public java.util.Map<String, ServiceInstance> getServicesInstances() {
+        return this.servicesInstances;
+    }
+
+    /**
+     * @return servicesWithPendingChanges
+     */
+    public java.util.List<String> getServicesWithPendingChanges() {
+        return this.servicesWithPendingChanges;
+    }
+
     public static final class Builder {
-        private InfraStackStatus infraStackStatus; 
-        private ReleaseDetail latestReleaseDetail; 
+        private String latestEnvironmentDeploymentName; 
         private Long observedGeneration; 
         private String observedTime; 
+        private java.util.Map<String, ServiceInstance> servicesInstances; 
+        private java.util.List<String> servicesWithPendingChanges; 
+
+        private Builder() {
+        } 
+
+        private Builder(EnvironmentStatus model) {
+            this.latestEnvironmentDeploymentName = model.latestEnvironmentDeploymentName;
+            this.observedGeneration = model.observedGeneration;
+            this.observedTime = model.observedTime;
+            this.servicesInstances = model.servicesInstances;
+            this.servicesWithPendingChanges = model.servicesWithPendingChanges;
+        } 
 
         /**
-         * infraStackStatus.
+         * latestEnvironmentDeploymentName.
          */
-        public Builder infraStackStatus(InfraStackStatus infraStackStatus) {
-            this.infraStackStatus = infraStackStatus;
-            return this;
-        }
-
-        /**
-         * latestReleaseDetail.
-         */
-        public Builder latestReleaseDetail(ReleaseDetail latestReleaseDetail) {
-            this.latestReleaseDetail = latestReleaseDetail;
+        public Builder latestEnvironmentDeploymentName(String latestEnvironmentDeploymentName) {
+            this.latestEnvironmentDeploymentName = latestEnvironmentDeploymentName;
             return this;
         }
 
@@ -101,6 +126,22 @@ public class EnvironmentStatus extends TeaModel {
          */
         public Builder observedTime(String observedTime) {
             this.observedTime = observedTime;
+            return this;
+        }
+
+        /**
+         * servicesInstances.
+         */
+        public Builder servicesInstances(java.util.Map<String, ServiceInstance> servicesInstances) {
+            this.servicesInstances = servicesInstances;
+            return this;
+        }
+
+        /**
+         * servicesWithPendingChanges.
+         */
+        public Builder servicesWithPendingChanges(java.util.List<String> servicesWithPendingChanges) {
+            this.servicesWithPendingChanges = servicesWithPendingChanges;
             return this;
         }
 

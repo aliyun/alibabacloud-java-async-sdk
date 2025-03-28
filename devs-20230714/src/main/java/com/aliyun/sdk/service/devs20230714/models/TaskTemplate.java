@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskTemplate} extends {@link TeaModel}
  *
  * <p>TaskTemplate</p>
@@ -27,7 +33,7 @@ public class TaskTemplate extends TeaModel {
     private String kind;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, String > labels;
+    private java.util.Map<String, String> labels;
 
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 40, minLength = 1)
@@ -61,6 +67,10 @@ public class TaskTemplate extends TeaModel {
 
     public static TaskTemplate create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -101,7 +111,7 @@ public class TaskTemplate extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.Map < String, String > getLabels() {
+    public java.util.Map<String, String> getLabels() {
         return this.labels;
     }
 
@@ -139,11 +149,27 @@ public class TaskTemplate extends TeaModel {
         private String description; 
         private Integer generation; 
         private String kind; 
-        private java.util.Map < String, String > labels; 
+        private java.util.Map<String, String> labels; 
         private String name; 
         private Integer resourceVersion; 
         private TaskTemplateSpec spec; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskTemplate model) {
+            this.createdTime = model.createdTime;
+            this.deletionTime = model.deletionTime;
+            this.description = model.description;
+            this.generation = model.generation;
+            this.kind = model.kind;
+            this.labels = model.labels;
+            this.name = model.name;
+            this.resourceVersion = model.resourceVersion;
+            this.spec = model.spec;
+            this.uid = model.uid;
+        } 
 
         /**
          * createdTime.
@@ -188,13 +214,16 @@ public class TaskTemplate extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, String > labels) {
+        public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
             return this;
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-task-template</p>
          */
         public Builder name(String name) {
             this.name = name;

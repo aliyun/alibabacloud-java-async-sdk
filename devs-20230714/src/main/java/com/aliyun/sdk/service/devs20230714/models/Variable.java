@@ -1,24 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Variable} extends {@link TeaModel}
  *
  * <p>Variable</p>
  */
 public class Variable extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
+    @com.aliyun.core.annotation.NameInMap("encrypted")
+    private Boolean encrypted;
+
+    @com.aliyun.core.annotation.NameInMap("sensitive")
+    private Boolean sensitive;
 
     @com.aliyun.core.annotation.NameInMap("value")
-    private String value;
+    private Object value;
 
     private Variable(Builder builder) {
-        this.name = builder.name;
+        this.encrypted = builder.encrypted;
+        this.sensitive = builder.sensitive;
         this.value = builder.value;
     }
 
@@ -30,36 +40,65 @@ public class Variable extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
-     * @return name
+     * @return encrypted
      */
-    public String getName() {
-        return this.name;
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    /**
+     * @return sensitive
+     */
+    public Boolean getSensitive() {
+        return this.sensitive;
     }
 
     /**
      * @return value
      */
-    public String getValue() {
+    public Object getValue() {
         return this.value;
     }
 
     public static final class Builder {
-        private String name; 
-        private String value; 
+        private Boolean encrypted; 
+        private Boolean sensitive; 
+        private Object value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Variable model) {
+            this.encrypted = model.encrypted;
+            this.sensitive = model.sensitive;
+            this.value = model.value;
+        } 
 
         /**
-         * name.
+         * encrypted.
          */
-        public Builder name(String name) {
-            this.name = name;
+        public Builder encrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
+         * sensitive.
+         */
+        public Builder sensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
             return this;
         }
 
         /**
          * value.
          */
-        public Builder value(String value) {
+        public Builder value(Object value) {
             this.value = value;
             return this;
         }

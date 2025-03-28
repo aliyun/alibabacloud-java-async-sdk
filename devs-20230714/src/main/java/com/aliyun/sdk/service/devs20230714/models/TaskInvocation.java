@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskInvocation} extends {@link TeaModel}
  *
  * <p>TaskInvocation</p>
@@ -52,6 +58,10 @@ public class TaskInvocation extends TeaModel {
 
     public static TaskInvocation create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class TaskInvocation extends TeaModel {
         private String slsLogStore; 
         private String slsProject; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskInvocation model) {
+            this.instanceID = model.instanceID;
+            this.invocationID = model.invocationID;
+            this.invocationTarget = model.invocationTarget;
+            this.output = model.output;
+            this.requestID = model.requestID;
+            this.slsLogStore = model.slsLogStore;
+            this.slsProject = model.slsProject;
+            this.status = model.status;
+        } 
 
         /**
          * instanceID.

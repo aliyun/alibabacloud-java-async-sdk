@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PipelineSpec} extends {@link TeaModel}
  *
  * <p>PipelineSpec</p>
@@ -34,6 +40,10 @@ public class PipelineSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return context
      */
@@ -59,6 +69,15 @@ public class PipelineSpec extends TeaModel {
         private Context context; 
         private String templateName; 
         private PipelineTemplateSpec templateSpec; 
+
+        private Builder() {
+        } 
+
+        private Builder(PipelineSpec model) {
+            this.context = model.context;
+            this.templateName = model.templateName;
+            this.templateSpec = model.templateSpec;
+        } 
 
         /**
          * context.

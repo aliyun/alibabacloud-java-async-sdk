@@ -1,21 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskStatus} extends {@link TeaModel}
  *
  * <p>TaskStatus</p>
  */
 public class TaskStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("executionDetails")
-    private java.util.List < String > executionDetails;
+    private java.util.List<String> executionDetails;
 
     @com.aliyun.core.annotation.NameInMap("invocations")
-    private java.util.List < TaskInvocation > invocations;
+    private java.util.List<TaskInvocation> invocations;
 
     @com.aliyun.core.annotation.NameInMap("latestExecError")
     private TaskExecError latestExecError;
@@ -42,17 +48,21 @@ public class TaskStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executionDetails
      */
-    public java.util.List < String > getExecutionDetails() {
+    public java.util.List<String> getExecutionDetails() {
         return this.executionDetails;
     }
 
     /**
      * @return invocations
      */
-    public java.util.List < TaskInvocation > getInvocations() {
+    public java.util.List<TaskInvocation> getInvocations() {
         return this.invocations;
     }
 
@@ -78,16 +88,27 @@ public class TaskStatus extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > executionDetails; 
-        private java.util.List < TaskInvocation > invocations; 
+        private java.util.List<String> executionDetails; 
+        private java.util.List<TaskInvocation> invocations; 
         private TaskExecError latestExecError; 
         private String phase; 
         private Long statusGeneration; 
 
+        private Builder() {
+        } 
+
+        private Builder(TaskStatus model) {
+            this.executionDetails = model.executionDetails;
+            this.invocations = model.invocations;
+            this.latestExecError = model.latestExecError;
+            this.phase = model.phase;
+            this.statusGeneration = model.statusGeneration;
+        } 
+
         /**
          * executionDetails.
          */
-        public Builder executionDetails(java.util.List < String > executionDetails) {
+        public Builder executionDetails(java.util.List<String> executionDetails) {
             this.executionDetails = executionDetails;
             return this;
         }
@@ -95,7 +116,7 @@ public class TaskStatus extends TeaModel {
         /**
          * invocations.
          */
-        public Builder invocations(java.util.List < TaskInvocation > invocations) {
+        public Builder invocations(java.util.List<TaskInvocation> invocations) {
             this.invocations = invocations;
             return this;
         }

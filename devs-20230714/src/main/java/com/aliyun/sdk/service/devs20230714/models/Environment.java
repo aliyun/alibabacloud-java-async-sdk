@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Environment} extends {@link TeaModel}
  *
  * <p>Environment</p>
@@ -24,7 +30,7 @@ public class Environment extends TeaModel {
     private String kind;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, String > labels;
+    private java.util.Map<String, String> labels;
 
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -32,9 +38,6 @@ public class Environment extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("projectName")
     private String projectName;
-
-    @com.aliyun.core.annotation.NameInMap("resourceVersion")
-    private Integer resourceVersion;
 
     @com.aliyun.core.annotation.NameInMap("spec")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -54,7 +57,6 @@ public class Environment extends TeaModel {
         this.labels = builder.labels;
         this.name = builder.name;
         this.projectName = builder.projectName;
-        this.resourceVersion = builder.resourceVersion;
         this.spec = builder.spec;
         this.status = builder.status;
         this.uid = builder.uid;
@@ -66,6 +68,10 @@ public class Environment extends TeaModel {
 
     public static Environment create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -99,7 +105,7 @@ public class Environment extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.Map < String, String > getLabels() {
+    public java.util.Map<String, String> getLabels() {
         return this.labels;
     }
 
@@ -115,13 +121,6 @@ public class Environment extends TeaModel {
      */
     public String getProjectName() {
         return this.projectName;
-    }
-
-    /**
-     * @return resourceVersion
-     */
-    public Integer getResourceVersion() {
-        return this.resourceVersion;
     }
 
     /**
@@ -150,13 +149,28 @@ public class Environment extends TeaModel {
         private String description; 
         private Integer generation; 
         private String kind; 
-        private java.util.Map < String, String > labels; 
+        private java.util.Map<String, String> labels; 
         private String name; 
         private String projectName; 
-        private Integer resourceVersion; 
         private EnvironmentSpec spec; 
         private EnvironmentStatus status; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(Environment model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.generation = model.generation;
+            this.kind = model.kind;
+            this.labels = model.labels;
+            this.name = model.name;
+            this.projectName = model.projectName;
+            this.spec = model.spec;
+            this.status = model.status;
+            this.uid = model.uid;
+        } 
 
         /**
          * createdTime.
@@ -193,13 +207,16 @@ public class Environment extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, String > labels) {
+        public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
             return this;
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-env</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -215,15 +232,7 @@ public class Environment extends TeaModel {
         }
 
         /**
-         * resourceVersion.
-         */
-        public Builder resourceVersion(Integer resourceVersion) {
-            this.resourceVersion = resourceVersion;
-            return this;
-        }
-
-        /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(EnvironmentSpec spec) {
             this.spec = spec;

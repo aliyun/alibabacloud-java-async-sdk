@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelinesRequest} extends {@link RequestModel}
  *
  * <p>ListPipelinesRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListPipelinesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("labelSelector")
-    private java.util.List < String > labelSelector;
+    private java.util.List<String> labelSelector;
 
     private ListPipelinesRequest(Builder builder) {
         super(builder);
@@ -28,7 +34,7 @@ public class ListPipelinesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -36,12 +42,12 @@ public class ListPipelinesRequest extends Request {
     /**
      * @return labelSelector
      */
-    public java.util.List < String > getLabelSelector() {
+    public java.util.List<String> getLabelSelector() {
         return this.labelSelector;
     }
 
     public static final class Builder extends Request.Builder<ListPipelinesRequest, Builder> {
-        private java.util.List < String > labelSelector; 
+        private java.util.List<String> labelSelector; 
 
         private Builder() {
             super();
@@ -55,7 +61,7 @@ public class ListPipelinesRequest extends Request {
         /**
          * labelSelector.
          */
-        public Builder labelSelector(java.util.List < String > labelSelector) {
+        public Builder labelSelector(java.util.List<String> labelSelector) {
             String labelSelectorShrink = shrink(labelSelector, "labelSelector", "simple");
             this.putQueryParameter("labelSelector", labelSelectorShrink);
             this.labelSelector = labelSelector;

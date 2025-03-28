@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Pipeline} extends {@link TeaModel}
  *
  * <p>Pipeline</p>
@@ -13,9 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class Pipeline extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
-
-    @com.aliyun.core.annotation.NameInMap("deletionTime")
-    private String deletionTime;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -27,7 +30,7 @@ public class Pipeline extends TeaModel {
     private String kind;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, String > labels;
+    private java.util.Map<String, String> labels;
 
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 40, minLength = 1)
@@ -47,7 +50,6 @@ public class Pipeline extends TeaModel {
 
     private Pipeline(Builder builder) {
         this.createdTime = builder.createdTime;
-        this.deletionTime = builder.deletionTime;
         this.description = builder.description;
         this.generation = builder.generation;
         this.kind = builder.kind;
@@ -67,18 +69,15 @@ public class Pipeline extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
     public String getCreatedTime() {
         return this.createdTime;
-    }
-
-    /**
-     * @return deletionTime
-     */
-    public String getDeletionTime() {
-        return this.deletionTime;
     }
 
     /**
@@ -105,7 +104,7 @@ public class Pipeline extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.Map < String, String > getLabels() {
+    public java.util.Map<String, String> getLabels() {
         return this.labels;
     }
 
@@ -146,30 +145,37 @@ public class Pipeline extends TeaModel {
 
     public static final class Builder {
         private String createdTime; 
-        private String deletionTime; 
         private String description; 
         private Integer generation; 
         private String kind; 
-        private java.util.Map < String, String > labels; 
+        private java.util.Map<String, String> labels; 
         private String name; 
         private Integer resourceVersion; 
         private PipelineSpec spec; 
         private PipelineStatus status; 
         private String uid; 
 
+        private Builder() {
+        } 
+
+        private Builder(Pipeline model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.generation = model.generation;
+            this.kind = model.kind;
+            this.labels = model.labels;
+            this.name = model.name;
+            this.resourceVersion = model.resourceVersion;
+            this.spec = model.spec;
+            this.status = model.status;
+            this.uid = model.uid;
+        } 
+
         /**
          * createdTime.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
-            return this;
-        }
-
-        /**
-         * deletionTime.
-         */
-        public Builder deletionTime(String deletionTime) {
-            this.deletionTime = deletionTime;
             return this;
         }
 
@@ -200,13 +206,16 @@ public class Pipeline extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, String > labels) {
+        public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
             return this;
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-pipeline</p>
          */
         public Builder name(String name) {
             this.name = name;

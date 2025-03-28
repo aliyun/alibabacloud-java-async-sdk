@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RepositorySpec} extends {@link TeaModel}
  *
  * <p>RepositorySpec</p>
@@ -50,6 +56,10 @@ public class RepositorySpec extends TeaModel {
 
     public static RepositorySpec create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -110,8 +120,24 @@ public class RepositorySpec extends TeaModel {
         private String platform; 
         private String webUrl; 
 
+        private Builder() {
+        } 
+
+        private Builder(RepositorySpec model) {
+            this.cloneUrl = model.cloneUrl;
+            this.connectionName = model.connectionName;
+            this.displayName = model.displayName;
+            this.id = model.id;
+            this.owner = model.owner;
+            this.platform = model.platform;
+            this.webUrl = model.webUrl;
+        } 
+
         /**
-         * cloneUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://github.com/DDofDD/start-springboot-lfgy.git">https://github.com/DDofDD/start-springboot-lfgy.git</a></p>
          */
         public Builder cloneUrl(String cloneUrl) {
             this.cloneUrl = cloneUrl;
@@ -119,7 +145,10 @@ public class RepositorySpec extends TeaModel {
         }
 
         /**
-         * connectionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>awesome-connection</p>
          */
         public Builder connectionName(String connectionName) {
             this.connectionName = connectionName;

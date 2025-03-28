@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Installation} extends {@link TeaModel}
  *
  * <p>Installation</p>
@@ -34,6 +40,10 @@ public class Installation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionUri
      */
@@ -59,6 +69,15 @@ public class Installation extends TeaModel {
         private String actionUri; 
         private String message; 
         private String stage; 
+
+        private Builder() {
+        } 
+
+        private Builder(Installation model) {
+            this.actionUri = model.actionUri;
+            this.message = model.message;
+            this.stage = model.stage;
+        } 
 
         /**
          * actionUri.

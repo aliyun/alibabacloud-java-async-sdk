@@ -1,20 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnvironmentRequest</p>
  */
 public class DeleteEnvironmentRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("project")
+    @com.aliyun.core.annotation.NameInMap("projectName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String project;
+    private String projectName;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("name")
@@ -23,7 +29,7 @@ public class DeleteEnvironmentRequest extends Request {
 
     private DeleteEnvironmentRequest(Builder builder) {
         super(builder);
-        this.project = builder.project;
+        this.projectName = builder.projectName;
         this.name = builder.name;
     }
 
@@ -35,16 +41,16 @@ public class DeleteEnvironmentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return project
+     * @return projectName
      */
-    public String getProject() {
-        return this.project;
+    public String getProjectName() {
+        return this.projectName;
     }
 
     /**
@@ -55,7 +61,7 @@ public class DeleteEnvironmentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteEnvironmentRequest, Builder> {
-        private String project; 
+        private String projectName; 
         private String name; 
 
         private Builder() {
@@ -64,21 +70,27 @@ public class DeleteEnvironmentRequest extends Request {
 
         private Builder(DeleteEnvironmentRequest request) {
             super(request);
-            this.project = request.project;
+            this.projectName = request.projectName;
             this.name = request.name;
         } 
 
         /**
-         * project.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-project</p>
          */
-        public Builder project(String project) {
-            this.putPathParameter("project", project);
-            this.project = project;
+        public Builder projectName(String projectName) {
+            this.putPathParameter("projectName", projectName);
+            this.projectName = projectName;
             return this;
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-env</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

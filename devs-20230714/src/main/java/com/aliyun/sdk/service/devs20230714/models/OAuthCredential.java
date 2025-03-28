@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OAuthCredential} extends {@link TeaModel}
  *
  * <p>OAuthCredential</p>
@@ -47,6 +53,10 @@ public class OAuthCredential extends TeaModel {
 
     public static OAuthCredential create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -99,8 +109,23 @@ public class OAuthCredential extends TeaModel {
         private String token; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(OAuthCredential model) {
+            this.createdTime = model.createdTime;
+            this.expiration = model.expiration;
+            this.refreshToken = model.refreshToken;
+            this.scope = model.scope;
+            this.token = model.token;
+            this.type = model.type;
+        } 
+
         /**
-         * createdTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716176924603</p>
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -108,7 +133,10 @@ public class OAuthCredential extends TeaModel {
         }
 
         /**
-         * expiration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716263324603</p>
          */
         public Builder expiration(Long expiration) {
             this.expiration = expiration;
@@ -132,7 +160,10 @@ public class OAuthCredential extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4e84246b6b3962cd3d207aad1ea2f911</p>
          */
         public Builder token(String token) {
             this.token = token;

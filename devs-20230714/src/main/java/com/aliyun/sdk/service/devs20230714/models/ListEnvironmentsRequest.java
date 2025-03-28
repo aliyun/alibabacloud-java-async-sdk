@@ -1,20 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvironmentsRequest</p>
  */
 public class ListEnvironmentsRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("project")
+    @com.aliyun.core.annotation.NameInMap("projectName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String project;
+    private String projectName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keyword")
@@ -22,7 +28,7 @@ public class ListEnvironmentsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("labelSelector")
-    private java.util.List < String > labelSelector;
+    private java.util.List<String> labelSelector;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
@@ -34,7 +40,7 @@ public class ListEnvironmentsRequest extends Request {
 
     private ListEnvironmentsRequest(Builder builder) {
         super(builder);
-        this.project = builder.project;
+        this.projectName = builder.projectName;
         this.keyword = builder.keyword;
         this.labelSelector = builder.labelSelector;
         this.pageNumber = builder.pageNumber;
@@ -49,16 +55,16 @@ public class ListEnvironmentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return project
+     * @return projectName
      */
-    public String getProject() {
-        return this.project;
+    public String getProjectName() {
+        return this.projectName;
     }
 
     /**
@@ -71,7 +77,7 @@ public class ListEnvironmentsRequest extends Request {
     /**
      * @return labelSelector
      */
-    public java.util.List < String > getLabelSelector() {
+    public java.util.List<String> getLabelSelector() {
         return this.labelSelector;
     }
 
@@ -90,9 +96,9 @@ public class ListEnvironmentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEnvironmentsRequest, Builder> {
-        private String project; 
+        private String projectName; 
         private String keyword; 
-        private java.util.List < String > labelSelector; 
+        private java.util.List<String> labelSelector; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -102,7 +108,7 @@ public class ListEnvironmentsRequest extends Request {
 
         private Builder(ListEnvironmentsRequest request) {
             super(request);
-            this.project = request.project;
+            this.projectName = request.projectName;
             this.keyword = request.keyword;
             this.labelSelector = request.labelSelector;
             this.pageNumber = request.pageNumber;
@@ -110,11 +116,14 @@ public class ListEnvironmentsRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-project</p>
          */
-        public Builder project(String project) {
-            this.putPathParameter("project", project);
-            this.project = project;
+        public Builder projectName(String projectName) {
+            this.putPathParameter("projectName", projectName);
+            this.projectName = projectName;
             return this;
         }
 
@@ -130,7 +139,7 @@ public class ListEnvironmentsRequest extends Request {
         /**
          * labelSelector.
          */
-        public Builder labelSelector(java.util.List < String > labelSelector) {
+        public Builder labelSelector(java.util.List<String> labelSelector) {
             String labelSelectorShrink = shrink(labelSelector, "labelSelector", "simple");
             this.putQueryParameter("labelSelector", labelSelectorShrink);
             this.labelSelector = labelSelector;

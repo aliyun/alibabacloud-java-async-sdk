@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectRequest} extends {@link RequestModel}
  *
  * <p>UpdateProjectRequest</p>
@@ -19,15 +25,10 @@ public class UpdateProjectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("body")
     private Project body;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("force")
-    private Boolean force;
-
     private UpdateProjectRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
         this.body = builder.body;
-        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -38,7 +39,7 @@ public class UpdateProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -57,17 +58,9 @@ public class UpdateProjectRequest extends Request {
         return this.body;
     }
 
-    /**
-     * @return force
-     */
-    public Boolean getForce() {
-        return this.force;
-    }
-
     public static final class Builder extends Request.Builder<UpdateProjectRequest, Builder> {
         private String name; 
         private Project body; 
-        private Boolean force; 
 
         private Builder() {
             super();
@@ -77,7 +70,6 @@ public class UpdateProjectRequest extends Request {
             super(request);
             this.name = request.name;
             this.body = request.body;
-            this.force = request.force;
         } 
 
         /**
@@ -95,15 +87,6 @@ public class UpdateProjectRequest extends Request {
         public Builder body(Project body) {
             this.putBodyParameter("body", body);
             this.body = body;
-            return this;
-        }
-
-        /**
-         * force.
-         */
-        public Builder force(Boolean force) {
-            this.putQueryParameter("force", force);
-            this.force = force;
             return this;
         }
 

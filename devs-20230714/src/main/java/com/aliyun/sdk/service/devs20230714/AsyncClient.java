@@ -19,120 +19,154 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<ActivateConnectionResponse> activateConnection(ActivateConnectionRequest request);
-
+    /**
+     * @param request the request parameters of CancelPipeline  CancelPipelineRequest
+     * @return CancelPipelineResponse
+     */
     CompletableFuture<CancelPipelineResponse> cancelPipeline(CancelPipelineRequest request);
 
+    /**
+     * @param request the request parameters of CancelTask  CancelTaskRequest
+     * @return CancelTaskResponse
+     */
     CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
 
-    CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
-
+    /**
+     * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
+     * @return CreateEnvironmentResponse
+     */
     CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
 
+    /**
+     * @param request the request parameters of CreatePipeline  CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
     CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
 
-    CompletableFuture<CreatePipelineTemplateResponse> createPipelineTemplate(CreatePipelineTemplateRequest request);
-
-    CompletableFuture<CreatePipelineTriggerResponse> createPipelineTrigger(CreatePipelineTriggerRequest request);
-
-    CompletableFuture<CreatePipelineTriggerEventResponse> createPipelineTriggerEvent(CreatePipelineTriggerEventRequest request);
-
+    /**
+     * @param request the request parameters of CreateProject  CreateProjectRequest
+     * @return CreateProjectResponse
+     */
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
-    CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
-
+    /**
+     * @param request the request parameters of CreateTask  CreateTaskRequest
+     * @return CreateTaskResponse
+     */
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
-    CompletableFuture<CreateTaskTemplateResponse> createTaskTemplate(CreateTaskTemplateRequest request);
-
-    CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
-
+    /**
+     * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
+     * @return DeleteEnvironmentResponse
+     */
     CompletableFuture<DeleteEnvironmentResponse> deleteEnvironment(DeleteEnvironmentRequest request);
 
-    CompletableFuture<DeletePipelineTemplateResponse> deletePipelineTemplate(DeletePipelineTemplateRequest request);
-
-    CompletableFuture<DeletePipelineTriggerResponse> deletePipelineTrigger(DeletePipelineTriggerRequest request);
-
-    CompletableFuture<DeletePipelineTriggerEventResponse> deletePipelineTriggerEvent(DeletePipelineTriggerEventRequest request);
-
+    /**
+     * @param request the request parameters of DeleteProject  DeleteProjectRequest
+     * @return DeleteProjectResponse
+     */
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
-    CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
-
-    CompletableFuture<DeleteTaskTemplateResponse> deleteTaskTemplate(DeleteTaskTemplateRequest request);
-
-    CompletableFuture<FetchConnectionCredentialResponse> fetchConnectionCredential(FetchConnectionCredentialRequest request);
-
-    CompletableFuture<FetchRepositoryCheckoutResponse> fetchRepositoryCheckout(FetchRepositoryCheckoutRequest request);
-
-    CompletableFuture<GetConnectionResponse> getConnection(GetConnectionRequest request);
-
+    /**
+     * @param request the request parameters of GetEnvironment  GetEnvironmentRequest
+     * @return GetEnvironmentResponse
+     */
     CompletableFuture<GetEnvironmentResponse> getEnvironment(GetEnvironmentRequest request);
 
+    /**
+     * @param request the request parameters of GetPipeline  GetPipelineRequest
+     * @return GetPipelineResponse
+     */
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
 
-    CompletableFuture<GetPipelineTemplateResponse> getPipelineTemplate(GetPipelineTemplateRequest request);
-
-    CompletableFuture<GetPipelineTriggerResponse> getPipelineTrigger(GetPipelineTriggerRequest request);
-
-    CompletableFuture<GetPipelineTriggerEventResponse> getPipelineTriggerEvent(GetPipelineTriggerEventRequest request);
-
+    /**
+     * @param request the request parameters of GetProject  GetProjectRequest
+     * @return GetProjectResponse
+     */
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
+    /**
+     * @param request the request parameters of GetRepository  GetRepositoryRequest
+     * @return GetRepositoryResponse
+     */
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
+    /**
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
-    CompletableFuture<GetTaskTemplateResponse> getTaskTemplate(GetTaskTemplateRequest request);
-
-    CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
-
+    /**
+     * @param request the request parameters of ListEnvironments  ListEnvironmentsRequest
+     * @return ListEnvironmentsResponse
+     */
     CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);
 
-    CompletableFuture<ListPipelineTemplatesResponse> listPipelineTemplates(ListPipelineTemplatesRequest request);
-
-    CompletableFuture<ListPipelineTriggerEventsResponse> listPipelineTriggerEvents(ListPipelineTriggerEventsRequest request);
-
-    CompletableFuture<ListPipelineTriggersResponse> listPipelineTriggers(ListPipelineTriggersRequest request);
-
+    /**
+     * @param request the request parameters of ListPipelines  ListPipelinesRequest
+     * @return ListPipelinesResponse
+     */
     CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
 
+    /**
+     * @param request the request parameters of ListProjects  ListProjectsRequest
+     * @return ListProjectsResponse
+     */
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
-    CompletableFuture<ListRepositoriesResponse> listRepositories(ListRepositoriesRequest request);
-
-    CompletableFuture<ListTaskTemplatesResponse> listTaskTemplates(ListTaskTemplatesRequest request);
-
+    /**
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
+     */
     CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
 
-    CompletableFuture<PutEnvironmentResponse> putEnvironment(PutEnvironmentRequest request);
-
+    /**
+     * @param request the request parameters of PutPipelineStatus  PutPipelineStatusRequest
+     * @return PutPipelineStatusResponse
+     */
     CompletableFuture<PutPipelineStatusResponse> putPipelineStatus(PutPipelineStatusRequest request);
 
-    CompletableFuture<PutPipelineTemplateResponse> putPipelineTemplate(PutPipelineTemplateRequest request);
-
-    CompletableFuture<PutPipelineTriggerResponse> putPipelineTrigger(PutPipelineTriggerRequest request);
-
-    CompletableFuture<PutProjectResponse> putProject(PutProjectRequest request);
-
+    /**
+     * @param request the request parameters of PutTaskStatus  PutTaskStatusRequest
+     * @return PutTaskStatusResponse
+     */
     CompletableFuture<PutTaskStatusResponse> putTaskStatus(PutTaskStatusRequest request);
 
-    CompletableFuture<PutTaskTemplateResponse> putTaskTemplate(PutTaskTemplateRequest request);
-
-    CompletableFuture<RefreshConnectionResponse> refreshConnection(RefreshConnectionRequest request);
-
+    /**
+     * @param request the request parameters of ResumeTask  ResumeTaskRequest
+     * @return ResumeTaskResponse
+     */
     CompletableFuture<ResumeTaskResponse> resumeTask(ResumeTaskRequest request);
 
+    /**
+     * @param request the request parameters of RetryTask  RetryTaskRequest
+     * @return RetryTaskResponse
+     */
     CompletableFuture<RetryTaskResponse> retryTask(RetryTaskRequest request);
 
+    /**
+     * @param request the request parameters of StartPipeline  StartPipelineRequest
+     * @return StartPipelineResponse
+     */
     CompletableFuture<StartPipelineResponse> startPipeline(StartPipelineRequest request);
 
+    /**
+     * @param request the request parameters of StartTask  StartTaskRequest
+     * @return StartTaskResponse
+     */
     CompletableFuture<StartTaskResponse> startTask(StartTaskRequest request);
 
+    /**
+     * @param request the request parameters of UpdateEnvironment  UpdateEnvironmentRequest
+     * @return UpdateEnvironmentResponse
+     */
     CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request);
 
-    CompletableFuture<UpdatePipelineTriggerResponse> updatePipelineTrigger(UpdatePipelineTriggerRequest request);
-
+    /**
+     * @param request the request parameters of UpdateProject  UpdateProjectRequest
+     * @return UpdateProjectResponse
+     */
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 
 }

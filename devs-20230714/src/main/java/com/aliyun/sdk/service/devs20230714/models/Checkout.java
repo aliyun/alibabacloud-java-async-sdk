@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Checkout} extends {@link TeaModel}
  *
  * <p>Checkout</p>
@@ -30,6 +36,10 @@ public class Checkout extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ref
      */
@@ -47,6 +57,14 @@ public class Checkout extends TeaModel {
     public static final class Builder {
         private String ref; 
         private String remote; 
+
+        private Builder() {
+        } 
+
+        private Builder(Checkout model) {
+            this.ref = model.ref;
+            this.remote = model.remote;
+        } 
 
         /**
          * ref.

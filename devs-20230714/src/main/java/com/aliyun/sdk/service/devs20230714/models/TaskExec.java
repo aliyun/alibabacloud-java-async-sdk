@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devs20230714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskExec} extends {@link TeaModel}
  *
  * <p>TaskExec</p>
@@ -18,7 +24,7 @@ public class TaskExec extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("runAfters")
-    private java.util.List < RunAfter > runAfters;
+    private java.util.List<RunAfter> runAfters;
 
     @com.aliyun.core.annotation.NameInMap("taskTemplate")
     private String taskTemplate;
@@ -38,6 +44,10 @@ public class TaskExec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return context
      */
@@ -55,7 +65,7 @@ public class TaskExec extends TeaModel {
     /**
      * @return runAfters
      */
-    public java.util.List < RunAfter > getRunAfters() {
+    public java.util.List<RunAfter> getRunAfters() {
         return this.runAfters;
     }
 
@@ -69,8 +79,18 @@ public class TaskExec extends TeaModel {
     public static final class Builder {
         private Context context; 
         private String name; 
-        private java.util.List < RunAfter > runAfters; 
+        private java.util.List<RunAfter> runAfters; 
         private String taskTemplate; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskExec model) {
+            this.context = model.context;
+            this.name = model.name;
+            this.runAfters = model.runAfters;
+            this.taskTemplate = model.taskTemplate;
+        } 
 
         /**
          * context.
@@ -91,7 +111,7 @@ public class TaskExec extends TeaModel {
         /**
          * runAfters.
          */
-        public Builder runAfters(java.util.List < RunAfter > runAfters) {
+        public Builder runAfters(java.util.List<RunAfter> runAfters) {
             this.runAfters = runAfters;
             return this;
         }
