@@ -28,7 +28,6 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
@@ -144,7 +143,6 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>List of resource IDs</p>
-         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
