@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class ListAITasksResponseBody extends TeaModel {
     private String success;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     private ListAITasksResponseBody(Builder builder) {
         this.httpStatusCode = builder.httpStatusCode;
@@ -46,6 +51,10 @@ public class ListAITasksResponseBody extends TeaModel {
 
     public static ListAITasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -86,7 +95,7 @@ public class ListAITasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -96,7 +105,19 @@ public class ListAITasksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String success; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAITasksResponseBody model) {
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * HttpStatusCode.
@@ -144,7 +165,7 @@ public class ListAITasksResponseBody extends TeaModel {
         /**
          * Tasks.
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -258,6 +279,19 @@ public class ListAITasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.createTime = model.createTime;
+                this.prompt = model.prompt;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CreateTime.

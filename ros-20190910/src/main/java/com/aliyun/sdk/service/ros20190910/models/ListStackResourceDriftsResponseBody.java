@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceDrifts")
-    private java.util.List < ResourceDrifts> resourceDrifts;
+    private java.util.List<ResourceDrifts> resourceDrifts;
 
     private ListStackResourceDriftsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
 
     public static ListStackResourceDriftsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     /**
      * @return resourceDrifts
      */
-    public java.util.List < ResourceDrifts> getResourceDrifts() {
+    public java.util.List<ResourceDrifts> getResourceDrifts() {
         return this.resourceDrifts;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceDrifts> resourceDrifts; 
+        private java.util.List<ResourceDrifts> resourceDrifts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStackResourceDriftsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceDrifts = model.resourceDrifts;
+        } 
 
         /**
          * <p>The query token returned in this call.</p>
@@ -86,7 +104,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         /**
          * <p>The resource drifts.</p>
          */
-        public Builder resourceDrifts(java.util.List < ResourceDrifts> resourceDrifts) {
+        public Builder resourceDrifts(java.util.List<ResourceDrifts> resourceDrifts) {
             this.resourceDrifts = resourceDrifts;
             return this;
         }
@@ -140,6 +158,14 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         public static final class Builder {
             private String logicalIdHierarchy; 
             private String typeHierarchy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleInfo model) {
+                this.logicalIdHierarchy = model.logicalIdHierarchy;
+                this.typeHierarchy = model.typeHierarchy;
+            } 
 
             /**
              * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>
@@ -242,6 +268,16 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             private String expectedValue; 
             private String propertyPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertyDifferences model) {
+                this.actualValue = model.actualValue;
+                this.differenceType = model.differenceType;
+                this.expectedValue = model.expectedValue;
+                this.propertyPath = model.propertyPath;
+            } 
+
             /**
              * <p>The actual value of the resource property.</p>
              * 
@@ -324,7 +360,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         private String physicalResourceId;
 
         @com.aliyun.core.annotation.NameInMap("PropertyDifferences")
-        private java.util.List < PropertyDifferences> propertyDifferences;
+        private java.util.List<PropertyDifferences> propertyDifferences;
 
         @com.aliyun.core.annotation.NameInMap("ResourceDriftStatus")
         private String resourceDriftStatus;
@@ -401,7 +437,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         /**
          * @return propertyDifferences
          */
-        public java.util.List < PropertyDifferences> getPropertyDifferences() {
+        public java.util.List<PropertyDifferences> getPropertyDifferences() {
             return this.propertyDifferences;
         }
 
@@ -433,10 +469,26 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             private String logicalResourceId; 
             private ModuleInfo moduleInfo; 
             private String physicalResourceId; 
-            private java.util.List < PropertyDifferences> propertyDifferences; 
+            private java.util.List<PropertyDifferences> propertyDifferences; 
             private String resourceDriftStatus; 
             private String resourceType; 
             private String stackId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDrifts model) {
+                this.actualProperties = model.actualProperties;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.expectedProperties = model.expectedProperties;
+                this.logicalResourceId = model.logicalResourceId;
+                this.moduleInfo = model.moduleInfo;
+                this.physicalResourceId = model.physicalResourceId;
+                this.propertyDifferences = model.propertyDifferences;
+                this.resourceDriftStatus = model.resourceDriftStatus;
+                this.resourceType = model.resourceType;
+                this.stackId = model.stackId;
+            } 
 
             /**
              * <p>The actual JSON-formatted resource properties.</p>
@@ -504,7 +556,7 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             /**
              * <p>The property drifts of the resource.</p>
              */
-            public Builder propertyDifferences(java.util.List < PropertyDifferences> propertyDifferences) {
+            public Builder propertyDifferences(java.util.List<PropertyDifferences> propertyDifferences) {
                 this.propertyDifferences = propertyDifferences;
                 return this;
             }

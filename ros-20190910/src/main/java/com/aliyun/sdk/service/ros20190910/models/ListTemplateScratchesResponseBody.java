@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TemplateScratches")
-    private java.util.List < TemplateScratches> templateScratches;
+    private java.util.List<TemplateScratches> templateScratches;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static ListTemplateScratchesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     /**
      * @return templateScratches
      */
-    public java.util.List < TemplateScratches> getTemplateScratches() {
+    public java.util.List<TemplateScratches> getTemplateScratches() {
         return this.templateScratches;
     }
 
@@ -82,8 +91,19 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TemplateScratches> templateScratches; 
+        private java.util.List<TemplateScratches> templateScratches; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplateScratchesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.templateScratches = model.templateScratches;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -121,7 +141,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * <p>The resource scenarios.</p>
          */
-        public Builder templateScratches(java.util.List < TemplateScratches> templateScratches) {
+        public Builder templateScratches(java.util.List<TemplateScratches> templateScratches) {
             this.templateScratches = templateScratches;
             return this;
         }
@@ -187,6 +207,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreferenceParameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The parameter name.</p>
              * 
@@ -227,7 +255,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
-        private java.util.List < String > resourceTypeFilter;
+        private java.util.List<String> resourceTypeFilter;
 
         private SourceResourceGroup(Builder builder) {
             this.resourceGroupId = builder.resourceGroupId;
@@ -252,13 +280,21 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * @return resourceTypeFilter
          */
-        public java.util.List < String > getResourceTypeFilter() {
+        public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
         }
 
         public static final class Builder {
             private String resourceGroupId; 
-            private java.util.List < String > resourceTypeFilter; 
+            private java.util.List<String> resourceTypeFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceResourceGroup model) {
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTypeFilter = model.resourceTypeFilter;
+            } 
 
             /**
              * <p>The ID of the source resource group.</p>
@@ -274,7 +310,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             /**
              * <p>The resource types for filtering resources.</p>
              */
-            public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
+            public Builder resourceTypeFilter(java.util.List<String> resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
                 return this;
             }
@@ -330,6 +366,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceResources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The resource ID.</p>
              * 
@@ -367,10 +411,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
      */
     public static class SourceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTags")
-        private java.util.Map < String, ? > resourceTags;
+        private java.util.Map<String, ?> resourceTags;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
-        private java.util.List < String > resourceTypeFilter;
+        private java.util.List<String> resourceTypeFilter;
 
         private SourceTag(Builder builder) {
             this.resourceTags = builder.resourceTags;
@@ -388,20 +432,28 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * @return resourceTags
          */
-        public java.util.Map < String, ? > getResourceTags() {
+        public java.util.Map<String, ?> getResourceTags() {
             return this.resourceTags;
         }
 
         /**
          * @return resourceTypeFilter
          */
-        public java.util.List < String > getResourceTypeFilter() {
+        public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > resourceTags; 
-            private java.util.List < String > resourceTypeFilter; 
+            private java.util.Map<String, ?> resourceTags; 
+            private java.util.List<String> resourceTypeFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceTag model) {
+                this.resourceTags = model.resourceTags;
+                this.resourceTypeFilter = model.resourceTypeFilter;
+            } 
 
             /**
              * <p>The source tags.</p>
@@ -409,7 +461,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;a&quot;: &quot;b&quot;}</p>
              */
-            public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
+            public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
                 this.resourceTags = resourceTags;
                 return this;
             }
@@ -417,7 +469,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             /**
              * <p>The resource types for filtering resources.</p>
              */
-            public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
+            public Builder resourceTypeFilter(java.util.List<String> resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
                 return this;
             }
@@ -473,6 +525,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the resource scenario.</p>
              * 
@@ -522,7 +582,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         private String logicalIdStrategy;
 
         @com.aliyun.core.annotation.NameInMap("PreferenceParameters")
-        private java.util.List < PreferenceParameters> preferenceParameters;
+        private java.util.List<PreferenceParameters> preferenceParameters;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -531,7 +591,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         private SourceResourceGroup sourceResourceGroup;
 
         @com.aliyun.core.annotation.NameInMap("SourceResources")
-        private java.util.List < SourceResources> sourceResources;
+        private java.util.List<SourceResources> sourceResources;
 
         @com.aliyun.core.annotation.NameInMap("SourceTag")
         private SourceTag sourceTag;
@@ -543,7 +603,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         private String statusReason;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
         private String templateScratchId;
@@ -611,7 +671,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * @return preferenceParameters
          */
-        public java.util.List < PreferenceParameters> getPreferenceParameters() {
+        public java.util.List<PreferenceParameters> getPreferenceParameters() {
             return this.preferenceParameters;
         }
 
@@ -632,7 +692,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * @return sourceResources
          */
-        public java.util.List < SourceResources> getSourceResources() {
+        public java.util.List<SourceResources> getSourceResources() {
             return this.sourceResources;
         }
 
@@ -660,7 +720,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -690,17 +750,38 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String description; 
             private String failedCode; 
             private String logicalIdStrategy; 
-            private java.util.List < PreferenceParameters> preferenceParameters; 
+            private java.util.List<PreferenceParameters> preferenceParameters; 
             private String resourceGroupId; 
             private SourceResourceGroup sourceResourceGroup; 
-            private java.util.List < SourceResources> sourceResources; 
+            private java.util.List<SourceResources> sourceResources; 
             private SourceTag sourceTag; 
             private String status; 
             private String statusReason; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String templateScratchId; 
             private String templateScratchType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateScratches model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.failedCode = model.failedCode;
+                this.logicalIdStrategy = model.logicalIdStrategy;
+                this.preferenceParameters = model.preferenceParameters;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sourceResourceGroup = model.sourceResourceGroup;
+                this.sourceResources = model.sourceResources;
+                this.sourceTag = model.sourceTag;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.tags = model.tags;
+                this.templateScratchId = model.templateScratchId;
+                this.templateScratchType = model.templateScratchType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the resource scenario was created.</p>
@@ -758,7 +839,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             /**
              * <p>The preference parameters of the resource scenario.</p>
              */
-            public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
+            public Builder preferenceParameters(java.util.List<PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
                 return this;
             }
@@ -785,7 +866,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             /**
              * <p>The source resources.</p>
              */
-            public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
+            public Builder sourceResources(java.util.List<SourceResources> sourceResources) {
                 this.sourceResources = sourceResources;
                 return this;
             }
@@ -826,7 +907,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             /**
              * <p>The tags of the resource scenario.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

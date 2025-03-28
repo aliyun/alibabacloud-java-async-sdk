@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class ListChangeSetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChangeSetName")
-    private java.util.List < String > changeSetName;
+    private java.util.List<String> changeSetName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
-    private java.util.List < String > executionStatus;
+    private java.util.List<String> executionStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -44,7 +49,7 @@ public class ListChangeSetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     private ListChangeSetsRequest(Builder builder) {
         super(builder);
@@ -66,7 +71,7 @@ public class ListChangeSetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,14 +86,14 @@ public class ListChangeSetsRequest extends Request {
     /**
      * @return changeSetName
      */
-    public java.util.List < String > getChangeSetName() {
+    public java.util.List<String> getChangeSetName() {
         return this.changeSetName;
     }
 
     /**
      * @return executionStatus
      */
-    public java.util.List < String > getExecutionStatus() {
+    public java.util.List<String> getExecutionStatus() {
         return this.executionStatus;
     }
 
@@ -123,19 +128,19 @@ public class ListChangeSetsRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     public static final class Builder extends Request.Builder<ListChangeSetsRequest, Builder> {
         private String changeSetId; 
-        private java.util.List < String > changeSetName; 
-        private java.util.List < String > executionStatus; 
+        private java.util.List<String> changeSetName; 
+        private java.util.List<String> executionStatus; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
         private String stackId; 
-        private java.util.List < String > status; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -171,7 +176,7 @@ public class ListChangeSetsRequest extends Request {
          * <strong>example:</strong>
          * <p>MyChangeSet</p>
          */
-        public Builder changeSetName(java.util.List < String > changeSetName) {
+        public Builder changeSetName(java.util.List<String> changeSetName) {
             this.putQueryParameter("ChangeSetName", changeSetName);
             this.changeSetName = changeSetName;
             return this;
@@ -191,7 +196,7 @@ public class ListChangeSetsRequest extends Request {
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
-        public Builder executionStatus(java.util.List < String > executionStatus) {
+        public Builder executionStatus(java.util.List<String> executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
             this.executionStatus = executionStatus;
             return this;
@@ -261,7 +266,7 @@ public class ListChangeSetsRequest extends Request {
          * <strong>example:</strong>
          * <p>CREATE_COMPLETE</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;

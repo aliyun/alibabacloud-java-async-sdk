@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DetectStackGroupDriftRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationPreferences")
-    private java.util.Map < String, ? > operationPreferences;
+    private java.util.Map<String, ?> operationPreferences;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -46,7 +51,7 @@ public class DetectStackGroupDriftRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,7 +66,7 @@ public class DetectStackGroupDriftRequest extends Request {
     /**
      * @return operationPreferences
      */
-    public java.util.Map < String, ? > getOperationPreferences() {
+    public java.util.Map<String, ?> getOperationPreferences() {
         return this.operationPreferences;
     }
 
@@ -81,7 +86,7 @@ public class DetectStackGroupDriftRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetectStackGroupDriftRequest, Builder> {
         private String clientToken; 
-        private java.util.Map < String, ? > operationPreferences; 
+        private java.util.Map<String, ?> operationPreferences; 
         private String regionId; 
         private String stackGroupName; 
 
@@ -141,7 +146,7 @@ public class DetectStackGroupDriftRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;FailureToleranceCount&quot;: 1, &quot;MaxConcurrentCount&quot;: 2}</p>
          */
-        public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
+        public Builder operationPreferences(java.util.Map<String, ?> operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
             this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;

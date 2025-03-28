@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,19 +21,19 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Metadata")
-    private java.util.Map < String, ? > metadata;
+    private java.util.Map<String, ?> metadata;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < java.util.Map<String, ?>> parameters;
+    private java.util.List<java.util.Map<String, ?>> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceIdentifierSummaries")
-    private java.util.List < ResourceIdentifierSummaries> resourceIdentifierSummaries;
+    private java.util.List<ResourceIdentifierSummaries> resourceIdentifierSummaries;
 
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
-    private java.util.List < String > resourceTypes;
+    private java.util.List<String> resourceTypes;
 
     @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
@@ -51,6 +56,10 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -61,14 +70,14 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
     /**
      * @return metadata
      */
-    public java.util.Map < String, ? > getMetadata() {
+    public java.util.Map<String, ?> getMetadata() {
         return this.metadata;
     }
 
     /**
      * @return parameters
      */
-    public java.util.List < java.util.Map<String, ?>> getParameters() {
+    public java.util.List<java.util.Map<String, ?>> getParameters() {
         return this.parameters;
     }
 
@@ -82,14 +91,14 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
     /**
      * @return resourceIdentifierSummaries
      */
-    public java.util.List < ResourceIdentifierSummaries> getResourceIdentifierSummaries() {
+    public java.util.List<ResourceIdentifierSummaries> getResourceIdentifierSummaries() {
         return this.resourceIdentifierSummaries;
     }
 
     /**
      * @return resourceTypes
      */
-    public java.util.List < String > getResourceTypes() {
+    public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
     }
 
@@ -102,12 +111,25 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String description; 
-        private java.util.Map < String, ? > metadata; 
-        private java.util.List < java.util.Map<String, ?>> parameters; 
+        private java.util.Map<String, ?> metadata; 
+        private java.util.List<java.util.Map<String, ?>> parameters; 
         private String requestId; 
-        private java.util.List < ResourceIdentifierSummaries> resourceIdentifierSummaries; 
-        private java.util.List < String > resourceTypes; 
+        private java.util.List<ResourceIdentifierSummaries> resourceIdentifierSummaries; 
+        private java.util.List<String> resourceTypes; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateSummaryResponseBody model) {
+            this.description = model.description;
+            this.metadata = model.metadata;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+            this.resourceIdentifierSummaries = model.resourceIdentifierSummaries;
+            this.resourceTypes = model.resourceTypes;
+            this.version = model.version;
+        } 
 
         /**
          * <p>The description of the stack template.</p>
@@ -126,7 +148,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
-        public Builder metadata(java.util.Map < String, ? > metadata) {
+        public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
             return this;
         }
@@ -134,7 +156,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         /**
          * <p>The declarations of the parameters in the template.</p>
          */
-        public Builder parameters(java.util.List < java.util.Map<String, ?>> parameters) {
+        public Builder parameters(java.util.List<java.util.Map<String, ?>> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -153,7 +175,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         /**
          * <p>The resource identifier summaries.<br>A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
          */
-        public Builder resourceIdentifierSummaries(java.util.List < ResourceIdentifierSummaries> resourceIdentifierSummaries) {
+        public Builder resourceIdentifierSummaries(java.util.List<ResourceIdentifierSummaries> resourceIdentifierSummaries) {
             this.resourceIdentifierSummaries = resourceIdentifierSummaries;
             return this;
         }
@@ -161,7 +183,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         /**
          * <p>All resource types that are used in the template.</p>
          */
-        public Builder resourceTypes(java.util.List < String > resourceTypes) {
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
@@ -191,10 +213,10 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
      */
     public static class ResourceIdentifierSummaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicalResourceIds")
-        private java.util.List < String > logicalResourceIds;
+        private java.util.List<String> logicalResourceIds;
 
         @com.aliyun.core.annotation.NameInMap("ResourceIdentifiers")
-        private java.util.List < String > resourceIdentifiers;
+        private java.util.List<String> resourceIdentifiers;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -216,14 +238,14 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         /**
          * @return logicalResourceIds
          */
-        public java.util.List < String > getLogicalResourceIds() {
+        public java.util.List<String> getLogicalResourceIds() {
             return this.logicalResourceIds;
         }
 
         /**
          * @return resourceIdentifiers
          */
-        public java.util.List < String > getResourceIdentifiers() {
+        public java.util.List<String> getResourceIdentifiers() {
             return this.resourceIdentifiers;
         }
 
@@ -235,14 +257,23 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > logicalResourceIds; 
-            private java.util.List < String > resourceIdentifiers; 
+            private java.util.List<String> logicalResourceIds; 
+            private java.util.List<String> resourceIdentifiers; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceIdentifierSummaries model) {
+                this.logicalResourceIds = model.logicalResourceIds;
+                this.resourceIdentifiers = model.resourceIdentifiers;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The logical IDs of all resources of the type that is specified by ResouceType in the template.</p>
              */
-            public Builder logicalResourceIds(java.util.List < String > logicalResourceIds) {
+            public Builder logicalResourceIds(java.util.List<String> logicalResourceIds) {
                 this.logicalResourceIds = logicalResourceIds;
                 return this;
             }
@@ -250,7 +281,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
             /**
              * <p>The resource properties. You can use a resource property to identify the resource that you want to manage. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
              */
-            public Builder resourceIdentifiers(java.util.List < String > resourceIdentifiers) {
+            public Builder resourceIdentifiers(java.util.List<String> resourceIdentifiers) {
                 this.resourceIdentifiers = resourceIdentifiers;
                 return this;
             }

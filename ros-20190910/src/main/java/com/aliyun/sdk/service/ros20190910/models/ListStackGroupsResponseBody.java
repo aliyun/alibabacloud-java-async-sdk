@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StackGroups")
-    private java.util.List < StackGroups> stackGroups;
+    private java.util.List<StackGroups> stackGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static ListStackGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
     /**
      * @return stackGroups
      */
-    public java.util.List < StackGroups> getStackGroups() {
+    public java.util.List<StackGroups> getStackGroups() {
         return this.stackGroups;
     }
 
@@ -82,8 +91,19 @@ public class ListStackGroupsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < StackGroups> stackGroups; 
+        private java.util.List<StackGroups> stackGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStackGroupsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.stackGroups = model.stackGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -121,7 +141,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         /**
          * <p>The stack groups.</p>
          */
-        public Builder stackGroups(java.util.List < StackGroups> stackGroups) {
+        public Builder stackGroups(java.util.List<StackGroups> stackGroups) {
             this.stackGroups = stackGroups;
             return this;
         }
@@ -186,6 +206,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
             private Boolean retainStacksOnAccountRemoval; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoDeployment model) {
+                this.enabled = model.enabled;
+                this.retainStacksOnAccountRemoval = model.retainStacksOnAccountRemoval;
+            } 
 
             /**
              * <p>Indicates whether automatic deployment is enabled.</p>
@@ -273,6 +301,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag that is added to the stack group.</p>
              * 
@@ -340,7 +376,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -441,7 +477,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -463,8 +499,26 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String stackGroupId; 
             private String stackGroupName; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackGroups model) {
+                this.autoDeployment = model.autoDeployment;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.permissionModel = model.permissionModel;
+                this.resourceGroupId = model.resourceGroupId;
+                this.stackGroupDriftStatus = model.stackGroupDriftStatus;
+                this.stackGroupId = model.stackGroupId;
+                this.stackGroupName = model.stackGroupName;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The information about automatic deployment settings.</p>
@@ -592,7 +646,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the stack group.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

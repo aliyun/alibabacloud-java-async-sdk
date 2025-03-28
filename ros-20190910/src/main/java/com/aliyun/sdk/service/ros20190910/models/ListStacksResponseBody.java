@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListStacksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Stacks")
-    private java.util.List < Stacks> stacks;
+    private java.util.List<Stacks> stacks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static ListStacksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListStacksResponseBody extends TeaModel {
     /**
      * @return stacks
      */
-    public java.util.List < Stacks> getStacks() {
+    public java.util.List<Stacks> getStacks() {
         return this.stacks;
     }
 
@@ -82,8 +91,19 @@ public class ListStacksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Stacks> stacks; 
+        private java.util.List<Stacks> stacks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStacksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.stacks = model.stacks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -123,7 +143,7 @@ public class ListStacksResponseBody extends TeaModel {
         /**
          * <p>Details of the stacks.</p>
          */
-        public Builder stacks(java.util.List < Stacks> stacks) {
+        public Builder stacks(java.util.List<Stacks> stacks) {
             this.stacks = stacks;
             return this;
         }
@@ -236,6 +256,18 @@ public class ListStacksResponseBody extends TeaModel {
             private String message; 
             private String requestId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationInfo model) {
+                this.action = model.action;
+                this.code = model.code;
+                this.logicalResourceId = model.logicalResourceId;
+                this.message = model.message;
+                this.requestId = model.requestId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
@@ -354,6 +386,14 @@ public class ListStacksResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key of the stack.</p>
              * 
@@ -439,7 +479,7 @@ public class ListStacksResponseBody extends TeaModel {
         private String statusReason;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
         private Integer timeoutInMinutes;
@@ -592,7 +632,7 @@ public class ListStacksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -627,9 +667,34 @@ public class ListStacksResponseBody extends TeaModel {
             private String stackType; 
             private String status; 
             private String statusReason; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer timeoutInMinutes; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stacks model) {
+                this.createTime = model.createTime;
+                this.deletionProtection = model.deletionProtection;
+                this.disableRollback = model.disableRollback;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.operationInfo = model.operationInfo;
+                this.parentStackId = model.parentStackId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceManaged = model.serviceManaged;
+                this.serviceName = model.serviceName;
+                this.stackDriftStatus = model.stackDriftStatus;
+                this.stackId = model.stackId;
+                this.stackName = model.stackName;
+                this.stackType = model.stackType;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.tags = model.tags;
+                this.timeoutInMinutes = model.timeoutInMinutes;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
@@ -834,7 +899,7 @@ public class ListStacksResponseBody extends TeaModel {
             /**
              * <p>The tags of the stack.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

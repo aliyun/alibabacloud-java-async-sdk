@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplatesRequest</p>
  */
 public class ListTemplatesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeTags")
     private String includeTags;
@@ -34,7 +43,7 @@ public class ListTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
@@ -42,6 +51,7 @@ public class ListTemplatesRequest extends Request {
 
     private ListTemplatesRequest(Builder builder) {
         super(builder);
+        this.filters = builder.filters;
         this.includeTags = builder.includeTags;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -59,9 +69,16 @@ public class ListTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return filters
+     */
+    public java.util.List<Filters> getFilters() {
+        return this.filters;
     }
 
     /**
@@ -102,7 +119,7 @@ public class ListTemplatesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -114,12 +131,13 @@ public class ListTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTemplatesRequest, Builder> {
+        private java.util.List<Filters> filters; 
         private String includeTags; 
         private Long pageNumber; 
         private Long pageSize; 
         private String resourceGroupId; 
         private String shareType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String templateName; 
 
         private Builder() {
@@ -128,6 +146,7 @@ public class ListTemplatesRequest extends Request {
 
         private Builder(ListTemplatesRequest request) {
             super(request);
+            this.filters = request.filters;
             this.includeTags = request.includeTags;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -138,10 +157,19 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to query the tag information. Valid values:</p>
+         * <p>Filter.</p>
+         */
+        public Builder filters(java.util.List<Filters> filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
+            return this;
+        }
+
+        /**
+         * <p>Whether to query tag information. Values:  </p>
          * <ul>
-         * <li>Enabled</li>
-         * <li>Disabled (default)</li>
+         * <li>Enabled: Query.  </li>
+         * <li>Disabled (default): Do not query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +182,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number.<br>Pages start from page 1.<br>Default value: 1.</p>
+         * <p>The page number of the template list.<br>Start value: 1.<br>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +194,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.<br>Valid values: 1 to 50.<br>Default value: 10.</p>
+         * <p>The number of entries per page in a paginated query.<br>Value range: 1~50.<br>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -178,7 +206,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.<br>For more information about resource groups, see the &quot;Resource Group&quot; section of <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+         * <p>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph6aiy****</p>
@@ -190,12 +218,12 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The sharing type of the template.</p>
-         * <p>Valid values:</p>
+         * <p>The sharing type of the template.  </p>
+         * <p>Values:  </p>
          * <ul>
-         * <li>Private (default): The template belongs to the template owner.</li>
-         * <li>Shared: The template is shared with other users.</li>
-         * <li>Official: The template is the shared template of the official version.</li>
+         * <li>Private (default): The template is owned by the user.  </li>
+         * <li>Shared: The template is shared by other users.  </li>
+         * <li>Official: The template is officially shared.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,16 +236,16 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The tags. You can specify up to 20 tags.</p>
+         * <p>Tags. A maximum of 20 tags are supported.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * <p>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
+         * <p>The name of the template. This parameter is effective only when ShareType is Private.<br>The length must not exceed 255 characters and must start with a digit or a letter. It can contain digits, letters, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>MyTemplate</p>
@@ -235,6 +263,92 @@ public class ListTemplatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplatesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesRequest</p>
+     */
+    public static class Filters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
+
+        private Filters(Builder builder) {
+            this.name = builder.name;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The name of the filter. You can choose one or more names for the query. Value range:  </p>
+             * <ul>
+             * <li>Categories: Template categories  </li>
+             * <li>DeployTypes: Deployment types  </li>
+             * <li>ApplicationScenes: Application scenarios  </li>
+             * <li>BasicServices: Basic services  </li>
+             * <li>ResourceTypes: Resource types  </li>
+             * <li>TemplateNames: Template names</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Categories</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The list of filter values.</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public Filters build() {
+                return new Filters(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListTemplatesRequest} extends {@link TeaModel}
@@ -279,9 +393,17 @@ public class ListTemplatesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The key of the tag. This parameter takes effect only when ShareType is set to Private.</p>
-             * <p>You can specify up to 20 tag keys.</p>
+             * <p>The key of the tag. This parameter is effective only when ShareType is Private.  </p>
+             * <p>A maximum of 20 tag keys are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>usage</p>
@@ -292,8 +414,8 @@ public class ListTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. This parameter takes effect only when ShareType is set to Private.</p>
-             * <p>You can specify up to 20 tag values.</p>
+             * <p>The value of the tag. This parameter is effective only when ShareType is Private.  </p>
+             * <p>A maximum of 20 tag values are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>deploy</p>

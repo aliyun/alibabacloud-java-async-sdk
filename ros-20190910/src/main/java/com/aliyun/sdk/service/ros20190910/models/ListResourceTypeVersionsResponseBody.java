@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceTypeVersions")
-    private java.util.List < ResourceTypeVersions> resourceTypeVersions;
+    private java.util.List<ResourceTypeVersions> resourceTypeVersions;
 
     private ListResourceTypeVersionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
     /**
      * @return resourceTypeVersions
      */
-    public java.util.List < ResourceTypeVersions> getResourceTypeVersions() {
+    public java.util.List<ResourceTypeVersions> getResourceTypeVersions() {
         return this.resourceTypeVersions;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceTypeVersions> resourceTypeVersions; 
+        private java.util.List<ResourceTypeVersions> resourceTypeVersions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceTypeVersionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceTypeVersions = model.resourceTypeVersions;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         /**
          * <p>The versions of the resource types.</p>
          */
-        public Builder resourceTypeVersions(java.util.List < ResourceTypeVersions> resourceTypeVersions) {
+        public Builder resourceTypeVersions(java.util.List<ResourceTypeVersions> resourceTypeVersions) {
             this.resourceTypeVersions = resourceTypeVersions;
             return this;
         }
@@ -189,6 +206,20 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             private String resourceType; 
             private String updateTime; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypeVersions model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.entityType = model.entityType;
+                this.isDefaultVersion = model.isDefaultVersion;
+                this.provider = model.provider;
+                this.resourceType = model.resourceType;
+                this.updateTime = model.updateTime;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>

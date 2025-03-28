@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateStackGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdministrationRoleName")
@@ -26,11 +31,15 @@ public class UpdateStackGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Capabilities")
-    private java.util.List < String > capabilities;
+    private java.util.List<String> capabilities;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentOptions")
+    private java.util.List<String> deploymentOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeploymentTargets")
@@ -50,11 +59,11 @@ public class UpdateStackGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationPreferences")
-    private java.util.Map < String, ? > operationPreferences;
+    private java.util.Map<String, ?> operationPreferences;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PermissionModel")
@@ -67,7 +76,7 @@ public class UpdateStackGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionIds")
-    private java.util.List < String > regionIds;
+    private java.util.List<String> regionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackGroupName")
@@ -97,6 +106,7 @@ public class UpdateStackGroupRequest extends Request {
         this.autoDeployment = builder.autoDeployment;
         this.capabilities = builder.capabilities;
         this.clientToken = builder.clientToken;
+        this.deploymentOptions = builder.deploymentOptions;
         this.deploymentTargets = builder.deploymentTargets;
         this.description = builder.description;
         this.executionRoleName = builder.executionRoleName;
@@ -121,7 +131,7 @@ public class UpdateStackGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +139,7 @@ public class UpdateStackGroupRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -150,7 +160,7 @@ public class UpdateStackGroupRequest extends Request {
     /**
      * @return capabilities
      */
-    public java.util.List < String > getCapabilities() {
+    public java.util.List<String> getCapabilities() {
         return this.capabilities;
     }
 
@@ -159,6 +169,13 @@ public class UpdateStackGroupRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return deploymentOptions
+     */
+    public java.util.List<String> getDeploymentOptions() {
+        return this.deploymentOptions;
     }
 
     /**
@@ -192,14 +209,14 @@ public class UpdateStackGroupRequest extends Request {
     /**
      * @return operationPreferences
      */
-    public java.util.Map < String, ? > getOperationPreferences() {
+    public java.util.Map<String, ?> getOperationPreferences() {
         return this.operationPreferences;
     }
 
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -220,7 +237,7 @@ public class UpdateStackGroupRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -260,20 +277,21 @@ public class UpdateStackGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateStackGroupRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private String administrationRoleName; 
         private AutoDeployment autoDeployment; 
-        private java.util.List < String > capabilities; 
+        private java.util.List<String> capabilities; 
         private String clientToken; 
+        private java.util.List<String> deploymentOptions; 
         private DeploymentTargets deploymentTargets; 
         private String description; 
         private String executionRoleName; 
         private String operationDescription; 
-        private java.util.Map < String, ? > operationPreferences; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.Map<String, ?> operationPreferences; 
+        private java.util.List<Parameters> parameters; 
         private String permissionModel; 
         private String regionId; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String stackGroupName; 
         private String templateBody; 
         private String templateId; 
@@ -291,6 +309,7 @@ public class UpdateStackGroupRequest extends Request {
             this.autoDeployment = request.autoDeployment;
             this.capabilities = request.capabilities;
             this.clientToken = request.clientToken;
+            this.deploymentOptions = request.deploymentOptions;
             this.deploymentTargets = request.deploymentTargets;
             this.description = request.description;
             this.executionRoleName = request.executionRoleName;
@@ -316,7 +335,7 @@ public class UpdateStackGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;12****&quot;]</p>
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
@@ -359,7 +378,7 @@ public class UpdateStackGroupRequest extends Request {
         /**
          * <p>The option for the stack group. You can specify up to one option.</p>
          */
-        public Builder capabilities(java.util.List < String > capabilities) {
+        public Builder capabilities(java.util.List<String> capabilities) {
             this.putQueryParameter("Capabilities", capabilities);
             this.capabilities = capabilities;
             return this;
@@ -377,6 +396,15 @@ public class UpdateStackGroupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeploymentOptions.
+         */
+        public Builder deploymentOptions(java.util.List<String> deploymentOptions) {
+            this.putQueryParameter("DeploymentOptions", deploymentOptions);
+            this.deploymentOptions = deploymentOptions;
             return this;
         }
 
@@ -445,7 +473,7 @@ public class UpdateStackGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;FailureToleranceCount&quot;: 1,&quot;MaxConcurrentCount&quot;: 2}</p>
          */
-        public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
+        public Builder operationPreferences(java.util.Map<String, ?> operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
             this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;
@@ -460,7 +488,7 @@ public class UpdateStackGroupRequest extends Request {
          * <li>false: disables automatic deployment. After you disable automatic deployment, the stack instances remain unchanged even if members in the folder change.</li>
          * </ul>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -506,7 +534,7 @@ public class UpdateStackGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;cn-hangzhou&quot;, &quot;cn-beijing&quot;]</p>
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
             this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
@@ -637,6 +665,14 @@ public class UpdateStackGroupRequest extends Request {
             private Boolean enabled; 
             private Boolean retainStacksOnAccountRemoval; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoDeployment model) {
+                this.enabled = model.enabled;
+                this.retainStacksOnAccountRemoval = model.retainStacksOnAccountRemoval;
+            } 
+
             /**
              * <p>The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.</p>
              * <blockquote>
@@ -680,10 +716,10 @@ public class UpdateStackGroupRequest extends Request {
      */
     public static class DeploymentTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
-        private java.util.List < String > accountIds;
+        private java.util.List<String> accountIds;
 
         @com.aliyun.core.annotation.NameInMap("RdFolderIds")
-        private java.util.List < String > rdFolderIds;
+        private java.util.List<String> rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
             this.accountIds = builder.accountIds;
@@ -701,25 +737,33 @@ public class UpdateStackGroupRequest extends Request {
         /**
          * @return accountIds
          */
-        public java.util.List < String > getAccountIds() {
+        public java.util.List<String> getAccountIds() {
             return this.accountIds;
         }
 
         /**
          * @return rdFolderIds
          */
-        public java.util.List < String > getRdFolderIds() {
+        public java.util.List<String> getRdFolderIds() {
             return this.rdFolderIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > accountIds; 
-            private java.util.List < String > rdFolderIds; 
+            private java.util.List<String> accountIds; 
+            private java.util.List<String> rdFolderIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentTargets model) {
+                this.accountIds = model.accountIds;
+                this.rdFolderIds = model.rdFolderIds;
+            } 
 
             /**
              * <p>The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.</p>
              */
-            public Builder accountIds(java.util.List < String > accountIds) {
+            public Builder accountIds(java.util.List<String> accountIds) {
                 this.accountIds = accountIds;
                 return this;
             }
@@ -727,7 +771,7 @@ public class UpdateStackGroupRequest extends Request {
             /**
              * <p>The ID of the operation.</p>
              */
-            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
+            public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
                 return this;
             }
@@ -784,6 +828,14 @@ public class UpdateStackGroupRequest extends Request {
         public static final class Builder {
             private String parameterKey; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>Specifies whether to retain stacks in a member when you remove the member from the folder.</p>

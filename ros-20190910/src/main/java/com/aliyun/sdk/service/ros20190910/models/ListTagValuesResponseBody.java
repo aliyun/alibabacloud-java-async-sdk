@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < String > values;
+    private java.util.List<String> values;
 
     private ListTagValuesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListTagValuesResponseBody extends TeaModel {
 
     public static ListTagValuesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListTagValuesResponseBody extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagValuesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.values = model.values;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -86,7 +104,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         /**
          * <p>The tag values.</p>
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

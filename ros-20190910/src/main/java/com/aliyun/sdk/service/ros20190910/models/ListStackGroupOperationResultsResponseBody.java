@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StackGroupOperationResults")
-    private java.util.List < StackGroupOperationResults> stackGroupOperationResults;
+    private java.util.List<StackGroupOperationResults> stackGroupOperationResults;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
 
     public static ListStackGroupOperationResultsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
     /**
      * @return stackGroupOperationResults
      */
-    public java.util.List < StackGroupOperationResults> getStackGroupOperationResults() {
+    public java.util.List<StackGroupOperationResults> getStackGroupOperationResults() {
         return this.stackGroupOperationResults;
     }
 
@@ -82,8 +91,19 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < StackGroupOperationResults> stackGroupOperationResults; 
+        private java.util.List<StackGroupOperationResults> stackGroupOperationResults; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStackGroupOperationResultsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.stackGroupOperationResults = model.stackGroupOperationResults;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -121,7 +141,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         /**
          * <p>The details of the results of the operation.</p>
          */
-        public Builder stackGroupOperationResults(java.util.List < StackGroupOperationResults> stackGroupOperationResults) {
+        public Builder stackGroupOperationResults(java.util.List<StackGroupOperationResults> stackGroupOperationResults) {
             this.stackGroupOperationResults = stackGroupOperationResults;
             return this;
         }
@@ -222,6 +242,17 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String statusReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackGroupOperationResults model) {
+                this.accountId = model.accountId;
+                this.rdFolderId = model.rdFolderId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
 
             /**
              * <p>The ID of the account to which the stack instance belongs.</p>

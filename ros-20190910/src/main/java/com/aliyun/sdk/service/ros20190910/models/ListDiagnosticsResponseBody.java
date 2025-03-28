@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDiagnosticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Diagnostics")
-    private java.util.List < Diagnostics> diagnostics;
+    private java.util.List<Diagnostics> diagnostics;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -47,10 +52,14 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diagnostics
      */
-    public java.util.List < Diagnostics> getDiagnostics() {
+    public java.util.List<Diagnostics> getDiagnostics() {
         return this.diagnostics;
     }
 
@@ -90,17 +99,29 @@ public class ListDiagnosticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Diagnostics> diagnostics; 
+        private java.util.List<Diagnostics> diagnostics; 
         private Integer httpStatusCode; 
         private String message; 
         private String nextToken; 
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDiagnosticsResponseBody model) {
+            this.diagnostics = model.diagnostics;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The items that are diagnosed.</p>
          */
-        public Builder diagnostics(java.util.List < Diagnostics> diagnostics) {
+        public Builder diagnostics(java.util.List<Diagnostics> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
@@ -249,6 +270,17 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             private String diagnosticProduct; 
             private String reportId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Diagnostics model) {
+                this.createTime = model.createTime;
+                this.diagnosticKey = model.diagnosticKey;
+                this.diagnosticProduct = model.diagnosticProduct;
+                this.reportId = model.reportId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the diagnostic report was generated.</p>

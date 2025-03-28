@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Templates")
-    private java.util.List < Templates> templates;
+    private java.util.List<Templates> templates;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     public static ListTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
@@ -82,11 +91,22 @@ public class ListTemplatesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTemplatesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The page number.<br>Pages start from page 1.</p>
+         * <p>The page number of the template list.<br>Start value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -97,7 +117,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paginated query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,9 +139,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The templates.</p>
+         * <p>The list of templates.</p>
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }
@@ -187,8 +207,16 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>The key of the tag.</p>
+             * <p>Tag key of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>usage</p>
@@ -199,7 +227,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>Tag value of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -223,6 +251,9 @@ public class ListTemplatesResponseBody extends TeaModel {
      * <p>ListTemplatesResponseBody</p>
      */
     public static class Templates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdditionalInfo")
+        private java.util.Map<String, ?> additionalInfo;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -239,7 +270,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TemplateARN")
         private String templateARN;
@@ -250,6 +281,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateUrl")
+        private String templateUrl;
+
         @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
@@ -257,6 +291,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         private String updateTime;
 
         private Templates(Builder builder) {
+            this.additionalInfo = builder.additionalInfo;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.ownerId = builder.ownerId;
@@ -266,6 +301,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             this.templateARN = builder.templateARN;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
+            this.templateUrl = builder.templateUrl;
             this.templateVersion = builder.templateVersion;
             this.updateTime = builder.updateTime;
         }
@@ -276,6 +312,13 @@ public class ListTemplatesResponseBody extends TeaModel {
 
         public static Templates create() {
             return builder().build();
+        }
+
+        /**
+         * @return additionalInfo
+         */
+        public java.util.Map<String, ?> getAdditionalInfo() {
+            return this.additionalInfo;
         }
 
         /**
@@ -316,7 +359,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -342,6 +385,13 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateUrl
+         */
+        public String getTemplateUrl() {
+            return this.templateUrl;
+        }
+
+        /**
          * @return templateVersion
          */
         public String getTemplateVersion() {
@@ -356,20 +406,52 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, ?> additionalInfo; 
             private String createTime; 
             private String description; 
             private String ownerId; 
             private String resourceGroupId; 
             private String shareType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String templateARN; 
             private String templateId; 
             private String templateName; 
+            private String templateUrl; 
             private String templateVersion; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.additionalInfo = model.additionalInfo;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.ownerId = model.ownerId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.templateARN = model.templateARN;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateUrl = model.templateUrl;
+                this.templateVersion = model.templateVersion;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>The time when the template was created.</p>
+             * <p>Supplementary information for public templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;其他&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</p>
+             */
+            public Builder additionalInfo(java.util.Map<String, ?> additionalInfo) {
+                this.additionalInfo = additionalInfo;
+                return this;
+            }
+
+            /**
+             * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-15T08:17:14.000000</p>
@@ -380,7 +462,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the template.</p>
+             * <p>Template description.</p>
              * 
              * <strong>example:</strong>
              * <p>test-description</p>
@@ -391,7 +473,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the template belongs.</p>
+             * <p>ID of the Alibaba Cloud account to which the template belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>151266687691****</p>
@@ -402,7 +484,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>Resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmxazb4ph6aiy****</p>
@@ -414,10 +496,10 @@ public class ListTemplatesResponseBody extends TeaModel {
 
             /**
              * <p>The sharing type of the template.</p>
-             * <p>Valid values:</p>
+             * <p>Values:</p>
              * <ul>
-             * <li>Private: The template belongs to the template owner.</li>
-             * <li>Shared: The template is shared with other users.</li>
+             * <li>Private: The template is owned by the user themselves.</li>
+             * <li>Shared: The template is shared by other users.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -429,15 +511,15 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the template.</p>
+             * <p>Tags of the template.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the template.</p>
+             * <p>The ARN of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ros:<em>:151266687691</em><em><strong>:template/a52f81be-496f-4e1c-a286-8852ab54</strong></em>*</p>
@@ -448,7 +530,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template ID.</p>
+             * <p>Template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4d4f5aa2-3260-4e47-863b-763fbb12****</p>
@@ -459,7 +541,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>Template name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -470,7 +552,18 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest version of the template.</p>
+             * <p>Link to the template</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ros-public-templates.oss-cn-hangzhou.aliyuncs.com/demo.yml">https://ros-public-templates.oss-cn-hangzhou.aliyuncs.com/demo.yml</a></p>
+             */
+            public Builder templateUrl(String templateUrl) {
+                this.templateUrl = templateUrl;
+                return this;
+            }
+
+            /**
+             * <p>Latest template version name.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -481,7 +574,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last updated.</p>
+             * <p>The last update time of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-15T08:17:14.000000</p>

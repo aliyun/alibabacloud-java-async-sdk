@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class CreateChangeSetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotificationURLs")
-    private java.util.List < String > notificationURLs;
+    private java.util.List<String> notificationURLs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parallelism")
@@ -43,7 +48,7 @@ public class CreateChangeSetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RamRoleName")
@@ -59,8 +64,12 @@ public class CreateChangeSetRequest extends Request {
     private String replacementOption;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourcesToImport")
-    private java.util.List < ResourcesToImport> resourcesToImport;
+    private java.util.List<ResourcesToImport> resourcesToImport;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackId")
@@ -85,6 +94,10 @@ public class CreateChangeSetRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackPolicyURL")
     private String stackPolicyURL;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -127,6 +140,7 @@ public class CreateChangeSetRequest extends Request {
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
         this.replacementOption = builder.replacementOption;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourcesToImport = builder.resourcesToImport;
         this.stackId = builder.stackId;
         this.stackName = builder.stackName;
@@ -134,6 +148,7 @@ public class CreateChangeSetRequest extends Request {
         this.stackPolicyDuringUpdateBody = builder.stackPolicyDuringUpdateBody;
         this.stackPolicyDuringUpdateURL = builder.stackPolicyDuringUpdateURL;
         this.stackPolicyURL = builder.stackPolicyURL;
+        this.tags = builder.tags;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateScratchId = builder.templateScratchId;
@@ -151,7 +166,7 @@ public class CreateChangeSetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -194,7 +209,7 @@ public class CreateChangeSetRequest extends Request {
     /**
      * @return notificationURLs
      */
-    public java.util.List < String > getNotificationURLs() {
+    public java.util.List<String> getNotificationURLs() {
         return this.notificationURLs;
     }
 
@@ -208,7 +223,7 @@ public class CreateChangeSetRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -234,9 +249,16 @@ public class CreateChangeSetRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourcesToImport
      */
-    public java.util.List < ResourcesToImport> getResourcesToImport() {
+    public java.util.List<ResourcesToImport> getResourcesToImport() {
         return this.resourcesToImport;
     }
 
@@ -280,6 +302,13 @@ public class CreateChangeSetRequest extends Request {
      */
     public String getStackPolicyURL() {
         return this.stackPolicyURL;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -337,19 +366,21 @@ public class CreateChangeSetRequest extends Request {
         private String clientToken; 
         private String description; 
         private Boolean disableRollback; 
-        private java.util.List < String > notificationURLs; 
+        private java.util.List<String> notificationURLs; 
         private Long parallelism; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String ramRoleName; 
         private String regionId; 
         private String replacementOption; 
-        private java.util.List < ResourcesToImport> resourcesToImport; 
+        private String resourceGroupId; 
+        private java.util.List<ResourcesToImport> resourcesToImport; 
         private String stackId; 
         private String stackName; 
         private String stackPolicyBody; 
         private String stackPolicyDuringUpdateBody; 
         private String stackPolicyDuringUpdateURL; 
         private String stackPolicyURL; 
+        private java.util.List<Tags> tags; 
         private String templateBody; 
         private String templateId; 
         private String templateScratchId; 
@@ -375,6 +406,7 @@ public class CreateChangeSetRequest extends Request {
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
             this.replacementOption = request.replacementOption;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourcesToImport = request.resourcesToImport;
             this.stackId = request.stackId;
             this.stackName = request.stackName;
@@ -382,6 +414,7 @@ public class CreateChangeSetRequest extends Request {
             this.stackPolicyDuringUpdateBody = request.stackPolicyDuringUpdateBody;
             this.stackPolicyDuringUpdateURL = request.stackPolicyDuringUpdateURL;
             this.stackPolicyURL = request.stackPolicyURL;
+            this.tags = request.tags;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateScratchId = request.templateScratchId;
@@ -482,7 +515,7 @@ public class CreateChangeSetRequest extends Request {
          * <strong>example:</strong>
          * <p><a href="http://my-site.com/ros-notify">http://my-site.com/ros-notify</a></p>
          */
-        public Builder notificationURLs(java.util.List < String > notificationURLs) {
+        public Builder notificationURLs(java.util.List<String> notificationURLs) {
             this.putQueryParameter("NotificationURLs", notificationURLs);
             this.notificationURLs = notificationURLs;
             return this;
@@ -519,7 +552,7 @@ public class CreateChangeSetRequest extends Request {
         /**
          * <p>The parameters that are defined in the template.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -572,9 +605,18 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>The resources that you want to import to the stack.</p>
          */
-        public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
+        public Builder resourcesToImport(java.util.List<ResourcesToImport> resourcesToImport) {
             this.putQueryParameter("ResourcesToImport", resourcesToImport);
             this.resourcesToImport = resourcesToImport;
             return this;
@@ -691,6 +733,15 @@ public class CreateChangeSetRequest extends Request {
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
             this.stackPolicyURL = stackPolicyURL;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -855,6 +906,14 @@ public class CreateChangeSetRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The key of parameter N that is defined in the template. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template. Maximum value of N: 200.</p>
              * <blockquote>
@@ -948,6 +1007,15 @@ public class CreateChangeSetRequest extends Request {
             private String resourceIdentifier; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcesToImport model) {
+                this.logicalResourceId = model.logicalResourceId;
+                this.resourceIdentifier = model.resourceIdentifier;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The logical ID of resource N. The logical ID is the name of the resource defined in the template.</p>
              * <blockquote>
@@ -993,6 +1061,81 @@ public class CreateChangeSetRequest extends Request {
 
             public ResourcesToImport build() {
                 return new ResourcesToImport(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateChangeSetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateChangeSetRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DetectStackDriftRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
-    private java.util.List < String > logicalResourceId;
+    private java.util.List<String> logicalResourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -46,7 +51,7 @@ public class DetectStackDriftRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,7 +66,7 @@ public class DetectStackDriftRequest extends Request {
     /**
      * @return logicalResourceId
      */
-    public java.util.List < String > getLogicalResourceId() {
+    public java.util.List<String> getLogicalResourceId() {
         return this.logicalResourceId;
     }
 
@@ -81,7 +86,7 @@ public class DetectStackDriftRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetectStackDriftRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > logicalResourceId; 
+        private java.util.List<String> logicalResourceId; 
         private String regionId; 
         private String stackId; 
 
@@ -117,7 +122,7 @@ public class DetectStackDriftRequest extends Request {
          * <strong>example:</strong>
          * <p>ScalingRule</p>
          */
-        public Builder logicalResourceId(java.util.List < String > logicalResourceId) {
+        public Builder logicalResourceId(java.util.List<String> logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
             this.logicalResourceId = logicalResourceId;
             return this;

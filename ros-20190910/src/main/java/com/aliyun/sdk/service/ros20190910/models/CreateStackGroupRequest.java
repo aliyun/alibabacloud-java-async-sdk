@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateStackGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Capabilities")
-    private java.util.List < String > capabilities;
+    private java.util.List<String> capabilities;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -38,7 +43,7 @@ public class CreateStackGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PermissionModel")
@@ -64,7 +69,7 @@ public class CreateStackGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -111,7 +116,7 @@ public class CreateStackGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,7 +138,7 @@ public class CreateStackGroupRequest extends Request {
     /**
      * @return capabilities
      */
-    public java.util.List < String > getCapabilities() {
+    public java.util.List<String> getCapabilities() {
         return this.capabilities;
     }
 
@@ -161,7 +166,7 @@ public class CreateStackGroupRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -203,7 +208,7 @@ public class CreateStackGroupRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -238,17 +243,17 @@ public class CreateStackGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateStackGroupRequest, Builder> {
         private String administrationRoleName; 
         private AutoDeployment autoDeployment; 
-        private java.util.List < String > capabilities; 
+        private java.util.List<String> capabilities; 
         private String clientToken; 
         private String description; 
         private String executionRoleName; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String permissionModel; 
         private String regionId; 
         private String resourceGroupId; 
         private String stackArn; 
         private String stackGroupName; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -311,7 +316,7 @@ public class CreateStackGroupRequest extends Request {
         /**
          * <p>The options for the stack group. You can specify up to one option.</p>
          */
-        public Builder capabilities(java.util.List < String > capabilities) {
+        public Builder capabilities(java.util.List<String> capabilities) {
             this.putQueryParameter("Capabilities", capabilities);
             this.capabilities = capabilities;
             return this;
@@ -357,7 +362,7 @@ public class CreateStackGroupRequest extends Request {
         /**
          * <p>The parameters of the stack group.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -433,7 +438,7 @@ public class CreateStackGroupRequest extends Request {
         /**
          * <p>The tags of the stack group.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -544,6 +549,14 @@ public class CreateStackGroupRequest extends Request {
             private Boolean enabled; 
             private Boolean retainStacksOnAccountRemoval; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoDeployment model) {
+                this.enabled = model.enabled;
+                this.retainStacksOnAccountRemoval = model.retainStacksOnAccountRemoval;
+            } 
+
             /**
              * <p>Indicates whether automatic deployment is enabled.</p>
              * <p>Valid values:</p>
@@ -632,6 +645,14 @@ public class CreateStackGroupRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The key of parameter N. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template.</p>
              * <p>Maximum value of N: 200.</p>
@@ -715,6 +736,14 @@ public class CreateStackGroupRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the stack group.</p>

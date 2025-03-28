@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListChangeSetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ChangeSets")
-    private java.util.List < ChangeSets> changeSets;
+    private java.util.List<ChangeSets> changeSets;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListChangeSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return changeSets
      */
-    public java.util.List < ChangeSets> getChangeSets() {
+    public java.util.List<ChangeSets> getChangeSets() {
         return this.changeSets;
     }
 
@@ -79,16 +88,27 @@ public class ListChangeSetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ChangeSets> changeSets; 
+        private java.util.List<ChangeSets> changeSets; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListChangeSetsResponseBody model) {
+            this.changeSets = model.changeSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The change sets.</p>
          */
-        public Builder changeSets(java.util.List < ChangeSets> changeSets) {
+        public Builder changeSets(java.util.List<ChangeSets> changeSets) {
             this.changeSets = changeSets;
             return this;
         }
@@ -149,6 +169,81 @@ public class ListChangeSetsResponseBody extends TeaModel {
      *
      * <p>ListChangeSetsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListChangeSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChangeSetsResponseBody</p>
+     */
     public static class ChangeSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeSetId")
         private String changeSetId;
@@ -171,6 +266,9 @@ public class ListChangeSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
@@ -183,6 +281,9 @@ public class ListChangeSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private ChangeSets(Builder builder) {
             this.changeSetId = builder.changeSetId;
             this.changeSetName = builder.changeSetName;
@@ -191,10 +292,12 @@ public class ListChangeSetsResponseBody extends TeaModel {
             this.description = builder.description;
             this.executionStatus = builder.executionStatus;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.stackId = builder.stackId;
             this.stackName = builder.stackName;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -255,6 +358,13 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return stackId
          */
         public String getStackId() {
@@ -282,6 +392,13 @@ public class ListChangeSetsResponseBody extends TeaModel {
             return this.statusReason;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String changeSetId; 
             private String changeSetName; 
@@ -290,10 +407,31 @@ public class ListChangeSetsResponseBody extends TeaModel {
             private String description; 
             private String executionStatus; 
             private String regionId; 
+            private String resourceGroupId; 
             private String stackId; 
             private String stackName; 
             private String status; 
             private String statusReason; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeSets model) {
+                this.changeSetId = model.changeSetId;
+                this.changeSetName = model.changeSetName;
+                this.changeSetType = model.changeSetType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.executionStatus = model.executionStatus;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.stackId = model.stackId;
+                this.stackName = model.stackName;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the change set.</p>
@@ -373,6 +511,14 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * <p>The ID of the stack with which the change set is associated.</p>
              * 
              * <strong>example:</strong>
@@ -413,6 +559,14 @@ public class ListChangeSetsResponseBody extends TeaModel {
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

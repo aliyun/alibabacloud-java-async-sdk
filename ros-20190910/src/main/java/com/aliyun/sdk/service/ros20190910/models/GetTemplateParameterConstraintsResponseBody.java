@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ParameterConstraints")
-    private java.util.List < ParameterConstraints> parameterConstraints;
+    private java.util.List<ParameterConstraints> parameterConstraints;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterConstraints
      */
-    public java.util.List < ParameterConstraints> getParameterConstraints() {
+    public java.util.List<ParameterConstraints> getParameterConstraints() {
         return this.parameterConstraints;
     }
 
@@ -46,13 +55,21 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ParameterConstraints> parameterConstraints; 
+        private java.util.List<ParameterConstraints> parameterConstraints; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateParameterConstraintsResponseBody model) {
+            this.parameterConstraints = model.parameterConstraints;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The constraints of the parameters.</p>
          */
-        public Builder parameterConstraints(java.util.List < ParameterConstraints> parameterConstraints) {
+        public Builder parameterConstraints(java.util.List<ParameterConstraints> parameterConstraints) {
             this.parameterConstraints = parameterConstraints;
             return this;
         }
@@ -118,6 +135,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String propertyName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotSupportResources model) {
+                this.propertyName = model.propertyName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The name of the resource property.</p>
              * 
@@ -155,7 +180,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
      */
     public static class OriginalConstraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedValues")
-        private java.util.List < ? > allowedValues;
+        private java.util.List<?> allowedValues;
+
+        @com.aliyun.core.annotation.NameInMap("Behavior")
+        private String behavior;
+
+        @com.aliyun.core.annotation.NameInMap("BehaviorReason")
+        private String behaviorReason;
 
         @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
@@ -168,6 +199,8 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         private OriginalConstraints(Builder builder) {
             this.allowedValues = builder.allowedValues;
+            this.behavior = builder.behavior;
+            this.behaviorReason = builder.behaviorReason;
             this.propertyName = builder.propertyName;
             this.resourceName = builder.resourceName;
             this.resourceType = builder.resourceType;
@@ -184,8 +217,22 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         /**
          * @return allowedValues
          */
-        public java.util.List < ? > getAllowedValues() {
+        public java.util.List<?> getAllowedValues() {
             return this.allowedValues;
+        }
+
+        /**
+         * @return behavior
+         */
+        public String getBehavior() {
+            return this.behavior;
+        }
+
+        /**
+         * @return behaviorReason
+         */
+        public String getBehaviorReason() {
+            return this.behaviorReason;
         }
 
         /**
@@ -210,16 +257,52 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > allowedValues; 
+            private java.util.List<?> allowedValues; 
+            private String behavior; 
+            private String behaviorReason; 
             private String propertyName; 
             private String resourceName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginalConstraints model) {
+                this.allowedValues = model.allowedValues;
+                this.behavior = model.behavior;
+                this.behaviorReason = model.behaviorReason;
+                this.propertyName = model.propertyName;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The values of the parameter.</p>
              */
-            public Builder allowedValues(java.util.List < ? > allowedValues) {
+            public Builder allowedValues(java.util.List<?> allowedValues) {
                 this.allowedValues = allowedValues;
+                return this;
+            }
+
+            /**
+             * <p>Behavior of the parameter</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QueryError</p>
+             */
+            public Builder behavior(String behavior) {
+                this.behavior = behavior;
+                return this;
+            }
+
+            /**
+             * <p>The reason for the parameter behavior</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No resource property refer to the parameter</p>
+             */
+            public Builder behaviorReason(String behaviorReason) {
+                this.behaviorReason = behaviorReason;
                 return this;
             }
 
@@ -319,6 +402,15 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryErrors model) {
+                this.errorMessage = model.errorMessage;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The error message.</p>
              * 
@@ -415,11 +507,20 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryTimeoutDetails model) {
+                this.errorMessage = model.errorMessage;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
-             * <p>The error message.</p>
+             * <p>Error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>ALIYUN::ECS::InstanceGroup</p>
+             * <p>query property SlaveZoneIds.* in resource rds error, error message: query 8 seconds timeout</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -427,10 +528,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource name.</p>
+             * <p>Resource name.</p>
              * 
              * <strong>example:</strong>
-             * <p>MyECS</p>
+             * <p>rds</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -438,10 +539,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
+             * <p>Resource type.</p>
              * 
              * <strong>example:</strong>
-             * <p>InstanceType is needed while query DataDisk</p>
+             * <p>ALIYUN::RDS::DBInstance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -463,10 +564,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
      */
     public static class ParameterConstraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedValues")
-        private java.util.List < String > allowedValues;
+        private java.util.List<String> allowedValues;
 
         @com.aliyun.core.annotation.NameInMap("AssociationParameterNames")
-        private java.util.List < String > associationParameterNames;
+        private java.util.List<String> associationParameterNames;
 
         @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;
@@ -475,25 +576,25 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         private String behaviorReason;
 
         @com.aliyun.core.annotation.NameInMap("IllegalValueByParameterConstraints")
-        private java.util.List < ? > illegalValueByParameterConstraints;
+        private java.util.List<?> illegalValueByParameterConstraints;
 
         @com.aliyun.core.annotation.NameInMap("IllegalValueByRules")
-        private java.util.List < ? > illegalValueByRules;
+        private java.util.List<?> illegalValueByRules;
 
         @com.aliyun.core.annotation.NameInMap("NotSupportResources")
-        private java.util.List < NotSupportResources> notSupportResources;
+        private java.util.List<NotSupportResources> notSupportResources;
 
         @com.aliyun.core.annotation.NameInMap("OriginalConstraints")
-        private java.util.List < OriginalConstraints> originalConstraints;
+        private java.util.List<OriginalConstraints> originalConstraints;
 
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
         @com.aliyun.core.annotation.NameInMap("QueryErrors")
-        private java.util.List < QueryErrors> queryErrors;
+        private java.util.List<QueryErrors> queryErrors;
 
         @com.aliyun.core.annotation.NameInMap("QueryTimeoutDetails")
-        private java.util.List < QueryTimeoutDetails> queryTimeoutDetails;
+        private java.util.List<QueryTimeoutDetails> queryTimeoutDetails;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -524,14 +625,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         /**
          * @return allowedValues
          */
-        public java.util.List < String > getAllowedValues() {
+        public java.util.List<String> getAllowedValues() {
             return this.allowedValues;
         }
 
         /**
          * @return associationParameterNames
          */
-        public java.util.List < String > getAssociationParameterNames() {
+        public java.util.List<String> getAssociationParameterNames() {
             return this.associationParameterNames;
         }
 
@@ -552,28 +653,28 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         /**
          * @return illegalValueByParameterConstraints
          */
-        public java.util.List < ? > getIllegalValueByParameterConstraints() {
+        public java.util.List<?> getIllegalValueByParameterConstraints() {
             return this.illegalValueByParameterConstraints;
         }
 
         /**
          * @return illegalValueByRules
          */
-        public java.util.List < ? > getIllegalValueByRules() {
+        public java.util.List<?> getIllegalValueByRules() {
             return this.illegalValueByRules;
         }
 
         /**
          * @return notSupportResources
          */
-        public java.util.List < NotSupportResources> getNotSupportResources() {
+        public java.util.List<NotSupportResources> getNotSupportResources() {
             return this.notSupportResources;
         }
 
         /**
          * @return originalConstraints
          */
-        public java.util.List < OriginalConstraints> getOriginalConstraints() {
+        public java.util.List<OriginalConstraints> getOriginalConstraints() {
             return this.originalConstraints;
         }
 
@@ -587,14 +688,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         /**
          * @return queryErrors
          */
-        public java.util.List < QueryErrors> getQueryErrors() {
+        public java.util.List<QueryErrors> getQueryErrors() {
             return this.queryErrors;
         }
 
         /**
          * @return queryTimeoutDetails
          */
-        public java.util.List < QueryTimeoutDetails> getQueryTimeoutDetails() {
+        public java.util.List<QueryTimeoutDetails> getQueryTimeoutDetails() {
             return this.queryTimeoutDetails;
         }
 
@@ -606,23 +707,41 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowedValues; 
-            private java.util.List < String > associationParameterNames; 
+            private java.util.List<String> allowedValues; 
+            private java.util.List<String> associationParameterNames; 
             private String behavior; 
             private String behaviorReason; 
-            private java.util.List < ? > illegalValueByParameterConstraints; 
-            private java.util.List < ? > illegalValueByRules; 
-            private java.util.List < NotSupportResources> notSupportResources; 
-            private java.util.List < OriginalConstraints> originalConstraints; 
+            private java.util.List<?> illegalValueByParameterConstraints; 
+            private java.util.List<?> illegalValueByRules; 
+            private java.util.List<NotSupportResources> notSupportResources; 
+            private java.util.List<OriginalConstraints> originalConstraints; 
             private String parameterKey; 
-            private java.util.List < QueryErrors> queryErrors; 
-            private java.util.List < QueryTimeoutDetails> queryTimeoutDetails; 
+            private java.util.List<QueryErrors> queryErrors; 
+            private java.util.List<QueryTimeoutDetails> queryTimeoutDetails; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterConstraints model) {
+                this.allowedValues = model.allowedValues;
+                this.associationParameterNames = model.associationParameterNames;
+                this.behavior = model.behavior;
+                this.behaviorReason = model.behaviorReason;
+                this.illegalValueByParameterConstraints = model.illegalValueByParameterConstraints;
+                this.illegalValueByRules = model.illegalValueByRules;
+                this.notSupportResources = model.notSupportResources;
+                this.originalConstraints = model.originalConstraints;
+                this.parameterKey = model.parameterKey;
+                this.queryErrors = model.queryErrors;
+                this.queryTimeoutDetails = model.queryTimeoutDetails;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The values of the parameter.</p>
              */
-            public Builder allowedValues(java.util.List < String > allowedValues) {
+            public Builder allowedValues(java.util.List<String> allowedValues) {
                 this.allowedValues = allowedValues;
                 return this;
             }
@@ -630,7 +749,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             /**
              * <p>The names of the associated parameters.</p>
              */
-            public Builder associationParameterNames(java.util.List < String > associationParameterNames) {
+            public Builder associationParameterNames(java.util.List<String> associationParameterNames) {
                 this.associationParameterNames = associationParameterNames;
                 return this;
             }
@@ -671,7 +790,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              * <p>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
              * </blockquote>
              */
-            public Builder illegalValueByParameterConstraints(java.util.List < ? > illegalValueByParameterConstraints) {
+            public Builder illegalValueByParameterConstraints(java.util.List<?> illegalValueByParameterConstraints) {
                 this.illegalValueByParameterConstraints = illegalValueByParameterConstraints;
                 return this;
             }
@@ -682,7 +801,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              * <p>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
              * </blockquote>
              */
-            public Builder illegalValueByRules(java.util.List < ? > illegalValueByRules) {
+            public Builder illegalValueByRules(java.util.List<?> illegalValueByRules) {
                 this.illegalValueByRules = illegalValueByRules;
                 return this;
             }
@@ -690,7 +809,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             /**
              * <p>The unsupported resource in the template.</p>
              */
-            public Builder notSupportResources(java.util.List < NotSupportResources> notSupportResources) {
+            public Builder notSupportResources(java.util.List<NotSupportResources> notSupportResources) {
                 this.notSupportResources = notSupportResources;
                 return this;
             }
@@ -698,7 +817,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             /**
              * <p>The original constraint information.</p>
              */
-            public Builder originalConstraints(java.util.List < OriginalConstraints> originalConstraints) {
+            public Builder originalConstraints(java.util.List<OriginalConstraints> originalConstraints) {
                 this.originalConstraints = originalConstraints;
                 return this;
             }
@@ -717,15 +836,15 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             /**
              * <p>The error that is returned when the request fails.</p>
              */
-            public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
+            public Builder queryErrors(java.util.List<QueryErrors> queryErrors) {
                 this.queryErrors = queryErrors;
                 return this;
             }
 
             /**
-             * QueryTimeoutDetails.
+             * <p>Query the details of timeout.</p>
              */
-            public Builder queryTimeoutDetails(java.util.List < QueryTimeoutDetails> queryTimeoutDetails) {
+            public Builder queryTimeoutDetails(java.util.List<QueryTimeoutDetails> queryTimeoutDetails) {
                 this.queryTimeoutDetails = queryTimeoutDetails;
                 return this;
             }

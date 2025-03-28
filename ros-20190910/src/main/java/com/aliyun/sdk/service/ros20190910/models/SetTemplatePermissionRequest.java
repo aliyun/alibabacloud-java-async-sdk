@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SetTemplatePermissionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > accountIds;
+    private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShareOption")
@@ -52,7 +57,7 @@ public class SetTemplatePermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +65,7 @@ public class SetTemplatePermissionRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -93,7 +98,7 @@ public class SetTemplatePermissionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetTemplatePermissionRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private String shareOption; 
         private String templateId; 
         private String templateVersion; 
@@ -125,7 +130,7 @@ public class SetTemplatePermissionRequest extends Request {
          * <strong>example:</strong>
          * <p>123456789</p>
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
             this.accountIds = accountIds;
             return this;

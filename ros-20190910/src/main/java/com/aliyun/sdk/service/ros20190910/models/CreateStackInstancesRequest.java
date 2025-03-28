@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateStackInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentOptions")
+    private java.util.List<String> deploymentOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeploymentTargets")
@@ -34,11 +43,11 @@ public class CreateStackInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationPreferences")
-    private java.util.Map < String, ? > operationPreferences;
+    private java.util.Map<String, ?> operationPreferences;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParameterOverrides")
-    private java.util.List < ParameterOverrides> parameterOverrides;
+    private java.util.List<ParameterOverrides> parameterOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -48,7 +57,7 @@ public class CreateStackInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > regionIds;
+    private java.util.List<String> regionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackGroupName")
@@ -64,6 +73,7 @@ public class CreateStackInstancesRequest extends Request {
         super(builder);
         this.accountIds = builder.accountIds;
         this.clientToken = builder.clientToken;
+        this.deploymentOptions = builder.deploymentOptions;
         this.deploymentTargets = builder.deploymentTargets;
         this.disableRollback = builder.disableRollback;
         this.operationDescription = builder.operationDescription;
@@ -83,7 +93,7 @@ public class CreateStackInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,7 +101,7 @@ public class CreateStackInstancesRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -100,6 +110,13 @@ public class CreateStackInstancesRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return deploymentOptions
+     */
+    public java.util.List<String> getDeploymentOptions() {
+        return this.deploymentOptions;
     }
 
     /**
@@ -126,14 +143,14 @@ public class CreateStackInstancesRequest extends Request {
     /**
      * @return operationPreferences
      */
-    public java.util.Map < String, ? > getOperationPreferences() {
+    public java.util.Map<String, ?> getOperationPreferences() {
         return this.operationPreferences;
     }
 
     /**
      * @return parameterOverrides
      */
-    public java.util.List < ParameterOverrides> getParameterOverrides() {
+    public java.util.List<ParameterOverrides> getParameterOverrides() {
         return this.parameterOverrides;
     }
 
@@ -147,7 +164,7 @@ public class CreateStackInstancesRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -166,15 +183,16 @@ public class CreateStackInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateStackInstancesRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private String clientToken; 
+        private java.util.List<String> deploymentOptions; 
         private DeploymentTargets deploymentTargets; 
         private Boolean disableRollback; 
         private String operationDescription; 
-        private java.util.Map < String, ? > operationPreferences; 
-        private java.util.List < ParameterOverrides> parameterOverrides; 
+        private java.util.Map<String, ?> operationPreferences; 
+        private java.util.List<ParameterOverrides> parameterOverrides; 
         private String regionId; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String stackGroupName; 
         private Long timeoutInMinutes; 
 
@@ -186,6 +204,7 @@ public class CreateStackInstancesRequest extends Request {
             super(request);
             this.accountIds = request.accountIds;
             this.clientToken = request.clientToken;
+            this.deploymentOptions = request.deploymentOptions;
             this.deploymentTargets = request.deploymentTargets;
             this.disableRollback = request.disableRollback;
             this.operationDescription = request.operationDescription;
@@ -206,7 +225,7 @@ public class CreateStackInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;151266687691****&quot;,&quot;141261387191****&quot;]</p>
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
@@ -222,6 +241,15 @@ public class CreateStackInstancesRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeploymentOptions.
+         */
+        public Builder deploymentOptions(java.util.List<String> deploymentOptions) {
+            this.putQueryParameter("DeploymentOptions", deploymentOptions);
+            this.deploymentOptions = deploymentOptions;
             return this;
         }
 
@@ -313,7 +341,7 @@ public class CreateStackInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;FailureToleranceCount&quot;: 1, &quot;MaxConcurrentCount&quot;: 2}</p>
          */
-        public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
+        public Builder operationPreferences(java.util.Map<String, ?> operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
             this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;
@@ -323,7 +351,7 @@ public class CreateStackInstancesRequest extends Request {
         /**
          * <p>The parameters that are used to override specific parameters.</p>
          */
-        public Builder parameterOverrides(java.util.List < ParameterOverrides> parameterOverrides) {
+        public Builder parameterOverrides(java.util.List<ParameterOverrides> parameterOverrides) {
             this.putQueryParameter("ParameterOverrides", parameterOverrides);
             this.parameterOverrides = parameterOverrides;
             return this;
@@ -349,7 +377,7 @@ public class CreateStackInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;cn-hangzhou&quot;, &quot;cn-beijing&quot;]</p>
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
             this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
@@ -400,10 +428,10 @@ public class CreateStackInstancesRequest extends Request {
      */
     public static class DeploymentTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
-        private java.util.List < String > accountIds;
+        private java.util.List<String> accountIds;
 
         @com.aliyun.core.annotation.NameInMap("RdFolderIds")
-        private java.util.List < String > rdFolderIds;
+        private java.util.List<String> rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
             this.accountIds = builder.accountIds;
@@ -421,20 +449,28 @@ public class CreateStackInstancesRequest extends Request {
         /**
          * @return accountIds
          */
-        public java.util.List < String > getAccountIds() {
+        public java.util.List<String> getAccountIds() {
             return this.accountIds;
         }
 
         /**
          * @return rdFolderIds
          */
-        public java.util.List < String > getRdFolderIds() {
+        public java.util.List<String> getRdFolderIds() {
             return this.rdFolderIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > accountIds; 
-            private java.util.List < String > rdFolderIds; 
+            private java.util.List<String> accountIds; 
+            private java.util.List<String> rdFolderIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentTargets model) {
+                this.accountIds = model.accountIds;
+                this.rdFolderIds = model.rdFolderIds;
+            } 
 
             /**
              * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
@@ -445,7 +481,7 @@ public class CreateStackInstancesRequest extends Request {
              * <strong>example:</strong>
              * <p>[&quot;151266687691****&quot;,&quot;141261387191****&quot;]</p>
              */
-            public Builder accountIds(java.util.List < String > accountIds) {
+            public Builder accountIds(java.util.List<String> accountIds) {
                 this.accountIds = accountIds;
                 return this;
             }
@@ -457,7 +493,7 @@ public class CreateStackInstancesRequest extends Request {
              * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
              * </blockquote>
              */
-            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
+            public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
                 return this;
             }
@@ -514,6 +550,14 @@ public class CreateStackInstancesRequest extends Request {
         public static final class Builder {
             private String parameterKey; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterOverrides model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>The key of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the name that you specified when you created the stack group.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,6 +58,10 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
 
     public static GetStackDriftDetectionStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
         private String requestId; 
         private String stackDriftStatus; 
         private String stackId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackDriftDetectionStatusResponseBody model) {
+            this.driftDetectionId = model.driftDetectionId;
+            this.driftDetectionStatus = model.driftDetectionStatus;
+            this.driftDetectionStatusReason = model.driftDetectionStatusReason;
+            this.driftDetectionTime = model.driftDetectionTime;
+            this.driftedStackResourceCount = model.driftedStackResourceCount;
+            this.requestId = model.requestId;
+            this.stackDriftStatus = model.stackDriftStatus;
+            this.stackId = model.stackId;
+        } 
 
         /**
          * <p>The ID of the drift detection operation.</p>

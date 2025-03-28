@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ValidateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpdateInfoOptions")
-    private java.util.List < String > updateInfoOptions;
+    private java.util.List<String> updateInfoOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValidationOption")
@@ -54,7 +59,7 @@ public class ValidateTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,7 +95,7 @@ public class ValidateTemplateRequest extends Request {
     /**
      * @return updateInfoOptions
      */
-    public java.util.List < String > getUpdateInfoOptions() {
+    public java.util.List<String> getUpdateInfoOptions() {
         return this.updateInfoOptions;
     }
 
@@ -106,7 +111,7 @@ public class ValidateTemplateRequest extends Request {
         private String regionId; 
         private String templateBody; 
         private String templateURL; 
-        private java.util.List < String > updateInfoOptions; 
+        private java.util.List<String> updateInfoOptions; 
         private String validationOption; 
 
         private Builder() {
@@ -177,7 +182,7 @@ public class ValidateTemplateRequest extends Request {
         /**
          * <p>The options that are used to control the generation of information about the stack update. You can specify up to two options.</p>
          */
-        public Builder updateInfoOptions(java.util.List < String > updateInfoOptions) {
+        public Builder updateInfoOptions(java.util.List<String> updateInfoOptions) {
             this.putQueryParameter("UpdateInfoOptions", updateInfoOptions);
             this.updateInfoOptions = updateInfoOptions;
             return this;

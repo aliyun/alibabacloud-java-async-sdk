@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateOptions")
-    private java.util.List < String > createOptions;
+    private java.util.List<String> createOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeletionProtection")
@@ -34,7 +39,7 @@ public class CreateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotificationURLs")
-    private java.util.List < String > notificationURLs;
+    private java.util.List<String> notificationURLs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parallelism")
@@ -42,7 +47,7 @@ public class CreateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RamRoleName")
@@ -72,7 +77,7 @@ public class CreateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -136,7 +141,7 @@ public class CreateStackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,7 +163,7 @@ public class CreateStackRequest extends Request {
     /**
      * @return createOptions
      */
-    public java.util.List < String > getCreateOptions() {
+    public java.util.List<String> getCreateOptions() {
         return this.createOptions;
     }
 
@@ -179,7 +184,7 @@ public class CreateStackRequest extends Request {
     /**
      * @return notificationURLs
      */
-    public java.util.List < String > getNotificationURLs() {
+    public java.util.List<String> getNotificationURLs() {
         return this.notificationURLs;
     }
 
@@ -193,7 +198,7 @@ public class CreateStackRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -242,7 +247,7 @@ public class CreateStackRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -298,19 +303,19 @@ public class CreateStackRequest extends Request {
     public static final class Builder extends Request.Builder<CreateStackRequest, Builder> {
         private String clientToken; 
         private String createOption; 
-        private java.util.List < String > createOptions; 
+        private java.util.List<String> createOptions; 
         private String deletionProtection; 
         private Boolean disableRollback; 
-        private java.util.List < String > notificationURLs; 
+        private java.util.List<String> notificationURLs; 
         private Long parallelism; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String ramRoleName; 
         private String regionId; 
         private String resourceGroupId; 
         private String stackName; 
         private String stackPolicyBody; 
         private String stackPolicyURL; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateBody; 
         private String templateId; 
         private String templateScratchId; 
@@ -386,7 +391,7 @@ public class CreateStackRequest extends Request {
         /**
          * <p>The creation options for the stack.</p>
          */
-        public Builder createOptions(java.util.List < String > createOptions) {
+        public Builder createOptions(java.util.List<String> createOptions) {
             this.putQueryParameter("CreateOptions", createOptions);
             this.createOptions = createOptions;
             return this;
@@ -459,7 +464,7 @@ public class CreateStackRequest extends Request {
          * <strong>example:</strong>
          * <p><a href="http://my-site.com/ros-event">http://my-site.com/ros-event</a></p>
          */
-        public Builder notificationURLs(java.util.List < String > notificationURLs) {
+        public Builder notificationURLs(java.util.List<String> notificationURLs) {
             this.putQueryParameter("NotificationURLs", notificationURLs);
             this.notificationURLs = notificationURLs;
             return this;
@@ -487,7 +492,7 @@ public class CreateStackRequest extends Request {
         /**
          * <p>The parameters that are defined in the template.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -580,7 +585,7 @@ public class CreateStackRequest extends Request {
         /**
          * <p>The tags that you want to add to the stack.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -736,6 +741,14 @@ public class CreateStackRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The key of parameter N that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.</p>
              * <p>Maximum value of N: 200.<br>The name must be 1 to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
@@ -819,6 +832,14 @@ public class CreateStackRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N that you want to add to the stack.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Versions")
-    private java.util.List < Versions> versions;
+    private java.util.List<Versions> versions;
 
     private ListTemplateVersionsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
 
     public static ListTemplateVersionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     /**
      * @return versions
      */
-    public java.util.List < Versions> getVersions() {
+    public java.util.List<Versions> getVersions() {
         return this.versions;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Versions> versions; 
+        private java.util.List<Versions> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplateVersionsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.versions = model.versions;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -86,7 +104,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The versions.</p>
          */
-        public Builder versions(java.util.List < Versions> versions) {
+        public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
             return this;
         }
@@ -188,6 +206,18 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             private String templateName; 
             private String templateVersion; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the version was created.</p>

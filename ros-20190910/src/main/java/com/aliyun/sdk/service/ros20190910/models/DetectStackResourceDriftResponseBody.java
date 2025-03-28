@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     private String physicalResourceId;
 
     @com.aliyun.core.annotation.NameInMap("PropertyDifferences")
-    private java.util.List < PropertyDifferences> propertyDifferences;
+    private java.util.List<PropertyDifferences> propertyDifferences;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -61,6 +66,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
 
     public static DetectStackResourceDriftResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -101,7 +110,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     /**
      * @return propertyDifferences
      */
-    public java.util.List < PropertyDifferences> getPropertyDifferences() {
+    public java.util.List<PropertyDifferences> getPropertyDifferences() {
         return this.propertyDifferences;
     }
 
@@ -139,11 +148,27 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         private String expectedProperties; 
         private String logicalResourceId; 
         private String physicalResourceId; 
-        private java.util.List < PropertyDifferences> propertyDifferences; 
+        private java.util.List<PropertyDifferences> propertyDifferences; 
         private String requestId; 
         private String resourceDriftStatus; 
         private String resourceType; 
         private String stackId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectStackResourceDriftResponseBody model) {
+            this.actualProperties = model.actualProperties;
+            this.driftDetectionTime = model.driftDetectionTime;
+            this.expectedProperties = model.expectedProperties;
+            this.logicalResourceId = model.logicalResourceId;
+            this.physicalResourceId = model.physicalResourceId;
+            this.propertyDifferences = model.propertyDifferences;
+            this.requestId = model.requestId;
+            this.resourceDriftStatus = model.resourceDriftStatus;
+            this.resourceType = model.resourceType;
+            this.stackId = model.stackId;
+        } 
 
         /**
          * <p>The actual JSON-formatted resource properties.</p>
@@ -203,7 +228,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         /**
          * <p>The property drifts of the resource.</p>
          */
-        public Builder propertyDifferences(java.util.List < PropertyDifferences> propertyDifferences) {
+        public Builder propertyDifferences(java.util.List<PropertyDifferences> propertyDifferences) {
             this.propertyDifferences = propertyDifferences;
             return this;
         }
@@ -331,6 +356,16 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
             private String differenceType; 
             private String expectedValue; 
             private String propertyPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyDifferences model) {
+                this.actualValue = model.actualValue;
+                this.differenceType = model.differenceType;
+                this.expectedValue = model.expectedValue;
+                this.propertyPath = model.propertyPath;
+            } 
 
             /**
              * <p>The actual value of the resource property.</p>

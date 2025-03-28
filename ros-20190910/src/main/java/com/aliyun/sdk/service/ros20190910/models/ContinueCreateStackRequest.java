@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ContinueCreateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RamRoleName")
@@ -34,11 +39,11 @@ public class ContinueCreateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecreatingOptions")
-    private java.util.List < String > recreatingOptions;
+    private java.util.List<String> recreatingOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecreatingResources")
-    private java.util.List < String > recreatingResources;
+    private java.util.List<String> recreatingResources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -91,7 +96,7 @@ public class ContinueCreateStackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,7 +125,7 @@ public class ContinueCreateStackRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -134,14 +139,14 @@ public class ContinueCreateStackRequest extends Request {
     /**
      * @return recreatingOptions
      */
-    public java.util.List < String > getRecreatingOptions() {
+    public java.util.List<String> getRecreatingOptions() {
         return this.recreatingOptions;
     }
 
     /**
      * @return recreatingResources
      */
-    public java.util.List < String > getRecreatingResources() {
+    public java.util.List<String> getRecreatingResources() {
         return this.recreatingResources;
     }
 
@@ -191,10 +196,10 @@ public class ContinueCreateStackRequest extends Request {
         private Boolean dryRun; 
         private String mode; 
         private Long parallelism; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String ramRoleName; 
-        private java.util.List < String > recreatingOptions; 
-        private java.util.List < String > recreatingResources; 
+        private java.util.List<String> recreatingOptions; 
+        private java.util.List<String> recreatingResources; 
         private String regionId; 
         private String stackId; 
         private String templateBody; 
@@ -300,7 +305,7 @@ public class ContinueCreateStackRequest extends Request {
         /**
          * <p>The template parameters that you want to use to override specific parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -321,7 +326,7 @@ public class ContinueCreateStackRequest extends Request {
         /**
          * <p>The options that ROS adopts when ROS continues to create the stack.</p>
          */
-        public Builder recreatingOptions(java.util.List < String > recreatingOptions) {
+        public Builder recreatingOptions(java.util.List<String> recreatingOptions) {
             this.putQueryParameter("RecreatingOptions", recreatingOptions);
             this.recreatingOptions = recreatingOptions;
             return this;
@@ -336,7 +341,7 @@ public class ContinueCreateStackRequest extends Request {
          * <strong>example:</strong>
          * <p>WebServer</p>
          */
-        public Builder recreatingResources(java.util.List < String > recreatingResources) {
+        public Builder recreatingResources(java.util.List<String> recreatingResources) {
             this.putQueryParameter("RecreatingResources", recreatingResources);
             this.recreatingResources = recreatingResources;
             return this;
@@ -501,6 +506,14 @@ public class ContinueCreateStackRequest extends Request {
         public static final class Builder {
             private String parameterKey; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>The name of template parameter N that you want to use to override a specific parameter. If you do not specify the name and value of a template parameter, ROS uses the name and value specified in the previous operation that was performed to create the stack. Maximum value of N: 200.</p>

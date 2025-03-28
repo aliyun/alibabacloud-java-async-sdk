@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetServiceProvisionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -23,7 +28,7 @@ public class GetServiceProvisionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -60,7 +65,7 @@ public class GetServiceProvisionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class GetServiceProvisionsRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -82,7 +87,7 @@ public class GetServiceProvisionsRequest extends Request {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
@@ -115,9 +120,9 @@ public class GetServiceProvisionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetServiceProvisionsRequest, Builder> {
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String regionId; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -141,7 +146,7 @@ public class GetServiceProvisionsRequest extends Request {
         /**
          * <p>The parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -163,7 +168,7 @@ public class GetServiceProvisionsRequest extends Request {
         /**
          * <p>The services.</p>
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.putQueryParameter("Services", services);
             this.services = services;
             return this;
@@ -270,6 +275,14 @@ public class GetServiceProvisionsRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
              * <blockquote>
@@ -340,6 +353,13 @@ public class GetServiceProvisionsRequest extends Request {
         public static final class Builder {
             private String serviceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.serviceName = model.serviceName;
+            } 
+
             /**
              * <p>The name of the service or feature. Valid values:</p>
              * <ul>
@@ -366,7 +386,7 @@ public class GetServiceProvisionsRequest extends Request {
              * <li>IMM: Intelligent Media Management (IMM)</li>
              * <li>IOT: IoT Platform</li>
              * <li>KMS: Key Management Service (KMS)</li>
-             * <li>NAS: Apsara File Storage NAS (NAS)</li>
+             * <li>NAS: File Storage NAS (NAS)</li>
              * <li>NLP: Natural Language Processing (NLP)</li>
              * <li>OSS: Object Storage Service (OSS)</li>
              * <li>OTS: Tablestore</li>

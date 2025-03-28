@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ImportStacksToStackGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationId
      */
@@ -49,8 +58,19 @@ public class ImportStacksToStackGroupResponseBody extends TeaModel {
         private String operationId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ImportStacksToStackGroupResponseBody model) {
+            this.operationId = model.operationId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * OperationId.
+         * <p>Operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +78,10 @@ public class ImportStacksToStackGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

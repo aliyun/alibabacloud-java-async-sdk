@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTemplateRecommendParametersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RecommendParameterValues")
-    private java.util.List < RecommendParameterValues> recommendParameterValues;
+    private java.util.List<RecommendParameterValues> recommendParameterValues;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class GetTemplateRecommendParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recommendParameterValues
      */
-    public java.util.List < RecommendParameterValues> getRecommendParameterValues() {
+    public java.util.List<RecommendParameterValues> getRecommendParameterValues() {
         return this.recommendParameterValues;
     }
 
@@ -46,13 +55,21 @@ public class GetTemplateRecommendParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RecommendParameterValues> recommendParameterValues; 
+        private java.util.List<RecommendParameterValues> recommendParameterValues; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateRecommendParametersResponseBody model) {
+            this.recommendParameterValues = model.recommendParameterValues;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RecommendParameterValues.
          */
-        public Builder recommendParameterValues(java.util.List < RecommendParameterValues> recommendParameterValues) {
+        public Builder recommendParameterValues(java.util.List<RecommendParameterValues> recommendParameterValues) {
             this.recommendParameterValues = recommendParameterValues;
             return this;
         }
@@ -114,6 +131,14 @@ public class GetTemplateRecommendParametersResponseBody extends TeaModel {
         public static final class Builder {
             private String parameterKey; 
             private String recommendValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecommendParameterValues model) {
+                this.parameterKey = model.parameterKey;
+                this.recommendValue = model.recommendValue;
+            } 
 
             /**
              * ParameterKey.

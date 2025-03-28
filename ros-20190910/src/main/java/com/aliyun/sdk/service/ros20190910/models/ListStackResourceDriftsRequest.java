@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListStackResourceDriftsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDriftStatus")
-    private java.util.List < String > resourceDriftStatus;
+    private java.util.List<String> resourceDriftStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackId")
@@ -51,7 +56,7 @@ public class ListStackResourceDriftsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -80,7 +85,7 @@ public class ListStackResourceDriftsRequest extends Request {
     /**
      * @return resourceDriftStatus
      */
-    public java.util.List < String > getResourceDriftStatus() {
+    public java.util.List<String> getResourceDriftStatus() {
         return this.resourceDriftStatus;
     }
 
@@ -95,7 +100,7 @@ public class ListStackResourceDriftsRequest extends Request {
         private Long maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List < String > resourceDriftStatus; 
+        private java.util.List<String> resourceDriftStatus; 
         private String stackId; 
 
         private Builder() {
@@ -154,7 +159,7 @@ public class ListStackResourceDriftsRequest extends Request {
          * <strong>example:</strong>
          * <p>MODIFIED</p>
          */
-        public Builder resourceDriftStatus(java.util.List < String > resourceDriftStatus) {
+        public Builder resourceDriftStatus(java.util.List<String> resourceDriftStatus) {
             this.putQueryParameter("ResourceDriftStatus", resourceDriftStatus);
             this.resourceDriftStatus = resourceDriftStatus;
             return this;

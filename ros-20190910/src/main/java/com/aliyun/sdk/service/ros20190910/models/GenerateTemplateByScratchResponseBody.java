@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourcesToImport")
-    private java.util.List < ResourcesToImport> resourcesToImport;
+    private java.util.List<ResourcesToImport> resourcesToImport;
 
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
@@ -35,6 +40,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
     /**
      * @return resourcesToImport
      */
-    public java.util.List < ResourcesToImport> getResourcesToImport() {
+    public java.util.List<ResourcesToImport> getResourcesToImport() {
         return this.resourcesToImport;
     }
 
@@ -58,8 +67,17 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourcesToImport> resourcesToImport; 
+        private java.util.List<ResourcesToImport> resourcesToImport; 
         private String templateBody; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateTemplateByScratchResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourcesToImport = model.resourcesToImport;
+            this.templateBody = model.templateBody;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -78,7 +96,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
          * <p>This parameter is returned only for a resource management scenario.</p>
          * </blockquote>
          */
-        public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
+        public Builder resourcesToImport(java.util.List<ResourcesToImport> resourcesToImport) {
             this.resourcesToImport = resourcesToImport;
             return this;
         }
@@ -111,7 +129,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         private String logicalResourceId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceIdentifier")
-        private java.util.Map < String, ? > resourceIdentifier;
+        private java.util.Map<String, ?> resourceIdentifier;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -140,7 +158,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         /**
          * @return resourceIdentifier
          */
-        public java.util.Map < String, ? > getResourceIdentifier() {
+        public java.util.Map<String, ?> getResourceIdentifier() {
             return this.resourceIdentifier;
         }
 
@@ -153,8 +171,17 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
 
         public static final class Builder {
             private String logicalResourceId; 
-            private java.util.Map < String, ? > resourceIdentifier; 
+            private java.util.Map<String, ?> resourceIdentifier; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcesToImport model) {
+                this.logicalResourceId = model.logicalResourceId;
+                this.resourceIdentifier = model.resourceIdentifier;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The logical ID of the resource.</p>
@@ -173,7 +200,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;VpcId&quot;: &quot;vpc-bp1m6fww66xbntjyc****&quot; }</p>
              */
-            public Builder resourceIdentifier(java.util.Map < String, ? > resourceIdentifier) {
+            public Builder resourceIdentifier(java.util.Map<String, ?> resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
                 return this;
             }

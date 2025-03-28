@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Recommends")
-    private java.util.Map < String, ? > recommends;
+    private java.util.Map<String, ?> recommends;
 
     @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
@@ -77,6 +82,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
 
     public static GetDiagnosticResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -138,7 +147,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
     /**
      * @return recommends
      */
-    public java.util.Map < String, ? > getRecommends() {
+    public java.util.Map<String, ?> getRecommends() {
         return this.recommends;
     }
 
@@ -186,12 +195,32 @@ public class GetDiagnosticResponseBody extends TeaModel {
         private String httpCode; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.Map < String, ? > recommends; 
+        private java.util.Map<String, ?> recommends; 
         private String reportId; 
         private String requestId; 
         private String status; 
         private String statusReason; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDiagnosticResponseBody model) {
+            this.code = model.code;
+            this.diagnosticKey = model.diagnosticKey;
+            this.diagnosticProduct = model.diagnosticProduct;
+            this.diagnosticResult = model.diagnosticResult;
+            this.diagnosticTime = model.diagnosticTime;
+            this.httpCode = model.httpCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.recommends = model.recommends;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.statusReason = model.statusReason;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The error code returned.</p>
@@ -284,7 +313,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;RosActionMessages&quot;: {&quot;Reason&quot;: &quot;Fail to delete stack (fc966920-450a-456b-983c-deeaec8e****), as deletion protection is enabled.&quot;, &quot;Recommend&quot;: &quot;&quot;}}</p>
          */
-        public Builder recommends(java.util.Map < String, ? > recommends) {
+        public Builder recommends(java.util.Map<String, ?> recommends) {
             this.recommends = recommends;
             return this;
         }
@@ -367,13 +396,13 @@ public class GetDiagnosticResponseBody extends TeaModel {
      */
     public static class DiagnosticResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedResources")
-        private java.util.Map < String, ? > failedResources;
+        private java.util.Map<String, ?> failedResources;
 
         @com.aliyun.core.annotation.NameInMap("RosActionMessages")
-        private java.util.Map < String, ? > rosActionMessages;
+        private java.util.Map<String, ?> rosActionMessages;
 
         @com.aliyun.core.annotation.NameInMap("StackMessages")
-        private java.util.Map < String, ? > stackMessages;
+        private java.util.Map<String, ?> stackMessages;
 
         private DiagnosticResult(Builder builder) {
             this.failedResources = builder.failedResources;
@@ -392,33 +421,42 @@ public class GetDiagnosticResponseBody extends TeaModel {
         /**
          * @return failedResources
          */
-        public java.util.Map < String, ? > getFailedResources() {
+        public java.util.Map<String, ?> getFailedResources() {
             return this.failedResources;
         }
 
         /**
          * @return rosActionMessages
          */
-        public java.util.Map < String, ? > getRosActionMessages() {
+        public java.util.Map<String, ?> getRosActionMessages() {
             return this.rosActionMessages;
         }
 
         /**
          * @return stackMessages
          */
-        public java.util.Map < String, ? > getStackMessages() {
+        public java.util.Map<String, ?> getStackMessages() {
             return this.stackMessages;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > failedResources; 
-            private java.util.Map < String, ? > rosActionMessages; 
-            private java.util.Map < String, ? > stackMessages; 
+            private java.util.Map<String, ?> failedResources; 
+            private java.util.Map<String, ?> rosActionMessages; 
+            private java.util.Map<String, ?> stackMessages; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiagnosticResult model) {
+                this.failedResources = model.failedResources;
+                this.rosActionMessages = model.rosActionMessages;
+                this.stackMessages = model.stackMessages;
+            } 
 
             /**
              * <p>The resources that failed to be diagnosed.</p>
              */
-            public Builder failedResources(java.util.Map < String, ? > failedResources) {
+            public Builder failedResources(java.util.Map<String, ?> failedResources) {
                 this.failedResources = failedResources;
                 return this;
             }
@@ -426,7 +464,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             /**
              * <p>The information about Resource Orchestration Service (ROS) calling.</p>
              */
-            public Builder rosActionMessages(java.util.Map < String, ? > rosActionMessages) {
+            public Builder rosActionMessages(java.util.Map<String, ?> rosActionMessages) {
                 this.rosActionMessages = rosActionMessages;
                 return this;
             }
@@ -434,7 +472,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             /**
              * <p>The stack information.</p>
              */
-            public Builder stackMessages(java.util.Map < String, ? > stackMessages) {
+            public Builder stackMessages(java.util.Map<String, ?> stackMessages) {
                 this.stackMessages = stackMessages;
                 return this;
             }

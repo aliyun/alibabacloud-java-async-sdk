@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,11 +52,11 @@ public class ListStacksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackIds")
-    private java.util.List < String > stackIds;
+    private java.util.List<String> stackIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackName")
-    private java.util.List < String > stackName;
+    private java.util.List<String> stackName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -59,11 +64,11 @@ public class ListStacksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListStacksRequest(Builder builder) {
         super(builder);
@@ -90,7 +95,7 @@ public class ListStacksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,14 +159,14 @@ public class ListStacksRequest extends Request {
     /**
      * @return stackIds
      */
-    public java.util.List < String > getStackIds() {
+    public java.util.List<String> getStackIds() {
         return this.stackIds;
     }
 
     /**
      * @return stackName
      */
-    public java.util.List < String > getStackName() {
+    public java.util.List<String> getStackName() {
         return this.stackName;
     }
 
@@ -175,14 +180,14 @@ public class ListStacksRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -195,11 +200,11 @@ public class ListStacksRequest extends Request {
         private String resourceGroupId; 
         private Boolean showNestedStack; 
         private String stackId; 
-        private java.util.List < String > stackIds; 
-        private java.util.List < String > stackName; 
+        private java.util.List<String> stackIds; 
+        private java.util.List<String> stackName; 
         private String startTime; 
-        private java.util.List < String > status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> status; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -333,7 +338,7 @@ public class ListStacksRequest extends Request {
         /**
          * <p>The IDs of the stacks.</p>
          */
-        public Builder stackIds(java.util.List < String > stackIds) {
+        public Builder stackIds(java.util.List<String> stackIds) {
             this.putQueryParameter("StackIds", stackIds);
             this.stackIds = stackIds;
             return this;
@@ -345,7 +350,7 @@ public class ListStacksRequest extends Request {
          * <strong>example:</strong>
          * <p>MyStack</p>
          */
-        public Builder stackName(java.util.List < String > stackName) {
+        public Builder stackName(java.util.List<String> stackName) {
             this.putQueryParameter("StackName", stackName);
             this.stackName = stackName;
             return this;
@@ -369,7 +374,7 @@ public class ListStacksRequest extends Request {
          * <strong>example:</strong>
          * <p>CREATE_COMPLETE</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
@@ -378,7 +383,7 @@ public class ListStacksRequest extends Request {
         /**
          * <p>The tags of the stack.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -434,6 +439,14 @@ public class ListStacksRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N.<br>Valid values of N: 1 to 20.</p>

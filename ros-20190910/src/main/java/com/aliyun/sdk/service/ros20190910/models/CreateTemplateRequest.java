@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -39,7 +44,7 @@ public class CreateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValidationOptions")
-    private java.util.List < String > validationOptions;
+    private java.util.List<String> validationOptions;
 
     private CreateTemplateRequest(Builder builder) {
         super(builder);
@@ -60,7 +65,7 @@ public class CreateTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,7 @@ public class CreateTemplateRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -110,18 +115,18 @@ public class CreateTemplateRequest extends Request {
     /**
      * @return validationOptions
      */
-    public java.util.List < String > getValidationOptions() {
+    public java.util.List<String> getValidationOptions() {
         return this.validationOptions;
     }
 
     public static final class Builder extends Request.Builder<CreateTemplateRequest, Builder> {
         private String description; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateBody; 
         private String templateName; 
         private String templateURL; 
-        private java.util.List < String > validationOptions; 
+        private java.util.List<String> validationOptions; 
 
         private Builder() {
             super();
@@ -165,7 +170,7 @@ public class CreateTemplateRequest extends Request {
         /**
          * <p>The tags of the template.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -211,7 +216,7 @@ public class CreateTemplateRequest extends Request {
         /**
          * ValidationOptions.
          */
-        public Builder validationOptions(java.util.List < String > validationOptions) {
+        public Builder validationOptions(java.util.List<String> validationOptions) {
             this.putQueryParameter("ValidationOptions", validationOptions);
             this.validationOptions = validationOptions;
             return this;
@@ -268,6 +273,14 @@ public class CreateTemplateRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the template.</p>

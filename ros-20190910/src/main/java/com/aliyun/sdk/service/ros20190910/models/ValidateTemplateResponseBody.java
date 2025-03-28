@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class ValidateTemplateResponseBody extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Outputs")
-    private java.util.List < Outputs> outputs;
+    private java.util.List<Outputs> outputs;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < java.util.Map<String, ?>> parameters;
+    private java.util.List<java.util.Map<String, ?>> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -28,7 +33,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
     private ResourceTypes resourceTypes;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.NameInMap("UpdateInfo")
     private UpdateInfo updateInfo;
@@ -51,6 +56,10 @@ public class ValidateTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -61,14 +70,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
     /**
      * @return outputs
      */
-    public java.util.List < Outputs> getOutputs() {
+    public java.util.List<Outputs> getOutputs() {
         return this.outputs;
     }
 
     /**
      * @return parameters
      */
-    public java.util.List < java.util.Map<String, ?>> getParameters() {
+    public java.util.List<java.util.Map<String, ?>> getParameters() {
         return this.parameters;
     }
 
@@ -89,7 +98,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -102,12 +111,25 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     public static final class Builder {
         private String description; 
-        private java.util.List < Outputs> outputs; 
-        private java.util.List < java.util.Map<String, ?>> parameters; 
+        private java.util.List<Outputs> outputs; 
+        private java.util.List<java.util.Map<String, ?>> parameters; 
         private String requestId; 
         private ResourceTypes resourceTypes; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private UpdateInfo updateInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValidateTemplateResponseBody model) {
+            this.description = model.description;
+            this.outputs = model.outputs;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+            this.resourceTypes = model.resourceTypes;
+            this.resources = model.resources;
+            this.updateInfo = model.updateInfo;
+        } 
 
         /**
          * <p>The description of the template.</p>
@@ -123,7 +145,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         /**
          * <p>The outputs of the template.</p>
          */
-        public Builder outputs(java.util.List < Outputs> outputs) {
+        public Builder outputs(java.util.List<Outputs> outputs) {
             this.outputs = outputs;
             return this;
         }
@@ -131,7 +153,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         /**
          * <p>The parameters that are defined in the Parameters section of the template.</p>
          */
-        public Builder parameters(java.util.List < java.util.Map<String, ?>> parameters) {
+        public Builder parameters(java.util.List<java.util.Map<String, ?>> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -164,7 +186,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
          * </ul>
          * </blockquote>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -239,6 +261,15 @@ public class ValidateTemplateResponseBody extends TeaModel {
             private String label; 
             private String outputKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.outputKey = model.outputKey;
+            } 
+
             /**
              * <p>The description of the template output.</p>
              * 
@@ -287,10 +318,10 @@ public class ValidateTemplateResponseBody extends TeaModel {
      */
     public static class ResourceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSources")
-        private java.util.List < String > dataSources;
+        private java.util.List<String> dataSources;
 
         @com.aliyun.core.annotation.NameInMap("Resources")
-        private java.util.List < String > resources;
+        private java.util.List<String> resources;
 
         private ResourceTypes(Builder builder) {
             this.dataSources = builder.dataSources;
@@ -308,25 +339,33 @@ public class ValidateTemplateResponseBody extends TeaModel {
         /**
          * @return dataSources
          */
-        public java.util.List < String > getDataSources() {
+        public java.util.List<String> getDataSources() {
             return this.dataSources;
         }
 
         /**
          * @return resources
          */
-        public java.util.List < String > getResources() {
+        public java.util.List<String> getResources() {
             return this.resources;
         }
 
         public static final class Builder {
-            private java.util.List < String > dataSources; 
-            private java.util.List < String > resources; 
+            private java.util.List<String> dataSources; 
+            private java.util.List<String> resources; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypes model) {
+                this.dataSources = model.dataSources;
+                this.resources = model.resources;
+            } 
 
             /**
              * <p>The DataSource resource types that are used in the template. The value is deduplicated.</p>
              */
-            public Builder dataSources(java.util.List < String > dataSources) {
+            public Builder dataSources(java.util.List<String> dataSources) {
                 this.dataSources = dataSources;
                 return this;
             }
@@ -334,7 +373,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             /**
              * <p>The regular resource types that are used in the template. The value is deduplicated.</p>
              */
-            public Builder resources(java.util.List < String > resources) {
+            public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
                 return this;
             }
@@ -401,6 +440,15 @@ public class ValidateTemplateResponseBody extends TeaModel {
             private String logicalResourceIdPattern; 
             private String resourcePath; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.logicalResourceIdPattern = model.logicalResourceIdPattern;
+                this.resourcePath = model.resourcePath;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The pattern in which the logical IDs of regular resources are formed.</p>
@@ -478,34 +526,34 @@ public class ValidateTemplateResponseBody extends TeaModel {
      */
     public static class UpdateInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParametersAllowedToBeModified")
-        private java.util.List < String > parametersAllowedToBeModified;
+        private java.util.List<String> parametersAllowedToBeModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersCauseInterruptionIfModified")
-        private java.util.List < String > parametersCauseInterruptionIfModified;
+        private java.util.List<String> parametersCauseInterruptionIfModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersCauseReplacementIfModified")
-        private java.util.List < String > parametersCauseReplacementIfModified;
+        private java.util.List<String> parametersCauseReplacementIfModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersConditionallyAllowedToBeModified")
-        private java.util.List < String > parametersConditionallyAllowedToBeModified;
+        private java.util.List<String> parametersConditionallyAllowedToBeModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersConditionallyCauseInterruptionIfModified")
-        private java.util.List < String > parametersConditionallyCauseInterruptionIfModified;
+        private java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersConditionallyCauseReplacementIfModified")
-        private java.util.List < String > parametersConditionallyCauseReplacementIfModified;
+        private java.util.List<String> parametersConditionallyCauseReplacementIfModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersNotAllowedToBeModified")
-        private java.util.List < String > parametersNotAllowedToBeModified;
+        private java.util.List<String> parametersNotAllowedToBeModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyAllowedToBeModified")
-        private java.util.List < String > parametersUncertainlyAllowedToBeModified;
+        private java.util.List<String> parametersUncertainlyAllowedToBeModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
-        private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified;
+        private java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 
         @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyCauseReplacementIfModified")
-        private java.util.List < String > parametersUncertainlyCauseReplacementIfModified;
+        private java.util.List<String> parametersUncertainlyCauseReplacementIfModified;
 
         private UpdateInfo(Builder builder) {
             this.parametersAllowedToBeModified = builder.parametersAllowedToBeModified;
@@ -531,89 +579,105 @@ public class ValidateTemplateResponseBody extends TeaModel {
         /**
          * @return parametersAllowedToBeModified
          */
-        public java.util.List < String > getParametersAllowedToBeModified() {
+        public java.util.List<String> getParametersAllowedToBeModified() {
             return this.parametersAllowedToBeModified;
         }
 
         /**
          * @return parametersCauseInterruptionIfModified
          */
-        public java.util.List < String > getParametersCauseInterruptionIfModified() {
+        public java.util.List<String> getParametersCauseInterruptionIfModified() {
             return this.parametersCauseInterruptionIfModified;
         }
 
         /**
          * @return parametersCauseReplacementIfModified
          */
-        public java.util.List < String > getParametersCauseReplacementIfModified() {
+        public java.util.List<String> getParametersCauseReplacementIfModified() {
             return this.parametersCauseReplacementIfModified;
         }
 
         /**
          * @return parametersConditionallyAllowedToBeModified
          */
-        public java.util.List < String > getParametersConditionallyAllowedToBeModified() {
+        public java.util.List<String> getParametersConditionallyAllowedToBeModified() {
             return this.parametersConditionallyAllowedToBeModified;
         }
 
         /**
          * @return parametersConditionallyCauseInterruptionIfModified
          */
-        public java.util.List < String > getParametersConditionallyCauseInterruptionIfModified() {
+        public java.util.List<String> getParametersConditionallyCauseInterruptionIfModified() {
             return this.parametersConditionallyCauseInterruptionIfModified;
         }
 
         /**
          * @return parametersConditionallyCauseReplacementIfModified
          */
-        public java.util.List < String > getParametersConditionallyCauseReplacementIfModified() {
+        public java.util.List<String> getParametersConditionallyCauseReplacementIfModified() {
             return this.parametersConditionallyCauseReplacementIfModified;
         }
 
         /**
          * @return parametersNotAllowedToBeModified
          */
-        public java.util.List < String > getParametersNotAllowedToBeModified() {
+        public java.util.List<String> getParametersNotAllowedToBeModified() {
             return this.parametersNotAllowedToBeModified;
         }
 
         /**
          * @return parametersUncertainlyAllowedToBeModified
          */
-        public java.util.List < String > getParametersUncertainlyAllowedToBeModified() {
+        public java.util.List<String> getParametersUncertainlyAllowedToBeModified() {
             return this.parametersUncertainlyAllowedToBeModified;
         }
 
         /**
          * @return parametersUncertainlyCauseInterruptionIfModified
          */
-        public java.util.List < String > getParametersUncertainlyCauseInterruptionIfModified() {
+        public java.util.List<String> getParametersUncertainlyCauseInterruptionIfModified() {
             return this.parametersUncertainlyCauseInterruptionIfModified;
         }
 
         /**
          * @return parametersUncertainlyCauseReplacementIfModified
          */
-        public java.util.List < String > getParametersUncertainlyCauseReplacementIfModified() {
+        public java.util.List<String> getParametersUncertainlyCauseReplacementIfModified() {
             return this.parametersUncertainlyCauseReplacementIfModified;
         }
 
         public static final class Builder {
-            private java.util.List < String > parametersAllowedToBeModified; 
-            private java.util.List < String > parametersCauseInterruptionIfModified; 
-            private java.util.List < String > parametersCauseReplacementIfModified; 
-            private java.util.List < String > parametersConditionallyAllowedToBeModified; 
-            private java.util.List < String > parametersConditionallyCauseInterruptionIfModified; 
-            private java.util.List < String > parametersConditionallyCauseReplacementIfModified; 
-            private java.util.List < String > parametersNotAllowedToBeModified; 
-            private java.util.List < String > parametersUncertainlyAllowedToBeModified; 
-            private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified; 
-            private java.util.List < String > parametersUncertainlyCauseReplacementIfModified; 
+            private java.util.List<String> parametersAllowedToBeModified; 
+            private java.util.List<String> parametersCauseInterruptionIfModified; 
+            private java.util.List<String> parametersCauseReplacementIfModified; 
+            private java.util.List<String> parametersConditionallyAllowedToBeModified; 
+            private java.util.List<String> parametersConditionallyCauseInterruptionIfModified; 
+            private java.util.List<String> parametersConditionallyCauseReplacementIfModified; 
+            private java.util.List<String> parametersNotAllowedToBeModified; 
+            private java.util.List<String> parametersUncertainlyAllowedToBeModified; 
+            private java.util.List<String> parametersUncertainlyCauseInterruptionIfModified; 
+            private java.util.List<String> parametersUncertainlyCauseReplacementIfModified; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateInfo model) {
+                this.parametersAllowedToBeModified = model.parametersAllowedToBeModified;
+                this.parametersCauseInterruptionIfModified = model.parametersCauseInterruptionIfModified;
+                this.parametersCauseReplacementIfModified = model.parametersCauseReplacementIfModified;
+                this.parametersConditionallyAllowedToBeModified = model.parametersConditionallyAllowedToBeModified;
+                this.parametersConditionallyCauseInterruptionIfModified = model.parametersConditionallyCauseInterruptionIfModified;
+                this.parametersConditionallyCauseReplacementIfModified = model.parametersConditionallyCauseReplacementIfModified;
+                this.parametersNotAllowedToBeModified = model.parametersNotAllowedToBeModified;
+                this.parametersUncertainlyAllowedToBeModified = model.parametersUncertainlyAllowedToBeModified;
+                this.parametersUncertainlyCauseInterruptionIfModified = model.parametersUncertainlyCauseInterruptionIfModified;
+                this.parametersUncertainlyCauseReplacementIfModified = model.parametersUncertainlyCauseReplacementIfModified;
+            } 
 
             /**
              * <p>The parameters that can be modified.</p>
              */
-            public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
+            public Builder parametersAllowedToBeModified(java.util.List<String> parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
                 return this;
             }
@@ -627,7 +691,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
              * </ul>
              * </blockquote>
              */
-            public Builder parametersCauseInterruptionIfModified(java.util.List < String > parametersCauseInterruptionIfModified) {
+            public Builder parametersCauseInterruptionIfModified(java.util.List<String> parametersCauseInterruptionIfModified) {
                 this.parametersCauseInterruptionIfModified = parametersCauseInterruptionIfModified;
                 return this;
             }
@@ -641,7 +705,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
              * </ul>
              * </blockquote>
              */
-            public Builder parametersCauseReplacementIfModified(java.util.List < String > parametersCauseReplacementIfModified) {
+            public Builder parametersCauseReplacementIfModified(java.util.List<String> parametersCauseReplacementIfModified) {
                 this.parametersCauseReplacementIfModified = parametersCauseReplacementIfModified;
                 return this;
             }
@@ -649,7 +713,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             /**
              * <p>The parameters that can be modified under specific conditions.</p>
              */
-            public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
+            public Builder parametersConditionallyAllowedToBeModified(java.util.List<String> parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
                 return this;
             }
@@ -663,7 +727,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
              * </ul>
              * </blockquote>
              */
-            public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
+            public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List<String> parametersConditionallyCauseInterruptionIfModified) {
                 this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
                 return this;
             }
@@ -677,7 +741,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
              * </ul>
              * </blockquote>
              */
-            public Builder parametersConditionallyCauseReplacementIfModified(java.util.List < String > parametersConditionallyCauseReplacementIfModified) {
+            public Builder parametersConditionallyCauseReplacementIfModified(java.util.List<String> parametersConditionallyCauseReplacementIfModified) {
                 this.parametersConditionallyCauseReplacementIfModified = parametersConditionallyCauseReplacementIfModified;
                 return this;
             }
@@ -685,7 +749,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             /**
              * <p>The parameters that cannot be modified.</p>
              */
-            public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
+            public Builder parametersNotAllowedToBeModified(java.util.List<String> parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
                 return this;
             }
@@ -693,7 +757,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             /**
              * <p>The parameters that can be modified under uncertain conditions.</p>
              */
-            public Builder parametersUncertainlyAllowedToBeModified(java.util.List < String > parametersUncertainlyAllowedToBeModified) {
+            public Builder parametersUncertainlyAllowedToBeModified(java.util.List<String> parametersUncertainlyAllowedToBeModified) {
                 this.parametersUncertainlyAllowedToBeModified = parametersUncertainlyAllowedToBeModified;
                 return this;
             }
@@ -707,7 +771,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
              * </ul>
              * </blockquote>
              */
-            public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
+            public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List<String> parametersUncertainlyCauseInterruptionIfModified) {
                 this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;
                 return this;
             }
@@ -721,7 +785,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
              * </ul>
              * </blockquote>
              */
-            public Builder parametersUncertainlyCauseReplacementIfModified(java.util.List < String > parametersUncertainlyCauseReplacementIfModified) {
+            public Builder parametersUncertainlyCauseReplacementIfModified(java.util.List<String> parametersUncertainlyCauseReplacementIfModified) {
                 this.parametersUncertainlyCauseReplacementIfModified = parametersUncertainlyCauseReplacementIfModified;
                 return this;
             }

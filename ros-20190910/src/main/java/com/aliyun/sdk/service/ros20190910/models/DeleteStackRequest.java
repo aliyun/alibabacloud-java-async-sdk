@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteStackRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeleteOptions")
-    private java.util.List < String > deleteOptions;
+    private java.util.List<String> deleteOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parallelism")
@@ -35,7 +40,7 @@ public class DeleteStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RetainResources")
-    private java.util.List < String > retainResources;
+    private java.util.List<String> retainResources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackId")
@@ -61,7 +66,7 @@ public class DeleteStackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class DeleteStackRequest extends Request {
     /**
      * @return deleteOptions
      */
-    public java.util.List < String > getDeleteOptions() {
+    public java.util.List<String> getDeleteOptions() {
         return this.deleteOptions;
     }
 
@@ -104,7 +109,7 @@ public class DeleteStackRequest extends Request {
     /**
      * @return retainResources
      */
-    public java.util.List < String > getRetainResources() {
+    public java.util.List<String> getRetainResources() {
         return this.retainResources;
     }
 
@@ -116,12 +121,12 @@ public class DeleteStackRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteStackRequest, Builder> {
-        private java.util.List < String > deleteOptions; 
+        private java.util.List<String> deleteOptions; 
         private Long parallelism; 
         private String ramRoleName; 
         private String regionId; 
         private Boolean retainAllResources; 
-        private java.util.List < String > retainResources; 
+        private java.util.List<String> retainResources; 
         private String stackId; 
 
         private Builder() {
@@ -142,14 +147,24 @@ public class DeleteStackRequest extends Request {
         /**
          * <p>The options for deleting the stack.</p>
          */
-        public Builder deleteOptions(java.util.List < String > deleteOptions) {
+        public Builder deleteOptions(java.util.List<String> deleteOptions) {
             this.putQueryParameter("DeleteOptions", deleteOptions);
             this.deleteOptions = deleteOptions;
             return this;
         }
 
         /**
-         * Parallelism.
+         * <p>The maximum number of concurrent operations that can be performed on resources.</p>
+         * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+         * <li>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -205,7 +220,7 @@ public class DeleteStackRequest extends Request {
          * <strong>example:</strong>
          * <p>WebServer</p>
          */
-        public Builder retainResources(java.util.List < String > retainResources) {
+        public Builder retainResources(java.util.List<String> retainResources) {
             this.putQueryParameter("RetainResources", retainResources);
             this.retainResources = retainResources;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class GetAITaskResponseBody extends TeaModel {
     private String taskId;
 
     @com.aliyun.core.annotation.NameInMap("TaskOutput")
-    private java.util.Map < String, ? > taskOutput;
+    private java.util.Map<String, ?> taskOutput;
 
     @com.aliyun.core.annotation.NameInMap("TaskType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -62,6 +67,10 @@ public class GetAITaskResponseBody extends TeaModel {
 
     public static GetAITaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -123,7 +132,7 @@ public class GetAITaskResponseBody extends TeaModel {
     /**
      * @return taskOutput
      */
-    public java.util.Map < String, ? > getTaskOutput() {
+    public java.util.Map<String, ?> getTaskOutput() {
         return this.taskOutput;
     }
 
@@ -143,8 +152,24 @@ public class GetAITaskResponseBody extends TeaModel {
         private String statusReason; 
         private String success; 
         private String taskId; 
-        private java.util.Map < String, ? > taskOutput; 
+        private java.util.Map<String, ?> taskOutput; 
         private String taskType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAITaskResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.statusReason = model.statusReason;
+            this.success = model.success;
+            this.taskId = model.taskId;
+            this.taskOutput = model.taskOutput;
+            this.taskType = model.taskType;
+        } 
 
         /**
          * Code.
@@ -213,7 +238,7 @@ public class GetAITaskResponseBody extends TeaModel {
         /**
          * TaskOutput.
          */
-        public Builder taskOutput(java.util.Map < String, ? > taskOutput) {
+        public Builder taskOutput(java.util.Map<String, ?> taskOutput) {
             this.taskOutput = taskOutput;
             return this;
         }

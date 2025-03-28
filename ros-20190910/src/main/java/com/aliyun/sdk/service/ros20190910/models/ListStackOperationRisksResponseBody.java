@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListStackOperationRisksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MissingPolicyActions")
-    private java.util.List < String > missingPolicyActions;
+    private java.util.List<String> missingPolicyActions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RiskResources")
-    private java.util.List < RiskResources> riskResources;
+    private java.util.List<RiskResources> riskResources;
 
     private ListStackOperationRisksResponseBody(Builder builder) {
         this.missingPolicyActions = builder.missingPolicyActions;
@@ -35,10 +40,14 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return missingPolicyActions
      */
-    public java.util.List < String > getMissingPolicyActions() {
+    public java.util.List<String> getMissingPolicyActions() {
         return this.missingPolicyActions;
     }
 
@@ -52,19 +61,28 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     /**
      * @return riskResources
      */
-    public java.util.List < RiskResources> getRiskResources() {
+    public java.util.List<RiskResources> getRiskResources() {
         return this.riskResources;
     }
 
     public static final class Builder {
-        private java.util.List < String > missingPolicyActions; 
+        private java.util.List<String> missingPolicyActions; 
         private String requestId; 
-        private java.util.List < RiskResources> riskResources; 
+        private java.util.List<RiskResources> riskResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStackOperationRisksResponseBody model) {
+            this.missingPolicyActions = model.missingPolicyActions;
+            this.requestId = model.requestId;
+            this.riskResources = model.riskResources;
+        } 
 
         /**
          * <p>The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.</p>
          */
-        public Builder missingPolicyActions(java.util.List < String > missingPolicyActions) {
+        public Builder missingPolicyActions(java.util.List<String> missingPolicyActions) {
             this.missingPolicyActions = missingPolicyActions;
             return this;
         }
@@ -83,7 +101,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         /**
          * <p>The resources that are at risk.</p>
          */
-        public Builder riskResources(java.util.List < RiskResources> riskResources) {
+        public Builder riskResources(java.util.List<RiskResources> riskResources) {
             this.riskResources = riskResources;
             return this;
         }
@@ -209,6 +227,20 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             private String requestId; 
             private String resourceType; 
             private String riskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskResources model) {
+                this.code = model.code;
+                this.logicalResourceId = model.logicalResourceId;
+                this.message = model.message;
+                this.physicalResourceId = model.physicalResourceId;
+                this.reason = model.reason;
+                this.requestId = model.requestId;
+                this.resourceType = model.resourceType;
+                this.riskType = model.riskType;
+            } 
 
             /**
              * <p>The error code that is returned when the risk detection fails.</p>

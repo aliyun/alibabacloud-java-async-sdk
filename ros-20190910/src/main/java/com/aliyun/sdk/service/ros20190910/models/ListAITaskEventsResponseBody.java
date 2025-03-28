@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAITaskEventsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Events")
-    private java.util.List < Events> events;
+    private java.util.List<Events> events;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -60,6 +65,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -70,7 +79,7 @@ public class ListAITaskEventsResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -125,7 +134,7 @@ public class ListAITaskEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private Integer httpStatusCode; 
         private String nextToken; 
         private String requestId; 
@@ -133,6 +142,21 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         private String taskId; 
         private String taskStatus; 
         private String taskType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAITaskEventsResponseBody model) {
+            this.code = model.code;
+            this.events = model.events;
+            this.httpStatusCode = model.httpStatusCode;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+            this.taskStatus = model.taskStatus;
+            this.taskType = model.taskType;
+        } 
 
         /**
          * Code.
@@ -145,7 +169,7 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         /**
          * Events.
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
@@ -306,6 +330,18 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             private String eventData; 
             private String handlerProcessStatus; 
             private String handlerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.agentType = model.agentType;
+                this.createTime = model.createTime;
+                this.estimatedProcessingTime = model.estimatedProcessingTime;
+                this.eventData = model.eventData;
+                this.handlerProcessStatus = model.handlerProcessStatus;
+                this.handlerType = model.handlerType;
+            } 
 
             /**
              * AgentType.

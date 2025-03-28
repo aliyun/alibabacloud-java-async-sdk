@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetResourceTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Attributes")
-    private java.util.Map < String, ? > attributes;
+    private java.util.Map<String, ?> attributes;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -34,7 +39,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     private String latestVersionId;
 
     @com.aliyun.core.annotation.NameInMap("Properties")
-    private java.util.Map < String, ? > properties;
+    private java.util.Map<String, ?> properties;
 
     @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
@@ -87,10 +92,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
-    public java.util.Map < String, ? > getAttributes() {
+    public java.util.Map<String, ?> getAttributes() {
         return this.attributes;
     }
 
@@ -139,7 +148,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.Map < String, ? > getProperties() {
+    public java.util.Map<String, ?> getProperties() {
         return this.properties;
     }
 
@@ -200,14 +209,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > attributes; 
+        private java.util.Map<String, ?> attributes; 
         private String createTime; 
         private String defaultVersionId; 
         private String description; 
         private String entityType; 
         private Boolean isDefaultVersion; 
         private String latestVersionId; 
-        private java.util.Map < String, ? > properties; 
+        private java.util.Map<String, ?> properties; 
         private String provider; 
         private String requestId; 
         private String resourceType; 
@@ -217,10 +226,32 @@ public class GetResourceTypeResponseBody extends TeaModel {
         private Integer totalVersionCount; 
         private String updateTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetResourceTypeResponseBody model) {
+            this.attributes = model.attributes;
+            this.createTime = model.createTime;
+            this.defaultVersionId = model.defaultVersionId;
+            this.description = model.description;
+            this.entityType = model.entityType;
+            this.isDefaultVersion = model.isDefaultVersion;
+            this.latestVersionId = model.latestVersionId;
+            this.properties = model.properties;
+            this.provider = model.provider;
+            this.requestId = model.requestId;
+            this.resourceType = model.resourceType;
+            this.supportDriftDetection = model.supportDriftDetection;
+            this.supportScratchDetection = model.supportScratchDetection;
+            this.templateBody = model.templateBody;
+            this.totalVersionCount = model.totalVersionCount;
+            this.updateTime = model.updateTime;
+        } 
+
         /**
          * <p>The type of the resource.</p>
          */
-        public Builder attributes(java.util.Map < String, ? > attributes) {
+        public Builder attributes(java.util.Map<String, ?> attributes) {
             this.attributes = attributes;
             return this;
         }
@@ -316,7 +347,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
          * <li>false: Drift detection is not supported.</li>
          * </ul>
          */
-        public Builder properties(java.util.Map < String, ? > properties) {
+        public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
             return this;
         }

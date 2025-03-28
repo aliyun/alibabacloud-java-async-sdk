@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListStackEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
-    private java.util.List < String > logicalResourceId;
+    private java.util.List<String> logicalResourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -31,7 +36,7 @@ public class ListStackEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private java.util.List < String > resourceType;
+    private java.util.List<String> resourceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StackId")
@@ -40,7 +45,7 @@ public class ListStackEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     private ListStackEventsRequest(Builder builder) {
         super(builder);
@@ -61,7 +66,7 @@ public class ListStackEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class ListStackEventsRequest extends Request {
     /**
      * @return logicalResourceId
      */
-    public java.util.List < String > getLogicalResourceId() {
+    public java.util.List<String> getLogicalResourceId() {
         return this.logicalResourceId;
     }
 
@@ -97,7 +102,7 @@ public class ListStackEventsRequest extends Request {
     /**
      * @return resourceType
      */
-    public java.util.List < String > getResourceType() {
+    public java.util.List<String> getResourceType() {
         return this.resourceType;
     }
 
@@ -111,18 +116,18 @@ public class ListStackEventsRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     public static final class Builder extends Request.Builder<ListStackEventsRequest, Builder> {
-        private java.util.List < String > logicalResourceId; 
+        private java.util.List<String> logicalResourceId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
-        private java.util.List < String > resourceType; 
+        private java.util.List<String> resourceType; 
         private String stackId; 
-        private java.util.List < String > status; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -145,7 +150,7 @@ public class ListStackEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>WebServer</p>
          */
-        public Builder logicalResourceId(java.util.List < String > logicalResourceId) {
+        public Builder logicalResourceId(java.util.List<String> logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
             this.logicalResourceId = logicalResourceId;
             return this;
@@ -194,7 +199,7 @@ public class ListStackEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>ALIYUN::ECS::Instance</p>
          */
-        public Builder resourceType(java.util.List < String > resourceType) {
+        public Builder resourceType(java.util.List<String> resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
             return this;
@@ -219,7 +224,7 @@ public class ListStackEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>CREATE_IN_PROGRESS</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;

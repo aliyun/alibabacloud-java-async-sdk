@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AdditionalInfo")
+    private java.util.Map<String, ?> additionalInfo;
+
     @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
@@ -28,7 +36,7 @@ public class GetTemplateResponseBody extends TeaModel {
     private String ownerId;
 
     @com.aliyun.core.annotation.NameInMap("Permissions")
-    private java.util.List < Permissions> permissions;
+    private java.util.List<Permissions> permissions;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -49,7 +57,7 @@ public class GetTemplateResponseBody extends TeaModel {
     private String stackId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateARN")
     private String templateARN;
@@ -70,6 +78,7 @@ public class GetTemplateResponseBody extends TeaModel {
     private String updateTime;
 
     private GetTemplateResponseBody(Builder builder) {
+        this.additionalInfo = builder.additionalInfo;
         this.changeSetId = builder.changeSetId;
         this.createTime = builder.createTime;
         this.description = builder.description;
@@ -97,6 +106,17 @@ public class GetTemplateResponseBody extends TeaModel {
 
     public static GetTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return additionalInfo
+     */
+    public java.util.Map<String, ?> getAdditionalInfo() {
+        return this.additionalInfo;
     }
 
     /**
@@ -137,7 +157,7 @@ public class GetTemplateResponseBody extends TeaModel {
     /**
      * @return permissions
      */
-    public java.util.List < Permissions> getPermissions() {
+    public java.util.List<Permissions> getPermissions() {
         return this.permissions;
     }
 
@@ -186,7 +206,7 @@ public class GetTemplateResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -233,25 +253,63 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, ?> additionalInfo; 
         private String changeSetId; 
         private String createTime; 
         private String description; 
         private String _interface; 
         private String ownerId; 
-        private java.util.List < Permissions> permissions; 
+        private java.util.List<Permissions> permissions; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
         private String shareType; 
         private String stackGroupName; 
         private String stackId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateARN; 
         private String templateBody; 
         private String templateId; 
         private String templateName; 
         private String templateVersion; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateResponseBody model) {
+            this.additionalInfo = model.additionalInfo;
+            this.changeSetId = model.changeSetId;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this._interface = model._interface;
+            this.ownerId = model.ownerId;
+            this.permissions = model.permissions;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.shareType = model.shareType;
+            this.stackGroupName = model.stackGroupName;
+            this.stackId = model.stackId;
+            this.tags = model.tags;
+            this.templateARN = model.templateARN;
+            this.templateBody = model.templateBody;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+            this.templateVersion = model.templateVersion;
+            this.updateTime = model.updateTime;
+        } 
+
+        /**
+         * <p>Supplementary information for the public template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;其他&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</p>
+         */
+        public Builder additionalInfo(java.util.Map<String, ?> additionalInfo) {
+            this.additionalInfo = additionalInfo;
+            return this;
+        }
 
         /**
          * <p>The ID of the change set. This parameter is returned only if you specify ChangeSetId.</p>
@@ -323,7 +381,7 @@ public class GetTemplateResponseBody extends TeaModel {
          * </ul>
          * </blockquote>
          */
-        public Builder permissions(java.util.List < Permissions> permissions) {
+        public Builder permissions(java.util.List<Permissions> permissions) {
             this.permissions = permissions;
             return this;
         }
@@ -402,7 +460,7 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The tags of the template.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -573,6 +631,17 @@ public class GetTemplateResponseBody extends TeaModel {
             private String templateVersion; 
             private String versionOption; 
 
+            private Builder() {
+            } 
+
+            private Builder(Permissions model) {
+                this.accountId = model.accountId;
+                this.shareOption = model.shareOption;
+                this.shareSource = model.shareSource;
+                this.templateVersion = model.templateVersion;
+                this.versionOption = model.versionOption;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account with which the template is shared.</p>
              * 
@@ -698,6 +767,14 @@ public class GetTemplateResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the template.</p>

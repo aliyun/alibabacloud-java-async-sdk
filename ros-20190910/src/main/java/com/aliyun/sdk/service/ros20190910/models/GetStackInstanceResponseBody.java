@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetStackInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private StackInstance stackInstance; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.stackInstance = model.stackInstance;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -118,6 +135,14 @@ public class GetStackInstanceResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterOverrides model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The name of the parameter that is used to override a specific parameter.</p>
              * 
@@ -161,10 +186,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
         private String driftDetectionTime;
 
         @com.aliyun.core.annotation.NameInMap("Outputs")
-        private java.util.List < java.util.Map<String, ?>> outputs;
+        private java.util.List<java.util.Map<String, ?>> outputs;
 
         @com.aliyun.core.annotation.NameInMap("ParameterOverrides")
-        private java.util.List < ParameterOverrides> parameterOverrides;
+        private java.util.List<ParameterOverrides> parameterOverrides;
 
         @com.aliyun.core.annotation.NameInMap("RdFolderId")
         private String rdFolderId;
@@ -230,14 +255,14 @@ public class GetStackInstanceResponseBody extends TeaModel {
         /**
          * @return outputs
          */
-        public java.util.List < java.util.Map<String, ?>> getOutputs() {
+        public java.util.List<java.util.Map<String, ?>> getOutputs() {
             return this.outputs;
         }
 
         /**
          * @return parameterOverrides
          */
-        public java.util.List < ParameterOverrides> getParameterOverrides() {
+        public java.util.List<ParameterOverrides> getParameterOverrides() {
             return this.parameterOverrides;
         }
 
@@ -300,8 +325,8 @@ public class GetStackInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String driftDetectionTime; 
-            private java.util.List < java.util.Map<String, ?>> outputs; 
-            private java.util.List < ParameterOverrides> parameterOverrides; 
+            private java.util.List<java.util.Map<String, ?>> outputs; 
+            private java.util.List<ParameterOverrides> parameterOverrides; 
             private String rdFolderId; 
             private String regionId; 
             private String stackDriftStatus; 
@@ -310,6 +335,24 @@ public class GetStackInstanceResponseBody extends TeaModel {
             private String stackId; 
             private String status; 
             private String statusReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackInstance model) {
+                this.accountId = model.accountId;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.outputs = model.outputs;
+                this.parameterOverrides = model.parameterOverrides;
+                this.rdFolderId = model.rdFolderId;
+                this.regionId = model.regionId;
+                this.stackDriftStatus = model.stackDriftStatus;
+                this.stackGroupId = model.stackGroupId;
+                this.stackGroupName = model.stackGroupName;
+                this.stackId = model.stackId;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
 
             /**
              * <p>The ID of the destination account to which the stack belongs.</p>
@@ -342,7 +385,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
              * <p> This parameter is returned if OutputOption is set to Enabled.</p>
              * </blockquote>
              */
-            public Builder outputs(java.util.List < java.util.Map<String, ?>> outputs) {
+            public Builder outputs(java.util.List<java.util.Map<String, ?>> outputs) {
                 this.outputs = outputs;
                 return this;
             }
@@ -350,7 +393,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
             /**
              * <p>The parameters that are used to override specific parameters.</p>
              */
-            public Builder parameterOverrides(java.util.List < ParameterOverrides> parameterOverrides) {
+            public Builder parameterOverrides(java.util.List<ParameterOverrides> parameterOverrides) {
                 this.parameterOverrides = parameterOverrides;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,19 +45,19 @@ public class GetStackResponseBody extends TeaModel {
     private Integer notCheckedStackResourceCount;
 
     @com.aliyun.core.annotation.NameInMap("NotificationURLs")
-    private java.util.List < String > notificationURLs;
+    private java.util.List<String> notificationURLs;
 
     @com.aliyun.core.annotation.NameInMap("OperationInfo")
     private OperationInfo operationInfo;
 
     @com.aliyun.core.annotation.NameInMap("OrderIds")
-    private java.util.List < String > orderIds;
+    private java.util.List<String> orderIds;
 
     @com.aliyun.core.annotation.NameInMap("Outputs")
-    private java.util.List < java.util.Map<String, ?>> outputs;
+    private java.util.List<java.util.Map<String, ?>> outputs;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("ParentStackId")
     private String parentStackId;
@@ -103,7 +108,7 @@ public class GetStackResponseBody extends TeaModel {
     private String statusReason;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateDescription")
     private String templateDescription;
@@ -175,6 +180,10 @@ public class GetStackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkedStackResourceCount
      */
@@ -241,7 +250,7 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * @return notificationURLs
      */
-    public java.util.List < String > getNotificationURLs() {
+    public java.util.List<String> getNotificationURLs() {
         return this.notificationURLs;
     }
 
@@ -255,21 +264,21 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * @return orderIds
      */
-    public java.util.List < String > getOrderIds() {
+    public java.util.List<String> getOrderIds() {
         return this.orderIds;
     }
 
     /**
      * @return outputs
      */
-    public java.util.List < java.util.Map<String, ?>> getOutputs() {
+    public java.util.List<java.util.Map<String, ?>> getOutputs() {
         return this.outputs;
     }
 
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -388,7 +397,7 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -451,11 +460,11 @@ public class GetStackResponseBody extends TeaModel {
         private String _interface; 
         private Log log; 
         private Integer notCheckedStackResourceCount; 
-        private java.util.List < String > notificationURLs; 
+        private java.util.List<String> notificationURLs; 
         private OperationInfo operationInfo; 
-        private java.util.List < String > orderIds; 
-        private java.util.List < java.util.Map<String, ?>> outputs; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<String> orderIds; 
+        private java.util.List<java.util.Map<String, ?>> outputs; 
+        private java.util.List<Parameters> parameters; 
         private String parentStackId; 
         private String ramRoleName; 
         private String regionId; 
@@ -472,7 +481,7 @@ public class GetStackResponseBody extends TeaModel {
         private String stackType; 
         private String status; 
         private String statusReason; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateDescription; 
         private String templateId; 
         private String templateScratchId; 
@@ -480,6 +489,50 @@ public class GetStackResponseBody extends TeaModel {
         private String templateVersion; 
         private Integer timeoutInMinutes; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackResponseBody model) {
+            this.checkedStackResourceCount = model.checkedStackResourceCount;
+            this.createTime = model.createTime;
+            this.deletionProtection = model.deletionProtection;
+            this.description = model.description;
+            this.disableRollback = model.disableRollback;
+            this.driftDetectionTime = model.driftDetectionTime;
+            this._interface = model._interface;
+            this.log = model.log;
+            this.notCheckedStackResourceCount = model.notCheckedStackResourceCount;
+            this.notificationURLs = model.notificationURLs;
+            this.operationInfo = model.operationInfo;
+            this.orderIds = model.orderIds;
+            this.outputs = model.outputs;
+            this.parameters = model.parameters;
+            this.parentStackId = model.parentStackId;
+            this.ramRoleName = model.ramRoleName;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.resourceProgress = model.resourceProgress;
+            this.rollbackFailedRootReason = model.rollbackFailedRootReason;
+            this.rootStackId = model.rootStackId;
+            this.serviceManaged = model.serviceManaged;
+            this.serviceName = model.serviceName;
+            this.stackDriftStatus = model.stackDriftStatus;
+            this.stackId = model.stackId;
+            this.stackName = model.stackName;
+            this.stackType = model.stackType;
+            this.status = model.status;
+            this.statusReason = model.statusReason;
+            this.tags = model.tags;
+            this.templateDescription = model.templateDescription;
+            this.templateId = model.templateId;
+            this.templateScratchId = model.templateScratchId;
+            this.templateURL = model.templateURL;
+            this.templateVersion = model.templateVersion;
+            this.timeoutInMinutes = model.timeoutInMinutes;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The number of resources on which drift detection was performed.</p>
@@ -597,7 +650,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The callback URLs for receiving stack events.</p>
          */
-        public Builder notificationURLs(java.util.List < String > notificationURLs) {
+        public Builder notificationURLs(java.util.List<String> notificationURLs) {
             this.notificationURLs = notificationURLs;
             return this;
         }
@@ -616,7 +669,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The order IDs. This parameter is returned only if you configured manual payment when you created a subscription stack.</p>
          */
-        public Builder orderIds(java.util.List < String > orderIds) {
+        public Builder orderIds(java.util.List<String> orderIds) {
             this.orderIds = orderIds;
             return this;
         }
@@ -624,7 +677,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The outputs of the stack.</p>
          */
-        public Builder outputs(java.util.List < java.util.Map<String, ?>> outputs) {
+        public Builder outputs(java.util.List<java.util.Map<String, ?>> outputs) {
             this.outputs = outputs;
             return this;
         }
@@ -632,7 +685,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The parameters of the stack.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -858,7 +911,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The tags of the stack.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -960,7 +1013,7 @@ public class GetStackResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Keys")
-        private java.util.List < String > keys;
+        private java.util.List<String> keys;
 
         private Logs(Builder builder) {
             this.content = builder.content;
@@ -985,13 +1038,21 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * @return keys
          */
-        public java.util.List < String > getKeys() {
+        public java.util.List<String> getKeys() {
             return this.keys;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.List < String > keys; 
+            private java.util.List<String> keys; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.content = model.content;
+                this.keys = model.keys;
+            } 
 
             /**
              * <p>The content of a resource log.</p>
@@ -1007,7 +1068,7 @@ public class GetStackResponseBody extends TeaModel {
             /**
              * <p>The keywords of a resource log.</p>
              */
-            public Builder keys(java.util.List < String > keys) {
+            public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
                 return this;
             }
@@ -1027,7 +1088,7 @@ public class GetStackResponseBody extends TeaModel {
      */
     public static class ResourceLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Logs")
-        private java.util.List < Logs> logs;
+        private java.util.List<Logs> logs;
 
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
@@ -1048,7 +1109,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * @return logs
          */
-        public java.util.List < Logs> getLogs() {
+        public java.util.List<Logs> getLogs() {
             return this.logs;
         }
 
@@ -1060,13 +1121,21 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Logs> logs; 
+            private java.util.List<Logs> logs; 
             private String resourceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceLogs model) {
+                this.logs = model.logs;
+                this.resourceName = model.resourceName;
+            } 
 
             /**
              * <p>All the logs that are associated with the resources.</p>
              */
-            public Builder logs(java.util.List < Logs> logs) {
+            public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
                 return this;
             }
@@ -1145,6 +1214,15 @@ public class GetStackResponseBody extends TeaModel {
             private String content; 
             private String stream; 
 
+            private Builder() {
+            } 
+
+            private Builder(TerraformLogs model) {
+                this.command = model.command;
+                this.content = model.content;
+                this.stream = model.stream;
+            } 
+
             /**
              * <p>The name of the Terraform command that is run. Valid values:</p>
              * <ul>
@@ -1204,10 +1282,10 @@ public class GetStackResponseBody extends TeaModel {
      */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceLogs")
-        private java.util.List < ResourceLogs> resourceLogs;
+        private java.util.List<ResourceLogs> resourceLogs;
 
         @com.aliyun.core.annotation.NameInMap("TerraformLogs")
-        private java.util.List < TerraformLogs> terraformLogs;
+        private java.util.List<TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
             this.resourceLogs = builder.resourceLogs;
@@ -1225,20 +1303,28 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * @return resourceLogs
          */
-        public java.util.List < ResourceLogs> getResourceLogs() {
+        public java.util.List<ResourceLogs> getResourceLogs() {
             return this.resourceLogs;
         }
 
         /**
          * @return terraformLogs
          */
-        public java.util.List < TerraformLogs> getTerraformLogs() {
+        public java.util.List<TerraformLogs> getTerraformLogs() {
             return this.terraformLogs;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceLogs> resourceLogs; 
-            private java.util.List < TerraformLogs> terraformLogs; 
+            private java.util.List<ResourceLogs> resourceLogs; 
+            private java.util.List<TerraformLogs> terraformLogs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.resourceLogs = model.resourceLogs;
+                this.terraformLogs = model.terraformLogs;
+            } 
 
             /**
              * <p>The logs of resources in the stack. This parameter is returned if LogOption is set to Resource or All.</p>
@@ -1246,7 +1332,7 @@ public class GetStackResponseBody extends TeaModel {
              * <p> The logs are returned only for resources of specific types, such as the <code>ALIYUN::ROS::ResourceCleaner</code> type.</p>
              * </blockquote>
              */
-            public Builder resourceLogs(java.util.List < ResourceLogs> resourceLogs) {
+            public Builder resourceLogs(java.util.List<ResourceLogs> resourceLogs) {
                 this.resourceLogs = resourceLogs;
                 return this;
             }
@@ -1257,7 +1343,7 @@ public class GetStackResponseBody extends TeaModel {
              * <p> This parameter is not returned for a running stack. The logs are generated from the most recent operation on the stack, such as the creation, resumed creation, update, or deletion operation.</p>
              * </blockquote>
              */
-            public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
+            public Builder terraformLogs(java.util.List<TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
                 return this;
             }
@@ -1360,6 +1446,18 @@ public class GetStackResponseBody extends TeaModel {
             private String message; 
             private String requestId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationInfo model) {
+                this.action = model.action;
+                this.code = model.code;
+                this.logicalResourceId = model.logicalResourceId;
+                this.message = model.message;
+                this.requestId = model.requestId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
@@ -1478,6 +1576,14 @@ public class GetStackResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The parameter name.</p>
              * 
@@ -1575,6 +1681,16 @@ public class GetStackResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InProgressResourceDetails model) {
+                this.progressTargetValue = model.progressTargetValue;
+                this.progressValue = model.progressValue;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * <p>The desired progress value of the resource.</p>
              * 
@@ -1640,7 +1756,7 @@ public class GetStackResponseBody extends TeaModel {
         private Integer inProgressResourceCount;
 
         @com.aliyun.core.annotation.NameInMap("InProgressResourceDetails")
-        private java.util.List < InProgressResourceDetails> inProgressResourceDetails;
+        private java.util.List<InProgressResourceDetails> inProgressResourceDetails;
 
         @com.aliyun.core.annotation.NameInMap("PendingResourceCount")
         private Integer pendingResourceCount;
@@ -1693,7 +1809,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * @return inProgressResourceDetails
          */
-        public java.util.List < InProgressResourceDetails> getInProgressResourceDetails() {
+        public java.util.List<InProgressResourceDetails> getInProgressResourceDetails() {
             return this.inProgressResourceDetails;
         }
 
@@ -1735,12 +1851,26 @@ public class GetStackResponseBody extends TeaModel {
         public static final class Builder {
             private Integer failedResourceCount; 
             private Integer inProgressResourceCount; 
-            private java.util.List < InProgressResourceDetails> inProgressResourceDetails; 
+            private java.util.List<InProgressResourceDetails> inProgressResourceDetails; 
             private Integer pendingResourceCount; 
             private Float stackActionProgress; 
             private Float stackOperationProgress; 
             private Integer successResourceCount; 
             private Integer totalResourceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceProgress model) {
+                this.failedResourceCount = model.failedResourceCount;
+                this.inProgressResourceCount = model.inProgressResourceCount;
+                this.inProgressResourceDetails = model.inProgressResourceDetails;
+                this.pendingResourceCount = model.pendingResourceCount;
+                this.stackActionProgress = model.stackActionProgress;
+                this.stackOperationProgress = model.stackOperationProgress;
+                this.successResourceCount = model.successResourceCount;
+                this.totalResourceCount = model.totalResourceCount;
+            } 
 
             /**
              * <p>The number of resources that failed to be created.</p>
@@ -1776,7 +1906,7 @@ public class GetStackResponseBody extends TeaModel {
              * <p> This parameter is returned only if <code>ShowResourceProgress</code> is set to <code>EnabledIfCreateStack</code>.</p>
              * </blockquote>
              */
-            public Builder inProgressResourceDetails(java.util.List < InProgressResourceDetails> inProgressResourceDetails) {
+            public Builder inProgressResourceDetails(java.util.List<InProgressResourceDetails> inProgressResourceDetails) {
                 this.inProgressResourceDetails = inProgressResourceDetails;
                 return this;
             }
@@ -1903,6 +2033,14 @@ public class GetStackResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the stack.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
-    private java.util.Map < String, ? > templateBody;
+    private java.util.Map<String, ?> templateBody;
 
     @com.aliyun.core.annotation.NameInMap("TemplateContent")
     private String templateContent;
@@ -35,6 +40,10 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
     /**
      * @return templateBody
      */
-    public java.util.Map < String, ? > getTemplateBody() {
+    public java.util.Map<String, ?> getTemplateBody() {
         return this.templateBody;
     }
 
@@ -58,8 +67,17 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > templateBody; 
+        private java.util.Map<String, ?> templateBody; 
         private String templateContent; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceTypeTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateBody = model.templateBody;
+            this.templateContent = model.templateContent;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -81,7 +99,7 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
          */
-        public Builder templateBody(java.util.Map < String, ? > templateBody) {
+        public Builder templateBody(java.util.Map<String, ?> templateBody) {
             this.templateBody = templateBody;
             return this;
         }

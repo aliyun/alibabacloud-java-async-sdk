@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class RegisterResourceTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return registrationId
      */
@@ -48,6 +57,14 @@ public class RegisterResourceTypeResponseBody extends TeaModel {
     public static final class Builder {
         private String registrationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegisterResourceTypeResponseBody model) {
+            this.registrationId = model.registrationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the registration record. You can call the <a href="https://help.aliyun.com/document_detail/2330740.html">ListResourceTypeRegistrations</a> operation to query registration records.</p>

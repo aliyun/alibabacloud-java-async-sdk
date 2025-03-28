@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -60,7 +65,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +80,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -116,7 +121,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTemplateRecommendParametersRequest, Builder> {
         private String clientToken; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String regionId; 
         private String templateBody; 
         private String templateId; 
@@ -150,7 +155,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -216,7 +221,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
      */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterCandidateValues")
-        private java.util.List < String > parameterCandidateValues;
+        private java.util.List<String> parameterCandidateValues;
 
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -241,7 +246,7 @@ public class GetTemplateRecommendParametersRequest extends Request {
         /**
          * @return parameterCandidateValues
          */
-        public java.util.List < String > getParameterCandidateValues() {
+        public java.util.List<String> getParameterCandidateValues() {
             return this.parameterCandidateValues;
         }
 
@@ -260,14 +265,23 @@ public class GetTemplateRecommendParametersRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > parameterCandidateValues; 
+            private java.util.List<String> parameterCandidateValues; 
             private String parameterKey; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterCandidateValues = model.parameterCandidateValues;
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * ParameterCandidateValues.
              */
-            public Builder parameterCandidateValues(java.util.List < String > parameterCandidateValues) {
+            public Builder parameterCandidateValues(java.util.List<String> parameterCandidateValues) {
                 this.parameterCandidateValues = parameterCandidateValues;
                 return this;
             }

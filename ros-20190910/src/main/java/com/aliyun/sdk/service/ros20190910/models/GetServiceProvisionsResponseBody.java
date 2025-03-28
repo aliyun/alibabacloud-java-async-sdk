@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceProvisions")
-    private java.util.List < ServiceProvisions> serviceProvisions;
+    private java.util.List<ServiceProvisions> serviceProvisions;
 
     private GetServiceProvisionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     /**
      * @return serviceProvisions
      */
-    public java.util.List < ServiceProvisions> getServiceProvisions() {
+    public java.util.List<ServiceProvisions> getServiceProvisions() {
         return this.serviceProvisions;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ServiceProvisions> serviceProvisions; 
+        private java.util.List<ServiceProvisions> serviceProvisions; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceProvisionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceProvisions = model.serviceProvisions;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * <p>The information about the services.</p>
          */
-        public Builder serviceProvisions(java.util.List < ServiceProvisions> serviceProvisions) {
+        public Builder serviceProvisions(java.util.List<ServiceProvisions> serviceProvisions) {
             this.serviceProvisions = serviceProvisions;
             return this;
         }
@@ -91,7 +108,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private String apiType;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.Map < String, ? > parameters;
+        private java.util.Map<String, ?> parameters;
 
         private ApiForCreation(Builder builder) {
             this.apiName = builder.apiName;
@@ -132,7 +149,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, ? > getParameters() {
+        public java.util.Map<String, ?> getParameters() {
             return this.parameters;
         }
 
@@ -140,7 +157,17 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String apiName; 
             private String apiProductId; 
             private String apiType; 
-            private java.util.Map < String, ? > parameters; 
+            private java.util.Map<String, ?> parameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiForCreation model) {
+                this.apiName = model.apiName;
+                this.apiProductId = model.apiProductId;
+                this.apiType = model.apiType;
+                this.parameters = model.parameters;
+            } 
 
             /**
              * <p>The name of the API operation.</p>
@@ -185,7 +212,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{   &quot;ServiceLinkedRole&quot;: &quot;AliyunServiceRoleForRdsPgsqlOnEcs&quot;,   &quot;RegionId&quot;: &quot;${RegionId}&quot; }</p>
              */
-            public Builder parameters(java.util.Map < String, ? > parameters) {
+            public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -265,6 +292,16 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String function; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.apiForCreation = model.apiForCreation;
+                this.created = model.created;
+                this.function = model.function;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The information about the API operation that is used to create the RAM role.</p>
              */
@@ -328,7 +365,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private String authorizationURL;
 
         @com.aliyun.core.annotation.NameInMap("Roles")
-        private java.util.List < Roles> roles;
+        private java.util.List<Roles> roles;
 
         private RoleProvision(Builder builder) {
             this.authorizationURL = builder.authorizationURL;
@@ -353,13 +390,21 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * @return roles
          */
-        public java.util.List < Roles> getRoles() {
+        public java.util.List<Roles> getRoles() {
             return this.roles;
         }
 
         public static final class Builder {
             private String authorizationURL; 
-            private java.util.List < Roles> roles; 
+            private java.util.List<Roles> roles; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleProvision model) {
+                this.authorizationURL = model.authorizationURL;
+                this.roles = model.roles;
+            } 
 
             /**
              * <p>The authorization URL of the RAM role.</p>
@@ -378,7 +423,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             /**
              * <p>The RAM roles of the service.</p>
              */
-            public Builder roles(java.util.List < Roles> roles) {
+            public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
                 return this;
             }
@@ -401,7 +446,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private Boolean autoEnableService;
 
         @com.aliyun.core.annotation.NameInMap("DependentServiceNames")
-        private java.util.List < String > dependentServiceNames;
+        private java.util.List<String> dependentServiceNames;
 
         @com.aliyun.core.annotation.NameInMap("EnableURL")
         private String enableURL;
@@ -446,7 +491,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * @return dependentServiceNames
          */
-        public java.util.List < String > getDependentServiceNames() {
+        public java.util.List<String> getDependentServiceNames() {
             return this.dependentServiceNames;
         }
 
@@ -487,12 +532,25 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoEnableService; 
-            private java.util.List < String > dependentServiceNames; 
+            private java.util.List<String> dependentServiceNames; 
             private String enableURL; 
             private RoleProvision roleProvision; 
             private String serviceName; 
             private String status; 
             private String statusReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceProvisions model) {
+                this.autoEnableService = model.autoEnableService;
+                this.dependentServiceNames = model.dependentServiceNames;
+                this.enableURL = model.enableURL;
+                this.roleProvision = model.roleProvision;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
 
             /**
              * <p>Indicates whether automatic activation for the service is defined in the template. Valid values:</p>
@@ -512,7 +570,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             /**
              * <p>The names of the services on which the service that is queried depends.</p>
              */
-            public Builder dependentServiceNames(java.util.List < String > dependentServiceNames) {
+            public Builder dependentServiceNames(java.util.List<String> dependentServiceNames) {
                 this.dependentServiceNames = dependentServiceNames;
                 return this;
             }

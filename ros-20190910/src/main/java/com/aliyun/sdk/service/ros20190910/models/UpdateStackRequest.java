@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRunOptions")
-    private java.util.List < String > dryRunOptions;
+    private java.util.List<String> dryRunOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parallelism")
@@ -35,7 +40,7 @@ public class UpdateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RamRoleName")
@@ -77,7 +82,7 @@ public class UpdateStackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -137,7 +142,7 @@ public class UpdateStackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -166,7 +171,7 @@ public class UpdateStackRequest extends Request {
     /**
      * @return dryRunOptions
      */
-    public java.util.List < String > getDryRunOptions() {
+    public java.util.List<String> getDryRunOptions() {
         return this.dryRunOptions;
     }
 
@@ -180,7 +185,7 @@ public class UpdateStackRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -250,7 +255,7 @@ public class UpdateStackRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -300,9 +305,9 @@ public class UpdateStackRequest extends Request {
         private String clientToken; 
         private Boolean disableRollback; 
         private Boolean dryRun; 
-        private java.util.List < String > dryRunOptions; 
+        private java.util.List<String> dryRunOptions; 
         private Long parallelism; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String ramRoleName; 
         private String regionId; 
         private String replacementOption; 
@@ -312,7 +317,7 @@ public class UpdateStackRequest extends Request {
         private String stackPolicyDuringUpdateBody; 
         private String stackPolicyDuringUpdateURL; 
         private String stackPolicyURL; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -406,7 +411,7 @@ public class UpdateStackRequest extends Request {
          * <p>This parameter takes effect only when DryRun is set to true.</p>
          * </blockquote>
          */
-        public Builder dryRunOptions(java.util.List < String > dryRunOptions) {
+        public Builder dryRunOptions(java.util.List<String> dryRunOptions) {
             this.putQueryParameter("DryRunOptions", dryRunOptions);
             this.dryRunOptions = dryRunOptions;
             return this;
@@ -436,7 +441,7 @@ public class UpdateStackRequest extends Request {
         /**
          * <p>The parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -592,7 +597,7 @@ public class UpdateStackRequest extends Request {
         /**
          * <p>The value of tag N that you want to add to the template.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -735,6 +740,14 @@ public class UpdateStackRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value in the template.</p>
              * <p>Maximum value of N: 200.</p>
@@ -817,6 +830,14 @@ public class UpdateStackRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N that you want to add to the stack.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class UpdateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValidationOptions")
-    private java.util.List < String > validationOptions;
+    private java.util.List<String> validationOptions;
 
     private UpdateTemplateRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class UpdateTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,7 +127,7 @@ public class UpdateTemplateRequest extends Request {
     /**
      * @return validationOptions
      */
-    public java.util.List < String > getValidationOptions() {
+    public java.util.List<String> getValidationOptions() {
         return this.validationOptions;
     }
 
@@ -134,7 +139,7 @@ public class UpdateTemplateRequest extends Request {
         private String templateId; 
         private String templateName; 
         private String templateURL; 
-        private java.util.List < String > validationOptions; 
+        private java.util.List<String> validationOptions; 
 
         private Builder() {
             super();
@@ -153,7 +158,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The description of the template. It can be up to 256 characters in length.</p>
+         * <p>The description of the template. The maximum length is 256 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>It is a demo.</p>
@@ -165,7 +170,14 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * IsDraft.
+         * <p>Whether to update the Draft (draft) version. Values:</p>
+         * <ul>
+         * <li>false (default): If template content is provided, a new version is created, and the Draft version is cleared. Otherwise, the current latest version is modified.</li>
+         * <li>true: Modifies the Draft version. The Draft version can only be retrieved via the GetTemplate interface. The ListTemplateVersions interface will not return it. The TemplateVersion parameter in other interfaces cannot specify Draft.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDraft(Boolean isDraft) {
             this.putQueryParameter("IsDraft", isDraft);
@@ -174,7 +186,21 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * RotateStrategy.
+         * <p>Template version rotation strategy. Values:</p>
+         * <ul>
+         * <li>None (default): No rotation. An error occurs when the version limit is reached.</li>
+         * <li>DeleteOldestNonSharedVersionWhenLimitExceeded: Rotates and deletes non-shared template versions.<blockquote>
+         * <ul>
+         * <li>If all versions of the template are shared, they cannot be rotated and deleted.</li>
+         * <li>The current latest version will not be rotated and deleted.</li>
+         * <li>Regardless of whether rotation deletion is used, the template version number cannot exceed v65000.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder rotateStrategy(String rotateStrategy) {
             this.putQueryParameter("RotateStrategy", rotateStrategy);
@@ -183,7 +209,13 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * <p>The structure of the template body. The length should be between 1 and 524,288 bytes. If the content is long, it is recommended to use HTTP POST + Body Param to pass the parameter in the request body to avoid request failure due to an overly long URL.</p>
+         * <blockquote>
+         * <p>You must and can only specify one of <code>TemplateBody</code>, <code>TemplateURL</code>, <code>TemplateId</code>, or <code>TemplateScratchId</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
          */
         public Builder templateBody(String templateBody) {
             this.putBodyParameter("TemplateBody", templateBody);
@@ -192,7 +224,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+         * <p>The template ID. Supports both shared and private templates.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,8 +237,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the template.</p>
-         * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * <p>The name of the template.<br>The length should not exceed 255 characters (utf-8 encoding), and it must start with a number, letter, or Chinese character. It can include numbers, letters, Chinese characters, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>MyTemplate</p>
@@ -218,11 +249,11 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in length, and the URL can be up to 1,024 bytes in length.</p>
+         * <p>The location of the file containing the template body. The URL must point to a template located on a web server (HTTP or HTTPS) or in an Alibaba Cloud OSS bucket (e.g., oss://ros/template/demo, oss://ros/template/demo?RegionId=cn-hangzhou), with a maximum size of 524,288 bytes.   </p>
          * <blockquote>
-         * <p> If the region of the OSS bucket is not specified, the RegionId value is used.</p>
+         * <p>If the OSS region is not specified, it defaults to the same as the <code>RegionId</code> parameter in the request.</p>
          * </blockquote>
-         * <p>You can specify only one of the TemplateBody and TemplateURL parameters.</p>
+         * <p>You can only specify one of <code>TemplateBody</code> or <code>TemplateURL</code>.<br>The maximum length of the URL is 1,024 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://ros/template/demo</p>
@@ -234,9 +265,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * ValidationOptions.
+         * <p>Validation options.</p>
+         * <p>By default, no options are enabled, and strict validation is performed.</p>
          */
-        public Builder validationOptions(java.util.List < String > validationOptions) {
+        public Builder validationOptions(java.util.List<String> validationOptions) {
             this.putQueryParameter("ValidationOptions", validationOptions);
             this.validationOptions = validationOptions;
             return this;

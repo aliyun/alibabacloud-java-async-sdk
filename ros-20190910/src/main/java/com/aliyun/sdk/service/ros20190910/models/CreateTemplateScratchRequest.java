@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class CreateTemplateScratchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PreferenceParameters")
-    private java.util.List < PreferenceParameters> preferenceParameters;
+    private java.util.List<PreferenceParameters> preferenceParameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -47,7 +52,7 @@ public class CreateTemplateScratchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceResources")
-    private java.util.List < SourceResources> sourceResources;
+    private java.util.List<SourceResources> sourceResources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceTag")
@@ -55,7 +60,7 @@ public class CreateTemplateScratchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateScratchType")
@@ -86,7 +91,7 @@ public class CreateTemplateScratchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,7 +127,7 @@ public class CreateTemplateScratchRequest extends Request {
     /**
      * @return preferenceParameters
      */
-    public java.util.List < PreferenceParameters> getPreferenceParameters() {
+    public java.util.List<PreferenceParameters> getPreferenceParameters() {
         return this.preferenceParameters;
     }
 
@@ -150,7 +155,7 @@ public class CreateTemplateScratchRequest extends Request {
     /**
      * @return sourceResources
      */
-    public java.util.List < SourceResources> getSourceResources() {
+    public java.util.List<SourceResources> getSourceResources() {
         return this.sourceResources;
     }
 
@@ -164,7 +169,7 @@ public class CreateTemplateScratchRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -180,13 +185,13 @@ public class CreateTemplateScratchRequest extends Request {
         private String description; 
         private String executionMode; 
         private String logicalIdStrategy; 
-        private java.util.List < PreferenceParameters> preferenceParameters; 
+        private java.util.List<PreferenceParameters> preferenceParameters; 
         private String regionId; 
         private String resourceGroupId; 
         private SourceResourceGroup sourceResourceGroup; 
-        private java.util.List < SourceResources> sourceResources; 
+        private java.util.List<SourceResources> sourceResources; 
         private SourceTag sourceTag; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateScratchType; 
 
         private Builder() {
@@ -273,7 +278,7 @@ public class CreateTemplateScratchRequest extends Request {
         /**
          * <p>The preference parameters of the resource scenario.</p>
          */
-        public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
+        public Builder preferenceParameters(java.util.List<PreferenceParameters> preferenceParameters) {
             String preferenceParametersShrink = shrink(preferenceParameters, "PreferenceParameters", "json");
             this.putQueryParameter("PreferenceParameters", preferenceParametersShrink);
             this.preferenceParameters = preferenceParameters;
@@ -321,7 +326,7 @@ public class CreateTemplateScratchRequest extends Request {
          * <p>When you set TemplateScratchType to ArchitectureDetection, you can specify SourceResources to detect the architecture data of all resources associated with the specified source resources. For example, if you set SourceResources to the ID of a Classic Load Balancer (CLB) instance, the architecture data of all resources, such as the Elastic Compute Service (ECS) instance, vSwitch, and VPC, associated with the CLB instance is detected.</p>
          * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources. In other cases, you can specify up to 200 source resources.</p>
          */
-        public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
+        public Builder sourceResources(java.util.List<SourceResources> sourceResources) {
             String sourceResourcesShrink = shrink(sourceResources, "SourceResources", "json");
             this.putQueryParameter("SourceResources", sourceResourcesShrink);
             this.sourceResources = sourceResources;
@@ -341,7 +346,7 @@ public class CreateTemplateScratchRequest extends Request {
         /**
          * <p>The tags of the resource scenario.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -422,6 +427,14 @@ public class CreateTemplateScratchRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreferenceParameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The parameter name.</p>
              * <p>For more information about the valid values of ParameterKey, see the &quot;<strong>Additional information about request parameters</strong>&quot; section of this topic.</p>
@@ -478,7 +491,7 @@ public class CreateTemplateScratchRequest extends Request {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
-        private java.util.List < String > resourceTypeFilter;
+        private java.util.List<String> resourceTypeFilter;
 
         private SourceResourceGroup(Builder builder) {
             this.resourceGroupId = builder.resourceGroupId;
@@ -503,13 +516,21 @@ public class CreateTemplateScratchRequest extends Request {
         /**
          * @return resourceTypeFilter
          */
-        public java.util.List < String > getResourceTypeFilter() {
+        public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
         }
 
         public static final class Builder {
             private String resourceGroupId; 
-            private java.util.List < String > resourceTypeFilter; 
+            private java.util.List<String> resourceTypeFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceResourceGroup model) {
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTypeFilter = model.resourceTypeFilter;
+            } 
 
             /**
              * <p>The ID of the source resource group.</p>
@@ -526,7 +547,7 @@ public class CreateTemplateScratchRequest extends Request {
             /**
              * <p>The resource types for filtering resources.</p>
              */
-            public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
+            public Builder resourceTypeFilter(java.util.List<String> resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
                 return this;
             }
@@ -549,7 +570,7 @@ public class CreateTemplateScratchRequest extends Request {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("RelatedResourceTypeFilter")
-        private java.util.List < String > relatedResourceTypeFilter;
+        private java.util.List<String> relatedResourceTypeFilter;
 
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -584,7 +605,7 @@ public class CreateTemplateScratchRequest extends Request {
         /**
          * @return relatedResourceTypeFilter
          */
-        public java.util.List < String > getRelatedResourceTypeFilter() {
+        public java.util.List<String> getRelatedResourceTypeFilter() {
             return this.relatedResourceTypeFilter;
         }
 
@@ -604,9 +625,19 @@ public class CreateTemplateScratchRequest extends Request {
 
         public static final class Builder {
             private String regionId; 
-            private java.util.List < String > relatedResourceTypeFilter; 
+            private java.util.List<String> relatedResourceTypeFilter; 
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceResources model) {
+                this.regionId = model.regionId;
+                this.relatedResourceTypeFilter = model.relatedResourceTypeFilter;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The region ID of the resource.</p>
@@ -631,7 +662,7 @@ public class CreateTemplateScratchRequest extends Request {
             /**
              * <p>The related resource type filters.</p>
              */
-            public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
+            public Builder relatedResourceTypeFilter(java.util.List<String> relatedResourceTypeFilter) {
                 this.relatedResourceTypeFilter = relatedResourceTypeFilter;
                 return this;
             }
@@ -676,10 +707,10 @@ public class CreateTemplateScratchRequest extends Request {
     public static class SourceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTags")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.Map < String, ? > resourceTags;
+        private java.util.Map<String, ?> resourceTags;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
-        private java.util.List < String > resourceTypeFilter;
+        private java.util.List<String> resourceTypeFilter;
 
         private SourceTag(Builder builder) {
             this.resourceTags = builder.resourceTags;
@@ -697,20 +728,28 @@ public class CreateTemplateScratchRequest extends Request {
         /**
          * @return resourceTags
          */
-        public java.util.Map < String, ? > getResourceTags() {
+        public java.util.Map<String, ?> getResourceTags() {
             return this.resourceTags;
         }
 
         /**
          * @return resourceTypeFilter
          */
-        public java.util.List < String > getResourceTypeFilter() {
+        public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > resourceTags; 
-            private java.util.List < String > resourceTypeFilter; 
+            private java.util.Map<String, ?> resourceTags; 
+            private java.util.List<String> resourceTypeFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceTag model) {
+                this.resourceTags = model.resourceTags;
+                this.resourceTypeFilter = model.resourceTypeFilter;
+            } 
 
             /**
              * <p>The source tags that consist of key-value pairs. If you want to specify only the tag key, you must leave the tag value empty. Example: <code>{&quot;TagKey&quot;: &quot;&quot;}</code>.</p>
@@ -720,7 +759,7 @@ public class CreateTemplateScratchRequest extends Request {
              * <strong>example:</strong>
              * <p>{&quot;a&quot;: &quot;b&quot;}</p>
              */
-            public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
+            public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
                 this.resourceTags = resourceTags;
                 return this;
             }
@@ -728,7 +767,7 @@ public class CreateTemplateScratchRequest extends Request {
             /**
              * <p>The resource types for filtering resources.</p>
              */
-            public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
+            public Builder resourceTypeFilter(java.util.List<String> resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
                 return this;
             }
@@ -784,6 +823,14 @@ public class CreateTemplateScratchRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the resource scenario.</p>

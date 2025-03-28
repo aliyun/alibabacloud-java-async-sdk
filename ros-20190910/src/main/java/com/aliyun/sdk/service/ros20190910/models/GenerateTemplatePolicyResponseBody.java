@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -48,6 +57,14 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     public static final class Builder {
         private Policy policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateTemplatePolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the policy.</p>
@@ -82,10 +99,10 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
      */
     public static class Statement extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
-        private java.util.List < String > action;
+        private java.util.List<String> action;
 
         @com.aliyun.core.annotation.NameInMap("Condition")
-        private java.util.Map < String, ? > condition;
+        private java.util.Map<String, ?> condition;
 
         @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
@@ -111,14 +128,14 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         /**
          * @return action
          */
-        public java.util.List < String > getAction() {
+        public java.util.List<String> getAction() {
             return this.action;
         }
 
         /**
          * @return condition
          */
-        public java.util.Map < String, ? > getCondition() {
+        public java.util.Map<String, ?> getCondition() {
             return this.condition;
         }
 
@@ -137,15 +154,25 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > action; 
-            private java.util.Map < String, ? > condition; 
+            private java.util.List<String> action; 
+            private java.util.Map<String, ?> condition; 
             private String effect; 
             private String resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statement model) {
+                this.action = model.action;
+                this.condition = model.condition;
+                this.effect = model.effect;
+                this.resource = model.resource;
+            } 
 
             /**
              * <p>The operations that are performed on the specified resource.</p>
              */
-            public Builder action(java.util.List < String > action) {
+            public Builder action(java.util.List<String> action) {
                 this.action = action;
                 return this;
             }
@@ -160,7 +187,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
              *     }
              * }</p>
              */
-            public Builder condition(java.util.Map < String, ? > condition) {
+            public Builder condition(java.util.Map<String, ?> condition) {
                 this.condition = condition;
                 return this;
             }
@@ -208,7 +235,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
      */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Statement")
-        private java.util.List < Statement> statement;
+        private java.util.List<Statement> statement;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
@@ -229,7 +256,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         /**
          * @return statement
          */
-        public java.util.List < Statement> getStatement() {
+        public java.util.List<Statement> getStatement() {
             return this.statement;
         }
 
@@ -241,13 +268,21 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Statement> statement; 
+            private java.util.List<Statement> statement; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.statement = model.statement;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The statements that are contained in the policy.</p>
              */
-            public Builder statement(java.util.List < Statement> statement) {
+            public Builder statement(java.util.List<Statement> statement) {
                 this.statement = statement;
                 return this;
             }

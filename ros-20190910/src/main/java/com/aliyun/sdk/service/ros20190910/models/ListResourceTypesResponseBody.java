@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceTypeSummaries")
-    private java.util.List < ResourceTypeSummaries> resourceTypeSummaries;
+    private java.util.List<ResourceTypeSummaries> resourceTypeSummaries;
 
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
-    private java.util.List < String > resourceTypes;
+    private java.util.List<String> resourceTypes;
 
     private ListResourceTypesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -35,6 +40,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,21 +54,30 @@ public class ListResourceTypesResponseBody extends TeaModel {
     /**
      * @return resourceTypeSummaries
      */
-    public java.util.List < ResourceTypeSummaries> getResourceTypeSummaries() {
+    public java.util.List<ResourceTypeSummaries> getResourceTypeSummaries() {
         return this.resourceTypeSummaries;
     }
 
     /**
      * @return resourceTypes
      */
-    public java.util.List < String > getResourceTypes() {
+    public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceTypeSummaries> resourceTypeSummaries; 
-        private java.util.List < String > resourceTypes; 
+        private java.util.List<ResourceTypeSummaries> resourceTypeSummaries; 
+        private java.util.List<String> resourceTypes; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceTypesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceTypeSummaries = model.resourceTypeSummaries;
+            this.resourceTypes = model.resourceTypes;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -75,7 +93,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * <p>The resource type summaries.</p>
          */
-        public Builder resourceTypeSummaries(java.util.List < ResourceTypeSummaries> resourceTypeSummaries) {
+        public Builder resourceTypeSummaries(java.util.List<ResourceTypeSummaries> resourceTypeSummaries) {
             this.resourceTypeSummaries = resourceTypeSummaries;
             return this;
         }
@@ -83,7 +101,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * <p>The array of resource types.</p>
          */
-        public Builder resourceTypes(java.util.List < String > resourceTypes) {
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
@@ -221,6 +239,21 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String resourceType; 
             private Integer totalVersionCount; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypeSummaries model) {
+                this.createTime = model.createTime;
+                this.defaultVersionId = model.defaultVersionId;
+                this.description = model.description;
+                this.entityType = model.entityType;
+                this.latestVersionId = model.latestVersionId;
+                this.provider = model.provider;
+                this.resourceType = model.resourceType;
+                this.totalVersionCount = model.totalVersionCount;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>

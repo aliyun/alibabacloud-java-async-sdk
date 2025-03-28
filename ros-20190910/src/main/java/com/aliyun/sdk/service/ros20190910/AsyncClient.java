@@ -852,11 +852,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you update a template, take note of the following items:</p>
+     * <p>When updating a template, please note:   </p>
      * <ul>
-     * <li>If you specify TemplateBody or TemplateURL, the existing version number is automatically incremented by 1 after the template is updated. For example, the version is changed from v1 to v2.</li>
-     * <li>If you do not specify TemplateBody or TemplateURL, the version number remains unchanged.</li>
-     * <li>A template can have up to 100 versions. If the number of templates reaches the upper limit, the template fails to be updated. You must create another template.</li>
+     * <li>If you specify <code>TemplateBody</code> or <code>TemplateURL</code>, the template version will be incremented by 1 after a successful update. For example, the version changes from v1 to v2.</li>
+     * <li>If neither <code>TemplateBody</code> nor <code>TemplateURL</code> is specified, the template version remains unchanged.</li>
+     * <li>A template can have up to 100 versions. If the version limit is reached, the template update will fail, and you need to recreate the template.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest

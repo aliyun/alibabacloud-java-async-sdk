@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private StackGroupOperation stackGroupOperation; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackGroupOperationResponseBody model) {
+            this.requestId = model.requestId;
+            this.stackGroupOperation = model.stackGroupOperation;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -82,10 +99,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
      */
     public static class DeploymentTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
-        private java.util.List < String > accountIds;
+        private java.util.List<String> accountIds;
 
         @com.aliyun.core.annotation.NameInMap("RdFolderIds")
-        private java.util.List < String > rdFolderIds;
+        private java.util.List<String> rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
             this.accountIds = builder.accountIds;
@@ -103,20 +120,28 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         /**
          * @return accountIds
          */
-        public java.util.List < String > getAccountIds() {
+        public java.util.List<String> getAccountIds() {
             return this.accountIds;
         }
 
         /**
          * @return rdFolderIds
          */
-        public java.util.List < String > getRdFolderIds() {
+        public java.util.List<String> getRdFolderIds() {
             return this.rdFolderIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > accountIds; 
-            private java.util.List < String > rdFolderIds; 
+            private java.util.List<String> accountIds; 
+            private java.util.List<String> rdFolderIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentTargets model) {
+                this.accountIds = model.accountIds;
+                this.rdFolderIds = model.rdFolderIds;
+            } 
 
             /**
              * <p>The IDs of the members in the resource directory.</p>
@@ -124,7 +149,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
              * <p>This parameter is returned only if AccountIds is specified when the <a href="https://help.aliyun.com/document_detail/151716.html">UpdateStackInstances</a> operation is called to update stack instances.</p>
              * </blockquote>
              */
-            public Builder accountIds(java.util.List < String > accountIds) {
+            public Builder accountIds(java.util.List<String> accountIds) {
                 this.accountIds = accountIds;
                 return this;
             }
@@ -132,7 +157,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             /**
              * <p>The IDs of the folders in the resource directory.</p>
              */
-            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
+            public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
                 return this;
             }
@@ -164,7 +189,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         private Integer maxConcurrentPercentage;
 
         @com.aliyun.core.annotation.NameInMap("RegionIdsOrder")
-        private java.util.List < String > regionIdsOrder;
+        private java.util.List<String> regionIdsOrder;
 
         private OperationPreferences(Builder builder) {
             this.failureToleranceCount = builder.failureToleranceCount;
@@ -213,7 +238,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         /**
          * @return regionIdsOrder
          */
-        public java.util.List < String > getRegionIdsOrder() {
+        public java.util.List<String> getRegionIdsOrder() {
             return this.regionIdsOrder;
         }
 
@@ -222,7 +247,18 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private Integer failureTolerancePercentage; 
             private Integer maxConcurrentCount; 
             private Integer maxConcurrentPercentage; 
-            private java.util.List < String > regionIdsOrder; 
+            private java.util.List<String> regionIdsOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationPreferences model) {
+                this.failureToleranceCount = model.failureToleranceCount;
+                this.failureTolerancePercentage = model.failureTolerancePercentage;
+                this.maxConcurrentCount = model.maxConcurrentCount;
+                this.maxConcurrentPercentage = model.maxConcurrentPercentage;
+                this.regionIdsOrder = model.regionIdsOrder;
+            } 
 
             /**
              * <p>The number of accounts within which stack operation failures are allowed to occur in each region. If the value of this parameter is exceeded in a region, Resource Orchestration Service (ROS) stops the operation in the region. If the operation is stopped in one region, the operation is no longer performed in other regions.</p>
@@ -287,7 +323,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             /**
              * <p>The regions in the order of operation execution.</p>
              */
-            public Builder regionIdsOrder(java.util.List < String > regionIdsOrder) {
+            public Builder regionIdsOrder(java.util.List<String> regionIdsOrder) {
                 this.regionIdsOrder = regionIdsOrder;
                 return this;
             }
@@ -426,6 +462,21 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private Integer inSyncStackInstancesCount; 
             private String stackGroupDriftStatus; 
             private Integer totalStackInstancesCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackGroupDriftDetectionDetail model) {
+                this.cancelledStackInstancesCount = model.cancelledStackInstancesCount;
+                this.driftDetectionStatus = model.driftDetectionStatus;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.driftedStackInstancesCount = model.driftedStackInstancesCount;
+                this.failedStackInstancesCount = model.failedStackInstancesCount;
+                this.inProgressStackInstancesCount = model.inProgressStackInstancesCount;
+                this.inSyncStackInstancesCount = model.inSyncStackInstancesCount;
+                this.stackGroupDriftStatus = model.stackGroupDriftStatus;
+                this.totalStackInstancesCount = model.totalStackInstancesCount;
+            } 
 
             /**
              * <p>The number of stack instances for which drift detection was canceled.</p>
@@ -734,6 +785,26 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             private String stackGroupId; 
             private String stackGroupName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackGroupOperation model) {
+                this.action = model.action;
+                this.administrationRoleName = model.administrationRoleName;
+                this.createTime = model.createTime;
+                this.deploymentTargets = model.deploymentTargets;
+                this.endTime = model.endTime;
+                this.executionRoleName = model.executionRoleName;
+                this.operationDescription = model.operationDescription;
+                this.operationId = model.operationId;
+                this.operationPreferences = model.operationPreferences;
+                this.retainStacks = model.retainStacks;
+                this.stackGroupDriftDetectionDetail = model.stackGroupDriftDetectionDetail;
+                this.stackGroupId = model.stackGroupId;
+                this.stackGroupName = model.stackGroupName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The operation type.</p>

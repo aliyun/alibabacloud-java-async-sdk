@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.NameInMap("Registrations")
-    private java.util.List < Registrations> registrations;
+    private java.util.List<Registrations> registrations;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -39,6 +44,10 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -49,7 +58,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     /**
      * @return registrations
      */
-    public java.util.List < Registrations> getRegistrations() {
+    public java.util.List<Registrations> getRegistrations() {
         return this.registrations;
     }
 
@@ -69,9 +78,19 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer pageNumber; 
-        private java.util.List < Registrations> registrations; 
+        private java.util.List<Registrations> registrations; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceTypeRegistrationsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.registrations = model.registrations;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -87,7 +106,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         /**
          * <p>The registration records of the resource.</p>
          */
-        public Builder registrations(java.util.List < Registrations> registrations) {
+        public Builder registrations(java.util.List<Registrations> registrations) {
             this.registrations = registrations;
             return this;
         }
@@ -223,6 +242,19 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             private String status; 
             private String statusReason; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Registrations model) {
+                this.createTime = model.createTime;
+                this.entityType = model.entityType;
+                this.registrationId = model.registrationId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>

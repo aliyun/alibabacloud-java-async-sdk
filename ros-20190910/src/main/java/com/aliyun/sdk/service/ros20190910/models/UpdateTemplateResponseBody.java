@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -61,8 +70,17 @@ public class UpdateTemplateResponseBody extends TeaModel {
         private String templateId; 
         private String templateVersion; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+            this.templateVersion = model.templateVersion;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8C5D90E1-66B6-496C-9371-3807F8DA80A8</p>
@@ -73,7 +91,7 @@ public class UpdateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>Template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
@@ -84,7 +102,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateVersion.
+         * <p>The template version affected by this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.templateVersion = templateVersion;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetStackGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetStackGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private StackGroup stackGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.stackGroup = model.stackGroup;
+        } 
 
         /**
          * <p>The details of the stack group.</p>
@@ -117,6 +134,14 @@ public class GetStackGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
             private Boolean retainStacksOnAccountRemoval; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoDeployment model) {
+                this.enabled = model.enabled;
+                this.retainStacksOnAccountRemoval = model.retainStacksOnAccountRemoval;
+            } 
 
             /**
              * <p>Indicates whether stacks in the member account are retained when the member account is deleted from the folder.</p>
@@ -201,6 +226,14 @@ public class GetStackGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String parameterKey; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>The name of the parameter.</p>
@@ -359,6 +392,21 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String stackGroupDriftStatus; 
             private Integer totalStackInstancesCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(StackGroupDriftDetectionDetail model) {
+                this.cancelledStackInstancesCount = model.cancelledStackInstancesCount;
+                this.driftDetectionStatus = model.driftDetectionStatus;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.driftedStackInstancesCount = model.driftedStackInstancesCount;
+                this.failedStackInstancesCount = model.failedStackInstancesCount;
+                this.inProgressStackInstancesCount = model.inProgressStackInstancesCount;
+                this.inSyncStackInstancesCount = model.inSyncStackInstancesCount;
+                this.stackGroupDriftStatus = model.stackGroupDriftStatus;
+                this.totalStackInstancesCount = model.totalStackInstancesCount;
+            } 
+
             /**
              * <p>The number of stack instances that have drifted.</p>
              * 
@@ -502,13 +550,13 @@ public class GetStackGroupResponseBody extends TeaModel {
         private String executionRoleName;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < Parameters> parameters;
+        private java.util.List<Parameters> parameters;
 
         @com.aliyun.core.annotation.NameInMap("PermissionModel")
         private String permissionModel;
 
         @com.aliyun.core.annotation.NameInMap("RdFolderIds")
-        private java.util.List < String > rdFolderIds;
+        private java.util.List<String> rdFolderIds;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -599,7 +647,7 @@ public class GetStackGroupResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
@@ -613,7 +661,7 @@ public class GetStackGroupResponseBody extends TeaModel {
         /**
          * @return rdFolderIds
          */
-        public java.util.List < String > getRdFolderIds() {
+        public java.util.List<String> getRdFolderIds() {
             return this.rdFolderIds;
         }
 
@@ -679,9 +727,9 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private String executionRoleName; 
-            private java.util.List < Parameters> parameters; 
+            private java.util.List<Parameters> parameters; 
             private String permissionModel; 
-            private java.util.List < String > rdFolderIds; 
+            private java.util.List<String> rdFolderIds; 
             private String resourceGroupId; 
             private StackGroupDriftDetectionDetail stackGroupDriftDetectionDetail; 
             private String stackGroupId; 
@@ -690,6 +738,28 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String templateBody; 
             private String templateContent; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackGroup model) {
+                this.administrationRoleName = model.administrationRoleName;
+                this.autoDeployment = model.autoDeployment;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.executionRoleName = model.executionRoleName;
+                this.parameters = model.parameters;
+                this.permissionModel = model.permissionModel;
+                this.rdFolderIds = model.rdFolderIds;
+                this.resourceGroupId = model.resourceGroupId;
+                this.stackGroupDriftDetectionDetail = model.stackGroupDriftDetectionDetail;
+                this.stackGroupId = model.stackGroupId;
+                this.stackGroupName = model.stackGroupName;
+                this.status = model.status;
+                this.templateBody = model.templateBody;
+                this.templateContent = model.templateContent;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The parameters of the stack group.</p>
@@ -748,7 +818,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             /**
              * <p>The key of the parameter.</p>
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -773,7 +843,7 @@ public class GetStackGroupResponseBody extends TeaModel {
              * <p> This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
              * </blockquote>
              */
-            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
+            public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
                 return this;
             }

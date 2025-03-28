@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CancelStackOperationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllowedStackOperations")
-    private java.util.List < String > allowedStackOperations;
+    private java.util.List<String> allowedStackOperations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CancelType")
@@ -46,7 +51,7 @@ public class CancelStackOperationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +59,7 @@ public class CancelStackOperationRequest extends Request {
     /**
      * @return allowedStackOperations
      */
-    public java.util.List < String > getAllowedStackOperations() {
+    public java.util.List<String> getAllowedStackOperations() {
         return this.allowedStackOperations;
     }
 
@@ -80,7 +85,7 @@ public class CancelStackOperationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelStackOperationRequest, Builder> {
-        private java.util.List < String > allowedStackOperations; 
+        private java.util.List<String> allowedStackOperations; 
         private String cancelType; 
         private String regionId; 
         private String stackId; 
@@ -100,7 +105,7 @@ public class CancelStackOperationRequest extends Request {
         /**
          * <p>The operations that you want to cancel on the stack.</p>
          */
-        public Builder allowedStackOperations(java.util.List < String > allowedStackOperations) {
+        public Builder allowedStackOperations(java.util.List<String> allowedStackOperations) {
             this.putQueryParameter("AllowedStackOperations", allowedStackOperations);
             this.allowedStackOperations = allowedStackOperations;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     private String changeSetType;
 
     @com.aliyun.core.annotation.NameInMap("Changes")
-    private java.util.List < java.util.Map<String, ?>> changes;
+    private java.util.List<java.util.Map<String, ?>> changes;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -40,13 +45,16 @@ public class GetChangeSetResponseBody extends TeaModel {
     private Log log;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
@@ -59,6 +67,9 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("StatusReason")
     private String statusReason;
+
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
@@ -79,10 +90,12 @@ public class GetChangeSetResponseBody extends TeaModel {
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.stackId = builder.stackId;
         this.stackName = builder.stackName;
         this.status = builder.status;
         this.statusReason = builder.statusReason;
+        this.tags = builder.tags;
         this.templateBody = builder.templateBody;
         this.timeoutInMinutes = builder.timeoutInMinutes;
     }
@@ -93,6 +106,10 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static GetChangeSetResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,7 +136,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     /**
      * @return changes
      */
-    public java.util.List < java.util.Map<String, ?>> getChanges() {
+    public java.util.List<java.util.Map<String, ?>> getChanges() {
         return this.changes;
     }
 
@@ -161,7 +178,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -177,6 +194,13 @@ public class GetChangeSetResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -208,6 +232,13 @@ public class GetChangeSetResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateBody
      */
     public String getTemplateBody() {
@@ -225,21 +256,49 @@ public class GetChangeSetResponseBody extends TeaModel {
         private String changeSetId; 
         private String changeSetName; 
         private String changeSetType; 
-        private java.util.List < java.util.Map<String, ?>> changes; 
+        private java.util.List<java.util.Map<String, ?>> changes; 
         private String createTime; 
         private String description; 
         private Boolean disableRollback; 
         private String executionStatus; 
         private Log log; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String regionId; 
         private String requestId; 
+        private String resourceGroupId; 
         private String stackId; 
         private String stackName; 
         private String status; 
         private String statusReason; 
+        private java.util.List<Tags> tags; 
         private String templateBody; 
         private Integer timeoutInMinutes; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetChangeSetResponseBody model) {
+            this.changeSetId = model.changeSetId;
+            this.changeSetName = model.changeSetName;
+            this.changeSetType = model.changeSetType;
+            this.changes = model.changes;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.disableRollback = model.disableRollback;
+            this.executionStatus = model.executionStatus;
+            this.log = model.log;
+            this.parameters = model.parameters;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.stackId = model.stackId;
+            this.stackName = model.stackName;
+            this.status = model.status;
+            this.statusReason = model.statusReason;
+            this.tags = model.tags;
+            this.templateBody = model.templateBody;
+            this.timeoutInMinutes = model.timeoutInMinutes;
+        } 
 
         /**
          * <p>The ID of the change set.</p>
@@ -277,7 +336,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         /**
          * <p>The changes of the change set.</p>
          */
-        public Builder changes(java.util.List < java.util.Map<String, ?>> changes) {
+        public Builder changes(java.util.List<java.util.Map<String, ?>> changes) {
             this.changes = changes;
             return this;
         }
@@ -337,7 +396,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         /**
          * <p>The parameters of the stack.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -361,6 +420,14 @@ public class GetChangeSetResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -405,6 +472,14 @@ public class GetChangeSetResponseBody extends TeaModel {
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -495,6 +570,15 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String content; 
             private String stream; 
 
+            private Builder() {
+            } 
+
+            private Builder(TerraformLogs model) {
+                this.command = model.command;
+                this.content = model.content;
+                this.stream = model.stream;
+            } 
+
             /**
              * <p>The name of the Terraform command that is run. Valid values:</p>
              * <ul>
@@ -554,7 +638,7 @@ public class GetChangeSetResponseBody extends TeaModel {
      */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TerraformLogs")
-        private java.util.List < TerraformLogs> terraformLogs;
+        private java.util.List<TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
             this.terraformLogs = builder.terraformLogs;
@@ -571,12 +655,19 @@ public class GetChangeSetResponseBody extends TeaModel {
         /**
          * @return terraformLogs
          */
-        public java.util.List < TerraformLogs> getTerraformLogs() {
+        public java.util.List<TerraformLogs> getTerraformLogs() {
             return this.terraformLogs;
         }
 
         public static final class Builder {
-            private java.util.List < TerraformLogs> terraformLogs; 
+            private java.util.List<TerraformLogs> terraformLogs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.terraformLogs = model.terraformLogs;
+            } 
 
             /**
              * <p>The Terraform logs. This parameter is returned only for change sets of Terraform stacks.</p>
@@ -584,7 +675,7 @@ public class GetChangeSetResponseBody extends TeaModel {
              * <p>This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</p>
              * </blockquote>
              */
-            public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
+            public Builder terraformLogs(java.util.List<TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
                 return this;
             }
@@ -640,6 +731,14 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The key of the parameter.</p>
              * 
@@ -664,6 +763,81 @@ public class GetChangeSetResponseBody extends TeaModel {
 
             public Parameters build() {
                 return new Parameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetChangeSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeSetResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

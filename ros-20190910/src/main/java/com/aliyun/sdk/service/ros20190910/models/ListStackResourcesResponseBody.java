@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private ListStackResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListStackResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListStackResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStackResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * <p>Details about resources.</p>
@@ -63,7 +80,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         /**
          * <p>The resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -117,6 +134,14 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String logicalIdHierarchy; 
             private String typeHierarchy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleInfo model) {
+                this.logicalIdHierarchy = model.logicalIdHierarchy;
+                this.typeHierarchy = model.typeHierarchy;
+            } 
 
             /**
              * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>
@@ -314,6 +339,24 @@ public class ListStackResourcesResponseBody extends TeaModel {
             private String status; 
             private String statusReason; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.createTime = model.createTime;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.logicalResourceId = model.logicalResourceId;
+                this.moduleInfo = model.moduleInfo;
+                this.physicalResourceId = model.physicalResourceId;
+                this.resourceDriftStatus = model.resourceDriftStatus;
+                this.resourceType = model.resourceType;
+                this.stackId = model.stackId;
+                this.stackName = model.stackName;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the resource was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>

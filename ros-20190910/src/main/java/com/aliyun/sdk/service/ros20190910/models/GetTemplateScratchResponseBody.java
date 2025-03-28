@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TemplateScratch templateScratch; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateScratchResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateScratch = model.templateScratch;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -118,6 +135,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreferenceParameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The parameter name.</p>
              * 
@@ -158,7 +183,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
-        private java.util.List < String > resourceTypeFilter;
+        private java.util.List<String> resourceTypeFilter;
 
         private SourceResourceGroup(Builder builder) {
             this.resourceGroupId = builder.resourceGroupId;
@@ -183,13 +208,21 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return resourceTypeFilter
          */
-        public java.util.List < String > getResourceTypeFilter() {
+        public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
         }
 
         public static final class Builder {
             private String resourceGroupId; 
-            private java.util.List < String > resourceTypeFilter; 
+            private java.util.List<String> resourceTypeFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceResourceGroup model) {
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTypeFilter = model.resourceTypeFilter;
+            } 
 
             /**
              * <p>The ID of the source resource group.</p>
@@ -205,7 +238,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             /**
              * <p>The resource type filters.</p>
              */
-            public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
+            public Builder resourceTypeFilter(java.util.List<String> resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
                 return this;
             }
@@ -225,7 +258,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
      */
     public static class SourceResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedResourceTypeFilter")
-        private java.util.List < String > relatedResourceTypeFilter;
+        private java.util.List<String> relatedResourceTypeFilter;
 
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -250,7 +283,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return relatedResourceTypeFilter
          */
-        public java.util.List < String > getRelatedResourceTypeFilter() {
+        public java.util.List<String> getRelatedResourceTypeFilter() {
             return this.relatedResourceTypeFilter;
         }
 
@@ -269,14 +302,23 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > relatedResourceTypeFilter; 
+            private java.util.List<String> relatedResourceTypeFilter; 
             private String resourceId; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceResources model) {
+                this.relatedResourceTypeFilter = model.relatedResourceTypeFilter;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * <p>The related resource type filters.</p>
              */
-            public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
+            public Builder relatedResourceTypeFilter(java.util.List<String> relatedResourceTypeFilter) {
                 this.relatedResourceTypeFilter = relatedResourceTypeFilter;
                 return this;
             }
@@ -318,10 +360,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
      */
     public static class SourceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTags")
-        private java.util.Map < String, ? > resourceTags;
+        private java.util.Map<String, ?> resourceTags;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
-        private java.util.List < String > resourceTypeFilter;
+        private java.util.List<String> resourceTypeFilter;
 
         private SourceTag(Builder builder) {
             this.resourceTags = builder.resourceTags;
@@ -339,20 +381,28 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return resourceTags
          */
-        public java.util.Map < String, ? > getResourceTags() {
+        public java.util.Map<String, ?> getResourceTags() {
             return this.resourceTags;
         }
 
         /**
          * @return resourceTypeFilter
          */
-        public java.util.List < String > getResourceTypeFilter() {
+        public java.util.List<String> getResourceTypeFilter() {
             return this.resourceTypeFilter;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > resourceTags; 
-            private java.util.List < String > resourceTypeFilter; 
+            private java.util.Map<String, ?> resourceTags; 
+            private java.util.List<String> resourceTypeFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceTag model) {
+                this.resourceTags = model.resourceTags;
+                this.resourceTypeFilter = model.resourceTypeFilter;
+            } 
 
             /**
              * <p>The source tags.</p>
@@ -360,7 +410,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;a&quot;: &quot;b&quot;}</p>
              */
-            public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
+            public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
                 this.resourceTags = resourceTags;
                 return this;
             }
@@ -368,7 +418,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             /**
              * <p>The resource type filters.</p>
              */
-            public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
+            public Builder resourceTypeFilter(java.util.List<String> resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
                 return this;
             }
@@ -423,6 +473,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean creatable; 
             private Boolean importable; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackProvision model) {
+                this.creatable = model.creatable;
+                this.importable = model.importable;
+            } 
 
             /**
              * <p>Indicates whether the resource is replicated by calling the <a href="https://help.aliyun.com/document_detail/132086.html">CreateStack</a> operation. Valid values:</p>
@@ -517,6 +575,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String stackId; 
             private String usageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stacks model) {
+                this.regionId = model.regionId;
+                this.stackId = model.stackId;
+                this.usageType = model.usageType;
+            } 
+
             /**
              * <p>The region ID of the stack.</p>
              * 
@@ -581,7 +648,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private String logicalIdStrategy;
 
         @com.aliyun.core.annotation.NameInMap("PreferenceParameters")
-        private java.util.List < PreferenceParameters> preferenceParameters;
+        private java.util.List<PreferenceParameters> preferenceParameters;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -590,7 +657,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private SourceResourceGroup sourceResourceGroup;
 
         @com.aliyun.core.annotation.NameInMap("SourceResources")
-        private java.util.List < SourceResources> sourceResources;
+        private java.util.List<SourceResources> sourceResources;
 
         @com.aliyun.core.annotation.NameInMap("SourceTag")
         private SourceTag sourceTag;
@@ -599,7 +666,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private StackProvision stackProvision;
 
         @com.aliyun.core.annotation.NameInMap("Stacks")
-        private java.util.List < Stacks> stacks;
+        private java.util.List<Stacks> stacks;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -608,7 +675,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private String statusReason;
 
         @com.aliyun.core.annotation.NameInMap("TemplateScratchData")
-        private java.util.Map < String, ? > templateScratchData;
+        private java.util.Map<String, ?> templateScratchData;
 
         @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
         private String templateScratchId;
@@ -678,7 +745,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return preferenceParameters
          */
-        public java.util.List < PreferenceParameters> getPreferenceParameters() {
+        public java.util.List<PreferenceParameters> getPreferenceParameters() {
             return this.preferenceParameters;
         }
 
@@ -699,7 +766,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return sourceResources
          */
-        public java.util.List < SourceResources> getSourceResources() {
+        public java.util.List<SourceResources> getSourceResources() {
             return this.sourceResources;
         }
 
@@ -720,7 +787,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return stacks
          */
-        public java.util.List < Stacks> getStacks() {
+        public java.util.List<Stacks> getStacks() {
             return this.stacks;
         }
 
@@ -741,7 +808,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * @return templateScratchData
          */
-        public java.util.Map < String, ? > getTemplateScratchData() {
+        public java.util.Map<String, ?> getTemplateScratchData() {
             return this.templateScratchData;
         }
 
@@ -771,19 +838,42 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String description; 
             private String failedCode; 
             private String logicalIdStrategy; 
-            private java.util.List < PreferenceParameters> preferenceParameters; 
+            private java.util.List<PreferenceParameters> preferenceParameters; 
             private String resourceGroupId; 
             private SourceResourceGroup sourceResourceGroup; 
-            private java.util.List < SourceResources> sourceResources; 
+            private java.util.List<SourceResources> sourceResources; 
             private SourceTag sourceTag; 
             private StackProvision stackProvision; 
-            private java.util.List < Stacks> stacks; 
+            private java.util.List<Stacks> stacks; 
             private String status; 
             private String statusReason; 
-            private java.util.Map < String, ? > templateScratchData; 
+            private java.util.Map<String, ?> templateScratchData; 
             private String templateScratchId; 
             private String templateScratchType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateScratch model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.failedCode = model.failedCode;
+                this.logicalIdStrategy = model.logicalIdStrategy;
+                this.preferenceParameters = model.preferenceParameters;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sourceResourceGroup = model.sourceResourceGroup;
+                this.sourceResources = model.sourceResources;
+                this.sourceTag = model.sourceTag;
+                this.stackProvision = model.stackProvision;
+                this.stacks = model.stacks;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.templateScratchData = model.templateScratchData;
+                this.templateScratchId = model.templateScratchId;
+                this.templateScratchType = model.templateScratchType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time at which the resource scenario was created.</p>
@@ -841,7 +931,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             /**
              * <p>The preference parameters of the resource scenario.</p>
              */
-            public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
+            public Builder preferenceParameters(java.util.List<PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
                 return this;
             }
@@ -868,7 +958,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             /**
              * <p>The source resources.</p>
              */
-            public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
+            public Builder sourceResources(java.util.List<SourceResources> sourceResources) {
                 this.sourceResources = sourceResources;
                 return this;
             }
@@ -892,7 +982,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             /**
              * <p>The stacks that are associated with the resource scenario.</p>
              */
-            public Builder stacks(java.util.List < Stacks> stacks) {
+            public Builder stacks(java.util.List<Stacks> stacks) {
                 this.stacks = stacks;
                 return this;
             }
@@ -930,7 +1020,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             /**
              * <p>The resource scenario data.</p>
              */
-            public Builder templateScratchData(java.util.Map < String, ? > templateScratchData) {
+            public Builder templateScratchData(java.util.Map<String, ?> templateScratchData) {
                 this.templateScratchData = templateScratchData;
                 return this;
             }

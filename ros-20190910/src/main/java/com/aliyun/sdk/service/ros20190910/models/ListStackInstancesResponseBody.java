@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListStackInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StackInstances")
-    private java.util.List < StackInstances> stackInstances;
+    private java.util.List<StackInstances> stackInstances;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListStackInstancesResponseBody extends TeaModel {
 
     public static ListStackInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListStackInstancesResponseBody extends TeaModel {
     /**
      * @return stackInstances
      */
-    public java.util.List < StackInstances> getStackInstances() {
+    public java.util.List<StackInstances> getStackInstances() {
         return this.stackInstances;
     }
 
@@ -82,8 +91,19 @@ public class ListStackInstancesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < StackInstances> stackInstances; 
+        private java.util.List<StackInstances> stackInstances; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStackInstancesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.stackInstances = model.stackInstances;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -121,7 +141,7 @@ public class ListStackInstancesResponseBody extends TeaModel {
         /**
          * <p>The stacks.</p>
          */
-        public Builder stackInstances(java.util.List < StackInstances> stackInstances) {
+        public Builder stackInstances(java.util.List<StackInstances> stackInstances) {
             this.stackInstances = stackInstances;
             return this;
         }
@@ -282,6 +302,22 @@ public class ListStackInstancesResponseBody extends TeaModel {
             private String stackId; 
             private String status; 
             private String statusReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackInstances model) {
+                this.accountId = model.accountId;
+                this.driftDetectionTime = model.driftDetectionTime;
+                this.rdFolderId = model.rdFolderId;
+                this.regionId = model.regionId;
+                this.stackDriftStatus = model.stackDriftStatus;
+                this.stackGroupId = model.stackGroupId;
+                this.stackGroupName = model.stackGroupName;
+                this.stackId = model.stackId;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
 
             /**
              * <p>The ID of the destination account to which the stack belongs.</p>

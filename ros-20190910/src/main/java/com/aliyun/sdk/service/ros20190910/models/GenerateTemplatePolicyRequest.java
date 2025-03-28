@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GenerateTemplatePolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationTypes")
-    private java.util.List < String > operationTypes;
+    private java.util.List<String> operationTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
@@ -49,7 +54,7 @@ public class GenerateTemplatePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -57,7 +62,7 @@ public class GenerateTemplatePolicyRequest extends Request {
     /**
      * @return operationTypes
      */
-    public java.util.List < String > getOperationTypes() {
+    public java.util.List<String> getOperationTypes() {
         return this.operationTypes;
     }
 
@@ -90,7 +95,7 @@ public class GenerateTemplatePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateTemplatePolicyRequest, Builder> {
-        private java.util.List < String > operationTypes; 
+        private java.util.List<String> operationTypes; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -127,7 +132,7 @@ public class GenerateTemplatePolicyRequest extends Request {
          * <p> The default value is the combination of all valid values.</p>
          * </blockquote>
          */
-        public Builder operationTypes(java.util.List < String > operationTypes) {
+        public Builder operationTypes(java.util.List<String> operationTypes) {
             this.putQueryParameter("OperationTypes", operationTypes);
             this.operationTypes = operationTypes;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetStackResourceResponseBody extends TeaModel {
     private String logicalResourceId;
 
     @com.aliyun.core.annotation.NameInMap("Metadata")
-    private java.util.Map < String, ? > metadata;
+    private java.util.Map<String, ?> metadata;
 
     @com.aliyun.core.annotation.NameInMap("ModuleInfo")
     private ModuleInfo moduleInfo;
@@ -37,7 +42,7 @@ public class GetStackResourceResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceAttributes")
-    private java.util.List < java.util.Map<String, ?>> resourceAttributes;
+    private java.util.List<java.util.Map<String, ?>> resourceAttributes;
 
     @com.aliyun.core.annotation.NameInMap("ResourceDriftStatus")
     private String resourceDriftStatus;
@@ -87,6 +92,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -118,7 +127,7 @@ public class GetStackResourceResponseBody extends TeaModel {
     /**
      * @return metadata
      */
-    public java.util.Map < String, ? > getMetadata() {
+    public java.util.Map<String, ?> getMetadata() {
         return this.metadata;
     }
 
@@ -146,7 +155,7 @@ public class GetStackResourceResponseBody extends TeaModel {
     /**
      * @return resourceAttributes
      */
-    public java.util.List < java.util.Map<String, ?>> getResourceAttributes() {
+    public java.util.List<java.util.Map<String, ?>> getResourceAttributes() {
         return this.resourceAttributes;
     }
 
@@ -204,11 +213,11 @@ public class GetStackResourceResponseBody extends TeaModel {
         private String description; 
         private String driftDetectionTime; 
         private String logicalResourceId; 
-        private java.util.Map < String, ? > metadata; 
+        private java.util.Map<String, ?> metadata; 
         private ModuleInfo moduleInfo; 
         private String physicalResourceId; 
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> resourceAttributes; 
+        private java.util.List<java.util.Map<String, ?>> resourceAttributes; 
         private String resourceDriftStatus; 
         private String resourceType; 
         private String stackId; 
@@ -216,6 +225,28 @@ public class GetStackResourceResponseBody extends TeaModel {
         private String status; 
         private String statusReason; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackResourceResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.driftDetectionTime = model.driftDetectionTime;
+            this.logicalResourceId = model.logicalResourceId;
+            this.metadata = model.metadata;
+            this.moduleInfo = model.moduleInfo;
+            this.physicalResourceId = model.physicalResourceId;
+            this.requestId = model.requestId;
+            this.resourceAttributes = model.resourceAttributes;
+            this.resourceDriftStatus = model.resourceDriftStatus;
+            this.resourceType = model.resourceType;
+            this.stackId = model.stackId;
+            this.stackName = model.stackName;
+            this.status = model.status;
+            this.statusReason = model.statusReason;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The resource type.</p>
@@ -268,7 +299,7 @@ public class GetStackResourceResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
-        public Builder metadata(java.util.Map < String, ? > metadata) {
+        public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
             return this;
         }
@@ -312,7 +343,7 @@ public class GetStackResourceResponseBody extends TeaModel {
          * <li>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</li>
          * </ul>
          */
-        public Builder resourceAttributes(java.util.List < java.util.Map<String, ?>> resourceAttributes) {
+        public Builder resourceAttributes(java.util.List<java.util.Map<String, ?>> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
@@ -445,6 +476,14 @@ public class GetStackResourceResponseBody extends TeaModel {
         public static final class Builder {
             private String logicalIdHierarchy; 
             private String typeHierarchy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleInfo model) {
+                this.logicalIdHierarchy = model.logicalIdHierarchy;
+                this.typeHierarchy = model.typeHierarchy;
+            } 
 
             /**
              * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>

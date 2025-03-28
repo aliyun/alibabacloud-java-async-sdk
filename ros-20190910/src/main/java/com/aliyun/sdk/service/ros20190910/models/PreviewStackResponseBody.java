@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class PreviewStackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class PreviewStackResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Stack stack; 
+
+        private Builder() {
+        } 
+
+        private Builder(PreviewStackResponseBody model) {
+            this.requestId = model.requestId;
+            this.stack = model.stack;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -130,6 +147,15 @@ public class PreviewStackResponseBody extends TeaModel {
             private String content; 
             private String stream; 
 
+            private Builder() {
+            } 
+
+            private Builder(TerraformLogs model) {
+                this.command = model.command;
+                this.content = model.content;
+                this.stream = model.stream;
+            } 
+
             /**
              * <p>The name of the Terraform command that is run. Valid values:</p>
              * <ul>
@@ -189,7 +215,7 @@ public class PreviewStackResponseBody extends TeaModel {
      */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TerraformLogs")
-        private java.util.List < TerraformLogs> terraformLogs;
+        private java.util.List<TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
             this.terraformLogs = builder.terraformLogs;
@@ -206,12 +232,19 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return terraformLogs
          */
-        public java.util.List < TerraformLogs> getTerraformLogs() {
+        public java.util.List<TerraformLogs> getTerraformLogs() {
             return this.terraformLogs;
         }
 
         public static final class Builder {
-            private java.util.List < TerraformLogs> terraformLogs; 
+            private java.util.List<TerraformLogs> terraformLogs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.terraformLogs = model.terraformLogs;
+            } 
 
             /**
              * <p>The Terraform logs. This parameter is returned only if the stack is a Terraform stack.</p>
@@ -219,7 +252,7 @@ public class PreviewStackResponseBody extends TeaModel {
              * <p>This parameter contains the logs of previewing the stack.</p>
              * </blockquote>
              */
-            public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
+            public Builder terraformLogs(java.util.List<TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
                 return this;
             }
@@ -275,6 +308,14 @@ public class PreviewStackResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * <p>The name of the parameter.</p>
              * 
@@ -327,19 +368,19 @@ public class PreviewStackResponseBody extends TeaModel {
         private String physicalResourceId;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
-        private java.util.Map < String, ? > properties;
+        private java.util.Map<String, ?> properties;
 
         @com.aliyun.core.annotation.NameInMap("Replacement")
         private String replacement;
 
         @com.aliyun.core.annotation.NameInMap("RequiredBy")
-        private java.util.List < String > requiredBy;
+        private java.util.List<String> requiredBy;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("Stack")
-        private java.util.Map < String, ? > stack;
+        private java.util.Map<String, ?> stack;
 
         private Resources(Builder builder) {
             this.acsResourceType = builder.acsResourceType;
@@ -400,7 +441,7 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.Map < String, ? > getProperties() {
+        public java.util.Map<String, ?> getProperties() {
             return this.properties;
         }
 
@@ -414,7 +455,7 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return requiredBy
          */
-        public java.util.List < String > getRequiredBy() {
+        public java.util.List<String> getRequiredBy() {
             return this.requiredBy;
         }
 
@@ -428,7 +469,7 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return stack
          */
-        public java.util.Map < String, ? > getStack() {
+        public java.util.Map<String, ?> getStack() {
             return this.stack;
         }
 
@@ -438,11 +479,27 @@ public class PreviewStackResponseBody extends TeaModel {
             private String description; 
             private String logicalResourceId; 
             private String physicalResourceId; 
-            private java.util.Map < String, ? > properties; 
+            private java.util.Map<String, ?> properties; 
             private String replacement; 
-            private java.util.List < String > requiredBy; 
+            private java.util.List<String> requiredBy; 
             private String resourceType; 
-            private java.util.Map < String, ? > stack; 
+            private java.util.Map<String, ?> stack; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.acsResourceType = model.acsResourceType;
+                this.action = model.action;
+                this.description = model.description;
+                this.logicalResourceId = model.logicalResourceId;
+                this.physicalResourceId = model.physicalResourceId;
+                this.properties = model.properties;
+                this.replacement = model.replacement;
+                this.requiredBy = model.requiredBy;
+                this.resourceType = model.resourceType;
+                this.stack = model.stack;
+            } 
 
             /**
              * <p>The resource type of an Alibaba Cloud service.</p>
@@ -512,7 +569,7 @@ public class PreviewStackResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{   &quot;DiskMappings&quot;: [     {       &quot;Category&quot;: &quot;cloud_ssd&quot;,       &quot;Size&quot;: &quot;20&quot;     }   ],   &quot;SystemDisk_Category&quot;: &quot;cloud_ssd&quot;,   &quot;InstanceChargeType&quot;: &quot;PostPaid&quot;,   &quot;AutoRenew&quot;: &quot;False&quot;,   &quot;WillReplace&quot;: true,   &quot;ImageId&quot;: &quot;centos_7&quot;,   &quot;InstanceType&quot;: &quot;ecs.g6.large&quot;,   &quot;AllocatePublicIP&quot;: true,   &quot;AutoRenewPeriod&quot;: 1,   &quot;IoOptimized&quot;: &quot;optimized&quot;,   &quot;ZoneId&quot;: &quot;cn-beijing-g&quot;,   &quot;VSwitchId&quot;: &quot;&quot;,   &quot;SecurityGroupId&quot;: &quot;&quot;,   &quot;Period&quot;: 1,   &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,   &quot;SystemDiskCategory&quot;: &quot;cloud_efficiency&quot;,   &quot;InternetMaxBandwidthOut&quot;: 1,   &quot;VpcId&quot;: &quot;&quot;,   &quot;InternetMaxBandwidthIn&quot;: 200,   &quot;PeriodUnit&quot;: &quot;Month&quot; }</p>
              */
-            public Builder properties(java.util.Map < String, ? > properties) {
+            public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -539,7 +596,7 @@ public class PreviewStackResponseBody extends TeaModel {
             /**
              * <p>The resources on which the stack depends.</p>
              */
-            public Builder requiredBy(java.util.List < String > requiredBy) {
+            public Builder requiredBy(java.util.List<String> requiredBy) {
                 this.requiredBy = requiredBy;
                 return this;
             }
@@ -561,7 +618,7 @@ public class PreviewStackResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder stack(java.util.Map < String, ? > stack) {
+            public Builder stack(java.util.Map<String, ?> stack) {
                 this.stack = stack;
                 return this;
             }
@@ -590,19 +647,19 @@ public class PreviewStackResponseBody extends TeaModel {
         private Log log;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < Parameters> parameters;
+        private java.util.List<Parameters> parameters;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("Resources")
-        private java.util.List < Resources> resources;
+        private java.util.List<Resources> resources;
 
         @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
         @com.aliyun.core.annotation.NameInMap("StackPolicyBody")
-        private java.util.Map < String, ? > stackPolicyBody;
+        private java.util.Map<String, ?> stackPolicyBody;
 
         @com.aliyun.core.annotation.NameInMap("TemplateDescription")
         private String templateDescription;
@@ -655,7 +712,7 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
@@ -669,7 +726,7 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < Resources> getResources() {
+        public java.util.List<Resources> getResources() {
             return this.resources;
         }
 
@@ -683,7 +740,7 @@ public class PreviewStackResponseBody extends TeaModel {
         /**
          * @return stackPolicyBody
          */
-        public java.util.Map < String, ? > getStackPolicyBody() {
+        public java.util.Map<String, ?> getStackPolicyBody() {
             return this.stackPolicyBody;
         }
 
@@ -705,13 +762,29 @@ public class PreviewStackResponseBody extends TeaModel {
             private String description; 
             private Boolean disableRollback; 
             private Log log; 
-            private java.util.List < Parameters> parameters; 
+            private java.util.List<Parameters> parameters; 
             private String regionId; 
-            private java.util.List < Resources> resources; 
+            private java.util.List<Resources> resources; 
             private String stackName; 
-            private java.util.Map < String, ? > stackPolicyBody; 
+            private java.util.Map<String, ?> stackPolicyBody; 
             private String templateDescription; 
             private Integer timeoutInMinutes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stack model) {
+                this.description = model.description;
+                this.disableRollback = model.disableRollback;
+                this.log = model.log;
+                this.parameters = model.parameters;
+                this.regionId = model.regionId;
+                this.resources = model.resources;
+                this.stackName = model.stackName;
+                this.stackPolicyBody = model.stackPolicyBody;
+                this.templateDescription = model.templateDescription;
+                this.timeoutInMinutes = model.timeoutInMinutes;
+            } 
 
             /**
              * <p>The description of the stack.</p>
@@ -746,7 +819,7 @@ public class PreviewStackResponseBody extends TeaModel {
             /**
              * <p>The parameters of the stack.</p>
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -765,7 +838,7 @@ public class PreviewStackResponseBody extends TeaModel {
             /**
              * <p>The resources in the stack.</p>
              */
-            public Builder resources(java.util.List < Resources> resources) {
+            public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;
                 return this;
             }
@@ -787,7 +860,7 @@ public class PreviewStackResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{   &quot;Statement&quot;: [     {       &quot;Action&quot;: &quot;Update:<em>&quot;,       &quot;Resource&quot;: &quot;</em>&quot;,       &quot;Effect&quot;: &quot;Allow&quot;,       &quot;Principal&quot;: &quot;<em>&quot;     },     {       &quot;Action&quot;: &quot;Update:</em>&quot;,       &quot;Resource&quot;: &quot;LogicalResourceId/apple1&quot;,       &quot;Effect&quot;: &quot;Deny&quot;,       &quot;Principal&quot;: &quot;*&quot;     }   ] }</p>
              */
-            public Builder stackPolicyBody(java.util.Map < String, ? > stackPolicyBody) {
+            public Builder stackPolicyBody(java.util.Map<String, ?> stackPolicyBody) {
                 this.stackPolicyBody = stackPolicyBody;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteStackInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -30,7 +35,7 @@ public class DeleteStackInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationPreferences")
-    private java.util.Map < String, ? > operationPreferences;
+    private java.util.Map<String, ?> operationPreferences;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -40,7 +45,7 @@ public class DeleteStackInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > regionIds;
+    private java.util.List<String> regionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RetainStacks")
@@ -73,7 +78,7 @@ public class DeleteStackInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +86,7 @@ public class DeleteStackInstancesRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -109,7 +114,7 @@ public class DeleteStackInstancesRequest extends Request {
     /**
      * @return operationPreferences
      */
-    public java.util.Map < String, ? > getOperationPreferences() {
+    public java.util.Map<String, ?> getOperationPreferences() {
         return this.operationPreferences;
     }
 
@@ -123,7 +128,7 @@ public class DeleteStackInstancesRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -142,13 +147,13 @@ public class DeleteStackInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteStackInstancesRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private String clientToken; 
         private DeploymentTargets deploymentTargets; 
         private String operationDescription; 
-        private java.util.Map < String, ? > operationPreferences; 
+        private java.util.Map<String, ?> operationPreferences; 
         private String regionId; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private Boolean retainStacks; 
         private String stackGroupName; 
 
@@ -175,7 +180,7 @@ public class DeleteStackInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;151266687691****&quot;]</p>
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
@@ -262,7 +267,7 @@ public class DeleteStackInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;FailureToleranceCount&quot;: 1, &quot;MaxConcurrentCount&quot;: 2}</p>
          */
-        public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
+        public Builder operationPreferences(java.util.Map<String, ?> operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
             this.putQueryParameter("OperationPreferences", operationPreferencesShrink);
             this.operationPreferences = operationPreferences;
@@ -289,7 +294,7 @@ public class DeleteStackInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;cn-hangzhou&quot;, &quot;cn-beijing&quot;]</p>
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
             this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
@@ -342,10 +347,10 @@ public class DeleteStackInstancesRequest extends Request {
      */
     public static class DeploymentTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountIds")
-        private java.util.List < String > accountIds;
+        private java.util.List<String> accountIds;
 
         @com.aliyun.core.annotation.NameInMap("RdFolderIds")
-        private java.util.List < String > rdFolderIds;
+        private java.util.List<String> rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
             this.accountIds = builder.accountIds;
@@ -363,20 +368,28 @@ public class DeleteStackInstancesRequest extends Request {
         /**
          * @return accountIds
          */
-        public java.util.List < String > getAccountIds() {
+        public java.util.List<String> getAccountIds() {
             return this.accountIds;
         }
 
         /**
          * @return rdFolderIds
          */
-        public java.util.List < String > getRdFolderIds() {
+        public java.util.List<String> getRdFolderIds() {
             return this.rdFolderIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > accountIds; 
-            private java.util.List < String > rdFolderIds; 
+            private java.util.List<String> accountIds; 
+            private java.util.List<String> rdFolderIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentTargets model) {
+                this.accountIds = model.accountIds;
+                this.rdFolderIds = model.rdFolderIds;
+            } 
 
             /**
              * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
@@ -384,7 +397,7 @@ public class DeleteStackInstancesRequest extends Request {
              * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
              * </blockquote>
              */
-            public Builder accountIds(java.util.List < String > accountIds) {
+            public Builder accountIds(java.util.List<String> accountIds) {
                 this.accountIds = accountIds;
                 return this;
             }
@@ -396,7 +409,7 @@ public class DeleteStackInstancesRequest extends Request {
              * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
              * </blockquote>
              */
-            public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
+            public Builder rdFolderIds(java.util.List<String> rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;
                 return this;
             }

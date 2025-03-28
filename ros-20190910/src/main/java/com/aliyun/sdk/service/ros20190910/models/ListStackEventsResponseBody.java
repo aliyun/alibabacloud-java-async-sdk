@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListStackEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Events")
-    private java.util.List < Events> events;
+    private java.util.List<Events> events;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class ListStackEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -79,16 +88,27 @@ public class ListStackEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListStackEventsResponseBody model) {
+            this.events = model.events;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The events.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
@@ -270,6 +290,21 @@ public class ListStackEventsResponseBody extends TeaModel {
             private String stackName; 
             private String status; 
             private String statusReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.createTime = model.createTime;
+                this.eventId = model.eventId;
+                this.logicalResourceId = model.logicalResourceId;
+                this.physicalResourceId = model.physicalResourceId;
+                this.resourceType = model.resourceType;
+                this.stackId = model.stackId;
+                this.stackName = model.stackName;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+            } 
 
             /**
              * <p>The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
