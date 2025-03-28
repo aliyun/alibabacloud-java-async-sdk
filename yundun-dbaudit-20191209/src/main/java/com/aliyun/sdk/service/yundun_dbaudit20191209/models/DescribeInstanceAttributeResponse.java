@@ -1,0 +1,131 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yundun_dbaudit20191209.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeInstanceAttributeResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeInstanceAttributeResponse</p>
+ */
+public class DescribeInstanceAttributeResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private DescribeInstanceAttributeResponseBody body;
+
+    private DescribeInstanceAttributeResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static DescribeInstanceAttributeResponse create() {
+        return new BuilderImpl().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeInstanceAttributeResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeInstanceAttributeResponse, Builder> {
+
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeInstanceAttributeResponseBody body);
+
+        @Override
+        DescribeInstanceAttributeResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeInstanceAttributeResponse, Builder>
+            implements Builder {
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
+        private DescribeInstanceAttributeResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeInstanceAttributeResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeInstanceAttributeResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeInstanceAttributeResponse build() {
+            return new DescribeInstanceAttributeResponse(this);
+        } 
+
+    } 
+
+}

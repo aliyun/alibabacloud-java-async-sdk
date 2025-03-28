@@ -1,0 +1,418 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yundun_dbaudit20191209.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeInstanceAttributeResponseBody</p>
+ */
+public class DescribeInstanceAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("InstanceAttribute")
+    private InstanceAttribute instanceAttribute;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private DescribeInstanceAttributeResponseBody(Builder builder) {
+        this.instanceAttribute = builder.instanceAttribute;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeInstanceAttributeResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return instanceAttribute
+     */
+    public InstanceAttribute getInstanceAttribute() {
+        return this.instanceAttribute;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private InstanceAttribute instanceAttribute; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceAttributeResponseBody model) {
+            this.instanceAttribute = model.instanceAttribute;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * InstanceAttribute.
+         */
+        public Builder instanceAttribute(InstanceAttribute instanceAttribute) {
+            this.instanceAttribute = instanceAttribute;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DescribeInstanceAttributeResponseBody build() {
+            return new DescribeInstanceAttributeResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttributeResponseBody</p>
+     */
+    public static class InstanceAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private Long expireTime;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
+        private String instanceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
+        private String internetEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
+        private String intranetEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("LicenseCode")
+        private String licenseCode;
+
+        @com.aliyun.core.annotation.NameInMap("PublicNetworkAccess")
+        private Boolean publicNetworkAccess;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SeriesCode")
+        private String seriesCode;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
+        private String vswitchId;
+
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
+        private java.util.List<String> whiteList;
+
+        private InstanceAttribute(Builder builder) {
+            this.description = builder.description;
+            this.expireTime = builder.expireTime;
+            this.instanceId = builder.instanceId;
+            this.instanceStatus = builder.instanceStatus;
+            this.internetEndpoint = builder.internetEndpoint;
+            this.intranetEndpoint = builder.intranetEndpoint;
+            this.licenseCode = builder.licenseCode;
+            this.publicNetworkAccess = builder.publicNetworkAccess;
+            this.regionId = builder.regionId;
+            this.seriesCode = builder.seriesCode;
+            this.startTime = builder.startTime;
+            this.vpcId = builder.vpcId;
+            this.vswitchId = builder.vswitchId;
+            this.whiteList = builder.whiteList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return instanceStatus
+         */
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
+        /**
+         * @return internetEndpoint
+         */
+        public String getInternetEndpoint() {
+            return this.internetEndpoint;
+        }
+
+        /**
+         * @return intranetEndpoint
+         */
+        public String getIntranetEndpoint() {
+            return this.intranetEndpoint;
+        }
+
+        /**
+         * @return licenseCode
+         */
+        public String getLicenseCode() {
+            return this.licenseCode;
+        }
+
+        /**
+         * @return publicNetworkAccess
+         */
+        public Boolean getPublicNetworkAccess() {
+            return this.publicNetworkAccess;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return seriesCode
+         */
+        public String getSeriesCode() {
+            return this.seriesCode;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        /**
+         * @return whiteList
+         */
+        public java.util.List<String> getWhiteList() {
+            return this.whiteList;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private Long expireTime; 
+            private String instanceId; 
+            private String instanceStatus; 
+            private String internetEndpoint; 
+            private String intranetEndpoint; 
+            private String licenseCode; 
+            private Boolean publicNetworkAccess; 
+            private String regionId; 
+            private String seriesCode; 
+            private Long startTime; 
+            private String vpcId; 
+            private String vswitchId; 
+            private java.util.List<String> whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceAttribute model) {
+                this.description = model.description;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.instanceStatus = model.instanceStatus;
+                this.internetEndpoint = model.internetEndpoint;
+                this.intranetEndpoint = model.intranetEndpoint;
+                this.licenseCode = model.licenseCode;
+                this.publicNetworkAccess = model.publicNetworkAccess;
+                this.regionId = model.regionId;
+                this.seriesCode = model.seriesCode;
+                this.startTime = model.startTime;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+                this.whiteList = model.whiteList;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(Long expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceStatus.
+             */
+            public Builder instanceStatus(String instanceStatus) {
+                this.instanceStatus = instanceStatus;
+                return this;
+            }
+
+            /**
+             * InternetEndpoint.
+             */
+            public Builder internetEndpoint(String internetEndpoint) {
+                this.internetEndpoint = internetEndpoint;
+                return this;
+            }
+
+            /**
+             * IntranetEndpoint.
+             */
+            public Builder intranetEndpoint(String intranetEndpoint) {
+                this.intranetEndpoint = intranetEndpoint;
+                return this;
+            }
+
+            /**
+             * LicenseCode.
+             */
+            public Builder licenseCode(String licenseCode) {
+                this.licenseCode = licenseCode;
+                return this;
+            }
+
+            /**
+             * PublicNetworkAccess.
+             */
+            public Builder publicNetworkAccess(Boolean publicNetworkAccess) {
+                this.publicNetworkAccess = publicNetworkAccess;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SeriesCode.
+             */
+            public Builder seriesCode(String seriesCode) {
+                this.seriesCode = seriesCode;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * WhiteList.
+             */
+            public Builder whiteList(java.util.List<String> whiteList) {
+                this.whiteList = whiteList;
+                return this;
+            }
+
+            public InstanceAttribute build() {
+                return new InstanceAttribute(this);
+            } 
+
+        } 
+
+    }
+}
